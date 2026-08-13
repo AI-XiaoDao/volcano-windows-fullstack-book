@@ -1,0 +1,574 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+ 文本型"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ 文本型"package name": "火山.仰望",
+ 文本型"@文档": "\"category = \\\"条码二维码库\\\"\"",
+ 文本型"classes": [
+ {
+            "class name": "条码解析类_",
+            "comment": "版本：0.23.90\nzbar使用了GNU LGPL 2.1许可",
+            "@文档": "\"category = \\\"条码二维码库.条码二维码解析\\\"\"",
+            "@视窗.外部头文件": "\"tml\\\\zbar\\\\include\\\\zbar.h\"",
+            "@视窗.外部库": "\"tml\\\\zbar\\\\lib\\\\$(p)\\\\zbar.lib\\r\\ntml\\\\zbar\\\\lib\\\\$(p)\\\\iconv.lib\\r\\ntml\\\\zbar\\\\lib\\\\$(p)\\\\charset.lib\"",
+            "@视窗.外部库": "\"winmm.lib\"",
+            "methods": [
+  {
+        "method name": "解析图片",
+        "comment": "支持解析二维码及条形码",
+        "result comment": "识别成功返回真",
+        "data type": "逻辑型",
+        "@禁止流程检查": "真",
+        "parameters": [
+   {
+"parameter name": "条码数据",
+"comment": "图片数据",
+"data type": "字节集类",
+"@输出名": "\"picBin\""
+   },
+   {
+"parameter name": "返回的解码信息",
+"comment": "集合的信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的解码信息组",
+"comment": "分组信息",
+"data type": "解析结果组",
+"@输出名": "\"retArray\"",
+"@默认值": "空对象"
+   }
+        ]
+  }
+            ]
+ },
+ {
+            "class name": "解析结果组",
+            "base class": "对象数组模板类",
+            "@文档": "\"category = \\\"条码二维码库.条码二维码解析.附加类\\\"\"",
+            "@模板实现类": "\"解码结果类\""
+ },
+ {
+"package name": "火山.仰望""class name": "解码结果类",
+"package name": "火山.仰望""base class": "扩展对象类",
+"package name": "火山.仰望""@文档": "\"category = \\\"条码二维码库.条码二维码解析.附加类\\\"\"",
+"package name": "火山.仰望""variables": [
+  {
+           "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容",
+           "@视窗.外部库": "\"winmm.lib\"""data type": "文本型",
+           "@视窗.外部库": "\"winmm.lib\"""@输出名": "\"content\""
+  },
+  {
+                "variable name": "矩形",
+                "data type": "矩形类",
+                "@输出名": "\"rect\""
+  },
+  {
+            "variable name": "矩形""variable name": "类型",
+            "variable name": "矩形""data type": "文本型",
+            "variable name": "矩形""@输出名": "\"type\""
+  },
+  {
+       "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""variable name": "方向",
+       "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型",
+       "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""@输出名": "\"orientation\""
+  }
+"package name": "火山.仰望"]
+ },
+ {
+      "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""class name": "二维码类_",
+      "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""comment": "qrencode4.1.1版",
+      "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""@文档": "\"category = \\\"条码二维码库.二维码生成\\\"\"",
+      "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""@视窗.外部头文件": "\"tml\\\\qrencode.h\"",
+      "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""@视窗.外部库.non_static": "\"tml\\\\lib\\\\$(p)\\\\qrencode.lib\"",
+      "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""methods": [
+  {
+     "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""@视窗.外部头文件": "\"tml\\\\qrencode.h\"""method name": "生成二维码_",
+     "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""@视窗.外部头文件": "\"tml\\\\qrencode.h\"""data type": "字节集类",
+     "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""@视窗.外部头文件": "\"tml\\\\qrencode.h\"""@禁止流程检查": "真",
+     "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""@视窗.外部头文件": "\"tml\\\\qrencode.h\"""parameters": [
+   {
+"parameter name": "二维码内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "缩放大小",
+"comment": "二维码大小随数字大小而变化",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "QR码版本",
+"comment": "数字越大,QR码的容量越大，如果指定为0，则库将选择适合输入数据的最小版本",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "容错级别",
+"comment": "0、7%　1、15%　2、25%　3、30%",
+"data type": "整数",
+"@默认值": "3"
+   },
+   {
+"parameter name": "红色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "绿色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "蓝色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "Logo数据",
+"comment": "二维码中间的Logo图标",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否圆化Logo",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否自动计算Logo",
+"comment": "自动计算Logo尺寸，按二维码总尺寸占比显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "Logo宽度",
+"comment": "是否自动Logo为真时，本参数失效",
+"data type": "小数",
+"@默认值": "50"
+   },
+   {
+"parameter name": "Logo高度",
+"comment": "是否自动Logo为真时，本参数失效",
+"data type": "小数",
+"@默认值": "50"
+   }
+     "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型""@视窗.外部头文件": "\"tml\\\\qrencode.h\""]
+  },
+  {
+comment": "是否自动Logo为真时，本参数失效""method name": "取二维码尺寸_",
+comment": "是否自动Logo为真时，本参数失效""data type": "尺寸类"
+  },
+  {
+comment": "是否自动Logo为真时，本参数失效""method name": "保存二维码_",
+comment": "是否自动Logo为真时，本参数失效""comment": "只保存原图(无Logo和改色后的)，“保存二维码2_”命令可保存带Logo和改色后的二维码",
+comment": "是否自动Logo为真时，本参数失效""data type": "逻辑型",
+comment": "是否自动Logo为真时，本参数失效""parameters": [
+   {
+"parameter name": "保存路径",
+"comment": "提供所欲写到的BMP文件名，例如“C:\\\\二维码.bmp”",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出宽度",
+"comment": "  指定图片的输出宽度. 如果小于0,参数值指定的是最终图片输出宽度相对于\n当前图片宽度的百分比(最小为10%); 如果等于0,则按图片原宽度输出; 如果\n大于0,指定输出图片的绝对宽度.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输出高度",
+"comment": "  指定图片的输出高度. 如果小于0,参数值指定的是最终图片输出高度相对于\n当前图片高度的百分比(最小为10%); 如果等于0,则按图片原高度输出; 如果\n大于0,指定输出图片的绝对高度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "是否自动Logo为真时，本参数失效"]
+  },
+  {
+comment": "是否自动Logo为真时，本参数失效""method name": "保存二维码2_",
+comment": "是否自动Logo为真时，本参数失效""comment": "与“保存二维码_”差别，本命令可保存带Logo和改色后的二维码",
+comment": "是否自动Logo为真时，本参数失效""data type": "逻辑型",
+comment": "是否自动Logo为真时，本参数失效""parameters": [
+   {
+"parameter name": "保存路径",
+"comment": "提供所欲写到的BMP文件名，例如“C:\\\\二维码.bmp”",
+"data type": "文本型"
+   }
+comment": "是否自动Logo为真时，本参数失效"]
+  },
+  {
+ }"method name": "修改二维码颜色",
+ }"comment": "在“生成二维码_”如有设置Logo，执行本命令时也将自动处理",
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "图片数据",
+"comment": "为空时修改内部生成的图片，不为空时则修改提供的图片",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "红色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "绿色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "蓝色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   }
+ }]
+  }
+      "@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容""data type": "文本型"]
+ },
+ {
+外部库.non_static"class name": "条形码类_",
+外部库.non_static"@文档": "\"category = \\\"条码二维码库.条形码生成\\\"\"",
+外部库.non_static"methods": [
+  {
+
+"method name": "生成条形码_",
+
+"comment": "只需要输入12位即可，最后一位校验码自动生成，最终是13位;\n可以通过“计算校验码_”获取最后一位数字",
+
+"result comment": "返回带有校验码的条形码数据",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "条码内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "显示画板",
+"data type": "画板"
+   },
+   {
+"parameter name": "背景色",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   },
+   {
+"parameter name": "条码颜色",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "线条加粗",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "线条高度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "左边位",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "顶边位",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "字体",
+"comment": "例如：\"宋体, 11, 1, 0, 0, 0, 0\" ；11表示字体大小，1表示加粗",
+"data type": "文本型",
+"@默认值": "\"宋体, 11, 1\""
+   },
+   {
+"parameter name": "画板跟随条码大小",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "图片保存路径",
+"comment": "本参数不为空时，将自动保存生成的条码为图片文件;\n例如：\"C:\\\\目录\\\\\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+"method name": "生成条形码_批量",
+"comment": "只需要输入12位即可，最后一位校验码自动生成;\n可以通过“计算校验码_”获取最后一位数字",
+"result comment": "返回带有校验码的条形码数据",
+"data type": "文本数组类",
+"parameters": [
+   {
+"parameter name": "条码内容",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "显示画板",
+"data type": "画板"
+   },
+   {
+"parameter name": "背景色",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   },
+   {
+"parameter name": "前景色",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "线条加粗",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "线条高度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "左边位",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "顶边位",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "字体",
+"comment": "例如：\"宋体, 11, 1, 0, 0, 0, 0\" ；11表示字体大小，1表示加粗",
+"data type": "文本型",
+"@默认值": "\"宋体, 11, 1\""
+   },
+   {
+"parameter name": "画板跟随条码大小",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+"method name": "保存条形码_",
+"parameters": [
+   {
+"parameter name": "保存路径名称",
+"comment": "BMP类型，例如：\"C:\\\\图片.bmp\"",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "取条形码数据_",
+"data type": "字节集类"
+  },
+  {
+@默认值": "10""method name": "计算校验码_",
+@默认值": "10""data type": "整数",
+@默认值": "10""parameters": [
+   {
+"parameter name": "条码",
+"data type": "文本型"
+   }
+@默认值": "10"]
+  },
+  {
+
+"method name": "生成条形码2_",
+
+"comment": "支持大于或小于13位条码",
+
+"result comment": "返回真表示生成完毕，假表示还未完成",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "条码内容",
+"comment": "6920927143215",
+"data type": "文本型"
+   },
+   {
+"parameter name": "显示画板",
+"data type": "画板"
+   },
+   {
+"parameter name": "条码格式",
+"comment": "0、code128A编码　1、code128B编码　2、code128C编码  ；1支持字母",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "背景色",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   },
+   {
+"parameter name": "条码颜色",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "线条高度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "左边位",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "顶边位",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "条码宽度",
+"comment": "-1为默认宽度，此值非精确值",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "字体",
+"comment": "例如：\"宋体, 11, 1, 0, 0, 0, 0\" ；11表示字体大小，1表示加粗",
+"data type": "文本型",
+"@默认值": "\"宋体, 11, 1\""
+   },
+   {
+"parameter name": "画板跟随条码大小",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "居中坐标",
+"comment": "条码数字居中坐标值",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "图片保存路径",
+"comment": "本参数不为空时，将自动保存生成的条码为图片文件;\n例如：\"C:\\\\目录\\\\\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+comment": "本参数不为空时，将自动保存生成的条码为图片文件;\n例如：\"C:\\\\目录\\\\\"""method name": "生成条形码_批量2",
+comment": "本参数不为空时，将自动保存生成的条码为图片文件;\n例如：\"C:\\\\目录\\\\\"""parameters": [
+   {
+"parameter name": "条码内容",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "显示画板",
+"data type": "画板"
+   },
+   {
+"parameter name": "条码格式",
+"comment": "0、code128A编码　1、code128B编码　2、code128C编码  ；1支持字母",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "背景色",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   },
+   {
+"parameter name": "条码颜色",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "线条高度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "左边位",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "顶边位",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "条码宽度",
+"comment": "-1为默认宽度，此值非精确值",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "字体",
+"comment": "例如：\"宋体, 11, 1, 0, 0, 0, 0\" ；11表示字体大小，1表示加粗",
+"data type": "文本型",
+"@默认值": "\"宋体, 11, 1\""
+   },
+   {
+"parameter name": "画板跟随条码大小",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "数字居中坐标",
+"comment": "条码数字居中坐标值",
+"data type": "整数",
+"@默认值": "-1"
+   }
+comment": "本参数不为空时，将自动保存生成的条码为图片文件;\n例如：\"C:\\\\目录\\\\\""]
+  },
+  {
+comment": "条码数字居中坐标值""method name": "取条码数字居中坐标值_",
+comment": "条码数字居中坐标值""comment": "本方法适用于“生成条形码2_”和“生成条形码_批量2”;\n返回该内容占位宽度",
+comment": "条码数字居中坐标值""data type": "整数",
+comment": "条码数字居中坐标值""parameters": [
+   {
+"parameter name": "条码内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体名称",
+"data type": "文本型",
+"@默认值": "\"宋体\""
+   },
+   {
+"parameter name": "字体大小",
+"data type": "整数",
+"@默认值": "9"
+   },
+   {
+"parameter name": "是否粗体",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否斜体",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "条码数字居中坐标值"]
+  }
+外部库.non_static]
+ }
+ 文本型]
+}

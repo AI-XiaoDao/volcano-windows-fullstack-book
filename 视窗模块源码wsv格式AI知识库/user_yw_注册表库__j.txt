@@ -1,0 +1,585 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+ꌤŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ꌤŝ"package name": "火山.仰望",
+ꌤŝ"@文档": "\"category = \\\"注册表库\\\"\"",
+ꌤŝ"classes": [
+ {
+ 整数"class name": "注册表类_",
+ 整数"@全局类": "真",
+ 整数"methods": [
+  {
+输入 = "kernel32.dll""method name": "注册表读文本_",
+输入 = "kernel32.dll""static": true,
+输入 = "kernel32.dll""data type": "文本型",
+输入 = "kernel32.dll""@禁止流程检查": "真",
+输入 = "kernel32.dll""parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+输入 = "kernel32.dll"]
+  },
+  {
+ 整数"method name": "注册表读整数_",
+ 整数"static": true,
+ 整数"data type": "整数",
+ 整数"@禁止流程检查": "真",
+ 整数"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ 整数]
+  },
+  {
+ }"method name": "注册表读长整数_",
+ }"static": true,
+ }"data type": "长整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+data type": "逻辑型""method name": "注册表读字节集_",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "字节集类",
+data type": "逻辑型""@禁止流程检查": "真",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "逻辑型"]
+  },
+  {
+"method name": "注册表写文本_",
+"comment": "例如：注册表写文本_ (2, \"主项\\\\子项\", \"测试\", \"内容\") ;\n相当于：\n[HKEY_CURRENT_USER\\主项\\子项]\n\"测试\"=\"内容\"",
+"static": true,
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "键值类型",
+"comment": "可调用常量值，如：“注册表键值类型常量.REG_DWORD”.\n0、REG_NONE 1、REG_SZ 2、REG_EXPAND_SZ 3、REG_BINARY 4、REG_DWORD 5、REG_DWORD_BIG_ENDIAN\n6、REG_LINK 7、REG_MULTI_SZ 8、REG_RESOURCE_LIST 9、REG_FULL_RESOURCE_DESCRIPTOR\n10、REG_RESOURCE_REQUIREMENTS_LIST 11、REG_QWORD",
+"data type": "整数",
+"@默认值": "1"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "注册表写整数_",
+data type": "文本型""static": true,
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否64位",
+"comment": "如果为真，带有KEY_WOW64_64KEY，如果为假，带有KEY_WOW64_32KEY",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "键值类型",
+"comment": "可调用常量值，如：“注册表键值类型常量.REG_DWORD”.\n0、REG_NONE 1、REG_SZ 2、REG_EXPAND_SZ 3、REG_BINARY 4、REG_DWORD 5、REG_DWORD_BIG_ENDIAN\n6、REG_LINK 7、REG_MULTI_SZ 8、REG_RESOURCE_LIST 9、REG_FULL_RESOURCE_DESCRIPTOR\n10、REG_RESOURCE_REQUIREMENTS_LIST 11、REG_QWORD",
+"data type": "整数",
+"@默认值": "4"
+   }
+data type": "文本型"]
+  },
+  {
+整数"@禁止流程检查": "真""method name": "注册表写长整数_",
+整数"@禁止流程检查": "真""static": true,
+整数"@禁止流程检查": "真""data type": "逻辑型",
+整数"@禁止流程检查": "真""@禁止流程检查": "真",
+整数"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "长整数"
+   },
+   {
+"parameter name": "是否64位",
+"comment": "如果为真，带有KEY_WOW64_64KEY，如果为假，带有KEY_WOW64_32KEY",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "键值类型",
+"comment": "可调用常量值，如：“注册表键值类型常量.REG_DWORD”.\n0、REG_NONE 1、REG_SZ 2、REG_EXPAND_SZ 3、REG_BINARY 4、REG_DWORD 5、REG_DWORD_BIG_ENDIAN\n6、REG_LINK 7、REG_MULTI_SZ 8、REG_RESOURCE_LIST 9、REG_FULL_RESOURCE_DESCRIPTOR\n10、REG_RESOURCE_REQUIREMENTS_LIST 11、REG_QWORD",
+"data type": "整数",
+"@默认值": "11"
+   }
+整数"@禁止流程检查": "真"]
+  },
+  {
+"method name": "注册表写字节集_",
+"static": true,
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "键值类型",
+"comment": "可调用常量值，如：“注册表键值类型常量.REG_DWORD”.\n0、REG_NONE 1、REG_SZ 2、REG_EXPAND_SZ 3、REG_BINARY 4、REG_DWORD 5、REG_DWORD_BIG_ENDIAN\n6、REG_LINK 7、REG_MULTI_SZ 8、REG_RESOURCE_LIST 9、REG_FULL_RESOURCE_DESCRIPTOR\n10、REG_RESOURCE_REQUIREMENTS_LIST 11、REG_QWORD",
+"data type": "整数",
+"@默认值": "4"
+   }
+]
+  },
+  {
+@默认值": "4""method name": "注册表导出_",
+@默认值": "4""comment": "注册表导出_ (\"C:\\\\注册表.reg\", \"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\")",
+@默认值": "4""static": true,
+@默认值": "4""data type": "逻辑型",
+@默认值": "4""parameters": [
+   {
+"parameter name": "保存路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "全路径注册项名",
+"data type": "文本型"
+   }
+@默认值": "4"]
+  },
+  {
+默认值": "4""parameters": [
+"method name": "注册表导入_",
+默认值": "4""parameters": [
+"static": true,
+默认值": "4""parameters": [
+"data type": "逻辑型",
+默认值": "4""parameters": [
+"parameters": [
+   {
+"parameter name": "欲导入的注册表文件",
+"data type": "文本型"
+   }
+默认值": "4""parameters": [
+]
+  },
+  {
+"method name": "注册表创建项_",
+"comment": "例如：注册表创建项_ (2, \"主项\\\\子项\") ；相当于：[HKEY_CURRENT_USER\\主项\\子项]",
+"static": true,
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "项名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+"method name": "注册表枚举键名_",
+"comment": "例如：\n注册表枚举键名_ (2, \"主项\", 名称变量)  ，就会得到主项下的\"子项\"和\"子项2\"两个名称  ;\n[HKEY_CURRENT_USER\\主项\\子项]\n[HKEY_CURRENT_USER\\主项\\子项2]",
+"static": true,
+"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的键名组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+comment": "例如：注册表创建项_ (2, \"主项\\\\子项\") ；相当于：[HKEY_CURRENT_USER\\主项\\子项]""method name": "注册表枚举键值名_",
+comment": "例如：注册表创建项_ (2, \"主项\\\\子项\") ；相当于：[HKEY_CURRENT_USER\\主项\\子项]""comment": "例如：\n注册表枚举键值名_ (2, \"主项\\\\子项\", 名称变量)  ，就会得到子项下的\"测试1\"和\"测试2\"两个名称  ;\n[HKEY_CURRENT_USER\\主项\\子项]\n\"测试1\"=\"内容1\"\n\"测试2\"=\"内容2\"",
+comment": "例如：注册表创建项_ (2, \"主项\\\\子项\") ；相当于：[HKEY_CURRENT_USER\\主项\\子项]""static": true,
+comment": "例如：注册表创建项_ (2, \"主项\\\\子项\") ；相当于：[HKEY_CURRENT_USER\\主项\\子项]""parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的值名称组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "返回的值类型组",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "例如：注册表创建项_ (2, \"主项\\\\子项\") ；相当于：[HKEY_CURRENT_USER\\主项\\子项]"]
+  },
+  {
+static": true"method name": "注册表删除键_",
+static": true"comment": "例如：　;\n注册表删除键_ (2, \"主项\\\\子项\")　;\n相当于删除\"子项\"处\n[HKEY_CURRENT_USER\\主项\\子项]\n\"测试\"=\"内容\"\n\n注册表删除键_ (2, \"主项\")　;\n相当于删除整个\"主项\"处",
+static": true"result comment": "不存在也返回真",
+static": true"static": true,
+static": true"data type": "逻辑型  ",
+static": true"@禁止流程检查": "真",
+static": true"@视窗.外部头文件": "\"<winreg.h>\"",
+static": true"@视窗.预定义宏": "\"_WIN32_WINNT=0x0600\"",
+static": true"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+static": true]
+  },
+  {
+data type": "文本数组类""method name": "注册表删除键值_",
+data type": "文本数组类""comment": "例如：注册表删除键值_ (2, \"主项\\\\子项\", \"测试\") ;\n相当于删除\"测试\"项：\n[HKEY_CURRENT_USER\\主项\\子项]\n\"测试\"=\"内容\"",
+data type": "文本数组类""static": true,
+data type": "文本数组类""data type": "逻辑型",
+data type": "文本数组类""@禁止流程检查": "真",
+data type": "文本数组类""parameters": [
+   {
+"parameter name": "根节点",
+"comment": "例如调整常量：“注册表根类型常量.HKEY_CURRENT_USER”.\n1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "文本数组类"]
+  },
+  {
+ }"method name": "注册表定位打开_",
+ }"comment": "注册表定位打开_ (\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\", \"Sysdiag\")",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "键路径",
+"comment": "完整的注册表路径；例如：\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"comment": "需要定位到的键值名称；例如：\"Sysdiag\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "定位次数",
+"comment": "可能会定位错误，建议设置次数为2－3左右",
+"data type": "整数",
+"@默认值": "3"
+   }
+ }]
+  },
+  {
+ }"method name": "注册表是否存在_",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "1、HKEY_CLASSES_ROOT　2、HKEY_CURRENT_USER　3、HKEY_LOCAL_MACHINE　4、HKEY_USERS　5、HKEY_CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  }
+ 整数]
+ },
+ {
+ }"class name": "注册表根类型常量",
+ }"@文档": "\"category = \\\"注册表库.附加类\\\"\"",
+ }"constants": [
+  {
+"constant name": "HKEY_CLASSES_ROOT",
+"data type": "整数",
+"initial value": "1"
+  },
+  {
+默认值": "4""static": true"constant name": "HKEY_CURRENT_USER",
+默认值": "4""static": true"data type": "整数",
+默认值": "4""static": true"initial value": "2"
+  },
+  {
+}"constant name": "HKEY_LOCAL_MACHINE",
+}"data type": "整数",
+}"initial value": "3"
+  },
+  {
+"constant name": "HKEY_USERS",
+"data type": "整数",
+"initial value": "4"
+  },
+  {
+data type": "整数""constant name": "HKEY_CURRENT_CONFIG",
+data type": "整数""data type": "整数",
+data type": "整数""initial value": "5"
+  }
+ }]
+ },
+ {
+_CURRENT_USER"class name": "注册表键值类型常量",
+_CURRENT_USER"@文档": "\"category = \\\"注册表库.附加类\\\"\"",
+_CURRENT_USER"constants": [
+  {
+位错误，建议设置次数为2－3左右"constant name": "REG_NONE",
+位错误，建议设置次数为2－3左右"data type": "整数",
+位错误，建议设置次数为2－3左右"initial value": "0"
+  },
+  {
+CURRENT_USER"constants": [
+"constant name": "REG_SZ",
+CURRENT_USER"constants": [
+"data type": "整数",
+CURRENT_USER"constants": [
+"initial value": "1"
+  },
+  {
+
+"constant name": "REG_EXPAND_SZ",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+data type": "逻辑型""constant name": "REG_BINARY",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""initial value": "3"
+  },
+  {
+ata type": "整数""initial value": "5""constant name": "REG_DWORD",
+ata type": "整数""initial value": "5""data type": "整数",
+ata type": "整数""initial value": "5""initial value": "4"
+  },
+  {
+]"constant name": "REG_DWORD_BIG_ENDIAN",
+]"data type": "整数",
+]"initial value": "5"
+  },
+  {
+comment": "可能会定位错误，建议设置次数为2－3左右""constant name": "REG_LINK",
+comment": "可能会定位错误，建议设置次数为2－3左右""data type": "整数",
+comment": "可能会定位错误，建议设置次数为2－3左右""initial value": "6"
+  },
+  {
+ 整数"constant name": "REG_MULTI_SZ",
+ 整数"data type": "整数",
+ 整数"initial value": "7"
+  },
+  {
+omment": "可能会定位错误，建议设置次数为2－3左右""data type": "整数""constant name": "REG_RESOURCE_LIST",
+omment": "可能会定位错误，建议设置次数为2－3左右""data type": "整数""data type": "整数",
+omment": "可能会定位错误，建议设置次数为2－3左右""data type": "整数""initial value": "8"
+  },
+  {
+nt": "可能会定位错误，建议设置次数为2－3左右""data type": "整数""constant name": "REG_RESOURCE_LIST""constant name": "REG_FULL_RESOURCE_DESCRIPTOR",
+nt": "可能会定位错误，建议设置次数为2－3左右""data type": "整数""constant name": "REG_RESOURCE_LIST""data type": "整数",
+nt": "可能会定位错误，建议设置次数为2－3左右""data type": "整数""constant name": "REG_RESOURCE_LIST""initial value": "9"
+  },
+  {
+type": "整数""initial value": "5""constant name": "REG_DWORD""constant name": "REG_RESOURCE_REQUIREMENTS_LIST",
+type": "整数""initial value": "5""constant name": "REG_DWORD""data type": "整数",
+type": "整数""initial value": "5""constant name": "REG_DWORD""initial value": "10"
+  },
+  {
+]"constant name": "REG_QWORD",
+]"data type": "整数",
+]"initial value": "11"
+  }
+_CURRENT_USER]
+ }
+ꌤŝ]
+}

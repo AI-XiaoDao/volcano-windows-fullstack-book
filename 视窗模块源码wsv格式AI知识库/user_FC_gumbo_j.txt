@@ -1,0 +1,578 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.HTML5解析\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"gumbo\\\\GumboQueryTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"gumbo\\\\GumboQueryToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"gumbo\\\\GumboQueryToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"gumbo\\\\GumboQueryToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"gumbo\\\\GumboQueryToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "网页解析节点类型",
+"@常量类": "整数",
+"constants": [
+  {
+    "constant name": "文档",
+    "comment": "  GUMBO_NODE_DOCUMENT,",
+    "initial value": "@GUMBO_NODE_DOCUMENT"
+  },
+  {
+方法 = """constant name": "元素",
+方法 = """comment": "  /** Element node.  v will be a GumboElement. */\n  GUMBO_NODE_ELEMENT,",
+方法 = """initial value": "@GUMBO_NODE_ELEMENT"
+  },
+  {
+Ȱꌥŝ"constant name": "文本",
+Ȱꌥŝ"comment": "  /** Text node.  v will be a GumboText. */\n  GUMBO_NODE_TEXT,",
+Ȱꌥŝ"initial value": "@GUMBO_NODE_TEXT"
+  },
+  {
+constant name": "文本""constant name": "附加数据",
+constant name": "文本""comment": " /** CDATA node. v will be a GumboText. */\n  GUMBO_NODE_CDATA,",
+constant name": "文本""initial value": "@GUMBO_NODE_CDATA"
+  },
+  {
+}"constant name": "注释",
+}"comment": "  /** Comment node.  v will be a GumboText, excluding comment delimiters. */\n  GUMBO_NODE_COMMENT,",
+}"initial value": "@GUMBO_NODE_COMMENT"
+  },
+  {
+"initial value": "@GUMBO_NODE_COMMENT""constant name": "空格",
+"initial value": "@GUMBO_NODE_COMMENT""comment": " /** Text node, where all contents is whitespace.  v will be a GumboText. */\n  GUMBO_NODE_WHITESPACE,",
+"initial value": "@GUMBO_NODE_COMMENT""initial value": "@GUMBO_NODE_WHITESPACE"
+  },
+  {
+ꌥŝ"comment": "  /** Text node.  v will be a GumboText. */\n  GUMBO_NODE_TEXT,""constant name": "模板",
+ꌥŝ"comment": "  /** Text node.  v will be a GumboText. */\n  GUMBO_NODE_TEXT,""comment": "  /** Template node.  This is separate from GUMBO_NODE_ELEMENT because many\n   * client libraries will want to ignore the contents of template nodes, as\n   * the spec suggests.  Recursing on GUMBO_NODE_ELEMENT will do the right thing\n   * here, while clients that want to include template contents should also\n   * check for GUMBO_NODE_TEMPLATE.  v will be a GumboElement.  */\n  GUMBO_NODE_TEMPLATE",
+ꌥŝ"comment": "  /** Text node.  v will be a GumboText. */\n  GUMBO_NODE_TEXT,""initial value": "@GUMBO_NODE_TEMPLATE"
+  }
+]
+ },
+ {
+"class name": "______网页解析模块",
+"@全局类": "真",
+"methods": [
+  {
+Ȱꌥŝ"method name": "网页解析_打开",
+Ȱꌥŝ"comment": "返回解析器句柄",
+Ȱꌥŝ"static": true,
+Ȱꌥŝ"data type": "变整数",
+Ȱꌥŝ"parameters": [
+   {
+"parameter name": "utf8",
+"comment": "必须是utf8的内容才能解析",
+"data type": "字节集类"
+   }
+Ȱꌥŝ]
+  },
+  {
+ŝ]"method name": "网页解析_关闭",
+ŝ]"static": true,
+ŝ]"@嵌入式方法": "\"\"",
+ŝ]"parameters": [
+   {
+"parameter name": "解析器句柄",
+"data type": "变整数"
+   }
+ŝ]]
+  },
+  {
+ }"method name": "网页解析_取根节点",
+ }"static": true,
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "解析器句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+]"method name": "网页解析_取子节点",
+]"static": true,
+]"data type": "变整数",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "子节点索引",
+"comment": "从0开始",
+"data type": "整数"
+   }
+]]
+  },
+  {
+]"method name": "网页解析_取子节点数",
+]"static": true,
+]"data type": "整数",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   }
+]]
+  },
+  {
+"method name": "网页解析_取节点类型",
+"comment": "是元素节点还是文本节点",
+"static": true,
+"data type": "网页解析节点类型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ }"method name": "网页解析_取文本节点内容",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ }"method name": "网页解析_取标签类型",
+ }"comment": "是 span h1 div 还是什么",
+ }"static": true,
+ }"data type": "网页解析节点类型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+
+"method name": "网页解析_取标签名称",
+
+"comment": "返回 h1 div 之类的 文本名称",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+hod name": "网页解析_取节点类型""method name": "网页解析_取开始标签源码",
+hod name": "网页解析_取节点类型""comment": "<a herf=\"aaaa\"   > 类似这样的",
+hod name": "网页解析_取节点类型""static": true,
+hod name": "网页解析_取节点类型""data type": "文本型",
+hod name": "网页解析_取节点类型""parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   }
+hod name": "网页解析_取节点类型"]
+  },
+  {
+
+"method name": "网页解析_取父节点",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "网页解析_取标签属性值",
+
+"comment": "当前节点是 <a herf=\"aaaa\"   > 传递 herf 则函数返回 aaaa ",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "网页解析_取节点_根据类名",
+}"static": true,
+}"data type": "变整数",
+}"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "类名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ }"method name": "网页解析_取节点_根据ID",
+ }"static": true,
+ }"data type": "变整数",
+ }"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "ID",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "网页解析_取节点_根据属性",
+"static": true,
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "属性名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "网页解析_取节点源码",
+ }"comment": "例如 <p> aaa </p> 得到的是 <p> aaa </p>",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ameter name": "节点句柄""method name": "网页解析_取节点内容",
+ameter name": "节点句柄""comment": "例如 <p> aaa </p> 得到的是 aaa",
+ameter name": "节点句柄""static": true,
+ameter name": "节点句柄""data type": "文本型",
+ameter name": "节点句柄""parameters": [
+   {
+"parameter name": "节点句柄",
+"data type": "变整数"
+   }
+ameter name": "节点句柄"]
+  }
+]
+ },
+ {
+"class name": "网页查询器",
+"comment": "首先要调用  网页解析类相关接口得到查询器，，查询器接口得到节点操作接口",
+"methods": [
+  {
+methods": [
+"method name": "取节点",
+methods": [
+"data type": "网页节点类",
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+methods": [
+]
+  },
+  {
+"method name": "取节点数",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "取节点数""method name": "查询",
+hod name": "取节点数""data type": "网页查询器",
+hod name": "取节点数""@嵌入式方法": "\"\"",
+hod name": "取节点数""parameters": [
+   {
+"parameter name": "选择器文本",
+"data type": "文本型"
+   }
+hod name": "取节点数"]
+  }
+]
+ },
+ {
+"class name": "网页解析类",
+"comment": "一旦这个类销毁了，那么其他接口都会失效，\n如果还有用到网页解析相关的所有接口，那么必须保证这个类的\n有效性",
+"variables": [
+  {
+data type": "整数""variable name": "网页解析句柄",
+data type": "整数""data type": "变整数"
+  }
+],
+"methods": [
+  {
+methods": [
+"method name": "解析文本",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "网页内容",
+"data type": "文本型"
+   }
+methods": [
+]
+  },
+  {
+methods": [
+"method name": "解析字节集",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "网页内容",
+"comment": "一定要确保 内容是 utf8 编码的",
+"data type": "字节集类"
+   }
+methods": [
+]
+  },
+  {
+}"method name": "取指定位置文本",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "开始位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束位置",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "查询",
+
+"data type": "网页查询器",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "选择器文本",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "网页节点类",
+"methods": [
+  {
+methods": [
+"method name": "是否有效",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+ods": [
+"method name": "是否有效""method name": "取父节点",
+ods": [
+"method name": "是否有效""data type": "网页节点类",
+ods": [
+"method name": "是否有效""@嵌入式方法": "\"\""
+  },
+  {
+static": true"method name": "取下一个兄弟节点",
+static": true"data type": "网页节点类",
+static": true"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取上一个兄弟节点",
+
+"data type": "网页节点类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "网页节点类""method name": "取节点数",
+"data type": "网页节点类""data type": "整数",
+"data type": "网页节点类""@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "取节点",
+"@嵌入式方法": "\"\"""data type": "网页节点类",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+ods": [
+"method name": "是否有效""method name": "取属性",
+ods": [
+"method name": "是否有效""data type": "文本型",
+ods": [
+"method name": "是否有效""@嵌入式方法": "\"\"",
+ods": [
+"method name": "是否有效""parameters": [
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   }
+ods": [
+"method name": "是否有效"]
+  },
+  {
+s": [
+"method name": "是否有效"]"method name": "取属性数量",
+s": [
+"method name": "是否有效"]"data type": "整数",
+s": [
+"method name": "是否有效"]"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取属性名",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取属性值",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取文本",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取节点自身文本",
+
+"data type": "文本型"
+  },
+  {
+thod name": "取节点自身文本""method name": "取节点开始位置",
+thod name": "取节点自身文本""data type": "整数",
+thod name": "取节点自身文本""@嵌入式方法": "\"\""
+  },
+  {
+thod name": "取文本""method name": "取节点结束位置",
+thod name": "取文本""data type": "整数",
+thod name": "取文本""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取节点外围开始位置",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取节点外围结束位置",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "取节点外围开始位置""method name": "取标签名称",
+thod name": "取节点外围开始位置""data type": "文本型"
+  },
+  {
+
+"method name": "查询",
+
+"data type": "网页查询器",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "选择器文本",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

@@ -1,0 +1,420 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"package name": "火山.原创软件",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"comment": "\n",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@文档": "\"category = \\\"COM.脚本控件\\\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"classes": [
+ {
+"class name": "DScriptControlSource",
+"methods": [
+  {
+ss name": "DScriptControlSource""method name": "Error",
+ss name": "DScriptControlSource""result comment": "HRESULT",
+ss name": "DScriptControlSource""data type": "整数",
+ss name": "DScriptControlSource""@嵌入式方法": "\"\""
+  },
+  {
+ "method name": "Timeout",
+ "result comment": "HRESULT",
+ "data type": "整数",
+ "@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IScriptControl",
+"comment": "64位的脚本控件源码 https://github.com/tablacus/TablacusScriptControl",
+"@视窗.外部头文件": "\"COM_msscript\\\\msscript.tlh\"",
+"@视窗.附属文件.x64": "\"COM_msscript\\\\tsc64.dll\"",
+"methods": [
+  {
+@视窗.外部头文件": "\"COM_msscript\\\\msscript.tlh\"""method name": "GetLanguage",
+@视窗.外部头文件": "\"COM_msscript\\\\msscript.tlh\"""result comment": "_bstr_t",
+@视窗.外部头文件": "\"COM_msscript\\\\msscript.tlh\"""data type": "文本型",
+@视窗.外部头文件": "\"COM_msscript\\\\msscript.tlh\"""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "PutLanguage",
+"result comment": "void",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "pbstrLanguage",
+"comment": "_bstr_t pbstrLanguage",
+"data type": "文本型"
+   }
+]
+  },
+  {
+@视窗.附属文件.x64": "\"COM_msscript\\\\tsc64.dll\"""method name": "PutState",
+@视窗.附属文件.x64": "\"COM_msscript\\\\tsc64.dll\"""result comment": "void",
+@视窗.附属文件.x64": "\"COM_msscript\\\\tsc64.dll\"""@嵌入式方法": "\"\"",
+@视窗.附属文件.x64": "\"COM_msscript\\\\tsc64.dll\"""parameters": [
+   {
+"parameter name": "pssState",
+"comment": "enum ScriptControlStates pssState",
+"data type": "整数"
+   }
+@视窗.附属文件.x64": "\"COM_msscript\\\\tsc64.dll\""]
+  },
+  {
+}"method name": "PutSitehWnd",
+}"result comment": "void",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "phwnd",
+"comment": "long phwnd",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "GetSitehWnd",
+}"result comment": "long",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"result comment": "long""method name": "GetTimeout",
+"result comment": "long""result comment": "long",
+"result comment": "long""data type": "整数",
+"result comment": "long""@嵌入式方法": "\"\""
+  },
+  {
+"result comment": "long""method name": "PutTimeout",
+"result comment": "long""result comment": "void",
+"result comment": "long""@嵌入式方法": "\"\"",
+"result comment": "long""parameters": [
+   {
+"parameter name": "plMilleseconds",
+"comment": "long plMilleseconds",
+"data type": "整数"
+   }
+"result comment": "long"]
+  },
+  {
+result comment": "long""parameters": [
+"method name": "GetAllowUI",
+result comment": "long""parameters": [
+"result comment": "VARIANT_BOOL",
+result comment": "long""parameters": [
+"data type": "逻辑型",
+result comment": "long""parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "PutAllowUI",
+
+"result comment": "void",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "pfAllowUI",
+"comment": "VARIANT_BOOL pfAllowUI",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "GetUseSafeSubset",
+"result comment": "VARIANT_BOOL",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+esult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""method name": "PutUseSafeSubset",
+esult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void",
+esult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""@嵌入式方法": "\"\"",
+esult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""parameters": [
+   {
+"parameter name": "pfUseSafeSubset",
+"comment": "VARIANT_BOOL pfUseSafeSubset",
+"data type": "逻辑型"
+   }
+esult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL"]
+  },
+  {
+eSafeSubset"method name": "GetError",
+eSafeSubset"result comment": "IScriptErrorPtr",
+eSafeSubset"data type": "IScriptError",
+eSafeSubset"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "_AboutBox",
+
+"result comment": "HRESULT",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Reset",
+
+"result comment": "HRESULT",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "AddCode",
+}"result comment": "HRESULT",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "Code",
+"comment": "_bstr_t Code",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void""method name": "Eval",
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void""result comment": "_variant_t",
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void""data type": "整数",
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void""@嵌入式方法": "\"\"",
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void""parameters": [
+   {
+"parameter name": "Expression",
+"comment": "_bstr_t Expression",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回值",
+"data type": "COM变体型"
+   }
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void"]
+  },
+  {
+data type": "COM变体型""method name": "ExecuteStatement",
+data type": "COM变体型""result comment": "HRESULT",
+data type": "COM变体型""data type": "整数",
+data type": "COM变体型""@嵌入式方法": "\"\"",
+data type": "COM变体型""parameters": [
+   {
+"parameter name": "Statement",
+"comment": "_bstr_t Statement",
+"data type": "文本型"
+   }
+data type": "COM变体型"]
+  }
+]
+ },
+ {
+"class name": "IScriptError",
+"methods": [
+  {
+
+"method name": "GetNumber",
+
+"result comment": "long",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void""method name": "GetSource",
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void""result comment": "_bstr_t",
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void""data type": "文本型",
+sult comment": "long""parameters": [
+"result comment": "VARIANT_BOOL""result comment": "void""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "GetDescription",
+ }"result comment": "_bstr_t",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "GetHelpFile",
+"result comment": "_bstr_t",
+"data type": "文本型",
+"@嵌入式方法": "\"\""
+  },
+  {
+ata type": "COM变体型""data type": "整数""method name": "GetHelpContext",
+ata type": "COM变体型""data type": "整数""result comment": "long",
+ata type": "COM变体型""data type": "整数""data type": "整数",
+ata type": "COM变体型""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetText",
+}"result comment": "_bstr_t",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetLine",
+}"result comment": "long",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetColumn",
+
+"result comment": "long",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "Clear",
+}"result comment": "HRESULT",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IScriptModule",
+"methods": [
+  {
+"method name": "GetName",
+"result comment": "_bstr_t",
+"data type": "文本型",
+"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "GetName""method name": "AddCode",
+hod name": "GetName""result comment": "HRESULT",
+hod name": "GetName""data type": "整数",
+hod name": "GetName""@嵌入式方法": "\"\"",
+hod name": "GetName""parameters": [
+   {
+"parameter name": "Code",
+"comment": "_bstr_t Code",
+"data type": "文本型"
+   }
+hod name": "GetName"]
+  },
+  {
+"method name": "Eval",
+"result comment": "_variant_t",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "Expression",
+"comment": "_bstr_t Expression",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "ExecuteStatement",
+"result comment": "HRESULT",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "Statement",
+"comment": "_bstr_t Statement",
+"data type": "文本型"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "IScriptModuleCollection",
+"methods": [
+  {
+@嵌入式方法": "\"\"""method name": "GetCount",
+@嵌入式方法": "\"\"""result comment": "long",
+@嵌入式方法": "\"\"""data type": "整数",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IScriptProcedure",
+"methods": [
+  {
+
+"method name": "GetName",
+
+"result comment": "_bstr_t",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetNumArgs",
+
+"result comment": "long",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetHasReturnValue",
+
+"result comment": "VARIANT_BOOL",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IScriptProcedureCollection",
+"methods": [
+  {
+
+"method name": "GetCount",
+
+"result comment": "long",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+]
+}

@@ -1,0 +1,1767 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"Mysql客户端".
+
+{
+问本程序中的接口需要引用模块"Mysql客户端"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"Mysql客户端"."package name": "火山.视窗.MYSQL数据库",
+问本程序中的接口需要引用模块"Mysql客户端"."classes": [
+ {
+"class name": "Mysql_SSL模式",
+"comment": "定义Mysql协议类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ "使用连接池当前空闲的连接执行一条SQL语句""constant name": "禁用加密模式",
+ "使用连接池当前空闲的连接执行一条SQL语句""comment": "客户端禁用加密连接。",
+ "使用连接池当前空闲的连接执行一条SQL语句""initial value": "1"
+  },
+  {
+0"constant name": "默认连接模式",
+0"comment": "默认值首选",
+0"initial value": "2"
+  },
+  {
+ "提供一个线程安全的Mysql连接池.""constant name": "启用加密模式",
+ "提供一个线程安全的Mysql连接池.""comment": "客户端需要加密连接，如果无法建立连接则失败。",
+ "提供一个线程安全的Mysql连接池.""initial value": "3"
+  },
+  {
+返回真,否则返回假."constant name": "证书加密模式",
+返回真,否则返回假."comment": "客户端需要加密连接，并且还针对服务器 CA 证书",
+返回真,否则返回假."initial value": "4"
+  },
+  {
+渐數ŝ"constant name": "服务器证书模式",
+渐數ŝ"comment": "针对其证书中的服务器主机名执行验证。 不适用于由服务器自动创建或使用mysql_ssl_rsa_setup手动创建的自签名证书。此类自签名证书不包含服务器名称作为 Common Name 值。",
+渐數ŝ"initial value": "5"
+  }
+]
+ },
+ {
+"class name": "Mysql数据库类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n如果用户程序中调用了本类中的\"使用新版本\"方法,将使用 mysql 最新 8.0.40 版进行编译,支持火山模块的静态链接方式,否则将使用 6.1.11 版进行编译.",
+"@视窗.外部头文件": "\"vol_mysql.h\"",
+"@视窗.头文件搜寻目录.d:!_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\1\\\\include\"",
+"@视窗.附属文件.d:!_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\1\\\\$(p)\\\\libmysql.dll\"",
+"@视窗.外部库.d:!_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\1\\\\$(p)\\\\libmysql.lib\"",
+"@视窗.头文件搜寻目录.d:_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\include\"",
+"@视窗.附属文件.non_static-x64 - d:_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libmysql.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libcrypto-3-x64.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libssl-3-x64.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\dll\\\\zlib1.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\dll\\\\zstd.dll\"",
+"@视窗.附属文件.non_static-win32 - d:_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libmysql.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libcrypto-3.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libssl-3.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\dll\\\\zlib1.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\dll\\\\zstd.dll\"",
+"@视窗.外部库.non_static - d:_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libmysql.lib\"",
+"@视窗.附属文件.static-debug-x64 - d:_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libmysql.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libcrypto-3-x64.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libssl-3-x64.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\dll\\\\zlib1.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\dll\\\\zstd.dll\"",
+"@视窗.附属文件.static-debug-win32 - d:_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libmysql.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libcrypto-3.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libssl-3.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\dll\\\\zlib1.dll\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\dll\\\\zstd.dll\"",
+"@视窗.外部库.static-debug - d:_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\dll\\\\libmysql.lib\"",
+"@视窗.外部库.static-release - d:_VOL_MYSQL_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\lib\\\\mysqlclient.lib\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\lib\\\\libcrypto.lib\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\mysql\\\\2\\\\$(p)\\\\lib\\\\libssl.lib\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\zlib-$(d).lib\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\zstd.lib\\r\\ncrypt32.lib\"",
+"@视窗.需求VS版本.static - d:_VOL_MYSQL_VER2": "\"16-\"",
+"@视窗.使用静态运行时库.static - d:_VOL_MYSQL_VER2": "真",
+"methods": [
+  {
+@常量类": "整数""method name": "使用新版本",
+@常量类": "整数""comment": "调用本方法指示编译器使用 mysql 最新 8.0.40 版进行编译,同时支持火山模块的静态链接方式,如果不调用本方法,将使用 6.1.11 版进行编译.\n注意: 本方法为编译时处理方法,系统在编译时只要检测到用户程序实际执行流程中任意位置调用了此方法,就启用对应的编译特性,和方法本身是否被执行到没有任何关系.",
+@常量类": "整数""static": true,
+@常量类": "整数""@视窗.预定义宏": "\"_VOL_MYSQL_VER2\"",
+@常量类": "整数""@视窗.编译信息": "\"基于 MYSQL 8.0.40 版本编译\""
+  },
+  {
+@常量类": "整数""method name": "取客户端版本名",
+@常量类": "整数""comment": "获取当前客户端的版本名称.",
+@常量类": "整数""static": true,
+@常量类": "整数""data type": "文本型",
+@常量类": "整数""@禁止流程检查": "真"
+  },
+  {
+ "允许加载本地数据功能.""method name": "取客户端版本号",
+ "允许加载本地数据功能.""comment": "获取当前客户端的版本号.",
+ "允许加载本地数据功能.""static": true,
+ "允许加载本地数据功能.""data type": "整数",
+ "允许加载本地数据功能.""@嵌入式方法": "\"\""
+  },
+  {
+常量类": "整数""static": true"method name": "SSL模式",
+常量类": "整数""static": true"comment": "指定需要连接使用的ssl模式类型.\n注意:必须在\"连接()\"方法之前调用生效.",
+常量类": "整数""static": true"type": "property setter",
+常量类": "整数""static": true"parameters": [
+   {
+"parameter name": "类型",
+"data type": "Mysql_SSL模式"
+   }
+常量类": "整数""static": true]
+  },
+  {
+ameter name": "类型""method name": "线程安全",
+ameter name": "类型""type": "property getter",
+ameter name": "类型""data type": "整数",
+ameter name": "类型""@禁止流程检查": "真"
+  },
+  {
+ "获取当前连接池中空闲的可用连接数.""method name": "连接超时",
+ "获取当前连接池中空闲的可用连接数.""comment": "设置连接超时时长.\n注意:必须在\"连接()\"方法之前调用生效.",
+ "获取当前连接池中空闲的可用连接数.""type": "property setter",
+ "获取当前连接池中空闲的可用连接数.""parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:秒.",
+"data type": "整数"
+   }
+ "获取当前连接池中空闲的可用连接数."]
+  },
+  {
+
+"method name": "连接超时",
+
+"comment": "获取当前配置的连接超时时长.",
+
+"result comment": "单位:秒",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+所有连接都已用尽时所欲等待的时长,提供-1表示无限等待,0表示不等待.单位:毫秒.""method name": "读取超时",
+所有连接都已用尽时所欲等待的时长,提供-1表示无限等待,0表示不等待.单位:毫秒.""comment": "设置读取信息的超时时长.\n注意:必须在\"连接()\"方法之前调用生效.",
+所有连接都已用尽时所欲等待的时长,提供-1表示无限等待,0表示不等待.单位:毫秒.""type": "property setter",
+所有连接都已用尽时所欲等待的时长,提供-1表示无限等待,0表示不等待.单位:毫秒.""parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:秒.",
+"data type": "整数"
+   }
+所有连接都已用尽时所欲等待的时长,提供-1表示无限等待,0表示不等待.单位:毫秒."]
+  },
+  {
+ameter name": "超时""method name": "读取超时",
+ameter name": "超时""comment": "获取当前配置的读取超时时长.",
+ameter name": "超时""result comment": "单位:秒",
+ameter name": "超时""type": "property getter",
+ameter name": "超时""data type": "整数"
+  },
+  {
+meter name": "超时""result comment": "单位:秒""method name": "写入超时",
+meter name": "超时""result comment": "单位:秒""comment": "设置写入数据的超时时长.\n注意:必须在\"连接()\"方法之前调用生效.",
+meter name": "超时""result comment": "单位:秒""type": "property setter",
+meter name": "超时""result comment": "单位:秒""parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:秒.",
+"data type": "整数"
+   }
+meter name": "超时""result comment": "单位:秒"]
+  },
+  {
+}"method name": "写入超时",
+}"comment": "获取当前配置的写入超时时长.",
+}"result comment": "单位:秒",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+"提供一个线程安全的Mysql连接池.""comment": "客户端需要加密连接，如果无法建立连接则失败。""method name": "通报数据截断错误",
+"提供一个线程安全的Mysql连接池.""comment": "客户端需要加密连接，如果无法建立连接则失败。""comment": "指定对于预处理语句是否允许通报数据截断错误.\n注意:必须在\"连接()\"方法之前调用生效.",
+"提供一个线程安全的Mysql连接池.""comment": "客户端需要加密连接，如果无法建立连接则失败。""type": "property setter",
+"提供一个线程安全的Mysql连接池.""comment": "客户端需要加密连接，如果无法建立连接则失败。""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+"提供一个线程安全的Mysql连接池.""comment": "客户端需要加密连接，如果无法建立连接则失败。"]
+  },
+  {
+
+"method name": "通报数据截断错误",
+
+"comment": "获取对于预处理语句是否允许通报数据截断错误.",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "自动提交事务",
+}"comment": "指定是否将当前事务提交模式设为自动.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+ }"method name": "自动重连",
+ }"comment": "如果与服务器连接被断开,是否进行自动重连.\n注意:必须在\"连接()\"方法之前调用生效.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+"type": "property getter""method name": "自动重连",
+"type": "property getter""comment": "获取是否已启用自动重连属性.",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "逻辑型",
+"type": "property getter""@禁止流程检查": "真"
+  },
+  {
+"data type": "整数""method name": "连接后命令",
+"data type": "整数""comment": "设置一个在连接成功后立即执行的命令,如再次连接将会再次执行该命令.\n注意:必须在\"连接()\"方法之前调用生效.",
+"data type": "整数""type": "property setter",
+"data type": "整数""parameters": [
+   {
+"parameter name": "命令内容",
+"data type": "文本型"
+   }
+"data type": "整数"]
+  },
+  {
+
+"method name": "命名选项文件",
+
+"comment": "指定从命名选项文件而不是从my.cnf读取选项配置.\n注意:必须在\"连接()\"方法之前调用生效.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "文件",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"type": "property setter""method name": "命名选项组",
+"type": "property setter""comment": "指定从my.cnf或用\"命名选项文件\"属性指定的文件中的命名组读取选项配置.\n注意:必须在\"连接()\"方法之前调用生效.",
+"type": "property setter""type": "property setter",
+"type": "property setter""parameters": [
+   {
+"parameter name": "命名组",
+"data type": "文本型"
+   }
+"type": "property setter"]
+  },
+  {
+"data type": "整数""method name": "字符集定义文件",
+"data type": "整数""comment": "指定包含字符集定义文件的目录的路径名.\n注意:必须在\"连接()\"方法之前调用生效.",
+"data type": "整数""type": "property setter",
+"data type": "整数""parameters": [
+   {
+"parameter name": "文件",
+"data type": "文本型"
+   }
+"data type": "整数"]
+  },
+  {
+type": "property getter""data type": "逻辑型""method name": "协议类型",
+type": "property getter""data type": "逻辑型""comment": "指定需要连接使用的协议类型.\n注意:必须在\"连接()\"方法之前调用生效.",
+type": "property getter""data type": "逻辑型""type": "property setter",
+type": "property getter""data type": "逻辑型""parameters": [
+   {
+"parameter name": "类型",
+"data type": "Mysql协议类型"
+   }
+type": "property getter""data type": "逻辑型"]
+  },
+  {
+ }"method name": "共享内存对象名称",
+ }"comment": "命名为与服务器进行通信的共享内存对象.\n注意:必须在\"连接()\"方法之前调用生效.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "多个查询结果",
+data type": "文本型""comment": "检查当前所执行的查询是否存在多个结果集.",
+data type": "文本型""result comment": "如果返回真,获取查询的记录集之前必须调用\"到下一个记录集()\"来获取多个记录集.",
+data type": "文本型""type": "property getter",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+}"type": "property setter""method name": "启用SSL",
+}"type": "property setter""comment": "启用SSL以建立数据库的安全连接.\n注意:必须在\"连接()\"方法之前调用生效.",
+}"type": "property setter""result comment": "返回0表示初始化SSL环境成功.",
+}"type": "property setter""data type": "整数",
+}"type": "property setter""@禁止流程检查": "真",
+}"type": "property setter""parameters": [
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件(key文件)路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件(cert)路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "授权文件",
+"comment": "提供所欲使用的证书授权文件(ca)路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目录名称",
+"comment": "提供pem格式的SSL CA证书目录路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "允许密码列表",
+"comment": "允许密码的列表,用于SSL加密.",
+"data type": "文本型"
+   }
+}"type": "property setter"]
+  },
+  {
+data type": "文本型""method name": "取SSL允许密码列表",
+data type": "文本型""comment": "获取SSL允许密码列表.",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""method name": "连接",
+data type": "文本型""comment": "连接至指定Mysql服务器.",
+data type": "文本型""result comment": "返回是否连接成功.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供所欲连接数据库的地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供所欲连接数据库的用户名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲连接数据库的连接密码.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据库名",
+"comment": "提供所欲连接数据库的名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"comment": "提供所欲连接数据库的端口.",
+"data type": "整数",
+"@默认值": "3306"
+   },
+   {
+"parameter name": "套接字",
+"comment": "该字符串描述了应使用的套接字或命名管道.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "配置位",
+"comment": "请参考\"Mysql连接配置\"所提供的常量,该参数接受其中单个或多个组合的值.",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "修改用户",
+"comment": "更改用户以及当前的默认数据库(即当前所操作的库).",
+"result comment": "返回是否更换用户成功.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "数据库名",
+"comment": "提供新的数据库名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供新的数据库用户名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供新的数据库密码.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "选择库",
+data type": "文本型""comment": "更改当前的默认数据库(即当前所操作的库).",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "数据库名",
+"comment": "提供新的数据库名称.",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ata type": "文本型""@禁止流程检查": "真""method name": "执行SQL语句",
+ata type": "文本型""@禁止流程检查": "真""comment": "执行一条SQL语句,执行成功后可通过\"取记录集\"命令获取记录集.\n注意:如果所欲执行的SQL语句中包含二进制数据,请使用命令\"执行SQL语句_二进制\",否则有可能执行出错.",
+ata type": "文本型""@禁止流程检查": "真""result comment": "执行成功返回真,否则返回假.",
+ata type": "文本型""@禁止流程检查": "真""data type": "逻辑型",
+ata type": "文本型""@禁止流程检查": "真""@禁止流程检查": "真",
+ata type": "文本型""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "语句内容",
+"comment": "提供所欲查询当前数据库的SQL语句.",
+"data type": "文本型"
+   }
+ata type": "文本型""@禁止流程检查": "真"]
+  },
+  {
+}"method name": "执行SQL语句_二进制",
+}"comment": "执行一条SQL语句,执行成功后可通过\"取记录集\"命令获取记录集.",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "语句内容",
+"comment": "提供所欲查询当前数据库的SQL语句.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+ta type": "文本型""@禁止流程检查": "真""@禁止流程检查": "真""method name": "到下一个记录集",
+ta type": "文本型""@禁止流程检查": "真""@禁止流程检查": "真""comment": "如果当前所执行的查询存在多个记录集,需调用本方法后去获取结果集.",
+ta type": "文本型""@禁止流程检查": "真""@禁止流程检查": "真""result comment": "如果返回0,表示后续还有结果未取完,返回-1表示已取完所有结果.",
+ta type": "文本型""@禁止流程检查": "真""@禁止流程检查": "真""data type": "整数",
+ta type": "文本型""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取记录集",
+
+"comment": "在使用\"执行SQL语句()\"获取一些需要返回数据的查询后,如果查询成功本方法将返回一个有效记录集.",
+
+"data type": "Mysql记录集类",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取临时记录集",
+}"comment": "获取一个临时记录集.\n注意:所返回的记录集实际上没有储存信息,每一行的数据必须通过\"到下一行()\"从服务器上读取后才可获取数据.\n本方法与\"取记录集\"方法相比占用内存更低效率更高,但不支持使用\"到指定行()\"命令.",
+}"data type": "Mysql记录集类",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"@禁止流程检查": "真""method name": "取所有表",
+
+"@禁止流程检查": "真""comment": "返回由当前数据库内的表名称组成的结果集,即等同于执行\"HOW tables [LIKE 通配符]\".",
+
+"@禁止流程检查": "真""result comment": "如果执行成功将返回包含所有表信息的结果集.",
+
+"@禁止流程检查": "真""data type": "Mysql记录集类",
+
+"@禁止流程检查": "真""@禁止流程检查": "真",
+
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "通配符",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+"@禁止流程检查": "真"]
+  },
+  {
+"method name": "取所有库",
+"comment": "返回由服务器上的数据库名称组成的结果集,等同于执行\"SHOW database [LIKE 通配符]\".",
+"result comment": "如果执行成功将返回包含所有库信息的结果集.",
+"data type": "Mysql记录集类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "通配符",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+
+"method name": "取所有线程",
+
+"comment": "返回描述当前服务器线程的结果集,即等同于执行\"SHOW PROCESSLIST\".",
+
+"data type": "Mysql记录集类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取指定表字段",
+
+"comment": "返回指定表中字段名称组成的结果集,等同于执行\"SHOW COLUMNS FROM 表 [LIKE 通配符]\".",
+
+"data type": "Mysql记录集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "表名",
+"comment": "提供所欲获取字段名称集的表.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "通配符",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+"@禁止流程检查": "真""method name": "取影响行数",
+"@禁止流程检查": "真""comment": "获取在执行了指定SQL语句后所影响到的记录数.",
+"@禁止流程检查": "真""data type": "长整数",
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+
+"comment": "返回描述当前服务器线程的结果集,即等同于执行\"SHOW PROCESSLIST\".""method name": "取查询列数",
+
+"comment": "返回描述当前服务器线程的结果集,即等同于执行\"SHOW PROCESSLIST\".""comment": "获取最近一次查询语句所取得的列数.",
+
+"comment": "返回描述当前服务器线程的结果集,即等同于执行\"SHOW PROCESSLIST\".""data type": "整数",
+
+"comment": "返回描述当前服务器线程的结果集,即等同于执行\"SHOW PROCESSLIST\".""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取自增值",
+
+"comment": "获取最近一次由insert或update语句为auto_increment列所生成的自增ID值.",
+
+"data type": "长整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取最近错误码",
+
+"comment": "获取最近一次调用失败的错误码.",
+
+"result comment": "0表示无错误.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+"comment": "获取最近一次调用失败的错误码.""method name": "取最近错误描述",
+"comment": "获取最近一次调用失败的错误码.""comment": "获取最近一次调用失败的错误描述内容.",
+"comment": "获取最近一次调用失败的错误码.""result comment": "如无错误则返回空文本.",
+"comment": "获取最近一次调用失败的错误码.""data type": "文本型",
+"comment": "获取最近一次调用失败的错误码.""@禁止流程检查": "真"
+  },
+  {
+"@禁止流程检查": "真""method name": "取当前SQL状态",
+"@禁止流程检查": "真""comment": "获取包含关于上次错误的SQL_STATE错误代码.",
+"@禁止流程检查": "真""result comment": "返回00000表示无错误.",
+"@禁止流程检查": "真""data type": "文本型",
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+"@禁止流程检查": "真""method name": "取语句告警数目",
+"@禁止流程检查": "真""comment": "获取执行上一次SQL语句期间所生成的告警数目.",
+"@禁止流程检查": "真""data type": "整数",
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取最近查询信息",
+}"comment": "获取最近对数据库执行查询的信息.\n注意:仅会返回对数据库执行insert/update/alter的语句信息,其他情况会返回空文本.",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取当前连接线程ID",
+}"comment": "获取当前用于连接数据库的线程PID.",
+}"result comment": "所返回的线程ID可使用\"停止线程()\"杀死.",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取当前字符集",
+}"comment": "获取当前数据库连接所使用的默认字符集.",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置当前字符集",
+
+"comment": "设置当前数据库连接所使用的默认字符集.",
+
+"result comment": "返回字符集是否设置成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "字符集",
+"comment": "例如:latin1",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"@禁止流程检查": "真""method name": "取字符集信息",
+
+"@禁止流程检查": "真""comment": "获取当前默认字符集的详细信息.",
+
+"@禁止流程检查": "真""data type": "Mysql字符集信息类"
+  },
+  {
+}"method name": "写入调试日志",
+}"comment": "指示服务器将一些调试信息写入日志.\n注意:连接数据库用户必须具有SUPER权限.",
+}"result comment": "返回是否执行成功.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+数据库连接所使用的默认字符集."method name": "刷新",
+数据库连接所使用的默认字符集."comment": "用于刷新表,高速缓冲或复位数据库服务器信息.\n注意:连接数据库用户必须具有RELOAD权限.",
+数据库连接所使用的默认字符集."result comment": "返回是否刷新成功.",
+数据库连接所使用的默认字符集."data type": "逻辑型",
+数据库连接所使用的默认字符集."@禁止流程检查": "真",
+数据库连接所使用的默认字符集."parameters": [
+   {
+"parameter name": "配置位",
+"comment": "请参考\"Mysql刷新配置\"所提供的常量,该参数接受其中单个或多个组合的值.",
+"data type": "整数"
+   }
+数据库连接所使用的默认字符集.]
+  },
+  {
+@禁止流程检查": "真""@禁止流程检查": "真""method name": "关闭线程",
+@禁止流程检查": "真""@禁止流程检查": "真""comment": "杀死指定线程.",
+@禁止流程检查": "真""@禁止流程检查": "真""data type": "逻辑型",
+@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真",
+@禁止流程检查": "真""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "线程ID",
+"data type": "整数"
+   }
+@禁止流程检查": "真""@禁止流程检查": "真"]
+  },
+  {
+禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""method name": "检测连接状态",
+禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "检查与服务器的连接是否正常,如果连接异常断开将会尝试重连.",
+禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""result comment": "返回0表示连接正常.",
+禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""data type": "整数",
+禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""method name": "取服务器信息",
+止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "获取数据库服务器的信息,包括以秒为单位的正常运行时间,以及运行线程的数目,问题数,再加载次数,以及打开的表数目.",
+止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""data type": "文本型",
+止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "获取数据库服务器的信息,包括以秒为单位的正常运行时间,以及运行线程的数目,问题数,再加载次数,以及打开的表数目.""method name": "取服务器版本名",
+流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "获取数据库服务器的信息,包括以秒为单位的正常运行时间,以及运行线程的数目,问题数,再加载次数,以及打开的表数目.""comment": "获取数据库服务器的版本名称.",
+流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "获取数据库服务器的信息,包括以秒为单位的正常运行时间,以及运行线程的数目,问题数,再加载次数,以及打开的表数目.""data type": "文本型",
+流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "获取数据库服务器的信息,包括以秒为单位的正常运行时间,以及运行线程的数目,问题数,再加载次数,以及打开的表数目.""@禁止流程检查": "真"
+  },
+  {
+止流程检查": "真""@禁止流程检查": "真"]"method name": "取服务器版本号",
+止流程检查": "真""@禁止流程检查": "真"]"comment": "获取数据库服务器的版本号.",
+止流程检查": "真""@禁止流程检查": "真"]"data type": "整数",
+止流程检查": "真""@禁止流程检查": "真"]"@禁止流程检查": "真"
+  },
+  {
+
+"data type": "逻辑型""method name": "取主机信息",
+
+"data type": "逻辑型""comment": "获取描述所使用连接类型的文本以及服务器主机名.",
+
+"data type": "逻辑型""data type": "文本型",
+
+"data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取协议版本号",
+}"comment": "获取当前所使用的连接协议版本号.",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+禁止流程检查": "真""@禁止流程检查": "真""comment": "杀死指定线程.""method name": "到Mysql数据",
+禁止流程检查": "真""@禁止流程检查": "真""comment": "杀死指定线程.""comment": "将指定数据转换至Mysql可识别的数据后返回.",
+禁止流程检查": "真""@禁止流程检查": "真""comment": "杀死指定线程.""data type": "字节集类",
+禁止流程检查": "真""@禁止流程检查": "真""comment": "杀死指定线程.""@禁止流程检查": "真",
+禁止流程检查": "真""@禁止流程检查": "真""comment": "杀死指定线程.""parameters": [
+   {
+"parameter name": "欲转换数据",
+"comment": "提供所欲转换数据.",
+"data type": "字节集类"
+   }
+禁止流程检查": "真""@禁止流程检查": "真""comment": "杀死指定线程."]
+  },
+  {
+止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "检查与服务器的连接是否正常,如果连接异常断开将会尝试重连.""method name": "重置当前连接",
+止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "检查与服务器的连接是否正常,如果连接异常断开将会尝试重连.""comment": "重新初始化连接资源.",
+止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "检查与服务器的连接是否正常,如果连接异常断开将会尝试重连.""result comment": "执行成功返回真,否则返回假.",
+止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "检查与服务器的连接是否正常,如果连接异常断开将会尝试重连.""data type": "逻辑型",
+止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真""comment": "检查与服务器的连接是否正常,如果连接异常断开将会尝试重连.""@禁止流程检查": "真"
+  },
+  {
+"method name": "开始提交事务",
+"comment": "提交当前事务.",
+"result comment": "成功返回真,失败返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+comment": "提交当前事务.""method name": "回滚事务",
+comment": "提交当前事务.""comment": "回滚当前事务.",
+comment": "提交当前事务.""result comment": "成功返回真,失败返回假.",
+comment": "提交当前事务.""data type": "逻辑型",
+comment": "提交当前事务.""@禁止流程检查": "真"
+  },
+  {
+流程检查": "真""@禁止流程检查": "真"]"data type": "整数""method name": "关闭",
+流程检查": "真""@禁止流程检查": "真"]"data type": "整数""comment": "关闭当前数据库,释放所占用资源,关闭后当前对象不可用."
+  },
+  {
+一次调用失败的错误描述内容."method name": "转义SQL语句",
+一次调用失败的错误描述内容."comment": "如果所欲执行的SQL语句中包含特殊字符,可使用本方法对该语句进行转义后确保语句安全执行.",
+一次调用失败的错误描述内容."result comment": "成功返回转义后的内容,否则返回空文本.",
+一次调用失败的错误描述内容."data type": "文本型",
+一次调用失败的错误描述内容."@禁止流程检查": "真",
+一次调用失败的错误描述内容."parameters": [
+   {
+"parameter name": "原内容",
+"comment": "提供所欲转义的文本内容.",
+"data type": "文本型"
+   }
+一次调用失败的错误描述内容.]
+  }
+]
+ },
+ {
+"class name": "Mysql记录集类",
+"comment": "本类实例表示一次SQL查询所得到的结果集.\n记录集实际为一个链表结构,移动其行(即\"到下一行\"/\"到指定行\"方法)的索引取出当前值.",
+"@强制依赖": "\"Mysql数据库类\"",
+"methods": [
+  {
+
+"method name": "是否有效",
+
+"comment": "判断该结果集是否为有效结果集.",
+
+"result comment": "返回假则该结果集将无法取出任何内容.",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+@强制依赖": "\"Mysql数据库类\"""method name": "行数",
+@强制依赖": "\"Mysql数据库类\"""comment": "返回该记录集所包含的行数.",
+@强制依赖": "\"Mysql数据库类\"""type": "property getter",
+@强制依赖": "\"Mysql数据库类\"""data type": "长整数",
+@强制依赖": "\"Mysql数据库类\"""@禁止流程检查": "真"
+  },
+  {
+@强制依赖": "\"Mysql数据库类\"""method name": "列数",
+@强制依赖": "\"Mysql数据库类\"""comment": "返回该记录集所包含的列(字段)总数.",
+@强制依赖": "\"Mysql数据库类\"""type": "property getter",
+@强制依赖": "\"Mysql数据库类\"""data type": "整数",
+@强制依赖": "\"Mysql数据库类\"""@禁止流程检查": "真"
+  },
+  {
+"method name": "列长度",
+"comment": "获取当前所处位置列(字段)的长度,为NULL时返回0.",
+"type": "property getter",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+强制依赖": "\"Mysql数据库类\"""type": "property getter""method name": "取字段列表",
+强制依赖": "\"Mysql数据库类\"""type": "property getter""comment": "获取该记录集中所有列信息(即所有字段).",
+强制依赖": "\"Mysql数据库类\"""type": "property getter""result comment": "一个成员对应一个列(字段),其成员数与列数(字段数)对应.",
+强制依赖": "\"Mysql数据库类\"""type": "property getter""data type": "Mysql字段信息数组类"
+  },
+  {
+comment": "提交当前事务.""method name": "取当前行数据",
+comment": "提交当前事务.""comment": "读出当前行的原始数据,包括所有列.\n注意:如果数据为文本,需使用\"多字节到文本()\"转换数据.",
+comment": "提交当前事务.""result comment": "一个成员对应一个列(字段),其成员数与列数(字段数)对应.",
+comment": "提交当前事务.""data type": "字节集数组类"
+  },
+  {
+录集中所有列信息(即所有字段)."method name": "取当前行文本数据",
+录集中所有列信息(即所有字段)."comment": "以文本内容形式读出当前行的数据,包括所有列.",
+录集中所有列信息(即所有字段)."result comment": "一个成员对应一个列(字段),其成员数与列数对应.",
+录集中所有列信息(即所有字段)."data type": "文本数组类"
+  },
+  {
+}"method name": "取当前行整数数据",
+}"comment": "按十进制整数形式读出当前行的数据,包括所有列.",
+}"result comment": "一个成员对应一个列(字段),其成员数与列数对应.",
+}"data type": "整数数组类"
+  },
+  {
+
+"method name": "到下一行",
+
+"comment": "移动到下一行去读数据.",
+
+"result comment": "如果移动成功返回真,否则返回假(通常为无数据).",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "到指定行",
+}"comment": "将当前记录指针移动到指定行,移动后调用\"取当前行XX()\"获取数据.\n注意:使用\"取临时结果集\"所返回的记录集不支持使用.",
+}"result comment": "移动成功返回真,失败返回假.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "行",
+"comment": "提供所欲跳转到的行索引.",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "关闭记录集,释放所占用资源."
+  },
+  {
+
+"method name": "读字节集数据",
+
+"comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.",
+
+"result comment": "返回所读到的数据.",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲读出数据对应的字段名称.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"comment": "移动到下一行去读数据.""method name": "读索引字节集数据",
+"comment": "移动到下一行去读数据.""comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.",
+"comment": "移动到下一行去读数据.""result comment": "返回所读到的数据.",
+"comment": "移动到下一行去读数据.""data type": "字节集类",
+"comment": "移动到下一行去读数据.""@禁止流程检查": "真",
+"comment": "移动到下一行去读数据.""parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲读出数据对应的字段索引位置.",
+"data type": "整数"
+   }
+"comment": "移动到下一行去读数据."]
+  },
+  {
+"method name": "读文本数据",
+"comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.",
+"result comment": "返回所读到的数据.",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲读出数据对应的字段名称.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "读索引文本数据",
+}"comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.",
+}"result comment": "返回所读到的数据.",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲读出数据对应的字段索引位置.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""method name": "读整数数据",
+"comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.",
+"comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""result comment": "返回所读到的数据.",
+"comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""data type": "整数",
+"comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲读出数据对应的字段名称.",
+"data type": "文本型"
+   }
+"comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容."]
+  },
+  {
+comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""result comment": "返回所读到的数据.""method name": "读索引整数数据",
+comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""result comment": "返回所读到的数据.""comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.",
+comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""result comment": "返回所读到的数据.""result comment": "返回所读到的数据.",
+comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""result comment": "返回所读到的数据.""data type": "整数",
+comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""result comment": "返回所读到的数据.""parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲读出数据对应的字段索引位置.",
+"data type": "整数"
+   }
+comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.""result comment": "返回所读到的数据."]
+  },
+  {
+data type": "整数""method name": "读短整数数据",
+data type": "整数""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.",
+data type": "整数""result comment": "返回所读到的数据.",
+data type": "整数""data type": "短整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲读出数据对应的字段名称.",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+ta type": "整数"]"method name": "读索引短整数数据",
+ta type": "整数"]"comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.",
+ta type": "整数"]"result comment": "返回所读到的数据.",
+ta type": "整数"]"data type": "短整数",
+ta type": "整数"]"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲读出数据对应的字段索引位置.",
+"data type": "整数"
+   }
+ta type": "整数"]]
+  },
+  {
+omment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容."]"method name": "读长整数数据",
+omment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容."]"comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.",
+omment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容."]"result comment": "返回所读到的数据.",
+omment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容."]"data type": "长整数",
+omment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容."]"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲读出数据对应的字段名称.",
+"data type": "文本型"
+   }
+omment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容."]]
+  },
+  {
+ata type": "整数""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""method name": "读索引长整数数据",
+ata type": "整数""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.",
+ata type": "整数""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""result comment": "返回所读到的数据.",
+ata type": "整数""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""data type": "长整数",
+ata type": "整数""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲读出数据对应的字段索引位置.",
+"data type": "整数"
+   }
+ata type": "整数""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容."]
+  },
+  {
+
+"method name": "读逻辑型数据",
+
+"comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.",
+
+"result comment": "返回所读到的数据.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲读出数据对应的字段名称.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+读出数据对应的字段名称."method name": "读索引逻辑型数据",
+读出数据对应的字段名称."comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.",
+读出数据对应的字段名称."result comment": "返回所读到的数据.",
+读出数据对应的字段名称."data type": "逻辑型",
+读出数据对应的字段名称."parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲读出数据对应的字段索引位置.",
+"data type": "整数"
+   }
+读出数据对应的字段名称.]
+  },
+  {
+出数据对应的字段名称."data type": "逻辑型""method name": "读字节数据",
+出数据对应的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.",
+出数据对应的字段名称."data type": "逻辑型""result comment": "返回所读到的数据.",
+出数据对应的字段名称."data type": "逻辑型""data type": "字节",
+出数据对应的字段名称."data type": "逻辑型""parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲读出数据对应的字段名称.",
+"data type": "文本型"
+   }
+出数据对应的字段名称."data type": "逻辑型"]
+  },
+  {
+comment": "提供所欲读出数据对应的字段名称.""method name": "读索引字节数据",
+comment": "提供所欲读出数据对应的字段名称.""comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.",
+comment": "提供所欲读出数据对应的字段名称.""result comment": "返回所读到的数据.",
+comment": "提供所欲读出数据对应的字段名称.""data type": "字节",
+comment": "提供所欲读出数据对应的字段名称.""parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲读出数据对应的字段索引位置.",
+"data type": "整数"
+   }
+comment": "提供所欲读出数据对应的字段名称."]
+  },
+  {
+comment": "提供所欲读出数据对应的字段索引位置.""method name": "读字符数据",
+comment": "提供所欲读出数据对应的字段索引位置.""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.",
+comment": "提供所欲读出数据对应的字段索引位置.""result comment": "返回所读到的数据.",
+comment": "提供所欲读出数据对应的字段索引位置.""data type": "字符",
+comment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲读出数据对应的字段名称.",
+"data type": "文本型"
+   }
+comment": "提供所欲读出数据对应的字段索引位置."]
+  },
+  {
+读出数据对应的字段名称."method name": "读索引字符数据",
+读出数据对应的字段名称."comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.",
+读出数据对应的字段名称."result comment": "返回所读到的数据.",
+读出数据对应的字段名称."data type": "字符",
+读出数据对应的字段名称."parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲读出数据对应的字段索引位置.",
+"data type": "整数"
+   }
+读出数据对应的字段名称.]
+  },
+  {
+omment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"method name": "读小数数据",
+omment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.",
+omment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"result comment": "返回所读到的数据.",
+omment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"data type": "小数",
+omment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲读出数据对应的字段名称.",
+"data type": "文本型"
+   }
+omment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+]
+  },
+  {
+ameter name": "字段名""method name": "读索引小数数据",
+ameter name": "字段名""comment": "提供指定字段(列)的索引,读出记录集当前行该字段对应的数据内容.",
+ameter name": "字段名""result comment": "返回所读到的数据.",
+ameter name": "字段名""data type": "小数",
+ameter name": "字段名""parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲读出数据对应的字段索引位置.",
+"data type": "整数"
+   }
+ameter name": "字段名"]
+  }
+]
+ },
+ {
+"class name": "Mysql连接配置",
+"comment": "提供Mysql连接时所欲启用的(多个)功能.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "启用压缩协议",
+
+"comment": "使用压缩协议.",
+
+"initial value": "@CLIENT_COMPRESS"
+  },
+  {
+onstant name": "启用压缩协议""constant name": "返回发现行数",
+onstant name": "启用压缩协议""comment": "返回发现的行数(匹配的),而不是受影响的行数.",
+onstant name": "启用压缩协议""initial value": "@CLIENT_FOUND_ROWS"
+  },
+  {
+data type": "整数""constant name": "允许函数空格",
+data type": "整数""comment": "允许在函数名后使用空格,使所有的函数名成为保留字.",
+data type": "整数""initial value": "@CLIENT_IGNORE_SPACE"
+  },
+  {
+data type": "整数""constant name": "当前为ODBC",
+data type": "整数""comment": "表明当前客户端为ODBC客户端.",
+data type": "整数""initial value": "@CLIENT_ODBC"
+  },
+  {
+mment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "交互超时处理",
+mment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""initial value": "@CLIENT_INTERACTIVE"
+  },
+  {
+ }"constant name": "加载本地数据",
+ }"comment": "允许加载本地数据功能.",
+ }"initial value": "@CLIENT_LOCAL_FILES"
+  },
+  {
+
+"constant name": "多语句支持",
+
+"comment": "通知服务器,客户端可能在单个字符串内发送多条语句(由分号';'隔开),如果未设置该标志,将禁止多语句执行.",
+
+"initial value": "@CLIENT_MULTI_STATEMENTS"
+  },
+  {
+ata type": "整数""initial value": "@CLIENT_ODBC""constant name": "多结果集支持",
+ata type": "整数""initial value": "@CLIENT_ODBC""comment": "通知服务器,客户端能够处理来自多语句执行或存储程序的多个结果集.",
+ata type": "整数""initial value": "@CLIENT_ODBC""initial value": "@CLIENT_MULTI_RESULTS"
+  },
+  {
+
+"constant name": "禁用SCHEMA",
+
+"comment": "禁止db_name.tbl_name.col_name语法,仅适用于ODBC.",
+
+"initial value": "@CLIENT_NO_SCHEMA"
+  },
+  {
+客户端为ODBC客户端."constant name": "加密协议支持",
+客户端为ODBC客户端."comment": "使用SSL(加密协议).",
+客户端为ODBC客户端."initial value": "@CLIENT_SSL"
+  },
+  {
+"constant name": "超长密码",
+"comment": "支持新的安全密码.",
+"initial value": "@CLIENT_LONG_PASSWORD"
+  },
+  {
+
+"constant name": "忽略信号管",
+
+"initial value": "@CLIENT_IGNORE_SIGPIPE"
+  }
+]
+ },
+ {
+"class name": "Mysql刷新配置",
+"comment": "提供刷新Mysql的可选(多个)功能.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+"comment": "禁止db_name.tbl_name.col_name语法,仅适用于ODBC.""constant name": "刷新授权表",
+"comment": "禁止db_name.tbl_name.col_name语法,仅适用于ODBC.""data type": "整数",
+"comment": "禁止db_name.tbl_name.col_name语法,仅适用于ODBC.""initial value": "@REFRESH_GRANT"
+  },
+  {
+"comment": "禁止db_name.tbl_name.col_name语法,仅适用于ODBC.""constant name": "刷新日志",
+"comment": "禁止db_name.tbl_name.col_name语法,仅适用于ODBC.""data type": "整数",
+"comment": "禁止db_name.tbl_name.col_name语法,仅适用于ODBC.""initial value": "@REFRESH_LOG"
+  },
+  {
+"initial value": "@CLIENT_MULTI_STATEMENTS""constant name": "刷新表",
+"initial value": "@CLIENT_MULTI_STATEMENTS""data type": "整数",
+"initial value": "@CLIENT_MULTI_STATEMENTS""initial value": "@REFRESH_TABLES"
+  },
+  {
+}"comment": "允许加载本地数据功能.""constant name": "刷新主机",
+}"comment": "允许加载本地数据功能.""data type": "整数",
+}"comment": "允许加载本地数据功能.""initial value": "@REFRESH_HOSTS"
+  },
+  {
+}"constant name": "刷新复位状态",
+}"data type": "整数",
+}"initial value": "@REFRESH_STATUS"
+  },
+  {
+"data type": "整数""constant name": "刷新线程",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@REFRESH_THREADS"
+  },
+  {
+ant name": "启用压缩协议""constant name": "返回发现行数""constant name": "复位并重启",
+ant name": "启用压缩协议""constant name": "返回发现行数""comment": "在从复制服务器上,复位主服务器信息,并重新启动从服务器.",
+ant name": "启用压缩协议""constant name": "返回发现行数""data type": "整数",
+ant name": "启用压缩协议""constant name": "返回发现行数""initial value": "@REFRESH_SLAVE"
+  },
+  {
+initial value": "@CLIENT_MULTI_STATEMENTS""data type": "整数""constant name": "删除二进制日志",
+initial value": "@CLIENT_MULTI_STATEMENTS""data type": "整数""comment": "在主复制服务器上,删除二进制日志索引中列出的二进制日志文件,并截断索引文件.",
+initial value": "@CLIENT_MULTI_STATEMENTS""data type": "整数""data type": "整数",
+initial value": "@CLIENT_MULTI_STATEMENTS""data type": "整数""initial value": "@REFRESH_MASTER"
+  },
+  {
+}"constant name": "刷新错误日志",
+}"comment": "仅刷新错误的日志.",
+}"data type": "整数",
+}"initial value": "@REFRESH_ERROR_LOG"
+  },
+  {
+"initial value": "@CLIENT_MULTI_STATEMENTS""constant name": "刷新引擎日志",
+"initial value": "@CLIENT_MULTI_STATEMENTS""comment": "刷新所有储存引擎的日志.",
+"initial value": "@CLIENT_MULTI_STATEMENTS""data type": "整数",
+"initial value": "@CLIENT_MULTI_STATEMENTS""initial value": "@REFRESH_ENGINE_LOG"
+  },
+  {
+"comment": "仅刷新错误的日志.""constant name": "刷新二进制日志",
+"comment": "仅刷新错误的日志.""data type": "整数",
+"comment": "仅刷新错误的日志.""initial value": "@REFRESH_BINARY_LOG"
+  },
+  {
+数据对应的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "刷新中继日志",
+数据对应的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""data type": "整数",
+数据对应的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""initial value": "@REFRESH_RELAY_LOG"
+  },
+  {
+ment": "仅刷新错误的日志.""constant name": "刷新二进制日志""constant name": "刷新常规日志",
+ment": "仅刷新错误的日志.""constant name": "刷新二进制日志""data type": "整数",
+ment": "仅刷新错误的日志.""constant name": "刷新二进制日志""initial value": "@REFRESH_GENERAL_LOG"
+  },
+  {
+mment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"parameters": [
+"constant name": "刷新慢查询日志",
+mment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"parameters": [
+"data type": "整数",
+mment": "提供所欲读出数据对应的字段索引位置.""parameters": [
+"parameters": [
+"initial value": "@REFRESH_SLOW_LOG"
+  }
+]
+ },
+ {
+"class name": "Mysql字符集信息类",
+"comment": "本类实例表示Mysql的字符集信息.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""variable name": "序号",
+@文档": "\"category = \\\"辅助类\\\"\"""data type": "整数"
+  },
+  {
+文档": "\"category = \\\"辅助类\\\"\"""data type": "整数""variable name": "状态",
+文档": "\"category = \\\"辅助类\\\"\"""data type": "整数""data type": "整数"
+  },
+  {
+ "\"category = \\\"辅助类\\\"\"""data type": "整数""variable name": "状态""variable name": "排序名",
+ "\"category = \\\"辅助类\\\"\"""data type": "整数""variable name": "状态""data type": "文本型"
+  },
+  {
+data type": "整数""data type": "整数""variable name": "字符集",
+data type": "整数""data type": "整数""data type": "文本型"
+  },
+  {
+}"variable name": "注释",
+}"data type": "文本型"
+  },
+  {
+
+"variable name": "字符集目录",
+
+"data type": "文本型"
+  },
+  {
+}"variable name": "多字节最小长度",
+}"data type": "整数"
+  },
+  {
+}"variable name": "多字节最大长度",
+}"data type": "整数"
+  }
+]
+ },
+ {
+"class name": "Mysql协议类型",
+"comment": "定义Mysql协议类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "默认",
+
+"initial value": "0"
+  },
+  {
+}"constant name": "TCP协议",
+}"initial value": "1"
+  },
+  {
+数据对应的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议",
+数据对应的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""initial value": "2"
+  },
+  {
+}"constant name": "PIPE协议",
+}"initial value": "3"
+  },
+  {
+
+"constant name": "内存协议",
+
+"initial value": "4"
+  }
+]
+ },
+ {
+"class name": "Mysql字段信息类",
+"comment": "本类实例表示数据表中的一个字段对象.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+}"variable name": "类型",
+}"comment": "该字段的具体类型.",
+}"data type": "Mysql字段类型"
+  },
+  {
+}"variable name": "名称",
+}"comment": "该字段的名称文本.",
+}"data type": "文本型"
+  },
+  {
+
+"variable name": "原始名称",
+
+"comment": "如果名称有别名,该属性可取出其原始名称.",
+
+"data type": "文本型"
+  },
+  {
+的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议""variable name": "表名",
+的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议""comment": "返回所处的表名称.",
+的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议""data type": "文本型"
+  },
+  {
+的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议""variable name": "原始表名",
+的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议""comment": "返回所处原始表名称.",
+的字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议""data type": "文本型"
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""variable name": "库名",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.",
+@文档": "\"category = \\\"辅助类\\\"\"""data type": "文本型"
+  },
+  {
+文档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.""variable name": "目录名",
+文档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.""comment": "返回所处表目录名称.",
+文档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.""data type": "文本型"
+  },
+  {
+
+"variable name": "默认值",
+
+"comment": "返回该字段预设的默认值.",
+
+"data type": "字节集类"
+  },
+  {
+}"variable name": "长度",
+}"comment": "返回该字段定义的长度.",
+}"data type": "整数"
+  },
+  {
+字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议""comment": "返回所处的表名称.""variable name": "最大长度",
+字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议""comment": "返回所处的表名称.""comment": "返回该字段的最大长度.",
+字段名称."data type": "逻辑型""comment": "提供指定字段(列)名称,读出记录集当前行该字段对应的数据内容.""constant name": "SOCKET协议""comment": "返回所处的表名称.""data type": "整数"
+  },
+  {
+"comment": "如果名称有别名,该属性可取出其原始名称.""variable name": "DIV标志位",
+"comment": "如果名称有别名,该属性可取出其原始名称.""data type": "整数"
+  },
+  {
+riable name": "默认值""variable name": "小数位数",
+riable name": "默认值""comment": "字段中小数的位数.",
+riable name": "默认值""data type": "整数"
+  },
+  {
+
+"variable name": "字符集索引",
+
+"comment": "该字段的字符集类型.",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "扩展内容",
+
+"data type": "变整数"
+  }
+]
+ },
+ {
+"class name": "Mysql字段类型",
+"comment": "表示一个字段的类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+}"constant name": "未压缩浮点数型",
+}"initial value": "@MYSQL_TYPE_DECIMAL"
+  },
+  {
+档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.""comment": "返回所处表目录名称.""constant name": "短整型",
+档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.""comment": "返回所处表目录名称.""initial value": "@MYSQL_TYPE_TINY"
+  },
+  {
+
+"constant name": "短整数型",
+
+"initial value": "@MYSQL_TYPE_SHORT"
+  },
+  {
+"initial value": "@MYSQL_TYPE_SHORT""constant name": "整数型",
+"initial value": "@MYSQL_TYPE_SHORT""initial value": "@MYSQL_TYPE_LONG"
+  },
+  {
+"constant name": "浮点型",
+"initial value": "@MYSQL_TYPE_FLOAT"
+  },
+  {
+}"constant name": "双精度浮点型",
+}"initial value": "@MYSQL_TYPE_DOUBLE"
+  },
+  {
+"constant name": "空值",
+"initial value": "@MYSQL_TYPE_NULL"
+  },
+  {
+QL_TYPE_DOUBLE"constant name": "时间戳型",
+QL_TYPE_DOUBLE"initial value": "@MYSQL_TYPE_TIMESTAMP"
+  },
+  {
+档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.""comment": "返回所处表目录名称.""constant name": "长整数型",
+档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.""comment": "返回所处表目录名称.""initial value": "@MYSQL_TYPE_LONGLONG"
+  },
+  {
+
+"constant name": "整数型_24位",
+
+"initial value": "@MYSQL_TYPE_INT24"
+  },
+  {
+"constant name": "日期型",
+"initial value": "@MYSQL_TYPE_DATE"
+  },
+  {
+
+"constant name": "时间型",
+
+"initial value": "@MYSQL_TYPE_TIME"
+  },
+  {
+
+"constant name": "日期时间型",
+
+"initial value": "@MYSQL_TYPE_DATETIME"
+  },
+  {
+QL_TYPE_LONGLONG"constant name": "年份型",
+QL_TYPE_LONGLONG"initial value": "@MYSQL_TYPE_YEAR"
+  },
+  {
+}"constant name": "新日期型",
+}"initial value": "@MYSQL_TYPE_NEWDATE"
+  },
+  {
+L_TYPE_LONGLONG"initial value": "@MYSQL_TYPE_YEAR""constant name": "变长字节型",
+L_TYPE_LONGLONG"initial value": "@MYSQL_TYPE_YEAR""initial value": "@MYSQL_TYPE_VARCHAR"
+  },
+  {
+}"constant name": "比特型",
+}"initial value": "@MYSQL_TYPE_BIT"
+  },
+  {
+
+"constant name": "时间戳型_2",
+
+"initial value": "@MYSQL_TYPE_TIMESTAMP2"
+  },
+  {
+
+"constant name": "日期时间型_2",
+
+"initial value": "@MYSQL_TYPE_DATETIME2"
+  },
+  {
+档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.""comment": "返回所处表目录名称.""constant name": "时间型_2",
+档": "\"category = \\\"辅助类\\\"\"""comment": "返回该字段所处的库名称.""comment": "返回所处表目录名称.""initial value": "@MYSQL_TYPE_TIME2"
+  },
+  {
+
+"constant name": "JSON型",
+
+"initial value": "@MYSQL_TYPE_JSON"
+  },
+  {
+"initial value": "@MYSQL_TYPE_JSON""constant name": "新未压缩浮点数型",
+"initial value": "@MYSQL_TYPE_JSON""initial value": "@MYSQL_TYPE_NEWDECIMAL"
+  },
+  {
+nstant name": "比特型""constant name": "枚举型",
+nstant name": "比特型""initial value": "@MYSQL_TYPE_ENUM"
+  },
+  {
+QL_TYPE_LONG"constant name": "集合型",
+QL_TYPE_LONG"initial value": "@MYSQL_TYPE_SET"
+  },
+  {
+QL_TYPE_ENUM"constant name": "字节型",
+QL_TYPE_ENUM"initial value": "@MYSQL_TYPE_BLOB"
+  },
+  {
+QL_TYPE_NEWDATE"constant name": "短字节型",
+QL_TYPE_NEWDATE"initial value": "@MYSQL_TYPE_TINY_BLOB"
+  },
+  {
+L_TYPE_ENUM"initial value": "@MYSQL_TYPE_BLOB""constant name": "长字节型",
+L_TYPE_ENUM"initial value": "@MYSQL_TYPE_BLOB""initial value": "@MYSQL_TYPE_MEDIUM_BLOB"
+  },
+  {
+L_TYPE_NEWDATE"initial value": "@MYSQL_TYPE_TINY_BLOB""constant name": "巨字节型",
+L_TYPE_NEWDATE"initial value": "@MYSQL_TYPE_TINY_BLOB""initial value": "@MYSQL_TYPE_LONG_BLOB"
+  },
+  {
+
+"constant name": "变长文本型",
+
+"initial value": "@MYSQL_TYPE_VAR_STRING"
+  },
+  {
+QL_TYPE_NEWDATE"constant name": "文本类型",
+QL_TYPE_NEWDATE"initial value": "@MYSQL_TYPE_STRING"
+  },
+  {
+
+"constant name": "几何型",
+
+"initial value": "@MYSQL_TYPE_GEOMETRY"
+  }
+]
+ },
+ {
+"class name": "Mysql字段信息数组类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"Mysql字段信息类\""
+ },
+ {
+"class name": "Mysql连接池类",
+"comment": "提供一个线程安全的Mysql连接池.",
+"methods": [
+  {
+"initial value": "@MYSQL_TYPE_BIT""method name": "初始化",
+"initial value": "@MYSQL_TYPE_BIT""comment": "初始化Mysql连接池并连接至指定Mysql服务器",
+"initial value": "@MYSQL_TYPE_BIT""result comment": "返回该连接池中所创建成功的连接数",
+"initial value": "@MYSQL_TYPE_BIT""data type": "整数",
+"initial value": "@MYSQL_TYPE_BIT""@嵌入式方法": "\"\"",
+"initial value": "@MYSQL_TYPE_BIT""parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供所欲连接数据库的地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供所欲连接数据库的用户名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲连接数据库的连接密码.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据库名",
+"comment": "提供所欲连接数据库的名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"comment": "提供所欲连接数据库的端口.",
+"data type": "整数",
+"@默认值": "3306"
+   },
+   {
+"parameter name": "套接字",
+"comment": "该字符串描述了应使用的套接字或命名管道.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "配置位",
+"comment": "请参考\"Mysql连接配置\"所提供的常量,该参数接受其中单个或多个组合的值.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大连接数",
+"comment": "连接池中所能创建的最大连接数量.",
+"data type": "整数",
+"@默认值": "50"
+   },
+   {
+"parameter name": "初始连接数",
+"comment": "初始化时所欲创建的可用连接数.",
+"data type": "整数",
+"@默认值": "10"
+   }
+"initial value": "@MYSQL_TYPE_BIT"]
+  },
+  {
+@默认值": "0""method name": "取连接",
+@默认值": "0""comment": "  从Mysql连接池中取出一个可用的连接. 成功返回真,失败返回假.\n  如果当前连接池中暂无可用连接,将会新建一个连接,如果已达到最大连接数限制时将会等待指定时长,\n超时后将会返回假.\n  注意:取出的连接使用完毕后务必调用\"释放连接\"方法,否则所取出的连接将一直处于占用状态.",
+@默认值": "0""result comment": "返回本次获取的连接是否有效.",
+@默认值": "0""data type": "逻辑型",
+@默认值": "0""@嵌入式方法": "\"\"",
+@默认值": "0""parameters": [
+   {
+"parameter name": "结果连接",
+"comment": "如果本方法成功,则所获得连接将填入此结果变量中.",
+"data type": "Mysql数据库类"
+   },
+   {
+"parameter name": "繁忙等待时间",
+"comment": "指定在所有连接都已用尽时所欲等待的时长,提供-1表示无限等待,0表示不等待.单位:毫秒.",
+"data type": "整数",
+"@默认值": "10000"
+   }
+@默认值": "0"]
+  },
+  {
+YPE_NEWDATE"constant name": "短字节型""method name": "释放连接",
+YPE_NEWDATE"constant name": "短字节型""comment": "释放从连接池中所取出的连接对象,使其在连接池中恢复空闲状态等待被获取.\n注意:取出的连接使用完毕后务必调用本方法释放,否则所取出的连接将一直处于占用状态.",
+YPE_NEWDATE"constant name": "短字节型""@嵌入式方法": "\"\"",
+YPE_NEWDATE"constant name": "短字节型""parameters": [
+   {
+"parameter name": "连接对象",
+"comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.",
+"data type": "Mysql数据库类"
+   }
+YPE_NEWDATE"constant name": "短字节型"]
+  },
+  {
+data type": "Mysql数据库类""method name": "释放所有连接",
+data type": "Mysql数据库类""comment": "释放连接池中所有的连接对象,使其在连接池中恢复空闲状态等待被获取.\n调用本方法时必须确认所有连接目前不再使用.",
+data type": "Mysql数据库类""@嵌入式方法": "\"\""
+  },
+  {
+认值": "0"]"method name": "销毁连接",
+认值": "0"]"comment": "销毁连接池中的指定连接,该连接将会从连接池中被移除并断开释放.",
+认值": "0"]"@嵌入式方法": "\"\"",
+认值": "0"]"parameters": [
+   {
+"parameter name": "连接对象",
+"comment": "提供所欲销毁的连接对象,必须确认此连接不再使用.",
+"data type": "Mysql数据库类"
+   }
+认值": "0"]]
+  },
+  {
+data type": "Mysql数据库类""method name": "创建连接",
+data type": "Mysql数据库类""comment": "在该连接池中新建一个连接,返回创建的结果.",
+data type": "Mysql数据库类""result comment": "如果当前连接池中连接已达最大连接数将会返回失败.",
+data type": "Mysql数据库类""data type": "逻辑型",
+data type": "Mysql数据库类""@嵌入式方法": "\"\""
+  },
+  {
+ type": "Mysql数据库类""method name": "释放所有连接""method name": "取空闲连接数",
+ type": "Mysql数据库类""method name": "释放所有连接""comment": "获取当前连接池中空闲的可用连接数.",
+ type": "Mysql数据库类""method name": "释放所有连接""data type": "整数",
+ type": "Mysql数据库类""method name": "释放所有连接""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置字符集",
+
+"comment": "设置该连接池中所有连接所欲使用的默认字符集,支持在\"初始化\"方法之前调用.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "字符集",
+"comment": "提供所欲使用的字符集.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "执行SQL语句",
+"comment": "使用连接池当前空闲的连接执行一条SQL语句",
+"result comment": "执行成功返回真,否则返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "语句内容",
+"comment": "提供所欲查询当前数据库的SQL语句.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "繁忙等待时间",
+"comment": "指定在所有连接都已用尽时所欲等待的时长,提供-1表示无限等待,0表示不等待.单位:毫秒.",
+"data type": "整数",
+"@默认值": "10000"
+   }
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"Mysql客户端".]
+}

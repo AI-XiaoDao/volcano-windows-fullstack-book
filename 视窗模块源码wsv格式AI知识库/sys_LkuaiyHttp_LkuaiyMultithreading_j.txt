@@ -1,0 +1,278 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".
+
+{
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."package name": "LkuaiyHttp.com",
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."classes": [
+ {
+"class name": "线程_线程时钟",
+"variables": [
+  {
+賰敹ŝ"variable name": "标记文本",
+賰敹ŝ"data type": "文本型"
+  },
+  {
+variable name": "标记文本""variable name": "是否正在任务",
+variable name": "标记文本""data type": "逻辑型"
+  }
+],
+"methods": [
+  {
+able name": "标记文本""variable name": "是否正在任务""method name": "时钟事件",
+able name": "标记文本""variable name": "是否正在任务""type": "event",
+able name": "标记文本""variable name": "是否正在任务""data type": "整数"
+  },
+  {
+ble name": "标记文本""variable name": "是否正在任务""type": "event""method name": "启动时钟",
+ble name": "标记文本""variable name": "是否正在任务""type": "event""comment": "如果已经启动了时钟，则多次使用本命令会直接无效处理",
+ble name": "标记文本""variable name": "是否正在任务""type": "event""parameters": [
+   {
+"parameter name": "时间",
+"comment": "毫秒",
+"data type": "整数"
+   }
+ble name": "标记文本""variable name": "是否正在任务""type": "event"]
+  },
+  {
+ }"method name": "结束时钟"
+  }
+]
+ },
+ {
+"class name": "线程_线程类",
+"base class": "参考对象类",
+"variables": [
+  {
+"variable name": "线程数据",
+"data type": "长整数"
+  }
+],
+"methods": [
+  {
+"method name": "创建线程",
+"comment": "启动本对象中的线程,开始执行其\"线程运行\"事件的处理方法.\n如果线程当前正在运行,将会直接返回真.",
+"result comment": "成功返回真,失败返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "线程传参",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+data type": "变整数""method name": "是否正在运行",
+data type": "变整数""comment": "返回本对象中的线程是否处于正在运行状态",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@嵌入式方法": "\"\""
+  },
+  {
+@默认值": "0""method name": "停止",
+@默认值": "0""comment": "  本方法只能在本对象中线程以外的线程(譬如主线程)中执行,用作通知并等待本对象的对\n应\"线程运行\"事件处理方法执行完毕退出.\n  为了支持本方法,本对象的对应\"线程运行\"事件处理方法中必须尽可能快地频繁调用本对\n象的\"是否需要退出\"方法,一旦发现该方法返回真,则需要尽快结束执行并返回,否则本方法\n将进入死等状态.",
+@默认值": "0""@嵌入式方法": "\"\""
+  },
+  {
+默认值": "0""@嵌入式方法": "\"\"""method name": "通知停止",
+默认值": "0""@嵌入式方法": "\"\"""comment": "  本方法只能在本对象中线程以外的线程(譬如主线程)中执行,用作通知本对象的对应\n\"线程运行\"事件处理方法执行完毕退出.\n  本方法与\"停止\"方法不同之处在于,本方法仅仅发出退出通知而不会一直等待其退出.",
+默认值": "0""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否需要退出",
+}"comment": "  本方法只能在本对象的线程(即对应\"线程运行\"事件处理方法)中执行,一旦\n发现本方法返回真,必须尽快结束\"线程运行\"事件处理方法的执行并返回,否\n则将导致另一线程中的\"停止\"方法调用进入死等状态.",
+}"result comment": "返回线程是否需要尽快退出",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "最大检查等待时间",
+"comment": "  指定检查线程退出通知(由\"停止\"或\"通知停止\"方法发出)的最大等待\n时间(单位毫秒),为0表示不等待,为-1表示一直等待.",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "工作函数",
+
+"comment": "  用户需要接收并处理本事件以执行所需要的功能,该事件处理方法将在一个单独的线程中运行.\n  注意: 在本事件的接收处理方法中,必须尽可能快地频繁调用本对象的\"是否需要退出\"方法,\n一旦发现该方法返回真,则需要尽快结束执行并返回,否则将导致另一线程中的\"停止\"方法调用\n进入死等状态.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "线程参数",
+"data type": "变整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "内部_线程指针",
+"variables": [
+  {
+"variable name": "传递原始句柄",
+"data type": "变整数"
+  },
+  {
+
+"variable name": "this_",
+
+"data type": "变整数"
+  }
+]
+ },
+ {
+"class name": "线程池_线程类",
+"@强制依赖": "\"HPSocket类\"",
+"methods": [
+  {
+methods": [
+"method name": "启动状态",
+methods": [
+"comment": "检查当前线程池是否已经启动.",
+methods": [
+"type": "property getter",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+ata type": "变整数""data type": "逻辑型""method name": "运行状态",
+ata type": "变整数""data type": "逻辑型""comment": "检查当前线程池当前的运行状态.",
+ata type": "变整数""data type": "逻辑型""type": "property getter",
+ata type": "变整数""data type": "逻辑型""data type": "HP状态",
+ata type": "变整数""data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "任务等待数量",
+
+"comment": "检查当前线程池中处于等待队列中的任务数量.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "正在执行数量",
+
+"comment": "检查当前线程池中处于执行中的任务数量.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "检查当前线程池中处于执行中的任务数量.""method name": "工作线程数量",
+"comment": "检查当前线程池中处于执行中的任务数量.""comment": "检查当前线程池的工作线程数量.",
+"comment": "检查当前线程池中处于执行中的任务数量.""type": "property getter",
+"comment": "检查当前线程池中处于执行中的任务数量.""data type": "整数",
+"comment": "检查当前线程池中处于执行中的任务数量.""@嵌入式方法": "\"\""
+  },
+  {
+"data type": "整数""method name": "队列最大容量",
+"data type": "整数""comment": "检查当前线程池的任务队列最大容量.",
+"data type": "整数""type": "property getter",
+"data type": "整数""data type": "整数",
+"data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+"data type": "整数""method name": "任务拒绝策略",
+"data type": "整数""comment": "检查当前线程池所使用的任务拒绝策略.",
+"data type": "整数""type": "property getter",
+"data type": "整数""data type": "HP线程任务拒绝策略",
+"data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "创建",
+
+"comment": "启动线程池组件并设定线程池运行参数.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "线程数量",
+"comment": "默认为0,即(CPU核数 * 2 + 2).",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁线程池",
+
+"comment": "关闭线程池组件,在线程池不再使用之后可以调用本方法进行关闭.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "等待时间",
+"comment": "单位:毫秒,默认-1即无限等待.如果在此等待时间内未能正常关闭,此时会尝试强制关闭.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+ }"method name": "等待",
+ }"comment": "等待线程池组件停止运行.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "超时时间",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "投递任务",
+ }"comment": "提交新任务至当前线程池组件中等待执行,注意使用本方法提交的线程将不会触发\"任务启动\"事件.\n",
+ }"result comment": "返回任务是否提交成功.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "线程传参",
+"comment": "注意：最好是某个变量或者某个数据的句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+]"method name": "线程池回调函数",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "线程传参",
+"data type": "变整数"
+   }
+]]
+  }
+]
+ }
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".]
+}

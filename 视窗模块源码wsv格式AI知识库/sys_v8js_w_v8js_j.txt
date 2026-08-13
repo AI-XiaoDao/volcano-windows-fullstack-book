@@ -1,0 +1,250 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"JavaScript脚本支持".
+
+{
+问本程序中的接口需要引用模块"JavaScript脚本支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"JavaScript脚本支持"."package name": "火山.视窗.NodeJS",
+问本程序中的接口需要引用模块"JavaScript脚本支持"."@视窗.外部头文件": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\NodeV8\\\\1\\\\NodeJsTool.h\"",
+问本程序中的接口需要引用模块"JavaScript脚本支持"."@视窗.外部库.win32": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\NodeV8\\\\1\\\\win32\\\\NodeJsToolx86.lib\"",
+问本程序中的接口需要引用模块"JavaScript脚本支持"."@视窗.外部库.x64": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\NodeV8\\\\1\\\\x64\\\\NodeJsToolx64.lib\"",
+问本程序中的接口需要引用模块"JavaScript脚本支持"."@视窗.附属文件.win32": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\NodeV8\\\\1\\\\win32\\\\NodeJsToolx86.dll\"",
+问本程序中的接口需要引用模块"JavaScript脚本支持"."@视窗.附属文件.x64": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\NodeV8\\\\1\\\\x64\\\\NodeJsToolx64.dll\"",
+问本程序中的接口需要引用模块"JavaScript脚本支持"."@视窗.预定义宏": "\"NODE_DLL\"",
+问本程序中的接口需要引用模块"JavaScript脚本支持"."classes": [
+ {
+"class name": "JS平台类",
+"comment": "用作创建JS引擎",
+"base class": "参考对象类",
+"methods": [
+  {
+base class": "参考对象类""method name": "是否已初始化",
+base class": "参考对象类""comment": "返回JS平台当前是否已经成功初始化.\n定义本类的对象实例时将自动初始化JS平台.",
+base class": "参考对象类""static": true,
+base class": "参考对象类""data type": "逻辑型",
+base class": "参考对象类""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取JS平台版本",
+
+"static": true,
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "创建JS引擎",
+
+"comment": "创建JS引擎对象,该对象在不使用后会自动销毁.",
+
+"result comment": "如果平台尚未初始化,将返回为空的JS引擎对象.",
+
+"data type": "JS引擎类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "执行JS脚本",
+
+"comment": "本方法可快捷执行JS脚本,自动创建JS引擎,执行JS后自动销毁引擎.",
+
+"result comment": "返回执行结果,失败将返回空文本(注意正常执行也可能返回空文本).",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "要执行的脚本",
+"comment": "提供要执行的JS脚本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "JS注册火山方法",
+
+"comment": "  将JS方法和火山方法绑定,实现JS方法调用火山方法.\n  本方法必须在\"创建JS隔离空间\"方法前调用,并且想要成功使用,\n必须使用\"执行JS隔离脚本\"方法来执行脚本.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "方法名称",
+"comment": "提供方法名称,需要和JS脚本中的一致.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回调方法",
+"comment": "提供所对应的回调方法",
+"@匹配方法": "\"JS模板方法\""
+   }
+
+]
+  },
+  {
+
+"method name": "JS取参数数量",
+
+"comment": "取JS脚本方法参数数量",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "参数句柄",
+"comment": " 在使用JS回调火山方法时,所需要调用的火山方法必须提供一个类型为\"变整数\"的参数.\n 本参数填写的就是这个变整数参数.",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "JS取参数",
+
+"comment": "获取JS脚本方法的参数",
+
+"result comment": "返回参数内容",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "参数句柄",
+"comment": "在使用JS回调火山方法时,所需要调用的火山方法必须提供一个类型为\"变整数\"的参数.\n本参数填写的就是这个变整数参数.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数索引",
+"comment": "提供参数索引,从0开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "JS置返回值",
+
+"comment": "本方法可将结果返回给JS脚本.",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "参数句柄",
+"comment": "在使用JS回调火山方法时,所需要调用的火山方法必须提供一个类型为\"变整数\"的参数.\n本参数填写的就是这个变整数参数.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "返回值文本",
+"comment": "提供要返回的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "JS模板方法",
+
+"comment": "用作提供用户所提供的类静态方法的格式模板",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "参数句柄",
+"data type": "变整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "JS引擎类",
+"comment": "本类对象必须通过JS平台类的创建才能正常使用",
+"base class": "参考对象类",
+"methods": [
+  {
+
+"method name": "是否为空",
+
+"comment": "返回本对象的内容是否为空",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "执行JS",
+
+"comment": "执行一次JS脚本,执行后的脚本不会进行保留.\n例如：先运行了 function add(a,b){return a+b;},之后再执行脚本 add(1,3) 这个就会报错.\n因为上次执行的脚本不会进行保留,每次执行都是唯一的.",
+
+"result comment": "返回执行结果",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "要运行的脚本",
+"comment": "提供要运行的JS代码",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "创建JS隔离空间",
+
+"comment": "  创建隔离空间后,执行JS脚本的结果可以进行保留.\n  只要在同一个隔离空间内,执行了function add(ab){ return a+b;},之后合适的时机\n再调用\"执行JS隔离脚本\"执行脚本add(1+3); 此时是成立的,不会报错.",
+
+"result comment": "返回所创建的隔离空间对象,该对象在不使用后会自动销毁.",
+
+"data type": "JS隔离空间类",
+
+"@禁止流程检查": "真"
+  }
+]
+ },
+ {
+"class name": "JS隔离空间类",
+"comment": "本类对象必须通过JS引擎类的创建才能正常使用",
+"base class": "参考对象类",
+"methods": [
+  {
+
+"method name": "是否为空",
+
+"comment": "返回本对象的内容是否为空",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "执行JS隔离脚本",
+}"result comment": "返回执行结果",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "要运行的脚本",
+"comment": "提供要运行的JS代码",
+"data type": "文本型"
+   }
+}]
+  }
+]
+ }
+问本程序中的接口需要引用模块"JavaScript脚本支持".]
+}

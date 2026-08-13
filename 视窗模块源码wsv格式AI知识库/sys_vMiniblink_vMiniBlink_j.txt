@@ -1,0 +1,3765 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MiniBlink浏览器".
+
+{
+516"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+516"package name": "火山.MiniBlink浏览器",
+516"@视窗.附属文件.x64": "\"lib\\\\x64\\\\node.dll\"",
+516"@视窗.附属文件.win32": "\"lib\\\\win32\\\\node.dll\"",
+516"@视窗.头文件搜寻目录": "\"lib\"",
+516"classes": [
+ {
+ = @"@wkeMenuItemId::kWkeMenuCutId" 注释 = "剪切""class name": "MB浏览器",
+ = @"@wkeMenuItemId::kWkeMenuCutId" 注释 = "剪切""comment": "MiniBlink核心API事件化封装",
+ = @"@wkeMenuItemId::kWkeMenuCutId" 注释 = "剪切""@视窗.外部头文件": "\"lib\\\\vol_miniblink.h\"",
+ = @"@wkeMenuItemId::kWkeMenuCutId" 注释 = "剪切""methods": [
+  {
+"method name": "初始化",
+"comment": "MiniBlink全局初始化 创建窗口前调用",
+"static": true,
+"parameters": [
+   {
+"parameter name": "DllPath",
+"comment": "MiniBlink动态库名称默认为\"node.dll\"用户可通过此参数修改调用动态库dll名称,请将改名后的dll库放置在编译目录.",
+"data type": "文本型",
+"@默认值": "\"node.dll\""
+   }
+]
+  },
+  {
+ "method name": "是否初始化",
+ "comment": "检查MiniBlink是否初始化",
+ "result comment": "是否已初始化",
+ "static": true,
+ "data type": "逻辑型",
+ "@禁止流程检查": "真",
+ "parameters": [
+   {
+"parameter name": "DllPath",
+"comment": "mb库dll名称 默认:\"node.dll\" ",
+"data type": "文本型",
+"@默认值": "\"node.dll\""
+   }
+ ]
+  },
+  {
+"method name": "事件注册",
+"comment": "浏览器窗口创建后会默认调用此方法注册事件,如果使用创建内存视图方式由用户自行事件注册"
+  },
+  {
+515"method name": "取浏览器句柄",
+515"comment": "取MB浏览器句柄",
+515"result comment": "返回MB浏览器句柄",
+515"data type": "变整数",
+515"@嵌入式方法": "\"\""
+  },
+  {
+comment": "mb库dll名称 默认:\"node.dll\" ""method name": "置浏览器句柄",
+comment": "mb库dll名称 默认:\"node.dll\" ""comment": "相当于更换了本类对象的MB浏览器句柄用于操作不同的浏览器,本对象已经创建的浏览器(WebView)包括MB窗口将被销毁.",
+comment": "mb库dll名称 默认:\"node.dll\" ""parameters": [
+   {
+"parameter name": "浏览器句柄",
+"comment": "提供一个新的浏览器句柄(WebView),并确保此句柄的有效性.",
+"data type": "变整数"
+   }
+comment": "mb库dll名称 默认:\"node.dll\" "]
+  },
+  {
+
+"method name": "取窗口句柄",
+
+"comment": "取MB浏览器的窗口句柄",
+
+"result comment": "MB浏览器的窗口句柄",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "创建窗口",
+
+"comment": "创建一个MB窗口,可以是弹出式窗口;无边框透明窗口;或者作为窗口子控件.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "窗口起始位置相对于屏幕的横坐标",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "窗口起始位置相对于屏幕的纵坐标",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "窗口宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"comment": "窗口高度",
+"data type": "整数",
+"@默认值": "300"
+   },
+   {
+"parameter name": "父窗口句柄",
+"comment": "提供一个父窗口句柄,当MB窗口类型为子控件窗口时需要提供父窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "窗口类型",
+"comment": "提供MB窗口类型",
+"data type": "MB窗口类型",
+"@默认值": "MB窗口类型.弹出式窗口"
+   }
+
+]
+  },
+  {
+thod name": "是否初始化""method name": "创建自定义风格窗口",
+thod name": "是否初始化""comment": "创建一个MB窗口,可以是弹出式窗口;无边框透明窗口;或者作为窗口子控件.",
+thod name": "是否初始化""data type": "逻辑型",
+thod name": "是否初始化""parameters": [
+   {
+"parameter name": "窗口风格",
+"comment": "窗口风格",
+"data type": "整数"
+   },
+   {
+"parameter name": "扩展风格",
+"comment": "窗口扩展风格",
+"data type": "整数"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "窗口起始位置相对于屏幕的横坐标",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "窗口起始位置相对于屏幕的纵坐标",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "窗口宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"comment": "窗口高度",
+"data type": "整数",
+"@默认值": "300"
+   },
+   {
+"parameter name": "背景颜色",
+"comment": "窗口的背景颜色,请使用颜色类常量.",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   },
+   {
+"parameter name": "父窗口句柄",
+"comment": "提供一个父窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+thod name": "是否初始化"]
+  },
+  {
+
+"method name": "置无边框窗口缩放",
+
+"comment": "创建MB窗口类型为:'透明窗口' 即无边框窗口时设置窗口可拖拽缩放"
+  },
+  {
+data type": "整数""method name": "置窗口最大缩放",
+data type": "整数""comment": "设置MB窗口的最大缩放尺寸",
+data type": "整数""parameters": [
+   {
+"parameter name": "宽度",
+"comment": "MB窗口的最大宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "MB窗口的最大高度",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "置窗口最小缩放",
+ }"comment": "设置MB窗口的最小缩放尺寸",
+ }"parameters": [
+   {
+"parameter name": "宽度",
+"comment": "MB窗口的最小宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "MB窗口的最小高度",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+景颜色,请使用颜色类常量."method name": "创建内存浏览器",
+景颜色,请使用颜色类常量."comment": "创建一个内存浏览器,但不创建真窗口(故没有窗口句柄),一般用在离屏渲染,无头模式,或绑定到窗口控件,游戏等.",
+景颜色,请使用颜色类常量."result comment": "成功返回真",
+景颜色,请使用颜色类常量."data type": "逻辑型",
+景颜色,请使用颜色类常量."@禁止流程检查": "真"
+  },
+  {
+
+"method name": "链接地址",
+
+"comment": "将当前网页主框架跳转载入到所指定的链接地址",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲载入的链接地址",
+"comment": "欲跳转到的链接地址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ethod name": "链接地址""method name": "链接地址",
+ethod name": "链接地址""comment": "返回主框架所浏览页面的链接地址",
+ethod name": "链接地址""type": "property getter",
+ethod name": "链接地址""data type": "文本型"
+  },
+  {
+d name": "链接地址""method name": "链接地址""method name": "置窗口",
+d name": "链接地址""method name": "链接地址""comment": "设置浏览器的窗口句柄渲染绘制上屏",
+d name": "链接地址""method name": "链接地址""@嵌入式方法": "\"\"",
+d name": "链接地址""method name": "链接地址""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供窗口句柄",
+"data type": "变整数"
+   }
+d name": "链接地址""method name": "链接地址"]
+  },
+  {
+@默认值": "500""method name": "置绘制位置偏移",
+@默认值": "500""comment": "设置浏览器的绘制位置,在某些情况下绘制的地方不在真窗口坐标的(0，0)处就需要调用此接口.",
+@默认值": "500""@嵌入式方法": "\"\"",
+@默认值": "500""parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "横坐标,相对窗口组件的左上角起始的横向位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "纵坐标,相对窗口组件的左上角起始的纵向位置.",
+"data type": "整数"
+   }
+@默认值": "500"]
+  },
+  {
+ }"method name": "销毁",
+ }"comment": "销毁浏览器以及其对应的所有资源,包括真实窗口等."
+  },
+  {
+ }"method name": "执行消息循环",
+ }"comment": "浏览器窗口执行消息循环,一些情况下需要用户自行进行消息处理时使用.",
+ }"static": true,
+ }"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "载入URL",
+ }"comment": "使浏览器载入一个URL地址",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "URL",
+"comment": "提供URL网址",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "载入URL_UTF8",
+"comment": "使浏览器载入一个URL地址",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "URL",
+"comment": "提供为utf8编码格式的URL网址",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+}"method name": "载入HTML",
+}"comment": "使浏览器载入一段HTML文档",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "html文本",
+"comment": "HTML文档",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ }"method name": "载入HTML_UTF8",
+ }"comment": "使浏览器载入一段HTML文件",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "html文本",
+"comment": "提供为utf8编码格式的HTML文本字节集",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+}"method name": "载入HTML基于URL",
+}"comment": "使浏览器载基于一个URL地址载入一段HTML",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "html文本",
+"comment": "HTML文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "基于url",
+"comment": "所基于URL地址",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "载入文件",
+
+"comment": "使浏览器载入一个文件",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供一个文件名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "载入文件UTF8",
+"comment": "使浏览器载入一个文件",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供一个utf8编码格式的文件名",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+}"comment": "使浏览器载入一段HTML文件""method name": "Post访问",
+}"comment": "使浏览器载入一段HTML文件""comment": "以Post方式访问所指定的URL",
+}"comment": "使浏览器载入一段HTML文件""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "提供所欲访问的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲传递数据",
+"comment": "提供所有欲传递过去的数据",
+"data type": "字节集类"
+   }
+}"comment": "使浏览器载入一段HTML文件"]
+  },
+  {
+"method name": "取Url",
+"comment": "取浏览器当前载入的url地址",
+"result comment": "url地址",
+"data type": "文本型",
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "字节集类""method name": "取框架Url",
+data type": "字节集类""comment": "取浏览器页面某框架载入的url地址",
+data type": "字节集类""result comment": "对应框架url地址",
+data type": "字节集类""data type": "文本型",
+data type": "字节集类""@嵌入式方法": "\"\"",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "提供一个框架ID",
+"data type": "变整数"
+   }
+data type": "字节集类"]
+  },
+  {
+}"method name": "是否载入中",
+}"comment": "判断浏览器当前是否正在载入中",
+}"result comment": "浏览器载入状态",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否载入成功",
+
+"comment": "判断浏览器当前是否已经载入成功",
+
+"result comment": "是否载入成功",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+页面某框架载入的url地址"method name": "是否载入失败",
+页面某框架载入的url地址"comment": "判断浏览器当前是否已经载入失败",
+页面某框架载入的url地址"result comment": "是否载入失败",
+页面某框架载入的url地址"data type": "逻辑型",
+页面某框架载入的url地址"@嵌入式方法": "\"\""
+  },
+  {
+器当前是否已经载入失败"method name": "是否载入完成",
+器当前是否已经载入失败"comment": "判断浏览器页面当前是否已经载入完成,由于现代网页大多采用动态加载 多框架等原因,本接口\n返回的加载完成并不等于\"网页已全部加载完成\",只表示MB已接收了服务器本次传回的全部数据.",
+器当前是否已经载入失败"result comment": "是否载入完成",
+器当前是否已经载入失败"data type": "逻辑型",
+器当前是否已经载入失败"@嵌入式方法": "\"\""
+  },
+  {
+器当前是否已经载入失败"method name": "是否文档已就绪",
+器当前是否已经载入失败"comment": "判断浏览器页面当前文档是否已就绪,由于现代网页大多采用动态加载,多框架等原因,本接口\n返回的加载完成并不等于\"网页已全部已就绪\",只表示MB已接收了服务器本次传回的全部数据.",
+器当前是否已经载入失败"result comment": "文档是否已就绪",
+器当前是否已经载入失败"data type": "逻辑型",
+器当前是否已经载入失败"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "停止载入",
+}"comment": "强制停止加载当前页面",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "重新载入",
+}"comment": "刷新页面,重新加载当前页面,从服务器重新拉取内容而不仅仅是重新渲染,相当于按ctrl+F5强刷.",
+}"@嵌入式方法": "\"\""
+  },
+  {
+架载入的url地址"method name": "是否载入失败""method name": "取标题",
+架载入的url地址"method name": "是否载入失败""comment": "取浏览器当前页面标题宽字符版",
+架载入的url地址"method name": "是否载入失败""result comment": "页面标题",
+架载入的url地址"method name": "是否载入失败""data type": "文本型",
+架载入的url地址"method name": "是否载入失败""@嵌入式方法": "\"\""
+  },
+  {
+当前是否已经载入失败"comment": "判断浏览器页面当前是否已经载入完成,由于现代网页大多采用动态加载 多框架等原因,本接口\n返回的加载完成并不等于\"网页已全部加载完成\",只表示MB已接收了服务器本次传回的全部数据.""method name": "取源码",
+当前是否已经载入失败"comment": "判断浏览器页面当前是否已经载入完成,由于现代网页大多采用动态加载 多框架等原因,本接口\n返回的加载完成并不等于\"网页已全部加载完成\",只表示MB已接收了服务器本次传回的全部数据.""comment": "取浏览器当前页面源码",
+当前是否已经载入失败"comment": "判断浏览器页面当前是否已经载入完成,由于现代网页大多采用动态加载 多框架等原因,本接口\n返回的加载完成并不等于\"网页已全部加载完成\",只表示MB已接收了服务器本次传回的全部数据.""result comment": "页面源码",
+当前是否已经载入失败"comment": "判断浏览器页面当前是否已经载入完成,由于现代网页大多采用动态加载 多框架等原因,本接口\n返回的加载完成并不等于\"网页已全部加载完成\",只表示MB已接收了服务器本次传回的全部数据.""data type": "文本型",
+当前是否已经载入失败"comment": "判断浏览器页面当前是否已经载入完成,由于现代网页大多采用动态加载 多框架等原因,本接口\n返回的加载完成并不等于\"网页已全部加载完成\",只表示MB已接收了服务器本次传回的全部数据.""@嵌入式方法": "\"\""
+  },
+  {
+data type": "字节集类""method name": "置尺寸",
+data type": "字节集类""comment": "重新设置浏览器显示区域尺寸",
+data type": "字节集类""@嵌入式方法": "\"\"",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "宽度",
+"comment": "像素宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "像素高度",
+"data type": "整数"
+   }
+data type": "字节集类"]
+  },
+  {
+
+"method name": "置窗口尺寸",
+
+"comment": "MB浏览器窗口类型不为子控件窗口时重新设置浏览器窗口尺寸",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "宽度",
+"comment": "像素宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "像素宽度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "置窗口标题",
+data type": "整数""comment": "设置MB浏览器窗口的标题",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "标题",
+"comment": "欲设置的窗口标题",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+url地址"method name": "是否载入失败""method name": "取标题""method name": "移动窗口",
+url地址"method name": "是否载入失败""method name": "取标题""comment": "移动MB浏览器窗口",
+url地址"method name": "是否载入失败""method name": "取标题""@嵌入式方法": "\"\"",
+url地址"method name": "是否载入失败""method name": "取标题""parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "横坐标相对于屏幕左上角",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "纵坐标相对于屏幕左上角",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "窗口宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "窗口高度",
+"data type": "整数"
+   }
+url地址"method name": "是否载入失败""method name": "取标题"]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "移动窗口居中",
+"@嵌入式方法": "\"\"""comment": "使浏览器窗口移动至屏幕中央",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+comment": "使浏览器载入一个文件""method name": "背景颜色",
+comment": "使浏览器载入一个文件""comment": "设置当前浏览器的背景颜色值.",
+comment": "使浏览器载入一个文件""type": "property setter",
+comment": "使浏览器载入一个文件""parameters": [
+   {
+"parameter name": "颜色值",
+"comment": "可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.",
+"data type": "整数"
+   }
+comment": "使浏览器载入一个文件"]
+  },
+  {
+comment": "可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.""method name": "透明模式",
+comment": "可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.""comment": "判断窗口是否是透明模式",
+comment": "可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.""result comment": "返回真代表当前浏览器为透明模式",
+comment": "可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.""type": "property getter",
+comment": "可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.""data type": "逻辑型",
+comment": "可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "透明模式",
+}"comment": "设置是否开启透明模式",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否透明",
+"comment": "真为开启透明模式",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+ }"method name": "置UserAgent",
+ }"comment": "设置浏览器UserAgent",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "UA文本",
+"comment": "提供一个UserAgent文本,如:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57\".",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "取UserAgent",
+ }"comment": "取浏览器UserAgent",
+ }"result comment": "返回浏览器UserAgent",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "置语言",
+"comment": "设置其他语言,默认跟随系统设定.",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "语言类型",
+"comment": "语言类型",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"parameters": [
+"method name": "可否后退",
+"parameters": [
+"comment": "判断浏览器当前页面加载状态是否可以后退",
+"parameters": [
+"result comment": "返回真代表当前页面可以后退",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "UA文本""method name": "后退",
+ameter name": "UA文本""comment": "后退到前一页",
+ameter name": "UA文本""data type": "逻辑型",
+ameter name": "UA文本""@嵌入式方法": "\"\""
+  },
+  {
+comment": "语言类型""method name": "可否前进",
+comment": "语言类型""comment": "判断浏览器当前页面加载状态是否可以前进",
+comment": "语言类型""result comment": "返回真代表当前页面可以前进",
+comment": "语言类型""type": "property getter",
+comment": "语言类型""data type": "逻辑型",
+comment": "语言类型""@嵌入式方法": "\"\""
+  },
+  {
+parameters": [
+"@嵌入式方法": "\"\"""method name": "前进",
+parameters": [
+"@嵌入式方法": "\"\"""comment": "前进一页",
+parameters": [
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+parameters": [
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"comment": "设置浏览器UserAgent""method name": "编辑_全选",
+}"comment": "设置浏览器UserAgent""comment": "页面编辑内容全选",
+}"comment": "设置浏览器UserAgent""@嵌入式方法": "\"\""
+  },
+  {
+ type": "字节集类""method name": "取框架Url""method name": "编辑_取消选择",
+ type": "字节集类""method name": "取框架Url""comment": "页面编辑内容全选取消",
+ type": "字节集类""method name": "取框架Url""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "UA文本""method name": "编辑_复制",
+ameter name": "UA文本""comment": "页面编辑内容复制",
+ameter name": "UA文本""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "编辑_剪切",
+"comment": "页面编辑内容剪切",
+"@嵌入式方法": "\"\""
+  },
+  {
+omment": "语言类型""comment": "判断浏览器当前页面加载状态是否可以前进""method name": "编辑_粘贴",
+omment": "语言类型""comment": "判断浏览器当前页面加载状态是否可以前进""comment": "页面编辑内容粘贴",
+omment": "语言类型""comment": "判断浏览器当前页面加载状态是否可以前进""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "编辑_删除",
+}"comment": "页面编辑内容删除",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "编辑_撤销",
+
+"comment": "页面编辑内容撤销",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "编辑_重做",
+
+"comment": "页面编辑内容重做",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取Cookie",
+}"comment": "取浏览器Cookie",
+}"result comment": "成功返回Cookie文本",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "编辑_重做""method name": "枚举Cookie",
+thod name": "编辑_重做""comment": "枚举所有现有Cookie,调用此方法触发\"获得Cookie\"事件中获得所有Cookie."
+  },
+  {
+
+"method name": "取Cookie_UTF8",
+
+"comment": "取浏览器Cookie",
+
+"result comment": "成功返回Cookie UTF8类型",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真"
+  },
+  {
+meter name": "UA文本""comment": "页面编辑内容复制""method name": "置Cookie",
+meter name": "UA文本""comment": "页面编辑内容复制""comment": "向浏览器写入一段Cookie",
+meter name": "UA文本""comment": "页面编辑内容复制""@嵌入式方法": "\"\"",
+meter name": "UA文本""comment": "页面编辑内容复制""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "写入Cookie对应的url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "cookie文本",
+"comment": "  cookie格式必须是类似:\ncna=4UvTFE12fEECAXFKf4SFW5eo; expires=Tue, 23-Jan-2029 13:17:21 GMT; path=/; domain=.youku.com",
+"data type": "文本型"
+   }
+meter name": "UA文本""comment": "页面编辑内容复制"]
+  },
+  {
+}"method name": "清除Cookie",
+}"comment": "清除Cookie,由于缓存等因素,直接删cookie.dat可能更有效.另外有的网站可能有服务端缓存,所以会存在清理无效的情况.",
+}"@嵌入式方法": "\"\""
+  },
+  {
+data type": "文本型""method name": "执行Cookie命令",
+data type": "文本型""comment": "执行一个COOKIE操作命令",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "COOKIE命令",
+"comment": "提供MBCookie命令类型",
+"data type": "MBCookie命令",
+"@默认值": "MBCookie命令.全部清除"
+   }
+data type": "文本型"]
+  },
+  {
+hod name": "编辑_重做""comment": "枚举所有现有Cookie,调用此方法触发\"获得Cookie\"事件中获得所有Cookie.""method name": "置Cookie文件路径",
+hod name": "编辑_重做""comment": "枚举所有现有Cookie,调用此方法触发\"获得Cookie\"事件中获得所有Cookie.""comment": "设置Cookie文件的目录,默认情况下文件名是 cookies.dat",
+hod name": "编辑_重做""comment": "枚举所有现有Cookie,调用此方法触发\"获得Cookie\"事件中获得所有Cookie.""@嵌入式方法": "\"\"",
+hod name": "编辑_重做""comment": "枚举所有现有Cookie,调用此方法触发\"获得Cookie\"事件中获得所有Cookie.""parameters": [
+   {
+"parameter name": "文件目录",
+"comment": "文件目录路径,不包括文件名,不能自动新建不存在的目录.",
+"data type": "文本型"
+   }
+hod name": "编辑_重做""comment": "枚举所有现有Cookie,调用此方法触发\"获得Cookie\"事件中获得所有Cookie."]
+  },
+  {
+meters": [
+"@嵌入式方法": "\"\"""method name": "前进""method name": "置Cookie文件全路径",
+meters": [
+"@嵌入式方法": "\"\"""method name": "前进""comment": "设置Cookie文件的全路径包括文件名,默认是程序运行的当前目录,默认文件名为cookie.dat。",
+meters": [
+"@嵌入式方法": "\"\"""method name": "前进""@嵌入式方法": "\"\"",
+meters": [
+"@嵌入式方法": "\"\"""method name": "前进""parameters": [
+   {
+"parameter name": "文件目录",
+"comment": "全路径,包括cookie文件名,不能自动新建不存在的目录.",
+"data type": "文本型"
+   }
+meters": [
+"@嵌入式方法": "\"\"""method name": "前进"]
+  },
+  {
+meter name": "UA文本""comment": "页面编辑内容复制""method name": "置LocalStorage路径",
+meter name": "UA文本""comment": "页面编辑内容复制""comment": "设置LocalStorage本地存储文件的路径",
+meter name": "UA文本""comment": "页面编辑内容复制""@嵌入式方法": "\"\"",
+meter name": "UA文本""comment": "页面编辑内容复制""parameters": [
+   {
+"parameter name": "文件目录",
+"comment": "如c:\\mb\\LocalStorage,必须且只能是目录,默认是当前目录.",
+"data type": "文本型"
+   }
+meter name": "UA文本""comment": "页面编辑内容复制"]
+  },
+  {
+}"method name": "添加插件目录",
+}"comment": "设置插件目录,默认情况下为plugins目录",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "文件目录",
+"comment": "如c:\\mb\\plugins,必须且只能是目录,默认是当前目录",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+eter name": "UA文本""comment": "页面编辑内容复制""@嵌入式方法": "\"\"""method name": "媒体音量",
+eter name": "UA文本""comment": "页面编辑内容复制""@嵌入式方法": "\"\"""comment": "设置浏览器的媒体音量 ",
+eter name": "UA文本""comment": "页面编辑内容复制""@嵌入式方法": "\"\"""type": "property setter",
+eter name": "UA文本""comment": "页面编辑内容复制""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "音量",
+"comment": "媒体音量值默认为1",
+"data type": "小数"
+   }
+eter name": "UA文本""comment": "页面编辑内容复制""@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "媒体音量",
+
+"comment": "取浏览器的媒体音量 ",
+
+"result comment": "媒体音量值",
+
+"type": "property getter",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "启用Cookie",
+
+"comment": "设置Cookie是否可用",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为启用",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+ameter name": "是否启用""method name": "启用Cookie",
+ameter name": "是否启用""comment": "判断是否启用Cookie",
+ameter name": "是否启用""result comment": "真为启用",
+ameter name": "是否启用""type": "property getter",
+ameter name": "是否启用""data type": "逻辑型",
+ameter name": "是否启用""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "文件目录""method name": "启用高分辨率支持",
+ameter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。",
+ameter name": "文件目录""static": true,
+ameter name": "文件目录""@嵌入式方法": "\"\""
+  },
+  {
+comment": "文件目录路径,不包括文件名,不能自动新建不存在的目录.""method name": "启用鼠标",
+comment": "文件目录路径,不包括文件名,不能自动新建不存在的目录.""comment": "开启或关闭鼠标消息,可以在开启触屏后,关闭鼠标消息",
+comment": "文件目录路径,不包括文件名,不能自动新建不存在的目录.""@嵌入式方法": "\"\"",
+comment": "文件目录路径,不包括文件名,不能自动新建不存在的目录.""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "文件目录路径,不包括文件名,不能自动新建不存在的目录."]
+  },
+  {
+thod name": "启用Cookie""method name": "启用触摸",
+thod name": "启用Cookie""comment": "开启或关闭触屏",
+thod name": "启用Cookie""@嵌入式方法": "\"\"",
+thod name": "启用Cookie""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+thod name": "启用Cookie"]
+  },
+  {
+
+"method name": "启用系统触摸",
+
+"comment": "开启或关闭系统触屏",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+meter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。""method name": "启用拖入文件",
+meter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。""comment": "可启用或关闭拖拽文件加载网页",
+meter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。""@嵌入式方法": "\"\"",
+meter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+meter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。"]
+  },
+  {
+ameter name": "是否启用""method name": "启用拖拽元素",
+ameter name": "是否启用""comment": "可启用或关闭元素拖拽或拖拽到其他进程",
+ameter name": "是否启用""@嵌入式方法": "\"\"",
+ameter name": "是否启用""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "是否启用"]
+  },
+  {
+data type": "逻辑型""method name": "启用内存缓存",
+data type": "逻辑型""comment": "可启用或关闭内存缓存 ",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "逻辑型"]
+  },
+  {
+data type": "逻辑型""method name": "保存内存缓存",
+data type": "逻辑型""comment": "保存当前浏览器内存缓存",
+data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "启用Npapi插件",
+"comment": "可启用或关闭Npapi插件",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+comment": "真为开启""method name": "启用无头模式",
+comment": "真为开启""comment": "开启或关闭无头模式,开启后页面不会被渲染上屏,直接内存运行,大幅提升性能.",
+comment": "真为开启""@嵌入式方法": "\"\"",
+comment": "真为开启""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "真为开启"]
+  },
+  {
+ type": "逻辑型""method name": "保存内存缓存""method name": "启用默认菜单",
+ type": "逻辑型""method name": "保存内存缓存""comment": "设置是否允许右键弹出MB浏览器默认菜单,默认状态下为开启.",
+ type": "逻辑型""method name": "保存内存缓存""@嵌入式方法": "\"\"",
+ type": "逻辑型""method name": "保存内存缓存""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ type": "逻辑型""method name": "保存内存缓存"]
+  },
+  {
+comment": "真为开启""method name": "置默认菜单项显示",
+comment": "真为开启""comment": "设置MB浏览器某菜单项是否显示",
+comment": "真为开启""@嵌入式方法": "\"\"",
+comment": "真为开启""parameters": [
+   {
+"parameter name": "菜单项",
+"comment": "MB默认菜单项常量",
+"data type": "MB默认菜单项"
+   },
+   {
+"parameter name": "是否显示",
+"comment": "真为显示,假为隐藏",
+"data type": "逻辑型"
+   }
+comment": "真为开启"]
+  },
+  {
+mment": "真为开启"]"method name": "启用导航到新窗口",
+mment": "真为开启"]"comment": "当有新页面需要打开时,是否在新窗口打开,默认是当前窗口,如开启,则会触发\"即将创建新窗口\"事件.",
+mment": "真为开启"]"@嵌入式方法": "\"\"",
+mment": "真为开启"]"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为启用,假为关闭.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+mment": "真为开启"]]
+  },
+  {
+ent": "真为开启"]]"method name": "启用跨域检查",
+ent": "真为开启"]]"comment": "设置是否开启csp跨域检查,默认状态下为开启,如需进行跨域操作,如跨域ajax,跨域设置iframe等,则需要先关闭此开关.",
+ent": "真为开启"]]"@嵌入式方法": "\"\"",
+ent": "真为开启"]]"parameters": [
+   {
+"parameter name": "是否检查",
+"data type": "逻辑型"
+   }
+ent": "真为开启"]]]
+  },
+  {
+eter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。""comment": "可启用或关闭拖拽文件加载网页""method name": "置设备参数",
+eter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。""comment": "可启用或关闭拖拽文件加载网页""comment": "设置webView模拟硬件设备环境",
+eter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。""comment": "可启用或关闭拖拽文件加载网页""@嵌入式方法": "\"\"",
+eter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。""comment": "可启用或关闭拖拽文件加载网页""parameters": [
+   {
+"parameter name": "设备参数名",
+"comment": "为\"navigator.maxTouchPoints\"时，需设置\"整数参数\"，表示touch的点数。\n为\"navigator.platform\"时，需设置\"文本参数\"，表示js里获取的navigator.platform字符串。\n为\"navigator.hardwareConcurrency\"时，需设置\"整数参数\"，表示js里获取的navigator.hardwareConcurrency整数值。\n为\"screen.width\"时，需设置\"整数参数\"，表示js里获取的screen.width整数值。\n为\"screen.height\"时，需设置\"整数参数\"，表示js里获取的screen.height整数值。\n为\"screen.availWidth\"时，需设置\"整数参数\"，表示js里获取的screen.availWidth整数值。\n为\"screen.availHeight\"时，需设置\"整数参数\"，表示js里获取的screen.availHeight整数值。\n为\"screen.pixelDepth\"时，需设置\"整数参数\"，表示js里获取的screen.pixelDepth整数值。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本参数",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "整数参数",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "浮点参数",
+"data type": "小数",
+"@默认值": "0"
+   }
+eter name": "文件目录""comment": "本质是通过设置ZOOM并且关闭系统默认缩放来实现的,所以再使用\"缩放系数\"会发现值可能不为1。""comment": "可启用或关闭拖拽文件加载网页"]
+  },
+  {
+data type": "小数""method name": "置代理",
+data type": "小数""comment": "置当前浏览器代理设置",
+data type": "小数""parameters": [
+   {
+"parameter name": "代理类型",
+"comment": "提供MB代理类型",
+"data type": "MB代理类型",
+"@默认值": "MB代理类型.HTTP"
+   },
+   {
+"parameter name": "服务器",
+"comment": "代理服务器地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"comment": "代理服务器端口",
+"data type": "短整数"
+   },
+   {
+"parameter name": "用户名",
+"comment": "代理服务器用户",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "密码",
+"comment": "代理服务器密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "小数"]
+  },
+  {
+@默认值": "\"\"""method name": "置全局代理",
+@默认值": "\"\"""comment": "设置MB浏览器代理全局生效",
+@默认值": "\"\"""static": true,
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "代理类型",
+"comment": "提供MB代理类型",
+"data type": "MB代理类型",
+"@默认值": "MB代理类型.HTTP"
+   },
+   {
+"parameter name": "服务器",
+"comment": "代理服务器地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"comment": "代理服务器端口",
+"data type": "短整数"
+   },
+   {
+"parameter name": "用户名",
+"comment": "代理服务器用户",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "密码",
+"comment": "代理服务器密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+@默认值": "\"\""]
+  },
+  {
+"method name": "置调试配置",
+"comment": "设置一些实验性选项,配置项目前支持:\nshowDevTools:开启开发者工具,此时参数值要填写开发者工具的资源路径,如file:///c:/miniblink-release/front_end/inspector.html 必须是全路径,并且不能有中文.\nwakeMinInterval:设置帧率,默认值是10值越大帧率越低;\ndrawMinInterval:设置帧率,默认值是3,值越大帧率越低;\nantiAlias:设置抗锯齿渲染,参数值必须设置为\"1\";\nminimumFontSize:最小字体;\nminimumLogicalFontSize:最小逻辑字体;\ndefaultFontSize:默认字号;\ndefaultFixedFontSize:默认Fixed字号;\nimageEnable:是否打开无图模式,参数值为\"0\"表示开启无图模式;\njsEnable:是否禁用js,参数值为\"0\"表示禁用;\nenableNodejs:是否开启nodejs 支持,参数值为\"1\"表示开启.(目前仅支持32位)",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "配置项",
+"comment": "配置项名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数值",
+"comment": "配置项参数值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "窗口将被关闭",
+"comment": "窗口模式下在浏览器窗口收到WM_CLODE消息时触发此回调接口,可返回非0拒绝关闭窗口.",
+"type": "event",
+"data type": "整数"
+  },
+  {
+comment": "提供MB代理类型""method name": "窗口将被销毁",
+comment": "提供MB代理类型""comment": "窗口模式下当浏览器窗口即将被销毁时触发此事件,与'窗口将被关闭'事件不同的时这个操作一旦开始无法取消.",
+comment": "提供MB代理类型""type": "event",
+comment": "提供MB代理类型""data type": "整数"
+  },
+  {
+
+"method name": "文档就绪",
+
+"comment": "当前页面文档就绪时触发此事件",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+ent": "提供MB代理类型""method name": "窗口将被销毁""method name": "文档就绪2",
+ent": "提供MB代理类型""method name": "窗口将被销毁""comment": "当前页面文档就绪时触发此事件",
+ent": "提供MB代理类型""method name": "窗口将被销毁""type": "event",
+ent": "提供MB代理类型""method name": "窗口将被销毁""data type": "整数",
+ent": "提供MB代理类型""method name": "窗口将被销毁""parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "触发当前事件的页面框架ID",
+"data type": "变整数"
+   }
+ent": "提供MB代理类型""method name": "窗口将被销毁"]
+  },
+  {
+comment": "触发当前事件的页面框架ID""method name": "标题被改变",
+comment": "触发当前事件的页面框架ID""comment": "当浏览器标题被改变时触发此事件",
+comment": "触发当前事件的页面框架ID""type": "event",
+comment": "触发当前事件的页面框架ID""data type": "整数",
+comment": "触发当前事件的页面框架ID""parameters": [
+   {
+"parameter name": "页面标题",
+"comment": "被改变页面的标题",
+"data type": "文本型"
+   }
+comment": "触发当前事件的页面框架ID"]
+  },
+  {
+comment": "配置项参数值""method name": "开始加载Url",
+comment": "配置项参数值""comment": "浏览器在开始一个请求时触发此事件,本事件中封装了一个类型为\"MB网络工作\"的对象,可对此次请求进行修改或拦截操作",
+comment": "配置项参数值""type": "event",
+comment": "配置项参数值""data type": "整数",
+comment": "配置项参数值""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "开始请求的url地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "网络工作指针",
+"comment": "网络工作指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "网络工作",
+"comment": "MB浏览器网络相关操作",
+"data type": "MB网络工作"
+   }
+comment": "配置项参数值"]
+  },
+  {
+"method name": "结束加载Url",
+"comment": "在 \"开始加载Url\" 事件中调用 \"网络工作.Hook请求()\"方法 在本事件中触发 并获得此次请求响应的数据 ",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "请求的url地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "网络工作指针",
+"comment": "MB网络工作指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "网络工作",
+"comment": "MB浏览器网络相关操作",
+"data type": "MB网络工作"
+   },
+   {
+"parameter name": "响应数据",
+"comment": "拦截到的响应数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "数据长度",
+"data type": "整数"
+   }
+]
+  },
+  {
+type": "event""method name": "Url被改变",
+type": "event""comment": "当浏览器Url被改变时触发此事件",
+type": "event""type": "event",
+type": "event""data type": "整数",
+type": "event""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "当前浏览器的url地址",
+"data type": "文本型"
+   }
+type": "event"]
+  },
+  {
+
+"method name": "Url被改变2",
+
+"comment": "当浏览器Url被改变时触发此事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "触发此事件所在的框架ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "链接地址",
+"comment": "当前浏览器的url地址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+comment": "MB浏览器网络相关操作""method name": "载入完成",
+comment": "MB浏览器网络相关操作""comment": "  当浏览器载入完成触发此事件,由于现代网页大多采用动态加载,多框架等原因,\n本事件返回的加载完成并不等于\"网页已全部加载完成\",只表示MB已接收了服务器本次传回的全部数据.",
+comment": "MB浏览器网络相关操作""type": "event",
+comment": "MB浏览器网络相关操作""data type": "整数",
+comment": "MB浏览器网络相关操作""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "当前载入页面的url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回状态",
+"comment": "返回状态 0:载入成功(SUCCEEDED)  1:载入失败(FAILED)  2:取消载入(CANCELED)",
+"data type": "整数"
+   },
+   {
+"parameter name": "失败原因",
+"comment": "失败原因",
+"data type": "文本型"
+   }
+comment": "MB浏览器网络相关操作"]
+  },
+  {
+data type": "文本型""method name": "Alert被调用",
+data type": "文本型""comment": "页面中js调用alert()方法 弹出信息框",
+data type": "文本型""type": "event",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "提示文本",
+"comment": "信息框提示文本",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ethod name": "Url被改变2""method name": "Confirm被调用",
+ethod name": "Url被改变2""comment": "页面中js调用confirm()方法 弹出信息框",
+ethod name": "Url被改变2""type": "event",
+ethod name": "Url被改变2""data type": "整数",
+ethod name": "Url被改变2""parameters": [
+   {
+"parameter name": "提示文本",
+"comment": "信息框提示文本",
+"data type": "文本型"
+   }
+ethod name": "Url被改变2"]
+  },
+  {
+]"method name": "Prompt被调用",
+]"comment": "页面中js调用prompt()方法 弹出对话框",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "提示文本",
+"comment": "对话框中显示的提示文本 网页prompt 函数的第1个参数 ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认输入文本",
+"comment": "默认输入文本 调用prompt 函数的第二个参数 ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输入文本",
+"comment": "输入的文本",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+"method name": "即将导航",
+"comment": "浏览器即将跳转时触发此事件",
+"result comment": "返回非0将拦截本次导航",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "导航类型",
+"comment": "MB导航类型常量",
+"data type": "MB导航类型"
+   },
+   {
+"parameter name": "链接地址",
+"comment": "即将导航的链接地址",
+"data type": "文本型"
+   }
+]
+  },
+  {
+comment": "MB导航类型常量""method name": "即将创建新窗口",
+comment": "MB导航类型常量""comment": "浏览器即将创建新窗口时触发此事件,配合\"启用导航到新窗口\"开关方法使用.",
+comment": "MB导航类型常量""type": "event",
+comment": "MB导航类型常量""data type": "整数",
+comment": "MB导航类型常量""parameters": [
+   {
+"parameter name": "导航类型",
+"comment": "MB导航类型常量",
+"data type": "MB导航类型"
+   },
+   {
+"parameter name": "链接地址",
+"comment": "即将在新窗口中载入的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新浏览器句柄",
+"comment": "  由于火山的事件只能返回整数类型,故这里传递了一个指针,即打开新窗口的浏览器句柄,\n如果需要在新窗口中载入新的页面,请调用 写指针处值 (新浏览器句柄, 新的MB浏览器对\n象.取浏览器句柄()) 如果不写入此值将默认在当前浏览器窗口中载入链接地址.",
+"data type": "变整数"
+   }
+comment": "MB导航类型常量"]
+  },
+  {
+data type": "MB导航类型""method name": "即将载入媒体",
+data type": "MB导航类型""comment": "浏览器即将载入媒体时触发此事件",
+data type": "MB导航类型""type": "event",
+data type": "MB导航类型""data type": "整数",
+data type": "MB导航类型""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "媒体资源的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "媒体尺寸",
+"comment": "媒体尺寸",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "持续时间",
+"comment": "持续时间",
+"data type": "小数"
+   }
+data type": "MB导航类型"]
+  },
+  {
+
+"method name": "脚本上下文创建",
+
+"comment": "当浏览器js脚本上下文创建时触发此事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "js脚本上下文创建所在的框架ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "上下文",
+"comment": "js脚本上下文指针值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "extensionGroup",
+"comment": "extensionGroup",
+"data type": "整数"
+   },
+   {
+"parameter name": "worldId",
+"comment": "worldId",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+comment": "媒体资源的链接地址""method name": "脚本上下文释放",
+comment": "媒体资源的链接地址""comment": "当浏览器js脚本上下文释放时触发此事件",
+comment": "媒体资源的链接地址""type": "event",
+comment": "媒体资源的链接地址""data type": "整数",
+comment": "媒体资源的链接地址""parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "所在的框架ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "上下文",
+"comment": "脚本上下文指针值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "worldId",
+"comment": "worldId",
+"data type": "整数"
+   }
+comment": "媒体资源的链接地址"]
+  },
+  {
+"method name": "控制台消息",
+"comment": "浏览器页面js控制台消息 ",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "消息级别",
+"comment": "控制台消息级别",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息内容",
+"comment": "控制台消息内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "资源名称",
+"comment": "资源名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "资源行",
+"comment": "资源行",
+"data type": "整数"
+   },
+   {
+"parameter name": "堆栈跟踪",
+"comment": "堆栈跟踪文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+omment": "媒体资源的链接地址""data type": "整数""method name": "鼠标经过URL改变",
+omment": "媒体资源的链接地址""data type": "整数""comment": "鼠标经过元素时显示该元素导航的url",
+omment": "媒体资源的链接地址""data type": "整数""type": "event",
+omment": "媒体资源的链接地址""data type": "整数""data type": "整数",
+omment": "媒体资源的链接地址""data type": "整数""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "鼠标指向元素的导航url",
+"data type": "文本型"
+   }
+omment": "媒体资源的链接地址""data type": "整数"]
+  },
+  {
+
+"method name": "网络响应",
+
+"comment": "网络请求发送后,收到服务器响应时触发此事件",
+
+"result comment": "返回非0 将被阻断",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "本次相应对应的url地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "网络工作",
+"comment": "MB网络工作相关操作",
+"data type": "MB网络工作"
+   }
+
+]
+  },
+  {
+
+"data type": "整数""method name": "获得Cookie",
+
+"data type": "整数""comment": "当调用\"枚举Cookie\"方法是触发此事件.用于获得所有Cookie.",
+
+"data type": "整数""result comment": "如由返回1则此Cookie由用户处理",
+
+"data type": "整数""type": "event",
+
+"data type": "整数""data type": "整数",
+
+"data type": "整数""parameters": [
+   {
+"parameter name": "Cookie名称",
+"comment": "Cookie名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Cookie值",
+"comment": "Cookie值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "作用域",
+"comment": "Cookie的作用域",
+"data type": "文本型"
+   },
+   {
+"parameter name": "路径",
+"comment": "如非空,只有路径上或路径下的URL才会获取cookie值.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否安全保护",
+"comment": "是否使用HTTPS安全协议发送Cookie",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "限HTTP",
+"comment": "如为真则仅为HTTP请求发送cookie,防止客户端脚本通过document.cookie属性访问Cookie.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否设置生存期",
+"comment": "cookie过期日期仅在为真时有效",
+"data type": "逻辑型"
+   }
+
+"data type": "整数"]
+  },
+  {
+
+"method name": "即将开始下载",
+
+"comment": "  需要调用\"启用下载事件\",浏览器在下载浏览器有下载文件时触发此事件,此接口尚未完善,\n回调中暂时只返回了下载UR,未带有身份认证信息,所以只适用于不需要身份认证的下载请求.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "目标url",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "启用下载事件",
+ }"comment": "启用\"即将开始下载\"事件",
+ }"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为启用 假为关闭",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+comment": "extensionGroup""method name": "启用下载事件2",
+comment": "extensionGroup""comment": "启用\"即将开始下载2\"事件",
+comment": "extensionGroup""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为启用 假为关闭",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "extensionGroup"]
+  },
+  {
+ameter name": "是否设置生存期""method name": "即将开始下载2",
+ameter name": "是否设置生存期""comment": "  需要调用\"启用下载事件2\",浏览器有下载文件时触发此事件,此接口尚未完善,\n回调中暂时只返回了下载UR,未带有身份认证信息,所以只适用于不需要身份认证的下载请求.",
+ameter name": "是否设置生存期""result comment": "返回0取消 返回1缓存数据",
+ameter name": "是否设置生存期""type": "event",
+ameter name": "是否设置生存期""data type": "整数",
+ameter name": "是否设置生存期""parameters": [
+   {
+"parameter name": "预计长度",
+"comment": "目标预计长度",
+"data type": "变整数"
+   },
+   {
+"parameter name": "链接地址",
+"comment": "目标url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "MIME类型",
+"comment": "目标MIME类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "disposition",
+"data type": "文本型"
+   },
+   {
+"parameter name": "网络工作",
+"comment": "MB网络工作",
+"data type": "MB网络工作"
+   }
+ameter name": "是否设置生存期"]
+  },
+  {
+"method name": "执行JS脚本",
+"comment": "执行一段js代码，由于js是弱类型语言 返回值 jsValue其实是一个指向封装了v8内部各种类型的类指针,这里封装成了一个基于\"jsValue类\"的\"js值\"对象,方便获得返回值.",
+"result comment": "返回js值对象,使用方法 如: js值对象.取文本值() 或 mb实例.执行JS脚本(\"return document.title\").取文本值()",
+"data type": "js值",
+"parameters": [
+   {
+"parameter name": "JS文本",
+"comment": "若要获得js运行结果返回值 脚本中加\"return\"关键字 如: \"return document.title\"",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "是否设置生存期""method name": "执行JS脚本UTF8",
+ameter name": "是否设置生存期""comment": "执行一段js代码，由于js是弱类型语言 返回值 jsValue其实是一个指向封装了v8内部各种类型的类指针,这里封装成了一个基于\"jsValue类\"的\"js值\"对象,方便获得返回值.",
+ameter name": "是否设置生存期""result comment": "返回js值对象,使用方法 如: js值对象.取文本值() 或 mb实例.执行JS脚本(\"return document.title\").取文本值()",
+ameter name": "是否设置生存期""data type": "js值",
+ameter name": "是否设置生存期""parameters": [
+   {
+"parameter name": "JS文本UTF8",
+"comment": "若要获得js运行结果返回值 脚本中加\"return\"关键字 如: \"return document.title\"",
+"data type": "字节集类"
+   }
+ameter name": "是否设置生存期"]
+  },
+  {
+
+"method name": "执行JS脚本自框架",
+
+"comment": "在指定框架中执行一段js代码,返回js执行返回值类实例 使用方法 如: 变量.取文本值() 或 mb实例.执行JS脚本(\"return document.title\").取文本值()",
+
+"result comment": "返回js值对象,用于js执行结果取值操作.",
+
+"data type": "js值",
+
+"parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "提供一个框架ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "JS文本",
+"comment": "若要获得js运行结果返回值 脚本中加\"return\"关键字 如: \"return document.title\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否闭包",
+"comment": "如为真,则MB会将这段js代码放到一个function(){ script }中执行,以避免变量名和页面中的js变量重名导致的错误.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+comment": "目标url""method name": "取主框架",
+comment": "目标url""comment": "取页面主框架ID",
+comment": "目标url""result comment": "返回页面主框架ID",
+comment": "目标url""data type": "变整数",
+comment": "目标url""@嵌入式方法": "\"\""
+  },
+  {
+omment": "目标url""@嵌入式方法": "\"\"""method name": "是否为主框架",
+omment": "目标url""@嵌入式方法": "\"\"""comment": "判断页面中的某个框架是否为远程框架",
+omment": "目标url""@嵌入式方法": "\"\"""result comment": "如果为主框架则返回真",
+omment": "目标url""@嵌入式方法": "\"\"""data type": "逻辑型",
+omment": "目标url""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+omment": "目标url""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "提供一个框架ID",
+"data type": "变整数"
+   }
+omment": "目标url""@嵌入式方法": "\"\""]
+  },
+  {
+data type": "变整数""method name": "是否为远程框架",
+data type": "变整数""comment": "判断页面中的某个框架是否为远程框架",
+data type": "变整数""result comment": "如果为远程框架则返回真",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "提供一个框架ID",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+
+"method name": "取JS执行状态",
+
+"comment": "获取页面主框架的js执行状态,js执行状态可以理解为一个句柄,js相关接口会频繁使用该句柄,使用完立刻就失效,再次使用需重新获取.。",
+
+"result comment": "主框架js执行状态",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "取JS执行状态_框架",
+ }"comment": "获取页面的js执行状态,js执行状态可以理解为一个句柄,js相关接口会频繁使用该句柄,使用完立刻就失效,再次使用需重新获取.",
+ }"result comment": "js执行状态",
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "提供页面框架ID",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+
+"method name": "JS绑定函数",
+
+"comment": "绑定全局JS函数,须在窗口创建前调用.",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "函数名称",
+"comment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数个数",
+"comment": "提供该js方法的参数个数",
+"data type": "整数"
+   },
+   {
+"parameter name": "回调方法指针",
+"comment": "指定一个静态方法指针值\n属性:@视窗.前缀文本 值为:@CDECL;\n返回值类型:整数 即调用jsValue类成员方法生成的js值;\n参数1 类型:js执行状态;\n如不指定此方法默认会在本类各实例对象的\"JS绑定方法被执行\"事件中触发",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "插入CSS到框架",
+ }"comment": "插入一段CSS到页面框架中",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "提供页面框架ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "CSS文本",
+"comment": "提供CSS文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "CSS文本""method name": "显示窗口",
+ameter name": "CSS文本""comment": "显示或隐藏浏览器窗口",
+ameter name": "CSS文本""@嵌入式方法": "\"\"",
+ameter name": "CSS文本""parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "是否显示浏览器窗口",
+"data type": "逻辑型"
+   }
+ameter name": "CSS文本"]
+  },
+  {
+ameter name": "参数个数""method name": "获取焦点",
+ameter name": "参数个数""comment": "如果浏览器绑定了窗口,窗口也会获得焦点.",
+ameter name": "参数个数""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "失去焦点",
+ }"comment": "让浏览器失去焦点",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+comment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""method name": "启动开发工具",
+comment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用",
+comment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""@视窗.附属文件": "\"data\\\\front_end > front_end\"",
+comment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""parameters": [
+   {
+"parameter name": "开发工具文件目录",
+"comment": "开发者工具目录,例如:\"file:///\"＋取运行目录 ()＋\"\\front_end\\inspector.html\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+comment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性."]
+  },
+  {
+ameter name": "开发工具文件目录""method name": "缩放级别",
+ameter name": "开发工具文件目录""comment": "浏览器的缩放系数",
+ameter name": "开发工具文件目录""type": "property setter",
+ameter name": "开发工具文件目录""parameters": [
+   {
+"parameter name": "缩放级别",
+"comment": "缩放系数,正常为1.",
+"data type": "小数"
+   }
+ameter name": "开发工具文件目录"]
+  },
+  {
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""method name": "缩放级别",
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""comment": "浏览器缩放系数",
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""result comment": "返回缩放系数",
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""type": "property getter",
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""data type": "小数",
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""@嵌入式方法": "\"\""
+  },
+  {
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""method name": "取高度",
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""comment": "取浏览器窗口高度",
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""data type": "整数",
+omment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "CSS文本""parameters": [
+"method name": "取宽度",
+meter name": "CSS文本""parameters": [
+"comment": "取浏览器窗口宽度",
+meter name": "CSS文本""parameters": [
+"data type": "整数",
+meter name": "CSS文本""parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+nt": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""method name": "取高度""method name": "取内容高度",
+nt": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""method name": "取高度""comment": "取浏览器当前的内容区域高度",
+nt": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""method name": "取高度""data type": "整数",
+nt": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""method name": "取高度""@嵌入式方法": "\"\""
+  },
+  {
+mment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""comment": "取浏览器窗口高度""method name": "取内容宽度",
+mment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""comment": "取浏览器窗口高度""comment": "取浏览器当前的内容区域宽度",
+mment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""comment": "取浏览器窗口高度""result comment": "内容区域宽度",
+mment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""comment": "取浏览器窗口高度""data type": "整数",
+mment": "提供该js方法的函数名称,全局生效,请注意方法名的唯一性.""comment": "打开浏览器开发者工具Devtools,须配合对应的页面文档使用""comment": "取浏览器窗口高度""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "垃圾回收",
+}"comment": " 延迟让MB垃圾回收",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "延迟毫秒",
+"comment": "时间单位为毫秒",
+"data type": "整数"
+   }
+}]
+  },
+  {
+meter name": "开发工具文件目录""type": "property setter""method name": "置资源回收间隔",
+meter name": "开发工具文件目录""type": "property setter""comment": "设置浏览器资源回收间隔",
+meter name": "开发工具文件目录""type": "property setter""@嵌入式方法": "\"\"",
+meter name": "开发工具文件目录""type": "property setter""parameters": [
+   {
+"parameter name": "时间间隔",
+"comment": "时间单位为秒",
+"data type": "整数"
+   }
+meter name": "开发工具文件目录""type": "property setter"]
+  },
+  {
+
+"method name": "工具_截图",
+
+"comment": "将页面打印到位图,返回位图字节集数据.",
+
+"result comment": "成功返回页面截图数据",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "欲截图的框架ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "工具_打印到PDF",
+
+"comment": "将页面生产PDF文件",
+
+"result comment": "成功返回PDF文件",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "框架ID",
+"comment": "提供欲生成PDF的框架ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "分辨率",
+"comment": "设置PDF的分辨率(50倍数)",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "打印背景",
+"comment": "是否打印背景",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "宽度",
+"comment": "设置PDF页面宽度",
+"data type": "整数",
+"@默认值": "842"
+   },
+   {
+"parameter name": "高度",
+"comment": "设施PDF页面高度",
+"data type": "整数",
+"@默认值": "595"
+   },
+   {
+"parameter name": "顶边距",
+"comment": "设置PDF页面顶边边距",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "底边距",
+"comment": "设置PDF页面底边边距",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "左边距",
+"comment": "设置PDF页面左边边距",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "右边距",
+"comment": "设置PDF页面右边边距",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+@默认值": "0""method name": "工具_序列化到MHTML",
+@默认值": "0""comment": "序列化到MHTML文档,返回UTF8字节集.",
+@默认值": "0""result comment": "成功返回MHTML文档字节集",
+@默认值": "0""data type": "字节集类",
+@默认值": "0""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "URLEscape编码",
+ }"comment": "将一串URL地址转化成Escape编码",
+ }"result comment": "成功返回Escape编码文本",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "URL文本",
+"comment": "提供将要编码的URL文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "URLEscape解码",
+}"comment": "将一串Escape编码的URL地址解码",
+}"result comment": "成功返回解码后的URL文本",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "Escape编码文本",
+"comment": "提供将要解码Escape编码文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+@默认值": "0""method name": "Base64编码",
+@默认值": "0""comment": "将一段文本转化成Base64编码",
+@默认值": "0""result comment": "成功返回Base64编码文本",
+@默认值": "0""static": true,
+@默认值": "0""data type": "文本型",
+@默认值": "0""@嵌入式方法": "\"\"",
+@默认值": "0""parameters": [
+   {
+"parameter name": "欲编码文本",
+"comment": "提供将要编码的文本",
+"data type": "文本型"
+   }
+@默认值": "0"]
+  },
+  {
+"method name": "Base64解码",
+"comment": "将一段Base64编码文本解码",
+"result comment": "成功返回解码后文本",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "欲解码文本",
+"comment": "提供将要解码文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+默认值": "0""result comment": "成功返回MHTML文档字节集""method name": "取网站图标",
+默认值": "0""result comment": "成功返回MHTML文档字节集""comment": "获取网站的favicon图标,此接口需在\"载入完成\"事件里调用后触发\"获得网站图标\"事件,得到图标文件.",
+默认值": "0""result comment": "成功返回MHTML文档字节集""data type": "整数",
+默认值": "0""result comment": "成功返回MHTML文档字节集""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "发送鼠标事件",
+
+"comment": "发送所指定的鼠标事件到浏览器",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "提供当前鼠标位置在浏览器窗口中的横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "提供当前鼠标位置在浏览器窗口中的纵向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "鼠标键状态",
+"comment": "提供鼠标按键的按下状态,为\"MB鼠标键类型\"类中各常量值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "提供辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+鼠标位置在浏览器窗口中的横向坐标"method name": "发送鼠标单击事件",
+鼠标位置在浏览器窗口中的横向坐标"comment": "触发一个鼠标点击事件,横坐标和纵坐标为相对窗口左上角的像素坐标.",
+鼠标位置在浏览器窗口中的横向坐标"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "纵坐标",
+"data type": "整数"
+   }
+鼠标位置在浏览器窗口中的横向坐标]
+  },
+  {
+
+"method name": "发送鼠标移动事件",
+
+"comment": "发送所指定的鼠标移动事件到浏览器",
+
+"parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "提供当前鼠标位置在浏览器窗口中的横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "提供当前鼠标位置在浏览器窗口中的纵向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "提供辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "鼠标键状态",
+"comment": "提供鼠标按键的按下状态,为\"MB鼠标键类型\"类中各常量值.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+鼠标位置在浏览器窗口中的纵向坐标"method name": "发送按键事件",
+鼠标位置在浏览器窗口中的纵向坐标"comment": "发送所指定的按键事件到MB浏览器",
+鼠标位置在浏览器窗口中的纵向坐标"parameters": [
+   {
+"parameter name": "键代码",
+"comment": "为\"按键码\"类中的常量值,注意不包括辅助键组合状态值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "提供辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "为按键放开事件",
+"comment": "  为真表示发送按键放开事件(WM_SYSKEYUP/WM_KEYUP),否则将发送\n按键按下事件(WM_SYSKEYDOWN/WM_KEYDOWN).",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "为系统按键事件",
+"comment": "  为真表示发送系统按键事件(WM_SYSKEYDOWN/WM_SYSKEYUP),否则将\n发送非系统按键事件(WM_KEYDOWN/WM_KEYUP)",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+鼠标位置在浏览器窗口中的纵向坐标]
+  },
+  {
+data type": "整数""method name": "发送字符事件",
+data type": "整数""comment": "向MB浏览器发送一个字符消息",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "字符编码",
+"comment": "提供所欲发送的字符",
+"data type": "字符"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "发送字符串事件",
+"comment": "向MB浏览器发送一个字符串消息",
+"parameters": [
+   {
+"parameter name": "字符串文本",
+"comment": "提供所欲发送的字符串文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+定的按键事件到MB浏览器"method name": "发送窗口移动事件",
+定的按键事件到MB浏览器"comment": "鼠标捕获移动MB窗口,一般用于通过js控制窗口移动."
+  },
+  {
+ }"method name": "发送窗口最大化事件",
+ }"comment": "发送消息使MB窗口最大化,再次调用还原窗口位置."
+  },
+  {
+ }"method name": "发送窗口最小化事件",
+ }"comment": "发送消息使MB窗口最小化",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+定的按键事件到MB浏览器"method name": "发送消息",
+定的按键事件到MB浏览器"comment": "向浏览器窗口发送一个window消息",
+定的按键事件到MB浏览器"data type": "长整数",
+定的按键事件到MB浏览器"@禁止流程检查": "真",
+定的按键事件到MB浏览器"parameters": [
+   {
+"parameter name": "message",
+"comment": "消息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "wParam",
+"comment": "消息附加参数wParam",
+"data type": "整数"
+   },
+   {
+"parameter name": "IParam",
+"comment": "消息附加参数IParam",
+"data type": "整数"
+   }
+定的按键事件到MB浏览器]
+  },
+  {
+事件到MB浏览器"method name": "发送窗口移动事件""method name": "网页_点击",
+事件到MB浏览器"method name": "发送窗口移动事件""comment": "执行JS查找并执行元素点击事件",
+事件到MB浏览器"method name": "发送窗口移动事件""parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   }
+事件到MB浏览器"method name": "发送窗口移动事件"]
+  },
+  {
+
+"method name": "网页_取元素文本",
+
+"comment": "执行JS查找并返回元素的textContent",
+
+"result comment": "返回元素的textContent文本",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ethod name": "发送窗口最大化事件""method name": "网页_取元素outerHTML",
+ethod name": "发送窗口最大化事件""comment": "执行JS查找并返回元素的outerHTML文本",
+ethod name": "发送窗口最大化事件""result comment": "返回元素的outerHTML文本",
+ethod name": "发送窗口最大化事件""data type": "文本型",
+ethod name": "发送窗口最大化事件""parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   }
+ethod name": "发送窗口最大化事件"]
+  },
+  {
+B浏览器"method name": "发送窗口移动事件""method name": "网页_点击""method name": "网页_取元素innerHTML",
+B浏览器"method name": "发送窗口移动事件""method name": "网页_点击""comment": "执行JS查找并返回元素的innerHTML文本",
+B浏览器"method name": "发送窗口移动事件""method name": "网页_点击""result comment": "返回元素的innerHTML文本",
+B浏览器"method name": "发送窗口移动事件""method name": "网页_点击""data type": "文本型",
+B浏览器"method name": "发送窗口移动事件""method name": "网页_点击""parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   }
+B浏览器"method name": "发送窗口移动事件""method name": "网页_点击"]
+  },
+  {
+"method name": "发送窗口移动事件""method name": "网页_点击""method name": "网页_取元素innerHTML""method name": "网页_取元素文本2",
+"method name": "发送窗口移动事件""method name": "网页_点击""method name": "网页_取元素innerHTML""comment": "执行JS查找并返回元素的innerText",
+"method name": "发送窗口移动事件""method name": "网页_点击""method name": "网页_取元素innerHTML""result comment": "返回元素的innerText文本",
+"method name": "发送窗口移动事件""method name": "网页_点击""method name": "网页_取元素innerHTML""data type": "文本型",
+"method name": "发送窗口移动事件""method name": "网页_点击""method name": "网页_取元素innerHTML""parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   }
+"method name": "发送窗口移动事件""method name": "网页_点击""method name": "网页_取元素innerHTML"]
+  },
+  {
+@默认值": "0""method name": "网页_取或置元素属性",
+@默认值": "0""comment": "执行JS查找并对属性进行取值或置值操作",
+@默认值": "0""result comment": "成功返回对应的属性文本",
+@默认值": "0""data type": "文本型",
+@默认值": "0""parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性名",
+"comment": "提供要取或置的属性名及值文本,例:取属性 type,class,value ,hidden 等等 置属性,style.color='red',value='百度一下'.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否闭包",
+"comment": "如为真.则MB会将这段js代码放到一个function(){ script }中执行.以避免变量名和页面中的js变量重名导致的错误.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+@默认值": "0"]
+  },
+  {
+data type": "变整数""method name": "网页_取元素值",
+data type": "变整数""comment": "执行JS查找并返回元素的value",
+data type": "变整数""result comment": "成功返回元素的文本值,失败返回js错误文本.",
+data type": "变整数""data type": "文本型",
+data type": "变整数""parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否闭包",
+"comment": "如为真.则MB会将这段js代码放到一个function(){ script }中执行.以避免变量名和页面中的js变量重名导致的错误.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "变整数"]
+  },
+  {
+ }"method name": "网页_填表",
+ }"comment": "执行JS查找元素并赋值",
+ }"result comment": "成功返回执行结果文本,失败返回js错误文本.",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填入内容",
+"comment": "填表内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+ata type": "变整数""parameters": [
+"method name": "网页_点击_框架",
+ata type": "变整数""parameters": [
+"comment": "执行JS查找并执行元素点击事件",
+ata type": "变整数""parameters": [
+"parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否闭包",
+"comment": "如为真.则MB会将这段js代码放到一个function(){ script }中执行.以避免变量名和页面中的js变量重名导致的错误.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ata type": "变整数""parameters": [
+]
+  },
+  {
+
+"method name": "网页_触发输入事件",
+
+"comment": "执行JS查找并执行元素输入事件,在填表时有些页面监听文本框的输入行为,此时需要先触发该元素的输入事件,再执行填表操作.",
+
+"parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  input 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否闭包",
+"comment": "如为真.则MB会将这段js代码放到一个function(){ script }中执行.以避免变量名和页面中的js变量重名导致的错误.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "网页_复选框选中",
+data type": "整数""comment": "执行JS查找元素,设置复选框的选中状态.",
+data type": "整数""parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  input 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否选中",
+"comment": "真为选中,假为取消选中状态.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否闭包",
+"comment": "如为真.则MB会将这段js代码放到一个function(){ script }中执行.以避免变量名和页面中的js变量重名导致的错误.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "网页_填表_框架",
+
+"comment": "执行JS查找元素并赋值",
+
+"result comment": "成功返回执行结果文本 ,失败返回js错误文本.",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填入内容",
+"comment": "填表内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素索引",
+"comment": "元素索引从0开始默认为第一个",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否闭包",
+"comment": "如为真,则MB会将这段js代码放到一个function(){ script }中执行,以避免变量名和页面中的js变量重名导致的错误.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+comment": "元素索引从0开始默认为第一个""method name": "网页_查找元素",
+comment": "元素索引从0开始默认为第一个""comment": "执行JS查找元素,成功返回查找到元素数量.",
+comment": "元素索引从0开始默认为第一个""result comment": "找到的元素数量",
+comment": "元素索引从0开始默认为第一个""data type": "整数",
+comment": "元素索引从0开始默认为第一个""parameters": [
+   {
+"parameter name": "css选择器",
+"comment": "提供一个 css选择器 如: #id  .css  div p 等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架ID",
+"comment": "默认为主框架",
+"data type": "变整数",
+"@默认值": "0"
+   }
+comment": "元素索引从0开始默认为第一个"]
+  },
+  {
+
+"method name": "获得网站图标",
+
+"comment": "需在\"载入完成\"事件里调用 \"取网站图标\"方法触发此事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "网站图标文件的url地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图标文件",
+"comment": "网站图标文件",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+]"method name": "JS绑定方法被执行",
+]"comment": "通过\"JS绑定函数\"绑定的js方法被执行时会触发此事件",
+]"result comment": "如要向js返回一个值,调用 jsValue类相关方法生成js值返回.",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态句柄,用于js值的操作",
+"data type": "变整数"
+   },
+   {
+"parameter name": "方法名称",
+"comment": "js函数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "js参数对象",
+"comment": "js参数对象用于获得js参数值",
+"data type": "js参数"
+   },
+   {
+"parameter name": "参数个数",
+"comment": "参数个数",
+"data type": "整数"
+   }
+]]
+  }
+ = @"@wkeMenuItemId::kWkeMenuCutId" 注释 = "剪切"]
+ },
+ {
+mment": "元素索引从0开始默认为第一个"]"class name": "jsValue类",
+mment": "元素索引从0开始默认为第一个"]"comment": "js取值相关操作类,由于js是弱类型语言jsValue其实是一个指向封装了v8内部各种类型的类指针,可以理解成一个代表js中各种类型的句柄.",
+mment": "元素索引从0开始默认为第一个"]"@禁止创建对象": "真",
+mment": "元素索引从0开始默认为第一个"]"methods": [
+  {
+comment": "元素索引从0开始默认为第一个""method name": "js垃圾回收",
+comment": "元素索引从0开始默认为第一个""comment": "js垃圾回收",
+comment": "元素索引从0开始默认为第一个""static": true,
+comment": "元素索引从0开始默认为第一个""@嵌入式方法": "\"\""
+  },
+  {
+
+"type": "event""method name": "js执行",
+
+"type": "event""comment": "执行一段js代码,代码会在MB内部自动被包裹在一个function(){}中,所以使用的变量会作为局部变量以避免同页面js代码中的其他变量重名导致运行出错,要获取返回值,请加return.",
+
+"type": "event""result comment": "返回一个js返回值对象用于取值操作",
+
+"type": "event""static": true,
+
+"type": "event""data type": "js值",
+
+"type": "event""parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "JS文本",
+"comment": "js代码脚本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否闭包",
+"comment": "设定是否闭包运行js",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+"type": "event"]
+  },
+  {
+js返回值对象用于取值操作"method name": "js执行状态是否有效",
+js返回值对象用于取值操作"comment": "判断js执行状态是否有效",
+js返回值对象用于取值操作"result comment": "返回真代表有效",
+js返回值对象用于取值操作"static": true,
+js返回值对象用于取值操作"data type": "逻辑型",
+js返回值对象用于取值操作"@嵌入式方法": "\"\"",
+js返回值对象用于取值操作"parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": " js执行状态句柄",
+"data type": "长整数"
+   }
+js返回值对象用于取值操作]
+  },
+  {
+"type": "event""parameters": [
+"method name": "jsValue是否有效",
+"type": "event""parameters": [
+"comment": "判断jsValue句柄是否有效",
+"type": "event""parameters": [
+"result comment": "返回真代表有效",
+"type": "event""parameters": [
+"static": true,
+"type": "event""parameters": [
+"data type": "逻辑型",
+"type": "event""parameters": [
+"@嵌入式方法": "\"\"",
+"type": "event""parameters": [
+"parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态句柄",
+"data type": "长整数"
+   },
+   {
+"parameter name": "jsValue句柄",
+"comment": "jsValue句柄",
+"data type": "长整数"
+   }
+"type": "event""parameters": [
+]
+  },
+  {
+ameter name": "js执行状态""method name": "js取浏览器句柄",
+ameter name": "js执行状态""comment": "通过js执行状态取浏览器句柄",
+ameter name": "js执行状态""result comment": "返回浏览器起句柄",
+ameter name": "js执行状态""static": true,
+ameter name": "js执行状态""data type": "变整数",
+ameter name": "js执行状态""@嵌入式方法": "\"\"",
+ameter name": "js执行状态""parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态句柄",
+"data type": "变整数"
+   }
+ameter name": "js执行状态"]
+  },
+  {
+ameter name": "jsValue句柄""method name": "js到整数",
+ameter name": "jsValue句柄""comment": "将jsValue代表的js值转换为整数",
+ameter name": "jsValue句柄""result comment": "整数js值",
+ameter name": "jsValue句柄""static": true,
+ameter name": "jsValue句柄""data type": "整数",
+ameter name": "jsValue句柄""@嵌入式方法": "\"\"",
+ameter name": "jsValue句柄""parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态",
+"data type": "变整数"
+   },
+   {
+"parameter name": "jsValue句柄",
+"comment": "js执行状态",
+"data type": "变整数"
+   }
+ameter name": "jsValue句柄"]
+  },
+  {
+data type": "长整数""method name": "js空",
+data type": "长整数""comment": "创建一个值为Null的jsValue句柄 用于程序向js返回数据",
+data type": "长整数""result comment": "返回jsValue句柄",
+data type": "长整数""static": true,
+data type": "长整数""data type": "整数",
+data type": "长整数""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "js未定义",
+"comment": "创建一个值为Undefined的jsValue句柄 用于程序向js返回数据",
+"result comment": "返回jsValue句柄",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+type": "event"]"method name": "js真",
+type": "event"]"comment": "创建一个值为True的jsValue句柄 用于程序向js返回数据",
+type": "event"]"result comment": "返回jsValue句柄",
+type": "event"]"static": true,
+type": "event"]"data type": "整数",
+type": "event"]"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "js假",
+
+"comment": "创建一个值为False的jsValue句柄 用于程序向js返回数据",
+
+"result comment": "返回jsValue句柄",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+result comment": "返回jsValue句柄""method name": "js整数",
+result comment": "返回jsValue句柄""comment": "创建一个值为数值型的jsValue句柄 用于程序向js返回数据",
+result comment": "返回jsValue句柄""result comment": "返回jsValue句柄",
+result comment": "返回jsValue句柄""static": true,
+result comment": "返回jsValue句柄""data type": "整数",
+result comment": "返回jsValue句柄""@嵌入式方法": "\"\"",
+result comment": "返回jsValue句柄""parameters": [
+   {
+"parameter name": "整数值",
+"comment": "整数返回值",
+"data type": "整数"
+   }
+result comment": "返回jsValue句柄"]
+  },
+  {
+ }"method name": "js浮点数",
+ }"comment": "创建一个值为Float型的jsValue句柄 用于程序向js返回数据",
+ }"result comment": "返回jsValue句柄",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "小数型值",
+"comment": "浮点数返回值",
+"data type": "小数"
+   }
+ }]
+  },
+  {
+sult comment": "返回jsValue句柄"]"method name": "js双精度",
+sult comment": "返回jsValue句柄"]"comment": "创建一个值为Double型的jsValue句柄 用于程序向js返回数据",
+sult comment": "返回jsValue句柄"]"result comment": "返回jsValue句柄",
+sult comment": "返回jsValue句柄"]"static": true,
+sult comment": "返回jsValue句柄"]"data type": "整数",
+sult comment": "返回jsValue句柄"]"@嵌入式方法": "\"\"",
+sult comment": "返回jsValue句柄"]"parameters": [
+   {
+"parameter name": "小数型值",
+"comment": "双精度小数返回值",
+"data type": "小数"
+   }
+sult comment": "返回jsValue句柄"]]
+  },
+  {
+
+"method name": "js逻辑",
+
+"comment": "创建一个值为逻辑型的jsValue句柄 用于程序向js返回数据",
+
+"result comment": "jsValue句柄",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"comment": "逻辑型返回值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+data type": "逻辑型""method name": "js字符串",
+data type": "逻辑型""comment": "创建一个值为js字符串型的jsValue句柄 用于程序向js返回数据",
+data type": "逻辑型""result comment": "返回jsValue句柄",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "文本内容",
+"comment": "文本内容",
+"data type": "文本型"
+   }
+data type": "逻辑型"]
+  },
+  {
+ata type": "逻辑型""parameters": [
+"method name": "js文本",
+ata type": "逻辑型""parameters": [
+"comment": "创建一个值为js字符串型的jsValue句柄 用于程序向js返回数据",
+ata type": "逻辑型""parameters": [
+"result comment": "返回jsValue句柄",
+ata type": "逻辑型""parameters": [
+"static": true,
+ata type": "逻辑型""parameters": [
+"data type": "整数",
+ata type": "逻辑型""parameters": [
+"@嵌入式方法": "\"\"",
+ata type": "逻辑型""parameters": [
+"parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文本内容",
+"comment": "文本内容",
+"data type": "文本型"
+   }
+ata type": "逻辑型""parameters": [
+]
+  },
+  {
+ }"method name": "js数组缓冲区",
+ }"comment": "创建一个表示jsArrayBuffer型的jsValue句柄主要用来处理一些二进制数据",
+ }"result comment": "返回jsValue句柄",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态",
+"data type": "变整数"
+   },
+   {
+"parameter name": "二进制数据",
+"comment": "欲向js中加入的字节集数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "数据尺寸",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ comment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区",
+ comment": "返回jsValue句柄"]"method name": "js双精度""comment": "将代表jsArrayBuffer的数据转成字节集",
+ comment": "返回jsValue句柄"]"method name": "js双精度""result comment": "返回内存数据字节集",
+ comment": "返回jsValue句柄"]"method name": "js双精度""static": true,
+ comment": "返回jsValue句柄"]"method name": "js双精度""data type": "字节集类",
+ comment": "返回jsValue句柄"]"method name": "js双精度""@禁止流程检查": "真",
+ comment": "返回jsValue句柄"]"method name": "js双精度""parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态",
+"data type": "变整数"
+   },
+   {
+"parameter name": "jsValue句柄",
+"comment": "jsValue句柄",
+"data type": "变整数"
+   }
+ comment": "返回jsValue句柄"]"method name": "js双精度"]
+  },
+  {
+comment": "返回jsValue句柄"]"method name": "js双精度""result comment": "返回内存数据字节集""method name": "js空对象",
+comment": "返回jsValue句柄"]"method name": "js双精度""result comment": "返回内存数据字节集""comment": "创建一个空对象的jsValue句柄 用于程序向js返回数据",
+comment": "返回jsValue句柄"]"method name": "js双精度""result comment": "返回内存数据字节集""result comment": "返回jsValue句柄",
+comment": "返回jsValue句柄"]"method name": "js双精度""result comment": "返回内存数据字节集""static": true,
+comment": "返回jsValue句柄"]"method name": "js双精度""result comment": "返回内存数据字节集""data type": "整数",
+comment": "返回jsValue句柄"]"method name": "js双精度""result comment": "返回内存数据字节集""@嵌入式方法": "\"\"",
+comment": "返回jsValue句柄"]"method name": "js双精度""result comment": "返回内存数据字节集""parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态",
+"data type": "变整数"
+   }
+comment": "返回jsValue句柄"]"method name": "js双精度""result comment": "返回内存数据字节集"]
+  },
+  {
+
+"method name": "js空数组",
+
+"comment": "创建一个表示空数组的jsValue句柄用于程序向js返回数据",
+
+"result comment": "返回jsValue句柄",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态",
+"data type": "变整数"
+   }
+
+]
+  }
+mment": "元素索引从0开始默认为第一个"]]
+ },
+ {
+
+"class name": "js值",
+
+"comment": "用于获得执行JS脚本的返回值以及获得js参数值",
+
+"base class": "jsValue类",
+
+"methods": [
+  {
+
+"result comment": "返回jsValue句柄""method name": "绑定",
+
+"result comment": "返回jsValue句柄""comment": "绑定jsValue句柄和js执行状态",
+
+"result comment": "返回jsValue句柄""result comment": "返回js值对象用于后续的取值操作",
+
+"result comment": "返回jsValue句柄""data type": "js值",
+
+"result comment": "返回jsValue句柄""parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态",
+"data type": "变整数"
+   },
+   {
+"parameter name": "jsValue句柄",
+"comment": "jsValue句柄",
+"data type": "变整数"
+   }
+
+"result comment": "返回jsValue句柄"]
+  },
+  {
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""method name": "jsValue句柄",
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""comment": "取代表当前js值的jsValue句柄",
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter",
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""data type": "变整数"
+  },
+  {
+前js值的jsValue句柄"method name": "js执行状态",
+前js值的jsValue句柄"comment": "取当前js值的执行状态句柄",
+前js值的jsValue句柄"type": "property getter",
+前js值的jsValue句柄"data type": "变整数"
+  },
+  {
+ent": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""method name": "取文本值",
+ent": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""comment": "将js返回的值转换成文本",
+ent": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""result comment": "返回js返回的文本值",
+ent": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""data type": "文本型"
+  },
+  {
+data type": "变整数""method name": "取整数值",
+data type": "变整数""comment": "将js返回的值转换成整数",
+data type": "变整数""result comment": "返回js返回的整数值",
+data type": "变整数""data type": "整数"
+  },
+  {
+的jsValue句柄"method name": "js执行状态""method name": "取小数值",
+的jsValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数",
+的jsValue句柄"method name": "js执行状态""result comment": "js返回的小数值",
+的jsValue句柄"method name": "js执行状态""data type": "小数"
+  },
+  {
+data type": "变整数""method name": "取浮点数值",
+data type": "变整数""comment": "将js返回的值转换成小数",
+data type": "变整数""result comment": "返回js返回的浮点数,这里使用小数表示",
+data type": "变整数""data type": "小数"
+  },
+  {
+comment": "jsValue句柄""method name": "取逻辑值",
+comment": "jsValue句柄""comment": "将js返回的值转换成逻辑值",
+comment": "jsValue句柄""result comment": "返回js返回的逻辑值",
+comment": "jsValue句柄""data type": "逻辑型"
+  },
+  {
+}"method name": "取字节集值",
+}"comment": "将js返回的ArrayBuffer类型值转为字节集",
+}"result comment": "失败返回空字节集",
+}"data type": "字节集类"
+  },
+  {
+"comment": "将js返回的ArrayBuffer类型值转为字节集""method name": "取值类型",
+"comment": "将js返回的ArrayBuffer类型值转为字节集""comment": "取js值的类型,与js数据类型常量进行比较判断值的类型",
+"comment": "将js返回的ArrayBuffer类型值转为字节集""result comment": "js数据类型常量 0:数值; 1:文本; 2:逻辑; 3:对象; 4:方法; 5:未定义; 6:数组; 7:空",
+"comment": "将js返回的ArrayBuffer类型值转为字节集""data type": "js数据类型"
+  }
+
+]
+ },
+ {
+}"class name": "js参数",
+}"comment": "用于获得js绑定方法被执行时提供的的参数",
+}"base class": "jsValue类",
+}"methods": [
+  {
+ type": "变整数""method name": "取整数值""method name": "绑定",
+ type": "变整数""method name": "取整数值""comment": "绑定设置js执行状态",
+ type": "变整数""method name": "取整数值""result comment": "返回js参数对象",
+ type": "变整数""method name": "取整数值""data type": "js参数",
+ type": "变整数""method name": "取整数值""parameters": [
+   {
+"parameter name": "js执行状态",
+"comment": "js执行状态,可以理解成一个句柄.",
+"data type": "变整数"
+   }
+ type": "变整数""method name": "取整数值"]
+  },
+  {
+ata type": "变整数""result comment": "返回js返回的浮点数,这里使用小数表示""method name": "js执行状态",
+ata type": "变整数""result comment": "返回js返回的浮点数,这里使用小数表示""comment": "取当前js参数的执行状态句柄",
+ata type": "变整数""result comment": "返回js返回的浮点数,这里使用小数表示""type": "property getter",
+ata type": "变整数""result comment": "返回js返回的浮点数,这里使用小数表示""data type": "变整数"
+  },
+  {
+jsValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数""method name": "取参数",
+jsValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数""comment": "取绑定js方法的参数",
+jsValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数""result comment": "返回js值对象",
+jsValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数""data type": "js值",
+jsValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数""parameters": [
+   {
+"parameter name": "参数索引",
+"comment": "参数索引 从0开始第几个参数",
+"data type": "整数"
+   }
+jsValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]
+  },
+  {
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"method name": "取参数类型",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"comment": "取绑定js方法的参数类型",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"result comment": "返回js数据类型常量 0:数值; 1:文本; 2:逻辑; 3:对象; 4:方法; 5:未定义; 6:数组; 7:空",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"data type": "js数据类型",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"parameters": [
+   {
+"parameter name": "参数索引",
+"comment": "参数索引 从0开始第几个参数",
+"data type": "整数"
+   }
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]]
+  },
+  {
+sValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数""parameters": [
+"method name": "取参数个数",
+sValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数""parameters": [
+"comment": "取绑定js方法的参数个数",
+sValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数""parameters": [
+"result comment": "返回js方法的参数个数",
+sValue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数""parameters": [
+"data type": "整数"
+  }
+}]
+ },
+ {
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"class name": "MB网络工作",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"comment": "MB网络工作类,用于获得或处理MB网络请求相关操作",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"methods": [
+  {
+e": "变整数""method name": "取整数值""method name": "绑定""method name": "绑定",
+e": "变整数""method name": "取整数值""method name": "绑定""comment": "初始化绑网络工作指针封装层内部使用",
+e": "变整数""method name": "取整数值""method name": "绑定""result comment": "返回MB网络工作对象",
+e": "变整数""method name": "取整数值""method name": "绑定""data type": "MB网络工作",
+e": "变整数""method name": "取整数值""method name": "绑定""parameters": [
+   {
+"parameter name": "网络工作指针",
+"data type": "变整数"
+   }
+e": "变整数""method name": "取整数值""method name": "绑定"]
+  },
+  {
+}"method name": "置MIMEType",
+}"comment": "设置网络响应的的MIMEType",
+}"parameters": [
+   {
+"parameter name": "MIME类型",
+"comment": "MIME类型 如:\"image/jpeg\"",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+: "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""method name": "取文本值""method name": "取MIMEType",
+: "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""method name": "取文本值""comment": "获取网络响应的的MIMEType",
+: "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""method name": "取文本值""data type": "文本型",
+: "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""method name": "取文本值""@禁止流程检查": "真",
+: "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""method name": "取文本值""parameters": [
+   {
+"parameter name": "MIME类型",
+"comment": "MIME类型 如:\"image/jpeg\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+: "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""type": "property getter""method name": "取文本值"]
+  },
+  {
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""method name": "取HTTP头某字段",
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""comment": "根据参数名获取http请求头",
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""result comment": "http头字段的值",
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""data type": "文本型",
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""@禁止流程检查": "真",
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""parameters": [
+   {
+"parameter name": "http头字段名",
+"comment": "http头字段名如:\"method\",\"user-agent\"等等.",
+"data type": "文本型"
+   }
+ment": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区"]
+  },
+  {
+"method name": "置HTTP头某字段",
+"comment": "设置http请求（或者file:///协议）的http请求头",
+"parameters": [
+   {
+"parameter name": "http头字段名",
+"comment": "http头字段名如:\"method\",\"user-agent\"等等.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "http头字段值",
+"comment": "http头字段值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "取HTTP响应头某字段",
+ }"comment": "获取http响应头",
+ }"result comment": "http头字段的值",
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "http头字段名",
+"comment": "http头字段名如:\"method\",\"user-agent\"等等.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "置数据",
+}"comment": "  调用此方法后,网络层收到数据会存储在一个内存缓冲区内,接收数据完成后触发\"结束加载Url\"事件.并允许次方法修改网络数据,\n此接口一般在\"开始加载Url\"事件中使用,在网络访问执行前,设置指定的数据到网络层,数据内容可以为js代码,图片,字符串,数据块等任意类型.",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "欲修改的网络数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+ent": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""@禁止流程检查": "真""method name": "Hook请求",
+ent": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""@禁止流程检查": "真""comment": "此方法一般在\"开始加载Url\"事件中使用,调用此方法会在接收数据完成后响应\"结束加载Url\"事件中获得拦截到的数据."
+  },
+  {
+thod name": "置数据""method name": "取请求方法",
+thod name": "置数据""comment": "取当前http请求类型",
+thod name": "置数据""result comment": "请求类型 0:无效; 1:Get; 2:Post; 3:Put.",
+thod name": "置数据""data type": "整数",
+thod name": "置数据""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取Url",
+
+"comment": "获取当前请求的链接地址",
+
+"result comment": "前请求的链接地址",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取消请求",
+}"comment": "取消本次网络请求,此方法需要在\"开始载入Ulr\"事件中使用."
+  },
+  {
+}"@禁止流程检查": "真""method name": "修改请求URL",
+}"@禁止流程检查": "真""comment": "修改当前请求的url,使请求指向另外一个url,此方法需要在\"开始载入Ulr\"事件中使用.",
+}"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "欲修改的url",
+"data type": "文本型"
+   }
+}"@禁止流程检查": "真"]
+  },
+  {
+hod name": "置数据""data type": "整数""method name": "取HTTP请求头",
+hod name": "置数据""data type": "整数""comment": "用于获得当前载入链接的请求头信息",
+hod name": "置数据""data type": "整数""parameters": [
+   {
+"parameter name": "请求头数据",
+"comment": "提供文本数组变量,用于存放获得的请求头信息,每个成员代表一个字段.",
+"data type": "文本数组类"
+   }
+hod name": "置数据""data type": "整数"]
+  },
+  {
+]"method name": "取HTTP响应头",
+]"comment": "用于获得当前载入链接的响应头信息",
+]"parameters": [
+   {
+"parameter name": "响应头数据",
+"comment": "提供文本数组变量,用于存放获得的响应头信息,每个成员代表一个字段.",
+"data type": "文本数组类"
+   }
+]]
+  },
+  {
+hod name": "置数据""@禁止流程检查": "真""method name": "取POST数据",
+hod name": "置数据""@禁止流程检查": "真""comment": "取当前POST请求数据,当前请求类型为POST时有效.",
+hod name": "置数据""@禁止流程检查": "真""result comment": "成功返回提交数据(文件)个数,否则返回0.",
+hod name": "置数据""@禁止流程检查": "真""data type": "整数",
+hod name": "置数据""@禁止流程检查": "真""@禁止流程检查": "真",
+hod name": "置数据""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "POST数据",
+"comment": "提供一个字节集数组,用来接收POST数据集.",
+"data type": "字节集数组类"
+   }
+hod name": "置数据""@禁止流程检查": "真"]
+  }
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]]
+ },
+ {
+"comment": "用于获得当前载入链接的响应头信息""class name": "MB窗口类型",
+"comment": "用于获得当前载入链接的响应头信息""comment": "MB窗口类型常量,创建MB窗口可以分别创建不同风格的窗口.",
+"comment": "用于获得当前载入链接的响应头信息""@文档": "\"category = \\\"辅助类\\\"\"",
+"comment": "用于获得当前载入链接的响应头信息""@常量类": "整数",
+"comment": "用于获得当前载入链接的响应头信息""constants": [
+  {
+data type": "字节集数组类""constant name": "弹出式窗口",
+data type": "字节集数组类""comment": "创建一个新的弹出式窗口",
+data type": "字节集数组类""initial value": "@wkeWindowType::WKE_WINDOW_TYPE_POPUP"
+  },
+  {
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"constant name": "透明窗口",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"comment": "无边框透明窗口适合用于WebUI",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"initial value": "@wkeWindowType::WKE_WINDOW_TYPE_TRANSPARENT"
+  },
+  {
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"constant name": "子控件窗口",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"comment": "子控件窗口,可以绑定到现有的窗口或组件布局器中作为窗口组件使用.",
+Value句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"initial value": "@wkeWindowType::WKE_WINDOW_TYPE_CONTROL"
+  }
+"comment": "用于获得当前载入链接的响应头信息"]
+ },
+ {
+"comment": "用于获得当前载入链接的响应头信息""class name": "MB代理类型",
+"comment": "用于获得当前载入链接的响应头信息""comment": "MB代理类型常量",
+"comment": "用于获得当前载入链接的响应头信息""@文档": "\"category = \\\"辅助类\\\"\"",
+"comment": "用于获得当前载入链接的响应头信息""@常量类": "整数",
+"comment": "用于获得当前载入链接的响应头信息""constants": [
+  {
+
+"constant name": "不使用代理",
+
+"comment": "不使用代理",
+
+"initial value": "@wkeProxyType::WKE_PROXY_NONE"
+  },
+  {
+comment": "用于获得当前载入链接的响应头信息""comment": "MB窗口类型常量,创建MB窗口可以分别创建不同风格的窗口.""constant name": "HTTP",
+comment": "用于获得当前载入链接的响应头信息""comment": "MB窗口类型常量,创建MB窗口可以分别创建不同风格的窗口.""comment": "HTTP代理",
+comment": "用于获得当前载入链接的响应头信息""comment": "MB窗口类型常量,创建MB窗口可以分别创建不同风格的窗口.""initial value": "@wkeProxyType::WKE_PROXY_HTTP"
+  },
+  {
+nstant name": "不使用代理""constant name": "SOCKS4",
+nstant name": "不使用代理""comment": "SOCKS4代理",
+nstant name": "不使用代理""initial value": "@wkeProxyType::WKE_PROXY_SOCKS4"
+  },
+  {
+明窗口适合用于WebUI"constant name": "SOCKS4A",
+明窗口适合用于WebUI"comment": "SOCKS4A代理",
+明窗口适合用于WebUI"initial value": "@wkeProxyType::WKE_PROXY_SOCKS4A"
+  },
+  {
+}"constant name": "SOCKS5",
+}"comment": "SOCKS5代理",
+}"initial value": "@wkeProxyType::WKE_PROXY_SOCKS5"
+  },
+  {
+": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""method name": "取HTTP头某字段""constant name": "SOCKS5HOSTNAME",
+": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""method name": "取HTTP头某字段""comment": "SOCKS5HOSTNAME代理",
+": "返回jsValue句柄"]"method name": "js双精度""method name": "js取数组缓冲区""method name": "取HTTP头某字段""initial value": "@wkeProxyType::WKE_PROXY_SOCKS5HOSTNAME"
+  }
+"comment": "用于获得当前载入链接的响应头信息"]
+ },
+ {
+nstant name": "SOCKS5""class name": "MBCookie命令",
+nstant name": "SOCKS5""comment": "执行Cookie命令常量",
+nstant name": "SOCKS5""@文档": "\"category = \\\"辅助类\\\"\"",
+nstant name": "SOCKS5""@常量类": "整数",
+nstant name": "SOCKS5""constants": [
+  {
+明窗口适合用于WebUI"constant name": "全部清除",
+明窗口适合用于WebUI"comment": "清楚所有Cookies",
+明窗口适合用于WebUI"initial value": "@wkeCookieCommand::wkeCookieCommandClearAllCookies"
+  },
+  {
+
+"constant name": "清除会话Cookies",
+
+"comment": "清除会话Cookies",
+
+"initial value": "@wkeCookieCommand::wkeCookieCommandClearSessionCookies"
+  },
+  {
+
+"constant name": "刷新到文件",
+
+"comment": "更新默认为\"cookies.dat\"文件",
+
+"initial value": "@wkeCookieCommand::wkeCookieCommandFlushCookiesToFile"
+  },
+  {
+窗口适合用于WebUI"initial value": "@wkeProxyType::WKE_PROXY_SOCKS4A""constant name": "从文件重新载入",
+窗口适合用于WebUI"initial value": "@wkeProxyType::WKE_PROXY_SOCKS4A""comment": "从默认为\"cookies.dat\"中重新载入Cookies",
+窗口适合用于WebUI"initial value": "@wkeProxyType::WKE_PROXY_SOCKS4A""initial value": "@wkeCookieCommand::wkeCookieCommandReloadCookiesFromFile"
+  }
+nstant name": "SOCKS5"]
+ },
+ {
+
+"class name": "MB导航类型",
+
+"comment": "MB导航类型常量,用户通过以下几种方式导航到当前页面.",
+
+"@文档": "\"category = \\\"辅助类\\\"\"",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+alue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"initial value": "@wkeWindowType::WKE_WINDOW_TYPE_TRANSPARENT""constant name": "点击链接",
+alue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"initial value": "@wkeWindowType::WKE_WINDOW_TYPE_TRANSPARENT""comment": "用户通过点击连接方式导航到当前页面",
+alue句柄"method name": "js执行状态""comment": "将js返回的值转换成小数"]"initial value": "@wkeWindowType::WKE_WINDOW_TYPE_TRANSPARENT""initial value": "@wkeNavigationType::WKE_NAVIGATION_TYPE_LINKCLICK"
+  },
+  {
+
+"constant name": "表单提交",
+
+"comment": "用户通过表单提交方式导航到当前页面",
+
+"initial value": "@wkeNavigationType::WKE_NAVIGATION_TYPE_FORMSUBMITTE"
+  },
+  {
+}"constant name": "后退",
+}"comment": "用户通过点击后退按钮方式导航到当前页面",
+}"initial value": "@wkeNavigationType::WKE_NAVIGATION_TYPE_BACKFORWARD"
+  },
+  {
+"initial value": "@wkeProxyType::WKE_PROXY_SOCKS5""constant name": "重新载入",
+"initial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面",
+"initial value": "@wkeProxyType::WKE_PROXY_SOCKS5""initial value": "@wkeNavigationType::WKE_NAVIGATION_TYPE_RELOAD"
+  },
+  {
+od name": "置数据""@禁止流程检查": "真""comment": "取当前POST请求数据,当前请求类型为POST时有效.""constant name": "表单重新提交",
+od name": "置数据""@禁止流程检查": "真""comment": "取当前POST请求数据,当前请求类型为POST时有效.""comment": "用户通过表单重新提交方式导航到当前页面",
+od name": "置数据""@禁止流程检查": "真""comment": "取当前POST请求数据,当前请求类型为POST时有效.""initial value": "@wkeNavigationType::WKE_NAVIGATION_TYPE_FORMRESUBMITT"
+  },
+  {
+}"constant name": "其他",
+}"comment": "用户通过其他方式导航到当前页面",
+}"initial value": "@wkeNavigationType::WKE_NAVIGATION_TYPE_OTHER"
+  }
+
+]
+ },
+ {
+"comment": "用户通过点击后退按钮方式导航到当前页面""class name": "js数据类型",
+"comment": "用户通过点击后退按钮方式导航到当前页面""comment": "js数据类型常量",
+"comment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"",
+"comment": "用户通过点击后退按钮方式导航到当前页面""@常量类": "整数",
+"comment": "用户通过点击后退按钮方式导航到当前页面""constants": [
+  {
+表单重新提交方式导航到当前页面"constant name": "数值",
+表单重新提交方式导航到当前页面"comment": "js数值类型",
+表单重新提交方式导航到当前页面"initial value": "@jsType::JSTYPE_NUMBER"
+  },
+  {
+d name": "置数据""@禁止流程检查": "真""comment": "取当前POST请求数据,当前请求类型为POST时有效.""comment": "用户通过表单重新提交方式导航到当前页面""constant name": "文本",
+d name": "置数据""@禁止流程检查": "真""comment": "取当前POST请求数据,当前请求类型为POST时有效.""comment": "用户通过表单重新提交方式导航到当前页面""comment": "js字符串类型",
+d name": "置数据""@禁止流程检查": "真""comment": "取当前POST请求数据,当前请求类型为POST时有效.""comment": "用户通过表单重新提交方式导航到当前页面""initial value": "@jsType::JSTYPE_STRING"
+  },
+  {
+initial value": "@wkeProxyType::WKE_PROXY_SOCKS5""initial value": "@wkeNavigationType::WKE_NAVIGATION_TYPE_RELOAD""constant name": "逻辑",
+initial value": "@wkeProxyType::WKE_PROXY_SOCKS5""initial value": "@wkeNavigationType::WKE_NAVIGATION_TYPE_RELOAD""comment": "js布尔类型",
+initial value": "@wkeProxyType::WKE_PROXY_SOCKS5""initial value": "@wkeNavigationType::WKE_NAVIGATION_TYPE_RELOAD""initial value": "@jsType::JSTYPE_BOOLEAN"
+  },
+  {
+comment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""constant name": "对象",
+comment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型",
+comment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""initial value": "@jsType::JSTYPE_OBJECT"
+  },
+  {
+}"constant name": "方法",
+}"comment": "js方法类型",
+}"initial value": "@jsType::JSTYPE_FUNCTION"
+  },
+  {
+}"constant name": "未定义",
+}"comment": "jsUNDEFINED",
+}"initial value": "@jsType::JSTYPE_UNDEFINED"
+  },
+  {
+}"constant name": "数组",
+}"comment": "js数组",
+}"initial value": "@jsType::JSTYPE_ARRAY"
+  },
+  {
+nstant name": "方法""constant name": "空",
+nstant name": "方法""comment": "jsNULL",
+nstant name": "方法""initial value": "@jsType::JSTYPE_NULL"
+  }
+"comment": "用户通过点击后退按钮方式导航到当前页面"]
+ },
+ {
+点击连接方式导航到当前页面"class name": "MB默认菜单项",
+点击连接方式导航到当前页面"comment": "MB默认菜单项常量",
+点击连接方式导航到当前页面"@文档": "\"category = \\\"辅助类\\\"\"",
+点击连接方式导航到当前页面"@常量类": "整数",
+点击连接方式导航到当前页面"constants": [
+  {
+nt name": "方法""constant name": "空""constant name": "全选",
+nt name": "方法""constant name": "空""comment": "内容全选",
+nt name": "方法""constant name": "空""initial value": "@wkeMenuItemId::kWkeMenuSelectedAllId"
+  },
+  {
+}"constant name": "选择文本",
+}"comment": "选择文本",
+}"initial value": "@wkeMenuItemId::kWkeMenuSelectedTextId"
+  },
+  {
+"comment": "选择文本""constant name": "撤销",
+"comment": "选择文本""comment": "撤销",
+"comment": "选择文本""initial value": "@wkeMenuItemId::kWkeMenuUndoId"
+  },
+  {
+
+"constant name": "复制图片",
+
+"comment": "复制图片",
+
+"initial value": "@wkeMenuItemId::kWkeMenuCopyImageId"
+  },
+  {
+initial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面""constant name": "审查元素",
+initial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面""comment": "审查元素",
+initial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面""initial value": "@wkeMenuItemId::kWkeMenuInspectElementAtId"
+  },
+  {
+表单重新提交方式导航到当前页面"constant name": "剪切",
+表单重新提交方式导航到当前页面"comment": "剪切",
+表单重新提交方式导航到当前页面"initial value": "@wkeMenuItemId::kWkeMenuCutId"
+  },
+  {
+
+"constant name": "粘贴",
+
+"comment": "粘贴",
+
+"initial value": "@wkeMenuItemId::kWkeMenuPasteId"
+  },
+  {
+
+"constant name": "打印",
+
+"comment": "打印",
+
+"initial value": "@wkeMenuItemId::kWkeMenuPrintId"
+  },
+  {
+ent": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""constant name": "对象""constant name": "前进",
+ent": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""constant name": "对象""comment": "前进",
+ent": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""constant name": "对象""initial value": "@wkeMenuItemId::kWkeMenuGoForwardId"
+  },
+  {
+
+"constant name": "后退",
+
+"comment": "后退",
+
+"initial value": "@wkeMenuItemId::kWkeMenuGoBackId"
+  },
+  {
+nstant name": "未定义""constant name": "刷新",
+nstant name": "未定义""comment": "刷新",
+nstant name": "未定义""initial value": "@wkeMenuItemId::kWkeMenuReloadId"
+  },
+  {
+comment": "选择文本""initial value": "@wkeMenuItemId::kWkeMenuUndoId""constant name": "图片另存为",
+comment": "选择文本""initial value": "@wkeMenuItemId::kWkeMenuUndoId""comment": "图片另存为",
+comment": "选择文本""initial value": "@wkeMenuItemId::kWkeMenuUndoId""initial value": "@wkeMenuItemId::kWkeMenuSaveImageId"
+  }
+点击连接方式导航到当前页面]
+ },
+ {
+omment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""class name": "MB鼠标键类型",
+omment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""comment": "MB鼠标事件类型常量",
+omment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""@文档": "\"category = \\\"辅助类\\\"\"",
+omment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""constants": [
+  {
+nstant name": "粘贴""constant name": "鼠标移动",
+nstant name": "粘贴""data type": "整数",
+nstant name": "粘贴""initial value": "512"
+  },
+  {
+nstant name": "粘贴""constant name": "左键按下",
+nstant name": "粘贴""data type": "整数",
+nstant name": "粘贴""initial value": "513"
+  },
+  {
+mment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""@文档": "\"category = \\\"辅助类\\\"\"""constant name": "左键放开",
+mment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""@文档": "\"category = \\\"辅助类\\\"\"""data type": "整数",
+mment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""@文档": "\"category = \\\"辅助类\\\"\"""initial value": "514"
+  },
+  {
+stant name": "粘贴""initial value": "513""constant name": "左键双击",
+stant name": "粘贴""initial value": "513""data type": "整数",
+stant name": "粘贴""initial value": "513""initial value": "515"
+  },
+  {
+mment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""comment": "MB鼠标事件类型常量""constant name": "右键按下",
+mment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""comment": "MB鼠标事件类型常量""data type": "整数",
+mment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型""comment": "MB鼠标事件类型常量""initial value": "516"
+  },
+  {
+
+"constant name": "右键放开",
+
+"data type": "整数",
+
+"initial value": "517"
+  },
+  {
+nitial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面""comment": "审查元素""constant name": "右键双击",
+nitial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面""comment": "审查元素""data type": "整数",
+nitial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面""comment": "审查元素""initial value": "518"
+  },
+  {
+
+"constant name": "中键按下",
+
+"data type": "整数",
+
+"initial value": "519"
+  },
+  {
+点击连接方式导航到当前页面"constant name": "中键放开",
+点击连接方式导航到当前页面"data type": "整数",
+点击连接方式导航到当前页面"initial value": "520"
+  },
+  {
+itial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面""comment": "审查元素""initial value": "518""constant name": "中键双击",
+itial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面""comment": "审查元素""initial value": "518""data type": "整数",
+itial value": "@wkeProxyType::WKE_PROXY_SOCKS5""comment": "用户通过刷新页面方式导航到当前页面""comment": "审查元素""initial value": "518""initial value": "521"
+  },
+  {
+
+"constant name": "滚轮滚动",
+
+"data type": "整数",
+
+"initial value": "522"
+  }
+omment": "用户通过点击后退按钮方式导航到当前页面""@文档": "\"category = \\\"辅助类\\\"\"""comment": "js对象类型"]
+ }
+516]
+}

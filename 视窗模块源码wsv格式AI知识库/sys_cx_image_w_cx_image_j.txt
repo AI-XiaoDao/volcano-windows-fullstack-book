@@ -1,0 +1,6519 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"CxImage图像处理支持".
+
+{
+问本程序中的接口需要引用模块"CxImage图像处理支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"CxImage图像处理支持"."package name": "火山.视窗.图像处理",
+问本程序中的接口需要引用模块"CxImage图像处理支持"."classes": [
+ {
+"class name": "图像处理类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n支持多种格式的图像处理.",
+"@视窗.外部库.static": "\"lib\\\\$(p)\\\\cximage-$(lm)-$(d).lib\\r\\nlib\\\\$(p)\\\\jpeg-$(lm)-$(d).lib\\r\\nlib\\\\$(p)\\\\png-$(lm)-$(d).lib\\r\\nlib\\\\$(p)\\\\mng-$(lm)-$(d).lib\\r\\nlib\\\\$(p)\\\\tiff-$(lm)-$(d).lib\\r\\nlib\\\\$(p)\\\\jasper-$(lm)-$(d).lib\\r\\nlib\\\\$(p)\\\\libdcr-$(lm)-$(d).lib\\r\\nlib\\\\$(p)\\\\libpsd-$(lm)-$(d).lib\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\zlib-$(d).lib\"",
+"@视窗.需求VS版本.static": "\"16-\"",
+"@视窗.外部库.non_static": "\"lib\\\\$(p)\\\\cximagecrt.lib\"",
+"@视窗.附属文件.non_static": "\"lib\\\\$(p)\\\\cximagecrt.dll\"",
+"@视窗.外部头文件": "\"vol_cximage.h\"",
+"@视窗.头文件搜寻目录": "\"lib\\\\include\"",
+"methods": [
+  {
+
+"method name": "创建自空白图像",
+
+"comment": "根据指定尺寸信息以及图像类型创建一张空白图像.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "宽度",
+"comment": "提供所欲创建图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所欲创建图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "位深度",
+"comment": "提供所欲创建图像的位深度,即每个像素点可表示的颜色比特位数,支持1, 4, 8, 24.",
+"data type": "整数",
+"@默认值": "8"
+   },
+   {
+"parameter name": "图像类型",
+"comment": "提供所欲创建图像的图像类型.",
+"data type": "图像格式类型",
+"@默认值": "图像格式类型.未知格式"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自图像文件",
+
+"comment": "载入外部文件的指定图像数据.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文件",
+"comment": "提供图像文件的完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图像类型",
+"comment": "提供该图像文件的图像类型.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自图像数据",
+
+"comment": "以指定的图像数据创建.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像类型",
+"comment": "提供该图像文件的图像类型.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自文件资源",
+
+"comment": "从指定的资源载入对应的图像数据.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "资源",
+"comment": "提供所欲载入的图像资源.",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "图像类型",
+"comment": "提供该图像文件的图像类型.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自通用缓冲区",
+
+"comment": "从通用缓冲区创建图像.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所欲创建图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所欲创建图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "位深度",
+"comment": "提供所欲创建图像的位深度,即每个像素点可表示的颜色比特位数,支持1, 4, 8, 24.",
+"data type": "整数"
+   },
+   {
+"parameter name": "行对齐",
+"comment": "指定所提供的图像数据单行排列的字节数.",
+"data type": "整数"
+   },
+   {
+"parameter name": "翻转",
+"comment": "指定是否翻转图像.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自矩阵数据",
+
+"comment": "从矩阵数据创建图像.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "矩阵",
+"comment": "提供所欲使用的矩阵位图数据,提供包含数据(BYTE*)的数组.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所欲创建图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所欲创建图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "位深度",
+"comment": "提供所欲创建图像的位深度,即每个像素点可表示的颜色比特位数,支持1, 4, 8, 24.",
+"data type": "整数"
+   },
+   {
+"parameter name": "行对齐",
+"comment": "指定所提供的图像数据单行排列的字节数.",
+"data type": "整数"
+   },
+   {
+"parameter name": "翻转",
+"comment": "指定是否翻转图像.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自内存句柄",
+
+"comment": "从指定的内存句柄创建图像.\n注意:本方法会复制内存创建,所提供的句柄必须自行释放,当前对象不会释放所提供的内存句柄.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄值",
+"comment": "提供所欲使用的内存句柄值(必须为CF_DIB格式).",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自位图对象",
+
+"comment": "以指定的位图对象创建图像.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "位图",
+"comment": "提供目标位图对象.",
+"data type": "位图对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自图标对象",
+
+"comment": "以指定的图标对象创建图像.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "图标",
+"comment": "提供目标图标对象.",
+"data type": "图标对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "检查图像格式",
+
+"comment": "检查指定图像文件是否与指定图像类型相匹配.",
+
+"result comment": "如果匹配则返回真,反之假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件",
+"comment": "提供图像文件的完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "匹配类型",
+"comment": "提供所欲匹配的图像格式类型.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "检查图像数据格式",
+
+"comment": "检查指定图像数据是否与指定图像类型相匹配.",
+
+"result comment": "如果匹配则返回真,反之假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲检查的图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "匹配类型",
+"comment": "提供所欲匹配的图像格式类型.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "复制创建",
+
+"comment": "复制另一图像对象所有属性到当前对象中.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "目标图像",
+"comment": "提供所欲复制的目标对象.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "复制像素",
+"comment": "是否复制所有像素.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "复制选区",
+"comment": "是否同时复制目标图像的选区.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "透明通道",
+"comment": "是否同时复制目标图像的透明通道.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+}"method name": "到位图对象",
+}"comment": "将当前图像数据拷贝创建为一个位图对象.",
+}"result comment": "返回复制的结果.",
+}"data type": "位图对象类",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到内存句柄",
+
+"comment": "将当前图像数据拷贝到系统内存并返回该句柄.\n注意:所返回内存句柄不会被自动释放,必须确保外部可以正常释放该句柄,请谨慎调用该方法.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到图像数据",
+
+"comment": "将当前图像数据写出到指定字节集中储存.",
+
+"result comment": "返回是否写出成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "用作存放所获得的图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像类型",
+"comment": "提供当前图像的格式类型.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "到多帧图像数据",
+
+"comment": "将指定的图像数组(多帧)写出到指定字节集中储存.",
+
+"result comment": "返回是否写出成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "图像帧",
+"comment": "提供所欲写出的多个图像帧.",
+"data type": "图像处理数组类"
+   },
+   {
+"parameter name": "缓冲区",
+"comment": "用作存放所获得的图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像类型",
+"comment": "提供所欲保存的图像类型.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+}"method name": "到RGBA图像数据",
+}"comment": "将当前图像数据编码导出为RGBA图像格式数据至指定字节集中储存.",
+}"result comment": "返回是否写出成功.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "用作存放所获得的图像数据.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "保存到文件",
+
+"comment": "将当前图像编码写出保存至目标文件.",
+
+"result comment": "返回是否写出保存成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "保存路径",
+"comment": "提供所欲保存图像的完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图像类型",
+"comment": "提供所欲保存的图像类型.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "保存多帧图像到文件",
+
+"comment": "将指定的图像数组(多帧)写出保存至目标文件(例如GIF格式图像).",
+
+"result comment": "返回是否写出保存成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "图像帧",
+"comment": "提供所欲写出的多个图像帧.",
+"data type": "图像处理数组类"
+   },
+   {
+"parameter name": "保存路径",
+"comment": "提供所欲保存图像的完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图像类型",
+"comment": "提供所欲保存的图像类型.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "保存RGBA图像到文件",
+
+"comment": "将当前图像数据编码导出为RGBA图像格式文件,主要用于OpenGL程序.",
+
+"result comment": "返回是否写出保存成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "保存路径",
+"comment": "提供所欲保存图像的完整路径.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取图像信息",
+
+"comment": "获取图像的Exif信息.",
+
+"data type": "图像信息类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "释放图像",
+
+"comment": "释放当前图像所占用资源,调用后图像需要重新创建.",
+
+"result comment": "如果当前图像存在多帧,必须在调用之前使用\"释放所有帧\",否则将释放失败.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "释放所有帧",
+
+"comment": "释放当前图像中的所有帧数据.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置禁用",
+
+"comment": "指定当前图像的启用/禁用状态.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "是否禁用",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "取禁用",
+
+"comment": "获取当前图像的启用/禁用状态.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "清除",
+
+"comment": "设置当前图像的比特到指定的值.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "比特",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "取像素指针",
+
+"comment": "获取当前图像指定行的像素指针.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "行索引",
+"comment": "提供指定行数.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "取位深度",
+
+"comment": "返回当前图像的位深度.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置重要颜色数",
+
+"comment": "设置最大重要颜色数,在索引图像时用到.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色数目",
+"comment": "应小于2^位深度,提供0表示所有颜色都将标为重要颜色.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取重要颜色数",
+
+"comment": "获取所设置的最大重要颜色数量.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置编解码选项",
+
+"comment": "设置某些格式图像的编解码设置项.",
+
+"result comment": "返回是否设置成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "选项",
+"comment": "提供所欲设置的选项.",
+"data type": "图像编解码选项"
+   },
+   {
+"parameter name": "图像格式",
+"comment": "仅支持JPG格式,GIF格式以及TIF格式.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "取编解码选项",
+
+"comment": "获取某些格式图像的编解码设置项.",
+
+"data type": "图像编解码选项",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "图像格式",
+"comment": "仅支持JPG格式,GIF格式以及TIF格式.",
+"data type": "图像格式类型"
+   }
+
+]
+  },
+  {
+
+"method name": "取颜色类型",
+
+"comment": "获取当前图像的颜色类型.",
+
+"result comment": "返回1表示索引色(indexed),返回2表示三基色(RGB),返回4表示RGBA.",
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取DIB",
+
+"comment": "取当前图像内部使用的DIB指针.",
+
+"result comment": "返回一个DIB指针,包含头信息.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取对齐宽度",
+
+"comment": "获取当前图像的对齐宽度",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置退出码",
+
+"comment": "设置退出码以用来退出太慢的循环或编码过程.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "退出码",
+"comment": "-1表示在解码之前获取到图像宽高后强制退出,仅用于指定的图像格式(BMP, JPG, GIF, TIF).",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "取退出码",
+
+"comment": "获取所设置的退出码.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置标志位",
+
+"comment": "设置图像标志位.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "标志",
+"data type": "整数"
+   },
+   {
+"parameter name": "锁定保留",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "取标志位",
+
+"comment": "获取已设置的图像标志位.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取当前帧",
+
+"comment": "获取当前已选定的图像(帧)索引.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取指定帧图像",
+
+"comment": "获取指定帧图像对象(例如多帧图像GIF),获取其中指定图像帧.",
+
+"data type": "图像处理类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供所欲获取的帧索引.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置当前帧",
+
+"comment": "设置将在下一次解码/载入时的图像帧索引.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取当前帧延时",
+
+"comment": "获取当前已选定的图像(帧)延时,仅用于GIF/MNG格式图像.",
+
+"result comment": "单位:毫秒.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置当前帧延时",
+
+"comment": "设置当前图像(帧)的延时时间.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "延时",
+"comment": "单位:毫秒.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取高度",
+
+"comment": "获取当前图像的高度.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取宽度",
+
+"comment": "获取当前图像的宽度.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取JPEG质量",
+}"comment": "获取已设置的JPEG图像质量.",
+}"result comment": "0-100之间.",
+}"data type": "字节",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置JPEG质量",
+
+"comment": "设置JPEG图像质量.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "质量",
+"comment": "0-100之间.",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "取JPEG压缩比",
+
+"comment": "获取已设置的JPEG图像压缩比例.",
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置JPEG压缩比",
+
+"comment": "设置JPEG图像压缩比例.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "压缩比",
+"comment": "可提供值为1, 2, 4, 8.",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "取最后错误",
+
+"comment": "获取最新的错误(如果有)内容描述.",
+
+"result comment": "无错误将返回空文本.",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取颜色数",
+
+"comment": "获取当前图像的颜色数.",
+
+"result comment": "返回2,16,256,如果为0表示RGB图像.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取帧数",
+
+"comment": "获取当前图像的帧数,例如GIF图像.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取处理进度",
+
+"comment": "获取当前图像处理的处理进度(在进行一些超大图像或一些耗时操作时).",
+
+"result comment": "0-100之间.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取尺寸",
+
+"comment": "获取当前图像的尺寸.",
+
+"result comment": "单位:字节.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取透明颜色",
+
+"comment": "获取当前图像的透明或背景颜色.",
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "置透明颜色",
+}"comment": "设置24位图像的透明颜色,仅在透明颜色索引大于时有效.",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "颜色",
+"data type": "图像颜色类"
+   }
+}]
+  },
+  {
+
+"method name": "取透明颜色索引",
+
+"comment": "获取用于透明度的索引.",
+
+"result comment": "返回-1表示不透明.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置透明颜色索引",
+
+"comment": "设置用于透明度的索引.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供-1表示不使用透明.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取图像类型",
+
+"comment": "获取当前图像的格式类型.",
+
+"data type": "图像格式类型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取版本信息",
+
+"comment": "获取CxImage类库的版本信息.",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取版本号",
+}"comment": "获取CxImage类库的版本信息.",
+}"data type": "小数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取横向分辨率",
+}"comment": "获取某些格式图像(TIFF, JPG, PNG, BMP)的横向分辨率(XDPI).",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置横向分辨率",
+
+"comment": "设置某些格式图像(TIFF, JPG, PNG, BMP)的横向分辨率(XDPI).",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "分辨率",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取纵向分辨率",
+
+"comment": "获取某些格式图像(TIFF, JPG, PNG, BMP)的横向分辨率(YDPI).",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置纵向分辨率",
+
+"comment": "设置某些格式图像(TIFF, JPG, PNG, BMP)的横向分辨率(YDPI).",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "分辨率",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "是否透明",
+
+"comment": "获取是否为透明图像.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否有效",
+
+"comment": "获取当前图像的数据是否有效(可在创建后调用以判断是否正确创建了图像).",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "调色板颜色混合",
+
+"comment": "将调色板混合指定的颜色.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色值",
+"comment": "提供所欲混合的颜色值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "混合比",
+"comment": "提供0-100之间的百分比.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取最接近调色板索引",
+
+"comment": "提供指定的颜色分量以匹配最佳调色板的索引.",
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "取调色板",
+
+"comment": "获取当前图像所使用的调色板.",
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取调色板尺寸",
+
+"comment": "获取调色板的尺寸.",
+
+"result comment": "单位:字节.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取指定调色板颜色",
+
+"comment": "获取指定索引处调色板颜色.",
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "置指定调色板颜色",
+
+"comment": "设置指定索引处调色板颜色.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "字节"
+   },
+   {
+"parameter name": "颜色",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "置指定调色板颜色2",
+
+"comment": "设置指定索引处调色板颜色.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "字节"
+   },
+   {
+"parameter name": "红色分量",
+"data type": "字节"
+   },
+   {
+"parameter name": "绿色分量",
+"data type": "字节"
+   },
+   {
+"parameter name": "蓝色分量",
+"data type": "字节"
+   },
+   {
+"parameter name": "透明通道",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "置指定调色板颜色值",
+
+"comment": "同\"置指定调色板颜色\"方法作用一致.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "字节"
+   },
+   {
+"parameter name": "颜色值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "是否为灰度",
+
+"comment": "获取当前图像是否为灰度图(有256种颜色和一个线性灰度调色板).",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "置灰度调色板",
+}"comment": "设置(或替换)调色板为灰度调色板,该方法不会改变像素.",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置标准调色板",
+
+"comment": "为4/8位深度设置一个标准颜色调色板.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "交换索引",
+
+"comment": "互换两个点像素的索引值.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引一",
+"data type": "字节"
+   },
+   {
+"parameter name": "索引二",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "是否为索引图",
+
+"comment": "获取当前图像颜色是否小于或等于256色.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否有相同调色板",
+
+"comment": "检测与另外一个图像处理对象是否有相同的调色板.",
+
+"result comment": "相同则返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "比较对象",
+"comment": "提供欲检查的另一图像.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "检查透明通道",
+"comment": "是否同时检查透明通道.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "置调色板",
+
+"comment": "设置当前所欲使用的调色板.",
+
+"parameters": [
+   {
+"parameter name": "颜色组",
+"comment": "提供所欲使用的调色板数组,成员数与颜色数保持一致.",
+"data type": "图像颜色数组类"
+   },
+   {
+"parameter name": "颜色数",
+"comment": "指定调色板颜色数,默认为256色.",
+"data type": "整数",
+"@默认值": "256"
+   }
+
+]
+  },
+  {
+
+"method name": "像素点颜色混合",
+
+"comment": "将指定像素点颜色与新颜色混合.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "提供目标像素点的横坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供目标像素点的纵坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "混合颜色",
+"comment": "提供所欲与其混合的新颜色.",
+"data type": "图像颜色类"
+   },
+   {
+"parameter name": "混合比",
+"comment": "提供0-1之间(百分比),0表示不混合,1完全混合.",
+"data type": "小数"
+   },
+   {
+"parameter name": "透明分量",
+"comment": "是否同时混合透明分量(Alpha).",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "画直线",
+
+"comment": "画一条指定颜色的直线.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "起始横坐标",
+"comment": "提供所欲画直线的起始横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "终点横坐标",
+"comment": "提供所欲画直线的终点横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始纵坐标",
+"comment": "提供所欲画直线的起始纵坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "终点纵坐标",
+"comment": "提供所欲画直线的终点纵坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色值",
+"comment": "提供所欲画直线的颜色值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "画直线2",
+
+"comment": "画一条指定颜色的直线.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "起始横坐标",
+"comment": "提供所欲画直线的起始横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "终点横坐标",
+"comment": "提供所欲画直线的终点横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始纵坐标",
+"comment": "提供所欲画直线的起始纵坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "终点纵坐标",
+"comment": "提供所欲画直线的终点纵坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色",
+"comment": "提供所欲画直线的颜色.",
+"data type": "图像颜色类"
+   },
+   {
+"parameter name": "透明分量",
+"comment": "是否同时使用透明分量(Alpha).",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "取像素颜色",
+
+"comment": "获取指定像素点的颜色.",
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "欲取其颜色的像素横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "欲取其颜色的像素纵坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "透明分量",
+"comment": "是否同时获取透明分量(Alpha).",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "置像素颜色",
+
+"comment": "设置指定像素点的颜色.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "欲设置其颜色的像素横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "欲设置其颜色的像素纵坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色",
+"comment": "提供所欲设置的颜色.",
+"data type": "图像颜色类"
+   },
+   {
+"parameter name": "透明分量",
+"comment": "是否同时设置其透明分量(Alpha).",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "置像素颜色值",
+
+"comment": "设置指定像素点的颜色值.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "欲设置其颜色的像素横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "欲设置其颜色的像素纵坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色值",
+"comment": "提供所欲设置的颜色值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取像素灰色",
+
+"comment": "获取指定像素点灰色.",
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "欲取其颜色的像素横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "欲取其颜色的像素纵坐标位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取像素索引",
+
+"comment": "获取指定像素对应的调色板索引.",
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "欲取其索引的像素横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "欲取其索引的像素纵坐标位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置像素索引",
+
+"comment": "设置指定像素对应的调色板索引.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "欲设置其索引的像素横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "欲设置其索引的像素纵坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲设置的索引.",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "是否包含像素",
+
+"comment": "检查指定像素坐标点是否位于当前图像之内.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "欲检查像素横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "欲检查像素纵坐标位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "是否为透明像素",
+
+"comment": "检查指定像素点是否为透明.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "欲检查像素横坐标位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "欲检查像素纵坐标位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取区域插值颜色",
+
+"comment": "与\"取像素插值颜色\"相似,但本方法可以正确处理二次抽样.\n如需从原图采样多于一个点像素时,应使用本方法而不是\"取像素插值颜色\".\n当图像面积的高度和宽度都小于像素时,本方法将取像素插值颜色.\n当图像面积的高度和宽度都大于1,本方法将计算区域内颜色的平均值.",
+
+"result comment": "返回目标区域颜色.",
+
+"data type": "图像颜色类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "中心横坐标",
+"comment": "提供所欲取区域(矩形)的中心横坐标.",
+"data type": "小数"
+   },
+   {
+"parameter name": "中心纵坐标",
+"comment": "提供所欲取区域(矩形)的中心纵坐标.",
+"data type": "小数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所欲取区域(矩形)的宽度.",
+"data type": "小数"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所欲取区域(矩形)的高度.",
+"data type": "小数"
+   },
+   {
+"parameter name": "插值算法",
+"comment": "提供所欲使用的插值算法.",
+"data type": "图像处理插值算法"
+   },
+   {
+"parameter name": "溢出算法",
+"comment": "提供所欲使用的溢出算法(仅在检索单个像素时使用).",
+"data type": "图像处理溢出算法",
+"@默认值": "图像处理溢出算法.背景"
+   },
+   {
+"parameter name": "替换颜色",
+"comment": "提供所欲使用的替换颜色列(在溢出算法为\"颜色\"时使用).",
+"data type": "图像颜色数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取像素插值颜色",
+
+"comment": "本方法将会根据所使用的插值算法重建图像,如果所指定的像素点位于图像之外,将会根据溢出算法计算最终颜色.",
+
+"result comment": "返回目标像素点颜色.",
+
+"data type": "图像颜色类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "提供所欲取其颜色的像素横坐标.",
+"data type": "小数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供所欲取其颜色的像素纵坐标.",
+"data type": "小数"
+   },
+   {
+"parameter name": "插值算法",
+"comment": "提供所欲使用的插值算法.",
+"data type": "图像处理插值算法",
+"@默认值": "图像处理插值算法.双线性"
+   },
+   {
+"parameter name": "溢出算法",
+"comment": "提供所欲使用的溢出算法.",
+"data type": "图像处理溢出算法",
+"@默认值": "图像处理溢出算法.背景"
+   },
+   {
+"parameter name": "替换颜色",
+"comment": "提供所欲使用的替换颜色列(在溢出算法为\"颜色\"时使用).",
+"data type": "图像颜色数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取像素溢出颜色",
+
+"comment": "本方法不使用插值算法重建,仅会在像素点超出边界时使用溢出算法计算颜色,如有透明通道将会一同获取.",
+
+"result comment": "返回目标像素点颜色.",
+
+"data type": "图像颜色类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "提供所欲取其颜色的像素横坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供所欲取其颜色的像素纵坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "溢出算法",
+"comment": "提供所欲使用的溢出算法.",
+"data type": "图像处理溢出算法",
+"@默认值": "图像处理溢出算法.背景"
+   },
+   {
+"parameter name": "替换颜色",
+"comment": "提供所欲使用的替换颜色列(在溢出算法为\"颜色\"时使用).",
+"data type": "图像颜色数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "溢出像素匹配",
+
+"comment": "提供指定的溢出算法计算溢出的像素坐标.",
+
+"parameters": [
+   {
+"parameter name": "计算结果",
+"comment": "计算后的横纵坐标结果将会写入至该变量.",
+"data type": "位置类"
+   },
+   {
+"parameter name": "溢出算法",
+"comment": "提供所欲使用的溢出算法.",
+"data type": "图像处理溢出算法"
+   }
+
+]
+  },
+  {
+
+"method name": "溢出像素匹配2",
+
+"comment": "提供指定的溢出算法计算溢出的像素坐标(小数).",
+
+"parameters": [
+   {
+"parameter name": "计算结果",
+"comment": "计算后的横纵坐标结果将会写入至该变量.",
+"data type": "小数位置类"
+   },
+   {
+"parameter name": "溢出算法",
+"comment": "提供所欲使用的溢出算法.",
+"data type": "图像处理溢出算法"
+   }
+
+]
+  },
+  {
+
+"method name": "拉伸绘图",
+
+"comment": "把图像(拉伸)画出到指定的场景设备,支持alpha通道,alpha调色板,透明度,暗度.",
+
+"result comment": "返回是否绘制成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备句柄",
+"comment": "提供所欲使用的设备句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "横向偏移",
+"comment": "所欲绘制当前图像的起始横向偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向偏移",
+"comment": "所欲绘制当前图像的起始纵向偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所欲绘制图像的宽度,提供小于0将默认使用当前图像的原始宽度.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所欲绘制图像的高度,提供小于0将默认使用当前图像的原始高度.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "绘制区域",
+"comment": "提供所欲限制的绘制区域,绘制的内容将会被限定到该区域中.",
+"data type": "矩形类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "平滑绘制",
+"comment": "是否启用双线性滤光器使其看起来平滑.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "垂直翻转",
+"comment": "是否垂直翻转图像.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "拉伸绘图2",
+
+"comment": "画出(拉伸)图像,仅支持透明.",
+
+"result comment": "返回是否绘制成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "设备句柄",
+"comment": "提供所欲使用的设备句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "横向偏移",
+"comment": "所欲绘制当前图像的起始横向偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向偏移",
+"comment": "所欲绘制当前图像的起始纵向偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所欲绘制图像的宽度,提供小于0将默认使用当前图像的原始宽度.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所欲绘制图像的高度,提供小于0将默认使用当前图像的原始高度.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "拉伸绘图3",
+
+"comment": "与\"拉伸绘图\"一致,参数提供坐标而非矩形区域.",
+
+"result comment": "返回是否绘制成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备句柄",
+"comment": "提供所欲使用的设备句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图像区域",
+"comment": "提供所欲绘制当前图像的区域,提供空对象将会使用当前图像的原始宽高,横纵偏移为0.",
+"data type": "矩形类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "绘制区域",
+"comment": "提供所欲限制的绘制区域,绘制的内容将会被限定到该区域中,提供空对象不限制.",
+"data type": "矩形类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "平滑绘制",
+"comment": "是否启用双线性滤光器使其看起来平滑.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "垂直翻转",
+"comment": "是否垂直翻转图像.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "拉伸绘图4",
+
+"comment": "与\"拉伸绘图2\"一致,参数提供坐标而非矩形区域.",
+
+"result comment": "返回是否绘制成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备句柄",
+"comment": "提供所欲使用的设备句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图像区域",
+"comment": "提供所欲绘制当前图像的区域,提供空对象将会使用当前图像的原始宽高,横纵偏移为0.",
+"data type": "矩形类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "平铺绘图",
+
+"comment": "把图像(平铺)画出到指定的场景设备.",
+
+"result comment": "返回是否绘制成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备句柄",
+"comment": "提供所欲使用的设备句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "绘制区域",
+"comment": "提供所欲限制的绘制区域,绘制的内容将会被限定到该区域中.",
+"data type": "矩形类"
+   }
+
+]
+  },
+  {
+
+"method name": "画文本",
+
+"comment": "将指定文本内容画出到指定的场景设备.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "设备句柄",
+"comment": "提供所欲使用的设备句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内容",
+"comment": "提供所欲绘制的文本内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供所欲绘制文字的起始横坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供所欲绘制文字的起始纵坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "字体颜色",
+"comment": "提供所欲绘制文字的内容颜色.",
+"data type": "图像颜色类"
+   },
+   {
+"parameter name": "字体描述",
+"comment": "提供所欲使用的字体类型,可通过\"取字体描述文本()\"获取.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体高度",
+"comment": "提供所欲绘制内容的高度.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "线条宽度",
+"comment": "提供所欲绘制内容的字体线条的宽度.",
+"data type": "整数",
+"@默认值": "400"
+   },
+   {
+"parameter name": "斜体",
+"comment": "是否使用斜体方式绘制内容.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "下划线",
+"comment": "是否在内容下方显示下划线.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "透明通道",
+"comment": "是否启用透明支持.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "上下翻转",
+
+"comment": "将当前图像进行上下翻转变换",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "翻转选区",
+"comment": "是否同时翻转选区.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "透明通道",
+"comment": "是否同时翻转透明通道.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "左右翻转",
+
+"comment": "将当前图像进行左右翻转变换",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "翻转选区",
+"comment": "是否同时翻转选区.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "透明通道",
+"comment": "是否同时翻转透明通道.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+}"method name": "底片",
+}"comment": "将当前图像进行底片变换.",
+}"result comment": "返回操作是否成功.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "灰度",
+
+"comment": "将当前图像进行灰度变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "左旋转",
+
+"comment": "基于当前图像进行左旋转变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次变换的结果将会放至该目标图像中(本对象将不会变换),如果为空对象则使当前本对象进行变换.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "右旋转",
+
+"comment": "基于当前图像进行右旋转变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次变换的结果将会放至该目标图像中(本对象将不会变换),如果为空对象则使当前本对象进行变换.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "圆形变换",
+
+"comment": "将当前图像进行圆形变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"data type": "图像圆形变换类型"
+   },
+   {
+"parameter name": "影响半径",
+"comment": "指定本次变换所欲影响的最大半径,如果为0则处理整张图像.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "KO系数",
+"comment": "仅在使用涡状圆形变换时使用.",
+"data type": "小数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "裁剪",
+
+"comment": "基于当前图像进行裁剪.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "左边",
+"data type": "整数"
+   },
+   {
+"parameter name": "顶边",
+"data type": "整数"
+   },
+   {
+"parameter name": "右边",
+"data type": "整数"
+   },
+   {
+"parameter name": "底边",
+"data type": "整数"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次裁剪的结果将会放至该目标图像中(本对象将不会裁剪),如果为空对象则使当前本对象进行裁剪.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "裁剪2",
+
+"comment": "基于当前图像进行裁剪.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "裁剪区域",
+"comment": "提供所欲裁剪的图像区域.",
+"data type": "矩形类"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次裁剪的结果将会放至该目标图像中(本对象将不会裁剪),如果为空对象则使当前本对象进行裁剪.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "裁剪旋转矩形",
+
+"comment": "基于当前图像进行矩形裁剪旋转变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "最左边",
+"comment": "矩形的最左端位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "最顶边",
+"comment": "矩形的最顶端位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "矩形的右边尺寸,顺时针围绕着最左边和最顶边位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "矩形的左边尺寸,顺时针围绕着最左边和最顶边位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "角度",
+"comment": "矩形右边的角度,相对于最左边和最顶边位置.",
+"data type": "小数"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次裁剪的结果将会放至该目标图像中(本对象将不会裁剪),如果为空对象则使当前本对象进行裁剪.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "减少位深度",
+
+"comment": "降低当前图像的位深度(每个像素比特减少到指定数目).",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "位深度",
+"comment": "提供目标位深度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "误差扩散",
+"comment": "处理图像的方式.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "调色板",
+"comment": "提供所欲使用的调色板,位深度为1,4,8时分别需要提供2,16,256个成员,提供空对象将使用默认调色板.",
+"data type": "图像颜色数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "重要颜色数",
+"comment": "提供所欲使用的重要颜色数,在索引图像时用到.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "高频振动",
+}"comment": "用指定的黑白处理方法变换当前图像.",
+}"result comment": "返回操作是否成功.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "类型",
+"data type": "图像处理抖动类型"
+   }
+}]
+  },
+  {
+
+"method name": "扩展",
+
+"comment": "基于当前图像进行扩展变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "左边增量",
+"comment": "将在当前左边基础上加上该值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "顶边增量",
+"comment": "将在当前顶边基础上加上该值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "右边增量",
+"comment": "将在当前右边基础上加上该值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "底边增量",
+"comment": "将在当前底边基础上加上该值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "边框颜色",
+"comment": "提供所欲使用的边框颜色.",
+"data type": "图像颜色类"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次扩展的结果将会放至该目标图像中(本对象将不会扩展),如果为空对象则使当前本对象进行扩展.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "扩展2",
+
+"comment": "基于当前图像进行扩展变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "新宽度",
+"comment": "提供所欲扩展到的一个新宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "新高度",
+"comment": "提供所欲扩展到的一个新高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "边框颜色",
+"comment": "提供所欲使用的边框颜色.",
+"data type": "图像颜色类"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次扩展的结果将会放至该目标图像中(本对象将不会扩展),如果为空对象则使当前本对象进行扩展.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "增加位深度",
+
+"comment": "增加当前图像的位深度(每个像素比特增加到指定数目).",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "位深度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "缩放",
+
+"comment": "缩放图像至一个新的宽高尺寸并填充边框.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "新宽度",
+"comment": "提供缩小后图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "新高度",
+"comment": "提供缩小后图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "边框颜色",
+"comment": "提供所欲使用的边框颜色.",
+"data type": "图像颜色类"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次缩放的结果将会放至该目标图像中(本对象将不会缩放),如果为空对象则使当前本对象进行缩放.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "缩放_QI",
+
+"comment": "高清晰度缩小图像并且效率非常高,对于速度比较重要的场景(缩略图和映射视图)有用,本方法对三基色24位真彩图像效果最好.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "新宽度",
+"comment": "提供缩小后图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "新高度",
+"comment": "提供缩小后图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "改变深度",
+"comment": "是否在缩小的同时改变位深度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次缩放的结果将会放至该目标图像中(本对象将不会缩放),如果为空对象则使当前本对象进行缩放.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "去除红眼",
+
+"comment": "去除人类或动物相片里经常出现的红眼现象.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "强度",
+"comment": "0-1之间,1表示强度最高.",
+"data type": "小数",
+"@默认值": "0.8"
+   }
+
+]
+  },
+  {
+
+"method name": "重定义尺寸",
+
+"comment": "基于当前图像对其宽高尺寸重新定义,即重新采样.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "新宽度",
+"comment": "提供改变后图像的新宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "新高度",
+"comment": "提供改变后图像的新宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "模式",
+"comment": "提供所欲使用的处理模式.",
+"data type": "图像尺寸重定义模式",
+"@默认值": "图像尺寸重定义模式.相邻像素"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次操作的结果将会放至该目标图像中(本对象将不会操作),如果为空对象则使当前本对象进行操作.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "重定义尺寸2",
+
+"comment": "基于当前图像对其宽高尺寸重新定义,即重新采样.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "新宽度",
+"comment": "提供改变后图像的新宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "新高度",
+"comment": "提供改变后图像的新宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "插值算法",
+"comment": "提供所欲使用的插值算法.",
+"data type": "图像处理插值算法",
+"@默认值": "图像处理插值算法.双三次2"
+   },
+   {
+"parameter name": "溢出算法",
+"comment": "提供所欲使用的溢出算法.",
+"data type": "图像处理溢出算法",
+"@默认值": "图像处理溢出算法.重复"
+   },
+   {
+"parameter name": "禁用均分",
+"comment": "收缩图像时不强制均分(会产生混叠).",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次操作的结果将会放至该目标图像中(本对象将不会操作),如果为空对象则使当前本对象进行操作.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "旋转",
+
+"comment": "基于当前图像对其进行旋转变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "角度",
+"comment": "提供所欲旋转的角度.",
+"data type": "小数"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次旋转的结果将会放至该目标图像中(本对象将不会旋转),如果为空对象则使当前本对象进行旋转.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "旋转180",
+
+"comment": "基于当前图像对其进行旋转180度变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次旋转的结果将会放至该目标图像中(本对象将不会旋转),如果为空对象则使当前本对象进行旋转.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "旋转2",
+
+"comment": "基于当前图像对其进行旋转变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "角度",
+"comment": "提供所欲旋转的角度.",
+"data type": "小数"
+   },
+   {
+"parameter name": "插值算法",
+"comment": "提供所欲使用的插值算法.",
+"data type": "图像处理插值算法",
+"@默认值": "图像处理插值算法.双三次2"
+   },
+   {
+"parameter name": "溢出算法",
+"comment": "提供所欲使用的溢出算法.",
+"data type": "图像处理溢出算法",
+"@默认值": "图像处理溢出算法.重复"
+   },
+   {
+"parameter name": "替换颜色",
+"comment": "提供所欲使用的替换颜色列(在溢出算法为\"颜色\"时使用).",
+"data type": "图像颜色数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "优化直角",
+"comment": "是否启用优化直角选项.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "保持原图",
+"comment": "是否强制保持原图的尺寸.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次旋转的结果将会放至该目标图像中(本对象将不会旋转),如果为空对象则使当前本对象进行旋转.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "倾斜",
+
+"comment": "基于当前图像进行倾斜变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "水平倾斜比",
+"comment": "提供0-1之间的值,表示一个百分比.",
+"data type": "小数"
+   },
+   {
+"parameter name": "垂直倾斜比",
+"comment": "提供0-1之间的值,表示一个百分比.",
+"data type": "小数"
+   },
+   {
+"parameter name": "支点横坐标",
+"comment": "提供所欲使用倾斜支点的横坐标.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "支点纵坐标",
+"comment": "提供所欲使用倾斜支点的纵坐标.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "双线性插值",
+"comment": "是否启用双线性插值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "高斯模糊",
+
+"comment": "基于当前图像进行高斯模糊处理.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "模糊半径",
+"comment": "即控制模糊程度一个系数.",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次处理的结果将会放至该目标图像中(本对象将不会处理),如果为空对象则使当前本对象进行处理.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "文字模糊",
+
+"comment": "基于当前图像进行文字模糊处理.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "阀值",
+"comment": "提供所欲使用的阀值.",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "衰变",
+"comment": "提供所欲使用的衰变值.",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "最大深度",
+"comment": "指定所欲模糊的最大深度.",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "水平模糊",
+"comment": "是否进行水平方向模糊.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "垂直模糊",
+"comment": "是否进行垂直方向模糊.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次处理的结果将会放至该目标图像中(本对象将不会处理),如果为空对象则使当前本对象进行处理.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "选择模糊",
+
+"comment": "在对比度阈值内选择性模糊图像,类似于非锐化蒙版,在对比度高于一定阀值时锐化所有.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "模糊半径",
+"comment": "即控制模糊程度一个系数.",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "阀值",
+"comment": "提供所欲使用的阀值.",
+"data type": "整数",
+"@默认值": "25"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "如果提供非空对象,本次处理的结果将会放至该目标图像中(本对象将不会处理),如果为空对象则使当前本对象进行处理.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "曝光",
+
+"comment": "将当前图像进行曝光处理,即将所有高于一定亮度的颜色转换成底片.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "等级",
+"comment": "提供所欲使用的曝光等级,0-255之间.",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "保留颜色",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "选择填充",
+
+"comment": "选择并填充图像.\n注意:如果不透明度为0并且加入选区为真,即作为魔术棒功能.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "起始横坐标",
+"comment": "提供填充的起始横坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始纵坐标",
+"comment": "提供填充的起始纵坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "填充颜色",
+"comment": "提供所欲使用的填充颜色.",
+"data type": "图像颜色类"
+   },
+   {
+"parameter name": "颜色偏移",
+"comment": "从起点的颜色偏移.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "不透明度",
+"comment": "提供所欲使用的不透明度,0-255之间,255表示完全不透明.",
+"data type": "整数",
+"@默认值": "255"
+   },
+   {
+"parameter name": "加入选区",
+"comment": "是否同时将所填充区域作为选区.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "选区等级",
+"comment": "指定所欲使用的选区等级.",
+"data type": "整数",
+"@默认值": "255"
+   }
+
+]
+  },
+  {
+
+"method name": "饱和",
+
+"comment": "改变当前图像进度饱和度.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "饱和度",
+"comment": "提供所欲设置的饱和度,-100 - 100之间.",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色空间",
+"comment": "提供1表示使用HSL,2表示使用YUV.",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "颜色匹配对象",
+
+"comment": "根据指定的颜色匹配是否有相应对象.",
+
+"result comment": "返回匹配结果.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "对象颜色",
+"data type": "图像颜色类"
+   },
+   {
+"parameter name": "轮廓颜色",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "调色",
+
+"comment": "替换图像原来的色调和饱和度值.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "色调",
+"comment": "提供所欲设置的新色调.",
+"data type": "字节"
+   },
+   {
+"parameter name": "饱和度",
+"comment": "提供所欲设置的新饱和度.",
+"data type": "字节"
+   },
+   {
+"parameter name": "混合度",
+"comment": "提供所欲设置的混合度,0-1之间,表示百分比.",
+"data type": "小数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "合并",
+
+"comment": "将不同的颜色图像组合起来.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "红色图层",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "绿色图层",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "蓝色图层",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "Alpha图层",
+"comment": "透明图层,可以为空对象.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "颜色空间",
+"comment": "提供所欲使用的颜色空间, 0=RGB, 1=HSL, 2=YUV, 3=YIQ, 4=XYZ",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "轮廓",
+
+"comment": "增强相临两个像素的变化值.效果和\"过滤器\"方法类似,但算法和\"边缘\"方法不同.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "扩张",
+
+"comment": "增强图像的光区.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内核尺寸",
+"comment": "提供所欲使用的内核尺寸.",
+"data type": "整数",
+"@默认值": "2"
+   }
+
+]
+  },
+  {
+
+"method name": "边缘",
+
+"comment": "增强相邻像素之间的差异.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内核尺寸",
+"comment": "提供所欲使用的内核尺寸.",
+"data type": "整数",
+"@默认值": "2"
+   }
+
+]
+  },
+  {
+
+"method name": "侵蚀",
+
+"comment": "增强图像的暗区.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内核尺寸",
+"comment": "提供所欲使用的内核尺寸.",
+"data type": "整数",
+"@默认值": "2"
+   }
+
+]
+  },
+  {
+
+"method name": "傅里叶变换",
+
+"comment": "基于当前图像进行二维傅里叶变换.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "原始图",
+"comment": "提供原始图用于计算,可以提供空对象,与\"图像\"不能同时为空对象.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "图像",
+"comment": "提供图像用于计算,可以提供空对象,与\"原始图\"不能同时为空对象.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "目标原图",
+"comment": "提供变换后的图像变量,变换结果将会存入该变量,如果为空将会变换当前本对象.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "目标图像",
+"comment": "提供变换后的图像变量,变换结果将会存入该变量,如果为空将会变换当前本对象.",
+"data type": "图像处理类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "逆向变换",
+"comment": "指定方向是否为逆向.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "强制变换",
+"comment": "指定是否进行强制变换,即图像将会被重定义尺寸,使其为2的幂.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "重点",
+"comment": "如果为真,实部返回大小,虚部返回相位.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "滤波",
+
+"comment": "二维线性滤波器.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "核心阵列",
+"comment": "提供行格式的矩阵数组,提供多少个数值为一行由参数二决定.\n例如柔化滤镜为:\n核心矩阵列\n 1 1 1\n 1 8 1\n 1 1 1",
+"data type": "整数数组类"
+   },
+   {
+"parameter name": "核心尺寸",
+"comment": "提供核心尺寸,即阵列每行成员数.",
+"data type": "整数"
+   },
+   {
+"parameter name": "因数",
+"comment": "归一化常数.",
+"data type": "整数"
+   },
+   {
+"parameter name": "偏移",
+"comment": "偏移量.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "伽玛系数",
+
+"comment": "调整图像的颜色平衡.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "系数",
+"comment": "取值范围:0.1 - 5.0之间.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "伽玛系数2",
+
+"comment": "调整图像的颜色平衡.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "红色分量",
+"comment": "取值范围:0.1 - 5.0之间.",
+"data type": "小数"
+   },
+   {
+"parameter name": "绿色分量",
+"comment": "取值范围:0.1 - 5.0之间.",
+"data type": "小数"
+   },
+   {
+"parameter name": "蓝色分量",
+"comment": "取值范围:0.1 - 5.0之间.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "柱状",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "红色",
+"comment": "提供整数数组变量,返回的结果将会放入该变量.",
+"data type": "整数数组类"
+   },
+   {
+"parameter name": "绿色",
+"comment": "提供整数数组变量,返回的结果将会放入该变量,提供空对象表示不获取该数据.",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "蓝色",
+"comment": "提供整数数组变量,返回的结果将会放入该变量,提供空对象表示不获取该数据.",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "灰色",
+"comment": "提供整数数组变量,返回的结果将会放入该变量,提供空对象表示不获取该数据.",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "颜色空间",
+"comment": "提供所欲使用的颜色空间, 0=RGB, 1=HSL, 2=YUV, 3=YIQ, 4=XYZ",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "柱状平衡",
+
+"comment": "柱状平衡",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "柱状对数",
+
+"comment": "柱状对数",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "柱状规范化",
+
+"comment": "柱状规范化",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "柱状根",
+}"comment": "柱状根",
+}"result comment": "返回操作是否成功.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "柱状拉伸",
+
+"comment": "柱状拉伸",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "方法",
+"comment": "提供0=亮度, 1=连接通道, 2=独立通道.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "色调调色板",
+
+"comment": "生成一个颜色饱和的\"彩虹\"调色板.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "校正",
+"comment": "1.0表示产生一个单一的色调光谱.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "抖动",
+
+"comment": "随机抖动处理图像,即为每个像素点添加一个随机偏移量.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "阀值",
+"comment": "所产生的随机偏移量最大值.",
+"data type": "整数",
+"@默认值": "2"
+   }
+
+]
+  },
+  {
+
+"method name": "对比度",
+
+"comment": "改变当前图像的亮度以及对比度.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "亮度",
+"comment": "取值范围:-255 - 255之间,负数表示图像变暗,反之变亮.",
+"data type": "整数"
+   },
+   {
+"parameter name": "对比",
+"comment": "对比度,取值范围:-100 - 100之间.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "显示查找表",
+
+"comment": "自定义像素灰度值的映射表,即LUT.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "表",
+"comment": "提供256字节的查找表.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "显示查找表2",
+
+"comment": "自定义像素灰度值的映射表(本方法独立指定每个颜色通道),即LUT.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "红色表",
+"comment": "提供256字节的查找表.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "绿色表",
+"comment": "提供256字节的查找表.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "蓝色表",
+"comment": "提供256字节的查找表.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "透明表",
+"comment": "提供256字节的查找表,提供空对象表示不指定.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取平均亮度",
+
+"comment": "获取当前图像的平均明亮度.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "中值",
+
+"comment": "将图像每个像素的强度调整为其周围像素的中值强度.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内核尺寸",
+"comment": "提供所欲使用的内核尺寸.",
+"data type": "整数",
+"@默认值": "3"
+   }
+
+]
+  },
+  {
+
+"method name": "混合",
+
+"comment": "将当前图像与另一张图混合.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "图像",
+"comment": "提供欲与其混合的另一张图像.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "混合方式",
+"comment": "提供所欲使用的图像混合方式.",
+"data type": "图像混合方式"
+   },
+   {
+"parameter name": "水平偏移",
+"comment": "图像的水平偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "垂直偏移",
+"comment": "图像的垂直偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "透明混合",
+"comment": "如果所欲混合的图像存在透明图层,是否一同混合.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "合并混合",
+
+"comment": "将当前图像与另一张图进行合并",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "图像",
+"comment": "提供欲与其合并的另一张图像.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "水平偏移",
+"comment": "提供合并欲使用的水平偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "垂直偏移",
+"comment": "提供合并欲使用的垂直偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "噪点",
+
+"comment": "为当前图像均匀添加噪点.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "等级",
+"comment": "提供噪点等级,取值范围0 - 255之间.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "修复",
+
+"comment": "智能修复当前图像,删除某些小缺陷,抖动等.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "半径比",
+"comment": "修复的半径范围,0.01 - 0.5之间.",
+"data type": "小数",
+"@默认值": "0.25"
+   },
+   {
+"parameter name": "补偿",
+"comment": "提供一个补偿值,确保将被消除的像素点满足该公式:半径比 * 补偿 < 1",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "颜色空间",
+"comment": "提供所欲使用的颜色空间, 0=RGB, 1=HSL, 2=YUV, 3=YIQ, 4=XYZ",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "调整三基色",
+
+"comment": "调整或修改三基色.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "红色分量",
+"data type": "整数"
+   },
+   {
+"parameter name": "绿色分量",
+"data type": "整数"
+   },
+   {
+"parameter name": "蓝色分量",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "阀值",
+
+"comment": "对当前图像对比度阀值调整.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "亮度等级",
+"comment": "可使用\"取平均亮度\"获取最佳值.",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "虚光蒙版",
+
+"comment": "作用主要是调整图像锐度,清晰度.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "影响半径",
+"comment": "本次操作所欲影响的半径.",
+"data type": "小数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "等级",
+"comment": "0-1.0之间.",
+"data type": "小数",
+"@默认值": "0.5"
+   },
+   {
+"parameter name": "阀值",
+"comment": "提供所欲指定的一个阀值.",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "提取CMYK",
+
+"comment": "从当前图像中提取CMYK通道,每个通道是一个8位的灰度图像.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道C",
+"comment": "通道C数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道M",
+"comment": "通道M数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道Y",
+"comment": "通道Y数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道K",
+"comment": "通道K数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "提取HSL",
+
+"comment": "从当前图像中提取HSL通道,每个通道是一个8位的灰度图像.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道H",
+"comment": "通道H数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道S",
+"comment": "通道S数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道L",
+"comment": "通道L数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "提取RGB",
+
+"comment": "从当前图像中提取RGB通道,每个通道是一个8位的灰度图像.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道R",
+"comment": "通道R数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道G",
+"comment": "通道G数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道B",
+"comment": "通道B数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "提取XYZ",
+
+"comment": "从当前图像中提取XYZ通道,每个通道是一个8位的灰度图像.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道X",
+"comment": "通道X数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道Y",
+"comment": "通道Y数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道Z",
+"comment": "通道Z数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "提取YIQ",
+
+"comment": "从当前图像中提取YIQ通道,每个通道是一个8位的灰度图像.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道Y",
+"comment": "通道Y数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道I",
+"comment": "通道I数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道Q",
+"comment": "通道Q数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "提取YUV",
+
+"comment": "从当前图像中提取YUV通道,每个通道是一个8位的灰度图像.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道Y",
+"comment": "通道Y数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道U",
+"comment": "通道U数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   },
+   {
+"parameter name": "通道V",
+"comment": "通道V数据将会写入至该图像对象中.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "选区添加颜色",
+
+"comment": "提供指定颜色,将所有匹配该颜色的像素添加至选区.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲添加至选区的像素颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "选区添加椭圆",
+
+"comment": "圈定一个椭圆,将该区域添加至选区.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "区域",
+"comment": "提供所欲添加至选区的椭圆区域.",
+"data type": "矩形类"
+   }
+
+]
+  },
+  {
+
+"method name": "选区添加像素",
+
+"comment": "将指定的一个像素点添加至选区.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "提供所欲添加像素的横坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供所欲添加像素的纵坐标.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "选区添加多边形",
+
+"comment": "提供多个顶点,连接起来成为一个多边形添加至选区.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "顶点数组",
+"comment": "提供所欲圈定多边形的所有顶点.",
+"data type": "位置数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "选区添加矩形",
+
+"comment": "圈定一个矩形,将该矩形区域添加至选区.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "区域",
+"comment": "提供所欲添加至选区的矩形区域.",
+"data type": "矩形类"
+   }
+
+]
+  },
+  {
+
+"method name": "选区清空",
+
+"comment": "清空当前选区.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "选区复制",
+}"comment": "从另外一个图像复制一个已经存在的选区.",
+}"result comment": "返回是否操作成功.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "图像",
+"comment": "提供所欲复制其选区的图像.",
+"data type": "图像处理类"
+   }
+}]
+  },
+  {
+
+"method name": "选区创建",
+
+"comment": "分配创建一个空选区.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "选区删除",
+
+"comment": "释放并删除当前选区.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "选区范围",
+
+"comment": "以矩形方式返回当前的选区范围.",
+
+"result comment": "返回当前的选区范围.",
+
+"data type": "矩形类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "选区反选",
+
+"comment": "反选当前选区,即将原有未选择的区域选中,已选择的区域取消选择.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "选区之内",
+
+"comment": "指定一个像素点,判断其是否处于当前选区之中.",
+
+"result comment": "处于选区中返回真,反之假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "提供所欲该像素点的横坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供所欲该像素点的纵坐标.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "选区是否有效",
+
+"comment": "检查当前图像上的选区是否有效.",
+
+"result comment": "返回选区是否有效.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "选区导出",
+
+"comment": "将当前选定的区域导出为一个8位灰度图像.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "存放图像",
+"comment": "所导出的图像将会置入该变量.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "选区到区域句柄",
+
+"comment": "将当前选区转换至一个区域句柄(HRGN).\n注意:所返回句柄务必自行调用DeleteObject释放,不理解指针概念请勿调用本方法.",
+
+"result comment": "执行成功返回句柄值,失败返回0.",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "Alpha清除",
+
+"comment": "清除透明通道.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha合并",
+
+"comment": "在Alpha图层中合并透明颜色蒙版.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha复制",
+
+"comment": "从另外一张图像复制其透明通道(具有一致的尺寸).",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "图像",
+"comment": "提供所欲复制其透明通道的图像.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "Alpha创建",
+
+"comment": "分配创建一个空的(不透明的)透明通道.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha删除",
+
+"comment": "删除并释放当前透明通道.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha翻转",
+
+"comment": "垂直翻转当前透明通道.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha从图像导入",
+
+"comment": "提供指定的灰度图像,基于该图像创建当前图像的透明通道.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "图像",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "取像素Alpha级别",
+
+"comment": "获取指定像素点的Alpha级别.",
+
+"result comment": "返回目标像素点的Alpha级别.",
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "提供所欲获取其Alpha级别的像素横坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供所欲获取其Alpha级别的像素纵坐标.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "置像素Alpha级别",
+}"comment": "设置指定像素点的Alpha级别.",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "提供所欲设置其Alpha级别的像素横坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供所欲设置其Alpha级别的像素纵坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "级别",
+"comment": "提供所欲设置的级别.",
+"data type": "字节"
+   }
+}]
+  },
+  {
+
+"method name": "置图像Alpha级别",
+
+"comment": "设置整张图像所有像素点的Alpha级别.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "级别",
+"comment": "提供所欲设置的级别.",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "取Alpha最大级别",
+
+"comment": "取最大Alpha级别.",
+
+"result comment": "返回最大Alpha级别.",
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置Alpha最大级别",
+
+"comment": "设置最大Alpha级别.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "最大级别",
+"comment": "提供所欲设置的Alpha级别.",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+}"method name": "取Alpha数据指针",
+}"comment": "获取指定像素点的Alpha数据指针,不理解指针概念的请勿调用本方法.",
+}"result comment": "返回目标像素点的数据指针(BYTE*).",
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "提供所欲获取其数据指针的像素横坐标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供所欲获取其数据指针的像素纵坐标.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "Alpha反转",
+
+"comment": "反转透明通道.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha是否有效",
+
+"comment": "检查当前透明通道是否有效.",
+
+"result comment": "有效返回真,反之假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha镜像",
+
+"comment": "水平翻转当前透明通道.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha调色板清除",
+
+"comment": "重置Alpha调色板.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置Alpha调色板是否启用",
+
+"comment": "指定是否启用Alpha调色板(将会影响到\"绘制\"系列方法).",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "取Alpha调色板是否启用",
+
+"comment": "获取当前是否已启用Alpha调色板(将会影响到\"绘制\"系列方法).",
+
+"result comment": "返回真表示已启用,反之未启用.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha调色板是否有效",
+
+"comment": "检查当前图像是否具有有效的Alpha调色板.",
+
+"result comment": "返回是否有效.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Alpha调色板导出",
+
+"comment": "将当前Alpha调色板导出为一个8位灰度图像.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "存放图像",
+"comment": "所导出的图像将会置入该变量.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "Alpha导出",
+
+"comment": "将当前Alpha通道导出为一个8位灰度图像.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "存放图像",
+"comment": "所导出的图像将会置入该变量.",
+"data type": "图像处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "Alpha混合",
+
+"comment": "混合Alpha通道和Alpha调色板的像素,结果是一个24位图像,背景色可以利用\"置透明颜色\"方法设置.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取指定图层",
+
+"comment": "取指定图层的图像.",
+
+"result comment": "返回该图层的图像对象.",
+
+"data type": "图像处理类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供所欲获取的图层索引,小于0表示获取最后一个图层.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取图层数量",
+
+"comment": "获取当前图像所存在图层的数量.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取图层父对象",
+
+"comment": "如果当前本对象为一个图层对象,则取他所属的父对象.",
+
+"data type": "图像处理类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "新建空图层",
+
+"comment": "创建一个新的空白图层.",
+
+"result comment": "返回是否创建成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "插入位置",
+"comment": "提供所创建的图层所欲插入的索引位置,小于0表示放置在最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "删除图层",
+
+"comment": "删除指定索引处的图层.",
+
+"result comment": "返回是否删除成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供所欲删除图层的索引位置,小于0表示删除最后的一个图层.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "删除所有图层",
+
+"comment": "删除全部的图层.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "HSL到RGB",
+
+"comment": "将HSL颜色转到RGB颜色.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲转换的颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "HSL颜色值到RGB",
+
+"comment": "将HSL颜色值转到RGB颜色.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色值",
+"comment": "提供所欲转换的颜色值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "图像颜色到颜色值",
+
+"comment": "将图像颜色对象转换为颜色值.",
+
+"result comment": "返回转换后的颜色值.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲转换的颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "颜色值到图像颜色",
+
+"comment": "将指定颜色值转换为颜色对象.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色值",
+"comment": "提供所欲转换的颜色值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "RGB到HSL",
+
+"comment": "将RGB颜色转到HSL颜色.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲转换的颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "RGB到XYZ",
+
+"comment": "将RGB颜色转到XYZ颜色.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲转换的颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "XYZ到RGB",
+
+"comment": "将XYZ颜色转到RGB颜色.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲转换的颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "RGB到YIQ",
+
+"comment": "将RGB颜色转到YIQ颜色.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲转换的颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "YIQ到RGB",
+
+"comment": "将YIQ颜色转到RGB颜色.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲转换的颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "RGB到YUV",
+
+"comment": "将RGB颜色转到YUV颜色.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲转换的颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  },
+  {
+
+"method name": "YUV到RGB",
+
+"comment": "将YUV颜色转到RGB颜色.",
+
+"result comment": "返回转换后的颜色.",
+
+"static": true,
+
+"data type": "图像颜色类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "提供所欲转换的颜色.",
+"data type": "图像颜色类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "GIF图像类",
+"comment": "本类实例表示一个GIF图像.",
+"base class": "图像处理类",
+"methods": [
+  {
+
+"method name": "载入GIF图像文件",
+
+"comment": "将指定图像文件解码载入.",
+
+"result comment": "返回载入是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "提供图像文件的完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "打开方式",
+"comment": "指定所欲使用的文件打开方式.",
+"data type": "文本型",
+"@默认值": "\"rb\""
+   }
+
+]
+  },
+  {
+
+"method name": "载入GIF图像数据",
+
+"comment": "将指定图像数据解码载入.",
+
+"result comment": "返回载入是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供图像文件的完整路径.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "写出GIF图像文件",
+
+"comment": "将当前图像对象的数据写出到本地文件.",
+
+"result comment": "返回是否写出成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "提供所欲将图像文件写出的路径,如果文件存在将会被覆盖.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "打开方式",
+"comment": "指定所欲使用的文件打开方式.",
+"data type": "文本型",
+"@默认值": "\"wb\""
+   },
+   {
+"parameter name": "写出所有帧",
+"comment": "指定是否写出所有帧,如提供假则仅会写出当前单帧图像.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "写出GIF图像数据",
+
+"comment": "将当前图像对象的数据写出到指定字节集中存放.",
+
+"result comment": "返回是否写出成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "提供所欲存放图像数据的字节集.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "写出所有帧",
+"comment": "指定是否写出所有帧,如提供假则仅会写出当前单帧图像.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "置循环次数",
+
+"comment": "设置GIF图像的循环次数.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "次数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取循环次数",
+
+"comment": "获取GIF图像的循环次数.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置注释信息",
+
+"comment": "设置GIF图像的注释文本信息.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"comment": "注意:最大支持255个字节,超出将被丢弃.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取注释信息",
+
+"comment": "设置GIF图像的注释文本信息.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  }
+]
+ },
+ {
+"class name": "MNG图像类",
+"comment": "本类实例表示一个MNG图像.",
+"base class": "图像处理类",
+"methods": [
+  {
+}"method name": "载入MNG图像文件",
+}"comment": "将指定图像文件解码载入.",
+}"result comment": "返回载入是否成功.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "路径",
+"comment": "提供图像文件的完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "打开方式",
+"comment": "指定所欲使用的文件打开方式.",
+"data type": "文本型",
+"@默认值": "\"rb\""
+   }
+}]
+  },
+  {
+
+"method name": "载入MNG图像数据",
+
+"comment": "将指定图像数据解码载入.",
+
+"result comment": "返回载入是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供图像文件的完整路径.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "写出MNG图像文件",
+
+"comment": "将当前图像对象的数据写出到本地文件.",
+
+"result comment": "返回是否写出成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "提供所欲将图像文件写出的路径,如果文件存在将会被覆盖.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "打开方式",
+"comment": "指定所欲使用的文件打开方式.",
+"data type": "文本型",
+"@默认值": "\"wb\""
+   }
+
+]
+  },
+  {
+
+"method name": "写出MNG图像数据",
+
+"comment": "将当前图像对象的数据写出到指定字节集中存放.",
+
+"result comment": "返回是否写出成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "提供所欲存放图像数据的字节集.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "写出所有帧",
+"comment": "指定是否写出所有帧,如提供假则仅会写出当前单帧图像.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "置播放速度",
+
+"comment": "设置MNG图像的播放速度.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "速度",
+"comment": "取值范围0.1-10之间.",
+"data type": "小数"
+   }
+
+]
+  }
+]
+ },
+ {
+}"class name": "图像格式类型",
+}"comment": "表示图像的格式.",
+}"@文档": "\"category = \\\"辅助类\\\"\"",
+}"@常量类": "整数",
+}"constants": [
+  {
+
+"constant name": "未知格式",
+
+"initial value": "@CXIMAGE_FORMAT_UNKNOWN"
+  },
+  {
+
+"constant name": "BMP格式",
+
+"initial value": "@CXIMAGE_FORMAT_BMP"
+  },
+  {
+
+"constant name": "GIF格式",
+
+"initial value": "@CXIMAGE_FORMAT_GIF"
+  },
+  {
+
+"constant name": "JPG格式",
+
+"initial value": "@CXIMAGE_FORMAT_JPG"
+  },
+  {
+
+"constant name": "PNG格式",
+
+"initial value": "@CXIMAGE_FORMAT_PNG"
+  },
+  {
+
+"constant name": "ICO格式",
+
+"initial value": "@CXIMAGE_FORMAT_ICO"
+  },
+  {
+
+"constant name": "TIF格式",
+
+"initial value": "@CXIMAGE_FORMAT_TIF"
+  },
+  {
+
+"constant name": "TGA格式",
+
+"initial value": "@CXIMAGE_FORMAT_TGA"
+  },
+  {
+
+"constant name": "PCX格式",
+
+"initial value": "@CXIMAGE_FORMAT_PCX"
+  },
+  {
+
+"constant name": "WBMP格式",
+
+"initial value": "@CXIMAGE_FORMAT_WBMP"
+  },
+  {
+
+"constant name": "WMF格式",
+
+"initial value": "@CXIMAGE_FORMAT_WMF"
+  },
+  {
+
+"constant name": "JP2格式",
+
+"initial value": "@CXIMAGE_FORMAT_JP2"
+  },
+  {
+
+"constant name": "JPC格式",
+
+"initial value": "@CXIMAGE_FORMAT_JPC"
+  },
+  {
+
+"constant name": "PGX格式",
+
+"initial value": "@CXIMAGE_FORMAT_PGX"
+  },
+  {
+
+"constant name": "PNM格式",
+
+"initial value": "@CXIMAGE_FORMAT_PNM"
+  },
+  {
+
+"constant name": "RAS格式",
+
+"initial value": "@CXIMAGE_FORMAT_RAS"
+  },
+  {
+
+"constant name": "MNG格式",
+
+"initial value": "@CXIMAGE_FORMAT_MNG"
+  },
+  {
+
+"constant name": "SKA格式",
+
+"initial value": "@CXIMAGE_FORMAT_SKA"
+  },
+  {
+
+"constant name": "RAW格式",
+
+"initial value": "@CXIMAGE_FORMAT_RAW"
+  },
+  {
+
+"constant name": "PSD格式",
+
+"initial value": "@CXIMAGE_FORMAT_PSD"
+  }
+}]
+ },
+ {
+"class name": "图像编解码选项",
+"comment": "表示指定格式图像可使用的编解码选项.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "GIF_LZW",
+
+"comment": "GIF图像LZW模式",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "GIF_无",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "GIF_RLE",
+
+"comment": "GIF图像RLE模式",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "TIF_自动",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "TIF_NONE",
+
+"initial value": "@COMPRESSION_NONE"
+  },
+  {
+
+"constant name": "TIF_CCITTRLE",
+
+"initial value": "@COMPRESSION_CCITTRLE"
+  },
+  {
+
+"constant name": "TIF_CCITTFAX3",
+
+"initial value": "@COMPRESSION_CCITTFAX3"
+  },
+  {
+
+"constant name": "TIF_CCITT_T4",
+
+"initial value": "@COMPRESSION_CCITT_T4"
+  },
+  {
+}"constant name": "TIF_CCITTFAX4",
+}"initial value": "@COMPRESSION_CCITTFAX4"
+  },
+  {
+
+"constant name": "TIF_CCITT_T6",
+
+"initial value": "@COMPRESSION_CCITT_T6"
+  },
+  {
+
+"constant name": "TIF_LZW",
+
+"initial value": "@COMPRESSION_LZW"
+  },
+  {
+
+"constant name": "TIF_OJPEG",
+
+"initial value": "@COMPRESSION_OJPEG"
+  },
+  {
+PRESSION_OJPEG"constant name": "TIF_JPEG",
+PRESSION_OJPEG"initial value": "@COMPRESSION_JPEG"
+  },
+  {
+
+"constant name": "TIF_NEXT",
+
+"initial value": "@COMPRESSION_NEXT"
+  },
+  {
+
+"constant name": "TIF_CCITTRLEW",
+
+"initial value": "@COMPRESSION_CCITTRLEW"
+  },
+  {
+
+"constant name": "TIF_PACKBITS",
+
+"initial value": "@COMPRESSION_PACKBITS"
+  },
+  {
+
+"constant name": "TIF_THUNDERSCAN",
+
+"initial value": "@COMPRESSION_THUNDERSCAN"
+  },
+  {
+
+"constant name": "TIF_IT8CTPAD",
+
+"initial value": "@COMPRESSION_IT8CTPAD"
+  },
+  {
+
+"constant name": "TIF_IT8LW",
+
+"initial value": "@COMPRESSION_IT8LW"
+  },
+  {
+
+"constant name": "TIF_IT8MP",
+
+"initial value": "@COMPRESSION_IT8MP"
+  },
+  {
+
+"constant name": "TIF_IT8BL",
+
+"initial value": "@COMPRESSION_IT8BL"
+  },
+  {
+
+"constant name": "TIF_PIXARFILM",
+
+"initial value": "@COMPRESSION_PIXARFILM"
+  },
+  {
+
+"constant name": "TIF_PIXARLOG",
+
+"initial value": "@COMPRESSION_PIXARLOG"
+  },
+  {
+
+"constant name": "TIF_DEFLATE",
+
+"initial value": "@COMPRESSION_DEFLATE"
+  },
+  {
+
+"constant name": "TIF_ADOBE_DEFLATE",
+
+"initial value": "@COMPRESSION_ADOBE_DEFLATE"
+  },
+  {
+
+"constant name": "TIF_DCS",
+
+"initial value": "@COMPRESSION_DCS"
+  },
+  {
+
+"constant name": "TIF_JBIG",
+
+"initial value": "@COMPRESSION_JBIG"
+  },
+  {
+
+"constant name": "TIF_SGILOG",
+
+"initial value": "@COMPRESSION_SGILOG"
+  },
+  {
+
+"constant name": "TIF_SGILOG24",
+
+"initial value": "@COMPRESSION_SGILOG24"
+  },
+  {
+
+"constant name": "TIF_JP2000",
+
+"initial value": "@COMPRESSION_JP2000"
+  },
+  {
+
+"constant name": "JPG_BASELINE编码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::ENCODE_BASELINE"
+  },
+  {
+
+"constant name": "JPG_GRAYSCALE编码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::ENCODE_GRAYSCALE"
+  },
+  {
+
+"constant name": "JPG_OPTIMIZE编码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::ENCODE_OPTIMIZE"
+  },
+  {
+
+"constant name": "JPG_PROGRESSIVE编码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::ENCODE_PROGRESSIVE"
+  },
+  {
+
+"constant name": "JPG_LOSSLESS编码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::ENCODE_LOSSLESS"
+  },
+  {
+
+"constant name": "JPG_SMOOTHING编码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::ENCODE_SMOOTHING"
+  },
+  {
+
+"constant name": "JPG_SUBSAMPLE_422编码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::ENCODE_SUBSAMPLE_422"
+  },
+  {
+}"constant name": "JPG_SUBSAMPLE_444编码",
+}"initial value": "@CxImageJPG::CODEC_OPTION::ENCODE_SUBSAMPLE_444"
+  },
+  {
+
+"constant name": "JPG_GRAYSCALE解码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::DECODE_GRAYSCALE"
+  },
+  {
+
+"constant name": "JPG_QUANTIZE解码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::DECODE_QUANTIZE"
+  },
+  {
+
+"constant name": "JPG_DITHER解码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::DECODE_DITHER"
+  },
+  {
+
+"constant name": "JPG_ONEPASS解码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::DECODE_ONEPASS"
+  },
+  {
+
+"constant name": "JPG_NOSMOOTH解码",
+
+"initial value": "@CxImageJPG::CODEC_OPTION::DECODE_NOSMOOTH"
+  }
+]
+ },
+ {
+"class name": "图像处理插值算法",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "相邻像素",
+
+"comment": "为位置相邻的像素.",
+
+"initial value": "@CxImage::InterpolationMethod::IM_NEAREST_NEIGHBOUR"
+  },
+  {
+
+"constant name": "双线性",
+
+"comment": "为四个位置相邻的像素,能够使像素比特效果变柔和.",
+
+"initial value": "@CxImage::InterpolationMethod::IM_BILINEAR"
+  },
+  {
+
+"constant name": "样条曲线",
+
+"comment": "B样条曲线,为16个位置相邻的像素,能够使像素比特效果变柔和洗涤颜色,使用双三次插值算法.",
+
+"initial value": "@CxImage::InterpolationMethod::IM_BSPLINE"
+  },
+  {
+
+"constant name": "双三次",
+
+"comment": "为16个位置相邻的像素,能够使像素比特效果有光晕.",
+
+"initial value": "@CxImage::InterpolationMethod::IM_BICUBIC"
+  },
+  {
+
+"constant name": "双三次2",
+
+"comment": "为16个位置相邻的像素,能够使像素比特效果有光晕,但少于\"双三次\"算法.",
+
+"initial value": "@CxImage::InterpolationMethod::IM_BICUBIC2"
+  },
+  {
+
+"constant name": "Lanczos",
+
+"comment": "为12*12的像素,能够使像素比特效果缓慢和明亮.",
+
+"initial value": "@CxImage::InterpolationMethod::IM_LANCZOS"
+  },
+  {
+
+"constant name": "BOX",
+
+"comment": "BOX插值算法.",
+
+"initial value": "@CxImage::InterpolationMethod::IM_BOX"
+  },
+  {
+
+"constant name": "Hermite",
+
+"initial value": "@CxImage::InterpolationMethod::IM_HERMITE"
+  },
+  {
+
+"constant name": "加重平衡",
+
+"initial value": "@CxImage::InterpolationMethod::IM_HAMMING"
+  },
+  {
+
+"constant name": "Sinc",
+
+"initial value": "@CxImage::InterpolationMethod::IM_SINC"
+  },
+  {
+
+"constant name": "BlackMan",
+
+"initial value": "@CxImage::InterpolationMethod::IM_BLACKMAN"
+  },
+  {
+
+"constant name": "贝塞尔",
+
+"initial value": "@CxImage::InterpolationMethod::IM_BESSEL"
+  },
+  {
+
+"constant name": "高斯",
+
+"initial value": "@CxImage::InterpolationMethod::IM_GAUSSIAN"
+  },
+  {
+
+"constant name": "二次方",
+
+"initial value": "@CxImage::InterpolationMethod::IM_QUADRATIC"
+  },
+  {
+
+"constant name": "Mitchell",
+
+"initial value": "@CxImage::InterpolationMethod::IM_MITCHELL"
+  },
+  {
+
+"constant name": "CatRom",
+
+"initial value": "@CxImage::InterpolationMethod::IM_CATROM"
+  },
+  {
+
+"constant name": "汉宁窗",
+
+"initial value": "@CxImage::InterpolationMethod::IM_HANNING"
+  },
+  {
+
+"constant name": "Power",
+
+"initial value": "@CxImage::InterpolationMethod::IM_POWER"
+  }
+]
+ },
+ {
+"class name": "图像处理溢出算法",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "颜色",
+
+"initial value": "@CxImage::OverflowMethod::OM_COLOR"
+  },
+  {
+
+"constant name": "背景",
+
+"initial value": "@CxImage::OverflowMethod::OM_BACKGROUND"
+  },
+  {
+
+"constant name": "透明",
+
+"initial value": "@CxImage::OverflowMethod::OM_TRANSPARENT"
+  },
+  {
+
+"constant name": "换行",
+
+"initial value": "@CxImage::OverflowMethod::OM_WRAP"
+  },
+  {
+
+"constant name": "重复",
+
+"initial value": "@CxImage::OverflowMethod::OM_REPEAT"
+  },
+  {
+
+"constant name": "对称",
+
+"initial value": "@CxImage::OverflowMethod::OM_MIRROR"
+  }
+]
+ },
+ {
+"class name": "图像圆形变换类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "普通鱼眼",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "0"
+  },
+  {
+
+"constant name": "反转鱼眼",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "涡状",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "镜像圆柱",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "BathRoom",
+
+"initial value": "4"
+  }
+]
+ },
+ {
+"class name": "图像处理抖动类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "FloydSteinberg",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "规则抖动",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "Burkes",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "Stucki",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "JarvisJudiceNinke",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "Sierra",
+
+"initial value": "5"
+  },
+  {
+
+"constant name": "StevensonArce",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "Bayer",
+
+"initial value": "7"
+  }
+]
+ },
+ {
+"class name": "图像尺寸重定义模式",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "双线性",
+
+"comment": "处理较慢.",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "相邻像素",
+
+"comment": "处理较快.",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "双三次",
+
+"comment": "双三次样条插值,比较精确.",
+
+"initial value": "2"
+  }
+]
+ },
+ {
+}"class name": "图像混合方式",
+}"@文档": "\"category = \\\"辅助类\\\"\"",
+}"@常量类": "整数",
+}"constants": [
+  {
+
+"constant name": "相加",
+
+"initial value": "@CxImage::ImageOpType::OpAdd"
+  },
+  {
+
+"constant name": "相与",
+
+"initial value": "@CxImage::ImageOpType::OpAnd"
+  },
+  {
+
+"constant name": "异或",
+
+"initial value": "@CxImage::ImageOpType::OpXor"
+  },
+  {
+
+"constant name": "或",
+
+"initial value": "@CxImage::ImageOpType::OpOr"
+  },
+  {
+
+"constant name": "掩模",
+
+"initial value": "@CxImage::ImageOpType::OpMask"
+  },
+  {
+
+"constant name": "源拷贝",
+
+"initial value": "@CxImage::ImageOpType::OpSrcCopy"
+  },
+  {
+
+"constant name": "目标拷贝",
+
+"initial value": "@CxImage::ImageOpType::OpDstCopy"
+  },
+  {
+
+"constant name": "相减",
+
+"initial value": "@CxImage::ImageOpType::OpSub"
+  },
+  {
+
+"constant name": "源混合",
+
+"initial value": "@CxImage::ImageOpType::OpSrcBlend"
+  },
+  {
+
+"constant name": "Screen",
+
+"initial value": "@CxImage::ImageOpType::OpScreen"
+  }
+}]
+ },
+ {
+"class name": "图像颜色类",
+"comment": "对应RGBQUAD",
+"base class": "扩展对象类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+
+"variable name": "蓝色分量",
+
+"data type": "字节",
+
+"@属性变量": "真"
+  },
+  {
+
+"variable name": "绿色分量",
+
+"data type": "字节",
+
+"@属性变量": "真"
+  },
+  {
+
+"variable name": "红色分量",
+
+"data type": "字节",
+
+"@属性变量": "真"
+  },
+  {
+
+"variable name": "透明分量",
+
+"data type": "字节",
+
+"@属性变量": "真"
+  }
+],
+"methods": [
+  {
+
+"method name": "到颜色值",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "图像信息类",
+"comment": "表示图像的Exif信息.",
+"base class": "扩展对象类",
+"@强制依赖": "\"图像处理类\"",
+"methods": [
+  {
+methods": [
+"method name": "取信息版本",
+methods": [
+"comment": "获取图像EXIF信息的版本.",
+methods": [
+"data type": "字节集类",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+methods": [
+"method name": "取相机制造商",
+methods": [
+"comment": "获取相机制造商信息.",
+methods": [
+"data type": "字节集类",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+methods": [
+"method name": "取相机型号",
+methods": [
+"comment": "获取相机型号信息.",
+methods": [
+"data type": "字节集类",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取日期",
+
+"comment": "取文件日期信息.",
+
+"data type": "字节集类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取高度",
+
+"comment": "获取图像的高度.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取宽度",
+
+"comment": "获取图像的宽度.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取方向",
+
+"comment": "获取图像的拍摄方向.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取颜色表示",
+
+"comment": "获取图像的颜色表示.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取被处理",
+
+"comment": "取被处理信息.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取是否使用闪光灯",
+
+"comment": "获取图像是否是使用闪光灯拍摄的.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取焦距",
+
+"comment": "获取拍摄焦距.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取曝光时长",
+
+"comment": "获取曝光时间(快门速度).",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取光圈值",
+
+"comment": "获取光圈数.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取目标距离",
+
+"comment": "获取拍摄物体距离.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取胶片宽度",
+
+"comment": "获取胶片宽度.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取曝光补偿",
+
+"comment": "获取曝光补偿值.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取白平衡",
+
+"comment": "获取白平衡值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取测光模式",
+
+"comment": "获取测光模式.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取曝光程序",
+
+"comment": "获取曝光程序信息.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取ISO速度",
+
+"comment": "获取ISO速度信息.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取压缩等级",
+
+"comment": "获取图像压缩等级.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取水平焦平面分辨率",
+
+"comment": "获取焦平面X轴分辨率.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取垂直焦平面分辨率",
+
+"comment": "获取焦平面Y轴分辨率.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取焦平面分辨率单位",
+
+"comment": "获取焦平面分辨率单位.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取水平分辨率",
+
+"comment": "获取图像X轴分辨率.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取垂直分辨率",
+
+"comment": "获取图像Y轴分辨率.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取分辨率单位",
+
+"comment": "获取图像分辨率单位.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取亮度",
+
+"comment": "获取图像的亮度信息.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取注释信息",
+
+"comment": "获取图像的注释信息.",
+
+"data type": "字节集类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "图像颜色数组类",
+"base class": "对象数组模板类",
+"@模板实现类": "\"图像颜色类\""
+ },
+ {
+"class name": "图像处理数组类",
+"base class": "对象数组模板类",
+"@模板实现类": "\"图像处理类\""
+ }
+问本程序中的接口需要引用模块"CxImage图像处理支持".]
+}

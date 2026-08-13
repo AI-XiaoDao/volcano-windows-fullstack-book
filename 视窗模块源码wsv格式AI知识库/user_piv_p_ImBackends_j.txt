@@ -1,0 +1,2306 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"package name": "火山.ImGui",
+"comment": "例程下载: https://saier.lanzoul.com/b016cwvle\nGLFW     3.4.0      https://www.glfw.org\nSDL2     2.32.8     https://www.libsdl.org\nSDL3     3.2.16     https://www.libsdl.org\nVulkan   1.3.246.1  https://vulkan.lunarg.com/sdk/home\nglad     2023-04-04 https://github.com/Dav1dde/glad",
+"@视窗.头文件搜寻目录": "\"FrameWork\"",
+"@视窗.外部头文件": "\"stb/piv_image.h\"",
+"@视窗.外部源文件": "\"stb\\\\piv_image.cpp\"",
+"classes": [
+ {
+it the command buffer"class name": "IM_Win32平台",
+it the command buffer"comment": "基于Windows API的平台后端",
+it the command buffer"@文档": "\"category = \\\"平台后端\\\"\"",
+it the command buffer"@视窗.外部头文件": "\"<backends/imgui_impl_win32.h>\"",
+it the command buffer"@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_win32.cpp\"",
+it the command buffer"methods": [
+  {
+t the command buffer"@文档": "\"category = \\\"平台后端\\\"\"""method name": "初始化",
+t the command buffer"@文档": "\"category = \\\"平台后端\\\"\"""comment": "初始化链接到DirectX渲染器",
+t the command buffer"@文档": "\"category = \\\"平台后端\\\"\"""static": true,
+t the command buffer"@文档": "\"category = \\\"平台后端\\\"\"""data type": "逻辑型",
+t the command buffer"@文档": "\"category = \\\"平台后端\\\"\"""@嵌入式方法": "\"\"",
+t the command buffer"@文档": "\"category = \\\"平台后端\\\"\"""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供Win32 API的窗口句柄(HWND)",
+"@匹配类型": "通用整数型"
+   }
+t the command buffer"@文档": "\"category = \\\"平台后端\\\"\""]
+  },
+  {
+ameter name": "窗口句柄""method name": "初始化_OpenGL",
+ameter name": "窗口句柄""comment": "初始化链接到OpenGL渲染器",
+ameter name": "窗口句柄""static": true,
+ameter name": "窗口句柄""data type": "逻辑型",
+ameter name": "窗口句柄""@嵌入式方法": "\"\"",
+ameter name": "窗口句柄""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供Win32 API的窗口句柄(HWND)",
+"data type": "变整数"
+   }
+ameter name": "窗口句柄"]
+  },
+  {
+ }"method name": "关闭",
+ }"comment": "关闭Win32框架",
+ }"static": true,
+ }"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "新建帧",
+
+"comment": "新建Win32帧",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "消息处理",
+
+"comment": "让ImGui处理Windows窗口中的部分消息",
+
+"result comment": "返回真表示允许消息继续向后传递并处理,返回假表示取消掉该消息的后续处理.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供消息所对应的窗口句柄(HWND)",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "消息值",
+"comment": "提供消息的具体值",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "消息参数1",
+"comment": "提供消息所附带的参数1的值",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "消息参数2",
+"comment": "提供消息所附带的参数2的值",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+@匹配类型": "通用整数型""method name": "关注DPI",
+@匹配类型": "通用整数型""comment": "设置本程序是否关注系统默认显示器的DPI(缩放比例)",
+@匹配类型": "通用整数型""static": true,
+@匹配类型": "通用整数型""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取窗口DPI",
+}"comment": "返回指定窗口的DPI比例值(相对基准96 DPI)",
+}"static": true,
+}"data type": "单精度小数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供Win32 API的窗口句柄(HWND)",
+"@匹配类型": "通用整数型"
+   }
+}]
+  },
+  {
+
+"method name": "取显示器DPI",
+
+"comment": "返回指定显示器的DPI比例值(相对基准96 DPI)",
+
+"static": true,
+
+"data type": "单精度小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "显示器句柄",
+"comment": "提供Win32 API的显示器句柄(HMONITOR)",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+ }"method name": "启用透明度合成",
+ }"comment": "启用桌面的alpha合成透明度,必须在窗口被创建和被显示之前使用才有效.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供Win32 API的窗口句柄(HWND)",
+"@匹配类型": "通用整数型"
+   }
+ }]
+  }
+it the command buffer]
+ },
+ {
+"class name": "IM_GLFW平台",
+"comment": "基于GLFW的平台后端,GLFW是一个OpenGL应用框架.",
+"@文档": "\"category = \\\"平台后端\\\"\"",
+"@视窗.头文件搜寻目录": "\"FrameWork\\\\glfw\\\\include\"",
+"@视窗.外部头文件": "\"FrameWork/glfw/piv_glfw.h\"",
+"@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_glfw.cpp\"",
+"@视窗.外部库.mt-non_dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3_mt.lib\"",
+"@视窗.外部库.md-non_dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3.lib\"",
+"@视窗.外部库.dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3dll.lib\"",
+"@视窗.附属文件.dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3.dll\"",
+"@视窗.需求VS版本": "\"15-\"",
+"methods": [
+  {
+@视窗.附属文件.dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3.dll\"""method name": "初始化_OpenGL",
+@视窗.附属文件.dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3.dll\"""comment": "初始化链接到OpenGL渲染器",
+@视窗.附属文件.dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3.dll\"""static": true,
+@视窗.附属文件.dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3.dll\"""data type": "逻辑型",
+@视窗.附属文件.dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3.dll\"""@嵌入式方法": "\"req_cpp_bool = true\"",
+@视窗.附属文件.dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3.dll\"""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供GLFW的窗口句柄,注意不支持Win32 API的窗口句柄.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "安装回调",
+"comment": "是否将GLFW的部分输入输出回调安装到ImGui中",
+"data type": "逻辑型"
+   }
+@视窗.附属文件.dynamic": "\"FrameWork\\\\glfw\\\\$(p)\\\\$(vs)\\\\glfw3.dll\""]
+  },
+  {
+}"method name": "初始化_Vulkan",
+}"comment": "初始化链接到Vulkan渲染器",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"req_cpp_bool = true\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供GLFW的窗口句柄,注意不支持Win32 API的窗口句柄.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "安装回调",
+"comment": "是否将GLFW的部分输入输出回调安装到ImGui中",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+
+"method name": "初始化_其他",
+
+"comment": "初始化链接到未知渲染器(本方法不可用)",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_cpp_bool = true\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供GLFW的窗口句柄,注意不支持Win32 API的窗口句柄.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "安装回调",
+"comment": "是否将GLFW的部分输入输出回调安装到ImGui中",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "关闭GLFW框架",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "新建帧",
+
+"comment": "新建GLFW帧",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "安装回调",
+}"comment": "将指定GLFW窗口的部分输入输出回调安装到ImGui中.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供GLFW的窗口句柄,注意不支持Win32 API的窗口句柄.",
+"@匹配类型": "通用整数型"
+   }
+}]
+  },
+  {
+"method name": "还原回调",
+"comment": "将指定GLFW窗口的部分输入输出回调函数,还原为ImGui接管前的设置.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供GLFW的窗口句柄,注意不支持Win32 API的窗口句柄.",
+"@匹配类型": "通用整数型"
+   }
+]
+  },
+  {
+}"method name": "置链接所有窗口",
+}"comment": "在所有窗口(包括后台和用户创建的辅助视口)启用链接回调.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "链接所有窗口",
+"comment": "是否将回调链接到所有窗口",
+"data type": "逻辑型"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "IM_SDL2平台",
+"comment": "基于SDL2(Simple DirectMedia Layer)的平台后端",
+"@文档": "\"category = \\\"平台后端\\\"\"",
+"@视窗.头文件搜寻目录": "\"FrameWork\\\\SDL2\\\\include\"",
+"@视窗.外部头文件": "\"<SDL.h>\\r\\n<SDL_syswm.h>\\r\\n<backends/imgui_impl_sdl2.h>\"",
+"@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_sdl2.cpp\"",
+"@视窗.外部库": "\"FrameWork\\\\SDL2\\\\$(p)\\\\SDL2.lib\\r\\nFrameWork\\\\SDL2\\\\$(p)\\\\SDL2main.lib\"",
+"@视窗.附属文件": "\"FrameWork\\\\SDL2\\\\$(p)\\\\SDL2.dll\"",
+"methods": [
+  {
+
+"method name": "初始化_OpenGL",
+
+"comment": "初始化链接到OpenGL渲染器",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "SDL环境",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+
+"method name": "初始化_D3D",
+
+"comment": "初始化链接到DirectX渲染器",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+
+"method name": "初始化_Vulkan",
+
+"comment": "初始化链接到Vulkan渲染器",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+}"method name": "关闭",
+}"comment": "关闭SDL2框架",
+}"static": true,
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "新建帧",
+
+"comment": "新建SDL2帧",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "处理事件",
+
+"comment": "让ImGui处理SDL2的部分输入输出事件",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "事件指针",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "IM_SDL3平台",
+"comment": "基于SDL3(Simple DirectMedia Layer)的平台后端",
+"@文档": "\"category = \\\"平台后端\\\"\"",
+"@视窗.头文件搜寻目录": "\"FrameWork\\\\SDL3\\\\include\"",
+"@视窗.外部头文件": "\"<SDL3/SDL.h>\\r\\n<backends/imgui_impl_sdl3.h>\"",
+"@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_sdl3.cpp\"",
+"@视窗.外部库": "\"FrameWork\\\\SDL3\\\\$(p)\\\\SDL3.lib\"",
+"@视窗.附属文件": "\"FrameWork\\\\SDL3\\\\$(p)\\\\SDL3.dll\"",
+"methods": [
+  {
+
+"method name": "初始化_OpenGL",
+
+"comment": "初始化链接到OpenGL渲染器",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "SDL环境",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+}"method name": "初始化_D3D",
+}"comment": "初始化链接到DirectX渲染器",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"@匹配类型": "通用整数型"
+   }
+}]
+  },
+  {
+"comment": "初始化链接到DirectX渲染器""method name": "初始化_Vulkan",
+"comment": "初始化链接到DirectX渲染器""comment": "初始化链接到Vulkan渲染器",
+"comment": "初始化链接到DirectX渲染器""static": true,
+"comment": "初始化链接到DirectX渲染器""data type": "逻辑型",
+"comment": "初始化链接到DirectX渲染器""@嵌入式方法": "\"\"",
+"comment": "初始化链接到DirectX渲染器""parameters": [
+   {
+"parameter name": "窗口句柄",
+"@匹配类型": "通用整数型"
+   }
+"comment": "初始化链接到DirectX渲染器"]
+  },
+  {
+"method name": "初始化_SDLGPU",
+"comment": "初始化链接到SDL GPU渲染器",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"@匹配类型": "通用整数型"
+   }
+]
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "关闭SDL2框架",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "新建帧",
+
+"comment": "新建SDL2帧",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "处理事件",
+"@嵌入式方法": "\"\"""comment": "让ImGui处理SDL3的部分输入输出事件",
+"@嵌入式方法": "\"\"""static": true,
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "事件指针",
+"@匹配类型": "通用整数型"
+   }
+"@嵌入式方法": "\"\""]
+  }
+]
+ },
+ {
+"class name": "IM_DX9渲染器",
+"comment": "基于DirectX9的渲染器后端,兼容Windows XP以上系统.",
+"@文档": "\"category = \\\"渲染器\\\"\"",
+"@视窗.外部头文件": "\"<d3d9.h>\\r\\n<backends/imgui_impl_dx9.h>\"",
+"@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_dx9.cpp\"",
+"@视窗.外部库": "\"d3d9.lib\"",
+"variables": [
+  {
+@视窗.外部库": "\"d3d9.lib\"""variable name": "垂直同步",
+@视窗.外部库": "\"d3d9.lib\"""comment": "必须在\"创建设备\"之前设置,后续更改无效.",
+@视窗.外部库": "\"d3d9.lib\"""data type": "逻辑型",
+@视窗.外部库": "\"d3d9.lib\"""initial value": "真",
+@视窗.外部库": "\"d3d9.lib\"""@输出名": "\"m_vsync\""
+  },
+  {
+}"variable name": "窗口宽度",
+}"data type": "整数",
+}"initial value": "0",
+}"@输出名": "\"m_Width\""
+  },
+  {
+
+"variable name": "窗口高度",
+
+"data type": "整数",
+
+"initial value": "0",
+
+"@输出名": "\"m_Height\""
+  }
+],
+"methods": [
+  {
+methods": [
+"method name": "渲染器类型",
+methods": [
+"comment": "返回渲染器类型(固定返回9)",
+methods": [
+"type": "property getter",
+methods": [
+"data type": "整数"
+  },
+  {
+riable name": "窗口宽度""method name": "渲染器名称",
+riable name": "窗口宽度""type": "property getter",
+riable name": "窗口宽度""data type": "文本型"
+  },
+  {
+
+"method name": "允许修改帧率",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "初始化",
+
+"comment": "在\"创建设备\"和\"ImGui.创建环境()\"后才能调用.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "关闭",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "关闭""method name": "新建帧",
+thod name": "关闭""@嵌入式方法": "\"\""
+  },
+  {
+hod name": "关闭""@嵌入式方法": "\"\"""method name": "渲染数据",
+hod name": "关闭""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+hod name": "关闭""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "绘制数据",
+"comment": "由\"ImGui.取渲染数据()\"返回",
+"data type": "IM绘制数据指针"
+   }
+hod name": "关闭""@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "创建设备对象",
+
+"comment": "用于在不丢失ImGui状态的情况下重置渲染设备",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "销毁设备对象",
+
+"comment": "用于在不丢失ImGui状态的情况下重置渲染设备",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "加载图片文件",
+
+"comment": "从指定的图片文件加载纹理到渲染器中,不再使用时请调用\"释放纹理\".",
+
+"result comment": "返回是否加载成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"FrameWork\\\\d3dx9\\\\include\\\\d3dx9tex.h\"",
+
+"@视窗.外部库.debug": "\"FrameWork\\\\d3dx9\\\\Lib\\\\$(p)\\\\d3dx9d.lib\"",
+
+"@视窗.外部库.release": "\"FrameWork\\\\d3dx9\\\\Lib\\\\$(p)\\\\d3dx9.lib\"",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "支持格式: .bmp、.dds、.dib、.hdr、.jpg、.pfm、.png、.ppm 和 .tga",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+
+"method name": "加载图片资源",
+
+"comment": "将程序文件中的图片资源加载到渲染器中,不再使用时请调用\"释放纹理\".",
+
+"result comment": "返回是否加载成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"FrameWork\\\\d3dx9\\\\include\\\\d3dx9tex.h\"",
+
+"@视窗.外部库.debug": "\"FrameWork\\\\d3dx9\\\\Lib\\\\$(p)\\\\d3dx9d.lib\"",
+
+"@视窗.外部库.release": "\"FrameWork\\\\d3dx9\\\\Lib\\\\$(p)\\\\d3dx9.lib\"",
+
+"parameters": [
+   {
+"parameter name": "图片资源",
+"comment": "支持格式: 支持格式: .bmp、.dds、.dib、.hdr、.jpg、.pfm、.png、.ppm 和 .tga",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+}"method name": "加载图片字节集",
+}"comment": "从指定的图片字节集加载纹理到渲染器中,不再使用时请调用\"释放纹理\".",
+}"result comment": "返回是否加载成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"@视窗.外部头文件": "\"FrameWork\\\\d3dx9\\\\include\\\\d3dx9tex.h\"",
+}"@视窗.外部库.debug": "\"FrameWork\\\\d3dx9\\\\Lib\\\\$(p)\\\\d3dx9d.lib\"",
+}"@视窗.外部库.release": "\"FrameWork\\\\d3dx9\\\\Lib\\\\$(p)\\\\d3dx9.lib\"",
+}"parameters": [
+   {
+"parameter name": "图片数据",
+"comment": "支持格式: 支持格式: .bmp、.dds、.dib、.hdr、.jpg、.pfm、.png、.ppm 和 .tga",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+
+"method name": "释放纹理",
+
+"comment": "释放图片纹理和对应的内存,之后不能再使用这个纹理ID.",
+
+"@视窗.外部头文件": "\"FrameWork\\\\d3dx9\\\\include\\\\d3dx9tex.h\"",
+
+"@视窗.外部库.debug": "\"FrameWork\\\\d3dx9\\\\Lib\\\\$(p)\\\\d3dx9d.lib\"",
+
+"@视窗.外部库.release": "\"FrameWork\\\\d3dx9\\\\Lib\\\\$(p)\\\\d3dx9.lib\"",
+
+"parameters": [
+   {
+"parameter name": "图片信息",
+"comment": "提供由\"本对象.加载图片××\"返回的图片信息,释放后会清空信息.",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+
+"method name": "创建设备",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "释放设备"
+  },
+  {
+
+"method name": "重置尺寸"
+  },
+  {
+thod name": "重置尺寸""method name": "渲染",
+thod name": "重置尺寸""parameters": [
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4",
+"@输出名": "\"clear_color\""
+   }
+thod name": "重置尺寸"]
+  },
+  {
+
+"method name": "准备"
+  },
+  {
+thod name": "重置尺寸""method name": "是否不可视",
+thod name": "重置尺寸""data type": "逻辑型",
+thod name": "重置尺寸""@禁止流程检查": "真"
+  },
+  {
+}"method name": "帧前处理"
+  },
+  {
+
+"method name": "创建设备_SDL2",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "渲染_SDL",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4"
+   }
+}]
+  },
+  {
+"parameters": [
+"method name": "_ResetDevice"
+  }
+]
+ },
+ {
+"class name": "IM_DX10渲染器",
+"comment": "基于DirectX10的渲染器后端,兼容Windows Vista以上系统.",
+"@文档": "\"category = \\\"渲染器\\\"\"",
+"@视窗.外部头文件": "\"<backends/imgui_impl_dx10.h>\\r\\n<d3d10_1.h>\\r\\n<d3d10.h>\"",
+"@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_dx10.cpp\"",
+"@视窗.外部库": "\"d3d10.lib\\r\\nd3dcompiler.lib\\r\\ndxgi.lib\"",
+"variables": [
+  {
+
+"variable name": "垂直同步",
+
+"comment": "可以在每次渲染时变更",
+
+"data type": "逻辑型",
+
+"initial value": "真",
+
+"@输出名": "\"m_vsync\""
+  },
+  {
+}"variable name": "窗口宽度",
+}"data type": "整数",
+}"initial value": "0",
+}"@输出名": "\"m_Width\""
+  },
+  {
+variables": [
+"variable name": "窗口高度",
+variables": [
+"data type": "整数",
+variables": [
+"initial value": "0",
+variables": [
+"@输出名": "\"m_Height\""
+  }
+],
+"methods": [
+  {
+
+"method name": "渲染器类型",
+
+"comment": "返回渲染器类型(固定返回10)",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "渲染器名称",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "允许修改帧率",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+variables": [
+"method name": "初始化",
+variables": [
+"comment": "在\"创建设备\"和\"ImGui.创建环境()\"后才能调用.",
+variables": [
+"data type": "逻辑型",
+variables": [
+"@嵌入式方法": "\"\""
+  },
+  {
+ariables": [
+"data type": "逻辑型""method name": "关闭",
+ariables": [
+"data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "新建帧",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "渲染器类型""method name": "渲染数据",
+thod name": "渲染器类型""@嵌入式方法": "\"\"",
+thod name": "渲染器类型""parameters": [
+   {
+"parameter name": "绘制数据",
+"comment": "由\"ImGui.取渲染数据()\"返回",
+"data type": "IM绘制数据指针"
+   }
+thod name": "渲染器类型"]
+  },
+  {
+ariables": [
+"@嵌入式方法": "\"\"""method name": "创建设备对象",
+ariables": [
+"@嵌入式方法": "\"\"""comment": "用于在不丢失ImGui状态的情况下重置渲染设备",
+ariables": [
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "销毁设备对象",
+}"comment": "用于在不丢失ImGui状态的情况下重置渲染设备",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "加载图片文件",
+}"comment": "从指定的图片文件加载纹理到渲染器中,不再使用时请调用\"释放纹理\".",
+}"result comment": "返回是否加载成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+}"method name": "加载图片资源",
+}"comment": "将程序文件中的图片资源加载到渲染器中,不再使用时请调用\"释放纹理\".",
+}"result comment": "返回是否加载成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "图片资源",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+}"method name": "加载图片字节集",
+}"comment": "从指定的图片字节集加载纹理到渲染器中,不再使用时请调用\"释放纹理\".",
+}"result comment": "返回是否加载成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "图片数据",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+}"method name": "释放纹理",
+}"comment": "释放图片纹理和对应的内存,之后不能再使用这个纹理ID.",
+}"parameters": [
+   {
+"parameter name": "图片信息",
+"comment": "提供由\"本对象.加载图片××\"返回的图片信息,释放后会清空信息.",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+
+"method name": "创建设备",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "释放设备"
+  },
+  {
+comment": "成功在此返回图片的信息""method name": "渲染",
+comment": "成功在此返回图片的信息""parameters": [
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4",
+"@输出名": "\"clear_color\""
+   }
+comment": "成功在此返回图片的信息"]
+  },
+  {
+
+"method name": "重置尺寸"
+  },
+  {
+@输出名": "\"clear_color\"""method name": "准备"
+  },
+  {
+
+"method name": "是否不可视",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "帧前处理"
+  },
+  {
+
+"method name": "创建设备_SDL2",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+thod name": "重置尺寸""method name": "创建设备_SDL3",
+thod name": "重置尺寸""data type": "逻辑型",
+thod name": "重置尺寸""@嵌入式方法": "\"\"",
+thod name": "重置尺寸""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+thod name": "重置尺寸"]
+  },
+  {
+
+"method name": "渲染_SDL",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4"
+   }
+
+]
+  },
+  {
+}"method name": "_CreateRenderTarget"
+  },
+  {
+}"method name": "_CleanupRenderTarget"
+  }
+]
+ },
+ {
+"class name": "IM_DX11渲染器",
+"comment": "基于DirectX11的渲染器后端,兼容Windows 7及以上系统.",
+"@文档": "\"category = \\\"渲染器\\\"\"",
+"@视窗.外部头文件": "\"<backends/imgui_impl_dx11.h>\\r\\n<d3d11.h>\"",
+"@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_dx11.cpp\"",
+"@视窗.外部库": "\"d3d11.lib\\r\\nd3dcompiler.lib\\r\\ndxgi.lib\"",
+"variables": [
+  {
+
+"variable name": "垂直同步",
+
+"comment": "可以在每次渲染时变更",
+
+"data type": "逻辑型",
+
+"initial value": "真",
+
+"@输出名": "\"m_vsync\""
+  },
+  {
+}"variable name": "窗口宽度",
+}"data type": "整数",
+}"initial value": "0",
+}"@输出名": "\"m_Width\""
+  },
+  {
+}"variable name": "窗口高度",
+}"data type": "整数",
+}"initial value": "0",
+}"@输出名": "\"m_Height\""
+  }
+],
+"methods": [
+  {
+}"method name": "渲染器类型",
+}"comment": "返回渲染器类型(固定返回11)",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+
+"method name": "渲染器名称",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "允许修改帧率",
+"data type": "文本型""type": "property getter",
+"data type": "文本型""data type": "逻辑型"
+  },
+  {
+data type": "文本型""data type": "逻辑型""method name": "初始化",
+data type": "文本型""data type": "逻辑型""comment": "在\"创建设备\"和\"ImGui.创建环境()\"后才能调用.",
+data type": "文本型""data type": "逻辑型""data type": "逻辑型",
+data type": "文本型""data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "关闭",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "新建帧",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "渲染数据",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "绘制数据",
+"comment": "由\"ImGui.取渲染数据()\"返回",
+"data type": "IM绘制数据指针"
+   }
+
+]
+  },
+  {
+}"method name": "创建设备对象",
+}"comment": "用于在不丢失ImGui状态的情况下重置渲染设备",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "销毁设备对象",
+
+"comment": "用于在不丢失ImGui状态的情况下重置渲染设备",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "加载图片文件",
+}"comment": "从指定的图片文件加载纹理到渲染器中,不再使用时请调用\"释放纹理\".",
+}"result comment": "返回是否加载成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+}"method name": "加载图片资源",
+}"comment": "将程序文件中的图片资源加载到渲染器中,不再使用时请调用\"释放纹理\".",
+}"result comment": "返回是否加载成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "图片资源",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+
+"method name": "加载图片字节集",
+
+"comment": "从指定的图片字节集加载纹理到渲染器中,不再使用时请调用\"释放纹理\".",
+
+"result comment": "返回是否加载成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "图片数据",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+
+"method name": "释放纹理",
+
+"comment": "释放图片纹理和对应的内存,之后不能再使用这个纹理ID.",
+
+"parameters": [
+   {
+"parameter name": "图片信息",
+"comment": "提供由\"本对象.加载图片××\"返回的图片信息,释放后会清空信息.",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+"method name": "创建设备",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "释放设备"
+  },
+  {
+"method name": "重置尺寸"
+  },
+  {
+ameter name": "图片信息""method name": "渲染",
+ameter name": "图片信息""parameters": [
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4",
+"@输出名": "\"clear_color\""
+   }
+ameter name": "图片信息"]
+  },
+  {
+}"method name": "准备"
+  },
+  {
+}"method name": "是否不可视",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+eter name": "图片信息"]"method name": "帧前处理"
+  },
+  {
+}"method name": "创建设备_SDL2",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+}"method name": "创建设备_SDL3",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "渲染_SDL",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4"
+   }
+
+]
+  },
+  {
+"method name": "_CreateRenderTarget"
+  },
+  {
+}"method name": "_CleanupRenderTarget"
+  }
+]
+ },
+ {
+"class name": "IM_DX12渲染器",
+"comment": "基于DirectX12的渲染器后端,兼容Windows 10及以上系统.",
+"@文档": "\"category = \\\"渲染器\\\"\"",
+"@视窗.外部头文件": "\"<backends/imgui_impl_dx12.h>\\r\\n<d3d12.h>\\r\\n<dxgi1_4.h>\"",
+"@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_dx12.cpp\"",
+"@视窗.外部库": "\"d3d12.lib\\r\\nd3dcompiler.lib\\r\\ndxgi.lib\"",
+"@视窗.预定义宏": "\"ImTextureID=ImU64\"",
+"variables": [
+  {
+}"variable name": "垂直同步",
+}"comment": "可以在每次渲染时变更;\n注意: DX12关闭垂直同步后,最高帧速率仅变为屏幕刷新率的两倍.",
+}"data type": "逻辑型",
+}"initial value": "真",
+}"@输出名": "\"m_vsync\""
+  },
+  {
+"initial value": "真""variable name": "窗口宽度",
+"initial value": "真""data type": "整数",
+"initial value": "真""initial value": "0",
+"initial value": "真""@输出名": "\"m_Width\""
+  },
+  {
+
+"variable name": "窗口高度",
+
+"data type": "整数",
+
+"initial value": "0",
+
+"@输出名": "\"m_Height\""
+  }
+],
+"methods": [
+  {
+}"method name": "渲染器类型",
+}"comment": "返回渲染器类型(固定返回12)",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+}"method name": "渲染器名称",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "允许修改帧率",
+"data type": "文本型""type": "property getter",
+"data type": "文本型""data type": "逻辑型"
+  },
+  {
+"data type": "文本型""method name": "初始化",
+"data type": "文本型""comment": "在\"创建设备\"和\"ImGui.创建环境()\"后才能调用.",
+"data type": "文本型""data type": "逻辑型",
+"data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "关闭"
+  },
+  {
+
+"method name": "新建帧",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "渲染数据",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "绘制数据",
+"comment": "由\"ImGui.取渲染数据()\"返回",
+"data type": "IM绘制数据指针"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "创建设备对象",
+"parameters": [
+"comment": "用于在不丢失ImGui状态的情况下重置渲染设备",
+"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "销毁设备对象",
+"comment": "用于在不丢失ImGui状态的情况下重置渲染设备",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "加载图片文件",
+
+"comment": "从指定的图片文件加载纹理到渲染器中,不再使用时请调用\"释放纹理\".\n注意: 只能在\"IM_DX12渲染器.初始化\"之后使用,即\"准备渲染\"事件中.",
+
+"result comment": "返回是否加载成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+
+"method name": "加载图片资源",
+
+"comment": "将程序文件中的图片资源加载到渲染器中,不再使用时请调用\"释放纹理\".\n注意: 只能在\"IM_DX12渲染器.初始化\"之后使用,即\"准备渲染\"事件中.",
+
+"result comment": "返回是否加载成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "图片资源",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+}"method name": "加载图片字节集",
+}"comment": "从指定的图片字节集加载纹理到渲染器中,不再使用时请调用\"释放纹理\".\n注意: 只能在\"IM_DX12渲染器.初始化\"之后使用,即\"准备渲染\"事件中.",
+}"result comment": "返回是否加载成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "图片数据",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+}"method name": "释放纹理",
+}"comment": "释放图片纹理和对应的内存,之后不能再使用这个纹理ID.",
+}"parameters": [
+   {
+"parameter name": "图片信息",
+"comment": "提供由\"本对象.加载图片××\"返回图片的信息,释放后会清空信息.",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+
+"method name": "创建设备",
+
+"comment": "CreateDeviceD3D",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "释放设备"
+  },
+  {
+ }"method name": "渲染",
+ }"parameters": [
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4",
+"@输出名": "\"clear_color\""
+   }
+ }]
+  },
+  {
+}"method name": "重置尺寸"
+  },
+  {
+
+"method name": "是否不可视",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+thod name": "是否不可视""method name": "帧前处理"
+  },
+  {
+"method name": "准备"
+  },
+  {
+}"method name": "创建设备_SDL2",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "创建设备_SDL3",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "渲染_SDL",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4"
+   }
+}]
+  },
+  {
+data type": "变整数""method name": "_CreateRenderTarget"
+  },
+  {
+
+"method name": "_CleanupRenderTarget"
+  },
+  {
+ateRenderTarget"method name": "_WaitForLastSubmittedFrame"
+  },
+  {
+
+"method name": "_WaitForNextFrameResources",
+
+"result comment": "FrameContext*",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真"
+  }
+]
+ },
+ {
+"result comment": "FrameContext*""class name": "IM_OpenGL渲染器",
+"result comment": "FrameContext*""comment": "基于现代OpenGL的渲染器后端,支持桌面OpenGL版本: 2.x 3.x 4.x",
+"result comment": "FrameContext*""@文档": "\"category = \\\"渲染器\\\"\"",
+"result comment": "FrameContext*""@视窗.外部头文件": "\"wingdi.h\\r\\n<backends/imgui_impl_opengl3.h>\\r\\n<glad/glad.h>\"",
+"result comment": "FrameContext*""@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_opengl3.cpp\\r\\nFrameWork\\\\glad\\\\glad.c\"",
+"result comment": "FrameContext*""@视窗.外部库": "\"Opengl32.lib\"",
+"result comment": "FrameContext*""variables": [
+  {
+result comment": "FrameContext*""variables": [
+"variable name": "窗口宽度",
+result comment": "FrameContext*""variables": [
+"data type": "整数",
+result comment": "FrameContext*""variables": [
+"initial value": "0",
+result comment": "FrameContext*""variables": [
+"@输出名": "\"m_Width\""
+  },
+  {
+data type": "变整数""variable name": "窗口高度",
+data type": "变整数""data type": "整数",
+data type": "变整数""initial value": "0",
+data type": "变整数""@输出名": "\"m_Height\""
+  }
+"result comment": "FrameContext*"],
+"result comment": "FrameContext*""methods": [
+  {
+result comment": "FrameContext*""variables": [
+"method name": "垂直同步",
+result comment": "FrameContext*""variables": [
+"comment": "OpenGL可以随时后续切换垂直同步的开关",
+result comment": "FrameContext*""variables": [
+"type": "property setter",
+result comment": "FrameContext*""variables": [
+"parameters": [
+   {
+"parameter name": "是否开启",
+"data type": "逻辑型"
+   }
+result comment": "FrameContext*""variables": [
+]
+  },
+  {
+}"method name": "渲染器类型",
+}"comment": "返回渲染器类型(固定返回0,表示OpenGL渲染器)",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+
+"method name": "渲染器名称",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "允许修改帧率",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+}"method name": "初始化",
+}"comment": "在\"创建设备\"和\"ImGui.创建环境()\"后才能调用.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "GLSL版本",
+"comment": "请提供一个\"#version XXX\"的GLSL版本,留空为默认值\"#version 130\".\n下列是OpenGL和GLSL版本的对应表:\n// OpenGL    GLSL      GLSL\n// version   version   string\n//----------------------------------------\n//  2.0       110       \"#version 110\"\n//  2.1       120       \"#version 120\"\n//  3.0       130       \"#version 130\"\n//  3.1       140       \"#version 140\"\n//  3.2       150       \"#version 150\"\n//  3.3       330       \"#version 330 core\"\n//  4.0       400       \"#version 400 core\"\n//  4.1       410       \"#version 410 core\"\n//  4.2       420       \"#version 410 core\"\n//  4.3       430       \"#version 430 core\"\n//  ES 2.0    100       \"#version 100\"      = WebGL 1.0\n//  ES 3.0    300       \"#version 300 es\"   = WebGL 2.0",
+"data type": "文本型",
+"@默认值": "\"#version 330 core\""
+   }
+}]
+  },
+  {
+}"method name": "关闭",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "新建帧",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "渲染数据",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "绘制数据",
+"comment": "由\"ImGui.取渲染数据()\"返回",
+"data type": "IM绘制数据指针"
+   }
+}]
+  },
+  {
+}"method name": "加载字体纹理",
+}"comment": "(可选项)已在\"初始化/关闭/新建帧\"时自动调用",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "销毁字体纹理",
+
+"comment": "(可选项)已在\"初始化/关闭/新建帧\"时自动调用",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "创建设备对象",
+}"comment": "(可选项)已在\"初始化/关闭/新建帧\"时自动调用",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "销毁设备对象",
+}"comment": "(可选项)已在\"初始化/关闭/新建帧\"时自动调用",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "加载图片文件",
+
+"comment": "从指定的图片文件加载纹理到渲染器中,不再使用时请调用\"释放纹理\".",
+
+"result comment": "返回是否加载成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+
+"method name": "加载图片资源",
+
+"comment": "将程序文件中的图片资源加载到渲染器中,不再使用时请调用\"释放纹理\".",
+
+"result comment": "返回是否加载成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "图片资源",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+ }"method name": "加载图片字节集",
+ }"comment": "从指定的图片字节集加载纹理到渲染器中,不再使用时请调用\"释放纹理\".",
+ }"result comment": "返回是否加载成功",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "图片数据",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+ }]
+  },
+  {
+
+"method name": "释放纹理",
+
+"comment": "释放图片纹理和对应的内存,之后不能再使用这个纹理ID.",
+
+"parameters": [
+   {
+"parameter name": "图片信息",
+"comment": "提供由\"本对象.加载图片××\"返回的图片信息",
+"data type": "IM图片信息类"
+   }
+
+]
+  },
+  {
+
+"method name": "创建设备",
+
+"data type": "逻辑型",
+
+"@视窗.外部库": "\"OpenGL32.lib\"",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "释放设备"
+  },
+  {
+
+"method name": "重置尺寸"
+  },
+  {
+]"method name": "渲染",
+]"parameters": [
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4",
+"@输出名": "\"clear_color\""
+   }
+]]
+  },
+  {
+"method name": "准备"
+  },
+  {
+
+"method name": "是否不可视",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "帧前处理"
+  },
+  {
+
+"method name": "创建设备_GLFW",
+
+"comment": "*适用于GLFW平台",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_GLFW",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4",
+"@输出名": "\"clear_color\""
+   }
+
+]
+  },
+  {
+"method name": "释放设备_GLFW"
+  },
+  {
+
+"method name": "创建设备_SDL2",
+
+"data type": "逻辑型",
+
+"@视窗.外部头文件": "\"<SDL_opengl.h>\"",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "创建设备_SDL3",
+ }"data type": "逻辑型",
+ }"@视窗.外部头文件": "\"<SDL3/SDL_opengl.h>\"",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+
+"method name": "渲染_SDL",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4"
+   }
+
+]
+  }
+"result comment": "FrameContext*"]
+ },
+ {
+ }"class name": "IM_Vulkan渲染器",
+ }"comment": "基于Vulkan的渲染器后端,Vulkan是OpenGL的下一代GPU API,目的就是取代OpenGL.",
+ }"@文档": "\"category = \\\"渲染器\\\"\"",
+ }"@视窗.预定义宏": "\"ImTextureID=ImU64\"",
+ }"@视窗.外部头文件": "\"<backends/imgui_impl_vulkan.h>\"",
+ }"@视窗.外部源文件": "\"imgui\\\\backends\\\\imgui_impl_vulkan.cpp\"",
+ }"@视窗.外部库": "\"FrameWork\\\\vulkan\\\\$(p)\\\\vulkan-1.lib\"",
+ }"@视窗.附属文件": "\"FrameWork\\\\vulkan\\\\$(p)\\\\vulkan-1.dll\"",
+ }"variables": [
+  {
+}"@视窗.外部库": "\"FrameWork\\\\vulkan\\\\$(p)\\\\vulkan-1.lib\"""variable name": "垂直同步",
+}"@视窗.外部库": "\"FrameWork\\\\vulkan\\\\$(p)\\\\vulkan-1.lib\"""comment": "必须在\"创建设备_GLFW/创建设备_SDL2\"之前设置,后续更改无效.",
+}"@视窗.外部库": "\"FrameWork\\\\vulkan\\\\$(p)\\\\vulkan-1.lib\"""data type": "逻辑型",
+}"@视窗.外部库": "\"FrameWork\\\\vulkan\\\\$(p)\\\\vulkan-1.lib\"""initial value": "真",
+}"@视窗.外部库": "\"FrameWork\\\\vulkan\\\\$(p)\\\\vulkan-1.lib\"""@输出名": "\"m_vsync\""
+  },
+  {
+}"comment": "基于Vulkan的渲染器后端,Vulkan是OpenGL的下一代GPU API,目的就是取代OpenGL.""variable name": "窗口宽度",
+}"comment": "基于Vulkan的渲染器后端,Vulkan是OpenGL的下一代GPU API,目的就是取代OpenGL.""data type": "整数",
+}"comment": "基于Vulkan的渲染器后端,Vulkan是OpenGL的下一代GPU API,目的就是取代OpenGL.""initial value": "0",
+}"comment": "基于Vulkan的渲染器后端,Vulkan是OpenGL的下一代GPU API,目的就是取代OpenGL.""@输出名": "\"m_Width\""
+  },
+  {
+
+"variable name": "窗口高度",
+
+"data type": "整数",
+
+"initial value": "0",
+
+"@输出名": "\"m_Height\""
+  },
+  {
+}"variable name": "最大图像数",
+}"comment": "最大允许加载的图像纹理数量,必须在初始化之前设置.",
+}"data type": "整数",
+}"initial value": "1000",
+}"@输出名": "\"m_MaxCount\""
+  }
+ }],
+ }"methods": [
+  {
+}"method name": "渲染器类型",
+}"comment": "返回渲染器类型(固定返回1,表示Vulkan渲染器)",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+
+"method name": "渲染器名称",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+"method name": "允许修改帧率",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "初始化",
+
+"comment": "在\"创建设备\"和\"ImGui.创建环境()\"后才能调用.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+data type": "逻辑型""method name": "新建帧",
+data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "关闭"
+  },
+  {
+}"method name": "渲染数据",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "绘制数据",
+"comment": "由\"ImGui.取渲染数据()\"返回",
+"data type": "IM绘制数据指针"
+   }
+}]
+  },
+  {
+"parameters": [
+"method name": "加载字体纹理",
+"parameters": [
+"comment": "(可选项)已在\"新建帧\"时自动调用",
+"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "销毁字体纹理",
+
+"comment": "(可选项)用户无需调用",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ameters": [
+"method name": "加载字体纹理""method name": "加载图片文件",
+ameters": [
+"method name": "加载字体纹理""comment": "从指定的图片文件加载纹理到渲染器中,不再使用时请调用\"释放纹理\".\n注意: 只能在\"IM_Vulkan渲染器.初始化\"之后使用,即\"准备渲染\"事件中.",
+ameters": [
+"method name": "加载字体纹理""result comment": "返回是否加载成功",
+ameters": [
+"method name": "加载字体纹理""data type": "逻辑型",
+ameters": [
+"method name": "加载字体纹理""@禁止流程检查": "真",
+ameters": [
+"method name": "加载字体纹理""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+ameters": [
+"method name": "加载字体纹理"]
+  },
+  {
+"method name": "加载图片资源",
+"comment": "将程序文件中的图片资源加载到渲染器中,不再使用时请调用\"释放纹理\".\n注意: 只能在\"IM_Vulkan渲染器.初始化\"之后使用,即\"准备渲染\"事件中.",
+"result comment": "返回是否加载成功",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "图片资源",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+]
+  },
+  {
+}"method name": "加载图片字节集",
+}"comment": "从指定的图片字节集加载纹理到渲染器中,不再使用时请调用\"释放纹理\".\n注意: 只能在\"IM_Vulkan渲染器.初始化\"之后使用,即\"准备渲染\"事件中.",
+}"result comment": "返回是否加载成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "图片数据",
+"comment": "支持格式: jpg,jpeg,png,bmp,psd,tga,gif,hdr,pic,pnm",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "成功在此返回图片的信息",
+"data type": "IM图片信息类"
+   }
+}]
+  },
+  {
+"method name": "释放纹理",
+"comment": "释放图片纹理和对应的内存,之后不能再使用这个纹理ID.",
+"parameters": [
+   {
+"parameter name": "图片信息",
+"comment": "提供由\"本对象.加载图片××\"返回图片的信息,释放后会清空信息.",
+"data type": "IM图片信息类"
+   }
+]
+  },
+  {
+"method name": "创建设备",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"@视窗.预定义宏": "\"VK_USE_PLATFORM_WIN32_KHR\"",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "释放设备"
+  },
+  {
+
+"method name": "重置尺寸"
+  },
+  {
+
+"method name": "渲染",
+
+"parameters": [
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4",
+"@输出名": "\"clear_color\""
+   }
+
+]
+  },
+  {
+comment": "成功在此返回图片的信息""method name": "准备"
+  },
+  {
+
+"method name": "是否不可视",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "帧前处理"
+  },
+  {
+}"method name": "创建设备_GLFW",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"@视窗.预定义宏": "\"GLFW_INCLUDE_VULKAN\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"method name": "渲染_GLFW",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4"
+   }
+]
+  },
+  {
+"method name": "释放设备_GLFW",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "创建设备_SDL2",
+
+"data type": "逻辑型",
+
+"@视窗.外部头文件": "\"<SDL_vulkan.h>\"",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "创建设备_SDL3",
+
+"data type": "逻辑型",
+
+"@视窗.外部头文件": "\"<SDL3/SDL_vulkan.h>\"",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_SDL",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "背景颜色",
+"data type": "ImVec4"
+   }
+
+]
+  }
+ }]
+ }
+]
+}

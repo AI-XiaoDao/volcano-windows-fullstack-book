@@ -1,0 +1,706 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.硬件特征\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"COM_WshShell\\\\wshom.tlh\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "IWshCollection",
+"methods": [
+  {
+d""method name": "Item",
+d""result comment": "_variant_t",
+d""data type": "COM变体型",
+d""@禁止流程检查": "真",
+d""parameters": [
+   {
+"parameter name": "Index",
+"comment": "VARIANT * Index",
+"data type": "COM变体型"
+   }
+d"]
+  },
+  {
+ethod name": "Item""method name": "Count",
+ethod name": "Item""result comment": "long",
+ethod name": "Item""data type": "整数",
+ethod name": "Item""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "Getlength",
+ }"result comment": "long",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IWshEnvironment",
+"methods": [
+  {
+ULT"method name": "GetItem",
+ULT"result comment": "_bstr_t",
+ULT"data type": "文本型",
+ULT"@嵌入式方法": "\"\"",
+ULT"parameters": [
+   {
+"parameter name": "Name",
+"comment": "_bstr_t Name",
+"data type": "文本型"
+   }
+ULT]
+  },
+  {
+data type": "文本型""method name": "PutItem",
+data type": "文本型""result comment": "void",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "Name",
+"comment": "_bstr_t Name",
+"data type": "文本型"
+   },
+   {
+"parameter name": "out_Value",
+"comment": "_bstr_t out_Value",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "文本型""method name": "Count",
+data type": "文本型""result comment": "long",
+data type": "文本型""data type": "整数",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Getlength",
+
+"result comment": "long",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ta type": "文本型"]"method name": "Remove",
+ta type": "文本型"]"result comment": "HRESULT",
+ta type": "文本型"]"data type": "整数",
+ta type": "文本型"]"@嵌入式方法": "\"\"",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "Name",
+"comment": "_bstr_t Name",
+"data type": "文本型"
+   }
+ta type": "文本型"]]
+  }
+]
+ },
+ {
+"class name": "IWshExec",
+"methods": [
+  {
+
+"method name": "GetStatus",
+
+"result comment": "WshExecStatus\nWshRunning  0\nWshFinished 1\nWshFailed   2",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+Environment"method name": "GetStdIn",
+Environment"result comment": "ITextStreamPtr",
+Environment"data type": "ITextStream",
+Environment"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetStdOut",
+
+"result comment": "ITextStreamPtr",
+
+"data type": "ITextStream",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"result comment": "ITextStreamPtr""method name": "GetStdErr",
+"result comment": "ITextStreamPtr""result comment": "ITextStreamPtr",
+"result comment": "ITextStreamPtr""data type": "ITextStream",
+"result comment": "ITextStreamPtr""@嵌入式方法": "\"\""
+  },
+  {
+"result comment": "long""method name": "GetProcessID",
+"result comment": "long""result comment": "long",
+"result comment": "long""data type": "整数",
+"result comment": "long""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetExitCode",
+
+"result comment": "long",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ type": "文本型""method name": "PutItem""method name": "Terminate",
+ type": "文本型""method name": "PutItem""result comment": "HRESULT",
+ type": "文本型""method name": "PutItem""data type": "整数",
+ type": "文本型""method name": "PutItem""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IWshNetwork2",
+"base class": "IWshNetwork",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+}"method name": "AddWindowsPrinterConnection",
+}"result comment": "HRESULT",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "PrinterName",
+"comment": "_bstr_t PrinterName",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DriverName",
+"comment": "_bstr_t DriverName",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Port",
+"comment": "_bstr_t Port",
+"data type": "文本型"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "IWshShell",
+"@模板基础类": "真",
+"methods": [
+  {
+"parameters": [
+"method name": "GetSpecialFolders",
+"parameters": [
+"result comment": "IWshCollectionPtr",
+"parameters": [
+"data type": "IWshCollection",
+"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "GetEnvironment",
+"result comment": "IWshEnvironmentPtr",
+"data type": "IWshEnvironment",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "Type",
+"comment": "VARIANT * Type",
+"data type": "COM变体型"
+   }
+]
+  },
+  {
+}"method name": "Run",
+}"result comment": "int",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "Command",
+"comment": "_bstr_t Command",
+"data type": "文本型"
+   },
+   {
+"parameter name": "WindowStyle",
+"comment": "VARIANT * WindowStyle",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "WaitOnReturn",
+"comment": "VARIANT * WaitOnReturn",
+"data type": "COM变体型"
+   }
+}]
+  },
+  {
+type": "文本型""method name": "PutItem""data type": "整数""method name": "Popup",
+type": "文本型""method name": "PutItem""data type": "整数""result comment": "int",
+type": "文本型""method name": "PutItem""data type": "整数""data type": "整数",
+type": "文本型""method name": "PutItem""data type": "整数""@嵌入式方法": "\"\"",
+type": "文本型""method name": "PutItem""data type": "整数""parameters": [
+   {
+"parameter name": "Text",
+"comment": "_bstr_t Text",
+"data type": "文本型"
+   },
+   {
+"parameter name": "SecondsToWait",
+"comment": "VARIANT * SecondsToWait",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "Title",
+"comment": "VARIANT * Title",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "Type",
+"comment": "VARIANT * Type",
+"data type": "COM变体型"
+   }
+type": "文本型""method name": "PutItem""data type": "整数"]
+  },
+  {
+ype": "文本型""method name": "PutItem""data type": "整数""data type": "整数""method name": "CreateShortcut",
+ype": "文本型""method name": "PutItem""data type": "整数""data type": "整数""comment": "https://blog.csdn.net/weixin_33860528/article/details/89983838",
+ype": "文本型""method name": "PutItem""data type": "整数""data type": "整数""result comment": "IDispatchPtr",
+ype": "文本型""method name": "PutItem""data type": "整数""data type": "整数""data type": "IWshShortcut",
+ype": "文本型""method name": "PutItem""data type": "整数""data type": "整数""@嵌入式方法": "\"\"",
+ype": "文本型""method name": "PutItem""data type": "整数""data type": "整数""parameters": [
+   {
+"parameter name": "PathLink",
+"comment": "_bstr_t PathLink",
+"data type": "文本型"
+   }
+ype": "文本型""method name": "PutItem""data type": "整数""data type": "整数"]
+  },
+  {
+}"method name": "CreateURLShortcut",
+}"comment": "https://blog.csdn.net/weixin_33860528/article/details/89983838",
+}"result comment": "IDispatchPtr",
+}"data type": "IWshURLShortcut",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "PathLink",
+"comment": "_bstr_t PathLink",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "ExpandEnvironmentStrings",
+}"result comment": "_bstr_t",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "Src",
+"comment": "_bstr_t Src",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ }"method name": "RegRead",
+ }"result comment": "_variant_t",
+ }"data type": "COM变体型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "Name",
+"comment": "_bstr_t Name",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "RegWrite",
+ }"result comment": "HRESULT",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "Name",
+"comment": "_bstr_t Name",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Value",
+"comment": "VARIANT * Value",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "Type",
+"comment": "VARIANT * Type",
+"data type": "COM变体型"
+   }
+ }]
+  },
+  {
+}"method name": "RegDelete",
+}"result comment": "HRESULT",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "Name",
+"comment": "_bstr_t Name",
+"data type": "文本型"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "IWshShell2",
+"base class": "IWshShell",
+"@模板基础类": "真",
+"methods": [
+  {
+}"method name": "LogEvent",
+}"result comment": "VARIANT_BOOL",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "Type",
+"comment": "VARIANT * Type",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "Message",
+"comment": "_bstr_t Message",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Target",
+"comment": "_bstr_t Target",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "AppActivate",
+
+"result comment": "VARIANT_BOOL",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "App",
+"comment": "VARIANT * App",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "Wait",
+"comment": "VARIANT * Wait",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+data type": "COM变体型""method name": "SendKeys",
+data type": "COM变体型""result comment": "HRESULT",
+data type": "COM变体型""data type": "整数",
+data type": "COM变体型""@嵌入式方法": "\"\"",
+data type": "COM变体型""parameters": [
+   {
+"parameter name": "Keys",
+"comment": "_bstr_t Keys",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Wait",
+"comment": "VARIANT * Wait",
+"data type": "COM变体型"
+   }
+data type": "COM变体型"]
+  }
+]
+ },
+ {
+"class name": "IWshShell3",
+"base class": "IWshShell2",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+comment": "VARIANT * Wait""method name": "Exec",
+comment": "VARIANT * Wait""comment": "异步的",
+comment": "VARIANT * Wait""result comment": "IWshExecPtr",
+comment": "VARIANT * Wait""data type": "IWshExec",
+comment": "VARIANT * Wait""@嵌入式方法": "\"\"",
+comment": "VARIANT * Wait""parameters": [
+   {
+"parameter name": "Command",
+"comment": "_bstr_t Command",
+"data type": "文本型"
+   }
+comment": "VARIANT * Wait"]
+  },
+  {
+ameter name": "Command""method name": "GetCurrentDirectory",
+ameter name": "Command""result comment": "_bstr_t",
+ameter name": "Command""data type": "文本型",
+ameter name": "Command""@嵌入式方法": "\"\""
+  },
+  {
+omment": "VARIANT * Wait""result comment": "IWshExecPtr""method name": "PutCurrentDirectory",
+omment": "VARIANT * Wait""result comment": "IWshExecPtr""result comment": "void",
+omment": "VARIANT * Wait""result comment": "IWshExecPtr""@嵌入式方法": "\"\"",
+omment": "VARIANT * Wait""result comment": "IWshExecPtr""parameters": [
+   {
+"parameter name": "out_Directory",
+"comment": "_bstr_t out_Directory",
+"data type": "文本型"
+   }
+omment": "VARIANT * Wait""result comment": "IWshExecPtr"]
+  }
+]
+ },
+ {
+"class name": "IWshShortcut",
+"methods": [
+  {
+methods": [
+"method name": "GetFullName",
+methods": [
+"result comment": "_bstr_t",
+methods": [
+"data type": "文本型",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+ethods": [
+"@嵌入式方法": "\"\"""method name": "GetArguments",
+ethods": [
+"@嵌入式方法": "\"\"""result comment": "_bstr_t",
+ethods": [
+"@嵌入式方法": "\"\"""data type": "文本型",
+ethods": [
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "PutArguments",
+}"result comment": "void",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "out_Arguments",
+"comment": "_bstr_t out_Arguments",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "GetDescription",
+}"result comment": "_bstr_t",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+methods": [
+"method name": "PutDescription",
+methods": [
+"result comment": "void",
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "out_Description",
+"comment": "_bstr_t out_Description",
+"data type": "文本型"
+   }
+methods": [
+]
+  },
+  {
+"data type": "文本型""method name": "GetHotkey",
+"data type": "文本型""result comment": "_bstr_t",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "PutHotkey",
+}"result comment": "void",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "out_HotKey",
+"comment": "_bstr_t out_HotKey",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "GetIconLocation",
+"result comment": "_bstr_t",
+"data type": "文本型",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "PutIconLocation",
+
+"result comment": "void",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "out_IconPath",
+"comment": "_bstr_t out_IconPath",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"result comment": "_bstr_t""method name": "PutRelativePath",
+"result comment": "_bstr_t""result comment": "void",
+"result comment": "_bstr_t""@嵌入式方法": "\"\"",
+"result comment": "_bstr_t""parameters": [
+   {
+"parameter name": "_arg1",
+"comment": "_bstr_t _arg1",
+"data type": "文本型"
+   }
+"result comment": "_bstr_t"]
+  },
+  {
+data type": "文本型""method name": "GetTargetPath",
+data type": "文本型""result comment": "_bstr_t",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "PutTargetPath",
+"result comment": "void",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "out_Path",
+"comment": "_bstr_t out_Path",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ata type": "文本型""result comment": "_bstr_t""method name": "GetWindowStyle",
+ata type": "文本型""result comment": "_bstr_t""result comment": "int",
+ata type": "文本型""result comment": "_bstr_t""data type": "整数",
+ata type": "文本型""result comment": "_bstr_t""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "PutWindowStyle",
+"result comment": "void",
+"@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""method name": "GetWorkingDirectory",
+@嵌入式方法": "\"\"""result comment": "_bstr_t",
+@嵌入式方法": "\"\"""data type": "文本型",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "out_Path""method name": "PutWorkingDirectory",
+ameter name": "out_Path""result comment": "void",
+ameter name": "out_Path""@嵌入式方法": "\"\"",
+ameter name": "out_Path""parameters": [
+   {
+"parameter name": "out_WorkingDirectory",
+"comment": "_bstr_t out_WorkingDirectory",
+"data type": "文本型"
+   }
+ameter name": "out_Path"]
+  },
+  {
+嵌入式方法": "\"\"""data type": "文本型""method name": "Load",
+嵌入式方法": "\"\"""data type": "文本型""result comment": "HRESULT",
+嵌入式方法": "\"\"""data type": "文本型""data type": "整数",
+嵌入式方法": "\"\"""data type": "文本型""@嵌入式方法": "\"\"",
+嵌入式方法": "\"\"""data type": "文本型""parameters": [
+   {
+"parameter name": "PathLink",
+"comment": "_bstr_t PathLink",
+"data type": "文本型"
+   }
+嵌入式方法": "\"\"""data type": "文本型"]
+  },
+  {
+}"method name": "Save",
+}"result comment": "HRESULT",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IWshURLShortcut",
+"methods": [
+  {
+式方法": "\"\"""data type": "文本型"]"method name": "GetFullName",
+式方法": "\"\"""data type": "文本型"]"result comment": "_bstr_t",
+式方法": "\"\"""data type": "文本型"]"data type": "文本型",
+式方法": "\"\"""data type": "文本型"]"@嵌入式方法": "\"\""
+  },
+  {
+WorkingDirectory"method name": "GetTargetPath",
+WorkingDirectory"result comment": "_bstr_t",
+WorkingDirectory"data type": "文本型",
+WorkingDirectory"@嵌入式方法": "\"\""
+  },
+  {
+ingDirectory"method name": "GetTargetPath""method name": "PutTargetPath",
+ingDirectory"method name": "GetTargetPath""result comment": "void",
+ingDirectory"method name": "GetTargetPath""@嵌入式方法": "\"\"",
+ingDirectory"method name": "GetTargetPath""parameters": [
+   {
+"parameter name": "out_Path",
+"comment": "_bstr_t out_Path",
+"data type": "文本型"
+   }
+ingDirectory"method name": "GetTargetPath"]
+  },
+  {
+"method name": "Load",
+"result comment": "HRESULT",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "PathLink",
+"comment": "_bstr_t PathLink",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "Save",
+
+"result comment": "HRESULT",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

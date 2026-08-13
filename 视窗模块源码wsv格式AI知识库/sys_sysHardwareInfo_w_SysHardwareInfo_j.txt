@@ -1,0 +1,2815 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+"package name": "火山.系统操作支持库",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+"comment": "APIHOOK、键鼠操作、系统硬件信息",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+"@视窗.外部头文件": "\"include\\\\WinOperateModule.h\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+"@视窗.外部源文件": "\"include\\\\WinOperateModule.cpp\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+"@视窗.外部头文件": "\"include\\\\WinApiHook.h\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+"@视窗.外部源文件": "\"include\\\\WinApiHook.cpp\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+"classes": [
+ {
+"class name": "鼠标按键类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+    "constant name": "左键",
+    "initial value": "0"
+  },
+  {
+敷ŝ"constant name": "右键",
+敷ŝ"initial value": "1"
+  },
+  {
+constants": [
+"constant name": "中键",
+constants": [
+"initial value": "2"
+  },
+  {
+ "constant name": "X键1",
+ "initial value": "3"
+  },
+  {
+constants": [
+"constant name": "X键2",
+constants": [
+"initial value": "4"
+  }
+]
+ },
+ {
+"class name": "事件标志值",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "跨进程异步",
+
+"comment": "回调函数不会映射到生成事件的进程的地址空间.挂钩函数跨进程边界调用,保证事件异步按顺序排列.",
+
+"initial value": "@WINEVENT_OUTOFCONTEXT"
+  },
+  {
+}"constant name": "跳过自身线程",
+}"comment": "阻止此挂钩实例接收由注册此挂钩的线程生成的事件",
+}"initial value": "@WINEVENT_SKIPOWNTHREAD"
+  },
+  {
+方法 = """constant name": "跳过线程",
+方法 = """comment": "阻止此挂钩实例接收此进程中线程生成的事件.此标志不会阻止线程生成事件.",
+方法 = """initial value": "@WINEVENT_SKIPOWNPROCESS"
+  },
+  {
+nstant name": "X键1""constant name": "挂钩DLL",
+nstant name": "X键1""comment": "包含回调函数的DLL映射到生成事件的进程的地址空间.指定此标志时,挂钩函数必须位于 DLL 中.",
+nstant name": "X键1""initial value": "@WINEVENT_INCONTEXT"
+  }
+]
+ },
+ {
+"class name": "常用事件常量值",
+"comment": "枚举了常用事件常量值",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+ss name": "事件标志值""constant name": "激活键盘快捷键",
+ss name": "事件标志值""comment": "激活键盘快捷键",
+ss name": "事件标志值""data type": "整数",
+ss name": "事件标志值""initial value": "@EVENT_OBJECT_ACCELERATORCHANGE"
+  },
+  {
+ """constant name": "跳过线程""constant name": "窗口可视",
+ """constant name": "跳过线程""comment": "当窗口被遮盖时发送. 隐藏的窗口仍然存在,但对用户不可见.",
+ """constant name": "跳过线程""data type": "整数",
+ """constant name": "跳过线程""initial value": "@EVENT_OBJECT_CLOAKED"
+  },
+  {
+ss name": "常用事件常量值""constant name": "滚动条到底",
+ss name": "常用事件常量值""comment": "窗口对象的滚动已结束,无论滚动是水平滚动还是垂直滚动,每当滚动操作完成时,都发送此事件.",
+ss name": "常用事件常量值""data type": "整数",
+ss name": "常用事件常量值""initial value": "0x8015"
+  },
+  {
+ "constant name": "对象被创建",
+ "comment": "已创建对象.窗口或控件被创建完成.",
+ "data type": "整数",
+ "initial value": "@EVENT_OBJECT_CREATE"
+  },
+  {
+s name": "常用事件常量值""initial value": "0x8015""constant name": "默认值被改变",
+s name": "常用事件常量值""initial value": "0x8015""comment": "可用于如单选框多选框选中状态被更变",
+s name": "常用事件常量值""initial value": "0x8015""data type": "整数",
+s name": "常用事件常量值""initial value": "0x8015""initial value": "@EVENT_OBJECT_DEFACTIONCHANGE"
+  },
+  {
+口消息.*"枚举了常用部分,并非全部."constant name": "描述被改变",
+口消息.*"枚举了常用部分,并非全部."comment": "基于对象的名称、角色、状态和值属性改变",
+口消息.*"枚举了常用部分,并非全部."data type": "整数",
+口消息.*"枚举了常用部分,并非全部."initial value": "@EVENT_OBJECT_DESCRIPTIONCHANGE"
+  },
+  {
+stant name": "X键1""initial value": "@WINEVENT_INCONTEXT""constant name": "对象被销毁",
+stant name": "X键1""initial value": "@WINEVENT_INCONTEXT""comment": "对象已被销毁",
+stant name": "X键1""initial value": "@WINEVENT_INCONTEXT""data type": "整数",
+stant name": "X键1""initial value": "@WINEVENT_INCONTEXT""initial value": "@EVENT_OBJECT_DESTROY"
+  },
+  {
+
+"constant name": "开始拖动元素",
+
+"comment": "开始拖动元素",
+
+"data type": "整数",
+
+"initial value": "@EVENT_OBJECT_DRAGSTART"
+  },
+  {
+ "constant name": "结束拖动元素",
+ "comment": "已结束拖动操作",
+ "data type": "整数",
+ "initial value": "@VENT_OBJECT_DRAGCANCEL"
+  },
+  {
+ਰ數ŝ"constant name": "元素被拖动删除",
+ਰ數ŝ"comment": "删除了放置目标上的元素",
+ਰ數ŝ"data type": "整数",
+ਰ數ŝ"initial value": "@EVENT_OBJECT_DRAGCOMPLETE"
+  },
+  {
+"data type": "整数""constant name": "元素拖动到边界",
+"data type": "整数""comment": "用户将元素拖动到放置目标的边界",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@EVENT_OBJECT_DRAGENTER"
+  },
+  {
+}"constant name": "元素被删除",
+}"comment": "元素被删除",
+}"data type": "整数",
+}"initial value": "@EVENT_OBJECT_DRAGDROPPED"
+  },
+  {
+消息.*"枚举了常用部分,并非全部."initial value": "@EVENT_OBJECT_DESCRIPTIONCHANGE""constant name": "最低事件值",
+消息.*"枚举了常用部分,并非全部."initial value": "@EVENT_OBJECT_DESCRIPTIONCHANGE""comment": "最低对象事件值",
+消息.*"枚举了常用部分,并非全部."initial value": "@EVENT_OBJECT_DESCRIPTIONCHANGE""data type": "整数",
+消息.*"枚举了常用部分,并非全部."initial value": "@EVENT_OBJECT_DESCRIPTIONCHANGE""initial value": "@EVENT_MIN"
+  },
+  {
+data type": "整数""initial value": "@EVENT_OBJECT_DRAGENTER""constant name": "最高事件值",
+data type": "整数""initial value": "@EVENT_OBJECT_DRAGENTER""comment": "最高对象事件值",
+data type": "整数""initial value": "@EVENT_OBJECT_DRAGENTER""data type": "整数",
+data type": "整数""initial value": "@EVENT_OBJECT_DRAGENTER""initial value": "@EVENT_MAX"
+  },
+  {
+
+"constant name": "接收到键盘焦点",
+
+"comment": "对象已接收键盘焦点",
+
+"data type": "整数",
+
+"initial value": "@EVENT_OBJECT_FOCUS"
+  },
+  {
+"initial value": "@EVENT_OBJECT_FOCUS""constant name": "帮助属性被改变",
+"initial value": "@EVENT_OBJECT_FOCUS""comment": "对象的帮助属性已更改.服务器应用程序为它们的辅助性对象发送该事件.",
+"initial value": "@EVENT_OBJECT_FOCUS""data type": "整数",
+"initial value": "@EVENT_OBJECT_FOCUS""initial value": "@EVENT_OBJECT_HELPCHANGE"
+  },
+  {
+NT_OBJECT_FOCUS"constant name": "对象被隐藏",
+NT_OBJECT_FOCUS"comment": "对象已隐藏",
+NT_OBJECT_FOCUS"data type": "整数",
+NT_OBJECT_FOCUS"initial value": "@EVENT_OBJECT_HIDE"
+  },
+  {
+}"constant name": "更改托管对象",
+}"comment": "承载其他可访问对象的窗口已更改托管对象",
+}"data type": "整数",
+}"initial value": "@EVENT_OBJECT_HOSTEDOBJECTSINVALIDATED"
+  },
+  {
+"data type": "整数""constant name": "输入法被隐藏",
+"data type": "整数""comment": "已隐藏输入法窗口",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@EVENT_OBJECT_IME_HIDE"
+  },
+  {
+}"constant name": "输入法被显示",
+}"comment": "输入法窗口已变为可见",
+}"data type": "整数",
+}"initial value": "@EVENT_OBJECT_IME_SHOW"
+  },
+  {
+"data type": "整数""constant name": "输入法尺寸改变",
+"data type": "整数""comment": "输入法窗口尺寸被改变",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@EVENT_OBJECT_IME_CHANGE"
+  },
+  {
+data type": "整数""comment": "已隐藏输入法窗口""constant name": "对象被调用",
+data type": "整数""comment": "已隐藏输入法窗口""comment": "已调用对象;例如,用户已单击按钮.",
+data type": "整数""comment": "已隐藏输入法窗口""data type": "整数",
+data type": "整数""comment": "已隐藏输入法窗口""initial value": "0x8013"
+  },
+  {
+
+"constant name": "区域被更改",
+
+"comment": "作为实时区域的一部分的对象已更改.实时区域是应用程序经常更改和/或异步更改的区域.",
+
+"data type": "整数",
+
+"initial value": "@EVENT_OBJECT_LIVEREGIONCHANGED"
+  },
+  {
+
+"constant name": "窗口尺寸被改变",
+
+"comment": "对象已更改位置、形状和大小.",
+
+"data type": "整数",
+
+"initial value": "@EVENT_OBJECT_LOCATIONCHANGE"
+  },
+  {
+}"constant name": "名称被更改",
+}"comment": "对象的名称属性已更改",
+}"data type": "整数",
+}"initial value": "@EVENT_OBJECT_NAMECHANGE"
+  },
+  {
+的名称、角色、状态和值属性改变"constant name": "父对象改变",
+的名称、角色、状态和值属性改变"comment": "对象具有新的父对象",
+的名称、角色、状态和值属性改变"data type": "整数",
+的名称、角色、状态和值属性改变"initial value": "@EVENT_OBJECT_PARENTCHANGE"
+  },
+  {
+nstant name": "更改托管对象""constant name": "容器准备好",
+nstant name": "更改托管对象""comment": "容器对象已添加、移除其子对象或对其子对象重新排序.\n当子元素数或元素顺序发生更改时,列表视图对象会生成此事件.\n子窗口的Z顺序更改时,父窗口也会发送此事件.",
+nstant name": "更改托管对象""data type": "整数",
+nstant name": "更改托管对象""initial value": "@EVENT_OBJECT_REORDER"
+  },
+  {
+"comment": "开始拖动元素""constant name": "焦点被改变",
+"comment": "开始拖动元素""comment": "容器对象中的选择已更改",
+"comment": "开始拖动元素""data type": "整数",
+"comment": "开始拖动元素""initial value": "@EVENT_OBJECT_SELECTION"
+  },
+  {
+data type": "整数""comment": "已隐藏输入法窗口""constant name": "新增内容",
+data type": "整数""comment": "已隐藏输入法窗口""comment": "容器对象中的子对象已添加到现有选定内容,如超级列表添加列表项.",
+data type": "整数""comment": "已隐藏输入法窗口""data type": "整数",
+data type": "整数""comment": "已隐藏输入法窗口""initial value": "@EVENT_OBJECT_SELECTIONADD"
+  },
+  {
+data type": "整数""data type": "整数""constant name": "删除内容",
+data type": "整数""data type": "整数""comment": "容器对象中的项已从所选内容中删除,如超级列表删除列表项.",
+data type": "整数""data type": "整数""data type": "整数",
+data type": "整数""data type": "整数""initial value": "@EVENT_OBJECT_SELECTIONREMOVE"
+  },
+  {
+"comment": "输入法窗口已变为可见""constant name": "选中项被更改",
+"comment": "输入法窗口已变为可见""comment": "容器对象中发生了许多选择更改,如列表项选择被更改.",
+"comment": "输入法窗口已变为可见""data type": "整数",
+"comment": "输入法窗口已变为可见""initial value": "@EVENT_OBJECT_SELECTIONWITHIN"
+  },
+  {
+}"constant name": "对象被显示",
+}"comment": "显示隐藏对象",
+}"data type": "整数",
+}"initial value": "@EVENT_OBJECT_SHOW"
+  },
+  {
+
+"constant name": "状态改变",
+
+"comment": "对象的状态已更改.例如,在单击或释放按钮对象或启用或禁用对象时发生状态更改.",
+
+"data type": "整数",
+
+"initial value": "@EVENT_OBJECT_STATECHANGE"
+  },
+  {
+}"constant name": "输入法转换目标",
+}"comment": "输入法转换目标",
+}"data type": "整数",
+}"initial value": "@EVENT_OBJECT_TEXTEDIT_CONVERSIONTARGETCHANGED"
+  },
+  {
+}"constant name": "选中文本被改变",
+}"comment": "对象的文本选择已更改",
+}"data type": "整数",
+}"initial value": "0x8014"
+  },
+  {
+
+"constant name": "窗口未遮盖",
+
+"comment": "当窗口未遮盖时发送. 隐藏的窗口仍然存在,但对用户不可见.",
+
+"data type": "整数",
+
+"initial value": "@EVENT_OBJECT_UNCLOAKED"
+  },
+  {
+NT_OBJECT_HIDE"constant name": "内容被更改",
+NT_OBJECT_HIDE"comment": "对象的内容属性被更改",
+NT_OBJECT_HIDE"data type": "整数",
+NT_OBJECT_HIDE"initial value": "@EVENT_OBJECT_VALUECHANGE"
+  },
+  {
+}"constant name": "已生成警报",
+}"comment": "已生成警报",
+}"data type": "整数",
+}"initial value": "@EVENT_SYSTEM_ALERT"
+  },
+  {
+"comment": "已生成警报""constant name": "显示预览框",
+"comment": "已生成警报""comment": "正在显示预览矩形",
+"comment": "已生成警报""data type": "整数",
+"comment": "已生成警报""initial value": "0x8016"
+  },
+  {
+}"constant name": "鼠标反捕获",
+}"comment": "窗口已丢失鼠标捕获",
+}"data type": "整数",
+}"initial value": "@EVENT_SYSTEM_CAPTUREEND"
+  },
+  {
+"comment": "当窗口未遮盖时发送. 隐藏的窗口仍然存在,但对用户不可见.""constant name": "鼠标捕获",
+"comment": "当窗口未遮盖时发送. 隐藏的窗口仍然存在,但对用户不可见.""comment": "窗口已收到鼠标捕获",
+"comment": "当窗口未遮盖时发送. 隐藏的窗口仍然存在,但对用户不可见.""data type": "整数",
+"comment": "当窗口未遮盖时发送. 隐藏的窗口仍然存在,但对用户不可见.""initial value": "@EVENT_SYSTEM_CAPTURESTART"
+  },
+  {
+
+"constant name": "退出帮助模式",
+
+"comment": "窗口已退出上下文相关的帮助模式",
+
+"data type": "整数",
+
+"initial value": "@EVENT_SYSTEM_CONTEXTHELPEND"
+  },
+  {
+}"constant name": "进入帮助模式",
+}"comment": "窗口已进入上下文相关的帮助模式",
+}"data type": "整数",
+}"initial value": "@EVENT_SYSTEM_CONTEXTHELPSTART"
+  },
+  {
+的名称、角色、状态和值属性改变"constant name": "激活窗口被改变",
+的名称、角色、状态和值属性改变"comment": "活动桌面已切换",
+的名称、角色、状态和值属性改变"data type": "整数",
+的名称、角色、状态和值属性改变"initial value": "@EVENT_SYSTEM_DESKTOPSWITCH"
+  },
+  {
+
+"constant name": "关闭对话框",
+
+"comment": "关闭对话框",
+
+"data type": "整数",
+
+"initial value": "@EVENT_SYSTEM_DIALOGEND"
+  },
+  {
+
+"constant name": "弹出对话框",
+
+"comment": "弹出对话框",
+
+"data type": "整数",
+
+"initial value": "@EVENT_SYSTEM_DIALOGSTART"
+  },
+  {
+
+"constant name": "退出拖放模式",
+
+"comment": "应用程序将退出拖放模式",
+
+"data type": "整数",
+
+"initial value": "@EVENT_SYSTEM_DRAGDROPEND"
+  },
+  {
+"initial value": "@EVENT_SYSTEM_DRAGDROPEND""constant name": "进入拖放模式",
+"initial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式",
+"initial value": "@EVENT_SYSTEM_DRAGDROPEND""data type": "整数",
+"initial value": "@EVENT_SYSTEM_DRAGDROPEND""initial value": "@EVENT_SYSTEM_DRAGDROPSTART"
+  },
+  {
+"data type": "整数""constant name": "最高系统事件值",
+"data type": "整数""comment": "最高的系统事件值.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@EVENT_SYSTEM_END"
+  },
+  {
+}"constant name": "前台窗口被更改",
+}"comment": "前台窗口已更改.同线程中的另一个窗口到前台,系统也会发送此事件. ",
+}"data type": "整数",
+}"initial value": "@EVENT_SYSTEM_FOREGROUND"
+  },
+  {
+"data type": "整数""constant name": "系统菜单被关闭",
+"data type": "整数""comment": "弹出菜单已关闭",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@EVENT_SYSTEM_MENUPOPUPEND"
+  },
+  {
+
+"constant name": "系统菜单被显示",
+
+"comment": "此时会显示一个弹出菜单",
+
+"data type": "整数",
+
+"initial value": "@EVENT_SYSTEM_MENUPOPUPSTART"
+  },
+  {
+"data type": "整数""constant name": "菜单栏菜单关闭",
+"data type": "整数""comment": "菜单栏中的菜单已关闭",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@EVENT_SYSTEM_MENUEND"
+  },
+  {
+data type": "整数""comment": "弹出菜单已关闭""constant name": "菜单栏菜单项选择",
+data type": "整数""comment": "弹出菜单已关闭""comment": "已选择菜单栏上的菜单项",
+data type": "整数""comment": "弹出菜单已关闭""data type": "整数",
+data type": "整数""comment": "弹出菜单已关闭""initial value": "@EVENT_SYSTEM_MENUSTART"
+  },
+  {
+的名称、角色、状态和值属性改变"constant name": "窗口还原",
+的名称、角色、状态和值属性改变"comment": "即将还原窗口对象",
+的名称、角色、状态和值属性改变"data type": "整数",
+的名称、角色、状态和值属性改变"initial value": "@EVENT_SYSTEM_MINIMIZEEND"
+  },
+  {
+data type": "整数""comment": "菜单栏中的菜单已关闭""constant name": "窗口最小化",
+data type": "整数""comment": "菜单栏中的菜单已关闭""comment": "窗口对象即将最小化",
+data type": "整数""comment": "菜单栏中的菜单已关闭""data type": "整数",
+data type": "整数""comment": "菜单栏中的菜单已关闭""initial value": "@EVENT_SYSTEM_MINIMIZESTART"
+  },
+  {
+}"constant name": "窗口移动",
+}"comment": "窗口的移动或调整大小已完成",
+}"data type": "整数",
+}"initial value": "@EVENT_SYSTEM_MOVESIZEEND"
+  },
+  {
+a type": "整数""constant name": "最高系统事件值""constant name": "窗口正在移动",
+a type": "整数""constant name": "最高系统事件值""comment": "正在移动窗口或调整窗口的大小",
+a type": "整数""constant name": "最高系统事件值""data type": "整数",
+a type": "整数""constant name": "最高系统事件值""initial value": "@EVENT_SYSTEM_MOVESIZESTART"
+  },
+  {
+ata type": "整数""comment": "弹出菜单已关闭""initial value": "@EVENT_SYSTEM_MENUSTART""constant name": "滚动条滚动结束",
+ata type": "整数""comment": "弹出菜单已关闭""initial value": "@EVENT_SYSTEM_MENUSTART""comment": "滚动条上的滚动已经结束",
+ata type": "整数""comment": "弹出菜单已关闭""initial value": "@EVENT_SYSTEM_MENUSTART""data type": "整数",
+ata type": "整数""comment": "弹出菜单已关闭""initial value": "@EVENT_SYSTEM_MENUSTART""initial value": "@EVENT_SYSTEM_SCROLLINGEND"
+  },
+  {
+ type": "整数""constant name": "最高系统事件值""comment": "正在移动窗口或调整窗口的大小""constant name": "滚动条滚动开始",
+ type": "整数""constant name": "最高系统事件值""comment": "正在移动窗口或调整窗口的大小""comment": "滚动条上的滚动已经开始",
+ type": "整数""constant name": "最高系统事件值""comment": "正在移动窗口或调整窗口的大小""data type": "整数",
+ type": "整数""constant name": "最高系统事件值""comment": "正在移动窗口或调整窗口的大小""initial value": "@EVENT_SYSTEM_SCROLLINGSTART"
+  },
+  {
+"data type": "整数""constant name": "开始播放声音",
+"data type": "整数""comment": "一个声音已经播放",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@EVENT_SYSTEM_SOUND"
+  },
+  {
+ta type": "整数""comment": "弹出菜单已关闭""initial value": "@EVENT_SYSTEM_MENUSTART""data type": "整数""constant name": "切换窗口",
+ta type": "整数""comment": "弹出菜单已关闭""initial value": "@EVENT_SYSTEM_MENUSTART""data type": "整数""comment": "ALT+TAB按键触发切换窗口",
+ta type": "整数""comment": "弹出菜单已关闭""initial value": "@EVENT_SYSTEM_MENUSTART""data type": "整数""data type": "整数",
+ta type": "整数""comment": "弹出菜单已关闭""initial value": "@EVENT_SYSTEM_MENUSTART""data type": "整数""initial value": "@EVENT_SYSTEM_SWITCHEND"
+  },
+  {
+
+"constant name": "切换激活窗口",
+
+"comment": "ALT+TAB按键切换,使得窗口被激活. ",
+
+"data type": "整数",
+
+"initial value": "@EVENT_SYSTEM_SWITCHSTART"
+  }
+]
+ },
+ {
+"class name": "扩展按键码",
+"comment": "虚拟按键码",
+"base class": "按键码",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+名称、角色、状态和值属性改变"data type": "整数""constant name": "数字键0",
+名称、角色、状态和值属性改变"data type": "整数""comment": "小键盘数字键0",
+名称、角色、状态和值属性改变"data type": "整数""data type": "整数",
+名称、角色、状态和值属性改变"data type": "整数""initial value": "@VK_NUMPAD0"
+  },
+  {
+initial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""constant name": "数字键1",
+initial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""comment": "小键盘数字键1",
+initial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数",
+initial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""initial value": "@VK_NUMPAD1"
+  },
+  {
+ type": "整数""constant name": "最高系统事件值""comment": "正在移动窗口或调整窗口的大小""constant name": "数字键2",
+ type": "整数""constant name": "最高系统事件值""comment": "正在移动窗口或调整窗口的大小""comment": "小键盘数字键2",
+ type": "整数""constant name": "最高系统事件值""comment": "正在移动窗口或调整窗口的大小""data type": "整数",
+ type": "整数""constant name": "最高系统事件值""comment": "正在移动窗口或调整窗口的大小""initial value": "@VK_NUMPAD2"
+  },
+  {
+a type": "整数""constant name": "开始播放声音""constant name": "数字键3",
+a type": "整数""constant name": "开始播放声音""comment": "小键盘数字键3",
+a type": "整数""constant name": "开始播放声音""data type": "整数",
+a type": "整数""constant name": "开始播放声音""initial value": "@VK_NUMPAD3"
+  },
+  {
+base class": "按键码""constant name": "数字键4",
+base class": "按键码""comment": "小键盘数字键4",
+base class": "按键码""data type": "整数",
+base class": "按键码""initial value": "@VK_NUMPAD4"
+  },
+  {
+称、角色、状态和值属性改变"data type": "整数""initial value": "@VK_NUMPAD0""constant name": "数字键5",
+称、角色、状态和值属性改变"data type": "整数""initial value": "@VK_NUMPAD0""comment": "小键盘数字键5",
+称、角色、状态和值属性改变"data type": "整数""initial value": "@VK_NUMPAD0""data type": "整数",
+称、角色、状态和值属性改变"data type": "整数""initial value": "@VK_NUMPAD0""initial value": "@VK_NUMPAD5"
+  },
+  {
+}"constant name": "数字键6",
+}"comment": "小键盘数字键6",
+}"data type": "整数",
+}"initial value": "@VK_NUMPAD6"
+  },
+  {
+
+"constant name": "数字键7",
+
+"comment": "小键盘数字键7",
+
+"data type": "整数",
+
+"initial value": "@VK_NUMPAD7"
+  },
+  {
+
+"constant name": "数字键8",
+
+"comment": "小键盘数字键8",
+
+"data type": "整数",
+
+"initial value": "@VK_NUMPAD8"
+  },
+  {
+"initial value": "@VK_NUMPAD8""constant name": "数字键9",
+"initial value": "@VK_NUMPAD8""comment": "小键盘数字键9",
+"initial value": "@VK_NUMPAD8""data type": "整数",
+"initial value": "@VK_NUMPAD8""initial value": "@VK_NUMPAD9"
+  },
+  {
+"data type": "整数""constant name": "副键盘减号",
+"data type": "整数""comment": "小键盘减号键",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@VK_SUBTRACT"
+  },
+  {
+}"constant name": "副键盘除号",
+}"comment": "小键盘除法键",
+}"data type": "整数",
+}"initial value": "@VK_DIVIDE"
+  }
+]
+ },
+ {
+"class name": "APIHOOK执行结果",
+"comment": "调用apiHook方法时的返回值.\n用于判断执行状态.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+、角色、状态和值属性改变"data type": "整数""initial value": "@VK_NUMPAD0""initial value": "@VK_NUMPAD5""constant name": "未知错误",
+、角色、状态和值属性改变"data type": "整数""initial value": "@VK_NUMPAD0""initial value": "@VK_NUMPAD5""comment": "未知错误",
+、角色、状态和值属性改变"data type": "整数""initial value": "@VK_NUMPAD0""initial value": "@VK_NUMPAD5""data type": "整数",
+、角色、状态和值属性改变"data type": "整数""initial value": "@VK_NUMPAD0""initial value": "@VK_NUMPAD5""initial value": "@MH_UNKNOWN"
+  },
+  {
+}"constant name": "成功",
+}"comment": "成功",
+}"data type": "整数",
+}"initial value": "@MH_OK"
+  },
+  {
+TAB按键触发切换窗口"constant name": "已经初始化",
+TAB按键触发切换窗口"comment": "已经初始化,尝试再次初始化时返回该值.",
+TAB按键触发切换窗口"data type": "整数",
+TAB按键触发切换窗口"initial value": "@MH_ERROR_ALREADY_INITIALIZED"
+  },
+  {
+
+"constant name": "尚未初始化",
+
+"comment": "尚未初始化",
+
+"data type": "整数",
+
+"initial value": "@MH_ERROR_NOT_INITIALIZED"
+  },
+  {
+
+"constant name": "钩子已被创建",
+
+"comment": "目标函数钩子已被创建",
+
+"data type": "整数",
+
+"initial value": "@MH_ERROR_ALREADY_CREATED"
+  },
+  {
+AB按键触发切换窗口"comment": "已经初始化,尝试再次初始化时返回该值.""constant name": "钩子尚未创建",
+AB按键触发切换窗口"comment": "已经初始化,尝试再次初始化时返回该值.""comment": "尚未创建指定目标函数的钩子",
+AB按键触发切换窗口"comment": "已经初始化,尝试再次初始化时返回该值.""data type": "整数",
+AB按键触发切换窗口"comment": "已经初始化,尝试再次初始化时返回该值.""initial value": "@MH_ERROR_NOT_CREATED"
+  },
+  {
+
+"constant name": "钩子已被启用",
+
+"comment": "钩子已被启用",
+
+"data type": "整数",
+
+"initial value": "@MH_ERROR_ENABLED"
+  },
+  {
+"initial value": "@MH_ERROR_NOT_INITIALIZED""constant name": "钩子启用失败",
+"initial value": "@MH_ERROR_NOT_INITIALIZED""comment": "钩子启用失败",
+"initial value": "@MH_ERROR_NOT_INITIALIZED""data type": "整数",
+"initial value": "@MH_ERROR_NOT_INITIALIZED""initial value": "@MH_ERROR_DISABLED"
+  },
+  {
+nitial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "无效指针",
+nitial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""comment": "指针无效",
+nitial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数",
+nitial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""initial value": "@MH_ERROR_NOT_EXECUTABLE"
+  },
+  {
+}"constant name": "连接函数失败",
+}"comment": "无法连接到指定的目标函数",
+}"data type": "整数",
+}"initial value": "@MH_ERROR_UNSUPPORTED_FUNCTION"
+  },
+  {
+
+"constant name": "无法分配内存",
+
+"comment": "无法分配内存",
+
+"data type": "整数",
+
+"initial value": "@MH_ERROR_MEMORY_ALLOC"
+  },
+  {
+
+"constant name": "更改保护失败",
+
+"comment": "未能更改内存保护",
+
+"data type": "整数",
+
+"initial value": "@MH_ERROR_MEMORY_PROTECT"
+  },
+  {
+键触发切换窗口"constant name": "已经初始化""constant name": "未知模块",
+键触发切换窗口"constant name": "已经初始化""comment": "没找到模块",
+键触发切换窗口"constant name": "已经初始化""data type": "整数",
+键触发切换窗口"constant name": "已经初始化""initial value": "@MH_ERROR_MODULE_NOT_FOUND"
+  },
+  {
+触发切换窗口"constant name": "已经初始化""data type": "整数""constant name": "未知函数",
+触发切换窗口"constant name": "已经初始化""data type": "整数""comment": "没找到函数",
+触发切换窗口"constant name": "已经初始化""data type": "整数""data type": "整数",
+触发切换窗口"constant name": "已经初始化""data type": "整数""initial value": "@MH_ERROR_FUNCTION_NOT_FOUND"
+  }
+]
+ },
+ {
+"class name": "常用窗口消息",
+"comment": "枚举了一些常用窗口消息ID值",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+}"constant name": "创建",
+}"comment": "创建窗口",
+}"data type": "整数",
+}"initial value": "@WM_CREATE"
+  },
+  {
+}"constant name": "销毁",
+}"comment": "窗口正被销毁",
+}"data type": "整数",
+}"initial value": "@WM_DESTROY"
+  },
+  {
+"comment": "窗口正被销毁""constant name": "移动",
+"comment": "窗口正被销毁""comment": "窗口被移动",
+"comment": "窗口正被销毁""data type": "整数",
+"comment": "窗口正被销毁""initial value": "@WM_MOVE"
+  },
+  {
+nitial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "尺寸改变",
+nitial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""comment": "窗口尺寸被改变",
+nitial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数",
+nitial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""initial value": "@WM_SIZE"
+  },
+  {
+itial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数""constant name": "尺寸改变中",
+itial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数""comment": "窗口正在调整大小",
+itial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数""data type": "整数",
+itial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数""initial value": "@WM_SIZING"
+  },
+  {
+itial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""comment": "窗口尺寸被改变""constant name": "正在激活",
+itial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""comment": "窗口尺寸被改变""comment": "指示窗口是激活还是已停用",
+itial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""comment": "窗口尺寸被改变""data type": "整数",
+itial value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""comment": "窗口尺寸被改变""initial value": "@WM_ACTIVATEAPP"
+  },
+  {
+l value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数""constant name": "尺寸改变中""constant name": "模式取消",
+l value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数""constant name": "尺寸改变中""comment": "发送到取消某些模式,例如鼠标反捕获.",
+l value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数""constant name": "尺寸改变中""data type": "整数",
+l value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""data type": "整数""constant name": "尺寸改变中""initial value": "@WM_CANCELMODE"
+  },
+  {
+}"constant name": "子窗口激活",
+}"comment": "子窗口被激活",
+}"data type": "整数",
+}"initial value": "@WM_CHILDACTIVATE"
+  },
+  {
+nstant name": "子窗口激活""constant name": "关闭",
+nstant name": "子窗口激活""comment": "发送为窗口或应用程序应终止的信号",
+nstant name": "子窗口激活""data type": "整数",
+nstant name": "子窗口激活""initial value": "@WM_CLOSE"
+  },
+  {
+}"constant name": "系统内存不足",
+}"comment": "当系统检测到超过30秒到60秒间隔的系统时间超过12.5%时,发送到所有顶级窗口.这表示系统内存较低.",
+}"data type": "整数",
+}"initial value": "@WM_COMPACTING"
+  },
+  {
+al value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "尺寸改变""constant name": "启用状态",
+al value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "尺寸改变""comment": "当应用程序更改窗口的启用状态时发送",
+al value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "尺寸改变""data type": "整数",
+al value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "尺寸改变""initial value": "@WM_ENABLE"
+  },
+  {
+nstant name": "销毁""constant name": "进入改变尺寸",
+nstant name": "销毁""comment": "在窗口进入移动或调整大小时发送",
+nstant name": "销毁""data type": "整数",
+nstant name": "销毁""initial value": "@WM_ENTERSIZEMOVE"
+  },
+  {
+}"constant name": "退出改变尺寸",
+}"comment": "在窗口退出移动或调整大小后发送",
+}"data type": "整数",
+}"initial value": "@WM_EXITSIZEMOVE"
+  },
+  {
+
+"constant name": "取缩略图",
+
+"comment": "检索与窗口关联的大图标或小图标的句柄.当按下Alt+TAB时,对话框中显示大图标或在窗口标题中显示小图标都会触发该消息.",
+
+"data type": "整数",
+
+"initial value": "@WM_GETICON"
+  },
+  {
+l value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "尺寸改变""data type": "整数""constant name": "最小化最大化",
+l value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "尺寸改变""data type": "整数""comment": "当窗口的大小或位置即将更改时发送",
+l value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "尺寸改变""data type": "整数""data type": "整数",
+l value": "@EVENT_SYSTEM_DRAGDROPEND""comment": "应用程序将进入拖放模式""data type": "整数""constant name": "尺寸改变""data type": "整数""initial value": "@WM_GETMINMAXINFO"
+  },
+  {
+"initial value": "@WM_CREATE""constant name": "输入法显示",
+"initial value": "@WM_CREATE""comment": "更改应用程序输入语言时发送",
+"initial value": "@WM_CREATE""data type": "整数",
+"initial value": "@WM_CREATE""initial value": "@WM_INPUTLANGCHANGE"
+  },
+  {
+"constant name": "输入法切换",
+"comment": "当用户选择新的输入语言时发送",
+"data type": "整数",
+"initial value": "@WM_INPUTLANGCHANGEREQUEST"
+  },
+  {
+}"constant name": "移动中",
+}"comment": "的窗口正在移动时发送",
+}"data type": "整数",
+}"initial value": "@WM_MOVING"
+  },
+  {
+}"constant name": "拖动图标",
+}"comment": "最小化窗口被拖动时,没有为其类定义的图标.应用程序将句柄返回到图标或游标.",
+}"data type": "整数",
+}"initial value": "@WM_QUERYDRAGICON"
+  },
+  {
+}"constant name": "还原",
+}"comment": "当用户请求将窗口还原到其以前的大小和位置时,发送图标显示.",
+}"data type": "整数",
+}"initial value": "@WM_QUERYOPEN"
+  },
+  {
+"initial value": "@WM_QUERYOPEN""constant name": "退出程序",
+"initial value": "@WM_QUERYOPEN""comment": "指示终止应用程序的请求",
+"initial value": "@WM_QUERYOPEN""data type": "整数",
+"initial value": "@WM_QUERYOPEN""initial value": "@WM_QUIT"
+  },
+  {
+}"constant name": "显示",
+}"comment": "当窗口即将隐藏或显示时发送",
+}"data type": "整数",
+}"initial value": "@WM_SHOWWINDOW"
+  },
+  {
+"data type": "整数""constant name": "样式改变",
+"data type": "整数""comment": "更改窗口的一个或多个样式后发送",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@WM_STYLECHANGED"
+  },
+  {
+
+"constant name": "样式改变中",
+
+"comment": "更改窗口的一个或多个样式中",
+
+"data type": "整数",
+
+"initial value": "@WM_STYLECHANGING"
+  },
+  {
+"comment": "更改窗口的一个或多个样式中""constant name": "主题更改",
+"comment": "更改窗口的一个或多个样式中""comment": "主题更改事件之后发送.主题更改事件包括主题的激活、主题停用或从一个主题过渡到另一个主题.",
+"comment": "更改窗口的一个或多个样式中""data type": "整数",
+"comment": "更改窗口的一个或多个样式中""initial value": "@WM_THEMECHANGED"
+  },
+  {
+QUERYDRAGICON"constant name": "层次改变",
+QUERYDRAGICON"comment": "窗口层次(Z顺序)被改变后发送",
+QUERYDRAGICON"data type": "整数",
+QUERYDRAGICON"initial value": "@WM_WINDOWPOSCHANGED"
+  },
+  {
+THEMECHANGED"constant name": "层次改变中",
+THEMECHANGED"comment": "窗口层次(Z顺序)被改变中",
+THEMECHANGED"data type": "整数",
+THEMECHANGED"initial value": "@WM_WINDOWPOSCHANGING"
+  },
+  {
+comment": "更改窗口的一个或多个样式中""comment": "主题更改事件之后发送.主题更改事件包括主题的激活、主题停用或从一个主题过渡到另一个主题.""constant name": "设置文本",
+comment": "更改窗口的一个或多个样式中""comment": "主题更改事件之后发送.主题更改事件包括主题的激活、主题停用或从一个主题过渡到另一个主题.""comment": "设置窗口的文本",
+comment": "更改窗口的一个或多个样式中""comment": "主题更改事件之后发送.主题更改事件包括主题的激活、主题停用或从一个主题过渡到另一个主题.""data type": "整数",
+comment": "更改窗口的一个或多个样式中""comment": "主题更改事件之后发送.主题更改事件包括主题的激活、主题停用或从一个主题过渡到另一个主题.""initial value": "@WM_SETTEXT"
+  },
+  {
+
+"constant name": "获取文本",
+
+"comment": "将对应于窗口的文本复制到调用方提供的缓冲区中",
+
+"data type": "整数",
+
+"initial value": "@WM_GETTEXT"
+  },
+  {
+HEMECHANGED"initial value": "@WM_WINDOWPOSCHANGING""constant name": "获取菜单",
+HEMECHANGED"initial value": "@WM_WINDOWPOSCHANGING""comment": "检索当前窗口的菜单句柄",
+HEMECHANGED"initial value": "@WM_WINDOWPOSCHANGING""data type": "整数",
+HEMECHANGED"initial value": "@WM_WINDOWPOSCHANGING""initial value": "@MN_GETHMENU"
+  },
+  {
+
+"constant name": "菜单项选择",
+
+"comment": "菜单项选择",
+
+"data type": "整数",
+
+"initial value": "@WM_MENUSELECT"
+  },
+  {
+omment": "更改窗口的一个或多个样式中""comment": "主题更改事件之后发送.主题更改事件包括主题的激活、主题停用或从一个主题过渡到另一个主题.""initial value": "@WM_SETTEXT""constant name": "菜单快捷键按下",
+omment": "更改窗口的一个或多个样式中""comment": "主题更改事件之后发送.主题更改事件包括主题的激活、主题停用或从一个主题过渡到另一个主题.""initial value": "@WM_SETTEXT""comment": "菜单快捷键按下",
+omment": "更改窗口的一个或多个样式中""comment": "主题更改事件之后发送.主题更改事件包括主题的激活、主题停用或从一个主题过渡到另一个主题.""initial value": "@WM_SETTEXT""data type": "整数",
+omment": "更改窗口的一个或多个样式中""comment": "主题更改事件之后发送.主题更改事件包括主题的激活、主题停用或从一个主题过渡到另一个主题.""initial value": "@WM_SETTEXT""initial value": "@WM_MENUCHAR"
+  },
+  {
+
+"constant name": "菜单右键抬起",
+
+"comment": "菜单中鼠标右键被抬起",
+
+"data type": "整数",
+
+"initial value": "@WM_MENURBUTTONUP"
+  },
+  {
+nstant name": "菜单项选择""constant name": "菜单切换",
+nstant name": "菜单项选择""comment": "系统菜单之间切换时发送",
+nstant name": "菜单项选择""data type": "整数",
+nstant name": "菜单项选择""initial value": "@WM_NEXTMENU"
+  },
+  {
+nstant name": "子窗口激活""constant name": "菜单下拉销毁",
+nstant name": "子窗口激活""comment": "下拉菜单或子菜单被销毁时发送",
+nstant name": "子窗口激活""data type": "整数",
+nstant name": "子窗口激活""initial value": "@WM_UNINITMENUPOPUP"
+  },
+  {
+"comment": "菜单中鼠标右键被抬起""constant name": "绘制文本",
+"comment": "菜单中鼠标右键被抬起""comment": "检索控件当前正在绘制其文本的字体",
+"comment": "菜单中鼠标右键被抬起""data type": "整数",
+"comment": "菜单中鼠标右键被抬起""initial value": "@WM_GETFONT"
+  },
+  {
+nstant name": "菜单右键抬起""constant name": "改变字体",
+nstant name": "菜单右键抬起""comment": "设置控件在绘制文本时要使用的字体",
+nstant name": "菜单右键抬起""data type": "整数",
+nstant name": "菜单右键抬起""initial value": "@WM_SETFONT"
+  },
+  {
+序更改窗口的启用状态时发送"constant name": "键盘获得焦点",
+序更改窗口的启用状态时发送"comment": "在窗口获得键盘焦点后发送到窗口",
+序更改窗口的启用状态时发送"data type": "整数",
+序更改窗口的启用状态时发送"initial value": "@WM_SETFOCUS"
+  },
+  {
+initial value": "@WM_QUERYOPEN""comment": "指示终止应用程序的请求""constant name": "键盘失去焦点",
+initial value": "@WM_QUERYOPEN""comment": "指示终止应用程序的请求""comment": "在窗口失去键盘焦点后发送到窗口",
+initial value": "@WM_QUERYOPEN""comment": "指示终止应用程序的请求""data type": "整数",
+initial value": "@WM_QUERYOPEN""comment": "指示终止应用程序的请求""initial value": "@WM_KILLFOCUS"
+  },
+  {
+UERYDRAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下",
+UERYDRAGICON"initial value": "@WM_WINDOWPOSCHANGED""comment": "当用户按下F10键(激活菜单栏)或按住Alt键,然后按另一个键时发送.",
+UERYDRAGICON"initial value": "@WM_WINDOWPOSCHANGED""data type": "整数",
+UERYDRAGICON"initial value": "@WM_WINDOWPOSCHANGED""initial value": "@WM_SYSKEYDOWN"
+  },
+  {
+QUERYDRAGICON"constant name": "键盘功能键放开",
+QUERYDRAGICON"comment": "功能键放开,Alt键放开.",
+QUERYDRAGICON"data type": "整数",
+QUERYDRAGICON"initial value": "@WM_SYSKEYUP"
+  },
+  {
+DRAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""constant name": "键盘输入字符",
+DRAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""comment": "输入字符",
+DRAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""data type": "整数",
+DRAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""initial value": "@WM_CHAR"
+  },
+  {
+RAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""comment": "输入字符""constant name": "键盘热键按下",
+RAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""comment": "输入字符""comment": "快捷键被按",
+RAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""comment": "输入字符""data type": "整数",
+RAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""comment": "输入字符""initial value": "@WM_HOTKEY"
+  },
+  {
+RAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""data type": "整数""constant name": "键盘按键按下",
+RAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""data type": "整数""comment": "按键按下",
+RAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""data type": "整数""data type": "整数",
+RAGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""data type": "整数""initial value": "@WM_KEYDOWN"
+  },
+  {
+}"constant name": "键盘按键抬起",
+}"comment": "按键抬起",
+}"data type": "整数",
+}"initial value": "@WM_KEYUP"
+  },
+  {
+AGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""data type": "整数""initial value": "@WM_KEYDOWN""constant name": "鼠标失去焦点",
+AGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""data type": "整数""initial value": "@WM_KEYDOWN""comment": "丢失鼠标捕获",
+AGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""data type": "整数""initial value": "@WM_KEYDOWN""data type": "整数",
+AGICON"initial value": "@WM_WINDOWPOSCHANGED""constant name": "键盘功能键按下""data type": "整数""initial value": "@WM_KEYDOWN""initial value": "@WM_CAPTURECHANGED"
+  },
+  {
+当前正在绘制其文本的字体"constant name": "鼠标左键双击",
+当前正在绘制其文本的字体"comment": "双击鼠标左键时",
+当前正在绘制其文本的字体"data type": "整数",
+当前正在绘制其文本的字体"initial value": "@WM_LBUTTONDBLCLK"
+  },
+  {
+发切换窗口"constant name": "已经初始化""data type": "整数""comment": "没找到函数""constant name": "鼠标左键按下",
+发切换窗口"constant name": "已经初始化""data type": "整数""comment": "没找到函数""comment": "鼠标左键按下",
+发切换窗口"constant name": "已经初始化""data type": "整数""comment": "没找到函数""data type": "整数",
+发切换窗口"constant name": "已经初始化""data type": "整数""comment": "没找到函数""initial value": "@WM_LBUTTONDOWN"
+  },
+  {
+nstant name": "子窗口激活""constant name": "鼠标左键抬起",
+nstant name": "子窗口激活""comment": "鼠标左键抬起",
+nstant name": "子窗口激活""data type": "整数",
+nstant name": "子窗口激活""initial value": "@WM_LBUTTONUP"
+  },
+  {
+"comment": "按键抬起""constant name": "鼠标中键双击",
+"comment": "按键抬起""comment": "双击鼠标中间按钮",
+"comment": "按键抬起""data type": "整数",
+"comment": "按键抬起""initial value": "@WM_MBUTTONDBLCLK"
+  },
+  {
+更改窗口的启用状态时发送"comment": "在窗口获得键盘焦点后发送到窗口""constant name": "鼠标中键按下",
+更改窗口的启用状态时发送"comment": "在窗口获得键盘焦点后发送到窗口""comment": "鼠标中键按下",
+更改窗口的启用状态时发送"comment": "在窗口获得键盘焦点后发送到窗口""data type": "整数",
+更改窗口的启用状态时发送"comment": "在窗口获得键盘焦点后发送到窗口""initial value": "@WM_MBUTTONDOWN"
+  },
+  {
+comment": "按键抬起""comment": "双击鼠标中间按钮""constant name": "鼠标中键抬起",
+comment": "按键抬起""comment": "双击鼠标中间按钮""comment": "鼠标中键抬起",
+comment": "按键抬起""comment": "双击鼠标中间按钮""data type": "整数",
+comment": "按键抬起""comment": "双击鼠标中间按钮""initial value": "@WM_MBUTTONUP"
+  },
+  {
+更改窗口的启用状态时发送"comment": "在窗口获得键盘焦点后发送到窗口""constant name": "鼠标激活",
+更改窗口的启用状态时发送"comment": "在窗口获得键盘焦点后发送到窗口""comment": "当光标处于非活动窗口中且用户按下鼠标按钮时发送",
+更改窗口的启用状态时发送"comment": "在窗口获得键盘焦点后发送到窗口""data type": "整数",
+更改窗口的启用状态时发送"comment": "在窗口获得键盘焦点后发送到窗口""initial value": "@WM_MOUSEACTIVATE"
+  },
+  {
+}"constant name": "鼠标悬停",
+}"comment": "鼠标悬停直到指定时间段内",
+}"data type": "整数",
+}"initial value": "@WM_MOUSEHOVER"
+  },
+  {
+口的启用状态时发送"constant name": "键盘获得焦点""constant name": "鼠标滑轮滚动",
+口的启用状态时发送"constant name": "键盘获得焦点""comment": "鼠标滑轮滚动",
+口的启用状态时发送"constant name": "键盘获得焦点""data type": "整数",
+口的启用状态时发送"constant name": "键盘获得焦点""initial value": "@WM_MOUSEWHEEL"
+  },
+  {
+comment": "按键抬起""comment": "双击鼠标中间按钮""constant name": "鼠标离开",
+comment": "按键抬起""comment": "双击鼠标中间按钮""comment": "鼠标离开",
+comment": "按键抬起""comment": "双击鼠标中间按钮""data type": "整数",
+comment": "按键抬起""comment": "双击鼠标中间按钮""initial value": "@WM_MOUSELEAVE"
+  },
+  {
+的启用状态时发送"constant name": "键盘获得焦点""comment": "鼠标滑轮滚动""constant name": "鼠标移动",
+的启用状态时发送"constant name": "键盘获得焦点""comment": "鼠标滑轮滚动""comment": "鼠标移动",
+的启用状态时发送"constant name": "键盘获得焦点""comment": "鼠标滑轮滚动""data type": "整数",
+的启用状态时发送"constant name": "键盘获得焦点""comment": "鼠标滑轮滚动""initial value": "@WM_MOUSEMOVE"
+  },
+  {
+
+"constant name": "鼠标右键双击",
+
+"comment": "鼠标右键双击",
+
+"data type": "整数",
+
+"initial value": "@WM_RBUTTONDBLCLK"
+  },
+  {
+}"constant name": "鼠标右键按下",
+}"comment": "鼠标右键按下",
+}"data type": "整数",
+}"initial value": "@WM_RBUTTONDOWN"
+  },
+  {
+在绘制文本时要使用的字体"constant name": "鼠标右键抬起",
+在绘制文本时要使用的字体"comment": "鼠标右键抬起",
+在绘制文本时要使用的字体"data type": "整数",
+在绘制文本时要使用的字体"initial value": "@WM_RBUTTONUP"
+  },
+  {
+口的启用状态时发送"constant name": "键盘获得焦点""constant name": "鼠标X键双击",
+口的启用状态时发送"constant name": "键盘获得焦点""comment": "鼠标X键双击",
+口的启用状态时发送"constant name": "键盘获得焦点""data type": "整数",
+口的启用状态时发送"constant name": "键盘获得焦点""initial value": "@WM_XBUTTONDBLCLK"
+  },
+  {
+}"constant name": "鼠标X键按下",
+}"comment": "鼠标X键按下",
+}"data type": "整数",
+}"initial value": "@WM_XBUTTONDOWN"
+  },
+  {
+nstant name": "键盘按键抬起""constant name": "鼠标X键抬起",
+nstant name": "键盘按键抬起""comment": "鼠标X键抬起",
+nstant name": "键盘按键抬起""data type": "整数",
+nstant name": "键盘按键抬起""initial value": "@WM_XBUTTONUP"
+  }
+]
+ },
+ {
+"class name": "系统键鼠操作类",
+"comment": "提供键盘按键及鼠标模拟操作",
+"@文档": "\"category = \\\"键盘鼠标输入模拟\\\"\"",
+"methods": [
+  {
+
+"method name": "绑定窗口",
+
+"comment": "设置操作将指向被绑定窗口,鼠标操作时,如超过窗口范围,将被定位到窗口边缘.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "要被绑定的窗口句柄.为0时,则表示取消绑定窗口.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+stant name": "键盘按键抬起""initial value": "@WM_XBUTTONUP""method name": "绑定窗口",
+stant name": "键盘按键抬起""initial value": "@WM_XBUTTONUP""comment": "返回被绑定的窗口句柄.",
+stant name": "键盘按键抬起""initial value": "@WM_XBUTTONUP""type": "property getter",
+stant name": "键盘按键抬起""initial value": "@WM_XBUTTONUP""data type": "变整数",
+stant name": "键盘按键抬起""initial value": "@WM_XBUTTONUP""@禁止流程检查": "真"
+  },
+  {
+"method name": "后台模式",
+"comment": "设置键鼠操作前后台模式",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"comment": "默认为假,表示窗口置于屏幕前台操作模式.\n如果为真,表示向绑定窗口发送操作信息的模式.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+}"method name": "后台模式",
+}"comment": "返回键鼠操作前后台模式",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "位置定位方式",
+}"comment": "设置鼠标前台操作时,位置是绝对位置或相对位置.绑定窗口后,忽略该属性.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"comment": "默认为真,表示指定坐标为屏幕绝对位置.如果为假,则指定以当前鼠标坐标为基准的相对位置.",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+"method name": "位置定位方式",
+"comment": "返回鼠标操作时,位置是绝对位置或相对位置.",
+"type": "property getter",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+态时发送"constant name": "键盘获得焦点""comment": "鼠标滑轮滚动""constant name": "鼠标移动""method name": "置组合键",
+态时发送"constant name": "键盘获得焦点""comment": "鼠标滑轮滚动""constant name": "鼠标移动""comment": "设置键鼠操作时,是否附加Ctrl键及Shift键等功能键.",
+态时发送"constant name": "键盘获得焦点""comment": "鼠标滑轮滚动""constant name": "鼠标移动""parameters": [
+   {
+"parameter name": "Ctrl键",
+"comment": "如果为真,表示附加Ctrl键.如果为假,表示取消附加Ctrl键.键盘鼠标有效.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Shift键",
+"comment": "如果为真,表示附加Shift键.如果为假,表示取消附加Shift键.键盘鼠标有效.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Atl键",
+"comment": "如果为真,表示附加Atl键.如果为假,表示取消附加Atl键.键盘有效.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+态时发送"constant name": "键盘获得焦点""comment": "鼠标滑轮滚动""constant name": "鼠标移动"]
+  },
+  {
+
+"method name": "取按键状态",
+
+"comment": "用来判断函数调用时指定按键的状态.如键被按下,则返回真,否则返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "键鼠按键码",
+"comment": "扩展按键码.*",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取按键开关状态",
+
+"comment": "取上一次按键状态.函数可实现按键逻辑开关状态获取.如获取大小写开关状态.",
+
+"result comment": "返回1",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "键盘按键",
+"comment": "扩展按键码.*",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取鼠标移动速度",
+
+"comment": "返回当前鼠标速度快慢,范围为:1-20.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+hod name": "位置定位方式""method name": "置鼠标移动速度",
+hod name": "位置定位方式""comment": "设置当前鼠标速度快慢",
+hod name": "位置定位方式""static": true,
+hod name": "位置定位方式""data type": "逻辑型",
+hod name": "位置定位方式""@禁止流程检查": "真",
+hod name": "位置定位方式""parameters": [
+   {
+"parameter name": "所欲设置的值",
+"comment": "范围为:1-20.",
+"data type": "整数"
+   }
+hod name": "位置定位方式"]
+  },
+  {
+data type": "整数""method name": "取鼠标双击速度",
+data type": "整数""comment": "返回鼠标双击速度",
+data type": "整数""static": true,
+data type": "整数""data type": "整数",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+comment": "范围为:1-20.""method name": "置鼠标双击速度",
+comment": "范围为:1-20.""comment": "设置鼠标双击速度",
+comment": "范围为:1-20.""static": true,
+comment": "范围为:1-20.""data type": "逻辑型",
+comment": "范围为:1-20.""@禁止流程检查": "真",
+comment": "范围为:1-20.""parameters": [
+   {
+"parameter name": "所欲设置的值",
+"comment": "单位:毫秒,范围为:0-5000.如果此参数设置为0,系统将使用默认的双击时间500毫秒.如果此参数值大于5000毫秒,则系统会将该值设置为5000毫秒.",
+"data type": "整数"
+   }
+comment": "范围为:1-20."]
+  },
+  {
+data type": "整数""method name": "置按键焦点",
+data type": "整数""comment": "为窗口设置键盘按键焦点,成功返回被设置焦点的窗口句柄,失败返回0,如窗口句柄无效、窗口处于禁用状态等.",
+data type": "整数""result comment": "成功返回绑定窗口的句柄",
+data type": "整数""static": true,
+data type": "整数""data type": "变整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "要设置焦点的窗口句柄",
+"data type": "变整数"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "整数""data type": "变整数""method name": "鼠标捕获",
+ata type": "整数""data type": "变整数""comment": "将鼠标捕获设置为属于当前线程指定的窗口.\n一旦窗口捕获了鼠标,所有鼠标输入都针对该窗口,无论光标是否在窗口的边界内.\n同一时刻只能有一个窗口捕获鼠标.\n如果鼠标光标在另一个线程创建的窗口上,只有当鼠标键按下时系统才将鼠标输入指向指定的窗口.",
+ata type": "整数""data type": "变整数""result comment": "成功返回绑定窗口的句柄",
+ata type": "整数""data type": "变整数""static": true,
+ata type": "整数""data type": "变整数""data type": "变整数",
+ata type": "整数""data type": "变整数""@嵌入式方法": "\"\"",
+ata type": "整数""data type": "变整数""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "要设置焦点的窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "开启",
+"comment": "如果为真,表示开启鼠标捕获,反而,则表示释放鼠标捕获.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ata type": "整数""data type": "变整数"]
+  },
+  {
+
+"method name": "发送文本",
+
+"comment": "将编辑控件中的选定文本或丰富的编辑控件替换为指定的文本",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "要将文本发送到的窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送内容",
+"comment": "要发送文本内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "置键鼠输入状态",
+}"comment": "启用或禁用指定窗口或控件的鼠标和键盘按键输入.禁用输入后,窗口不会接收输入,如鼠标单击和按键.启用输入后,窗口将接收所有输入.",
+}"static": true,
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "要设置焦点的窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否禁止",
+"comment": "开启或禁止",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+ }"method name": "取键鼠输入状态",
+ }"comment": "返回指定的窗口是否启用鼠标和键盘按键输入",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "要设置焦点的窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+
+"method name": "延时",
+
+"comment": "异步延时,退出程序前,需等待延时结束.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲等待的时间",
+"comment": "单位:毫秒.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+comment": "单位:毫秒.""method name": "鼠标滚动",
+comment": "单位:毫秒.""comment": "模拟鼠标滑轮滚动,如模式为后台并绑定窗口,则为向窗口发送鼠标滑轮滚动动作.",
+comment": "单位:毫秒.""result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+comment": "单位:毫秒.""data type": "逻辑型",
+comment": "单位:毫秒.""@嵌入式方法": "\"\"",
+comment": "单位:毫秒.""parameters": [
+   {
+"parameter name": "滚动方向",
+"comment": "0为向上滚动,1为向下滚动.",
+"data type": "整数"
+   }
+comment": "单位:毫秒."]
+  },
+  {
+comment": "开启或禁止""method name": "鼠标移动",
+comment": "开启或禁止""comment": "模拟鼠标移动,如模式为后台并绑定窗口,则为向窗口发送鼠标移动动作.",
+comment": "开启或禁止""result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+comment": "开启或禁止""data type": "逻辑型",
+comment": "开启或禁止""@嵌入式方法": "\"\"",
+comment": "开启或禁止""parameters": [
+   {
+"parameter name": "横向坐标",
+"comment": "指定水平方向的绝对位置或相对位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向坐标",
+"comment": "指定垂直方向的绝对位置或相对位置",
+"data type": "整数"
+   }
+comment": "开启或禁止"]
+  },
+  {
+
+"parameters": [
+"method name": "鼠标按下",
+
+"parameters": [
+"comment": "模拟鼠标按下,如模式为后台并绑定窗口,则为向窗口发送鼠标按下动作.",
+
+"parameters": [
+"result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+
+"parameters": [
+"data type": "逻辑型",
+
+"parameters": [
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "鼠标按键",
+"comment": "按下的鼠标键",
+"data type": "鼠标按键类型",
+"@默认值": "鼠标按键类型.左键"
+   },
+   {
+"parameter name": "横向坐标",
+"comment": "指定水平方向的绝对位置或相对位置.后台绑定窗口模式下有效,否则,忽略该参数.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向坐标",
+"comment": "指定垂直方向的绝对位置或相对位置.后台绑定窗口模式下有效,否则,忽略该参数.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+"parameters": [
+]
+  },
+  {
+ameter name": "纵向坐标""method name": "鼠标抬起",
+ameter name": "纵向坐标""comment": "模拟鼠标抬起,如模式为后台并绑定窗口,则为向窗口发送鼠标抬起动作.",
+ameter name": "纵向坐标""result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+ameter name": "纵向坐标""data type": "逻辑型",
+ameter name": "纵向坐标""@嵌入式方法": "\"\"",
+ameter name": "纵向坐标""parameters": [
+   {
+"parameter name": "鼠标按键",
+"comment": "按下的鼠标键",
+"data type": "鼠标按键类型",
+"@默认值": "鼠标按键类型.左键"
+   },
+   {
+"parameter name": "横向坐标",
+"comment": "指定水平方向的绝对位置或相对位置.后台绑定窗口模式下有效,否则,忽略该参数.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向坐标",
+"comment": "指定垂直方向的绝对位置或相对位置.后台绑定窗口模式下有效,否则,忽略该参数.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ameter name": "纵向坐标"]
+  },
+  {
+,退出程序前,需等待延时结束."method name": "鼠标单击",
+,退出程序前,需等待延时结束."comment": "模拟鼠标单击,如模式为后台并绑定窗口,则为向窗口发送鼠标单击动作.",
+,退出程序前,需等待延时结束."result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+,退出程序前,需等待延时结束."data type": "逻辑型",
+,退出程序前,需等待延时结束."@嵌入式方法": "\"\"",
+,退出程序前,需等待延时结束."parameters": [
+   {
+"parameter name": "鼠标按键",
+"comment": "按下的鼠标键",
+"data type": "鼠标按键类型",
+"@默认值": "鼠标按键类型.左键"
+   },
+   {
+"parameter name": "横向坐标",
+"comment": "后台绑定窗口模式下,指定对窗口发送点击信息的横向坐标位置,否则,忽略该参数.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向坐标",
+"comment": "后台绑定窗口模式下,指定对窗口发送点击信息的纵向坐标位置,否则,忽略该参数.",
+"data type": "整数",
+"@默认值": "0"
+   }
+,退出程序前,需等待延时结束.]
+  },
+  {
+"method name": "鼠标双击",
+"comment": "模拟鼠标双击,如模式为后台并绑定窗口,则为向窗口发送鼠标双击动作.",
+"result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "鼠标按键",
+"comment": "按下的鼠标键",
+"data type": "鼠标按键类型",
+"@默认值": "鼠标按键类型.左键"
+   },
+   {
+"parameter name": "横向坐标",
+"comment": "后台绑定窗口模式下,指定对窗口发送点击信息的横向坐标位置,否则,忽略该参数.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向坐标",
+"comment": "后台绑定窗口模式下,指定对窗口发送点击信息的纵向坐标位置,否则,忽略该参数.",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+ameter name": "纵向坐标""method name": "键盘按下",
+ameter name": "纵向坐标""comment": "模拟键盘按键按下,如模式为后台并绑定窗口,则为向窗口发送键盘按键按下动作.",
+ameter name": "纵向坐标""result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+ameter name": "纵向坐标""data type": "逻辑型",
+ameter name": "纵向坐标""@嵌入式方法": "\"\"",
+ameter name": "纵向坐标""parameters": [
+   {
+"parameter name": "键盘按键",
+"comment": "扩展按键码.*.键盘按键的按键码.",
+"data type": "整数"
+   },
+   {
+"parameter name": "功能键",
+"comment": "默认为假,表示普通击键,如果为真,则表示功能键,可用于热键技能不输入字符.如果为功能键,请保持按下抬起一置.\n当组合键不为空时,作为功能键使用,忽略该参数.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "纵向坐标"]
+  },
+  {
+data type": "整数""method name": "键盘抬起",
+data type": "整数""comment": "模拟键盘按键抬起,如模式为后台并绑定窗口,则为向窗口发送键盘按键抬起动作.",
+data type": "整数""result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "键盘按键",
+"comment": "扩展按键码.*.键盘按键的按键码.",
+"data type": "整数"
+   },
+   {
+"parameter name": "功能键",
+"comment": "默认为假,表示普通击键,如果为真,则表示功能键,可用于热键技能不输入字符.如果为功能键,请保持按下抬起一置.\n当组合键不为空时,作为功能键使用,忽略该参数.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "键盘单击",
+ }"comment": "模拟键盘单击,如模式为后台并绑定窗口,则为向窗口发送键盘单击动作.",
+ }"result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "键盘按键",
+"comment": "扩展按键码.*.键盘按键的按键码.",
+"data type": "整数"
+   },
+   {
+"parameter name": "功能键",
+"comment": "默认为假,表示普通击键,如果为真,则表示功能键,可用于热键技能不输入字符.\n当组合键不为空时,作为功能键使用,忽略该参数.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+
+"method name": "键盘输入",
+
+"comment": "模拟键盘输入,如模式为后台并绑定窗口,则为向窗口发送键盘输入动作.如模式为前台等同于键盘单击.",
+
+"result comment": "成功返回真,失败返回假.后台模式绑定窗口无效时,直接返回假,异步发送动作后返回真.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "键盘按键",
+"comment": "扩展按键码.*.键盘按键的按键码.",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "系统CPU信息类",
+"comment": "提供获取单个或多个CPU硬件设备信息",
+"@文档": "\"category = \\\"硬件信息\\\"\"",
+"methods": [
+  {
+omment": "开启或禁止""comment": "模拟鼠标移动,如模式为后台并绑定窗口,则为向窗口发送鼠标移动动作.""method name": "到下一个",
+omment": "开启或禁止""comment": "模拟鼠标移动,如模式为后台并绑定窗口,则为向窗口发送鼠标移动动作.""comment": "用于多个CPU硬件环境,成功将指向下一个CPU,如果失败将不改变当前指向CPU.",
+omment": "开启或禁止""comment": "模拟鼠标移动,如模式为后台并绑定窗口,则为向窗口发送鼠标移动动作.""data type": "逻辑型",
+omment": "开启或禁止""comment": "模拟鼠标移动,如模式为后台并绑定窗口,则为向窗口发送鼠标移动动作.""@嵌入式方法": "\"\""
+  },
+  {
+comment": "提供获取单个或多个CPU硬件设备信息""method name": "名称",
+comment": "提供获取单个或多个CPU硬件设备信息""comment": "当前CPU名称",
+comment": "提供获取单个或多个CPU硬件设备信息""type": "property getter",
+comment": "提供获取单个或多个CPU硬件设备信息""data type": "文本型",
+comment": "提供获取单个或多个CPU硬件设备信息""@嵌入式方法": "\"\""
+  },
+  {
+thod name": "键盘输入""method name": "描述",
+thod name": "键盘输入""comment": "当前CPU描述",
+thod name": "键盘输入""type": "property getter",
+thod name": "键盘输入""data type": "文本型",
+thod name": "键盘输入""@嵌入式方法": "\"\""
+  },
+  {
+hod name": "键盘输入""data type": "文本型""method name": "硬件ID",
+hod name": "键盘输入""data type": "文本型""comment": "当前CPU硬件ID",
+hod name": "键盘输入""data type": "文本型""type": "property getter",
+hod name": "键盘输入""data type": "文本型""data type": "文本型",
+hod name": "键盘输入""data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+ent": "提供获取单个或多个CPU硬件设备信息""method name": "名称""method name": "设备ID",
+ent": "提供获取单个或多个CPU硬件设备信息""method name": "名称""comment": "当前CPU设备ID",
+ent": "提供获取单个或多个CPU硬件设备信息""method name": "名称""type": "property getter",
+ent": "提供获取单个或多个CPU硬件设备信息""method name": "名称""data type": "文本型",
+ent": "提供获取单个或多个CPU硬件设备信息""method name": "名称""@嵌入式方法": "\"\""
+  },
+  {
+nt": "提供获取单个或多个CPU硬件设备信息""method name": "名称""comment": "当前CPU设备ID""method name": "序列号",
+nt": "提供获取单个或多个CPU硬件设备信息""method name": "名称""comment": "当前CPU设备ID""comment": "当前CPU序列号",
+nt": "提供获取单个或多个CPU硬件设备信息""method name": "名称""comment": "当前CPU设备ID""type": "property getter",
+nt": "提供获取单个或多个CPU硬件设备信息""method name": "名称""comment": "当前CPU设备ID""data type": "文本型",
+nt": "提供获取单个或多个CPU硬件设备信息""method name": "名称""comment": "当前CPU设备ID""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "制造商",
+
+"comment": "当前CPU制造商",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "插槽名称",
+}"comment": "当前CPU插槽名称",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "状态",
+
+"comment": "当前CPU状态",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "键盘输入""method name": "核心数",
+thod name": "键盘输入""comment": "当前CPU核心数量",
+thod name": "键盘输入""type": "property getter",
+thod name": "键盘输入""data type": "长整数",
+thod name": "键盘输入""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "逻辑核心数",
+
+"comment": "当前CPU逻辑核心数量",
+
+"type": "property getter",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "键盘输入""data type": "长整数""method name": "启用核心数",
+hod name": "键盘输入""data type": "长整数""comment": "当前CPU启用核心数",
+hod name": "键盘输入""data type": "长整数""type": "property getter",
+hod name": "键盘输入""data type": "长整数""data type": "长整数",
+hod name": "键盘输入""data type": "长整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "线程数",
+}"comment": "当前CPU每个核心的线程数.",
+}"type": "property getter",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "当前CPU状态""method name": "数据宽度",
+"comment": "当前CPU状态""comment": "当前CPU数据宽度",
+"comment": "当前CPU状态""result comment": "单位:bits.",
+"comment": "当前CPU状态""type": "property getter",
+"comment": "当前CPU状态""data type": "整数",
+"comment": "当前CPU状态""@嵌入式方法": "\"\""
+  },
+  {
+"type": "property getter""method name": "地址宽度",
+"type": "property getter""comment": "当前CPU地址宽度",
+"type": "property getter""result comment": "单位:bits.",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "整数",
+"type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+type": "property getter""data type": "整数""method name": "实时时钟频率",
+type": "property getter""data type": "整数""comment": "当前CPU实时时钟频率",
+type": "property getter""data type": "整数""result comment": "单位:MHz.",
+type": "property getter""data type": "整数""type": "property getter",
+type": "property getter""data type": "整数""data type": "长整数",
+type": "property getter""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+ype": "property getter""data type": "整数""@嵌入式方法": "\"\"""method name": "最大时钟频率",
+ype": "property getter""data type": "整数""@嵌入式方法": "\"\"""comment": "CPU最大时钟频率",
+ype": "property getter""data type": "整数""@嵌入式方法": "\"\"""result comment": "单位:MHz.",
+ype": "property getter""data type": "整数""@嵌入式方法": "\"\"""type": "property getter",
+ype": "property getter""data type": "整数""@嵌入式方法": "\"\"""data type": "长整数",
+ype": "property getter""data type": "整数""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "外部时钟频率",
+}"comment": "CPU外部时钟频率",
+}"result comment": "单位:MHz.",
+}"type": "property getter",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "键盘输入""comment": "当前CPU核心数量""method name": "使用率",
+hod name": "键盘输入""comment": "当前CPU核心数量""comment": "当前CPU使用率,返回百分比数值.",
+hod name": "键盘输入""comment": "当前CPU核心数量""result comment": "百分比",
+hod name": "键盘输入""comment": "当前CPU核心数量""type": "property getter",
+hod name": "键盘输入""comment": "当前CPU核心数量""data type": "整数",
+hod name": "键盘输入""comment": "当前CPU核心数量""@嵌入式方法": "\"\""
+  },
+  {
+od name": "键盘输入""data type": "文本型""comment": "当前CPU硬件ID""method name": "处理器类型",
+od name": "键盘输入""data type": "文本型""comment": "当前CPU硬件ID""comment": "当前CPU处理器类型",
+od name": "键盘输入""data type": "文本型""comment": "当前CPU硬件ID""type": "property getter",
+od name": "键盘输入""data type": "文本型""comment": "当前CPU硬件ID""data type": "文本型"
+  },
+  {
+}"method name": "二级缓存",
+}"comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.",
+}"result comment": "计量单位:kb.",
+}"type": "property getter",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "二级缓存速度",
+
+"comment": "当前CPU二级缓存速度.",
+
+"result comment": "计量单位:megahertz(MHz).",
+
+"type": "property getter",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""method name": "三级缓存",
+"comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""comment": "当前CPU三级缓存,多核心时,为所有核心三级缓存总和.",
+"comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""result comment": "计量单位:kb.",
+"comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""type": "property getter",
+"comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""data type": "长整数",
+"comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "三级缓存速度",
+}"comment": "当前CPU三级缓存速度.",
+}"result comment": "计量单位:megahertz(MHz).",
+}"type": "property getter",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "系统硬盘信息类",
+"comment": "提供获取存储设备磁盘驱动器信息.包括:硬盘,U盘,移动硬盘等多个或单个设备.",
+"@文档": "\"category = \\\"硬件信息\\\"\"",
+"methods": [
+  {
+"result comment": "计量单位:megahertz(MHz).""method name": "到下一个",
+"result comment": "计量单位:megahertz(MHz).""comment": "用于硬件有多个硬盘环境,成功将指向下一个硬盘,如果失败不改变当前指向硬盘.",
+"result comment": "计量单位:megahertz(MHz).""data type": "逻辑型",
+"result comment": "计量单位:megahertz(MHz).""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "状态",
+
+"comment": "硬盘状态",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "文本型""method name": "型号",
+"data type": "文本型""comment": "硬盘型号",
+"data type": "文本型""type": "property getter",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "序列号",
+}"comment": "硬盘序列号",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "制造商",
+}"comment": "硬盘制造商",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "版本",
+}"comment": "硬盘版本",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"result comment": "计量单位:kb.""method name": "描述",
+"result comment": "计量单位:kb.""comment": "硬盘描述",
+"result comment": "计量单位:kb.""type": "property getter",
+"result comment": "计量单位:kb.""data type": "文本型",
+"result comment": "计量单位:kb.""@嵌入式方法": "\"\""
+  },
+  {
+od name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""method name": "标签",
+od name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""comment": "硬盘标签",
+od name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""type": "property getter",
+od name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型",
+od name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+"comment": "当前CPU状态""method name": "名称",
+"comment": "当前CPU状态""comment": "硬盘名称",
+"comment": "当前CPU状态""type": "property getter",
+"comment": "当前CPU状态""data type": "文本型",
+"comment": "当前CPU状态""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "系统显示器信息类",
+"comment": "提供获取一个或多个显示器相关信息.注:当与Windows显示器驱动程序不兼容的硬件(WDDM)时,返回此类实例的属性值不准确.",
+"@文档": "\"category = \\\"硬件信息\\\"\"",
+"methods": [
+  {
+thod name": "二级缓存""method name": "到下一个",
+thod name": "二级缓存""comment": "用于多个显示器硬件环境,成功将指向下一个显示器,如果失败将不改变当前指向的显示器.",
+thod name": "二级缓存""data type": "逻辑型",
+thod name": "二级缓存""@嵌入式方法": "\"\""
+  },
+  {
+comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""data type": "长整数""method name": "名称",
+comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""data type": "长整数""comment": "显示器名称",
+comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""data type": "长整数""type": "property getter",
+comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""data type": "长整数""data type": "文本型",
+comment": "当前CPU二级缓存,多核心时,为所有核心二级缓存总和.""data type": "长整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "描述",
+}"comment": "显示器描述",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+result comment": "计量单位:megahertz(MHz).""data type": "逻辑型""method name": "制造商",
+result comment": "计量单位:megahertz(MHz).""data type": "逻辑型""comment": "显示器制造商",
+result comment": "计量单位:megahertz(MHz).""data type": "逻辑型""type": "property getter",
+result comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型",
+result comment": "计量单位:megahertz(MHz).""data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+d name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态",
+d name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""comment": "显示器状态",
+d name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""type": "property getter",
+d name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""data type": "文本型",
+d name": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+hod name": "二级缓存""data type": "逻辑型""method name": "设备ID",
+hod name": "二级缓存""data type": "逻辑型""comment": "显示器零件编号",
+hod name": "二级缓存""data type": "逻辑型""type": "property getter",
+hod name": "二级缓存""data type": "逻辑型""data type": "文本型",
+hod name": "二级缓存""data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "型号",
+
+"comment": "显示器型号",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "类型",
+
+"comment": "显示器类型",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "版本",
+"comment": "显示器版本,无记录时为空.",
+"type": "property getter",
+"data type": "文本型",
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "文本型""method name": "屏幕宽度",
+"data type": "文本型""comment": "屏幕宽度,无记录时为空.",
+"data type": "文本型""type": "property getter",
+"data type": "文本型""data type": "长整数",
+"data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+esult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度",
+esult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""comment": "屏幕高度,无记录时为空.",
+esult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter",
+esult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""data type": "长整数",
+esult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "系统BIOS信息类",
+"comment": "提供获取主板BIOS相关信息",
+"@文档": "\"category = \\\"硬件信息\\\"\"",
+"methods": [
+  {
+
+"method name": "到下一个",
+
+"comment": "用于主板有多个BIOS环境,成功将指向下一个BIOS,如果失败不改变当前指向BIOS.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+sult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""method name": "名称",
+sult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""comment": "BIOS名称",
+sult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""type": "property getter",
+sult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""data type": "文本型",
+sult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+data type": "文本型""type": "property getter""method name": "描述",
+data type": "文本型""type": "property getter""comment": "BIOS描述",
+data type": "文本型""type": "property getter""type": "property getter",
+data type": "文本型""type": "property getter""data type": "文本型",
+data type": "文本型""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+type": "property getter""method name": "当前语言",
+type": "property getter""comment": "BIOS当前语言",
+type": "property getter""type": "property getter",
+type": "property getter""data type": "文本型",
+type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+ata type": "文本型""type": "property getter""type": "property getter""method name": "制造商",
+ata type": "文本型""type": "property getter""type": "property getter""comment": "BIOS制造商",
+ata type": "文本型""type": "property getter""type": "property getter""type": "property getter",
+ata type": "文本型""type": "property getter""type": "property getter""data type": "文本型",
+ata type": "文本型""type": "property getter""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+ype": "property getter""comment": "BIOS当前语言""method name": "状态",
+ype": "property getter""comment": "BIOS当前语言""comment": "BIOS状态",
+ype": "property getter""comment": "BIOS当前语言""type": "property getter",
+ype": "property getter""comment": "BIOS当前语言""data type": "文本型",
+ype": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\""
+  },
+  {
+t comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""method name": "主版本号",
+t comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""comment": "BIOS主要 SMBIOS 版本号",
+t comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""type": "property getter",
+t comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""data type": "整数",
+t comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\""
+  },
+  {
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""data type": "文本型""method name": "次版本号",
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""data type": "文本型""comment": "BIOS次要 SMBIOS 版本号",
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""data type": "文本型""type": "property getter",
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""data type": "文本型""data type": "整数",
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""comment": "BIOS名称""method name": "版本",
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""comment": "BIOS名称""comment": "BIOS版本.此字符串由BIOS制造商创建.",
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""comment": "BIOS名称""type": "property getter",
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""comment": "BIOS名称""data type": "文本型",
+ult comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""type": "property getter""comment": "BIOS名称""@嵌入式方法": "\"\""
+  },
+  {
+pe": "property getter""comment": "BIOS当前语言""type": "property getter""method name": "标识符",
+pe": "property getter""comment": "BIOS当前语言""type": "property getter""comment": "标识符",
+pe": "property getter""comment": "BIOS当前语言""type": "property getter""type": "property getter",
+pe": "property getter""comment": "BIOS当前语言""type": "property getter""data type": "文本型",
+pe": "property getter""comment": "BIOS当前语言""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""method name": "序列号",
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""comment": "序列号",
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""type": "property getter",
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""data type": "文本型",
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "系统主板信息类",
+"comment": "提供获取主板相关信息",
+"@文档": "\"category = \\\"硬件信息\\\"\"",
+"methods": [
+  {
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""method name": "名称",
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""comment": "主板名称",
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""type": "property getter",
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""data type": "文本型",
+me": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""@嵌入式方法": "\"\""
+  },
+  {
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""method name": "序列号",
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""comment": "主板序列号",
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""type": "property getter",
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""data type": "文本型",
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "描述",
+}"comment": "主板描述",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""method name": "制造商",
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""comment": "主板制造商",
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""type": "property getter",
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""data type": "文本型",
+ comment": "计量单位:megahertz(MHz).""data type": "逻辑型""data type": "文本型""method name": "屏幕高度""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "其他标识",
+
+"comment": "主板其他标识",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "状态",
+
+"comment": "主板状态",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+pe": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号",
+pe": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""comment": "主板零件编号",
+pe": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""type": "property getter",
+pe": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""data type": "文本型",
+pe": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""method name": "型号",
+ "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号",
+ "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""type": "property getter",
+ "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""data type": "文本型",
+ "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "版本",
+
+"comment": "主板版本",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "系统网卡信息类",
+"comment": "提供获取一个或多个网卡设备信息",
+"@文档": "\"category = \\\"硬件信息\\\"\"",
+"methods": [
+  {
+e": "property getter""comment": "BIOS当前语言""type": "property getter""data type": "文本型""method name": "到下一个",
+e": "property getter""comment": "BIOS当前语言""type": "property getter""data type": "文本型""comment": "指向下一张网卡",
+e": "property getter""comment": "BIOS当前语言""type": "property getter""data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+ "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""method name": "到首网卡",
+ "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "指向首张网卡",
+ "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "序号",
+
+"comment": "当前系统分配给网卡的序号,非网卡排列序号.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""method name": "网卡数量",
+"property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""comment": "返回网卡数量",
+"property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""type": "property getter",
+"property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""data type": "整数",
+"property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""@嵌入式方法": "\"\""
+  },
+  {
+"comment": "主板状态""method name": "名称",
+"comment": "主板状态""comment": "返回当前位置网卡的名称",
+"comment": "主板状态""type": "property getter",
+"comment": "主板状态""data type": "文本型",
+"comment": "主板状态""@嵌入式方法": "\"\""
+  },
+  {
+e": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""type": "property getter""method name": "描述",
+e": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""type": "property getter""comment": "返回当前位置的网卡的描述",
+e": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""type": "property getter""type": "property getter",
+e": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""type": "property getter""data type": "文本型",
+e": "property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "MAC",
+}"comment": "返回当前位置网卡的MAC",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "IP地址",
+"@嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址",
+"@嵌入式方法": "\"\"""type": "property getter",
+"@嵌入式方法": "\"\"""data type": "文本型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "子网掩码",
+}"comment": "返回当前位置网卡的子网掩码",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+comment": "主板状态""data type": "文本型""method name": "默认网关",
+comment": "主板状态""data type": "文本型""comment": "返回当前位置网卡的默认网关",
+comment": "主板状态""data type": "文本型""type": "property getter",
+comment": "主板状态""data type": "文本型""data type": "文本型",
+comment": "主板状态""data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "DHCP",
+
+"comment": "动态主机配置协议.如果开启,则返回DHCP路由地址,否则返回空文本.",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "DNS1",
+
+"comment": "返回当前位置网卡的DNS1",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""data type": "整数""method name": "DNS2",
+property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""data type": "整数""comment": "返回当前位置网卡的DNS2",
+property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""data type": "整数""type": "property getter",
+property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""data type": "整数""data type": "文本型",
+property getter""comment": "BIOS当前语言""@嵌入式方法": "\"\"""method name": "零件编号""comment": "主板型号""data type": "整数""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "系统硬件类",
+"comment": "系统硬件类.*,提供获取系统硬件信息类的静态方式.",
+"@文档": "\"category = \\\"硬件信息\\\"\"",
+"methods": [
+  {
+@文档": "\"category = \\\"硬件信息\\\"\"""method name": "取网卡信息",
+@文档": "\"category = \\\"硬件信息\\\"\"""comment": "返回网卡信息类",
+@文档": "\"category = \\\"硬件信息\\\"\"""static": true,
+@文档": "\"category = \\\"硬件信息\\\"\"""data type": "系统网卡信息类",
+@文档": "\"category = \\\"硬件信息\\\"\"""@禁止流程检查": "真"
+  },
+  {
+"data type": "文本型""method name": "取CPU信息",
+"data type": "文本型""comment": "返回系统CPU信息类",
+"data type": "文本型""static": true,
+"data type": "文本型""data type": "系统CPU信息类",
+"data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+@嵌入式方法": "\"\"""type": "property getter""method name": "取硬盘信息",
+@嵌入式方法": "\"\"""type": "property getter""comment": "返回系统硬盘信息类",
+@嵌入式方法": "\"\"""type": "property getter""static": true,
+@嵌入式方法": "\"\"""type": "property getter""data type": "系统硬盘信息类",
+@嵌入式方法": "\"\"""type": "property getter""@禁止流程检查": "真"
+  },
+  {
+@嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""method name": "取主板信息",
+@嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""comment": "返回系统主板信息类",
+@嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""static": true,
+@嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""data type": "系统主板信息类",
+@嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""@禁止流程检查": "真"
+  },
+  {
+嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""@禁止流程检查": "真""method name": "取显示器信息",
+嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""@禁止流程检查": "真""comment": "返回系统显示器信息类",
+嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""@禁止流程检查": "真""static": true,
+嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""@禁止流程检查": "真""data type": "系统显示器信息类",
+嵌入式方法": "\"\"""comment": "返回当前位置网卡的IP地址""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+e": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""data type": "文本型""method name": "取BIOS信息",
+e": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""data type": "文本型""comment": "返回系统BIOS信息类",
+e": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""data type": "文本型""static": true,
+e": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""data type": "文本型""data type": "系统BIOS信息类",
+e": "键盘输入""comment": "当前CPU核心数量""type": "property getter""data type": "文本型""method name": "状态""data type": "文本型""@禁止流程检查": "真"
+  }
+]
+ },
+ {
+"class name": "系统API钩子类",
+"comment": "提供对API函数HOOK方法",
+"@文档": "\"category = \\\"钩子操作\\\"\"",
+"methods": [
+  {
+"method name": "初始化",
+"comment": "初始化MinHook库,必须在程序开始做一次初始化,否则无法使用它进行API Hook.",
+"result comment": "APIHOOK执行结果.*",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "清理",
+}"comment": "手动清理释放内存,该类退出时,会自动调用该方法.",
+}"result comment": "APIHOOK执行结果.*",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "从指针创建",
+
+"comment": "从函数指针创建一个Hook,并保存进行Hook所需要的信息,成功加入HOOK列表.",
+
+"result comment": "APIHOOK执行结果.*",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "函数指针",
+"comment": "目标函数指针地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "挂接子程序",
+"comment": "用来HOOK的子程序指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "回调指针",
+"comment": "返回值,原始函数回调指针,通过该指针可执行回原始函数.可为空.",
+"data type": "变整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "从函数名创建",
+
+"comment": "从函数名创建一个Hook,并保存进行Hook所需要的信息,成功加入HOOK列表.",
+
+"result comment": "APIHOOK执行结果.*",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "模块名称",
+"comment": "指定函数所属模块名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "函数名称",
+"comment": "模块所在的目标函数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "挂接子程序",
+"comment": "用来HOOK的子程序指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "回调指针",
+"comment": "返回值,原始函数回调指针,通过该指针可执行回原始函数.可为空.",
+"data type": "变整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "函数指针",
+"comment": "返回值,目标函数指针地址,用以接收原始函数真实地址,可根据该值进行\"移除\",\"设置队列\"等操作.可为空.",
+"data type": "变整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+data type": "变整数类""method name": "开启",
+data type": "变整数类""comment": "根据函数指针,开启Hook,使Hook生效.多函数时,使用\"开启队列\"方法.",
+data type": "变整数类""result comment": "APIHOOK执行结果.*",
+data type": "变整数类""data type": "整数",
+data type": "变整数类""@嵌入式方法": "\"\"",
+data type": "变整数类""parameters": [
+   {
+"parameter name": "函数指针",
+"comment": "目标函数指针地址",
+"data type": "变整数"
+   }
+data type": "变整数类"]
+  },
+  {
+comment": "用来HOOK的子程序指针""method name": "暂停",
+comment": "用来HOOK的子程序指针""comment": "根据函数指针,暂停Hook,使Hook暂时失效.多函数时,使用\"设置队列\"方法.",
+comment": "用来HOOK的子程序指针""result comment": "APIHOOK执行结果.*",
+comment": "用来HOOK的子程序指针""data type": "整数",
+comment": "用来HOOK的子程序指针""@嵌入式方法": "\"\"",
+comment": "用来HOOK的子程序指针""parameters": [
+   {
+"parameter name": "函数指针",
+"comment": "目标函数指针地址",
+"data type": "变整数"
+   }
+comment": "用来HOOK的子程序指针"]
+  },
+  {
+omment": "用来HOOK的子程序指针""data type": "整数""method name": "设置队列",
+omment": "用来HOOK的子程序指针""data type": "整数""comment": "以队列形式管理HOOK列表,设置队列中的某个函数是否开启HOOK.\n多函数可分多次设置.统一设置时,请将\"函数指针\"设为0.\n设置后执行\"开启队列\"方法使HOOK生效.",
+omment": "用来HOOK的子程序指针""data type": "整数""result comment": "APIHOOK执行结果.*",
+omment": "用来HOOK的子程序指针""data type": "整数""data type": "整数",
+omment": "用来HOOK的子程序指针""data type": "整数""@嵌入式方法": "\"\"",
+omment": "用来HOOK的子程序指针""data type": "整数""parameters": [
+   {
+"parameter name": "函数指针",
+"comment": "目标函数指针地址.如果为0,表示设置对象为HOOK列表全部函数.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否开启",
+"comment": "设置是否开启状态.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+omment": "用来HOOK的子程序指针""data type": "整数"]
+  },
+  {
+ }"method name": "开启队列",
+ }"comment": "根据HOOK列表及队列设置,选择性开启Hook,使Hook生效.",
+ }"result comment": "APIHOOK执行结果.*",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "系统消息钩子类",
+"@文档": "\"category = \\\"钩子操作\\\"\"",
+"variables": [
+  {
+data type": "文本型""static": true"variable name": "当前类指针",
+data type": "文本型""static": true"static": true,
+data type": "文本型""static": true"data type": "变整数"
+  }
+],
+"methods": [
+  {
+variables": [
+"method name": "安装全局事件钩子",
+variables": [
+"comment": "安装全局事件钩子",
+variables": [
+"result comment": "事件钩子句柄",
+variables": [
+"data type": "变整数",
+variables": [
+"@禁止流程检查": "真",
+variables": [
+"parameters": [
+   {
+"parameter name": "最低事件值",
+"comment": "常用事件常量值.*,设置响应信息范围最低事件值. 使用常量\"常用事件常量值.最低事件值\"可以指定可能的最小事件值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "最高事件值",
+"comment": "常用事件常量值.*,设置响应信息范围最高事件值. 使用常量\"常用事件常量值.最高事件值\"可以指定可能的最小事件值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "函数DLL句柄",
+"comment": "当\"事件标志值\"为\"挂钩DLL\"时,提供 DLL 句柄,其他标志时必须为0.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "事件进程ID",
+"comment": "指定挂钩函数从中接收事件的进程的 ID. 指定为0,以从当前桌面上的所有进程接收事件.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "事件线程ID",
+"comment": "指定挂钩函数从中接收事件的线程的 ID. 如果此参数为0,则挂钩函数与当前桌面上的所有现有线程相关联.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "事件标志值",
+"comment": "事件标志值",
+"data type": "事件标志值",
+"@默认值": "事件标志值.跨进程异步"
+   }
+variables": [
+]
+  },
+  {
+ameter name": "事件进程ID""method name": "卸载全局事件钩子",
+ameter name": "事件进程ID""comment": "卸载全局事件钩子",
+ameter name": "事件进程ID""parameters": [
+   {
+"parameter name": "事件钩子句柄",
+"comment": "安装全局事件钩子返回的句柄",
+"data type": "变整数"
+   }
+ameter name": "事件进程ID"]
+  },
+  {
+ameter name": "回调指针""method name": "拦截到全局事件消息",
+ameter name": "回调指针""comment": "安装全局事件钩子触发的事件",
+ameter name": "回调指针""type": "event",
+ameter name": "回调指针""data type": "整数",
+ameter name": "回调指针""parameters": [
+   {
+"parameter name": "事件钩子句柄",
+"comment": "事件挂钩函数的句柄.\"安装事件钩子\"时的返回此值,区分事件钩子的每个实例.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "事件值",
+"comment": "常用事件常量值.*",
+"data type": "整数"
+   },
+   {
+"parameter name": "窗口句柄",
+"comment": "对生成事件的窗口的句柄.如果没有与事件关联的窗口,则为0.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "对象标识",
+"comment": "标识与事件关联的对象. 对象标识符之一或自定义对象ID.",
+"data type": "整数"
+   },
+   {
+"parameter name": "子对象标识",
+"comment": "标识事件是由对象还是对象的子元素触发. 如果此值为0,则事件由对象触发;否则,此值是触发事件的元素的子ID.",
+"data type": "整数"
+   },
+   {
+"parameter name": "线程ID",
+"comment": "线程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "响应时间",
+"comment": "指定生成事件的时间（以毫秒为单位）",
+"data type": "整数"
+   }
+ameter name": "回调指针"]
+  },
+  {
+meter name": "回调指针""parameters": [
+"method name": "拦截到窗口消息",
+meter name": "回调指针""parameters": [
+"comment": "安装窗口消息钩子触发的事件.",
+meter name": "回调指针""parameters": [
+"result comment": "  返回0表示将该消息向后继续传递到该窗口的原处理函数,返回1表示将该消息\n拦截不再进行后续处理,返回-1表示将该消息传递到Windows系统默认窗口消息\n处理函数而不是该窗口的原处理函数.",
+meter name": "回调指针""parameters": [
+"type": "event",
+meter name": "回调指针""parameters": [
+"data type": "整数",
+meter name": "回调指针""parameters": [
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "消息所对应的窗口句柄值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息值",
+"comment": "消息ID值",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数一",
+"comment": "消息所携带参数一",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数二",
+"comment": "消息所携带参数二",
+"data type": "变整数"
+   }
+meter name": "回调指针""parameters": [
+]
+  },
+  {
+ameter name": "子对象标识""method name": "拦截到鼠标消息",
+ameter name": "子对象标识""comment": "安装全局鼠标钩子触发的事件",
+ameter name": "子对象标识""result comment": "返回0表示将该消息向后继续传递,返回1表示将该消息拦截不再进行后续处理.",
+ameter name": "子对象标识""type": "event",
+ameter name": "子对象标识""data type": "整数",
+ameter name": "子对象标识""parameters": [
+   {
+"parameter name": "消息值",
+"comment": "请参考\"常用窗口消息\"中的鼠标标志,如\"常用窗口消息.鼠标左键按下\".",
+"data type": "整数"
+   },
+   {
+"parameter name": "横向坐标",
+"comment": "鼠标当前横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向坐标",
+"comment": "鼠标当前横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "鼠标数据",
+"comment": "区分鼠标X键1或鼠标X键2,滑轮滚动向上或向下等的鼠标数据.",
+"data type": "整数"
+   }
+ameter name": "子对象标识"]
+  },
+  {
+comment": "设置是否开启状态.""method name": "拦截到键盘消息",
+comment": "设置是否开启状态.""comment": "安装全局键盘钩子触发的事件",
+comment": "设置是否开启状态.""result comment": "返回0表示将该消息向后继续传递,返回1表示将该消息拦截不再进行后续处理.",
+comment": "设置是否开启状态.""type": "event",
+comment": "设置是否开启状态.""data type": "整数",
+comment": "设置是否开启状态.""parameters": [
+   {
+"parameter name": "消息值",
+"comment": "请参考\"常用窗口消息\"中的键盘标志,如\"常用窗口消息.键盘按键按下\".",
+"data type": "整数"
+   },
+   {
+"parameter name": "火山按键码",
+"comment": "提供按键的火山按键代码值(为\"扩展按键码\"类中的常量值)",
+"data type": "整数"
+   },
+   {
+"parameter name": "虚拟键代码",
+"comment": "提供按键的虚拟键代码",
+"data type": "整数"
+   },
+   {
+"parameter name": "按键扫描码",
+"comment": "提供按键的对应硬件扫描码",
+"data type": "整数"
+   },
+   {
+"parameter name": "击键信息",
+"comment": "指定击键关联的信息",
+"data type": "整数"
+   }
+comment": "设置是否开启状态."]
+  },
+  {
+ameter name": "消息值""method name": "安装窗口消息钩子",
+ameter name": "消息值""comment": "针对所指定窗口安装消息钩子,成功返回真,失败返回假.支持单窗口多消息.\n注意: 一个本类对象只能截获一个窗口的消息,如欲同时截获多个窗口,请使用多个本类对象.",
+ameter name": "消息值""data type": "逻辑型",
+ameter name": "消息值""@禁止流程检查": "真",
+ameter name": "消息值""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "要安装钩子的窗口句柄,支持外部窗口.",
+"data type": "变整数"
+   }
+ameter name": "消息值"]
+  },
+  {
+comment": "消息所携带参数一""method name": "卸载窗口消息钩子",
+comment": "消息所携带参数一""comment": "卸载先前所安装的窗口消息钩子",
+comment": "消息所携带参数一""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "添加窗口过滤消息",
+
+"comment": "根据消息标识添加拦截过滤,多次添加可拦截的多个消息.只触发过滤器中消息.如无过滤器消息将触发全部消息.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口消息ID",
+"comment": "\"常用窗口消息.*\"枚举了常用部分,并非全部.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "删除窗口过滤消息",
+ }"comment": "根据所指定的消息ID值删除拦截消息",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "窗口消息ID",
+"comment": "\"常用窗口消息.*\"枚举了常用部分,并非全部.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+comment": "设置是否开启状态.""method name": "清空窗口过滤消息",
+comment": "设置是否开启状态.""comment": "清空过滤器中所有消息标识,清空后,由于失去过滤,将触发全部消息.",
+comment": "设置是否开启状态.""@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "删除窗口过滤消息""method name": "安装全局键盘钩子",
+ethod name": "删除窗口过滤消息""comment": "安装键盘全局钩子",
+ethod name": "删除窗口过滤消息""data type": "逻辑型",
+ethod name": "删除窗口过滤消息""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "卸载全局键盘钩子",
+ }"comment": "卸载键盘全局钩子",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+data type": "变整数""method name": "安装全局鼠标钩子",
+data type": "变整数""comment": "安装鼠标全局钩子",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@禁止流程检查": "真"
+  },
+  {
+thod name": "删除窗口过滤消息""data type": "逻辑型""method name": "卸载全局鼠标钩子",
+thod name": "删除窗口过滤消息""data type": "逻辑型""comment": "卸载鼠标全局钩子",
+thod name": "删除窗口过滤消息""data type": "逻辑型""@嵌入式方法": "\"\""
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"硬件及键鼠和钩子操作库".
+
+]
+}

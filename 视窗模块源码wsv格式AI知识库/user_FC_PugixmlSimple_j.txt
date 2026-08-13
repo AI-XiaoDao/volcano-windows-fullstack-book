@@ -1,0 +1,462 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.pugixml简易类\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"PugixmlSimple\\\\pugixmlTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"PugixmlSimple\\\\pugixmlToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"PugixmlSimple\\\\pugixmlToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"PugixmlSimple\\\\pugixmlToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"PugixmlSimple\\\\pugixmlToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "xml格式常量",
+"@常量类": "整数",
+"constants": [
+  {
+됰數ŝ"constant name": "标准格式",
+됰數ŝ"comment": " // Indent the nodes that are written to output stream with as many indentation strings as deep the node is in DOM tree. This flag is on by default.",
+됰數ŝ"initial value": "0x01"
+  },
+  {
+됰數ŝ"constant name": "写入bom头",
+됰數ŝ"comment": " // Write encoding-specific BOM to the output stream. This flag is off by default.",
+됰數ŝ"initial value": "0x02"
+  },
+  {
+됰數ŝ"constant name": "原始格式",
+됰數ŝ"comment": "// Use raw output mode (no indentation and no line breaks are written). This flag is off by default.",
+됰數ŝ"initial value": "0x04"
+  },
+  {
+
+"constant name": "不保存声明",
+
+"comment": " // Omit default XML declaration even if there is no declaration in the document. This flag is off by default.",
+
+"initial value": "0x08"
+  },
+  {
+    "constant name": "没有空格",
+    "comment": " // Don't escape attribute values and PCDATA contents. This flag is off by default.",
+    "initial value": "0x10"
+  },
+  {
+nstant name": "不保存声明""constant name": "文本格式",
+nstant name": "不保存声明""comment": " // Open file using text mode in xml_document::save_file. This enables special character (i.e. new-line) conversions on some systems. This flag is off by default.",
+nstant name": "不保存声明""initial value": "0x20"
+  },
+  {
+"constant name": "没有空格""constant name": "标准属性",
+"constant name": "没有空格""comment": " // Write every attribute on a new line with appropriate indentation. This flag is off by default.",
+"constant name": "没有空格""initial value": "0x40"
+  },
+  {
+}"constant name": "不保存空元素标签",
+}"comment": "// Don't output empty element tags, instead writing an explicit start and end tag even if there are no children. This flag is off by default.",
+}"initial value": "0x80"
+  },
+  {
+nstant name": "不保存空元素标签""constant name": "忽略控制字符",
+nstant name": "不保存空元素标签""comment": " // Skip characters belonging to range [0; 32) instead of \"&#xNN;\" encoding. This flag is off by default.",
+nstant name": "不保存空元素标签""initial value": "0x100"
+  },
+  {
+
+"constant name": "属性单引号",
+
+"comment": " // Use single quotes ' instead of double quotes \" for enclosing attribute values. This flag is off by default.",
+
+"initial value": "0x200"
+  }
+]
+ },
+ {
+"class name": "xml编码常量",
+"@常量类": "整数",
+"constants": [
+  {
+됰數ŝ"constant name": "自动",
+됰數ŝ"comment": "// Auto-detect input encoding using BOM or < / <? detection; use UTF8 if BOM is not found",
+됰數ŝ"initial value": "0"
+  },
+  {
+
+"constant name": "utf8",
+
+"comment": "// UTF8 encoding",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "utf16_le",
+
+"comment": "// Little-endian UTF16",
+
+"initial value": "2"
+  },
+  {
+}"constant name": "utf16_be",
+}"comment": "// Big-endian UTF16",
+}"initial value": "3"
+  },
+  {
+
+"constant name": "utf16",
+
+"comment": " // UTF16 with native endianness",
+
+"initial value": "4"
+  },
+  {
+nstant name": "utf16_be""constant name": "utf32_le",
+nstant name": "utf16_be""comment": "// Little-endian UTF32",
+nstant name": "utf16_be""initial value": "5"
+  },
+  {
+"initial value": "2""constant name": "utf32_be",
+"initial value": "2""comment": "// Big-endian UTF32",
+"initial value": "2""initial value": "6"
+  },
+  {
+initial value": "2""initial value": "6""constant name": "utf32",
+initial value": "2""initial value": "6""comment": "// UTF32 with native endianness",
+initial value": "2""initial value": "6""initial value": "7"
+  },
+  {
+"initial value": "4""constant name": "wchar",
+"initial value": "4""comment": "// The same encoding wchar_t has (either UTF16 or UTF32)",
+"initial value": "4""initial value": "8"
+  },
+  {
+tial value": "4""constant name": "wchar""constant name": "latin1",
+tial value": "4""constant name": "wchar""initial value": "9"
+  }
+]
+ },
+ {
+"class name": "xml解析常量",
+"comment": " // Parsing options\n\n // Minimal parsing mode (equivalent to turning all other flags off).\n // Only elements and PCDATA sections are added to the DOM tree, no text conversions are performed.\n const unsigned int parse_minimal = 0x0000;\n\n // This flag determines if processing instructions (node_pi) are added to the DOM tree. This flag is off by default.\n const unsigned int parse_pi = 0x0001;\n\n // This flag determines if comments (node_comment) are added to the DOM tree. This flag is off by default.\n const unsigned int parse_comments = 0x0002;\n\n // This flag determines if CDATA sections (node_cdata) are added to the DOM tree. This flag is on by default.\n const unsigned int parse_cdata = 0x0004;\n\n // This flag determines if plain character data (node_pcdata) that consist only of whitespace are added to the DOM tree.\n // This flag is off by default; turning it on usually results in slower parsing and more memory consumption.\n const unsigned int parse_ws_pcdata = 0x0008;\n\n // This flag determines if character and entity references are expanded during parsing. This flag is on by default.\n const unsigned int parse_escapes = 0x0010;\n\n // This flag determines if EOL characters are normalized (converted to #xA) during parsing. This flag is on by default.\n const unsigned int parse_eol = 0x0020;\n\n // This flag determines if attribute values are normalized using CDATA normalization rules during parsing. This flag is on by default.\n const unsigned int parse_wconv_attribute = 0x0040;\n\n // This flag determines if attribute values are normalized using NMTOKENS normalization rules during parsing. This flag is off by default.\n const unsigned int parse_wnorm_attribute = 0x0080;\n\n // This flag determines if document declaration (node_declaration) is added to the DOM tree. This flag is off by default.\n const unsigned int parse_declaration = 0x0100;\n\n // This flag determines if document type declaration (node_doctype) is added to the DOM tree. This flag is off by default.\n const unsigned int parse_doctype = 0x0200;\n\n // This flag determines if plain character data (node_pcdata) that is the only child of the parent node and that consists only\n // of whitespace is added to the DOM tree.\n // This flag is off by default; turning it on may result in slower parsing and more memory consumption.\n const unsigned int parse_ws_pcdata_single = 0x0400;\n\n // This flag determines if leading and trailing whitespace is to be removed from plain character data. This flag is off by default.\n const unsigned int parse_trim_pcdata = 0x0800;\n\n // This flag determines if plain character data that does not have a parent node is added to the DOM tree, and if an empty document\n // is a valid document. This flag is off by default.\n const unsigned int parse_fragment = 0x1000;\n\n // This flag determines if plain character data is be stored in the parent element's value. This significantly changes the structure of\n // the document; this flag is only recommended for parsing documents with many PCDATA nodes in memory-constrained environments.\n // This flag is off by default.\n const unsigned int parse_embed_pcdata = 0x2000;\n\n // The default parsing mode.\n // Elements, PCDATA and CDATA sections are added to the DOM tree, character/reference entities are expanded,\n // End-of-Line characters are normalized, attribute values are normalized using CDATA normalization rules.\n const unsigned int parse_default = parse_cdata | parse_escapes | parse_wconv_attribute | parse_eol;\n\n // The full parsing mode.\n // Nodes of all types are added to the DOM tree, character/reference entities are expanded,\n // End-of-Line characters are normalized, attribute values are normalized using CDATA normalization rules.\n const unsigned int parse_full = parse_default | parse_pi | parse_comments | parse_declaration | parse_doctype;\n",
+"@常量类": "整数",
+"constants": [
+  {
+"comment": "// Little-endian UTF16""constant name": "默认",
+"comment": "// Little-endian UTF16""comment": "parse_default",
+"comment": "// Little-endian UTF16""initial value": "116"
+  },
+  {
+
+"constant name": "全部",
+
+"comment": "parse_full",
+
+"initial value": "887"
+  }
+]
+ },
+ {
+"class name": "xml简易类",
+"methods": [
+  {
+"comment": "// Little-endian UTF16""method name": "关闭",
+"comment": "// Little-endian UTF16""result comment": "void",
+"comment": "// Little-endian UTF16""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "从文本加载",
+
+"result comment": "bool",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "lpszXml",
+"comment": "const int *",
+"data type": "文本型"
+   },
+   {
+"parameter name": "nOption",
+"comment": "int",
+"data type": "xml解析常量",
+"@默认值": "xml解析常量.默认"
+   }
+
+]
+  },
+  {
+"comment": "// Little-endian UTF16""method name": "从文件加载",
+"comment": "// Little-endian UTF16""result comment": "bool",
+"comment": "// Little-endian UTF16""data type": "逻辑型",
+"comment": "// Little-endian UTF16""@嵌入式方法": "\"\"",
+"comment": "// Little-endian UTF16""parameters": [
+   {
+"parameter name": "lpszXmlFile",
+"comment": "const int *",
+"data type": "文本型"
+   },
+   {
+"parameter name": "nOption",
+"comment": "int",
+"data type": "xml解析常量",
+"@默认值": "xml解析常量.默认"
+   }
+"comment": "// Little-endian UTF16"]
+  },
+  {
+}"method name": "到文件",
+}"result comment": "bool",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "lpszXmlFile",
+"comment": "const int *",
+"data type": "文本型"
+   },
+   {
+"parameter name": "indent",
+"data type": "文本型",
+"@默认值": "\"\\t\""
+   },
+   {
+"parameter name": "nFormat",
+"comment": "int",
+"data type": "xml格式常量",
+"@默认值": "xml格式常量.标准格式"
+   },
+   {
+"parameter name": "nEncoding",
+"comment": "int",
+"data type": "xml编码常量",
+"@默认值": "xml编码常量.自动"
+   }
+}]
+  },
+  {
+"method name": "到文本",
+"result comment": "int *",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "indent",
+"comment": "const int *",
+"data type": "文本型",
+"@默认值": "\"\\t\""
+   },
+   {
+"parameter name": "nFormat",
+"comment": "int",
+"data type": "xml格式常量",
+"@默认值": "xml格式常量.标准格式"
+   },
+   {
+"parameter name": "nEncoding",
+"comment": "int",
+"data type": "xml编码常量",
+"@默认值": "xml编码常量.wchar"
+   }
+]
+  },
+  {
+"method name": "置逻辑值",
+"result comment": "bool",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式  \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦\n路径不存在则直接创建路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "value",
+"comment": "bool",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+ }"method name": "置整数",
+ }"result comment": "bool",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦\n路径不存在则直接创建路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "value",
+"comment": "int",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "置长整数",
+
+"result comment": "bool",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦\n路径不存在则直接创建路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "value",
+"comment": "long long",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+comment": "long long""method name": "置小数",
+comment": "long long""result comment": "bool",
+comment": "long long""data type": "逻辑型",
+comment": "long long""@嵌入式方法": "\"\"",
+comment": "long long""parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦\n路径不存在则直接创建路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "value",
+"comment": "double",
+"data type": "小数"
+   }
+comment": "long long"]
+  },
+  {
+
+"method name": "置文本",
+
+"result comment": "bool",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦\n路径不存在则直接创建路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "value",
+"comment": "const int *",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "是否存在",
+"comment": "检查路径是否存在",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦\n路径不存在则直接创建路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "取逻辑值",
+ }"result comment": "bool",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦\n如果路径不存在返回 0",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"parameters": [
+"method name": "取整数",
+}"parameters": [
+"result comment": "bool",
+}"parameters": [
+"data type": "整数",
+}"parameters": [
+"@嵌入式方法": "\"\"",
+}"parameters": [
+"parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦\n失败返回0",
+"data type": "文本型"
+   }
+}"parameters": [
+]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "取长整数",
+}"@嵌入式方法": "\"\"""result comment": "失败返回0",
+}"@嵌入式方法": "\"\"""data type": "长整数",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦",
+"data type": "文本型"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "取小数",
+
+"result comment": "bool",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"data type": "小数""method name": "取文本",
+"data type": "小数""result comment": "失败返回空文本",
+"data type": "小数""data type": "文本型",
+"data type": "小数""@嵌入式方法": "\"\"",
+"data type": "小数""parameters": [
+   {
+"parameter name": "lpszPath",
+"comment": "直接使用路径方式\n属性值方式 L \"/Profile/Tools/Tool/@Filename\"\n节点文本属性 \"/Profile/Tools/Tool\n节点文本属性 \"/Profile/Tools[1]/Tool\n注意 [索引] 中的索引是从 1开始\n注意！！！末尾无斜杠哦",
+"data type": "文本型"
+   }
+"data type": "小数"]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

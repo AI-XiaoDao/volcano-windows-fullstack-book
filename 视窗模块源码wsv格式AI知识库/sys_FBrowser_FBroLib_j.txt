@@ -1,0 +1,6761 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"FBrowser浏览器".
+
+{
+    "file description": "本文件为一个火山程序的可用公开接口描述json文本",
+    "package name": "FBrowser.浏览器",
+    "comment": "\n\n浏览器各主要功能合集",
+    "@视窗.外部库.win32": "\"src\\\\env\\\\lib\\\\FBrowserCEF3lib.lib\\r\\nsrc\\\\env\\\\lib\\\\FBrowserVIP.lib\\r\\nsrc\\\\env\\\\lib\\\\libcef.lib\"",
+    "@视窗.外部库.win32-debug": "\"src\\\\env\\\\lib\\\\debug\\\\libcef_dll_wrapper.lib\"",
+    "@视窗.外部库.win32-release": "\"src\\\\env\\\\lib\\\\release\\\\libcef_dll_wrapper.lib\"",
+    "@视窗.附属文件.win32": "\"src\\\\CEFLib\\\\\"",
+    "@视窗.外部库.x64": "\"src\\\\env\\\\lib64\\\\FBrowserCEF3lib.lib\\r\\nsrc\\\\env\\\\lib64\\\\FBrowserVIP.lib\\r\\nsrc\\\\env\\\\lib64\\\\libcef.lib\"",
+    "@视窗.外部库.x64-debug": "\"src\\\\env\\\\lib64\\\\debug\\\\libcef_dll_wrapper.lib\"",
+    "@视窗.外部库.x64-release": "\"src\\\\env\\\\lib64\\\\release\\\\libcef_dll_wrapper.lib\"",
+    "@视窗.附属文件.x64": "\"src\\\\CEFLib64\\\\\"",
+    "@视窗.头文件搜寻目录": "\"src\\\\FBrowserCEF3lib\\\\\"",
+    "@视窗.外部头文件": "\"src\\\\FBroBaseDis.h\"",
+    "@视窗.附加编译参数.release": "\"cpp:/O2 /Ot\"",
+    "@视窗.附加编译参数": "\"cpp:/std:c++17\"",
+    "@视窗.附加编译参数": "\"link:/LARGEADDRESSAWARE\"",
+    "@视窗.附加编译参数.x64": "\"link:/STACK:\\\"0x800000\\\"\"",
+    "@视窗.附加编译参数.win32": "\"link:/STACK:\\\"0x400000\\\"\"",
+    "classes": [
+ {
+"class name": "FBrowser初始化控制",
+"@全局类": "真",
+"variables": [
+  {
+@全局类": "真""variable name": "是否为VIP",
+@全局类": "真""static": true,
+@全局类": "真""data type": "逻辑型",
+@全局类": "真""initial value": "假"
+  }
+],
+"methods": [
+  {
+methods": [
+"method name": "启用自带调试提示",
+methods": [
+"comment": "仅调试模式下有用，启用模块类调试输出提示，一般指事件类初始化和销毁内部的只在调试模式下显示的提示信息；\n全部类初始化在全局所以该设置屏蔽不到已经初始化的事件类，只能屏蔽设置后的；\n当然你也可以把他放在第一个加载的事件类的初始化里面，这样后面的信息就都可以屏蔽",
+methods": [
+"static": true,
+methods": [
+"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   }
+methods": [
+]
+  },
+  {
+ameter name": "是否启用""method name": "FBrowser_初始化",
+ameter name": "是否启用""static": true,
+ameter name": "是否启用""data type": "逻辑型",
+ameter name": "是否启用""@禁止流程检查": "真",
+ameter name": "是否启用""parameters": [
+   {
+"parameter name": "基础设置",
+"comment": "如果不设置执行进程，则默认使用FBrowserCEF3Subprocess.exe当执行进程",
+"data type": "FBrowser_初始化配置"
+   },
+   {
+"parameter name": "初始化事件",
+"comment": "使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_应用事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针"
+   }
+ameter name": "是否启用"]
+  },
+  {
+
+"method name": "FBrowser_关闭",
+
+"comment": "Shutdown 程序结束的时候调用，关闭释放浏览器全部资源，只有多进程模式下才会完全释放",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "结束程序",
+"comment": "为真结束当前程序",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+全局类": "真""data type": "逻辑型""method name": "FBrowser_消息循环_执行",
+全局类": "真""data type": "逻辑型""comment": "DoMessageLoopWork",
+全局类": "真""data type": "逻辑型""static": true
+  },
+  {
+局类": "真""data type": "逻辑型""static": true"method name": "FBrowser_消息循环_运行",
+局类": "真""data type": "逻辑型""static": true"comment": "RunMessageLoop",
+局类": "真""data type": "逻辑型""static": true"static": true
+  },
+  {
+全局类": "真""data type": "逻辑型""method name": "FBrowser_消息循环_退出",
+全局类": "真""data type": "逻辑型""comment": "QuitMessageLoop",
+全局类": "真""data type": "逻辑型""static": true
+  },
+  {
+
+"method name": "FBrowser_消息循环_设置系统模式",
+
+"comment": "SetOSModalLoop",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "系统模式",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"comment": "SetOSModalLoop""method name": "FBrowser_自定义方案_注册",
+"comment": "SetOSModalLoop""comment": "设置自定义方案，设置后通过自定义方案地址访问,例如fbrowser://test fbrowser为方案名，test为域名\nPS：用在初始化之后\n使用完后通过调用\"FBrowser_自定义方案_清理\"释放",
+"comment": "SetOSModalLoop""static": true,
+"comment": "SetOSModalLoop""@禁止流程检查": "真",
+"comment": "SetOSModalLoop""parameters": [
+   {
+"parameter name": "方案名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "域名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "资源处理器",
+"comment": "使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_资源处理器”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针"
+   }
+"comment": "SetOSModalLoop"]
+  },
+  {
+"method name": "FBrowser_自定义方案_清理",
+"comment": "只能执行一次，多次执行只会最后一个生效",
+"static": true
+  },
+  {
+}"method name": "FBrowser_初始化_设置V8环境默认堆栈大小",
+}"comment": "设置浏览器所创建的渲染进程V8环境的堆栈默认值，必须在初始化之前设置，只针对渲染进程；\n如果出现渲染进程因堆栈大小不足导致的崩溃，可通过扩展最大值得以缓解；但如果代码不规范（比如JS只申请不释放，乱使用循环导致的内存溢出，这个只能缓解过多后该崩溃还是得崩溃，所以一点要注意检测JS相关代码是否规范）;\n设置成功后可通过js命令window.performance.memory查看",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "初始尺寸",
+"comment": "单位：MB；一般不做修改，不设置或者设置为0及为内核的默认值；\n据资料介绍，谷歌内核该值默认为4MB",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大尺寸",
+"comment": "单位：MB；不设置或者设置为0及为内核的默认值；32位程序允许最大值不能超过4000MB \n据资料介绍，谷歌内核该值32位系统默认为1G；64位系统内存小于16G为2G，内存大于16G为4G；",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+@默认值": "0""method name": "FBrowser_内存_压缩清理",
+@默认值": "0""comment": "压缩清理内存，执行该命令后会触发V8的GC回收和压缩现有内存到虚拟内存，达到节约内存的目的；\n重点提示：有的内存占用是因为开发者申请内存未释放照成，这种情况最好从源头查找原因，该功能只为辅助，代码不规范异常操作导致的崩溃，它救不了你，\n如果是大型网页建议使用64位版本，或通过“FBrowser_初始化_设置V8环境默认堆栈大小”命令和精益工具开启大内存支持，32位程序默认情况下经过测试最大在2G左右",
+@默认值": "0""static": true
+  },
+  {
+一次，多次执行只会最后一个生效"method name": "FBrowser_JS交互_注册",
+一次，多次执行只会最后一个生效"comment": "FBroQueryFunctions\n注意：静态事件和动态事件只能设置一个，优先静态事件有效；采用动态事件可实现事件的动态多态操作，更加灵活；",
+一次，多次执行只会最后一个生效"static": true,
+一次，多次执行只会最后一个生效"parameters": [
+   {
+"parameter name": "JS执行函数名",
+"comment": "js_query_function，详见text.html调用JS例子中的doQuery",
+"data type": "文本型"
+   },
+   {
+"parameter name": "JS退出函数名",
+"comment": "js_cancel_function，详见text.html调用JS例子中的doQueryCancel",
+"data type": "文本型"
+   },
+   {
+"parameter name": "JS交互事件",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS交互事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+一次，多次执行只会最后一个生效]
+  },
+  {
+data type": "类_FBrowser_事件智能指针""method name": "FBrowser_JS交互_删除",
+data type": "类_FBrowser_事件智能指针""static": true,
+data type": "类_FBrowser_事件智能指针""parameters": [
+   {
+"parameter name": "JS执行函数名",
+"data type": "文本型"
+   }
+data type": "类_FBrowser_事件智能指针"]
+  },
+  {
+data type": "整数""method name": "FBrowser_进程_取当前进程类型",
+data type": "整数""result comment": "参考：进程类型.",
+data type": "整数""static": true,
+data type": "整数""data type": "整数",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+}"method name": "FBrowser_创建URL请求",
+}"comment": "使用当前环境创建URL请求",
+}"static": true,
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "请求",
+"comment": "要请求的数据的，用于设置请求地址，类型等参数",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "请求环境",
+"comment": "为空为全局环境",
+"data type": "类_FBrowser_请求环境",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "URL请求事件",
+"comment": "获取数据和状态的异步回调。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_URL请求事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "标识",
+"comment": "标识，传递给事件的标识，执行请求触发的事件的标识参数",
+"data type": "长整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "FBrowser_取版本号",
+
+"comment": "取当前版本号",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "FBrowser_取初始化缓存目录",
+"comment": "取出初始化设置的真实缓存路径",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "FBrowser_设置程序DPI模式",
+}"comment": "设置当前程序的DPI感知模式,在程序入口初始化之前调用",
+}"static": true,
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "DPI模式",
+"comment": "参考：DPI模式.",
+"data type": "DPI模式"
+   }
+}]
+  }
+]
+ },
+ {
+data type": "文本型""class name": "类_FBrowser_事件智能指针",
+data type": "文本型""comment": "事件智能指针，方便动态创建事件指针，智能指针会在引用完毕后自动释放所创建的指针，无需手动释放",
+data type": "文本型""@全局类": "真",
+data type": "文本型""methods": [
+  {
+
+"method name": "FBrowser创建事件智能指针",
+
+"comment": "创建继承事件相关类的智能指针，智能指针会在引用完毕后自动释放所创建的指针",
+
+"static": true,
+
+"data type": "类_FBrowser_事件智能指针",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据类型",
+"comment": "需要创建的指针类型，必须是继承事件或者回调的类，否则会出错",
+"data type": "对象类",
+"@需求类型": "数据类型"
+   }
+
+]
+  },
+  {
+
+"method name": "是否为空",
+
+"comment": "判断当前设置的事件指针是否为空",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+data type": "长整数""method name": "创建",
+data type": "长整数""comment": "创建继承事件相关类的智能指针，智能指针会在引用完毕后自动释放所创建的指针,如果原本存在值，再次创建会覆盖原值",
+data type": "长整数""@嵌入式方法": "\"\"",
+data type": "长整数""parameters": [
+   {
+"parameter name": "数据类型",
+"comment": "创建的类型必须是继承事件或者回调的子类",
+"data type": "对象类",
+"@需求类型": "数据类型"
+   }
+data type": "长整数"]
+  },
+  {
+ameter name": "数据类型""method name": "引用",
+ameter name": "数据类型""comment": "引用已经创建的事件数据指针，事件数据指针必须是用NEW创建，或者是本类方法的创建方法创建，否则将会出错",
+ameter name": "数据类型""@嵌入式方法": "\"\"",
+ameter name": "数据类型""parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "数据指针和下面的数据类型必须相匹配，否则将会出错",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据类型",
+"comment": "引用的指针数据类型，必须是事件或者回调类",
+"data type": "对象类",
+"@需求类型": "数据类型"
+   }
+ameter name": "数据类型"]
+  },
+  {
+ameter name": "数据指针""method name": "取指针",
+ameter name": "数据指针""comment": "取出当前事件的指针\n注意：\n1.此操作存在一定的不安全性，如果对指针不熟悉不建议使用！！！！！！！！！\n2.取出的指针将会脱离智能指针的控制，如果智能指针引用完毕释放了，取出来的指针自行没做处理清空，将变成野指针，再次调用就会出现异常",
+ameter name": "数据指针""data type": "变整数",
+ameter name": "数据指针""@禁止流程检查": "真",
+ameter name": "数据指针""@嵌入式方法": "\"\"",
+ameter name": "数据指针""parameters": [
+   {
+"parameter name": "数据类型",
+"comment": "要取出的指针数据类型，必须和当前设置的指针数据类型一样，否则将出错",
+"data type": "对象类",
+"@需求类型": "数据类型"
+   }
+ameter name": "数据指针"]
+  },
+  {
+ }"method name": "取执行类",
+ }"comment": "取出当前智能指针保存的对应数据类型的执行类",
+ }"@嵌入式方法": "\"\"",
+ }"@视窗.返回参考": "真",
+ }"parameters": [
+   {
+"parameter name": "数据类型",
+"comment": "需要返回的指针类型，类指针和数据类型必须匹配，否则可能会出错",
+"data type": "对象类",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   }
+ }]
+  },
+  {
+
+"method name": "取事件数据类型",
+
+"comment": "取出当前事件的类型",
+
+"data type": "事件数据类型",
+
+"@禁止流程检查": "真"
+  },
+  {
+ameter name": "数据类型""method name": "释放",
+ameter name": "数据类型""comment": "如果没有采用全局或者存在循环引用无法释放的问题，不用刻意取释放，智能指针会在引用完毕后自动释放"
+  },
+  {
+}"method name": "置空"
+  }
+data type": "文本型"]
+ },
+ {
+}"class name": "FBrowser类辅助",
+}"@全局类": "真"
+ },
+ {
+ta type": "文本型"]"class name": "FBrowser辅助功能",
+ta type": "文本型"]"@全局类": "真",
+ta type": "文本型"]"methods": [
+  {
+ameter name": "数据类型""method name": "FBrowser_Parser_Base64编码",
+ameter name": "数据类型""static": true,
+ameter name": "数据类型""data type": "文本型",
+ameter name": "数据类型""@禁止流程检查": "真",
+ameter name": "数据类型""parameters": [
+   {
+"parameter name": "数据",
+"data type": "文本型"
+   }
+ameter name": "数据类型"]
+  },
+  {
+meter name": "数据类型""@禁止流程检查": "真""method name": "FBrowser_Parser_Base64解码",
+meter name": "数据类型""@禁止流程检查": "真""static": true,
+meter name": "数据类型""@禁止流程检查": "真""data type": "类_FBrowser_字节集",
+meter name": "数据类型""@禁止流程检查": "真""@禁止流程检查": "真",
+meter name": "数据类型""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "数据",
+"data type": "文本型"
+   }
+meter name": "数据类型""@禁止流程检查": "真"]
+  },
+  {
+ameter name": "数据类型""method name": "FBrowser_Parser_取数据URI",
+ameter name": "数据类型""static": true,
+ameter name": "数据类型""data type": "文本型",
+ameter name": "数据类型""@禁止流程检查": "真",
+ameter name": "数据类型""parameters": [
+   {
+"parameter name": "mimetype",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据",
+"data type": "文本型"
+   }
+ameter name": "数据类型"]
+  },
+  {
+ameter name": "mimetype""method name": "FBrowser_Parser_URI编码",
+ameter name": "mimetype""comment": "Escapes characters in |text| which are unsuitable for use as a query parameter value. \nEverything except alphanumerics and -_.!~*'() will be converted to \"%XX\". \nIf |use_plus| is true spaces will change to \"+\". \nThe result is basically the same as encodeURIComponent in Javacript.",
+ameter name": "mimetype""static": true,
+ameter name": "mimetype""data type": "文本型",
+ameter name": "mimetype""@禁止流程检查": "真",
+ameter name": "mimetype""parameters": [
+   {
+"parameter name": "数据",
+"comment": "text",
+"data type": "文本型"
+   },
+   {
+"parameter name": "use_plus",
+"data type": "逻辑型"
+   }
+ameter name": "mimetype"]
+  },
+  {
+meter name": "数据类型""parameters": [
+"method name": "FBrowser_Parser_URI解码",
+meter name": "数据类型""parameters": [
+"comment": "Unescapes |text| and returns the result. \nUnescaping consists of looking for the exact pattern \"%XX\" where each X is a hex digit and converting to the character with the numerical value of those digits (e.g. \"i%20=%203%3b\" unescapes to \"i = 3;\"). \nIf |convert_to_utf8| is true this function will attempt to interpret the initial decoded result as UTF-8. \nIf the result is convertable into UTF-8 it will be returned as converted. Otherwise the initial decoded result will be returned.  \nThe |unescape_rule| parameter supports further customization the decoding process.",
+meter name": "数据类型""parameters": [
+"static": true,
+meter name": "数据类型""parameters": [
+"data type": "文本型",
+meter name": "数据类型""parameters": [
+"@禁止流程检查": "真",
+meter name": "数据类型""parameters": [
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "text",
+"data type": "文本型"
+   },
+   {
+"parameter name": "convert_to_utf8",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "unescape_rule",
+"comment": "参考：URI保留规则. 位标识操作",
+"data type": "逻辑型"
+   }
+meter name": "数据类型""parameters": [
+]
+  },
+  {
+meter name": "数据类型""parameters": [
+"method name": "FBrowser_Parser_解析JSON",
+meter name": "数据类型""parameters": [
+"comment": "Parses the specified |json_string| and returns a dictionary or list representation. \nIf JSON parsing fails this method returns NULL.",
+meter name": "数据类型""parameters": [
+"static": true,
+meter name": "数据类型""parameters": [
+"data type": "类_FBrowser_值",
+meter name": "数据类型""parameters": [
+"@禁止流程检查": "真",
+meter name": "数据类型""parameters": [
+"parameters": [
+   {
+"parameter name": "json_string",
+"data type": "文本型"
+   },
+   {
+"parameter name": "options",
+"comment": "参考：JSON解析.*",
+"data type": "整数"
+   }
+meter name": "数据类型""parameters": [
+]
+  },
+  {
+eter name": "数据类型"]"method name": "FBrowser_Parser_字节值解析为JSON",
+eter name": "数据类型"]"comment": "FBroHsParseJSON_BinaryValue",
+eter name": "数据类型"]"static": true,
+eter name": "数据类型"]"data type": "类_FBrowser_值",
+eter name": "数据类型"]"@禁止流程检查": "真",
+eter name": "数据类型"]"parameters": [
+   {
+"parameter name": "字节值",
+"data type": "类_FBrowser_字节集"
+   },
+   {
+"parameter name": "options",
+"comment": "参考：JSON解析.*",
+"data type": "整数"
+   }
+eter name": "数据类型"]]
+  },
+  {
+comment": "要取出的指针数据类型，必须和当前设置的指针数据类型一样，否则将出错""method name": "FBrowser_Parser_写入JSON",
+comment": "要取出的指针数据类型，必须和当前设置的指针数据类型一样，否则将出错""static": true,
+comment": "要取出的指针数据类型，必须和当前设置的指针数据类型一样，否则将出错""data type": "文本型",
+comment": "要取出的指针数据类型，必须和当前设置的指针数据类型一样，否则将出错""@禁止流程检查": "真",
+comment": "要取出的指针数据类型，必须和当前设置的指针数据类型一样，否则将出错""parameters": [
+   {
+"parameter name": "node",
+"data type": "类_FBrowser_值"
+   },
+   {
+"parameter name": "options",
+"comment": "参考：JSON解析.*",
+"data type": "整数"
+   }
+comment": "要取出的指针数据类型，必须和当前设置的指针数据类型一样，否则将出错"]
+  },
+  {
+}"method name": "FBrowser_清理全局缓存",
+}"comment": "非cef自带功能，FBrowser特有内核实现功能，清理浏览器缓存，支持占用状态下清理appcache,cache_storage,cookies,indexeddb,local_storage,service_workers,websql",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "源地址",
+"comment": "留空则为当前origin域，前面必须含http(s)，根域名不能包含网址后的路径。例如：\"https://www.baidu.com/s?ie=utf-8&f=8\"则填\"https://www.baidu.com",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "清理对象",
+"comment": "参考：清理缓存.xxxx    要清理什么缓存，可单个单个清理，也可一起清理，多个模式，用\"位或\"添加。例如：位或 (#清理缓存_Appcache, #清理缓存_Cookies，#清理缓存_LocalStorage)",
+"data type": "长整数",
+"@默认值": "清理缓存.全部"
+   },
+   {
+"parameter name": "存储类型",
+"comment": "参考：缓存类型.xxxx    要清理缓存的类型",
+"data type": "长整数",
+"@默认值": "缓存类型.全部"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_清理缓存回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+
+"method name": "FBrowser_浏览器_通过ID取浏览器",
+
+"comment": "通过浏览器ID取出浏览器类，ID由浏览器类取ID获得，如果获取失败将返回一个空浏览器，注意判断",
+
+"static": true,
+
+"data type": "类_FBrowser_浏览器",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "浏览器ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "类_FBrowser_事件智能指针""method name": "FBrowser_浏览器_通过序号取浏览器",
+data type": "类_FBrowser_事件智能指针""comment": " 通过内置浏览器清单的顺序号获取浏览器类，如果获取失败将返回一个空浏览器，注意判断",
+data type": "类_FBrowser_事件智能指针""static": true,
+data type": "类_FBrowser_事件智能指针""data type": "类_FBrowser_浏览器",
+data type": "类_FBrowser_事件智能指针""@禁止流程检查": "真",
+data type": "类_FBrowser_事件智能指针""parameters": [
+   {
+"parameter name": "序号",
+"comment": "从0开始",
+"data type": "整数"
+   }
+data type": "类_FBrowser_事件智能指针"]
+  },
+  {
+}"method name": "FBrowser_浏览器_通过窗口句柄取浏览器",
+}"comment": " 通过浏览器的窗口句柄取浏览器，注意这里是浏览器的窗口句柄，不是浏览器父窗口的句柄",
+}"static": true,
+}"data type": "类_FBrowser_浏览器",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+
+"method name": "FBrowser_浏览器_通过用户标识取浏览器",
+
+"comment": "通过浏览器标识取出浏览器类，浏览器标识为创建浏览器的时候设置，如果获取失败将返回一个空浏览器，注意判断",
+
+"static": true,
+
+"data type": "类_FBrowser_浏览器",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "用户标识",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"static": true"method name": "FBrowser_浏览器_取数量",
+"static": true"static": true,
+"static": true"data type": "整数",
+"static": true"@禁止流程检查": "真"
+  },
+  {
+"method name": "FBrowser_浏览器_取ID清单",
+"comment": "返回全部浏览器ID清单，返回值为一个保存整数的清单列表值",
+"static": true,
+"data type": "类_FBrowser_列表值",
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "FBrowser_浏览器_取用户标识清单",
+"comment": "返回全部浏览器标识清单，浏览器标识为创建浏览器的时候设置，返回值为一个保存文本的清单列表值",
+"static": true,
+"data type": "类_FBrowser_列表值",
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "FBrowser_启用异常收集",
+"comment": "火山版本内置已经设置了，所有这个没用",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "异常信息文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "异常执行回调",
+"@匹配方法": "\"异常收集回调模板函数\""
+   }
+]
+  }
+ta type": "文本型"]]
+ },
+ {
+}"class name": "类_FBrowser_浏览器",
+}"@全局类": "真",
+}"methods": [
+  {
+ameter name": "窗口句柄""method name": "FBrowser_创建浏览器",
+ameter name": "窗口句柄""comment": "注意：浏览的静态事件和动态事件只能设置一个，优先静态事件有效，不设置则没有事件触发；采用动态事件可实现一个浏览器一个独立事件的动态多态操作，更加灵活；",
+ameter name": "窗口句柄""static": true,
+ameter name": "窗口句柄""data type": "逻辑型",
+ameter name": "窗口句柄""@禁止流程检查": "真",
+ameter name": "窗口句柄""parameters": [
+   {
+"parameter name": "链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口信息",
+"data type": "FBrowser_窗口信息"
+   },
+   {
+"parameter name": "浏览器设置",
+"data type": "FBrowser_浏览器配置",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "请求环境",
+"data type": "类_FBrowser_请求环境",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "浏览器事件",
+"comment": "使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_浏览器事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "禁用事件",
+"comment": "当前浏览器器事件开关，可关闭某些不必要的事件加载，合理设置可提高加载速度",
+"data type": "FBrowser_禁用事件",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "标识",
+"comment": "设置创建后的浏览器的用户标识，设置后可通过用户标识获取到对应的浏览器，注意用户标识不要重复",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ameter name": "窗口句柄"]
+  },
+  {
+rowser_事件智能指针"method name": "FBrowser_创建浏览器_同步",
+rowser_事件智能指针"comment": "只能通过：FBrowser_任务运行器_投递任务 的方式创建，发送到UI线程使用，在其他线程无效\n例如：FBrowser_任务运行器_投递任务 (#线程ID_UI, 任务运行器)\n注意：浏览的静态事件和动态事件只能设置一个，优先静态事件有效，不设置则没有事件触发；采用动态事件可实现一个浏览器一个独立事件的动态多态操作，更加灵活；",
+rowser_事件智能指针"static": true,
+rowser_事件智能指针"data type": "类_FBrowser_浏览器",
+rowser_事件智能指针"@禁止流程检查": "真",
+rowser_事件智能指针"parameters": [
+   {
+"parameter name": "链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口信息",
+"data type": "FBrowser_窗口信息"
+   },
+   {
+"parameter name": "浏览器设置",
+"data type": "FBrowser_浏览器配置",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "请求环境",
+"data type": "类_FBrowser_请求环境",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "浏览器事件",
+"comment": "使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_浏览器事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "禁用事件",
+"comment": "当前浏览器器事件开关，可关闭某些不必要的事件加载，合理设置可提高加载速度",
+"data type": "FBrowser_禁用事件",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "标识",
+"comment": "设置创建后的浏览器的用户标识，设置后可通过用户标识获取到对应的浏览器，注意用户标识不要重复",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+rowser_事件智能指针]
+  },
+  {
+
+"method name": "FBrowser_创建后台浏览器",
+
+"comment": "创建一个完全后台没有窗口的浏览器，该浏览器没有窗口，也没有窗口句柄，只能后台，不能显示出来，\n不同于创建浏览器再隐藏窗口，也非无头模式其优于无头模式，类似于插件后台但不能用插件的API，\n可用于纯后台刷新取数等相关操作，比前台浏览器占用更低，其他操作和普通浏览器无异\n注意：浏览的静态事件和动态事件只能设置一个，优先静态事件有效，不设置则没有事件触发；采用动态事件可实现一个浏览器一个独立事件的动态多态操作，更加灵活；",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "浏览器设置",
+"data type": "FBrowser_浏览器配置",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "请求环境",
+"data type": "类_FBrowser_请求环境",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "浏览器事件",
+"comment": "使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_浏览器事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "禁用事件",
+"comment": "当前浏览器器事件开关，可关闭某些不必要的事件加载，合理设置可提高加载速度",
+"data type": "FBrowser_禁用事件",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "标识",
+"comment": "设置创建后的浏览器的用户标识，设置后可通过用户标识获取到对应的浏览器，注意用户标识不要重复",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+"method name": "FBrowser_创建后台浏览器_同步",
+"comment": "创建一个完全后台没有窗口的浏览器，该浏览器没有窗口，也没有窗口句柄，只能后台，不能显示出来，\n不同于创建浏览器再隐藏窗口，也非无头模式其优于无头模式，类似于插件后台但不能用插件的API，\n可用于纯后台刷新取数等相关操作，比前台浏览器占用更低，其他操作和普通浏览器无异。\n只能通过：FBrowser_任务运行器_投递任务 的方式创建，发送到UI线程使用，在其他线程无效\n例如：FBrowser_任务运行器_投递任务 (#线程ID_UI, 任务运行器)\n注意：浏览的静态事件和动态事件只能设置一个，优先静态事件有效，不设置则没有事件触发；采用动态事件可实现一个浏览器一个独立事件的动态多态操作，更加灵活；",
+"static": true,
+"data type": "类_FBrowser_浏览器",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "浏览器设置",
+"data type": "FBrowser_浏览器配置",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "请求环境",
+"data type": "类_FBrowser_请求环境",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "浏览器事件",
+"comment": "使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_浏览器事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "禁用事件",
+"comment": "当前浏览器器事件开关，可关闭某些不必要的事件加载，合理设置可提高加载速度",
+"data type": "FBrowser_禁用事件",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "标识",
+"comment": "设置创建后的浏览器的用户标识，设置后可通过用户标识获取到对应的浏览器，注意用户标识不要重复",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+ameter name": "禁用事件""method name": "是否为空",
+ameter name": "禁用事件""data type": "逻辑型",
+ameter name": "禁用事件""@禁止流程检查": "真"
+  },
+  {
+@默认值": "空对象""method name": "置空",
+@默认值": "空对象""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+"method name": "是否已关闭",
+"comment": "判断当前浏览是否已经关闭，已关闭或未创建都返回真；浏览器执行关闭命令或手动关闭后且完全释放内部资源后返回真，并不一定是一关闭状态就是已关闭状态；\n该命令是为了防止库内部浏览器已经被关闭本类还未处理而去执行类方法而导致崩溃，所以执行该类方法之前可通过此方法",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+@禁止流程检查": "真""method name": "取用户标识",
+@禁止流程检查": "真""comment": "这里的用户标识指的是浏览器创建的时候传递设置的值",
+@禁止流程检查": "真""data type": "文本型",
+@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+禁止流程检查": "真""@禁止流程检查": "真""method name": "可否后退",
+禁止流程检查": "真""@禁止流程检查": "真""comment": "英文名：CanGoBack 说明：Returns true if the browser can navigate backwards.",
+禁止流程检查": "真""@禁止流程检查": "真""data type": "逻辑型",
+禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+}"method name": "后退",
+}"comment": "英文名：GoBack 说明：Navigate backwards.",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "可否前进",
+}"comment": "英文名：CanGoForward 说明：Returns true if the browser can navigate forwards.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+"data type": "逻辑型""method name": "前进",
+"data type": "逻辑型""comment": "英文名：GoForward 说明：Navigate forwards.",
+"data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "是否读取中",
+ }"comment": "英文名：IsLoading 说明：Returns true if the browser is currently loading.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真"
+  },
+  {
+thod name": "可否前进""method name": "重新载入",
+thod name": "可否前进""comment": "英文名：Reload 说明：Reload the current page."
+  },
+  {
+"comment": "英文名：GoBack 说明：Navigate backwards.""method name": "重新载入_忽略缓存",
+"comment": "英文名：GoBack 说明：Navigate backwards.""comment": "英文名：ReloadIgnoreCache 说明：Reload the current page ignoring any cached data."
+  },
+  {
+
+"method name": "停止载入",
+
+"comment": "英文名：StopLoad 说明：  Stop loading the page."
+  },
+  {
+
+"method name": "取ID",
+
+"comment": "英文名：GetIdentifier 说明： Returns the globally unique identifier for this browser. This value is also used as the tabId for extension APIs.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"@禁止流程检查": "真""method name": "是否相同",
+}"@禁止流程检查": "真""comment": "英文名：IsSame 说明：Returns true if this object is pointing to the same handle as |that| object.",
+}"@禁止流程检查": "真""data type": "逻辑型",
+}"@禁止流程检查": "真""@禁止流程检查": "真",
+}"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "对比浏览器",
+"comment": "that",
+"data type": "类_FBrowser_浏览器"
+   }
+}"@禁止流程检查": "真"]
+  },
+  {
+thod name": "停止载入""method name": "是否为弹窗",
+thod name": "停止载入""comment": "英文名：IsPopup 说明：Returns true if the window is a popup window.",
+thod name": "停止载入""data type": "逻辑型",
+thod name": "停止载入""@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否有文档",
+}"comment": "英文名：HasDocument 说明：Returns true if a document has been loaded in the browser.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取主框架",
+
+"comment": "英文名：GetMainFrame 说明：Returns the main (top-level) frame for the browser window.只能在主进程中使用",
+
+"data type": "类_FBrowser_框架",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取当前焦点框架",
+
+"comment": "英文名：GetFocusedFrame 说明：Returns the focused frame for the browser window.",
+
+"data type": "类_FBrowser_框架",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取框架_ID",
+}"comment": "英文名：GetFrame 说明：必须使用取框架ID取出的ID标识，ID错误会导致返回值为空，用类的是否为空判断，类为空而执行操作会导致奔溃",
+}"data type": "类_FBrowser_框架",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "ID",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+止流程检查": "真""@禁止流程检查": "真""data type": "逻辑型""method name": "取框架_名称",
+止流程检查": "真""@禁止流程检查": "真""data type": "逻辑型""comment": "英文名：GetFrame 说明：必须使用取框架名称取出的框架名，名称会导致返回值为空，用类的是否为空判断，类为空而执行操作会导致奔溃.",
+止流程检查": "真""@禁止流程检查": "真""data type": "逻辑型""data type": "类_FBrowser_框架",
+止流程检查": "真""@禁止流程检查": "真""data type": "逻辑型""@禁止流程检查": "真",
+止流程检查": "真""@禁止流程检查": "真""data type": "逻辑型""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+止流程检查": "真""@禁止流程检查": "真""data type": "逻辑型"]
+  },
+  {
+thod name": "取当前焦点框架""method name": "取框架ID",
+thod name": "取当前焦点框架""comment": "英文名：GetFrameIdentifiers 说明： Returns the identifiers of all existing frames.",
+thod name": "取当前焦点框架""data type": "FBrowser_文本数组",
+thod name": "取当前焦点框架""@禁止流程检查": "真"
+  },
+  {
+ameter name": "名称""method name": "取框架名称",
+ameter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames",
+ameter name": "名称""data type": "FBrowser_文本数组",
+ameter name": "名称""@禁止流程检查": "真"
+  },
+  {
+er name": "名称""method name": "取框架名称""method name": "关闭浏览器",
+er name": "名称""method name": "取框架名称""comment": "英文名：CloseBrowser 说明：关闭后该类将会变为无效，Request that the browser close. The JavaScript 'onbeforeunload' event will be fired.",
+er name": "名称""method name": "取框架名称""parameters": [
+   {
+"parameter name": "立即关闭",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否置空",
+"comment": "是否将当前设置为空，设置为真后，这里会将当前浏览器直接设置为空，如果是数组，设置空后可直接使用命令删除当前成员，不用等浏览器事件关闭时再删除",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+er name": "名称""method name": "取框架名称"]
+  },
+  {
+"@禁止流程检查": "真""method name": "尝试关闭浏览器",
+"@禁止流程检查": "真""comment": "英文名：TryCloseBrowser 说明:Helper for closing a browser. Call this method from the top-level window close handler.",
+"@禁止流程检查": "真""data type": "逻辑型",
+"@禁止流程检查": "真""@禁止流程检查": "真",
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "是否置空",
+"comment": "是否执行关闭成功后直接将当前设置为空，设置为真后，这里会将当前浏览器直接设置为空，如果是数组，设置空后可直接使用命令删除当前成员，不用等浏览器事件关闭时再删除",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+"@禁止流程检查": "真"]
+  },
+  {
+meter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames""method name": "置焦点",
+meter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames""comment": "英文名：SetFocus 说明:Set whether the browser is focused",
+meter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames""parameters": [
+   {
+"parameter name": "焦点",
+"data type": "逻辑型"
+   }
+meter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames"]
+  },
+  {
+}"method name": "取窗口句柄",
+}"comment": "英文名：GetWindowHandle 说明:Retrieve the window handle for this browser,只能主进程中使用",
+}"data type": "变整数",
+}"@禁止流程检查": "真"
+  },
+  {
+ name": "名称""method name": "取框架名称"]"method name": "取打开者窗口句柄",
+ name": "名称""method name": "取框架名称"]"comment": "英文名：GetOpenerWindowHandle 说明:Retrieve the window handle of the browser that opened this browser",
+ name": "名称""method name": "取框架名称"]"data type": "变整数",
+ name": "名称""method name": "取框架名称"]"@禁止流程检查": "真"
+  },
+  {
+hod name": "取当前焦点框架""data type": "FBrowser_文本数组""method name": "是否浏览器视图",
+hod name": "取当前焦点框架""data type": "FBrowser_文本数组""comment": "英文名：HasView 说明:Returns true if this browser is wrapped in a CefBrowserView",
+hod name": "取当前焦点框架""data type": "FBrowser_文本数组""data type": "逻辑型",
+hod name": "取当前焦点框架""data type": "FBrowser_文本数组""@禁止流程检查": "真"
+  },
+  {
+ter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames"]"method name": "取缩放级别",
+ter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames"]"data type": "小数",
+ter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames"]"@禁止流程检查": "真"
+  },
+  {
+od name": "取当前焦点框架""data type": "FBrowser_文本数组""@禁止流程检查": "真""method name": "置缩放级别",
+od name": "取当前焦点框架""data type": "FBrowser_文本数组""@禁止流程检查": "真""comment": "英文名：SetZoomLevel 说明: Change the zoom level to the specified value",
+od name": "取当前焦点框架""data type": "FBrowser_文本数组""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "级别",
+"data type": "小数"
+   }
+od name": "取当前焦点框架""data type": "FBrowser_文本数组""@禁止流程检查": "真"]
+  },
+  {
+ter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames"]"method name": "开始下载",
+ter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames"]"comment": "英文名：StartDownload 说明:  Download the file at |url| using CefDownloadHandler.",
+ter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames"]"parameters": [
+   {
+"parameter name": "地址",
+"comment": "url",
+"data type": "文本型"
+   }
+ter name": "名称""comment": "英文名：GetFrameNames 说明：Returns the names of all existing frames"]]
+  },
+  {
+od name": "取当前焦点框架""data type": "FBrowser_文本数组""@禁止流程检查": "真""method name": "下载图片",
+od name": "取当前焦点框架""data type": "FBrowser_文本数组""@禁止流程检查": "真""comment": "英文名：DownloadImage 说明:Download |image_url| and execute |callback| on completion with the images received from the renderer.\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+od name": "取当前焦点框架""data type": "FBrowser_文本数组""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为图标",
+"comment": "is_favicon",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "最大尺寸",
+"data type": "整数"
+   },
+   {
+"parameter name": "忽略缓存",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "下载图片回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_下载图片回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+od name": "取当前焦点框架""data type": "FBrowser_文本数组""@禁止流程检查": "真"]
+  },
+  {
+"method name": "打开对话框",
+"comment": "英文名：RunFileDialog 说明：打开文件选择对话框\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+"parameters": [
+   {
+"parameter name": "模式",
+"comment": "打开模式，参考：文件对话框.xxx，多个类型用：位或运算",
+"data type": "整数",
+"@默认值": "文件对话框.打开"
+   },
+   {
+"parameter name": "标题",
+"comment": "打开窗口标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "默认文件名",
+"comment": "模式为保存时候的默认文件名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "过滤器",
+"comment": "可空,used to restrict the selectable file types and may any combination of \n(a) valid lower-cased MIME types(e.g. \"text/*\" or \"image/*\"),\n(b) individual file extensions (e.g.\".txt\" or \".png\"), or \n(c) combined description and file extension delimited using \"|\" and \";\" (e.g. \"Image Types|.png;.gif;.jpg\").",
+"data type": "FBrowser_文本数组",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "打开文件对话框回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_打开文件对话框回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+rowser_事件智能指针"method name": "打印",
+rowser_事件智能指针"comment": "英文名：Print"
+  },
+  {
+ }"method name": "打印为PDF",
+ }"comment": "英文名：PrintToPDF\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+ }"parameters": [
+   {
+"parameter name": "保存文件路径",
+"comment": "路径+文件名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "PDF打印设置",
+"data type": "FBrowser_PDF打印设置"
+   },
+   {
+"parameter name": "打印为PDF回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_打印为PDF回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+"method name": "查找",
+"comment": "英文名：Find",
+"parameters": [
+   {
+"parameter name": "查找文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向前",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否区分大小",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "查找下一个",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+ }"method name": "停止查找",
+ }"comment": "英文名：StopFinding",
+ }"parameters": [
+   {
+"parameter name": "清除选项",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+]"method name": "打开开发者工具",
+]"comment": "英文名：ShowDevTools",
+]"parameters": [
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父窗口",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "横坐标",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "浏览器设置",
+"data type": "FBrowser_浏览器配置",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "元素坐标",
+"comment": "选择元素坐标",
+"data type": "FBrowser_位置",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "浏览器事件",
+"comment": "使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_浏览器事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "禁用事件",
+"comment": "当前浏览器器事件开关，可关闭某些不必要的事件加载，合理设置可提高加载速度",
+"data type": "FBrowser_禁用事件",
+"@默认值": "空对象"
+   }
+]]
+  },
+  {
+"method name": "关闭开发者工具",
+"comment": "英文名：CloseDevTools"
+  },
+  {
+"method name": "是否为开发者",
+"comment": "判断当前浏览器是否为开发者",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+data type": "逻辑型""method name": "是否存在开发者工具",
+data type": "逻辑型""comment": "英文名：HasDevTools判断当前浏览器是否打开了开发者工具",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+data type": "逻辑型""method name": "发送按键事件",
+data type": "逻辑型""comment": "英文名：SendKeyEvent",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "按键事件",
+"data type": "FBrowser_按键事件"
+   }
+data type": "逻辑型"]
+  },
+  {
+SendKeyEvent"method name": "发送鼠标点击事件",
+SendKeyEvent"comment": "英文名：SendMouseClickEvent",
+SendKeyEvent"parameters": [
+   {
+"parameter name": "按键类型",
+"comment": "参考：鼠标按键类型.xxx",
+"data type": "整数"
+   },
+   {
+"parameter name": "鼠标事件",
+"data type": "FBrowser_鼠标事件"
+   },
+   {
+"parameter name": "点击",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "点击次数",
+"data type": "整数"
+   }
+SendKeyEvent]
+  },
+  {
+ShowDevTools"method name": "发送鼠标移动事件",
+ShowDevTools"comment": "英文名：SendMouseMoveEvent",
+ShowDevTools"parameters": [
+   {
+"parameter name": "鼠标事件",
+"data type": "FBrowser_鼠标事件"
+   },
+   {
+"parameter name": "鼠标离开",
+"data type": "逻辑型"
+   }
+ShowDevTools]
+  },
+  {
+"method name": "发送鼠标滚轮事件",
+"comment": "英文名：SendMouseWheelEvent",
+"parameters": [
+   {
+"parameter name": "鼠标事件",
+"data type": "FBrowser_鼠标事件"
+   },
+   {
+"parameter name": "横向滚轮",
+"comment": "负数为向右，正数为向左",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向滚轮",
+"comment": "负数为向下，正数为向上",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "发送触摸事件",
+
+"comment": "英文名：SendTouchEvent",
+
+"parameters": [
+   {
+"parameter name": "触摸事件",
+"data type": "FBrowser_触摸事件"
+   }
+
+]
+  },
+  {
+"method name": "置页面静音",
+"comment": "英文名：SetAudioMuted",
+"parameters": [
+   {
+"parameter name": "静音",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+"method name": "是否页面静音",
+"comment": "英文名：IsAudioMuted ",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+@默认值": "空对象""method name": "置自动调整大小",
+@默认值": "空对象""comment": "英文名：SetAutoResizeEnabled",
+@默认值": "空对象""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "最小高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最小宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大宽度",
+"data type": "整数"
+   }
+@默认值": "空对象"]
+  },
+  {
+
+"method name": "取请求环境",
+
+"data type": "类_FBrowser_请求环境"
+  },
+  {
+}"method name": "移动窗口",
+}"parameters": [
+   {
+"parameter name": "左边",
+"data type": "整数"
+   },
+   {
+"parameter name": "顶边",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否重画",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "显示隐藏窗口",
+data type": "整数""comment": "显示隐藏浏览器",
+data type": "整数""parameters": [
+   {
+"parameter name": "显示隐藏",
+"comment": "为真显示浏览器，为假隐藏浏览器",
+"data type": "逻辑型"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "取父窗口句柄",
+ata type": "整数""parameters": [
+"data type": "变整数",
+ata type": "整数""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+type": "整数""parameters": [
+"method name": "取父窗口句柄""method name": "置父窗口",
+type": "整数""parameters": [
+"method name": "取父窗口句柄""comment": "设置浏览器父窗口",
+type": "整数""parameters": [
+"method name": "取父窗口句柄""parameters": [
+   {
+"parameter name": "父窗口句柄",
+"comment": "要设置的新父窗口句柄，如果为0，则以桌面为父窗口",
+"data type": "变整数"
+   }
+type": "整数""parameters": [
+"method name": "取父窗口句柄"]
+  },
+  {
+": "整数""parameters": [
+"method name": "取父窗口句柄""method name": "置父窗口""method name": "置窗口属性",
+": "整数""parameters": [
+"method name": "取父窗口句柄""method name": "置父窗口""comment": "设置浏览器窗口属性，通常用于设置窗口风格",
+": "整数""parameters": [
+"method name": "取父窗口句柄""method name": "置父窗口""parameters": [
+   {
+"parameter name": "风格类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "风格",
+"data type": "整数"
+   }
+": "整数""parameters": [
+"method name": "取父窗口句柄""method name": "置父窗口"]
+  },
+  {
+type": "整数""parameters": [
+"method name": "取父窗口句柄""method name": "取窗口属性",
+type": "整数""parameters": [
+"method name": "取父窗口句柄""comment": "获取浏览器窗口属性，通常用于设置窗口风格",
+type": "整数""parameters": [
+"method name": "取父窗口句柄""data type": "整数",
+type": "整数""parameters": [
+"method name": "取父窗口句柄""@禁止流程检查": "真",
+type": "整数""parameters": [
+"method name": "取父窗口句柄""parameters": [
+   {
+"parameter name": "风格类型",
+"comment": "参考:窗口风格.",
+"data type": "整数"
+   }
+type": "整数""parameters": [
+"method name": "取父窗口句柄"]
+  },
+  {
+"method name": "取窗口标题",
+"comment": "取当前浏览器窗口标题，非父窗口标题",
+"data type": "文本型",
+"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "进程间消息_发送数据_到全部渲染进程",
+ }"comment": "在主进程中执行，向该浏览器对应的全部渲染进程发送消息",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "消息名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "消息",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "进程间消息_发送数据_到指定渲染进程",
+data type": "文本型""comment": "在主进程中执行，向该浏览器框架ID所对应的渲染进程发送消息",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "渲染进程ID",
+"comment": "通过\"进程间消息_取渲染进程ID清单\"获取",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "消息",
+"data type": "字节集类"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "整数""method name": "进程间消息_取渲染进程数量",
+data type": "整数""comment": "取可以通讯的渲染进程数",
+data type": "整数""data type": "整数",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+data type": "整数""method name": "进程间消息_取渲染进程ID清单",
+data type": "整数""comment": "取可以通讯的渲染进程数",
+data type": "整数""data type": "整数数组类",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+}"method name": "进程间消息_发送数据_到主进程",
+}"comment": "在渲染进程中执行,失败返回0",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "消息名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "消息",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+ }"method name": "离屏渲染_离屏渲染被禁用",
+ }"comment": "英文名：IsWindowRenderingDisabled Returns true if window rendering is disabled.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真"
+  },
+  {
+data type": "字节集类""method name": "离屏渲染_通知已被调整大小",
+data type": "字节集类""comment": "英文名：WasResized \n说明：Notify the browser that the widget has been resized. \nThe browser will first call CefRenderHandler::GetViewRect to get the new size and then call CefRenderHandler::OnPaint asynchronously with the updated regions. \nThis method is only used when window rendering is disabled."
+  },
+  {
+ata type": "整数""@禁止流程检查": "真""method name": "离屏渲染_通知已被隐藏",
+ata type": "整数""@禁止流程检查": "真""comment": "英文名：WasHidden \n说明：Notify the browser that it has been hidden or shown. Layouting and CefRenderHandler::OnPaint notification will stop when the browser is hidden.\nThis method is only used when window rendering is disabled.",
+ata type": "整数""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "隐藏",
+"data type": "逻辑型"
+   }
+ata type": "整数""@禁止流程检查": "真"]
+  },
+  {
+息_取渲染进程ID清单"method name": "离屏渲染_通知屏幕信息被改变",
+息_取渲染进程ID清单"comment": "英文名：NotifyScreenInfoChanged \n说明：Send a notification to the browser that the screen info has changed. \nThe browser will then call CefRenderHandler::GetScreenInfo to update the screen information with the new values. \nThis simulates moving the webview window from one display to another, or changing the properties of the current display. \nThis method is only used when window rendering is disabled."
+  },
+  {
+ata type": "整数""@禁止流程检查": "真""method name": "离屏渲染_使视图无效",
+ata type": "整数""@禁止流程检查": "真""comment": "英文名：Invalidate \n说明：Invalidate the view. \nThe browser will call CefRenderHandler::OnPaint asynchronously. \nThis method is only used when window rendering is disabled.",
+ata type": "整数""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "绘制元素类型",
+"comment": "参考：绘制元素类型.XXXXX",
+"data type": "整数"
+   }
+ata type": "整数""@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "离屏渲染_取帧率",
+
+"comment": "英文名：GetWindowlessFrameRate 单位：fps \n说明：Returns the maximum rate in frames per second (fps) that CefRenderHandler:: OnPaint will be called for a windowless browser. \nThe actual fps may be lower if the browser cannot generate frames at the requested rate. The minimum value is 1 and the maximum value is 60 (default 30). \nThis method can only be called on the UI thread.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "离屏渲染_置帧率",
+
+"comment": "英文名：SetWindowlessFrameRate \n说明：Set the maximum rate in frames per second (fps) that CefRenderHandler:: OnPaint will be called for a windowless browser.\n The actual fps may be lower if the browser cannot generate frames at the requested rate. \nThe minimum value is 1 and the maximum value is 60 (default 30). \nCan also be set at browser creation via CefBrowserSettings.windowless_frame_rate.",
+
+"parameters": [
+   {
+"parameter name": "帧率",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "消息""method name": "离屏渲染_IME置组成",
+ameter name": "消息""comment": "英文名：ImeSetComposition\nBegins a new composition or updates the existing composition. Blink has a\nspecial node (a composition node) that allows the input method to change\ntext without affecting other DOM nodes. |text| is the optional text that\nwill be inserted into the composition node. |underlines| is an optional set\nof ranges that will be underlined in the resulting text.\n|replacement_range| is an optional range of the existing text that will be\n replaced. |selection_range| is an optional range of the resulting text that\nwill be selected after insertion or replacement. The |replacement_range|\nvalue is only used on OS X.\nThis method may be called multiple times as the composition changes. When\nthe client is done making changes the composition should either be canceled\nor completed. To cancel the composition call ImeCancelComposition. To\ncomplete the composition call either ImeCommitText or\nImeFinishComposingText. Completion is usually signaled when:\n   A. The client receives a WM_IME_COMPOSITION message with a GCS_RESULTSTR\n      flag (on Windows), or;\n   B. The client receives a \"commit\" signal of GtkIMContext (on Linux), or;\n   C. insertText of NSTextInput is called (on Mac).\n This method is only used when window rendering is disabled.",
+ameter name": "消息""parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "下划线组成",
+"data type": "FBrowser_下划线组成数组"
+   },
+   {
+"parameter name": "代替范围",
+"data type": "FBrowser_范围"
+   },
+   {
+"parameter name": "选择范围",
+"data type": "FBrowser_范围"
+   }
+ameter name": "消息"]
+  },
+  {
+comment": "参考：绘制元素类型.XXXXX""method name": "离屏渲染_IME置交互文本",
+comment": "参考：绘制元素类型.XXXXX""comment": "英文名：ImeCommitText \n说明：Completes the existing composition by optionally inserting the specified |text| into the composition node. \n|replacement_range| is an optional range of the existing text that will be replaced. \n|relative_cursor_pos| is where the cursor will be positioned relative to the current cursor position. \nSee comments on ImeSetComposition for usage. \nThe |replacement_range| and |relative_cursor_pos| values are only used on OS X.\n This method is only used when window rendering is disabled.",
+comment": "参考：绘制元素类型.XXXXX""parameters": [
+   {
+"parameter name": "文本",
+"comment": "text",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代替范围",
+"comment": "replacement_range",
+"data type": "FBrowser_范围"
+   },
+   {
+"parameter name": "relative_cursor_pos",
+"data type": "整数"
+   }
+comment": "参考：绘制元素类型.XXXXX"]
+  },
+  {
+data type": "FBrowser_范围""method name": "离屏渲染_IME完成组合文本",
+data type": "FBrowser_范围""comment": "英文名：ImeFinishComposingText \n说明：Completes the existing composition by applying the current composition node contents. \nIf |keep_selection| is false the current selection, if any, will be discarded. See comments on ImeSetComposition for usage. \nThis method is only used when window rendering is disabled.",
+data type": "FBrowser_范围""parameters": [
+   {
+"parameter name": "保持选择",
+"comment": "keep_selection",
+"data type": "逻辑型"
+   }
+data type": "FBrowser_范围"]
+  },
+  {
+data type": "文本型""method name": "离屏渲染_IME取消组合",
+data type": "文本型""comment": "英文名：ImeCancelComposition \n说明：Cancels the existing composition and discards the composition node contents without applying them. \nSee comments on ImeSetComposition for usage. This method is only used when window rendering is disabled."
+  },
+  {
+ameter name": "relative_cursor_pos""method name": "离屏渲染_拖动进入",
+ameter name": "relative_cursor_pos""comment": "英文名：DragTargetDragEnter \n说明：Call this method when the user drags the mouse into the web view (before calling DragTargetDragOver/DragTargetLeave/DragTargetDrop). \n|drag_data| should not contain file contents as this type of data is not allowed to be dragged into the web view.\n File contents can be removed using CefDragData::ResetFileContents (for example, if |drag_data| comes from CefRenderHandler::StartDragging). \nThis method is only used when window rendering is disabled.",
+ameter name": "relative_cursor_pos""parameters": [
+   {
+"parameter name": "拖拽数据",
+"comment": "drag_data",
+"data type": "类_FBrowser_拖拽数据"
+   },
+   {
+"parameter name": "鼠标事件",
+"data type": "FBrowser_鼠标事件"
+   },
+   {
+"parameter name": "拖动操作类型",
+"comment": "参考：拖动操作.xxxx",
+"data type": "整数"
+   }
+ameter name": "relative_cursor_pos"]
+  },
+  {
+comment": "参考：拖动操作.xxxx""method name": "离屏渲染_拖动移动",
+comment": "参考：拖动操作.xxxx""comment": "英文名：DragTargetDragOver \n说明：Call this method each time the mouse is moved across the web view during a drag operation (after calling DragTargetDragEnter and before calling DragTargetDragLeave/DragTargetDrop). \nThis method is only used when window rendering is disabled.",
+comment": "参考：拖动操作.xxxx""parameters": [
+   {
+"parameter name": "鼠标事件",
+"data type": "FBrowser_鼠标事件"
+   },
+   {
+"parameter name": "拖动操作类型",
+"comment": "参考：拖动操作.xxxx",
+"data type": "整数"
+   }
+comment": "参考：拖动操作.xxxx"]
+  },
+  {
+ameter name": "鼠标事件""method name": "离屏渲染_拖动离开",
+ameter name": "鼠标事件""comment": "英文名：DragTargetDragLeave \n说明：Call this method when the user drags the mouse out of the web view (after calling DragTargetDragEnter). \nThis method is only used when window rendering is disabled."
+  },
+  {
+omment": "参考：拖动操作.xxxx""parameters": [
+"method name": "离屏渲染_拖动放下",
+omment": "参考：拖动操作.xxxx""parameters": [
+"comment": "英文名：DragTargetDrop \n说明：Call this method when the user completes the drag operation by dropping the object onto the web view (after calling DragTargetDragEnter).\nThe object being dropped is |drag_data|, given as an argument to the previous DragTargetDragEnter call. \nThis method is only used when window rendering is disabled.",
+omment": "参考：拖动操作.xxxx""parameters": [
+"parameters": [
+   {
+"parameter name": "鼠标事件",
+"data type": "FBrowser_鼠标事件"
+   }
+omment": "参考：拖动操作.xxxx""parameters": [
+]
+  },
+  {
+ata type": "FBrowser_范围""parameters": [
+"method name": "离屏渲染_拖动结束位置",
+ata type": "FBrowser_范围""parameters": [
+"comment": "英文名：DragSourceEndedAt \n说明：Call this method when the drag operation started by a CefRenderHandler::StartDragging call has ended either in a drop or by being cancelled. \n|x| and |y| are mouse coordinates relative to the upper-left corner of the view. \nIf the web view is both the drag source and the drag target then all DragTarget* methods should be called before DragSource* mthods. \nThis method is only used when window rendering is disabled.",
+ata type": "FBrowser_范围""parameters": [
+"parameters": [
+   {
+"parameter name": "横坐标",
+"comment": "x",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "y",
+"data type": "整数"
+   },
+   {
+"parameter name": "拖动操作类型",
+"comment": "参考：拖动操作.xxxxx",
+"data type": "整数"
+   }
+ata type": "FBrowser_范围""parameters": [
+]
+  },
+  {
+"method name": "离屏渲染_拖动系统结束",
+"comment": "英文名：DragSourceSystemDragEnded \n说明：Call this method when the drag operation started by a CefRenderHandler::StartDragging call has completed. \nThis method may be called immediately without first calling DragSourceEndedAt to cancel a drag operation. \nIf the web view is both the drag source and the drag target then all DragTarget* methods should be called before DragSource* mthods. \nThis method is only used when window rendering is disabled."
+  },
+  {
+"method name": "清理缓存",
+"comment": "非cef自带功能，FBrowser特有内核实现功能，\n清理当前浏览器缓存，支持占用状态下清理appcache,cache_storage,cookies,indexeddb,local_storage,service_workers,websql；\n注：如果是独立缓存又采用了单进程模式清理无效,因为独立缓存是不能使用单进程模式的，调试状态使用单进程模式的请注意，可以编译出来进行测试，或调试也不用单进程模式",
+"parameters": [
+   {
+"parameter name": "源地址",
+"comment": "留空则为当前origin域，前面必须含http(s)，根域名不能包含网址后的路径。例如：\"https://www.baidu.com/s?ie=utf-8&f=8\"则填\"https://www.baidu.com",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "清理对象",
+"comment": "参考：清理缓存.xxxx    要清理什么缓存，可单个单个清理，也可一起清理，多个模式，用\"位或\"添加。例如：位或 (#清理缓存_Appcache, #清理缓存_Cookies，#清理缓存_LocalStorage)",
+"data type": "长整数",
+"@默认值": "清理缓存.全部"
+   },
+   {
+"parameter name": "存储类型",
+"comment": "参考：缓存类型.xxxx    要清理缓存的类型",
+"data type": "长整数",
+"@默认值": "缓存类型.全部"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_清理缓存回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+"method name": "设置代理",
+"comment": "设置当前浏览器代理，在\"浏览器_即将导航\"或\"浏览器_创建完毕\"事件中设置，也可在其他地方设置，但刷新后才会生效；\n配合独立缓存一起使用设置的代理也会成为独立，否则还是全局，如果需要认证则需要设置账号密码；\n不支持带账号密码的S5代理，如要使用带账号密码的S5代理，请使用“VIP_高级_设置代理”\n注意：因为设置代理利用的首选项功能，如果启用了保留用户首选项，关闭的时候就要使用清理代理功能，否则可能再次打开浏览器还是使用的之前的代理，但又未手动设置账号密码或代理已经关闭而导致代理失败网页无法显示",
+"parameters": [
+   {
+"parameter name": "代理地址",
+"comment": "要区分大小写，不要有空格，否则地址错误将会设置失败",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代理账号",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+ }"method name": "清空代理"
+  },
+  {
+}"method name": "取主填表框架",
+}"comment": "英文名：GetMainFrame 说明：Returns the main (top-level) frame for the browser window.只能在主进程中使用",
+}"data type": "类_FBrowser_填表框架",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取焦点填表框架",
+}"comment": "英文名：GetFocusedFrame 说明：Returns the focused frame for the browser window.",
+}"data type": "类_FBrowser_填表框架",
+}"@禁止流程检查": "真"
+  },
+  {
+"method name": "取填表框架_ID",
+"comment": "英文名：GetFrame 说明：必须使用取框架ID取出的ID标识，ID错误会导致返回值为空，用类的是否为空判断，类为空而执行操作会导致奔溃",
+"data type": "类_FBrowser_填表框架",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "ID",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "取填表框架_名称",
+data type": "文本型""comment": "英文名：GetFrame 说明：必须使用取框架名称取出的框架名，名称会导致返回值为空，用类的是否为空判断，类为空而执行操作会导致奔溃.",
+data type": "文本型""data type": "类_FBrowser_填表框架",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "取开发者DOM",
+"data type": "类_FBrowserVIP_开发者DOM",
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "取额外数据",
+"data type": "类_FBrowser_字典值",
+"@禁止流程检查": "真"
+  },
+  {
+hod name": "取额外数据""method name": "取主浏览器",
+hod name": "取额外数据""comment": "取出当前浏览器的主(父)浏览，如果不存在或者已经关闭将返回空",
+hod name": "取额外数据""data type": "类_FBrowser_浏览器",
+hod name": "取额外数据""@禁止流程检查": "真"
+  },
+  {
+hod name": "取额外数据""method name": "取VIP控制器",
+hod name": "取额外数据""comment": "VIP功能，需赞助后才可使用",
+hod name": "取额外数据""data type": "类_FBrowserVIP_控制器",
+hod name": "取额外数据""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取窗口运行风格",
+
+"data type": "窗口运行风格",
+
+"@禁止流程检查": "真"
+  }
+}]
+ },
+ {
+@禁止流程检查": "真""class name": "类_FBrowser_框架",
+@禁止流程检查": "真""base class": "类_FBrowser_基础框架",
+@禁止流程检查": "真""@输出名": "\"FBroFrame\"",
+@禁止流程检查": "真""methods": [
+  {
+禁止流程检查": "真""base class": "类_FBrowser_基础框架""method name": "撤销",
+禁止流程检查": "真""base class": "类_FBrowser_基础框架""comment": "英文名:Undo 说明：Execute chax in this frame. "
+  },
+  {
+od name": "取额外数据""@禁止流程检查": "真""method name": "恢复",
+od name": "取额外数据""@禁止流程检查": "真""comment": "英文名:Redo 说明：Execute redo in this frame "
+  },
+  {
+止流程检查": "真""base class": "类_FBrowser_基础框架""comment": "英文名:Undo 说明：Execute chax in this frame. ""method name": "剪切",
+止流程检查": "真""base class": "类_FBrowser_基础框架""comment": "英文名:Undo 说明：Execute chax in this frame. ""comment": "英文名:Cut 说明： Execute cut in this frame."
+  },
+  {
+name": "取额外数据""method name": "取主浏览器""method name": "复制",
+name": "取额外数据""method name": "取主浏览器""comment": "英文名:Copy 说明：  Execute cut in this frame."
+  },
+  {
+d name": "取额外数据""@禁止流程检查": "真""comment": "英文名:Redo 说明：Execute redo in this frame ""method name": "粘贴",
+d name": "取额外数据""@禁止流程检查": "真""comment": "英文名:Redo 说明：Execute redo in this frame ""comment": "英文名:Paste 说明：Execute paste in this frame. "
+  },
+  {
+od name": "取额外数据""data type": "类_FBrowserVIP_控制器""method name": "删除",
+od name": "取额外数据""data type": "类_FBrowserVIP_控制器""comment": "英文名:Delete 说明：Execute delete in this frame. "
+  },
+  {
+d name": "取额外数据""@禁止流程检查": "真""comment": "英文名:Redo 说明：Execute redo in this frame ""method name": "全选",
+d name": "取额外数据""@禁止流程检查": "真""comment": "英文名:Redo 说明：Execute redo in this frame ""comment": "英文名:SelectAll 说明：Execute select all in this frame."
+  },
+  {
+comment": "英文名：GetFrame 说明：必须使用取框架ID取出的ID标识，ID错误会导致返回值为空，用类的是否为空判断，类为空而执行操作会导致奔溃""method name": "源码视图",
+comment": "英文名：GetFrame 说明：必须使用取框架ID取出的ID标识，ID错误会导致返回值为空，用类的是否为空判断，类为空而执行操作会导致奔溃""comment": "英文名:ViewSource  说明：Save this frame's HTML source to a temporary file and open it in the default text viewing application."
+  },
+  {
+}"method name": "载入地址",
+}"comment": "英文名:LoadURL 说明：Load the specified |url| ",
+}"parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "取源码_异步",
+"comment": "英文名:GetSource 说明：异步取出当前框架源码，返回源码在回调函数中获取\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+"parameters": [
+   {
+"parameter name": "字符串回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_字符串回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+rowser_事件智能指针"method name": "取文本_异步",
+rowser_事件智能指针"comment": "英文名:GetText 说明：异步取出当前框架文本，返回文本在回调函数中获取\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+rowser_事件智能指针"parameters": [
+   {
+"parameter name": "字符串回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_字符串回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+rowser_事件智能指针]
+  },
+  {
+ }"method name": "载入请求",
+ }"comment": "英文名：LoadRequest",
+ }"parameters": [
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   }
+ }]
+  },
+  {
+comment": "英文名:GetSource 说明：异步取出当前框架源码，返回源码在回调函数中获取\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；""method name": "发送进程消息",
+comment": "英文名:GetSource 说明：异步取出当前框架源码，返回源码在回调函数中获取\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；""comment": "英文名：SendProcessMessage",
+comment": "英文名:GetSource 说明：异步取出当前框架源码，返回源码在回调函数中获取\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；""parameters": [
+   {
+"parameter name": "消息类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "进程消息",
+"data type": "类_FBrowser_进程消息"
+   }
+comment": "英文名:GetSource 说明：异步取出当前框架源码，返回源码在回调函数中获取\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；"]
+  },
+  {
+
+"method name": "取V8环境",
+
+"comment": "GetV8Context，只能在渲染进程中调用",
+
+"data type": "类_FBrowser_V8环境",
+
+"@禁止流程检查": "真"
+  },
+  {
+rowserVIP_开发者DOM"method name": "取父框架",
+rowserVIP_开发者DOM"comment": "GetParent",
+rowserVIP_开发者DOM"data type": "类_FBrowser_框架",
+rowserVIP_开发者DOM"@禁止流程检查": "真"
+  },
+  {
+}"method name": "访问DOM对象",
+}"comment": "VisitDOM，只能在渲染进程中调用\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+}"parameters": [
+   {
+"parameter name": "DOM回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_DOM回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+
+"method name": "创建URL请求",
+
+"comment": "使用当前环境创建URL请求",
+
+"parameters": [
+   {
+"parameter name": "请求",
+"comment": "要请求的数据，用于设置请求地址，类型等参数",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "URL请求事件",
+"comment": "获取数据和状态的异步回调。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_URL请求事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "标识",
+"comment": "标识，传递给事件的标识，执行请求触发的事件的标识参数",
+"data type": "长整数",
+"@默认值": "0"
+   }
+
+]
+  }
+@禁止流程检查": "真"]
+ },
+ {
+thod name": "创建URL请求""class name": "类_FBrowser_命令行",
+thod name": "创建URL请求""@输出名": "\"FBroCommandLine\"",
+thod name": "创建URL请求""@全局类": "真",
+thod name": "创建URL请求""methods": [
+  {
+
+"method name": "FBrowser_命令行_创建",
+
+"static": true,
+
+"data type": "类_FBrowser_命令行",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "FBrowser_命令行_取全局",
+}"static": true,
+}"data type": "类_FBrowser_命令行",
+}"@禁止流程检查": "真"
+  },
+  {
+"static": true"method name": "是否为空",
+"static": true"data type": "逻辑型",
+"static": true"@禁止流程检查": "真"
+  },
+  {
+"method name": "置空",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+}"method name": "是否有效",
+}"comment": "英语名：IsValid 说明：当前对象是否为空",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+static": true"data type": "逻辑型""method name": "是否只读",
+static": true"data type": "逻辑型""comment": "英语名：IsReadOnly 说明：",
+static": true"data type": "逻辑型""data type": "逻辑型",
+static": true"data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+IsReadOnly 说明："method name": "取字符串",
+IsReadOnly 说明："comment": "英语名：GetCommandLineString 说明：",
+IsReadOnly 说明："data type": "文本型",
+IsReadOnly 说明："@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取程序",
+
+"comment": "英语名：GetProgram 说明：取出执行程序名，包含路径",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "置程序",
+}"comment": "英语名：SetProgram",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "程序名",
+"comment": "带路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"comment": "英语名：IsValid 说明：当前对象是否为空""method name": "是否存在项",
+"comment": "英语名：IsValid 说明：当前对象是否为空""comment": "英语名：HasSwitches",
+"comment": "英语名：IsValid 说明：当前对象是否为空""data type": "逻辑型",
+"comment": "英语名：IsValid 说明：当前对象是否为空""@禁止流程检查": "真"
+  },
+  {
+tatic": true"data type": "逻辑型""data type": "逻辑型""method name": "是否存在某项",
+tatic": true"data type": "逻辑型""data type": "逻辑型""comment": "英语名：HasSwitch 说明：name前面不用加\"--\"",
+tatic": true"data type": "逻辑型""data type": "逻辑型""data type": "逻辑型",
+tatic": true"data type": "逻辑型""data type": "逻辑型""@禁止流程检查": "真",
+tatic": true"data type": "逻辑型""data type": "逻辑型""parameters": [
+   {
+"parameter name": "项目名",
+"data type": "文本型"
+   }
+tatic": true"data type": "逻辑型""data type": "逻辑型"]
+  },
+  {
+"comment": "英语名：SetProgram""method name": "取项值",
+"comment": "英语名：SetProgram""comment": "英语名：GetSwitchValue 说明：name前面不用加\"--\"",
+"comment": "英语名：SetProgram""data type": "文本型",
+"comment": "英语名：SetProgram""@禁止流程检查": "真",
+"comment": "英语名：SetProgram""parameters": [
+   {
+"parameter name": "项目名",
+"data type": "文本型"
+   }
+"comment": "英语名：SetProgram"]
+  },
+  {
+adOnly 说明："method name": "取字符串""method name": "置值",
+adOnly 说明："method name": "取字符串""comment": "英语名：AppendSwitch 说明：value默认前面要加\"--\"",
+adOnly 说明："method name": "取字符串""parameters": [
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+adOnly 说明："method name": "取字符串"]
+  },
+  {
+"parameters": [
+"method name": "置项值",
+"parameters": [
+"comment": "英语名：AppendSwitchWithValue 说明：name默认前面要加\"--\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "项目名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "项目值",
+"data type": "文本型"
+   }
+"parameters": [
+]
+  },
+  {
+Only 说明："method name": "取字符串"]"method name": "是否存在额外参数",
+Only 说明："method name": "取字符串"]"comment": "英语名：HasArguments 说明：判断是否存在额外参数 Get the remaining command line arguments",
+Only 说明："method name": "取字符串"]"data type": "逻辑型",
+Only 说明："method name": "取字符串"]"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取额外参数",
+
+"comment": "英语名：GetArguments 说明：取出额外参数  Add an argument to the end of the command line",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"@禁止流程检查": "真""method name": "置额外参数",
+
+"@禁止流程检查": "真""comment": "英语名：AppendArgument 说明：设置额外参数 Add an argument to the end of the command line",
+
+"@禁止流程检查": "真""@禁止流程检查": "真",
+
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "参数文本",
+"data type": "文本型"
+   }
+
+"@禁止流程检查": "真"]
+  },
+  {
+comment": "英语名：SetProgram""@禁止流程检查": "真""method name": "插入值",
+comment": "英语名：SetProgram""@禁止流程检查": "真""comment": "英语名：PrependWrapper 说明：在当前命令之间插入值 Insert a command before the current command. Common for debuggers, like \"valgrind\" or \"gdb --args\".",
+comment": "英语名：SetProgram""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+comment": "英语名：SetProgram""@禁止流程检查": "真"]
+  },
+  {
+data type": "文本型""method name": "启用单进程模式",
+data type": "文本型""comment": "命令行--single-process，只为了方便多进程模拟调试，仅调试模式下有用，单进程模式存在各种问题，不建议发布软件使用"
+  },
+  {
+}"method name": "启用摄像头",
+}"comment": "命令行enable-media-stream,允许浏览使用摄像头"
+  },
+  {
+}"method name": "启用跨框架操作模式",
+}"comment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性"
+  },
+  {
+"parameters": [
+"method name": "启用录音",
+"parameters": [
+"comment": "命令行：enable-speech-input,允许浏览使用话筒"
+  },
+  {
+ameter name": "参数文本""method name": "启用自动播放",
+ameter name": "参数文本""comment": "命令行：autoplay-poliey，支持绝对部分视频网站自动播放视频，各别有限制的除外"
+  },
+  {
+parameters": [
+"comment": "命令行：enable-speech-input,允许浏览使用话筒""method name": "启用无头模式",
+parameters": [
+"comment": "命令行：enable-speech-input,允许浏览使用话筒""comment": "命令行：--headless，无头模式"
+  },
+  {
+"comment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口",
+"comment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""comment": "命令行：--remote-debugging-port",
+"comment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""parameters": [
+   {
+"parameter name": "端口号",
+"data type": "整数"
+   }
+"comment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性"]
+  },
+  {
+"comment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "禁用GPU",
+"comment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""comment": "禁用后，网页渲染将由CPU处理，会提高CPU占用，不兼容的显卡只能禁用GPU否者网页可能渲染失败"
+  },
+  {
+comment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""comment": "禁用后，网页渲染将由CPU处理，会提高CPU占用，不兼容的显卡只能禁用GPU否者网页可能渲染失败""method name": "禁用GPU缓存",
+comment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""comment": "禁用后，网页渲染将由CPU处理，会提高CPU占用，不兼容的显卡只能禁用GPU否者网页可能渲染失败""comment": "禁止GPU创建缓存文件及文件夹"
+  },
+  {
+meter name": "参数文本""comment": "命令行：autoplay-poliey，支持绝对部分视频网站自动播放视频，各别有限制的除外""method name": "忽略GPU禁用清单",
+meter name": "参数文本""comment": "命令行：autoplay-poliey，支持绝对部分视频网站自动播放视频，各别有限制的除外""comment": "内核内置不兼容部分显卡，设置后忽略内核这个设置，能有效解决部分显卡不兼容的问题，但因为部分显卡本身太老或驱动问题，忽略了也没用，只有禁用GPU"
+  },
+  {
+U创建缓存文件及文件夹"method name": "设置全局代理",
+U创建缓存文件及文件夹"comment": "设置全局代理，只能设置一个，如果需要认证则需要设置账号密码；不支持带账号密码的S5代理，如要使用带账号密码的S5代理，请使用“VIP_高级_设置全局代理”",
+U创建缓存文件及文件夹"parameters": [
+   {
+"parameter name": "代理地址",
+"comment": "要区分大小写，不要有空格，否则地址错误将会设置失败",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代理账号",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+U创建缓存文件及文件夹]
+  },
+  {
+ment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口""method name": "VIP_高级_设置全局代理",
+ment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口""comment": "设置全局代理，只能设置一个，如果需要认证则需要设置账号密码；带账号密码的S5代理，需赞助会员才可使用",
+ment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口""parameters": [
+   {
+"parameter name": "代理地址",
+"comment": "要区分大小写，不要有空格，否则地址错误将会设置失败",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代理账号",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "关闭S5错误提示",
+"comment": "关闭S5代理错误弹窗提示，默认为假，为真关闭提示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口"]
+  },
+  {
+ment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口""method name": "禁用代理",
+ment": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口""comment": "命令行：--no-proxy-server，禁止使用代理和系统的自动检测代理功能"
+  }
+thod name": "创建URL请求"]
+ },
+ {
+ }"class name": "类_FBrowser_请求环境",
+ }"@输出名": "\"FBroRequestContext\"",
+ }"@全局类": "真",
+ }"methods": [
+  {
+ent": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口""comment": "命令行：--no-proxy-server，禁止使用代理和系统的自动检测代理功能""method name": "FBrowser_请求环境_取全局",
+ent": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口""comment": "命令行：--no-proxy-server，禁止使用代理和系统的自动检测代理功能""static": true,
+ent": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口""comment": "命令行：--no-proxy-server，禁止使用代理和系统的自动检测代理功能""data type": "类_FBrowser_请求环境",
+ent": "跨框架操作，解除框架和框架直接不能直接操作的限制，存在不安全性""method name": "设置远程调试端口""comment": "命令行：--no-proxy-server，禁止使用代理和系统的自动检测代理功能""@禁止流程检查": "真"
+  },
+  {
+ameter name": "关闭S5错误提示""method name": "是否为空",
+ameter name": "关闭S5错误提示""data type": "逻辑型",
+ameter name": "关闭S5错误提示""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置空",
+
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+meter name": "关闭S5错误提示""@禁止流程检查": "真""method name": "是否为全局",
+meter name": "关闭S5错误提示""@禁止流程检查": "真""data type": "逻辑型",
+meter name": "关闭S5错误提示""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+"method name": "创建",
+"parameters": [
+   {
+"parameter name": "请求环境配置",
+"data type": "FBrowser_请求环境配置"
+   }
+]
+  },
+  {
+"method name": "创建_其他",
+"parameters": [
+   {
+"parameter name": "其他请求环境",
+"data type": "类_FBrowser_请求环境"
+   }
+]
+  },
+  {
+rowser_请求环境"method name": "是否相同",
+rowser_请求环境"data type": "逻辑型",
+rowser_请求环境"@禁止流程检查": "真",
+rowser_请求环境"parameters": [
+   {
+"parameter name": "其他请求环境",
+"data type": "类_FBrowser_请求环境"
+   }
+rowser_请求环境]
+  },
+  {
+
+"method name": "是否为分享",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "其他请求环境",
+"data type": "类_FBrowser_请求环境"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "取缓存路径",
+"parameters": [
+"data type": "文本型",
+"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+owser_请求环境"parameters": [
+"method name": "取Cookie管理器",
+owser_请求环境"parameters": [
+"data type": "类_FBrowser_Cookie管理器",
+owser_请求环境"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+owser_请求环境"data type": "逻辑型""method name": "置首选项",
+owser_请求环境"data type": "逻辑型""comment": "SetPreference",
+owser_请求环境"data type": "逻辑型""data type": "文本型",
+owser_请求环境"data type": "逻辑型""@禁止流程检查": "真",
+owser_请求环境"data type": "逻辑型""parameters": [
+   {
+"parameter name": "设置值",
+"data type": "类_FBrowser_值"
+   },
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "错误文本",
+"comment": "返回错误文本",
+"data type": "文本型"
+   }
+owser_请求环境"data type": "逻辑型"]
+  },
+  {
+owser_请求环境"parameters": [
+"method name": "VIP_高级_载入插件路径",
+owser_请求环境"parameters": [
+"comment": "VIP功能，需赞助后才能使用，异步载入已经解压的插件，在全局环境中即为全局，在独立环境中即为独立，载入后未隐藏模式插件管理页不会展示出来",
+owser_请求环境"parameters": [
+"@禁止流程检查": "真",
+owser_请求环境"parameters": [
+"parameters": [
+   {
+"parameter name": "插件路径",
+"comment": "要载入的插件所在路径",
+"data type": "文本型"
+   }
+owser_请求环境"parameters": [
+]
+  },
+  {
+rowser_请求环境"method name": "VIP_高级_安装CRX插件包",
+rowser_请求环境"comment": "VIP功能，需赞助后才能使用，异步安装CRX插件包，在全局环境中即为全局，在独立环境中即为独立，安装完成后会在插件管理页中展示出来，\n注意：CRX安装没有载入插件路径效率高，所以会概率性发生网页已经打开了但是插件还未完全安装完，如已安装完成，网页重新刷新即可生效",
+rowser_请求环境"@禁止流程检查": "真",
+rowser_请求环境"parameters": [
+   {
+"parameter name": "CRX文件路径",
+"comment": "要安装的CRX插件包，需要完整的路径+文件名",
+"data type": "文本型"
+   }
+rowser_请求环境]
+  },
+  {
+ameter name": "关闭S5错误提示""method name": "VIP_高级_卸载插件",
+ameter name": "关闭S5错误提示""comment": "VIP功能，需赞助后才能使用,卸载加载的插件，不要在插件事件里面使用可能会出现异常或卸载失败",
+ameter name": "关闭S5错误提示""parameters": [
+   {
+"parameter name": "插件ID",
+"data type": "文本型"
+   }
+ameter name": "关闭S5错误提示"]
+  },
+  {
+ameter name": "关闭S5错误提示""method name": "VIP_高级_取插件地址",
+ameter name": "关闭S5错误提示""comment": "VIP功能，需赞助后才能使用,卸载加载的插件，不要在插件事件里面使用可能会出现异常或卸载失败",
+ameter name": "关闭S5错误提示""data type": "文本型",
+ameter name": "关闭S5错误提示""@禁止流程检查": "真",
+ameter name": "关闭S5错误提示""parameters": [
+   {
+"parameter name": "插件ID",
+"data type": "文本型"
+   }
+ameter name": "关闭S5错误提示"]
+  },
+  {
+ameter name": "设置值""method name": "VIP_高级_取插件路径",
+ameter name": "设置值""comment": "VIP功能，需赞助后才能使用,卸载加载的插件，不要在插件事件里面使用可能会出现异常或卸载失败",
+ameter name": "设置值""data type": "文本型",
+ameter name": "设置值""@禁止流程检查": "真",
+ameter name": "设置值""parameters": [
+   {
+"parameter name": "插件ID",
+"data type": "文本型"
+   }
+ameter name": "设置值"]
+  },
+  {
+data type": "文本型""method name": "VIP_高级_取插件名",
+data type": "文本型""comment": "VIP功能，需赞助后才能使用,卸载加载的插件，不要在插件事件里面使用可能会出现异常或卸载失败",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "插件ID",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  }
+ }]
+ },
+ {
+data type": "文本型""class name": "类_FBrowser_图片",
+data type": "文本型""@输出名": "\"FBroImage\"",
+data type": "文本型""methods": [
+  {
+"method name": "是否为空",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""method name": "置空",
+data type": "文本型""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+wser_请求环境"parameters": [
+"@禁止流程检查": "真""method name": "取像素宽度",
+wser_请求环境"parameters": [
+"@禁止流程检查": "真""comment": "英文名：GetWidth 说明:Returns the image width in density independent pixel (DIP) units.",
+wser_请求环境"parameters": [
+"@禁止流程检查": "真""data type": "整数",
+wser_请求环境"parameters": [
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+ type": "文本型""method name": "置空""method name": "取像素高度",
+ type": "文本型""method name": "置空""comment": "英文名：GetHeight 说明:Returns the image height in density independent pixel (DIP) units",
+ type": "文本型""method name": "置空""data type": "整数",
+ type": "文本型""method name": "置空""@禁止流程检查": "真"
+  },
+  {
+meter name": "关闭S5错误提示""@禁止流程检查": "真""method name": "取图片信息",
+meter name": "关闭S5错误提示""@禁止流程检查": "真""comment": "英文名：GetRepresentationInfo 说明： Returns information for the representation that most closely matches |scale_factor|",
+meter name": "关闭S5错误提示""@禁止流程检查": "真""data type": "逻辑型",
+meter name": "关闭S5错误提示""@禁止流程检查": "真""@禁止流程检查": "真",
+meter name": "关闭S5错误提示""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "比例因子",
+"comment": "设置比例因子",
+"data type": "小数"
+   },
+   {
+"parameter name": "实际比例",
+"comment": "返回实际比例",
+"data type": "小数类"
+   },
+   {
+"parameter name": "宽度",
+"comment": "返回宽度",
+"data type": "整数类"
+   },
+   {
+"parameter name": "高度",
+"comment": "返回高度",
+"data type": "整数类"
+   }
+meter name": "关闭S5错误提示""@禁止流程检查": "真"]
+  },
+  {
+wser_请求环境"parameters": [
+"@禁止流程检查": "真""method name": "取图片数据_BMP",
+wser_请求环境"parameters": [
+"@禁止流程检查": "真""comment": "英文名：GetAsBitmap",
+wser_请求环境"parameters": [
+"@禁止流程检查": "真""data type": "类_FBrowser_字节集",
+wser_请求环境"parameters": [
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "比例因子",
+"comment": "设置比例因子",
+"data type": "小数"
+   },
+   {
+"parameter name": "颜色类型",
+"comment": "参考：颜色类型.xxx",
+"data type": "整数"
+   },
+   {
+"parameter name": "透明类型",
+"comment": "参考：透明类型.xxx",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "返回宽度",
+"data type": "整数类"
+   },
+   {
+"parameter name": "高度",
+"comment": "返回高度",
+"data type": "整数类"
+   }
+wser_请求环境"parameters": [
+"@禁止流程检查": "真"]
+  },
+  {
+GetAsBitmap"method name": "取图片数据_JPG",
+GetAsBitmap"data type": "类_FBrowser_字节集",
+GetAsBitmap"parameters": [
+   {
+"parameter name": "比例因子",
+"comment": "设置比例因子",
+"data type": "小数"
+   },
+   {
+"parameter name": "质量",
+"comment": "0-100，100为最高",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "返回宽度",
+"data type": "整数类"
+   },
+   {
+"parameter name": "高度",
+"comment": "返回高度",
+"data type": "整数类"
+   }
+GetAsBitmap]
+  },
+  {
+comment": "返回高度""method name": "取图片数据_PNG",
+comment": "返回高度""data type": "类_FBrowser_字节集",
+comment": "返回高度""parameters": [
+   {
+"parameter name": "比例因子",
+"comment": "设置比例因子",
+"data type": "小数"
+   },
+   {
+"parameter name": "透明",
+"comment": "0-100，100为最高",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "返回宽度",
+"data type": "整数类"
+   },
+   {
+"parameter name": "高度",
+"comment": "返回高度",
+"data type": "整数类"
+   }
+comment": "返回高度"]
+  }
+data type": "文本型"]
+ },
+ {
+omment": "返回高度""data type": "类_FBrowser_字节集""class name": "类_FBrowser_请求",
+omment": "返回高度""data type": "类_FBrowser_字节集""@输出名": "\"FBroRequest\"",
+omment": "返回高度""data type": "类_FBrowser_字节集""methods": [
+  {
+"method name": "是否为空",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "置空",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+
+"method name": "创建"
+  },
+  {
+
+"method name": "是否只读",
+
+"comment": "英文名：IsReadOnly",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+"comment": "英文名：IsReadOnly""method name": "取地址",
+"comment": "英文名：IsReadOnly""comment": "英文名：GetURL",
+"comment": "英文名：IsReadOnly""data type": "文本型",
+"comment": "英文名：IsReadOnly""@禁止流程检查": "真"
+  },
+  {
+GetAsBitmap"method name": "置地址",
+GetAsBitmap"comment": "英文名：SetURL",
+GetAsBitmap"parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   }
+GetAsBitmap]
+  },
+  {
+tAsBitmap]"method name": "取类型",
+tAsBitmap]"comment": "英文名：GetMethod 说明：get or post",
+tAsBitmap]"data type": "文本型",
+tAsBitmap]"@禁止流程检查": "真"
+  },
+  {
+comment": "设置比例因子""method name": "置类型",
+comment": "设置比例因子""comment": "英文名：SetMethod",
+comment": "设置比例因子""parameters": [
+   {
+"parameter name": "类型",
+"data type": "文本型"
+   }
+comment": "设置比例因子"]
+  },
+  {
+ameter name": "高度""method name": "置来路",
+ameter name": "高度""comment": "英文名：SetReferrer",
+ameter name": "高度""parameters": [
+   {
+"parameter name": "来路地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "来路类型",
+"comment": "参考：来路策略.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ameter name": "高度"]
+  },
+  {
+"method name": "取来路地址",
+"comment": "英文名：GetReferrerURL",
+"data type": "文本型",
+"@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""method name": "取来路类型",
+data type": "文本型""comment": "英文名：GetReferrerPolicy 说明：",
+data type": "文本型""result comment": "参考：来路策略.",
+data type": "文本型""data type": "整数",
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+"method name": "取POST数据",
+"comment": "英文名：GetPostData",
+"data type": "类_FBrowser_POST数据",
+"@禁止流程检查": "真"
+  },
+  {
+ata type": "文本型""data type": "整数""method name": "置POST数据",
+ata type": "文本型""data type": "整数""comment": "英文名：SetPostData",
+ata type": "文本型""data type": "整数""parameters": [
+   {
+"parameter name": "POST数据",
+"data type": "类_FBrowser_POST数据"
+   }
+ata type": "文本型""data type": "整数"]
+  },
+  {
+
+"method name": "取协议头数据",
+
+"comment": "英文名：GetHeaderMap 说明： Get the header values. Will not include the Referer value if any.",
+
+"data type": "FBrowser_双文本数组",
+
+"@禁止流程检查": "真"
+  },
+  {
+comment": "设置比例因子""method name": "删除协议头数据",
+comment": "设置比例因子""comment": "部分协议头不能删除，删除后可通过第三方工具抓包确认，开发者工具显示的并不一定是删除后数据",
+comment": "设置比例因子""parameters": [
+   {
+"parameter name": "关键字",
+"comment": "要删除协议头的key",
+"data type": "文本型"
+   }
+comment": "设置比例因子"]
+  },
+  {
+}"method name": "置协议头数据",
+}"comment": "英文名：SetHeaderMap",
+}"parameters": [
+   {
+"parameter name": "头数据",
+"data type": "FBrowser_双文本"
+   }
+}]
+  },
+  {
+SetHeaderMap"method name": "置协议头数据_数组",
+SetHeaderMap"comment": "英文名：SetHeaderMap ",
+SetHeaderMap"parameters": [
+   {
+"parameter name": "头数据",
+"data type": "FBrowser_双文本数组"
+   },
+   {
+"parameter name": "删除其他数据",
+"comment": "为真设置的时候将会删除其他头数据，只保留当前设置的值，反之保留其他头数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+SetHeaderMap]
+  },
+  {
+
+"method name": "取协议头_名称",
+
+"comment": "英文名：GetHeaderByName",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "置协议头_名称",
+ }"comment": "英文名：SetHeaderByName",
+ }"parameters": [
+   {
+"parameter name": "协议名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "覆盖",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+}"method name": "设置",
+}"comment": "英文名：GetHeaderMap",
+}"parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "大写POST或者GET",
+"data type": "文本型"
+   },
+   {
+"parameter name": "POST数据",
+"comment": "类型为POST,此项不能为空",
+"data type": "类_FBrowser_POST数据",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "协议头数据",
+"data type": "FBrowser_双文本",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+ }"method name": "取标识",
+ }"comment": "英文名：GetFlags 说明：",
+ }"result comment": "参考：请求标识.xxx",
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "设置标识",
+
+"comment": "英文名：SetFlags",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"comment": "参考：请求标识.xxx",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"@禁止流程检查": "真""method name": "获取地址_首件cookie",
+}"@禁止流程检查": "真""comment": "英文名：GetFirstPartyForCookies",
+}"@禁止流程检查": "真""data type": "文本型",
+}"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""method name": "设置地址_首件cookie",
+data type": "文本型""comment": "英文名：SetFirstPartyForCookies",
+data type": "文本型""parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ata type": "文本型""comment": "英文名：SetFirstPartyForCookies""method name": "取资源类型",
+ata type": "文本型""comment": "英文名：SetFirstPartyForCookies""comment": "英文名：GetResourceType 说明：",
+ata type": "文本型""comment": "英文名：SetFirstPartyForCookies""result comment": "参考：资源类型.xx",
+ata type": "文本型""comment": "英文名：SetFirstPartyForCookies""data type": "整数",
+ata type": "文本型""comment": "英文名：SetFirstPartyForCookies""@禁止流程检查": "真"
+  },
+  {
+ameter name": "地址""method name": "取过渡类型",
+ameter name": "地址""comment": "英文名：GetTransitionType",
+ameter name": "地址""result comment": "参考：过渡类型.",
+ameter name": "地址""data type": "长整数",
+ameter name": "地址""@禁止流程检查": "真"
+  },
+  {
+}"data type": "整数""method name": "取ID",
+}"data type": "整数""comment": "英文名：GetIdentifier",
+}"data type": "整数""data type": "长整数",
+}"data type": "整数""@禁止流程检查": "真"
+  }
+omment": "返回高度""data type": "类_FBrowser_字节集"]
+ },
+ {
+"data type": "整数""data type": "长整数""class name": "类_FBrowser_POST数据",
+"data type": "整数""data type": "长整数""@输出名": "\"FBroPostData\"",
+"data type": "整数""data type": "长整数""methods": [
+  {
+ameter name": "关键字""method name": "是否为空",
+ameter name": "关键字""data type": "逻辑型",
+ameter name": "关键字""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置空",
+
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+er name": "关键字""method name": "是否为空""method name": "创建"
+  },
+  {
+er name": "关键字""method name": "是否为空""method name": "是否只读",
+er name": "关键字""method name": "是否为空""data type": "逻辑型",
+er name": "关键字""method name": "是否为空""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "是否包含元素",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+omment": "返回高度""data type": "类_FBrowser_字节集""method name": "取元素个数",
+omment": "返回高度""data type": "类_FBrowser_字节集""data type": "整数",
+omment": "返回高度""data type": "类_FBrowser_字节集""@禁止流程检查": "真"
+  },
+  {
+ame": "关键字""method name": "是否为空""method name": "创建""method name": "取元素",
+ame": "关键字""method name": "是否为空""method name": "创建""data type": "类_FBrowser_POST元素数组"
+  },
+  {
+}"method name": "移除元素",
+}"parameters": [
+   {
+"parameter name": "POST元素",
+"data type": "类_FBrowser_POST元素"
+   }
+}]
+  },
+  {
+}"method name": "增加元素",
+}"parameters": [
+   {
+"parameter name": "POST元素",
+"data type": "类_FBrowser_POST元素"
+   }
+}]
+  },
+  {
+}"method name": "移除所有元素"
+  }
+"data type": "整数""data type": "长整数"]
+ },
+ {
+"class name": "类_FBrowser_POST元素",
+"@输出名": "\"FBroHsPostDataElement\"",
+"methods": [
+  {
+rowser_POST元素"method name": "是否为空",
+rowser_POST元素"data type": "逻辑型",
+rowser_POST元素"@禁止流程检查": "真"
+  },
+  {
+rowser_POST元素"method name": "置空",
+rowser_POST元素"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+rowser_POST元素"method name": "创建"
+  },
+  {
+rowser_POST元素"method name": "是否只读",
+rowser_POST元素"data type": "逻辑型",
+rowser_POST元素"@禁止流程检查": "真"
+  },
+  {
+}"method name": "置空数据",
+}"comment": "将数据设置为空，注意这里指针还是存在，只是数据是空",
+}"@禁止流程检查": "真"
+  },
+  {
+"@禁止流程检查": "真""method name": "置数据_文件",
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+"@禁止流程检查": "真"]
+  },
+  {
+owser_POST元素"data type": "逻辑型""method name": "置数据",
+owser_POST元素"data type": "逻辑型""comment": "注意数据编码必须是UTF8，或和网页保持一致，否则中文会乱码",
+owser_POST元素"data type": "逻辑型""parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+owser_POST元素"data type": "逻辑型"]
+  },
+  {
+ser_POST元素"data type": "逻辑型"]"method name": "置数据_文本",
+ser_POST元素"data type": "逻辑型"]"parameters": [
+   {
+"parameter name": "文本数据",
+"data type": "文本型"
+   }
+ser_POST元素"data type": "逻辑型"]]
+  },
+  {
+owser_POST元素"@禁止流程检查": "真""method name": "取类型",
+owser_POST元素"@禁止流程检查": "真""data type": "整数",
+owser_POST元素"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取文件",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "取数据大小",
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取字节集数据",
+
+"comment": "取出字节集数据，注意编码，一般默认为UTF8编码",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "数据大小""method name": "取文本数据",
+ameter name": "数据大小""comment": "取出文本数据，注意编码，一般默认为UTF8编码",
+ameter name": "数据大小""data type": "文本型",
+ameter name": "数据大小""@禁止流程检查": "真",
+ameter name": "数据大小""parameters": [
+   {
+"parameter name": "是否为UTF8",
+"comment": "默认为真，设置为真则当前返回的数据为UTF8数转换为文本，假则直接转换为文本",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "数据大小"]
+  }
+]
+ },
+ {
+r_POST元素"@禁止流程检查": "真""method name": "取类型""class name": "类_FBrowser_进程消息",
+r_POST元素"@禁止流程检查": "真""method name": "取类型""@输出名": "\"FBroProcessMessage\"",
+r_POST元素"@禁止流程检查": "真""method name": "取类型""methods": [
+  {
+"method name": "是否为空",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+"comment": "将数据设置为空，注意这里指针还是存在，只是数据是空""method name": "置空",
+"comment": "将数据设置为空，注意这里指针还是存在，只是数据是空""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+
+"method name": "创建",
+
+"comment": "英文名：Create",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ment": "返回高度""data type": "类_FBrowser_字节集"]"method name": "是否有效",
+ment": "返回高度""data type": "类_FBrowser_字节集"]"comment": "英文名：IsValid",
+ment": "返回高度""data type": "类_FBrowser_字节集"]"data type": "逻辑型",
+ment": "返回高度""data type": "类_FBrowser_字节集"]"@禁止流程检查": "真"
+  },
+  {
+ent": "返回高度""data type": "类_FBrowser_字节集"]"@禁止流程检查": "真""method name": "是否只读",
+ent": "返回高度""data type": "类_FBrowser_字节集"]"@禁止流程检查": "真""comment": "英文名：IsReadOnly",
+ent": "返回高度""data type": "类_FBrowser_字节集"]"@禁止流程检查": "真""data type": "逻辑型",
+ent": "返回高度""data type": "类_FBrowser_字节集"]"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+}"method name": "复制",
+}"comment": "英文名：Copy",
+}"data type": "类_FBrowser_进程消息"
+  },
+  {
+thod name": "复制""method name": "取名称",
+thod name": "复制""comment": "英文名：GetName",
+thod name": "复制""data type": "文本型",
+thod name": "复制""@禁止流程检查": "真"
+  },
+  {
+rowser_进程消息"method name": "取列表值",
+rowser_进程消息"comment": "英文名：GetArgumentList",
+rowser_进程消息"data type": "类_FBrowser_列表值"
+  },
+  {
+
+"method name": "取共享内存数据",
+
+"comment": "英文名：GetSharedMemoryRegion",
+
+"data type": "类_FBrowser_共享内存数据"
+  }
+r_POST元素"@禁止流程检查": "真""method name": "取类型"]
+ },
+ {
+}"class name": "类_FBrowser_任务运行器",
+}"@全局类": "真",
+}"methods": [
+  {
+ass name": "类_FBrowser_任务运行器""method name": "FBrowser_任务运行器_取当前",
+ass name": "类_FBrowser_任务运行器""static": true,
+ass name": "类_FBrowser_任务运行器""data type": "类_FBrowser_任务运行器",
+ass name": "类_FBrowser_任务运行器""@禁止流程检查": "真"
+  },
+  {
+rowser_任务运行器"method name": "FBrowser_任务运行器_取指定线程",
+rowser_任务运行器"static": true,
+rowser_任务运行器"data type": "类_FBrowser_任务运行器",
+rowser_任务运行器"@禁止流程检查": "真",
+rowser_任务运行器"parameters": [
+   {
+"parameter name": "线程ID",
+"data type": "整数"
+   }
+rowser_任务运行器]
+  },
+  {
+rowser_任务运行器"method name": "FBrowser_任务运行器_是否指定线程上调用",
+rowser_任务运行器"static": true,
+rowser_任务运行器"data type": "逻辑型",
+rowser_任务运行器"@禁止流程检查": "真",
+rowser_任务运行器"parameters": [
+   {
+"parameter name": "线程ID",
+"data type": "整数"
+   }
+rowser_任务运行器]
+  },
+  {
+"method name": "FBrowser_任务运行器_投递任务",
+"comment": "注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+"static": true,
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "线程ID",
+"comment": "参考：线程ID.xxx",
+"data type": "整数"
+   },
+   {
+"parameter name": "任务执行回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_任务回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+ }"method name": "FBrowser_任务运行器_投递任务_延迟",
+ }"comment": "注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "线程ID",
+"comment": "参考：线程ID.xxx",
+"data type": "整数"
+   },
+   {
+"parameter name": "延迟时间",
+"comment": "ms",
+"data type": "长整数"
+   },
+   {
+"parameter name": "任务执行回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_任务回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+"method name": "是否为空",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "置空",
+}"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+data type": "整数""method name": "是否相同",
+data type": "整数""data type": "逻辑型",
+data type": "整数""parameters": [
+   {
+"parameter name": "对比值",
+"data type": "类_FBrowser_任务运行器"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "是否为当前线程",
+"data type": "逻辑型"
+  },
+  {
+ta type": "整数"]"method name": "是否为指定线程",
+ta type": "整数"]"data type": "逻辑型",
+ta type": "整数"]"parameters": [
+   {
+"parameter name": "线程ID",
+"data type": "整数"
+   }
+ta type": "整数"]]
+  },
+  {
+}"static": true"method name": "投递任务",
+}"static": true"comment": "注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+}"static": true"data type": "逻辑型",
+}"static": true"@禁止流程检查": "真",
+}"static": true"parameters": [
+   {
+"parameter name": "任务执行回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_任务回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+}"static": true]
+  },
+  {
+ta type": "整数"]"method name": "投递延时任务",
+ta type": "整数"]"comment": "注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+ta type": "整数"]"data type": "逻辑型",
+ta type": "整数"]"@禁止流程检查": "真",
+ta type": "整数"]"parameters": [
+   {
+"parameter name": "延时",
+"comment": "ms",
+"data type": "长整数"
+   },
+   {
+"parameter name": "任务执行回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_任务回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+ta type": "整数"]]
+  }
+}]
+ },
+ {
+ type": "整数"]]"class name": "类_FBrowser_Cookie管理器",
+ type": "整数"]]"@全局类": "真",
+ type": "整数"]]"methods": [
+  {
+"method name": "FBrowser_Cookie管理器_取全局",
+"static": true,
+"data type": "类_FBrowser_Cookie管理器",
+"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "是否为空",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真"
+  },
+  {
+}"@禁止流程检查": "真""method name": "置空",
+}"@禁止流程检查": "真""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+comment": "ms""method name": "取全部Cookie",
+comment": "ms""comment": "英文名：VisitAllCookies 说明：取出全部cookie\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+comment": "ms""data type": "逻辑型",
+comment": "ms""@禁止流程检查": "真",
+comment": "ms""parameters": [
+   {
+"parameter name": "Cookie回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_Cookie回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+comment": "ms"]
+  },
+  {
+data type": "类_FBrowser_事件智能指针""method name": "取地址Cookie",
+data type": "类_FBrowser_事件智能指针""comment": "英文名：VisitUrlCookies 说明：按地址取出cookie\n注意：静态回调和动态回调只能设置一个，优先静态回调有效；采用动态回调可实现回调的动态多态操作，更加灵活；",
+data type": "类_FBrowser_事件智能指针""data type": "逻辑型",
+data type": "类_FBrowser_事件智能指针""@禁止流程检查": "真",
+data type": "类_FBrowser_事件智能指针""parameters": [
+   {
+"parameter name": "地址",
+"comment": "url,注意这里是地址，不是域名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "取全部",
+"comment": "为真会取出全部，为假类型为HTTP的不会取去",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "Cookie回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_Cookie回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+data type": "类_FBrowser_事件智能指针"]
+  },
+  {
+ameter name": "取全部""method name": "置Cookie",
+ameter name": "取全部""comment": "英文名：SetCookie",
+ameter name": "取全部""data type": "逻辑型",
+ameter name": "取全部""parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Cookie数据",
+"data type": "FBrowser_Cookie数据"
+   }
+ameter name": "取全部"]
+  },
+  {
+er name": "取全部""method name": "置Cookie""method name": "删除Cookie",
+er name": "取全部""method name": "置Cookie""comment": "英文名：DeleteCookies",
+er name": "取全部""method name": "置Cookie""data type": "逻辑型",
+er name": "取全部""method name": "置Cookie""parameters": [
+   {
+"parameter name": "地址",
+"comment": "url,为\"\"则删除全部",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Cookie名",
+"comment": "为\"\"则删除全部",
+"data type": "文本型"
+   }
+er name": "取全部""method name": "置Cookie"]
+  },
+  {
+comment": "url,为\"\"则删除全部""method name": "刷新Cookie",
+comment": "url,为\"\"则删除全部""comment": "英文名：FlushStore",
+comment": "url,为\"\"则删除全部""data type": "逻辑型"
+  }
+ type": "整数"]]]
+ },
+ {
+"class name": "类_FBrowser_响应",
+"methods": [
+  {
+"method name": "是否为空",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+ame": "取全部""method name": "置Cookie""method name": "删除Cookie""method name": "置空",
+ame": "取全部""method name": "置Cookie""method name": "删除Cookie""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+data type": "文本型""method name": "创建"
+  },
+  {
+comment": "url,为\"\"则删除全部""method name": "是否只读",
+comment": "url,为\"\"则删除全部""comment": "英文名：IsReadOnly 说明：Returns true if this object is read-only.",
+comment": "url,为\"\"则删除全部""data type": "逻辑型",
+comment": "url,为\"\"则删除全部""@禁止流程检查": "真"
+  },
+  {
+ameter name": "Cookie回调""method name": "取错误",
+ameter name": "Cookie回调""comment": "英文名：GetError 说明：Get the response error code",
+ameter name": "Cookie回调""data type": "整数"
+  },
+  {
+
+"method name": "置错误",
+
+"comment": "英文名：SetError 说明：Set the response error code.",
+
+"parameters": [
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+: "取全部""method name": "置Cookie""method name": "删除Cookie""method name": "置空""method name": "取状态",
+: "取全部""method name": "置Cookie""method name": "删除Cookie""method name": "置空""comment": "英文名：GetStatus 说明：Get the response status code.",
+: "取全部""method name": "置Cookie""method name": "删除Cookie""method name": "置空""data type": "整数",
+: "取全部""method name": "置Cookie""method name": "删除Cookie""method name": "置空""@禁止流程检查": "真"
+  },
+  {
+@禁止流程检查": "真""method name": "置状态",
+@禁止流程检查": "真""comment": "英文名：SetStatus 说明：Set the response status code.",
+@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "状态代码",
+"data type": "整数"
+   }
+@禁止流程检查": "真"]
+  },
+  {
+止流程检查": "真"]"method name": "取状态文本",
+止流程检查": "真"]"comment": "英文名：GetStatusText 说明：Get the response status text.",
+止流程检查": "真"]"data type": "文本型",
+止流程检查": "真"]"@禁止流程检查": "真"
+  },
+  {
+流程检查": "真"]"@禁止流程检查": "真""method name": "置状态文本",
+流程检查": "真"]"@禁止流程检查": "真""comment": "英文名：SetStatusText 说明：Set the response status text.",
+流程检查": "真"]"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+流程检查": "真"]"@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "取MIME类型",
+
+"comment": "英文名：GetMimeType 说明：Get the response mime type.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "置MIME类型",
+}"comment": "英文名：SetMimeType 说明：Set the response mime type.",
+}"parameters": [
+   {
+"parameter name": "MIME类型",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "取字符集",
+"comment": "英文名：GetCharset 说明：Get the response charset",
+"data type": "文本型",
+"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "置字符集",
+ }"comment": "英文名：SetCharset 说明：Set the response charset.",
+ }"parameters": [
+   {
+"parameter name": "字符集",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "取协议头_名称",
+ }"comment": "英文名：GetHeaderByName 说明：Get the value for the specified response header field.",
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "置协议头_名称",
+}"comment": "英文名：SetHeaderByName 说明：Set the header |name| to |value|. If |overwrite| is true any existing values will be replaced with the new value.",
+}"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "覆盖",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+ }"method name": "删除协议头数据",
+ }"comment": "部分协议头不能删除，删除后可通过第三方工具抓包确认，开发者工具显示的并不一定是删除后数据",
+ }"parameters": [
+   {
+"parameter name": "关键字",
+"comment": "要删除协议头的key",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+comment": "英文名：GetCharset 说明：Get the response charset""method name": "取协议头数据",
+comment": "英文名：GetCharset 说明：Get the response charset""data type": "FBrowser_双文本数组",
+comment": "英文名：GetCharset 说明：Get the response charset""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置协议头数据_数组",
+
+"comment": "英文名：SetHeaderMap 说明：Set all response header fields.",
+
+"parameters": [
+   {
+"parameter name": "头数据",
+"data type": "FBrowser_双文本数组"
+   },
+   {
+"parameter name": "删除其他数据",
+"comment": "为真设置的时候将会删除其他头数据，只保留当前设置的值，反之保留其他头数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "置协议头数据",
+
+"comment": "英文名：SetHeaderMap 说明：Set all response header fields.",
+
+"parameters": [
+   {
+"parameter name": "头数据",
+"data type": "FBrowser_双文本"
+   }
+
+]
+  },
+  {
+}"method name": "取地址",
+}"comment": "英文名：GetURL 说明：获取HSTS重定向或更改后的解析URL。Get the resolved URL after redirects or changed as a result of HSTS.",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+thod name": "取地址""method name": "置地址",
+thod name": "取地址""comment": "英文名：SetURL 说明：Set the resolved URL after redirects or changed as a result of HSTS.",
+thod name": "取地址""parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   }
+thod name": "取地址"]
+  }
+]
+ },
+ {
+@默认值": "假""class name": "类_FBrowser_菜单环境",
+@默认值": "假""comment": "CefContextMenuParams",
+@默认值": "假""@输出名": "\"FBroContextMenuParams\"",
+@默认值": "假""methods": [
+  {
+ontextMenuParams"method name": "是否为空",
+ontextMenuParams"data type": "逻辑型",
+ontextMenuParams"@禁止流程检查": "真"
+  },
+  {
+默认值": "假""methods": [
+"method name": "置空",
+默认值": "假""methods": [
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+hod name": "是否为空""method name": "取横向位置",
+hod name": "是否为空""comment": "英文名：pGetXCoord",
+hod name": "是否为空""data type": "整数",
+hod name": "是否为空""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "取纵向位置",
+ }"comment": "英文名：pGetYCoord",
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+}"comment": "英文名：pGetYCoord""method name": "取类型",
+}"comment": "英文名：pGetYCoord""comment": "英文名：pGetTypeFlags",
+}"comment": "英文名：pGetYCoord""result comment": "参考 菜单类型.xxx 类型可叠加",
+}"comment": "英文名：pGetYCoord""data type": "整数",
+}"comment": "英文名：pGetYCoord""@禁止流程检查": "真"
+  },
+  {
+ameter name": "地址""method name": "取地址",
+ameter name": "地址""comment": "英文名：pGetLinkUrl",
+ameter name": "地址""data type": "文本型",
+ameter name": "地址""@禁止流程检查": "真"
+  },
+  {
+"comment": "英文名：Create""method name": "取完整地址",
+"comment": "英文名：Create""comment": "英文名：pGetUnfilteredLinkUrl",
+"comment": "英文名：Create""data type": "文本型",
+"comment": "英文名：Create""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取源地址",
+}"comment": "英文名：pGetSourceUr",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取页地址",
+
+"comment": "英文名：pGetPageUrl",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+"@禁止流程检查": "真""method name": "取框架网页编码",
+"@禁止流程检查": "真""comment": "英文名：pGetFrameCharset",
+"@禁止流程检查": "真""data type": "文本型",
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+@禁止流程检查": "真""comment": "英文名：pGetFrameCharset""method name": "取框架页地址",
+@禁止流程检查": "真""comment": "英文名：pGetFrameCharset""comment": "英文名：pGetFrameUrl",
+@禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型",
+@禁止流程检查": "真""comment": "英文名：pGetFrameCharset""@禁止流程检查": "真"
+  },
+  {
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""method name": "是否存在图片",
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""comment": "英文名：HasImageContents",
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""data type": "逻辑型",
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""method name": "取媒体类型",
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""comment": "英文名：GetMediaType ",
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""result comment": "参考：媒体类型.***",
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""data type": "整数",
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取媒体类型标识",
+}"comment": "英文名：GetMediaType ",
+}"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""method name": "取选择文本",
+"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""comment": "英文名：GetSelectionText",
+"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""data type": "文本型",
+"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取错误单词",
+}"comment": "英文名：GetMisspelledWord",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""method name": "取字典建议",
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""data type": "FBrowser_文本数组",
+禁止流程检查": "真""comment": "英文名：pGetFrameCharset""data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""comment": "英文名：GetSelectionText""method name": "是否为编辑框",
+result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""comment": "英文名：GetSelectionText""comment": "英文名：IsEditable",
+result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""comment": "英文名：GetSelectionText""data type": "逻辑型",
+result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""comment": "英文名：GetSelectionText""@禁止流程检查": "真"
+  },
+  {
+"comment": "英文名：GetMisspelledWord""method name": "是否为选择框",
+"comment": "英文名：GetMisspelledWord""comment": "英文名：IsSpellCheckEnabled",
+"comment": "英文名：GetMisspelledWord""data type": "逻辑型",
+"comment": "英文名：GetMisspelledWord""@禁止流程检查": "真"
+  },
+  {
+"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""method name": "取编辑框类型标识",
+"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""comment": "英文名：GetEditStateFlags ",
+"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""result comment": "参考:编辑框标识.****",
+"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""data type": "整数",
+"result comment": "参考：媒体标识.*** 因可能会出现多个标识，所以这里可以通过位与/位或/+判断""@禁止流程检查": "真"
+  },
+  {
+"@禁止流程检查": "真""method name": "是否为Custom菜单",
+"@禁止流程检查": "真""comment": "英文名：IsCustomMenu",
+"@禁止流程检查": "真""data type": "逻辑型",
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  }
+@默认值": "假"]
+ },
+ {
+}"class name": "类_FBrowser_菜单模式",
+}"comment": "CefMenuModel",
+}"@输出名": "\"FBroMenuModel\"",
+}"methods": [
+  {
+"method name": "是否为空",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+comment": "英文名：GetMisspelledWord""@禁止流程检查": "真""method name": "置空",
+comment": "英文名：GetMisspelledWord""@禁止流程检查": "真""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+
+"method name": "清空菜单",
+
+"comment": "英文名：Clear",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取数量",
+}"comment": "英文名：GetCount",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+omment": "英文名：GetMisspelledWord""@禁止流程检查": "真""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""method name": "添加分隔栏",
+omment": "英文名：GetMisspelledWord""@禁止流程检查": "真""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""comment": "英文名：AddSeparator",
+omment": "英文名：GetMisspelledWord""@禁止流程检查": "真""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""data type": "逻辑型",
+omment": "英文名：GetMisspelledWord""@禁止流程检查": "真""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "添加菜单",
+
+"comment": "英文名：AddItem",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "标签名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+AddSeparator"method name": "添加Check菜单",
+AddSeparator"comment": "英文名：AddCheckItem",
+AddSeparator"data type": "逻辑型",
+AddSeparator"@禁止流程检查": "真",
+AddSeparator"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "标签名",
+"data type": "文本型"
+   }
+AddSeparator]
+  },
+  {
+ameter name": "标签名""method name": "添加Radio菜单",
+ameter name": "标签名""comment": "英文名：AddRadioItem",
+ameter name": "标签名""data type": "逻辑型",
+ameter name": "标签名""@禁止流程检查": "真",
+ameter name": "标签名""parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "标签名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "群ID",
+"data type": "整数"
+   }
+ameter name": "标签名"]
+  },
+  {
+
+"method name": "添加子菜单",
+
+"comment": "英文名：AddSubMenu",
+
+"data type": "类_FBrowser_菜单模式",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "标签名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "删除菜单",
+"comment": "英文名：Remove",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取菜单标签",
+"comment": "英文名：GetMisspelledWord",
+"data type": "文本型",
+"@禁止流程检查": "真"
+  },
+  {
+hod name": "删除菜单""method name": "置菜单标签",
+hod name": "删除菜单""comment": "英文名：SetLable",
+hod name": "删除菜单""data type": "逻辑型",
+hod name": "删除菜单""@禁止流程检查": "真",
+hod name": "删除菜单""parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "标签名",
+"data type": "文本型"
+   }
+hod name": "删除菜单"]
+  },
+  {
+
+"method name": "取菜单类型",
+
+"comment": "英文名：GetType",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取分组ID",
+
+"comment": "英文名：GetType",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "取子菜单",
+}"comment": "英文名：AddSubMenu",
+}"data type": "类_FBrowser_菜单模式",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "是否可见",
+}"comment": "英文名：IsVisable",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "命令ID""method name": "置可见状态",
+ameter name": "命令ID""comment": "英文名：SetVisable",
+ameter name": "命令ID""data type": "逻辑型",
+ameter name": "命令ID""@禁止流程检查": "真",
+ameter name": "命令ID""parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "可见",
+"data type": "逻辑型"
+   }
+ameter name": "命令ID"]
+  },
+  {
+"comment": "英文名：AddSubMenu""method name": "是否禁止",
+"comment": "英文名：AddSubMenu""comment": "英文名：IsEnable",
+"comment": "英文名：AddSubMenu""data type": "逻辑型",
+"comment": "英文名：AddSubMenu""@禁止流程检查": "真",
+"comment": "英文名：AddSubMenu""parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   }
+"comment": "英文名：AddSubMenu"]
+  },
+  {
+comment": "英文名：AddSubMenu""data type": "逻辑型""method name": "置禁止状态",
+comment": "英文名：AddSubMenu""data type": "逻辑型""comment": "英文名：SetEnable",
+comment": "英文名：AddSubMenu""data type": "逻辑型""data type": "逻辑型",
+comment": "英文名：AddSubMenu""data type": "逻辑型""@禁止流程检查": "真",
+comment": "英文名：AddSubMenu""data type": "逻辑型""parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "禁止",
+"data type": "逻辑型"
+   }
+comment": "英文名：AddSubMenu""data type": "逻辑型"]
+  },
+  {
+ameter name": "命令ID""method name": "是否选中",
+ameter name": "命令ID""comment": "英文名：IsChecked",
+ameter name": "命令ID""data type": "逻辑型",
+ameter name": "命令ID""@禁止流程检查": "真",
+ameter name": "命令ID""parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   }
+ameter name": "命令ID"]
+  },
+  {
+
+"method name": "选中状态",
+
+"comment": "英文名：SetCheck",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "选中",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "选中状态_索引",
+"comment": "英文名：SetCheckedAt",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "索引ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "选中",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+data type": "整数""method name": "存在快捷键",
+data type": "整数""comment": "英文名：",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "存在快捷键_索引",
+
+"comment": "英文名：HasAcceleratorAt",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "索引ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "设置快捷键",
+"comment": "只是用于显示快捷键，触发需自行用键盘事件实现",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "键代码",
+"comment": "key_code",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否按下shift",
+"comment": "shift_pressed",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否按下ctrl",
+"comment": "ctrl_pressed",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否按下alt",
+"comment": "alt_pressed",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+}"method name": "设置快捷键_索引",
+}"comment": "只是用于显示快捷键，触发需自行用键盘事件实现",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "索引ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "键代码",
+"comment": "key_code",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否按下shift",
+"comment": "shift_pressed",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否按下ctrl",
+"comment": "ctrl_pressed",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否按下alt",
+"comment": "alt_pressed",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+
+"method name": "移除快捷键",
+
+"comment": "英文名：",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "移除快捷键_索引",
+"data type": "逻辑型""comment": "英文名：",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""@禁止流程检查": "真",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "索引ID",
+"data type": "整数"
+   }
+"data type": "逻辑型"]
+  },
+  {
+ameter name": "命令ID""method name": "取快捷键",
+ameter name": "命令ID""comment": "只是用于显示快捷键，触发需自行用键盘事件实现",
+ameter name": "命令ID""data type": "逻辑型",
+ameter name": "命令ID""@禁止流程检查": "真",
+ameter name": "命令ID""parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "键代码",
+"comment": "key_code，返回数据",
+"data type": "整数类"
+   },
+   {
+"parameter name": "返回是否按下shift值",
+"comment": "shift_pressed，返回数据",
+"data type": "逻辑型类"
+   },
+   {
+"parameter name": "返回是否按下ctrl值",
+"comment": "ctrl_pressed，返回数据",
+"data type": "逻辑型类"
+   },
+   {
+"parameter name": "返回是否按下alt值",
+"comment": "alt_pressed，返回数据",
+"data type": "逻辑型类"
+   }
+ameter name": "命令ID"]
+  },
+  {
+comment": "alt_pressed，返回数据""method name": "取快捷键_索引",
+comment": "alt_pressed，返回数据""comment": "只是用于显示快捷键，触发需自行用键盘事件实现",
+comment": "alt_pressed，返回数据""data type": "逻辑型",
+comment": "alt_pressed，返回数据""@禁止流程检查": "真",
+comment": "alt_pressed，返回数据""parameters": [
+   {
+"parameter name": "索引ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "键代码",
+"comment": "key_code，返回数据",
+"data type": "整数类"
+   },
+   {
+"parameter name": "返回是否按下shift值",
+"comment": "shift_pressed，返回数据",
+"data type": "逻辑型类"
+   },
+   {
+"parameter name": "返回是否按下ctrl值",
+"comment": "ctrl_pressed，返回数据",
+"data type": "逻辑型类"
+   },
+   {
+"parameter name": "返回是否按下alt值",
+"comment": "alt_pressed，返回数据",
+"data type": "逻辑型类"
+   }
+comment": "alt_pressed，返回数据"]
+  },
+  {
+data type": "逻辑型类""method name": "置颜色",
+data type": "逻辑型类""data type": "逻辑型",
+data type": "逻辑型类""@禁止流程检查": "真",
+data type": "逻辑型类""parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色类型",
+"comment": "color_type 参考：菜单颜色类型.",
+"data type": "整数"
+   },
+   {
+"parameter name": "A",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "R",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "G",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "B",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "逻辑型类"]
+  },
+  {
+"method name": "置颜色_索引",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "索引ID",
+"comment": "索引为-1为设置默认颜色",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色类型",
+"comment": "color_type 参考：菜单颜色类型.",
+"data type": "整数"
+   },
+   {
+"parameter name": "A",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "R",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "G",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "B",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+
+"method name": "取颜色",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色类型",
+"comment": "color_type 参考：菜单颜色类型.",
+"data type": "整数"
+   },
+   {
+"parameter name": "返回A值",
+"data type": "整数类"
+   },
+   {
+"parameter name": "返回R值",
+"data type": "整数类"
+   },
+   {
+"parameter name": "返回G值",
+"data type": "整数类"
+   },
+   {
+"parameter name": "返回B值",
+"data type": "整数类"
+   }
+
+]
+  },
+  {
+"method name": "取颜色_索引",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "索引ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色类型",
+"comment": "color_type 参考：菜单颜色类型.",
+"data type": "整数"
+   },
+   {
+"parameter name": "返回A值",
+"data type": "整数类"
+   },
+   {
+"parameter name": "返回R值",
+"data type": "整数类"
+   },
+   {
+"parameter name": "返回G值",
+"data type": "整数类"
+   },
+   {
+"parameter name": "返回B值",
+"data type": "整数类"
+   }
+]
+  },
+  {
+ }"method name": "置字体",
+ }"comment": "待验证",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "字体清单",
+"comment": "\"Arial, Helvetica, Bold Italic 14px\"",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "返回B值""method name": "置字体_索引",
+ameter name": "返回B值""comment": "待验证",
+ameter name": "返回B值""data type": "逻辑型",
+ameter name": "返回B值""@禁止流程检查": "真",
+ameter name": "返回B值""parameters": [
+   {
+"parameter name": "索引ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "字体清单",
+"comment": "\"Arial, Helvetica, Bold Italic 14px\"",
+"data type": "文本型"
+   }
+ameter name": "返回B值"]
+  }
+}]
+ },
+ {
+"class name": "类_FBrowser_下载",
+"comment": "CefDownloadItem",
+"@输出名": "\"FBroDownloadItem\"",
+"methods": [
+  {
+ss name": "类_FBrowser_下载""method name": "是否为空",
+ss name": "类_FBrowser_下载""data type": "逻辑型",
+ss name": "类_FBrowser_下载""@禁止流程检查": "真"
+  },
+  {
+s name": "类_FBrowser_下载""data type": "逻辑型""method name": "置空",
+s name": "类_FBrowser_下载""data type": "逻辑型""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+data type": "整数""method name": "是否仍在下载中",
+data type": "整数""comment": "英文名：IsInProgress",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+"method name": "是否已下载完成",
+"comment": "英文名：IsComplete",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+ss name": "类_FBrowser_下载""method name": "是否已取消",
+ss name": "类_FBrowser_下载""comment": "英文名：IsCanceled",
+ss name": "类_FBrowser_下载""data type": "逻辑型",
+ss name": "类_FBrowser_下载""@禁止流程检查": "真"
+  },
+  {
+me": "类_FBrowser_下载""data type": "逻辑型""method name": "置空""method name": "取现行下载速度",
+me": "类_FBrowser_下载""data type": "逻辑型""method name": "置空""comment": "英文名：GetCurrentSpeed",
+me": "类_FBrowser_下载""data type": "逻辑型""method name": "置空""data type": "长整数",
+me": "类_FBrowser_下载""data type": "逻辑型""method name": "置空""@禁止流程检查": "真"
+  },
+  {
+s name": "类_FBrowser_下载""data type": "逻辑型""method name": "取下载百分比",
+s name": "类_FBrowser_下载""data type": "逻辑型""comment": "英文名：GetPercentComplete",
+s name": "类_FBrowser_下载""data type": "逻辑型""data type": "整数",
+s name": "类_FBrowser_下载""data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "取总长度",
+ }"comment": "英文名：GetTotalBytes",
+ }"data type": "长整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+GetTotalBytes"method name": "取已下载长度",
+GetTotalBytes"comment": "英文名：GetReceivedBytes",
+GetTotalBytes"data type": "长整数",
+GetTotalBytes"@禁止流程检查": "真"
+  },
+  {
+ type": "整数""method name": "是否仍在下载中""method name": "取开始时间",
+ type": "整数""method name": "是否仍在下载中""comment": "英文名：GetStartTime",
+ type": "整数""method name": "是否仍在下载中""data type": "文本型",
+ type": "整数""method name": "是否仍在下载中""@禁止流程检查": "真"
+  },
+  {
+ame": "类_FBrowser_下载""method name": "是否已取消""method name": "取结束时间",
+ame": "类_FBrowser_下载""method name": "是否已取消""comment": "英文名：GetEndTime",
+ame": "类_FBrowser_下载""method name": "是否已取消""data type": "文本型",
+ame": "类_FBrowser_下载""method name": "是否已取消""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "取存储位置",
+ }"comment": "英文名：GetFullPath",
+ }"data type": "文本型",
+ }"@禁止流程检查": "真"
+  },
+  {
+type": "整数""method name": "是否仍在下载中""@禁止流程检查": "真""method name": "取关联标识符",
+type": "整数""method name": "是否仍在下载中""@禁止流程检查": "真""comment": "英文名：GetDownloadId",
+type": "整数""method name": "是否仍在下载中""@禁止流程检查": "真""data type": "整数",
+type": "整数""method name": "是否仍在下载中""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取地址",
+
+"comment": "英文名：GetURL",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取原始地址",
+}"comment": "英文名：GetOriginalUrl",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+"data type": "文本型""method name": "取推荐文件名",
+"data type": "文本型""comment": "英文名：GetSuggestedFileName",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+GetFullPath"method name": "取内容描述",
+GetFullPath"comment": "英文名：GetContentDisposition",
+GetFullPath"data type": "文本型",
+GetFullPath"@禁止流程检查": "真"
+  },
+  {
+thod name": "取原始地址""method name": "取MIME类型",
+thod name": "取原始地址""comment": "英文名：GetMimeType",
+thod name": "取原始地址""data type": "文本型",
+thod name": "取原始地址""@禁止流程检查": "真"
+  }
+]
+ },
+ {
+etFullPath"@禁止流程检查": "真""class name": "类_FBrowser_方案注册",
+etFullPath"@禁止流程检查": "真""@输出名": "\"FBroSchemeRegistrar\"",
+etFullPath"@禁止流程检查": "真""methods": [
+  {
+ethod name": "取存储位置""method name": "是否为空",
+ethod name": "取存储位置""data type": "逻辑型",
+ethod name": "取存储位置""@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""@禁止流程检查": "真""method name": "置空",
+data type": "文本型""@禁止流程检查": "真""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+"method name": "添加自定义方案",
+"comment": "AddCustomScheme\n // Register a custom scheme. This method should not be called for the built-in\n // HTTP, HTTPS, FILE, FTP, ABOUT and DATA schemes.\n //\n // See cef_scheme_options_t for possible values for |options|.\n //\n // This function may be called on any thread. It should only be called once\n // per unique |scheme_name| value. If |scheme_name| is already registered or\n // if an error occurs this method will return false.",
+"parameters": [
+   {
+"parameter name": "方案名",
+"comment": "scheme_name",
+"data type": "文本型"
+   },
+   {
+"parameter name": "控制",
+"comment": "options",
+"data type": "整数"
+   }
+]
+  }
+etFullPath"@禁止流程检查": "真"]
+ },
+ {
+ }"class name": "类_FBrowser_V8环境",
+ }"comment": "只能在渲染进程中使用",
+ }"@输出名": "\"FBroV8Context\"",
+ }"@全局类": "真",
+ }"methods": [
+  {
+"method name": "FBrowser_V8_注册JS扩展",
+"result comment": "成功返回事件标识ID",
+"static": true,
+"data type": "长整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "扩展名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "扩展JS代码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "处理回调事件",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_V8处理程序”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+}"method name": "FBrowser_V8环境_取当前环境",
+}"static": true,
+}"data type": "类_FBrowser_V8环境",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "FBrowser_V8环境_取运行环境",
+
+"static": true,
+
+"data type": "类_FBrowser_V8环境",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否为空",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+"data type": "类_FBrowser_V8环境""method name": "置空",
+"data type": "类_FBrowser_V8环境""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+ameter name": "处理回调事件""method name": "是否有效",
+ameter name": "处理回调事件""comment": "英文名：IsValid",
+ameter name": "处理回调事件""data type": "逻辑型",
+ameter name": "处理回调事件""@禁止流程检查": "真"
+  },
+  {
+a type": "类_FBrowser_V8环境""method name": "置空""method name": "是否当前环境",
+a type": "类_FBrowser_V8环境""method name": "置空""comment": "英文名：InContext",
+a type": "类_FBrowser_V8环境""method name": "置空""data type": "逻辑型",
+a type": "类_FBrowser_V8环境""method name": "置空""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取任务处理器",
+
+"comment": "英文名：GetTaskRunner",
+
+"data type": "类_FBrowser_任务运行器",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"comment": "只能在渲染进程中使用""method name": "取浏览器",
+}"comment": "只能在渲染进程中使用""comment": "英文名：GetBrowser",
+}"comment": "只能在渲染进程中使用""data type": "类_FBrowser_浏览器",
+}"comment": "只能在渲染进程中使用""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取框架",
+
+"comment": "英文名：GetFrame",
+
+"data type": "类_FBrowser_框架",
+
+"@禁止流程检查": "真"
+  },
+  {
+thod name": "取框架""method name": "取全局V8值",
+thod name": "取框架""comment": "英文名：GetGlobal",
+thod name": "取框架""data type": "类_FBrowser_V8值",
+thod name": "取框架""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "进入",
+
+"comment": "英文名：Enter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "退出",
+
+"comment": "英文名：Exit",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否相同",
+}"comment": "英文名：IsSame",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "对比值",
+"data type": "类_FBrowser_V8环境"
+   }
+}]
+  },
+  {
+
+"method name": "执行JS代码",
+
+"comment": "英文名：Eval",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "代码文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "错误链接",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "错误行位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "V8值",
+"comment": "执行返回值",
+"data type": "类_FBrowser_V8值",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "V8异常",
+"comment": "执行返回错误值",
+"data type": "类_FBrowser_V8异常",
+"@默认值": "空对象"
+   }
+
+]
+  }
+ }]
+ },
+ {
+ }"class name": "类_FBrowser_V8异常",
+ }"comment": "只能在渲染进程中使用",
+ }"@输出名": "\"FBroV8Exception\"",
+ }"methods": [
+  {
+ameter name": "错误链接""method name": "是否为空",
+ameter name": "错误链接""data type": "逻辑型",
+ameter name": "错误链接""@禁止流程检查": "真"
+  },
+  {
+"method name": "置空",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+@默认值": "空对象""method name": "取消息",
+@默认值": "空对象""comment": "英文名：GetMessage",
+@默认值": "空对象""data type": "文本型",
+@默认值": "空对象""@禁止流程检查": "真"
+  },
+  {
+"parameters": [
+"method name": "取源代码行",
+"parameters": [
+"comment": "英文名：GetSourceLine",
+"parameters": [
+"data type": "文本型",
+"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取脚本资源名",
+}"comment": "英文名：GetScriptResourceName",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+parameters": [
+"data type": "文本型""method name": "取发生的行号",
+parameters": [
+"data type": "文本型""comment": "英文名：GetLineNumber",
+parameters": [
+"data type": "文本型""data type": "整数",
+parameters": [
+"data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+"method name": "取开始脚本索引",
+"comment": "英文名：GetStartPosition",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+GetLineNumber"method name": "取结束脚本索引",
+GetLineNumber"comment": "英文名：GetEndPosition",
+GetLineNumber"data type": "整数",
+GetLineNumber"@禁止流程检查": "真"
+  },
+  {
+ameter name": "错误行位置""method name": "取开始行",
+ameter name": "错误行位置""comment": "英文名：GetStartColumn",
+ameter name": "错误行位置""data type": "整数",
+ameter name": "错误行位置""@禁止流程检查": "真"
+  },
+  {
+data type": "整数""method name": "取结束行",
+data type": "整数""comment": "英文名：GetEndColumn",
+data type": "整数""data type": "整数",
+data type": "整数""@禁止流程检查": "真"
+  }
+ }]
+ },
+ {
+parameters": [
+"comment": "英文名：GetSourceLine""class name": "类_FBrowser_V8堆栈踪迹",
+parameters": [
+"comment": "英文名：GetSourceLine""comment": "只能在渲染进程中使用",
+parameters": [
+"comment": "英文名：GetSourceLine""@输出名": "\"FBroV8StackTrace\"",
+parameters": [
+"comment": "英文名：GetSourceLine""methods": [
+  {
+meter name": "错误行位置""@禁止流程检查": "真""method name": "是否为空",
+meter name": "错误行位置""@禁止流程检查": "真""data type": "逻辑型",
+meter name": "错误行位置""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+]"method name": "置空",
+]"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+"comment": "英文名：GetScriptResourceName""method name": "是否有效",
+"comment": "英文名：GetScriptResourceName""comment": "英文名：IsValid",
+"comment": "英文名：GetScriptResourceName""data type": "逻辑型",
+"comment": "英文名：GetScriptResourceName""@禁止流程检查": "真"
+  },
+  {
+ata type": "整数""comment": "英文名：GetEndColumn""method name": "取框架数",
+ata type": "整数""comment": "英文名：GetEndColumn""comment": "英文名：GetFrameCount",
+ata type": "整数""comment": "英文名：GetEndColumn""data type": "整数",
+ata type": "整数""comment": "英文名：GetEndColumn""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取堆栈框架",
+}"comment": "英文名：GetFrame",
+}"data type": "类_FBrowser_V8堆栈框架",
+}"@禁止流程检查": "真"
+  }
+parameters": [
+"comment": "英文名：GetSourceLine"]
+ },
+ {
+"class name": "类_FBrowser_V8堆栈框架",
+"comment": "CefV8StackFrame",
+"@输出名": "\"FBroV8StackFrame\"",
+"methods": [
+  {
+"comment": "英文名：GetScriptResourceName""method name": "是否为空",
+"comment": "英文名：GetScriptResourceName""data type": "逻辑型",
+"comment": "英文名：GetScriptResourceName""@禁止流程检查": "真"
+  },
+  {
+}"method name": "置空",
+}"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+
+"method name": "是否有效",
+
+"comment": "英文名：IsValid",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+meter name": "错误行位置""comment": "英文名：GetStartColumn""method name": "取脚本名",
+meter name": "错误行位置""comment": "英文名：GetStartColumn""comment": "英文名：GetScriptName",
+meter name": "错误行位置""comment": "英文名：GetStartColumn""data type": "文本型",
+meter name": "错误行位置""comment": "英文名：GetStartColumn""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取脚本名或资源地址",
+}"comment": "英文名：GetScriptNameOrSourceURL",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+meter name": "错误行位置""@禁止流程检查": "真""method name": "取函数名",
+meter name": "错误行位置""@禁止流程检查": "真""comment": "英文名：GetFunctionName",
+meter name": "错误行位置""@禁止流程检查": "真""data type": "文本型",
+meter name": "错误行位置""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+eter name": "错误行位置""@禁止流程检查": "真""@禁止流程检查": "真""method name": "取行号",
+eter name": "错误行位置""@禁止流程检查": "真""@禁止流程检查": "真""comment": "英文名：GetLineNumber",
+eter name": "错误行位置""@禁止流程检查": "真""@禁止流程检查": "真""data type": "整数",
+eter name": "错误行位置""@禁止流程检查": "真""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取列号",
+}"comment": "英文名：GetColumn",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+meter name": "错误行位置""comment": "英文名：GetStartColumn""method name": "是否为执行JS代码",
+meter name": "错误行位置""comment": "英文名：GetStartColumn""comment": "英文名：IsEval 判断是否为使用\"执行JS代码\"产生的结果",
+meter name": "错误行位置""comment": "英文名：GetStartColumn""data type": "逻辑型",
+meter name": "错误行位置""comment": "英文名：GetStartColumn""@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否构造",
+}"comment": "英文名：IsConstructor",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  }
+]
+ },
+ {
+
+"class name": "类_FBrowser_DOM节点",
+
+"comment": "只能在渲染进程中使用",
+
+"@输出名": "\"FBroDOMNode\"",
+
+"methods": [
+  {
+arameters": [
+"comment": "英文名：GetSourceLine""comment": "只能在渲染进程中使用""method name": "是否为空",
+arameters": [
+"comment": "英文名：GetSourceLine""comment": "只能在渲染进程中使用""data type": "逻辑型",
+arameters": [
+"comment": "英文名：GetSourceLine""comment": "只能在渲染进程中使用""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置空",
+
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+
+"method name": "取类型",
+
+"comment": "Returns the type for this node.",
+
+"result comment": "返回值参考：#节点类型_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""method name": "是否为文本",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""comment": "Returns true if this is a text node",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""data type": "逻辑型",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""@禁止流程检查": "真"
+  },
+  {
+ass name": "类_FBrowser_DOM节点""method name": "是否为元素节点",
+ass name": "类_FBrowser_DOM节点""comment": "Returns true if this is an element node",
+ass name": "类_FBrowser_DOM节点""data type": "逻辑型",
+ass name": "类_FBrowser_DOM节点""@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否为可编辑",
+}"comment": "Returns true if this is an editable node.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+ss name": "类_FBrowser_DOM节点""@禁止流程检查": "真""method name": "是否为表单控件元素",
+ss name": "类_FBrowser_DOM节点""@禁止流程检查": "真""comment": "Returns true if this is a form control element node.",
+ss name": "类_FBrowser_DOM节点""@禁止流程检查": "真""data type": "逻辑型",
+ss name": "类_FBrowser_DOM节点""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取表单控件元素类型",
+
+"comment": "Returns the type of this form control element node.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否相同",
+}"comment": "Returns true if this object is pointing to the same handle as |that| object.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "对比值",
+"data type": "类_FBrowser_DOM节点"
+   }
+}]
+  },
+  {
+}"method name": "取名字",
+}"comment": "Returns the name of this node.",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取值",
+
+"comment": " Returns the value of this node.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置值",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+thod name": "置空""method name": "取标记内容",
+thod name": "置空""comment": "Returns the contents of this node as markup.",
+thod name": "置空""data type": "文本型",
+thod name": "置空""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取DOM文档",
+}"comment": "Returns the document associated with this node.",
+}"data type": "类_FBrowser_DOM文档",
+}"@禁止流程检查": "真"
+  },
+  {
+hod name": "置空""@禁止流程检查": "真""method name": "取父节点",
+hod name": "置空""@禁止流程检查": "真""comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空Returns the parent node.",
+hod name": "置空""@禁止流程检查": "真""data type": "类_FBrowser_DOM节点",
+hod name": "置空""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+ame": "类_FBrowser_DOM节点""@禁止流程检查": "真""method name": "是否为表单控件元素""method name": "取上一个节点",
+ame": "类_FBrowser_DOM节点""@禁止流程检查": "真""method name": "是否为表单控件元素""comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空Returns the previous sibling node.",
+ame": "类_FBrowser_DOM节点""@禁止流程检查": "真""method name": "是否为表单控件元素""data type": "类_FBrowser_DOM节点",
+ame": "类_FBrowser_DOM节点""@禁止流程检查": "真""method name": "是否为表单控件元素""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取下一个节点",
+}"comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.",
+}"data type": "类_FBrowser_DOM节点",
+}"@禁止流程检查": "真"
+  },
+  {
+me": "类_FBrowser_DOM节点""@禁止流程检查": "真""method name": "是否为表单控件元素""@禁止流程检查": "真""method name": "是否有子节点",
+me": "类_FBrowser_DOM节点""@禁止流程检查": "真""method name": "是否为表单控件元素""@禁止流程检查": "真""comment": "Returns true if this node has child nodes.",
+me": "类_FBrowser_DOM节点""@禁止流程检查": "真""method name": "是否为表单控件元素""@禁止流程检查": "真""data type": "逻辑型",
+me": "类_FBrowser_DOM节点""@禁止流程检查": "真""method name": "是否为表单控件元素""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+hod name": "置空""comment": "Returns the contents of this node as markup.""method name": "取第一个子节点",
+hod name": "置空""comment": "Returns the contents of this node as markup.""comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空Return the first child node.",
+hod name": "置空""comment": "Returns the contents of this node as markup.""data type": "类_FBrowser_DOM节点",
+hod name": "置空""comment": "Returns the contents of this node as markup.""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取最后一个子节点",
+
+"comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空Returns the last child node.",
+
+"data type": "类_FBrowser_DOM节点",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取标签名",
+
+"comment": "The following methods are valid only for element nodes. Returns the tag name of this element.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+"comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""method name": "是否有属性",
+"comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""comment": "Returns true if this element has attributes.",
+"comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""data type": "逻辑型",
+"comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""@禁止流程检查": "真"
+  },
+  {
+"@禁止流程检查": "真""method name": "是否含有属性",
+"@禁止流程检查": "真""comment": "Returns true if this element has attributes.",
+"@禁止流程检查": "真""data type": "逻辑型",
+"@禁止流程检查": "真""@禁止流程检查": "真",
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+"@禁止流程检查": "真"]
+  },
+  {
+data type": "文本型""method name": "取属性值",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "文本型""method name": "取全部属性值",
+data type": "文本型""comment": "如果节点下有子节点，不会取出子节点下的的节点属性,Returns a map of all element attributes.",
+data type": "文本型""data type": "FBrowser_双文本数组",
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""data type": "逻辑型""method name": "置属性值",
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""data type": "逻辑型""comment": "Set the value for the element attribute named |attrName|. Returns true on success.",
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""data type": "逻辑型""data type": "逻辑型",
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""data type": "逻辑型""@禁止流程检查": "真",
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""data type": "逻辑型""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""data type": "逻辑型"]
+  },
+  {
+}"method name": "取内部文本",
+}"comment": "Returns the inner text of the element.",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""@禁止流程检查": "真""method name": "取边界",
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""@禁止流程检查": "真""comment": "Returns the bounds of the element.",
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""@禁止流程检查": "真""data type": "FBrowser_矩形位置",
+comment": "如果不存在节点，返回值可能会为空，可用类的\"未创建\"判断是否为空，Returns the next sibling node.""@禁止流程检查": "真""@禁止流程检查": "真"
+  }
+
+]
+ },
+ {
+
+"class name": "类_FBrowser_DOM文档",
+
+"comment": "只能在渲染进程中使用",
+
+"@输出名": "\"FBroDOMDocument\"",
+
+"methods": [
+  {
+}"method name": "是否为空",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置空",
+
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+data type": "文本型""method name": "取类型",
+data type": "文本型""comment": "Returns the document type",
+data type": "文本型""result comment": "返回值类型：节点文档类型.xxxxx",
+data type": "文本型""data type": "整数",
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+"data type": "逻辑型""method name": "取根节点",
+"data type": "逻辑型""comment": "Returns the root document node.",
+"data type": "逻辑型""data type": "类_FBrowser_DOM节点",
+"data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取主体节点",
+}"comment": "Returns the BODY node of an HTML document.",
+}"data type": "类_FBrowser_DOM节点",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取头节点",
+}"comment": "Returns the HEAD node of an HTML document.",
+}"data type": "类_FBrowser_DOM节点",
+}"@禁止流程检查": "真"
+  },
+  {
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""method name": "取标题",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""data type": "文本型",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取ID节点",
+}"data type": "类_FBrowser_DOM节点",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "ID",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""method name": "取焦点节点",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""comment": "Returns the node that currently has keyboard focus.",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""data type": "类_FBrowser_DOM节点",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""@禁止流程检查": "真"
+  },
+  {
+"parameters": [
+"method name": "是否被选择",
+"parameters": [
+"comment": "Returns true if a portion of the document is selected.",
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+parameters": [
+"comment": "Returns true if a portion of the document is selected.""method name": "取选择开始点",
+parameters": [
+"comment": "Returns true if a portion of the document is selected.""comment": "Returns the selection offset within the start node.",
+parameters": [
+"comment": "Returns true if a portion of the document is selected.""data type": "整数",
+parameters": [
+"comment": "Returns true if a portion of the document is selected.""@禁止流程检查": "真"
+  },
+  {
+"comment": "Returns the BODY node of an HTML document.""method name": "取选择结束点",
+"comment": "Returns the BODY node of an HTML document.""comment": "Returns the selection offset within the end node.",
+"comment": "Returns the BODY node of an HTML document.""data type": "整数",
+"comment": "Returns the BODY node of an HTML document.""@禁止流程检查": "真"
+  },
+  {
+arameters": [
+"comment": "Returns true if a portion of the document is selected.""data type": "整数""method name": "取选择标记",
+arameters": [
+"comment": "Returns true if a portion of the document is selected.""data type": "整数""comment": "Returns the contents of this selection as markup.",
+arameters": [
+"comment": "Returns true if a portion of the document is selected.""data type": "整数""data type": "文本型",
+arameters": [
+"comment": "Returns true if a portion of the document is selected.""data type": "整数""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取选择文本",
+}"comment": "Returns the contents of this selection as text.",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+"data type": "文本型""method name": "取基本地址",
+"data type": "文本型""comment": "Returns the base URL for the document.",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""@禁止流程检查": "真""method name": "取完整地址",
+data type": "文本型""@禁止流程检查": "真""comment": "Returns a complete URL based on the document base URL and the specified partial URL.",
+data type": "文本型""@禁止流程检查": "真""data type": "文本型",
+data type": "文本型""@禁止流程检查": "真""@禁止流程检查": "真"
+  }
+
+]
+ },
+ {
+"class name": "类_FBrowser_SSL信息",
+"comment": "CefSSLInfo",
+"@输出名": "\"FBroSSLInfo\"",
+"methods": [
+  {
+}"method name": "是否为空",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置空",
+
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+eters": [
+"comment": "Returns true if a portion of the document is selected.""data type": "整数""method name": "取选择标记""method name": "取状态",
+eters": [
+"comment": "Returns true if a portion of the document is selected.""data type": "整数""method name": "取选择标记""comment": "Returns the selection offset within the end node.",
+eters": [
+"comment": "Returns true if a portion of the document is selected.""data type": "整数""method name": "取选择标记""data type": "整数",
+eters": [
+"comment": "Returns true if a portion of the document is selected.""data type": "整数""method name": "取选择标记""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取X509证书",
+
+"comment": "Returns the selection offset within the end node.",
+
+"data type": "类_FBrowser_X509证书",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "是否为错误",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "SSL状态",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+parameters": [
+"data type": "逻辑型""class name": "类_FBrowser_X509证书",
+parameters": [
+"data type": "逻辑型""comment": "CefX509Certificate",
+parameters": [
+"data type": "逻辑型""@输出名": "\"FBroX509Certificate\"",
+parameters": [
+"data type": "逻辑型""methods": [
+  {
+
+"method name": "是否为空",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+"data type": "逻辑型""method name": "置空",
+"data type": "逻辑型""comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+"data type": "逻辑型""method name": "取主题",
+"data type": "逻辑型""comment": "Returns the subject of the X.509 certificate. For HTTPS server\ncertificates this represents the web server.  The common name of the\nsubject should match the host name of the web server.",
+"data type": "逻辑型""data type": "类_FBrowser_X509证书主题",
+"data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取颁发者",
+}"comment": "Returns the issuer of the X.509 certificate.",
+}"data type": "类_FBrowser_X509证书主题",
+}"@禁止流程检查": "真"
+  },
+  {
+"comment": "Returns the issuer of the X.509 certificate.""method name": "取DER编码序列号",
+"comment": "Returns the issuer of the X.509 certificate.""comment": " Returns the DER encoded serial number for the X.509 certificate. The value\n  possibly includes a leading 00 byte.",
+"comment": "Returns the issuer of the X.509 certificate.""data type": "类_FBrowser_字节集",
+"comment": "Returns the issuer of the X.509 certificate.""@禁止流程检查": "真"
+  },
+  {
+rowser_X509证书主题"method name": "取DER编码数据",
+rowser_X509证书主题"comment": "Returns the DER encoded data for the X.509 certificate.",
+rowser_X509证书主题"data type": "类_FBrowser_字节集",
+rowser_X509证书主题"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取PEM编码数据",
+}"comment": "Returns the PEM encoded data for the X.509 certificate.",
+}"data type": "类_FBrowser_字节集",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取失效前的日期",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+rowser_X509证书主题"method name": "取失效后的日期",
+rowser_X509证书主题"data type": "文本型",
+rowser_X509证书主题"@禁止流程检查": "真"
+  },
+  {
+"data type": "文本型""method name": "取颁发者证书数量",
+"data type": "文本型""comment": "Returns the selection offset within the end node.",
+"data type": "文本型""data type": "整数",
+"data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""comment": "Returns the selection offset within the end node.""method name": "取颁发者DER编码数据",
+data type": "文本型""comment": "Returns the selection offset within the end node.""comment": "Returns the DER encoded data for the certificate issuer chain.\nIf we failed to encode a certificate in the chain it is still\npresent in the array but is an empty string.",
+data type": "文本型""comment": "Returns the selection offset within the end node.""data type": "类_FBrowser_字节集数组",
+data type": "文本型""comment": "Returns the selection offset within the end node.""@禁止流程检查": "真"
+  },
+  {
+thod name": "取X509证书""method name": "取颁发者PEM编码数据",
+thod name": "取X509证书""comment": "Returns the PEM encoded data for the certificate issuer chain.\nIf we failed to encode a certificate in the chain it is still\npresent in the array but is an empty string.",
+thod name": "取X509证书""data type": "类_FBrowser_字节集数组",
+thod name": "取X509证书""@禁止流程检查": "真"
+  }
+parameters": [
+"data type": "逻辑型"]
+ },
+ {
+a type": "文本型""method name": "取颁发者证书数量""class name": "类_FBrowser_X509证书主题",
+a type": "文本型""method name": "取颁发者证书数量""comment": "CefX509CertPrincipal",
+a type": "文本型""method name": "取颁发者证书数量""@输出名": "\"FBroX509CertPrincipal\"",
+a type": "文本型""method name": "取颁发者证书数量""methods": [
+  {
+rowser_字节集数组"method name": "是否为空",
+rowser_字节集数组"data type": "逻辑型",
+rowser_字节集数组"@禁止流程检查": "真"
+  },
+  {
+"method name": "置空",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+ata type": "文本型""comment": "Returns the selection offset within the end node.""@禁止流程检查": "真""method name": "取显示名",
+ata type": "文本型""comment": "Returns the selection offset within the end node.""@禁止流程检查": "真""comment": "英文名：GetDisplayName",
+ata type": "文本型""comment": "Returns the selection offset within the end node.""@禁止流程检查": "真""data type": "文本型",
+ata type": "文本型""comment": "Returns the selection offset within the end node.""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+owser_X509证书主题"data type": "类_FBrowser_字节集""method name": "取公共名",
+owser_X509证书主题"data type": "类_FBrowser_字节集""comment": "英文名：GetCommonName",
+owser_X509证书主题"data type": "类_FBrowser_字节集""data type": "文本型",
+owser_X509证书主题"data type": "类_FBrowser_字节集""@禁止流程检查": "真"
+  },
+  {
+pe": "文本型""method name": "取颁发者证书数量""class name": "类_FBrowser_X509证书主题""method name": "取本地名",
+pe": "文本型""method name": "取颁发者证书数量""class name": "类_FBrowser_X509证书主题""comment": "英文名：GetLocalityName",
+pe": "文本型""method name": "取颁发者证书数量""class name": "类_FBrowser_X509证书主题""data type": "文本型",
+pe": "文本型""method name": "取颁发者证书数量""class name": "类_FBrowser_X509证书主题""@禁止流程检查": "真"
+  },
+  {
+GetLocalityName"method name": "取州或省名",
+GetLocalityName"comment": "英文名：GetStateOrProvinceName",
+GetLocalityName"data type": "文本型",
+GetLocalityName"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取国家名",
+}"comment": "英文名：GetCountryName",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+"data type": "文本型""method name": "取地址列表",
+"data type": "文本型""comment": "英文名：GetStreetAddresses",
+"data type": "文本型""data type": "FBrowser_文本数组",
+"data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+ata type": "文本型""comment": "Returns the selection offset within the end node.""data type": "类_FBrowser_字节集数组""method name": "取组织列表",
+ata type": "文本型""comment": "Returns the selection offset within the end node.""data type": "类_FBrowser_字节集数组""comment": "英文名：GetOrganizationNames",
+ata type": "文本型""comment": "Returns the selection offset within the end node.""data type": "类_FBrowser_字节集数组""data type": "FBrowser_文本数组",
+ata type": "文本型""comment": "Returns the selection offset within the end node.""data type": "类_FBrowser_字节集数组""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取组织单元列表",
+}"comment": "英文名：GetOrganizationUnitNames",
+}"data type": "FBrowser_文本数组",
+}"@禁止流程检查": "真"
+  },
+  {
+"data type": "FBrowser_文本数组""method name": "取域组件列表",
+"data type": "FBrowser_文本数组""comment": "英文名：GetDomainComponents",
+"data type": "FBrowser_文本数组""data type": "FBrowser_文本数组",
+"data type": "FBrowser_文本数组""@禁止流程检查": "真"
+  }
+a type": "文本型""method name": "取颁发者证书数量"]
+ },
+ {
+"comment": "英文名：GetOrganizationUnitNames""class name": "类_FBrowser_服务器",
+"comment": "英文名：GetOrganizationUnitNames""comment": "CefServer",
+"comment": "英文名：GetOrganizationUnitNames""@全局类": "真",
+"comment": "英文名：GetOrganizationUnitNames""methods": [
+  {
+type": "文本型""method name": "取颁发者证书数量"]"method name": "FBrowser_服务器_创建",
+type": "文本型""method name": "取颁发者证书数量"]"comment": "注意：静态事件和动态事件只能设置一个，优先静态事件有效；采用动态事件可实现回调的动态多态操作，更加灵活；",
+type": "文本型""method name": "取颁发者证书数量"]"static": true,
+type": "文本型""method name": "取颁发者证书数量"]"parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大连接数",
+"data type": "整数"
+   },
+   {
+"parameter name": "服务处理事件",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_服务器事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+type": "文本型""method name": "取颁发者证书数量"]]
+  },
+  {
+ }"method name": "是否为空",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真"
+  },
+  {
+}"method name": "置空",
+}"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+thod name": "置空""method name": "关闭",
+thod name": "置空""comment": "Shutdown：\nStop the server and shut down the dedicated server thread. \nSee CefServerHandler::OnServerCreated documentation for a description of server lifespan.",
+thod name": "置空""@禁止流程检查": "真"
+  },
+  {
+thod name": "置空""method name": "是否运行中",
+thod name": "置空""comment": "IsRunning：\nReturns true if the server is currently running and accepting incoming connections. \nSee CefServerHandler::OnServerCreated documentation for a description of server lifespan. \nThis method must be called on the dedicated server thread.",
+thod name": "置空""data type": "逻辑型",
+thod name": "置空""@禁止流程检查": "真"
+  },
+  {
+thod name": "置空""method name": "取服务器地址",
+thod name": "置空""comment": "GetAddress：Returns the server address including the port number.",
+thod name": "置空""data type": "文本型",
+thod name": "置空""@禁止流程检查": "真"
+  },
+  {
+ name": "置空""method name": "是否运行中""method name": "是否存在连接",
+ name": "置空""method name": "是否运行中""comment": "HasConnection：\nReturns true if the server currently has a connection. \nThis method must be called on the dedicated server thread.",
+ name": "置空""method name": "是否运行中""data type": "逻辑型",
+ name": "置空""method name": "是否运行中""@禁止流程检查": "真"
+  },
+  {
+data type": "整数""method name": "是否有效连接",
+data type": "整数""comment": "IsValidConnection：\nReturns true if |connection_id| represents a valid connection. \nThis method must be called on the dedicated server thread.",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "connection_id",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "发送Http200响应",
+
+"comment": "SendHttp200Response：\n Send an HTTP 200 \"OK\" response to the connection identified by |connection_id|. \n|content_type| is the response content type (e.g.\"text/html\"), |data| is the response content, and |data_size| is the size of |data| in bytes. \nThe contents of |data| will be copied. The connection will be closed automatically after the response is sent.",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "connection_id",
+"data type": "整数"
+   },
+   {
+"parameter name": "连接类型",
+"comment": "content_type",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "data",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"comment": "data_size",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "发送Http404响应",
+data type": "整数""comment": "SendHttp404Response：\nSend an HTTP 404 \"Not Found\" response to the connection identified by |connection_id|. \nThe connection will be closed automatically after the response is sent.",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "connectionid",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+comment": "connection_id""method name": "发送Http500响应",
+comment": "connection_id""comment": "SendHttp500Response：\nSend an HTTP 500 \"Internal Server Error\" response to the connection identified by |connection_id|.\n|error_message| is the associated error message. \nThe connection will be closed automatically after the response is sent.",
+comment": "connection_id""@禁止流程检查": "真",
+comment": "connection_id""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "connection_id",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误文本",
+"comment": "error_message",
+"data type": "文本型"
+   }
+comment": "connection_id"]
+  },
+  {
+ameter name": "连接类型""method name": "取任务运行器",
+ameter name": "连接类型""comment": "GetTaskRunner：Returns the task runner for the dedicated server thread.",
+ameter name": "连接类型""data type": "类_FBrowser_任务运行器",
+ameter name": "连接类型""@禁止流程检查": "真"
+  },
+  {
+comment": "connection_id""method name": "发送原始数据",
+comment": "connection_id""comment": "SendRawData：\nSend raw data directly to the connection identified by |connection_id|.\n|data| is the raw data and |data_size| is the size of |data| in bytes.The contents of |data| will be copied. \nNo validation of |data| is performed internally so the client should be careful to send the amount indicated by the \"Content-Length\" header, if specified. \nSee SendHttpResponse documentation for intended usage.",
+comment": "connection_id""@禁止流程检查": "真",
+comment": "connection_id""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "connectionid",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "data",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"comment": "data_size",
+"data type": "整数"
+   }
+comment": "connection_id"]
+  },
+  {
+ameter name": "连接类型""method name": "关闭连接",
+ameter name": "连接类型""comment": "CloseConnection",
+ameter name": "连接类型""@禁止流程检查": "真",
+ameter name": "连接类型""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+ameter name": "连接类型"]
+  },
+  {
+
+"method name": "发送WebSocket数据",
+
+"comment": "SendWebSocketMessage:Send a WebSocket message to the connection identified by |connection_id|.",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "connection_id",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+meter name": "连接类型""comment": "CloseConnection""method name": "发送HttpResponse",
+meter name": "连接类型""comment": "CloseConnection""comment": "SendHttpResponse：Send a custom HTTP response to the connection identified by |connection_id|",
+meter name": "连接类型""comment": "CloseConnection""@禁止流程检查": "真",
+meter name": "连接类型""comment": "CloseConnection""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "connectionid",
+"data type": "整数"
+   },
+   {
+"parameter name": "响应代码",
+"comment": "responsecode:the HTTP response code sent in the status line (e.g. 200)",
+"data type": "整数"
+   },
+   {
+"parameter name": "响应类型",
+"comment": "contenttype:the response content type sent as the \"Content-Type\" header (e.g. \"text/html\")",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内容长度",
+"comment": "content_length:\nthe expected content length.If |content_length| is >= 0 then the \"Content-Length\" header will be sent.\nIf |content_length| is 0 then no content is expected and the connection will be closed automatically after the response is sent.\nIf |content_length| is < 0 then no \"Content-Length\" header will be sent and the client will continue reading until the connection is closed",
+"data type": "整数"
+   },
+   {
+"parameter name": "额外头数据",
+"comment": "extra_headers：the map of extra response headers",
+"data type": "FBrowser_双文本数组"
+   }
+meter name": "连接类型""comment": "CloseConnection"]
+  }
+"comment": "英文名：GetOrganizationUnitNames"]
+ },
+ {
+"class name": "类_FBrowser_读取流",
+"comment": "CefStreamReader",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "FBrowser_读取流_从文件创建",
+
+"static": true,
+
+"data type": "类_FBrowser_读取流",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "文件名""method name": "FBrowser_读取流_从数据创建",
+ameter name": "文件名""comment": "Create a new CefStreamReader object from a file.",
+ameter name": "文件名""static": true,
+ameter name": "文件名""data type": "类_FBrowser_读取流",
+ameter name": "文件名""@禁止流程检查": "真",
+ameter name": "文件名""parameters": [
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+ameter name": "文件名"]
+  },
+  {
+
+"method name": "是否为空",
+
+"comment": "Create a new CefStreamReader object from data.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "置空",
+ }"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+ }"method name": "读取",
+ }"comment": "Read raw binary data.",
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "ptr",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"comment": "size",
+"data type": "整数"
+   },
+   {
+"parameter name": "n",
+"comment": "n",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+comment": "ptr""method name": "到指定偏移位置",
+comment": "ptr""comment": "Seek to the specified offset position. \n|whence| may be any one of SEEK_CUR, SEEK_END or SEEK_SET. Returns zero on success and non-zero on failure.",
+comment": "ptr""data type": "整数",
+comment": "ptr""@禁止流程检查": "真",
+comment": "ptr""parameters": [
+   {
+"parameter name": "偏移位置",
+"comment": "offset",
+"data type": "长整数"
+   },
+   {
+"parameter name": "由来",
+"comment": "whence  参考：SEEK.XXXXX",
+"data type": "整数"
+   }
+comment": "ptr"]
+  },
+  {
+comment": "ptr""method name": "取当前偏移位置",
+comment": "ptr""comment": "Return the current offset position.",
+comment": "ptr""data type": "长整数",
+comment": "ptr""@禁止流程检查": "真"
+  },
+  {
+ameter name": "n""method name": "是否到文件尾",
+ameter name": "n""comment": "Return non-zero if at end of file.",
+ameter name": "n""data type": "逻辑型",
+ameter name": "n""@禁止流程检查": "真"
+  },
+  {
+eter name": "文件名"]"method name": "是否阻塞",
+eter name": "文件名"]"comment": "Returns true if this reader performs work like accessing the file system  which may block.   \nUsed as a hint for determining the thread to access the reader from.",
+eter name": "文件名"]"data type": "逻辑型",
+eter name": "文件名"]"@禁止流程检查": "真"
+  }
+]
+ },
+ {
+ }"class name": "类_FBrowser_同步辅助类",
+ }"comment": "同步辅助类，可用于辅助异步等待返回值，注意：内置等待方法不能用于浏览器事件中，会卡事件照成浏览器停止加载而异常;不能直接通过\"=\"直接给类赋值，必须使用内置方法操作",
+ }"methods": [
+  {
+"method name": "是否已创建",
+"comment": "返回真表示已创建，返回假表示未创建",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "创建",
+
+"comment": "创建后使用完毕需执行销毁释放资源，否则资源无法释放,如果数据已经存在再次创建会重置以前数据"
+  },
+  {
+}"method name": "销毁",
+}"comment": "释放资源"
+  },
+  {
+}"comment": "同步辅助类，可用于辅助异步等待返回值，注意：内置等待方法不能用于浏览器事件中，会卡事件照成浏览器停止加载而异常;不能直接通过\"=\"直接给类赋值，必须使用内置方法操作""method name": "取指针",
+}"comment": "同步辅助类，可用于辅助异步等待返回值，注意：内置等待方法不能用于浏览器事件中，会卡事件照成浏览器停止加载而异常;不能直接通过\"=\"直接给类赋值，必须使用内置方法操作""comment": "取出该类创建后的原始指针，未创建返回0",
+}"comment": "同步辅助类，可用于辅助异步等待返回值，注意：内置等待方法不能用于浏览器事件中，会卡事件照成浏览器停止加载而异常;不能直接通过\"=\"直接给类赋值，必须使用内置方法操作""data type": "变整数",
+}"comment": "同步辅助类，可用于辅助异步等待返回值，注意：内置等待方法不能用于浏览器事件中，会卡事件照成浏览器停止加载而异常;不能直接通过\"=\"直接给类赋值，必须使用内置方法操作""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "绑定",
+
+"comment": "绑定的指针必须是该类方法中\"取指针\"取出的数据，如果已存在指针值将会绑定失败，需将原数据销毁后才可重新绑定，乱设置指针会导致异常出错，严重的会崩溃",
+
+"parameters": [
+   {
+"parameter name": "指针",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"comment": "释放资源""method name": "是否有效",
+"comment": "释放资源""comment": "判断同步类是否有效，如果同步类已销毁或者意外终止这里会返回假",
+"comment": "释放资源""data type": "逻辑型",
+"comment": "释放资源""@禁止流程检查": "真"
+  },
+  {
+"comment": "绑定的指针必须是该类方法中\"取指针\"取出的数据，如果已存在指针值将会绑定失败，需将原数据销毁后才可重新绑定，乱设置指针会导致异常出错，严重的会崩溃""method name": "清理数据",
+"comment": "绑定的指针必须是该类方法中\"取指针\"取出的数据，如果已存在指针值将会绑定失败，需将原数据销毁后才可重新绑定，乱设置指针会导致异常出错，严重的会崩溃""comment": "清理全部已设置的数据，此方法不会重置等待，只清理数据"
+  },
+  {
+ }"method name": "重置",
+ }"comment": "使用前必须向执行创建命令，重置当前状态并清理已设置数据",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真"
+  },
+  {
+}"data type": "逻辑型""method name": "等待",
+}"data type": "逻辑型""comment": "使用前必须先执行创建命令,执行后,一直柱塞等待直到执行本类中的\"停止等待\"后结束,返回0等待失败，返回-1等待超时，返回1成功\n不能用于浏览器事件中，会卡事件照成浏览器停止加载而异常",
+}"data type": "逻辑型""data type": "整数",
+}"data type": "逻辑型""@禁止流程检查": "真",
+}"data type": "逻辑型""parameters": [
+   {
+"parameter name": "超时",
+"data type": "整数",
+"@默认值": "99999"
+   }
+}"data type": "逻辑型"]
+  },
+  {
+data type": "整数""method name": "停止等待",
+data type": "整数""comment": "使用前必须先执行创建或绑定已创建的指针命令,结束等待操作",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+}"data type": "逻辑型""method name": "置整数",
+}"data type": "逻辑型""parameters": [
+   {
+"parameter name": "数据",
+"data type": "整数"
+   }
+}"data type": "逻辑型"]
+  },
+  {
+meter name": "n""comment": "Return non-zero if at end of file.""method name": "置双精度小数型",
+meter name": "n""comment": "Return non-zero if at end of file.""parameters": [
+   {
+"parameter name": "数据",
+"data type": "小数"
+   }
+meter name": "n""comment": "Return non-zero if at end of file."]
+  },
+  {
+}"comment": "使用前必须向执行创建命令，重置当前状态并清理已设置数据""method name": "置逻辑型",
+}"comment": "使用前必须向执行创建命令，重置当前状态并清理已设置数据""parameters": [
+   {
+"parameter name": "数据",
+"data type": "逻辑型"
+   }
+}"comment": "使用前必须向执行创建命令，重置当前状态并清理已设置数据"]
+  },
+  {
+}"data type": "逻辑型""method name": "置文本型",
+}"data type": "逻辑型""parameters": [
+   {
+"parameter name": "数据",
+"data type": "文本型"
+   }
+}"data type": "逻辑型"]
+  },
+  {
+ }"method name": "置字节集",
+ }"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+}"method name": "添加字节集",
+}"comment": "在原有的基础上添加字节集数据，原数据保留",
+}"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "取整数",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+ta type": "逻辑型""method name": "置文本型""method name": "取双精度小数型",
+ta type": "逻辑型""method name": "置文本型""data type": "小数",
+ta type": "逻辑型""method name": "置文本型""@禁止流程检查": "真"
+  },
+  {
+a type": "逻辑型""method name": "置文本型""data type": "小数""method name": "取逻辑型",
+a type": "逻辑型""method name": "置文本型""data type": "小数""data type": "逻辑型",
+a type": "逻辑型""method name": "置文本型""data type": "小数""@禁止流程检查": "真"
+  },
+  {
+基础上添加字节集数据，原数据保留"method name": "取文本型",
+基础上添加字节集数据，原数据保留"data type": "文本型",
+基础上添加字节集数据，原数据保留"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取字节集",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "取出大小",
+"comment": "为0会取出全部大小，不能超出本身大小",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "偏移量",
+"comment": "开始读取字节集位置",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "置浏览器",
+}"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+}]
+  },
+  {
+"method name": "置框架",
+"parameters": [
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   }
+]
+  },
+  {
+}"method name": "置字典值",
+}"parameters": [
+   {
+"parameter name": "字典值",
+"data type": "类_FBrowser_字典值"
+   }
+}]
+  },
+  {
+"parameters": [
+"method name": "取浏览器",
+"parameters": [
+"data type": "类_FBrowser_浏览器",
+"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+data type": "整数""method name": "取框架",
+data type": "整数""data type": "类_FBrowser_框架",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取字典值",
+}"data type": "类_FBrowser_字典值",
+}"@禁止流程检查": "真"
+  },
+  {
+ type": "整数""method name": "取框架""method name": "是否存在整数值",
+ type": "整数""method name": "取框架""comment": "存在值返回真，不存在或重置后返回假，为真包括设置为0",
+ type": "整数""method name": "取框架""data type": "逻辑型",
+ type": "整数""method name": "取框架""@禁止流程检查": "真"
+  },
+  {
+]"method name": "是否存在双精度小数值",
+]"comment": "存在值返回真，不存在或重置后返回假，为真包括设置为0",
+]"data type": "逻辑型",
+]"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "是否存在逻辑值",
+
+"comment": "存在值返回真，不存在或重置后返回假，为真包括设置为假",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否存在文本值",
+}"comment": "存在值返回真，不存在或重置后返回假，为真包括设置为空文本",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否存在字节集值",
+}"comment": "存在值返回真，不存在或重置后返回假",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+"data type": "逻辑型""method name": "是否存在浏览器值",
+"data type": "逻辑型""comment": "存在值返回真，不存在或重置后返回假",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "是否存在框架值",
+
+"comment": "存在值返回真，不存在或重置后返回假",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+data type": "字节集类""method name": "是否存在字典值",
+data type": "字节集类""comment": "存在值返回真，不存在或重置后返回假",
+data type": "字节集类""data type": "逻辑型",
+data type": "字节集类""@禁止流程检查": "真"
+  }
+ }]
+ },
+ {
+"class name": "类_FBrowser_填表框架",
+"base class": "类_FBrowser_基础框架",
+"methods": [
+  {
+}"method name": "点击元素",
+}"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+"data type": "逻辑型""method name": "滚动到元素",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否顶端对齐",
+"comment": "默认为：真，为否为底部对齐",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"data type": "逻辑型"]
+  },
+  {
+
+"method name": "置元素选择框",
+
+"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "选择",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "取元素选择框",
+
+"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "置元素选择项",
+data type": "整数""parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "选择项",
+"comment": "选择选择框的第几个",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "取元素选择项",
+
+"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "置元素焦点",
+
+"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否焦点",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "置元素内容",
+"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "取元素内容",
+data type": "文本型""parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "置元素内文本",
+ }"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "取元素内文本",
+data type": "整数""parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "置元素外文本",
+ }"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "取元素外文本",
+ }"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+data type": "类_FBrowser_事件智能指针""method name": "置元素内代码",
+data type": "类_FBrowser_事件智能指针""parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "代码文本",
+"data type": "文本型"
+   }
+data type": "类_FBrowser_事件智能指针"]
+  },
+  {
+"method name": "取元素内代码",
+"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+}"method name": "置元素外代码",
+}"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "代码文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"parameters": [
+"method name": "取元素外代码",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+"parameters": [
+]
+  },
+  {
+ameter name": "结果回调""method name": "置元素属性",
+ameter name": "结果回调""parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+ameter name": "结果回调"]
+  },
+  {
+}"method name": "取元素属性",
+}"parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "元素名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+ameter name": "元素名""method name": "元素是否存在",
+ameter name": "元素名""parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+ameter name": "元素名"]
+  },
+  {
+ameter name": "结果回调""method name": "取元素坐标",
+ameter name": "结果回调""parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果回调",
+"comment": "异步获取数据或者触发响应事件的回调，数据反馈或者事件响应会触发回调中对应的方法。\n使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_JS回调”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针",
+"@默认值": "空对象"
+   }
+ameter name": "结果回调"]
+  },
+  {
+data type": "文本型""method name": "触发元素事件",
+data type": "文本型""parameters": [
+   {
+"parameter name": "选择器",
+"data type": "文本型"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始，选择器的第几个标签",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "事件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "按键代码",
+"comment": "为空默认为：回车键",
+"data type": "整数",
+"@默认值": "13"
+   }
+data type": "文本型"]
+  }
+]
+ },
+ {
+
+"class name": "类_FBrowser_用户额外配置",
+
+"methods": [
+  {
+arameters": [
+]"method name": "是否为空",
+arameters": [
+]"data type": "逻辑型",
+arameters": [
+]"@禁止流程检查": "真"
+  },
+  {
+"method name": "置空",
+"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+ }"method name": "置事件",
+ }"comment": "如果不设置则采用默认当前设置的事件",
+ }"parameters": [
+   {
+"parameter name": "浏览器事件",
+"comment": "使用“FBrowser创建事件智能指针”全局方法或者在设置之前用该类型参数中的“创建”方法来创建一个继承于“类_FBrowser_浏览器事件”的自定义类事件；\n即可实现事件触发到你所自定义的类事件方法中；采用智能指针引用完毕后会自动释放，如不设置将不会触发；",
+"data type": "类_FBrowser_事件智能指针"
+   },
+   {
+"parameter name": "禁用事件",
+"comment": "即将打开新窗口的浏览器器事件开关，可关闭某些不必要的事件加载，合理设置可提高加载速度",
+"data type": "FBrowser_禁用事件",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+
+"method name": "置标识",
+
+"comment": "如果不设置则采用默认当前设置的用户标识",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取标识",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+@默认值": "0""method name": "置额外信息",
+@默认值": "0""parameters": [
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值"
+   }
+@默认值": "0"]
+  },
+  {
+}"method name": "取额外信息",
+}"data type": "类_FBrowser_字典值",
+}"@禁止流程检查": "真"
+  }
+
+]
+ },
+ {
+comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""class name": "类_FBrowser_URL请求",
+comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""methods": [
+  {
+omment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""methods": [
+"method name": "是否为空",
+omment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""methods": [
+"data type": "逻辑型",
+omment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据""methods": [
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "置空",
+}"comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"
+  },
+  {
+er name": "结果回调""method name": "取元素坐标""method name": "取请求",
+er name": "结果回调""method name": "取元素坐标""data type": "类_FBrowser_请求",
+er name": "结果回调""method name": "取元素坐标""@禁止流程检查": "真"
+  },
+  {
+ameter name": "选择器""method name": "取请求状态码",
+ameter name": "选择器""data type": "URL请求状态",
+ameter name": "选择器""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取请求错误码",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+r name": "结果回调""method name": "取元素坐标""data type": "类_FBrowser_请求""method name": "取响应",
+r name": "结果回调""method name": "取元素坐标""data type": "类_FBrowser_请求""data type": "类_FBrowser_响应",
+r name": "结果回调""method name": "取元素坐标""data type": "类_FBrowser_请求""@禁止流程检查": "真"
+  },
+  {
+"data type": "类_FBrowser_字典值""method name": "是否带缓存响应",
+"data type": "类_FBrowser_字典值""@禁止流程检查": "真"
+  },
+  {
+rowser_用户额外配置"method name": "取消"
+  }
+comment": "手动置空当前类包含的cef类指针，置空后该类将无法使用，如没有其他引用将自动释放cef类指针的资源数据"]
+ }
+    ]
+}

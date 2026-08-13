@@ -1,0 +1,334 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"标准正则表达式支持库".
+
+{
+䊐敹ŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+䊐敹ŝ"package name": "火山.视窗.正则",
+䊐敹ŝ"classes": [
+ {
+@"@std::regex_constants::syntax_option_type::egrep""class name": "正则表达式类",
+@"@std::regex_constants::syntax_option_type::egrep""comment": "★ 本类由\"飞翔的企鹅\"封装.\n基于C++系统库提供文本的正则匹配/替换相关操作.",
+@"@std::regex_constants::syntax_option_type::egrep""@视窗.外部头文件": "\"w_regex.h\"",
+@"@std::regex_constants::syntax_option_type::egrep""@视窗.外部源文件": "\"w_regex.cpp\"",
+@"@std::regex_constants::syntax_option_type::egrep""methods": [
+  {
+
+"method name": "匹配",
+
+"comment": "以正则匹配方式查找欲匹配内容中的指定内容,如匹配成功可通过\"取子匹配内容\"获取各个子匹配组的内容.",
+
+"result comment": "如存在任何匹配内容将返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲匹配内容",
+"comment": "提供所欲进行匹配的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "表达式内容",
+"comment": "提供所欲使用的正则表达式内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "表达式选项",
+"comment": "提供所欲使用的表达式内容选项,请参考\"正则表达式选项\"所提供的常量值,可单个或多个值组合使用.",
+"data type": "整数",
+"@默认值": "正则表达式选项.ECMA语法"
+   },
+   {
+"parameter name": "匹配选项",
+"comment": "提供所欲使用的匹配选项,请参考\"正则匹配选项\"所提供的常量值,可单个或多个值组合使用.",
+"data type": "整数",
+"@默认值": "正则匹配选项.默认"
+   }
+
+]
+  },
+  {
+}"method name": "完全匹配",
+}"comment": "使用指定正则表达式检查指定的内容是否完全匹配该表达式规则",
+}"result comment": "完全匹配返回真,否则返回假.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "欲匹配内容",
+"comment": "提供所欲进行匹配的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "表达式内容",
+"comment": "提供所欲使用的正则表达式内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "表达式选项",
+"comment": "提供所欲使用的表达式内容选项,请参考\"正则表达式选项\"所提供的常量值,可单个或多个值组合使用.",
+"data type": "整数",
+"@默认值": "正则表达式选项.ECMA语法"
+   },
+   {
+"parameter name": "匹配选项",
+"comment": "提供所欲使用的匹配选项,请参考\"正则匹配选项\"所提供的常量值,可单个或多个值组合使用.",
+"data type": "整数",
+"@默认值": "正则匹配选项.默认"
+   }
+}]
+  },
+  {
+
+"method name": "替换",
+
+"comment": "以正则匹配方式查找并替换欲匹配内容中的子内容.",
+
+"result comment": "返回被替换后的文本内容",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲匹配内容",
+"comment": "提供所欲进行匹配的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "表达式内容",
+"comment": "提供所欲使用的正则表达式内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换格式内容",
+"comment": "提供所欲使用的替换格式内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "表达式选项",
+"comment": "提供所欲使用的表达式内容选项,请参考\"正则表达式选项\"所提供的常量值,可单个或多个值组合使用.",
+"data type": "整数",
+"@默认值": "正则表达式选项.ECMA语法"
+   },
+   {
+"parameter name": "匹配选项",
+"comment": "提供所欲使用的匹配选项,请参考\"正则匹配选项\"所提供的常量值,可单个或多个值组合使用.",
+"data type": "整数",
+"@默认值": "正则匹配选项.默认"
+   }
+
+]
+  },
+  {
+}"method name": "取子匹配文本",
+}"comment": "使用\"匹配\"方法后获取所匹配到的子匹配内容",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供所欲获取子匹配内容的索引位置,0表示获取整个匹配组内容,从1开始获取子匹配组内容.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "取子匹配数量",
+}"comment": "使用\"匹配\"方法后获取子匹配数量",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否存在匹配",
+
+"comment": "检查上次执行\"匹配\"是否匹配到内容.",
+
+"result comment": "匹配到内容返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到下一个匹配",
+
+"comment": "  查找下一个匹配文本段.\n  如果本对象当前处于匹配状态(即调用过\"匹配\"方法并返回真),则从当前匹配文本段的\n下一个字符处开始查找下一个匹配文本段.",
+
+"result comment": "如果存在下一个匹配文本段将返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "匹配选项",
+"comment": "提供所欲使用的匹配选项,请参考\"正则匹配选项\"所提供的常量值,可单个或多个值组合使用.",
+"data type": "整数",
+"@默认值": "正则匹配选项.默认"
+   }
+
+]
+  }
+@"@std::regex_constants::syntax_option_type::egrep"]
+ },
+ {
+"class name": "正则匹配选项",
+"comment": "提供正则匹配过程中所欲使用的各种选项,支持多个值组合使用.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+constants": [
+"constant name": "默认",
+constants": [
+"comment": "使用默认选项",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "@std::regex_constants::match_flag_type::match_default"
+  },
+  {
+
+"constant name": "非行首",
+
+"comment": "不将首字符作为行首处理",
+
+"data type": "整数",
+
+"initial value": "@std::regex_constants::match_flag_type::match_not_bol"
+  },
+  {
+nstant name": "非行首""constant name": "非行尾",
+nstant name": "非行首""comment": "不将尾字符作为行尾处理",
+nstant name": "非行首""data type": "整数",
+nstant name": "非行首""initial value": "@std::regex_constants::match_flag_type::match_not_eol"
+  },
+  {
+}"constant name": "非单词首",
+}"comment": "不将首字符作为单词首处理",
+}"data type": "整数",
+}"initial value": "@std::regex_constants::match_flag_type::match_not_bow"
+  },
+  {
+
+"constant name": "非单词尾",
+
+"comment": "不将尾字符作为单词尾处理",
+
+"data type": "整数",
+
+"initial value": "@std::regex_constants::match_flag_type::match_not_eow"
+  },
+  {
+"initial value": "@std::regex_constants::match_flag_type::match_not_bow""constant name": "任意匹配",
+"initial value": "@std::regex_constants::match_flag_type::match_not_bow""comment": "如果存在多于一个匹配,则接受任何匹配项.",
+"initial value": "@std::regex_constants::match_flag_type::match_not_bow""data type": "整数",
+"initial value": "@std::regex_constants::match_flag_type::match_not_bow""initial value": "@std::regex_constants::match_flag_type::match_any"
+  },
+  {
+}"constant name": "非空匹配",
+}"comment": "不匹配任何空序列",
+}"data type": "整数",
+}"initial value": "@std::regex_constants::match_flag_type::match_not_null"
+  },
+  {
+}"constant name": "连续匹配",
+}"comment": "子匹配组必须从要匹配的第一个字符开始",
+}"data type": "整数",
+}"initial value": "@std::regex_constants::match_flag_type::match_continuous"
+  },
+  {
+"comment": "子匹配组必须从要匹配的第一个字符开始""constant name": "包含之前",
+"comment": "子匹配组必须从要匹配的第一个字符开始""comment": "在表达式第一个字符之前还存在有其他任意字符",
+"comment": "子匹配组必须从要匹配的第一个字符开始""data type": "整数",
+"comment": "子匹配组必须从要匹配的第一个字符开始""initial value": "@std::regex_constants::match_flag_type::match_prev_avail"
+  }
+]
+ },
+ {
+"class name": "正则表达式选项",
+"comment": "提供正则表达式所欲使用的选项,支持多个值组合使用.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+comment": "子匹配组必须从要匹配的第一个字符开始""initial value": "@std::regex_constants::match_flag_type::match_prev_avail""constant name": "不区分大小写",
+comment": "子匹配组必须从要匹配的第一个字符开始""initial value": "@std::regex_constants::match_flag_type::match_prev_avail""comment": "在匹配过程中忽略大小写",
+comment": "子匹配组必须从要匹配的第一个字符开始""initial value": "@std::regex_constants::match_flag_type::match_prev_avail""data type": "整数",
+comment": "子匹配组必须从要匹配的第一个字符开始""initial value": "@std::regex_constants::match_flag_type::match_prev_avail""initial value": "@std::regex_constants::syntax_option_type::icase"
+  },
+  {
+comment": "子匹配组必须从要匹配的第一个字符开始""initial value": "@std::regex_constants::match_flag_type::match_prev_avail""constant name": "无子匹配组",
+comment": "子匹配组必须从要匹配的第一个字符开始""initial value": "@std::regex_constants::match_flag_type::match_prev_avail""comment": "表示匹配后不保存子匹配组的数据",
+comment": "子匹配组必须从要匹配的第一个字符开始""initial value": "@std::regex_constants::match_flag_type::match_prev_avail""data type": "整数",
+comment": "子匹配组必须从要匹配的第一个字符开始""initial value": "@std::regex_constants::match_flag_type::match_prev_avail""initial value": "@std::regex_constants::syntax_option_type::nosubs"
+  },
+  {
+}"constant name": "匹配效率优先",
+}"comment": "执行速度优先于构造速度",
+}"data type": "整数",
+}"initial value": "@std::regex_constants::syntax_option_type::optimize"
+  },
+  {
+"initial value": "@std::regex_constants::syntax_option_type::optimize""constant name": "字符范围",
+"initial value": "@std::regex_constants::syntax_option_type::optimize""comment": "指定表达式是否支持使用字符范围,例如\"a-z\".",
+"initial value": "@std::regex_constants::syntax_option_type::optimize""data type": "整数",
+"initial value": "@std::regex_constants::syntax_option_type::optimize""initial value": "@std::regex_constants::syntax_option_type::collate"
+  },
+  {
+
+"constant name": "ECMA语法",
+
+"comment": "指定表达式使用ECMA-262指定的语法",
+
+"data type": "整数",
+
+"initial value": "@std::regex_constants::syntax_option_type::ECMAScript"
+  },
+  {
+}"constant name": "基本语法",
+}"comment": "指定表达式使用POSIX基本的正则表达式语法",
+}"data type": "整数",
+}"initial value": "@std::regex_constants::syntax_option_type::basic"
+  },
+  {
+}"constant name": "扩展语法",
+}"comment": "指定表达式使用POSIX拓展的正则表达式语法",
+}"data type": "整数",
+}"initial value": "@std::regex_constants::syntax_option_type::extended"
+  },
+  {
+
+"constant name": "AWK语法",
+
+"comment": "指定表达式使用POSIX版本的awk语言正则表达式语法",
+
+"data type": "整数",
+
+"initial value": "@std::regex_constants::syntax_option_type::awk"
+  },
+  {
+}"constant name": "GREP语法",
+}"comment": "指定表达式使用POSIX版本的grep语言正则表达式语法",
+}"data type": "整数",
+}"initial value": "@std::regex_constants::syntax_option_type::grep"
+  },
+  {
+
+"constant name": "EGREP语法",
+
+"comment": "指定表达式使用POSIX版本的egrep语言正则表达式语法",
+
+"data type": "整数",
+
+"initial value": "@std::regex_constants::syntax_option_type::egrep"
+  }
+]
+ }
+䊐敹ŝ]
+}

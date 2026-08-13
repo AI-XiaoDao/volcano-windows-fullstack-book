@@ -1,0 +1,6409 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"海康威视工业相机".
+
+{
+问本程序中的接口需要引用模块"海康威视工业相机"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"海康威视工业相机"."package name": "火山.视窗.海康威视",
+问本程序中的接口需要引用模块"海康威视工业相机"."@视窗.头文件搜寻目录": "\"lib\\\\include\"",
+问本程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"",
+问本程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部库": "\"lib\\\\$(p)\\\\MvCameraControl.lib\"",
+问本程序中的接口需要引用模块"海康威视工业相机"."classes": [
+ {
+本程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""class name": "工业相机类",
+本程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""comment": "★ 本类由\"飞翔的企鹅\"封装.\n海康工业相机SDK V3.4.0\n使用前确保系统已安装对应环境(MVS驱动以及动态链接库环境变量).\n官方网站:https://www.hikrobotics.com/\n运行时软件环境下载(MSV):https://www.hikrobotics.com/machinevision/service/download?module=0",
+本程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""@禁止创建对象": "真",
+本程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""methods": [
+  {
+程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""methods": [
+"method name": "取库版本号",
+程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""methods": [
+"comment": "获取SDK版本号.",
+程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""methods": [
+"result comment": "4个字节分别对应主版本号,子版本号,修正版本号,测试.",
+程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""methods": [
+"static": true,
+程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""methods": [
+"data type": "整数",
+程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\"""methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+本程序中的接口需要引用模块"海康威视工业相机"."classes": [
+"method name": "取支持传输协议层",
+本程序中的接口需要引用模块"海康威视工业相机"."classes": [
+"comment": "获取支持的传输层,包含Gige和U3V传输层,Gige代表支持GigeVision协议的工业相机,U3V代表支持U3V协议的工业相机.",
+本程序中的接口需要引用模块"海康威视工业相机"."classes": [
+"result comment": "返回支持的传输层编号.",
+本程序中的接口需要引用模块"海康威视工业相机"."classes": [
+"static": true,
+本程序中的接口需要引用模块"海康威视工业相机"."classes": [
+"data type": "整数",
+本程序中的接口需要引用模块"海康威视工业相机"."classes": [
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取所有设备信息",
+
+"comment": "枚举获取指定类型的设备列表.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "传输层",
+"comment": "提供所欲枚举的指定设备类型,请参考\"相机传输层协议类型\"所提供的常量,本参数支持位或多选.",
+"data type": "整数"
+   },
+   {
+"parameter name": "信息列表",
+"comment": "如果获取成功,获取的设备信息列表结果将写入至该变量.",
+"data type": "相机设备信息数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "取接口信息列表",
+
+"comment": "通过GenTL枚举接口信息列表.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "提供所欲使用的GenTL的cti文件路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "信息列表",
+"comment": "如果获取成功,获取的接口信息列表结果将写入至该变量.",
+"data type": "接口信息数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "取指定接口设备信息",
+
+"comment": "通过指定的通过GenTL Interface枚举所有设备列表.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "接口信息",
+"comment": "提供指定的接口信息对象.",
+"data type": "接口信息类"
+   },
+   {
+"parameter name": "信息列表",
+"comment": "如果获取成功,获取的设备信息列表结果将写入至该变量.",
+"data type": "GENTL设备信息数组类"
+   }
+
+]
+  },
+  {
+"static": true"method name": "取指定设备可访问权限",
+"static": true"comment": "读取设备CCP寄存器的值,判断当前状态是否具有指定类型的访问权限.",
+"static": true"result comment": "可用返回真,否则返回假.",
+"static": true"static": true,
+"static": true"data type": "逻辑型",
+"static": true"@嵌入式方法": "\"\"",
+"static": true"parameters": [
+   {
+"parameter name": "设备",
+"comment": "提供所欲检查的设备.",
+"data type": "相机设备信息类"
+   },
+   {
+"parameter name": "检查类型",
+"comment": "提供所欲检查该设备的权限类型.",
+"data type": "相机访问权限类型"
+   }
+"static": true]
+  },
+  {
+
+"method name": "置日志储存路径",
+
+"comment": "设置SDK输出的日志保存路径.",
+
+"result comment": "返回设置是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "提供所欲指定的日志储存路径.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"static": true"method name": "创建设备",
+"static": true"comment": "根据指定的设备信息创建相机设备对象.",
+"static": true"result comment": "返回所创建的相机设备对象.",
+"static": true"static": true,
+"static": true"data type": "相机设备类",
+"static": true"@禁止流程检查": "真",
+"static": true"parameters": [
+   {
+"parameter name": "设备信息",
+"comment": "提供所欲创建设备的信息对象.",
+"data type": "相机设备信息类"
+   },
+   {
+"parameter name": "启用日志",
+"comment": "指定所打开的相机设备对象是否生成其操作日志.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次创建设备的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+"static": true]
+  },
+  {
+
+"method name": "创建接口设备",
+
+"comment": "根据指定的接口设备信息创建相机设备对象.",
+
+"result comment": "返回所创建的相机设备对象.",
+
+"static": true,
+
+"data type": "相机设备类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备信息",
+"comment": "提供所欲创建GENTL接口设备的信息对象.",
+"data type": "GENTL设备信息类"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次创建设备的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "发送动作命令",
+
+"comment": "对当前相机设备发出动作命令,仅GIGE设备可用.",
+
+"result comment": "返回执行动作命令后的结果.",
+
+"static": true,
+
+"data type": "相机动作命令结果数组类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备密钥",
+"comment": "设备密钥.",
+"data type": "整数"
+   },
+   {
+"parameter name": "组键",
+"data type": "整数"
+   },
+   {
+"parameter name": "组掩码",
+"data type": "整数"
+   },
+   {
+"parameter name": "广播包地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "启用动作时间",
+"comment": "指定是否启用动作时间.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "动作时间",
+"comment": "预定的动作时间,和设备主频有关,仅在\"启用动作时间\"为真时本参数才有意义.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "ACK超时",
+"comment": "等待ACK的超时时间,如果为0表示不需要ACK.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "启用指定网卡",
+"comment": "指定是否启用指定网卡.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "指定网卡IP",
+"comment": "指定的网卡IP,仅在\"启用指定网卡\"为真时本参数才有意义.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "置枚举命令回复包类型",
+
+"comment": "设置枚举命令的回复包类型,该方法只对GigE相机有效.",
+
+"result comment": "返回设置是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"comment": "0表示单播,1表示广播.",
+"data type": "整数"
+   }
+
+]
+  }
+本程序中的接口需要引用模块"海康威视工业相机"."@视窗.外部头文件": "\"src\\\\vol_hik_machine.h\""]
+ },
+ {
+"class name": "相机设备类",
+"comment": "表示一个相机设备对象,提供设备的所有操作接口.",
+"methods": [
+  {
+
+"method name": "打开设备",
+
+"comment": "在对设备进行任何操作之前务必确保已成功打开设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "访问权限",
+"comment": "提供打开该设备所欲使用的权限类型.",
+"data type": "相机访问权限类型",
+"@默认值": "相机访问权限类型.独占权限"
+   },
+   {
+"parameter name": "权限切换密钥",
+"comment": "提供切换访问权限时的密钥.",
+"data type": "短整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "关闭设备",
+ }"comment": "通常与\"打开设备\"成对使用,关闭后如需再使用设备需再次调用\"打开设备\"方法.",
+ }"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"data type": "整数""method name": "取设备信息",
+}"data type": "整数""comment": "获取该设备的信息对象.",
+}"data type": "整数""result comment": "返回该相机的设备信息对象.",
+}"data type": "整数""data type": "相机设备信息类",
+}"data type": "整数""@禁止流程检查": "真",
+}"data type": "整数""parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+}"data type": "整数"]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "读整数值属性",
+}"@嵌入式方法": "\"\"""comment": "读取该设备的数值属性.",
+}"@嵌入式方法": "\"\"""result comment": "返回读取的属性值.",
+}"@嵌入式方法": "\"\"""data type": "相机数值属性类",
+}"@嵌入式方法": "\"\"""@禁止流程检查": "真",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲读取的属性名称,例如需获取其宽度属性即提供\"Width\",具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "写整数值属性",
+
+"comment": "写入该设备的数值属性.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲写入的属性名称,例如需设置其宽度属性即提供\"Width\",具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的属性值.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+thod name": "写整数值属性""method name": "读枚举值属性",
+thod name": "写整数值属性""comment": "读取该设备的枚举值属性.",
+thod name": "写整数值属性""result comment": "返回读取的属性值.",
+thod name": "写整数值属性""data type": "相机枚举值属性类",
+thod name": "写整数值属性""@禁止流程检查": "真",
+thod name": "写整数值属性""parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲读取的属性名称,例如需获取其像素格式属性即提供\"PixelFormat\",具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+thod name": "写整数值属性"]
+  },
+  {
+data type": "文本型""method name": "写枚举值属性",
+data type": "文本型""comment": "写入该设备的枚举值属性.",
+data type": "文本型""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+data type": "文本型""data type": "整数",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲写入的属性名称,例如需设置其像素格式属性即提供\"PixelFormat\",具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的属性值.",
+"data type": "整数"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "写文本枚举值属性",
+}"comment": "同\"写枚举值属性\"一致,本方法以文本型内容写入该设备的枚举值属性.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲写入的属性名称,例如需设置其像素格式属性即提供\"PixelFormat\",具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的属性值.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "读浮点值属性",
+"comment": "读取该设备的浮点属性.",
+"result comment": "返回读取的属性值.",
+"data type": "相机浮点属性类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲读取的属性名称,具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+
+"method name": "写浮点值属性",
+
+"comment": "写入该设备的浮点属性.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲写入的属性名称,具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的属性值.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "读逻辑值属性",
+
+"comment": "读取该设备的逻辑值属性.",
+
+"result comment": "返回读取的属性值.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲读取的属性名称,具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "写逻辑值属性",
+
+"comment": "写入该设备的逻辑值属性.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲写入的属性名称,具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的属性值.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "读文本值属性",
+
+"comment": "读取该设备的文本值属性.",
+
+"result comment": "返回读取的属性值.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲读取的属性名称,具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+}"method name": "写文本值属性",
+}"comment": "写入该设备的文本值属性.",
+}"result comment": "返回执行是否成功，请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲写入的属性名称,具体可以查看MVS属性描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的属性值.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "执行指定命令",
+
+"comment": "设置该设备的命令属性,以执行指定的命令.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "命令",
+"comment": "提供所欲执行的命令,例如:\"TriggerSoftware\".",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读指定内存地址值",
+
+"comment": "通过寄存器地址获取该相机设备寄存器的数据.",
+
+"result comment": "返回读取到的数据.",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "待读取的内存地址,该地址可以从设备的Camera.xml文件中获取,形如xxx_RegAddr的xml节点值.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "读取长度",
+"comment": "提供所欲读取数据的尺寸(单位字节).",
+"data type": "长整数"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "写指定内存地址值",
+
+"comment": "通过寄存器地址写入该相机设备寄存器的数据.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲写入的完整数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "地址",
+"comment": "待读取的内存地址,该地址可以从设备的Camera.xml文件中获取,形如xxx_RegAddr的xml节点值.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+"method name": "取当前连接状态",
+"comment": "获取当前该设备是否处于连接状态.",
+"result comment": "返回真表示处于连接状态,否则为失去连接.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+comment": "获取当前该设备是否处于连接状态.""method name": "置内部图像缓存节点数量",
+comment": "获取当前该设备是否处于连接状态.""comment": "设置SDK内部图像缓存节点个数,通常在抓图前调用.\n注意:该方法不支持CameraLink设备.",
+comment": "获取当前该设备是否处于连接状态.""result comment": "返回执行是否成功，请参考\"工业相机状态码\"所提供的常量值.",
+comment": "获取当前该设备是否处于连接状态.""data type": "整数",
+comment": "获取当前该设备是否处于连接状态.""@嵌入式方法": "\"\"",
+comment": "获取当前该设备是否处于连接状态.""parameters": [
+   {
+"parameter name": "数量",
+"comment": "提供所欲设置的缓存节点个数,必须大于等于1.",
+"data type": "整数"
+   }
+comment": "获取当前该设备是否处于连接状态."]
+  },
+  {
+"method name": "置取流策略",
+"comment": "设置该设备的取流策略.",
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "策略",
+"comment": "提供所欲设置的策略类型.",
+"data type": "相机取流策略"
+   }
+]
+  },
+  {
+}"method name": "置输出缓存数量",
+}"comment": "设置输出缓存个数(只有在\"列表最新\"取流策略下才有效. ",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "数量",
+"comment": "提供所欲设置的数量,范围:大于等于1,小于图像缓存节点个数(即\"置内部图像缓存节点数量\"方法的设置值).",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "取流量及丢包信息",
+}"comment": "如果当前设备为GigE设备,调用本方法以获取网络流量以及丢包信息,其他类型设备无法获取.\n注意:需要在开启抓图后才可使用.",
+}"result comment": "返回流量以及丢包信息.",
+}"data type": "相机流量丢包信息类",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+
+"method name": "取相机数据接收信息",
+
+"comment": "如果当前设备为U3V设备,调用本方法以获取host收到从设备端的总字节数,其他类型设备无法获取.",
+
+"result comment": "返回数据接收信息.",
+
+"data type": "相机数据接收信息类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+@默认值": "空对象""method name": "保存相机属性",
+@默认值": "空对象""comment": "保存当前相机设备指定属性.",
+@默认值": "空对象""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+@默认值": "空对象""data type": "整数",
+@默认值": "空对象""@嵌入式方法": "\"\"",
+@默认值": "空对象""parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲保存的属性名称.",
+"data type": "文本型"
+   }
+@默认值": "空对象"]
+  },
+  {
+
+"method name": "导入相机属性",
+
+"comment": "导入当前相机设备指定属性.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "属性名",
+"comment": "提供所欲导入的属性名称.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读取相机文件",
+
+"comment": "从当前相机设备读取文件.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "用户文件名",
+"comment": "提供用户文件名,例如:UserSet1.bin",
+"data type": "文本型"
+   },
+   {
+"parameter name": "设备文件名",
+"comment": "提供设备文件名,例如:UserSet1",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "写入相机文件",
+
+"comment": "将文件写入当前相机设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "用户文件名",
+"comment": "提供用户文件名,例如:UserSet1.bin",
+"data type": "文本型"
+   },
+   {
+"parameter name": "设备文件名",
+"comment": "提供设备文件名,例如:UserSet1",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+默认值": "空对象""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.""method name": "取文件存取进度",
+默认值": "空对象""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.""comment": "获取文件存取的进度.",
+默认值": "空对象""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+默认值": "空对象""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.""data type": "整数",
+默认值": "空对象""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.""@禁止流程检查": "真",
+默认值": "空对象""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.""parameters": [
+   {
+"parameter name": "总长度",
+"comment": "提供变量以接收文件存取的总长度值.",
+"data type": "长整数类"
+   },
+   {
+"parameter name": "已完成长度",
+"comment": "提供变量以接收文件存取的已完成长度值.",
+"data type": "长整数类"
+   }
+默认值": "空对象""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值."]
+  },
+  {
+}"method name": "强制设置网络参数",
+}"comment": "强制设置设备网络参数(包括IP,子网掩码,默认网关),仅GIGE设备可用.\n  注意:本方法调用后需要重新创建设备,即重新调用\"工业相机类.创建设备()\",当前本对象将失效无法继续使用.\n如果设备为DHCP的状态,调用该接口强制设置设备网络参数之后设备将会重启.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "IP",
+"data type": "整数"
+   },
+   {
+"parameter name": "子网掩码",
+"data type": "整数"
+   },
+   {
+"parameter name": "默认网关",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "置IP配置方式",
+}"comment": "设置当前设备IP配置方式,仅GIGE设备可用.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "模式",
+"comment": "提供所欲设置的模式.",
+"data type": "相机IP配置模式"
+   }
+}]
+  },
+  {
+}"method name": "置网络传输模式",
+}"comment": "设置SDK内部优先使用的网络模式,如不设置默认优先使用驱动模式,仅GIGE设备可用.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "模式",
+"comment": "提供所欲设置的模式.",
+"data type": "相机网络传输模式"
+   }
+}]
+  },
+  {
+
+"method name": "取网络传输信息",
+
+"comment": "获取网络传输相关信息,包括已接收数据大小,丢帧数量等,请在开始取流开启采集之后调用,仅GIGE设备可用.",
+
+"result comment": "返回网络传输信息.",
+
+"data type": "相机网络传输信息类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+thod name": "置网络传输模式""method name": "置GVSP取流超时",
+thod name": "置网络传输模式""comment": "在开始取流之前调用本方法以设置GVSP取流超时时间,仅GIGE设备可用.",
+thod name": "置网络传输模式""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+thod name": "置网络传输模式""data type": "整数",
+thod name": "置网络传输模式""@嵌入式方法": "\"\"",
+thod name": "置网络传输模式""parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:毫秒,提供的值必须大于等于10毫秒.",
+"data type": "整数"
+   }
+thod name": "置网络传输模式"]
+  },
+  {
+"method name": "取GVSP取流超时",
+"comment": "获取所设置的GVSP取流超时时间,仅GIGE设备可用.",
+"result comment": "返回所定义的取流超时时间,单位:毫秒.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+
+"method name": "取最佳包尺寸",
+
+"comment": "获取当前相机设备的最佳包尺寸(packetsize),该大小即网络上传输一个包的大小,仅GIGE设备可用.",
+
+"result comment": "返回最佳包尺寸.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "取最佳包尺寸""method name": "置重发包配置",
+thod name": "取最佳包尺寸""comment": "设置是否打开重发包支持,及重发包设置,仅GIGE设备可用.",
+thod name": "取最佳包尺寸""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+thod name": "取最佳包尺寸""data type": "整数",
+thod name": "取最佳包尺寸""@嵌入式方法": "\"\"",
+thod name": "取最佳包尺寸""parameters": [
+   {
+"parameter name": "启用",
+"comment": "指定是否启用重发包.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "最大重发比",
+"data type": "整数"
+   },
+   {
+"parameter name": "重发超时",
+"data type": "整数"
+   }
+thod name": "取最佳包尺寸"]
+  },
+  {
+
+"method name": "置重传命令重试次数",
+
+"comment": "设置重传命令最大尝试次数,在重发包配置启用的状态下可设置,仅GIGE设备可用.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "最大次数",
+"comment": "重传命令最大尝试次数,默认为20.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取重传命令重试次数",
+
+"comment": "获取重传命令最大尝试次数,仅GIGE设备可用.",
+
+"result comment": "返回所定义的最大重传命令重试次数.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "置重传包请求间隔",
+
+"comment": "设置同一重传包多次请求之间的时间间隔,在重发包配置启用的状态下可设置,仅GIGE设备可用.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "间隔",
+"comment": "单位:毫秒.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取重传包请求间隔",
+
+"comment": "获取同一重传包多次请求之间的时间间隔,仅GIGE设备可用.",
+
+"result comment": "返回所定义的重传包请求间隔.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "置数据传输模式",
+data type": "整数""comment": "设置传输模式,可以为单播模式,组播模式等,仅GIGE设备可用.",
+data type": "整数""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+data type": "整数""data type": "整数",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "类型",
+"comment": "提供所欲设置的传输模式.",
+"data type": "相机数据传输模式"
+   },
+   {
+"parameter name": "目标IP",
+"comment": "仅在组播模式下需要提供本参数.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "目标端口",
+"comment": "仅在组播模式下需要提供本参数.",
+"data type": "短整数",
+"@默认值": "0"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "置设备波特率",
+}"comment": "设置设备波特率,支持在未打开前调用,仅CameraLink设备可用.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "波特率",
+"comment": "提供所欲使用的波特率.",
+"data type": "相机波特率类型"
+   }
+}]
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "取设备波特率",
+ata type": "整数""parameters": [
+"comment": "获取设备的波特率,支持在未打开前调用,仅CameraLink设备可用.",
+ata type": "整数""parameters": [
+"data type": "相机波特率类型",
+ata type": "整数""parameters": [
+"@禁止流程检查": "真",
+ata type": "整数""parameters": [
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+ata type": "整数""parameters": [
+]
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "置串口操作等待超时",
+ata type": "整数""parameters": [
+"comment": "设置串口操作等待时长.",
+ata type": "整数""parameters": [
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ata type": "整数""parameters": [
+"data type": "整数",
+ata type": "整数""parameters": [
+"@嵌入式方法": "\"\"",
+ata type": "整数""parameters": [
+"parameters": [
+   {
+"parameter name": "超时",
+"comment": "提供串口操作的等待时长,单位:毫秒.",
+"data type": "整数"
+   }
+ata type": "整数""parameters": [
+]
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "注册图像数据采集回调",
+ata type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.",
+ata type": "整数""parameters": [
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ata type": "整数""parameters": [
+"data type": "整数",
+ata type": "整数""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""method name": "注册图像RGB数据采集回调",
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""comment": "本方法设置RGB图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.",
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""data type": "整数",
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""@禁止流程检查": "真"
+  },
+  {
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""method name": "注册图像BGR数据采集回调",
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""comment": "本方法设置BGR图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.",
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""data type": "整数",
+ta type": "整数""parameters": [
+"comment": "本方法设置图像数据的回调函数(图像数据将通过\"收到图像采集数据\"事件返回),即被动采集图像,本方法不支持CameraLink设备.""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "开始取流",
+
+"comment": "  开始取流,如果调用了\"注册图像数据采集回调\"等方法,采集到数据后将会触发\"收到图像采集数据\"事件.\n如未使用上述方法注册事件,此时可调用\"取图像帧采集数据\"等方法获取采集的图像数据,本方法不支持CameraLink设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "停止取流",
+
+"comment": "调用了\"开始取流\"后,可使用本方法停止,通常成对使用,本方法不支持CameraLink设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取图像帧采集数据",
+
+"comment": "  在调用\"开始取流\"后,获取一帧采集到的图像数据,应用程序需要根据帧率,控制好调用该方法的频率.\n注意:调用本方法将阻塞直到有数据返回或指定的超时时间达到后返回错误,本方法不支持CameraLink设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "帧数据",
+"comment": "提供存放数据的缓冲区,获取到数据后将写入至该变量.\n注意:调用本方法前务必为其分配足够的内存空间.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据对象",
+"comment": "提供数据信息对象,获取到的信息将写入至该变量.",
+"data type": "图像数据信息"
+   },
+   {
+"parameter name": "超时时间",
+"comment": "提供本次执行的最大超时时间,单位毫秒,在该时间内未获取到数据将返回一个错误.",
+"data type": "整数",
+"@默认值": "1000"
+   }
+
+]
+  },
+  {
+
+"method name": "取内部缓存图像帧数据",
+
+"comment": "  在调用\"开始取流\"后,使用内部缓存获取一帧图片,应用程序需要根据帧率,控制好调用该方法的频率.\n注意:调用本方法将阻塞直到有数据返回或指定的超时时间达到后返回错误,本方法不支持CameraLink设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据对象",
+"comment": "提供数据信息对象,获取到的信息将写入至该变量.",
+"data type": "图像帧输出数据信息"
+   },
+   {
+"parameter name": "超时时间",
+"comment": "提供本次执行的最大超时时间,单位毫秒,在该时间内未获取到数据将返回一个错误.",
+"data type": "整数",
+"@默认值": "1000"
+   }
+
+]
+  },
+  {
+
+"method name": "取内部缓存图像帧RGB数据",
+
+"comment": "  同\"取内部缓存图像帧数据\"方法一致,但会将获取到的数据转为RGB24格式再返回,本方法不支持CameraLink设备.\n注意:因为图像转换成RGB24格式有耗时,所以当数据帧率过高时该方法可能会导致丢帧.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "帧数据",
+"comment": "提供存放数据的缓冲区,获取到数据后将写入至该变量.\n注意:调用本方法前务必为其分配足够的内存空间.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据对象",
+"comment": "提供数据信息对象,获取到的信息将写入至该变量.",
+"data type": "图像数据信息"
+   },
+   {
+"parameter name": "超时时间",
+"comment": "提供本次执行的最大超时时间,单位毫秒,在该时间内未获取到数据将返回一个错误.",
+"data type": "整数",
+"@默认值": "1000"
+   }
+
+]
+  },
+  {
+
+"method name": "释放内部缓存图像帧数据",
+
+"comment": "释放图像缓存(此接口用于释放不再使用的图像缓存,与\"取内部缓存图像帧数据\"成对使用),本方法不支持CameraLink设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据对象",
+"comment": "提供所欲释放的数据对象.",
+"data type": "图像帧输出数据信息"
+   }
+
+]
+  },
+  {
+
+"method name": "清除取流数据缓存",
+
+"comment": "  支持在取流过程中调用,以清除缓存中不需要的图像数据.\n在连续模式切触发模式后,可以清除历史数据,本方法不支持CameraLink设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "显示图像帧到组件",
+
+"comment": "将一帧图像显示到指定的窗口组件上,该方法不支持CameraLink设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供所欲图像的窗口组件句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "提供采集到的原始图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "提供所欲显示图像的宽度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "提供所欲显示图像的高度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供所欲显示图像的像素格式.",
+"data type": "图像像素格式"
+   }
+
+]
+  },
+  {
+
+"method name": "显示图像帧到组件2",
+
+"comment": "同\"显示图像帧到组件\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供所欲图像的窗口组件句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "提供所欲显示的数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "提供所欲显示图像的宽度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "提供所欲显示图像的高度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供所欲显示图像的像素格式.",
+"data type": "图像像素格式"
+   }
+
+]
+  },
+  {
+
+"method name": "保存图像数据",
+
+"comment": "将所采集的图像帧数据转换保存为指定格式(JPG/BMP等)的图像数据.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供采集到的原始图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "提供所欲输出图像的宽度",
+"data type": "短整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "提供所欲输出图像的高度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "输出格式",
+"comment": "提供所欲输出的图像格式类型.",
+"data type": "相机图像数据保存格式"
+   },
+   {
+"parameter name": "JPG质量",
+"comment": "在指定输出格式为\"JPEG\"时本参数有意义,其他格式无效,范围:[50-99].",
+"data type": "整数"
+   },
+   {
+"parameter name": "插值方法",
+"comment": "指定所欲使用的插值方法,0表示快速,1表示均衡,2表示最优.",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "保存图像数据2",
+
+"comment": "同\"保存图像数据\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供采集到的原始图像的数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "提供所欲输出图像的宽度",
+"data type": "短整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "提供所欲输出图像的高度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "输出格式",
+"comment": "提供所欲输出的图像格式类型.",
+"data type": "相机图像数据保存格式"
+   },
+   {
+"parameter name": "JPG质量",
+"comment": "在指定输出格式为\"JPEG\"时本参数有意义,其他格式无效,范围:[50-99].",
+"data type": "整数"
+   },
+   {
+"parameter name": "插值方法",
+"comment": "指定所欲使用的插值方法,0表示快速,1表示均衡,2表示最优.",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "保存图像数据到文件",
+
+"comment": "将所采集的图像帧数据转换保存为指定格式(JPG/BMP等)的图像数据并写出到指定文件.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供采集到的原始图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "提供所欲输出图像的宽度",
+"data type": "短整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "提供所欲输出图像的高度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "保存格式",
+"comment": "提供所欲保存图像的图像格式类型.",
+"data type": "相机图像数据保存格式"
+   },
+   {
+"parameter name": "图像质量",
+"comment": "在指定保存格式为\"JPEG/PNG\"时本参数有意义,其他格式无效,JPG范围:[50-99]，PNG范围:[0-9].",
+"data type": "整数"
+   },
+   {
+"parameter name": "插值方法",
+"comment": "指定所欲使用的插值方法,0表示快速,1表示均衡,2表示最优.",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存路径",
+"comment": "提供图像文件的写出路径.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "保存图像数据到文件2",
+
+"comment": "同\"保存图像数据到文件\"基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供采集到的原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "提供所欲输出图像的宽度",
+"data type": "短整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "提供所欲输出图像的高度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "保存格式",
+"comment": "提供所欲保存图像的图像格式类型.",
+"data type": "相机图像数据保存格式"
+   },
+   {
+"parameter name": "图像质量",
+"comment": "在指定保存格式为\"JPEG/PNG\"时本参数有意义,其他格式无效,JPG范围:[50-99]，PNG范围:[0-9].",
+"data type": "整数"
+   },
+   {
+"parameter name": "插值方法",
+"comment": "指定所欲使用的插值方法,0表示快速,1表示均衡,2表示最优.",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存路径",
+"comment": "提供图像文件的写出路径.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+comment": "提供图像文件的写出路径.""method name": "保存3D点云数据",
+comment": "提供图像文件的写出路径.""comment": "保存3D点云数据,支持PLY,CSV和OBJ三种格式.",
+comment": "提供图像文件的写出路径.""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+comment": "提供图像文件的写出路径.""data type": "整数",
+comment": "提供图像文件的写出路径.""parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供采集到的原始图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "行点数",
+"comment": "行点数,即图像宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "行数",
+"comment": "行数,即图像宽高.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "输出格式",
+"comment": "提供所欲输出点云文件的格式类型.",
+"data type": "点云数据保存文件格式"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+comment": "提供图像文件的写出路径."]
+  },
+  {
+"method name": "保存3D点云数据2",
+"comment": "同\"保存3D点云数据\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供采集到的原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "行点数",
+"comment": "行点数,即图像宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "行数",
+"comment": "行数,即图像宽高.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "输出格式",
+"comment": "提供所欲输出点云文件的格式类型.",
+"data type": "点云数据保存文件格式"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+ }"method name": "旋转图像数据",
+ }"comment": "将指定图像数据进行旋转变换后返回,本方法仅支持MONO8/RGB24/BGR24格式数据的90/180/270度旋转.",
+ }"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供采集到的原始图像数据指针.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度,旋转后新图像数据的宽度将被写入至该变量.",
+"data type": "整数类"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度,旋转后新图像数据的高度将被写入至该变量.",
+"data type": "整数类"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "旋转类型",
+"comment": "提供所欲使用的旋转类型,1表示旋转90度,2表示旋转180度,3表示旋转270度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+"method name": "旋转图像数据2",
+"comment": "同\"旋转图像数据\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供采集到的原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度,旋转后新图像数据的宽度将被写入至该变量.",
+"data type": "整数类"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度,旋转后新图像数据的高度将被写入至该变量.",
+"data type": "整数类"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "旋转类型",
+"comment": "提供所欲使用的旋转类型,1表示旋转90度,2表示旋转180度,3表示旋转270度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+
+"method name": "翻转图像数据",
+
+"comment": "将指定图像数据进行翻转变换后返回,本方法仅支持MONO8/RGB24/BGR24格式数据的垂直和水平翻转.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供采集到的原始图像数据指针.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度,翻转后新图像数据的宽度将被写入至该变量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度,翻转后新图像数据的高度将被写入至该变量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "垂直翻转",
+"comment": "提供真表示垂直翻转,否则水平翻转.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "翻转图像数据2",
+
+"comment": "同\"翻转图像数据\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供采集到的原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "垂直翻转",
+"comment": "提供真表示垂直翻转,否则水平翻转.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "转换图像像素格式",
+data type": "整数""comment": "将指定图像数据的像素格式转换到指定格式.",
+data type": "整数""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供所欲转换的源图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "原像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "新像素格式",
+"comment": "提供所欲转换到的新像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "转换图像像素格式2",
+"comment": "同\"转换图像像素格式\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供采集到的原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "原像素格式",
+"comment": "提供采集到的原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "新像素格式",
+"comment": "提供所欲转换到的新像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+
+"method name": "置Bayer插值算法类型",
+
+"comment": "设置内部图像转换接口的Bayer插值算法类型.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "插值方法",
+"comment": "指定所欲使用的插值方法,0表示快速,1表示均衡,2表示最优.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "置Bayer伽马值",
+ }"comment": "设置Bayer格式的Gamma值.",
+ }"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "伽马值",
+"comment": "提供所欲使用的Gamma值,范围:[0.1,4.0]",
+"data type": "小数"
+   }
+ }]
+  },
+  {
+ }"method name": "置Bayer伽马信息",
+ }"comment": "设置Bayer格式的Gamma信息.",
+ }"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "类型",
+"comment": "提供所欲指定的类型.",
+"data type": "图像Bayer伽马类型"
+   },
+   {
+"parameter name": "伽马值",
+"comment": "提供所欲使用的Gamma值,范围:[0.1,4.0]",
+"data type": "小数"
+   },
+   {
+"parameter name": "曲线缓存",
+"comment": "提供所欲使用的Gamma曲线缓存数据.",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+}"method name": "置BayerCCM参数",
+}"comment": "设置Bayer格式的CCM使能和矩阵,量化系数默认1024.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "启用",
+"comment": "是否启用CCM.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "矩阵数据",
+"comment": "提供CCM矩阵数据,最多可提供9个成员.",
+"data type": "整数数组类"
+   },
+   {
+"parameter name": "量化系数",
+"comment": "提供所欲使用的量化系数,必须是2的整数幂,最大值65536.",
+"data type": "整数",
+"@默认值": "1024"
+   }
+}]
+  },
+  {
+}"method name": "置BayerCLUT参数",
+}"comment": "设置Bayer格式的CLUT使能和信息.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "启用",
+"comment": "是否启用CLUT.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "CLUT尺寸",
+"comment": "指定CLUT尺寸,范围:[17-33].",
+"data type": "整数"
+   },
+   {
+"parameter name": "量化CLUT表",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "量化系数",
+"comment": "提供所欲使用的量化系数,必须是2的整数幂,最大值65536.",
+"data type": "整数",
+"@默认值": "1024"
+   }
+}]
+  },
+  {
+
+"method name": "调整图像对比度",
+
+"comment": "将指定图像数据的对比度调整后返回,以相机实际支持为准.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供所欲处理的源图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "对比度值",
+"comment": "提供所欲设置的对比度值,范围:[0-10000].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "调整图像对比度2",
+
+"comment": "同\"调整图像对比度\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "对比度值",
+"comment": "提供所欲设置的对比度值,范围:[0-10000].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "调整图像锐化",
+}"comment": "将指定图像数据进行锐化调整后返回,以相机实际支持为准.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供所欲处理的源图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "锐化强度",
+"comment": "提供锐度调节强度,范围[0-500].",
+"data type": "整数"
+   },
+   {
+"parameter name": "锐化半径",
+"comment": "提供锐度调节半径,范围[1-21].",
+"data type": "整数"
+   },
+   {
+"parameter name": "调节阀值",
+"comment": "提供锐度调节阈值,范围[0-255].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+调节阈值,范围[0-255]."method name": "调整图像锐化2",
+调节阈值,范围[0-255]."comment": "同\"调整图像锐化\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+调节阈值,范围[0-255]."result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+调节阈值,范围[0-255]."data type": "整数",
+调节阈值,范围[0-255]."@禁止流程检查": "真",
+调节阈值,范围[0-255]."parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "锐化强度",
+"comment": "提供锐度调节强度,范围[0-500].",
+"data type": "整数"
+   },
+   {
+"parameter name": "锐化半径",
+"comment": "提供锐度调节半径,范围[1-21].",
+"data type": "整数"
+   },
+   {
+"parameter name": "调节阀值",
+"comment": "提供锐度调节阈值,范围[0-255].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+调节阈值,范围[0-255].]
+  },
+  {
+阈值,范围[0-255].]"method name": "调整图像色彩校正",
+阈值,范围[0-255].]"comment": "将指定图像数据进行色彩校正(包括CCM和CLUT)后返回,以相机实际支持为准.",
+阈值,范围[0-255].]"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+阈值,范围[0-255].]"data type": "整数",
+阈值,范围[0-255].]"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供所欲处理的源图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "有效图像位",
+"comment": "提供有效图像位数(8,10,12,16).",
+"data type": "整数"
+   },
+   {
+"parameter name": "伽马类型",
+"comment": "提供所欲指定的类型.",
+"data type": "图像Bayer伽马类型"
+   },
+   {
+"parameter name": "伽马值",
+"comment": "提供所欲使用的Gamma值,范围:[0.1,4.0]",
+"data type": "小数"
+   },
+   {
+"parameter name": "伽马曲线缓存",
+"comment": "提供所欲使用的Gamma曲线缓存数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "CCM启用",
+"comment": "是否启用CCM.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "CCM矩阵数据",
+"comment": "提供矩阵数据,最多可提供9个成员.",
+"data type": "整数数组类"
+   },
+   {
+"parameter name": "CCM量化系数",
+"comment": "提供所欲使用的CCM量化系数,必须是2的整数幂,最大值65536.",
+"data type": "整数"
+   },
+   {
+"parameter name": "CLUT启用",
+"comment": "是否启用CLUT.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "CLUT尺寸",
+"comment": "指定CLUT尺寸,范围:[17-33].",
+"data type": "整数"
+   },
+   {
+"parameter name": "CLUT量化表",
+"comment": "提供量化CLUT表数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "CLUT量化系数",
+"comment": "提供所欲使用的CLUT量化系数,必须是2的整数幂,最大值65536.",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+阈值,范围[0-255].]]
+  },
+  {
+ameter name": "输出数据""method name": "调整图像色彩校正2",
+ameter name": "输出数据""comment": "同\"调整图像色彩校正\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+ameter name": "输出数据""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ameter name": "输出数据""data type": "整数",
+ameter name": "输出数据""@禁止流程检查": "真",
+ameter name": "输出数据""parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "有效图像位",
+"comment": "提供有效图像位数(8,10,12,16).",
+"data type": "整数"
+   },
+   {
+"parameter name": "伽马类型",
+"comment": "提供所欲指定的类型.",
+"data type": "图像Bayer伽马类型"
+   },
+   {
+"parameter name": "伽马值",
+"comment": "提供所欲使用的Gamma值,范围:[0.1,4.0]",
+"data type": "小数"
+   },
+   {
+"parameter name": "伽马曲线缓存",
+"comment": "提供所欲使用的Gamma曲线缓存数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "CCM启用",
+"comment": "是否启用CCM.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "CCM矩阵数据",
+"comment": "提供矩阵数据,最多可提供9个成员.",
+"data type": "整数数组类"
+   },
+   {
+"parameter name": "CCM量化系数",
+"comment": "提供所欲使用的CCM量化系数,必须是2的整数幂,最大值65536.",
+"data type": "整数"
+   },
+   {
+"parameter name": "CLUT启用",
+"comment": "是否启用CLUT.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "CLUT尺寸",
+"comment": "指定CLUT尺寸,范围:[17-33].",
+"data type": "整数"
+   },
+   {
+"parameter name": "CLUT量化表",
+"comment": "提供量化CLUT表数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "CLUT量化系数",
+"comment": "提供所欲使用的CLUT量化系数,必须是2的整数幂,最大值65536.",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+ameter name": "输出数据"]
+  },
+  {
+
+"method name": "图像噪声估计",
+
+"comment": "对指定图像数据进行噪声估计,以相机实际支持为准.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供所欲处理的源图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "图像ROI",
+"comment": "提供图像区域数据,如果提供空对象则会进行全图噪声估计.",
+"data type": "矩形类"
+   },
+   {
+"parameter name": "噪声阀值",
+"comment": "提供噪声阈值,范围:[0-4095].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放图像数据的变量,务必提供足够长度的空间,转换后将图像数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "图像噪声估计2",
+
+"comment": "同\"图像噪声估计\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "图像ROI",
+"comment": "提供图像区域数据,如果提供空对象则会进行全图噪声估计.",
+"data type": "矩形类"
+   },
+   {
+"parameter name": "噪声阀值",
+"comment": "提供噪声阈值,范围:[0-4095].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放噪声特性的变量,务必提供足够长度的空间,处理完成后将数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+阈值,范围:[0-4095]."method name": "调整图像空域降噪",
+阈值,范围:[0-4095]."comment": "对指定图像数据进行空域降噪处理,以相机实际支持为准.",
+阈值,范围:[0-4095]."result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+阈值,范围:[0-4095]."data type": "整数",
+阈值,范围:[0-4095]."parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供所欲处理的源图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "噪声特性",
+"comment": "提供噪声特性数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "降噪强度",
+"comment": "提供所欲使用的降噪强度,范围:[0-100].",
+"data type": "整数"
+   },
+   {
+"parameter name": "Bayer锐化强度",
+"comment": "提供所欲使用的Bayer锐化强度,范围:[0-32].",
+"data type": "整数"
+   },
+   {
+"parameter name": "噪声校正系数",
+"comment": "提供所欲使用的噪声校正系数,范围:[0-1280].",
+"data type": "整数"
+   },
+   {
+"parameter name": "亮度校正系数",
+"comment": "提供所欲使用的亮度校正系数,范围:[1-2000].",
+"data type": "整数"
+   },
+   {
+"parameter name": "色度校正系数",
+"comment": "提供所欲使用的色度校正系数,范围:[1-2000].",
+"data type": "整数"
+   },
+   {
+"parameter name": "亮度降噪强度",
+"comment": "提供所欲使用的亮度降噪强度,范围:[0-100].",
+"data type": "整数"
+   },
+   {
+"parameter name": "色度降噪强度",
+"comment": "提供所欲使用的色度降噪强度,范围:[0-100].",
+"data type": "整数"
+   },
+   {
+"parameter name": "锐化强度",
+"comment": "提供所欲使用的锐化强度,范围:[1-1000].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放处理后数据的变量,务必提供足够长度的空间,处理完成后将数据写入至该变量.",
+"data type": "字节集类"
+   }
+阈值,范围:[0-4095].]
+  },
+  {
+}"method name": "调整图像空域降噪2",
+}"comment": "同\"调整图像空域降噪\"方法基本一致,不同的是本方法的数据需要提供数据指针方式而非字节集方式.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "噪声特性",
+"comment": "提供噪声特性数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "降噪强度",
+"comment": "提供所欲使用的降噪强度,范围:[0-100].",
+"data type": "整数"
+   },
+   {
+"parameter name": "Bayer锐化强度",
+"comment": "提供所欲使用的Bayer锐化强度,范围:[0-32].",
+"data type": "整数"
+   },
+   {
+"parameter name": "噪声校正系数",
+"comment": "提供所欲使用的噪声校正系数,范围:[0-1280].",
+"data type": "整数"
+   },
+   {
+"parameter name": "亮度校正系数",
+"comment": "提供所欲使用的亮度校正系数,范围:[1-2000].",
+"data type": "整数"
+   },
+   {
+"parameter name": "色度校正系数",
+"comment": "提供所欲使用的色度校正系数,范围:[1-2000].",
+"data type": "整数"
+   },
+   {
+"parameter name": "亮度降噪强度",
+"comment": "提供所欲使用的亮度降噪强度,范围:[0-100].",
+"data type": "整数"
+   },
+   {
+"parameter name": "色度降噪强度",
+"comment": "提供所欲使用的色度降噪强度,范围:[0-100].",
+"data type": "整数"
+   },
+   {
+"parameter name": "锐化强度",
+"comment": "提供所欲使用的锐化强度,范围:[1-1000].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放处理后数据的变量,务必提供足够长度的空间,处理完成后将数据写入至该变量.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "图像LSC标定",
+}"comment": "对指定图像数据进行LSC标定,以相机实际支持为准.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供所欲处理的源图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "宽度分块数",
+"comment": "提供宽度分块数.",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度分块数",
+"comment": "提供高度分块数.",
+"data type": "整数"
+   },
+   {
+"parameter name": "边缘填充系数",
+"comment": "提供边缘填充系数,范围:[1-5].",
+"data type": "整数"
+   },
+   {
+"parameter name": "标定方式",
+"comment": "提供标定方式,0表示以中心为基准,1表示以最亮区为基准,2表示以\"目标亮度\"参数为基准.",
+"data type": "整数"
+   },
+   {
+"parameter name": "目标亮度",
+"comment": "提供所欲使用的目标亮度基准(标定方式为2时本参数有意义),8位时范围为[0-255],10位时范围为[0-1023],12位时范围为[0-4095],16位时范围为[0-65535].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放处理后数据的变量,处理完成后将数据写入至该变量.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "图像LSC标定2",
+}"comment": "对指定图像数据进行LSC标定,以相机实际支持为准.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "宽度分块数",
+"comment": "提供宽度分块数.",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度分块数",
+"comment": "提供高度分块数.",
+"data type": "整数"
+   },
+   {
+"parameter name": "边缘填充系数",
+"comment": "提供边缘填充系数,范围:[1-5].",
+"data type": "整数"
+   },
+   {
+"parameter name": "标定方式",
+"comment": "提供标定方式,0表示以中心为基准,1表示以最亮区为基准,2表示以\"目标亮度\"参数为基准.",
+"data type": "整数"
+   },
+   {
+"parameter name": "目标亮度",
+"comment": "提供所欲使用的目标亮度基准(标定方式为2时本参数有意义),8位时范围为[0-255],10位时范围为[0-1023],12位时范围为[0-4095],16位时范围为[0-65535].",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放标定表缓存数据的变量,处理完成后将数据写入至该变量.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "图像LSC校正",
+
+"comment": "对指定图像数据进行LSC校正,以相机实际支持为准.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供所欲处理的源图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度,范围:16-65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度,范围:16-65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "标定数据",
+"comment": "提供该图像的标定数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放校正后数据的变量,务必提供足够长度的空间,处理完成后将数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "图像LSC校正2",
+
+"comment": "对指定图像数据进行LSC校正,以相机实际支持为准.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "需提供原始图像的宽度,范围:16-65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "需提供原始图像的高度,范围:16-65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素格式",
+"comment": "提供原始图像的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "标定数据",
+"comment": "提供该图像的标定数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放校正后数据的变量,务必提供足够长度的空间,处理完成后将数据写入至该变量.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "图像无损解码",
+}"comment": "对指定图像数据进行LSC校正,以相机实际支持为准.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供所欲处理的源图像数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放解码后数据的变量,务必提供足够长度的空间,处理完成后将数据写入至该变量.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出信息",
+"comment": "提供存放解码后图像信息的变量,处理完成后解码的图像信息将写入该变量.",
+"data type": "图像解码结果信息类"
+   }
+}]
+  },
+  {
+}"method name": "图像无损解码2",
+}"comment": "将从相机中取到的无损压缩码流解码成裸数据,同时支持解析当前相机实时图像的水印信息(如果输入的无损码流不是当前相机或者不是实时取流的，则水印解析可能异常),以相机实际支持为准.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供原始图像数据指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供数据指针指向数据的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "提供存放解码后数据的变量,务必提供足够长度的空间,处理完成后将数据写入至该变量.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出信息",
+"comment": "提供存放解码后图像信息的变量,处理完成后解码的图像信息将写入该变量.",
+"data type": "图像解码结果信息类"
+   }
+}]
+  },
+  {
+}"method name": "开始录像",
+}"comment": "开始录像.",
+}"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "像素格式",
+"comment": "输入数据的像素格式.",
+"data type": "图像像素格式"
+   },
+   {
+"parameter name": "图像宽度",
+"comment": "图像宽(指定目标参数时需为2的倍数).",
+"data type": "短整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "图像高(指定目标参数时需为2的倍数).",
+"data type": "短整数"
+   },
+   {
+"parameter name": "帧率",
+"comment": "帧率fps(大于1/16).",
+"data type": "小数"
+   },
+   {
+"parameter name": "码率",
+"comment": "码率kbps(128-16*1024).",
+"data type": "整数"
+   },
+   {
+"parameter name": "存放路径",
+"comment": "录像文件存放路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "录像格式",
+"comment": "录像格式,1表示AVI格式,目前仅支持AVI.",
+"data type": "整数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+thod name": "图像无损解码""method name": "输入录像数据",
+thod name": "图像无损解码""comment": "输入录像数据.",
+thod name": "图像无损解码""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+thod name": "图像无损解码""data type": "整数",
+thod name": "图像无损解码""@禁止流程检查": "真",
+thod name": "图像无损解码""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲输入的录像数据.",
+"data type": "字节集类"
+   }
+thod name": "图像无损解码"]
+  },
+  {
+ }"method name": "停止录像",
+ }"comment": "停止录像.",
+ }"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "清除GenICam节点缓存",
+
+"comment": "在加载工业相机节点时需要读取GenICam配置文件,该方法可以起到清除GenICam缓存的功能.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置GVCP命令超时",
+
+"comment": "设置GVCP命令超时时间,仅用于GIGE设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "超时",
+"comment": "提供所欲设置的超时时间,单位:毫秒.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置重传GVCP命令次数",
+
+"comment": "该方法用于在GVCP包传输异常时,增加重传的次数,在一定程度上可以避免设备掉线,仅用于GIGE设备.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "次数",
+"comment": "提供所欲设置的重传次数,范围:0-100 ",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取重传GVCP命令次数",
+
+"comment": "获取当前设备所设置的GVCP重传次数,仅用于GIGE设备.",
+
+"result comment": "返回所设置的重传次数.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "置U3V传输包尺寸",
+
+"comment": "增加传输包大小可以适当降低取流时的CPU占用率,但不同的PC和不同USB扩展卡存在不同的兼容性,如果参数设置过大可能会出现取不到图像的风险.",
+
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "尺寸",
+"comment": "提供所欲设置的传输的包大小,单位:字节.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取U3V传输包尺寸",
+
+"comment": "获取当前设备所设置的传输包尺寸,仅用于USB3设备.",
+
+"result comment": "返回所设置的传输包尺寸.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+"result comment": "返回所设置的重传次数.""method name": "置U3V传输通道个数",
+"result comment": "返回所设置的重传次数.""comment": "可以根据PC的性能,设备出图帧率,图像大小和内存使用率等因素对该参数进行调节,但不同的PC和不同的USB扩展卡存在不同的兼容性.",
+"result comment": "返回所设置的重传次数.""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+"result comment": "返回所设置的重传次数.""data type": "整数",
+"result comment": "返回所设置的重传次数.""@嵌入式方法": "\"\"",
+"result comment": "返回所设置的重传次数.""parameters": [
+   {
+"parameter name": "个数",
+"comment": "提供所欲设置的传输通道个数,范围:1-10",
+"data type": "整数"
+   }
+"result comment": "返回所设置的重传次数."]
+  },
+  {
+
+"method name": "取U3V传输通道个数",
+
+"comment": "获取当前设置的U3V异步取流节点个数,2000W设备的MONO8默认为3个,YUV为默认2个,RGB为默认1个,其它情况默认8个节点.",
+
+"result comment": "返回传输通道个数.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+data type": "整数类""method name": "本地升级设备",
+data type": "整数类""comment": "通过本方法可以将升级固件文件发送给设备进行升级,该接口需要等待升级固件文件成功传给设备端之后再返回,响应时间可能较长.",
+data type": "整数类""result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+data type": "整数类""data type": "整数",
+data type": "整数类""@嵌入式方法": "\"\"",
+data type": "整数类""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供升级固件文件.",
+"data type": "文本型"
+   }
+data type": "整数类"]
+  },
+  {
+
+"method name": "取当前升级进度",
+
+"comment": "获取升级进度.",
+
+"result comment": "返回当前进度值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+"method name": "取相机属性树",
+"comment": "获取相机属性树XML.",
+"result comment": "返回执行是否成功,请参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "返回数据",
+"comment": "提供接收数据的缓冲区变量,获取的结果将写入至该变量.",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+"method name": "取指定节点访问模式",
+"comment": "获得指定节点的访问模式.",
+"data type": "相机属性树节点访问模式",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "节点名称",
+"comment": "提供所欲检查的节点名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+ameter name": "结果""method name": "取指定节点接口类型",
+ameter name": "结果""comment": "获得指定节点的类型.",
+ameter name": "结果""data type": "相机属性树节点接口类型",
+ameter name": "结果""@禁止流程检查": "真",
+ameter name": "结果""parameters": [
+   {
+"parameter name": "节点名称",
+"comment": "提供所欲检查的节点名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+ameter name": "结果"]
+  },
+  {
+}"method name": "收到异常消息",
+}"comment": "运行过程中如果设备发送异常消息,本事件将被发送.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "消息类型",
+"comment": "提供本次设备异常的消息类型,请参考\"相机异常消息类型\"所提供的常量值.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "收到设备事件",
+"comment": "在设备被成功打开后,相机有事件回调时本事件将被发送.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "事件名称",
+"comment": "提供本次事件的事件名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "事件ID",
+"comment": "提供本次事件的事件序号.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "流通道序号",
+"data type": "短整数"
+   },
+   {
+"parameter name": "帧号高位",
+"data type": "整数"
+   },
+   {
+"parameter name": "帧号低位",
+"data type": "整数"
+   },
+   {
+"parameter name": "时间戳高位",
+"data type": "整数"
+   },
+   {
+"parameter name": "时间戳低位",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+]"method name": "收到图像采集数据",
+]"comment": "在调用了\"注册图像数据采集回调\"并且开始取流后,如果采集到图像数据将通过本事件发送.",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图像信息",
+"data type": "图像数据信息"
+   }
+]]
+  }
+]
+ },
+ {
+"class name": "图像帧输出数据信息",
+"comment": "包含图像帧的输出信息.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"methods": [
+  {
+
+"method name": "取图像信息对象",
+
+"comment": "获取该输出信息中所包含的图像信息.",
+
+"data type": "图像数据信息",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取图像指针地址",
+
+"comment": "获取该图像帧的原始数据指针.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "工业相机状态码",
+"comment": "工业相机SDK状态码定义.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+comment": "包含图像帧的输出信息.""constant name": "成功",
+comment": "包含图像帧的输出信息.""comment": "成功,未出现错误",
+comment": "包含图像帧的输出信息.""data type": "整数",
+comment": "包含图像帧的输出信息.""initial value": "@MV_OK"
+  },
+  {
+}"constant name": "无效句柄",
+}"comment": "错误或无效的句柄",
+}"data type": "整数",
+}"initial value": "@MV_E_HANDLE"
+  },
+  {
+ss name": "工业相机状态码""constant name": "功能不支持",
+ss name": "工业相机状态码""comment": "不支持的功能",
+ss name": "工业相机状态码""data type": "整数",
+ss name": "工业相机状态码""initial value": "@MV_E_SUPPORT"
+  },
+  {
+
+"constant name": "缓存已满",
+
+"comment": "缓存已满",
+
+"data type": "整数",
+
+"initial value": "@MV_E_SUPPORT"
+  },
+  {
+"comment": "获取该图像帧的原始数据指针.""constant name": "函数调用顺序错误",
+"comment": "获取该图像帧的原始数据指针.""comment": "函数调用顺序有误",
+"comment": "获取该图像帧的原始数据指针.""data type": "整数",
+"comment": "获取该图像帧的原始数据指针.""initial value": "@MV_E_CALLORDER"
+  },
+  {
+comment": "获取该图像帧的原始数据指针.""comment": "函数调用顺序有误""constant name": "参数错误",
+comment": "获取该图像帧的原始数据指针.""comment": "函数调用顺序有误""comment": "错误的参数",
+comment": "获取该图像帧的原始数据指针.""comment": "函数调用顺序有误""data type": "整数",
+comment": "获取该图像帧的原始数据指针.""comment": "函数调用顺序有误""initial value": "@MV_E_PARAMETER"
+  },
+  {
+}"constant name": "资源申请失败",
+}"comment": "资源申请失败",
+}"data type": "整数",
+}"initial value": "@MV_E_RESOURCE"
+  },
+  {
+}"constant name": "无数据",
+}"comment": "无数据",
+}"data type": "整数",
+}"initial value": "@MV_E_NODATA"
+  },
+  {
+"data type": "图像数据信息""constant name": "前置条件有误",
+"data type": "图像数据信息""comment": "前置条件有误,或运行环境已发生变化.",
+"data type": "图像数据信息""data type": "整数",
+"data type": "图像数据信息""initial value": "@MV_E_PRECONDITION"
+  },
+  {
+ent": "获取该图像帧的原始数据指针.""comment": "函数调用顺序有误""constant name": "参数错误""constant name": "版本不匹配",
+ent": "获取该图像帧的原始数据指针.""comment": "函数调用顺序有误""constant name": "参数错误""comment": "版本不匹配",
+ent": "获取该图像帧的原始数据指针.""comment": "函数调用顺序有误""constant name": "参数错误""data type": "整数",
+ent": "获取该图像帧的原始数据指针.""comment": "函数调用顺序有误""constant name": "参数错误""initial value": "@MV_E_VERSION"
+  },
+  {
+
+"constant name": "缓冲区尺寸不足",
+
+"comment": "传入的内存空间不足",
+
+"data type": "整数",
+
+"initial value": "@MV_E_NOENOUGH_BUF"
+  },
+  {
+}"constant name": "图像异常",
+}"comment": "异常图像,可能是丢包导致图像不完整.",
+}"data type": "整数",
+}"initial value": "@MV_E_ABNORMAL_IMAGE"
+  },
+  {
+}"constant name": "无法载入动态链接库",
+}"comment": "动态导入DLL失败",
+}"data type": "整数",
+}"initial value": "@MV_E_LOAD_LIBRARY"
+  },
+  {
+
+"constant name": "无可输出缓存",
+
+"comment": "没有可输出的缓存",
+
+"data type": "整数",
+
+"initial value": "@MV_E_NOOUTBUF"
+  },
+  {
+
+"constant name": "加密错误",
+
+"comment": "加密错误",
+
+"data type": "整数",
+
+"initial value": "@MV_E_ENCRYPT"
+  },
+  {
+
+"constant name": "未知错误",
+
+"comment": "未知的错误 ",
+
+"data type": "整数",
+
+"initial value": "@MV_E_UNKNOW"
+  },
+  {
+
+"constant name": "GC_通用错误",
+
+"comment": "通用错误",
+
+"data type": "整数",
+
+"initial value": "@MV_E_GC_GENERIC"
+  },
+  {
+}"constant name": "GC_参数非法",
+}"comment": "参数非法",
+}"data type": "整数",
+}"initial value": "@MV_E_GC_ARGUMENT"
+  },
+  {
+}"constant name": "GC_值超出范围",
+}"data type": "整数",
+}"initial value": "@MV_E_GC_RANGE"
+  },
+  {
+
+"constant name": "GC_属性",
+
+"data type": "整数",
+
+"initial value": "@MV_E_GC_PROPERTY"
+  },
+  {
+
+"constant name": "GC_运行环境有错误",
+
+"data type": "整数",
+
+"initial value": "@MV_E_GC_RUNTIME"
+  },
+  {
+s name": "工业相机状态码""initial value": "@MV_E_SUPPORT""constant name": "GC_逻辑错误",
+s name": "工业相机状态码""initial value": "@MV_E_SUPPORT""data type": "整数",
+s name": "工业相机状态码""initial value": "@MV_E_SUPPORT""initial value": "@MV_E_GC_LOGICAL"
+  },
+  {
+"initial value": "@MV_E_RESOURCE""constant name": "GC_节点访问条件错误",
+"initial value": "@MV_E_RESOURCE""data type": "整数",
+"initial value": "@MV_E_RESOURCE""initial value": "@MV_E_GC_ACCESS"
+  },
+  {
+}"constant name": "GC_超时错误",
+}"data type": "整数",
+}"initial value": "@MV_E_GC_TIMEOUT"
+  },
+  {
+
+"constant name": "GC_转换异常",
+
+"data type": "整数",
+
+"initial value": "@MV_E_GC_DYNAMICCAST"
+  },
+  {
+E_GC_DYNAMICCAST"constant name": "GC_未知错误",
+E_GC_DYNAMICCAST"data type": "整数",
+E_GC_DYNAMICCAST"initial value": "@MV_E_GC_UNKNOW"
+  },
+  {
+
+"constant name": "不支持的命令",
+
+"comment": "命令不被设备支持 ",
+
+"data type": "整数",
+
+"initial value": "@MV_E_NOT_IMPLEMENTED"
+  },
+  {
+_DYNAMICCAST"constant name": "GC_未知错误""constant name": "目标地址不存在",
+_DYNAMICCAST"constant name": "GC_未知错误""comment": "访问的目标地址不存在 ",
+_DYNAMICCAST"constant name": "GC_未知错误""data type": "整数",
+_DYNAMICCAST"constant name": "GC_未知错误""initial value": "@MV_E_INVALID_ADDRESS"
+  },
+  {
+DYNAMICCAST"constant name": "GC_未知错误""initial value": "@MV_E_INVALID_ADDRESS""constant name": "目标地址不可写",
+DYNAMICCAST"constant name": "GC_未知错误""initial value": "@MV_E_INVALID_ADDRESS""comment": "目标地址不可写 ",
+DYNAMICCAST"constant name": "GC_未知错误""initial value": "@MV_E_INVALID_ADDRESS""data type": "整数",
+DYNAMICCAST"constant name": "GC_未知错误""initial value": "@MV_E_INVALID_ADDRESS""initial value": "@MV_E_WRITE_PROTECT"
+  },
+  {
+}"constant name": "设备无权访问",
+}"comment": "设备无访问权限",
+}"data type": "整数",
+}"initial value": "@MV_E_ACCESS_DENIED"
+  },
+  {
+
+"constant name": "设备繁忙",
+
+"comment": "设备忙,或网络断开",
+
+"data type": "整数",
+
+"initial value": "@MV_E_BUSY"
+  },
+  {
+
+"constant name": "网络包数据错误",
+
+"comment": "网络包数据错误",
+
+"data type": "整数",
+
+"initial value": "@MV_E_PACKET"
+  },
+  {
+
+"constant name": "网络错误",
+
+"comment": "网络相关错误",
+
+"data type": "整数",
+
+"initial value": "@MV_E_NETER"
+  },
+  {
+
+"constant name": "设备IP冲突",
+
+"comment": "设备IP冲突",
+
+"data type": "整数",
+
+"initial value": "@MV_E_IP_CONFLICT"
+  },
+  {
+
+"constant name": "USB_读USB错误",
+
+"comment": "读USB出错",
+
+"data type": "整数",
+
+"initial value": "@MV_E_USB_READ"
+  },
+  {
+"data type": "整数""constant name": "USB_写USB错误",
+"data type": "整数""comment": "写USB出错",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@MV_E_USB_WRITE"
+  },
+  {
+
+"constant name": "USB_设备异常",
+
+"comment": "设备异常",
+
+"data type": "整数",
+
+"initial value": "@MV_E_USB_DEVICE"
+  },
+  {
+E_USB_DEVICE"constant name": "USB_GenICam错误",
+E_USB_DEVICE"comment": "GenICam相关错误",
+E_USB_DEVICE"data type": "整数",
+E_USB_DEVICE"initial value": "@MV_E_USB_GENICAM"
+  },
+  {
+}"constant name": "USB_带宽不足",
+}"comment": "带宽不足",
+}"data type": "整数",
+}"initial value": "@MV_E_USB_BANDWIDTH"
+  },
+  {
+E_USB_BANDWIDTH"constant name": "USB_驱动错误",
+E_USB_BANDWIDTH"comment": "驱动不匹配或者未装驱动",
+E_USB_BANDWIDTH"data type": "整数",
+E_USB_BANDWIDTH"initial value": "@MV_E_USB_DRIVER"
+  },
+  {
+
+"constant name": "USB_未知错误",
+
+"comment": "USB未知的错误",
+
+"data type": "整数",
+
+"initial value": "@MV_E_USB_UNKNOW"
+  },
+  {
+
+"constant name": "升级固件不匹配",
+
+"comment": "升级固件不匹配",
+
+"data type": "整数",
+
+"initial value": "@MV_E_UPG_FILE_MISMATCH"
+  },
+  {
+"data type": "整数""constant name": "升级固件语言不匹配",
+"data type": "整数""comment": "升级固件语言不匹配",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@MV_E_UPG_LANGUSGE_MISMATCH"
+  },
+  {
+}"constant name": "升级冲突",
+}"comment": "升级冲突",
+}"data type": "整数",
+}"initial value": "@MV_E_UPG_CONFLICT"
+  },
+  {
+
+"constant name": "升级内部错误",
+
+"comment": "升级时相机内部出现错误",
+
+"data type": "整数",
+
+"initial value": "@MV_E_UPG_INNER_ERR"
+  },
+  {
+
+"constant name": "升级未知错误",
+
+"comment": "升级时未知错误",
+
+"data type": "整数",
+
+"initial value": "@MV_E_UPG_UNKNOW"
+  },
+  {
+"initial value": "@MV_E_UPG_UNKNOW""constant name": "设备断开连接",
+"initial value": "@MV_E_UPG_UNKNOW""comment": "设备断开连接",
+"initial value": "@MV_E_UPG_UNKNOW""data type": "整数",
+"initial value": "@MV_E_UPG_UNKNOW""initial value": "@MV_EXCEPTION_DEV_DISCONNECT"
+  },
+  {
+nstant name": "USB_未知错误""constant name": "库与驱动版本不匹配",
+nstant name": "USB_未知错误""comment": "SDK与驱动版本不匹配",
+nstant name": "USB_未知错误""data type": "整数",
+nstant name": "USB_未知错误""initial value": "@MV_EXCEPTION_VERSION_CHECK"
+  },
+  {
+nstant name": "USB_未知错误""constant name": "ALG_成功",
+nstant name": "USB_未知错误""comment": "处理正确 ",
+nstant name": "USB_未知错误""data type": "整数",
+nstant name": "USB_未知错误""initial value": "@MV_ALG_OK"
+  },
+  {
+
+"constant name": "ALG_未知错误",
+
+"comment": "不确定类型错误",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_ERR"
+  },
+  {
+}"constant name": "ALG_能力集有无效参数",
+}"comment": "能力集中存在无效参数 ",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_ABILITY_ARG"
+  },
+  {
+"data type": "整数""constant name": "ALG_空内存地址",
+"data type": "整数""comment": "内存地址为空 ",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@MV_ALG_E_MEM_NULL"
+  },
+  {
+}"constant name": "ALG_内存对齐不满足",
+}"comment": "内存对齐不满足要求",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_MEM_ALIGN"
+  },
+  {
+ALG_E_MEM_ALIGN"constant name": "ALG_内存空间不足",
+ALG_E_MEM_ALIGN"comment": "内存空间大小不够 ",
+ALG_E_MEM_ALIGN"data type": "整数",
+ALG_E_MEM_ALIGN"initial value": "@MV_ALG_E_MEM_LACK"
+  },
+  {
+
+"constant name": "ALG_内存空间对齐不满足",
+
+"comment": "内存空间大小不满足对齐要求",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_MEM_SIZE_ALIGN"
+  },
+  {
+
+"constant name": "ALG_内存地址对齐不满足",
+
+"comment": "内存地址不满足对齐要求",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_MEM_ADDR_ALIGN"
+  },
+  {
+"initial value": "@MV_ALG_E_MEM_ADDR_ALIGN""constant name": "ALG_图像格式不正确",
+"initial value": "@MV_ALG_E_MEM_ADDR_ALIGN""comment": "图像格式不正确或者不支持",
+"initial value": "@MV_ALG_E_MEM_ADDR_ALIGN""data type": "整数",
+"initial value": "@MV_ALG_E_MEM_ADDR_ALIGN""initial value": "@MV_ALG_E_IMG_FORMAT"
+  },
+  {
+"initial value": "@MV_ALG_E_MEM_ADDR_ALIGN""constant name": "ALG_图像尺寸不正确",
+"initial value": "@MV_ALG_E_MEM_ADDR_ALIGN""comment": "图像宽高不正确或者超出范围",
+"initial value": "@MV_ALG_E_MEM_ADDR_ALIGN""data type": "整数",
+"initial value": "@MV_ALG_E_MEM_ADDR_ALIGN""initial value": "@MV_ALG_E_IMG_SIZE"
+  },
+  {
+
+"constant name": "ALG_图像宽高与步进不匹配",
+
+"comment": "图像宽高与step参数不匹配 ",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_IMG_STEP"
+  },
+  {
+E_MEM_ALIGN"constant name": "ALG_内存空间不足""constant name": "ALG_图像数据地址为空",
+E_MEM_ALIGN"constant name": "ALG_内存空间不足""comment": "图像数据存储地址为空(某个分量)",
+E_MEM_ALIGN"constant name": "ALG_内存空间不足""data type": "整数",
+E_MEM_ALIGN"constant name": "ALG_内存空间不足""initial value": "@MV_ALG_E_IMG_DATA_NULL"
+  },
+  {
+
+"constant name": "ALG_配置参数类型不正确",
+
+"comment": "设置或者获取参数类型不正确 ",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_CFG_TYPE"
+  },
+  {
+
+"constant name": "ALG_配置参数大小不正确",
+
+"comment": "设置或者获取参数的输入,输出结构体大小不正确.",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_CFG_SIZE"
+  },
+  {
+
+"constant name": "ALG_处理参数类型不正确",
+
+"comment": "处理类型不正确",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_PRC_TYPE"
+  },
+  {
+"initial value": "@MV_ALG_E_CFG_TYPE""constant name": "ALG_处理参数尺寸不正确",
+"initial value": "@MV_ALG_E_CFG_TYPE""comment": "处理时输入,输出参数大小不正确.",
+"initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数",
+"initial value": "@MV_ALG_E_CFG_TYPE""initial value": "@MV_ALG_E_PRC_SIZE"
+  },
+  {
+
+"constant name": "ALG_子处理参数类型不正确",
+
+"comment": "子处理类型不正确",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_FUNC_TYPE"
+  },
+  {
+
+"constant name": "ALG_子处理参数尺寸不正确",
+
+"comment": "子处理时输入,输出参数大小不正确.",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_FUNC_SIZE"
+  },
+  {
+}"constant name": "ALG_索引不正确",
+}"comment": "index参数不正确",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_PARAM_INDEX"
+  },
+  {
+
+"constant name": "ALG_值参数不正确",
+
+"comment": "value参数不正确或者超出范围",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_PARAM_INDEX"
+  },
+  {
+
+"constant name": "ALG_参数数量不正确",
+
+"comment": "param_num参数不正确",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_PARAM_NUM"
+  },
+  {
+E_MEM_ALIGN"constant name": "ALG_内存空间不足""constant name": "ALG_函数参数指针为空",
+E_MEM_ALIGN"constant name": "ALG_内存空间不足""comment": "函数参数指针为空",
+E_MEM_ALIGN"constant name": "ALG_内存空间不足""data type": "整数",
+E_MEM_ALIGN"constant name": "ALG_内存空间不足""initial value": "@MV_ALG_E_NULL_PTR"
+  },
+  {
+ALG_E_PARAM_NUM"constant name": "ALG_超过最大内存限定",
+ALG_E_PARAM_NUM"comment": "超过限定的最大内存 ",
+ALG_E_PARAM_NUM"data type": "整数",
+ALG_E_PARAM_NUM"initial value": "@MV_ALG_E_OVER_MAX_MEM"
+  },
+  {
+ALG_E_PARAM_NUM"constant name": "ALG_回调函数错误",
+ALG_E_PARAM_NUM"comment": "回调函数出错",
+ALG_E_PARAM_NUM"data type": "整数",
+ALG_E_PARAM_NUM"initial value": "@MV_ALG_E_CALL_BACK"
+  },
+  {
+}"constant name": "ALG_加密错误",
+}"comment": "加密错误",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_ENCRYPT"
+  },
+  {
+ALG_E_ENCRYPT"constant name": "ALG_算法库期限错误",
+ALG_E_ENCRYPT"comment": "算法库使用期限错误",
+ALG_E_ENCRYPT"data type": "整数",
+ALG_E_ENCRYPT"initial value": "@MV_ALG_E_EXPIRE"
+  },
+  {
+"initial value": "@MV_ALG_E_CFG_TYPE""constant name": "ALG_参数范围错误",
+"initial value": "@MV_ALG_E_CFG_TYPE""comment": "参数范围不正确 ",
+"initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数",
+"initial value": "@MV_ALG_E_CFG_TYPE""initial value": "@MV_ALG_E_BAD_ARG"
+  },
+  {
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""constant name": "ALG_数据大小错误",
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""comment": "数据大小不正确 ",
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""data type": "整数",
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""initial value": "@MV_ALG_E_DATA_SIZE"
+  },
+  {
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""constant name": "ALG_数据步进错误",
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""comment": "数据step不正确 ",
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""data type": "整数",
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""initial value": "@MV_ALG_E_STEP"
+  },
+  {
+}"constant name": "ALG_不支持指令集",
+}"comment": "cpu不支持优化代码中的指令集",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_CPUID"
+  },
+  {
+ALG_E_CPUID"constant name": "ALG_警告",
+ALG_E_CPUID"comment": "警告",
+ALG_E_CPUID"data type": "整数",
+ALG_E_CPUID"initial value": "@MV_ALG_WARNING"
+  },
+  {
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""constant name": "ALG_算法库超时",
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""comment": "算法库超时 ",
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""data type": "整数",
+initial value": "@MV_ALG_E_CFG_TYPE""data type": "整数""initial value": "@MV_ALG_E_TIME_OUT"
+  },
+  {
+}"constant name": "ALG_算法库版本号错误",
+}"comment": "算法版本号出错 ",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_LIB_VERSION"
+  },
+  {
+
+"constant name": "ALG_模型版本号错误",
+
+"comment": "模型版本号出错",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_MODEL_VERSION"
+  },
+  {
+"initial value": "@MV_ALG_E_MODEL_VERSION""constant name": "ALG_GPU内存分配错误",
+"initial value": "@MV_ALG_E_MODEL_VERSION""comment": "GPU内存分配错误",
+"initial value": "@MV_ALG_E_MODEL_VERSION""data type": "整数",
+"initial value": "@MV_ALG_E_MODEL_VERSION""initial value": "@MV_ALG_E_GPU_MEM_ALLOC"
+  },
+  {
+initial value": "@MV_ALG_E_MODEL_VERSION""initial value": "@MV_ALG_E_GPU_MEM_ALLOC""constant name": "ALG_文件不存在",
+initial value": "@MV_ALG_E_MODEL_VERSION""initial value": "@MV_ALG_E_GPU_MEM_ALLOC""data type": "整数",
+initial value": "@MV_ALG_E_MODEL_VERSION""initial value": "@MV_ALG_E_GPU_MEM_ALLOC""initial value": "@MV_ALG_E_FILE_NON_EXIST"
+  },
+  {
+
+"constant name": "ALG_字符串为空",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_NONE_STRING"
+  },
+  {
+}"constant name": "ALG_图像解码器错误",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_IMAGE_CODEC"
+  },
+  {
+
+"constant name": "ALG_打开文件错误",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_FILE_OPEN"
+  },
+  {
+"data type": "整数""constant name": "ALG_文件读取错误",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@MV_ALG_E_FILE_READ"
+  },
+  {
+}"constant name": "ALG_文件写错误",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_FILE_WRITE"
+  },
+  {
+
+"constant name": "ALG_文件读取大小错误",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_FILE_READ_SIZE"
+  },
+  {
+"data type": "整数""constant name": "ALG_文件类型错误",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@MV_ALG_E_FILE_TYPE"
+  },
+  {
+"data type": "整数""constant name": "ALG_模型类型错误",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@MV_ALG_E_MODEL_TYPE"
+  },
+  {
+ALG_E_MODEL_TYPE"constant name": "ALG_分配内存错误",
+ALG_E_MODEL_TYPE"data type": "整数",
+ALG_E_MODEL_TYPE"initial value": "@MV_ALG_E_MALLOC_MEM"
+  },
+  {
+}"constant name": "ALG_线程绑核失败",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_BIND_CORE_FAILED"
+  },
+  {
+}"constant name": "ALG_噪声特性图像格式错误",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_DENOISE_NE_IMG_FORMAT"
+  },
+  {
+}"constant name": "ALG_噪声特性类型错误",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_DENOISE_NE_FEATURE_TYPE"
+  },
+  {
+}"constant name": "ALG_噪声特性个数错误",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_DENOISE_NE_PROFILE_NUM"
+  },
+  {
+}"constant name": "ALG_噪声特性增益个数错误",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_DENOISE_NE_GAIN_NUM"
+  },
+  {
+
+"constant name": "ALG_噪声曲线增益值输入错误",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_DENOISE_NE_GAIN_VAL"
+  },
+  {
+
+"constant name": "ALG_噪声曲线柱数错误",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_DENOISE_NE_BIN_NUM"
+  },
+  {
+
+"constant name": "ALG_噪声初始化增益设置错误",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_DENOISE_NE_INIT_GAIN"
+  },
+  {
+
+"constant name": "ALG_噪声未初始化",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_DENOISE_NE_NOT_INIT"
+  },
+  {
+
+"constant name": "ALG_颜色空间模式错误",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_DENOISE_COLOR_MODE"
+  },
+  {
+}"constant name": "ALG_图像ROI个数错误",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_DENOISE_ROI_NUM"
+  },
+  {
+
+"constant name": "ALG_图像ROI原点错误",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_DENOISE_ROI_ORI_PT"
+  },
+  {
+"initial value": "@MV_ALG_E_DENOISE_ROI_ORI_PT""constant name": "ALG_图像ROI大小错误",
+"initial value": "@MV_ALG_E_DENOISE_ROI_ORI_PT""data type": "整数",
+"initial value": "@MV_ALG_E_DENOISE_ROI_ORI_PT""initial value": "@MV_ALG_E_DENOISE_ROI_SIZE"
+  },
+  {
+"initial value": "@MV_ALG_E_DENOISE_ROI_ORI_PT""constant name": "ALG_输入相机增益不存在",
+"initial value": "@MV_ALG_E_DENOISE_ROI_ORI_PT""data type": "整数",
+"initial value": "@MV_ALG_E_DENOISE_ROI_ORI_PT""initial value": "@MV_ALG_E_DENOISE_GAIN_NOT_EXIST"
+  },
+  {
+}"constant name": "ALG_输入相机增益超范围",
+}"data type": "整数",
+}"initial value": "@MV_ALG_E_DENOISE_GAIN_BEYOND_RANGE"
+  },
+  {
+
+"constant name": "ALG_输入噪声特性内存大小错误",
+
+"data type": "整数",
+
+"initial value": "@MV_ALG_E_DENOISE_NP_BUF_SIZE"
+  }
+]
+ },
+ {
+
+"class name": "图像数据信息",
+
+"comment": "表示相机采集到的图像帧的数据信息.",
+
+"@文档": "\"category = \\\"辅助类\\\"\"",
+
+"variables": [
+  {
+
+"variable name": "图像宽度",
+
+"data type": "短整数"
+  },
+  {
+
+"variable name": "图像高度",
+
+"data type": "短整数"
+  },
+  {
+
+"variable name": "像素格式",
+
+"data type": "图像像素格式"
+  },
+  {
+
+"variable name": "帧号",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "时间戳高位",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "时间戳低位",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "保留",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "主机时间戳",
+
+"data type": "长整数"
+  },
+  {
+
+"variable name": "帧长度",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "水印时标秒数",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "周期数",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "周期偏移",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "增益",
+
+"data type": "小数"
+  },
+  {
+
+"variable name": "曝光时间",
+
+"data type": "小数"
+  },
+  {
+
+"variable name": "平均亮度",
+
+"data type": "整数"
+  },
+  {
+riable name": "图像高度""variable name": "红色",
+riable name": "图像高度""data type": "整数"
+  },
+  {
+
+"variable name": "绿色",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "蓝色",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "总帧数",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "触发计数",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "输入",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "输出",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "水平偏移量",
+
+"data type": "短整数"
+  },
+  {
+
+"variable name": "垂直偏移量",
+
+"data type": "短整数"
+  },
+  {
+"data type": "整数""variable name": "Chunk宽",
+"data type": "整数""data type": "短整数"
+  },
+  {
+}"variable name": "Chunk高",
+}"data type": "短整数"
+  },
+  {
+
+"variable name": "本帧丢包数",
+
+"data type": "整数"
+  },
+  {
+}"variable name": "未解析Chunk数据",
+}"data type": "图像Chunk数据数组类"
+  },
+  {
+}"variable name": "校准",
+}"data type": "长整数"
+  }
+
+]
+ },
+ {
+"data type": "整数""class name": "图像Chunk数据类",
+"data type": "整数""@文档": "\"category = \\\"辅助类\\\"\"",
+"data type": "整数""variables": [
+  {
+
+"variable name": "Chunk数据",
+
+"comment": "未解析的Chunk数据指针.",
+
+"data type": "变整数"
+  },
+  {
+
+"variable name": "Chunk数据长度",
+
+"comment": "Chunk数据的长度.",
+
+"data type": "整数"
+  },
+  {
+"data type": "整数""variable name": "Chunk数据ID",
+"data type": "整数""data type": "整数"
+  }
+"data type": "整数"]
+ },
+ {
+"class name": "图像解码结果信息类",
+"comment": "存放图像解码后的结果信息.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+a type": "整数""variable name": "Chunk数据ID""variable name": "图像宽度",
+a type": "整数""variable name": "Chunk数据ID""data type": "整数"
+  },
+  {
+ type": "整数""variable name": "Chunk数据ID""data type": "整数""variable name": "图像高度",
+ type": "整数""variable name": "Chunk数据ID""data type": "整数""data type": "整数"
+  },
+  {
+ type": "整数""variable name": "Chunk数据ID""data type": "整数""variable name": "像素格式",
+ type": "整数""variable name": "Chunk数据ID""data type": "整数""data type": "图像像素格式"
+  },
+  {
+}"variable name": "水印时标秒数",
+}"data type": "整数"
+  },
+  {
+
+"variable name": "水印周期数",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "水印周期偏移",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "水印增益",
+
+"data type": "小数"
+  },
+  {
+a type": "整数""variable name": "Chunk数据ID""variable name": "水印曝光时间",
+a type": "整数""variable name": "Chunk数据ID""data type": "小数"
+  },
+  {
+
+"variable name": "水印平均亮度",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "水印红色",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "水印绿色",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "水印蓝色",
+
+"data type": "整数"
+  },
+  {
+e": "整数""variable name": "Chunk数据ID""data type": "整数""variable name": "图像高度""variable name": "水印总帧数",
+e": "整数""variable name": "Chunk数据ID""data type": "整数""variable name": "图像高度""data type": "整数"
+  },
+  {
+
+"variable name": "水印触发计数",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "水印输入",
+
+"data type": "整数"
+  },
+  {
+riable name": "水印蓝色""variable name": "水印输出",
+riable name": "水印蓝色""data type": "整数"
+  },
+  {
+"data type": "整数""variable name": "水印水平偏移量",
+"data type": "整数""data type": "短整数"
+  },
+  {
+}"variable name": "水印垂直偏移量",
+}"data type": "短整数"
+  },
+  {
+}"variable name": "水印宽度",
+}"data type": "短整数"
+  },
+  {
+"data type": "整数""variable name": "水印高度",
+"data type": "整数""data type": "短整数"
+  }
+]
+ },
+ {
+"class name": "图像像素格式",
+"comment": "指定了采集到图像数据帧的像素格式.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+集到图像数据帧的像素格式."constant name": "未知格式",
+集到图像数据帧的像素格式."initial value": "@MvGvspPixelType::PixelType_Gvsp_Undefined"
+  },
+  {
+集到图像数据帧的像素格式."constant name": "Mono1p",
+集到图像数据帧的像素格式."initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono1p"
+  },
+  {
+
+"constant name": "Mono4p",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono4p"
+  },
+  {
+
+"constant name": "Mono8",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono8"
+  },
+  {
+
+"constant name": "Mono8_Signed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono8_Signed"
+  },
+  {
+}"constant name": "Mono10",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono10"
+  },
+  {
+
+"constant name": "Mono10_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono10_Packed"
+  },
+  {
+
+"constant name": "Mono12",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono12"
+  },
+  {
+
+"constant name": "Mono12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono12_Packed"
+  },
+  {
+
+"constant name": "Mono14",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono14"
+  },
+  {
+
+"constant name": "Mono16",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono16"
+  },
+  {
+
+"constant name": "BayerGR8",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGR8"
+  },
+  {
+
+"constant name": "BayerRG8",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerRG8"
+  },
+  {
+
+"constant name": "BayerGB8",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB8"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB8""constant name": "BayerBG8",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB8""initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerBG8"
+  },
+  {
+}"constant name": "BayerGR10",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGR10"
+  },
+  {
+}"constant name": "BayerRG10",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerRG10"
+  },
+  {
+}"constant name": "BayerGB10",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB10"
+  },
+  {
+}"constant name": "BayerBG10",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerBG10"
+  },
+  {
+}"constant name": "BayerGR12",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGR12"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono16""constant name": "BayerRG12",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Mono16""initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerRG12"
+  },
+  {
+}"constant name": "BayerGB12",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB12"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerBG10""constant name": "BayerBG12",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerBG10""initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerBG12"
+  },
+  {
+}"constant name": "BayerGR10_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGR10_Packed"
+  },
+  {
+
+"constant name": "BayerRG10_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerRG10_Packed"
+  },
+  {
+nstant name": "BayerRG10_Packed""constant name": "BayerGB10_Packed",
+nstant name": "BayerRG10_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB10_Packed"
+  },
+  {
+
+"constant name": "BayerBG10_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerBG10_Packed"
+  },
+  {
+
+"constant name": "BayerGR12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGR12_Packed"
+  },
+  {
+
+"constant name": "BayerRG12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerRG12_Packed"
+  },
+  {
+
+"constant name": "BayerGB12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB12_Packed"
+  },
+  {
+}"constant name": "BayerBG12_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerBG12_Packed"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB8""constant name": "BayerGR16",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB8""initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGR16"
+  },
+  {
+
+"constant name": "BayerRG16",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerRG16"
+  },
+  {
+nstant name": "BayerBG12_Packed""constant name": "BayerGB16",
+nstant name": "BayerBG12_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB16"
+  },
+  {
+}"constant name": "BayerBG16",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerBG16"
+  },
+  {
+rGR10_Packed"constant name": "RGB8_Packed",
+rGR10_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB8_Packed"
+  },
+  {
+
+"constant name": "BGR8_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BGR8_Packed"
+  },
+  {
+
+"constant name": "RGBA8_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGBA8_Packed"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB8""constant name": "BGRA8_Packed",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BayerGB8""initial value": "@MvGvspPixelType::PixelType_Gvsp_BGRA8_Packed"
+  },
+  {
+rGR10_Packed"constant name": "RGB10_Packed",
+rGR10_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10_Packed"
+  },
+  {
+}"constant name": "BGR10_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_BGR10_Packed"
+  },
+  {
+
+"constant name": "RGB12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB12_Packed"
+  },
+  {
+
+"constant name": "BGR12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BGR12_Packed"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB12_Packed""constant name": "RGB16_Packed",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB12_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB16_Packed"
+  },
+  {
+
+"constant name": "BGR16_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BGR16_Packed"
+  },
+  {
+
+"constant name": "RGBA16_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGBA16_Packed"
+  },
+  {
+
+"constant name": "BGRA16_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BGRA16_Packed"
+  },
+  {
+
+"constant name": "RGB10V1_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10V1_Packed"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10V1_Packed""constant name": "RGB10V2_Packed",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10V1_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10V2_Packed"
+  },
+  {
+nstant name": "RGB10V1_Packed""constant name": "RGB12V1_Packed",
+nstant name": "RGB10V1_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB12V1_Packed"
+  },
+  {
+stant name": "RGB10V1_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB12V1_Packed""constant name": "RGB565_Packed",
+stant name": "RGB10V1_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB12V1_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB565_Packed"
+  },
+  {
+
+"constant name": "BGR565_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_BGR565_Packed"
+  },
+  {
+
+"constant name": "YUV411_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_YUV411_Packed"
+  },
+  {
+}"constant name": "YUV422_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_YUV422_Packed"
+  },
+  {
+}"constant name": "YUV422_YUYV_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_YUV422_YUYV_Packed"
+  },
+  {
+}"constant name": "YUV444_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_YUV444_Packed"
+  },
+  {
+
+"constant name": "YCBCR8_CBYCR",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR8_CBYCR"
+  },
+  {
+nstant name": "RGB10V1_Packed""constant name": "YCBCR422_8",
+nstant name": "RGB10V1_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR422_8"
+  },
+  {
+stant name": "RGB10V1_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR422_8""constant name": "YCBCR422_8_CBYCRY",
+stant name": "RGB10V1_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR422_8""initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR422_8_CBYCRY"
+  },
+  {
+
+"constant name": "YCBCR411_8_CBYYCRYY",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR411_8_CBYYCRYY"
+  },
+  {
+
+"constant name": "YCBCR601_8_CBYCR",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR601_8_CBYCR"
+  },
+  {
+}"constant name": "YCBCR601_422_8",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR601_422_8"
+  },
+  {
+
+"constant name": "YCBCR601_422_8_CBYCRY",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR601_422_8_CBYCRY"
+  },
+  {
+
+"constant name": "YCBCR601_411_8_CBYYCRYY",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR601_411_8_CBYYCRYY"
+  },
+  {
+}"constant name": "YCBCR709_8_CBYCR",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR709_8_CBYCR"
+  },
+  {
+}"constant name": "YCBCR709_422_8",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR709_422_8"
+  },
+  {
+}"constant name": "YCBCR709_422_8_CBYCRY",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR709_422_8_CBYCRY"
+  },
+  {
+
+"constant name": "YCBCR709_411_8_CBYYCRYY",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR709_411_8_CBYYCRYY"
+  },
+  {
+
+"constant name": "RGB8_Planar",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB8_Planar"
+  },
+  {
+}"constant name": "RGB10_Planar",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10_Planar"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10_Planar""constant name": "RGB12_Planar",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10_Planar""initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB12_Planar"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10_Planar""constant name": "RGB16_Planar",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB10_Planar""initial value": "@MvGvspPixelType::PixelType_Gvsp_RGB16_Planar"
+  },
+  {
+}"constant name": "Jpeg",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_Jpeg"
+  },
+  {
+nstant name": "Jpeg""constant name": "Coord3D_ABC32f",
+nstant name": "Jpeg""initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_ABC32f"
+  },
+  {
+
+"constant name": "Coord3D_ABC32f_Planar",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_ABC32f_Planar"
+  },
+  {
+nstant name": "Coord3D_ABC32f_Planar""constant name": "Coord3D_AC32f",
+nstant name": "Coord3D_ABC32f_Planar""initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_AC32f"
+  },
+  {
+
+"constant name": "COORD3D_DEPTH_PLUS_MASK",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_COORD3D_DEPTH_PLUS_MASK"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR601_411_8_CBYYCRYY""constant name": "Coord3D_ABC32",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_YCBCR601_411_8_CBYYCRYY""initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_ABC32"
+  },
+  {
+
+"constant name": "Coord3D_AB32f",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_AB32f"
+  },
+  {
+
+"constant name": "Coord3D_AB32",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_AB32"
+  },
+  {
+nstant name": "Coord3D_ABC32f_Planar""constant name": "Coord3D_AC32f_64",
+nstant name": "Coord3D_ABC32f_Planar""initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_AC32f_64"
+  },
+  {
+
+"constant name": "Coord3D_AC32f_Planar",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_AC32f_Planar"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_AC32f_Planar""constant name": "Coord3D_AC32",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_AC32f_Planar""initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_AC32"
+  },
+  {
+}"constant name": "Coord3D_A32f",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_A32f"
+  },
+  {
+
+"constant name": "Coord3D_A32",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_A32"
+  },
+  {
+
+"constant name": "Coord3D_C32f",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_C32f"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_C32f""constant name": "Coord3D_C32",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_C32f""initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_C32"
+  },
+  {
+
+"constant name": "Coord3D_ABC16",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_ABC16"
+  },
+  {
+}"constant name": "Coord3D_C16",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_Coord3D_C16"
+  },
+  {
+
+"constant name": "HB_Mono8",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_Mono8"
+  },
+  {
+}"constant name": "HB_Mono10",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_Mono10"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_Mono10""constant name": "HB_Mono10_Packed",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_Mono10""initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_Mono10_Packed"
+  },
+  {
+
+"constant name": "HB_Mono12",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_Mono12"
+  },
+  {
+
+"constant name": "HB_Mono12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_Mono12_Packed"
+  },
+  {
+
+"constant name": "HB_Mono16",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_Mono16"
+  },
+  {
+
+"constant name": "HB_BayerGR8",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGR8"
+  },
+  {
+
+"constant name": "HB_BayerRG8",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerRG8"
+  },
+  {
+
+"constant name": "HB_BayerGB8",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGB8"
+  },
+  {
+
+"constant name": "HB_BayerBG8",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG8"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG8""constant name": "HB_BayerGR10",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG8""initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGR10"
+  },
+  {
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG8""constant name": "HB_BayerRG10",
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG8""initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerRG10"
+  },
+  {
+
+"constant name": "HB_BayerGB10",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGB10"
+  },
+  {
+d3D_AC32f_64"constant name": "HB_BayerBG10",
+d3D_AC32f_64"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG10"
+  },
+  {
+}"constant name": "HB_BayerGR12",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGR12"
+  },
+  {
+
+"constant name": "HB_BayerRG12",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerRG12"
+  },
+  {
+}"constant name": "HB_BayerGB12",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGB12"
+  },
+  {
+
+"constant name": "HB_BayerBG12",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG12"
+  },
+  {
+
+"constant name": "HB_BayerGR10_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGR10_Packed"
+  },
+  {
+
+"constant name": "HB_BayerRG10_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerRG10_Packed"
+  },
+  {
+tial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG8""constant name": "HB_BayerRG10""constant name": "HB_BayerGB10_Packed",
+tial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG8""constant name": "HB_BayerRG10""initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGB10_Packed"
+  },
+  {
+}"constant name": "HB_BayerBG10_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG10_Packed"
+  },
+  {
+
+"constant name": "HB_BayerGR12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGR12_Packed"
+  },
+  {
+
+"constant name": "HB_BayerRG12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerRG12_Packed"
+  },
+  {
+
+"constant name": "HB_BayerGB12_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerGB12_Packed"
+  },
+  {
+nstant name": "HB_BayerRG12_Packed""constant name": "HB_BayerBG12_Packed",
+nstant name": "HB_BayerRG12_Packed""initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BayerBG12_Packed"
+  },
+  {
+}"constant name": "HB_YUV422_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_YUV422_Packed"
+  },
+  {
+}"constant name": "HB_YUV422_YUYV_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_YUV422_YUYV_Packed"
+  },
+  {
+
+"constant name": "HB_RGB8_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGB8_Packed"
+  },
+  {
+UV422_Packed"constant name": "HB_BGR8_Packed",
+UV422_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BGR8_Packed"
+  },
+  {
+
+"constant name": "HB_RGBA8_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGBA8_Packed"
+  },
+  {
+
+"constant name": "HB_BGRA8_Packed",
+
+"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BGRA8_Packed"
+  },
+  {
+ayerBG12_Packed"constant name": "HB_RGB16_Packed",
+ayerBG12_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGB16_Packed"
+  },
+  {
+}"constant name": "HB_BGR16_Packed",
+}"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BGR16_Packed"
+  },
+  {
+UV422_Packed"constant name": "HB_RGBA16_Packed",
+UV422_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGBA16_Packed"
+  },
+  {
+GBA8_Packed"constant name": "HB_BGRA16_Packed",
+GBA8_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_BGRA16_Packed"
+  }
+]
+ },
+ {
+V422_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGBA16_Packed""class name": "相机动作命令结果类",
+V422_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGBA16_Packed""comment": "对相机设备执行指定的动作命令后返回的结果对象.",
+V422_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGBA16_Packed""@文档": "\"category = \\\"辅助类\\\"\"",
+V422_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGBA16_Packed""variables": [
+  {
+_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGBA16_Packed""class name": "相机动作命令结果类""variable name": "设备IP",
+_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGBA16_Packed""class name": "相机动作命令结果类""data type": "文本型"
+  },
+  {
+GBA16_Packed"variable name": "状态码",
+GBA16_Packed"data type": "整数"
+  }
+V422_Packed"initial value": "@MvGvspPixelType::PixelType_Gvsp_HB_RGBA16_Packed"]
+ },
+ {
+"class name": "相机网络传输信息类",
+"comment": "网络传输的相关信息.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+UV422_Packed"variable name": "已接收数据尺寸",
+UV422_Packed"comment": "开始取流和结束取流之间的统计.",
+UV422_Packed"data type": "长整数"
+  },
+  {
+}"variable name": "丢帧数量",
+}"data type": "整数"
+  },
+  {
+
+"variable name": "已接收帧数量",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "请求重发包数",
+
+"data type": "长整数"
+  },
+  {
+
+"variable name": "重发包数",
+
+"data type": "长整数"
+  }
+]
+ },
+ {
+"class name": "相机流量丢包信息类",
+"comment": "GigE相机设备的网络流量和丢包信息反馈信息.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+tegory = \\\"辅助类\\\"\""variable name": "已接收数据尺寸",
+tegory = \\\"辅助类\\\"\""comment": "Start和Stop之间的统计.",
+tegory = \\\"辅助类\\\"\""data type": "长整数"
+  },
+  {
+
+"variable name": "丢包数量",
+
+"data type": "长整数"
+  },
+  {
+
+"variable name": "丢帧数量",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "已接收帧数量",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "请求重发包数",
+
+"data type": "长整数"
+  },
+  {
+riable name": "请求重发包数""variable name": "重发包数",
+riable name": "请求重发包数""data type": "长整数"
+  }
+]
+ },
+ {
+le name": "请求重发包数""variable name": "重发包数""class name": "相机数据接收信息类",
+le name": "请求重发包数""variable name": "重发包数""comment": "表示host收到从u3v设备端的总字节数.",
+le name": "请求重发包数""variable name": "重发包数""@文档": "\"category = \\\"辅助类\\\"\"",
+le name": "请求重发包数""variable name": "重发包数""variables": [
+  {
+
+"variable name": "已接收数据尺寸",
+
+"comment": "Open和Close之间的统计.",
+
+"data type": "长整数"
+  },
+  {
+}"variable name": "已收到帧数",
+}"data type": "整数"
+  },
+  {
+"data type": "长整数""variable name": "错误帧数",
+"data type": "长整数""data type": "整数"
+  }
+le name": "请求重发包数""variable name": "重发包数"]
+ },
+ {
+le name": "请求重发包数""variable name": "重发包数""class name": "相机数值属性类",
+le name": "请求重发包数""variable name": "重发包数""comment": "表示相机设备的数值属性.",
+le name": "请求重发包数""variable name": "重发包数""@文档": "\"category = \\\"辅助类\\\"\"",
+le name": "请求重发包数""variable name": "重发包数""variables": [
+  {
+tegory = \\\"辅助类\\\"\""variable name": "当前值",
+tegory = \\\"辅助类\\\"\""data type": "长整数"
+  },
+  {
+tegory = \\\"辅助类\\\"\""variable name": "最大值",
+tegory = \\\"辅助类\\\"\""data type": "长整数"
+  },
+  {
+}"variable name": "最小值",
+}"data type": "长整数"
+  },
+  {
+}"variable name": "INC",
+}"data type": "长整数"
+  }
+le name": "请求重发包数""variable name": "重发包数"]
+ },
+ {
+"class name": "相机枚举值属性类",
+"comment": "表示相机设备的枚举值属性.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+
+"variable name": "当前值",
+
+"data type": "整数"
+  },
+  {
+}"variable name": "支持值",
+}"data type": "整数数组类"
+  }
+]
+ },
+ {
+"class name": "相机浮点属性类",
+"comment": "表示相机设备的数值属性.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+
+"variable name": "当前值",
+
+"data type": "小数"
+  },
+  {
+}"variable name": "最大值",
+}"data type": "小数"
+  },
+  {
+
+"variable name": "最小值",
+
+"data type": "小数"
+  }
+]
+ },
+ {
+"class name": "相机传输层协议类型",
+"comment": "相机设备传输层协议类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+comment": "相机设备传输层协议类型.""constant name": "未知",
+comment": "相机设备传输层协议类型.""comment": "未知设备类型",
+comment": "相机设备传输层协议类型.""data type": "整数",
+comment": "相机设备传输层协议类型.""initial value": "@MV_UNKNOW_DEVICE"
+  },
+  {
+comment": "相机设备传输层协议类型.""constant name": "GIGE",
+comment": "相机设备传输层协议类型.""comment": "GigE设备",
+comment": "相机设备传输层协议类型.""data type": "整数",
+comment": "相机设备传输层协议类型.""initial value": "@MV_GIGE_DEVICE"
+  },
+  {
+comment": "表示相机设备的数值属性.""constant name": "_1394",
+comment": "表示相机设备的数值属性.""comment": "1394-a/b设备",
+comment": "表示相机设备的数值属性.""data type": "整数",
+comment": "表示相机设备的数值属性.""initial value": "@MV_1394_DEVICE"
+  },
+  {
+
+"constant name": "USB",
+
+"comment": "USB3.0设备 ",
+
+"data type": "整数",
+
+"initial value": "@MV_USB_DEVICE"
+  },
+  {
+
+"constant name": "CameraLink",
+
+"comment": "CameraLink设备",
+
+"data type": "整数",
+
+"initial value": "@MV_CAMERALINK_DEVICE"
+  }
+]
+ },
+ {
+"class name": "相机数据传输模式",
+"comment": "定义设备的网络传输模式.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+1394_DEVICE"constant name": "单播",
+1394_DEVICE"comment": "表示单播(默认)",
+1394_DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST"
+  },
+  {
+
+"constant name": "组播",
+
+"comment": "表示组播",
+
+"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_MULTICAST"
+  },
+  {
+
+"constant name": "局域网广播",
+
+"comment": "表示局域网内广播,暂不支持.",
+
+"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_LIMITEDBROADCAST"
+  },
+  {
+
+"constant name": "子网内广播",
+
+"comment": "表示子网内广播,暂不支持.",
+
+"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_SUBNETBROADCAST"
+  },
+  {
+
+"constant name": "从设备获取",
+
+"comment": "表示从设备获取,暂不支持.",
+
+"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_CAMERADEFINED"
+  },
+  {
+
+"constant name": "自定义接收",
+
+"comment": "表示用户自定义应用端接收图像数据端口号.",
+
+"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST_DEFINED_PORT"
+  },
+  {
+
+"constant name": "单播不接收数据",
+
+"comment": "表示设置了单播,但本实例不接收图像数据.",
+
+"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST_WITHOUT_RECV"
+  },
+  {
+"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_CAMERADEFINED""constant name": "组播不接收数据",
+"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_CAMERADEFINED""comment": "表示组播模式,但本实例不接收图像数据.",
+"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_CAMERADEFINED""initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_MULTICAST_WITHOUT_RECV"
+  }
+]
+ },
+ {
+"class name": "图像Bayer伽马类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+}"constant name": "不启用",
+}"initial value": "@MV_CC_GAMMA_TYPE::MV_CC_GAMMA_TYPE_NONE"
+  },
+  {
+
+"constant name": "伽马值",
+
+"initial value": "@MV_CC_GAMMA_TYPE::MV_CC_GAMMA_TYPE_VALUE"
+  },
+  {
+}"constant name": "伽马曲线",
+}"initial value": "@MV_CC_GAMMA_TYPE::MV_CC_GAMMA_TYPE_USER_CURVE"
+  },
+  {
+"initial value": "@MV_CC_GAMMA_TYPE::MV_CC_GAMMA_TYPE_VALUE""constant name": "线性RGB到sRGB",
+"initial value": "@MV_CC_GAMMA_TYPE::MV_CC_GAMMA_TYPE_VALUE""initial value": "@MV_CC_GAMMA_TYPE::MV_CC_GAMMA_TYPE_LRGB2SRGB"
+  },
+  {
+394_DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB",
+394_DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""comment": "仅色彩插值时支持,色彩校正时无效.",
+394_DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""initial value": "@MV_CC_GAMMA_TYPE::MV_CC_GAMMA_TYPE_SRGB2LRGB"
+  }
+]
+ },
+ {
+nstant name": "伽马曲线""class name": "相机波特率类型",
+nstant name": "伽马曲线""comment": "定义设备可选的波特率类型.",
+nstant name": "伽马曲线""@文档": "\"category = \\\"辅助类\\\"\"",
+nstant name": "伽马曲线""@常量类": "整数",
+nstant name": "伽马曲线""constants": [
+  {
+}"constant name": "波特率_9600",
+}"initial value": "@MV_CAML_BAUDRATE_9600"
+  },
+  {
+}"constant name": "波特率_19200",
+}"initial value": "@MV_CAML_BAUDRATE_19200"
+  },
+  {
+initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_CAMERADEFINED""comment": "表示组播模式,但本实例不接收图像数据.""constant name": "波特率_38400",
+initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_CAMERADEFINED""comment": "表示组播模式,但本实例不接收图像数据.""initial value": "@MV_CAML_BAUDRATE_38400"
+  },
+  {
+
+"constant name": "波特率_57600",
+
+"initial value": "@MV_CAML_BAUDRATE_57600"
+  },
+  {
+
+"constant name": "波特率_115200",
+
+"initial value": "@MV_CAML_BAUDRATE_115200"
+  },
+  {
+}"constant name": "波特率_230400",
+}"initial value": "@MV_CAML_BAUDRATE_230400"
+  },
+  {
+
+"constant name": "波特率_460800",
+
+"initial value": "@MV_CAML_BAUDRATE_460800"
+  },
+  {
+
+"constant name": "波特率_921600",
+
+"initial value": "@MV_CAML_BAUDRATE_921600"
+  },
+  {
+
+"constant name": "最大值",
+
+"initial value": "@MV_CAML_BAUDRATE_AUTOMAX"
+  }
+nstant name": "伽马曲线"]
+ },
+ {
+DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB""class name": "相机属性树节点访问模式",
+DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB""comment": "定义XML当前节点的访问模式.",
+DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB""@文档": "\"category = \\\"辅助类\\\"\"",
+DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB""@常量类": "整数",
+DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB""constants": [
+  {
+
+"constant name": "不可实现",
+
+"initial value": "@MV_XML_AccessMode::AM_NI"
+  },
+  {
+
+"constant name": "不可用",
+
+"initial value": "@MV_XML_AccessMode::AM_NA"
+  },
+  {
+}"constant name": "只写",
+}"initial value": "@MV_XML_AccessMode::AM_WO"
+  },
+  {
+
+"constant name": "只读",
+
+"initial value": "@MV_XML_AccessMode::AM_RO"
+  },
+  {
+"comment": "表示设置了单播,但本实例不接收图像数据.""constant name": "读写",
+"comment": "表示设置了单播,但本实例不接收图像数据.""initial value": "@MV_XML_AccessMode::AM_RW"
+  },
+  {
+}"constant name": "未定义",
+}"initial value": "@MV_XML_AccessMode::AM_Undefined"
+  },
+  {
+}"constant name": "循环检测",
+}"initial value": "@MV_XML_AccessMode::AM_CycleDetect"
+  }
+DEVICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB"]
+ },
+ {
+VICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB"]"class name": "相机属性树节点接口类型",
+VICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB"]"comment": "定义每个节点对应的接口类型.",
+VICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB"]"@文档": "\"category = \\\"辅助类\\\"\"",
+VICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB"]"@常量类": "整数",
+VICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB"]"constants": [
+  {
+
+"constant name": "值",
+
+"initial value": "@MV_XML_InterfaceType::IFT_IValue"
+  },
+  {
+
+"constant name": "基础",
+
+"initial value": "@MV_XML_InterfaceType::IFT_IBase"
+  },
+  {
+
+"constant name": "数值",
+
+"initial value": "@MV_XML_InterfaceType::IFT_IInteger"
+  },
+  {
+
+"constant name": "逻辑",
+
+"initial value": "@MV_XML_InterfaceType::IFT_IBoolean"
+  },
+  {
+
+"constant name": "命令",
+
+"initial value": "@MV_XML_InterfaceType::IFT_ICommand"
+  },
+  {
+
+"constant name": "浮点",
+
+"initial value": "@MV_XML_InterfaceType::IFT_IFloat"
+  },
+  {
+
+"constant name": "文本",
+
+"initial value": "@MV_XML_InterfaceType::IFT_IString"
+  },
+  {
+
+"constant name": "注册",
+
+"initial value": "@MV_XML_InterfaceType::IFT_IRegister"
+  },
+  {
+
+"constant name": "分类",
+
+"initial value": "@MV_XML_InterfaceType::IFT_ICategory"
+  },
+  {
+
+"constant name": "枚举",
+
+"initial value": "@MV_XML_InterfaceType::IFT_IEnumeration"
+  },
+  {
+"initial value": "@MV_XML_AccessMode::AM_Undefined""constant name": "枚举项",
+"initial value": "@MV_XML_AccessMode::AM_Undefined""initial value": "@MV_XML_InterfaceType::IFT_IEnumEntry"
+  },
+  {
+
+"constant name": "端口",
+
+"initial value": "@MV_XML_InterfaceType::IFT_IPort"
+  }
+VICE"initial value": "@MV_GIGE_TRANSMISSION_TYPE::MV_GIGE_TRANSTYPE_UNICAST""constant name": "sRGB到线性RGB"]]
+ },
+ {
+"class name": "相机图像数据保存格式",
+"comment": "定义保存图片格式.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "未定义",
+
+"initial value": "@MV_SAVE_IAMGE_TYPE::MV_Image_Undefined"
+  },
+  {
+
+"constant name": "BMP",
+
+"initial value": "@MV_SAVE_IAMGE_TYPE::MV_Image_Bmp"
+  },
+  {
+
+"constant name": "JPEG",
+
+"initial value": "@MV_SAVE_IAMGE_TYPE::MV_Image_Jpeg"
+  },
+  {
+
+"constant name": "PNG",
+
+"initial value": "@MV_SAVE_IAMGE_TYPE::MV_Image_Png"
+  },
+  {
+
+"constant name": "TIFF",
+
+"initial value": "@MV_SAVE_IAMGE_TYPE::MV_Image_Tif"
+  }
+]
+ },
+ {
+}"class name": "点云数据保存文件格式",
+}"comment": "定义点云数据保存文件格式.",
+}"@文档": "\"category = \\\"辅助类\\\"\"",
+}"@常量类": "整数",
+}"constants": [
+  {
+}"constant name": "未定义",
+}"initial value": "@MV_SAVE_POINT_CLOUD_FILE_TYPE::MV_PointCloudFile_Undefined"
+  },
+  {
+
+"constant name": "PLY",
+
+"initial value": "@MV_SAVE_POINT_CLOUD_FILE_TYPE::MV_PointCloudFile_PLY"
+  },
+  {
+
+"constant name": "CSV",
+
+"initial value": "@MV_SAVE_POINT_CLOUD_FILE_TYPE::MV_PointCloudFile_CSV"
+  },
+  {
+
+"constant name": "OBJ",
+
+"initial value": "@MV_SAVE_POINT_CLOUD_FILE_TYPE::MV_PointCloudFile_OBJ"
+  }
+}]
+ },
+ {
+"class name": "相机IP配置模式",
+"comment": "定义设备的IP配置方式.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+constants": [
+"constant name": "固定",
+constants": [
+"comment": "固定IP地址模式",
+constants": [
+"initial value": "@MV_IP_CFG_STATIC"
+  },
+  {
+
+"constant name": "自动获取",
+
+"comment": "DHCP自动获取IP模式",
+
+"initial value": "@MV_IP_CFG_DHCP"
+  },
+  {
+
+"constant name": "链路本地",
+
+"comment": "LLA(Link-local address),链路本地地址.",
+
+"initial value": "@MV_IP_CFG_LLA"
+  }
+]
+ },
+ {
+"class name": "相机网络传输模式",
+"comment": "定义设备的网络传输模式.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+constants": [
+"constant name": "驱动",
+constants": [
+"comment": "驱动模式",
+constants": [
+"initial value": "@MV_NET_TRANS_DRIVER"
+  },
+  {
+constants": [
+"constant name": "Socket",
+constants": [
+"comment": "Socket模式",
+constants": [
+"initial value": "@MV_NET_TRANS_SOCKET"
+  }
+]
+ },
+ {
+"class name": "相机访问权限类型",
+"comment": "相机设备的可访问权限类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+comment": "相机设备的可访问权限类型.""constant name": "独占权限",
+comment": "相机设备的可访问权限类型.""comment": "独占权限,其他应用只允许读CCP寄存器.",
+comment": "相机设备的可访问权限类型.""initial value": "@MV_ACCESS_Exclusive"
+  },
+  {
+
+"constant name": "选择独占",
+
+"comment": "可以从5模式下抢占权限,然后以独占权限打开.",
+
+"initial value": "@MV_ACCESS_ExclusiveWithSwitch"
+  },
+  {
+
+"constant name": "控制权限",
+
+"comment": "控制权限,其他应用允许读所有寄存器.",
+
+"initial value": "@MV_ACCESS_Control"
+  },
+  {
+
+"constant name": "选择控制",
+
+"comment": "可以从5的模式下抢占权限,然后以控制权限打开.",
+
+"initial value": "@MV_ACCESS_ControlWithSwitch"
+  },
+  {
+
+"constant name": "可抢占控制",
+
+"comment": "可被抢占的控制权限打开.",
+
+"initial value": "@MV_ACCESS_ControlSwitchEnable"
+  },
+  {
+
+"constant name": "抢占控制",
+
+"comment": "可以从5的模式下抢占权限,然后以可被抢占的控制权限打开.",
+
+"initial value": "@MV_ACCESS_ControlSwitchEnableWithKey"
+  },
+  {
+
+"constant name": "只读",
+
+"comment": "读模式打开设备,适用于控制权限下.",
+
+"initial value": "@MV_ACCESS_Monitor"
+  }
+]
+ },
+ {
+"class name": "相机取流策略",
+"comment": "相机设备的取流策略类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "逐帧获取",
+
+"comment": "从旧到新一帧一帧的从输出缓存列表中获取图像,打开设备后默认为该策略.",
+
+"initial value": "@MV_GRAB_STRATEGY::MV_GrabStrategy_OneByOne"
+  },
+  {
+}"constant name": "列表最新帧",
+}"comment": "仅从输出缓存列表中获取最新的一帧图像,同时清空输出缓存列表.",
+}"initial value": "@MV_GRAB_STRATEGY::MV_GrabStrategy_LatestImagesOnly"
+  },
+  {
+
+"constant name": "列表最新",
+
+"comment": "从输出缓存列表中获取最新的指定多帧(由\"置输出缓存数量\"方法设置)的图像.",
+
+"initial value": "@MV_GRAB_STRATEGY::MV_GrabStrategy_LatestImages"
+  },
+  {
+
+"constant name": "等待下帧",
+
+"comment": "在调用取流接口时忽略输出缓存列表中所有图像,并等待设备即将生成的一帧图像.该策略只支持GigE设备.不支持U3V设备.",
+
+"initial value": "@MV_GRAB_STRATEGY::MV_GrabStrategy_UpcomingImage"
+  }
+]
+ },
+ {
+"class name": "相机异常消息类型",
+"comment": "提供相机设备异常消息类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+
+"constant name": "设备断开连接",
+
+"data type": "整数",
+
+"initial value": "@MV_EXCEPTION_DEV_DISCONNECT"
+  },
+  {
+"constant name": "版本不匹配",
+"comment": "当前所使用SDK与驱动版本不匹配.",
+"data type": "整数",
+"initial value": "@MV_EXCEPTION_VERSION_CHECK"
+  }
+]
+ },
+ {
+"class name": "接口信息类",
+"comment": "通过GenTL枚举到的接口信息.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+variables": [
+"variable name": "接口ID",
+variables": [
+"comment": "GenTL接口ID.",
+variables": [
+"data type": "文本型"
+  },
+  {
+
+"variable name": "传输层类型",
+
+"comment": "传输层类型.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "接口显示名称",
+
+"comment": "Interface显示名称.",
+
+"data type": "文本型"
+  },
+  {
+}"variable name": "文件索引",
+}"comment": "GenTL的cti文件索引.",
+}"data type": "整数"
+  }
+]
+ },
+ {
+用SDK与驱动版本不匹配."class name": "GENTL设备信息类",
+用SDK与驱动版本不匹配."comment": "通过GenTL枚举到的设备信息.",
+用SDK与驱动版本不匹配."@文档": "\"category = \\\"辅助类\\\"\"",
+用SDK与驱动版本不匹配."variables": [
+  {
+
+"variable name": "接口ID",
+
+"data type": "文本型"
+  },
+  {
+}"variable name": "设备ID",
+}"data type": "文本型"
+  },
+  {
+}"variable name": "供应商名称",
+}"data type": "文本型"
+  },
+  {
+"data type": "文本型""variable name": "型号名称",
+"data type": "文本型""data type": "文本型"
+  },
+  {
+
+"variable name": "传输层类型",
+
+"data type": "文本型"
+  },
+  {
+onstants": [
+"initial value": "@MV_NET_TRANS_SOCKET""variable name": "设备显示名",
+onstants": [
+"initial value": "@MV_NET_TRANS_SOCKET""data type": "文本型"
+  },
+  {
+}"variable name": "用户自定义名",
+}"data type": "文本型"
+  },
+  {
+
+"variable name": "序列号",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "设备版本号",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "文件索引",
+
+"data type": "整数"
+  }
+用SDK与驱动版本不匹配.]
+ },
+ {
+}"class name": "相机设备信息类",
+}"comment": "表示指定相机设备的各种信息.",
+}"@文档": "\"category = \\\"辅助类\\\"\"",
+}"variables": [
+  {
+"variables": [
+"variable name": "主要版本号",
+"variables": [
+"comment": "获取该设备的主要版本号.",
+"variables": [
+"data type": "短整数"
+  },
+  {
+
+"variable name": "次要版本号",
+
+"comment": "获取该设备的次要版本号.",
+
+"data type": "短整数"
+  },
+  {
+
+"variable name": "高MAC地址",
+
+"comment": "获取该设备的高MAC地址.",
+
+"data type": "整数"
+  },
+  {
+"data type": "整数""variable name": "低MAC地址",
+"data type": "整数""comment": "获取该设备的低MAC地址.",
+"data type": "整数""data type": "整数"
+  },
+  {
+onstants": [
+"initial value": "@MV_NET_TRANS_SOCKET""variable name": "传输层协议类型",
+onstants": [
+"initial value": "@MV_NET_TRANS_SOCKET""comment": "获取该设备的传输层协议类型,常量值请参考\"相机传输层协议类型\".",
+onstants": [
+"initial value": "@MV_NET_TRANS_SOCKET""data type": "整数"
+  },
+  {
+
+"variable name": "GIGE设备信息",
+
+"comment": "如果当前设备为GIGE设备,获取其详细信息.",
+
+"data type": "GIGE设备信息类"
+  },
+  {
+
+"variable name": "USB3设备信息",
+
+"comment": "如果当前设备为USB3设备,获取其详细信息.",
+
+"data type": "USB设备信息类"
+  },
+  {
+riable name": "GIGE设备信息""variable name": "CAML设备信息",
+riable name": "GIGE设备信息""comment": "如果当前设备为CAML设备,获取其详细信息.",
+riable name": "GIGE设备信息""data type": "CAML设备信息类"
+  }
+}],
+}"methods": [
+  {
+"methods": [
+"method name": "取设备组播状态",
+"methods": [
+"comment": "获取该设备的组播状态,无需打开设备即可获取其状态.",
+"methods": [
+"result comment": "返回真表示处于组播状态,反之则未处于组播.",
+"methods": [
+"data type": "逻辑型",
+"methods": [
+"@禁止流程检查": "真",
+"methods": [
+"parameters": [
+   {
+"parameter name": "结果",
+"comment": "提供变量以接收本次执行的结果,值可参考\"工业相机状态码\"所提供的常量值.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+"methods": [
+]
+  }
+}]
+ },
+ {
+DK与驱动版本不匹配.]"class name": "GIGE设备信息类",
+DK与驱动版本不匹配.]"comment": "表示GIGE设备的具体信息.",
+DK与驱动版本不匹配.]"@文档": "\"category = \\\"辅助类\\\"\"",
+DK与驱动版本不匹配.]"variables": [
+  {
+K与驱动版本不匹配.]"variables": [
+"variable name": "IP配置选项",
+K与驱动版本不匹配.]"variables": [
+"comment": "获取该设备的IP配置选项.",
+K与驱动版本不匹配.]"variables": [
+"data type": "整数"
+  },
+  {
+K与驱动版本不匹配.]"variables": [
+"variable name": "当前IP配置",
+K与驱动版本不匹配.]"variables": [
+"comment": "获取该设备的当前IP配置.",
+K与驱动版本不匹配.]"variables": [
+"data type": "整数"
+  },
+  {
+K与驱动版本不匹配.]"variables": [
+"variable name": "当前IP地址",
+K与驱动版本不匹配.]"variables": [
+"comment": "获取该设备的当前IP地址.",
+K与驱动版本不匹配.]"variables": [
+"data type": "整数"
+  },
+  {
+K与驱动版本不匹配.]"variables": [
+"variable name": "当前子网掩码",
+K与驱动版本不匹配.]"variables": [
+"comment": "获取该设备的当前子网掩码.",
+K与驱动版本不匹配.]"variables": [
+"data type": "整数"
+  },
+  {
+
+"variable name": "当前网关",
+
+"comment": "获取该设备的当前网关.",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "制造商名称",
+
+"comment": "获取该设备的制造商名称.",
+
+"data type": "文本型"
+  },
+  {
+riable name": "制造商名称""variable name": "型号名称",
+riable name": "制造商名称""comment": "获取该设备的型号名称.",
+riable name": "制造商名称""data type": "文本型"
+  },
+  {
+
+"variable name": "设备版本",
+
+"comment": "获取该设备的设备版本.",
+
+"data type": "文本型"
+  },
+  {
+}"variable name": "制造商信息",
+}"comment": "获取该设备的制造商的具体信息.",
+}"data type": "文本型"
+  },
+  {
+"data type": "文本型""variable name": "序列号",
+"data type": "文本型""comment": "获取该设备的序列号.",
+"data type": "文本型""data type": "文本型"
+  },
+  {
+ }"variable name": "用户名称",
+ }"comment": "获取该设备的用户自定义名称.",
+ }"data type": "文本型"
+  },
+  {
+}"variable name": "网口IP地址",
+}"comment": "获取该设备的网口IP地址.",
+}"data type": "整数"
+  }
+DK与驱动版本不匹配.]]
+ },
+ {
+
+"class name": "USB设备信息类",
+
+"comment": "表示USB3设备的具体信息.",
+
+"@文档": "\"category = \\\"辅助类\\\"\"",
+
+"variables": [
+  {
+tegory = \\\"辅助类\\\"\""variable name": "控制输入端点",
+tegory = \\\"辅助类\\\"\""comment": "获取该设备的控制输入端点.",
+tegory = \\\"辅助类\\\"\""data type": "字节"
+  },
+  {
+egory = \\\"辅助类\\\"\""data type": "字节""variable name": "控制输出端点",
+egory = \\\"辅助类\\\"\""data type": "字节""comment": "获取该设备的控制输出端点.",
+egory = \\\"辅助类\\\"\""data type": "字节""data type": "字节"
+  },
+  {
+egory = \\\"辅助类\\\"\""data type": "字节""variable name": "流端点",
+egory = \\\"辅助类\\\"\""data type": "字节""comment": "获取该设备的流端点.",
+egory = \\\"辅助类\\\"\""data type": "字节""data type": "字节"
+  },
+  {
+egory = \\\"辅助类\\\"\""data type": "字节""variable name": "事件端点",
+egory = \\\"辅助类\\\"\""data type": "字节""comment": "获取该设备的事件端点.",
+egory = \\\"辅助类\\\"\""data type": "字节""data type": "字节"
+  },
+  {
+
+"variable name": "供应商ID号",
+
+"comment": "获取该设备的供应商ID号.",
+
+"data type": "短整数"
+  },
+  {
+
+"variable name": "产品ID号",
+
+"comment": "获取该设备的产品ID号.",
+
+"data type": "短整数"
+  },
+  {
+}"variable name": "设备索引号",
+}"comment": "获取该设备的设备索引号.",
+}"data type": "整数"
+  },
+  {
+
+"variable name": "设备GUID",
+
+"comment": "获取该设备的设备GUID号.",
+
+"data type": "文本型"
+  },
+  {
+"comment": "获取该设备的设备GUID号.""variable name": "供应商名称",
+"comment": "获取该设备的设备GUID号.""comment": "获取该设备的供应商名字.",
+"comment": "获取该设备的设备GUID号.""data type": "文本型"
+  },
+  {
+"comment": "获取该设备的设备GUID号.""variable name": "型号名称",
+"comment": "获取该设备的设备GUID号.""comment": "获取该设备的型号名字.",
+"comment": "获取该设备的设备GUID号.""data type": "文本型"
+  },
+  {
+"comment": "获取该设备的设备GUID号.""variable name": "家族名称",
+"comment": "获取该设备的设备GUID号.""comment": "获取该设备的家族名字.",
+"comment": "获取该设备的设备GUID号.""data type": "文本型"
+  },
+  {
+"comment": "获取该设备的设备GUID号.""variable name": "设备版本",
+"comment": "获取该设备的设备GUID号.""comment": "获取该设备的设备版本.",
+"comment": "获取该设备的设备GUID号.""data type": "文本型"
+  },
+  {
+
+"variable name": "制造商名称",
+
+"comment": "获取该设备的制造商名字.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "序列号",
+
+"comment": "获取该设备的序列号.",
+
+"data type": "文本型"
+  },
+  {
+"data type": "文本型""variable name": "用户名称",
+"data type": "文本型""comment": "获取该设备的用户自定义名称.",
+"data type": "文本型""data type": "文本型"
+  },
+  {
+
+"variable name": "支持USB协议",
+
+"comment": "获取该设备的支持的USB协议.",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "设备地址",
+
+"comment": "获取该设备的地址.",
+
+"data type": "整数"
+  }
+
+]
+ },
+ {
+
+"class name": "CAML设备信息类",
+
+"comment": "表示CAML设备的具体信息.",
+
+"@文档": "\"category = \\\"辅助类\\\"\"",
+
+"variables": [
+  {
+
+"variable name": "端口号",
+
+"comment": "获取该设备的端口号.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "型号名称",
+
+"comment": "获取该设备的型号名字.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "家族名称",
+
+"comment": "获取该设备的名称.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "设备版本",
+
+"comment": "获取该设备的设备版本.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "制造商名称",
+
+"comment": "获取该设备的制造商名字.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "序列号",
+
+"comment": "获取该设备的序列号.",
+
+"data type": "文本型"
+  }
+
+]
+ },
+ {
+"class name": "相机设备信息数组类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"相机设备信息类\""
+ },
+ {
+"class name": "GENTL设备信息数组类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"GENTL设备信息类\""
+ },
+ {
+"class name": "接口信息数组类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"接口信息类\""
+ },
+ {
+"class name": "图像Chunk数据数组类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"图像Chunk数据类\""
+ },
+ {
+"class name": "相机动作命令结果数组类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"相机动作命令结果类\""
+ }
+问本程序中的接口需要引用模块"海康威视工业相机".]
+}

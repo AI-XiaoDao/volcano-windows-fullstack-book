@@ -1,0 +1,74 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+ """file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ """package name": "火山.程序",
+ """classes": [
+ {
+韐鷴ŝ"class name": "启动类",
+韐鷴ŝ"base class": "窗口程序类",
+韐鷴ŝ"methods": [
+  {
+鷴ŝ"base class": "窗口程序类""method name": "启动方法",
+鷴ŝ"base class": "窗口程序类""data type": "整数"
+  }
+韐鷴ŝ]
+ },
+ {
+ŝ]"class name": "腾讯云对象存储密钥获取类",
+ŝ]"comment": "\n",
+ŝ]"constants": [
+  {
+]"constants": [
+"constant name": "Policy权限信息",
+]"constants": [
+"data type": "文本型",
+]"constants": [
+"initial value": "\"{\\\"version\\\":\\\"2.0\\\",\\\"statement\\\":[{\\\"action\\\":[\\\"%s\\\"],\\\"effect\\\":\\\"allow\\\",\\\"resource\\\":[\\\"%s\\\"]}]}\""
+  }
+ŝ]],
+ŝ]"methods": [
+  {
+"method name": "获取",
+"comment": "访问腾讯云服务器获取临时秘钥数据.\n使用的是v1签名,参考文档: https://cloud.tencent.com/document/api/1312/48201#.E4.BD.BF.E7.94.A8.E7.AD.BE.E5.90.8D.E6.96.B9.E6.B3.95-v1-.E7.9A.84.E5.85.AC.E5.85.B1.E5.8F.82.E6.95.B0\n对象存储COS临时密钥默认有效时间为30分钟（即1800秒）。\n若临时密钥已过期，则持有过期临时密钥的请求将被拒绝。\n（1）主账号：有效时间最长2小时（即7200秒）；\n（2）子账号：最长36小时（即129600秒）",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "SecretId",
+"comment": "申请地址:https://console.cloud.tencent.com/cam/capi",
+"data type": "文本型"
+   },
+   {
+"parameter name": "SecretKey",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Policy",
+"comment": "参考文档：https://cloud.tencent.com/document/product/436/31923  \n文档2：https://cloud.tencent.com/document/product/598/10603\n文档3：https://cloud.tencent.com/document/product/598/10606",
+"data type": "文本型"
+   },
+   {
+"parameter name": "地区",
+"comment": "例如:ap-chengdu",
+"data type": "文本型"
+   },
+   {
+"parameter name": "别名",
+"comment": "必须为英文字母,默认为\"voldp\".",
+"data type": "文本型",
+"@默认值": "\"voldp\""
+   },
+   {
+"parameter name": "有效期秒",
+"comment": "指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。",
+"data type": "整数",
+"@默认值": "1800"
+   }
+]
+  }
+ŝ]]
+ }
+ ""]
+}

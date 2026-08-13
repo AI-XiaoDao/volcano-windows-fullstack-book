@@ -1,0 +1,305 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+= "category = \"设备操作\"""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+= "category = \"设备操作\"""package name": "火山.基本",
+= "category = \"设备操作\"""@文档": "\"category = \\\"设备操作\\\"\"",
+= "category = \"设备操作\"""classes": [
+ {
+"class name": "串口流控制模式",
+"@文档": "\"category = \\\"串口通讯.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+constants": [
+"constant name": "默认",
+constants": [
+"initial value": "0"
+  },
+  {
+后缀文本 = "public IVolSerialEventInterface""constant name": "禁止",
+后缀文本 = "public IVolSerialEventInterface""initial value": "1"
+  },
+  {
+ 文本型数据为Unicode编码且包括结束零字符,如需以其它编码或格式发送文本,请将其转换为相应字节集.""constant name": "启用",
+ 文本型数据为Unicode编码且包括结束零字符,如需以其它编码或格式发送文本,请将其转换为相应字节集.""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "串口流控制方案",
+"@文档": "\"category = \\\"串口通讯.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ (SUCCEEDED (RegOpenKeyEx(HKEY_LOCAL_MACHINE, _T("Hardware\\DeviceMap\\SerialComm"), NULL, KEY_READ, &hkey)))"constant name": "无",
+ (SUCCEEDED (RegOpenKeyEx(HKEY_LOCAL_MACHINE, _T("Hardware\\DeviceMap\\SerialComm"), NULL, KEY_READ, &hkey)))"initial value": "0"
+  },
+  {
+释 = "返回所获得串口名称的数目""constant name": "CtsRts",
+释 = "返回所获得串口名称的数目""initial value": "1"
+  },
+  {
+用作存储所有获得的串口名称""constant name": "CtsDtr",
+用作存储所有获得的串口名称""initial value": "2"
+  },
+  {
+
+"constant name": "DsrRts",
+
+"initial value": "3"
+  },
+  {
+ = """constant name": "DsrDtr",
+ = """initial value": "4"
+  },
+  {
+
+"constant name": "XonXoff",
+
+"initial value": "5"
+  }
+]
+ },
+ {
+"class name": "串口停止位数",
+"comment": "提供串口停止位的数目",
+"@文档": "\"category = \\\"串口通讯.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ 整数"constant name": "一位",
+ 整数"comment": "1位",
+ 整数"initial value": "1"
+  },
+  {
+ "本参数可以为以下值之一:  1: DTR信号;  2: RTS信号; 3: Break信号""constant name": "一点五位",
+ "本参数可以为以下值之一:  1: DTR信号;  2: RTS信号; 3: Break信号""comment": "1.5位",
+ "本参数可以为以下值之一:  1: DTR信号;  2: RTS信号; 3: Break信号""initial value": "2"
+  },
+  {
+}"constant name": "二位",
+}"comment": "2位",
+}"initial value": "3"
+  }
+]
+ },
+ {
+"class name": "串口奇偶校验方式",
+"@文档": "\"category = \\\"串口通讯.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+@常量类": "整数""constant name": "无",
+@常量类": "整数""initial value": "0"
+  },
+  {
+
+"constant name": "奇校验",
+
+"initial value": "1"
+  },
+  {
+constants": [
+"constant name": "偶校验",
+constants": [
+"initial value": "2"
+  },
+  {
+@文档": "\"category = \\\"串口通讯.辅助类\\\"\"""constant name": "标志校验",
+@文档": "\"category = \\\"串口通讯.辅助类\\\"\"""initial value": "3"
+  },
+  {
+@文档": "\"category = \\\"串口通讯.辅助类\\\"\"""constant name": "空白校验",
+@文档": "\"category = \\\"串口通讯.辅助类\\\"\"""initial value": "4"
+  }
+]
+ },
+ {
+"class name": "串口类",
+"comment": "提供对串口操作的支持",
+"@文档": "\"category = \\\"串口通讯\\\"\"",
+"@视窗.后缀文本": "\"public IVolSerialEventInterface\"",
+"@视窗.外部头文件": "\"libs\\\\serial\\\\vol_serial.h\"",
+"@视窗.外部源文件": "\"libs\\\\serial\\\\vol_serial.cpp\"",
+"variables": [
+  {
+}"variable name": "端口号",
+}"comment": "提供所欲访问的端口号,从 1 开始.",
+}"data type": "整数",
+}"initial value": "1",
+}"@属性变量": "真"
+  },
+  {
+"variable name": "波特率",
+"comment": "指定通信端口所使用的波特率,比较常用的波特率有:\n  110, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 38400, 56000, 57600, 115200, 128000, 256000.",
+"data type": "整数",
+"initial value": "19200",
+"@属性变量": "真"
+  },
+  {
+"initial value": "1""variable name": "数据位数",
+"initial value": "1""data type": "整数",
+"initial value": "1""initial value": "8",
+"initial value": "1""@属性变量": "真"
+  },
+  {
+释 = "返回所获得串口名称的数目""variable name": "停止位数",
+释 = "返回所获得串口名称的数目""data type": "串口停止位数",
+释 = "返回所获得串口名称的数目""initial value": "串口停止位数.一位",
+释 = "返回所获得串口名称的数目""@属性变量": "真"
+  },
+  {
+ "本参数用作存储所有获得的串口名称""variable name": "奇偶校验",
+ "本参数用作存储所有获得的串口名称""comment": "指定通信时对数据是否进行奇偶校验",
+ "本参数用作存储所有获得的串口名称""data type": "逻辑型",
+ "本参数用作存储所有获得的串口名称""initial value": "假",
+ "本参数用作存储所有获得的串口名称""@属性变量": "真"
+  },
+  {
+nstant name": "DsrRts""variable name": "事件字符",
+nstant name": "DsrRts""comment": "指定用作触发事件的字符,必须为ASCII字符,为'\\0'表示不支持事件字符.",
+nstant name": "DsrRts""data type": "字符",
+nstant name": "DsrRts""initial value": "'\\0'",
+nstant name": "DsrRts""@属性变量": "真"
+  },
+  {
+initial value": "1""@属性变量": "真""variable name": "等待时间",
+initial value": "1""@属性变量": "真""comment": "指定在进行端口读写操作时最长等待时间,单位毫秒.为0表示无限等待.",
+initial value": "1""@属性变量": "真""data type": "整数",
+initial value": "1""@属性变量": "真""initial value": "1000",
+initial value": "1""@属性变量": "真""@属性变量": "真"
+  },
+  {
+}"variable name": "奇偶校验方案",
+}"comment": "指定通信时所使用的具体奇偶校验位方案",
+}"data type": "串口奇偶校验方式",
+}"initial value": "串口奇偶校验方式.无",
+}"@属性变量": "真"
+  },
+  {
+"本参数用作存储所有获得的串口名称""@属性变量": "真""variable name": "流控制方案",
+"本参数用作存储所有获得的串口名称""@属性变量": "真""comment": "指定通信时所使用的流控制方案",
+"本参数用作存储所有获得的串口名称""@属性变量": "真""data type": "串口流控制方案",
+"本参数用作存储所有获得的串口名称""@属性变量": "真""initial value": "串口流控制方案.无",
+"本参数用作存储所有获得的串口名称""@属性变量": "真""@属性变量": "真"
+  },
+  {
+initial value": "1""@属性变量": "真""variable name": "Rts流控制",
+initial value": "1""@属性变量": "真""comment": "指定通信时是否启用Rts流控制",
+initial value": "1""@属性变量": "真""data type": "串口流控制模式",
+initial value": "1""@属性变量": "真""initial value": "串口流控制模式.默认",
+initial value": "1""@属性变量": "真""@属性变量": "真"
+  },
+  {
+}"variable name": "Dtr流控制",
+}"comment": "指定通信时是否启用Dtr流控制",
+}"data type": "串口流控制模式",
+}"initial value": "串口流控制模式.默认",
+}"@属性变量": "真"
+  }
+],
+"methods": [
+  {
+riable name": "Dtr流控制""method name": "收到信号",
+riable name": "Dtr流控制""comment": "当通信端口的信号状态发生改变时,会产生本事件.",
+riable name": "Dtr流控制""type": "event",
+riable name": "Dtr流控制""data type": "整数",
+riable name": "Dtr流控制""parameters": [
+   {
+"parameter name": "信号类型",
+"comment": "指示具体检测到信号状态的类型,为以下值之一:\n   1: BREAK信号; 2:CTS上升沿信号;  3: DSR上升沿信号; 4: ERR信号; 5: RING信号; 6: RLSD上升沿信号; 7: 事件字符到达; 8: CTS下降沿信号; 9: DSR下降沿信号; 10: RLSD下降沿信号.",
+"data type": "整数"
+   }
+riable name": "Dtr流控制"]
+  },
+  {
+ameter name": "信号类型""method name": "数据到达",
+ameter name": "信号类型""comment": "每当通信端口接收到一个数据字节,就会产生本事件.",
+ameter name": "信号类型""type": "event",
+ameter name": "信号类型""data type": "整数",
+ameter name": "信号类型""parameters": [
+   {
+"parameter name": "数据字节值",
+"comment": "提供所接收到的数据字节值",
+"data type": "整数"
+   }
+ameter name": "信号类型"]
+  },
+  {
+iable name": "Dtr流控制""parameters": [
+"method name": "启动",
+iable name": "Dtr流控制""parameters": [
+"comment": "启动或重新启动对指定端口的操作. 在对端口进行操作之前必须首先启动,如在端口启动后又更改了端口属性必须重新启动.",
+iable name": "Dtr流控制""parameters": [
+"result comment": "成功返回真,失败返回假.",
+iable name": "Dtr流控制""parameters": [
+"data type": "逻辑型",
+iable name": "Dtr流控制""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+iable name": "Dtr流控制""data type": "整数""method name": "停止",
+iable name": "Dtr流控制""data type": "整数""comment": "关闭已经启动的指定端口",
+iable name": "Dtr流控制""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+时是否启用Dtr流控制"method name": "发送数据",
+时是否启用Dtr流控制"comment": "从端口发送指定的数据",
+时是否启用Dtr流控制"result comment": "成功返回真,失败返回假.",
+时是否启用Dtr流控制"data type": "逻辑型",
+时是否启用Dtr流控制"@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+时是否启用Dtr流控制"parameters": [
+   {
+"parameter name": "所欲发送的所有数据",
+"comment": "提供所欲发送的所有数据,可以为基本数据类型或字节集类数据.\n注意: 文本型数据为Unicode编码且包括结束零字符,如需以其它编码或格式发送文本,请将其转换为相应字节集.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+时是否启用Dtr流控制]
+  },
+  {
+@属性变量": "真""method name": "信号操作",
+@属性变量": "真""comment": "本命令可以设置或清除通讯端口上指定信号的状态",
+@属性变量": "真""result comment": "成功返回真,失败返回假.",
+@属性变量": "真""data type": "逻辑型",
+@属性变量": "真""@嵌入式方法": "\"\"",
+@属性变量": "真""parameters": [
+   {
+"parameter name": "操作类型",
+"comment": "本参数可以为以下值之一:  1: 清除信号;  2: 发送或置位.",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲操作信号类型",
+"comment": "本参数可以为以下值之一:  1: DTR信号;  2: RTS信号; 3: Break信号",
+"data type": "整数"
+   }
+@属性变量": "真"]
+  },
+  {
+
+"method name": "取可用串口",
+
+"comment": "从注册表中获取系统中当前所有可用串口列表",
+
+"result comment": "返回所获得串口名称的数目",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "结果存储参数",
+"comment": "本参数用作存储所有获得的串口名称",
+"data type": "文本排序数组类"
+   }
+
+]
+  }
+]
+ }
+= "category = \"设备操作\""]
+}

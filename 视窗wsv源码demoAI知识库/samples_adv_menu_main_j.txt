@@ -1,0 +1,481 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+= 超级菜单类"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+= 超级菜单类"package name": "火山.程序",
+= 超级菜单类"classes": [
+ {
+"class name": "启动类",
+"base class": "窗口程序类",
+"variables": [
+  {
+
+"variable name": "菜单1",
+
+"comment": "  此处也可以直接将\"图片组\"属性如同\"弹出菜单类1\"一样设置在\"菜单类1\"上,\n以便可以使用菜单类数据类型来显示菜单.",
+
+"data type": "菜单类1",
+
+"图片组": "\"res\\\\tool_bar.bmp\""
+  }
+],
+"methods": [
+  {
+
+"method name": "启动方法",
+
+"data type": "整数"
+  }
+]
+ },
+ {
+"class name": "菜单类1",
+"base class": "超级菜单类",
+"@设计内容": "\"2\\n0\\n文件(&F)\\n文件\\n20000\\n文件操作菜单\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n1\\n新建(&N)\\n新建\\n20001\\n新建一个文件\\nN\\n1\\n0\\n0\\n0\\n0\\n0\\n1\\n打开(&O)\\n打开\\n20002\\n打开所指定文件\\nO\\n1\\n0\\n0\\n0\\n0\\n1\\n1\\n保存(&S)\\n保存\\n20003\\n保存当前文件\\nS\\n1\\n0\\n0\\n0\\n0\\n2\\n1\\n\\n\\n0\\n\\n\\n0\\n0\\n1\\n0\\n0\\n-1\\n1\\n最近打开(&R)\\n最近打开\\n20013\\n提供最近打开的文件列表\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n2\\n文件1(&1)\\n文件1\\n20014\\n最近打开的文件1\\n\\n0\\n0\\n0\\n0\\n0\\n12\\n2\\n文件2(&2)\\n文件2\\n20015\\n最近打开的文件2\\n\\n0\\n0\\n0\\n0\\n0\\n12\\n2\\n文件3(&3)\\n文件3\\n20016\\n最近打开的文件3\\n\\n0\\n0\\n0\\n0\\n0\\n12\\n1\\n全部保存(&A)\\n全部保存\\n20004\\n保存所有当前已经被打开的文件\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n0\\n编辑(&E)\\n编辑\\n20006\\n编辑操作\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n1\\n复制(&C)\\n复制\\n20008\\n将当前内容复制到剪贴板\\nC\\n1\\n0\\n0\\n0\\n0\\n-1\\n1\\n剪切(&X)\\n剪切\\n20007\\n将当前内容剪切到剪贴板\\nX\\n1\\n0\\n0\\n0\\n0\\n4\\n1\\n粘贴(&V)\\n粘贴\\n20009\\n将剪贴板中的内容粘贴到文档中\\nV\\n1\\n0\\n0\\n0\\n1\\n5\\n1\\n\\n\\n0\\n\\n\\n0\\n0\\n1\\n0\\n0\\n-1\\n1\\n撤销(&U)\\n撤销\\n20011\\n撤销先前进行的编辑操作\\nZ\\n1\\n0\\n0\\n0\\n0\\n7\\n1\\n重做(&R)\\n重做\\n20012\\n重做先前所撤销的操作\\nY\\n1\\n0\\n0\\n0\\n0\\n8\\n0\\n演示(&D)\\n演示\\n20017\\n演示动态修改菜单样式\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n1\\n风格(&S)\\n风格\\n20019\\n修改菜单风格\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n2\\n蓝色(&B)\\n蓝色\\n20020\\n\\n\\n0\\n0\\n0\\n1\\n0\\n-1\\n2\\n灰色(&G)\\n灰色\\n20021\\n\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n2\\n雅绿(&E)\\n雅绿\\n20022\\n\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n2\\n粉红(&R)\\n粉红\\n20023\\n\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n2\\n青春(&Y)\\n青春\\n20024\\n\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n2\\n古朴(&O)\\n古朴\\n20025\\n\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n1\\n修改字体(&F)\\n修改字体\\n20026\\n修改菜单项字体\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n1\\n修改图片(&P)\\n修改图片\\n20027\\n修改本菜单项的图片\\n\\n0\\n0\\n0\\n0\\n0\\n10\\n1\\n修改标题(&T)\\n修改标题\\n20028\\n修改本菜单项的标题内容\\n\\n0\\n0\\n0\\n0\\n0\\n-1\"",
+"constants": [
+  {
+
+"constant name": "文件",
+
+"comment": "文件(&F)",
+
+"data type": "整数",
+
+"initial value": "20000",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "新建",
+
+"comment": "新建(&N)",
+
+"data type": "整数",
+
+"initial value": "20001",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "打开",
+
+"comment": "打开(&O)",
+
+"data type": "整数",
+
+"initial value": "20002",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "保存",
+
+"comment": "保存(&S)",
+
+"data type": "整数",
+
+"initial value": "20003",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "最近打开",
+
+"comment": "最近打开(&R)",
+
+"data type": "整数",
+
+"initial value": "20013",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "文件1",
+
+"comment": "文件1(&1)",
+
+"data type": "整数",
+
+"initial value": "20014",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "文件2",
+
+"comment": "文件2(&2)",
+
+"data type": "整数",
+
+"initial value": "20015",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "文件3",
+
+"comment": "文件3(&3)",
+
+"data type": "整数",
+
+"initial value": "20016",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "全部保存",
+
+"comment": "全部保存(&A)",
+
+"data type": "整数",
+
+"initial value": "20004",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "编辑",
+
+"comment": "编辑(&E)",
+
+"data type": "整数",
+
+"initial value": "20006",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "复制",
+
+"comment": "复制(&C)",
+
+"data type": "整数",
+
+"initial value": "20008",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "剪切",
+
+"comment": "剪切(&X)",
+
+"data type": "整数",
+
+"initial value": "20007",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "粘贴",
+
+"comment": "粘贴(&V)",
+
+"data type": "整数",
+
+"initial value": "20009",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "撤销",
+
+"comment": "撤销(&U)",
+
+"data type": "整数",
+
+"initial value": "20011",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "重做",
+
+"comment": "重做(&R)",
+
+"data type": "整数",
+
+"initial value": "20012",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "演示",
+
+"comment": "演示(&D)",
+
+"data type": "整数",
+
+"initial value": "20017",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "风格",
+
+"comment": "风格(&S)",
+
+"data type": "整数",
+
+"initial value": "20019",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "蓝色",
+
+"comment": "蓝色(&B)",
+
+"data type": "整数",
+
+"initial value": "20020",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "灰色",
+
+"comment": "灰色(&G)",
+
+"data type": "整数",
+
+"initial value": "20021",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "雅绿",
+
+"comment": "雅绿(&E)",
+
+"data type": "整数",
+
+"initial value": "20022",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "粉红",
+
+"comment": "粉红(&R)",
+
+"data type": "整数",
+
+"initial value": "20023",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "青春",
+
+"comment": "青春(&Y)",
+
+"data type": "整数",
+
+"initial value": "20024",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "古朴",
+
+"comment": "古朴(&O)",
+
+"data type": "整数",
+
+"initial value": "20025",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "修改字体",
+
+"comment": "修改字体(&F)",
+
+"data type": "整数",
+
+"initial value": "20026",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "修改图片",
+
+"comment": "修改图片(&P)",
+
+"data type": "整数",
+
+"initial value": "20027",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "修改标题",
+
+"comment": "修改标题(&T)",
+
+"data type": "整数",
+
+"initial value": "20028",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "_最小值",
+
+"comment": "所有ID值中的最小值",
+
+"data type": "整数",
+
+"initial value": "20000",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "_最大值",
+
+"comment": "所有ID值中的最大值",
+
+"data type": "整数",
+
+"initial value": "20028",
+
+"@自动生成": "\"wtl\""
+  }
+]
+ },
+ {
+"class name": "弹出菜单类1",
+"comment": "  注意此处与\"菜单类1\"的区别是,将图片组属性直接设置在类里面,\n这样就可以使用\"弹出菜单类1\"类数据类型而不用定义实例来显示菜单了.",
+"base class": "超级菜单类",
+"@设计内容": "\"2\\n0\\n编辑(&E)\\n编辑\\n20006\\n编辑操作\\n\\n0\\n0\\n0\\n0\\n0\\n-1\\n1\\n复制(&C)\\n复制\\n20008\\n将当前内容复制到剪贴板\\nC\\n1\\n0\\n0\\n0\\n0\\n-1\\n1\\n剪切(&X)\\n剪切\\n20007\\n将当前内容剪切到剪贴板\\nX\\n1\\n0\\n0\\n0\\n0\\n4\\n1\\n粘贴(&V)\\n粘贴\\n20009\\n将剪贴板中的内容粘贴到文档中\\nV\\n1\\n0\\n0\\n0\\n1\\n5\\n1\\n\\n\\n0\\n\\n\\n0\\n0\\n1\\n0\\n0\\n-1\\n1\\n撤销(&U)\\n撤销\\n20011\\n撤销先前进行的编辑操作\\nZ\\n1\\n0\\n0\\n0\\n0\\n7\\n1\\n重做(&R)\\n重做\\n20012\\n重做先前所撤销的操作\\nY\\n1\\n0\\n0\\n0\\n0\\n8\"",
+"图片组": "\"res\\\\tool_bar.bmp\"",
+"constants": [
+  {
+
+"constant name": "编辑",
+
+"comment": "编辑(&E)",
+
+"data type": "整数",
+
+"initial value": "20006",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "复制",
+
+"comment": "复制(&C)",
+
+"data type": "整数",
+
+"initial value": "20008",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "剪切",
+
+"comment": "剪切(&X)",
+
+"data type": "整数",
+
+"initial value": "20007",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "粘贴",
+
+"comment": "粘贴(&V)",
+
+"data type": "整数",
+
+"initial value": "20009",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "撤销",
+
+"comment": "撤销(&U)",
+
+"data type": "整数",
+
+"initial value": "20011",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "重做",
+
+"comment": "重做(&R)",
+
+"data type": "整数",
+
+"initial value": "20012",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "_最小值",
+
+"comment": "所有ID值中的最小值",
+
+"data type": "整数",
+
+"initial value": "20006",
+
+"@自动生成": "\"wtl\""
+  },
+  {
+
+"constant name": "_最大值",
+
+"comment": "所有ID值中的最大值",
+
+"data type": "整数",
+
+"initial value": "20012",
+
+"@自动生成": "\"wtl\""
+  }
+]
+ }
+= 超级菜单类]
+}

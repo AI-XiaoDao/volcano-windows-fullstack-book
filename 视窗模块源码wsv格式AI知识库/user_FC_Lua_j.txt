@@ -1,0 +1,1819 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"package name": "火山.原创软件",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@文档": "\"category = \\\"开源库.lua\\\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.外部头文件": "\"Lua\\\\include\\\\lua.hpp\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.外部库.win32": "\"Lua\\\\win32\\\\LuaToolx86.lib\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.附属文件.win32": "\"Lua\\\\win32\\\\LuaToolx86.dll\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.外部库.x64": "\"Lua\\\\x64\\\\LuaToolx64.lib\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.附属文件.x64": "\"Lua\\\\x64\\\\LuaToolx64.dll\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"classes": [
+ {
+"class name": "______lua基础函数",
+"@全局类": "真",
+"methods": [
+  {
+ꌤŝ"method name": "lua_newstate",
+ꌤŝ"static": true,
+ꌤŝ"data type": "变整数",
+ꌤŝ"@嵌入式方法": "\"\"",
+ꌤŝ"parameters": [
+   {
+"parameter name": "lua_Alloc",
+"data type": "变整数"
+   },
+   {
+"parameter name": "ud",
+"data type": "变整数"
+   }
+ꌤŝ]
+  },
+  {
+}"method name": "lua_close",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+}"method name": "lua_newthread",
+}"static": true,
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+}"method name": "lua_resetthread",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"method name": "lua_atpanic",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "panicf",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ }"method name": "lua_version",
+ }"static": true,
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"method name": "lua_absindex",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "变整数""method name": "lua_gettop",
+data type": "变整数""static": true,
+data type": "变整数""data type": "整数",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+thod name": "lua_absindex""method name": "lua_settop",
+thod name": "lua_absindex""static": true,
+thod name": "lua_absindex""@嵌入式方法": "\"\"",
+thod name": "lua_absindex""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+thod name": "lua_absindex"]
+  },
+  {
+"parameters": [
+"method name": "lua_pushvalue",
+"parameters": [
+"static": true,
+"parameters": [
+"@嵌入式方法": "\"\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+
+"method name": "lua_rotate",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "n",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lua_copy",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "源栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "目标栈索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lua_checkstack",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "n",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "lua_xmove",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "源句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "目标句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "n",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "lua_isnumber",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "lua_isstring",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "lua_iscfunction",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "lua_isinteger",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "lua_isuserdata",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "lua_type",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "lua_typename",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"parameters": [
+"method name": "lua_tonumberx",
+}"parameters": [
+"static": true,
+}"parameters": [
+"data type": "小数",
+}"parameters": [
+"@嵌入式方法": "\"\"",
+}"parameters": [
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "返回值_是否数值",
+"data type": "整数"
+   }
+}"parameters": [
+]
+  },
+  {
+ameter name": "栈索引""method name": "lua_tointegerx",
+ameter name": "栈索引""static": true,
+ameter name": "栈索引""data type": "长整数",
+ameter name": "栈索引""@嵌入式方法": "\"\"",
+ameter name": "栈索引""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "返回值_是否数值",
+"data type": "整数"
+   }
+ameter name": "栈索引"]
+  },
+  {
+data type": "整数""method name": "lua_toboolean",
+data type": "整数""static": true,
+data type": "整数""data type": "小数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "lua_tolstring",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "返回值_文本长度",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "lua_rawlen",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lua_tocfunction",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "lua_touserdata",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "lua_tothread",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+data type": "整数""method name": "lua_topointer",
+data type": "整数""static": true,
+data type": "整数""data type": "变整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "lua_arith",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "操作码",
+"comment": "#define LUA_OPADD 0 /* ORDER TM, ORDER OP */\n#define LUA_OPSUB 1\n#define LUA_OPMUL 2\n#define LUA_OPMOD 3\n#define LUA_OPPOW 4\n#define LUA_OPDIV 5\n#define LUA_OPIDIV 6\n#define LUA_OPBAND 7\n#define LUA_OPBOR 8\n#define LUA_OPBXOR 9\n#define LUA_OPSHL 10\n#define LUA_OPSHR 11\n#define LUA_OPUNM 12\n#define LUA_OPBNOT 13",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ }"method name": "lua_rawequal",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引1",
+"comment": "#define LUA_OPADD 0 /* ORDER TM, ORDER OP */\n#define LUA_OPSUB 1\n#define LUA_OPMUL 2\n#define LUA_OPMOD 3\n#define LUA_OPPOW 4\n#define LUA_OPDIV 5\n#define LUA_OPIDIV 6\n#define LUA_OPBAND 7\n#define LUA_OPBOR 8\n#define LUA_OPBXOR 9\n#define LUA_OPSHL 10\n#define LUA_OPSHR 11\n#define LUA_OPUNM 12\n#define LUA_OPBNOT 13",
+"data type": "整数"
+   },
+   {
+"parameter name": "栈索引2",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "lua_compare",
+data type": "整数""static": true,
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引1",
+"comment": "#define LUA_OPADD 0 /* ORDER TM, ORDER OP */\n#define LUA_OPSUB 1\n#define LUA_OPMUL 2\n#define LUA_OPMOD 3\n#define LUA_OPPOW 4\n#define LUA_OPDIV 5\n#define LUA_OPIDIV 6\n#define LUA_OPBAND 7\n#define LUA_OPBOR 8\n#define LUA_OPBXOR 9\n#define LUA_OPSHL 10\n#define LUA_OPSHR 11\n#define LUA_OPUNM 12\n#define LUA_OPBNOT 13",
+"data type": "整数"
+   },
+   {
+"parameter name": "栈索引2",
+"data type": "整数"
+   },
+   {
+"parameter name": "操作码",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+data type": "整数""method name": "lua_pushnil",
+data type": "整数""static": true,
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "lua_pushnumber",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+ameter name": "操作码""method name": "lua_pushinteger",
+ameter name": "操作码""static": true,
+ameter name": "操作码""@嵌入式方法": "\"\"",
+ameter name": "操作码""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "长整数"
+   }
+ameter name": "操作码"]
+  },
+  {
+
+"method name": "lua_pushlstring",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ameter name": "数据大小""method name": "lua_pushstring",
+ameter name": "数据大小""static": true,
+ameter name": "数据大小""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内容",
+"comment": "utf8文本指针",
+"data type": "文本型"
+   }
+ameter name": "数据大小"]
+  },
+  {
+
+"method name": "lua_pushcclosure",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "函数指针",
+"comment": "utf8文本指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "n",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lua_pushboolean",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lua_pushlightuserdata",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "lua_pushthread",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+
+"method name": "lua_getglobal",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "lua_gettable",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "lua_getfield",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "名称",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "lua_geti",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "n",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+}"method name": "lua_rawget",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "lua_rawgeti",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "n",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "lua_rawgetp",
+data type": "整数""static": true,
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "名称",
+"data type": "字节集类"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "lua_createtable",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "narr",
+"data type": "整数"
+   },
+   {
+"parameter name": "nrec",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+]"method name": "lua_newuserdatauv",
+]"comment": "LUA_API void *(lua_newuserdatauv) (lua_State *L, size_t sz, int nuvalue);",
+]"static": true,
+]"data type": "变整数",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "sz",
+"data type": "变整数"
+   },
+   {
+"parameter name": "nuvalue",
+"data type": "整数"
+   }
+]]
+  },
+  {
+"static": true"method name": "lua_getmetatable",
+"static": true"static": true,
+"static": true"data type": "整数",
+"static": true"@嵌入式方法": "\"\"",
+"static": true"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "objindex",
+"data type": "整数"
+   }
+"static": true]
+  },
+  {
+}"method name": "lua_getiuservalue",
+}"comment": "LUA_API int  (lua_getiuservalue) (lua_State *L, int idx, int n);",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "n",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "lua_setglobal",
+
+"comment": "LUA_API void  (lua_setglobal) (lua_State *L, const char *name);",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "名称",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"static": true"method name": "lua_settable",
+
+"static": true"comment": "LUA_API void  (lua_settable) (lua_State *L, int idx);",
+
+"static": true"static": true,
+
+"static": true"@嵌入式方法": "\"\"",
+
+"static": true"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+
+"static": true]
+  },
+  {
+
+"method name": "lua_setfield",
+
+"comment": "LUA_API void  (lua_setfield) (lua_State *L, int idx, const char *k);",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "k",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+]"method name": "lua_seti",
+]"comment": "LUA_API void  (lua_seti) (lua_State *L, int idx, lua_Integer n);",
+]"static": true,
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "n",
+"data type": "长整数"
+   }
+]]
+  },
+  {
+
+"method name": "lua_rawset",
+
+"comment": "LUA_API void  (lua_rawset) (lua_State *L, int idx);",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "栈索引""method name": "lua_rawseti",
+ameter name": "栈索引""comment": "LUA_API void  (lua_rawseti) (lua_State *L, int idx, lua_Integer n);",
+ameter name": "栈索引""static": true,
+ameter name": "栈索引""@嵌入式方法": "\"\"",
+ameter name": "栈索引""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "n",
+"data type": "长整数"
+   }
+ameter name": "栈索引"]
+  },
+  {
+"method name": "lua_rawsetp",
+"comment": "LUA_API void  (lua_rawsetp) (lua_State *L, int idx, const void *p);",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "p",
+"data type": "变整数"
+   }
+]
+  },
+  {
+data type": "整数""method name": "lua_setmetatable",
+data type": "整数""comment": "LUA_API int   (lua_setmetatable) (lua_State *L, int objindex);",
+data type": "整数""static": true,
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "objindex",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ameter name": "objindex""method name": "lua_setiuservalue",
+ameter name": "objindex""comment": "LUA_API int   (lua_setiuservalue) (lua_State *L, int idx, int n);",
+ameter name": "objindex""static": true,
+ameter name": "objindex""data type": "整数",
+ameter name": "objindex""@嵌入式方法": "\"\"",
+ameter name": "objindex""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "n",
+"data type": "整数"
+   }
+ameter name": "objindex"]
+  },
+  {
+eter name": "objindex"]"method name": "lua_pcallk",
+eter name": "objindex"]"static": true,
+eter name": "objindex"]"data type": "整数",
+eter name": "objindex"]"@嵌入式方法": "\"\"",
+eter name": "objindex"]"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "nargs",
+"comment": "参数数量",
+"data type": "整数"
+   },
+   {
+"parameter name": "nresults",
+"comment": "返回值个数",
+"data type": "整数"
+   },
+   {
+"parameter name": "errfunc",
+"data type": "整数"
+   },
+   {
+"parameter name": "ctx",
+"comment": "lua_KFunction",
+"data type": "变整数"
+   },
+   {
+"parameter name": "k",
+"comment": "lua_KFunction",
+"data type": "变整数"
+   }
+eter name": "objindex"]]
+  },
+  {
+data type": "变整数""method name": "lua_pcall",
+data type": "变整数""static": true,
+data type": "变整数""data type": "整数",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "nargs",
+"comment": "参数数量",
+"data type": "整数"
+   },
+   {
+"parameter name": "nresults",
+"comment": "返回值个数",
+"data type": "整数"
+   },
+   {
+"parameter name": "errfunc",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+data type": "整数""method name": "lua_getextraspace",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "lua_tonumber",
+
+"static": true,
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lua_tointeger",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lua_pop",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "弹出数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"static": true"method name": "lua_newtable",
+"static": true"static": true,
+"static": true"@嵌入式方法": "\"\"",
+"static": true"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+"static": true]
+  },
+  {
+
+"method name": "lua_register",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "函数",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+}"method name": "lua_pushcfunction",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "函数",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+}"method name": "lua_isfunction",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "变整数""method name": "lua_istable",
+data type": "变整数""static": true,
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+}"method name": "lua_islightuserdata",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "lua_isnil",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "lua_isboolean",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "lua_isthread",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "lua_isnone",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"static": true"method name": "lua_isnoneornil",
+"static": true"static": true,
+"static": true"data type": "逻辑型",
+"static": true"@嵌入式方法": "\"\"",
+"static": true"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+"static": true]
+  },
+  {
+
+"method name": "lua_pushliteral",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文本指针",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "lua_pushglobaltable",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+"method name": "lua_tostring",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "lua_insert",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "lua_remove",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "lua_replace",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "______luaL基础函数",
+"@全局类": "真",
+"methods": [
+  {
+ }"method name": "luaL_checkversion",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+"method name": "luaL_loadfilex",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "脚本文件",
+"comment": "d:\\\\aa.lua",
+"data type": "文本型"
+   },
+   {
+"parameter name": "模式",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "luaL_loadfile",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "脚本文件",
+"comment": "d:\\\\aa.lua",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "luaL_loadbufferx",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "模式",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "luaL_loadstring",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "脚本内容",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "luaL_newstate",
+ }"static": true,
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+data type": "变整数""method name": "luaL_len",
+data type": "变整数""static": true,
+data type": "变整数""data type": "长整数",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "栈索引",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+}"method name": "luaL_requiref",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "模块名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "注册函数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否注册到全局",
+"data type": "整数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+}"method name": "luaL_newlib",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数数组",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+}"method name": "luaL_dofile",
+}"comment": "加载，并且执行文本",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "luaL_dostring",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "脚本内容",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "______lualib基础函数",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "luaL_openlibs",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+
+]
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+]
+}

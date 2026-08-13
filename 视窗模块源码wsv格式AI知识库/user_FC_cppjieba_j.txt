@@ -1,0 +1,219 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "https://github.com/yanyiwu/cppjieba",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.结巴分词\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"cppjieba\\\\cppjiebaTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"cppjieba\\\\cppjiebaToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"cppjieba\\\\cppjiebaToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"cppjieba\\\\cppjiebaToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"cppjieba\\\\cppjiebaToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件": "\"cppjieba\\\\dic\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "结巴分词类",
+"methods": [
+  {
+"method name": "打开",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "词典文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "HMM文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户词典文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "IDF文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "停止词文件",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "关闭",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "分词",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "要分词的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结巴文本",
+"data type": "结巴文本数组"
+   },
+   {
+"parameter name": "是否用HMM",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+ﺐ數ŝ"method name": "分词所有",
+ﺐ數ŝ"@嵌入式方法": "\"\"",
+ﺐ數ŝ"parameters": [
+   {
+"parameter name": "要分词的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结巴文本",
+"data type": "结巴文本数组"
+   }
+ﺐ數ŝ]
+  },
+  {
+data type": "结巴文本数组""method name": "搜索分词",
+data type": "结巴文本数组""@嵌入式方法": "\"\"",
+data type": "结巴文本数组""parameters": [
+   {
+"parameter name": "要分词的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结巴文本",
+"data type": "结巴文本数组"
+   },
+   {
+"parameter name": "是否用HMM",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "结巴文本数组"]
+  },
+  {
+}"method name": "置插入短语",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "用户单词",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束标签",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+
+"method name": "置插入短语频率",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "用户单词",
+"data type": "文本型"
+   },
+   {
+"parameter name": "插入频率",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束标签",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+"method name": "取词性",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "单词数组",
+"data type": "结巴文本数组"
+   },
+   {
+"parameter name": "词性数组",
+"data type": "结巴文本数组"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "结巴文本数组",
+"comment": "这个是 高性能键值表 配套组件，暂时也不建议用到其他地方，当然也可以用的",
+"methods": [
+  {
+ameter name": "单词数组""method name": "类_初始化"
+  },
+  {
+ }"method name": "类_清理"
+  },
+  {
+
+"method name": "取成员数",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+parameters": [
+"method name": "取成员",
+parameters": [
+"data type": "文本型",
+parameters": [
+"@嵌入式方法": "\"\"",
+parameters": [
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+parameters": [
+]
+  },
+  {
+ameter name": "索引""method name": "加入成员",
+ameter name": "索引""parameters": [
+   {
+"parameter name": "要加入的内容",
+"data type": "文本型"
+   }
+ameter name": "索引"]
+  },
+  {
+ }"method name": "删除成员",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ethod name": "类_清理""method name": "清空",
+ethod name": "类_清理""@嵌入式方法": "\"\""
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

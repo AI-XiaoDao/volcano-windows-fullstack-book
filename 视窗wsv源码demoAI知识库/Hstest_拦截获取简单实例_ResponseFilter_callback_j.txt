@@ -1,0 +1,129 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+ダ鴄Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ダ鴄Ǹ"package name": "浏览器.回调",
+ダ鴄Ǹ"classes": [
+ {
+"class name": "类_FBrowser_资源过滤器测试",
+"base class": "类_FBrowser_资源过滤器",
+"variables": [
+  {
+
+"variable name": "地址",
+
+"data type": "文本型"
+  }
+],
+"methods": [
+  {
+
+"method name": "初始化过滤器",
+
+"comment": "返回假取消此次拦截",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "结束",
+
+"comment": "1.如果是通过“FBrowser创建类指针”创建的本事件，需在这里调用对自身进行释放，如果不释放会造成内存泄露，也可将类指针保持在其他地方释放，反正一定要记得释放\n2.如果使用全局或程序集变量调用的类，这里不用释放",
+
+"result comment": "返回真释放当前类，释放后类将不能再使用，否则会崩溃",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "获取数据",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "传递过来的数据指针,数据类型为UTF8",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"comment": "当前数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "修改数据",
+
+"data type": "整数",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "输入指针",
+"comment": "传入数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "输入大小",
+"comment": "传入数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "输入读取大小",
+"comment": "传入数据回写大小，用作告诉来源已经接纳了多少数据",
+"data type": "整数类"
+   },
+   {
+"parameter name": "输出指针",
+"comment": "写回数据输出指针，写回后浏览器接收显示相应的数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "输出大小",
+"comment": "写回数据缓存能容纳数据的最大值，输出数据都不能大于此值，否则浏览器崩溃，如大于必须做分包处理",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出写入大小",
+"comment": "写回数据会写大小，用作告诉浏览器我写入了多少数据",
+"data type": "整数类"
+   }
+
+]
+  }
+]
+ }
+ダ鴄Ǹ]
+}

@@ -1,0 +1,743 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"SoundTouch音频处理".
+
+{
+问本程序中的接口需要引用模块"SoundTouch音频处理"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"SoundTouch音频处理"."package name": "火山.音频处理",
+问本程序中的接口需要引用模块"SoundTouch音频处理"."comment": "https://www.surina.net/soundtouch/soundstretch.html\nhttps://codeberg.org/soundtouch/soundtouch\n封装自开源库soundtouch 2.3.2\n",
+问本程序中的接口需要引用模块"SoundTouch音频处理"."@视窗.头文件搜寻目录": "\"include\"",
+问本程序中的接口需要引用模块"SoundTouch音频处理"."@视窗.外部头文件": "\"include\\\\BPMDetect.h\\ninclude\\\\FIFOSampleBuffer.h\\ninclude\\\\FIFOSamplePipe.h\\ninclude\\\\SoundTouch.h\\ninclude\\\\soundtouch_config.h\\ninclude\\\\STTypes.h\\ninclude\\\\WavFile.h\"",
+问本程序中的接口需要引用模块"SoundTouch音频处理"."@视窗.外部源文件": "\"src\\\\AAFilter.cpp\\nsrc\\\\BPMDetect.cpp\\nsrc\\\\cpu_detect_x86.cpp\\nsrc\\\\FIFOSampleBuffer.cpp\\nsrc\\\\FIRFilter.cpp\\nsrc\\\\InterpolateCubic.cpp\\nsrc\\\\InterpolateLinear.cpp\\nsrc\\\\InterpolateShannon.cpp\\nsrc\\\\mmx_optimized.cpp\\nsrc\\\\PeakFinder.cpp\\nsrc\\\\RateTransposer.cpp\\nsrc\\\\SoundTouch.cpp\\nsrc\\\\sse_optimized.cpp\\nsrc\\\\TDStretch.cpp\\nsrc\\\\WavFile.cpp\"",
+问本程序中的接口需要引用模块"SoundTouch音频处理"."@视窗.外部头文件": "\"<memory>\"",
+问本程序中的接口需要引用模块"SoundTouch音频处理"."classes": [
+ {
+"class name": "音频处理类",
+"comment": "本类提供音频处理功能.",
+"methods": [
+  {
+= "category = \"辅助类\"""method name": "取版本号2",
+= "category = \"辅助类\"""comment": "返回SoundTouch库的文本型版本号.",
+= "category = \"辅助类\"""static": true,
+= "category = \"辅助类\"""data type": "文本型",
+= "category = \"辅助类\"""@嵌入式方法": "\"\""
+  },
+  {
+本中的处理序列大小.注意：这是只读参数,即不可设置此参数.此参数值不是恒定的,而是根据节奏/音高/速率/采样率设置.""method name": "取版本号",
+本中的处理序列大小.注意：这是只读参数,即不可设置此参数.此参数值不是恒定的,而是根据节奏/音高/速率/采样率设置.""comment": "返回SoundTouch库的版本号.",
+本中的处理序列大小.注意：这是只读参数,即不可设置此参数.此参数值不是恒定的,而是根据节奏/音高/速率/采样率设置.""static": true,
+本中的处理序列大小.注意：这是只读参数,即不可设置此参数.此参数值不是恒定的,而是根据节奏/音高/速率/采样率设置.""data type": "整数",
+本中的处理序列大小.注意：这是只读参数,即不可设置此参数.此参数值不是恒定的,而是根据节奏/音高/速率/采样率设置.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "置速率",
+}"comment": "设置新的速率控制值.",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲设置的新速率",
+"comment": "正常速率=1,小于1变慢,大于1变快.",
+"data type": "小数"
+   }
+}]
+  },
+  {
+}"method name": "置节拍",
+}"comment": "设置新的节拍控制值.",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲设置的新节拍",
+"comment": "正常节拍=1.0,小于1变慢,大于1变快.",
+"data type": "小数"
+   }
+}]
+  },
+  {
+
+"method name": "置速率百分比",
+
+"comment": "设置新的速率百分比值.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的新速率",
+"comment": "值为(-50 .. +100 %)之间.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+ameter name": "所欲设置的新节拍""method name": "置节拍百分比",
+ameter name": "所欲设置的新节拍""comment": "设置新的节拍百分比值.",
+ameter name": "所欲设置的新节拍""@嵌入式方法": "\"\"",
+ameter name": "所欲设置的新节拍""parameters": [
+   {
+"parameter name": "所欲设置的新节拍",
+"comment": "值为(-50 .. +100 %)之间.",
+"data type": "小数"
+   }
+ameter name": "所欲设置的新节拍"]
+  },
+  {
+er name": "所欲设置的新节拍""method name": "置节拍百分比""method name": "置音调",
+er name": "所欲设置的新节拍""method name": "置节拍百分比""comment": "设置新的音调.",
+er name": "所欲设置的新节拍""method name": "置节拍百分比""@嵌入式方法": "\"\"",
+er name": "所欲设置的新节拍""method name": "置节拍百分比""parameters": [
+   {
+"parameter name": "所欲设置的新音调",
+"comment": "正常音调=1.0,小于1音调变低,大于1音调变高.",
+"data type": "小数"
+   }
+er name": "所欲设置的新节拍""method name": "置节拍百分比"]
+  },
+  {
+}"method name": "置音调2",
+}"comment": "在原音调基础上以八度音为单位进行调整.",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲设置的新音调",
+"comment": "值为-1.00到1.00之间.",
+"data type": "小数"
+   }
+}]
+  },
+  {
+.00到1.00之间."method name": "置音调3",
+.00到1.00之间."comment": "在原音调基础上以半音为单位进行调整.",
+.00到1.00之间."@嵌入式方法": "\"\"",
+.00到1.00之间."parameters": [
+   {
+"parameter name": "所欲设置的新音调",
+"comment": "值为-12到12之间.",
+"data type": "整数"
+   }
+.00到1.00之间.]
+  },
+  {
+
+"@嵌入式方法": "\"\"""method name": "置通道数",
+
+"@嵌入式方法": "\"\"""comment": "设置音频数据的通道数.",
+
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲设置的通道数",
+"comment": "1=单声道,2=立体声.",
+"data type": "整数"
+   }
+
+"@嵌入式方法": "\"\""]
+  },
+  {
+"method name": "置采样率",
+"comment": "设置采样率.",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲设置的采样率",
+"data type": "整数"
+   }
+]
+  },
+  {
+comment": "1=单声道,2=立体声.""method name": "置控制属性",
+comment": "1=单声道,2=立体声.""comment": "更改控制处理系统的行为设置.",
+comment": "1=单声道,2=立体声.""data type": "逻辑型",
+comment": "1=单声道,2=立体声.""@嵌入式方法": "\"\"",
+comment": "1=单声道,2=立体声.""parameters": [
+   {
+"parameter name": "所欲设置的属性类型",
+"data type": "音频控制类型"
+   },
+   {
+"parameter name": "所欲设置的属性值",
+"data type": "整数"
+   }
+comment": "1=单声道,2=立体声."]
+  },
+  {
+ }"method name": "取未处理样本数",
+ }"comment": "返回当前未处理的样本数.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "取未处理样本数""method name": "取控制属性",
+ethod name": "取未处理样本数""comment": "更改控制处理系统的行为设置.",
+ethod name": "取未处理样本数""data type": "整数",
+ethod name": "取未处理样本数""@嵌入式方法": "\"\"",
+ethod name": "取未处理样本数""parameters": [
+   {
+"parameter name": "所欲获取的属性类型",
+"data type": "音频控制类型"
+   }
+ethod name": "取未处理样本数"]
+  },
+  {
+}"method name": "取通道数",
+}"comment": "返回音频数据的通道数.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "取未处理样本数""method name": "取输入输出采样率比率",
+ethod name": "取未处理样本数""comment": "获取输入和输出音频持续时间之间的比率,用于计算处理输出持续时间.如果您要处理N个样本流,可以预料得到(N*取输入输出采样率比率())个样本.\n假设整个音轨是用相同的处理参数处理的,该比率将给出完整音轨的精确目标持续时间比率.\n如果将此比率应用于计算处理内部的中间偏移流,那么这个比率是近似的,可以从理想的偏移偏离正负几十毫秒,但到音频流结束时,持续时间比率将变为准确.",
+ethod name": "取未处理样本数""data type": "小数",
+ethod name": "取未处理样本数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "刷新",
+}"comment": "将最后一个样本从管道刷新到输出并清除内部缓冲区.\n注意：此函数用于提取声音的最后样本流.该功能最终可能会引入额外的空白样本因此不建议在声音流的中间调用此函数.",
+}"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "输入样本32",
+data type": "整数""comment": "将音频样本数据输入到采样处理缓冲区中.\n注意:调用本方法之前需要先设置采样率,否则将引发运行时异常.\n注意:本方法使用32位浮点采样类型.",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲提供的样本输入缓冲区",
+"comment": "提供样本数据的输入缓冲区内存地址.\n注意:内存指针类型为单精度小数,即(float*).",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲提供的样本数",
+"comment": "注意:在立体声的情况下,单个样本包含两个通道的数据.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "输入样本16",
+ }"comment": "将音频样本数据输入到采样处理缓冲区中.\n注意:调用本方法之前需要先设置采样率,否则将引发运行时异常.\n注意:本方法使用16位整数采样类型.",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲提供的样本输入缓冲区",
+"comment": "提供样本数据的输入缓冲区内存地址.\n注意:内存指针类型为短整数,即(short*).",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲提供的样本数",
+"comment": "注意:在立体声的情况下,单个样本包含两个通道的数据.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "输出样本32",
+data type": "整数""comment": "从样本缓冲区的开头输出采样,将输入的样本复制到样本输出缓冲区,并将它们从采样缓冲区中删除.\n如果少于缓冲区中的样本数,返回所有可获取的样本.\n注意:本方法使用32位浮点采样类型.",
+data type": "整数""result comment": "返回输出的样本数.",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲提供的样本输出缓冲区",
+"comment": "提供样本数据的输出缓冲区内存地址.\n注意:内存指针类型为单精度小数,即(float*).",
+"data type": "变整数"
+   },
+   {
+"parameter name": "最大接收样本数",
+"comment": "输出缓冲区最大可接收的样本数.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "输出样本16",
+ }"comment": "从样本缓冲区的开头输出采样,将输入的样本复制到样本输出缓冲区,并将它们从采样缓冲区中删除.\n如果少于缓冲区中的样本数,返回所有可获取的样本.\n注意:本方法使用16位浮点采样类型.",
+ }"result comment": "返回输出的样本数.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲提供的样本输出缓冲区",
+"comment": "提供样本数据的输出缓冲区内存地址.\n注意:内存指针类型为短整数,即(short*).",
+"data type": "变整数"
+   },
+   {
+"parameter name": "最大接收样本数",
+"comment": "输出缓冲区最大可接收的样本数.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "删除样本",
+
+"comment": "从样本缓冲区的开头删除指定数量的样本,而不将其复制到任何位置.\n用于在直接访问样本缓冲区时减少缓冲区中的样本数量.",
+
+"result comment": "返回输出样本数.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲删除的样本数",
+"comment": "从样本缓冲区的开头删除的样本数.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "清空",
+
+"comment": "清空所有样本缓冲区.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为空",
+
+"comment": "返回是否有任何可用于输出的样本.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "置样本数",
+}"comment": "设置管道中的样本数量.",
+}"result comment": "返回修改后的样本数.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲设置的样本数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "移动样本",
+
+"comment": "将其他\"音频处理类\"中的样本数据移动到当前实例.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲移动的音频",
+"comment": "要移动的源样本数据",
+"data type": "音频处理类"
+   }
+
+]
+  },
+  {
+
+"method name": "取输出样本地址",
+
+"comment": "返回指向输出样本的起始地址,该功能用于直接访问输出样本.\n注意:如非对指针非常了解,请不要使用本方法.\n使用此函数输出样本时,通过调用\"删除样本()\"函数删除.",
+
+"result comment": "返回输出样本的起始地址.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "音频速率类",
+"comment": "本类计算音频数据的BPM速率.",
+"methods": [
+  {
+comment": "本类计算音频数据的BPM速率.""method name": "创建",
+comment": "本类计算音频数据的BPM速率.""comment": "创建对象数据,使用本类方式之前必须先调用本方法.",
+comment": "本类计算音频数据的BPM速率.""parameters": [
+   {
+"parameter name": "所欲设置的样本通道数",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的样本采样率",
+"data type": "整数"
+   }
+comment": "本类计算音频数据的BPM速率."]
+  },
+  {
+"method name": "销毁",
+"comment": "销毁之前创建的对象数据.",
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取速率",
+}"comment": "返回BPM速率.",
+}"result comment": "成功返回速率,失败返回零.",
+}"data type": "单精度小数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "销毁""method name": "输入样本32",
+hod name": "销毁""comment": "将音频样本数据输入到缓冲区中进行计算,使用\"取速率()\"可以获取到处理结果.\n注意:本方法使用32位浮点采样类型.",
+hod name": "销毁""@嵌入式方法": "\"\"",
+hod name": "销毁""parameters": [
+   {
+"parameter name": "所欲提供的样本输入缓冲区",
+"comment": "提供样本数据的输入缓冲区内存地址.\n注意:内存指针类型为单精度小数,即(float*).",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲提供的样本数",
+"comment": "注意:在立体声的情况下,单个样本包含两个通道的数据.",
+"data type": "整数"
+   }
+hod name": "销毁"]
+  },
+  {
+ameter name": "所欲提供的样本输出缓冲区""method name": "输入样本16",
+ameter name": "所欲提供的样本输出缓冲区""comment": "将音频样本数据输入到采样处理缓冲区中进行计算,使用\"取速率()\"可以获取到处理结果.\n注意:本方法使用16位整数采样类型.",
+ameter name": "所欲提供的样本输出缓冲区""@嵌入式方法": "\"\"",
+ameter name": "所欲提供的样本输出缓冲区""parameters": [
+   {
+"parameter name": "所欲提供的样本输入缓冲区",
+"comment": "提供样本数据的输入缓冲区内存地址.\n注意:内存指针类型为短整数,即(short*).",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲提供的样本数",
+"comment": "注意:在立体声的情况下,单个样本包含两个通道的数据.",
+"data type": "整数"
+   }
+ameter name": "所欲提供的样本输出缓冲区"]
+  }
+]
+ },
+ {
+"class name": "音频文件输入类",
+"comment": "本类提供WAV格式文件的读取操作.",
+"methods": [
+  {
+eter name": "所欲提供的样本输出缓冲区"]"method name": "取采样率",
+eter name": "所欲提供的样本输出缓冲区"]"comment": "获取音频文件采样率. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+eter name": "所欲提供的样本输出缓冲区"]"data type": "整数",
+eter name": "所欲提供的样本输出缓冲区"]"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "取位数",
+ }"comment": "获取每个样本的位数,即8或16. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+eter name": "所欲提供的样本输出缓冲区"]"method name": "取数据大小",
+eter name": "所欲提供的样本输出缓冲区"]"comment": "获取以字节为单位的样本数据大小. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.\n本方法应该返回\"取样本大小()\"相同信息.",
+eter name": "所欲提供的样本输出缓冲区"]"data type": "整数",
+eter name": "所欲提供的样本输出缓冲区"]"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取样本数",
+}"comment": "获取文件中的样本数. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取样本大小",
+
+"comment": "获取每个音频样本的字节数（例如,16位立体声=4字节/样本）. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ent": "本类计算音频数据的BPM速率.""method name": "创建""method name": "取通道数",
+ent": "本类计算音频数据的BPM速率.""method name": "创建""comment": "获取文件中的音频通道数（1=单声道,2=立体声）. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+ent": "本类计算音频数据的BPM速率.""method name": "创建""data type": "整数",
+ent": "本类计算音频数据的BPM速率.""method name": "创建""@嵌入式方法": "\"\""
+  },
+  {
+nt": "本类计算音频数据的BPM速率.""method name": "创建""@嵌入式方法": "\"\"""method name": "取时间长度",
+nt": "本类计算音频数据的BPM速率.""method name": "创建""@嵌入式方法": "\"\"""comment": "获取音频文件长度（以毫秒为单位）. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+nt": "本类计算音频数据的BPM速率.""method name": "创建""@嵌入式方法": "\"\"""data type": "整数",
+nt": "本类计算音频数据的BPM速率.""method name": "创建""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取已读时间",
+}"comment": "获取到目前为止从文件中读取音频的毫秒数. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "打开文件",
+
+"comment": "打开文件并初始化资源,使用本类方法之前,必须先调用本方法.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲打开的文件路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "关闭文件",
+
+"comment": "关闭之前打开的文件,并释放资源.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "移到文件首",
+}"comment": "回放到文件的开头. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+}"@嵌入式方法": "\"\""
+  },
+  {
+er name": "所欲提供的样本输出缓冲区""method name": "输入样本16""method name": "是否文件尾",
+er name": "所欲提供的样本输出缓冲区""method name": "输入样本16""comment": "获取是否到达文件结尾. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+er name": "所欲提供的样本输出缓冲区""method name": "输入样本16""data type": "逻辑型",
+er name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\""
+  },
+  {
+r name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""method name": "读入数据8",
+r name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""comment": "从WAV文件中读取音频样本. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.\n注意:此方法仅适用于8位样本.",
+r name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""result comment": "返回实际读取的大小.",
+r name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数",
+r name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+r name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "要保存的数据缓冲区",
+"comment": "注意:必须确保内存地址有效.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区尺寸",
+"data type": "整数"
+   }
+r name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\""]
+  },
+  {
+ name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""method name": "读入数据16",
+ name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""comment": "从WAV文件中读取音频样本为16位整数格式. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+ name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""result comment": "返回实际读取的大小.",
+ name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""data type": "整数",
+ name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""@嵌入式方法": "\"\"",
+ name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""parameters": [
+   {
+"parameter name": "要保存的短整数数组地址",
+"comment": "指向短整数的内存地址,即：提供一个短整数的数组地址.\n注意:必须确保内存地址有效.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "短整数数组的成员数",
+"comment": "参数\"要保存的短整数数组地址\"数组中的成员数.",
+"data type": "整数"
+   }
+ name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数"]
+  },
+  {
+"method name": "读入数据32",
+"comment": "从WAV文件中读取音频样本为32位浮点格式。转换范围为[-1,1]的采样值.\n本方法支持读取8/16/24/32位样本格式. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+"result comment": "返回实际读取的大小.",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "要保存的单精度数组地址",
+"comment": "指向单精度小数的内存地址,即：提供一个单精度小数的数组地址.\n注意:必须确保内存地址有效.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "单精度数组的成员数",
+"comment": "参数\"要保存的单精度数组地址\"数组中的成员数.",
+"data type": "整数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "音频文件输出类",
+"comment": "本类提供WAV格式文件的写出操作",
+"methods": [
+  {
+parameters": [
+"method name": "打开文件",
+parameters": [
+"comment": "打开文件并初始化资源,使用本类方法之前,必须先调用本方法.",
+parameters": [
+"data type": "逻辑型",
+parameters": [
+"@禁止流程检查": "真",
+parameters": [
+"parameters": [
+   {
+"parameter name": "所欲打开的文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲设置的样本采样率",
+"comment": "如:44100.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的样本位数",
+"comment": "8或16位.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的样本通道数",
+"comment": "1=单声道,2=立体声",
+"data type": "整数"
+   }
+parameters": [
+]
+  },
+  {
+
+"method name": "关闭文件",
+
+"comment": "关闭之前打开的文件,并释放资源.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""data type": "整数""method name": "写出数据8",
+name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""data type": "整数""comment": "将数据写入WAV文件. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.\n注意:此方法仅适用于8位样本.",
+name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""data type": "整数""result comment": "返回操作是否成功.",
+name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""data type": "整数""data type": "逻辑型",
+name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""data type": "整数""@禁止流程检查": "真",
+name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""data type": "整数""parameters": [
+   {
+"parameter name": "要写出的数据缓冲区",
+"comment": "注意:必须确保内存地址有效.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区尺寸",
+"data type": "整数"
+   }
+name": "所欲提供的样本输出缓冲区""method name": "输入样本16""@嵌入式方法": "\"\"""data type": "整数""data type": "整数"]
+  },
+  {
+
+"method name": "写出数据16",
+
+"comment": "以16位整数格式,将数据写入WAV文件. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+
+"result comment": "返回操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "要保存的短整数数组地址",
+"comment": "指向短整数的内存地址,即：提供一个短整数的数组地址.\n注意:必须确保内存地址有效.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "短整数数组的成员数",
+"comment": "参数\"要保存的短整数数组地址\"数组中的成员数.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "写出数据32",
+}"comment": "以32位浮点格式,将数据写入WAV文件. 调用本方法前,必须首先调用\"打开文件\"方法打开文件.",
+}"result comment": "返回操作是否成功.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "要保存的单精度数组地址",
+"comment": "指向单精度小数的内存地址,即：提供一个单精度小数的数组地址.\n注意:必须确保内存地址有效.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "单精度数组的成员数",
+"comment": "参数\"要保存的单精度数组地址\"数组中的成员数.",
+"data type": "整数"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "音频控制类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+constants": [
+"constant name": "AA滤波器",
+constants": [
+"comment": "启用/禁用音调转置器中的抗混叠滤波器（0=禁用）.",
+constants": [
+"initial value": "@soundtouch::SETTING_USE_AA_FILTER"
+  },
+  {
+onstants": [
+"comment": "启用/禁用音调转置器中的抗混叠滤波器（0=禁用）.""constant name": "AA滤波器长度",
+onstants": [
+"comment": "启用/禁用音调转置器中的抗混叠滤波器（0=禁用）.""comment": "AA滤波器长度（8-128,默认值=32）.",
+onstants": [
+"comment": "启用/禁用音调转置器中的抗混叠滤波器（0=禁用）.""initial value": "@soundtouch::SETTING_AA_FILTER_LENGTH"
+  },
+  {
+"constant name": "快速搜索算法",
+"comment": "启用/禁用快速搜索算法.",
+"initial value": "@soundtouch::SETTING_USE_QUICKSEEK"
+  },
+  {
+}"constant name": "帧时间",
+}"comment": "时间拉伸算法单个处理序列的长度（以毫秒为单位）.这决定了原始声音在时间拉伸算法中被截断的序列长度.官方例子设置值为40.",
+}"initial value": "@soundtouch::SETTING_SEQUENCE_MS"
+  },
+  {
+comment": "参数\"要保存的短整数数组地址\"数组中的成员数.""constant name": "叠加寻找窗的范围长度",
+comment": "参数\"要保存的短整数数组地址\"数组中的成员数.""comment": "时间拉伸算法为找到最佳可能重叠位置.官方例子设置值为15.",
+comment": "参数\"要保存的短整数数组地址\"数组中的成员数.""initial value": "@soundtouch::SETTING_SEEKWINDOW_MS"
+  },
+  {
+"comment": "时间拉伸算法单个处理序列的长度（以毫秒为单位）.这决定了原始声音在时间拉伸算法中被截断的序列长度.官方例子设置值为40.""constant name": "叠加范围",
+"comment": "时间拉伸算法单个处理序列的长度（以毫秒为单位）.这决定了原始声音在时间拉伸算法中被截断的序列长度.官方例子设置值为40.""comment": "时间拉伸算法重叠长度（以毫秒为单位）.官方例子设置值为8.",
+"comment": "时间拉伸算法单个处理序列的长度（以毫秒为单位）.这决定了原始声音在时间拉伸算法中被截断的序列长度.官方例子设置值为40.""initial value": "@soundtouch::SETTING_OVERLAP_MS"
+  },
+  {
+comment": "时间拉伸算法单个处理序列的长度（以毫秒为单位）.这决定了原始声音在时间拉伸算法中被截断的序列长度.官方例子设置值为40.""comment": "时间拉伸算法重叠长度（以毫秒为单位）.官方例子设置值为8.""constant name": "查询样本处理序列输入大小",
+comment": "时间拉伸算法单个处理序列的长度（以毫秒为单位）.这决定了原始声音在时间拉伸算法中被截断的序列长度.官方例子设置值为40.""comment": "时间拉伸算法重叠长度（以毫秒为单位）.官方例子设置值为8.""comment": "查询样本中的处理序列大小.注意：这是只读参数,即不可设置此参数.此参数值不是恒定的,而是根据节奏/音高/速率/采样率设置.",
+comment": "时间拉伸算法单个处理序列的长度（以毫秒为单位）.这决定了原始声音在时间拉伸算法中被截断的序列长度.官方例子设置值为40.""comment": "时间拉伸算法重叠长度（以毫秒为单位）.官方例子设置值为8.""initial value": "@soundtouch::SETTING_NOMINAL_INPUT_SEQUENCE"
+  },
+  {
+
+"constant name": "查询样本处理平均输出大小",
+
+"comment": "查询样本平均处理输出大小.注意：这是只读参数,即不可设置此参数.此参数值不是恒定的,而是根据节奏/音高/速率/采样率设置.",
+
+"initial value": "@soundtouch::SETTING_NOMINAL_OUTPUT_SEQUENCE"
+  },
+  {
+WAV格式文件的写出操作"constant name": "查询初始处理延迟",
+WAV格式文件的写出操作"comment": "查询初始处理延迟.注意：这是只读参数,即不可设置此参数.此参数值不是恒定的,而是根据节奏/音高/速率/采样率设置.",
+WAV格式文件的写出操作"initial value": "@soundtouch::SETTING_INITIAL_LATENCY"
+  }
+]
+ }
+问本程序中的接口需要引用模块"SoundTouch音频处理".]
+}

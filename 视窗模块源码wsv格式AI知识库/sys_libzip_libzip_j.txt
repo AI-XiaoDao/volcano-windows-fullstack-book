@@ -1,0 +1,1345 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"libzip压缩解压".
+
+{
+问本程序中的接口需要引用模块"libzip压缩解压"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"libzip压缩解压"."package name": "火山.视窗.LIBZIP",
+问本程序中的接口需要引用模块"libzip压缩解压"."classes": [
+ {
+"class name": "ZIP压缩解压类",
+"comment": "★ 本类由\"caixiaoxi\"封装.\n基于libzip库静态编译封装,提供对(zip)文件的解压缩支持.",
+"@视窗.外部头文件": "\"Vol_libzip.h\"",
+"@视窗.头文件搜寻目录": "\"include\"",
+"@视窗.外部源文件": "\"Vol_libzip.cpp\"",
+"@视窗.外部库": "\"lib\\\\$(p)\\\\zip.lib\\nlib\\\\$(p)\\\\zlibstatic.lib\"",
+"@视窗.后缀文本": "\"public ILIBZIPEventListener\"",
+"methods": [
+  {
+\"覆盖已存在文件\"与\"UTF8编码\"的组合.""method name": "打开文件",
+\"覆盖已存在文件\"与\"UTF8编码\"的组合.""comment": "打开或创建ZIP包",
+\"覆盖已存在文件\"与\"UTF8编码\"的组合.""result comment": "成功返回0,否则返回错误码.",
+\"覆盖已存在文件\"与\"UTF8编码\"的组合.""data type": "整数",
+\"覆盖已存在文件\"与\"UTF8编码\"的组合.""@嵌入式方法": "\"\"",
+\"覆盖已存在文件\"与\"UTF8编码\"的组合.""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "ZIP包的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "打开模式",
+"comment": "ZIP的打开方式,参考\"ZIP打开模式\"常量",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否接收进度事件",
+"comment": "指定是否注册操作进度监听事件,用来监控ZIP添加,写入进度.\n本参数为真时,当向压缩包内添加或修改条目时将触发\"操作进度已改变\"事件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否接收取消控制事件",
+"comment": "指定是否注册操作取消控制事件,用来取消对zip条目的操作.\n本参数为真时,执行一些耗时操作时触发\"操作取消控制事件\"事件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+\"覆盖已存在文件\"与\"UTF8编码\"的组合."]
+  },
+  {
+comment": "指定是否注册操作取消控制事件,用来取消对zip条目的操作.\n本参数为真时,执行一些耗时操作时触发\"操作取消控制事件\"事件.""method name": "添加数据",
+comment": "指定是否注册操作取消控制事件,用来取消对zip条目的操作.\n本参数为真时,执行一些耗时操作时触发\"操作取消控制事件\"事件.""comment": "向已打开的ZIP包添加字节集数据",
+comment": "指定是否注册操作取消控制事件,用来取消对zip条目的操作.\n本参数为真时,执行一些耗时操作时触发\"操作取消控制事件\"事件.""result comment": "成功返回0,否则返回错误码.",
+comment": "指定是否注册操作取消控制事件,用来取消对zip条目的操作.\n本参数为真时,执行一些耗时操作时触发\"操作取消控制事件\"事件.""data type": "整数",
+comment": "指定是否注册操作取消控制事件,用来取消对zip条目的操作.\n本参数为真时,执行一些耗时操作时触发\"操作取消控制事件\"事件.""@禁止流程检查": "真",
+comment": "指定是否注册操作取消控制事件,用来取消对zip条目的操作.\n本参数为真时,执行一些耗时操作时触发\"操作取消控制事件\"事件.""parameters": [
+   {
+"parameter name": "条目名",
+"comment": "条目文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据",
+"comment": "欲向压缩包内写入的文件数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "压缩方法",
+"comment": "默认自动选择压缩模式,参考\"ZIP压缩方法\"常量.",
+"data type": "整数",
+"@默认值": "ZIP压缩方法.默认"
+   },
+   {
+"parameter name": "加密算法",
+"comment": "默认0不加密设置的密码也无效,参考\"ZIP加密方法\"常量.",
+"data type": "整数",
+"@默认值": "ZIP加密方法.不加密"
+   },
+   {
+"parameter name": "密码",
+"comment": "默认无密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "操作标志",
+"comment": "参考\"ZIP操作标志\"常量,默认为\"UTF8编码\"与\"覆盖已存在文件\"的组合.",
+"data type": "整数",
+"@默认值": "ZIP操作标志.默认"
+   }
+comment": "指定是否注册操作取消控制事件,用来取消对zip条目的操作.\n本参数为真时,执行一些耗时操作时触发\"操作取消控制事件\"事件."]
+  },
+  {
+"method name": "添加文件",
+"comment": "向已打开的ZIP包添加文件.",
+"result comment": "成功返回0,否则返回错误码.",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "条目名",
+"comment": "条目文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名",
+"comment": "欲添加的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "压缩方法",
+"comment": "默认自动选择压缩模式,参考\"ZIP压缩方法\"常量.",
+"data type": "整数",
+"@默认值": "ZIP压缩方法.默认"
+   },
+   {
+"parameter name": "加密算法",
+"comment": "默认0不加密设置的密码也无效,参考\"ZIP加密方法\"常量.",
+"data type": "整数",
+"@默认值": "ZIP加密方法.不加密"
+   },
+   {
+"parameter name": "密码",
+"comment": "默认无密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "操作标志",
+"comment": "参考\"ZIP操作标志\"常量,默认为\"UTF8编码\"与\"覆盖已存在文件\"的组合.",
+"data type": "整数",
+"@默认值": "ZIP操作标志.默认"
+   }
+]
+  },
+  {
+串为CP437编码（DOS的默认编码）."method name": "添加目录",
+串为CP437编码（DOS的默认编码）."comment": "向已打开的ZIP包添加空文件夹目录.",
+串为CP437编码（DOS的默认编码）."result comment": "成功返回0,否则返回错误码.",
+串为CP437编码（DOS的默认编码）."data type": "逻辑型",
+串为CP437编码（DOS的默认编码）."@嵌入式方法": "\"\"",
+串为CP437编码（DOS的默认编码）."parameters": [
+   {
+"parameter name": "目录名",
+"comment": "文件夹名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "操作标志",
+"comment": "参考\"ZIP操作标志\"常量,默认为\"UTF8编码\"与\"覆盖已存在文件\"的组合.",
+"data type": "整数",
+"@默认值": "ZIP操作标志.默认"
+   }
+串为CP437编码（DOS的默认编码）.]
+  },
+  {
+"method name": "关闭",
+"comment": "保存所有修改,并关闭打开的ZIP包.",
+"result comment": "成功返回0,失败则返回错误码.",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+result comment": "成功返回0,失败则返回错误码.""method name": "放弃更改",
+result comment": "成功返回0,失败则返回错误码.""comment": "丢弃所有更改,并关闭打开的ZIP包.",
+result comment": "成功返回0,失败则返回错误码.""result comment": "成功返回0,失败则返回错误码.",
+result comment": "成功返回0,失败则返回错误码.""data type": "整数",
+result comment": "成功返回0,失败则返回错误码.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否已打开",
+}"comment": "返回当前对象对应的ZIP包是否是打开状态.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取条目数",
+
+"comment": "取当地打开的ZIP包中的条目数(文件及文件夹)",
+
+"result comment": "成功返回条目数量,失败返回-1.",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "查找条目",
+}"comment": "在当前打开的zip文件中查找条目.",
+}"result comment": "成功则返回条目索引,失败返回-1.",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "条目名",
+"comment": "文件或文件夹名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "操作标志",
+"comment": "参考\"ZIP操作标志\"查找和名称类相关常量.\n可用\"位或\"组合使用.",
+"data type": "整数",
+"@默认值": "ZIP操作标志.忽略大小写"
+   }
+}]
+  },
+  {
+
+"method name": "取条目信息",
+
+"comment": "取当前打开ZIP包中条目的详细信息.",
+
+"result comment": "成功返回0,失败则返回错误码.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "条目索引",
+"comment": "条目索引",
+"data type": "长整数"
+   },
+   {
+"parameter name": "条目信息",
+"comment": "用于接收条目信息的变量",
+"data type": "ZIP条目信息",
+"@需求类型": "可写入变量"
+   }
+
+]
+  },
+  {
+
+"method name": "取条目信息2",
+
+"comment": "取当前打开ZIP包中条目的详细信息.",
+
+"result comment": "成功返回0,失败则返回错误码.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "条目名",
+"comment": "条目文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "条目信息",
+"comment": "用于接收条目信息的变量",
+"data type": "ZIP条目信息",
+"@需求类型": "可写入变量"
+   }
+
+]
+  },
+  {
+回条目索引,失败返回-1."method name": "取所有条目",
+回条目索引,失败返回-1."comment": "取当前打开ZIP包中所有条目",
+回条目索引,失败返回-1."result comment": "成功返回0,失败则返回错误码.",
+回条目索引,失败返回-1."data type": "整数",
+回条目索引,失败返回-1."@禁止流程检查": "真",
+回条目索引,失败返回-1."parameters": [
+   {
+"parameter name": "条目集",
+"comment": "用于接收条目集的变量",
+"data type": "ZIP条目集类",
+"@需求类型": "可写入变量"
+   }
+回条目索引,失败返回-1.]
+  },
+  {
+
+"method name": "取条目数据",
+
+"comment": "取当前打开的ZIP包条目文件的字节集数据",
+
+"result comment": "成功返回0,失败则返回错误码.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "条目索引",
+"data type": "长整数"
+   },
+   {
+"parameter name": "条目数据",
+"comment": "用于接收条目集的字节集变量",
+"data type": "字节集类",
+"@需求类型": "可写入变量"
+   }
+
+]
+  },
+  {
+437编码（DOS的默认编码）."method name": "添加目录""method name": "取条目数据2",
+437编码（DOS的默认编码）."method name": "添加目录""comment": "取当前打开的ZIP包条目文件的字节集数据.",
+437编码（DOS的默认编码）."method name": "添加目录""result comment": "成功返回0,失败则返回错误码.",
+437编码（DOS的默认编码）."method name": "添加目录""data type": "整数",
+437编码（DOS的默认编码）."method name": "添加目录""@嵌入式方法": "\"\"",
+437编码（DOS的默认编码）."method name": "添加目录""parameters": [
+   {
+"parameter name": "条目名",
+"comment": "条目文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "条目数据",
+"comment": "用于接收条目集的字节集变量",
+"data type": "字节集类",
+"@需求类型": "可写入变量"
+   }
+437编码（DOS的默认编码）."method name": "添加目录"]
+  },
+  {
+"method name": "解压到文件",
+"comment": "提取当前打开ZIP包中条目到文件",
+"result comment": "成功返回0,失败返回错误码.",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "条目索引",
+"comment": "条目索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "文件名",
+"comment": "提供保存到文件名,,如果所处目录不存在,将自动创建.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "解压到文件2",
+
+"comment": "提取当前打开ZIP包中条目到文件",
+
+"result comment": "成功返回0,失败返回错误码.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "条目名",
+"comment": "条目文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名",
+"comment": "提供保存到文件名,,如果所处目录不存在,将自动创建.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "条目名""method name": "解压全部",
+ameter name": "条目名""comment": "提取当前所有文件条目到指定文件夹",
+ameter name": "条目名""result comment": "成功返回0.遇到错误返回错误码.",
+ameter name": "条目名""data type": "整数",
+ameter name": "条目名""@嵌入式方法": "\"\"",
+ameter name": "条目名""parameters": [
+   {
+"parameter name": "欲解压到目录",
+"comment": "提供欲保存到的目录路径,如果不存在,将自动创建.",
+"data type": "文本型"
+   }
+ameter name": "条目名"]
+  },
+  {
+result comment": "成功返回0,失败返回错误码.""method name": "删除条目",
+result comment": "成功返回0,失败返回错误码.""comment": "删除当前打开ZIP包中条目文件",
+result comment": "成功返回0,失败返回错误码.""result comment": "成功返回0,失败返回错误码.",
+result comment": "成功返回0,失败返回错误码.""data type": "整数",
+result comment": "成功返回0,失败返回错误码.""@嵌入式方法": "\"\"",
+result comment": "成功返回0,失败返回错误码.""parameters": [
+   {
+"parameter name": "条目索引",
+"comment": "条目索引",
+"data type": "长整数"
+   }
+result comment": "成功返回0,失败返回错误码."]
+  },
+  {
+
+"method name": "删除条目2",
+
+"comment": "删除当前打开ZIP包中条目文件",
+
+"result comment": "成功返回0,失败返回错误码.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "条目名",
+"comment": "条目文件名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "重命名条目",
+ }"comment": "重命名当前打开ZIP包中条目文件",
+ }"result comment": "成功返回0,失败返回错误码.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "条目索引",
+"comment": "条目文件名",
+"data type": "长整数"
+   },
+   {
+"parameter name": "新条目名",
+"comment": "新条目名",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "重命名条目2",
+
+"comment": "重命名当前打开ZIP包中条目文件",
+
+"result comment": "成功返回0,失败返回错误码.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "条目名",
+"comment": "条目文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新条目名",
+"comment": "新条目名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "新条目名""method name": "置条目压缩方法",
+ameter name": "新条目名""comment": "设置当前打开ZIP包中条目的压缩方法",
+ameter name": "新条目名""result comment": "成功返回0,失败返回错误码.",
+ameter name": "新条目名""data type": "整数",
+ameter name": "新条目名""@嵌入式方法": "\"\"",
+ameter name": "新条目名""parameters": [
+   {
+"parameter name": "条目索引",
+"comment": "条目文件名",
+"data type": "长整数"
+   },
+   {
+"parameter name": "压缩方法",
+"comment": "压缩方法,参考\"ZIP压缩方法\"常量.",
+"data type": "整数"
+   }
+ameter name": "新条目名"]
+  },
+  {
+"method name": "置条目压缩方法2",
+"comment": "设置当前打开ZIP包中条目的压缩方法",
+"result comment": "成功返回0,失败返回错误码.",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "条目名",
+"comment": "条目文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "压缩方法",
+"comment": "压缩方法,参考\"ZIP压缩方法\"常量.",
+"data type": "整数"
+   }
+]
+  },
+  {
+ }"method name": "置条目密码",
+ }"comment": "设置当前打开ZIP包中条目的加密方法和密码",
+ }"result comment": "成功返回0,失败返回错误码.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "条目索引",
+"comment": "条目文件名",
+"data type": "长整数"
+   },
+   {
+"parameter name": "加密方法",
+"comment": "参考\"ZIP加密方法\"常量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "密码",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+comment": "条目文件名""method name": "置条目密码2",
+comment": "条目文件名""comment": "设置当前打开ZIP包中条目的加密方法和密码",
+comment": "条目文件名""result comment": "成功返回0,失败返回错误码.",
+comment": "条目文件名""data type": "整数",
+comment": "条目文件名""@嵌入式方法": "\"\"",
+comment": "条目文件名""parameters": [
+   {
+"parameter name": "条目名",
+"comment": "条目文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "加密方法",
+"comment": "参考\"ZIP加密方法\"常量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "密码",
+"data type": "文本型"
+   }
+comment": "条目文件名"]
+  },
+  {
+ethod name": "删除条目2""method name": "置默认密码",
+ethod name": "删除条目2""comment": "置压缩文件默认密码,解压有密码的压缩文件时调用.",
+ethod name": "删除条目2""result comment": "成功返回0,失败返回错误码.",
+ethod name": "删除条目2""data type": "整数",
+ethod name": "删除条目2""@嵌入式方法": "\"\"",
+ethod name": "删除条目2""parameters": [
+   {
+"parameter name": "密码",
+"comment": "密码",
+"data type": "文本型"
+   }
+ethod name": "删除条目2"]
+  },
+  {
+thod name": "删除条目2""data type": "整数""method name": "置归档注释",
+thod name": "删除条目2""data type": "整数""comment": "用于设置ZIP归档文件(压缩包)的注释",
+thod name": "删除条目2""data type": "整数""result comment": "成功返回0,失败返回错误码.",
+thod name": "删除条目2""data type": "整数""data type": "整数",
+thod name": "删除条目2""data type": "整数""@禁止流程检查": "真",
+thod name": "删除条目2""data type": "整数""parameters": [
+   {
+"parameter name": "注释内容",
+"comment": "注释内容字符串",
+"data type": "文本型"
+   }
+thod name": "删除条目2""data type": "整数"]
+  },
+  {
+ZIP归档文件(压缩包)的注释"method name": "取归档注释",
+ZIP归档文件(压缩包)的注释"comment": "取ZIP归档文件(压缩包)的注释",
+ZIP归档文件(压缩包)的注释"result comment": "成功返回注释文本,否则返回空文本.",
+ZIP归档文件(压缩包)的注释"data type": "文本型",
+ZIP归档文件(压缩包)的注释"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "置归档标志",
+ }"comment": "用于设置ZIP归档文件(压缩包)的标志位.\n控制ZIP文件的一些特性和行为.",
+ }"result comment": "成功返回0,失败返回错误码.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "归档标志",
+"comment": "参考常量\"ZIP归档标志\"",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否启用",
+"comment": "真为启用,假为禁用.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+}"method name": "取归档标志",
+}"comment": "取ZIP归档文件(压缩包)的标志位,用于检查归档是否为只读等标志.",
+}"result comment": "成功时返回对应标志的整数值(通常是 0 或 1,表示该标志是否启用),失败返回-1.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "检查归档标志",
+"comment": "参考常量\"ZIP归档标志\"",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "加密方法""method name": "撤销修改",
+ameter name": "加密方法""comment": "用于撤销对单个文件条目的修改,比如修改了某个文件的压缩方式或加密方式.\n可以用这个方法来撤销这些修改.",
+ameter name": "加密方法""result comment": "成功返回0,失败返回错误码.",
+ameter name": "加密方法""data type": "整数",
+ameter name": "加密方法""@嵌入式方法": "\"\"",
+ameter name": "加密方法""parameters": [
+   {
+"parameter name": "条目索引",
+"comment": "文件条目名索引",
+"data type": "长整数"
+   }
+ameter name": "加密方法"]
+  },
+  {
+ }"method name": "撤销修改2",
+ }"comment": "用于撤销对单个文件条目的修改,比如修改了某个文件的压缩方式或加密方式.\n可以用这个方法来撤销这些修改.",
+ }"result comment": "成功返回0,失败返回错误码.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "条目名",
+"comment": "文件条目名",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "撤销所有修改",
+data type": "整数""comment": "撤销对所有文件条目的修改,会将所有文件条目恢复到打开ZIP文件时的状态.",
+data type": "整数""result comment": "成功返回0,失败返回错误码.",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "条目名""method name": "撤销全局归档修改",
+ameter name": "条目名""comment": "撤销对ZIP归档文件本身的全局修改,比如撤销对ZIP注释.\n归档标志等全局属性的修改.不会影响对单个文件条目的修改.",
+ameter name": "条目名""result comment": "成功返回0,失败返回错误码.",
+ameter name": "条目名""data type": "整数",
+ameter name": "条目名""@嵌入式方法": "\"\""
+  },
+  {
+ata type": "整数""@嵌入式方法": "\"\"""method name": "取最后错误文本",
+ata type": "整数""@嵌入式方法": "\"\"""comment": "取最后执行失败的错误文本.",
+ata type": "整数""@嵌入式方法": "\"\"""data type": "文本型",
+ata type": "整数""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ata type": "整数""comment": "撤销对所有文件条目的修改,会将所有文件条目恢复到打开ZIP文件时的状态.""method name": "取错误文本",
+ata type": "整数""comment": "撤销对所有文件条目的修改,会将所有文件条目恢复到打开ZIP文件时的状态.""comment": "通过错误码取得错误文本.",
+ata type": "整数""comment": "撤销对所有文件条目的修改,会将所有文件条目恢复到打开ZIP文件时的状态.""data type": "文本型",
+ata type": "整数""comment": "撤销对所有文件条目的修改,会将所有文件条目恢复到打开ZIP文件时的状态.""@嵌入式方法": "\"\"",
+ata type": "整数""comment": "撤销对所有文件条目的修改,会将所有文件条目恢复到打开ZIP文件时的状态.""parameters": [
+   {
+"parameter name": "错误码",
+"comment": "执行本类操作返回的错误码",
+"data type": "整数"
+   }
+ata type": "整数""comment": "撤销对所有文件条目的修改,会将所有文件条目恢复到打开ZIP文件时的状态."]
+  },
+  {
+
+"method name": "检查压缩方法是否支持",
+
+"comment": "查指定的压缩方法是否被支持",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "压缩方法",
+"comment": "提供要检查的压缩方法,参考常量\"ZIP压缩方法\"",
+"data type": "整数"
+   },
+   {
+"parameter name": "压缩或解压",
+"comment": "真为检查压缩能力,假为检查解压能力.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"method name": "检查加密方法是否支持",
+"comment": "查指定的加密方法是否被支持",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "加密方法",
+"comment": "要检查的加密方法,参考常量\"ZIP加密方法\"",
+"data type": "整数"
+   },
+   {
+"parameter name": "加密或解密",
+"comment": "真为检查加密能力,假为检查解密能力.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+
+"method name": "取库版本",
+
+"comment": "取当前libzip库版本号",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+comment": "真为检查加密能力,假为检查解密能力.""method name": "操作进度已改变",
+comment": "真为检查加密能力,假为检查解密能力.""comment": "当向压缩包内添加或修改条目,会在保存关闭前触发\"操作进度已改变\"事件.\n注意: 本事件只有当调用\"打开文件\"方法时指定\"是否接收进度事件\"参数为真时才会触发.",
+comment": "真为检查加密能力,假为检查解密能力.""type": "event",
+comment": "真为检查加密能力,假为检查解密能力.""data type": "整数",
+comment": "真为检查加密能力,假为检查解密能力.""parameters": [
+   {
+"parameter name": "进度值",
+"comment": "进度值是一个0.0到1.0之间的值,表示完成所有操作的百分比.",
+"data type": "小数"
+   }
+comment": "真为检查加密能力,假为检查解密能力."]
+  },
+  {
+data type": "文本型""method name": "操作取消控制事件",
+data type": "文本型""comment": "执行一些耗时操作时触发此事件,触发频率是由libzip库控制的.\n通常在处理大量数据时会定期调用,以检查是否需要取消操作.\n这个机制可以防止程序在执行耗时操作时无法响应用户的取消请求.\n注意: 本事件只有当调用\"打开文件\"方法时指定\"是否接收取消控制事件\"参数为真时才会触发.",
+data type": "文本型""result comment": "返回0继续操作,返回非0则取消所有未完成的操作.",
+data type": "文本型""type": "event",
+data type": "文本型""data type": "整数"
+  }
+]
+ },
+ {
+"class name": "ZIP条目信息",
+"comment": "表示ZIP包中的文件的信息详情",
+"methods": [
+  {
+}"method name": "条目名",
+}"comment": "条目名称,即压缩文件在ZIP包中的文件名.",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "索引",
+
+"comment": "当前条目在ZIP包中的索引.",
+
+"type": "property getter",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "压缩前尺寸",
+data type": "整数""comment": "当前条目(文件)压缩前尺寸.",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "长整数",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+ata type": "整数""type": "property getter""method name": "压缩后尺寸",
+ata type": "整数""type": "property getter""comment": "当前条目(文件)压缩后尺寸.",
+ata type": "整数""type": "property getter""type": "property getter",
+ata type": "整数""type": "property getter""data type": "长整数",
+ata type": "整数""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "检查归档标志""method name": "最后修改时间",
+ameter name": "检查归档标志""comment": "当前条目(文件)的最后修改时间.\n表示自 Unix 纪元（1970年1月1日 UTC）以来的秒数.",
+ameter name": "检查归档标志""type": "property getter",
+ameter name": "检查归档标志""data type": "长整数",
+ameter name": "检查归档标志""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "压缩方法",
+
+"comment": "当前条目(文件)所使用的压缩方法.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "压缩方法""method name": "加密方法",
+thod name": "压缩方法""comment": "当前条目(文件)所使用的压缩方法.",
+thod name": "压缩方法""type": "property getter",
+thod name": "压缩方法""data type": "整数",
+thod name": "压缩方法""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "CRC",
+}"comment": "当前条目(文件)循环冗余校验.",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "ZIP条目集类",
+"comment": "ZIP条目信息对象数组",
+"base class": "对象数组模板类",
+"@模板实现类": "\"ZIP条目信息\""
+ },
+ {
+"class name": "ZIP打开模式",
+"comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用",
+"constants": [
+  {
+}"constant name": "只读模式",
+}"comment": "只允许读取操作,不能修改、添加或删除文件,不能更改压缩方式.\n适用场景:查看ZIP内容,提取文件,防止意外修改.",
+}"data type": "整数",
+}"initial value": "@CLIBZIPWrapper::READ_ONLY"
+  },
+  {
+}"constant name": "创建模式",
+}"comment": "如果文件不存在则创建新的ZIP文件,如果文件存在则打开现有文件,允许读写操作.\n适用场景:创建新的ZIP文件,修改现有ZIP文件.",
+}"data type": "整数",
+}"initial value": "@CLIBZIPWrapper::CREATE"
+  },
+  {
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""constant name": "独占创建模式",
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""comment": "只创建新文件,如果文件已存在则失败,保证不会覆盖现有文件.\n适用场景:确保创建全新的ZIP文件,防止覆盖现有文件.",
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""data type": "整数",
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""initial value": "@CLIBZIPWrapper::CREATE_EXCLUSIVE"
+  },
+  {
+}"constant name": "截断模式",
+}"comment": "如果文件存在则清空内容,创建全新的空ZIP文件.\n适用场景:需要覆盖现有ZIP文件,不需要保留原有内容.",
+}"data type": "整数",
+}"initial value": "@CLIBZIPWrapper::TRUNCATE"
+  },
+  {
+(文件)循环冗余校验."constant name": "一致性检查模式",
+(文件)循环冗余校验."comment": "打开时检查ZIP文件的一致性,验证文件结构和数据完整性,可以与其他模式组合使用.\n适用场景:处理可能损坏的ZIP文件,需要验证ZIP文件完整性时.",
+(文件)循环冗余校验."data type": "整数",
+(文件)循环冗余校验."initial value": "@CLIBZIPWrapper::CHECK_CONSISTENCY"
+  }
+]
+ },
+ {
+"class name": "ZIP压缩方法",
+"comment": "用于设置条目的ZIP压缩算法",
+"constants": [
+  {
+"type": "property getter""constant name": "默认",
+"type": "property getter""comment": "默认,通常会在\"DEFLATE\"和\"存储\"之间选择.\n适用场景:当你不确定使用哪种压缩方法时.",
+"type": "property getter""data type": "整数",
+"type": "property getter""initial value": "@CLIBZIPWrapper::COMP_DEFAULT"
+  },
+  {
+"initial value": "@CLIBZIPWrapper::TRUNCATE""constant name": "存储",
+"initial value": "@CLIBZIPWrapper::TRUNCATE""comment": "直接存储数据,不进行任何压缩,速度最快.\n适用场景:已经压缩过的文件（如JPG、PNG、MP3等）.\n加密文件,非常小的文件（小于1KB）,需要快速访问的文件.",
+"initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数",
+"initial value": "@CLIBZIPWrapper::TRUNCATE""initial value": "@CLIBZIPWrapper::COMP_STORE"
+  },
+  {
+omment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""data type": "整数""constant name": "DEFLATE压缩",
+omment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""data type": "整数""comment": "ZIP格式最常用的压缩算法,使用LZ77算法和Huffman编码的组合.\n压缩速度快,压缩率适中（通常可达到2:1到3:1）.\n适用场景:文本文件,普通文档,需要快速解压的场合.",
+omment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""data type": "整数""data type": "整数",
+omment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""data type": "整数""initial value": "@CLIBZIPWrapper::COMP_DEFLATE"
+  },
+  {
+"data type": "整数""constant name": "BZIP2压缩",
+"data type": "整数""comment": "使用Burrows-Wheeler变换的压缩算法,比DEFLATE提供更好的压缩率.\n压缩和解压速度较慢,内存使用较多.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@CLIBZIPWrapper::COMP_BZIP2"
+  },
+  {
+initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""constant name": "LZMA压缩",
+initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""comment": "7-Zip使用的压缩算法(当前版本未实现)",
+initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""data type": "整数",
+initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""initial value": "@CLIBZIPWrapper::COMP_LZMA"
+  },
+  {
+
+"constant name": "ZSTD压缩",
+
+"comment": "Facebook开发的现代压缩算法(当前版本未实现)",
+
+"data type": "整数",
+
+"initial value": "@CLIBZIPWrapper::COMP_ZSTD"
+  }
+]
+ },
+ {
+"class name": "ZIP加密方法",
+"comment": "用于定义ZIP文件的加密方法",
+"constants": [
+  {
+
+"constant name": "不加密",
+
+"comment": "文件以明文形式存储在ZIP中,任何人都可以直接读取文件内容.",
+
+"data type": "整数",
+
+"initial value": "@CLIBZIPWrapper::ENC_NONE"
+  },
+  {
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""constant name": "AES128",
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""comment": "使用128位AES加密,提供基本的安全性.",
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""data type": "整数",
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""initial value": "@CLIBZIPWrapper::ENC_AES_128"
+  },
+  {
+nstant name": "不加密""constant name": "AES192",
+nstant name": "不加密""comment": "Z密钥长度为192位提供最高级别的安全性.",
+nstant name": "不加密""data type": "整数",
+nstant name": "不加密""initial value": "@CLIBZIPWrapper::ENC_AES_192"
+  },
+  {
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""constant name": "AES256",
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""comment": "使用256位AES加密提供最高级别的安全性.",
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""data type": "整数",
+comment": "ZIP打开模式的打开模式,可用\"位或\"组合使用""initial value": "@CLIBZIPWrapper::ENC_AES_256"
+  }
+]
+ },
+ {
+"class name": "ZIP错误码",
+"comment": "ZIP错误码",
+"constants": [
+  {
+"initial value": "@CLIBZIPWrapper::TRUNCATE""constant name": "成功",
+"initial value": "@CLIBZIPWrapper::TRUNCATE""comment": "操作成功完成，没有错误",
+"initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数",
+"initial value": "@CLIBZIPWrapper::TRUNCATE""initial value": "@ZIP_ER_OK"
+  },
+  {
+constants": [
+"constant name": "多磁盘",
+constants": [
+"comment": "不支持跨多个磁盘的ZIP文件,这是一个较老的ZIP格式特性,现代实现通常不支持.",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "@ZIP_ER_MULTIDISK"
+  },
+  {
+
+"constant name": "重命名",
+
+"comment": "重命名临时文件失败,通常发生在写入操作完成后.尝试用临时文件替换原文件时.",
+
+"data type": "整数",
+
+"initial value": "@ZIP_ER_RENAME"
+  },
+  {
+initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""constant name": "关闭失败",
+initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""comment": "关闭ZIP文件时发生错误,可能是文件系统问题或资源释放问题.",
+initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""data type": "整数",
+initial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""initial value": "@ZIP_ER_CLOSE"
+  },
+  {
+
+"constant name": "定位",
+
+"comment": "文件定位操作失败,在ZIP文件中移动读写位置时发生错误.",
+
+"data type": "整数",
+
+"initial value": "@ZIP_ER_SEEK"
+  },
+  {
+"data type": "整数""constant name": "读取",
+"data type": "整数""comment": "读取数据时发生错误,可能是文件损坏或I/O错误.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@ZIP_ER_READ"
+  },
+  {
+
+"constant name": "写入",
+
+"comment": "写入数据时发生错误,可能是磁盘空间不足或权限问题.",
+
+"data type": "整数",
+
+"initial value": "@ZIP_ER_WRITE"
+  },
+  {
+"data type": "整数""constant name": "CRC校验失败",
+"data type": "整数""comment": "CRC校验失败,表示文件内容可能已损坏或被修改.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@ZIP_ER_CRC"
+  },
+  {
+
+"constant name": "已关闭",
+
+"comment": "尝试操作一个已经关闭的ZIP存档,需要重新打开存档才能继续操作.",
+
+"data type": "整数",
+
+"initial value": "@ZIP_ER_ZIPCLOSED"
+  },
+  {
+ial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""constant name": "LZMA压缩""constant name": "不存在",
+ial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""constant name": "LZMA压缩""comment": "在ZIP存档中找不到指定的文件,文件名可能错误或文件已被删除.",
+ial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""constant name": "LZMA压缩""data type": "整数",
+ial value": "@CLIBZIPWrapper::TRUNCATE""data type": "整数""constant name": "LZMA压缩""initial value": "@ZIP_ER_NOENT"
+  },
+  {
+data type": "整数""initial value": "@ZIP_ER_CRC""constant name": "已存在",
+data type": "整数""initial value": "@ZIP_ER_CRC""comment": "要添加的文件名在ZIP存档中已存在,需要先删除已有文件或使用不同名称",
+data type": "整数""initial value": "@ZIP_ER_CRC""data type": "整数",
+data type": "整数""initial value": "@ZIP_ER_CRC""initial value": "@ZIP_ER_EXISTS"
+  },
+  {
+}"constant name": "打开失败",
+}"comment": "无法打开ZIP文件,可能是权限问题或文件损坏.",
+}"data type": "整数",
+}"initial value": "@ZIP_ER_OPEN"
+  },
+  {
+
+"constant name": "临时文件",
+
+"comment": "创建临时文件失败,可能是临时目录权限问题或空间不足.",
+
+"data type": "整数",
+
+"initial value": "@ZIP_ER_TMPOPEN"
+  },
+  {
+}"constant name": "ZLIB错误",
+}"comment": "使用ZLIB压缩库时发生错误,压缩或解压缩过程中的问题.",
+}"data type": "整数",
+}"initial value": "@ZIP_ER_ZLIB"
+  },
+  {
+"comment": "创建临时文件失败,可能是临时目录权限问题或空间不足.""constant name": "内存分配失败",
+"comment": "创建临时文件失败,可能是临时目录权限问题或空间不足.""comment": "内存分配失败",
+"comment": "创建临时文件失败,可能是临时目录权限问题或空间不足.""data type": "整数",
+"comment": "创建临时文件失败,可能是临时目录权限问题或空间不足.""initial value": "@ZIP_ER_MEMORY"
+  },
+  {
+}"constant name": "已更改",
+}"comment": "条目已被更改,可能影响一致性检查.",
+}"data type": "整数",
+}"initial value": "@ZIP_ER_CHANGED"
+  },
+  {
+data type": "整数""data type": "整数""constant name": "不支持压缩",
+data type": "整数""data type": "整数""comment": "不支持使用的压缩方法.",
+data type": "整数""data type": "整数""data type": "整数",
+data type": "整数""data type": "整数""initial value": "@ZIP_ER_COMPNOTSUPP"
+  },
+  {
+ss name": "ZIP打开模式""constant name": "文件结束",
+ss name": "ZIP打开模式""comment": "过早遇到文件结束,文件可能被截断.",
+ss name": "ZIP打开模式""data type": "整数",
+ss name": "ZIP打开模式""initial value": "@ZIP_ER_EOF"
+  },
+  {
+}"constant name": "无效参数",
+}"comment": "传入的参数无效",
+}"data type": "整数",
+}"initial value": "@ZIP_ER_INVAL"
+  },
+  {
+nstant name": "临时文件""constant name": "非ZIP文件",
+nstant name": "临时文件""comment": "文件不是有效的ZIP格式",
+nstant name": "临时文件""data type": "整数",
+nstant name": "临时文件""initial value": "@ZIP_ER_NOZIP"
+  },
+  {
+
+"constant name": "内部错误",
+
+"comment": "内部错误",
+
+"data type": "整数",
+
+"initial value": "@ZIP_ER_INTERNAL"
+  },
+  {
+stant name": "临时文件""comment": "文件不是有效的ZIP格式""constant name": "存档数据不一致",
+stant name": "临时文件""comment": "文件不是有效的ZIP格式""comment": "ZIP存档数据不一致",
+stant name": "临时文件""comment": "文件不是有效的ZIP格式""data type": "整数",
+stant name": "临时文件""comment": "文件不是有效的ZIP格式""initial value": "@ZIP_ER_INCONS"
+  },
+  {
+"initial value": "@ZIP_ER_INTERNAL""constant name": "无法删除",
+"initial value": "@ZIP_ER_INTERNAL""comment": "无法删除文件",
+"initial value": "@ZIP_ER_INTERNAL""data type": "整数",
+"initial value": "@ZIP_ER_INTERNAL""initial value": "@ZIP_ER_REMOVE"
+  },
+  {
+}"constant name": "已删除",
+}"comment": "尝试访问的条目已经被标记为删除",
+}"data type": "整数",
+}"initial value": "@ZIP_ER_DELETED"
+  },
+  {
+nstant name": "临时文件""constant name": "不支持加密",
+nstant name": "临时文件""comment": "不支持的加密方法",
+nstant name": "临时文件""data type": "整数",
+nstant name": "临时文件""initial value": "@ZIP_ER_ENCRNOTSUPP"
+  },
+  {
+data type": "整数""data type": "整数""constant name": "只读",
+data type": "整数""data type": "整数""comment": "尝试修改只读的ZIP文件",
+data type": "整数""data type": "整数""data type": "整数",
+data type": "整数""data type": "整数""initial value": "@ZIP_ER_RDONLY"
+  },
+  {
+}"constant name": "无密码",
+}"comment": "未提供密码",
+}"data type": "整数",
+}"initial value": "@ZIP_ER_NOPASSWD"
+  },
+  {
+stant name": "临时文件""data type": "整数""constant name": "密码错误",
+stant name": "临时文件""data type": "整数""comment": "提供的密码错误",
+stant name": "临时文件""data type": "整数""data type": "整数",
+stant name": "临时文件""data type": "整数""initial value": "@ZIP_ER_WRONGPASSWD"
+  },
+  {
+的条目已经被标记为删除"constant name": "不支持操作",
+的条目已经被标记为删除"comment": "不支持的操作",
+的条目已经被标记为删除"data type": "整数",
+的条目已经被标记为删除"initial value": "@ZIP_ER_OPNOTSUPP"
+  },
+  {
+
+"constant name": "使用中",
+
+"comment": "资源正被其他操作使用",
+
+"data type": "整数",
+
+"initial value": "@ZIP_ER_INUSE"
+  },
+  {
+}"constant name": "定位指示",
+}"comment": "获取文件位置时发生错误,文件指针操作问题.",
+}"data type": "整数",
+}"initial value": "@ZIP_ER_TELL"
+  },
+  {
+"initial value": "@ZIP_ER_DELETED""constant name": "压缩数据无效",
+"initial value": "@ZIP_ER_DELETED""comment": "压缩数据无效",
+"initial value": "@ZIP_ER_DELETED""data type": "整数",
+"initial value": "@ZIP_ER_DELETED""initial value": "@ZIP_ER_COMPRESSED_DATA"
+  },
+  {
+nstant name": "无效参数""constant name": "已取消",
+nstant name": "无效参数""comment": "操作已取消",
+nstant name": "无效参数""data type": "整数",
+nstant name": "无效参数""initial value": "@ZIP_ER_CANCELLED"
+  },
+  {
+stant name": "无效参数""data type": "整数""constant name": "数据长度",
+stant name": "无效参数""data type": "整数""comment": "数据长度与预期不符",
+stant name": "无效参数""data type": "整数""data type": "整数",
+stant name": "无效参数""data type": "整数""initial value": "@ZIP_ER_DATA_LENGTH"
+  },
+  {
+}"constant name": "不允许",
+}"comment": "在torrentzip中不允许的操作,特定格式的限制.",
+}"data type": "整数",
+}"initial value": "@ZIP_ER_NOT_ALLOWED"
+  },
+  {
+}"constant name": "截断",
+}"comment": "ZIP存档可能被截断或损坏,文件不完整或传输中断.",
+}"data type": "整数",
+}"initial value": "@ZIP_ER_TRUNCATED_ZIP"
+  }
+]
+ },
+ {
+"class name": "ZIP归档标志",
+"comment": "ZIP归档文件的全局标志,控制压缩包的一些特性和行为,可用\"位或\"组合使用.",
+"constants": [
+  {
+nt name": "无效参数""constant name": "已取消""constant name": "只读模式",
+nt name": "无效参数""constant name": "已取消""comment": "表示ZIP文件为只读模式,一旦设置就不能被清除,防止对ZIP文件进行修改操作.",
+nt name": "无效参数""constant name": "已取消""data type": "整数",
+nt name": "无效参数""constant name": "已取消""initial value": "@ZIP_AFL_RDONLY"
+  },
+  {
+"data type": "整数""constant name": "TZIP格式",
+"data type": "整数""comment": "表示当前ZIP文件是torrentzip格式,用于确保相同内容的ZIP文件有相同的哈希值.\n主要用于BT下载等场景.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@ZIP_AFL_IS_TORRENTZIP"
+  },
+  {
+"data type": "整数""constant name": "写入TZIP",
+"data type": "整数""comment": "表示要将ZIP文件写入为torrentzip格式.\n设置此标志后,新建或修改的ZIP文件会使用torrentzip格式.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP"
+  },
+  {
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""constant name": "保留空包",
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""comment": "当ZIP文件为空时不要删除文件,默认情况下,如果ZIP文件中没有任何条目,文件会被删除.\n设置此标志可以保留空的ZIP文件.",
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""data type": "整数",
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""initial value": "@ZIP_AFL_CREATE_OR_KEEP_FILE_FOR_EMPTY_ARCHIVE"
+  }
+]
+ },
+ {
+"class name": "ZIP操作标志",
+"comment": "用于控制查找,读取,编码,创建等行为的标志位,根据不同的操作可用\"位或\"组合使用.",
+"constants": [
+  {
+nstant name": "无效参数""constant name": "忽略大小写",
+nstant name": "无效参数""comment": "忽略大小写进行匹配,例如：\"Test.txt\" 和 \"test.TXT\" 会被视为相同.",
+nstant name": "无效参数""data type": "整数",
+nstant name": "无效参数""initial value": "@ZIP_FL_NOCASE"
+  },
+  {
+
+"constant name": "忽略目录",
+
+"comment": "忽略目录部分进行匹配,例如：\"dir/test.txt\" 和 \"test.txt\" 会被视为相同,只匹配文件名部分.",
+
+"data type": "整数",
+
+"initial value": "@ZIP_FL_NODIR"
+  },
+  {
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""constant name": "读取压缩数据",
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""comment": "读取压缩数据,直接获取压缩形式的数据,不进行解压用于需要处理原始压缩数据的场景.",
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""data type": "整数",
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""initial value": "@ZIP_FL_COMPRESSED"
+  },
+  {
+ata type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""initial value": "@ZIP_FL_COMPRESSED""constant name": "使用原始数据",
+ata type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""initial value": "@ZIP_FL_COMPRESSED""comment": "忽略所有对文件的修改,读取ZIP文件中的原始版本.",
+ata type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""initial value": "@ZIP_FL_COMPRESSED""data type": "整数",
+ata type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""initial value": "@ZIP_FL_COMPRESSED""initial value": "@ZIP_FL_UNCHANGED"
+  },
+  {
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""constant name": "读取加密数据",
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""comment": "读取加密数据,包含了\"读取压缩数据\"的功能用于处理加密文件.",
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""data type": "整数",
+data type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""initial value": "@ZIP_FL_ENCRYPTED"
+  },
+  {
+ata type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""data type": "整数""constant name": "猜测编码",
+ata type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""data type": "整数""comment": "自动尝试确定正确的编码方式",
+ata type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""data type": "整数""data type": "整数",
+ata type": "整数""initial value": "@ZIP_AFL_WANT_TORRENTZIP""data type": "整数""initial value": "@ZIP_FL_ENC_GUESS"
+  },
+  {
+
+"constant name": "原始字符串",
+
+"comment": "获取未修改的原始字符串,不进行任何编码转换.",
+
+"data type": "整数",
+
+"initial value": "@ZIP_FL_ENC_RAW"
+  },
+  {
+的条目已经被标记为删除"constant name": "严格模式",
+的条目已经被标记为删除"comment": "严格遵循规范,按照ZIP规范严格处理编码.",
+的条目已经被标记为删除"data type": "整数",
+的条目已经被标记为删除"initial value": "@ZIP_FL_ENC_STRICT"
+  },
+  {
+nstant name": "原始字符串""constant name": "UTF8编码",
+nstant name": "原始字符串""comment": "指定字符串为UTF-8编码.",
+nstant name": "原始字符串""data type": "整数",
+nstant name": "原始字符串""initial value": "@ZIP_FL_ENC_UTF_8"
+  },
+  {
+
+"constant name": "CP437编码",
+
+"comment": "指定字符串为CP437编码（DOS的默认编码）.",
+
+"data type": "整数",
+
+"initial value": "@ZIP_FL_ENC_CP437"
+  },
+  {
+ss name": "ZIP归档标志""constant name": "本地头",
+ss name": "ZIP归档标志""comment": "搜索ZIP文件的本地头部信息.",
+ss name": "ZIP归档标志""data type": "整数",
+ss name": "ZIP归档标志""initial value": "@ZIP_FL_LOCAL"
+  },
+  {
+}"constant name": "中央目录",
+}"comment": "搜索ZIP文件的中央目录",
+}"data type": "整数",
+}"initial value": "@ZIP_FL_CENTRAL"
+  },
+  {
+
+"constant name": "覆盖已存在文件",
+
+"comment": "用于添加文件时，如果同名文件存在则覆盖.",
+
+"data type": "整数",
+
+"initial value": "@ZIP_FL_OVERWRITE"
+  },
+  {
+
+"constant name": "默认",
+
+"comment": "默认为\"覆盖已存在文件\"与\"UTF8编码\"的组合.",
+
+"data type": "整数",
+
+"initial value": "0"
+  }
+]
+ }
+问本程序中的接口需要引用模块"libzip压缩解压".]
+}

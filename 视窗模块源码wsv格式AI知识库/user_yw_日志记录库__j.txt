@@ -1,0 +1,441 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"日志记录库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+"class name": "日志记录类_",
+"@视窗.外部库.x64-debug": "\"rzl\\\\spdlogx64d.lib\"",
+"@视窗.外部库.x64-release": "\"rzl\\\\spdlogx64.lib\"",
+"@视窗.外部库.win32-debug": "\"rzl\\\\spdlogx86d.lib\"",
+"@视窗.外部库.win32-release": "\"rzl\\\\spdlogx86.lib\"",
+"@视窗.外部头文件.全局-211": "\"rzl\\\\logg.h\"",
+"methods": [
+  {
+ 1、调试 2、信息 3、警告 4、错误 5、重要"method name": "创建基本日志_",
+ 1、调试 2、信息 3、警告 4、错误 5、重要"comment": "日志文件会被一直写入,不断变大",
+ 1、调试 2、信息 3、警告 4、错误 5、重要"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ 1、调试 2、信息 3、警告 4、错误 5、重要"parameters": [
+   {
+"parameter name": "日志名",
+"comment": "例如：“运行日志”，也可留空",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文件名",
+"comment": "例如“C:\\\\日志.txt”",
+"data type": "文本型"
+   }
+ 1、调试 2、信息 3、警告 4、错误 5、重要]
+  },
+  {
+ 整数"method name": "创建循环日志_",
+ 整数"comment": "在设定的文件范围内循环记录",
+ 整数"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ 整数"parameters": [
+   {
+"parameter name": "日志名",
+"comment": "例如：“运行日志”，也可留空",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文件名",
+"comment": "例如“C:\\\\日志.txt”",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件最大字节",
+"data type": "长整数",
+"@默认值": "5242880"
+   },
+   {
+"parameter name": "最大文件数",
+"data type": "长整数",
+"@默认值": "9999999"
+   }
+ 整数]
+  },
+  {
+ }"method name": "创建每日日志_",
+ }"comment": "每天指定时间点，创建一个新文件(第一次是直接创建的)",
+ }"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ }"parameters": [
+   {
+"parameter name": "日志名",
+"comment": "例如：“运行日志”，也可留空",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文件名",
+"comment": "例如“C:\\\\日志.txt”",
+"data type": "文本型"
+   },
+   {
+"parameter name": "指定小时",
+"data type": "整数",
+"@默认值": "23"
+   },
+   {
+"parameter name": "指定分钟",
+"data type": "整数",
+"@默认值": "59"
+   },
+   {
+"parameter name": "truncate",
+"comment": "默认即可",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "最大文件数",
+"data type": "长整数",
+"@默认值": "9999999"
+   }
+ }]
+  },
+  {
+"method name": "置日志等级_",
+"comment": "0、跟踪　1、调试　2、信息　3、警告　4、错误　5、重要",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "等级",
+"comment": "日志等级常量.信息",
+"data type": "整数",
+"@默认值": "日志等级常量.信息"
+   }
+]
+  },
+  {
+"method name": "取日志等级_",
+"comment": "0、跟踪　1、调试　2、信息　3、警告　4、错误　5、重要",
+"result comment": "0、跟踪　1、调试　2、信息　3、警告　4、错误　5、重要",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "保存日志_",
+}"comment": "添对“添加日志_、添加格式日志_跟踪”等操作之后进行保存",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "添加日志_",
+"comment": "添加完毕后，执行“保存日志_”操作，默认不需要主动执行保存，可一次添加多个，一同保存;\n0、跟踪 1、调试 2、信息 3、警告 4、错误 5、重要",
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "等级",
+"comment": "例如：日志等级常量.信息",
+"data type": "整数",
+"@默认值": "日志等级常量.信息"
+   },
+   {
+"parameter name": "立即保存",
+"comment": "如果设置假，请在添加完毕后，执行“保存日志_”操作",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "添加日志_跟踪",
+"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”",
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "添加日志_调试",
+ }"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”",
+ }"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ }"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+result comment": "0、跟踪　1、调试　2、信息　3、警告　4、错误　5、重要""method name": "添加日志_信息",
+result comment": "0、跟踪　1、调试　2、信息　3、警告　4、错误　5、重要""comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”",
+result comment": "0、跟踪　1、调试　2、信息　3、警告　4、错误　5、重要""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+result comment": "0、跟踪　1、调试　2、信息　3、警告　4、错误　5、重要""parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+result comment": "0、跟踪　1、调试　2、信息　3、警告　4、错误　5、重要"]
+  },
+  {
+}"method name": "添加日志_警告",
+}"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "添加日志_错误",
+}"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+data type": "文本型""method name": "添加日志_重要",
+data type": "文本型""comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”",
+data type": "文本型""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ta type": "文本型"]"method name": "添加格式日志_跟踪",
+ta type": "文本型"]"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\" ",
+ta type": "文本型"]"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换数据",
+"@匹配类型": "通用基本型",
+"@可扩展": "\"\""
+   }
+ta type": "文本型"]]
+  },
+  {
+@默认值": "9999999""method name": "添加格式日志_调试",
+@默认值": "9999999""comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\"",
+@默认值": "9999999""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+@默认值": "9999999""parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换数据",
+"@匹配类型": "通用基本型",
+"@可扩展": "\"\""
+   }
+@默认值": "9999999"]
+  },
+  {
+ameter name": "替换数据""method name": "添加格式日志_信息",
+ameter name": "替换数据""comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\"",
+ameter name": "替换数据""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ameter name": "替换数据""parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换数据",
+"@匹配类型": "通用基本型",
+"@可扩展": "\"\""
+   }
+ameter name": "替换数据"]
+  },
+  {
+}"method name": "添加格式日志_警告",
+}"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\"",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换数据",
+"@匹配类型": "通用基本型",
+"@可扩展": "\"\""
+   }
+}]
+  },
+  {
+
+"method name": "添加格式日志_错误",
+
+"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\"",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换数据",
+"@匹配类型": "通用基本型",
+"@可扩展": "\"\""
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "添加格式日志_重要",
+"parameters": [
+"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\"",
+"parameters": [
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换数据",
+"@匹配类型": "通用基本型",
+"@可扩展": "\"\""
+   }
+"parameters": [
+]
+  },
+  {
+"method name": "加载日志_",
+"comment": "加载一个日志文件，筛选查询日志信息；重复加载，会自动清理上一次的加载",
+"result comment": "返回日志总条数，0表示无数据；-1表示错误，例如文件不存在",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "日志路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+er name": "替换数据""method name": "添加格式日志_信息""method name": "取日志总条数_",
+er name": "替换数据""method name": "添加格式日志_信息""data type": "整数"
+  },
+  {
+arameters": [
+]"method name": "读取日志行_数据",
+arameters": [
+]"data type": "文本型",
+arameters": [
+]"parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "整数"
+   }
+arameters": [
+]]
+  },
+  {
+"method name": "读取日志行_范围数据",
+"data type": "文本数组类",
+"parameters": [
+   {
+"parameter name": "起始索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\"""method name": "读日志行_等级数据",
+"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\"""comment": "0、跟踪 1、调试 2、信息 3、警告 4、错误 5、重要",
+"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\"""data type": "文本数组类",
+"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\"""parameters": [
+   {
+"parameter name": "等级",
+"comment": "例如：日志等级常量.信息",
+"data type": "整数",
+"@默认值": "日志等级常量.信息"
+   }
+"comment": "先设置“置日志等级_”，添加完毕后执行“保存日志_”;\n用法同 \"加入格式文本\""]
+  },
+  {
+
+"method name": "读日志行_查询数据",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "关键词",
+"data type": "文本型"
+   },
+   {
+"parameter name": "附加关键词",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "日志等级常量",
+"@文档": "\"category = \\\"日志记录库.附加类\\\"\"",
+"constants": [
+  {
+
+"constant name": "跟踪",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+data type": "文本型""constant name": "调试",
+data type": "文本型""data type": "整数",
+data type": "文本型""initial value": "1"
+  },
+  {
+comment": "加载一个日志文件，筛选查询日志信息；重复加载，会自动清理上一次的加载""constant name": "信息",
+comment": "加载一个日志文件，筛选查询日志信息；重复加载，会自动清理上一次的加载""data type": "整数",
+comment": "加载一个日志文件，筛选查询日志信息；重复加载，会自动清理上一次的加载""initial value": "2"
+  },
+  {
+ }"constant name": "警告",
+ }"data type": "整数",
+ }"initial value": "3"
+  },
+  {
+"data type": "文本数组类""constant name": "错误",
+"data type": "文本数组类""data type": "整数",
+"data type": "文本数组类""initial value": "4"
+  },
+  {
+ }"constant name": "重要",
+ }"data type": "整数",
+ }"initial value": "5"
+  }
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

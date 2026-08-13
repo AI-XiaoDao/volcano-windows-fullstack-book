@@ -1,0 +1,231 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.日志记录\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+外部库.win32 = "GLog\\GLogToolx86.lib""class name": "日志_全局类",
+外部库.win32 = "GLog\\GLogToolx86.lib""@视窗.外部头文件": "\"GLog\\\\GLogTool.h\"",
+外部库.win32 = "GLog\\GLogToolx86.lib""@视窗.外部库.win32": "\"GLog\\\\GLogToolx86.lib\"",
+外部库.win32 = "GLog\\GLogToolx86.lib""@视窗.附属文件.win32": "\"GLog\\\\GLogToolx86.dll\"",
+外部库.win32 = "GLog\\GLogToolx86.lib""@视窗.外部库.x64": "\"GLog\\\\GLogToolx64.lib\"",
+外部库.win32 = "GLog\\GLogToolx86.lib""@视窗.附属文件.x64": "\"GLog\\\\GLogToolx64.dll\"",
+外部库.win32 = "GLog\\GLogToolx86.lib""methods": [
+  {
+
+"method name": "打开",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "日志目录",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "关闭",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置分类目录与前缀",
+
+"comment": "将不同的日志类型放到不同的目录 ",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"comment": "0 信息\n1 警告\n2 错误\n3 重大错误，一旦遇到重大错误，程序会直接退出，一般这个不用\n//const int GLOG_INFO = 0, GLOG_WARNING = 1, GLOG_ERROR = 2, GLOG_FATAL = 3,\n//NUM_SEVERITIES = 4;",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "目录",
+"comment": "可以是目录 \"log/\" 或者是  \"log/前缀名称_\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "置日志文件最大大小",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "最大大小",
+"comment": "单位MB",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置大于指定级别输出控制台",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"comment": "0 信息\n1 警告\n2 错误\n3 重大错误，一旦遇到重大错误，程序会直接退出，一般这个不用\n//const int GLOG_INFO = 0, GLOG_WARNING = 1, GLOG_ERROR = 2, GLOG_FATAL = 3,\n//NUM_SEVERITIES = 4;",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "置输出到控制台",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "是否全部输出到控制台",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "置文件名主名称",
+
+"comment": "如果没调用这个函数，那么系统会自动使用程序的名称，如果设置了就会用您指定的名称",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"comment": "0 信息\n1 警告\n2 错误\n3 重大错误，一旦遇到重大错误，程序会直接退出，一般这个不用\n//const int GLOG_INFO = 0, GLOG_WARNING = 1, GLOG_ERROR = 2, GLOG_FATAL = 3,\n//NUM_SEVERITIES = 4;",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "记录",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"comment": "0 信息\n1 警告\n2 错误\n3 重大错误，一旦遇到重大错误，程序会直接退出，一般这个不用",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "信息",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "记录信息",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "信息",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "记录警告",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "信息",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "记录错误",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "信息",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "记录重大错误",
+
+"comment": "一旦调用后，程序会立即退出",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "信息",
+"data type": "文本型"
+   }
+
+]
+  }
+外部库.win32 = "GLog\\GLogToolx86.lib"]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

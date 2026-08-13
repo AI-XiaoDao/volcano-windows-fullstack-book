@@ -1,0 +1,208 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"CMD操作库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+"class name": "CMD代码页编码类_",
+"@文档": "\"category = \\\"CMD操作库.CMD编码\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+行提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""method name": "置CMD编码_",
+行提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""comment": "修改cmd的编码格式即当前活动代码页编号",
+行提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""static": true,
+行提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""data type": "逻辑型",
+行提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""parameters": [
+   {
+"parameter name": "代码页编号",
+"data type": "文本型",
+"@默认值": "代码页编号类.GB2312"
+   },
+   {
+"parameter name": "是否还原默认",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+行提示符中执行一条命令,如果当前有正在运行的命令,执行会失败."]
+  }
+]
+ },
+ {
+"class name": "代码页编号类",
+"@文档": "\"category = \\\"CMD操作库.编码.附加参数\\\"\"",
+"constants": [
+  {
+提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""parameters": [
+"constant name": "GB2312",
+提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""parameters": [
+"comment": "简体中文（GB2312，也可以理解为 ANSI）",
+提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""parameters": [
+"data type": "文本型",
+提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""parameters": [
+"initial value": "\"936\""
+  },
+  {
+"constant name": "UTF7",
+"comment": "Unicode (UTF-7)",
+"data type": "文本型",
+"initial value": "\"65000\""
+  },
+  {
+示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""parameters": [
+"comment": "简体中文（GB2312，也可以理解为 ANSI）""constant name": "UTF8",
+示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""parameters": [
+"comment": "简体中文（GB2312，也可以理解为 ANSI）""comment": "Unicode (UTF-8)",
+示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""parameters": [
+"comment": "简体中文（GB2312，也可以理解为 ANSI）""data type": "文本型",
+示符中执行一条命令,如果当前有正在运行的命令,执行会失败.""parameters": [
+"comment": "简体中文（GB2312，也可以理解为 ANSI）""initial value": "\"65001\""
+  }
+]
+ },
+ {
+"class name": "CMD类_",
+"@文档": "\"category = \\\"CMD操作库.CMD\\\"\"",
+"@全局类": "真",
+"@视窗.外部头文件": "\"cmd\\\\Processes.h\"",
+"@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"",
+"methods": [
+  {
+ping www.baidu.com""method name": "运行_",
+ping www.baidu.com""static": true,
+ping www.baidu.com""data type": "逻辑型",
+ping www.baidu.com""parameters": [
+   {
+"parameter name": "欲运行的命令行",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否等待执行完毕",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ping www.baidu.com"]
+  }
+]
+ },
+ {
+"class name": "CMD回显类_",
+"@文档": "\"category = \\\"CMD操作库.CMD回显\\\"\"",
+"methods": [
+  {
+data type": "逻辑型""method name": "执行命令_",
+data type": "逻辑型""comment": "例如;\nping www.baidu.com -t",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "要执行的命令",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "逻辑型"]
+  },
+  {
+ta type": "逻辑型"]"method name": "回显数据事件",
+ta type": "逻辑型"]"type": "event",
+ta type": "逻辑型"]"data type": "整数",
+ta type": "逻辑型"]"parameters": [
+   {
+"parameter name": "收到的字节集",
+"data type": "字节集类"
+   }
+ta type": "逻辑型"]]
+  }
+]
+ },
+ {
+"class name": "匿名管道类_",
+"comment": "启动一个命令行提示符进程,通过匿名管道让当前进程和命令行之间交互传递输出输入信息",
+"@文档": "\"category = \\\"CMD操作库.匿名管道\\\"\"",
+"@视窗.外部头文件": "\"namedpipeapi.h\"",
+"methods": [
+  {
+@默认值": "真""method name": "是否已启动",
+@默认值": "真""comment": "返回当前是否已启动命令行控制台",
+@默认值": "真""type": "property getter",
+@默认值": "真""data type": "逻辑型",
+@默认值": "真""@嵌入式方法": "\"\""
+  },
+  {
+�數ŝ"method name": "是否空闲",
+�數ŝ"comment": "返回当前是否处于空闲状态,返回假表示正在执行命令.\r\n  注意: 本方法通过检查最后输出的字符是否为'>'来判断命令是否执行完毕,\r\n如果命令在执行的过程中输出了'>'字符,将可能无法获取正确的结果.",
+�數ŝ"type": "property getter",
+�數ŝ"data type": "逻辑型",
+�數ŝ"@嵌入式方法": "\"\""
+  },
+  {
+ta type": "逻辑型"]"method name": "输出信息事件",
+ta type": "逻辑型"]"comment": "启动命令行提示符或执行命令后,在此返回命令的输出信息",
+ta type": "逻辑型"]"result comment": "此返回值无意义",
+ta type": "逻辑型"]"type": "event",
+ta type": "逻辑型"]"data type": "整数",
+ta type": "逻辑型"]"parameters": [
+   {
+"parameter name": "输出信息",
+"comment": "  命令行提示符打印在屏幕上的文本,请根据命令行的编码\r\n使用\"多字节到文本\"或\"UTF8到文本\"等命令转换到文本型.",
+"data type": "字节集类"
+   }
+ta type": "逻辑型"]]
+  },
+  {
+ type": "逻辑型"]]"method name": "初始化_",
+ type": "逻辑型"]]"comment": "类初始化时会自动初始化，除非你执行过\"关闭命令行\",否则不需要手动调用本方法",
+ type": "逻辑型"]]"result comment": "成功返回进程ID",
+ type": "逻辑型"]]"data type": "整数",
+ type": "逻辑型"]]"@禁止流程检查": "真",
+ type": "逻辑型"]]"parameters": [
+   {
+"parameter name": "刷新时间",
+"comment": "读取屏幕信息的间隔",
+"data type": "整数",
+"@默认值": "200"
+   }
+ type": "逻辑型"]]]
+  },
+  {
+data type": "字节集类""method name": "执行命令_",
+data type": "字节集类""comment": "在命令行提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.",
+data type": "字节集类""data type": "逻辑型",
+data type": "字节集类""@禁止流程检查": "真",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "执行命令",
+"comment": "例如：ping www.baidu.com",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为UTF8",
+"comment": "是否以UTF-8编码要执行的命令,否则为ANSI本地多字节编码",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "字节集类"]
+  },
+  {
+ameter name": "是否为UTF8""method name": "终止命令_",
+ameter name": "是否为UTF8""comment": "在命令行提示符中发出CTRL+C信号,终止正在执行的命令"
+  },
+  {
+"method name": "关闭命令_",
+"@禁止流程检查": "真"
+  }
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

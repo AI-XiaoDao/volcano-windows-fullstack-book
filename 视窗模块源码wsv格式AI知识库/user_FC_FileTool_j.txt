@@ -1,0 +1,406 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.文件操作\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "文件打开方式f",
+"@常量类": "整数",
+"constants": [
+  {
+ 长整数"constant name": "新建",
+ 长整数"comment": "创建一个新文件,如果文件已经存在则返回失败\nCreates a new file. The function fails if the specified file already exists.",
+ 长整数"initial value": "@CREATE_NEW"
+  },
+  {
+ 变整数"constant name": "新建或覆盖",
+ 变整数"comment": "创建一个新文件,如果文件存在，则覆盖这个文件,并且清除其属性\nCreates a new file. If the file exists, the function overwrites the file, \nclears the existing attributes, \nand combines the file attributes and flags specified by dwFlagsAndAttributes with FILE_ATTRIBUTE_ARCHIVE.",
+ 变整数"initial value": "@CREATE_ALWAYS"
+  },
+  {
+ 长整数"constant name": "打开",
+ 长整数"comment": "打开文件,如果文件不存在则打开失败\nOpens the file. The function fails if the file does not exist. ",
+ 长整数"initial value": "@OPEN_EXISTING"
+  },
+  {
+⡐ꡮŝ"constant name": "打开或创建",
+⡐ꡮŝ"comment": "如果文件则打开文件，如果不存在则会创建文件,此时和CREATE_NEW功能一样\nOpens the file, if it exists. If the file does not exist,\n the function creates the file as if dwCreationDisposition were CREATE_NEW.",
+⡐ꡮŝ"initial value": "@OPEN_ALWAYS"
+  },
+  {
+        "constant name": "清空",
+        "comment": "打开文件。 打开后，文件将被截断，因此其大小为零字节。 \n调用过程必须打开至少具有GENERIC_WRITE访问权限的文件。 如果文件不存在，该功能将失败。\nOpens the file. Once opened, the file is truncated so that its size is zero bytes.\n The calling process must open the file with at least GENERIC_WRITE access. The function fails if the file does not exist.",
+        "initial value": "@TRUNCATE_EXISTING"
+  }
+]
+ },
+ {
+"class name": "文件共享方式f",
+"@常量类": "整数",
+"constants": [
+  {
+ 整数"constant name": "不共享",
+ 整数"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了",
+ 整数"initial value": "0"
+  },
+  {
+整数"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""constant name": "共享读",
+整数"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""comment": "例如两个软件同时操作 a.txt 如果指定这个标志，表示两个软件都可以对a.txt读  否则只有第一个打开a.txt 的可以操作，其他的不能",
+整数"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""initial value": "@FILE_SHARE_READ"
+  },
+  {
+constant name": "打开或创建""constant name": "共享写",
+constant name": "打开或创建""comment": "例如两个软件同时操作 a.txt 如果指定这个标志，表示两个软件都可以对a.txt写  否则只有第一个打开a.txt 的可以操作，其他的不能",
+constant name": "打开或创建""initial value": "@FILE_SHARE_WRITE"
+  },
+  {
+长整数"initial value": "@OPEN_EXISTING""constant name": "共享读写",
+长整数"initial value": "@OPEN_EXISTING""initial value": "@FILE_SHARE_WRITE|FILE_SHARE_READ"
+  },
+  {
+onstant name": "打开或创建""initial value": "@FILE_SHARE_WRITE""constant name": "共享删除",
+onstant name": "打开或创建""initial value": "@FILE_SHARE_WRITE""comment": "原理同上",
+onstant name": "打开或创建""initial value": "@FILE_SHARE_WRITE""initial value": "@FILE_SHARE_DELETE"
+  }
+]
+ },
+ {
+"class name": "文件指针常量",
+"@常量类": "整数",
+"constants": [
+  {
+ 变整数"constant name": "文件首",
+ 变整数"comment": "文件指针起始位置为文件起始位置，当调用SetFilePointerEx成功后，\n文件指针将指向liDistanceToMove指向的位置。\nFILE_BEGIN The starting point is zero or the beginning of the file. ",
+ 变整数"initial value": "@FILE_BEGIN"
+  },
+  {
+E_SHARE_DELETE"constant name": "当前位置",
+E_SHARE_DELETE"comment": "文件指针起始位置为当前文件指针指向的位置\nFILE_CURRENT The starting point is the current value of the file pointer. ",
+E_SHARE_DELETE"initial value": "@FILE_CURRENT"
+  },
+  {
+"constant name": "打开""constant name": "文件尾",
+"constant name": "打开""comment": "文件指针起始位置为文件末尾\nFILE_END The starting point is the current end-of-file position. ",
+"constant name": "打开""initial value": "@FILE_END"
+  }
+]
+ },
+ {
+"class name": "文件访问方式f",
+"@常量类": "整数",
+"constants": [
+  {
+ 变整数"constant name": "读",
+ 变整数"initial value": "@GENERIC_READ"
+  },
+  {
+"constant name": "新建或覆盖""constant name": "写",
+"constant name": "新建或覆盖""initial value": "@GENERIC_WRITE"
+  },
+  {
+"constant name": "读写",
+"initial value": "@GENERIC_READ|GENERIC_WRITE"
+  }
+]
+ },
+ {
+"class name": "______文件操作",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "文件操作_打开",
+
+"result comment": "-1 表示打开失败，否则返回 文件句柄",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "打开方式",
+"comment": "默认只是打开，如果指定的文件不存在，则打开失败",
+"data type": "文件打开方式f",
+"@默认值": "文件打开方式f.打开"
+   },
+   {
+"parameter name": "共享模式",
+"data type": "文件共享方式f",
+"@默认值": "文件共享方式f.共享读"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "读模式 写模式 读写模块 \n解释：用什么方式打开，比如读方式，\n例如我们操作文件的时候我们只需要读取一下就行，\n某些的话不需要读，只需要写",
+"data type": "文件访问方式f",
+"@默认值": "文件访问方式f.读写"
+   }
+
+]
+  },
+  {
+㋰ꡮŝ"method name": "文件操作_关闭",
+㋰ꡮŝ"static": true,
+㋰ꡮŝ"@嵌入式方法": "\"\"",
+㋰ꡮŝ"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   }
+㋰ꡮŝ]
+  },
+  {
+
+"method name": "文件操作_写内存数据",
+
+"result comment": "返回写了多少个字节",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ꡮŝ"@嵌入式方法": "\"\"""method name": "文件操作_读到内存",
+ꡮŝ"@嵌入式方法": "\"\"""result comment": "返回实际夺取了多少个字节",
+ꡮŝ"@嵌入式方法": "\"\"""static": true,
+ꡮŝ"@嵌入式方法": "\"\"""data type": "整数",
+ꡮŝ"@嵌入式方法": "\"\"""@禁止流程检查": "真",
+ꡮŝ"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区指针",
+"comment": "这个参数使用前，必须申请一段空的内存，来存放读到的数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区大小",
+"comment": "分配的内存大小",
+"data type": "整数"
+   }
+ꡮŝ"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "文件操作_写字节集",
+
+"result comment": "返回 实际写成功的 长度",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要写的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+data type": "变整数""method name": "文件操作_读字节集",
+data type": "变整数""static": true,
+data type": "变整数""data type": "字节集类",
+data type": "变整数""parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "读取长度",
+"comment": "-1表示读取整个文件",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "变整数"]
+  },
+  {
+ꡮŝ"@嵌入式方法": "\"\"""method name": "文件操作_取文件大小",
+ꡮŝ"@嵌入式方法": "\"\"""static": true,
+ꡮŝ"@嵌入式方法": "\"\"""data type": "长整数",
+ꡮŝ"@嵌入式方法": "\"\"""@禁止流程检查": "真",
+ꡮŝ"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   }
+ꡮŝ"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "文件操作_置读写位置",
+
+"result comment": "返回移动的距离",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "移动距离",
+"data type": "长整数"
+   },
+   {
+"parameter name": "移动方式",
+"data type": "文件指针常量"
+   }
+
+]
+  },
+  {
+method name": "文件操作_关闭""method name": "文件操作_置读写位置为文件结尾",
+method name": "文件操作_关闭""static": true,
+method name": "文件操作_关闭""@嵌入式方法": "\"\"",
+method name": "文件操作_关闭""parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   }
+method name": "文件操作_关闭"]
+  },
+  {
+ŝ"@嵌入式方法": "\"\"""@禁止流程检查": "真""method name": "文件操作_取读写位置",
+ŝ"@嵌入式方法": "\"\"""@禁止流程检查": "真""static": true,
+ŝ"@嵌入式方法": "\"\"""@禁止流程检查": "真""data type": "长整数",
+ŝ"@嵌入式方法": "\"\"""@禁止流程检查": "真""@禁止流程检查": "真",
+ŝ"@嵌入式方法": "\"\"""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   }
+ŝ"@嵌入式方法": "\"\"""@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "文件操作_锁定文件",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "锁定位置",
+"data type": "长整数"
+   },
+   {
+"parameter name": "锁定字节数",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+data type": "变整数""method name": "文件操作_解锁文件",
+data type": "变整数""static": true,
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "锁定位置",
+"data type": "长整数"
+   },
+   {
+"parameter name": "锁定字节数",
+"data type": "长整数"
+   }
+data type": "变整数"]
+  }
+]
+ },
+ {
+"class name": "文件操作_全局类",
+"methods": [
+  {
+ }"method name": "写到文件_从指针",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ameter name": "移动距离""method name": "读入文件_到指针",
+ameter name": "移动距离""static": true,
+ameter name": "移动距离""data type": "逻辑型",
+ameter name": "移动距离""parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内存指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内存大小",
+"data type": "整数"
+   }
+ameter name": "移动距离"]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

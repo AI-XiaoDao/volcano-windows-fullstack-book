@@ -1,0 +1,1793 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC属性表格组件".
+
+{
+问本程序中的接口需要引用模块"MFC属性表格组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"MFC属性表格组件"."package name": "火山.MFC界面.属性表格",
+问本程序中的接口需要引用模块"MFC属性表格组件"."classes": [
+ {
+"class name": "属性数据类型",
+"comment": "提供属性的类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+所有属性加入方法返回的属性标识值值""constant name": "整数值",
+所有属性加入方法返回的属性标识值值""initial value": "@GP_DTYPE_INT"
+  },
+  {
+后缀文本 = "public IPropertyGridEventListener""constant name": "小数值",
+后缀文本 = "public IPropertyGridEventListener""initial value": "@GP_DTYPE_DOUBLE"
+  },
+  {
+有属性加入方法返回的属性标识值值"constant name": "逻辑值",
+有属性加入方法返回的属性标识值值"initial value": "@GP_DTYPE_BOOL"
+  },
+  {
+有属性加入方法返回的属性标识值值"constant name": "文本值",
+有属性加入方法返回的属性标识值值"initial value": "@GP_DTYPE_TEXT"
+  }
+]
+ },
+ {
+"class name": "属性细节类型",
+"comment": "提供属性的细节类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ 变整数 注释 = "提供由所有属性加入方法返回的属性标识值值""constant name": "无",
+ 变整数 注释 = "提供由所有属性加入方法返回的属性标识值值""initial value": "@GPDVT_NONE"
+  },
+  {
+所有属性加入方法返回的属性标识值值""constant name": "颜色",
+所有属性加入方法返回的属性标识值值""comment": "颜色值. 属性数据类型必须为\"整数值\".",
+所有属性加入方法返回的属性标识值值""initial value": "@GPDVT_COLOR"
+  },
+  {
+comment": "提供属性的细节类型""constant name": "颜色支持透明",
+comment": "提供属性的细节类型""comment": "颜色值,支持使用透明色(颜色类.透明色). 属性数据类型必须为\"整数值\".",
+comment": "提供属性的细节类型""initial value": "@GPDVT_COLOR_WITH_TANS"
+  },
+  {
+ "返回指定属性的父属性标识值,如果不存在父属性,则返回0.""constant name": "颜色支持默认",
+ "返回指定属性的父属性标识值,如果不存在父属性,则返回0.""comment": "颜色值,支持使用默认色(颜色类.默认色). 属性数据类型必须为\"整数值\".",
+ "返回指定属性的父属性标识值,如果不存在父属性,则返回0.""initial value": "@GPDVT_COLOR_WITH_DEFAULT"
+  },
+  {
+}"constant name": "打开文件名",
+}"comment": "欲打开文件名. 属性数据类型必须为\"文本值\".",
+}"initial value": "@GPDVT_OPEN_FILENAME"
+  },
+  {
+}"constant name": "保存文件名",
+}"comment": "欲保存到文件名. 属性数据类型必须为\"文本值\".",
+}"initial value": "@GPDVT_SAVE_FILENAME"
+  },
+  {
+有属性加入方法返回的属性标识值值"constant name": "字体",
+有属性加入方法返回的属性标识值值"comment": "字体信息. 属性数据类型必须为\"文本值\".",
+有属性加入方法返回的属性标识值值"initial value": "@GPDVT_FONT"
+  },
+  {
+具有属性的数目""constant name": "定宽字体",
+具有属性的数目""comment": "定宽字体信息. 属性数据类型必须为\"文本值\".",
+具有属性的数目""initial value": "@GPDVT_FIXED_PITCH_FONT"
+  },
+  {
+
+"constant name": "日期",
+
+"comment": "日期信息. 属性数据类型必须为\"文本值\".",
+
+"initial value": "@GPDVT_DATE"
+  },
+  {
+}"constant name": "自定义",
+}"comment": "自定义文本信息. 属性数据类型必须为\"文本值\".",
+}"initial value": "@GPDVT_CUSTOM"
+  }
+]
+ },
+ {
+"class name": "属性表格",
+"base class": "窗口组件",
+"@视窗.外部头文件": "\"src\\\\tr_vol_mfc_property_grid.h\"",
+"@视窗.外部源文件": "\"src\\\\tr_vol_mfc_color_popup.cpp\\nsrc\\\\vol_mfc_property_grid.cpp\"",
+"@视窗.后缀文本": "\"public IPropertyGridEventListener\"",
+"@视窗.窗口组件": "\"icon=\\\"@66\\\"\\ndefault_size = \\\"160, 240\\\"\\ndefault_event = \\\"当前属性被改变\\\"\"",
+"methods": [
+  {
+属性加入方法返回的属性标识值值"initial value": "@GP_DTYPE_BOOL""method name": "自定义属性按钮被单击",
+属性加入方法返回的属性标识值值"initial value": "@GP_DTYPE_BOOL""comment": "当细节类型为自定义的属性行右侧按钮被单击后,本事件被发送.",
+属性加入方法返回的属性标识值值"initial value": "@GP_DTYPE_BOOL""type": "event",
+属性加入方法返回的属性标识值值"initial value": "@GP_DTYPE_BOOL""data type": "整数",
+属性加入方法返回的属性标识值值"initial value": "@GP_DTYPE_BOOL""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "所单击属性的标识值,必定不为0.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数文本",
+"comment": "提供建立被单击属性时所提供的附加文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "  所单击属性的当前值内容,可以在事件处理程序中对其进行修改,\n修改后的内容会被置回属性值中.",
+"data type": "文本型"
+   }
+属性加入方法返回的属性标识值值"initial value": "@GP_DTYPE_BOOL"]
+  },
+  {
+ 属性数据类型必须为\"整数值\"."method name": "属性值被改变",
+ 属性数据类型必须为\"整数值\"."comment": "当属性值被改变后,本事件被发送.",
+ 属性数据类型必须为\"整数值\"."type": "event",
+ 属性数据类型必须为\"整数值\"."data type": "整数",
+ 属性数据类型必须为\"整数值\"."parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "必定不为0",
+"data type": "变整数"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供被修改后的属性值内容",
+"data type": "文本型"
+   }
+ 属性数据类型必须为\"整数值\".]
+  },
+  {
+
+"method name": "当前属性被改变",
+
+"comment": "当前被选择属性被改变后,本事件被发送.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "当前选择属性标识值",
+"comment": "提供选择之后的当前属性,注意有可能为0,为0表示无.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "先前选择属性标识值",
+"comment": "提供选择之前的当前属性,注意有可能为0,为0表示无.",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ameter name": "属性值""method name": "背景色",
+ameter name": "属性值""type": "property getter",
+ameter name": "属性值""data type": "整数",
+ameter name": "属性值""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "背景色",
+}"type": "property setter",
+}"@值细节类型": "颜色支持默认",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "欲设置属性值",
+"comment": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "文本色",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"type": "property setter""method name": "文本色",
+"type": "property setter""type": "property setter",
+"type": "property setter""@值细节类型": "颜色支持默认",
+"type": "property setter""@视窗.设置时机": "组件创建前后",
+"type": "property setter""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"comment": "可以使用\"颜色类\"中定义的常量值",
+"data type": "整数"
+   }
+"type": "property setter"]
+  },
+  {
+
+"method name": "分组属性背景色",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+nstant name": "自定义""method name": "分组属性背景色",
+nstant name": "自定义""type": "property setter",
+nstant name": "自定义""@值细节类型": "颜色支持默认",
+nstant name": "自定义""@视窗.设置时机": "组件创建前后",
+nstant name": "自定义""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"comment": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.",
+"data type": "整数"
+   }
+nstant name": "自定义"]
+  },
+  {
+
+"method name": "分组属性文本色",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+stant name": "自定义""@值细节类型": "颜色支持默认""method name": "分组属性文本色",
+stant name": "自定义""@值细节类型": "颜色支持默认""type": "property setter",
+stant name": "自定义""@值细节类型": "颜色支持默认""@值细节类型": "颜色支持默认",
+stant name": "自定义""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后",
+stant name": "自定义""@值细节类型": "颜色支持默认""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"comment": "可以使用\"颜色类\"中定义的常量值",
+"data type": "整数"
+   }
+stant name": "自定义""@值细节类型": "颜色支持默认"]
+  },
+  {
+ }"method name": "描述栏背景色",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+tant name": "自定义"]"method name": "描述栏背景色",
+tant name": "自定义"]"type": "property setter",
+tant name": "自定义"]"@值细节类型": "颜色支持默认",
+tant name": "自定义"]"@视窗.设置时机": "组件创建前后",
+tant name": "自定义"]"parameters": [
+   {
+"parameter name": "欲设置属性值",
+"comment": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.",
+"data type": "整数"
+   }
+tant name": "自定义"]]
+  },
+  {
+comment": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色",
+comment": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""type": "property getter",
+comment": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""data type": "整数",
+comment": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "描述栏文本色",
+
+"type": "property setter",
+
+"@值细节类型": "颜色支持默认",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "欲设置属性值",
+"comment": "可以使用\"颜色类\"中定义的常量值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+comment": "可以使用\"颜色类\"中定义的常量值""method name": "线条颜色",
+comment": "可以使用\"颜色类\"中定义的常量值""type": "property getter",
+comment": "可以使用\"颜色类\"中定义的常量值""data type": "整数",
+comment": "可以使用\"颜色类\"中定义的常量值""@嵌入式方法": "\"\""
+  },
+  {
+omment": "可以使用\"颜色类\"中定义的常量值""data type": "整数""method name": "线条颜色",
+omment": "可以使用\"颜色类\"中定义的常量值""data type": "整数""type": "property setter",
+omment": "可以使用\"颜色类\"中定义的常量值""data type": "整数""@值细节类型": "颜色支持默认",
+omment": "可以使用\"颜色类\"中定义的常量值""data type": "整数""@视窗.设置时机": "组件创建前后",
+omment": "可以使用\"颜色类\"中定义的常量值""data type": "整数""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"comment": "可以使用\"颜色类\"中定义的常量值",
+"data type": "整数"
+   }
+omment": "可以使用\"颜色类\"中定义的常量值""data type": "整数"]
+  },
+  {
+ent": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""method name": "显示头组件",
+ent": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""comment": "指定是否启用属性框的头部组件",
+ent": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""type": "property getter",
+ent": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""data type": "逻辑型",
+ent": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""@嵌入式方法": "\"\""
+  },
+  {
+nt": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""data type": "逻辑型""method name": "显示头组件",
+nt": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""data type": "逻辑型""comment": "指定是否启用属性框的头部组件",
+nt": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""data type": "逻辑型""type": "property setter",
+nt": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""data type": "逻辑型""@视窗.设置时机": "组件创建前后",
+nt": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""data type": "逻辑型""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "逻辑型"
+   }
+nt": "可以使用\"颜色类\"中定义的常量值,使用\"颜色类.默认色\"以引用默认背景色.""method name": "描述栏文本色""data type": "逻辑型"]
+  },
+  {
+"method name": "属性名列标题",
+"comment": "指定属性框的头组件上属性名列的标题文本,如果为空,则默认为\"属性名\".",
+"type": "property getter",
+"data type": "文本型",
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "逻辑型""method name": "属性名列标题",
+data type": "逻辑型""comment": "指定属性框的头组件上属性名列的标题文本,如果为空,则默认为\"属性名\".",
+data type": "逻辑型""type": "property setter",
+data type": "逻辑型""@视窗.设置时机": "组件创建前后",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "文本型"
+   }
+data type": "逻辑型"]
+  },
+  {
+ "提供欲获取其直接子属性的父属性标识值,为0则去获取顶层属性.""method name": "属性值列标题",
+ "提供欲获取其直接子属性的父属性标识值,为0则去获取顶层属性.""comment": "指定属性框的头组件上属性值列的标题文本,如果为空,则默认为\"属性值\".",
+ "提供欲获取其直接子属性的父属性标识值,为0则去获取顶层属性.""type": "property getter",
+ "提供欲获取其直接子属性的父属性标识值,为0则去获取顶层属性.""data type": "文本型",
+ "提供欲获取其直接子属性的父属性标识值,为0则去获取顶层属性.""@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "属性值列标题",
+"@嵌入式方法": "\"\"""comment": "指定属性框的头组件上属性值列的标题文本,如果为空,则默认为\"属性值\".",
+"@嵌入式方法": "\"\"""type": "property setter",
+"@嵌入式方法": "\"\"""@视窗.设置时机": "组件创建前后",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "文本型"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+data type": "文本型""method name": "真值文本",
+data type": "文本型""comment": "指定属性表中用作代表逻辑值\"真\"的文本,如果为空,则默认为\"真\".",
+data type": "文本型""type": "property getter",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "真值文本",
+
+"comment": "指定属性表中用作代表逻辑值\"真\"的文本,如果为空,则默认为\"真\".",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "假值文本",
+data type": "文本型""comment": "指定属性表中用作代表逻辑值\"假\"的文本,如果为空,则默认为\"假\".",
+data type": "文本型""type": "property getter",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "假值文本",
+
+"comment": "指定属性表中用作代表逻辑值\"假\"的文本,如果为空,则默认为\"假\".",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "基准路径",
+
+"comment": "指定当属性细节类型为\"打开文件名\"或\"保存文件名\"时,用作将用户所输入的绝对路径文件名转换为相对路径时使用的基准路径,为空表示不进行转换.",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "欲设置属性值""method name": "基准路径",
+ameter name": "欲设置属性值""comment": "指定当属性细节类型为\"打开文件名\"或\"保存文件名\"时,用作将用户所输入的绝对路径文件名转换为相对路径时使用的基准路径,为空表示不进行转换.",
+ameter name": "欲设置属性值""type": "property setter",
+ameter name": "欲设置属性值""@视窗.设置时机": "组件创建前后",
+ameter name": "欲设置属性值""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "文本型"
+   }
+ameter name": "欲设置属性值"]
+  },
+  {
+ type": "文本型""method name": "真值文本""method name": "左列宽度",
+ type": "文本型""method name": "真值文本""comment": "指定属性表中左列宽度占整个属性表宽度的百分比",
+ type": "文本型""method name": "真值文本""type": "property getter",
+ type": "文本型""method name": "真值文本""data type": "整数",
+ type": "文本型""method name": "真值文本""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""method name": "左列宽度",
+meter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""comment": "指定属性表中左列宽度占整个属性表宽度的百分比",
+meter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""type": "property setter",
+meter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""@视窗.设置时机": "组件创建前后",
+meter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "整数"
+   }
+meter name": "欲设置属性值""@视窗.设置时机": "组件创建前后"]
+  },
+  {
+ type": "文本型""method name": "真值文本""method name": "显示描述栏",
+ type": "文本型""method name": "真值文本""comment": "指定是否显示属性表底部的描述栏",
+ type": "文本型""method name": "真值文本""type": "property getter",
+ type": "文本型""method name": "真值文本""data type": "逻辑型",
+ type": "文本型""method name": "真值文本""@嵌入式方法": "\"\""
+  },
+  {
+type": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""method name": "显示描述栏",
+type": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""comment": "指定是否显示属性表底部的描述栏",
+type": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter",
+type": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""@视窗.设置时机": "组件创建前后",
+type": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "逻辑型"
+   }
+type": "文本型""method name": "真值文本""@嵌入式方法": "\"\""]
+  },
+  {
+ata type": "文本型""data type": "文本型""method name": "描述栏行数",
+ata type": "文本型""data type": "文本型""comment": "提供属性表底部描述栏的显示行数",
+ata type": "文本型""data type": "文本型""type": "property getter",
+ata type": "文本型""data type": "文本型""data type": "整数",
+ata type": "文本型""data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+eter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""method name": "描述栏行数",
+eter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""comment": "提供属性表底部描述栏的显示行数",
+eter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""type": "property setter",
+eter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""@视窗.设置时机": "组件创建前",
+eter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "整数"
+   }
+eter name": "欲设置属性值""@视窗.设置时机": "组件创建前后""comment": "指定属性表中左列宽度占整个属性表宽度的百分比"]
+  },
+  {
+ameter name": "欲设置属性值""method name": "自动排序",
+ameter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序",
+ameter name": "欲设置属性值""type": "property getter",
+ameter name": "欲设置属性值""data type": "逻辑型",
+ameter name": "欲设置属性值""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""method name": "自动排序",
+meter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""comment": "是否按字母方式对属性项进行自动排序.\n注意: 如果本属性为真,则分组属性将不会被显示.",
+meter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""type": "property setter",
+meter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""@视窗.设置时机": "组件创建前",
+meter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "逻辑型"
+   }
+meter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序"]
+  },
+  {
+ype": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""method name": "高级外观",
+ype": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观",
+ype": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""type": "property getter",
+ype": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""data type": "逻辑型",
+ype": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "高级外观",
+}"comment": "指定是否使用.NET外观",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+pe": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""method name": "标记被修改属性",
+pe": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""comment": "指定是否特殊显示被修改过的属性",
+pe": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""type": "property getter",
+pe": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""data type": "逻辑型",
+pe": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""@嵌入式方法": "\"\""
+  },
+  {
+e": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""data type": "逻辑型""method name": "标记被修改属性",
+e": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""data type": "逻辑型""comment": "指定是否特殊显示被修改过的属性",
+e": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""data type": "逻辑型""type": "property setter",
+e": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""data type": "逻辑型""@视窗.设置时机": "组件创建前后",
+e": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""data type": "逻辑型""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "逻辑型"
+   }
+e": "文本型""method name": "真值文本""@嵌入式方法": "\"\"""type": "property setter""comment": "指定是否使用.NET外观""data type": "逻辑型"]
+  },
+  {
+"comment": "指定是否使用.NET外观""method name": "全宽度分组属性名",
+"comment": "指定是否使用.NET外观""comment": "指定是否以完整的宽度显示分组属性的类别名称",
+"comment": "指定是否使用.NET外观""type": "property getter",
+"comment": "指定是否使用.NET外观""data type": "逻辑型",
+"comment": "指定是否使用.NET外观""@嵌入式方法": "\"\""
+  },
+  {
+eter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""parameters": [
+"method name": "全宽度分组属性名",
+eter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""parameters": [
+"comment": "指定是否以完整的宽度显示分组属性的类别名称",
+eter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""parameters": [
+"type": "property setter",
+eter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""parameters": [
+"@视窗.设置时机": "组件创建前后",
+eter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""parameters": [
+"parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "逻辑型"
+   }
+eter name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""parameters": [
+]
+  },
+  {
+data type": "逻辑型""method name": "修改后立即刷新",
+data type": "逻辑型""type": "property getter",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+r name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""method name": "自动排序""method name": "修改后立即刷新",
+r name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""method name": "自动排序""comment": "指定修改属性表内容(譬如加入新属性/删除属性/显示或隐藏属性等)后是否立即重新布局属性表并刷新其显示.\n在批量修改属性表内容前设置本属性值为假,可以提高修改速度并避免属性表闪烁. \n如果本属性值被设置为假,在修改完属性表内容后,需要手动调用本对象的\"刷新\"方法以更新属性表的显示.\n当把本属性的值从假设置为真时,会自动刷新属性表.\n本属性默认值为真.",
+r name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""method name": "自动排序""type": "property setter",
+r name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""method name": "自动排序""@视窗.设置时机": "组件创建前后",
+r name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""method name": "自动排序""parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "逻辑型"
+   }
+r name": "欲设置属性值""comment": "是否按字母方式对属性项进行自动排序""method name": "自动排序"]
+  },
+  {
+type": "文本型""method name": "真值文本""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""method name": "显示拖动上下文",
+type": "文本型""method name": "真值文本""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""comment": "指定在拖动属性表头部时是否显示拖动上下文",
+type": "文本型""method name": "真值文本""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""type": "property getter",
+type": "文本型""method name": "真值文本""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""data type": "逻辑型",
+type": "文本型""method name": "真值文本""comment": "指定属性表中左列宽度占整个属性表宽度的百分比""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "显示拖动上下文",
+
+"comment": "指定在拖动属性表头部时是否显示拖动上下文",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "始终显示用户提示",
+
+"comment": "指定是否始终显示用户提示文本",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "始终显示用户提示",
+ }"comment": "指定是否始终显示用户提示文本",
+ }"type": "property setter",
+ }"@视窗.设置时机": "组件创建前后",
+ }"parameters": [
+   {
+"parameter name": "欲设置属性值",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+ }"method name": "刷新",
+ }"comment": "  更新属性表的布局,刷新属性表的显示.\n  如果\"修改后立即刷新\"属性值为假,则修改属性表内容后需要\n调用本方法进行手动刷新,否则不需要调用本方法.",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"comment": "指定是否始终显示用户提示文本""method name": "加入属性",
+}"comment": "指定是否始终显示用户提示文本""comment": "  加入一个属性到属性表中. 属性表窗口组件必须已经被创建.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.",
+}"comment": "指定是否始终显示用户提示文本""result comment": "成功返回该属性的标识值(非0),失败返回0.",
+}"comment": "指定是否始终显示用户提示文本""data type": "变整数",
+}"comment": "指定是否始终显示用户提示文本""@嵌入式方法": "\"\"",
+}"comment": "指定是否始终显示用户提示文本""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "提供属性的数据类型",
+"data type": "属性数据类型"
+   },
+   {
+"parameter name": "细节类型",
+"comment": "提供属性的细节类型",
+"data type": "属性细节类型",
+"@默认值": "属性细节类型.无"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始值文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "备选项列表",
+"comment": "  当属性数据类型为\"文本值\"或\"整数值\"且属性细节类型为\"无\"时,用作提供属性所有待选择项的文\n本项列表,各项目之间使用'\\n'换行符分隔.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加文本",
+"comment": "  1. 当属性数据类型为\"文本值\"且属性细节类型为\"打开文件名\"或\"保存文件名\"时,用作提供文件\n名过滤器文本. 该文本必须以'|'分隔和结束,类似以下格式:\n    \"JPG文件(*.jpg;*.jpeg)|*.jpg;*.jpeg|\"\n    \"JPG文件(*.jpg;*.jpeg)|*.jpg;*.jpeg|GIF动画(*.gif)|*.gif|\"\n    注意: 该文本在使用时尾部会自动加上匹配所有文件的过滤器.\n  2. 当属性数据类型为\"文本值\"且属性细节类型为\"自定义\"时,用作提供当用户单击值列右侧按钮\n时所触发\"自定义属性按钮被单击\"事件的\"参数文本\"参数值.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+}"comment": "指定是否始终显示用户提示文本"]
+  },
+  {
+
+"method name": "加入文件属性",
+
+"comment": "  加入一个可以用作获取欲打开/保存文件名的属性. 属性表窗口组件必须已经被创建.\n  注意从文件选择对话框中获得的文件名将受\"基准路径\"属性影响.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.",
+
+"result comment": "成功返回该属性的标识值(非0),失败返回0.",
+
+"data type": "变整数",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为打开",
+"comment": "为真表示获取欲打开文件的名称,为假表示获取欲保存文件的名称.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始值文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "过滤器文本",
+"comment": "该文本必须以'|'分隔和结束,类似以下格式:\n  \"JPG文件(*.jpg;*.jpeg)|*.jpg;*.jpeg|\"\n  \"JPG文件(*.jpg;*.jpeg)|*.jpg;*.jpeg|GIF动画(*.gif)|*.gif|\"\n  注意: 该文本在使用时尾部会自动加上匹配所有文件的过滤器.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+@默认值": "\"\"""method name": "加入字体属性",
+@默认值": "\"\"""comment": "  加入一个可以用作获取字体描述文本的属性. 属性表窗口组件必须已经被创建.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.\n  属性值的格式为:\n    \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例子: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+@默认值": "\"\"""result comment": "成功返回该属性的标识值(非0),失败返回0.",
+@默认值": "\"\"""data type": "变整数",
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "仅限定宽字体",
+"comment": "指定用户是否只能选择定宽字体",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始值文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+@默认值": "\"\""]
+  },
+  {
+ }"method name": "加入自定义属性",
+ }"comment": "  加入一个属性行右侧具有按钮的文本属性,当用户单击值该按钮时将触发\"自定义属性按钮被单击\"事件.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完所有属\n性后手动调用\"刷新\"方法刷新.\n  属性表窗口组件必须已经被创建.",
+ }"result comment": "成功返回该属性的标识值(非0),失败返回0.",
+ }"data type": "变整数",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始值文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "事件参数文本",
+"comment": "用作提供当用户单击值列右侧按钮时所触发\"自定义属性按钮被单击\"事件的\"参数文本\"参数值.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+"method name": "加入列表文本属性",
+"comment": "  加入具有备选列表项的文本属性,属性值只能为所提供备选项列表中的某一个备选项或者空文本.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.\n  属性表窗口组件必须已经被创建.",
+"result comment": "成功返回该属性的标识值(非0),失败返回0.",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "备选项列表",
+"comment": "用作提供属性所有待选择项的文本项列表,各项目之间使用'\\n'换行符分隔.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始值文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+hod name": "加入列表文本属性""method name": "加入列表整数属性",
+hod name": "加入列表文本属性""comment": "  加入具有备选列表项的整数属性,属性值只能为所提供备选项列表中某一个备选项的索引位置或\n者空文本. 属性表窗口组件必须已经被创建.\n  注意: 设置本属性的内容时,需要使用对应备选项在备选项列表中的索引位置整数文本,读取时\n获得的亦为该索引位置整数文本或空文本(表示未选择任何备选项).\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.",
+hod name": "加入列表文本属性""result comment": "成功返回该属性的标识值(非0),失败返回0.",
+hod name": "加入列表文本属性""data type": "变整数",
+hod name": "加入列表文本属性""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "备选项列表",
+"comment": "用作提供属性所有待选择项的文本项列表,各项目之间使用'\\n'换行符分隔.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始值文本,属性值为所提供备选项列表中某一个备选项的索引位置或者空文本.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+hod name": "加入列表文本属性"]
+  },
+  {
+comment": "提供属性对应的注释文本""method name": "加入文本属性",
+comment": "提供属性对应的注释文本""comment": "  加入属性内容为文本的属性. 属性表窗口组件必须已经被创建.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.",
+comment": "提供属性对应的注释文本""result comment": "成功返回该属性的标识值(非0),失败返回0.",
+comment": "提供属性对应的注释文本""data type": "变整数",
+comment": "提供属性对应的注释文本""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始值文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+comment": "提供属性对应的注释文本"]
+  },
+  {
+comment": "提供属性对应的注释文本""method name": "加入整数属性",
+comment": "提供属性对应的注释文本""comment": "  加入属性内容为整数文本的属性,支持十进制或以\"0x\"开头的十六进制格式.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.\n  属性表窗口组件必须已经被创建.",
+comment": "提供属性对应的注释文本""result comment": "成功返回该属性的标识值(非0),失败返回0.",
+comment": "提供属性对应的注释文本""data type": "变整数",
+comment": "提供属性对应的注释文本""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始整数值文本,支持十进制或以\"0x\"开头的十六进制格式.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+comment": "提供属性对应的注释文本"]
+  },
+  {
+data type": "文本型""method name": "加入小数属性",
+data type": "文本型""comment": "  加入属性内容为小数文本的属性.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.\n  属性表窗口组件必须已经被创建.",
+data type": "文本型""result comment": "成功返回该属性的标识值(非0),失败返回0.",
+data type": "文本型""data type": "变整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始小数值文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+data type": "文本型"]
+  },
+  {
+comment": "提供属性对应的注释文本""method name": "加入逻辑属性",
+comment": "提供属性对应的注释文本""comment": "  加入属性内容为逻辑值的属性. 属性值为\"1\"(真)/\"0\"(假)/空文本(未选择)之一.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.\n  属性表窗口组件必须已经被创建.",
+comment": "提供属性对应的注释文本""result comment": "成功返回该属性的标识值(非0),失败返回0.",
+comment": "提供属性对应的注释文本""data type": "变整数",
+comment": "提供属性对应的注释文本""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始值文本,属性值为\"1\"(真)/\"0\"(假)/空文本(未选择)之一.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+comment": "提供属性对应的注释文本"]
+  },
+  {
+"method name": "加入颜色属性",
+"comment": "  加入属性值为颜色值的属性. 属性值为十六进制颜色值文本(可以使用\"十六进制文本到整数\"\n全局方法转换到对应的颜色值). 属性表窗口组件必须已经被创建.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.\n  如果颜色细节类型为\"属性细节类型.颜色支持透明\",除了正常的颜色值外,将可能返回\n\"颜色类.透明色\"值文本,如果颜色细节类型为\"属性细节类型.颜色支持默认\",将可能返回\n\"颜色类.默认色\"值文本.",
+"result comment": "成功返回该属性的标识值(非0),失败返回0.",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "颜色细节类型",
+"comment": "  提供属性的颜色细节类型,必须为\"属性细节类型.颜色\"/\"属性细节类型.颜色支持透明\"/\n\"属性细节类型.颜色支持默认\"之一.",
+"data type": "属性细节类型",
+"@默认值": "属性细节类型.颜色"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性的初始十六进制颜色值文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+ }"method name": "加入日期属性",
+ }"comment": "  加入属性值为日期值的属性. 属性值为日期值文本(可以使用\"到时间 (属性值, 真)\"全局方法转换到\n对应的日期值). 属性表窗口组件必须已经被创建.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完所有\n属性后手动调用\"刷新\"方法刷新.",
+ }"result comment": "成功返回该属性的标识值(非0),失败返回0.",
+ }"data type": "变整数",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "  提供属性的日期文本,格式见\"到时间\"全局方法的中文格式说明,譬如:\n\"1973年11月15日\", \"1973/11/15\", \"1973-11-15\"等.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "注释",
+"comment": "提供属性对应的注释文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+}"result comment": "成功返回该属性的标识值(非0),失败返回0.""method name": "加入分组属性",
+}"result comment": "成功返回该属性的标识值(非0),失败返回0.""comment": "  加入一个分组属性到属性表中. 分组属性中可以加入其它子属性.\n  只有本方法才能加入分组属性,其它方法所加入属性均为非分组属性.\n  加入后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则将不刷新需要用户在加入完\n所有属性后手动调用\"刷新\"方法刷新.\n  属性表窗口组件必须已经被创建.",
+}"result comment": "成功返回该属性的标识值(非0),失败返回0.""result comment": "成功返回该属性的标识值(非0),失败返回0.",
+}"result comment": "成功返回该属性的标识值(非0),失败返回0.""data type": "变整数",
+}"result comment": "成功返回该属性的标识值(非0),失败返回0.""@嵌入式方法": "\"\"",
+}"result comment": "成功返回该属性的标识值(非0),失败返回0.""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "父属性标识值",
+"comment": "如果欲将新属性加入到一个父属性中,提供该父属性的标识值,为0表示无. 注意该属性必须为分组属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "用户数值",
+"comment": "提供关联到本属性的用户数值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+}"result comment": "成功返回该属性的标识值(非0),失败返回0."]
+  },
+  {
+ }"method name": "删除属性",
+ }"comment": "  删除所指定的属性,成功(找到了该属性)删除返回真,失败返回假.\n  删除后,如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则需要用户\n在适当时候手动调用\"刷新\"方法刷新.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供所欲删除属性的标识值",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+
+"method name": "清空",
+
+"comment": "删除属性表中的所有属性",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+comment": "提供关联到本属性的用户数值""method name": "查找属性",
+comment": "提供关联到本属性的用户数值""comment": "查找返回属性表中第一个具有所指定用户数值的属性",
+comment": "提供关联到本属性的用户数值""result comment": "找到返回非0属性标识值值,未找到返回0",
+comment": "提供关联到本属性的用户数值""data type": "变整数",
+comment": "提供关联到本属性的用户数值""@嵌入式方法": "\"\"",
+comment": "提供关联到本属性的用户数值""parameters": [
+   {
+"parameter name": "欲查找用户数值",
+"comment": "提供所欲查找的用户数值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否查找子属性",
+"comment": "指定是否递归查找所有子属性(即非顶层属性)",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "提供关联到本属性的用户数值"]
+  },
+  {
+comment": "提供所欲查找的用户数值""method name": "置当前属性",
+comment": "提供所欲查找的用户数值""comment": "设置当前被选择属性,注意会触发\"当前属性被改变\"事件.",
+comment": "提供所欲查找的用户数值""parameters": [
+   {
+"parameter name": "所欲设置属性标识值",
+"comment": "如果为0,则取消被选择的当前属性.",
+"data type": "变整数"
+   }
+comment": "提供所欲查找的用户数值"]
+  },
+  {
+
+"method name": "取当前属性",
+
+"comment": "返回当前属性标识值,没有当前属性则返回0.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "确保显示",
+
+"comment": "确保所指定的属性被显示",
+
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "所欲确保其显示的属性标识值,该属性标识值值由所有属性加入方法返回.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否自动展开",
+"comment": "当所指定属性位于被折叠状态时,是否自动展开其所有父属性.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+omment": "提供关联到本属性的用户数值""parameters": [
+"method name": "全部展开",
+omment": "提供关联到本属性的用户数值""parameters": [
+"comment": "展开或折叠所有分组属性.\n注意: 当\"自动排序\"属性为真时,本方法不起作用.",
+omment": "提供关联到本属性的用户数值""parameters": [
+"@嵌入式方法": "\"\"",
+omment": "提供关联到本属性的用户数值""parameters": [
+"parameters": [
+   {
+"parameter name": "是否展开",
+"comment": "为真则展开,为假则折叠.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+omment": "提供关联到本属性的用户数值""parameters": [
+]
+  },
+  {
+
+"method name": "取用户数值",
+
+"comment": "返回所指定属性的用户数值",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+mment": "提供所欲查找的用户数值"]"method name": "置用户数值",
+mment": "提供所欲查找的用户数值"]"comment": "设置所指定属性的用户数值",
+mment": "提供所欲查找的用户数值"]"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲设置的用户数值",
+"data type": "变整数"
+   }
+mment": "提供所欲查找的用户数值"]]
+  },
+  {
+"method name": "取数据类型",
+"comment": "返回所指定属性的数据类型",
+"data type": "属性数据类型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+]
+  },
+  {
+hod name": "取数据类型""method name": "取细节类型",
+hod name": "取数据类型""comment": "返回所指定属性的细节类型",
+hod name": "取数据类型""data type": "属性细节类型",
+hod name": "取数据类型""@禁止流程检查": "真",
+hod name": "取数据类型""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值",
+"data type": "变整数"
+   }
+hod name": "取数据类型"]
+  },
+  {
+comment": "所欲确保其显示的属性标识值,该属性标识值值由所有属性加入方法返回.""method name": "取被扩展子属性数",
+comment": "所欲确保其显示的属性标识值,该属性标识值值由所有属性加入方法返回.""comment": "返回所指定分组属性的所有被展开的直接/间接子属性数目",
+comment": "所欲确保其显示的属性标识值,该属性标识值值由所有属性加入方法返回.""data type": "整数",
+comment": "所欲确保其显示的属性标识值,该属性标识值值由所有属性加入方法返回.""@禁止流程检查": "真",
+comment": "所欲确保其显示的属性标识值,该属性标识值值由所有属性加入方法返回.""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否包含隐藏属性",
+"comment": "指定是否包含所有被隐藏的子属性",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "所欲确保其显示的属性标识值,该属性标识值值由所有属性加入方法返回."]
+  },
+  {
+"comment": "返回当前属性标识值,没有当前属性则返回0.""method name": "添加属性备选项",
+"comment": "返回当前属性标识值,没有当前属性则返回0.""comment": "添加一个属性值备选项",
+"comment": "返回当前属性标识值,没有当前属性则返回0.""result comment": "成功返回真,失败返回假.",
+"comment": "返回当前属性标识值,没有当前属性则返回0.""data type": "逻辑型",
+"comment": "返回当前属性标识值,没有当前属性则返回0.""@禁止流程检查": "真",
+"comment": "返回当前属性标识值,没有当前属性则返回0.""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "备选项文本",
+"comment": "提供所欲添加备选项的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否要求唯一",
+"comment": "如果本参数值为真且所欲添加的备选项已经存在,则添加失败返回假.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"comment": "返回当前属性标识值,没有当前属性则返回0."]
+  },
+  {
+
+"method name": "删除所有备选项",
+
+"comment": "删除指定属性的所有备选项",
+
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "取备选项数",
+ }"comment": "返回指定属性的当前备选项数目",
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ameter name": "属性标识值""method name": "取备选项",
+ameter name": "属性标识值""comment": "返回属性所指定索引位置处的备选项文本",
+ameter name": "属性标识值""data type": "文本型",
+ameter name": "属性标识值""@禁止流程检查": "真",
+ameter name": "属性标识值""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "备选项索引位置",
+"comment": "提供所欲获取的备选项索引位置,必须大于等于0且小于\"取备选项数\"方法的返回值.",
+"data type": "整数"
+   }
+ameter name": "属性标识值"]
+  },
+  {
+"method name": "展开",
+"comment": "展开或折叠所指定的分组属性",
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由\"加入分组属性\"方法返回的分组属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否展开",
+"comment": "为真则展开,为假则折叠.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "重绘属性",
+"comment": "重新绘制所指定的属性",
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+]
+  },
+  {
+comment": "提供由\"加入分组属性\"方法返回的分组属性标识值值""method name": "显示属性",
+comment": "提供由\"加入分组属性\"方法返回的分组属性标识值值""comment": "  显示或隐藏所指定的属性.\n  如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则需要用户\n在适当时候手动调用\"刷新\"方法刷新.",
+comment": "提供由\"加入分组属性\"方法返回的分组属性标识值值""@嵌入式方法": "\"\"",
+comment": "提供由\"加入分组属性\"方法返回的分组属性标识值值""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否显示",
+"comment": "为真则显示,为假则隐藏.",
+"data type": "逻辑型"
+   }
+comment": "提供由\"加入分组属性\"方法返回的分组属性标识值值"]
+  },
+  {
+ }"method name": "是否可视",
+ }"comment": "返回所指定属性是否处于可视状态",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"method name": "取属性名称",
+}"comment": "返回所指定属性的名称",
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"method name": "置属性名称",
+"comment": "  设置所指定属性的名称.\n  如果\"修改后立即刷新\"属性值为真,将立即刷新属性表,否则需要用户\n在适当时候手动调用\"刷新\"方法刷新.",
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲设置名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"@禁止流程检查": "真""method name": "取属性值",
+}"@禁止流程检查": "真""comment": "返回所指定属性的当前值",
+}"@禁止流程检查": "真""data type": "文本型",
+}"@禁止流程检查": "真""@禁止流程检查": "真",
+}"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+}"@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "置属性值",
+
+"comment": "设置所指定属性的当前值. 属性表窗口组件必须已经被创建.",
+
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲设置的属性值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"data type": "文本型""method name": "取属性注释",
+"data type": "文本型""comment": "返回所指定属性的注释内容",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@禁止流程检查": "真",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+"data type": "文本型"]
+  },
+  {
+comment": "提供由所有属性加入方法返回的属性标识值值""method name": "置属性注释",
+comment": "提供由所有属性加入方法返回的属性标识值值""comment": "设置所指定属性的注释内容",
+comment": "提供由所有属性加入方法返回的属性标识值值""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲设置的注释",
+"data type": "文本型"
+   }
+comment": "提供由所有属性加入方法返回的属性标识值值"]
+  },
+  {
+comment": "提供由所有属性加入方法返回的属性标识值值""method name": "是否为分组属性",
+comment": "提供由所有属性加入方法返回的属性标识值值""comment": "返回所指定属性是否为分组属性",
+comment": "提供由所有属性加入方法返回的属性标识值值""data type": "逻辑型",
+comment": "提供由所有属性加入方法返回的属性标识值值""@禁止流程检查": "真",
+comment": "提供由所有属性加入方法返回的属性标识值值""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+comment": "提供由所有属性加入方法返回的属性标识值值"]
+  },
+  {
+ameter name": "所欲设置的属性值""method name": "是否被展开",
+ameter name": "所欲设置的属性值""comment": "返回所指定分组属性是否处于被展开状态",
+ameter name": "所欲设置的属性值""data type": "逻辑型",
+ameter name": "所欲设置的属性值""@禁止流程检查": "真",
+ameter name": "所欲设置的属性值""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+ameter name": "所欲设置的属性值"]
+  },
+  {
+data type": "变整数""method name": "父属性是否被展开",
+data type": "变整数""comment": "返回所指定属性的所有直接/间接父属性是否均处于被展开状态",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+ }"method name": "是否为当前属性",
+ }"comment": "返回所指定属性是否为当前被选择属性",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"@禁止流程检查": "真""method name": "取父属性数",
+}"@禁止流程检查": "真""comment": "返回所指定属性直接/间接父属性的总共数目",
+}"@禁止流程检查": "真""data type": "整数",
+}"@禁止流程检查": "真""@禁止流程检查": "真",
+}"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+}"@禁止流程检查": "真"]
+  },
+  {
+comment": "提供由所有属性加入方法返回的属性标识值值""method name": "禁止属性",
+comment": "提供由所有属性加入方法返回的属性标识值值""comment": "禁止或许可用户对所指定属性进行操作",
+comment": "提供由所有属性加入方法返回的属性标识值值""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否禁止",
+"comment": "为真禁止用户对所指定属性进行操作,为假则允许.",
+"data type": "逻辑型"
+   }
+comment": "提供由所有属性加入方法返回的属性标识值值"]
+  },
+  {
+
+"method name": "属性是否被禁止",
+
+"comment": "返回所指定属性是否禁止用户进行操作",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+定属性是否禁止用户进行操作"method name": "禁止编辑属性",
+定属性是否禁止用户进行操作"comment": "禁止或允许用户激活内嵌编辑框对所指定属性的内容进行编辑修改操作",
+定属性是否禁止用户进行操作"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否禁止",
+"comment": "为真禁止用户对所指定属性的内容进行编辑修改操作,为假则允许.",
+"data type": "逻辑型"
+   }
+定属性是否禁止用户进行操作]
+  },
+  {
+ }"method name": "属性是否可编辑",
+ }"comment": "返回是否允许用户激活内嵌编辑框对所指定属性的内容进行编辑修改操作",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+comment": "提供由所有属性加入方法返回的属性标识值值""method name": "取属性",
+comment": "提供由所有属性加入方法返回的属性标识值值""comment": "返回所指定索引位置处的属性标识值",
+comment": "提供由所有属性加入方法返回的属性标识值值""result comment": "成功返回非0属性标识值值,所提供索引位置无效则返回0.",
+comment": "提供由所有属性加入方法返回的属性标识值值""data type": "变整数",
+comment": "提供由所有属性加入方法返回的属性标识值值""@禁止流程检查": "真",
+comment": "提供由所有属性加入方法返回的属性标识值值""parameters": [
+   {
+"parameter name": "父属性标识值",
+"comment": "提供欲获取其直接子属性的父属性标识值,为0则去获取顶层属性.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "索引位置",
+"comment": "提供所欲获取属性的索引位置,必须大于等于0且小于\"取属性数\"方法的返回值.",
+"data type": "整数"
+   }
+comment": "提供由所有属性加入方法返回的属性标识值值"]
+  },
+  {
+"method name": "取属性数",
+"comment": "返回所具有属性的数目",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "父属性标识值",
+"comment": "提供欲获取其直接子属性数目的父属性标识值,为0则获取顶层属性的数目.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+@禁止流程检查": "真""method name": "取父属性",
+@禁止流程检查": "真""comment": "返回指定属性的父属性标识值,如果不存在父属性,则返回0.",
+@禁止流程检查": "真""data type": "变整数",
+@禁止流程检查": "真""@禁止流程检查": "真",
+@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "是否被修改",
+
+"comment": "返回所指定属性是否处于被修改状态",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "属性标识值",
+"comment": "提供由所有属性加入方法返回的属性标识值值",
+"data type": "变整数"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"MFC属性表格组件".]
+}

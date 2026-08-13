@@ -1,0 +1,1140 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+{
+问本程序中的接口需要引用模块"MFC版锐浪报表"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"MFC版锐浪报表"."package name": "火山.锐浪",
+问本程序中的接口需要引用模块"MFC版锐浪报表"."comment": "本文件放置包含各种与外部进行数据交换时的属性方法等。",
+问本程序中的接口需要引用模块"MFC版锐浪报表"."@文档": "\"category = \\\"数据导出\\\"\"",
+问本程序中的接口需要引用模块"MFC版锐浪报表"."classes": [
+ {
+"class name": "导出选项",
+"comment": "ExportOption，数据导出选项的基类。",
+"base class": "COM对象类",
+"methods": [
+  {
+    "method name": "获取导出格基类",
+    "comment": "AsE2CellOption",
+    "type": "property getter",
+    "data type": "导出格基类"
+  },
+  {
+"method name": "获取导出格基类""method name": "获取为CSV选项",
+"method name": "获取导出格基类""comment": "AsE2CSVOption，获取将本对象转换为导出CSV文件选项对象的接口引用。\n将本对象转换为导出CSV文件选项对象，只有当本对象确实是一个导出CSV文件选项对象时,才能成功取得对象的接口引用。",
+"method name": "获取导出格基类""type": "property getter",
+"method name": "获取导出格基类""data type": "导出CSV选项"
+  },
+  {
+ 逻辑型"method name": "获取为HTM选项",
+ 逻辑型"comment": "AsE2HTMOption，获取将本对象转换为导出Htm文件选项对象的接口引用。\n将本对象转换为导出Htm文件选项对象，只有当本对象确实是一个导出Htm文件选项对象时,才能成功取得对象的接口引用。",
+ 逻辑型"type": "property getter",
+ 逻辑型"data type": "导出HTM选项"
+  },
+  {
+
+"method name": "获取为IMG选项",
+
+"comment": "AsE2IMGOption，获取将本对象转换为导出图像文件选项对象的接口引用。\n将本对象转换为导出图像文件选项对象，只有当本对象确实是一个导出图像文件选项对象时,才能成功取得对象的接口引用。",
+
+"type": "property getter",
+
+"data type": "导出IMG选项"
+  },
+  {
+ "method name": "获取为PDF选项",
+ "comment": "AsE2PDFOption，获取将本对象转换为导出PDF文件选项对象的接口引用。\n将本对象转换为导出PDF文件选项对象，只有当本对象确实是一个导出PDF文件选项对象时,才能成功取得对象的接口引用。",
+ "type": "property getter",
+ "data type": "导出PDF选项"
+  },
+  {
+hod name": "获取导出格基类""method name": "获取为CSV选项""method name": "获取为RTF选项",
+hod name": "获取导出格基类""method name": "获取为CSV选项""comment": "AsE2RTFOption，获取将本对象转换为导出 RTF 文件选项对象的接口引用。\n将本对象转换为导出 RTF 文件选项对象，只有当本对象确实是一个导出 RTF 文件选项对象时,才能成功取得对象的接口引用。",
+hod name": "获取导出格基类""method name": "获取为CSV选项""type": "property getter",
+hod name": "获取导出格基类""method name": "获取为CSV选项""data type": "导出RTF选项"
+  },
+  {
+eType，指定导出的图像格式。"method name": "获取为TXT选项",
+eType，指定导出的图像格式。"comment": "AsE2TXTOption，获取将本对象转换为导出文本文件选项对象的接口引用。\n将本对象转换为导出文本文件选项对象，只有当本对象确实是一个导出文本文件选项对象时,才能成功取得对象的接口引用。",
+eType，指定导出的图像格式。"type": "property getter",
+eType，指定导出的图像格式。"data type": "导出TXT选项"
+  },
+  {
+ "ImageType，指定导出的图像格式。""method name": "获取为XLS选项",
+ "ImageType，指定导出的图像格式。""comment": "AsE2XLSOption，获取将本对象转换为导出Excel文件选项对象的接口引用。\n将本对象转换为导出Excel文件选项对象，只有当本对象确实是一个导出Excel文件选项对象时,才能成功取得对象的接口引用。",
+ "ImageType，指定导出的图像格式。""type": "property getter",
+ "ImageType，指定导出的图像格式。""data type": "导出XLS选项"
+  },
+  {
+}"method name": "导出后不打开",
+}"comment": "AbortOpenFile，指定报表在导出为文档之后是否用关联程序打开该导出文档。",
+}"result comment": "默认值为假。为真则不打开，为假则打开。",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+
+"method name": "导出后不打开",
+
+"comment": "AbortOpenFile，指定报表在导出为文档之后是否用关联程序打开该导出文档。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"comment": "默认值为假。为真则不打开，为假则打开。",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "不显示导出设置对话框",
+"parameters": [
+"comment": "AbortShowOptionDlg，指定报表在导出之前是否显示导出选项设置对话框。",
+"parameters": [
+"result comment": "默认值为假。为真显示，为假则不显示。",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "逻辑型"
+  },
+  {
+ageType，指定导出的图像格式。""method name": "获取为XLS选项""method name": "不显示导出设置对话框",
+ageType，指定导出的图像格式。""method name": "获取为XLS选项""comment": "AbortShowOptionDlg，指定报表在导出之前是否显示导出选项设置对话框。",
+ageType，指定导出的图像格式。""method name": "获取为XLS选项""type": "property setter",
+ageType，指定导出的图像格式。""method name": "获取为XLS选项""parameters": [
+   {
+"parameter name": "逻辑值",
+"comment": "默认值为假。为真显示，为假则不显示。",
+"data type": "逻辑型"
+   }
+ageType，指定导出的图像格式。""method name": "获取为XLS选项"]
+  },
+  {
+geType，指定导出的图像格式。""method name": "获取为XLS选项""comment": "AbortShowOptionDlg，指定报表在导出之前是否显示导出选项设置对话框。""method name": "导出类型",
+geType，指定导出的图像格式。""method name": "获取为XLS选项""comment": "AbortShowOptionDlg，指定报表在导出之前是否显示导出选项设置对话框。""comment": "ExportType，获取本导出文件选项对象的具体类型。",
+geType，指定导出的图像格式。""method name": "获取为XLS选项""comment": "AbortShowOptionDlg，指定报表在导出之前是否显示导出选项设置对话框。""result comment": "1、导出XLS； 2、导出TXT； 3、导出HTM； 4、导出RTF； 5、导出PDF； 6、导出CSV； 7、导出IMG",
+geType，指定导出的图像格式。""method name": "获取为XLS选项""comment": "AbortShowOptionDlg，指定报表在导出之前是否显示导出选项设置对话框。""type": "property getter",
+geType，指定导出的图像格式。""method name": "获取为XLS选项""comment": "AbortShowOptionDlg，指定报表在导出之前是否显示导出选项设置对话框。""data type": "导出类型枚举"
+  },
+  {
+geType，指定导出的图像格式。""method name": "获取为XLS选项""parameters": [
+"method name": "导出类型",
+geType，指定导出的图像格式。""method name": "获取为XLS选项""parameters": [
+"comment": "ExportType，获取本导出文件选项对象的具体类型。",
+geType，指定导出的图像格式。""method name": "获取为XLS选项""parameters": [
+"type": "property setter",
+geType，指定导出的图像格式。""method name": "获取为XLS选项""parameters": [
+"parameters": [
+   {
+"parameter name": "导出类型枚举值",
+"comment": "1、导出XLS； 2、导出TXT； 3、导出HTM； 4、导出RTF； 5、导出PDF； 6、导出CSV； 7、导出IMG",
+"data type": "导出类型枚举"
+   }
+geType，指定导出的图像格式。""method name": "获取为XLS选项""parameters": [
+]
+  },
+  {
+"parameters": [
+"method name": "文件名",
+"parameters": [
+"comment": "FileName，获取导出文件的完整路径与文件名称。",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "文本型"
+  },
+  {
+
+"method name": "文件名",
+
+"comment": "FileName，设置导出文件的完整路径与文件名称。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "指定导出文件的完整路径与文件名称。",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "导出后发送邮件",
+
+"comment": "MailExportFile，指定在导出之后是否启动邮件发送程序发送该导出文档。",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+eType，指定导出的图像格式。""method name": "获取为XLS选项"]"method name": "导出后发送邮件",
+eType，指定导出的图像格式。""method name": "获取为XLS选项"]"comment": "MailExportFile，指定在导出之后是否启动邮件发送程序发送该导出文档。",
+eType，指定导出的图像格式。""method name": "获取为XLS选项"]"type": "property setter",
+eType，指定导出的图像格式。""method name": "获取为XLS选项"]"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+eType，指定导出的图像格式。""method name": "获取为XLS选项"]]
+  },
+  {
+"parameters": [
+"method name": "邮件主题",
+"parameters": [
+"comment": "MailSubject，指定邮件的标题。",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "文本型"
+  },
+  {
+敷ŝ"method name": "邮件主题",
+敷ŝ"comment": "MailSubject，指定邮件的标题。",
+敷ŝ"type": "property setter",
+敷ŝ"parameters": [
+   {
+"parameter name": "主题文本",
+"data type": "文本型"
+   }
+敷ŝ]
+  },
+  {
+ }"method name": "邮件正文",
+ }"comment": "MailText，指定邮件的正文。",
+ }"type": "property getter",
+ }"data type": "文本型"
+  },
+  {
+
+"method name": "邮件正文",
+
+"comment": "MailText，指定邮件的正文。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "正文文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "邮件收件人",
+ }"comment": "MailTo，指定邮件的收件人地址。",
+ }"type": "property getter",
+ }"data type": "文本型"
+  },
+  {
+
+"method name": "邮件收件人",
+
+"comment": "MailTo，指定邮件的收件人地址。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "收件人",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+eType，指定导出的图像格式。"method name": "显示选项对话框",
+eType，指定导出的图像格式。"comment": "ShowOptionDlg，显示导出选项设置对话框，可以在打开的对话框中设定各个选项值。\n如果在关闭对话框时选择了确定按钮，返回真值，反之则返回假值。",
+eType，指定导出的图像格式。"data type": "逻辑型"
+  }
+]
+ },
+ {
+"class name": "导出格基类",
+"comment": "E2CellOption，基类，数据导出，导出格子类型数据XLS\\CSV\\HTM\\RTF\\TXT的导出选项基接口，PDF\\IMG除外。",
+"base class": "导出选项",
+"methods": [
+  {
+ameter name": "正文文本""method name": "列与明细网格保持一致",
+ameter name": "正文文本""comment": "ColumnAsDetailGrid，指示导出文件的列是否与报表明细网格的列保持一致。\n当本属性为TRUE时，如导出的EXCEL，RTF等文件时会产生较少的列。",
+ameter name": "正文文本""type": "property getter",
+ameter name": "正文文本""data type": "逻辑型"
+  },
+  {
+base class": "导出选项""method name": "列与明细网格保持一致",
+base class": "导出选项""comment": "ColumnAsDetailGrid，指示导出文件的列是否与报表明细网格的列保持一致。\n当本属性为TRUE时，如导出的EXCEL，RTF等文件时会产生较少的列。",
+base class": "导出选项""type": "property setter",
+base class": "导出选项""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+base class": "导出选项"]
+  },
+  {
+
+"method name": "输出页分隔行",
+
+"comment": "ExportPageBreak，指定在导出数据时是否产生页之间的分隔。\nMicrosoft Office Excel 有 1026年手动水平分页符的工作表的限制。在 Excel 2007 中的手动分页符限制为 1023年。导出 Excel 时，如果分页符超过了1023个，将自动产生新的工作表继续进行导出",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+}"method name": "输出页分隔行",
+}"comment": "ExportPageBreak，指定在导出数据时是否产生页之间的分隔。\nMicrosoft Office Excel 有 1026年手动水平分页符的工作表的限制。在 Excel 2007 中的手动分页符限制为 1023年。导出 Excel 时，如果分页符超过了1023个，将自动产生新的工作表继续进行导出。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+er name": "正文文本""method name": "列与明细网格保持一致""method name": "输出页眉与页脚",
+er name": "正文文本""method name": "列与明细网格保持一致""comment": "ExportPageHeaderFooter，指定是否导出页眉与页脚，只有在产生页间分隔时此属性才有效。",
+er name": "正文文本""method name": "列与明细网格保持一致""type": "property getter",
+er name": "正文文本""method name": "列与明细网格保持一致""data type": "逻辑型"
+  },
+  {
+"type": "property getter""method name": "输出页眉与页脚",
+"type": "property getter""comment": "ExportPageHeaderFooter，指定是否导出页眉与页脚，只有在产生页间分隔时此属性才有效。",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+"type": "property getter"]
+  },
+  {
+
+"method name": "只输出明细网格",
+
+"comment": "OnlyExportDetailGrid，指定是否只导出明细网格中的数据。",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "只输出明细网格",
+
+"comment": "OnlyExportDetailGrid，指定是否只导出明细网格中的数据。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "只导出纯文本数据",
+
+"comment": "OnlyExportPureText，是否只导出纯文本类型数据。",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"data type": "逻辑型""method name": "只导出纯文本数据",
+
+"data type": "逻辑型""comment": "OnlyExportPureText，是否只导出纯文本类型数据。",
+
+"data type": "逻辑型""type": "property setter",
+
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+"data type": "逻辑型"]
+  },
+  {
+ta type": "逻辑型""method name": "只导出纯文本数据""method name": "与打印页面保持一致",
+ta type": "逻辑型""method name": "只导出纯文本数据""comment": "SameAsPrint，指定是否按打印输出方式产生导出数据。",
+ta type": "逻辑型""method name": "只导出纯文本数据""type": "property getter",
+ta type": "逻辑型""method name": "只导出纯文本数据""data type": "逻辑型"
+  },
+  {
+
+"method name": "与打印页面保持一致",
+
+"comment": "SameAsPrint，指定是否按打印输出方式产生导出数据。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"comment": "SameAsPrint，指定是否按打印输出方式产生导出数据。""method name": "压缩空白行",
+"comment": "SameAsPrint，指定是否按打印输出方式产生导出数据。""comment": "SupressEmptyLines，指定是否压缩空白行，即不产生空白行。",
+"comment": "SameAsPrint，指定是否按打印输出方式产生导出数据。""type": "property getter",
+"comment": "SameAsPrint，指定是否按打印输出方式产生导出数据。""data type": "逻辑型"
+  },
+  {
+"method name": "压缩空白行",
+"comment": "SupressEmptyLines，指定是否压缩空白行，即不产生空白行。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "导出XLS选项",
+"comment": "E2XLSOption，数据导出，表示导出XLS格式文件的选项。",
+"base class": "导出格基类",
+"methods": [
+  {
+"method name": "导出xlsx格式",
+"comment": "ToXlsxFormat，指示是否导出为新的 .xlsx 格式。",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+type": "property setter""method name": "导出xlsx格式",
+type": "property setter""comment": "ToXlsxFormat，指示是否导出为新的 .xlsx 格式。",
+type": "property setter""type": "property setter",
+type": "property setter""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+type": "property setter"]
+  },
+  {
+Subject，指定邮件的标题。"method name": "禁止标题行重复输出",
+Subject，指定邮件的标题。"comment": "ColumnTitleForbidRepeat，指定是否禁止明细网格的标题行重复输出。",
+Subject，指定邮件的标题。"type": "property getter",
+Subject，指定邮件的标题。"data type": "逻辑型"
+  },
+  {
+
+"method name": "禁止标题行重复输出",
+
+"comment": "ColumnTitleForbidRepeat，指定是否禁止明细网格的标题行重复输出。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+ }"method name": "增大行高适应",
+ }"comment": "ExpandRowHeight，增大行高适应多行文字完整显示，指示是否加大EXCEL的行高以便多行文字数据可以在格中完整显示出来。\nEXCEL中多行文字的行间距大于 Grid++Report 中文字的行间距，如果导出的EXCEL行高与报表保持一致，则多行文字在EXCEL中可能不能完整地显示出来。\n设置本选项值为真，可以保证多行文字在导出后也可以完整显示。",
+ }"type": "property getter",
+ }"data type": "逻辑型"
+  },
+  {
+data type": "逻辑型""method name": "增大行高适应",
+data type": "逻辑型""comment": "ExpandRowHeight，增大行高适应多行文字完整显示，指示是否加大EXCEL的行高以便多行文字数据可以在格中完整显示出来。\nEXCEL中多行文字的行间距大于 Grid++Report 中文字的行间距，如果导出的EXCEL行高与报表保持一致，则多行文字在EXCEL中可能不能完整地显示出来。\n设置本选项值为真，可以保证多行文字在导出后也可以完整显示。",
+data type": "逻辑型""type": "property setter",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+data type": "逻辑型"]
+  },
+  {
+ta type": "逻辑型"]"method name": "最小列宽",
+ta type": "逻辑型"]"comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。",
+ta type": "逻辑型"]"type": "property getter",
+ta type": "逻辑型"]"data type": "小数"
+  },
+  {
+data type": "逻辑型""method name": "最小列宽",
+data type": "逻辑型""comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。",
+data type": "逻辑型""type": "property setter",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "小数值",
+"data type": "小数"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "最小行高",
+
+"comment": "MinRowHeight，指定导出产生行的最小高度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。",
+
+"type": "property getter",
+
+"data type": "小数"
+  },
+  {
+ta type": "逻辑型"]"method name": "最小行高",
+ta type": "逻辑型"]"comment": "MinRowHeight，指定导出产生行的最小高度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。",
+ta type": "逻辑型"]"type": "property setter",
+ta type": "逻辑型"]"parameters": [
+   {
+"parameter name": "小数值",
+"data type": "小数"
+   }
+ta type": "逻辑型"]]
+  },
+  {
+ta type": "逻辑型"]"method name": "换新数据表行数",
+ta type": "逻辑型"]"comment": "NewSheetRows，指定导出多少行后在新工作表继续导出，默认为0，不导出到新工作",
+ta type": "逻辑型"]"type": "property getter",
+ta type": "逻辑型"]"data type": "整数"
+  },
+  {
+ type": "逻辑型""method name": "最小列宽""method name": "换新数据表行数",
+ type": "逻辑型""method name": "最小列宽""comment": "NewSheetRows，指定导出多少行后在新工作表继续导出，默认为0，不导出到新工作",
+ type": "逻辑型""method name": "最小列宽""type": "property setter",
+ type": "逻辑型""method name": "最小列宽""parameters": [
+   {
+"parameter name": "整数值",
+"data type": "整数"
+   }
+ type": "逻辑型""method name": "最小列宽"]
+  },
+  {
+ }"method name": "页面左边距",
+ }"comment": "PageLeftMargin，Excel页面设置的左边距，如果为0，由Grid++Report自动产生边距值。",
+ }"type": "property getter",
+ }"data type": "小数"
+  },
+  {
+}"method name": "页面左边距",
+}"comment": "PageLeftMargin，Excel页面设置的左边距，如果为0，由Grid++Report自动产生边距值。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "小数值",
+"data type": "小数"
+   }
+}]
+  },
+  {
+"method name": "页面右边距",
+"comment": "PageRightMargin，Excel页面设置的右边距，如果为0，由Grid++Report自动产生边距值。\n如果此属性值为0，为了保证报表中一页的内容能完整在Excel中也能一页显示出来，Grid++Report会把Excel页面的右边距设为0。",
+"type": "property getter",
+"data type": "小数"
+  },
+  {
+
+"method name": "页面右边距",
+
+"comment": "PageRightMargin，Excel页面设置的右边距，如果为0，由Grid++Report自动产生边距值。\n如果此属性值为0，为了保证报表中一页的内容能完整在Excel中也能一页显示出来，Grid++Report会把Excel页面的右边距设为0。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "小数值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+"method name": "页面上边距",
+"comment": "PageTopMargin，Excel页面设置的上边距，如果为0，由Grid++Report自动产生边距值。\n如果此属性值为0，为了保证报表中一页的内容能完整在Excel中也能一页显示出来，Grid++Report会把Excel页面的上边距设为比报表中的小。",
+"type": "property getter",
+"data type": "小数"
+  },
+  {
+
+"method name": "页面上边距",
+
+"comment": "PageTopMargin，Excel页面设置的上边距，如果为0，由Grid++Report自动产生边距值。\n如果此属性值为0，为了保证报表中一页的内容能完整在Excel中也能一页显示出来，Grid++Report会把Excel页面的上边距设为比报表中的小。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "小数值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+]"method name": "页面下边距",
+]"comment": "PageBottomMargin，Excel页面设置的下边距，如果为0，由Grid++Report自动产生边距值。\n如果此属性值为0，为了保证报表中一页的内容能完整在Excel中也能一页显示出来，Grid++Report会把Excel页面的下边距设为比报表中的小。",
+]"type": "property getter",
+]"data type": "小数"
+  },
+  {
+ethod name": "页面左边距""method name": "页面下边距",
+ethod name": "页面左边距""comment": "PageBottomMargin，Excel页面设置的下边距，如果为0，由Grid++Report自动产生边距值。\n如果此属性值为0，为了保证报表中一页的内容能完整在Excel中也能一页显示出来，Grid++Report会把Excel页面的下边距设为比报表中的小。",
+ethod name": "页面左边距""type": "property setter",
+ethod name": "页面左边距""parameters": [
+   {
+"parameter name": "小数值",
+"data type": "小数"
+   }
+ethod name": "页面左边距"]
+  }
+]
+ },
+ {
+"class name": "导出TXT选项",
+"comment": "E2TXTOption，数据导出,表示导出TXT格式文件的选项。",
+"base class": "导出格基类",
+"methods": [
+  {
+thod name": "页面左边距""parameters": [
+"method name": "用Tab字符对齐",
+thod name": "页面左边距""parameters": [
+"comment": "UsingTabChar，指定是否用tab符号进行对齐处理。\n一个tab符号相当于8个空格字符占据的位置，用tab符号进行对齐处理可以减少导出文件的大小。",
+thod name": "页面左边距""parameters": [
+"type": "property getter",
+thod name": "页面左边距""parameters": [
+"data type": "逻辑型"
+  },
+  {
+ype": "逻辑型"]"method name": "换新数据表行数""method name": "用Tab字符对齐",
+ype": "逻辑型"]"method name": "换新数据表行数""comment": "UsingTabChar，指定是否用tab符号进行对齐处理。\n一个tab符号相当于8个空格字符占据的位置，用tab符号进行对齐处理可以减少导出文件的大小。",
+ype": "逻辑型"]"method name": "换新数据表行数""type": "property setter",
+ype": "逻辑型"]"method name": "换新数据表行数""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+ype": "逻辑型"]"method name": "换新数据表行数"]
+  },
+  {
+
+"method name": "文字编码",
+
+"comment": "TextEncode，指定文字的编码类型。",
+
+"type": "property getter",
+
+"data type": "文本编码枚举"
+  },
+  {
+ethod name": "页面左边距""method name": "文字编码",
+ethod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。",
+ethod name": "页面左边距""type": "property setter",
+ethod name": "页面左边距""parameters": [
+   {
+"parameter name": "文本编码枚举值",
+"data type": "文本编码枚举"
+   }
+ethod name": "页面左边距"]
+  }
+]
+ },
+ {
+"class name": "导出HTM选项",
+"comment": "E2HTMOption，数据导出，表示导出HTM格式文件的选项。",
+"base class": "导出格基类",
+"methods": [
+  {
+thod name": "页面左边距""parameters": [
+"method name": "图像路径",
+thod name": "页面左边距""parameters": [
+"comment": "PicturePath，指定导出的图片文件存储的子目录名称。",
+thod name": "页面左边距""parameters": [
+"type": "property getter",
+thod name": "页面左边距""parameters": [
+"data type": "文本型"
+  },
+  {
+"method name": "图像路径",
+"comment": "PicturePath，指定导出的图片文件存储的子目录名称。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "路径""method name": "多个页",
+ameter name": "路径""comment": "MultiPage",
+ameter name": "路径""type": "property getter",
+ameter name": "路径""data type": "逻辑型"
+  },
+  {
+thod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。""method name": "多个页",
+thod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。""comment": "MultiPage",
+thod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。""type": "property setter",
+thod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+thod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。"]
+  }
+]
+ },
+ {
+"class name": "导出CSV选项",
+"comment": "E2CSVOption，数据导出，表示导出CSV格式文件的选项。",
+"base class": "导出格基类",
+"methods": [
+  {
+parameters": [
+"method name": "CSV分隔字符",
+parameters": [
+"comment": "DelimiterChar，指定CSV分隔字符。",
+parameters": [
+"type": "property getter",
+parameters": [
+"data type": "文本型"
+  },
+  {
+}"method name": "CSV分隔字符",
+}"comment": "DelimiterChar，指定CSV分隔字符。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+pe": "逻辑型"]"method name": "换新数据表行数""parameters": [
+"method name": "引号分割字符",
+pe": "逻辑型"]"method name": "换新数据表行数""parameters": [
+"comment": "QuoteText，指定括定内容的符号文字，可以为空。",
+pe": "逻辑型"]"method name": "换新数据表行数""parameters": [
+"type": "property getter",
+pe": "逻辑型"]"method name": "换新数据表行数""parameters": [
+"data type": "文本型"
+  },
+  {
+}"method name": "引号分割字符",
+}"comment": "QuoteText，指定括定内容的符号文字，可以为空。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+thod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。""method name": "文字编码",
+thod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。""comment": "TextEncode，指定文字的编码类型。",
+thod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。""type": "property getter",
+thod name": "页面左边距""comment": "TextEncode，指定文字的编码类型。""data type": "文本编码枚举"
+  },
+  {
+"type": "property setter""method name": "文字编码",
+"type": "property setter""comment": "TextEncode，指定文字的编码类型。",
+"type": "property setter""type": "property setter",
+"type": "property setter""parameters": [
+   {
+"parameter name": "文本编码枚举值",
+"data type": "文本编码枚举"
+   }
+"type": "property setter"]
+  }
+]
+ },
+ {
+"class name": "导出RTF选项",
+"comment": "E2RTFOption，数据导出，表示导出RTF格式文件的选项。",
+"base class": "导出格基类",
+"methods": [
+  {
+a type": "逻辑型"]"comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。""method name": "作者",
+a type": "逻辑型"]"comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。""comment": "Author，指定导出的 RTF 文件的作者。",
+a type": "逻辑型"]"comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。""type": "property getter",
+a type": "逻辑型"]"comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。""data type": "文本型"
+  },
+  {
+base class": "导出格基类""method name": "作者",
+base class": "导出格基类""comment": "Author，指定导出的 RTF 文件的作者。",
+base class": "导出格基类""type": "property setter",
+base class": "导出格基类""parameters": [
+   {
+"parameter name": "作者名",
+"data type": "文本型"
+   }
+base class": "导出格基类"]
+  },
+  {
+ type": "逻辑型"]"comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。""type": "property getter""method name": "创建程序",
+ type": "逻辑型"]"comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。""type": "property getter""comment": "Creator，指定导出的 RTF 文件的创建程序。",
+ type": "逻辑型"]"comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。""type": "property getter""type": "property getter",
+ type": "逻辑型"]"comment": "MinColumnWidth，指定导出产生的列的最小宽度，以字符为计量单位，用报表缺省字体的字符平均宽度进行转换。""type": "property getter""data type": "文本型"
+  },
+  {
+ase class": "导出格基类""comment": "Author，指定导出的 RTF 文件的作者。""method name": "创建程序",
+ase class": "导出格基类""comment": "Author，指定导出的 RTF 文件的作者。""comment": "Creator，指定导出的 RTF 文件的创建程序。",
+ase class": "导出格基类""comment": "Author，指定导出的 RTF 文件的作者。""type": "property setter",
+ase class": "导出格基类""comment": "Author，指定导出的 RTF 文件的作者。""parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+ase class": "导出格基类""comment": "Author，指定导出的 RTF 文件的作者。"]
+  }
+]
+ },
+ {
+"class name": "导出PDF选项",
+"comment": "E2PDFOption，数据导出，表示导出PDF格式文件的选项。\nPDF导出乱码原因与解决办法:\n1、一般是因为报表中的“字体“属性中的“字符集”没有设为对应的语言；\n2、报表主对象的字体属性中的“字符集”要设对，不应该是“西方”；\n3、检查对应部件框或单元格的字体属性中的“字符集”要设对，不应该是“西方”；\n4、如果是简体中文，字符集应该是GB2312，如果是繁体，字符集应该是CHINESE_BIG5；\n5、尝试将PDF导出对话框的“ANSI文字编码”项不勾选，以新的方式进行PDF导出。",
+"base class": "导出选项",
+"methods": [
+  {
+"method name": "ANSI文字编码",
+"comment": "AnsiTextMode，指定是否将文本数据编码为ANSI字符方式。\n如果此属性为FALSE，则文本内容将编码为字体图形方式，这种方式能很好解决乱码问题，但可能存在Windows XP与Windows7下产生的PDF文件互不相认的问题。\nPDF导出乱码原因与解决办法:\n1、一般是因为报表中的“字体“属性中的“字符集”没有设为对应的语言；\n2、报表主对象的字体属性中的“字符集”要设对，不应该是“西方”；\n3、检查对应部件框或单元格的字体属性中的“字符集”要设对，不应该是“西方”；\n4、如果是简体中文，字符集应该是GB2312，如果是繁体，字符集应该是CHINESE_BIG5；\n5、尝试将PDF导出对话框的“ANSI文字编码”项不勾选，以新的方式进行PDF导出。",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+type": "property getter""method name": "ANSI文字编码",
+type": "property getter""comment": "AnsiTextMode，指定是否将文本数据编码为ANSI字符方式。\n如果此属性为FALSE，则文本内容将编码为字体图形方式，这种方式能很好解决乱码问题，但可能存在Windows XP与Windows7下产生的PDF文件互不相认的问题。\nPDF导出乱码原因与解决办法:\n1、一般是因为报表中的“字体“属性中的“字符集”没有设为对应的语言；\n2、报表主对象的字体属性中的“字符集”要设对，不应该是“西方”；\n3、检查对应部件框或单元格的字体属性中的“字符集”要设对，不应该是“西方”；\n4、如果是简体中文，字符集应该是GB2312，如果是繁体，字符集应该是CHINESE_BIG5；\n5、尝试将PDF导出对话框的“ANSI文字编码”项不勾选，以新的方式进行PDF导出。",
+type": "property getter""type": "property setter",
+type": "property getter""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+type": "property getter"]
+  },
+  {
+ss name": "导出PDF选项""method name": "压缩数据",
+ss name": "导出PDF选项""comment": "Compressed，指定是否对 PDF 页面数据进行压缩。\n压缩 PDF 页面数据可以产生更小的 PDF 文件，采用 zlib 压缩算法对数据进行压缩。\n如果不压缩页面数据，产生的 PDF 文件可以用文本方式打开，从而可以分析 PDF 文件的结构。",
+ss name": "导出PDF选项""type": "property getter",
+ss name": "导出PDF选项""data type": "逻辑型"
+  },
+  {
+ss name": "导出PDF选项""method name": "压缩数据",
+ss name": "导出PDF选项""comment": "Compressed，指定是否对 PDF 页面数据进行压缩。\n压缩 PDF 页面数据可以产生更小的 PDF 文件，采用 zlib 压缩算法对数据进行压缩。\n如果不压缩页面数据，产生的 PDF 文件可以用文本方式打开，从而可以分析 PDF 文件的结构",
+ss name": "导出PDF选项""type": "property setter",
+ss name": "导出PDF选项""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+ss name": "导出PDF选项"]
+  },
+  {
+data type": "文本型""method name": "嵌入字体数据",
+data type": "文本型""comment": "FontEmbedding，指定是否将字体数据嵌入到生成的 PDF 文档中。",
+data type": "文本型""type": "property getter",
+data type": "文本型""data type": "逻辑型"
+  },
+  {
+ }"method name": "嵌入字体数据",
+ }"comment": "FontEmbedding，指定是否将字体数据嵌入到生成的 PDF 文档中。",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+ethod name": "嵌入字体数据""method name": "作者",
+ethod name": "嵌入字体数据""comment": "Author，指定 PDF 文件的作者(Author)属性。",
+ethod name": "嵌入字体数据""type": "property getter",
+ethod name": "嵌入字体数据""data type": "文本型"
+  },
+  {
+"method name": "作者",
+"comment": "Author，指定 PDF 文件的作者(Author)属性。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "作者名",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "创建程序",
+
+"comment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+hod name": "作者""method name": "创建程序",
+hod name": "作者""comment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。",
+hod name": "作者""type": "property setter",
+hod name": "作者""parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+hod name": "作者"]
+  },
+  {
+"type": "property getter""method name": "关键字",
+"type": "property getter""comment": "Keywords，指定 PDF 文件的关键字(Keywords)属性。",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "文本型"
+  },
+  {
+"method name": "关键字",
+"comment": "Keywords，指定 PDF 文件的关键字(Keywords)属性。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ethod name": "嵌入字体数据""method name": "拥有者密码",
+ethod name": "嵌入字体数据""comment": "OwnerPassword，指定 PDF 文件的拥有者密码。\n如果要设置文档的口令，OwnerPassword 是必须要设置的，而 UserPassword 不一定要设置。\nOwnerPassword 与 UserPassword 必须不一样。只有设置了 UserPassword，在以阅读方式打开文档时才需要输入口令。",
+ethod name": "嵌入字体数据""type": "property getter",
+ethod name": "嵌入字体数据""data type": "文本型"
+  },
+  {
+"comment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。""method name": "拥有者密码",
+"comment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。""comment": "OwnerPassword，指定 PDF 文件的拥有者密码。\n如果要设置文档的口令，OwnerPassword 是必须要设置的，而 UserPassword 不一定要设置。\nOwnerPassword 与 UserPassword 必须不一样。只有设置了 UserPassword，在以阅读方式打开文档时才需要输入口令。",
+"comment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。""type": "property setter",
+"comment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。""parameters": [
+   {
+"parameter name": "密码文本",
+"data type": "文本型"
+   }
+"comment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。"]
+  },
+  {
+ }"method name": "用户密码",
+ }"comment": "UserPassword，指定 PDF 文件的用户密码。\n如果要设置文档的口令，OwnerPassword 是必须要设置的，而 UserPassword 不一定要设置。\nOwnerPassword 与 UserPassword 必须不一样。只有设置了 UserPassword，在以阅读方式打开文档时才需要输入口令。",
+ }"type": "property getter",
+ }"data type": "文本型"
+  },
+  {
+ment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。""method name": "拥有者密码""method name": "用户密码",
+ment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。""method name": "拥有者密码""comment": "UserPassword，指定 PDF 文件的用户密码。\n如果要设置文档的口令，OwnerPassword 是必须要设置的，而 UserPassword 不一定要设置。\nOwnerPassword 与 UserPassword 必须不一样。只有设置了 UserPassword，在以阅读方式打开文档时才需要输入口令。",
+ment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。""method name": "拥有者密码""type": "property setter",
+ment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。""method name": "拥有者密码""parameters": [
+   {
+"parameter name": "密码文本",
+"data type": "文本型"
+   }
+ment": "Creator，指定 PDF 文件的生成应用程序(Creator)属性。""method name": "拥有者密码"]
+  },
+  {
+
+"method name": "制作程序",
+
+"comment": "Producer，指定 PDF 文件的制作程序(Producer)属性。",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+type": "property setter""parameters": [
+"method name": "制作程序",
+type": "property setter""parameters": [
+"comment": "Producer，指定 PDF 文件的制作程序(Producer)属性。",
+type": "property setter""parameters": [
+"type": "property setter",
+type": "property setter""parameters": [
+"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+type": "property setter""parameters": [
+]
+  },
+  {
+
+"method name": "主题",
+
+"comment": "Subject，指定 PDF 文件的主题(Subject)属性。",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "主题",
+"data type": "文本型""comment": "Subject，指定 PDF 文件的主题(Subject)属性。",
+"data type": "文本型""type": "property setter",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "主题文本",
+"data type": "文本型"
+   }
+"data type": "文本型"]
+  },
+  {
+data type": "文本型""type": "property setter""method name": "设置安全性限制状态",
+data type": "文本型""type": "property setter""comment": "GetDocPermission，获取文档某项安全性限制的是否允许的状态。",
+data type": "文本型""type": "property setter""parameters": [
+   {
+"parameter name": "安全限制项",
+"comment": "PDF安全限制项枚举：1、允许打印； 2、允许更改文档； 3、允许复制内容； 4、允许编辑",
+"data type": "PDF安全限制项枚举"
+   },
+   {
+"parameter name": "是否允许",
+"data type": "逻辑型"
+   }
+data type": "文本型""type": "property setter"]
+  },
+  {
+ameter name": "密码文本""method name": "获取安全性限制状态",
+ameter name": "密码文本""comment": "GetDocPermission，获取文档某项安全性限制的是否允许的状态。",
+ameter name": "密码文本""data type": "逻辑型",
+ameter name": "密码文本""parameters": [
+   {
+"parameter name": "安全限制项",
+"comment": "PDF安全限制项枚举：1、允许打印； 2、允许更改文档； 3、允许复制内容； 4、允许编辑",
+"data type": "PDF安全限制项枚举"
+   }
+ameter name": "密码文本"]
+  }
+]
+ },
+ {
+"class name": "导出IMG选项",
+"comment": "E2IMGOption，数据导出，表示导出TMG格式文件的选项。",
+"base class": "导出选项",
+"methods": [
+  {
+ameter name": "密码文本""method name": "全部在一页",
+ameter name": "密码文本""comment": "AllInOne，指示是否将整个报表导出在一个图像文件中。",
+ameter name": "密码文本""type": "property getter",
+ameter name": "密码文本""data type": "逻辑型"
+  },
+  {
+
+"method name": "全部在一页",
+
+"comment": "AllInOne，指示是否将整个报表导出在一个图像文件中。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "绘制页面框",
+"comment": "DrawPageBox，指定是否在导出的图像上绘制一个页边框。",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+ameter name": "安全限制项""method name": "绘制页面框",
+ameter name": "安全限制项""comment": "DrawPageBox，指定是否在导出的图像上绘制一个页边框。",
+ameter name": "安全限制项""type": "property setter",
+ameter name": "安全限制项""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+ameter name": "安全限制项"]
+  },
+  {
+}"method name": "分辨率",
+}"comment": "DPI，指定导出图像的分辨率DPI。",
+}"result comment": "DPI越高，导出图像文件大小更大。",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+data type": "逻辑型""method name": "分辨率",
+data type": "逻辑型""comment": "DPI，指定导出图像的分辨率DPI。",
+data type": "逻辑型""type": "property setter",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "整数值",
+"comment": "默认值96，DPI越高，导出图像文件大小更大。",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "垂直间隙",
+
+"comment": "VertGap，当图像导出在一个图像中时，每页之间的垂直间距，以屏幕像素为单位。",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+meter name": "安全限制项""type": "property setter""method name": "垂直间隙",
+meter name": "安全限制项""type": "property setter""comment": "VertGap，当图像导出在一个图像中时，每页之间的垂直间距，以屏幕像素为单位。",
+meter name": "安全限制项""type": "property setter""type": "property setter",
+meter name": "安全限制项""type": "property setter""parameters": [
+   {
+"parameter name": "间隙值",
+"comment": "每页之间的垂直间距，以屏幕像素为单位。",
+"data type": "整数"
+   }
+meter name": "安全限制项""type": "property setter"]
+  },
+  {
+}"method name": "图像类型",
+}"comment": "ImageType，指定导出的图像格式。",
+}"type": "property getter",
+}"data type": "图像类型枚举"
+  },
+  {
+
+"method name": "图像类型",
+
+"comment": "ImageType，指定导出的图像格式。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "图像类型枚举值",
+"data type": "图像类型枚举"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"MFC版锐浪报表".]
+}

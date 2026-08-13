@@ -1,0 +1,284 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+息 = "177FE8, 0, 0, 0""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+息 = "177FE8, 0, 0, 0""package name": "火山.基本",
+息 = "177FE8, 0, 0, 0""classes": [
+ {
+外部源文件 = "libs\\sound\\vol_sound.cpp""class name": "媒体播放类",
+外部源文件 = "libs\\sound\\vol_sound.cpp""@文档": "\"category = \\\"媒体播放\\\"\"",
+外部源文件 = "libs\\sound\\vol_sound.cpp""@全局类": "真",
+外部源文件 = "libs\\sound\\vol_sound.cpp""@视窗.外部库": "\"Winmm.lib\"",
+外部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+  {
+部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+"method name": "播放WAV资源",
+部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+"comment": "播放所指定的WAV声音资源",
+部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+"result comment": "返回是否播放成功",
+部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+"static": true,
+部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+"data type": "逻辑型",
+部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+"@嵌入式方法": "\"\"",
+部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+"parameters": [
+   {
+"parameter name": "所欲播放的WAV资源",
+"data type": "WAV资源"
+   },
+   {
+"parameter name": "是否循环播放",
+"comment": "指定是否循环播放所指定的声音",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否同步播放",
+"comment": "  参数值如果为真,则本方法一直等到声音播放完毕后\n才会返回,否则将立即返回而声音将异步播放.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+]
+  },
+  {
+ameter name": "是否同步播放""method name": "播放WAV文件",
+ameter name": "是否同步播放""comment": "播放所指定的WAV声音文件",
+ameter name": "是否同步播放""result comment": "返回是否播放成功",
+ameter name": "是否同步播放""static": true,
+ameter name": "是否同步播放""data type": "逻辑型",
+ameter name": "是否同步播放""@嵌入式方法": "\"\"",
+ameter name": "是否同步播放""parameters": [
+   {
+"parameter name": "所欲播放的WAV文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否循环播放",
+"comment": "指定是否循环播放所指定的声音",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否同步播放",
+"comment": "  参数值如果为真,则本方法一直等到声音播放完毕后\n才会返回,否则将立即返回而声音将异步播放.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "是否同步播放"]
+  },
+  {
+@默认值": "假""method name": "播放WAV数据",
+@默认值": "假""comment": "播放所指定的WAV声音数据",
+@默认值": "假""result comment": "返回是否播放成功",
+@默认值": "假""static": true,
+@默认值": "假""data type": "逻辑型",
+@默认值": "假""@嵌入式方法": "\"\"",
+@默认值": "假""parameters": [
+   {
+"parameter name": "所欲播放的WAV数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否循环播放",
+"comment": "指定是否循环播放所指定的声音",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否同步播放",
+"comment": "  参数值如果为真,则本方法一直等到声音播放完毕后\n才会返回,否则将立即返回而声音将异步播放.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@默认值": "假"]
+  },
+  {
+
+"method name": "停止播放Wav声音",
+
+"comment": "停止当前正在进行的所有异步WAV声音播放",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  }
+外部源文件 = "libs\\sound\\vol_sound.cpp"]
+ },
+ {
+外部源文件 = "libs\\sound\\vol_sound.cpp""class name": "声音播放器",
+外部源文件 = "libs\\sound\\vol_sound.cpp""comment": "用作支持对各种格式声音的播放,可以定义本类的多个实例以支持同时播放多个声音.",
+外部源文件 = "libs\\sound\\vol_sound.cpp""base class": "参考对象类",
+外部源文件 = "libs\\sound\\vol_sound.cpp""@文档": "\"category = \\\"媒体播放\\\"\"",
+外部源文件 = "libs\\sound\\vol_sound.cpp""@视窗.头文件搜寻目录": "\"libs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\ports\\\\MSVC++\"",
+外部源文件 = "libs\\sound\\vol_sound.cpp""@视窗.外部头文件": "\"libs\\\\sound\\\\vol_sound.h\"",
+外部源文件 = "libs\\sound\\vol_sound.cpp""@视窗.外部源文件": "\"libs\\\\sound\\\\vol_sound.cpp\"",
+外部源文件 = "libs\\sound\\vol_sound.cpp""@视窗.外部源文件": "\"libs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\compat.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\dct64.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\equalizer.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\feature.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\format.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\frame.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\icy.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\icy2utf8.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\id3.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\index.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\layer1.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\layer2.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\layer3.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\libmpg123.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\ports\\\\MSVC++\\\\msvc.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\ntom.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\optimize.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\parse.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\readers.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\stringbuf.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\synth.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\synth_8bit.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\synth_real.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\synth_s32.c\\r\\nlibs\\\\sound\\\\mpg123-1.13.3\\\\src\\\\libmpg123\\\\tabinit.c\\r\\n\"",
+外部源文件 = "libs\\sound\\vol_sound.cpp""@视窗.预定义宏": "\"_CRT_SECURE_NO_WARNINGS\\r\\nOPT_GENERIC\"",
+外部源文件 = "libs\\sound\\vol_sound.cpp""methods": [
+  {
+
+"method name": "音量",
+
+"comment": "返回当前所设置的播放音量",
+
+"type": "property getter",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "音量",
+
+"comment": "设置当前播放音量",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的音量",
+"comment": "提供播放音量,音量值从0到1. 0表示静默,1表示使用声音原始音量.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "声道均衡值",
+
+"comment": "返回当前所设置的左右声道均衡值",
+
+"type": "property getter",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "声道均衡值",
+
+"comment": "设置当前播放时所使用的左右声道均衡值",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的均衡值",
+"comment": "提供左右声道均衡值. 从-1到1, -1表示左声道音量最大右声道完全静默,1表示右声道音量最大左声道完全静默,0表示左右声道均为最大音量.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "播放文件",
+
+"comment": "播放所指定的声音文件,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲播放的声音文件名",
+"comment": "提供所欲播放的声音文件名,目前支持wav或mp3格式.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否循环播放",
+"comment": "指定是否循环播放所指定的音乐",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "播放数据",
+"@嵌入式方法": "\"\"""comment": "播放所指定的声音字节集数据,返回是否成功.",
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲播放的声音数据",
+"comment": "提供所欲播放的声音数据,目前支持wav或mp3格式.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否循环播放",
+"comment": "指定是否循环播放所指定的音乐",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+comment": "提供所欲播放的声音文件名,目前支持wav或mp3格式.""method name": "播放资源",
+comment": "提供所欲播放的声音文件名,目前支持wav或mp3格式.""comment": "播放所指定的声音资源数据,返回是否成功.",
+comment": "提供所欲播放的声音文件名,目前支持wav或mp3格式.""data type": "逻辑型",
+comment": "提供所欲播放的声音文件名,目前支持wav或mp3格式.""@禁止流程检查": "真",
+comment": "提供所欲播放的声音文件名,目前支持wav或mp3格式.""parameters": [
+   {
+"parameter name": "所欲播放的声音资源",
+"comment": "提供所欲播放的声音资源数据,目前支持wav或mp3格式.",
+"data type": "声音资源"
+   },
+   {
+"parameter name": "是否循环播放",
+"comment": "指定是否循环播放所指定的音乐",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "提供所欲播放的声音文件名,目前支持wav或mp3格式."]
+  },
+  {
+data type": "声音资源""method name": "停止",
+data type": "声音资源""comment": "停止当前正在播放的声音",
+data type": "声音资源""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "暂停",
+
+"comment": "暂停当前正在播放的声音",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "继续",
+
+"comment": "继续播放当前被暂停播放的声音",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否循环播放",
+
+"comment": "返回当前是否设置为循环播放",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "是否正在播放",
+"@嵌入式方法": "\"\"""comment": "返回当前是否正在进行播放",
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  }
+外部源文件 = "libs\\sound\\vol_sound.cpp"]
+ }
+息 = "177FE8, 0, 0, 0"]
+}

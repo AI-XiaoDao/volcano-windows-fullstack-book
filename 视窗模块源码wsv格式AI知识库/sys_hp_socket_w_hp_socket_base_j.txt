@@ -1,0 +1,1794 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"HPSocket网络通讯支持".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"HPSocket网络通讯支持".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"HPSocket网络通讯支持".
+
+"package name": "火山.视窗.网络",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"HPSocket网络通讯支持".
+
+"classes": [
+ {
+"class name": "HPSocket类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n提供一些全局方法.",
+"base class": "HPSocket基础类",
+"@禁止创建对象": "真",
+"methods": [
+  {
+๠敷ŝ"method name": "取HP版本号",
+๠敷ŝ"comment": "获取当前库的版本号.",
+๠敷ŝ"result comment": "4个字节分别对应主版本号,子版本号,修正版本号,构建编号.",
+๠敷ŝ"static": true,
+๠敷ŝ"data type": "整数",
+๠敷ŝ"@嵌入式方法": "\"\""
+  },
+  {
+๠敷ŝ"method name": "取错误码描述",
+๠敷ŝ"comment": "获取指定错误代码的描述文本.",
+๠敷ŝ"static": true,
+๠敷ŝ"data type": "文本型",
+๠敷ŝ"@嵌入式方法": "\"\"",
+๠敷ŝ"parameters": [
+   {
+"parameter name": "错误码",
+"comment": "提供所欲获取其文本描述的错误码.",
+"data type": "整数"
+   }
+๠敷ŝ]
+  },
+  {
+敷ŝ"data type": "整数""method name": "取上次错误码",
+敷ŝ"data type": "整数""comment": "获取系统返回的错误代码.",
+敷ŝ"data type": "整数""static": true,
+敷ŝ"data type": "整数""data type": "整数",
+敷ŝ"data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+敷ŝ"comment": "获取当前库的版本号.""method name": "取上次错误码_WSA",
+敷ŝ"comment": "获取当前库的版本号.""comment": "获取系统返回的错误代码(调用WSAGetLastError()方法).",
+敷ŝ"comment": "获取当前库的版本号.""static": true,
+敷ŝ"comment": "获取当前库的版本号.""data type": "整数",
+敷ŝ"comment": "获取当前库的版本号.""@嵌入式方法": "\"\""
+  },
+  {
+ŝ]"method name": "从文件加载Cookie",
+ŝ]"comment": "从指定文件加载Cookie.",
+ŝ]"result comment": "返回是否操作成功.",
+ŝ]"static": true,
+ŝ]"data type": "逻辑型",
+ŝ]"@嵌入式方法": "\"\"",
+ŝ]"parameters": [
+   {
+"parameter name": "目标文件",
+"comment": "提供所欲加载Cookie的文件.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否追加",
+"comment": "指定是否保留已存在的Cookie,提供假将清除原有Cookie.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ŝ]]
+  },
+  {
+敷ŝ"@嵌入式方法": "\"\"""method name": "保存Cookie到文件",
+敷ŝ"@嵌入式方法": "\"\"""comment": "将Cookie写出到文件保存.",
+敷ŝ"@嵌入式方法": "\"\"""result comment": "返回是否操作成功.",
+敷ŝ"@嵌入式方法": "\"\"""static": true,
+敷ŝ"@嵌入式方法": "\"\"""data type": "逻辑型",
+敷ŝ"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+敷ŝ"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "目标文件",
+"comment": "提供所欲保存Cookie的文件.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否追加",
+"comment": "指定是否保留文件中已存在的Cookie,提供假将清除原有Cookie.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+敷ŝ"@嵌入式方法": "\"\""]
+  },
+  {
+嵌入式方法": "\"\"""method name": "保存Cookie到文件""method name": "清理Cookie",
+嵌入式方法": "\"\"""method name": "保存Cookie到文件""comment": "清理指定域名下Cookies.",
+嵌入式方法": "\"\"""method name": "保存Cookie到文件""result comment": "返回是否操作成功.",
+嵌入式方法": "\"\"""method name": "保存Cookie到文件""static": true,
+嵌入式方法": "\"\"""method name": "保存Cookie到文件""data type": "逻辑型",
+嵌入式方法": "\"\"""method name": "保存Cookie到文件""@嵌入式方法": "\"\"",
+嵌入式方法": "\"\"""method name": "保存Cookie到文件""parameters": [
+   {
+"parameter name": "域名",
+"comment": "提供所欲清除Cookie的域名,提供空将清除所有.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "路径",
+"comment": "路径,提供空文本将清除所有路径.",
+"data type": "文本型"
+   }
+嵌入式方法": "\"\"""method name": "保存Cookie到文件"]
+  },
+  {
+
+"method name": "清理过期Cookie",
+
+"comment": "清理指定域名下过期的Cookies.",
+
+"result comment": "返回是否操作成功.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "域名",
+"comment": "提供所欲清除过期Cookie的域名,提供空将清除所有.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "路径",
+"comment": "路径,提供空文本将清除所有路径.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"comment": "清理指定域名下过期的Cookies.""method name": "置Cookie",
+
+"comment": "清理指定域名下过期的Cookies.""comment": "设置Cookie.",
+
+"comment": "清理指定域名下过期的Cookies.""result comment": "返回是否操作成功.",
+
+"comment": "清理指定域名下过期的Cookies.""static": true,
+
+"comment": "清理指定域名下过期的Cookies.""data type": "逻辑型",
+
+"comment": "清理指定域名下过期的Cookies.""@嵌入式方法": "\"\"",
+
+"comment": "清理指定域名下过期的Cookies.""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供Cookie名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供Cookie值内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "域名",
+"comment": "提供所欲置入的域.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "路径",
+"comment": "提供所欲置入的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "生命周期",
+"comment": "即\"MaxAge\"属性.",
+"data type": "整数"
+   },
+   {
+"parameter name": "HttpOnly",
+"comment": "即\"HttpOnly\"属性.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "Secure",
+"comment": "即\"Secure\"属性.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "SameSite",
+"comment": "即\"SameSite\"属性.",
+"data type": "整数"
+   },
+   {
+"parameter name": "已存在更新值",
+"comment": "如果所欲置入Cookie已存在,是否仅更新其值内容.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+"comment": "清理指定域名下过期的Cookies."]
+  },
+  {
+ameter name": "SameSite""method name": "删除Cookie",
+ameter name": "SameSite""comment": "删除指定Cookie.",
+ameter name": "SameSite""result comment": "返回是否操作成功.",
+ameter name": "SameSite""static": true,
+ameter name": "SameSite""data type": "逻辑型",
+ameter name": "SameSite""@嵌入式方法": "\"\"",
+ameter name": "SameSite""parameters": [
+   {
+"parameter name": "域名",
+"comment": "提供所欲删除Cookie所在域.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "路径",
+"comment": "提供所欲删除Cookie所处路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "名称",
+"comment": "提供所欲删除Cookie的名称.",
+"data type": "文本型"
+   }
+ameter name": "SameSite"]
+  },
+  {
+er name": "SameSite""method name": "删除Cookie""method name": "置允许三方Cookie",
+er name": "SameSite""method name": "删除Cookie""comment": "设置是否允许第三方Cookie.",
+er name": "SameSite""method name": "删除Cookie""static": true,
+er name": "SameSite""method name": "删除Cookie""@嵌入式方法": "\"\"",
+er name": "SameSite""method name": "删除Cookie""parameters": [
+   {
+"parameter name": "是否允许",
+"data type": "逻辑型"
+   }
+er name": "SameSite""method name": "删除Cookie"]
+  },
+  {
+ name": "SameSite""method name": "删除Cookie"]"method name": "取允许三方Cookie",
+ name": "SameSite""method name": "删除Cookie"]"comment": "获取是否允许第三方Cookie.",
+ name": "SameSite""method name": "删除Cookie"]"static": true,
+ name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型",
+ name": "SameSite""method name": "删除Cookie"]"@嵌入式方法": "\"\""
+  },
+  {
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""method name": "Cookie过期文本到整数",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""comment": "将指定Cookie expires字符串转换为整数.",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""result comment": "返回时间戳.",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""static": true,
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""data type": "长整数",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""@禁止流程检查": "真",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供所欲转换的Cookie expires内容.",
+"data type": "文本型"
+   }
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型"]
+  },
+  {
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""method name": "Cookie过期整数到文本",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""comment": "将指定时间戳转换为Cookie expires内容.",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""result comment": "返回是否操作成功.",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""static": true,
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""data type": "逻辑型",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""@禁止流程检查": "真",
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型""parameters": [
+   {
+"parameter name": "时间戳",
+"comment": "提供所欲转换的expires时间.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "内容",
+"comment": "转换成功将返回Cookie expires内容.",
+"data type": "文本型"
+   }
+name": "SameSite""method name": "删除Cookie"]"data type": "逻辑型"]
+  },
+  {
+
+"method name": "生成Cookie内容",
+
+"comment": "提供指定Cookie属性生成一个Cookie字符串.",
+
+"result comment": "返回是否生成成功.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供Cookie名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供Cookie值内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "域名",
+"comment": "提供所欲置入的域.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "路径",
+"comment": "提供所欲置入的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "生命周期",
+"comment": "即\"MaxAge\"属性.",
+"data type": "整数"
+   },
+   {
+"parameter name": "HttpOnly",
+"comment": "即\"HttpOnly\"属性.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "Secure",
+"comment": "即\"Secure\"属性.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "SameSite",
+"comment": "即\"SameSite\"属性.",
+"data type": "整数"
+   },
+   {
+"parameter name": "内容",
+"comment": "转换成功将返回所生成的Cookie内容.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+comment": "转换成功将返回所生成的Cookie内容.""method name": "取当前UTC时间",
+comment": "转换成功将返回所生成的Cookie内容.""comment": "获取当前UTC时间.",
+comment": "转换成功将返回所生成的Cookie内容.""static": true,
+comment": "转换成功将返回所生成的Cookie内容.""data type": "长整数",
+comment": "转换成功将返回所生成的Cookie内容.""@嵌入式方法": "\"\""
+  },
+  {
+data type": "逻辑型""method name": "Cookie最大时间到过期时间",
+data type": "逻辑型""comment": "将指定Cookie MaxAge属性转换为过期时间.",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "长整数",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "MaxAge",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+comment": "提供Cookie名称.""method name": "Cookie过期时间到最大时间",
+comment": "提供Cookie名称.""comment": "将指定Cookie Expires属性转换为MaxAge.",
+comment": "提供Cookie名称.""static": true,
+comment": "提供Cookie名称.""data type": "整数",
+comment": "提供Cookie名称.""@嵌入式方法": "\"\"",
+comment": "提供Cookie名称.""parameters": [
+   {
+"parameter name": "Expires",
+"data type": "长整数"
+   }
+comment": "提供Cookie名称."]
+  },
+  {
+
+"@禁止流程检查": "真""method name": "取主机IP地址",
+
+"@禁止流程检查": "真""comment": "获取指定主机IPV4地址.",
+
+"@禁止流程检查": "真""static": true,
+
+"@禁止流程检查": "真""data type": "文本数组类",
+
+"@禁止流程检查": "真""@禁止流程检查": "真",
+
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "主机名",
+"comment": "提供空文本则表示获取本机.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+"@禁止流程检查": "真"]
+  },
+  {
+@禁止流程检查": "真"]"method name": "取主机IPV6地址",
+@禁止流程检查": "真"]"comment": "获取主机IPV6地址.",
+@禁止流程检查": "真"]"static": true,
+@禁止流程检查": "真"]"data type": "文本数组类",
+@禁止流程检查": "真"]"@禁止流程检查": "真",
+@禁止流程检查": "真"]"parameters": [
+   {
+"parameter name": "主机名",
+"comment": "提供空文本则表示获取本机.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+@禁止流程检查": "真"]]
+  },
+  {
+"@禁止流程检查": "真""parameters": [
+"method name": "压缩数据",
+"@禁止流程检查": "真""parameters": [
+"comment": "对指定数据进行Zlib压缩.",
+"@禁止流程检查": "真""parameters": [
+"result comment": "返回被压缩后的数据.",
+"@禁止流程检查": "真""parameters": [
+"static": true,
+"@禁止流程检查": "真""parameters": [
+"data type": "字节集类",
+"@禁止流程检查": "真""parameters": [
+"@禁止流程检查": "真",
+"@禁止流程检查": "真""parameters": [
+"parameters": [
+   {
+"parameter name": "欲压缩数据",
+"comment": "提供所欲压缩的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "压缩级别",
+"comment": "0-9之间,级别越高压缩率越大,相应的压缩时间会变长.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "压缩位数",
+"comment": "8-15,表示处理raw deflate的方法.",
+"data type": "整数",
+"@默认值": "15"
+   },
+   {
+"parameter name": "压缩状态",
+"comment": "指定分配内存的等级,1-9之间,1会使用最低的内存,压缩时间最长.",
+"data type": "整数",
+"@默认值": "8"
+   },
+   {
+"parameter name": "压缩算法",
+"comment": "指定所欲使用的压缩算法.",
+"data type": "整数",
+"@默认值": "0"
+   }
+"@禁止流程检查": "真""parameters": [
+]
+  },
+  {
+ameter name": "压缩状态""method name": "解压数据",
+ameter name": "压缩状态""comment": "对指定数据进行Zlib解压.",
+ameter name": "压缩状态""result comment": "返回解压的结果.\n0->解压成功.\n-3->提供的解压数据不正确.\n-5->输出缓冲区尺寸不足,需要分配更大空间.",
+ameter name": "压缩状态""static": true,
+ameter name": "压缩状态""data type": "整数",
+ameter name": "压缩状态""@禁止流程检查": "真",
+ameter name": "压缩状态""parameters": [
+   {
+"parameter name": "欲解压数据",
+"comment": "提供所欲解压的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出缓冲区",
+"comment": "提供的字节集必须先预分配足够的空间.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "压缩位数",
+"comment": "8-15,表示处理raw deflate的方法.",
+"data type": "整数",
+"@默认值": "15"
+   }
+ameter name": "压缩状态"]
+  },
+  {
+}"method name": "压缩数据_GZip",
+}"comment": "对指定数据进行GZip压缩.",
+}"result comment": "返回被压缩后的数据.",
+}"static": true,
+}"data type": "字节集类",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "欲压缩数据",
+"comment": "提供所欲压缩的数据.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "解压数据_GZip",
+
+"comment": "对指定数据进行GZip解压.",
+
+"result comment": "返回被解压后的数据.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲解压数据",
+"comment": "提供所欲解压的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+]"method name": "Base64编码",
+]"comment": "将指定数据进行Base64编码.",
+]"result comment": "返回编码后的数据.",
+]"static": true,
+]"data type": "字节集类",
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "欲编码数据",
+"comment": "提供所欲进行编码的数据.",
+"data type": "字节集类"
+   }
+]]
+  },
+  {
+]"method name": "Base64解码",
+]"comment": "将指定数据进行Base64解码.",
+]"result comment": "返回解码后的数据.",
+]"static": true,
+]"data type": "字节集类",
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "欲解码数据",
+"comment": "提供所欲进行解码的数据.",
+"data type": "字节集类"
+   }
+]]
+  },
+  {
+"data type": "字节集类""method name": "URL编码",
+"data type": "字节集类""comment": "将指定数据进行URL编码.",
+"data type": "字节集类""result comment": "返回编码后的数据.",
+"data type": "字节集类""static": true,
+"data type": "字节集类""data type": "字节集类",
+"data type": "字节集类""@禁止流程检查": "真",
+"data type": "字节集类""parameters": [
+   {
+"parameter name": "欲编码数据",
+"comment": "提供所欲进行编码的数据.",
+"data type": "字节集类"
+   }
+"data type": "字节集类"]
+  },
+  {
+data type": "字节集类""data type": "字节集类""method name": "URL解码",
+data type": "字节集类""data type": "字节集类""comment": "将指定数据进行URL解码.",
+data type": "字节集类""data type": "字节集类""result comment": "返回解码后的数据.",
+data type": "字节集类""data type": "字节集类""static": true,
+data type": "字节集类""data type": "字节集类""data type": "字节集类",
+data type": "字节集类""data type": "字节集类""@禁止流程检查": "真",
+data type": "字节集类""data type": "字节集类""parameters": [
+   {
+"parameter name": "欲解码数据",
+"comment": "提供所欲进行解码的数据.",
+"data type": "字节集类"
+   }
+data type": "字节集类""data type": "字节集类"]
+  },
+  {
+
+"method name": "压缩数据_Brotli",
+
+"comment": "将指定数据使用Brotli算法进行无损压缩后返回",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲压缩数据",
+"comment": "提供所欲对其进行压缩的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"data type": "字节集类""method name": "解压数据_Brotli",
+
+"data type": "字节集类""comment": "将指定使用Brotli压缩算法压缩后的数据进行解压后返回",
+
+"data type": "字节集类""result comment": "返回0表示解压成功,返回-3表示所提供的压缩数据不正确,返回-5表示所提供的数据缓冲区尺寸不足,需增加尺寸后重试.",
+
+"data type": "字节集类""static": true,
+
+"data type": "字节集类""data type": "整数",
+
+"data type": "字节集类""@禁止流程检查": "真",
+
+"data type": "字节集类""parameters": [
+   {
+"parameter name": "欲解压数据",
+"comment": "提供所欲对其进行解压的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据缓冲区",
+"comment": "解压成功后数据将写入该参数",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "解压成功后数据的真实长度将写入该参数",
+"data type": "整数类"
+   }
+
+"data type": "字节集类"]
+  }
+]
+ },
+ {
+"class name": "HP线程池类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n可用于执行异步任务的线程池类.",
+"@强制依赖": "\"HPSocket基础类\"",
+"@视窗.后缀文本": "\"public IHPThreadPoolListener\"",
+"methods": [
+  {
+data type": "整数类""method name": "创建",
+data type": "整数类""comment": "主动创建线程池,可设置是否监听线程池的各种事件.\n注:如不主动创建将自动创建,不会启用监听事件,如已经使用过该对象再调用本方法将会被忽略.",
+data type": "整数类""parameters": [
+   {
+"parameter name": "是否监听",
+"comment": "设置是否监听线程池中发生的各种事件,譬如:\"线程池已启动\" / \"线程即将执行\"等系列事件.",
+"data type": "逻辑型"
+   }
+data type": "整数类"]
+  },
+  {
+ta type": "整数类"]"method name": "启动状态",
+ta type": "整数类"]"comment": "检查当前线程池是否已经启动.",
+ta type": "整数类"]"type": "property getter",
+ta type": "整数类"]"data type": "逻辑型",
+ta type": "整数类"]"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "欲解压数据""method name": "运行状态",
+ameter name": "欲解压数据""comment": "检查当前线程池当前的运行状态.",
+ameter name": "欲解压数据""type": "property getter",
+ameter name": "欲解压数据""data type": "HP状态",
+ameter name": "欲解压数据""@嵌入式方法": "\"\""
+  },
+  {
+data type": "逻辑型""method name": "任务等待数量",
+data type": "逻辑型""comment": "检查当前线程池中处于等待队列中的任务数量.",
+data type": "逻辑型""type": "property getter",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "正在执行数量",
+
+"comment": "检查当前线程池中处于执行中的任务数量.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "工作线程数量",
+}"comment": "检查当前线程池的工作线程数量.",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "欲解压数据""method name": "队列最大容量",
+ameter name": "欲解压数据""comment": "检查当前线程池的任务队列最大容量.",
+ameter name": "欲解压数据""type": "property getter",
+ameter name": "欲解压数据""data type": "整数",
+ameter name": "欲解压数据""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "任务拒绝策略",
+"comment": "检查当前线程池所使用的任务拒绝策略.",
+"type": "property getter",
+"data type": "HP线程任务拒绝策略",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"@禁止流程检查": "真""method name": "启动",
+
+"@禁止流程检查": "真""comment": "启动线程池组件并设定线程池运行参数.",
+
+"@禁止流程检查": "真""data type": "逻辑型",
+
+"@禁止流程检查": "真""@嵌入式方法": "\"\"",
+
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "线程数量",
+"comment": "默认为0,即(CPU核数 * 2 + 2).",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "队列容量",
+"comment": "任务队列最大容量,默认为0,即不限制.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "拒绝策略",
+"comment": "当任务无法处理时所欲使用的策略.",
+"data type": "HP线程任务拒绝策略",
+"@默认值": "HP线程任务拒绝策略.立即返回失败"
+   },
+   {
+"parameter name": "堆栈大小",
+"comment": "线程堆栈空间大小(默认为0,即由操作系统默认).",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+"@禁止流程检查": "真"]
+  },
+  {
+a type": "整数类"]"@嵌入式方法": "\"\"""method name": "关闭",
+a type": "整数类"]"@嵌入式方法": "\"\"""comment": "关闭线程池组件,在线程池不再使用之后可以调用本方法进行关闭.",
+a type": "整数类"]"@嵌入式方法": "\"\"""data type": "逻辑型",
+a type": "整数类"]"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+a type": "整数类"]"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "等待时间",
+"comment": "单位:毫秒,默认-1即无限等待.如果在此等待时间内未能正常关闭,此时会尝试强制关闭.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+a type": "整数类"]"@嵌入式方法": "\"\""]
+  },
+  {
+type": "整数类"]"@嵌入式方法": "\"\""]"method name": "等待",
+type": "整数类"]"@嵌入式方法": "\"\""]"comment": "等待线程池组件停止运行.",
+type": "整数类"]"@嵌入式方法": "\"\""]"data type": "逻辑型",
+type": "整数类"]"@嵌入式方法": "\"\""]"@嵌入式方法": "\"\"",
+type": "整数类"]"@嵌入式方法": "\"\""]"parameters": [
+   {
+"parameter name": "超时时间",
+"data type": "整数"
+   }
+type": "整数类"]"@嵌入式方法": "\"\""]]
+  },
+  {
+}"method name": "置线程数量",
+}"comment": "动态调整该线程池可工作线程的数量.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "线程数量",
+"comment": "默认为0,即(CPU核数 * 2 + 2).",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"comment": "检查当前线程池的工作线程数量.""method name": "提交任务",
+"comment": "检查当前线程池的工作线程数量.""comment": "提交新任务至当前线程池组件中等待执行,注意使用本方法提交的线程将不会触发\"任务启动\"事件.\n",
+"comment": "检查当前线程池的工作线程数量.""result comment": "返回任务是否提交成功.",
+"comment": "检查当前线程池的工作线程数量.""data type": "逻辑型",
+"comment": "检查当前线程池的工作线程数量.""@嵌入式方法": "\"\"",
+"comment": "检查当前线程池的工作线程数量.""parameters": [
+   {
+"parameter name": "执行函数",
+"comment": "提供所欲执行的线程函数.",
+"@匹配方法": "\"线程模板函数\""
+   },
+   {
+"parameter name": "用户数据",
+"comment": "自定义用户数据,将会在线程执行函数中提供数据.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "等待时间",
+"comment": "单位:毫秒,默认-1即无限等待.\n注意:仅在\"拒绝策略\"为立即返回失败时有效.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+"comment": "检查当前线程池的工作线程数量."]
+  },
+  {
+ }"method name": "线程模板函数",
+ }"comment": "提供线程执行函数的模板方法.",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "用户数据",
+"comment": "在提交任务时所提供的用户数据参数.",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ }"method name": "线程池已启动",
+ }"comment": "当线程池启动成功本事件将被发送",
+ }"type": "event",
+ }"data type": "整数"
+  },
+  {
+"method name": "线程池已关闭",
+"comment": "当线程池关闭后本事件将被发送",
+"type": "event",
+"data type": "整数"
+  },
+  {
+data type": "整数""method name": "线程已就绪",
+data type": "整数""comment": "当线程池中的任意一条工作线程准备就绪后本事件将被发送",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "线程ID",
+"data type": "变整数"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "线程已退出",
+ }"comment": "当线程池中的任意一条工作线程已执行完毕退出后本事件将被发送",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "线程ID",
+"data type": "变整数"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "HP状态",
+"comment": "提供常量以表示HP通信组件的状态.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+"constant name": "正在启动",
+"initial value": "0"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "已经启动",
+tegory = \\\"辅助类\\\"\""initial value": "1"
+  },
+  {
+ }"constant name": "正在停止",
+ }"initial value": "2"
+  },
+  {
+}"initial value": "2""constant name": "已经停止",
+}"initial value": "2""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "HP错误码",
+"comment": "提供常量以表示HP通信组件所返回的各个错误码.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+}"constant name": "成功",
+}"comment": "无错误",
+}"initial value": "0"
+  },
+  {
+ss name": "HP错误码""constant name": "未启动",
+ss name": "HP错误码""comment": "当前状态不允许操作",
+ss name": "HP错误码""initial value": "1"
+  },
+  {
+"constant name": "参数错误",
+"comment": "非法参数",
+"initial value": "2"
+  },
+  {
+ethod name": "线程池已启动""constant name": "创建失败",
+ethod name": "线程池已启动""comment": "创建SOCKET失败",
+ethod name": "线程池已启动""initial value": "3"
+  },
+  {
+
+"constant name": "绑定失败",
+
+"comment": "绑定SOCKET失败",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "设置失败",
+
+"comment": "设置SOCKET失败",
+
+"initial value": "5"
+  },
+  {
+
+"constant name": "监听失败",
+
+"comment": "监听SOCKET失败",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "端口错误",
+
+"comment": "创建完成端口失败",
+
+"initial value": "7"
+  },
+  {
+nstant name": "绑定失败""constant name": "创建线程失败",
+nstant name": "绑定失败""comment": "创建工作线程失败",
+nstant name": "绑定失败""initial value": "8"
+  },
+  {
+}"constant name": "监测线程失败",
+}"comment": "创建监测线程失败",
+}"initial value": "9"
+  },
+  {
+"initial value": "9""constant name": "绑定端口失败",
+"initial value": "9""comment": "绑定完成端口失败",
+"initial value": "9""initial value": "10"
+  },
+  {
+"initial value": "7""constant name": "连接失败",
+"initial value": "7""comment": "连接服务器失败",
+"initial value": "7""initial value": "11"
+  },
+  {
+initial value": "9""initial value": "10""constant name": "网络错误",
+initial value": "9""initial value": "10""comment": "网络错误",
+initial value": "9""initial value": "10""initial value": "12"
+  },
+  {
+nstant name": "端口错误""constant name": "数据处理错误",
+nstant name": "端口错误""comment": "数据处理错误",
+nstant name": "端口错误""initial value": "13"
+  },
+  {
+}"constant name": "数据发送失败",
+}"comment": "数据发送失败",
+}"initial value": "14"
+  },
+  {
+"initial value": "14""constant name": "SSL环境错误",
+"initial value": "14""comment": "SSL环境未就绪",
+"initial value": "14""initial value": "101"
+  }
+]
+ },
+ {
+"class name": "HP地址重用选项",
+"comment": "HP通信组件地址重用模式选项.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+}"constant name": "不重用",
+}"comment": "不进行重用.",
+}"initial value": "0"
+  },
+  {
+
+"constant name": "仅地址",
+
+"comment": "仅重用IP地址.",
+
+"initial value": "1"
+  },
+  {
+comment": "非法参数""constant name": "全部",
+comment": "非法参数""comment": "重用端口与IP地址.",
+comment": "非法参数""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "HP数据发送策略",
+"comment": "HP通信组件数据发送模式选项.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+}"constant name": "打包模式",
+}"comment": "默认使用该模式.",
+}"initial value": "0"
+  },
+  {
+"comment": "创建监测线程失败""constant name": "安全模式",
+"comment": "创建监测线程失败""initial value": "1"
+  },
+  {
+}"constant name": "直接模式",
+}"initial value": "2"
+  }
+]
+ },
+ {
+"class name": "HP发送事件同步策略",
+"comment": "HP通信组件数据发送事件同步选项.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "不同步",
+
+"comment": "默认使用该模式.",
+
+"initial value": "0"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "同步关闭事件",
+tegory = \\\"辅助类\\\"\""initial value": "1"
+  },
+  {
+ameter name": "等待时间""constant name": "同步接收事件",
+ameter name": "等待时间""comment": "仅适用于TCP.",
+ameter name": "等待时间""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "HP操作类型",
+"comment": "用于在\"连接被关闭()\"事件中通过该常量标识是哪种操作导致的错误.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "未知操作",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "0"
+  },
+  {
+}"constant name": "接受请求",
+}"initial value": "1"
+  },
+  {
+
+"constant name": "连接请求",
+
+"initial value": "2"
+  },
+  {
+"initial value": "2""constant name": "发送请求",
+"initial value": "2""initial value": "3"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "接收请求",
+tegory = \\\"辅助类\\\"\""initial value": "4"
+  },
+  {
+ry = \\\"辅助类\\\"\""constant name": "同步关闭事件""constant name": "主动断开",
+ry = \\\"辅助类\\\"\""constant name": "同步关闭事件""initial value": "5"
+  }
+]
+ },
+ {
+"class name": "HPSSL验证模式",
+"comment": "提供SSL验证模式选项.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+"initial value": "2""constant name": "无验证",
+"initial value": "2""comment": "完全忽略验证证书.",
+"initial value": "2""initial value": "0x00"
+  },
+  {
+constants": [
+"constant name": "单项验证",
+constants": [
+"comment": "希望验证对方的证书,对于客户端来说,如果设置了这样的模式,如果在验证服务器端证书的时候,出现了错误,将捂手失败,\n对于服务器来说,如果设置了这样的模式,客户端可以不提供证书,如果客户端不提供证书,服务器端自行决定如何处理.",
+constants": [
+"initial value": "0x01"
+  },
+  {
+
+"constant name": "双向验证",
+
+"comment": "本模式下,服务器将会向客户端索要证书,如果客户端无法提供正确证书,将会握手失败.",
+
+"initial value": "0x02"
+  },
+  {
+"initial value": "2""constant name": "单次验证",
+"initial value": "2""initial value": "0x04"
+  }
+]
+ },
+ {
+"class name": "HP数据抓取结果",
+"comment": "提供抓取数据/窥探数据的结果类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+tants": [
+"constant name": "单项验证""constant name": "成功",
+tants": [
+"constant name": "单项验证""comment": "抓取数据成功.",
+tants": [
+"constant name": "单项验证""initial value": "0"
+  },
+  {
+initial value": "2""initial value": "0x04""constant name": "长度过大",
+initial value": "2""initial value": "0x04""comment": "抓取数据失败,原因:所欲抓取数据过长.",
+initial value": "2""initial value": "0x04""initial value": "1"
+  },
+  {
+initial value": "2""initial value": "0x04""constant name": "无数据",
+initial value": "2""initial value": "0x04""comment": "抓取数据失败,原因:指定连接ID中没有数据.",
+initial value": "2""initial value": "0x04""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "HP数据报传播模式",
+"comment": "提供数据报的几种传播模式.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+tants": [
+"constant name": "单项验证""constant name": "单播",
+tants": [
+"constant name": "单项验证""initial value": "-1"
+  },
+  {
+}"constant name": "组播",
+}"initial value": "0"
+  },
+  {
+ants": [
+"constant name": "单项验证""comment": "抓取数据成功.""constant name": "广播",
+ants": [
+"constant name": "单项验证""comment": "抓取数据成功.""initial value": "1"
+  }
+]
+ },
+ {
+"class name": "HPHTTP协议版本",
+"comment": "提供HTTP协议版本.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+comment": "提供SSL验证模式选项.""constant name": "HTTP1_0",
+comment": "提供SSL验证模式选项.""comment": "HTTP/1.0",
+comment": "提供SSL验证模式选项.""initial value": "1"
+  },
+  {
+}"constant name": "HTTP1_1",
+}"comment": "HTTP/1.1",
+}"initial value": "2"
+  }
+]
+ },
+ {
+"class name": "HPHTTP协议升级类型",
+"comment": "提供HTTP协议升级类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+constants": [
+"constant name": "无",
+constants": [
+"comment": "没有升级.",
+constants": [
+"initial value": "0"
+  },
+  {
+}"constant name": "WebSocket",
+}"initial value": "1"
+  },
+  {
+"constant name": "HTTP隧道",
+"initial value": "2"
+  },
+  {
+
+"constant name": "未知",
+
+"initial value": "-1"
+  }
+]
+ },
+ {
+"class name": "HP请求头类",
+"comment": "提供键/值成员,用于Cookie及请求头等.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+comment": "提供数据报的几种传播模式.""variable name": "名称",
+comment": "提供数据报的几种传播模式.""data type": "文本型"
+  },
+  {
+}"variable name": "值",
+}"data type": "文本型"
+  }
+]
+ },
+ {
+"class name": "HP请求头数组类",
+"comment": "实现一个键/值数组列表类型.",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"HP请求头类\"",
+"methods": [
+  {
+comment": "提供HTTP协议版本.""method name": "检查加入头成员",
+comment": "提供HTTP协议版本.""static": true,
+comment": "提供HTTP协议版本.""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "HP请求头数组类"
+   },
+   {
+"parameter name": "参数1",
+"data type": "HP请求头类"
+   }
+comment": "提供HTTP协议版本."]
+  }
+]
+ },
+ {
+"class name": "HPHTTP状态码",
+"comment": "定义HTTP状态码.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+"constant name": "继续",
+"comment": "CONTINUE",
+"data type": "短整数",
+"initial value": "100"
+  },
+  {
+}"constant name": "交换协议",
+}"comment": "SWITCHING_PROTOCOLS",
+}"data type": "短整数",
+}"initial value": "101"
+  },
+  {
+mment": "提供HTTP协议版本."]"constant name": "正在处理",
+mment": "提供HTTP协议版本."]"comment": "PROCESSING",
+mment": "提供HTTP协议版本."]"data type": "短整数",
+mment": "提供HTTP协议版本."]"initial value": "102"
+  },
+  {
+
+"constant name": "成功",
+
+"comment": "HTTP_OK",
+
+"data type": "短整数",
+
+"initial value": "200"
+  },
+  {
+
+"constant name": "已创建",
+
+"comment": "CREATED",
+
+"data type": "短整数",
+
+"initial value": "201"
+  },
+  {
+}"constant name": "已同意",
+}"comment": "ACCEPTED",
+}"data type": "短整数",
+}"initial value": "202"
+  },
+  {
+}"constant name": "非权威信息",
+}"comment": "NON_AUTHORITATIVE_INFORMATION",
+}"data type": "短整数",
+}"initial value": "203"
+  },
+  {
+comment": "提供HTTP协议版本.""constant name": "空内容",
+comment": "提供HTTP协议版本.""comment": "NO_CONTENT",
+comment": "提供HTTP协议版本.""data type": "短整数",
+comment": "提供HTTP协议版本.""initial value": "204"
+  },
+  {
+ent": "提供HTTP协议版本.""constant name": "空内容""constant name": "重置内容",
+ent": "提供HTTP协议版本.""constant name": "空内容""comment": "RESET_CONTENT",
+ent": "提供HTTP协议版本.""constant name": "空内容""data type": "短整数",
+ent": "提供HTTP协议版本.""constant name": "空内容""initial value": "205"
+  },
+  {
+ent": "提供HTTP协议版本.""constant name": "空内容""constant name": "分块内容",
+ent": "提供HTTP协议版本.""constant name": "空内容""comment": "PARTIAL_CONTENT",
+ent": "提供HTTP协议版本.""constant name": "空内容""data type": "短整数",
+ent": "提供HTTP协议版本.""constant name": "空内容""initial value": "206"
+  },
+  {
+}"constant name": "多状态",
+}"comment": "MULTI_STATUS",
+}"data type": "短整数",
+}"initial value": "207"
+  },
+  {
+omment": "提供HTTP协议版本.""initial value": "204""constant name": "已报告",
+omment": "提供HTTP协议版本.""initial value": "204""comment": "ALREADY_REPORTED",
+omment": "提供HTTP协议版本.""initial value": "204""data type": "短整数",
+omment": "提供HTTP协议版本.""initial value": "204""initial value": "208"
+  },
+  {
+
+"constant name": "已响应",
+
+"comment": "IM_USED",
+
+"data type": "短整数",
+
+"initial value": "226"
+  },
+  {
+}"constant name": "多重选择",
+}"comment": "MULTIPLE_CHOICES",
+}"data type": "短整数",
+}"initial value": "300"
+  },
+  {
+}"constant name": "永久重定向",
+}"comment": "MOVED_PERMANENTLY",
+}"data type": "短整数",
+}"initial value": "301"
+  },
+  {
+}"constant name": "临时重定向",
+}"comment": "MOVED_TEMPORARILY",
+}"data type": "短整数",
+}"initial value": "302"
+  },
+  {
+
+"constant name": "重定向",
+
+"comment": "SEE_OTHER",
+
+"data type": "短整数",
+
+"initial value": "303"
+  },
+  {
+"initial value": "226""constant name": "缓存",
+"initial value": "226""comment": "NOT_MODIFIED",
+"initial value": "226""data type": "短整数",
+"initial value": "226""initial value": "304"
+  },
+  {
+
+"constant name": "使用代理",
+
+"comment": "USE_PROXY",
+
+"data type": "短整数",
+
+"initial value": "305"
+  },
+  {
+initial value": "226""initial value": "304""constant name": "选择代理",
+initial value": "226""initial value": "304""comment": "SWITCH_PROXY",
+initial value": "226""initial value": "304""data type": "短整数",
+initial value": "226""initial value": "304""initial value": "306"
+  },
+  {
+nstant name": "使用代理""constant name": "临时重定向_",
+nstant name": "使用代理""comment": "TEMPORARY_REDIRECT",
+nstant name": "使用代理""data type": "短整数",
+nstant name": "使用代理""initial value": "307"
+  },
+  {
+initial value": "226""initial value": "304""constant name": "永久重定向_",
+initial value": "226""initial value": "304""comment": "PERMANENT_REDIRECT",
+initial value": "226""initial value": "304""data type": "短整数",
+initial value": "226""initial value": "304""initial value": "308"
+  },
+  {
+
+"constant name": "请求无效",
+
+"comment": "BAD_REQUEST",
+
+"data type": "短整数",
+
+"initial value": "400"
+  },
+  {
+}"constant name": "未授权",
+}"comment": "UNAUTHORIZED",
+}"data type": "短整数",
+}"initial value": "401"
+  },
+  {
+}"constant name": "需要付款",
+}"comment": "PAYMENT_REQUIRED",
+}"data type": "短整数",
+}"initial value": "402"
+  },
+  {
+"data type": "短整数""constant name": "拒绝访问",
+"data type": "短整数""comment": "FORBIDDEN",
+"data type": "短整数""data type": "短整数",
+"data type": "短整数""initial value": "403"
+  },
+  {
+data type": "短整数""initial value": "403""constant name": "未找到资源",
+data type": "短整数""initial value": "403""comment": "NOT_FOUND",
+data type": "短整数""initial value": "403""data type": "短整数",
+data type": "短整数""initial value": "403""initial value": "404"
+  },
+  {
+nstant name": "需要付款""constant name": "不允许的请求方法",
+nstant name": "需要付款""comment": "METHOD_NOT_ALLOWED",
+nstant name": "需要付款""data type": "短整数",
+nstant name": "需要付款""initial value": "405"
+  },
+  {
+
+"constant name": "不允许的请求",
+
+"comment": "NOT_ACCEPTABLE",
+
+"data type": "短整数",
+
+"initial value": "406"
+  },
+  {
+"initial value": "402""constant name": "需要代理服务器认证身份",
+"initial value": "402""comment": "PROXY_AUTHENTICATION_REQUIRED",
+"initial value": "402""data type": "短整数",
+"initial value": "402""initial value": "407"
+  },
+  {
+"comment": "USE_PROXY""constant name": "请求超时",
+"comment": "USE_PROXY""comment": "REQUEST_TIMEOUT",
+"comment": "USE_PROXY""data type": "短整数",
+"comment": "USE_PROXY""initial value": "408"
+  },
+  {
+EST_TIMEOUT"constant name": "资源状态冲突",
+EST_TIMEOUT"comment": "CONFLICT",
+EST_TIMEOUT"data type": "短整数",
+EST_TIMEOUT"initial value": "409"
+  },
+  {
+}"constant name": "资源过期",
+}"comment": "GONE",
+}"data type": "短整数",
+}"initial value": "410"
+  },
+  {
+"initial value": "402""constant name": "需要表明长度",
+"initial value": "402""comment": "LENGTH_REQUIRED",
+"initial value": "402""data type": "短整数",
+"initial value": "402""initial value": "411"
+  },
+  {
+}"constant name": "未满足先决条件",
+}"comment": "PRECONDITION_FAILED",
+}"data type": "短整数",
+}"initial value": "412"
+  },
+  {
+}"constant name": "请求体太大",
+}"comment": "REQUEST_ENTITY_TOO_LARGE",
+}"data type": "短整数",
+}"initial value": "413"
+  },
+  {
+"initial value": "402""constant name": "请求域太长",
+"initial value": "402""comment": "REQUEST_URI_TOO_LONG",
+"initial value": "402""data type": "短整数",
+"initial value": "402""initial value": "414"
+  },
+  {
+}"constant name": "不支持的媒体类型",
+}"comment": "UNSUPPORTED_MEDIA_TYPE",
+}"data type": "短整数",
+}"initial value": "415"
+  },
+  {
+}"constant name": "不满足请求范围",
+}"comment": "REQUESTED_RANGE_NOT_SATISFIABLE",
+}"data type": "短整数",
+}"initial value": "416"
+  },
+  {
+initial value": "402""initial value": "411""constant name": "预期结果失败",
+initial value": "402""initial value": "411""comment": "EXPECTATION_FAILED",
+initial value": "402""initial value": "411""data type": "短整数",
+initial value": "402""initial value": "411""initial value": "417"
+  },
+  {
+ANENT_REDIRECT"constant name": "错误的请求",
+ANENT_REDIRECT"comment": "MISDIRECTED_REQUEST",
+ANENT_REDIRECT"data type": "短整数",
+ANENT_REDIRECT"initial value": "421"
+  },
+  {
+}"constant name": "无法遵循的语义错误",
+}"comment": "UNPROCESSABLE_ENTITY",
+}"data type": "短整数",
+}"initial value": "422"
+  },
+  {
+
+"constant name": "已锁定",
+
+"comment": "LOCKED",
+
+"data type": "短整数",
+
+"initial value": "423"
+  },
+  {
+
+"constant name": "失败的依赖项",
+
+"comment": "FAILED_DEPENDENCY",
+
+"data type": "短整数",
+
+"initial value": "424"
+  },
+  {
+ANENT_REDIRECT"constant name": "无序收集",
+ANENT_REDIRECT"comment": "UNORDERED_COLLECTION",
+ANENT_REDIRECT"data type": "短整数",
+ANENT_REDIRECT"initial value": "425"
+  },
+  {
+EST_URI_TOO_LONG"constant name": "需要升级协议",
+EST_URI_TOO_LONG"comment": "UPGRADE_REQUIRED",
+EST_URI_TOO_LONG"data type": "短整数",
+EST_URI_TOO_LONG"initial value": "426"
+  },
+  {
+"initial value": "424""constant name": "需要条件请求",
+"initial value": "424""comment": "PRECONDITION_REQUIRED",
+"initial value": "424""data type": "短整数",
+"initial value": "424""initial value": "428"
+  },
+  {
+initial value": "424""data type": "短整数""constant name": "请求过多",
+initial value": "424""data type": "短整数""comment": "TOO_MANY_REQUESTS",
+initial value": "424""data type": "短整数""data type": "短整数",
+initial value": "424""data type": "短整数""initial value": "429"
+  },
+  {
+}"constant name": "请求头过大",
+}"comment": "REQUEST_HEADER_FIELDS_TOO_LARGE",
+}"data type": "短整数",
+}"initial value": "431"
+  },
+  {
+
+"constant name": "因法律不可用",
+
+"comment": "UNAVAILABLE_FOR_LEGAL_REASONS",
+
+"data type": "短整数",
+
+"initial value": "451"
+  },
+  {
+nstant name": "资源过期""constant name": "使用重试",
+nstant name": "资源过期""comment": "RETRY_WITH",
+nstant name": "资源过期""data type": "短整数",
+nstant name": "资源过期""initial value": "449"
+  },
+  {
+initial value": "402""comment": "LENGTH_REQUIRED""constant name": "服务器内部错误",
+initial value": "402""comment": "LENGTH_REQUIRED""comment": "INTERNAL_SERVER_ERROR",
+initial value": "402""comment": "LENGTH_REQUIRED""data type": "短整数",
+initial value": "402""comment": "LENGTH_REQUIRED""initial value": "500"
+  },
+  {
+
+"constant name": "尚未实现",
+
+"comment": "NOT_IMPLEMENTED",
+
+"data type": "短整数",
+
+"initial value": "501"
+  },
+  {
+stant name": "资源过期""comment": "RETRY_WITH""constant name": "错误网关",
+stant name": "资源过期""comment": "RETRY_WITH""comment": "BAD_GATEWAY",
+stant name": "资源过期""comment": "RETRY_WITH""data type": "短整数",
+stant name": "资源过期""comment": "RETRY_WITH""initial value": "502"
+  },
+  {
+tant name": "资源过期""comment": "RETRY_WITH""data type": "短整数""constant name": "服务不可用",
+tant name": "资源过期""comment": "RETRY_WITH""data type": "短整数""comment": "SERVICE_UNAVAILABLE",
+tant name": "资源过期""comment": "RETRY_WITH""data type": "短整数""data type": "短整数",
+tant name": "资源过期""comment": "RETRY_WITH""data type": "短整数""initial value": "503"
+  },
+  {
+}"constant name": "网关超时",
+}"comment": "GATEWAY_TIMEOUT",
+}"data type": "短整数",
+}"initial value": "504"
+  },
+  {
+nitial value": "402""comment": "LENGTH_REQUIRED""comment": "INTERNAL_SERVER_ERROR""constant name": "HTTP版本不支持",
+nitial value": "402""comment": "LENGTH_REQUIRED""comment": "INTERNAL_SERVER_ERROR""comment": "HTTP_VERSION_NOT_SUPPORTED",
+nitial value": "402""comment": "LENGTH_REQUIRED""comment": "INTERNAL_SERVER_ERROR""data type": "短整数",
+nitial value": "402""comment": "LENGTH_REQUIRED""comment": "INTERNAL_SERVER_ERROR""initial value": "505"
+  },
+  {
+al value": "402""comment": "LENGTH_REQUIRED""comment": "INTERNAL_SERVER_ERROR""constant name": "HTTP版本不支持""constant name": "服务器存在内部配置错误",
+al value": "402""comment": "LENGTH_REQUIRED""comment": "INTERNAL_SERVER_ERROR""constant name": "HTTP版本不支持""comment": "VARIANT_ALSO_NEGOTIATES",
+al value": "402""comment": "LENGTH_REQUIRED""comment": "INTERNAL_SERVER_ERROR""constant name": "HTTP版本不支持""data type": "短整数",
+al value": "402""comment": "LENGTH_REQUIRED""comment": "INTERNAL_SERVER_ERROR""constant name": "HTTP版本不支持""initial value": "506"
+  },
+  {
+
+"constant name": "服务器无法存储",
+
+"comment": "INSUFFICIENT_STORAGE",
+
+"data type": "短整数",
+
+"initial value": "507"
+  },
+  {
+}"constant name": "发现无穷循环",
+}"comment": "LOOP_DETECTED",
+}"data type": "短整数",
+}"initial value": "508"
+  },
+  {
+
+"constant name": "流量超限",
+
+"comment": "BANDWIDTH_LIMIT_EXCEEDED",
+
+"data type": "短整数",
+
+"initial value": "509"
+  },
+  {
+
+"constant name": "未扩展",
+
+"comment": "NOT_EXTENDED",
+
+"data type": "短整数",
+
+"initial value": "510"
+  },
+  {
+}"constant name": "需要网络验证",
+}"comment": "NETWORK_AUTHENTICATION_REQUIRED",
+}"data type": "短整数",
+}"initial value": "511"
+  },
+  {
+}"constant name": "无法解析响应头",
+}"comment": "UNPARSEABLE_RESPONSE_HEADERS",
+}"data type": "短整数",
+}"initial value": "600"
+  }
+]
+ },
+ {
+"class name": "HPURL字段",
+"comment": "本常量类定义了HP_HTTP服务器可以取得的URL域值字段名.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "短整数",
+"constants": [
+  {
+}"constant name": "概要",
+}"comment": "当前所请求概要",
+}"initial value": "0"
+  },
+  {
+}"constant name": "主机",
+}"comment": "当前所请求主机",
+}"initial value": "1"
+  },
+  {
+"initial value": "600""constant name": "端口",
+"initial value": "600""comment": "当前所请求端口",
+"initial value": "600""initial value": "2"
+  },
+  {
+
+"constant name": "路径",
+
+"comment": "当前所请求路径,即请求文件的路径",
+
+"initial value": "3"
+  },
+  {
+求路径,即请求文件的路径"constant name": "查询",
+求路径,即请求文件的路径"comment": "当前所请求查询文本,即GET访问?后面的参数",
+求路径,即请求文件的路径"initial value": "4"
+  },
+  {
+"initial value": "1""constant name": "片段",
+"initial value": "1""comment": "当前所请求片段",
+"initial value": "1""initial value": "5"
+  },
+  {
+}"constant name": "用户信息",
+}"comment": "当前所请求用户信息",
+}"initial value": "6"
+  },
+  {
+stant name": "资源过期""initial value": "449""constant name": "字段数量",
+stant name": "资源过期""initial value": "449""initial value": "7"
+  }
+]
+ },
+ {
+"class name": "HP线程任务拒绝策略",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+}"constant name": "立即返回失败",
+}"comment": "当任务无法执行时直接返回失败.",
+}"initial value": "0"
+  },
+  {
+IMPLEMENTED"constant name": "等待",
+IMPLEMENTED"comment": "等待(直到执行成功,超时或线程池关闭等原因导致失败).",
+IMPLEMENTED"initial value": "1"
+  },
+  {
+}"constant name": "调用者线程执行",
+}"comment": "转到调用处的线程去执行.",
+}"initial value": "2"
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"HPSocket网络通讯支持".
+
+]
+}

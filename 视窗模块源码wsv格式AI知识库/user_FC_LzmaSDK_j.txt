@@ -1,0 +1,97 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+    "file description": "本文件为一个火山程序的可用公开接口描述json文本",
+    "package name": "火山.原创软件",
+    "@文档": "\"category = \\\"开源库.LzmaSDK\\\"\"",
+    "@视窗.外部头文件": "\"LzmaSDK\\\\LzmaSDKTool.h\"",
+    "@视窗.外部库.win32": "\"LzmaSDK\\\\LzmaSDKToolx86.lib\"",
+    "@视窗.附属文件.win32": "\"LzmaSDK\\\\LzmaSDKToolx86.dll\"",
+    "@视窗.外部库.x64": "\"LzmaSDK\\\\LzmaSDKToolx64.lib\"",
+    "@视窗.附属文件.x64": "\"LzmaSDK\\\\LzmaSDKToolx64.dll\"",
+    "classes": [
+ {
+"class name": "______LzmaSDK",
+"comment": "7z的开源库 https://www.7-zip.org/sdk.html 这里下载",
+"@全局类": "真",
+"methods": [
+  {
+ 字节集类"method name": "压缩_lzma",
+ 字节集类"static": true,
+ 字节集类"data type": "字节集类",
+ 字节集类"parameters": [
+   {
+"parameter name": "要压缩的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "压缩等级",
+"data type": "整数",
+"@默认值": "7"
+   },
+   {
+"parameter name": "字典大小",
+"comment": "需要自己计算值可选值为  1 << 27 == 16777216\n        128 MB = (1 << 27) bytes for 32-bit version\n          1 GB = (1 << 30) bytes for 64-bit version\n     The default value is 16 MB = (1 << 24) bytes.",
+"data type": "整数",
+"@默认值": "16777216"
+   }
+ 字节集类]
+  },
+  {
+节集类]"method name": "解压_lzma",
+节集类]"static": true,
+节集类]"data type": "字节集类",
+节集类]"parameters": [
+   {
+"parameter name": "要解压的数据",
+"data type": "字节集类"
+   }
+节集类]]
+  },
+  {
+}"method name": "压缩_lzma_指针",
+}"static": true,
+}"data type": "字节集类",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "要压缩的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "压缩等级",
+"data type": "整数",
+"@默认值": "6"
+   },
+   {
+"parameter name": "字典大小",
+"data type": "整数",
+"@默认值": "16777216"
+   }
+}]
+  },
+  {
+}"method name": "解压_lzma_指针",
+}"static": true,
+}"data type": "字节集类",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "要解压的数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"data type": "整数"
+   }
+}]
+  }
+]
+ }
+    ]
+}

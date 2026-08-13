@@ -1,0 +1,415 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"RAR文件解压缩支持".
+
+{
+问本程序中的接口需要引用模块"RAR文件解压缩支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"RAR文件解压缩支持"."package name": "火山.视窗.文件解压",
+问本程序中的接口需要引用模块"RAR文件解压缩支持"."classes": [
+ {
+"class name": "RAR文件解压类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n基于Unrar实现对RAR压缩格式文件的访问处理",
+"@视窗.外部库.win32": "\"libs\\\\win32\\\\UnRAR.lib\"",
+"@视窗.附属文件.win32": "\"libs\\\\win32\\\\UnRAR.dll\"",
+"@视窗.外部库.x64": "\"libs\\\\x64\\\\UnRAR64.lib\"",
+"@视窗.附属文件.x64": "\"libs\\\\x64\\\\UnRAR64.dll\"",
+"@视窗.外部头文件": "\"libs\\\\vol_unrar.h\"",
+"methods": [
+  {
+型 = 整数 值 = @RHDF_DIRECTORY"method name": "取库版本号",
+型 = 整数 值 = @RHDF_DIRECTORY"comment": "返回所使用库的版本号",
+型 = 整数 值 = @RHDF_DIRECTORY"static": true,
+型 = 整数 值 = @RHDF_DIRECTORY"data type": "整数",
+型 = 整数 值 = @RHDF_DIRECTORY"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "打开文件",
+}"comment": "打开指定的压缩文件",
+}"data type": "RAR操作结果码",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "提供文件所处的路径,例如\"C:\\\\abc.rar\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解压密码",
+"comment": "如果所提供压缩文件需要解压密码请提供",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+疐敹ŝ"method name": "关闭文件",
+疐敹ŝ"comment": "如果已经打开压缩文件,则将其关闭.",
+疐敹ŝ"@嵌入式方法": "\"\""
+  },
+  {
+ "method name": "取当前文件名",
+ "comment": "获取当前压缩包中所指向的文件名称",
+ "data type": "文本型",
+ "@嵌入式方法": "\"\""
+  },
+  {
+型 = 整数 值 = @RHDF_DIRECTORY"method name": "取当前卷名称",
+型 = 整数 值 = @RHDF_DIRECTORY"comment": "获取当前文件所处的卷名称",
+型 = 整数 值 = @RHDF_DIRECTORY"data type": "文本型",
+型 = 整数 值 = @RHDF_DIRECTORY"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "取当前文件标志",
+"@嵌入式方法": "\"\"""comment": "获取当前压缩包中所指向文件所包含的标志位",
+"@嵌入式方法": "\"\"""result comment": "请参考\"RAR文件标志位\"所提供的常量值",
+"@嵌入式方法": "\"\"""data type": "整数",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "取当前文件压缩尺寸",
+"comment": "获取当前压缩包中所指向文件尺寸",
+"data type": "长整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+method name": "关闭文件""method name": "取当前文件压缩前尺寸",
+method name": "关闭文件""comment": "获取当前压缩包中所指向文件被压缩之前尺寸",
+method name": "关闭文件""data type": "长整数",
+method name": "关闭文件""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取操作系统类型",
+
+"comment": "获取当前压缩包中所指向文件在哪种系统下进行的压缩",
+
+"result comment": "0:MS DOS\n1:OS/2\n2:Windows\n3:Unix",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""method name": "取当前文件CRC32",
+@嵌入式方法": "\"\"""comment": "获取当前压缩包中所指向文件的CRC校验",
+@嵌入式方法": "\"\"""data type": "整数",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+method name": "关闭文件""method name": "取当前文件日期",
+method name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期",
+method name": "关闭文件""data type": "整数",
+method name": "关闭文件""@嵌入式方法": "\"\""
+  },
+  {
+打开的分卷文件""method name": "取当前文件压缩版本号",
+打开的分卷文件""comment": "获取当前压缩包中所指向文件的压缩版本号",
+打开的分卷文件""data type": "整数",
+打开的分卷文件""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取压缩方法",
+
+"comment": "获取所使用的压缩方法",
+
+"result comment": "0x30:存储\n0x31:最快的压缩速度\n0x32:快速压缩\n0x33:正常压缩\n0x34:良好的压缩\n0x35:最佳压缩",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""method name": "取当前文件属性",
+ethod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""comment": "获取当前压缩包中所指向文件的属性",
+ethod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""data type": "整数",
+ethod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""@嵌入式方法": "\"\""
+  },
+  {
+"parameters": [
+"method name": "取当前字典尺寸",
+"parameters": [
+"comment": "获取压缩字典的尺寸",
+"parameters": [
+"result comment": "单位:kb",
+"parameters": [
+"data type": "整数",
+"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+parameters": [
+"data type": "整数""method name": "取当前哈希算法类型",
+parameters": [
+"data type": "整数""comment": "获取用于保护文件数据完整性的哈希函数的类型",
+parameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp",
+parameters": [
+"data type": "整数""data type": "整数",
+parameters": [
+"data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+
+"data type": "整数""method name": "取当前文件哈希值",
+
+"data type": "整数""comment": "获取当前压缩包中所指向文件的哈希值",
+
+"data type": "整数""data type": "文本型",
+
+"data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+arameters": [
+"data type": "整数""@嵌入式方法": "\"\"""method name": "取文件系统重定向类型",
+arameters": [
+"data type": "整数""@嵌入式方法": "\"\"""comment": "获取文件系统重定向的类型",
+arameters": [
+"data type": "整数""@嵌入式方法": "\"\"""result comment": "0:没有重定向,通常的文件.\n1:Unix符号链接\n2:Windows符号链接\n3:Windows软连接\n4:硬链接\n5:使用-oi开关保存的文件引用",
+arameters": [
+"data type": "整数""@嵌入式方法": "\"\"""data type": "整数",
+arameters": [
+"data type": "整数""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+嵌入式方法": "\"\"""comment": "获取当前压缩包中所指向文件的CRC校验""method name": "取文件系统重定向目标",
+嵌入式方法": "\"\"""comment": "获取当前压缩包中所指向文件的CRC校验""comment": "获取文件系统重定向目标名称",
+嵌入式方法": "\"\"""comment": "获取当前压缩包中所指向文件的CRC校验""data type": "文本型",
+嵌入式方法": "\"\"""comment": "获取当前压缩包中所指向文件的CRC校验""@嵌入式方法": "\"\""
+  },
+  {
+parameters": [
+"result comment": "单位:kb""method name": "移动到下一文件",
+parameters": [
+"result comment": "单位:kb""comment": "移动到压缩包中的下一个文件",
+parameters": [
+"result comment": "单位:kb""result comment": "返回移动的结果",
+parameters": [
+"result comment": "单位:kb""data type": "RAR操作结果码",
+parameters": [
+"result comment": "单位:kb""@嵌入式方法": "\"\""
+  },
+  {
+
+"comment": "获取当前压缩包中所指向文件在哪种系统下进行的压缩""method name": "测试当前文件",
+
+"comment": "获取当前压缩包中所指向文件在哪种系统下进行的压缩""comment": "测试当前压缩包中所指向文件是否正常,该方法执行后将会移动到下一个文件.",
+
+"comment": "获取当前压缩包中所指向文件在哪种系统下进行的压缩""data type": "RAR操作结果码",
+
+"comment": "获取当前压缩包中所指向文件在哪种系统下进行的压缩""@嵌入式方法": "\"\""
+  },
+  {
+rameters": [
+"data type": "整数""@嵌入式方法": "\"\"""data type": "整数""method name": "解压当前文件",
+rameters": [
+"data type": "整数""@嵌入式方法": "\"\"""data type": "整数""comment": "解压当前压缩包中所指向文件到指定目录,该方法执行后将会移动到下一个文件.",
+rameters": [
+"data type": "整数""@嵌入式方法": "\"\"""data type": "整数""data type": "RAR操作结果码",
+rameters": [
+"data type": "整数""@嵌入式方法": "\"\"""data type": "整数""@嵌入式方法": "\"\"",
+rameters": [
+"data type": "整数""@嵌入式方法": "\"\"""data type": "整数""parameters": [
+   {
+"parameter name": "存放目录",
+"comment": "解压缩后释放文件的目录,留空则使用压缩文件当前所处目录.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+rameters": [
+"data type": "整数""@嵌入式方法": "\"\"""data type": "整数"]
+  },
+  {
+附属文件.x64 = "libs\\x64\\UnRAR64.dll""method name": "测试所有文件",
+附属文件.x64 = "libs\\x64\\UnRAR64.dll""comment": "测试当前所打开压缩包中的所有文件",
+附属文件.x64 = "libs\\x64\\UnRAR64.dll""result comment": "如果所有文件都测试成功则返回真,有文件失败将返回假.",
+附属文件.x64 = "libs\\x64\\UnRAR64.dll""data type": "逻辑型"
+  },
+  {
+thod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""comment": "获取当前压缩包中所指向文件的属性""method name": "解压所有文件",
+thod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""comment": "获取当前压缩包中所指向文件的属性""comment": "解压当前所打开压缩包中的所有文件到指定目录",
+thod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""comment": "获取当前压缩包中所指向文件的属性""result comment": "如果所有文件都解压成功则返回真,有文件失败将返回假.",
+thod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""comment": "获取当前压缩包中所指向文件的属性""data type": "逻辑型",
+thod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""comment": "获取当前压缩包中所指向文件的属性""parameters": [
+   {
+"parameter name": "存放目录",
+"comment": "解压缩后释放文件的目录,留空则使用压缩文件当前所处目录.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+thod name": "关闭文件""comment": "获取当前压缩包中所指向文件的文件日期""comment": "获取当前压缩包中所指向文件的属性"]
+  },
+  {
+arameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""method name": "正在解压数据",
+arameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""comment": "在解压过程中本事件将被触发",
+arameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""type": "event",
+arameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""data type": "整数",
+arameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""parameters": [
+   {
+"parameter name": "数据",
+"comment": "解压出的数据内容,最大尺寸不会超过最大字典大小(RAR3.0中为4MB).",
+"data type": "字节集类"
+   }
+arameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp"]
+  },
+  {
+rameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""comment": "在解压过程中本事件将被触发""method name": "提供下一个分卷",
+rameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""comment": "在解压过程中本事件将被触发""comment": "如果所操作的文件存在多个分卷,需要在该事件中提供多个分卷文件路径",
+rameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""comment": "在解压过程中本事件将被触发""result comment": "返回0表示忽略,返回1表示重试,返回-1表示终止操作.",
+rameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""comment": "在解压过程中本事件将被触发""type": "event",
+rameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""comment": "在解压过程中本事件将被触发""data type": "整数",
+rameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""comment": "在解压过程中本事件将被触发""parameters": [
+   {
+"parameter name": "下一分卷文件名",
+"comment": "在该参数中写入下一个分卷文件的完整路径",
+"data type": "文本型"
+   }
+rameters": [
+"data type": "整数""result comment": "0:RAR_HASH_NONE\n1:CRC32\n2:BLAKE2sp""comment": "在解压过程中本事件将被触发"]
+  },
+  {
+"parameters": [
+"method name": "所需分卷已打开",
+"parameters": [
+"comment": "如果所需的分卷已成功打开本事件将被发送",
+"parameters": [
+"result comment": "返回非0表示终止操作",
+"parameters": [
+"type": "event",
+"parameters": [
+"data type": "整数",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "分卷文件名",
+"comment": "所成功打开的分卷文件",
+"data type": "文本型"
+   }
+"parameters": [
+]
+  }
+]
+ },
+ {
+"class name": "RAR操作结果码",
+"@常量类": "整数",
+"constants": [
+  {
+od name": "关闭文件""method name": "取当前文件日期""constant name": "成功",
+od name": "关闭文件""method name": "取当前文件日期""initial value": "@ERAR_SUCCESS"
+  },
+  {
+ameter name": "分卷文件名""constant name": "文档结束",
+ameter name": "分卷文件名""initial value": "@ERAR_END_ARCHIVE"
+  },
+  {
+}"constant name": "内存不足",
+}"initial value": "@ERAR_NO_MEMORY"
+  },
+  {
+ss name": "RAR操作结果码""constant name": "CRC验证错误",
+ss name": "RAR操作结果码""initial value": "@ERAR_BAD_DATA"
+  },
+  {
+er name": "分卷文件名""constant name": "文档结束""constant name": "无效归档",
+er name": "分卷文件名""constant name": "文档结束""initial value": "@ERAR_BAD_ARCHIVE"
+  },
+  {
+}"constant name": "未知格式",
+}"initial value": "@ERAR_UNKNOWN_FORMAT"
+  },
+  {
+ameters": [
+"method name": "取当前字典尺寸""constant name": "卷打开错误",
+ameters": [
+"method name": "取当前字典尺寸""initial value": "@ERAR_EOPEN"
+  },
+  {
+"constant name": "创建失败",
+"initial value": "@ERAR_ECREATE"
+  },
+  {
+ame": "关闭文件""method name": "取当前文件日期""constant name": "成功""constant name": "关闭失败",
+ame": "关闭文件""method name": "取当前文件日期""constant name": "成功""initial value": "@ERAR_ECLOSE"
+  },
+  {
+}"constant name": "读取错误",
+}"initial value": "@ERAR_EREAD"
+  },
+  {
+r name": "分卷文件名""constant name": "文档结束""initial value": "@ERAR_BAD_ARCHIVE""constant name": "写入错误",
+r name": "分卷文件名""constant name": "文档结束""initial value": "@ERAR_BAD_ARCHIVE""initial value": "@ERAR_EWRITE"
+  },
+  {
+ame": "关闭文件""method name": "取当前文件日期""constant name": "成功""constant name": "缓冲区不足",
+ame": "关闭文件""method name": "取当前文件日期""constant name": "成功""initial value": "@ERAR_SMALL_BUF"
+  },
+  {
+: "关闭文件""method name": "取当前文件日期""constant name": "成功""constant name": "缓冲区不足""constant name": "未知错误",
+: "关闭文件""method name": "取当前文件日期""constant name": "成功""constant name": "缓冲区不足""initial value": "@ERAR_UNKNOWN"
+  },
+  {
+
+"constant name": "未提供密码",
+
+"initial value": "@ERAR_MISSING_PASSWORD"
+  },
+  {
+}"constant name": "引用错误",
+}"initial value": "@ERAR_EREFERENCE"
+  },
+  {
+}"constant name": "密码错误",
+}"initial value": "@ERAR_BAD_PASSWORD"
+  }
+]
+ },
+ {
+"class name": "RAR文件标志位",
+"constants": [
+  {
+R_SMALL_BUF"constant name": "上一卷继续",
+R_SMALL_BUF"data type": "整数",
+R_SMALL_BUF"initial value": "@RHDF_SPLITBEFORE"
+  },
+  {
+parameters": [
+"data type": "整数""constant name": "下一卷继续",
+parameters": [
+"data type": "整数""data type": "整数",
+parameters": [
+"data type": "整数""initial value": "@RHDF_SPLITAFTER"
+  },
+  {
+F_SPLITAFTER"constant name": "密码加密",
+F_SPLITAFTER"data type": "整数",
+F_SPLITAFTER"initial value": "@RHDF_ENCRYPTED"
+  },
+  {
+arameters": [
+"data type": "整数""data type": "整数""constant name": "老文件数据",
+arameters": [
+"data type": "整数""data type": "整数""data type": "整数",
+arameters": [
+"data type": "整数""data type": "整数""initial value": "@RHDF_SOLID"
+  },
+  {
+ss name": "RAR文件标志位""constant name": "目录条目",
+ss name": "RAR文件标志位""data type": "整数",
+ss name": "RAR文件标志位""initial value": "@RHDF_DIRECTORY"
+  }
+]
+ }
+问本程序中的接口需要引用模块"RAR文件解压缩支持".]
+}

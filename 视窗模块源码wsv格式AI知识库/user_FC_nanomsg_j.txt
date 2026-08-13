@@ -1,0 +1,1382 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.进程通讯\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "进程通讯配置常量",
+"constants": [
+  {
+鑀敷ŝ"constant name": "NN_LINGER",
+鑀敷ŝ"data type": "整数",
+鑀敷ŝ"initial value": "1"
+  },
+  {
+ 整数"constant name": "NN_SNDBUF",
+ 整数"comment": "发送缓冲区大小，字节。为了防止阻止超过缓冲区的消息，除了发送缓冲区中的数据之外，还可以缓冲一条消息。此选项的类型为 int。默认值为128kB。",
+ 整数"data type": "整数",
+ 整数"initial value": "2"
+  },
+  {
+}"constant name": "NN_RCVBUF",
+}"comment": "接收缓冲区大小，字节。为了防止阻止超过缓冲区的消息，除了接收缓冲区中的数据之外，还可以缓冲一条消息。此选项的类型为 int。默认值为128kB。",
+}"data type": "整数",
+}"initial value": "3"
+  },
+  {
+씠敷ŝ"constant name": "NN_SNDTIMEO",
+씠敷ŝ"comment": "插座上发送操作的超时，在毫秒内。如果消息不能在指定的超时内发送，则会返回 ETIMEDOUT 错误。负值意味着无限超时。该选项的类型为 int。默认值为-1。",
+씠敷ŝ"data type": "整数",
+씠敷ŝ"initial value": "4"
+  },
+  {
+整数"data type": "整数""constant name": "NN_RCVTIMEO",
+整数"data type": "整数""comment": "插座上 recv 操作的超时，在毫秒内。如果无法在指定超时内收到消息，则会返回 ETIMEDOUT 错误。负值意味着无限超时。该选项的类型为 int。默认值为-1。",
+整数"data type": "整数""data type": "整数",
+整数"data type": "整数""initial value": "5"
+  },
+  {
+
+"constant name": "NN_RECONNECT_IVL",
+
+"comment": "对于基于连接的传输（如 TCP），此选项指定在尝试重新建立连接之前，\n在毫秒内连接中断时需要等待多长时间。请注意，\n实际重新连接间隔可能在一定程度上是随机的，以防止严重的重新连接风暴。\n该选项的类型为 int。默认值为 100 （0.1 秒）。",
+
+"data type": "整数",
+
+"initial value": "6"
+  },
+  {
+}"constant name": "NN_RECONNECT_IVL_MAX",
+}"comment": "此选项仅在NN_RECONNECT_IVL选项之外使用。它指定了最大的重新连接间隔。\n在每次重新连接尝试时，以前的间隔将加倍，直到达到NN_RECONNECT_IVL_MAX。\n零值意味着不执行指数反向，重新连接间隔仅基于NN_RECONNECT_IVL。\n如果NN_RECONNECT_IVL_MAX小于NN_RECONNECT_IVL，则忽略它。该选项的类型为 int。默认值为 0。",
+}"data type": "整数",
+}"initial value": "7"
+  },
+  {
+
+"constant name": "NN_SNDPRIO",
+
+"comment": "为随后添加到插座的端点设置出站优先级。此选项对向所有同行发送消息的插座类型没有影响。\n但是，如果插座类型将每个消息发送给单个对等（或有限的对等器组），则具有高优先级的同级比低优先级的同侪优先。\n该选项的类型为 int。最高优先级为 1，最低优先级为 16。默认值为 8。",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+
+"constant name": "NN_RCVPRIO",
+
+"comment": "随后添加到插座的端点设置入站优先级。此选项对无法接收消息的插座类型没有影响。收到邮件时\n，在收到来自优先级较低的同行的消息之前，将接收来自优先级较高的同行的消息。该选项的类型为 int。最高优先级为 1，最低优先级为 16。默认值为 8。",
+
+"data type": "整数",
+
+"initial value": "9"
+  },
+  {
+}"constant name": "NN_SNDFD",
+}"data type": "整数",
+}"initial value": "10"
+  },
+  {
+}"constant name": "NN_RCVFD",
+}"data type": "整数",
+}"initial value": "11"
+  },
+  {
+数"data type": "整数""comment": "插座上 recv 操作的超时，在毫秒内。如果无法在指定超时内收到消息，则会返回 ETIMEDOUT 错误。负值意味着无限超时。该选项的类型为 int。默认值为-1。""constant name": "NN_DOMAIN",
+数"data type": "整数""comment": "插座上 recv 操作的超时，在毫秒内。如果无法在指定超时内收到消息，则会返回 ETIMEDOUT 错误。负值意味着无限超时。该选项的类型为 int。默认值为-1。""data type": "整数",
+数"data type": "整数""comment": "插座上 recv 操作的超时，在毫秒内。如果无法在指定超时内收到消息，则会返回 ETIMEDOUT 错误。负值意味着无限超时。该选项的类型为 int。默认值为-1。""initial value": "12"
+  },
+  {
+
+"constant name": "NN_PROTOCOL",
+
+"data type": "整数",
+
+"initial value": "13"
+  },
+  {
+
+"constant name": "NN_IPV4ONLY",
+
+"comment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。",
+
+"data type": "整数",
+
+"initial value": "14"
+  },
+  {
+"comment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""constant name": "NN_SOCKET_NAME",
+"comment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""comment": "错误报告和统计的插座名称。选项的类型是字符串。默认值为\"插座\"。N\"其中N是插座整数。此选项是实验性的，详情请参阅nn_env（7）",
+"comment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""data type": "整数",
+"comment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""initial value": "15"
+  },
+  {
+"comment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""constant name": "NN_RCVMAXSIZE",
+"comment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""comment": "可以字节接收的最大消息大小。负值意味着接收的大小仅受可用可地址存储器的限制。此选项的类型为 int。默认值为1024kB。",
+"comment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""data type": "整数",
+"comment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""initial value": "16"
+  },
+  {
+
+"constant name": "NN_MAXTTL",
+
+"comment": "设置消息在删除之前可以经过的最大\"跳\"数。每次收到消息（例如通过nn_device（3）函数）都算作单跳。这提供了一种防止无意循环的保护形式。",
+
+"data type": "整数",
+
+"initial value": "17"
+  }
+]
+ },
+ {
+"class name": "进程通讯模型常量",
+"comment": "\nNN_PUSH=80,NN_PULL=81\nNN_REQ=48,NN_REP=49\nNN_PAIR=16,NN_PAIR=16\nNN_SUB=33,NN_PUB=32\nNN_SUB_SUBSCRIBE=1,NN_SUB_UNSUBSCRIBE=2\nNN_SURVEYOR=98,NN_RESPONDENT=99",
+"constants": [
+  {
+ment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""constant name": "NN_RCVMAXSIZE""constant name": "NN_PUSH",
+ment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""constant name": "NN_RCVMAXSIZE""data type": "整数",
+ment": "如果设置为 1，则仅使用 IPv4 地址。如果设置为 0，则使用 IPv4 和 IPv6 地址。该选项的类型为 int。默认值为 1。""constant name": "NN_RCVMAXSIZE""initial value": "80"
+  },
+  {
+}"constant name": "NN_PULL",
+}"data type": "整数",
+}"initial value": "81"
+  },
+  {
+
+"constant name": "NN_REQ",
+
+"data type": "整数",
+
+"initial value": "48"
+  },
+  {
+
+"constant name": "NN_REP",
+
+"data type": "整数",
+
+"initial value": "49"
+  },
+  {
+"data type": "整数""constant name": "NN_PAIR",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "16"
+  },
+  {
+}"constant name": "NN_SUB",
+}"data type": "整数",
+}"initial value": "33"
+  },
+  {
+}"constant name": "NN_PUB",
+}"data type": "整数",
+}"initial value": "32"
+  },
+  {
+}"constant name": "NN_BUS",
+}"data type": "整数",
+}"initial value": "112"
+  },
+  {
+data type": "整数""data type": "整数""constant name": "NN_SURVEYOR",
+data type": "整数""data type": "整数""data type": "整数",
+data type": "整数""data type": "整数""initial value": "98"
+  },
+  {
+}"constant name": "NN_RESPONDENT",
+}"data type": "整数",
+}"initial value": "99"
+  },
+  {
+"data type": "整数""constant name": "NN_INPROC",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "-1"
+  }
+]
+ },
+ {
+"class name": "进程通讯通讯状态常量",
+"comment": "/*  Transport statistics  */",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "NN_STAT_ESTABLISHED_CONNECTIONS",
+
+"initial value": "101"
+  },
+  {
+}"constant name": "NN_STAT_ACCEPTED_CONNECTIONS",
+}"initial value": "102"
+  },
+  {
+nstant name": "NN_PULL""constant name": "NN_STAT_DROPPED_CONNECTIONS",
+nstant name": "NN_PULL""initial value": "103"
+  },
+  {
+}"constant name": "NN_STAT_BROKEN_CONNECTIONS",
+}"initial value": "104"
+  },
+  {
+
+"constant name": "NN_STAT_CONNECT_ERRORS",
+
+"initial value": "105"
+  },
+  {
+
+"constant name": "NN_STAT_BIND_ERRORS",
+
+"initial value": "106"
+  },
+  {
+
+"constant name": "NN_STAT_ACCEPT_ERRORS",
+
+"initial value": "107"
+  },
+  {
+
+"constant name": "NN_STAT_CURRENT_CONNECTIONS",
+
+"initial value": "201"
+  },
+  {
+
+"constant name": "NN_STAT_INPROGRESS_CONNECTIONS",
+
+"initial value": "202"
+  },
+  {
+constants": [
+"constant name": "NN_STAT_CURRENT_EP_ERRORS",
+constants": [
+"initial value": "203"
+  },
+  {
+"initial value": "201""constant name": "NN_STAT_MESSAGES_SENT",
+"initial value": "201""initial value": "301"
+  },
+  {
+}"constant name": "NN_STAT_MESSAGES_RECEIVED",
+}"initial value": "302"
+  },
+  {
+"initial value": "107""constant name": "NN_STAT_BYTES_SENT",
+"initial value": "107""initial value": "303"
+  },
+  {
+}"constant name": "NN_STAT_BYTES_RECEIVED",
+}"initial value": "304"
+  },
+  {
+
+"constant name": "NN_STAT_CURRENT_SND_PRIORITY",
+
+"initial value": "401"
+  }
+]
+ },
+ {
+"class name": "______进程通讯_全局函数",
+"comment": "主页 https://nanomsg.org/gettingstarted/index.html",
+"@全局类": "真",
+"@视窗.外部头文件": "\"nanomsg\\\\nanomsgTool.h\"",
+"@视窗.外部库.win32": "\"nanomsg\\\\nanomsgToolx86.lib\"",
+"@视窗.附属文件.win32": "\"nanomsg\\\\nanomsgToolx86.dll\"",
+"@视窗.外部库.x64": "\"nanomsg\\\\nanomsgToolx64.lib\"",
+"@视窗.附属文件.x64": "\"nanomsg\\\\nanomsgToolx64.dll\"",
+"methods": [
+  {
+@视窗.外部头文件": "\"nanomsg\\\\nanomsgTool.h\"""method name": "Nanomsg_GetState",
+@视窗.外部头文件": "\"nanomsg\\\\nanomsgTool.h\"""result comment": "错误返回-1",
+@视窗.外部头文件": "\"nanomsg\\\\nanomsgTool.h\"""static": true,
+@视窗.外部头文件": "\"nanomsg\\\\nanomsgTool.h\"""data type": "整数哈希集",
+@视窗.外部头文件": "\"nanomsg\\\\nanomsgTool.h\"""@嵌入式方法": "\"\"",
+@视窗.外部头文件": "\"nanomsg\\\\nanomsgTool.h\"""parameters": [
+   {
+"parameter name": "socket",
+"data type": "整数"
+   },
+   {
+"parameter name": "要查询的值",
+"data type": "进程通讯通讯状态常量"
+   }
+@视窗.外部头文件": "\"nanomsg\\\\nanomsgTool.h\""]
+  },
+  {
+"method name": "Nanomsg_new",
+"result comment": "void *",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Nanomsg_CopyConstruct",
+
+"result comment": "void",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "hDes",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "hSrc",
+"comment": "void *",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+comment": "void *""method name": "Nanomsg_delete",
+comment": "void *""result comment": "void",
+comment": "void *""static": true,
+comment": "void *""@嵌入式方法": "\"\"",
+comment": "void *""parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   }
+comment": "void *"]
+  },
+  {
+"method name": "Nanomsg_Socket",
+"result comment": "bool",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "domain",
+"comment": "#define AF_SP 1\n#define AF_SP_RAW 2",
+"data type": "整数"
+   },
+   {
+"parameter name": "protocol",
+"comment": "int",
+"data type": "整数"
+   }
+]
+  },
+  {
+data type": "整数""method name": "Nanomsg_GetErrorText",
+data type": "整数""static": true,
+data type": "整数""data type": "文本型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   }
+data type": "整数"]
+  },
+  {
+comment": "int""method name": "Nanomsg_GetErrorCode",
+comment": "int""static": true,
+comment": "int""data type": "整数",
+comment": "int""@嵌入式方法": "\"\""
+  },
+  {
+omment": "int""@嵌入式方法": "\"\"""method name": "Nanomsg_Setsockopt",
+omment": "int""@嵌入式方法": "\"\"""result comment": "bool",
+omment": "int""@嵌入式方法": "\"\"""static": true,
+omment": "int""@嵌入式方法": "\"\"""data type": "逻辑型",
+omment": "int""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+omment": "int""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "level",
+"data type": "整数"
+   },
+   {
+"parameter name": "option",
+"comment": "如果 level == 0 ，那么可以调用 进程通讯配置常量的值",
+"data type": "整数"
+   },
+   {
+"parameter name": "optval",
+"comment": "const void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "optvallen",
+"comment": "long long",
+"data type": "长整数"
+   }
+omment": "int""@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "Nanomsg_Getsockopt",
+
+"result comment": "bool",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "level",
+"comment": "int",
+"data type": "整数"
+   },
+   {
+"parameter name": "option",
+"comment": "int",
+"data type": "整数"
+   },
+   {
+"parameter name": "optval",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "optvallen",
+"comment": "long long *",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ameter name": "option""method name": "Nanomsg_close",
+ameter name": "option""result comment": "bool",
+ameter name": "option""static": true,
+ameter name": "option""data type": "逻辑型",
+ameter name": "option""@嵌入式方法": "\"\"",
+ameter name": "option""parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   }
+ameter name": "option"]
+  },
+  {
+
+"method name": "Nanomsg_Bind",
+
+"result comment": "bool",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "addr",
+"comment": "const char *",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "Nanomsg_Recv",
+
+"result comment": "bool",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "buf",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "pbyteRead",
+"comment": "int *",
+"data type": "整数"
+   },
+   {
+"parameter name": "flags",
+"comment": "int",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "Nanomsg_FreeMsg",
+}"result comment": "void",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "pMsg",
+"comment": "void *",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+
+"method name": "Nanomsg_Connect",
+
+"result comment": "bool",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "lpszUrl",
+"comment": "const char *",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+}"method name": "Nanomsg_Send",
+}"result comment": "bool",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "buf",
+"comment": "const void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "len",
+"comment": "int",
+"data type": "整数"
+   },
+   {
+"parameter name": "flags",
+"comment": "int",
+"data type": "整数"
+   }
+}]
+  },
+  {
+comment": "int""method name": "Nanomsg_Shutdown",
+comment": "int""result comment": "bool",
+comment": "int""static": true,
+comment": "int""data type": "逻辑型",
+comment": "int""@嵌入式方法": "\"\"",
+comment": "int""parameters": [
+   {
+"parameter name": "hNano",
+"comment": "void *",
+"data type": "变整数"
+   },
+   {
+"parameter name": "nhow",
+"comment": "int",
+"data type": "整数"
+   }
+comment": "int"]
+  }
+]
+ },
+ {
+"class name": "进程通讯_单向_发送器",
+"comment": "原文连接https://nanomsg.org/gettingstarted/pipeline.html",
+"base class": "______进程通讯_模板类",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+"method name": "开始",
+"comment": "   NN_PULL  81",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+]
+  },
+  {
+@默认值": "1""method name": "发送",
+@默认值": "1""data type": "逻辑型",
+@默认值": "1""parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "选项",
+"data type": "整数",
+"@默认值": "0"
+   }
+@默认值": "1"]
+  },
+  {
+
+"method name": "停止",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "进程通讯_单向_接收器",
+"comment": "原文连接 https://nanomsg.org/gettingstarted/pipeline.html",
+"base class": "______进程通讯_模板类",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+data type": "整数""method name": "开始",
+data type": "整数""comment": "     ",
+data type": "整数""data type": "逻辑型",
+data type": "整数""parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+data type": "整数"]
+  },
+  {
+ameter name": "url""method name": "接收",
+ameter name": "url""data type": "逻辑型",
+ameter name": "url""@禁止流程检查": "真",
+ameter name": "url""parameters": [
+   {
+"parameter name": "用来存放接收的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标记",
+"data type": "整数",
+"@默认值": "0"
+   }
+ameter name": "url"]
+  },
+  {
+"method name": "停止",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "进程通讯_双向_发送器",
+"comment": "原文连接 https://nanomsg.org/gettingstarted/reqrep.html",
+"base class": "______进程通讯_模板类",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+@模板实现类": "\"\"""method name": "开始",
+@模板实现类": "\"\"""data type": "逻辑型",
+@模板实现类": "\"\"""parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+@模板实现类": "\"\""]
+  },
+  {
+}"method name": "发送",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "选项",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+@默认值": "0""method name": "接收",
+@默认值": "0""data type": "逻辑型",
+@默认值": "0""@禁止流程检查": "真",
+@默认值": "0""parameters": [
+   {
+"parameter name": "用来存放接收的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标记",
+"data type": "整数",
+"@默认值": "0"
+   }
+@默认值": "0"]
+  },
+  {
+data type": "字节集类""method name": "停止",
+data type": "字节集类""data type": "逻辑型",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "字节集类"]
+  }
+]
+ },
+ {
+"class name": "进程通讯_双向_接收器",
+"comment": "原文连接 https://nanomsg.org/gettingstarted/reqrep.html",
+"base class": "______进程通讯_模板类",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+methods": [
+"method name": "开始",
+methods": [
+"comment": "     ",
+methods": [
+"data type": "逻辑型",
+methods": [
+"parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+methods": [
+]
+  },
+  {
+data type": "整数""method name": "接收",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "用来存放接收的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标记",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "发送",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "选项",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ta type": "整数"]"method name": "停止",
+ta type": "整数"]"data type": "逻辑型",
+ta type": "整数"]"parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+ta type": "整数"]]
+  }
+]
+ },
+ {
+"class name": "进程通讯_一对一_发送器",
+"comment": "例子 https://nanomsg.org/gettingstarted/pair.html",
+"base class": "______进程通讯_原始套接字_配置函数",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+methods": [
+"method name": "开始",
+methods": [
+"data type": "逻辑型",
+methods": [
+"parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+methods": [
+]
+  },
+  {
+thods": [
+]"method name": "发送",
+thods": [
+]"data type": "逻辑型",
+thods": [
+]"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "选项",
+"data type": "整数",
+"@默认值": "0"
+   }
+thods": [
+]]
+  },
+  {
+ }"method name": "接收",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "用来存放接收的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标记",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "停止",
+data type": "整数""data type": "逻辑型",
+data type": "整数""parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "整数"]
+  }
+]
+ },
+ {
+"class name": "进程通讯_一对一_接收器",
+"comment": "例子 https://nanomsg.org/gettingstarted/pair.html",
+"base class": "______进程通讯_原始套接字_配置函数",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+ type": "整数""method name": "停止""method name": "开始",
+ type": "整数""method name": "停止""comment": "     ",
+ type": "整数""method name": "停止""data type": "逻辑型",
+ type": "整数""method name": "停止""parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+ type": "整数""method name": "停止"]
+  },
+  {
+
+"method name": "接收",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "用来存放接收的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标记",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "发送",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "选项",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+ }"method name": "停止",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "进程通讯_单向广播_接收器",
+"comment": "可以有多个接收器\n例子 https://nanomsg.org/gettingstarted/pubsub.html",
+"base class": "______进程通讯_模板类",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+ }"method name": "开始",
+ }"comment": "   NN_PULL  81",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "过滤器",
+"comment": "默认为空，表示接收所有的消息，否则只接收特定的消息",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+ }]
+  },
+  {
+ }"method name": "接收",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "用来存放接收的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标记",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+ }"method name": "停止",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "进程通讯_单向广播_发送器",
+"comment": "只能有一个发送器\n例子 https://nanomsg.org/gettingstarted/pubsub.html",
+"base class": "______进程通讯_模板类",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+data type": "整数""method name": "开始",
+data type": "整数""comment": "     ",
+data type": "整数""data type": "逻辑型",
+data type": "整数""parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "发送",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "选项",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ameter name": "选项""method name": "停止",
+ameter name": "选项""data type": "逻辑型",
+ameter name": "选项""parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+ameter name": "选项"]
+  }
+]
+ },
+ {
+"class name": "进程通讯_双向广播_接收器",
+"comment": "可以有多个接收器\n例子https://nanomsg.org/gettingstarted/survey.html",
+"base class": "______进程通讯_模板类",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+@模板实现类": "\"\"""method name": "开始",
+@模板实现类": "\"\"""comment": "   NN_PULL  81",
+@模板实现类": "\"\"""data type": "逻辑型",
+@模板实现类": "\"\"""parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+@模板实现类": "\"\""]
+  },
+  {
+comment": "可选值 \n1 表示自带协议\n2 表示原始协议""method name": "接收",
+comment": "可选值 \n1 表示自带协议\n2 表示原始协议""data type": "逻辑型",
+comment": "可选值 \n1 表示自带协议\n2 表示原始协议""@禁止流程检查": "真",
+comment": "可选值 \n1 表示自带协议\n2 表示原始协议""parameters": [
+   {
+"parameter name": "用来存放接收的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标记",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "可选值 \n1 表示自带协议\n2 表示原始协议"]
+  },
+  {
+
+"method name": "发送",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "选项",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+]"method name": "停止",
+]"data type": "逻辑型",
+]"parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+]]
+  }
+]
+ },
+ {
+"class name": "进程通讯_双向广播_发送器",
+"comment": "只能有一个发送器\n例子https://nanomsg.org/gettingstarted/survey.html",
+"base class": "______进程通讯_模板类",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+
+"method name": "开始",
+
+"comment": "     ",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "发送",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "选项",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "接收",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "用来存放接收的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标记",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+}"method name": "是否接收超时",
+}"data type": "逻辑型"
+  },
+  {
+"data type": "逻辑型""method name": "停止",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+"data type": "逻辑型"]
+  }
+]
+ },
+ {
+"class name": "进程通讯_双向多对多_发送接收",
+"comment": "例子 https://nanomsg.org/gettingstarted/bus.html",
+"base class": "______进程通讯_原始套接字_配置函数",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+}"method name": "绑定",
+}"comment": "     ",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+@默认值": "1""method name": "连接",
+@默认值": "1""data type": "逻辑型",
+@默认值": "1""parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议类型",
+"comment": "可选值 \n1 表示自带协议\n2 表示原始协议",
+"data type": "整数",
+"@默认值": "1"
+   }
+@默认值": "1"]
+  },
+  {
+data type": "文本型""method name": "接收",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "用来存放接收的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标记",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "发送",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "选项",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+"method name": "停止",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "停止方式",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

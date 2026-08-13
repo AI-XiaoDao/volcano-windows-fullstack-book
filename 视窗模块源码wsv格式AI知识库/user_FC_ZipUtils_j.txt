@@ -1,0 +1,667 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.程序",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "模块魔改于 https://bbs.125.la/forum.php?mod=viewthread&tid=14694299&extra=page%3D1 k大的模块",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.ZipUtils\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"ZipUtils\\\\ZipUtilsTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"ZipUtils\\\\ZipUtilsToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"ZipUtils\\\\ZipUtilsToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"ZipUtils\\\\ZipUtilsToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"ZipUtils\\\\ZipUtilsToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "ZIP项目信息类F",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"methods": [
+  {
+ 文本型"method name": "取索引",
+ 文本型"comment": "此文件在 zip 中的索引 ",
+ 文本型"data type": "整数",
+ 文本型"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取名称",
+}"comment": "zip 中的文件名 ",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ "类_清理 时会自动关闭""method name": "取文件属性",
+ "类_清理 时会自动关闭""comment": "就像在 GetFileAttributes 中一样。 ",
+ "类_清理 时会自动关闭""data type": "整数",
+ "类_清理 时会自动关闭""@嵌入式方法": "\"\""
+  },
+  {
+"类_清理 时会自动关闭""@嵌入式方法": "\"\"""method name": "取访问时间",
+"类_清理 时会自动关闭""@嵌入式方法": "\"\"""data type": "小数",
+"类_清理 时会自动关闭""@嵌入式方法": "\"\"""@禁止流程检查": "真"
+  },
+  {
+或管道句柄。"method name": "取创建时间",
+或管道句柄。"data type": "小数",
+或管道句柄。"@禁止流程检查": "真"
+  },
+  {
+methods": [
+"method name": "取修改时间",
+methods": [
+"data type": "小数",
+methods": [
+"@禁止流程检查": "真"
+  },
+  {
+ 整数"method name": "取压缩大小",
+ 整数"comment": "如果尚不知道，这些可能是 -1（例如，正在流式传输） ",
+ 整数"data type": "整数",
+ 整数"@嵌入式方法": "\"\""
+  },
+  {
+文件名相对于此目录。""method name": "取解压大小",
+文件名相对于此目录。""comment": "如果尚不知道，这些可能是 -1（例如，正在流式传输） ",
+文件名相对于此目录。""data type": "整数",
+文件名相对于此目录。""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "ZIP返回值_常量类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+整数"data type": "整数""constant name": "成功",
+整数"data type": "整数""comment": "0x00000000",
+整数"data type": "整数""data type": "整数",
+整数"data type": "整数""initial value": "@ZipUtils_ZR_OK"
+  },
+  {
+"constant name": "最近",
+"comment": "0x00000001 永远不会返回的伪错误代码",
+"data type": "整数",
+"initial value": "@ZipUtils_ZR_RECENT"
+  },
+  {
+"method name": "取索引""constant name": "生成掩码",
+"method name": "取索引""comment": "0x0000FF00",
+"method name": "取索引""data type": "整数",
+"method name": "取索引""initial value": "@ZipUtils_ZR_GENMASK"
+  },
+  {
+释 = "ZIP返回值 中的常量""constant name": "无法复制",
+释 = "ZIP返回值 中的常量""comment": "0x00000100 无法复制句柄 ",
+释 = "ZIP返回值 中的常量""data type": "整数",
+释 = "ZIP返回值 中的常量""initial value": "@ZipUtils_ZR_NODUPH"
+  },
+  {
+method name": "取索引""data type": "整数""constant name": "无文件",
+method name": "取索引""data type": "整数""comment": "0x00000200 无法 创建/打开 文件 ",
+method name": "取索引""data type": "整数""data type": "整数",
+method name": "取索引""data type": "整数""initial value": "@ZipUtils_ZR_NOFILE"
+  },
+  {
+开始。"constant name": "无法分配",
+开始。"comment": "0x00000300 未能分配一些资源 ",
+开始。"data type": "整数",
+开始。"initial value": "@ZipUtils_ZR_NOALLOC"
+  },
+  {
+method name": "取压缩大小""constant name": "写入",
+method name": "取压缩大小""comment": "0x00000400 写入文件的一般错误 ",
+method name": "取压缩大小""data type": "整数",
+method name": "取压缩大小""initial value": "@ZipUtils_ZR_WRITE"
+  },
+  {
+程检查 = 真"constant name": "未找到",
+程检查 = 真"comment": "0x00000500 在 zip 中找不到该文件 ",
+程检查 = 真"data type": "整数",
+程检查 = 真"initial value": "@ZipUtils_ZR_NOTFOUND"
+  },
+  {
+od name": "取压缩大小""constant name": "写入""constant name": "更多",
+od name": "取压缩大小""constant name": "写入""comment": "0x00000600 还有更多数据需要解压 ",
+od name": "取压缩大小""constant name": "写入""data type": "整数",
+od name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_MORE"
+  },
+  {
+}"constant name": "读取",
+}"comment": "0x00000800 读取文件的一般错误 ",
+}"data type": "整数",
+}"initial value": "@ZipUtils_ZR_READ"
+  },
+  {
+程检查 = 真"constant name": "密码",
+程检查 = 真"comment": "0x00001000 我们没有得到正确的密码来解压文件",
+程检查 = 真"data type": "整数",
+程检查 = 真"initial value": "@ZipUtils_ZR_PASSWORD"
+  },
+  {
+ethod name": "取索引""data type": "整数""initial value": "@ZipUtils_ZR_NOFILE""constant name": "调用掩码",
+ethod name": "取索引""data type": "整数""initial value": "@ZipUtils_ZR_NOFILE""comment": "0x00FF0000",
+ethod name": "取索引""data type": "整数""initial value": "@ZipUtils_ZR_NOFILE""data type": "整数",
+ethod name": "取索引""data type": "整数""initial value": "@ZipUtils_ZR_NOFILE""initial value": "@ZipUtils_ZR_CALLERMASK"
+  },
+  {
+}"constant name": "参数",
+}"comment": "0x00010000 参数的一般错误",
+}"data type": "整数",
+}"initial value": "@ZipUtils_ZR_ARGS"
+  },
+  {
+}"constant name": "非映射文件",
+}"comment": "0x00020000 尝试使用 ZipGetMemory，但这仅适用于 mmap zipfile，而您的则不是 ",
+}"data type": "整数",
+}"initial value": "@ZipUtils_ZR_NOTMMAP"
+  },
+  {
+"comment": "0x00010000 参数的一般错误""constant name": "内存大小",
+"comment": "0x00010000 参数的一般错误""comment": "0x00030000 内存太小 ",
+"comment": "0x00010000 参数的一般错误""data type": "整数",
+"comment": "0x00010000 参数的一般错误""initial value": "@ZipUtils_ZR_MEMSIZE"
+  },
+  {
+d name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_MORE""constant name": "失败",
+d name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_MORE""comment": "0x00040000 当你调用这个函数时，事情已经失败了",
+d name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_MORE""data type": "整数",
+d name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_MORE""initial value": "@ZipUtils_ZR_FAILED"
+  },
+  {
+
+"constant name": "关闭",
+
+"comment": "0x00050000 zip创建已关闭 ",
+
+"data type": "整数",
+
+"initial value": "@ZipUtils_ZR_ENDED"
+  },
+  {
+"comment": "0x00000800 读取文件的一般错误 ""constant name": "错误大小",
+"comment": "0x00000800 读取文件的一般错误 ""comment": "0x00060000 指示的输入文件大小结果是错误的 ",
+"comment": "0x00000800 读取文件的一般错误 ""data type": "整数",
+"comment": "0x00000800 读取文件的一般错误 ""initial value": "@ZipUtils_ZR_MISSIZE"
+  },
+  {
+}"constant name": "部分解压",
+}"comment": "0x00070000 该文件已经部分解压",
+}"data type": "整数",
+}"initial value": "@ZipUtils_ZR_PARTIALUNZ"
+  },
+  {
+"comment": "0x00070000 该文件已经部分解压""constant name": "模式",
+"comment": "0x00070000 该文件已经部分解压""comment": "0x00080000 尝试混合 创建/打开 zip ",
+"comment": "0x00070000 该文件已经部分解压""data type": "整数",
+"comment": "0x00070000 该文件已经部分解压""initial value": "@ZipUtils_ZR_ZMODE"
+  },
+  {
+od name": "取压缩大小""constant name": "写入""constant name": "BUG掩码",
+od name": "取压缩大小""constant name": "写入""comment": "0xFF000000 ",
+od name": "取压缩大小""constant name": "写入""data type": "整数",
+od name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_BUGMASK"
+  },
+  {
+Utils_ZR_ENDED"constant name": "无法初始化",
+Utils_ZR_ENDED"comment": "0x01000000 初始化不起作用 ",
+Utils_ZR_ENDED"data type": "整数",
+Utils_ZR_ENDED"initial value": "@ZipUtils_ZR_NOTINITED"
+  },
+  {
+
+"constant name": "寻找",
+
+"comment": "0x02000000 试图在一个不可搜索的文件中寻找",
+
+"data type": "整数",
+
+"initial value": "@ZipUtils_ZR_SEEK"
+  },
+  {
+d name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_BUGMASK""constant name": "不能改变",
+d name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_BUGMASK""comment": "0x04000000 在存储上改变了主意，但不允许",
+d name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_BUGMASK""data type": "整数",
+d name": "取压缩大小""constant name": "写入""initial value": "@ZipUtils_ZR_BUGMASK""initial value": "@ZipUtils_ZR_NOCHANGE"
+  },
+  {
+
+"constant name": "内部",
+
+"comment": "0x05000000 de/inflation 代码中的内部错误 ",
+
+"data type": "整数",
+
+"initial value": "@ZipUtils_ZR_FLATE"
+  }
+]
+ },
+ {
+"class name": "ZIP压缩类F",
+"methods": [
+  {
+"data type": "整数""method name": "创建自文件",
+"data type": "整数""comment": "创建一个压缩包自一个文件名",
+"data type": "整数""result comment": "ZIP返回值 中的常量",
+"data type": "整数""data type": "逻辑型",
+"data type": "整数""@禁止流程检查": "真",
+"data type": "整数""parameters": [
+   {
+"parameter name": "参数_文件名",
+"comment": "压缩包文件名。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数_密码",
+"comment": "压缩包密码",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+"data type": "整数"]
+  },
+  {
+
+"method name": "创建自内存",
+
+"comment": "zip 不能超过 <参数_内存大小> 字节数",
+
+"result comment": "ZIP返回值 中的常量",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "参数_缓冲区地址",
+"comment": "如果为 0 则在页面文件中创建。",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数_内存大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数_密码",
+"comment": "压缩包密码",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "创建自句柄",
+data type": "文本型""comment": "创建一个压缩包自文件句柄(hFile)或管道句柄(hPipe)",
+data type": "文本型""result comment": "ZIP返回值 中的常量",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "参数_句柄",
+"comment": "文件句柄或管道句柄。",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数_密码",
+"comment": "压缩包密码",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "添加文件",
+"comment": "向压缩包添加项目",
+"result comment": "ZIP返回值 中的常量",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "参数_名称",
+"comment": "压缩包内的项目名。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数_文件名",
+"comment": "要添加到压缩包的本地文件路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+thod name": "创建自内存""method name": "添加字节集",
+thod name": "创建自内存""comment": "向压缩包添加项目",
+thod name": "创建自内存""result comment": "ZIP返回值 中的常量",
+thod name": "创建自内存""data type": "整数",
+thod name": "创建自内存""@禁止流程检查": "真",
+thod name": "创建自内存""parameters": [
+   {
+"parameter name": "参数_名称",
+"comment": "压缩包内的项目名。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数_字节集",
+"comment": "要添加到压缩包的字节集数据",
+"data type": "字节集类"
+   }
+thod name": "创建自内存"]
+  },
+  {
+comment": "文件句柄或管道句柄。""method name": "添加句柄",
+comment": "文件句柄或管道句柄。""comment": "向压缩包添加项目",
+comment": "文件句柄或管道句柄。""result comment": "ZIP返回值 中的常量",
+comment": "文件句柄或管道句柄。""data type": "整数",
+comment": "文件句柄或管道句柄。""@禁止流程检查": "真",
+comment": "文件句柄或管道句柄。""parameters": [
+   {
+"parameter name": "参数_名称",
+"comment": "压缩包内的项目名。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数_句柄",
+"comment": "文件句柄或管道句柄。",
+"data type": "变整数"
+   }
+comment": "文件句柄或管道句柄。"]
+  },
+  {
+ameter name": "参数_句柄""method name": "添加句柄2",
+ameter name": "参数_句柄""comment": "向压缩包添加项目",
+ameter name": "参数_句柄""result comment": "ZIP返回值 中的常量",
+ameter name": "参数_句柄""data type": "整数",
+ameter name": "参数_句柄""@禁止流程检查": "真",
+ameter name": "参数_句柄""parameters": [
+   {
+"parameter name": "参数_名称",
+"comment": "压缩包内的项目名。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数_句柄",
+"comment": "文件句柄或管道句柄。",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数_长度",
+"data type": "整数"
+   }
+ameter name": "参数_句柄"]
+  },
+  {
+mment": "文件句柄或管道句柄。"]"method name": "添加目录",
+mment": "文件句柄或管道句柄。"]"comment": "向压缩包添加一个空目录",
+mment": "文件句柄或管道句柄。"]"result comment": "ZIP返回值 中的常量",
+mment": "文件句柄或管道句柄。"]"data type": "整数",
+mment": "文件句柄或管道句柄。"]"@禁止流程检查": "真",
+mment": "文件句柄或管道句柄。"]"parameters": [
+   {
+"parameter name": "参数_目录",
+"comment": "压缩包中的目录名",
+"data type": "文本型"
+   }
+mment": "文件句柄或管道句柄。"]]
+  },
+  {
+ }"method name": "取字节集",
+ }"data type": "字节集类",
+ }"@禁止流程检查": "真"
+  },
+  {
+"method name": "关闭",
+"comment": "类_清理 时会自动关闭",
+"result comment": "ZIP返回值 中的常量",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+ment": "文件句柄或管道句柄。"]"@禁止流程检查": "真""method name": "取错误信息",
+ment": "文件句柄或管道句柄。"]"@禁止流程检查": "真""data type": "文本型",
+ment": "文件句柄或管道句柄。"]"@禁止流程检查": "真""@禁止流程检查": "真",
+ment": "文件句柄或管道句柄。"]"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   }
+ment": "文件句柄或管道句柄。"]"@禁止流程检查": "真"]
+  }
+]
+ },
+ {
+"class name": "ZIP解压类F",
+"methods": [
+  {
+
+"method name": "打开自文件",
+
+"comment": "打开压缩包自一个文件名。",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "参数_文件名",
+"comment": "压缩包文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数_密码",
+"comment": "压缩包密码",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+Utils_ZR_ZMODE"method name": "打开自字节集",
+Utils_ZR_ZMODE"comment": "打开压缩包自字节集, 注意 <参数_字节集数据> 的生命周期如果结束了, 此类的方法也不能用了",
+Utils_ZR_ZMODE"data type": "逻辑型",
+Utils_ZR_ZMODE"@禁止流程检查": "真",
+Utils_ZR_ZMODE"parameters": [
+   {
+"parameter name": "参数_字节集数据",
+"comment": "压缩包字节集数据。",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "参数_密码",
+"comment": "压缩包密码",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+Utils_ZR_ZMODE]
+  },
+  {
+"method name": "打开自句柄",
+"comment": "打开压缩包自一个文件句柄(hFile) 或 管道句柄(hPipe)。",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "参数_句柄",
+"comment": "文件句柄或管道句柄。",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数_密码",
+"comment": "压缩包密码",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+ }"method name": "取项目数",
+ }"comment": "获取压缩包内的项目总数",
+ }"result comment": "项目总数",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取项目信息",
+
+"comment": "获取压缩包内的项目信息。",
+
+"result comment": "ZIP返回值 中的常量",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "参数_索引",
+"comment": "压缩包项目索引, 索引从0开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数_项目",
+"comment": "返回的项目信息",
+"data type": "ZIP项目信息类F"
+   }
+
+]
+  },
+  {
+
+"parameters": [
+"method name": "寻找项目",
+
+"parameters": [
+"comment": "根据项目名寻找指定项目。",
+
+"parameters": [
+"result comment": "ZIP返回值 中的常量",
+
+"parameters": [
+"data type": "整数",
+
+"parameters": [
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "参数_名称",
+"comment": "要寻找的项目名。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数_项目",
+"comment": "返回的项目信息",
+"data type": "ZIP项目信息类F"
+   },
+   {
+"parameter name": "参数_忽略大小写",
+"comment": "寻找匹配时是否不区分大小写。",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+"parameters": [
+]
+  },
+  {
+ameter name": "参数_密码""method name": "解压项目到文件",
+ameter name": "参数_密码""comment": "解压指定索引项目",
+ameter name": "参数_密码""result comment": "ZIP返回值 中的常量",
+ameter name": "参数_密码""data type": "整数",
+ameter name": "参数_密码""@嵌入式方法": "\"\"",
+ameter name": "参数_密码""parameters": [
+   {
+"parameter name": "参数_索引",
+"comment": "索引从0开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数_文件名",
+"comment": "解压后文件名。",
+"data type": "文本型"
+   }
+ameter name": "参数_密码"]
+  },
+  {
+data type": "文本型""method name": "解压项目到字节集",
+data type": "文本型""comment": "解压指定项目到字节集",
+data type": "文本型""result comment": "ZIP返回值 中的常量",
+data type": "文本型""data type": "整数",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "参数_索引",
+"comment": "索引从0开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出_返回值",
+"comment": "解压到此字节集。",
+"data type": "字节集类"
+   }
+data type": "文本型"]
+  },
+  {
+ameter name": "参数_文件名""method name": "解压项目到句柄",
+ameter name": "参数_文件名""comment": "解压指定项目到文件句柄或管道句柄",
+ameter name": "参数_文件名""result comment": "ZIP返回值 中的常量",
+ameter name": "参数_文件名""data type": "整数",
+ameter name": "参数_文件名""@嵌入式方法": "\"\"",
+ameter name": "参数_文件名""parameters": [
+   {
+"parameter name": "参数_索引",
+"comment": "索引从0开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数_句柄",
+"comment": "文件句柄或管道句柄。",
+"data type": "变整数"
+   }
+ameter name": "参数_文件名"]
+  },
+  {
+meter name": "参数_句柄""parameters": [
+"method name": "置解压根目录",
+meter name": "参数_句柄""parameters": [
+"comment": "设置解压项目的根目录",
+meter name": "参数_句柄""parameters": [
+"result comment": "ZIP返回值 中的常量",
+meter name": "参数_句柄""parameters": [
+"data type": "整数",
+meter name": "参数_句柄""parameters": [
+"@嵌入式方法": "\"\"",
+meter name": "参数_句柄""parameters": [
+"parameters": [
+   {
+"parameter name": "参数_目录",
+"comment": "解压的文件名相对于此目录。",
+"data type": "文本型"
+   }
+meter name": "参数_句柄""parameters": [
+]
+  },
+  {
+ameter name": "参数_目录""method name": "关闭",
+ameter name": "参数_目录""comment": "类_清理 时会自动关闭",
+ameter name": "参数_目录""result comment": "ZIP返回值 中的常量",
+ameter name": "参数_目录""data type": "整数",
+ameter name": "参数_目录""@禁止流程检查": "真"
+  },
+  {
+"method name": "取错误信息",
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   }
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

@@ -1,0 +1,330 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "leveldb-1.23\nhttps://github.com/google/leveldb/blob/main/doc/index.md",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.leveldb\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"leveldb\\\\leveldbTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"leveldb\\\\leveldbToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"leveldb\\\\leveldbToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"leveldb\\\\leveldbToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"leveldb\\\\leveldbToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______leveldb全局类",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "等级数据库_创建",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ 文本型"method name": "等级数据库_销毁",
+ 文本型"static": true,
+ 文本型"@嵌入式方法": "\"\"",
+ 文本型"parameters": [
+   {
+"parameter name": "数据库句柄",
+"data type": "变整数"
+   }
+ 文本型]
+  },
+  {
+"method name": "等级数据库_打开配置_置不存在创建",
+"comment": "再 打开 前调用 ，一般用作 写配置的时候才用",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "数据库句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否启用不存在创建",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+}"method name": "等级数据库_打开数据库",
+}"result comment": "如果为假 可以调用 等级数据库_取错误信息（）",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "数据库句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据库名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "等级数据库_关闭数据库",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "数据库句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "等级数据库_置文本",
+
+"result comment": "如果为假 可以调用 等级数据库_取错误信息（）",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据库句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "等级数据库_取文本",
+}"result comment": "如果为假 可以调用 等级数据库_取错误信息（）",
+}"static": true,
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "数据库句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出_键值",
+"comment": "用来保存取出来的文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "等级数据库_删除",
+"result comment": "如果为假 可以调用 等级数据库_取错误信息（）",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "数据库句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "键名称""method name": "等级数据库_取错误信息",
+ameter name": "键名称""static": true,
+ameter name": "键名称""data type": "文本型",
+ameter name": "键名称""@嵌入式方法": "\"\"",
+ameter name": "键名称""parameters": [
+   {
+"parameter name": "数据库句柄",
+"data type": "变整数"
+   }
+ameter name": "键名称"]
+  },
+  {
+
+"method name": "等级数据库_枚举",
+
+"comment": "void FUCTIONTYPE leveldb_DB_EnumKV(void* p, void* pUser, pEnumCallBack pCallback);",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据库句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "回调函数",
+"@匹配方法": "\"等级数据库枚举回调\""
+   }
+
+]
+  },
+  {
+ameter name": "回调函数""method name": "等级数据库枚举回调",
+ameter name": "回调函数""comment": "typedef int (FUCTIONTYPE* pEnumCallBack)(const char* k, const char* v, void* pUser);",
+ameter name": "回调函数""result comment": "返回1 表示停止枚举 0，表示继续",
+ameter name": "回调函数""static": true,
+ameter name": "回调函数""data type": "整数",
+ameter name": "回调函数""parameters": [
+   {
+"parameter name": "键文本指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "值文本指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "变整数"
+   }
+ameter name": "回调函数"]
+  }
+]
+ },
+ {
+"class name": "等级数据库类",
+"base class": "参考对象模板类",
+"@模板实现类": "\"CleveldbHandle\"",
+"methods": [
+  {
+eveldbHandle\""method name": "取最后一次错误信息文本",
+eveldbHandle\""data type": "文本型"
+  },
+  {
+
+"method name": "打开预配置_是否不存在则创建",
+
+"result comment": "如果数据库不存在，则打开的时候 会创建 ",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "打开",
+
+"result comment": "如果返回假 可以调用 取最后一次错误信息文本 查看错误信息",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "数据库名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "关闭"
+  },
+  {
+a type": "逻辑型""method name": "关闭""method name": "置文本",
+a type": "逻辑型""method name": "关闭""result comment": "如果返回假 可以调用 取最后一次错误信息文本 查看错误信息",
+a type": "逻辑型""method name": "关闭""data type": "逻辑型",
+a type": "逻辑型""method name": "关闭""parameters": [
+   {
+"parameter name": "键",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+a type": "逻辑型""method name": "关闭"]
+  },
+  {
+
+"method name": "取文本",
+
+"result comment": "如果返回假 可以调用 取最后一次错误信息文本 查看错误信息",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "键",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出_值",
+"comment": "用来保存枚举到的值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "删除",
+
+"result comment": "如果返回假 可以调用 取最后一次错误信息文本 查看错误信息",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "键",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "键值枚举回调",
+ }"result comment": "返回1 表示停止枚举 返回 0表示继续",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "键",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "枚举键值"
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

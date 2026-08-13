@@ -1,0 +1,2564 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"yyJSON".
+
+{
+ᦠꡱŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ᦠꡱŝ"package name": "火山视窗.JSON支持",
+ᦠꡱŝ"@视窗.头文件搜寻目录": "\"src\"",
+ᦠꡱŝ"@视窗.外部头文件": "\"vol_yyjson.h\"",
+ᦠꡱŝ"@视窗.外部源文件": "\"src\\\\yyjson.c\"",
+ᦠꡱŝ"classes": [
+ {
+"class name": "YYJSON只读对象类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n本类仅用于解析功能,效率极高,如需使用构造功能请使用\"YYJSON对象类\".",
+"base class": "扩展对象类",
+"methods": [
+  {
+base class": "扩展对象类""method name": "创建自文本",
+base class": "扩展对象类""comment": "从一段JSON文本创建一个对象",
+base class": "扩展对象类""result comment": "创建成功返回真,否则返回假.",
+base class": "扩展对象类""data type": "逻辑型",
+base class": "扩展对象类""@嵌入式方法": "\"\"",
+base class": "扩展对象类""parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供JSON内容文本",
+"data type": "文本型"
+   }
+base class": "扩展对象类"]
+  },
+  {
+ꡱŝ"@视窗.外部源文件": "\"src\\\\yyjson.c\"""method name": "创建自字节集",
+ꡱŝ"@视窗.外部源文件": "\"src\\\\yyjson.c\"""comment": "从指定的内存从创建一个对象",
+ꡱŝ"@视窗.外部源文件": "\"src\\\\yyjson.c\"""result comment": "创建成功返回真,否则返回假.",
+ꡱŝ"@视窗.外部源文件": "\"src\\\\yyjson.c\"""data type": "逻辑型",
+ꡱŝ"@视窗.外部源文件": "\"src\\\\yyjson.c\"""@嵌入式方法": "\"\"",
+ꡱŝ"@视窗.外部源文件": "\"src\\\\yyjson.c\"""parameters": [
+   {
+"parameter name": "内容",
+"comment": "请确保所提供内容为UTF8编码,且尾部不能带0结束符.",
+"data type": "字节集类"
+   }
+ꡱŝ"@视窗.外部源文件": "\"src\\\\yyjson.c\""]
+  },
+  {
+ "表示一个JSON对象的子类型""method name": "创建自文件",
+ "表示一个JSON对象的子类型""comment": "从包含一段JSON文本文件创建一个对象",
+ "表示一个JSON对象的子类型""result comment": "创建成功返回真,否则返回假.",
+ "表示一个JSON对象的子类型""data type": "逻辑型",
+ "表示一个JSON对象的子类型""@嵌入式方法": "\"\"",
+ "表示一个JSON对象的子类型""parameters": [
+   {
+"parameter name": "路径",
+"comment": "提供包含JSON内容文本的完整文件路径",
+"data type": "文本型"
+   }
+ "表示一个JSON对象的子类型"]
+  },
+  {
+ameter name": "内容""method name": "取键值数",
+ameter name": "内容""comment": "获取当前JSON整个文档对象中的键值总数量(并非成员数).",
+ameter name": "内容""data type": "整数",
+ameter name": "内容""@嵌入式方法": "\"\""
+  },
+  {
+se class": "扩展对象类"]"method name": "取成员数",
+se class": "扩展对象类"]"comment": "获取当前JSON对象的成员数量",
+se class": "扩展对象类"]"data type": "整数",
+se class": "扩展对象类"]"@嵌入式方法": "\"\""
+  },
+  {
+或nan数字输出为null"method name": "是否为空",
+或nan数字输出为null"comment": "检查当前对象是否为空(NULL)",
+或nan数字输出为null"data type": "逻辑型",
+或nan数字输出为null"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为真",
+
+"comment": "检查当前对象的值是否为真",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否为假",
+}"comment": "检查当前对象的值是否为假",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+使用的JSON格式化(到文本)时的可选项""method name": "是否为逻辑型",
+使用的JSON格式化(到文本)时的可选项""comment": "检查当前对象的值是否为逻辑型",
+使用的JSON格式化(到文本)时的可选项""data type": "逻辑型",
+使用的JSON格式化(到文本)时的可选项""@嵌入式方法": "\"\""
+  },
+  {
+ "method name": "是否为无符号整数",
+ "comment": "检查当前对象的值是否为无符号整数类型",
+ "data type": "逻辑型",
+ "@嵌入式方法": "\"\""
+  },
+  {
+数字输出为null"method name": "是否为空""method name": "是否为长整数",
+数字输出为null"method name": "是否为空""comment": "检查当前对象的值是否为长整数类型",
+数字输出为null"method name": "是否为空""data type": "逻辑型",
+数字输出为null"method name": "是否为空""@嵌入式方法": "\"\""
+  },
+  {
+
+"@嵌入式方法": "\"\"""method name": "是否为整数",
+
+"@嵌入式方法": "\"\"""comment": "检查当前对象的值是否为(包含有符号或无符号)整数",
+
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ 整数"method name": "是否为小数",
+ 整数"comment": "检查当前对象的值是否为小数",
+ 整数"data type": "逻辑型",
+ 整数"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "是否为无符号整数""method name": "是否为数值",
+thod name": "是否为无符号整数""comment": "检查当前对象的值是否为(包含有符号或无符号)整数或小数",
+thod name": "是否为无符号整数""data type": "逻辑型",
+thod name": "是否为无符号整数""@嵌入式方法": "\"\""
+  },
+  {
+对象是否为空(NULL)"method name": "是否为文本",
+对象是否为空(NULL)"comment": "检查当前对象的值是否为文本型",
+对象是否为空(NULL)"data type": "逻辑型",
+对象是否为空(NULL)"@嵌入式方法": "\"\""
+  },
+  {
+ "method name": "是否为数组",
+ "comment": "检查当前对象的值是否为数组",
+ "data type": "逻辑型",
+ "@嵌入式方法": "\"\""
+  },
+  {
+"表示一个JSON对象的子类型""result comment": "创建成功返回真,否则返回假.""method name": "是否为对象",
+"表示一个JSON对象的子类型""result comment": "创建成功返回真,否则返回假.""comment": "检查当前对象的值是否为对象",
+"表示一个JSON对象的子类型""result comment": "创建成功返回真,否则返回假.""data type": "逻辑型",
+"表示一个JSON对象的子类型""result comment": "创建成功返回真,否则返回假.""@嵌入式方法": "\"\""
+  },
+  {
+comment": "提供包含JSON内容文本的完整文件路径""method name": "是否为容器",
+comment": "提供包含JSON内容文本的完整文件路径""comment": "检查当前对象的值是否为对象或者数组",
+comment": "提供包含JSON内容文本的完整文件路径""data type": "逻辑型",
+comment": "提供包含JSON内容文本的完整文件路径""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取类型",
+
+"comment": "获取当前对象值的具体类型",
+
+"data type": "YYJSON值类型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+对象的值是否为对象或者数组"method name": "取子类型",
+对象的值是否为对象或者数组"comment": "获取当前对象值的子类型",
+对象的值是否为对象或者数组"data type": "YYJSON值子类型",
+对象的值是否为对象或者数组"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取标签",
+}"comment": "获取当前对象值的标签",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"comment": "检查当前对象的值是否为真""method name": "取类型描述",
+
+"comment": "检查当前对象的值是否为真""comment": "获取类型名称文本",
+
+"comment": "检查当前对象的值是否为真""data type": "文本型",
+
+"comment": "检查当前对象的值是否为真""@嵌入式方法": "\"\""
+  },
+  {
+
+"@嵌入式方法": "\"\"""method name": "到数组",
+
+"@嵌入式方法": "\"\"""comment": "将当前对象作为数组类型返回",
+
+"@嵌入式方法": "\"\"""data type": "YYJSON只读数组类",
+
+"@嵌入式方法": "\"\"""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "到逻辑值",
+
+"comment": "将当前对象作为逻辑值类型返回",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""method name": "到长整数",
+"comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""comment": "将当前对象作为长整数类型返回",
+"comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数",
+"comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "到整数",
+}"comment": "将当前对象作为整数类型返回",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+入式方法": "\"\"""method name": "是否为整数""method name": "到小数",
+入式方法": "\"\"""method name": "是否为整数""comment": "将当前对象作为小数类型返回",
+入式方法": "\"\"""method name": "是否为整数""data type": "小数",
+入式方法": "\"\"""method name": "是否为整数""@嵌入式方法": "\"\""
+  },
+  {
+thod name": "取标签""method name": "到文本",
+thod name": "取标签""comment": "将当前对象作为文本类型返回",
+thod name": "取标签""data type": "文本型",
+thod name": "取标签""@禁止流程检查": "真"
+  },
+  {
+comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""method name": "取逻辑值",
+comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回",
+comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""data type": "逻辑型",
+comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""@嵌入式方法": "\"\"",
+comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+comment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数"]
+  },
+  {
+hod name": "取标签""comment": "将当前对象作为文本类型返回""method name": "取路径逻辑型",
+hod name": "取标签""comment": "将当前对象作为文本类型返回""comment": "根据所提供的路径内容取对象值并以逻辑值类型返回",
+hod name": "取标签""comment": "将当前对象作为文本类型返回""data type": "逻辑型",
+hod name": "取标签""comment": "将当前对象作为文本类型返回""@嵌入式方法": "\"\"",
+hod name": "取标签""comment": "将当前对象作为文本类型返回""parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+hod name": "取标签""comment": "将当前对象作为文本类型返回"]
+  },
+  {
+}"method name": "取长整数",
+}"comment": "根据指定键名称取对象值以长整数类型返回",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+comment": "路径必须以\"/\"开始,如:/user/0""method name": "取路径长整数",
+comment": "路径必须以\"/\"开始,如:/user/0""comment": "根据所提供的路径内容取对象值并以长整数类型返回",
+comment": "路径必须以\"/\"开始,如:/user/0""data type": "长整数",
+comment": "路径必须以\"/\"开始,如:/user/0""@嵌入式方法": "\"\"",
+comment": "路径必须以\"/\"开始,如:/user/0""parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+comment": "路径必须以\"/\"开始,如:/user/0"]
+  },
+  {
+comment": "提供所欲获取其值对应的键名称""method name": "取整数",
+comment": "提供所欲获取其值对应的键名称""comment": "根据指定键名称取对象值以整数类型返回",
+comment": "提供所欲获取其值对应的键名称""data type": "整数",
+comment": "提供所欲获取其值对应的键名称""@嵌入式方法": "\"\"",
+comment": "提供所欲获取其值对应的键名称""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+comment": "提供所欲获取其值对应的键名称"]
+  },
+  {
+"method name": "取路径整数",
+"comment": "根据所提供的路径内容取对象值并以整数类型返回",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "取小数",
+ }"comment": "根据指定键名称取对象值以小数类型返回",
+ }"data type": "小数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "键名称""method name": "取路径小数",
+ameter name": "键名称""comment": "根据所提供的路径内容取对象值并以小数类型返回",
+ameter name": "键名称""data type": "小数",
+ameter name": "键名称""@嵌入式方法": "\"\"",
+ameter name": "键名称""parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+ameter name": "键名称"]
+  },
+  {
+}"comment": "根据指定键名称取对象值以小数类型返回""method name": "取文本",
+}"comment": "根据指定键名称取对象值以小数类型返回""comment": "根据指定键名称取对象值以文本类型返回",
+}"comment": "根据指定键名称取对象值以小数类型返回""data type": "文本型",
+}"comment": "根据指定键名称取对象值以小数类型返回""@禁止流程检查": "真",
+}"comment": "根据指定键名称取对象值以小数类型返回""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+}"comment": "根据指定键名称取对象值以小数类型返回"]
+  },
+  {
+"method name": "取路径文本",
+"comment": "根据所提供的路径内容取对象值并以文本类型返回",
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+]
+  },
+  {
+mment": "提供所欲获取其值对应的键名称"]"method name": "取路径内容",
+mment": "提供所欲获取其值对应的键名称"]"comment": "无论JSON类型是什么,都以文本数据返回.",
+mment": "提供所欲获取其值对应的键名称"]"data type": "文本型",
+mment": "提供所欲获取其值对应的键名称"]"parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+mment": "提供所欲获取其值对应的键名称"]]
+  },
+  {
+ent": "提供所欲获取其值对应的键名称"]]"method name": "取对象",
+ent": "提供所欲获取其值对应的键名称"]]"comment": "根据指定键名称取对象值",
+ent": "提供所欲获取其值对应的键名称"]]"data type": "YYJSON只读对象类",
+ent": "提供所欲获取其值对应的键名称"]]"@禁止流程检查": "真",
+ent": "提供所欲获取其值对应的键名称"]]"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+ent": "提供所欲获取其值对应的键名称"]]]
+  },
+  {
+omment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回""method name": "取路径对象",
+omment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回""comment": "根据所提供的路径内容取对象值",
+omment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回""data type": "YYJSON只读对象类",
+omment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回""@禁止流程检查": "真",
+omment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回""parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+omment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回"]
+  },
+  {
+ment": "提供所欲获取其值对应的键名称"]"parameters": [
+"method name": "取数组",
+ment": "提供所欲获取其值对应的键名称"]"parameters": [
+"comment": "根据指定键名称取数组值",
+ment": "提供所欲获取其值对应的键名称"]"parameters": [
+"data type": "YYJSON只读数组类",
+ment": "提供所欲获取其值对应的键名称"]"parameters": [
+"@禁止流程检查": "真",
+ment": "提供所欲获取其值对应的键名称"]"parameters": [
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+ment": "提供所欲获取其值对应的键名称"]"parameters": [
+]
+  },
+  {
+nt": "提供所欲获取其值对应的键名称"]]"parameters": [
+"method name": "取路径数组",
+nt": "提供所欲获取其值对应的键名称"]]"parameters": [
+"comment": "根据所提供的路径内容取数组值",
+nt": "提供所欲获取其值对应的键名称"]]"parameters": [
+"data type": "YYJSON只读数组类",
+nt": "提供所欲获取其值对应的键名称"]]"parameters": [
+"@禁止流程检查": "真",
+nt": "提供所欲获取其值对应的键名称"]]"parameters": [
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "例如:/user/0",
+"data type": "文本型"
+   }
+nt": "提供所欲获取其值对应的键名称"]]"parameters": [
+]
+  },
+  {
+ment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回"]"method name": "到可读文本",
+ment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回"]"comment": "将当前对象以JSON格式化文本内容返回",
+ment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回"]"data type": "文本型",
+ment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回"]"@嵌入式方法": "\"\"",
+ment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回"]"parameters": [
+   {
+"parameter name": "选项",
+"comment": "请参考\"YYJSON格式化选项\"所提供的常量值,可使用其组合值.",
+"data type": "整数",
+"@默认值": "YYJSON格式化选项.缩进"
+   }
+ment": "检查当前对象的值是否为真""comment": "获取类型名称文本""data type": "长整数""comment": "根据指定键名称取对象值以逻辑值类型返回"]]
+  },
+  {
+comment": "提供所欲获取其值对应的键名称""method name": "枚举循环",
+comment": "提供所欲获取其值对应的键名称""comment": "  启动一个循环来枚举当前对象中的每一个成员,在循环中可以调用\n\"取枚举值\"方法来获取当前所枚举到的成员值.",
+comment": "提供所欲获取其值对应的键名称""@嵌入式方法": "\"name = iter\\r\\nhas_loop_body = true\""
+  },
+  {
+"method name": "取枚举键对象",
+"comment": "  只能在本类的\"枚举循环\"语句的子语句体中使用,用作取回当前所枚举到的键值,\n如果有多层本类或本类继承类的\"枚举循环\"嵌套,本方法将返回最近层\"枚举循环\"所枚举到的键值.",
+"data type": "YYJSON只读对象类",
+"@嵌入式方法": "\"parent = \\\"iter\\\"\""
+  },
+  {
+"method name": "取枚举值对象",
+"comment": "  只能在本类的\"枚举循环\"语句的子语句体中使用,用作取回当前所枚举到的成员值,\n如果有多层本类或本类继承类的\"枚举循环\"嵌套,本方法将返回最近层\"枚举循环\"所枚举到的成员值.",
+"data type": "YYJSON只读对象类",
+"@嵌入式方法": "\"parent = \\\"iter\\\"\""
+  },
+  {
+@嵌入式方法": "\"parent = \\\"iter\\\"\"""method name": "取展示内容",
+@嵌入式方法": "\"parent = \\\"iter\\\"\"""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+@嵌入式方法": "\"parent = \\\"iter\\\"\"""@虚拟方法": "可覆盖",
+@嵌入式方法": "\"parent = \\\"iter\\\"\"""parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+@嵌入式方法": "\"parent = \\\"iter\\\"\""]
+  },
+  {
+ent": "提供所欲获取其值对应的键名称""method name": "枚举循环""method name": "流读入",
+ent": "提供所欲获取其值对应的键名称""method name": "枚举循环""comment": "从所指定的流对象中读入本对象的数据. 请注意以下事项:\n  1. 一旦定义了\"流读入\"方法,必须定义对应的\"流写出\"方法,所读入内容格式与\n\"流写出\"方法写出的内容格式必须完全一致;\n  2. 任何类如果既没有定义\"流读入\"方法,也没有定义\"流写出\"方法,编译器会自动\n建立默认的\"流读入\"和\"流写出\"方法,默认方法就是首先调用基础类中的对应方法,\n然后将本对象中的所有非静态变量成员顺序从流中读入/写出;\n  3. 继承类中如果覆盖了本方法且基础类中也存在数据需要从流中读入,则必须负\n责调用基础类中的\"流读入\"方法,调用格式如: \"父对象.流读入 (流对象)\";\n  4. 如果本方法中的读入操作比较复杂或耗时,在之前最好检查一下流对象当前是\n否处于出错状态(\"流对象.是否出错\"方法返回真),如果出错则放弃后续的读入操作,\n以提高运行效率;\n  5. 在读入过程中一旦发现出错,则需要将对应的错误码写入\"流对象.错误码\"属性\n中(流读入出错不需要,会自动写入),以禁止后续的流读入操作. 错误码可以是\n\"流错误码\"类中的常量值,也可以是自行定义的错误码值(必须大于0);\n  6. 流对象一旦处于出错状态(流对象的\"错误码\"属性值不为\"流错误码.无错误\"),\n则后续所有流读入操作都会失败,如果欲再次使用此流对象,需要首先调用其\n\"清除错误\"方法清除掉流的出错状态或者将流关闭后再打开.",
+ent": "提供所欲获取其值对应的键名称""method name": "枚举循环""@虚拟方法": "可覆盖",
+ent": "提供所欲获取其值对应的键名称""method name": "枚举循环""parameters": [
+   {
+"parameter name": "流对象",
+"comment": "提供欲从其中读入本对象数据内容的输入流",
+"data type": "输入流类"
+   }
+ent": "提供所欲获取其值对应的键名称""method name": "枚举循环"]
+  },
+  {
+"method name": "流写出",
+"comment": "将本对象的数据写入所指定的流对象中. 注意:\n  1. 一旦定义了\"流写出\"方法,必须定义对应的\"流读入\"方法,所写出内容格式与\n\"流读入\"方法读取的内容格式必须完全一致;\n  2. 任何类如果既没有定义\"流读入\"方法,也没有定义\"流写出\"方法,编译器会自动\n建立默认的\"流读入\"和\"流写出\"方法,默认方法就是首先调用基础类中的对应方法,\n然后将本对象中的所有非静态变量成员顺序从流中读入/写出;\n  3. 继承类中如果覆盖了本方法且基础类中也存在数据需要写出到流中,则必须负\n责调用基础类中的\"流写出\"方法,调用格式如: \"父对象.流写出 (流对象)\";\n  4. 如果本方法中的写出操作比较复杂或耗时,在之前最好检查一下流对象当前是\n否处于出错状态(\"流对象.是否出错\"方法返回真),如果出错则放弃后续的写出操作,\n以提高运行效率;\n  5. 在写出过程中一旦发现出错,则需要将对应的错误码写入\"流对象.错误码\"属性\n中(流写出出错不需要,会自动写入),以禁止后续的流写出操作. 错误码可以是\n\"流错误码\"类中的常量值,也可以是自行定义的错误码值(必须大于0);\n  6. 流对象一旦处于出错状态(流对象的\"错误码\"属性值不为\"流错误码.无错误\"),\n则后续所有流写出操作都会失败,如果欲再次使用此流对象,需要首先调用其\n\"清除错误\"方法清除掉流的出错状态或者将流关闭后再打开.",
+"@虚拟方法": "可覆盖",
+"parameters": [
+   {
+"parameter name": "流对象",
+"comment": "提供欲将本对象数据内容写出到其中的输出流",
+"data type": "输出流类"
+   }
+]
+  }
+]
+ },
+ {
+入式方法": "\"parent = \\\"iter\\\"\""]"class name": "YYJSON只读数组类",
+入式方法": "\"parent = \\\"iter\\\"\""]"comment": "本类仅用于解析功能,效率极高,如需使用构造功能请使用\"YYJSON数组类\".",
+入式方法": "\"parent = \\\"iter\\\"\""]"base class": "扩展对象类",
+入式方法": "\"parent = \\\"iter\\\"\""]"methods": [
+  {
+式方法": "\"parent = \\\"iter\\\"\""]"comment": "本类仅用于解析功能,效率极高,如需使用构造功能请使用\"YYJSON数组类\".""method name": "取成员数",
+式方法": "\"parent = \\\"iter\\\"\""]"comment": "本类仅用于解析功能,效率极高,如需使用构造功能请使用\"YYJSON数组类\".""comment": "获取该数组内包含的成员数量",
+式方法": "\"parent = \\\"iter\\\"\""]"comment": "本类仅用于解析功能,效率极高,如需使用构造功能请使用\"YYJSON数组类\".""data type": "整数",
+式方法": "\"parent = \\\"iter\\\"\""]"comment": "本类仅用于解析功能,效率极高,如需使用构造功能请使用\"YYJSON数组类\".""@嵌入式方法": "\"\""
+  },
+  {
+parameters": [
+"method name": "取成员",
+parameters": [
+"comment": "获取指定索引位置的成员值",
+parameters": [
+"data type": "YYJSON只读对象类",
+parameters": [
+"@禁止流程检查": "真",
+parameters": [
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+parameters": [
+]
+  },
+  {
+arameters": [
+"comment": "获取指定索引位置的成员值""method name": "取逻辑值成员",
+arameters": [
+"comment": "获取指定索引位置的成员值""comment": "获取指定索引位置的成员值",
+arameters": [
+"comment": "获取指定索引位置的成员值""data type": "逻辑型",
+arameters": [
+"comment": "获取指定索引位置的成员值""@嵌入式方法": "\"\"",
+arameters": [
+"comment": "获取指定索引位置的成员值""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+arameters": [
+"comment": "获取指定索引位置的成员值"]
+  },
+  {
+}"method name": "取长整数",
+}"comment": "获取指定索引位置的成员值",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+eters": [
+"comment": "获取指定索引位置的成员值""method name": "取逻辑值成员""method name": "取整数",
+eters": [
+"comment": "获取指定索引位置的成员值""method name": "取逻辑值成员""comment": "获取指定索引位置的成员值",
+eters": [
+"comment": "获取指定索引位置的成员值""method name": "取逻辑值成员""data type": "整数",
+eters": [
+"comment": "获取指定索引位置的成员值""method name": "取逻辑值成员""@嵌入式方法": "\"\"",
+eters": [
+"comment": "获取指定索引位置的成员值""method name": "取逻辑值成员""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+eters": [
+"comment": "获取指定索引位置的成员值""method name": "取逻辑值成员"]
+  },
+  {
+
+"method name": "取小数",
+
+"comment": "获取指定索引位置的成员值",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+arameters": [
+"comment": "获取指定索引位置的成员值""method name": "取文本",
+arameters": [
+"comment": "获取指定索引位置的成员值""comment": "获取指定索引位置的成员值",
+arameters": [
+"comment": "获取指定索引位置的成员值""data type": "文本型",
+arameters": [
+"comment": "获取指定索引位置的成员值""@禁止流程检查": "真",
+arameters": [
+"comment": "获取指定索引位置的成员值""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+arameters": [
+"comment": "获取指定索引位置的成员值"]
+  },
+  {
+"method name": "取首成员",
+"comment": "获取首个成员值",
+"data type": "YYJSON只读对象类",
+"@禁止流程检查": "真"
+  },
+  {
+comment": "获取首个成员值""method name": "取尾成员",
+comment": "获取首个成员值""comment": "获取最末尾处的成员值",
+comment": "获取首个成员值""data type": "YYJSON只读对象类",
+comment": "获取首个成员值""@禁止流程检查": "真"
+  },
+  {
+"parameters": [
+"method name": "枚举循环",
+"parameters": [
+"comment": "  启动一个循环来枚举当前数组中的每一个成员,在循环中可以调用\n\"取枚举值\"方法来获取当前所枚举到的成员值.",
+"parameters": [
+"@嵌入式方法": "\"name = iter\\r\\nhas_loop_body = true\""
+  },
+  {
+}"method name": "取枚举值",
+}"comment": "  只能在本类的\"枚举循环\"语句的子语句体中使用,用作取回当前所枚举到的成员值,\n如果有多层本类或本类继承类的\"枚举循环\"嵌套,本方法将返回最近层\"枚举循环\"所枚举到的成员值.",
+}"data type": "YYJSON只读对象类",
+}"@嵌入式方法": "\"parent = \\\"iter\\\"\""
+  },
+  {
+}"method name": "到可读文本",
+}"comment": "将当前数组以JSON格式化文本内容返回",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "选项",
+"comment": "请参考\"YYJSON格式化选项\"所提供的常量值,可使用其组合值.",
+"data type": "整数",
+"@默认值": "YYJSON格式化选项.缩进"
+   }
+}]
+  },
+  {
+"method name": "取展示内容",
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+"@虚拟方法": "可覆盖",
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+]
+  }
+入式方法": "\"parent = \\\"iter\\\"\""]]
+ },
+ {
+"class name": "YYJSON对象类",
+"comment": "本类同时支持解析与构造,处理速度较慢,如仅需解析功能请使用\"YYJSON只读对象类\".",
+"base class": "扩展对象类",
+"methods": [
+  {
+ameter name": "索引""method name": "创建自文本",
+ameter name": "索引""comment": "从一段JSON文本创建一个对象",
+ameter name": "索引""result comment": "创建成功返回真,否则返回假.",
+ameter name": "索引""data type": "逻辑型",
+ameter name": "索引""@嵌入式方法": "\"\"",
+ameter name": "索引""parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供JSON内容文本",
+"data type": "文本型"
+   }
+ameter name": "索引"]
+  },
+  {
+}"method name": "创建自字节集",
+}"comment": "从指定的内存从创建一个对象",
+}"result comment": "创建成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "内容",
+"comment": "请确保所提供内容为UTF8编码,且尾部不能带0结束符.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+er name": "索引""method name": "创建自文本""method name": "创建值自文件",
+er name": "索引""method name": "创建自文本""comment": "从包含一段JSON文本文件创建一个对象",
+er name": "索引""method name": "创建自文本""result comment": "创建成功返回真,否则返回假.",
+er name": "索引""method name": "创建自文本""data type": "逻辑型",
+er name": "索引""method name": "创建自文本""@嵌入式方法": "\"\"",
+er name": "索引""method name": "创建自文本""parameters": [
+   {
+"parameter name": "路径",
+"comment": "提供包含JSON内容文本的完整文件路径",
+"data type": "文本型"
+   }
+er name": "索引""method name": "创建自文本"]
+  },
+  {
+thod name": "创建自字节集""method name": "创建值自空值",
+thod name": "创建自字节集""comment": "根据指定的值创建一个单一值对象",
+thod name": "创建自字节集""result comment": "创建成功返回真,否则返回假.",
+thod name": "创建自字节集""data type": "逻辑型",
+thod name": "创建自字节集""@禁止流程检查": "真"
+  },
+  {
+}"method name": "创建值自逻辑值",
+}"comment": "根据指定的值创建一个单一值对象",
+}"result comment": "创建成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+r name": "索引""method name": "创建自文本""result comment": "创建成功返回真,否则返回假.""method name": "创建值自长整数",
+r name": "索引""method name": "创建自文本""result comment": "创建成功返回真,否则返回假.""comment": "根据指定的值创建一个单一值对象",
+r name": "索引""method name": "创建自文本""result comment": "创建成功返回真,否则返回假.""result comment": "创建成功返回真,否则返回假.",
+r name": "索引""method name": "创建自文本""result comment": "创建成功返回真,否则返回假.""data type": "逻辑型",
+r name": "索引""method name": "创建自文本""result comment": "创建成功返回真,否则返回假.""@禁止流程检查": "真",
+r name": "索引""method name": "创建自文本""result comment": "创建成功返回真,否则返回假.""parameters": [
+   {
+"parameter name": "值",
+"data type": "长整数"
+   }
+r name": "索引""method name": "创建自文本""result comment": "创建成功返回真,否则返回假."]
+  },
+  {
+hod name": "创建自字节集""@禁止流程检查": "真""method name": "创建值自整数",
+hod name": "创建自字节集""@禁止流程检查": "真""comment": "根据指定的值创建一个单一值对象",
+hod name": "创建自字节集""@禁止流程检查": "真""result comment": "创建成功返回真,否则返回假.",
+hod name": "创建自字节集""@禁止流程检查": "真""data type": "逻辑型",
+hod name": "创建自字节集""@禁止流程检查": "真""@禁止流程检查": "真",
+hod name": "创建自字节集""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+hod name": "创建自字节集""@禁止流程检查": "真"]
+  },
+  {
+hod name": "取展示内容""method name": "创建值自小数",
+hod name": "取展示内容""comment": "根据指定的值创建一个单一值对象",
+hod name": "取展示内容""result comment": "创建成功返回真,否则返回假.",
+hod name": "取展示内容""data type": "逻辑型",
+hod name": "取展示内容""@禁止流程检查": "真",
+hod name": "取展示内容""parameters": [
+   {
+"parameter name": "值",
+"data type": "小数"
+   }
+hod name": "取展示内容"]
+  },
+  {
+od name": "取展示内容""result comment": "创建成功返回真,否则返回假.""method name": "创建值自文本",
+od name": "取展示内容""result comment": "创建成功返回真,否则返回假.""comment": "根据指定的值创建一个单一值对象",
+od name": "取展示内容""result comment": "创建成功返回真,否则返回假.""result comment": "创建成功返回真,否则返回假.",
+od name": "取展示内容""result comment": "创建成功返回真,否则返回假.""data type": "逻辑型",
+od name": "取展示内容""result comment": "创建成功返回真,否则返回假.""@禁止流程检查": "真",
+od name": "取展示内容""result comment": "创建成功返回真,否则返回假.""parameters": [
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+od name": "取展示内容""result comment": "创建成功返回真,否则返回假."]
+  },
+  {
+od name": "取展示内容""@禁止流程检查": "真""method name": "是否为空",
+od name": "取展示内容""@禁止流程检查": "真""comment": "检查当前对象是否为空(NULL)",
+od name": "取展示内容""@禁止流程检查": "真""data type": "逻辑型",
+od name": "取展示内容""@禁止流程检查": "真""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为真",
+
+"comment": "检查当前对象的值是否为真",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "是否为假",
+"comment": "检查当前对象的值是否为假",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "是否为逻辑型",
+"@嵌入式方法": "\"\"""comment": "检查当前对象的值是否为逻辑型",
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否为无符号整数",
+}"comment": "检查当前对象的值是否为无符号整数类型",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "是否为长整数",
+"comment": "检查当前对象的值是否为长整数类型",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "从指定的内存从创建一个对象""method name": "是否为整数",
+"comment": "从指定的内存从创建一个对象""comment": "检查当前对象的值是否为(包含有符号或无符号)整数",
+"comment": "从指定的内存从创建一个对象""data type": "逻辑型",
+"comment": "从指定的内存从创建一个对象""@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""method name": "是否为小数",
+@嵌入式方法": "\"\"""comment": "检查当前对象的值是否为小数",
+@嵌入式方法": "\"\"""data type": "逻辑型",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+"data type": "逻辑型""method name": "是否为数值",
+"data type": "逻辑型""comment": "检查当前对象的值是否为(包含有符号或无符号)整数或小数",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+对象是否为空(NULL)"method name": "是否为文本",
+对象是否为空(NULL)"comment": "检查当前对象的值是否为文本型",
+对象是否为空(NULL)"data type": "逻辑型",
+对象是否为空(NULL)"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为数组",
+
+"comment": "检查当前对象的值是否为数组",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+象是否为空(NULL)"comment": "检查当前对象的值是否为文本型""method name": "是否为对象",
+象是否为空(NULL)"comment": "检查当前对象的值是否为文本型""comment": "检查当前对象的值是否为对象",
+象是否为空(NULL)"comment": "检查当前对象的值是否为文本型""data type": "逻辑型",
+象是否为空(NULL)"comment": "检查当前对象的值是否为文本型""@嵌入式方法": "\"\""
+  },
+  {
+"data type": "逻辑型""method name": "是否为容器",
+"data type": "逻辑型""comment": "检查当前对象的值是否为对象或者数组",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+od name": "取展示内容""@禁止流程检查": "真""method name": "取类型",
+od name": "取展示内容""@禁止流程检查": "真""comment": "获取当前对象值的具体类型",
+od name": "取展示内容""@禁止流程检查": "真""data type": "YYJSON值类型",
+od name": "取展示内容""@禁止流程检查": "真""@嵌入式方法": "\"\""
+  },
+  {
+data type": "逻辑型""data type": "逻辑型""method name": "取子类型",
+data type": "逻辑型""data type": "逻辑型""comment": "获取当前对象值的子类型",
+data type": "逻辑型""data type": "逻辑型""data type": "YYJSON值子类型",
+data type": "逻辑型""data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+是否为空(NULL)"comment": "检查当前对象的值是否为文本型""@嵌入式方法": "\"\"""method name": "取标签",
+是否为空(NULL)"comment": "检查当前对象的值是否为文本型""@嵌入式方法": "\"\"""comment": "获取当前对象值的标签",
+是否为空(NULL)"comment": "检查当前对象的值是否为文本型""@嵌入式方法": "\"\"""data type": "整数",
+是否为空(NULL)"comment": "检查当前对象的值是否为文本型""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取类型描述",
+
+"comment": "获取类型名称文本",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到数组",
+
+"comment": "将当前对象作为数组类型返回",
+
+"data type": "YYJSON数组类",
+
+"@禁止流程检查": "真"
+  },
+  {
+ata type": "逻辑型""data type": "逻辑型""comment": "获取当前对象值的子类型""method name": "到逻辑值",
+ata type": "逻辑型""data type": "逻辑型""comment": "获取当前对象值的子类型""comment": "将当前对象作为逻辑值类型返回",
+ata type": "逻辑型""data type": "逻辑型""comment": "获取当前对象值的子类型""data type": "逻辑型",
+ata type": "逻辑型""data type": "逻辑型""comment": "获取当前对象值的子类型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到长整数",
+
+"comment": "将当前对象作为长整数类型返回",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到整数",
+
+"comment": "将当前对象作为整数类型返回",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""method name": "到小数",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "将当前对象作为小数类型返回",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""data type": "小数",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到文本",
+
+"comment": "将当前对象作为文本类型返回",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+"data type": "逻辑型""method name": "取逻辑值",
+"data type": "逻辑型""comment": "根据指定键名称取对象值以逻辑值类型返回",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""@嵌入式方法": "\"\"",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+"data type": "逻辑型"]
+  },
+  {
+
+"method name": "取路径逻辑值",
+
+"comment": "根据所提供的路径内容取对象值并以逻辑值类型返回",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "路径""method name": "取长整数",
+ameter name": "路径""comment": "根据指定键名称取对象值以长整数类型返回",
+ameter name": "路径""data type": "长整数",
+ameter name": "路径""@嵌入式方法": "\"\"",
+ameter name": "路径""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+ameter name": "路径"]
+  },
+  {
+"method name": "取路径长整数",
+"comment": "根据所提供的路径内容取对象值并以长整数类型返回",
+"data type": "长整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "取整数",
+data type": "文本型""comment": "根据指定键名称取对象值以整数类型返回",
+data type": "文本型""data type": "整数",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+meter name": "路径""parameters": [
+"method name": "取路径整数",
+meter name": "路径""parameters": [
+"comment": "根据所提供的路径内容取对象值并以整数类型返回",
+meter name": "路径""parameters": [
+"data type": "整数",
+meter name": "路径""parameters": [
+"@嵌入式方法": "\"\"",
+meter name": "路径""parameters": [
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+meter name": "路径""parameters": [
+]
+  },
+  {
+}"method name": "取小数",
+}"comment": "根据指定键名称取对象值以小数类型返回",
+}"data type": "小数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+comment": "路径必须以\"/\"开始,如:/user/0""method name": "取路径小数",
+comment": "路径必须以\"/\"开始,如:/user/0""comment": "根据所提供的路径内容取对象值并以小数类型返回",
+comment": "路径必须以\"/\"开始,如:/user/0""data type": "小数",
+comment": "路径必须以\"/\"开始,如:/user/0""@嵌入式方法": "\"\"",
+comment": "路径必须以\"/\"开始,如:/user/0""parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+comment": "路径必须以\"/\"开始,如:/user/0"]
+  },
+  {
+"method name": "取文本",
+"comment": "根据指定键名称取对象值以文本类型返回",
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+meter name": "路径""data type": "长整数""method name": "取路径文本",
+meter name": "路径""data type": "长整数""comment": "根据所提供的路径内容取对象值并以文本类型返回",
+meter name": "路径""data type": "长整数""data type": "文本型",
+meter name": "路径""data type": "长整数""@禁止流程检查": "真",
+meter name": "路径""data type": "长整数""parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+meter name": "路径""data type": "长整数"]
+  },
+  {
+ameter name": "路径""method name": "取路径内容",
+ameter name": "路径""comment": "无论JSON类型是什么,都以文本数据返回.",
+ameter name": "路径""data type": "文本型",
+ameter name": "路径""parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+ameter name": "路径"]
+  },
+  {
+入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "将当前对象作为小数类型返回""method name": "取对象",
+入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "将当前对象作为小数类型返回""comment": "根据指定键名称取对象值",
+入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "将当前对象作为小数类型返回""data type": "YYJSON对象类",
+入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "将当前对象作为小数类型返回""@禁止流程检查": "真",
+入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "将当前对象作为小数类型返回""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "将当前对象作为小数类型返回"]
+  },
+  {
+comment": "根据指定键名称取对象值以文本类型返回""method name": "取路径对象",
+comment": "根据指定键名称取对象值以文本类型返回""comment": "根据所提供的路径内容取对象值",
+comment": "根据指定键名称取对象值以文本类型返回""data type": "YYJSON对象类",
+comment": "根据指定键名称取对象值以文本类型返回""@禁止流程检查": "真",
+comment": "根据指定键名称取对象值以文本类型返回""parameters": [
+   {
+"parameter name": "路径",
+"comment": "路径必须以\"/\"开始,如:/user/0",
+"data type": "文本型"
+   }
+comment": "根据指定键名称取对象值以文本类型返回"]
+  },
+  {
+comment": "路径必须以\"/\"开始,如:/user/0""method name": "取数组",
+comment": "路径必须以\"/\"开始,如:/user/0""comment": "根据指定键名称取数组值",
+comment": "路径必须以\"/\"开始,如:/user/0""data type": "YYJSON数组类",
+comment": "路径必须以\"/\"开始,如:/user/0""@禁止流程检查": "真",
+comment": "路径必须以\"/\"开始,如:/user/0""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供所欲获取其值对应的键名称",
+"data type": "文本型"
+   }
+comment": "路径必须以\"/\"开始,如:/user/0"]
+  },
+  {
+ent": "路径必须以\"/\"开始,如:/user/0""method name": "取数组""method name": "取路径数组",
+ent": "路径必须以\"/\"开始,如:/user/0""method name": "取数组""comment": "根据所提供的路径内容取数组值",
+ent": "路径必须以\"/\"开始,如:/user/0""method name": "取数组""data type": "YYJSON数组类",
+ent": "路径必须以\"/\"开始,如:/user/0""method name": "取数组""@禁止流程检查": "真",
+ent": "路径必须以\"/\"开始,如:/user/0""method name": "取数组""parameters": [
+   {
+"parameter name": "路径",
+"comment": "例如:/user/0",
+"data type": "文本型"
+   }
+ent": "路径必须以\"/\"开始,如:/user/0""method name": "取数组"]
+  },
+  {
+: "路径必须以\"/\"开始,如:/user/0""method name": "取数组""method name": "取路径数组""method name": "枚举循环",
+: "路径必须以\"/\"开始,如:/user/0""method name": "取数组""method name": "取路径数组""comment": "  启动一个循环来枚举当前对象中的每一个成员,在循环中可以调用\n\"取枚举值\"方法来获取当前所枚举到的成员值.",
+: "路径必须以\"/\"开始,如:/user/0""method name": "取数组""method name": "取路径数组""@嵌入式方法": "\"name = iter\\r\\nhas_loop_body = true\""
+  },
+  {
+meter name": "路径""data type": "长整数""method name": "取枚举键对象",
+meter name": "路径""data type": "长整数""comment": "  只能在本类的\"枚举循环\"语句的子语句体中使用,用作取回当前所枚举到的成员值,\n如果有多层本类或本类继承类的\"枚举循环\"嵌套,本方法将返回最近层\"枚举循环\"所枚举到的成员值.",
+meter name": "路径""data type": "长整数""data type": "YYJSON对象类",
+meter name": "路径""data type": "长整数""@嵌入式方法": "\"parent = \\\"iter\\\"\""
+  },
+  {
+
+"method name": "取枚举值对象",
+
+"comment": "  只能在本类的\"枚举循环\"语句的子语句体中使用,用作取回当前所枚举到的成员值,\n如果有多层本类或本类继承类的\"枚举循环\"嵌套,本方法将返回最近层\"枚举循环\"所枚举到的成员值.",
+
+"data type": "YYJSON对象类",
+
+"@嵌入式方法": "\"parent = \\\"iter\\\"\""
+  },
+  {
+t": "路径必须以\"/\"开始,如:/user/0""method name": "取数组"]"method name": "取成员数",
+t": "路径必须以\"/\"开始,如:/user/0""method name": "取数组"]"comment": "获取当前JSON对象的成员数量",
+t": "路径必须以\"/\"开始,如:/user/0""method name": "取数组"]"data type": "整数",
+t": "路径必须以\"/\"开始,如:/user/0""method name": "取数组"]"@嵌入式方法": "\"\""
+  },
+  {
+以\"/\"开始,如:/user/0"method name": "加入空成员",
+以\"/\"开始,如:/user/0"comment": "在当前对象尾部加入新的空值(NULL)成员",
+以\"/\"开始,如:/user/0"result comment": "加入成功返回真,否则返回假.",
+以\"/\"开始,如:/user/0"data type": "逻辑型",
+以\"/\"开始,如:/user/0"@禁止流程检查": "真",
+以\"/\"开始,如:/user/0"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   }
+以\"/\"开始,如:/user/0]
+  },
+  {
+"method name": "加入逻辑值成员",
+"comment": "在当前对象尾部加入新的逻辑型成员",
+"result comment": "加入成功返回真,否则返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值内容",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+"method name": "加入长整数成员",
+"comment": "在当前对象尾部加入新的长整数成员",
+"result comment": "加入成功返回真,否则返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值内容",
+"data type": "长整数"
+   }
+]
+  },
+  {
+hod name": "加入长整数成员""method name": "加入整数成员",
+hod name": "加入长整数成员""comment": "在当前对象尾部加入新的整数成员",
+hod name": "加入长整数成员""result comment": "加入成功返回真,否则返回假.",
+hod name": "加入长整数成员""data type": "逻辑型",
+hod name": "加入长整数成员""@禁止流程检查": "真",
+hod name": "加入长整数成员""parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值内容",
+"data type": "整数"
+   }
+hod name": "加入长整数成员"]
+  },
+  {
+comment": "从指定的内存从创建一个对象""data type": "逻辑型""method name": "加入小数成员",
+comment": "从指定的内存从创建一个对象""data type": "逻辑型""comment": "在当前对象尾部加入新的小数成员",
+comment": "从指定的内存从创建一个对象""data type": "逻辑型""result comment": "加入成功返回真,否则返回假.",
+comment": "从指定的内存从创建一个对象""data type": "逻辑型""data type": "逻辑型",
+comment": "从指定的内存从创建一个对象""data type": "逻辑型""@禁止流程检查": "真",
+comment": "从指定的内存从创建一个对象""data type": "逻辑型""parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值内容",
+"data type": "小数"
+   }
+comment": "从指定的内存从创建一个对象""data type": "逻辑型"]
+  },
+  {
+comment": "提供所欲加入的值内容""method name": "加入文本成员",
+comment": "提供所欲加入的值内容""comment": "在当前对象尾部加入新的文本值成员",
+comment": "提供所欲加入的值内容""result comment": "加入成功返回真,否则返回假.",
+comment": "提供所欲加入的值内容""data type": "逻辑型",
+comment": "提供所欲加入的值内容""@禁止流程检查": "真",
+comment": "提供所欲加入的值内容""parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值内容",
+"data type": "文本型"
+   }
+comment": "提供所欲加入的值内容"]
+  },
+  {
+JSON对象的成员数量"method name": "加入成员",
+JSON对象的成员数量"comment": "插入一个指定的对象成员到当前对象的尾部",
+JSON对象的成员数量"result comment": "插入成功返回真,否则返回假.",
+JSON对象的成员数量"data type": "逻辑型",
+JSON对象的成员数量"@禁止流程检查": "真",
+JSON对象的成员数量"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON对象类"
+   },
+   {
+"parameter name": "覆盖",
+"comment": "如果当前对象中已存在该键,是否覆盖其值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+JSON对象的成员数量]
+  },
+  {
+ }"method name": "缓存并加入成员",
+ }"comment": "同\"加入成员\"方法,与其不同的是本方法参数的\"值\"无需考虑其作用域,但执行效率较前者低.",
+ }"result comment": "插入成功返回真,否则返回假.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的成员值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被加入一次,多次被加入将导致成员值丢失或混乱.",
+"data type": "YYJSON对象类"
+   },
+   {
+"parameter name": "覆盖",
+"comment": "如果当前对象中已存在该键,是否覆盖其值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+ }"method name": "加入数组成员",
+ }"comment": "插入一个指定的数组成员到当前对象的尾部",
+ }"result comment": "插入成功返回真,否则返回假.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON数组类"
+   },
+   {
+"parameter name": "覆盖",
+"comment": "如果当前对象中已存在该键,是否覆盖其值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "缓存加入数组成员",
+data type": "文本型""comment": "同\"加入数组成员\"方法,与其不同的是本方法参数的\"值\"无需考虑其作用域,但执行效率较前者低.",
+data type": "文本型""result comment": "插入成功返回真,否则返回假.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的成员值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被加入一次,多次被加入将导致成员值丢失或混乱.",
+"data type": "YYJSON数组类"
+   },
+   {
+"parameter name": "覆盖",
+"comment": "如果当前对象中已存在该键,是否覆盖其值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "插入成员",
+"comment": "插入一个指定的对象成员到当前对象的指定索引位置",
+"result comment": "插入成功返回真,否则返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲插入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON对象类"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲插入的索引位置",
+"data type": "整数"
+   }
+]
+  },
+  {
+ata type": "文本型""data type": "逻辑型""method name": "缓存并插入成员",
+ata type": "文本型""data type": "逻辑型""comment": "同\"插入成员\"方法,与其不同的是本方法参数的\"值\"无需考虑其作用域,但执行效率较前者低.",
+ata type": "文本型""data type": "逻辑型""result comment": "插入成功返回真,否则返回假.",
+ata type": "文本型""data type": "逻辑型""data type": "逻辑型",
+ata type": "文本型""data type": "逻辑型""parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲插入的成员值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被加入一次,多次被加入将导致成员值丢失或混乱.",
+"data type": "YYJSON对象类"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲插入的索引位置",
+"data type": "整数"
+   }
+ata type": "文本型""data type": "逻辑型"]
+  },
+  {
+comment": "提供所欲插入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.""method name": "插入数组成员",
+comment": "提供所欲插入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.""comment": "插入一个指定的对象成员到当前对象的指定索引位置",
+comment": "提供所欲插入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.""result comment": "插入成功返回真,否则返回假.",
+comment": "提供所欲插入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.""data type": "逻辑型",
+comment": "提供所欲插入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.""@禁止流程检查": "真",
+comment": "提供所欲插入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.""parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON数组类"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲插入的索引位置",
+"data type": "整数"
+   }
+comment": "提供所欲插入的成员值,必须确保该对象的作用域大于或等于当前对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况."]
+  },
+  {
+ }"method name": "缓存并插入数组成员",
+ }"comment": "同\"插入数组成员\"方法,与其不同的是本方法参数的\"值\"无需考虑其作用域,但执行效率较前者低.",
+ }"result comment": "插入成功返回真,否则返回假.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的成员值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被加入一次,多次被加入将导致成员值丢失或混乱.",
+"data type": "YYJSON数组类"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲插入的索引位置",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "替换成员",
+data type": "文本型""comment": "将当前对象中指定的成员替换为一个新的值",
+data type": "文本型""result comment": "替换成功返回真,否则返回假.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换值",
+"comment": "提供所欲替换的新值,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被替换一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON对象类"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "缓存并替换成员",
+"comment": "同\"替换成员\"方法,与其不同的是本方法参数的\"替换值\"无需考虑其作用域,但执行效率较前者低.",
+"result comment": "替换成功返回真,否则返回假.",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换值",
+"comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.",
+"data type": "YYJSON对象类"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "替换数组成员",
+data type": "文本型""comment": "将当前数组中指定的成员替换为一个新的值",
+data type": "文本型""result comment": "替换成功返回真,否则返回假.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换值",
+"comment": "提供所欲替换的新值,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被替换一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON数组类"
+   }
+data type": "文本型"]
+  },
+  {
+象中指定的成员替换为一个新的值"method name": "缓存并替换数组成员",
+象中指定的成员替换为一个新的值"comment": "同\"替换数组成员\"方法,与其不同的是本方法参数的\"替换值\"无需考虑其作用域,但执行效率较前者低.",
+象中指定的成员替换为一个新的值"result comment": "替换成功返回真,否则返回假.",
+象中指定的成员替换为一个新的值"data type": "逻辑型",
+象中指定的成员替换为一个新的值"@禁止流程检查": "真",
+象中指定的成员替换为一个新的值"parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换值",
+"comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.",
+"data type": "YYJSON数组类"
+   }
+象中指定的成员替换为一个新的值]
+  },
+  {
+的成员替换为一个新的值"method name": "缓存并替换数组成员""method name": "删除成员",
+的成员替换为一个新的值"method name": "缓存并替换数组成员""comment": "删除指定键所对应的所有值",
+的成员替换为一个新的值"method name": "缓存并替换数组成员""result comment": "删除成功返回真,否则返回假.",
+的成员替换为一个新的值"method name": "缓存并替换数组成员""data type": "逻辑型",
+的成员替换为一个新的值"method name": "缓存并替换数组成员""@禁止流程检查": "真",
+的成员替换为一个新的值"method name": "缓存并替换数组成员""parameters": [
+   {
+"parameter name": "键名",
+"comment": "提供所欲定义的键名称",
+"data type": "文本型"
+   }
+的成员替换为一个新的值"method name": "缓存并替换数组成员"]
+  },
+  {
+ameter name": "键名""method name": "清空",
+ameter name": "键名""comment": "清空当前对象中的所有成员",
+ameter name": "键名""result comment": "返回是否清空成功",
+ameter name": "键名""data type": "逻辑型",
+ameter name": "键名""@禁止流程检查": "真"
+  },
+  {
+"method name": "清除缓存",
+"comment": "在使用了\"缓存并加入/插入\"等系列方法后,如所被缓存对象不再需要使用(即充当当前对象的子对象)时,可调用本方法清理缓存所占用内存."
+  },
+  {
+ata type": "文本型""@禁止流程检查": "真""method name": "翻转",
+ata type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数",
+ata type": "文本型""@禁止流程检查": "真""result comment": "返回是否翻转成功",
+ata type": "文本型""@禁止流程检查": "真""data type": "逻辑型",
+ata type": "文本型""@禁止流程检查": "真""@嵌入式方法": "\"\"",
+ata type": "文本型""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "次数",
+"comment": "提供所欲翻转的次数",
+"data type": "整数"
+   }
+ata type": "文本型""@禁止流程检查": "真"]
+  },
+  {
+}"method name": "到可读文本",
+}"comment": "将当前数组以JSON格式化文本内容返回",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "选项",
+"comment": "请参考\"YYJSON格式化选项\"所提供的常量值,可使用其组合值.",
+"data type": "整数",
+"@默认值": "YYJSON格式化选项.缩进"
+   }
+}]
+  },
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "流读入",
+
+"comment": "从所指定的流对象中读入本对象的数据. 请注意以下事项:\n  1. 一旦定义了\"流读入\"方法,必须定义对应的\"流写出\"方法,所读入内容格式与\n\"流写出\"方法写出的内容格式必须完全一致;\n  2. 任何类如果既没有定义\"流读入\"方法,也没有定义\"流写出\"方法,编译器会自动\n建立默认的\"流读入\"和\"流写出\"方法,默认方法就是首先调用基础类中的对应方法,\n然后将本对象中的所有非静态变量成员顺序从流中读入/写出;\n  3. 继承类中如果覆盖了本方法且基础类中也存在数据需要从流中读入,则必须负\n责调用基础类中的\"流读入\"方法,调用格式如: \"父对象.流读入 (流对象)\";\n  4. 如果本方法中的读入操作比较复杂或耗时,在之前最好检查一下流对象当前是\n否处于出错状态(\"流对象.是否出错\"方法返回真),如果出错则放弃后续的读入操作,\n以提高运行效率;\n  5. 在读入过程中一旦发现出错,则需要将对应的错误码写入\"流对象.错误码\"属性\n中(流读入出错不需要,会自动写入),以禁止后续的流读入操作. 错误码可以是\n\"流错误码\"类中的常量值,也可以是自行定义的错误码值(必须大于0);\n  6. 流对象一旦处于出错状态(流对象的\"错误码\"属性值不为\"流错误码.无错误\"),\n则后续所有流读入操作都会失败,如果欲再次使用此流对象,需要首先调用其\n\"清除错误\"方法清除掉流的出错状态或者将流关闭后再打开.",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "流对象",
+"comment": "提供欲从其中读入本对象数据内容的输入流",
+"data type": "输入流类"
+   }
+
+]
+  },
+  {
+"method name": "流写出",
+"comment": "将本对象的数据写入所指定的流对象中. 注意:\n  1. 一旦定义了\"流写出\"方法,必须定义对应的\"流读入\"方法,所写出内容格式与\n\"流读入\"方法读取的内容格式必须完全一致;\n  2. 任何类如果既没有定义\"流读入\"方法,也没有定义\"流写出\"方法,编译器会自动\n建立默认的\"流读入\"和\"流写出\"方法,默认方法就是首先调用基础类中的对应方法,\n然后将本对象中的所有非静态变量成员顺序从流中读入/写出;\n  3. 继承类中如果覆盖了本方法且基础类中也存在数据需要写出到流中,则必须负\n责调用基础类中的\"流写出\"方法,调用格式如: \"父对象.流写出 (流对象)\";\n  4. 如果本方法中的写出操作比较复杂或耗时,在之前最好检查一下流对象当前是\n否处于出错状态(\"流对象.是否出错\"方法返回真),如果出错则放弃后续的写出操作,\n以提高运行效率;\n  5. 在写出过程中一旦发现出错,则需要将对应的错误码写入\"流对象.错误码\"属性\n中(流写出出错不需要,会自动写入),以禁止后续的流写出操作. 错误码可以是\n\"流错误码\"类中的常量值,也可以是自行定义的错误码值(必须大于0);\n  6. 流对象一旦处于出错状态(流对象的\"错误码\"属性值不为\"流错误码.无错误\"),\n则后续所有流写出操作都会失败,如果欲再次使用此流对象,需要首先调用其\n\"清除错误\"方法清除掉流的出错状态或者将流关闭后再打开.",
+"@虚拟方法": "可覆盖",
+"parameters": [
+   {
+"parameter name": "流对象",
+"comment": "提供欲将本对象数据内容写出到其中的输出流",
+"data type": "输出流类"
+   }
+]
+  }
+]
+ },
+ {
+]"class name": "YYJSON数组类",
+]"comment": "本类同时支持解析与构造,处理速度较慢,如仅需解析功能请使用\"YYJSON只读数组类\".",
+]"base class": "扩展对象类",
+]"methods": [
+  {
+
+"parameters": [
+"method name": "创建自逻辑型数据",
+
+"parameters": [
+"comment": "根据所提供指定数量的成员创建本数组对象,如已创建成功则无法重复创建.",
+
+"parameters": [
+"result comment": "返回是否创建成功",
+
+"parameters": [
+"data type": "逻辑型",
+
+"parameters": [
+"@禁止流程检查": "真",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "成员",
+"comment": "提供所欲使用的成员数据",
+"data type": "逻辑型数组类"
+   }
+
+"parameters": [
+]
+  },
+  {
+"method name": "创建自长整数数据",
+"comment": "根据所提供指定数量的成员创建本数组对象,如已创建成功则无法重复创建.",
+"result comment": "返回是否创建成功",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "成员",
+"comment": "提供所欲使用的成员数据",
+"data type": "长整数数组类"
+   }
+]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "创建自小数数据",
+"@嵌入式方法": "\"\"""comment": "根据所提供指定数量的成员创建本数组对象,如已创建成功则无法重复创建.",
+"@嵌入式方法": "\"\"""result comment": "返回是否创建成功",
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@禁止流程检查": "真",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "成员",
+"comment": "提供所欲使用的成员数据",
+"data type": "小数数组类"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+ta type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""method name": "创建自字节数据",
+ta type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""comment": "根据所提供指定数量的成员创建本数组对象,如已创建成功则无法重复创建.",
+ta type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""result comment": "返回是否创建成功",
+ta type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""data type": "逻辑型",
+ta type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""@禁止流程检查": "真",
+ta type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""parameters": [
+   {
+"parameter name": "成员",
+"comment": "提供所欲使用的成员数据",
+"data type": "字节数组类"
+   }
+ta type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数"]
+  },
+  {
+指定的成员替换为一个新的值]"method name": "创建自短整数数据",
+指定的成员替换为一个新的值]"comment": "根据所提供指定数量的成员创建本数组对象,如已创建成功则无法重复创建.",
+指定的成员替换为一个新的值]"result comment": "返回是否创建成功",
+指定的成员替换为一个新的值]"data type": "逻辑型",
+指定的成员替换为一个新的值]"@禁止流程检查": "真",
+指定的成员替换为一个新的值]"parameters": [
+   {
+"parameter name": "成员",
+"comment": "提供所欲使用的成员数据",
+"data type": "短整数数组类"
+   }
+指定的成员替换为一个新的值]]
+  },
+  {
+@嵌入式方法": "\"\"""@禁止流程检查": "真""method name": "创建自整数数据",
+@嵌入式方法": "\"\"""@禁止流程检查": "真""comment": "根据所提供指定数量的成员创建本数组对象,如已创建成功则无法重复创建.",
+@嵌入式方法": "\"\"""@禁止流程检查": "真""result comment": "返回是否创建成功",
+@嵌入式方法": "\"\"""@禁止流程检查": "真""data type": "逻辑型",
+@嵌入式方法": "\"\"""@禁止流程检查": "真""@禁止流程检查": "真",
+@嵌入式方法": "\"\"""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "成员",
+"comment": "提供所欲使用的成员数据",
+"data type": "整数数组类"
+   }
+@嵌入式方法": "\"\"""@禁止流程检查": "真"]
+  },
+  {
+ass name": "YYJSON数组类""method name": "创建自文本数据",
+ass name": "YYJSON数组类""comment": "根据所提供指定数量的成员创建本数组对象,如已创建成功则无法重复创建.",
+ass name": "YYJSON数组类""result comment": "返回是否创建成功",
+ass name": "YYJSON数组类""data type": "逻辑型",
+ass name": "YYJSON数组类""@禁止流程检查": "真",
+ass name": "YYJSON数组类""parameters": [
+   {
+"parameter name": "成员",
+"comment": "提供所欲使用的成员数据",
+"data type": "文本数组类"
+   }
+ass name": "YYJSON数组类"]
+  },
+  {
+入式方法": "\"\"""@禁止流程检查": "真"]"method name": "取成员数",
+入式方法": "\"\"""@禁止流程检查": "真"]"comment": "获取该数组内包含的成员数量",
+入式方法": "\"\"""@禁止流程检查": "真"]"data type": "整数",
+入式方法": "\"\"""@禁止流程检查": "真"]"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "取成员",
+ }"comment": "获取指定索引位置的成员值",
+ }"data type": "YYJSON对象类",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+定的成员替换为一个新的值]"data type": "逻辑型""method name": "取逻辑值成员",
+定的成员替换为一个新的值]"data type": "逻辑型""comment": "获取指定索引位置的成员值",
+定的成员替换为一个新的值]"data type": "逻辑型""data type": "逻辑型",
+定的成员替换为一个新的值]"data type": "逻辑型""@嵌入式方法": "\"\"",
+定的成员替换为一个新的值]"data type": "逻辑型""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+定的成员替换为一个新的值]"data type": "逻辑型"]
+  },
+  {
+ }"method name": "取长整数",
+ }"comment": "获取指定索引位置的成员值",
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"@禁止流程检查": "真""method name": "取整数",
+}"@禁止流程检查": "真""comment": "获取指定索引位置的成员值",
+}"@禁止流程检查": "真""data type": "整数",
+}"@禁止流程检查": "真""@嵌入式方法": "\"\"",
+}"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+}"@禁止流程检查": "真"]
+  },
+  {
+"@禁止流程检查": "真""parameters": [
+"method name": "取小数",
+"@禁止流程检查": "真""parameters": [
+"comment": "获取指定索引位置的成员值",
+"@禁止流程检查": "真""parameters": [
+"data type": "小数",
+"@禁止流程检查": "真""parameters": [
+"@嵌入式方法": "\"\"",
+"@禁止流程检查": "真""parameters": [
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+"@禁止流程检查": "真""parameters": [
+]
+  },
+  {
+@禁止流程检查": "真""parameters": [
+"data type": "小数""method name": "取文本",
+@禁止流程检查": "真""parameters": [
+"data type": "小数""comment": "获取指定索引位置的成员值",
+@禁止流程检查": "真""parameters": [
+"data type": "小数""data type": "文本型",
+@禁止流程检查": "真""parameters": [
+"data type": "小数""@禁止流程检查": "真",
+@禁止流程检查": "真""parameters": [
+"data type": "小数""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+@禁止流程检查": "真""parameters": [
+"data type": "小数"]
+  },
+  {
+禁止流程检查": "真""parameters": [
+"data type": "小数""parameters": [
+"method name": "取首成员",
+禁止流程检查": "真""parameters": [
+"data type": "小数""parameters": [
+"comment": "获取首个成员值",
+禁止流程检查": "真""parameters": [
+"data type": "小数""parameters": [
+"data type": "YYJSON对象类",
+禁止流程检查": "真""parameters": [
+"data type": "小数""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "取尾成员",
+ }"comment": "获取最末尾处的成员值",
+ }"data type": "YYJSON对象类",
+ }"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "枚举循环",
+
+"comment": "  启动一个循环来枚举当前数组中的每一个成员,在循环中可以调用\n\"取枚举值\"方法来获取当前所枚举到的成员值.",
+
+"@嵌入式方法": "\"name = iter\\r\\nhas_loop_body = true\""
+  },
+  {
+}"comment": "获取指定索引位置的成员值""method name": "取枚举值",
+}"comment": "获取指定索引位置的成员值""comment": "  只能在本类的\"枚举循环\"语句的子语句体中使用,用作取回当前所枚举到的成员值,\n如果有多层本类或本类继承类的\"枚举循环\"嵌套,本方法将返回最近层\"枚举循环\"所枚举到的成员值.",
+}"comment": "获取指定索引位置的成员值""data type": "YYJSON对象类",
+}"comment": "获取指定索引位置的成员值""@嵌入式方法": "\"parent = \\\"iter\\\"\""
+  },
+  {
+
+"method name": "到可读文本",
+
+"comment": "将当前数组以JSON格式化文本内容返回",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "选项",
+"comment": "请参考\"YYJSON格式化选项\"所提供的常量值,可使用其组合值.",
+"data type": "整数",
+"@默认值": "YYJSON格式化选项.缩进"
+   }
+
+]
+  },
+  {
+ameter name": "选项""method name": "插入成员",
+ameter name": "选项""comment": "插入一个指定的对象成员到当前数组的指定索引位置",
+ameter name": "选项""result comment": "插入成功返回真,否则返回假.",
+ameter name": "选项""data type": "逻辑型",
+ameter name": "选项""@禁止流程检查": "真",
+ameter name": "选项""parameters": [
+   {
+"parameter name": "插入值",
+"comment": "提供所欲插入的成员,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON对象类"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲插入的索引位置",
+"data type": "整数"
+   }
+ameter name": "选项"]
+  },
+  {
+"method name": "缓存并插入成员",
+"comment": "同\"插入成员\"方法,与其不同的是本方法参数的\"插入值\"无需考虑其作用域,但执行效率较前者低.",
+"result comment": "插入成功返回真,否则返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "插入值",
+"comment": "提供所欲插入的成员,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被插入一次,多次插入将导致成员值丢失或混乱.",
+"data type": "YYJSON对象类"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲插入的索引位置",
+"data type": "整数"
+   }
+]
+  },
+  {
+a type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""parameters": [
+"method name": "插入数组成员",
+a type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""parameters": [
+"comment": "插入一个指定的数组成员到当前数组的指定索引位置",
+a type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""parameters": [
+"result comment": "插入成功返回真,否则返回假.",
+a type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""parameters": [
+"data type": "逻辑型",
+a type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""parameters": [
+"@禁止流程检查": "真",
+a type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""parameters": [
+"parameters": [
+   {
+"parameter name": "插入值",
+"comment": "提供所欲插入的成员,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON数组类"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲插入的索引位置",
+"data type": "整数"
+   }
+a type": "文本型""@禁止流程检查": "真""comment": "将当前对象中的成员翻转指定次数""parameters": [
+]
+  },
+  {
+ameter name": "插入值""method name": "缓存并插入数组成员",
+ameter name": "插入值""comment": "同\"插入数组成员\"方法,与其不同的是本方法参数的\"插入值\"无需考虑其作用域,但执行效率较前者低.",
+ameter name": "插入值""result comment": "插入成功返回真,否则返回假.",
+ameter name": "插入值""data type": "逻辑型",
+ameter name": "插入值""@禁止流程检查": "真",
+ameter name": "插入值""parameters": [
+   {
+"parameter name": "插入值",
+"comment": "提供所欲插入的成员,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被插入一次,多次插入将导致成员值丢失或混乱.",
+"data type": "YYJSON数组类"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲插入的索引位置",
+"data type": "整数"
+   }
+ameter name": "插入值"]
+  },
+  {
+meter name": "插入值""parameters": [
+"method name": "插入成员到首部",
+meter name": "插入值""parameters": [
+"comment": "插入一个指定的对象成员到当前数组的首部",
+meter name": "插入值""parameters": [
+"result comment": "插入成功返回真,否则返回假.",
+meter name": "插入值""parameters": [
+"data type": "逻辑型",
+meter name": "插入值""parameters": [
+"@禁止流程检查": "真",
+meter name": "插入值""parameters": [
+"parameters": [
+   {
+"parameter name": "添加值",
+"comment": "提供所欲插入的成员,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON对象类"
+   }
+meter name": "插入值""parameters": [
+]
+  },
+  {
+data type": "YYJSON对象类""method name": "缓存并插入成员到首部",
+data type": "YYJSON对象类""comment": "同\"插入成员到首部\"方法,与其不同的是本方法参数的\"添加值\"无需考虑其作用域,但执行效率较前者低.",
+data type": "YYJSON对象类""result comment": "插入成功返回真,否则返回假.",
+data type": "YYJSON对象类""data type": "逻辑型",
+data type": "YYJSON对象类""@禁止流程检查": "真",
+data type": "YYJSON对象类""parameters": [
+   {
+"parameter name": "添加值",
+"comment": "提供所欲插入的成员,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被插入一次,多次插入将导致成员值丢失或混乱.",
+"data type": "YYJSON对象类"
+   }
+data type": "YYJSON对象类"]
+  },
+  {
+ }"method name": "插入数组成员到首部",
+ }"comment": "插入一个指定的数组成员到当前数组的首部",
+ }"result comment": "插入成功返回真,否则返回假.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "添加值",
+"comment": "提供所欲插入的成员,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON数组类"
+   }
+ }]
+  },
+  {
+"method name": "缓存并插入数组成员到首部",
+"comment": "同\"插入数组成员到首部\"方法,与其不同的是本方法参数的\"添加值\"无需考虑其作用域,但执行效率较前者低.",
+"result comment": "插入成功返回真,否则返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "添加值",
+"comment": "提供所欲插入的成员,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被插入一次,多次插入将导致成员值丢失或混乱.",
+"data type": "YYJSON数组类"
+   }
+]
+  },
+  {
+
+"method name": "替换成员",
+
+"comment": "将当前数组中指定的成员替换为一个新的值",
+
+"result comment": "返回被替换之前该索引位置处的成员值",
+
+"data type": "YYJSON对象类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供所替换成员所处的索引位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "替换值",
+"comment": "提供所欲替换的新值,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被替换一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON对象类"
+   }
+
+]
+  },
+  {
+}"result comment": "插入成功返回真,否则返回假.""method name": "缓存并替换成员",
+}"result comment": "插入成功返回真,否则返回假.""comment": "同\"替换成员\"方法,与其不同的是本方法参数的\"替换值\"无需考虑其作用域,但执行效率较前者低.",
+}"result comment": "插入成功返回真,否则返回假.""result comment": "返回被替换之前该索引位置处的成员值",
+}"result comment": "插入成功返回真,否则返回假.""data type": "YYJSON对象类",
+}"result comment": "插入成功返回真,否则返回假.""@禁止流程检查": "真",
+}"result comment": "插入成功返回真,否则返回假.""parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供所替换成员所处的索引位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "替换值",
+"comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.",
+"data type": "YYJSON对象类"
+   }
+}"result comment": "插入成功返回真,否则返回假."]
+  },
+  {
+换之前该索引位置处的成员值"method name": "替换数组成员",
+换之前该索引位置处的成员值"comment": "将当前数组中指定的成员替换为一个新的值",
+换之前该索引位置处的成员值"result comment": "返回被替换之前该索引位置处的成员值",
+换之前该索引位置处的成员值"data type": "YYJSON对象类",
+换之前该索引位置处的成员值"@禁止流程检查": "真",
+换之前该索引位置处的成员值"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供所替换成员所处的索引位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "替换值",
+"comment": "提供所欲替换的新值,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被替换一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON数组类"
+   }
+换之前该索引位置处的成员值]
+  },
+  {
+]"method name": "缓存并替换数组成员",
+]"comment": "同\"替换数组成员\"方法,与其不同的是本方法参数的\"替换值\"无需考虑其作用域,但执行效率较前者低.",
+]"result comment": "返回被替换之前该索引位置处的成员值",
+]"data type": "YYJSON对象类",
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供所替换成员所处的索引位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "替换值",
+"comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.",
+"data type": "YYJSON数组类"
+   }
+]]
+  },
+  {
+thod name": "缓存并替换数组成员""method name": "删除成员",
+thod name": "缓存并替换数组成员""comment": "删除当前数组中指定索引位置处的成员",
+thod name": "缓存并替换数组成员""result comment": "返回被删除之前该索引位置处的成员值",
+thod name": "缓存并替换数组成员""data type": "YYJSON对象类",
+thod name": "缓存并替换数组成员""@禁止流程检查": "真",
+thod name": "缓存并替换数组成员""parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供所删除成员所处的索引位置",
+"data type": "整数"
+   }
+thod name": "缓存并替换数组成员"]
+  },
+  {
+ata type": "YYJSON对象类""parameters": [
+"method name": "删除首部成员",
+ata type": "YYJSON对象类""parameters": [
+"comment": "删除当前数组中处于首部的成员",
+ata type": "YYJSON对象类""parameters": [
+"result comment": "返回被删除之前该位置处的成员值",
+ata type": "YYJSON对象类""parameters": [
+"data type": "YYJSON对象类",
+ata type": "YYJSON对象类""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+hod name": "缓存并替换数组成员""@禁止流程检查": "真""method name": "删除尾部成员",
+hod name": "缓存并替换数组成员""@禁止流程检查": "真""comment": "删除当前数组中处于首部的成员",
+hod name": "缓存并替换数组成员""@禁止流程检查": "真""result comment": "返回被删除之前该位置处的成员值",
+hod name": "缓存并替换数组成员""@禁止流程检查": "真""data type": "YYJSON对象类",
+hod name": "缓存并替换数组成员""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "删除范围成员",
+
+"comment": "删除当前数组中指定范围内的所有成员",
+
+"result comment": "返回是否删除成功",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "起始索引",
+"comment": "提供所欲删除范围的起始索引位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "删除数量",
+"comment": "提供所欲删除成员的数量",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "清空",
+
+"comment": "清空当前数组中的所有成员",
+
+"result comment": "返回是否清空成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "清除缓存",
+
+"comment": "在使用了\"缓存并加入/插入\"等系列方法后,如所被缓存对象不再需要使用(即充当当前对象的成员)时,可调用本方法清理缓存所占用内存."
+  },
+  {
+]"method name": "翻转",
+]"comment": "将当前数组中的成员翻转指定次数",
+]"result comment": "返回是否翻转成功",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "次数",
+"comment": "提供所欲翻转的次数",
+"data type": "整数"
+   }
+]]
+  },
+  {
+comment": "提供所替换成员所处的索引位置""method name": "加入新成员",
+comment": "提供所替换成员所处的索引位置""comment": "插入一个指定的对象成员到当前数组的尾部",
+comment": "提供所替换成员所处的索引位置""result comment": "返回所插入的成员对象",
+comment": "提供所替换成员所处的索引位置""data type": "YYJSON对象类",
+comment": "提供所替换成员所处的索引位置""@禁止流程检查": "真"
+  },
+  {
+omment": "提供所替换成员所处的索引位置""@禁止流程检查": "真""method name": "加入新数组成员",
+omment": "提供所替换成员所处的索引位置""@禁止流程检查": "真""comment": "插入一个指定的数组成员到当前数组的尾部",
+omment": "提供所替换成员所处的索引位置""@禁止流程检查": "真""result comment": "返回所插入的数组对象",
+omment": "提供所替换成员所处的索引位置""@禁止流程检查": "真""data type": "YYJSON数组类",
+omment": "提供所替换成员所处的索引位置""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+ethod name": "清空""method name": "加入成员",
+ethod name": "清空""comment": "插入一个指定的对象成员到当前数组的尾部",
+ethod name": "清空""result comment": "插入成功返回真,否则返回假.",
+ethod name": "清空""data type": "逻辑型",
+ethod name": "清空""@禁止流程检查": "真",
+ethod name": "清空""parameters": [
+   {
+"parameter name": "添加值",
+"comment": "提供所欲插入的成员,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON对象类"
+   }
+ethod name": "清空"]
+  },
+  {
+组中的成员翻转指定次数"method name": "缓存并加入成员",
+组中的成员翻转指定次数"comment": "同\"加入成员\"方法,与其不同的是本方法参数的\"添加值\"无需考虑其作用域,但执行效率较前者低.",
+组中的成员翻转指定次数"result comment": "插入成功返回真,否则返回假.",
+组中的成员翻转指定次数"data type": "逻辑型",
+组中的成员翻转指定次数"@禁止流程检查": "真",
+组中的成员翻转指定次数"parameters": [
+   {
+"parameter name": "添加值",
+"comment": "提供所欲插入的成员,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被加入一次,多次加入将导致成员值丢失或混乱.",
+"data type": "YYJSON对象类"
+   }
+组中的成员翻转指定次数]
+  },
+  {
+ent": "提供所替换成员所处的索引位置""method name": "加入新成员""method name": "加入数组成员",
+ent": "提供所替换成员所处的索引位置""method name": "加入新成员""comment": "插入一个指定的数组成员到当前数组的尾部",
+ent": "提供所替换成员所处的索引位置""method name": "加入新成员""result comment": "插入成功返回真,否则返回假.",
+ent": "提供所替换成员所处的索引位置""method name": "加入新成员""data type": "逻辑型",
+ent": "提供所替换成员所处的索引位置""method name": "加入新成员""@禁止流程检查": "真",
+ent": "提供所替换成员所处的索引位置""method name": "加入新成员""parameters": [
+   {
+"parameter name": "添加值",
+"comment": "提供所欲插入的成员,必须确保该对象的作用域大于或等于当前数组对象,且同一个值对象仅支持被加入一次,否则将出现成员值丢失的情况.",
+"data type": "YYJSON数组类"
+   }
+ent": "提供所替换成员所处的索引位置""method name": "加入新成员"]
+  },
+  {
+"result comment": "返回是否删除成功""method name": "缓存并加入数组成员",
+"result comment": "返回是否删除成功""comment": "同\"加入数组成员\"方法,与其不同的是本方法参数的\"添加值\"无需考虑其作用域,但执行效率较前者低.",
+"result comment": "返回是否删除成功""result comment": "插入成功返回真,否则返回假.",
+"result comment": "返回是否删除成功""data type": "逻辑型",
+"result comment": "返回是否删除成功""@禁止流程检查": "真",
+"result comment": "返回是否删除成功""parameters": [
+   {
+"parameter name": "添加值",
+"comment": "提供所欲插入的成员,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被加入一次,多次加入将导致成员值丢失或混乱.",
+"data type": "YYJSON数组类"
+   }
+"result comment": "返回是否删除成功"]
+  },
+  {
+ameter name": "添加值""method name": "加入空成员",
+ameter name": "添加值""comment": "插入一个空值作为数组成员到当前数组的尾部",
+ameter name": "添加值""result comment": "插入成功返回真,否则返回假.",
+ameter name": "添加值""data type": "逻辑型",
+ameter name": "添加值""@禁止流程检查": "真"
+  },
+  {
+ameter name": "添加值""method name": "加入逻辑值成员",
+ameter name": "添加值""comment": "插入一个指定的值作为数组成员到当前数组的尾部",
+ameter name": "添加值""result comment": "插入成功返回真,否则返回假.",
+ameter name": "添加值""data type": "逻辑型",
+ameter name": "添加值""@禁止流程检查": "真",
+ameter name": "添加值""parameters": [
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值",
+"data type": "逻辑型"
+   }
+ameter name": "添加值"]
+  },
+  {
+result comment": "返回是否删除成功""parameters": [
+"method name": "加入长整数成员",
+result comment": "返回是否删除成功""parameters": [
+"comment": "插入一个指定的值作为数组成员到当前数组的尾部",
+result comment": "返回是否删除成功""parameters": [
+"result comment": "插入成功返回真,否则返回假.",
+result comment": "返回是否删除成功""parameters": [
+"data type": "逻辑型",
+result comment": "返回是否删除成功""parameters": [
+"@禁止流程检查": "真",
+result comment": "返回是否删除成功""parameters": [
+"parameters": [
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值",
+"data type": "长整数"
+   }
+result comment": "返回是否删除成功""parameters": [
+]
+  },
+  {
+ameter name": "值""method name": "加入整数成员",
+ameter name": "值""comment": "插入一个指定的值作为数组成员到当前数组的尾部",
+ameter name": "值""result comment": "插入成功返回真,否则返回假.",
+ameter name": "值""data type": "逻辑型",
+ameter name": "值""@禁止流程检查": "真",
+ameter name": "值""parameters": [
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值",
+"data type": "整数"
+   }
+ameter name": "值"]
+  },
+  {
+comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.""method name": "加入小数成员",
+comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.""comment": "插入一个指定的值作为数组成员到当前数组的尾部",
+comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.""result comment": "插入成功返回真,否则返回假.",
+comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.""data type": "逻辑型",
+comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.""@禁止流程检查": "真",
+comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱.""parameters": [
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值",
+"data type": "小数"
+   }
+comment": "提供所欲替换的新值,该对象将会被缓存,如确保不再使用时可调用\"清除缓存\"方法释放所占用内存.\n注意:同一个值对象仅支持被替换一次,多次替换将导致成员值丢失或混乱."]
+  },
+  {
+meter name": "值""comment": "插入一个指定的值作为数组成员到当前数组的尾部""method name": "加入文本成员",
+meter name": "值""comment": "插入一个指定的值作为数组成员到当前数组的尾部""comment": "插入一个指定的值作为数组成员到当前数组的尾部",
+meter name": "值""comment": "插入一个指定的值作为数组成员到当前数组的尾部""result comment": "插入成功返回真,否则返回假.",
+meter name": "值""comment": "插入一个指定的值作为数组成员到当前数组的尾部""data type": "逻辑型",
+meter name": "值""comment": "插入一个指定的值作为数组成员到当前数组的尾部""@禁止流程检查": "真",
+meter name": "值""comment": "插入一个指定的值作为数组成员到当前数组的尾部""parameters": [
+   {
+"parameter name": "值",
+"comment": "提供所欲加入的值",
+"data type": "文本型"
+   }
+meter name": "值""comment": "插入一个指定的值作为数组成员到当前数组的尾部"]
+  },
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  }
+]]
+ },
+ {
+ }"class name": "YYJSON值类型",
+ }"comment": "表示一个JSON对象的类型",
+ }"@文档": "\"category = \\\"辅助类\\\"\"",
+ }"@常量类": "整数",
+ }"constants": [
+  {
+data type": "文本型""constant name": "未知",
+data type": "文本型""initial value": "@YYJSON_TYPE_NONE"
+  },
+  {
+data type": "文本型""constant name": "空值",
+data type": "文本型""initial value": "@YYJSON_TYPE_NULL"
+  },
+  {
+eter name": "添加值"]"constant name": "逻辑值",
+eter name": "添加值"]"initial value": "@YYJSON_TYPE_BOOL"
+  },
+  {
+
+"constant name": "数值",
+
+"initial value": "@YYJSON_TYPE_NUM"
+  },
+  {
+"constant name": "文本值",
+"initial value": "@YYJSON_TYPE_STR"
+  },
+  {
+ }"constant name": "数组值",
+ }"initial value": "@YYJSON_TYPE_ARR"
+  },
+  {
+
+"constant name": "对象值",
+
+"initial value": "@YYJSON_TYPE_OBJ"
+  }
+ }]
+ },
+ {
+SON_TYPE_ARR"class name": "YYJSON值子类型",
+SON_TYPE_ARR"comment": "表示一个JSON对象的子类型",
+SON_TYPE_ARR"@文档": "\"category = \\\"辅助类\\\"\"",
+SON_TYPE_ARR"@常量类": "整数",
+SON_TYPE_ARR"constants": [
+  {
+meter name": "值""@禁止流程检查": "真""constant name": "未知",
+meter name": "值""@禁止流程检查": "真""initial value": "@YYJSON_SUBTYPE_NONE"
+  },
+  {
+}"comment": "表示一个JSON对象的类型""constant name": "为假",
+}"comment": "表示一个JSON对象的类型""initial value": "@YYJSON_SUBTYPE_FALSE"
+  },
+  {
+"initial value": "@YYJSON_TYPE_OBJ""constant name": "为真",
+"initial value": "@YYJSON_TYPE_OBJ""initial value": "@YYJSON_SUBTYPE_TRUE"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "为无符号整数",
+tegory = \\\"辅助类\\\"\""initial value": "@YYJSON_SUBTYPE_UINT"
+  },
+  {
+}"constant name": "为有符号整数",
+}"initial value": "@YYJSON_SUBTYPE_SINT"
+  },
+  {
+egory = \\\"辅助类\\\"\""initial value": "@YYJSON_SUBTYPE_UINT""constant name": "为小数",
+egory = \\\"辅助类\\\"\""initial value": "@YYJSON_SUBTYPE_UINT""initial value": "@YYJSON_SUBTYPE_REAL"
+  }
+SON_TYPE_ARR]
+ },
+ {
+"class name": "YYJSON格式化选项",
+"comment": "提供可使用的JSON格式化(到文本)时的可选项",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+}"constant name": "压缩",
+}"comment": "以最小占用的方式输出内容",
+}"data type": "整数",
+}"initial value": "@YYJSON_WRITE_NOFLAG"
+  },
+  {
+}"constant name": "缩进",
+}"comment": "以4个空格符号缩进方式输出内容",
+}"data type": "整数",
+}"initial value": "@YYJSON_WRITE_PRETTY"
+  },
+  {
+"constant name": "输出A码",
+"comment": "将Unicode字符转义,仅输出ASCII码.",
+"data type": "整数",
+"initial value": "@YYJSON_WRITE_ESCAPE_UNICODE"
+  },
+  {
+SON_WRITE_PRETTY"constant name": "转义",
+SON_WRITE_PRETTY"comment": "将'/'转义为'\\/'",
+SON_WRITE_PRETTY"data type": "整数",
+SON_WRITE_PRETTY"initial value": "@YYJSON_WRITE_ESCAPE_SLASHES"
+  },
+  {
+}"constants": [
+"constant name": "字符表示无限",
+}"constants": [
+"comment": "将inf或nan数字输出为\"无限\"和\"nan\"字符(非标准)",
+}"constants": [
+"data type": "整数",
+}"constants": [
+"initial value": "@YYJSON_WRITE_ALLOW_INF_AND_NAN"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "空表示无限",
+tegory = \\\"辅助类\\\"\""comment": "将inf或nan数字输出为null",
+tegory = \\\"辅助类\\\"\""data type": "整数",
+tegory = \\\"辅助类\\\"\""initial value": "@YYJSON_WRITE_INF_AND_NAN_AS_NULL"
+  }
+]
+ }
+ᦠꡱŝ]
+}

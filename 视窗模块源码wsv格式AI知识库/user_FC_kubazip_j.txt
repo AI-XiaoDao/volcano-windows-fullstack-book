@@ -1,0 +1,209 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.kubazip\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "酷包文件名编码方式常量类",
+"@常量类": "整数",
+"constants": [
+  {
+现类 = """constant name": "utf8",
+现类 = """initial value": "1"
+  },
+  {
+    "constant name": "简体中文",
+    "initial value": "2"
+  },
+  {
+ = 6"constant name": "繁体中文",
+ = 6"initial value": "3"
+  }
+]
+ },
+ {
+"class name": "酷包解压公有模板",
+"base class": "酷包模板类",
+"@模板基础类": "真",
+"methods": [
+  {
+methods": [
+"method name": "取文件",
+methods": [
+"data type": "字节集类",
+methods": [
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+methods": [
+]
+  },
+  {
+thods": [
+]"method name": "取文件从索引",
+thods": [
+]"data type": "字节集类",
+thods": [
+]"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "文件名",
+"comment": "这里可以得到一个索引的文件名，新建一个文本变量即可",
+"data type": "文本型"
+   }
+thods": [
+]]
+  }
+]
+ },
+ {
+"class name": "酷包压缩类",
+"base class": "酷包创建和修改公用模板",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+@模板实现类": "\"\"""method name": "打开",
+@模板实现类": "\"\"""data type": "逻辑型",
+@模板实现类": "\"\"""parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "压缩等级",
+"comment": "1 到 9",
+"data type": "整数",
+"@默认值": "6"
+   }
+@模板实现类": "\"\""]
+  },
+  {
+崀敷ŝ"method name": "关闭"
+  }
+]
+ },
+ {
+"class name": "酷包解压类",
+"comment": "压缩包必须存在",
+"base class": "酷包解压公有模板",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+"method name": "打开",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "关闭"
+  },
+  {
+
+"method name": "解压",
+
+"comment": "注意，解压类是局部变量，请自己手动挂接事件 例如 挂接事件 (解压)",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解压到的目录",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "回调进度",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "用户文件名",
+"data type": "文本型"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "酷包内存压缩类",
+"base class": "酷包创建和修改公用模板",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+
+"method name": "创建",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "压缩等级",
+"comment": "1 到 9",
+"data type": "整数",
+"@默认值": "6"
+   }
+
+]
+  },
+  {
+
+"method name": "到字节集",
+
+"data type": "字节集类"
+  },
+  {
+}"method name": "关闭"
+  }
+]
+ },
+ {
+"class name": "酷包内存解压类",
+"base class": "酷包解压公有模板",
+"@模板实现类": "\"\"",
+"methods": [
+  {
+
+"method name": "打开",
+
+"parameters": [
+   {
+"parameter name": "压缩包数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "关闭"
+  },
+  {
+"parameters": [
+"method name": "到字节集",
+"parameters": [
+"data type": "字节集类"
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

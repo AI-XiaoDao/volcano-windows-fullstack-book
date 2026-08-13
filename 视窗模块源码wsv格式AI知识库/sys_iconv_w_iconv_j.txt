@@ -1,0 +1,1023 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"文本编码转换支持".
+
+{
+问本程序中的接口需要引用模块"文本编码转换支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"文本编码转换支持"."package name": "火山.视窗",
+问本程序中的接口需要引用模块"文本编码转换支持"."classes": [
+ {
+"class name": "编码转换类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n提供数据编码转换相关支持.\n",
+"@视窗.外部库.non_static": "\"lib\\\\dynamic\\\\$(p)\\\\libiconv.lib\"",
+"@视窗.附属文件.non_static": "\"lib\\\\dynamic\\\\$(p)\\\\libiconv.dll\"",
+"@视窗.预定义宏.non_static": "\"BUILDING_LIBICONV\\r\\nBUILDING_DLL\\r\\nPIC\\r\\nHAVE_CONFIG_H\\r\\nENABLE_RELOCATABLE=1\\r\\nIN_LIBRARY\\r\\nNO_XMALLOC\\r\\n_CRT_SECURE_NO_WARNINGS\"",
+"@视窗.外部库.static": "\"lib\\\\static\\\\$(p)\\\\libiconv_a_$(d).lib\"",
+"@视窗.预定义宏.static": "\"HAVE_CONFIG_H\\r\\nENABLE_RELOCATABLE=1\\r\\nIN_LIBRARY\\r\\nNO_XMALLOC\\r\\nset_relocation_prefix=libiconv_set_relocation_prefix\\r\\nrelocate=libiconv_relocate\\r\\n_CRT_SECURE_NO_WARNINGS\"",
+"@视窗.需求VS版本.static": "\"16-\"",
+"@视窗.头文件搜寻目录": "\"lib\\\\include\"",
+"@视窗.外部头文件": "\"lib\\\\src\\\\vol_iconv.h\"",
+"@视窗.外部源文件": "\"lib\\\\src\\\\vol_iconv.cpp\"",
+"methods": [
+  {
+methods": [
+"method name": "编码转换",
+methods": [
+"comment": "将指定数据进行编码转换.",
+methods": [
+"result comment": "转换成功返回真,否则返回假.",
+methods": [
+"static": true,
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "欲转换数据",
+"comment": "提供欲对其执行编码的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "转换前编码",
+"comment": "提供欲转换数据的编码,请参考常量类\"编码类型\"所提供常量值,如果与数据不符可能导致转换失败.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转换后编码",
+"comment": "提供欲将其进行编码的类型,请参考常量类\"编码类型\"所提供常量值.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果变量",
+"comment": "转换成功后的数据将被写入至该结果变量,如果转换失败将会被重置为空字节集.",
+"data type": "字节集类"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "编码转换2",
+
+"comment": "将指定数据进行编码转换,与\"编码转换\"不同的是本方法采用一个对象方式指定转换类型,在执行多次相同转换类型时效率较高.",
+
+"result comment": "转换成功返回真,否则返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲转换数据",
+"comment": "提供欲对其执行编码的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "转换方式",
+"comment": "提供所欲使用的转换方式.",
+"data type": "编码转换方式类"
+   },
+   {
+"parameter name": "结果变量",
+"comment": "转换成功后的数据将被写入至该结果变量,如果转换失败将会被重置为空字节集.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "转换到编码",
+
+"comment": "将火山的文本转换为指定的编码.",
+
+"result comment": "转换成功返回真,否则返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲转换文本",
+"comment": "提供欲对其进行编码转换的文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转换到编码",
+"comment": "提供欲将其进行转换到的编码类型,请参考常量类\"编码类型\"所提供常量值.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果变量",
+"comment": "转换成功后的数据将被写入至该结果变量,如果转换失败将会被重置为空字节集.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "从编码转换",
+
+"comment": "将指定编码的数据转换为火山的文本.",
+
+"result comment": "转换成功返回真,否则返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲转换数据",
+"comment": "提供欲对其进行编码转换的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲转换数据编码",
+"comment": "提供所欲转换数据的编码类型,请参考常量类\"编码类型\"所提供常量值,如果与数据不符可能导致转换失败.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果变量",
+"comment": "转换成功后的文本将会写入至该变量,转换失败将会被重置为空文本.",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "编码转换方式类",
+"comment": "指定所欲采用的编码转换方式,请使用\"创建\"方法初始化.",
+"@强制依赖": "\"编码转换类\"",
+"methods": [
+  {
+
+"method name": "创建",
+
+"comment": "使用本实例之前务必先执行本方法进行初始化.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "转换前编码",
+"comment": "提供欲转换数据的编码,请参考常量类\"编码类型\"所提供常量值,如果与数据不符可能导致转换失败.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转换后编码",
+"comment": "提供欲将其进行编码的类型,请参考常量类\"编码类型\"所提供常量值.",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "编码类型",
+"comment": "提供各种编码类型的常量.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+ss name": "编码类型""constant name": "GB2312",
+ss name": "编码类型""data type": "文本型",
+ss name": "编码类型""initial value": "\"GB2312\""
+  },
+  {
+
+"constant name": "EUC_CN",
+
+"data type": "文本型",
+
+"initial value": "\"EUC-CN\""
+  },
+  {
+"initial value": "\"EUC-CN\"""constant name": "HZ",
+"initial value": "\"EUC-CN\"""data type": "文本型",
+"initial value": "\"EUC-CN\"""initial value": "\"HZ\""
+  },
+  {
+
+"constant name": "GBK",
+
+"data type": "文本型",
+
+"initial value": "\"GBK\""
+  },
+  {
+
+"constant name": "GB18030",
+
+"data type": "文本型",
+
+"initial value": "\"GB18030\""
+  },
+  {
+
+"constant name": "EUC_TW",
+
+"data type": "文本型",
+
+"initial value": "\"EUC-TW\""
+  },
+  {
+
+"constant name": "BIG5",
+
+"data type": "文本型",
+
+"initial value": "\"BIG5\""
+  },
+  {
+
+"constant name": "CP950",
+
+"data type": "文本型",
+
+"initial value": "\"CP950\""
+  },
+  {
+
+"constant name": "BIG5_HKSCS",
+
+"data type": "文本型",
+
+"initial value": "\"BIG5-HKSCS\""
+  },
+  {
+
+"constant name": "ISO_2022_CN",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-2022-CN\""
+  },
+  {
+
+"constant name": "ISO_2022_CN_EXT",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-2022-CN-EXT\""
+  },
+  {
+
+"constant name": "EUC_JP",
+
+"data type": "文本型",
+
+"initial value": "\"EUC-JP\""
+  },
+  {
+
+"constant name": "SHIFT_JIS",
+
+"data type": "文本型",
+
+"initial value": "\"SHIFT_JIS\""
+  },
+  {
+"initial value": "\"EUC-JP\"""constant name": "CP932",
+"initial value": "\"EUC-JP\"""data type": "文本型",
+"initial value": "\"EUC-JP\"""initial value": "\"CP932\""
+  },
+  {
+
+"constant name": "ISO_2022_JP",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-2022-JP\""
+  },
+  {
+
+"constant name": "ISO_2022_JP_2",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-2022-JP-2\""
+  },
+  {
+
+"constant name": "ISO_2022_JP_1",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-2022-JP-1\""
+  },
+  {
+
+"constant name": "EUC_JISX0213",
+
+"data type": "文本型",
+
+"initial value": "\"EUC-JISX0213\""
+  },
+  {
+
+"constant name": "Shift_JISX0213",
+
+"data type": "文本型",
+
+"initial value": "\"Shift_JISX0213\""
+  },
+  {
+
+"constant name": "ISO_2022_JP_3",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-2022-JP-3\""
+  },
+  {
+O-2022-JP-3\""constant name": "EUC_KR",
+O-2022-JP-3\""data type": "文本型",
+O-2022-JP-3\""initial value": "\"EUC-KR\""
+  },
+  {
+O-2022-JP-3\""constant name": "CP949",
+O-2022-JP-3\""data type": "文本型",
+O-2022-JP-3\""initial value": "\"CP949\""
+  },
+  {
+}"constant name": "ISO_2022_KR",
+}"data type": "文本型",
+}"initial value": "\"ISO-2022-KR\""
+  },
+  {
+
+"constant name": "JOHAB",
+
+"data type": "文本型",
+
+"initial value": "\"JOHAB\""
+  },
+  {
+
+"constant name": "UTF_8",
+
+"data type": "文本型",
+
+"initial value": "\"UTF-8\""
+  },
+  {
+
+"constant name": "UCS_2",
+
+"data type": "文本型",
+
+"initial value": "\"UCS-2\""
+  },
+  {
+
+"constant name": "UCS_2BE",
+
+"data type": "文本型",
+
+"initial value": "\"UCS-2BE\""
+  },
+  {
+
+"constant name": "UCS_2LE",
+
+"data type": "文本型",
+
+"initial value": "\"UCS-2LE\""
+  },
+  {
+
+"constant name": "UCS_4",
+
+"data type": "文本型",
+
+"initial value": "\"UCS-4\""
+  },
+  {
+"initial value": "\"UCS-2LE\"""constant name": "UCS_4BE",
+"initial value": "\"UCS-2LE\"""data type": "文本型",
+"initial value": "\"UCS-2LE\"""initial value": "\"UCS-4BE\""
+  },
+  {
+
+"constant name": "UCS_4LE",
+
+"data type": "文本型",
+
+"initial value": "\"UCS-4LE\""
+  },
+  {
+
+"constant name": "UTF_16",
+
+"data type": "文本型",
+
+"initial value": "\"UTF-16\""
+  },
+  {
+
+"constant name": "UTF_16BE",
+
+"data type": "文本型",
+
+"initial value": "\"UTF-16BE\""
+  },
+  {
+
+"constant name": "UTF_16LE",
+
+"data type": "文本型",
+
+"initial value": "\"UTF-16LE\""
+  },
+  {
+
+"constant name": "UTF_32",
+
+"data type": "文本型",
+
+"initial value": "\"UTF-32\""
+  },
+  {
+
+"constant name": "UTF_32BE",
+
+"data type": "文本型",
+
+"initial value": "\"UTF-32BE\""
+  },
+  {
+"initial value": "\"UTF-32BE\"""constant name": "UTF_32LE",
+"initial value": "\"UTF-32BE\"""data type": "文本型",
+"initial value": "\"UTF-32BE\"""initial value": "\"UTF-32LE\""
+  },
+  {
+"initial value": "\"UTF-32BE\"""constant name": "UTF_7",
+"initial value": "\"UTF-32BE\"""data type": "文本型",
+"initial value": "\"UTF-32BE\"""initial value": "\"UTF-7\""
+  },
+  {
+}"constant name": "C99",
+}"data type": "文本型",
+}"initial value": "\"C99\""
+  },
+  {
+}"constant name": "JAVA",
+}"data type": "文本型",
+}"initial value": "\"JAVA\""
+  },
+  {
+
+"constant name": "UCS_2_INTERNAL",
+
+"data type": "文本型",
+
+"initial value": "\"UCS-2-INTERNAL\""
+  },
+  {
+
+"constant name": "UCS_4_INTERNAL",
+
+"data type": "文本型",
+
+"initial value": "\"UCS-4-INTERNAL\""
+  },
+  {
+
+"constant name": "ASCII",
+
+"data type": "文本型",
+
+"initial value": "\"ASCII\""
+  },
+  {
+
+"constant name": "ISO_8859_1",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-1\""
+  },
+  {
+"initial value": "\"ISO-8859-1\"""constant name": "ISO_8859_2",
+"initial value": "\"ISO-8859-1\"""data type": "文本型",
+"initial value": "\"ISO-8859-1\"""initial value": "\"ISO-8859-2\""
+  },
+  {
+
+"constant name": "ISO_8859_3",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-3\""
+  },
+  {
+
+"constant name": "ISO_8859_4",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-4\""
+  },
+  {
+
+"constant name": "ISO_8859_5",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-5\""
+  },
+  {
+
+"constant name": "ISO_8859_6",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-6\""
+  },
+  {
+
+"constant name": "ISO_8859_7",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-7\""
+  },
+  {
+"initial value": "\"ISO-8859-7\"""constant name": "ISO_8859_8",
+"initial value": "\"ISO-8859-7\"""data type": "文本型",
+"initial value": "\"ISO-8859-7\"""initial value": "\"ISO-8859-8\""
+  },
+  {
+"initial value": "\"ISO-8859-7\"""constant name": "ISO_8859_9",
+"initial value": "\"ISO-8859-7\"""data type": "文本型",
+"initial value": "\"ISO-8859-7\"""initial value": "\"ISO-8859-9\""
+  },
+  {
+}"constant name": "ISO_8859_10",
+}"data type": "文本型",
+}"initial value": "\"ISO-8859-10\""
+  },
+  {
+
+"constant name": "ISO_8859_13",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-13\""
+  },
+  {
+
+"constant name": "ISO_8859_14",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-14\""
+  },
+  {
+
+"constant name": "ISO_8859_15",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-15\""
+  },
+  {
+
+"constant name": "ISO_8859_16",
+
+"data type": "文本型",
+
+"initial value": "\"ISO-8859-16\""
+  },
+  {
+
+"constant name": "KOI8_R",
+
+"data type": "文本型",
+
+"initial value": "\"KOI8-R\""
+  },
+  {
+"initial value": "\"KOI8-R\"""constant name": "KOI8_U",
+"initial value": "\"KOI8-R\"""data type": "文本型",
+"initial value": "\"KOI8-R\"""initial value": "\"KOI8-U\""
+  },
+  {
+"initial value": "\"KOI8-R\"""constant name": "KOI8_RU",
+"initial value": "\"KOI8-R\"""data type": "文本型",
+"initial value": "\"KOI8-R\"""initial value": "\"KOI8-RU\""
+  },
+  {
+
+"constant name": "CP1250",
+
+"data type": "文本型",
+
+"initial value": "\"CP1250\""
+  },
+  {
+
+"constant name": "CP1251",
+
+"data type": "文本型",
+
+"initial value": "\"CP1251\""
+  },
+  {
+
+"constant name": "CP1252",
+
+"data type": "文本型",
+
+"initial value": "\"CP1252\""
+  },
+  {
+"initial value": "\"CP1252\"""constant name": "CP1253",
+"initial value": "\"CP1252\"""data type": "文本型",
+"initial value": "\"CP1252\"""initial value": "\"CP1253\""
+  },
+  {
+
+"constant name": "CP1254",
+
+"data type": "文本型",
+
+"initial value": "\"CP1254\""
+  },
+  {
+
+"constant name": "CP1257",
+
+"data type": "文本型",
+
+"initial value": "\"CP1257\""
+  },
+  {
+"initial value": "\"CP1257\"""constant name": "CP850",
+"initial value": "\"CP1257\"""data type": "文本型",
+"initial value": "\"CP1257\"""initial value": "\"CP850\""
+  },
+  {
+
+"constant name": "CP866",
+
+"data type": "文本型",
+
+"initial value": "\"CP866\""
+  },
+  {
+
+"constant name": "MacRoman",
+
+"data type": "文本型",
+
+"initial value": "\"MacRoman\""
+  },
+  {
+}"constant name": "MacCentralEurope",
+}"data type": "文本型",
+}"initial value": "\"MacCentralEurope\""
+  },
+  {
+cCentralEurope\""constant name": "MacIceland",
+cCentralEurope\""data type": "文本型",
+cCentralEurope\""initial value": "\"MacIceland\""
+  },
+  {
+
+"constant name": "MacCroatian",
+
+"data type": "文本型",
+
+"initial value": "\"MacCroatian\""
+  },
+  {
+
+"constant name": "MacRomania",
+
+"data type": "文本型",
+
+"initial value": "\"MacRomania\""
+  },
+  {
+
+"constant name": "MacCyrillic",
+
+"data type": "文本型",
+
+"initial value": "\"MacCyrillic\""
+  },
+  {
+
+"constant name": "MacUkraine",
+
+"data type": "文本型",
+
+"initial value": "\"MacUkraine\""
+  },
+  {
+
+"constant name": "MacGreek",
+
+"data type": "文本型",
+
+"initial value": "\"MacGreek\""
+  },
+  {
+
+"constant name": "MacTurkish",
+
+"data type": "文本型",
+
+"initial value": "\"MacTurkish\""
+  },
+  {
+
+"constant name": "Macintosh",
+
+"data type": "文本型",
+
+"initial value": "\"Macintosh\""
+  },
+  {
+
+"constant name": "CP437",
+
+"data type": "文本型",
+
+"initial value": "\"CP437\""
+  },
+  {
+
+"constant name": "CP737",
+
+"data type": "文本型",
+
+"initial value": "\"CP737\""
+  },
+  {
+
+"constant name": "CP775",
+
+"data type": "文本型",
+
+"initial value": "\"CP775\""
+  },
+  {
+"initial value": "\"CP737\"""constant name": "CP852",
+"initial value": "\"CP737\"""data type": "文本型",
+"initial value": "\"CP737\"""initial value": "\"CP852\""
+  },
+  {
+
+"constant name": "CP853",
+
+"data type": "文本型",
+
+"initial value": "\"CP853\""
+  },
+  {
+
+"constant name": "CP855",
+
+"data type": "文本型",
+
+"initial value": "\"CP855\""
+  },
+  {
+
+"constant name": "CP857",
+
+"data type": "文本型",
+
+"initial value": "\"CP857\""
+  },
+  {
+
+"constant name": "CP858",
+
+"data type": "文本型",
+
+"initial value": "\"CP858\""
+  },
+  {
+
+"constant name": "CP860",
+
+"data type": "文本型",
+
+"initial value": "\"CP860\""
+  },
+  {
+
+"constant name": "CP861",
+
+"data type": "文本型",
+
+"initial value": "\"CP861\""
+  },
+  {
+"initial value": "\"CP861\"""constant name": "CP863",
+"initial value": "\"CP861\"""data type": "文本型",
+"initial value": "\"CP861\"""initial value": "\"CP863\""
+  },
+  {
+"initial value": "\"CP861\"""constant name": "CP865",
+"initial value": "\"CP861\"""data type": "文本型",
+"initial value": "\"CP861\"""initial value": "\"CP865\""
+  },
+  {
+}"constant name": "CP869",
+}"data type": "文本型",
+}"initial value": "\"CP869\""
+  },
+  {
+
+"constant name": "CP1125",
+
+"data type": "文本型",
+
+"initial value": "\"CP1125\""
+  },
+  {
+
+"constant name": "CP1255",
+
+"data type": "文本型",
+
+"initial value": "\"CP1255\""
+  },
+  {
+
+"constant name": "CP1256",
+
+"data type": "文本型",
+
+"initial value": "\"CP1256\""
+  },
+  {
+
+"constant name": "CP862",
+
+"data type": "文本型",
+
+"initial value": "\"CP862\""
+  },
+  {
+
+"constant name": "MacHebrew",
+
+"data type": "文本型",
+
+"initial value": "\"MacHebrew\""
+  },
+  {
+"initial value": "\"MacHebrew\"""constant name": "MacArabic",
+"initial value": "\"MacHebrew\"""data type": "文本型",
+"initial value": "\"MacHebrew\"""initial value": "\"MacArabic\""
+  },
+  {
+"initial value": "\"MacHebrew\"""constant name": "CP864",
+"initial value": "\"MacHebrew\"""data type": "文本型",
+"initial value": "\"MacHebrew\"""initial value": "\"CP864\""
+  },
+  {
+
+"constant name": "ARMSCII_8",
+
+"data type": "文本型",
+
+"initial value": "\"ARMSCII-8\""
+  },
+  {
+
+"constant name": "Georgian_Academy",
+
+"data type": "文本型",
+
+"initial value": "\"Georgian-Academy\""
+  },
+  {
+}"constant name": "Georgian_PS",
+}"data type": "文本型",
+}"initial value": "\"Georgian-PS\""
+  },
+  {
+
+"constant name": "KOI8_T",
+
+"data type": "文本型",
+
+"initial value": "\"KOI8-T\""
+  },
+  {
+
+"constant name": "TIS_620",
+
+"data type": "文本型",
+
+"initial value": "\"TIS-620\""
+  },
+  {
+
+"constant name": "CP874",
+
+"data type": "文本型",
+
+"initial value": "\"CP874\""
+  },
+  {
+
+"constant name": "MacThai",
+
+"data type": "文本型",
+
+"initial value": "\"MacThai\""
+  },
+  {
+"initial value": "\"MacThai\"""constant name": "MuleLao_1",
+"initial value": "\"MacThai\"""data type": "文本型",
+"initial value": "\"MacThai\"""initial value": "\"MuleLao-1\""
+  },
+  {
+
+"constant name": "CP1133",
+
+"data type": "文本型",
+
+"initial value": "\"CP1133\""
+  },
+  {
+
+"constant name": "VISCII",
+
+"data type": "文本型",
+
+"initial value": "\"VISCII\""
+  },
+  {
+
+"constant name": "TCVN",
+
+"data type": "文本型",
+
+"initial value": "\"TCVN\""
+  },
+  {
+
+"constant name": "CP1258",
+
+"data type": "文本型",
+
+"initial value": "\"CP1258\""
+  },
+  {
+
+"constant name": "TDS565",
+
+"data type": "文本型",
+
+"initial value": "\"TDS565\""
+  },
+  {
+}"constant name": "HP_ROMAN8",
+}"data type": "文本型",
+}"initial value": "\"HP-ROMAN8\""
+  },
+  {
+
+"constant name": "NEXTSTEP",
+
+"data type": "文本型",
+
+"initial value": "\"NEXTSTEP\""
+  },
+  {
+
+"constant name": "RISCOS_LATIN1",
+
+"data type": "文本型",
+
+"initial value": "\"RISCOS-LATIN1\""
+  }
+]
+ }
+问本程序中的接口需要引用模块"文本编码转换支持".]
+}

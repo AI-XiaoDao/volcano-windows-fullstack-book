@@ -1,0 +1,437 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"package name": "火山.原创软件",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@文档": "\"category = \\\"二次封装.简易配置\\\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"classes": [
+ {
+"class name": "配置项_简易",
+"methods": [
+  {
+methods": [
+"method name": "打开",
+methods": [
+"parameters": [
+   {
+"parameter name": "文件全路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否以Json格式保存",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否格式化",
+"comment": "只有当保存格式为 json的时候 这个参数才会有作用",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+methods": [
+]
+  },
+  {
+methods": [
+"method name": "置文本",
+methods": [
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "文本型"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "置长整数",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+}"method name": "是否存在",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "取长整数",
+
+"data type": "长整数",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "取文本",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "保存"
+  }
+]
+ },
+ {
+"class name": "配置项类f",
+"@视窗.外部头文件": "\"SimpleIni\\\\ConvertUTF.h\\nSimpleIni\\\\SimpleIni.h\"",
+"@视窗.外部源文件": "\"SimpleIni\\\\ConvertUTF.c\"",
+"methods": [
+  {
+
+"method name": "是否为空",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "清空"
+  },
+  {
+
+"method name": "是否UTF8编码",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "打开",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否UTF8",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "关闭",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "如果不填写",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "保存",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "如果不设置，则保存到 打开时的文件路径",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "到文本",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "从字节集载入",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "从文本载入",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "到字节集",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "取文本",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "节点",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认键值",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+}"method name": "置文本",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "节点",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "注释",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+}"method name": "取小数",
+}"data type": "小数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "节点",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认键值",
+"data type": "小数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "置小数",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "节点",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "小数"
+   },
+   {
+"parameter name": "注释",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "取逻辑值",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "节点",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认键值",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ }"method name": "置逻辑值",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "节点",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "注释",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ }]
+  },
+  {
+ }"method name": "取整数",
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "节点",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认键值",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+ }"method name": "置整数",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "节点",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "整数"
+   },
+   {
+"parameter name": "注释",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ }]
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+]
+}

@@ -1,0 +1,343 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"HTML解析工具类".
+
+{
+问本程序中的接口需要引用模块"HTML解析工具类"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"HTML解析工具类"."package name": "火山.视窗.HTML解析",
+问本程序中的接口需要引用模块"HTML解析工具类"."comment": "封装自gumbo开源库,是 Google 的一款用C语言实现的HTML5解析库 https://gitee.com/mirrors/gumbo?hmsr=aladdin1e6",
+问本程序中的接口需要引用模块"HTML解析工具类"."@视窗.外部头文件": "\"html\\\\gumboTool\\\\gumboTool.h\"",
+问本程序中的接口需要引用模块"HTML解析工具类"."@视窗.外部库.x64": "\"html\\\\x64\\\\gumboToolx64.lib\"",
+问本程序中的接口需要引用模块"HTML解析工具类"."@视窗.外部库.win32": "\"html\\\\win32\\\\gumboToolx86.lib\"",
+问本程序中的接口需要引用模块"HTML解析工具类"."@视窗.附属文件.x64": "\"html\\\\x64\\\\gumboToolx64.dll\"",
+问本程序中的接口需要引用模块"HTML解析工具类"."@视窗.附属文件.win32": "\"html\\\\win32\\\\gumboToolx86.dll\"",
+问本程序中的接口需要引用模块"HTML解析工具类"."classes": [
+ {
+"class name": "网页解析节点类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+tegory = \\\"辅助类\\\"\""constant name": "文档",
+tegory = \\\"辅助类\\\"\""comment": "是否为文档节点",
+tegory = \\\"辅助类\\\"\""initial value": "@GUMBO_NODE_DOCUMENT"
+  },
+  {
+"constant name": "标签",
+"comment": "是否为HTML标签节点",
+"initial value": "@GUMBO_NODE_ELEMENT"
+  },
+  {
+ 变整数"constant name": "文本",
+ 变整数"comment": "是否为文本节点",
+ 变整数"initial value": "@GUMBO_NODE_TEXT"
+  },
+  {
+= 参考对象模板类"constant name": "附加数据",
+= 参考对象模板类"comment": "是否为附加数据节点",
+= 参考对象模板类"initial value": "@GUMBO_NODE_CDATA"
+  },
+  {
+变整数"initial value": "@GUMBO_NODE_TEXT""constant name": "注释",
+变整数"initial value": "@GUMBO_NODE_TEXT""comment": "是否为注释节点",
+变整数"initial value": "@GUMBO_NODE_TEXT""initial value": "@GUMBO_NODE_COMMENT"
+  },
+  {
+现类 = "HTML解析器数据类""constant name": "空白",
+现类 = "HTML解析器数据类""comment": "是否为空白节点",
+现类 = "HTML解析器数据类""initial value": "@GUMBO_NODE_WHITESPACE"
+  },
+  {
+类 = "HTML解析器数据类""initial value": "@GUMBO_NODE_WHITESPACE""constant name": "模板",
+类 = "HTML解析器数据类""initial value": "@GUMBO_NODE_WHITESPACE""comment": "是否为模板节点",
+类 = "HTML解析器数据类""initial value": "@GUMBO_NODE_WHITESPACE""initial value": "@GUMBO_NODE_TEMPLATE"
+  }
+]
+ },
+ {
+"class name": "网页解析器",
+"comment": "用于解析HTML网页代码.",
+"base class": "参考对象模板类",
+"@模板实现类": "\"HTML解析器数据类\"",
+"methods": [
+  {
+}"method name": "从资源打开",
+}"comment": "从文件资源构建本网页解析器对象",
+}"parameters": [
+   {
+"parameter name": "网页资源",
+"data type": "视窗文件资源"
+   }
+}]
+  },
+  {
+现类 = "HTML解析器数据类""method name": "从文本打开",
+现类 = "HTML解析器数据类""comment": "从文本数据构建本网页解析器对象",
+现类 = "HTML解析器数据类""parameters": [
+   {
+"parameter name": "网页文本",
+"comment": "提供网页文本",
+"data type": "文本型"
+   }
+现类 = "HTML解析器数据类"]
+  },
+  {
+ "HTML解析器数据类""method name": "从文本打开""method name": "从字节集打开",
+ "HTML解析器数据类""method name": "从文本打开""comment": "通过指定字节数据构建本网页解析器对象",
+ "HTML解析器数据类""method name": "从文本打开""parameters": [
+   {
+"parameter name": "字节集数据",
+"data type": "字节集类"
+   }
+ "HTML解析器数据类""method name": "从文本打开"]
+  },
+  {
+"method name": "关闭",
+"comment": "关闭本网页解析器,如果不调用此方法,在本类对象超出作用区域销毁时会自动关闭."
+  },
+  {
+"HTML解析器数据类""method name": "从文本打开""parameters": [
+"method name": "取根节点",
+"HTML解析器数据类""method name": "从文本打开""parameters": [
+"comment": "取指定解析器的根节点句柄",
+"HTML解析器数据类""method name": "从文本打开""parameters": [
+"result comment": "返回根节点句柄.",
+"HTML解析器数据类""method name": "从文本打开""parameters": [
+"data type": "变整数",
+"HTML解析器数据类""method name": "从文本打开""parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+HTML解析器数据类""method name": "从文本打开""parameters": [
+"result comment": "返回根节点句柄.""method name": "取子节点",
+HTML解析器数据类""method name": "从文本打开""parameters": [
+"result comment": "返回根节点句柄.""comment": "取出解析器的指定子节点.",
+HTML解析器数据类""method name": "从文本打开""parameters": [
+"result comment": "返回根节点句柄.""data type": "变整数",
+HTML解析器数据类""method name": "从文本打开""parameters": [
+"result comment": "返回根节点句柄.""@禁止流程检查": "真",
+HTML解析器数据类""method name": "从文本打开""parameters": [
+"result comment": "返回根节点句柄.""parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "子节点索引",
+"comment": "索引从0开始",
+"data type": "整数"
+   }
+HTML解析器数据类""method name": "从文本打开""parameters": [
+"result comment": "返回根节点句柄."]
+  },
+  {
+ameter name": "网页资源""method name": "取子节点数",
+ameter name": "网页资源""comment": "取指定节点句柄的子节点数量.",
+ameter name": "网页资源""result comment": "返回节点数量",
+ameter name": "网页资源""data type": "整数",
+ameter name": "网页资源""@嵌入式方法": "\"\"",
+ameter name": "网页资源""parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供要获取子节点数量的节点句柄.",
+"data type": "变整数"
+   }
+ameter name": "网页资源"]
+  },
+  {
+eter name": "网页资源"]"method name": "取节点类型",
+eter name": "网页资源"]"comment": "判断指定节点是元素节点还是文本节点",
+eter name": "网页资源"]"result comment": "返回节点类型",
+eter name": "网页资源"]"data type": "网页解析节点类型",
+eter name": "网页资源"]"@嵌入式方法": "\"\"",
+eter name": "网页资源"]"parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   }
+eter name": "网页资源"]]
+  },
+  {
+
+"method name": "取文本节点内容",
+
+"comment": "取指定文本节点的内容",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"comment": "取指定文本节点的内容""method name": "取标签类型",
+"comment": "取指定文本节点的内容""comment": "取出指定节点的标签是什么类型的,例如:span h1 div.",
+"comment": "取指定文本节点的内容""result comment": "返回标签类型.",
+"comment": "取指定文本节点的内容""data type": "网页解析节点类型",
+"comment": "取指定文本节点的内容""@嵌入式方法": "\"\"",
+"comment": "取指定文本节点的内容""parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   }
+"comment": "取指定文本节点的内容"]
+  },
+  {
+omment": "取指定文本节点的内容"]"method name": "取标签名称",
+omment": "取指定文本节点的内容"]"comment": "取出指定节点的标签名称,例如:span h1 div.",
+omment": "取指定文本节点的内容"]"result comment": "返回标签名称",
+omment": "取指定文本节点的内容"]"data type": "文本型",
+omment": "取指定文本节点的内容"]"@嵌入式方法": "\"\"",
+omment": "取指定文本节点的内容"]"parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   }
+omment": "取指定文本节点的内容"]]
+  },
+  {
+}"method name": "取标签源码",
+}"comment": "取出一个标签的开始源码,例如:<a href=\"XXX\">,源码中不包含结束标签.",
+}"result comment": "返回开始标签源码.",
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"result comment": "返回开始标签源码.""method name": "取父节点",
+"result comment": "返回开始标签源码.""comment": "取指定节点的父节点句柄.",
+"result comment": "返回开始标签源码.""result comment": "返回父节点句柄",
+"result comment": "返回开始标签源码.""data type": "变整数",
+"result comment": "返回开始标签源码.""@嵌入式方法": "\"\"",
+"result comment": "返回开始标签源码.""parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   }
+"result comment": "返回开始标签源码."]
+  },
+  {
+result comment": "返回开始标签源码.""data type": "变整数""method name": "取属性值",
+result comment": "返回开始标签源码.""data type": "变整数""comment": " 取出标签属性值.\n 例如:<a href=\"XXX\">提供属性\"href\"返回XXX.",
+result comment": "返回开始标签源码.""data type": "变整数""data type": "文本型",
+result comment": "返回开始标签源码.""data type": "变整数""parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "属性名称",
+"comment": "提供属性名称",
+"data type": "文本型"
+   }
+result comment": "返回开始标签源码.""data type": "变整数"]
+  },
+  {
+"method name": "类名取节点",
+"comment": "根据类名称取节点",
+"result comment": "返回节点句柄",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "类名称",
+"comment": "提供类名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+comment": "提供类名称""method name": "ID取节点",
+comment": "提供类名称""comment": "通过ID取节点",
+comment": "提供类名称""result comment": "返回节点句柄",
+comment": "提供类名称""data type": "变整数",
+comment": "提供类名称""parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "ID",
+"comment": "提供ID名",
+"data type": "文本型"
+   }
+comment": "提供类名称"]
+  },
+  {
+data type": "变整数""method name": "属性取节点",
+data type": "变整数""comment": "通过属性取节点句柄",
+data type": "变整数""result comment": "返回节点句柄",
+data type": "变整数""data type": "变整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "属性名",
+"comment": "提供属性名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供属性值",
+"data type": "文本型"
+   }
+data type": "变整数"]
+  },
+  {
+comment": "提供类名称""method name": "取节点源码",
+comment": "提供类名称""comment": "取节点全部源代码",
+comment": "提供类名称""result comment": "返回源代码",
+comment": "提供类名称""data type": "文本型",
+comment": "提供类名称""@禁止流程检查": "真",
+comment": "提供类名称""parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   }
+comment": "提供类名称"]
+  },
+  {
+comment": "提供属性值""method name": "取节点内容",
+comment": "提供属性值""comment": "取节点所有文本内容",
+comment": "提供属性值""result comment": "返回文本内容",
+comment": "提供属性值""data type": "文本型",
+comment": "提供属性值""@禁止流程检查": "真",
+comment": "提供属性值""parameters": [
+   {
+"parameter name": "节点句柄",
+"comment": "提供节点句柄",
+"data type": "变整数"
+   }
+comment": "提供属性值"]
+  }
+]
+ }
+问本程序中的接口需要引用模块"HTML解析工具类".]
+}

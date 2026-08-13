@@ -1,0 +1,580 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+        "file description": "本文件为一个火山程序的可用公开接口描述json文本",
+        "package name": "火山.原创软件",
+        "comment": "本模块来源于网络\n切勿用作非法用途\n文章: https://blog.csdn.net/wkq0825/article/details/82255984",
+        "@文档": "\"category = \\\"STL.vector\\\"\"",
+        "@视窗.外部头文件": "\"<vector>\\n<algorithm>\"",
+        "classes": [
+ {
+ 矩形_结构类"class name": "vector",
+ 矩形_结构类"base class": "组合模板",
+ 矩形_结构类"@模板基础类": "真",
+ 矩形_结构类"@视窗.外部头文件": "\"Vector\\\\vectorTool.h\"",
+ 矩形_结构类"methods": [
+  {
+所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据."method name": "取成员",
+所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据."comment": "根据索引取值",
+所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据."data type": "模板类型1",
+所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据."@嵌入式方法": "\"\"",
+所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据."parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.]
+  },
+  {
+       "@视窗.外部头文件": "\"<vector>\\n<algorithm>\"""method name": "取成员_引用",
+       "@视窗.外部头文件": "\"<vector>\\n<algorithm>\"""data type": "模板类型1",
+       "@视窗.外部头文件": "\"<vector>\\n<algorithm>\"""@嵌入式方法": "\"\"",
+       "@视窗.外部头文件": "\"<vector>\\n<algorithm>\"""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+       "@视窗.外部头文件": "\"<vector>\\n<algorithm>\""]
+  },
+  {
+        "method name": "加入容器",
+        "parameters": [
+   {
+"parameter name": "要添加的容器",
+"data type": "vector"
+   },
+   {
+"parameter name": "加入的指定位置",
+"comment": "如果为-1 表示加入到末尾",
+"data type": "整数",
+"@默认值": "-1"
+   }
+        ]
+  },
+  {
+comment": "如果为-1 表示加入到末尾""method name": "删除成员",
+comment": "如果为-1 表示加入到末尾""comment": "删除指定位置 和指定数量的成员",
+comment": "如果为-1 表示加入到末尾""parameters": [
+   {
+"parameter name": "开始位置",
+"comment": "0表示从 首元素开始删除 ",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "删除数量",
+"comment": "如果为-1 表示从指定位置删除到尾部",
+"data type": "整数",
+"@默认值": "1"
+   }
+comment": "如果为-1 表示加入到末尾"]
+  },
+  {
+ }"method name": "加入成员",
+ }"comment": "//在a的第1个元素（从第0个算起）的位置插入数值5，如a为1,2,3,4，插入元素后为1,5,2,3,4",
+ }"parameters": [
+   {
+"parameter name": "要加入的成员",
+"data type": "模板类型1"
+   },
+   {
+"parameter name": "加入的位置",
+"comment": "如果为 ，表示加入到末尾",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+comment": "如果为 ，表示加入到末尾""method name": "置容量",
+comment": "如果为 ，表示加入到末尾""comment": "设置这个的好处就是可以避免重复分配内存",
+comment": "如果为 ，表示加入到末尾""@嵌入式方法": "\"\"",
+comment": "如果为 ，表示加入到末尾""parameters": [
+   {
+"parameter name": "最大数量",
+"data type": "变整数"
+   }
+comment": "如果为 ，表示加入到末尾"]
+  },
+  {
+"method name": "取容量",
+"comment": "返回a在内存中总共可以容纳的元素个数",
+"data type": "变整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置成员值",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "长整数"
+   },
+   {
+"parameter name": "新值",
+"data type": "模板类型1"
+   }
+
+]
+  },
+  {
+ }"method name": "取数据指针",
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "取数据指针大小",
+data type": "整数""data type": "变整数",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "迭代正向",
+}"@嵌入式方法": "\"name = VDL_vector_Forward_Iterator\\r\\nhas_body = true\""
+  },
+  {
+"method name": "迭代反向",
+"@嵌入式方法": "\"name = VDL_vector_Reverse_Iterator\\r\\nhas_body = true\""
+  },
+  {
+ameter name": "新值""method name": "迭代值",
+ameter name": "新值""data type": "模板类型1",
+ameter name": "新值""@嵌入式方法": "\"parent = \\\"VDL_vector_Forward_Iterator,VDL_vector_Reverse_Iterator\\\"\""
+  },
+  {
+
+"method name": "替换",
+
+"result comment": "返回替换次数",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲查找的内容",
+"data type": "模板类型1"
+   },
+   {
+"parameter name": "用作替换的内容",
+"data type": "模板类型1"
+   },
+   {
+"parameter name": "查找开始位置",
+"comment": "表示从首元素开始查找",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否全部替换",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+"method name": "是否存在",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "欲查找的内容",
+"data type": "模板类型1"
+   }
+]
+  },
+  {
+ }"method name": "反转",
+ }"comment": "例如当然容器值为 1 3 2  反转后为 2 3 1",
+ }"parameters": [
+   {
+"parameter name": "开始位置",
+"comment": "-1 或者 0 都表示从 首元素开始反转",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "反转数量",
+"comment": "-1 表示从 开始位置，直接反转到 容器尾元素",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  }
+ 矩形_结构类]
+ },
+ {
+
+"class name": "容器基础数值类模板",
+
+"base class": "vector",
+
+"@模板基础类": "真",
+
+"methods": [
+  {
+者 0 都表示从 首元素开始反转"method name": "排序",
+者 0 都表示从 首元素开始反转"parameters": [
+   {
+"parameter name": "是否从小到大",
+"data type": "逻辑型"
+   }
+者 0 都表示从 首元素开始反转]
+  },
+  {
+er name": "新值""method name": "迭代值""method name": "去重复",
+er name": "新值""method name": "迭代值""parameters": [
+   {
+"parameter name": "按照从小到大",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+er name": "新值""method name": "迭代值"]
+  },
+  {
+
+"method name": "到字节集",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "从字节集载入",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+
+]
+  }
+
+]
+ },
+ {
+"class name": "容器整数类",
+"base class": "容器基础数值类模板",
+"@模板实现类": "\"整数\""
+ },
+ {
+ethod name": "从字节集载入""class name": "容器字节类",
+ethod name": "从字节集载入""base class": "容器基础数值类模板",
+ethod name": "从字节集载入""@模板实现类": "\"字节\""
+ },
+ {
+"class name": "容器短整数类",
+"base class": "容器基础数值类模板",
+"@模板实现类": "\"短整数\""
+ },
+ {
+
+"parameters": [
+"class name": "容器变整数类",
+
+"parameters": [
+"base class": "容器基础数值类模板",
+
+"parameters": [
+"@模板实现类": "\"变整数\""
+ },
+ {
+data type": "逻辑型""class name": "容器长整数类",
+data type": "逻辑型""base class": "容器基础数值类模板",
+data type": "逻辑型""@模板实现类": "\"长整数\""
+ },
+ {
+"parameters": [
+"@模板实现类": "\"变整数\"""class name": "容器小数类",
+"parameters": [
+"@模板实现类": "\"变整数\"""base class": "容器基础数值类模板",
+"parameters": [
+"@模板实现类": "\"变整数\"""@模板实现类": "\"小数\""
+ },
+ {
+]"class name": "容器逻辑型类",
+]"base class": "容器基础数值类模板",
+]"@模板实现类": "\"逻辑型\""
+ },
+ {
+"class name": "容器文本类",
+"base class": "vector",
+"@模板实现类": "\"文本型\"",
+"@输出名": "\"vector_string\""
+ },
+ {
+er name": "新值""method name": "迭代值""class name": "容器测试",
+er name": "新值""method name": "迭代值""methods": [
+  {
+"method name": "开始测试"
+  }
+er name": "新值""method name": "迭代值"]
+ },
+ {
+"class name": "整数数组容器类",
+"base class": "基础数值数组容器模板类",
+"@模板实现类": "\"整数\""
+ },
+ {
+}"class name": "字节数组容器类",
+}"base class": "基础数值数组容器模板类",
+}"@模板实现类": "\"字节\""
+ },
+ {
+"class name": "短整数数组容器类",
+"base class": "基础数值数组容器模板类",
+"@模板实现类": "\"短整数\""
+ },
+ {
+}"class name": "变整数数组容器类",
+}"base class": "基础数值数组容器模板类",
+}"@模板实现类": "\"变整数\""
+ },
+ {
+ameters": [
+"@模板实现类": "\"变整数\"""class name": "容器小数类""class name": "长整数数组容器类",
+ameters": [
+"@模板实现类": "\"变整数\"""class name": "容器小数类""base class": "基础数值数组容器模板类",
+ameters": [
+"@模板实现类": "\"变整数\"""class name": "容器小数类""@模板实现类": "\"长整数\""
+ },
+ {
+形_结构类]"class name": "小数数组容器类",
+形_结构类]"base class": "基础数值数组容器模板类",
+形_结构类]"@模板实现类": "\"小数\""
+ },
+ {
+"@模板实现类": "\"字节\"""class name": "逻辑型数组容器类",
+"@模板实现类": "\"字节\"""base class": "基础数值数组容器模板类",
+"@模板实现类": "\"字节\"""@模板实现类": "\"逻辑型\""
+ },
+ {
+"class name": "矩形_结构类",
+"base class": "结构基础类",
+"methods": [
+  {
+}"method name": "取展示内容",
+}"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+}"@虚拟方法": "可覆盖",
+}"@输出名": "\"GetDumpString\"",
+}"@视窗.后缀文本": "\"override\"",
+}"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "左边",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "顶边",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+类]"class name": "小数数组容器类""method name": "右边",
+类]"class name": "小数数组容器类""type": "property getter",
+类]"class name": "小数数组容器类""data type": "整数",
+类]"class name": "小数数组容器类""@嵌入式方法": "\"\""
+  },
+  {
+@默认值": "假""method name": "底边",
+@默认值": "假""type": "property getter",
+@默认值": "假""data type": "整数",
+@默认值": "假""@嵌入式方法": "\"\""
+  },
+  {
+"base class": "基础数值数组容器模板类""method name": "左边",
+"base class": "基础数值数组容器模板类""type": "property setter",
+"base class": "基础数值数组容器模板类""parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+"base class": "基础数值数组容器模板类"]
+  },
+  {
+comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.""method name": "顶边",
+comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.""type": "property setter",
+comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.""parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据."]
+  },
+  {
+"@视窗.后缀文本": "\"override\"""method name": "右边",
+"@视窗.后缀文本": "\"override\"""type": "property setter",
+"@视窗.后缀文本": "\"override\"""parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+"@视窗.后缀文本": "\"override\""]
+  },
+  {
+data type": "整数""method name": "底边",
+data type": "整数""type": "property setter",
+data type": "整数""parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+data type": "整数"]
+  }
+]
+ },
+ {
+comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.""class name": "矩形数组容器类",
+comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.""base class": "结构数组容器模板类",
+comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.""@模板实现类": "\"矩形_结构类\"",
+comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.""methods": [
+  {
+"method name": "取展示内容",
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+"@虚拟方法": "可覆盖",
+"@输出名": "\"GetDumpString\"",
+"@视窗.后缀文本": "\"override\"",
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+]
+  }
+comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据."]
+ },
+ {
+data type": "整数""class name": "坐标_结构类",
+data type": "整数""base class": "结构基础类",
+data type": "整数""methods": [
+  {
+comment": "用作填入本对象中所有数据的展示文本""method name": "取展示内容",
+comment": "用作填入本对象中所有数据的展示文本""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+comment": "用作填入本对象中所有数据的展示文本""@虚拟方法": "可覆盖",
+comment": "用作填入本对象中所有数据的展示文本""@输出名": "\"GetDumpString\"",
+comment": "用作填入本对象中所有数据的展示文本""@视窗.后缀文本": "\"override\"",
+comment": "用作填入本对象中所有数据的展示文本""parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+comment": "用作填入本对象中所有数据的展示文本"]
+  },
+  {
+omment": "用作填入本对象中所有数据的展示文本""@虚拟方法": "可覆盖""method name": "横坐标",
+omment": "用作填入本对象中所有数据的展示文本""@虚拟方法": "可覆盖""type": "property getter",
+omment": "用作填入本对象中所有数据的展示文本""@虚拟方法": "可覆盖""data type": "整数",
+omment": "用作填入本对象中所有数据的展示文本""@虚拟方法": "可覆盖""@嵌入式方法": "\"\""
+  },
+  {
+omment": "用作填入本对象中所有数据的展示文本""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n""method name": "纵坐标",
+omment": "用作填入本对象中所有数据的展示文本""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n""type": "property getter",
+omment": "用作填入本对象中所有数据的展示文本""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n""data type": "整数",
+omment": "用作填入本对象中所有数据的展示文本""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "横坐标",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+mment": "用作填入本对象中所有数据的展示文本"]"method name": "纵坐标",
+mment": "用作填入本对象中所有数据的展示文本"]"type": "property setter",
+mment": "用作填入本对象中所有数据的展示文本"]"parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+mment": "用作填入本对象中所有数据的展示文本"]]
+  }
+data type": "整数"]
+ },
+ {
+]"class name": "坐标数组容器类",
+]"base class": "结构数组容器模板类",
+]"@模板实现类": "\"矩形_结构类\"",
+]"methods": [
+  {
+"methods": [
+"method name": "取展示内容",
+"methods": [
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+"methods": [
+"@虚拟方法": "可覆盖",
+"methods": [
+"@输出名": "\"GetDumpString\"",
+"methods": [
+"@视窗.后缀文本": "\"override\"",
+"methods": [
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+"methods": [
+]
+  }
+]]
+ },
+ {
+本对象中所有数据的展示文本"class name": "整数数组容器测试",
+本对象中所有数据的展示文本"methods": [
+  {
+ameter name": "展示内容""method name": "开始测试"
+  }
+本对象中所有数据的展示文本]
+ },
+ {
+data type": "整数""class name": "矩形数组容器测试类",
+data type": "整数""methods": [
+  {
+ }"method name": "开始测试"
+  }
+data type": "整数"]
+ }
+        ]
+}

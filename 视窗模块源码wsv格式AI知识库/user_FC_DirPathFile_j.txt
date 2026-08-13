@@ -1,0 +1,575 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.文件目录\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"<Shlwapi.h>\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库": "\"Shlwapi.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"<Shlobj.h>\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"DirPathFile\\\\DirPathFile.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "____目录文件操作类",
+"@全局类": "真",
+"@禁止创建对象": "真",
+"methods": [
+  {
+    "method name": "文件_是否存在f",
+    "comment": "可以用作查询目录是否存在",
+    "static": true,
+    "data type": "逻辑型",
+    "@嵌入式方法": "\"\"",
+    "parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   }
+    ]
+  },
+  {
+态 类型 = 文本型"method name": "目录_是否存在f",
+态 类型 = 文本型"comment": "可以用作查询目录是否存在",
+态 类型 = 文本型"static": true,
+态 类型 = 文本型"data type": "逻辑型",
+态 类型 = 文本型"@嵌入式方法": "\"\"",
+态 类型 = 文本型"parameters": [
+   {
+"parameter name": "目录",
+"data type": "文本型"
+   }
+态 类型 = 文本型]
+  },
+  {
+    "method name": "目录_是否为目录F",
+    "static": true,
+    "data type": "逻辑型",
+    "@禁止流程检查": "真",
+    "parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+    ]
+  },
+  {
+    "method name": "目录_是否系统目录f",
+    "static": true,
+    "data type": "逻辑型",
+    "@嵌入式方法": "\"\"",
+    "parameters": [
+   {
+"parameter name": "目录",
+"data type": "文本型"
+   }
+    ]
+  },
+  {
+ = 文本型"method name": "目录_是否存在f""method name": "目录_创建_强制创建",
+ = 文本型"method name": "目录_是否存在f""comment": "例如 c:\\\\aa\\\\bb\\\\cc\\\\dd 不存在这些目录只需要用这个函数，就能创建所有的目录了",
+ = 文本型"method name": "目录_是否存在f""static": true,
+ = 文本型"method name": "目录_是否存在f""data type": "逻辑型",
+ = 文本型"method name": "目录_是否存在f""@禁止流程检查": "真",
+ = 文本型"method name": "目录_是否存在f""parameters": [
+   {
+"parameter name": "要创建的目录",
+"data type": "文本型"
+   }
+ = 文本型"method name": "目录_是否存在f"]
+  },
+  {
+    "method name": "目录_创建",
+    "comment": "如果 目录不存在则创建失败\n比如 c:\\\\aa\\\\bb 如果aa目录不存在，则创建失败",
+    "static": true,
+    "data type": "逻辑型",
+    "@嵌入式方法": "\"\"",
+    "parameters": [
+   {
+"parameter name": "要创建的目录",
+"data type": "文本型"
+   }
+    ]
+  },
+  {
+  ]"method name": "文件_枚举F",
+  ]"comment": "只会枚举指定目录下面的文件，不包含子目录",
+  ]"static": true,
+  ]"@嵌入式方法": "\"name = FileEnumFile \\nhas_body = true\"",
+  ]"parameters": [
+   {
+"parameter name": "要枚举的目录",
+"comment": "目录的化例如 c:\\\\a   注意，结尾不带双斜杠",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件类型",
+"comment": "*.* 或者 *.txt 或者其他 可以使用通配符 ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来保存搜索到的文件名称",
+"data type": "文本型"
+   }
+  ]]
+  },
+  {
+
+"method name": "文件_删除",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "要删除的文件",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文件_枚举目录和文件",
+
+"comment": "只会枚举指定目录下面的文件，不包含子目录",
+
+"static": true,
+
+"@嵌入式方法": "\"name = FileEnumFileAndDir \\nhas_body = true\"",
+
+"parameters": [
+   {
+"parameter name": "要枚举的目录",
+"comment": "目录的化例如 c:\\\\a   注意，结尾不带双斜杠",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件类型",
+"comment": "*.* 或者 *.txt 或者其他 可以使用通配符 ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来保存搜索到的文件名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"static": true"method name": "文件_枚举目录和文件_包含所有子目录",
+
+"static": true"comment": "包含子目录的文件都会被枚举到",
+
+"static": true"static": true,
+
+"static": true"parameters": [
+   {
+"parameter name": "要枚举的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件类型",
+"comment": "*.* 或者 *.txt 或者其他 可以使用通配符 ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来存放所有文件",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否全路径",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+"static": true]
+  },
+  {
+\a 这种返回空"method name": "文件_枚举_包含所有子目录",
+\a 这种返回空"comment": "包含子目录的文件都会被枚举到",
+\a 这种返回空"static": true,
+\a 这种返回空"parameters": [
+   {
+"parameter name": "要枚举的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件类型",
+"comment": "*.* 或者 *.txt 或者其他 可以使用通配符 ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来存放所有文件",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否全路径",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+\a 这种返回空]
+  },
+  {
+\a 这种返回空"method name": "目录_枚举",
+\a 这种返回空"comment": "只会枚举指定目录里面包含的目录列表，不会枚举所有包含的子目录",
+\a 这种返回空"static": true,
+\a 这种返回空"@嵌入式方法": "\"name = DirEnumDir \\nhas_body = true\"",
+\a 这种返回空"parameters": [
+   {
+"parameter name": "要枚举的目录",
+"comment": "目录的化例如 c:\\\\a   注意，结尾不带双斜杠",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来保存搜索到的文件名称",
+"data type": "文本型"
+   }
+\a 这种返回空]
+  },
+  {
+
+"method name": "目录_枚举所有子目录",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "要枚举的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来存放所有目录",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否全路径",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "目录_枚举所有子目录_删除特定目录",
+data type": "文本型""comment": "从指定的目录里面搜索指定名称的目录删除\n会删除子目录里面所有 用户指定名称的目录",
+data type": "文本型""static": true,
+data type": "文本型""parameters": [
+   {
+"parameter name": "要枚举的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要删除目录名称",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "目录_枚举所有子目录_取特定目录完整路径数组",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "要枚举的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "特定目录名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果数组",
+"comment": "用来保存特定目录的完整名称 数组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否只查找一次",
+"comment": "如果为假，会把所有特定名称的目录都会找出来",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ }"method name": "目录_枚举所有子目录_取特定目录完整路径",
+ }"comment": "只会找第一个",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "要枚举的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "特定目录名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "目录_枚举所有子目录_删除多个特定目录",
+}"comment": "从指定的目录里面搜索指定名称的目录删除\n会删除子目录里面所有 用户指定名称的目录\n不用区分结尾是否带 \\",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "要枚举的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要删除目录名称",
+"data type": "键值表"
+   }
+}]
+  },
+  {
+"parameters": [
+"method name": "目录_删除",
+"parameters": [
+"comment": "此功能可以删除非空目录",
+"parameters": [
+"static": true,
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"@禁止流程检查": "真",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "要删除的目录路径",
+"comment": "例如 c:\\\\a\\\\bb",
+"data type": "文本型"
+   }
+"parameters": [
+]
+  },
+  {
+parameters": [
+"comment": "此功能可以删除非空目录""method name": "目录_复制",
+parameters": [
+"comment": "此功能可以删除非空目录""comment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹拷贝到 d盘cc目录下面 ",
+parameters": [
+"comment": "此功能可以删除非空目录""static": true,
+parameters": [
+"comment": "此功能可以删除非空目录""data type": "逻辑型",
+parameters": [
+"comment": "此功能可以删除非空目录""@禁止流程检查": "真",
+parameters": [
+"comment": "此功能可以删除非空目录""parameters": [
+   {
+"parameter name": "原始路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标路径",
+"data type": "文本型"
+   }
+parameters": [
+"comment": "此功能可以删除非空目录"]
+  },
+  {
+﯐ꌤŝ"method name": "目录_移动",
+﯐ꌤŝ"comment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 ",
+﯐ꌤŝ"static": true,
+﯐ꌤŝ"data type": "逻辑型",
+﯐ꌤŝ"@禁止流程检查": "真",
+﯐ꌤŝ"parameters": [
+   {
+"parameter name": "原始路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标路径",
+"data type": "文本型"
+   }
+﯐ꌤŝ]
+  },
+  {
+
+"method name": "目录_重命名",
+
+"comment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = c:\\\\cc \n把C盘目录下aa文件夹重命名为cc ",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "原始路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取火山安装目录",
+
+"static": true,
+
+"data type": "文本型"
+  },
+  {
+"method name": "目录_取火山安装目录",
+"data type": "文本型"
+  },
+  {
+ꌤŝ"comment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 ""method name": "目录_取特定目录",
+ꌤŝ"comment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 ""static": true,
+ꌤŝ"comment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 ""data type": "文本型",
+ꌤŝ"comment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 ""@禁止流程检查": "真",
+ꌤŝ"comment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 ""parameters": [
+   {
+"parameter name": "目录类型",
+"comment": "#define CSIDL_DESKTOP                   0x0000        // <desktop>\n#define CSIDL_INTERNET                  0x0001        // Internet Explorer (icon on desktop)\n#define CSIDL_PROGRAMS                  0x0002        // Start Menu\\Programs\n#define CSIDL_CONTROLS                  0x0003        // My Computer\\Control Panel\n#define CSIDL_PRINTERS                  0x0004        // My Computer\\Printers\n#define CSIDL_PERSONAL                  0x0005        // My Documents\n#define CSIDL_FAVORITES                 0x0006        // <user name>\\Favorites\n#define CSIDL_STARTUP                   0x0007        // Start Menu\\Programs\\Startup\n#define CSIDL_RECENT                    0x0008        // <user name>\\Recent\n#define CSIDL_SENDTO                    0x0009        // <user name>\\SendTo\n#define CSIDL_BITBUCKET                 0x000a        // <desktop>\\Recycle Bin\n#define CSIDL_STARTMENU                 0x000b        // <user name>\\Start Menu\n#define CSIDL_MYDOCUMENTS               CSIDL_PERSONAL //  Personal was just a silly name for My Documents\n#define CSIDL_MYMUSIC                   0x000d        // \"My Music\" folder\n#define CSIDL_MYVIDEO                   0x000e        // \"My Videos\" folder\n#define CSIDL_DESKTOPDIRECTORY          0x0010        // <user name>\\Desktop\n#define CSIDL_DRIVES                    0x0011        // My Computer\n#define CSIDL_NETWORK                   0x0012        // Network Neighborhood (My Network Places)\n#define CSIDL_NETHOOD                   0x0013        // <user name>\\nethood\n#define CSIDL_FONTS                     0x0014        // windows\\fonts\n#define CSIDL_TEMPLATES                 0x0015\n#define CSIDL_COMMON_STARTMENU          0x0016        // All Users\\Start Menu\n#define CSIDL_COMMON_PROGRAMS           0X0017        // All Users\\Start Menu\\Programs\n#define CSIDL_COMMON_STARTUP            0x0018        // All Users\\Startup\n#define CSIDL_COMMON_DESKTOPDIRECTORY   0x0019        // All Users\\Desktop\n#define CSIDL_APPDATA                   0x001a        // <user name>\\Application Data\n#define CSIDL_PRINTHOOD                 0x001b        // <user name>\\PrintHood",
+"data type": "整数"
+   }
+ꌤŝ"comment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 "]
+  },
+  {
+omment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 ""method name": "目录_取特定目录""method name": "目录_取Windows目录",
+omment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 ""method name": "目录_取特定目录""comment": "GetWindowsDirectory",
+omment": "可以复制非空目录 \n原始路径 = c:\\\\aa\n目标路径 = d:\\\\cc \n把C盘目录下aa文件夹移动到 d盘cc目录下面 ""method name": "目录_取特定目录""static": true
+  },
+  {
+data type": "文本型""method name": "目录_取系统目录",
+data type": "文本型""static": true,
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+}"method name": "目录_取当前目录",
+}"static": true,
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "目录_置当前目录F",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "新的目录",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"static": true"method name": "取当前目录f",
+"static": true"comment": "GetCurrentDirectory",
+"static": true"static": true,
+"static": true"data type": "文本型",
+"static": true"@禁止流程检查": "真"
+  },
+  {
+ type": "文本型""method name": "目录_取系统目录""method name": "路径_取盘符",
+ type": "文本型""method name": "目录_取系统目录""comment": "例如  c:\\\\bb\\ccc 得到的是 c:",
+ type": "文本型""method name": "目录_取系统目录""static": true,
+ type": "文本型""method name": "目录_取系统目录""data type": "文本型",
+ type": "文本型""method name": "目录_取系统目录""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+ type": "文本型""method name": "目录_取系统目录"]
+  },
+  {
+
+"method name": "路径_取目录名称",
+
+"comment": "比如输入 c:\\a\\b 得到 b",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "完整路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "路径_取父路径",
+"comment": "比如输入 c:\\a\\b 得到 c:\\a",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "完整路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+indowsDirectory"method name": "路径_取文件名与后缀",
+indowsDirectory"comment": "比如输入 c:\\a\\b.txt 得到 txt",
+indowsDirectory"static": true,
+indowsDirectory"data type": "文本型",
+indowsDirectory"parameters": [
+   {
+"parameter name": "完整路径",
+"data type": "文本型"
+   }
+indowsDirectory]
+  },
+  {
+indowsDirectory"method name": "路径_取路径与文件名_不含后缀",
+indowsDirectory"comment": "如果不是正常例如 c:\\\\a.txt \n是 c:\\a 这种返回空",
+indowsDirectory"static": true,
+indowsDirectory"data type": "文本型",
+indowsDirectory"parameters": [
+   {
+"parameter name": "完整路径",
+"data type": "文本型"
+   }
+indowsDirectory]
+  },
+  {
+"method name": "路径_取后缀",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "完整路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "路径_取文件名_不含后缀",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "完整路径",
+"data type": "文本型"
+   }
+ }]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

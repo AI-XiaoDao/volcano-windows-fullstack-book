@@ -1,0 +1,2065 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+數ŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+數ŝ"package name": "火山.原创软件",
+數ŝ"comment": "\n\n\n\n ",
+數ŝ"@文档": "\"category = \\\"开源库.hpsocket\\\"\"",
+數ŝ"@视窗.外部头文件": "\"HPSocket\\\\HPSocketTool.h\"",
+數ŝ"@视窗.外部库.win32": "\"HPSocket\\\\HPSocketToolx86.lib\"",
+數ŝ"@视窗.附属文件.win32": "\"HPSocket\\\\HPSocketToolx86.dll\"",
+數ŝ"@视窗.外部库.x64": "\"HPSocket\\\\HPSocketToolx64.lib\"",
+數ŝ"@视窗.附属文件.x64": "\"HPSocket\\\\HPSocketToolx64.dll\"",
+數ŝ"classes": [
+ {
+ 变整数"class name": "______客户端通用函数",
+ 变整数"comment": "支持 websocket tcp tcppull\n这些函数必须再客户端创建后调用",
+ 变整数"@全局类": "真",
+ 变整数"methods": [
+  {
+ 变整数"method name": "客户端_置附加数据指针",
+ 变整数"static": true,
+ 变整数"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "总共可以设置30个 从0 - 29",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "变整数"
+   }
+ 变整数]
+  },
+  {
+变整数"parameters": [
+"method name": "客户端_取附加数据指针",
+变整数"parameters": [
+"static": true,
+变整数"parameters": [
+"data type": "变整数",
+变整数"parameters": [
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "总共可以设置30个 从0 - 29",
+"data type": "整数"
+   }
+变整数"parameters": [
+]
+  },
+  {
+數ŝ"comment": "\n\n\n\n ""method name": "客户端_置附加数据字节集",
+數ŝ"comment": "\n\n\n\n ""static": true,
+數ŝ"comment": "\n\n\n\n ""parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "总共可以设置30个 从0 - 29",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "字节集类"
+   }
+數ŝ"comment": "\n\n\n\n "]
+  },
+  {
+ }"method name": "客户端_取附加数据字节集",
+ }"static": true,
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "总共可以设置30个 从0 - 29",
+"data type": "整数"
+   }
+ }]
+  }
+ 变整数]
+ },
+ {
+}"static": true"class name": "______服务器通用函数",
+}"static": true"@全局类": "真",
+}"static": true"methods": [
+  {
+atic": true"class name": "______服务器通用函数""method name": "HPServer_SetUserDataPVOID",
+atic": true"class name": "______服务器通用函数""static": true,
+atic": true"class name": "______服务器通用函数""@嵌入式方法": "\"\"",
+atic": true"class name": "______服务器通用函数""parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "0-29",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "变整数"
+   }
+atic": true"class name": "______服务器通用函数"]
+  },
+  {
+"method name": "HPServer_GetUserDataPVOID",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "0-29",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "HPServer_SetUserDataBin",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "0-29",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+data type": "字节集类""method name": "HPServer_GetUserDataBin",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "0-29",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "字节集类"
+   }
+data type": "字节集类"]
+  },
+  {
+
+"method name": "HPServer_SetUserData",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "总共可以设置30个 从0 - 29",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "附加数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "HPServer_GetUserDataSize",
+}"static": true,
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "总共可以设置30个 从0 - 29",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "HPServer_GetUserData",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "总共可以设置30个 从0 - 29",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "服务器_置附加数据指针",
+"static": true,
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "0-29",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ }"method name": "服务器_取附加数据指针",
+ }"data type": "变整数",
+ }"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "0-29",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "服务器_置附加数据字节集",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "0-29",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+ }"method name": "服务器_取附加数据字节集",
+ }"static": true,
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据索引",
+"comment": "0-29",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+data type": "字节集类""method name": "服务器_取连接地址",
+data type": "字节集类""comment": "获取客户端连接地址 例如 127.0.0.1:19730  ",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "文本型",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "字节集类"]
+  },
+  {
+"method name": "服务器_断开客户",
+"comment": ";",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+]
+  }
+}"static": true]
+ },
+ {
+parameters": [
+"class name": "客户端事件类_WebSocket",
+parameters": [
+"@视窗.后缀文本": "\"public IClient_Http_WebSocket_Event\"",
+parameters": [
+"methods": [
+  {
+"method name": "连接成功",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+]
+  },
+  {
+data type": "变整数""method name": "协议升级",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+ameter name": "连接句柄""method name": "收到消息",
+ameter name": "连接句柄""type": "event",
+ameter name": "连接句柄""data type": "整数",
+ameter name": "连接句柄""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "操作码",
+"data type": "字节"
+   },
+   {
+"parameter name": "收到的数据",
+"data type": "字节集类"
+   }
+ameter name": "连接句柄"]
+  },
+  {
+"method name": "连接关闭",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "操作码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   }
+]
+  }
+parameters": [
+]
+ },
+ {
+}"class name": "______客户端_Http_WebSocket_基础函数",
+}"@全局类": "真",
+}"methods": [
+  {
+
+"method name": "客户端_websocket_创建",
+
+"result comment": "返回通讯句柄",
+
+"static": true,
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "要连接的url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否异步",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "加密套件",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "客户端_websocket_置协议头",
+
+"comment": "请再 客户端_websocket_创建 后使用\n并且要再 客户端_websocket_启动之前",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "客户端_websocket_启动",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ameter name": "附加数据""method name": "客户端_websocket_停止",
+ameter name": "附加数据""static": true,
+ameter name": "附加数据""data type": "逻辑型",
+ameter name": "附加数据""@嵌入式方法": "\"\"",
+ameter name": "附加数据""parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   }
+ameter name": "附加数据"]
+  },
+  {
+meter name": "附加数据""@嵌入式方法": "\"\"""method name": "客户端_websocket_销毁",
+meter name": "附加数据""@嵌入式方法": "\"\"""static": true,
+meter name": "附加数据""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+meter name": "附加数据""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   }
+meter name": "附加数据""@嵌入式方法": "\"\""]
+  },
+  {
+}"method name": "客户端_websocket_发送字节集",
+}"static": true,
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+"method name": "客户端_websocket_发送文本",
+"static": true,
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "文本型"
+   }
+]
+  },
+  {
+eter name": "附加数据"]"method name": "客户端_websocket_置超时",
+eter name": "附加数据"]"comment": "只有再异步的时候有用",
+eter name": "附加数据"]"static": true,
+eter name": "附加数据"]"@嵌入式方法": "\"\"",
+eter name": "附加数据"]"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求超时",
+"data type": "整数"
+   },
+   {
+"parameter name": "连接超时",
+"data type": "整数"
+   }
+eter name": "附加数据"]]
+  }
+}]
+ },
+ {
+}"class name": "服务器事件类_WebSocket",
+}"@视窗.后缀文本": "\"public IServer_Http_WebSocket_Event\"",
+}"methods": [
+  {
+
+"method name": "连接成功",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "收到消息",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "操作码",
+"data type": "字节"
+   },
+   {
+"parameter name": "收到的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"data type": "整数""method name": "连接关闭",
+
+"data type": "整数""type": "event",
+
+"data type": "整数""data type": "整数",
+
+"data type": "整数""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+
+"data type": "整数"]
+  }
+}]
+ },
+ {
+ameter name": "连接句柄""class name": "______服务器_Http_WebSocket_基础函数",
+ameter name": "连接句柄""comment": "注意，暂时不支持wss ",
+ameter name": "连接句柄""@全局类": "真",
+ameter name": "连接句柄""methods": [
+  {
+"method name": "服务器_Websocket_创建",
+"comment": "void* __HP_CALL HPServer_Websocket_Create(void*Listener hListener,BOOL bHttps);",
+"static": true,
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "是否WSS",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+
+"method name": "服务器_Websocket_启动",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "监听地址",
+"data type": "文本型",
+"@默认值": "\"0.0.0.0\""
+   },
+   {
+"parameter name": "监听端口",
+"data type": "整数",
+"@默认值": "19730"
+   }
+
+]
+  },
+  {
+ameter name": "监听地址""method name": "服务器_Websocket_停止",
+ameter name": "监听地址""comment": "BOOL __HP_CALL HPServer_Websocket_Stop(void* pServer);",
+ameter name": "监听地址""static": true,
+ameter name": "监听地址""data type": "逻辑型",
+ameter name": "监听地址""@嵌入式方法": "\"\"",
+ameter name": "监听地址""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+ameter name": "监听地址"]
+  },
+  {
+meter name": "监听地址""data type": "逻辑型""method name": "服务器_websocket_销毁",
+meter name": "监听地址""data type": "逻辑型""static": true,
+meter name": "监听地址""data type": "逻辑型""@嵌入式方法": "\"\"",
+meter name": "监听地址""data type": "逻辑型""parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   }
+meter name": "监听地址""data type": "逻辑型"]
+  },
+  {
+"method name": "服务器_Websocket_发送字节集",
+"static": true,
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+Websocket_发送字节集"method name": "服务器_Websocket_发送文本",
+Websocket_发送字节集"static": true,
+Websocket_发送字节集"data type": "逻辑型",
+Websocket_发送字节集"parameters": [
+   {
+"parameter name": "通讯句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "文本型"
+   }
+Websocket_发送字节集]
+  }
+ameter name": "连接句柄"]
+ },
+ {
+
+"class name": "客户端事件类_HPTcpPull",
+
+"@视窗.后缀文本": "\"public IClient_TcpPull_Event\"",
+
+"methods": [
+  {
+eter name": "连接句柄"]"method name": "连接成功",
+eter name": "连接句柄"]"type": "event",
+eter name": "连接句柄"]"data type": "整数",
+eter name": "连接句柄"]"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+eter name": "连接句柄"]]
+  },
+  {
+"method name": "握手成功",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+]
+  },
+  {
+parameters": [
+"method name": "发送数据",
+parameters": [
+"type": "event",
+parameters": [
+"data type": "整数",
+parameters": [
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+parameters": [
+]
+  },
+  {
+ameter name": "连接ID""method name": "收到数据",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "收到的数据长度",
+"data type": "整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+ }"method name": "连接关闭",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "操作码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   }
+ }]
+  }
+
+]
+ },
+ {
+data type": "变整数""class name": "______客户端_TcpPull_基础函数",
+data type": "变整数""@全局类": "真",
+data type": "变整数""methods": [
+  {
+ata type": "变整数""methods": [
+"method name": "客户端_TcpPull_创建",
+ata type": "变整数""methods": [
+"static": true,
+ata type": "变整数""methods": [
+"data type": "变整数",
+ata type": "变整数""methods": [
+"parameters": [
+   {
+"parameter name": "是否SSL",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "加密协议类型",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ata type": "变整数""methods": [
+]
+  },
+  {
+data type": "变整数""method name": "客户端_TcpPull_启动",
+data type": "变整数""static": true,
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "IP地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "短整数"
+   },
+   {
+"parameter name": "是否异步",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "变整数"]
+  },
+  {
+ta type": "变整数"]"method name": "客户端_TcpPull_停止",
+ta type": "变整数"]"static": true,
+ta type": "变整数"]"@嵌入式方法": "\"\"",
+ta type": "变整数"]"parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   }
+ta type": "变整数"]]
+  },
+  {
+ata type": "变整数""parameters": [
+"method name": "客户端_TcpPull_发送",
+ata type": "变整数""parameters": [
+"static": true,
+ata type": "变整数""parameters": [
+"parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+ata type": "变整数""parameters": [
+]
+  },
+  {
+
+"method name": "_HPClient_TcpPull_Fetch",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区长度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"static": true"method name": "客户端_TcpPull_抓取数据",
+"static": true"static": true,
+"static": true"data type": "字节集类",
+"static": true"parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要抓取的长度",
+"data type": "整数"
+   }
+"static": true]
+  }
+data type": "变整数"]
+ },
+ {
+ta type": "变整数"]"class name": "服务器事件类_HPTcpPull",
+ta type": "变整数"]"@视窗.后缀文本": "\"public IServer_TcpPull_Event\"",
+ta type": "变整数"]"methods": [
+  {
+tatic": true]"method name": "开始监听",
+tatic": true]"type": "event",
+tatic": true]"data type": "整数",
+tatic": true]"parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "监听套接字",
+"data type": "变整数"
+   }
+tatic": true]]
+  },
+  {
+tatic": true]"method name": "客户到达",
+tatic": true]"type": "event",
+tatic": true]"data type": "整数",
+tatic": true]"parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "客户套接字",
+"data type": "变整数"
+   }
+tatic": true]]
+  },
+  {
+static": true"static": true"method name": "发送数据",
+static": true"static": true"comment": "当调用 客户端 发送 的时候，这里会给一个机会，看您最终组包的数据",
+static": true"static": true"type": "event",
+static": true"static": true"data type": "整数",
+static": true"static": true"parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+static": true"static": true]
+  },
+  {
+data type": "变整数""method name": "收到数据",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+ata type": "变整数""parameters": [
+"method name": "连接断开",
+ata type": "变整数""parameters": [
+"type": "event",
+ata type": "变整数""parameters": [
+"data type": "整数",
+ata type": "变整数""parameters": [
+"parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "操作码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   }
+ata type": "变整数""parameters": [
+]
+  },
+  {
+ }"method name": "服务器关闭",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   }
+ }]
+  }
+ta type": "变整数"]]
+ },
+ {
+ta type": "变整数"]"class name": "______服务器_TcpPull_基础函数",
+ta type": "变整数"]"@全局类": "真",
+ta type": "变整数"]"methods": [
+  {
+"method name": "服务器_TcpPull_创建",
+"static": true,
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "是否SSL",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "加密协议",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+ameter name": "操作码""method name": "服务器_TcpPull_销毁",
+ameter name": "操作码""static": true,
+ameter name": "操作码""@嵌入式方法": "\"\"",
+ameter name": "操作码""parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   }
+ameter name": "操作码"]
+  },
+  {
+
+"method name": "_HPServer_TcpPull_Start",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "绑定地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "端口",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+ }"method name": "服务器_TcpPull_启动",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "服务器句柄",
+"comment": "void* pServer, const char* lpBindAddr, USHORT uPort",
+"data type": "变整数"
+   },
+   {
+"parameter name": "绑定地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "短整数"
+   }
+ }]
+  },
+  {
+"method name": "服务器_TcpPull_停止",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+"method name": "服务器_TcpPull_抓取数据",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "抓取数据大小",
+"data type": "整数"
+   }
+]
+  },
+  {
+ }"method name": "服务器_TcpPull_发送",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "服务器句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+ }]
+  }
+ta type": "变整数"]]
+ },
+ {
+data type": "变整数""class name": "客户端事件类_HPTcp",
+data type": "变整数""@视窗.后缀文本": "\"public IClient_Tcp_Event\"",
+data type": "变整数""methods": [
+  {
+
+"method name": "连接成功",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+]"method name": "握手成功",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+]]
+  },
+  {
+ethod name": "服务器_TcpPull_发送""method name": "收到数据",
+ethod name": "服务器_TcpPull_发送""type": "event",
+ethod name": "服务器_TcpPull_发送""data type": "整数",
+ethod name": "服务器_TcpPull_发送""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+ethod name": "服务器_TcpPull_发送"]
+  },
+  {
+"method name": "连接关闭",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "操作码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   }
+]
+  }
+data type": "变整数"]
+ },
+ {
+"class name": "______客户端_Tcp_基础函数",
+"@全局类": "真",
+"methods": [
+  {
+ }"method name": "客户端_Tcp_创建",
+ }"static": true,
+ }"data type": "变整数",
+ }"parameters": [
+   {
+"parameter name": "是否SSL",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "加密协议类型",
+"comment": "\"DEFAULT:!aNULL:!eNULL:!SSLv23\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ }]
+  },
+  {
+
+"method name": "_HPClient_Tcp_Start",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "IP地址指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "端口",
+"data type": "短整数"
+   },
+   {
+"parameter name": "是否异步",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "客户端_Tcp_启动",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "IP地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "短整数"
+   },
+   {
+"parameter name": "是否异步",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+]"method name": "客户端_Tcp_停止",
+]"static": true,
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   }
+]]
+  },
+  {
+
+"method name": "客户端_Tcp_销毁",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+}"method name": "客户端_Tcp_发送",
+}"static": true,
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+thod name": "客户端_Tcp_发送""method name": "客户端_Tcp_置接收缓冲区大小",
+thod name": "客户端_Tcp_发送""static": true,
+thod name": "客户端_Tcp_发送""@嵌入式方法": "\"\"",
+thod name": "客户端_Tcp_发送""parameters": [
+   {
+"parameter name": "客户端句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区大小",
+"data type": "整数"
+   }
+thod name": "客户端_Tcp_发送"]
+  }
+]
+ },
+ {
+}"class name": "事件类_HPUdpNode",
+}"comment": "udp没有客户端和服务器之说，都是同一个组件，但是为了命名统一\n所以，还是做了兼容",
+}"@视窗.后缀文本": "\"public IUdpNode_Event\"",
+}"methods": [
+  {
+"method name": "开始监听",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "soListen",
+"comment": "暂时不知道做什么用。。。",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ name": "客户端_Tcp_发送""method name": "客户端_Tcp_置接收缓冲区大小""method name": "将要发送",
+ name": "客户端_Tcp_发送""method name": "客户端_Tcp_置接收缓冲区大小""type": "event",
+ name": "客户端_Tcp_发送""method name": "客户端_Tcp_置接收缓冲区大小""data type": "整数",
+ name": "客户端_Tcp_发送""method name": "客户端_Tcp_置接收缓冲区大小""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "远程地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "远程端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "将要发送的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "将要发送的数据大小",
+"data type": "整数"
+   }
+ name": "客户端_Tcp_发送""method name": "客户端_Tcp_置接收缓冲区大小"]
+  },
+  {
+}"method name": "收到数据",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "远程地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "远程端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "收到的数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+"method name": "错误",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "操作码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   },
+   {
+"parameter name": "远程地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "远程端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "关闭",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+
+]
+  }
+}]
+ },
+ {
+ }"class name": "______HPUdpNode_全局函数",
+ }"@全局类": "真",
+ }"methods": [
+  {
+"method name": "HPUdpNode_创建",
+"static": true,
+"data type": "变整数"
+  },
+  {
+hod name": "HPUdpNode_创建""method name": "HPUdpNode_启动",
+hod name": "HPUdpNode_创建""static": true,
+hod name": "HPUdpNode_创建""data type": "逻辑型",
+hod name": "HPUdpNode_创建""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "绑定地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "绑定端口",
+"data type": "整数"
+   }
+hod name": "HPUdpNode_创建"]
+  },
+  {
+"method name": "HPUdpNode_发送",
+"comment": "\n",
+"static": true,
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "远程地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "远程端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+]
+  }
+ }]
+ },
+ {
+"class name": "事件类_HPTcpPullAgent",
+"@视窗.后缀文本": "\"public ITcpPullAgent_Event\"",
+"methods": [
+  {
+ }"method name": "连接成功",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+
+"method name": "将要发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "收到数据",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"data type": "整数"
+   }
+]
+  },
+  {
+parameters": [
+"method name": "连接断开",
+parameters": [
+"type": "event",
+parameters": [
+"data type": "整数",
+parameters": [
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "操作码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误码",
+"data type": "整数"
+   }
+parameters": [
+]
+  },
+  {
+data type": "变整数""method name": "关闭",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  }
+]
+ },
+ {
+ }"class name": "______HPTcpPullAgent_全局函数",
+ }"@全局类": "真",
+ }"methods": [
+  {
+"method name": "HPTcpPullAgent_创建",
+"static": true,
+"data type": "变整数"
+  },
+  {
+ type": "变整数""method name": "关闭""method name": "HPTcpPullAgent_销毁",
+ type": "变整数""method name": "关闭""static": true,
+ type": "变整数""method name": "关闭""@嵌入式方法": "\"\"",
+ type": "变整数""method name": "关闭""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+ type": "变整数""method name": "关闭"]
+  },
+  {
+type": "变整数""method name": "关闭""static": true"method name": "HPTcpPullAgent_启动",
+type": "变整数""method name": "关闭""static": true"static": true,
+type": "变整数""method name": "关闭""static": true"data type": "逻辑型",
+type": "变整数""method name": "关闭""static": true"@嵌入式方法": "\"\"",
+type": "变整数""method name": "关闭""static": true"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "绑定地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否异步",
+"data type": "逻辑型"
+   }
+type": "变整数""method name": "关闭""static": true]
+  },
+  {
+}"methods": [
+"method name": "HPTcpPullAgent_连接",
+}"methods": [
+"static": true,
+}"methods": [
+"data type": "逻辑型",
+}"methods": [
+"@嵌入式方法": "\"\"",
+}"methods": [
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出_连接ID",
+"data type": "变整数"
+   }
+}"methods": [
+]
+  },
+  {
+data type": "整数""method name": "HPTcpPullAgent_断开连接",
+data type": "整数""static": true,
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否强制断开",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "HPTcpPullAgent_停止",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+}"method name": "HPTcpPullAgent_取本地地址",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+@嵌入式方法": "\"\"""method name": "HPTcpPullAgent_置连接附加数据",
+@嵌入式方法": "\"\"""static": true,
+@嵌入式方法": "\"\"""data type": "逻辑型",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "变整数"
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+data type": "变整数""method name": "HPTcpPullAgent_取连接附加数据",
+data type": "变整数""static": true,
+data type": "变整数""data type": "变整数",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+
+"method name": "HPTcpPullAgent_取错误文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "HPTcpPullAgent_取当前连接数",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"method name": "HPTcpPullAgent_抓取数据",
+}"result comment": "返回0表示成功",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "抓取大小",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "HPTcpPullAgent_发送指针数据",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送的数据大小",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "HPTcpPullAgent_发送",
+data type": "整数""comment": "\n",
+data type": "整数""static": true,
+data type": "整数""data type": "逻辑型",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+data type": "整数"]
+  }
+ }]
+ }
+數ŝ]
+}

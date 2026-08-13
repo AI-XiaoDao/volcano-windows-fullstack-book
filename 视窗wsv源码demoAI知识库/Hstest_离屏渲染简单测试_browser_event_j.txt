@@ -1,0 +1,469 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+곀鳶Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+곀鳶Ǹ"package name": "浏览器.事件",
+곀鳶Ǹ"classes": [
+ {
+"class name": "类_FBrowser_自定义初始化事件",
+"base class": "类_FBrowser_应用事件",
+"methods": [
+  {
+
+"method name": "浏览器_初始化完毕",
+
+"@虚拟方法": "可覆盖"
+  },
+  {
+
+"method name": "即将处理命令行",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "进程类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "命令行",
+"data type": "类_FBrowser_命令行"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_自定义浏览器事件",
+"base class": "类_FBrowser_浏览器事件",
+"methods": [
+  {
+
+"method name": "浏览器_创建完毕",
+
+"@禁止流程检查": "真",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_控制台消息",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "日志级别",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "行",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_执行关闭",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将关闭",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_获取根屏幕矩形",
+
+"comment": "GetRootScreenRect\n在屏幕坐标中检索根窗口矩形。如果提供了矩形则返回true。如果该方法返回false，则使用GetViewRect的矩形。",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "矩形",
+"comment": "可读可写",
+"data type": "FBrowser_矩形位置"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_获取视图矩形",
+
+"comment": "GetViewRect\n在屏幕坐标中检索根窗口矩形。如果提供了矩形则返回true。如果该方法返回false，则使用GetViewRect的矩形。",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "矩形",
+"comment": "可读可写",
+"data type": "FBrowser_矩形位置"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_获取屏幕点",
+
+"comment": "GetScreenPoint",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "视图横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "视图纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "屏幕横坐标",
+"comment": "设置值",
+"data type": "整数类"
+   },
+   {
+"parameter name": "屏幕纵坐标",
+"comment": "设置值",
+"data type": "整数类"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_获取窗口信息",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "屏幕信息",
+"comment": "可设置",
+"data type": "FBrowser_屏幕信息"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_移动调整弹窗",
+
+"comment": "GetViewRect\n在屏幕坐标中检索根窗口矩形。如果提供了矩形则返回true。如果该方法返回false，则使用GetViewRect的矩形。",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "矩形",
+"comment": "可读可写",
+"data type": "FBrowser_矩形位置"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_将被绘制",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "类型",
+"comment": "0为PET_VIEW 1为PET_POPUP",
+"data type": "整数"
+   },
+   {
+"parameter name": "矩形清单",
+"comment": "可设置",
+"data type": "FBrowser_矩形位置数组"
+   },
+   {
+"parameter name": "缓存指针",
+"comment": "渲染图层数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_将被加速绘制",
+
+"comment": "英文名：OnAcceleratedPaint 说明：启用离屏渲染功能后才会调用，当一个元素被渲染到共享纹理句柄时调用",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "类型",
+"comment": "0为PET_VIEW 1为PET_POPUP",
+"data type": "整数"
+   },
+   {
+"parameter name": "矩形清单",
+"comment": "dirtyRects 可设置",
+"data type": "FBrowser_矩形位置数组"
+   },
+   {
+"parameter name": "加速绘制信息",
+"comment": "shared_handle是D3D11 Texture2D的句柄，可以通过ID3D11Device使用OpenSharedResource方法访问。",
+"data type": "FBrowser_加速绘制信息"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_开始拖拽",
+
+"comment": "英文名：StartDragging 说明：启用离屏渲染功能后才会调用",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "拖拽数据",
+"data type": "类_FBrowser_拖拽数据"
+   },
+   {
+"parameter name": "拖拽操作类型",
+"comment": "allowed_ops",
+"data type": "整数"
+   },
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_更新拖动光标",
+
+"comment": "英文名：UpdateDragCursor 说明：启用离屏渲染功能后才会调用",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "拖拽操作类型",
+"comment": "operation",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_滚动偏移量改变",
+
+"comment": "英文名：OnScrollOffsetChanged 说明：启用离屏渲染功能后才会调用",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "横坐标",
+"data type": "小数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_IME范围改变",
+
+"comment": "英文名：OnImeCompositionRangeChanged  说明：启用离屏渲染功能后才会调用，IME组成范围改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "选择范围",
+"comment": "selected_range",
+"data type": "FBrowser_范围"
+   },
+   {
+"parameter name": "字符范围",
+"comment": "只读 character_bounds",
+"data type": "FBrowser_矩形位置数组"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_文本选择改变",
+
+"comment": "英文名：OnTextSelectionChanged 说明：启用离屏渲染功能后才会调用",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "选择文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "选择范围",
+"data type": "FBrowser_范围"
+   }
+
+]
+  },
+  {
+
+"method name": "离屏渲染_虚拟键盘请求",
+
+"comment": "英文名：OnVirtualKeyboardRequested 说明：启用离屏渲染功能后才会调用",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "browser",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "输入类型",
+"comment": "input_mode 参考：文本输入类型.XXXXX",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ }
+곀鳶Ǹ]
+}

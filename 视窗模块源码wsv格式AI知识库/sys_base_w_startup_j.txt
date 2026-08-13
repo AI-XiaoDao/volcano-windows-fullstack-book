@@ -1,0 +1,276 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+建对象 = 真"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+建对象 = 真"package name": "火山.基本",
+建对象 = 真"comment": "本包中的内容用作提供火山程序启动代码",
+建对象 = 真"@文档": "\"category = \\\"启动\\\"\"",
+建对象 = 真"classes": [
+ {
+对象 = 真"classes": [
+"class name": "程序基础类",
+对象 = 真"classes": [
+"@别名": "\"@an<CVolUserApp>\"",
+对象 = 真"classes": [
+"@禁止创建对象": "真"
+ },
+ {
+对象 = 真"classes": [
+"class name": "程序类",
+对象 = 真"classes": [
+"comment": "用户定义的启动类必须直接或间接以此类作为基础类",
+对象 = 真"classes": [
+"base class": "程序基础类",
+对象 = 真"classes": [
+"@全局类": "真",
+对象 = 真"classes": [
+"@禁止创建对象": "真",
+对象 = 真"classes": [
+"methods": [
+  {
+
+"method name": "取程序",
+
+"comment": "返回系统自动建立的全局唯一的用户启动类实例对象",
+
+"static": true,
+
+"data type": "启动类",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真"
+  },
+  {
+
+"method name": "取全局对象",
+
+"comment": "  获取指定类型对象类的唯一性全局实例.\n  如果该类型的全局对象尚不存在,则自动创建一个新对象并记录到系统数组中返回,否则直接\n返回在系统数组中的已有全局类对象.\n  本方法支持在多线程环境中运行. 当用户程序退出时,系统将自动释放所有已有的全局对象.",
+
+"static": true,
+
+"data type": "对象类",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲获取对象类型",
+"comment": "提供所欲获取全局对象的类型",
+"data type": "对象类",
+"@需求类型": "数据类型"
+   }
+
+]
+  },
+  {
+
+"method name": "投递退出消息",
+
+"comment": "  向Windows消息队列发送一个退出消息,通知其退出消息队列处理.\n  如果使用系统所提供的各种界面库,不需要调用本方法,否则在程序主窗口关闭的时候,\n需要调用本方法退出消息队列处理,否则程序将不会结束.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "退出码",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取用户程序名称",
+
+"comment": "返回在项目设置里面所设置的程序名称",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取用户程序版本号",
+
+"comment": "返回在项目设置里面所设置的程序版本号",
+
+"static": true,
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取用户程序次版本号",
+
+"comment": "返回在项目设置里面所设置的程序次版本号",
+
+"static": true,
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取用户程序版本名",
+
+"comment": "返回在项目设置里面所设置的程序版本名称文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取火山平台版本号",
+
+"comment": "返回编译此程序时所使用的火山平台版本号",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  }
+对象 = 真"classes": [
+]
+ },
+ {
+"class name": "窗口程序类",
+"comment": "基于窗口的用户程序的启动类可以选择以此类作为基础类",
+"base class": "程序类",
+"@禁止创建对象": "真",
+"methods": [
+  {
+base class": "程序类""method name": "消息过滤",
+base class": "程序类""comment": "用户的启动类可以覆盖此方法以过滤处理程序中所有窗口的消息",
+base class": "程序类""result comment": "返回真表示允许消息继续向后传递并处理,返回假表示取消掉该消息的后续处理.",
+base class": "程序类""data type": "逻辑型",
+base class": "程序类""@虚拟方法": "可覆盖",
+base class": "程序类""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供消息所对应的窗口句柄(HWND)",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息值",
+"comment": "提供消息的具体值",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息参数1",
+"comment": "提供消息所附带的参数1的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息参数2",
+"comment": "提供消息所附带的参数2的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息地址",
+"comment": "提供消息的具体 MSG* 地址指针,用作备用.",
+"data type": "变整数"
+   }
+base class": "程序类"]
+  },
+  {
+
+"method name": "空闲",
+
+"comment": "当系统正处于空闲状态时调用此方法,用户的启动类可以覆盖此方法以做一些后台处理工作.",
+
+"result comment": "返回假,在此次空闲期间系统将不再调用本方法(可以降低 CPU 占用率),返回真则将继续调用.",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "已空闲时间",
+"comment": "  提供自系统本次进入空闲状态后到现在所经过的空闲时间,单位为毫秒.用户程序在空闲状态\n下所进行的大工作量操作最好等到此值较大时进行.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "即将退出",
+}"comment": "用户的启动类可以覆盖此方法以在窗口程序退出前做一些清理工作",
+}"@虚拟方法": "可覆盖"
+  }
+]
+ },
+ {
+"class name": "动态库程序类",
+"comment": "动态链接库用户程序的启动类可以选择以此类作为基础类",
+"base class": "程序类",
+"@禁止创建对象": "真",
+"methods": [
+  {
+
+"method name": "入口通知",
+
+"comment": "动态库的 DllMain 入口函数通知",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "动态库自身的模块句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "调用原因",
+"data type": "整数"
+   },
+   {
+"parameter name": "保留指针",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "将被卸载",
+
+"comment": "用户的启动类可以覆盖此方法以在动态链接库被卸载前做一些清理工作",
+
+"@虚拟方法": "可覆盖"
+  },
+  {
+
+"method name": "_调试入口",
+
+"comment": "当使用火山DLL默认调试启动程序直接调试DLL时,本方法将在DLL加载后被自动调用.",
+
+"static": true,
+
+"@编译条件": "\"_VOL_DEBUG\"",
+
+"@视窗.输出": "真",
+
+"@输出名": "\"_VolDllDebugEntry\""
+  }
+]
+ }
+建对象 = 真]
+}

@@ -1,0 +1,459 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"Redis数据库".
+
+{
+问本程序中的接口需要引用模块"Redis数据库"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"Redis数据库"."package name": "火山.视窗.数据库",
+问本程序中的接口需要引用模块"Redis数据库"."classes": [
+ {
+"class name": "Redis数据库类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n提供对Redis数据库的操作支持.",
+"@视窗.头文件搜寻目录": "\"lib\\\\include\\\\hiredis\"",
+"@视窗.外部头文件": "\"vol_hi_redis.h\"",
+"@视窗.外部源文件": "\"lib\\\\src\\\\vol_hi_redis.cpp\"",
+"@视窗.外部源文件": "\"lib\\\\src\\\\alloc.c\\nlib\\\\src\\\\async.c\\nlib\\\\src\\\\dict.c\\nlib\\\\src\\\\hiredis.c\\nlib\\\\src\\\\net.c\\nlib\\\\src\\\\read.c\\nlib\\\\src\\\\sds.c\\nlib\\\\src\\\\sockcompat.c\"",
+"@视窗.需求VS版本": "\"14-\"",
+"methods": [
+  {
+"method name": "连接",
+"comment": "开始连接到指定的Redis数据库,如果当前处于已连接的状态将会被断开.",
+"result comment": "返回连接结果.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供所欲连接数据库的地址/IP.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"comment": "提供所欲连接数据库的连接端口号.",
+"data type": "整数",
+"@默认值": "6379"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供该库的授权密码,无密码请留空.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "库号",
+"comment": "  提供连接成功后所欲使用的库号索引,默认情况下有16个库,可\n提供0-15之间的索引号,如自己设置库数量请提供正确范围内的索引.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "超时",
+"comment": "提供连接服务器的超时时间,单位:秒.",
+"data type": "整数",
+"@默认值": "10"
+   }
+]
+  },
+  {
+"method name": "启用心跳保活",
+"comment": "将当前数据库连接启用KeepAlive功能.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取错误内容",
+
+"comment": "获取错误内容.",
+
+"result comment": "无错误时返回空文本.",
+
+"data type": "文本型"
+  },
+  {
+࠰敺ŝ"method name": "取错误码",
+࠰敺ŝ"comment": "获取错误码.",
+࠰敺ŝ"result comment": "无错误时返回0.",
+࠰敺ŝ"data type": "整数"
+  },
+  {
+敺ŝ"result comment": "无错误时返回0.""method name": "关闭",
+敺ŝ"result comment": "无错误时返回0.""comment": "关闭并将当前已连接的数据库断开.",
+敺ŝ"result comment": "无错误时返回0.""@嵌入式方法": "\"\""
+  },
+  {
+方法成功,则所获得连接将填入此结果变量中.""method name": "执行命令",
+方法成功,则所获得连接将填入此结果变量中.""comment": "对当前已连接的数据库执行指定命令,如欲提供二进制数据或其他非文本型数据的命令执行,请使用\"执行命令2\".",
+方法成功,则所获得连接将填入此结果变量中.""result comment": "返回执行该命令后服务器所返回的结果.",
+方法成功,则所获得连接将填入此结果变量中.""data type": "Redis执行结果类",
+方法成功,则所获得连接将填入此结果变量中.""@嵌入式方法": "\"\"",
+方法成功,则所获得连接将填入此结果变量中.""parameters": [
+   {
+"parameter name": "命令内容",
+"comment": "提供所欲执行完整命令内容,例如\"SET key value\".",
+"data type": "文本型"
+   }
+方法成功,则所获得连接将填入此结果变量中."]
+  },
+  {
+当前已连接的数据库断开."method name": "执行命令2",
+当前已连接的数据库断开."comment": "对当前已连接的数据库执行指定命令.",
+当前已连接的数据库断开."result comment": "返回执行该命令后服务器所返回的结果.",
+当前已连接的数据库断开."data type": "Redis执行结果类",
+当前已连接的数据库断开."@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+当前已连接的数据库断开."parameters": [
+   {
+"parameter name": "命令类型",
+"comment": "提供所欲执行的命令类型,例如\"SET\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数内容",
+"comment": "提供所欲执行命令携带的所有参数,文本型的参数将会以多字节编码方式提交储存.\n注意:除支持基本型外仅支持字节集类参数,提交其他类型参数将导致失败立即返回.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+当前已连接的数据库断开.]
+  },
+  {
+"method name": "连续执行命令",
+"comment": "  加入一个命令到执行命令缓冲区中等待执行,适用于需要执行大量命令而不需要立即返回结\n果的场景下使用,如欲提供二进制数据或其他非文本型数据的命令执行,请使用\"连续执行命令2\".",
+"result comment": "返回是否加入命令成功",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "命令内容",
+"comment": "提供所欲执行完整命令内容,例如\"SET key value\".",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "连续执行命令2",
+ }"comment": "  加入一个命令到执行命令缓冲区中等待执行,适用于需要执行大量命令而不需要\n立即返回结果的场景下使用.",
+ }"result comment": "返回是否加入命令成功.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+ }"parameters": [
+   {
+"parameter name": "命令类型",
+"comment": "提供所欲执行的命令类型,例如\"SET\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数内容",
+"comment": "提供所欲执行命令携带的所有参数,文本型的参数将会以多字节编码方式提交储存.\n注意:除支持基本型外仅支持字节集类参数,提交其他类型参数将导致失败立即返回.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+ }]
+  },
+  {
+ "如果本方法成功,则所获得连接将填入此结果变量中.""method name": "取连续执行结果",
+ "如果本方法成功,则所获得连接将填入此结果变量中.""comment": "  在使用了\"连续执行命令\"或\"连续执行命令2\"加入了多条命令后,使用本方法提\n交命令执行并且获取命令执行结果.",
+ "如果本方法成功,则所获得连接将填入此结果变量中.""data type": "Redis执行结果类",
+ "如果本方法成功,则所获得连接将填入此结果变量中.""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取连接状态",
+
+"comment": "获取当前与服务器的连接状态",
+
+"result comment": "返回真表示与服务器连接正常,否则与服务器的连接已丢失.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "Redis执行结果类",
+"comment": "本类实例表示一个服务器的返回信息(命令执行后).",
+"@强制依赖": "\"Redis数据库类\"",
+"methods": [
+  {
+
+"comment": "获取当前与服务器的连接状态""method name": "类型",
+
+"comment": "获取当前与服务器的连接状态""comment": "获取该结果中数据的类型.",
+
+"comment": "获取当前与服务器的连接状态""type": "property getter",
+
+"comment": "获取当前与服务器的连接状态""data type": "Redis结果类型",
+
+"comment": "获取当前与服务器的连接状态""@禁止流程检查": "真"
+  },
+  {
+"如果本方法成功,则所获得连接将填入此结果变量中.""comment": "  在使用了\"连续执行命令\"或\"连续执行命令2\"加入了多条命令后,使用本方法提\n交命令执行并且获取命令执行结果.""method name": "是否有效",
+"如果本方法成功,则所获得连接将填入此结果变量中.""comment": "  在使用了\"连续执行命令\"或\"连续执行命令2\"加入了多条命令后,使用本方法提\n交命令执行并且获取命令执行结果.""comment": "获取当前执行结果是否为有效状态",
+"如果本方法成功,则所获得连接将填入此结果变量中.""comment": "  在使用了\"连续执行命令\"或\"连续执行命令2\"加入了多条命令后,使用本方法提\n交命令执行并且获取命令执行结果.""result comment": "返回真表示有效,否则无效无法获取其任何数据.",
+"如果本方法成功,则所获得连接将填入此结果变量中.""comment": "  在使用了\"连续执行命令\"或\"连续执行命令2\"加入了多条命令后,使用本方法提\n交命令执行并且获取命令执行结果.""type": "property getter",
+"如果本方法成功,则所获得连接将填入此结果变量中.""comment": "  在使用了\"连续执行命令\"或\"连续执行命令2\"加入了多条命令后,使用本方法提\n交命令执行并且获取命令执行结果.""data type": "逻辑型",
+"如果本方法成功,则所获得连接将填入此结果变量中.""comment": "  在使用了\"连续执行命令\"或\"连续执行命令2\"加入了多条命令后,使用本方法提\n交命令执行并且获取命令执行结果.""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取文本内容",
+
+"comment": "以文本方式获取命令执行结果的内容.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取字节集内容",
+
+"comment": "以字节集方式获取命令执行结果的内容.",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真"
+  },
+  {
+comment": "提供连接服务器的超时时间,单位:秒.""method name": "取整数内容",
+comment": "提供连接服务器的超时时间,单位:秒.""comment": "获取该结果中的数值内容.",
+comment": "提供连接服务器的超时时间,单位:秒.""data type": "长整数",
+comment": "提供连接服务器的超时时间,单位:秒.""@禁止流程检查": "真"
+  },
+  {
+
+"@禁止流程检查": "真""method name": "取小数内容",
+
+"@禁止流程检查": "真""comment": "获取该结果中的小数内容.",
+
+"@禁止流程检查": "真""data type": "小数",
+
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取数组内容",
+
+"comment": "获取该结果中的数组内容并将其写入到结果参数中",
+
+"result comment": "返回写入到结果参数数组中的成员数目",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果参数",
+"data type": "Redis执行结果数组类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "Redis结果类型",
+"comment": "表示Redis执行结果中信息的类型.",
+"@常量类": "整数",
+"constants": [
+  {
+"result comment": "返回写入到结果参数数组中的成员数目""constant name": "文本内容",
+"result comment": "返回写入到结果参数数组中的成员数目""initial value": "@REDIS_REPLY_STRING"
+  },
+  {
+"result comment": "返回写入到结果参数数组中的成员数目""constant name": "数组内容",
+"result comment": "返回写入到结果参数数组中的成员数目""initial value": "@REDIS_REPLY_ARRAY"
+  },
+  {
+omment": "提供连接服务器的超时时间,单位:秒.""data type": "长整数""constant name": "整型内容",
+omment": "提供连接服务器的超时时间,单位:秒.""data type": "长整数""initial value": "@REDIS_REPLY_INTEGER"
+  },
+  {
+
+"constant name": "空内容",
+
+"comment": "表示Nil,无任何内容.",
+
+"initial value": "@REDIS_REPLY_NIL"
+  },
+  {
+
+"constant name": "状态内容",
+
+"comment": "表示本次回复的是一个状态,例如SET命令将数据成功置入将会返回该类型.",
+
+"initial value": "@REDIS_REPLY_STATUS"
+  },
+  {
+}"constant name": "错误内容",
+}"comment": "表示本次执行错误,可用取文本内容取出错误描述.",
+}"initial value": "@REDIS_REPLY_ERROR"
+  },
+  {
+"initial value": "@REDIS_REPLY_NIL""constant name": "小数内容",
+"initial value": "@REDIS_REPLY_NIL""initial value": "@REDIS_REPLY_DOUBLE"
+  },
+  {
+}"constant name": "逻辑值内容",
+}"initial value": "@REDIS_REPLY_BOOL"
+  },
+  {
+IS_REPLY_STATUS"constant name": "可变内容",
+IS_REPLY_STATUS"initial value": "@REDIS_REPLY_VERB"
+  },
+  {
+IS_REPLY_STRING"constant name": "键值对内容",
+IS_REPLY_STRING"initial value": "@REDIS_REPLY_MAP"
+  },
+  {
+S_REPLY_STRING"initial value": "@REDIS_REPLY_MAP""constant name": "集合内容",
+S_REPLY_STRING"initial value": "@REDIS_REPLY_MAP""initial value": "@REDIS_REPLY_SET"
+  },
+  {
+
+"constant name": "属性内容",
+
+"initial value": "@REDIS_REPLY_ATTR"
+  },
+  {
+IS_REPLY_ATTR"constant name": "推送内容",
+IS_REPLY_ATTR"initial value": "@REDIS_REPLY_PUSH"
+  },
+  {
+
+"constant name": "大数内容",
+
+"initial value": "@REDIS_REPLY_BIGNUM"
+  }
+]
+ },
+ {
+"class name": "Redis执行结果数组类",
+"base class": "对象数组模板类",
+"@模板实现类": "\"Redis执行结果类\""
+ },
+ {
+"class name": "Redis连接池类",
+"comment": "提供一个线程安全的Redis连接池.",
+"methods": [
+  {
+"method name": "初始化",
+"comment": "初始化Redis连接池并连接至指定Redis服务器",
+"result comment": "返回该连接池中所创建成功的连接数",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供所欲连接数据库的地址/IP.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"comment": "提供所欲连接数据库的连接端口号.",
+"data type": "整数",
+"@默认值": "6379"
+   },
+   {
+"parameter name": "超时",
+"comment": "提供连接服务器的超时时间,单位:秒.",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供该库的授权密码,无密码请留空.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "库号",
+"comment": "  提供连接成功后所欲使用的库号索引,默认情况下有16个库,可\n提供0-15之间的索引号,如自己设置库数量请提供正确范围内的索引.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大连接数",
+"comment": "连接池中所能创建的最大连接数量.",
+"data type": "整数",
+"@默认值": "50"
+   },
+   {
+"parameter name": "初始连接数",
+"comment": "初始化时所欲创建的可用连接数.",
+"data type": "整数",
+"@默认值": "10"
+   }
+]
+  },
+  {
+所欲创建的可用连接数."method name": "取连接",
+所欲创建的可用连接数."comment": "  从Redis连接池中取出一个可用的连接,成功返回真,失败返回假.\n  如果当前连接池中暂无可用连接,将会新建一个连接,如果已达到最大连接数限制时将会等待指定时长,\n超时后将会返回假.\n  注意:取出的连接使用完毕后务必调用\"释放连接\"方法,否则所取出的连接将一直处于占用状态.",
+所欲创建的可用连接数."result comment": "返回本次获取的连接是否有效.",
+所欲创建的可用连接数."data type": "逻辑型",
+所欲创建的可用连接数."@嵌入式方法": "\"\"",
+所欲创建的可用连接数."parameters": [
+   {
+"parameter name": "结果连接",
+"comment": "如果本方法成功,则所获得连接将填入此结果变量中.",
+"data type": "Redis数据库类"
+   },
+   {
+"parameter name": "繁忙等待时间",
+"comment": "指定在所有连接都已用尽时所欲等待的时长,提供-1表示无限等待,0表示不等待.单位:毫秒.",
+"data type": "整数",
+"@默认值": "10000"
+   }
+所欲创建的可用连接数.]
+  },
+  {
+comment": "如果本方法成功,则所获得连接将填入此结果变量中.""method name": "释放连接",
+comment": "如果本方法成功,则所获得连接将填入此结果变量中.""comment": "释放从连接池中所取出的连接对象,使其在连接池中恢复空闲状态等待被获取.\n注意:取出的连接使用完毕后务必调用本方法释放,否则所取出的连接将一直处于占用状态.",
+comment": "如果本方法成功,则所获得连接将填入此结果变量中.""@嵌入式方法": "\"\"",
+comment": "如果本方法成功,则所获得连接将填入此结果变量中.""parameters": [
+   {
+"parameter name": "连接对象",
+"comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.",
+"data type": "Redis数据库类"
+   }
+comment": "如果本方法成功,则所获得连接将填入此结果变量中."]
+  },
+  {
+comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.""method name": "释放所有连接",
+comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.""comment": "释放连接池中所有的连接对象,使其在连接池中恢复空闲状态等待被获取.\n调用本方法时必须确认所有连接目前不再使用.",
+comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.""@嵌入式方法": "\"\""
+  },
+  {
+欲创建的可用连接数."result comment": "返回本次获取的连接是否有效.""method name": "销毁连接",
+欲创建的可用连接数."result comment": "返回本次获取的连接是否有效.""comment": "销毁连接池中的指定连接,该连接将会从连接池中被移除并断开释放.",
+欲创建的可用连接数."result comment": "返回本次获取的连接是否有效.""@嵌入式方法": "\"\"",
+欲创建的可用连接数."result comment": "返回本次获取的连接是否有效.""parameters": [
+   {
+"parameter name": "连接对象",
+"comment": "提供所欲销毁的连接对象,必须确认此连接不再使用.",
+"data type": "Redis数据库类"
+   }
+欲创建的可用连接数."result comment": "返回本次获取的连接是否有效."]
+  },
+  {
+comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.""method name": "创建连接",
+comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.""comment": "在该连接池中新建一个连接,返回创建的结果.",
+comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.""result comment": "如果当前连接池中连接已达最大连接数将会返回失败.",
+comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.""data type": "逻辑型",
+comment": "提供所欲释放的连接对象,必须确认此连接目前不再使用.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取空闲连接数",
+}"comment": "获取当前连接池中空闲的可用连接数.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "结果连接""method name": "取连接数",
+ameter name": "结果连接""comment": "获取当前连接池中所有的可用连接数(包括所有空闲或正在执行任务的连接).",
+ameter name": "结果连接""data type": "整数",
+ameter name": "结果连接""@嵌入式方法": "\"\""
+  }
+]
+ }
+问本程序中的接口需要引用模块"Redis数据库".]
+}

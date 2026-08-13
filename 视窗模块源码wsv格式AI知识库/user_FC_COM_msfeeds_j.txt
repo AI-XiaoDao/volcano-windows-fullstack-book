@@ -1,0 +1,1019 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.程序",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "RSS相关的",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"COM_msfeeds\\\\msfeeds.tlh\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "IFeed",
+"methods": [
+  {
+ 整数"method name": "Xml",
+ 整数"result comment": "_bstr_t",
+ 整数"data type": "文本型",
+ 整数"@嵌入式方法": "\"\"",
+ 整数"parameters": [
+   {
+"parameter name": "Count",
+"comment": "long Count",
+"data type": "整数"
+   },
+   {
+"parameter name": "sortProperty",
+"comment": "enum FEEDS_XML_SORT_PROPERTY sortProperty",
+"data type": "整数"
+   },
+   {
+"parameter name": "sortOrder",
+"comment": "enum FEEDS_XML_SORT_ORDER sortOrder",
+"data type": "整数"
+   },
+   {
+"parameter name": "filterFlags",
+"comment": "enum FEEDS_XML_FILTER_FLAGS filterFlags",
+"data type": "整数"
+   },
+   {
+"parameter name": "includeFlags",
+"comment": "enum FEEDS_XML_INCLUDE_FLAGS includeFlags",
+"data type": "整数"
+   }
+ 整数]
+  },
+  {
+
+"method name": "GetName",
+
+"result comment": "_bstr_t",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Rename",
+
+"result comment": "HRESULT",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "Name",
+"comment": "_bstr_t Name",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "GetUrl",
+ }"result comment": "_bstr_t",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+"result comment": "HRESULT""method name": "PutUrl",
+"result comment": "HRESULT""result comment": "void",
+"result comment": "HRESULT""@嵌入式方法": "\"\"",
+"result comment": "HRESULT""parameters": [
+   {
+"parameter name": "feedUrl",
+"comment": "_bstr_t feedUrl",
+"data type": "文本型"
+   }
+"result comment": "HRESULT"]
+  },
+  {
+result comment": "HRESULT""result comment": "void""method name": "GetLocalId",
+result comment": "HRESULT""result comment": "void""result comment": "_bstr_t",
+result comment": "HRESULT""result comment": "void""data type": "文本型",
+result comment": "HRESULT""result comment": "void""@嵌入式方法": "\"\""
+  },
+  {
+esult comment": "HRESULT""result comment": "void""result comment": "_bstr_t""method name": "GetPath",
+esult comment": "HRESULT""result comment": "void""result comment": "_bstr_t""result comment": "_bstr_t",
+esult comment": "HRESULT""result comment": "void""result comment": "_bstr_t""data type": "文本型",
+esult comment": "HRESULT""result comment": "void""result comment": "_bstr_t""@嵌入式方法": "\"\""
+  },
+  {
+t comment": "HRESULT""result comment": "void""result comment": "_bstr_t""method name": "GetPath""method name": "Move",
+t comment": "HRESULT""result comment": "void""result comment": "_bstr_t""method name": "GetPath""result comment": "HRESULT",
+t comment": "HRESULT""result comment": "void""result comment": "_bstr_t""method name": "GetPath""data type": "整数",
+t comment": "HRESULT""result comment": "void""result comment": "_bstr_t""method name": "GetPath""@嵌入式方法": "\"\"",
+t comment": "HRESULT""result comment": "void""result comment": "_bstr_t""method name": "GetPath""parameters": [
+   {
+"parameter name": "newParentPath",
+"comment": "_bstr_t newParentPath",
+"data type": "文本型"
+   }
+t comment": "HRESULT""result comment": "void""result comment": "_bstr_t""method name": "GetPath"]
+  },
+  {
+sult comment": "HRESULT""result comment": "void""result comment": "_bstr_t""@嵌入式方法": "\"\"""method name": "GetParent",
+sult comment": "HRESULT""result comment": "void""result comment": "_bstr_t""@嵌入式方法": "\"\"""result comment": "IDispatchPtr",
+sult comment": "HRESULT""result comment": "void""result comment": "_bstr_t""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetLastWriteTime",
+}"result comment": "DATE",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "Delete",
+"@嵌入式方法": "\"\"""result comment": "HRESULT",
+"@嵌入式方法": "\"\"""data type": "整数",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""data type": "整数""method name": "Download",
+@嵌入式方法": "\"\"""data type": "整数""result comment": "HRESULT",
+@嵌入式方法": "\"\"""data type": "整数""data type": "整数",
+@嵌入式方法": "\"\"""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "AsyncDownload",
+}"result comment": "HRESULT",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+嵌入式方法": "\"\"""data type": "整数""result comment": "HRESULT""method name": "CancelAsyncDownload",
+嵌入式方法": "\"\"""data type": "整数""result comment": "HRESULT""result comment": "HRESULT",
+嵌入式方法": "\"\"""data type": "整数""result comment": "HRESULT""data type": "整数",
+嵌入式方法": "\"\"""data type": "整数""result comment": "HRESULT""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "PutSyncSetting",
+}"result comment": "void",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "SyncSetting",
+"comment": "enum FEEDS_SYNC_SETTING SyncSetting",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"result comment": "HRESULT""method name": "GetInterval",
+"result comment": "HRESULT""result comment": "long",
+"result comment": "HRESULT""data type": "整数",
+"result comment": "HRESULT""@嵌入式方法": "\"\""
+  },
+  {
+comment": "enum FEEDS_SYNC_SETTING SyncSetting""method name": "PutInterval",
+comment": "enum FEEDS_SYNC_SETTING SyncSetting""result comment": "void",
+comment": "enum FEEDS_SYNC_SETTING SyncSetting""@嵌入式方法": "\"\"",
+comment": "enum FEEDS_SYNC_SETTING SyncSetting""parameters": [
+   {
+"parameter name": "minutes",
+"comment": "long minutes",
+"data type": "整数"
+   }
+comment": "enum FEEDS_SYNC_SETTING SyncSetting"]
+  },
+  {
+thod name": "PutSyncSetting""method name": "GetLastDownloadTime",
+thod name": "PutSyncSetting""result comment": "DATE",
+thod name": "PutSyncSetting""@嵌入式方法": "\"\""
+  },
+  {
+result comment": "HRESULT""@嵌入式方法": "\"\"""method name": "GetLocalEnclosurePath",
+result comment": "HRESULT""@嵌入式方法": "\"\"""result comment": "_bstr_t",
+result comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型",
+result comment": "HRESULT""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ult comment": "HRESULT""method name": "GetInterval""method name": "GetItems",
+ult comment": "HRESULT""method name": "GetInterval""result comment": "IDispatchPtr",
+ult comment": "HRESULT""method name": "GetInterval""@嵌入式方法": "\"\""
+  },
+  {
+esult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""method name": "GetItem",
+esult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""result comment": "IDispatchPtr",
+esult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""data type": "IFeedItem",
+esult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""@嵌入式方法": "\"\"",
+esult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""parameters": [
+   {
+"parameter name": "itemId",
+"comment": "long itemId",
+"data type": "整数"
+   }
+esult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型"]
+  },
+  {
+
+"method name": "GetTitle",
+
+"result comment": "_bstr_t",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+sult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""@嵌入式方法": "\"\"""method name": "GetDescription",
+sult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""@嵌入式方法": "\"\"""result comment": "_bstr_t",
+sult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""@嵌入式方法": "\"\"""data type": "文本型",
+sult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "GetLink",
+ }"result comment": "_bstr_t",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetImage",
+}"result comment": "_bstr_t",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "文本型""method name": "GetLastBuildDate",
+"data type": "文本型""result comment": "DATE",
+"data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetPubDate",
+
+"result comment": "DATE",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"result comment": "_bstr_t""method name": "GetTtl",
+"result comment": "_bstr_t""result comment": "long",
+"result comment": "_bstr_t""data type": "整数",
+"result comment": "_bstr_t""@嵌入式方法": "\"\""
+  },
+  {
+result comment": "_bstr_t""data type": "整数""method name": "GetLanguage",
+result comment": "_bstr_t""data type": "整数""result comment": "_bstr_t",
+result comment": "_bstr_t""data type": "整数""data type": "文本型",
+result comment": "_bstr_t""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+a type": "文本型""method name": "GetLastBuildDate""method name": "GetCopyright",
+a type": "文本型""method name": "GetLastBuildDate""result comment": "_bstr_t",
+a type": "文本型""method name": "GetLastBuildDate""data type": "文本型",
+a type": "文本型""method name": "GetLastBuildDate""@嵌入式方法": "\"\""
+  },
+  {
+thod name": "GetPubDate""method name": "GetMaxItemCount",
+thod name": "GetPubDate""result comment": "long",
+thod name": "GetPubDate""data type": "整数",
+thod name": "GetPubDate""@嵌入式方法": "\"\""
+  },
+  {
+thod name": "GetPubDate""method name": "PutMaxItemCount",
+thod name": "GetPubDate""result comment": "void",
+thod name": "GetPubDate""@嵌入式方法": "\"\"",
+thod name": "GetPubDate""parameters": [
+   {
+"parameter name": "Count",
+"comment": "long Count",
+"data type": "整数"
+   }
+thod name": "GetPubDate"]
+  },
+  {
+sult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""parameters": [
+"method name": "GetDownloadEnclosuresAutomatically",
+sult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""parameters": [
+"result comment": "VARIANT_BOOL",
+sult comment": "HRESULT""@嵌入式方法": "\"\"""data type": "文本型""parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "PutDownloadEnclosuresAutomatically",
+"result comment": "void",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "DownloadEnclosuresAutomatically",
+"comment": "VARIANT_BOOL DownloadEnclosuresAutomatically",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+ }"method name": "Merge",
+ }"result comment": "HRESULT",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "feedXml",
+"comment": "_bstr_t feedXml",
+"data type": "文本型"
+   },
+   {
+"parameter name": "feedUrl",
+"comment": "_bstr_t feedUrl",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+axItemCount"method name": "GetDownloadUrl",
+axItemCount"result comment": "_bstr_t",
+axItemCount"data type": "文本型",
+axItemCount"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetIsList",
+}"result comment": "VARIANT_BOOL",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "Merge""method name": "MarkAllItemsRead",
+ethod name": "Merge""result comment": "HRESULT",
+ethod name": "Merge""data type": "整数",
+ethod name": "Merge""@嵌入式方法": "\"\""
+  },
+  {
+]"method name": "GetWatcher",
+]"result comment": "IDispatchPtr",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "scope",
+"comment": "enum FEEDS_EVENTS_SCOPE scope",
+"data type": "整数"
+   },
+   {
+"parameter name": "mask",
+"comment": "enum FEEDS_EVENTS_MASK mask",
+"data type": "整数"
+   }
+]]
+  },
+  {
+ }"method name": "GetUnreadItemCount",
+ }"result comment": "long",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "GetItemCount",
+ }"result comment": "long",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IFeedEnclosure",
+"methods": [
+  {
+thod name": "Merge""data type": "整数""method name": "GetUrl",
+thod name": "Merge""data type": "整数""result comment": "_bstr_t",
+thod name": "Merge""data type": "整数""data type": "文本型",
+thod name": "Merge""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetType",
+
+"result comment": "_bstr_t",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "scope""method name": "GetLength",
+ameter name": "scope""result comment": "long",
+ameter name": "scope""data type": "整数",
+ameter name": "scope""@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "GetItemCount""method name": "AsyncDownload",
+ethod name": "GetItemCount""result comment": "HRESULT",
+ethod name": "GetItemCount""data type": "整数",
+ethod name": "GetItemCount""@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "GetItemCount""method name": "CancelAsyncDownload",
+ethod name": "GetItemCount""result comment": "HRESULT",
+ethod name": "GetItemCount""data type": "整数",
+ethod name": "GetItemCount""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetLocalPath",
+
+"result comment": "_bstr_t",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+nreadItemCount"method name": "GetParent",
+nreadItemCount"result comment": "IDispatchPtr",
+nreadItemCount"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "GetItemCount""data type": "整数""method name": "GetDownloadUrl",
+thod name": "GetItemCount""data type": "整数""result comment": "_bstr_t",
+thod name": "GetItemCount""data type": "整数""data type": "文本型",
+thod name": "GetItemCount""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "scope""result comment": "long""method name": "GetDownloadMimeType",
+meter name": "scope""result comment": "long""result comment": "_bstr_t",
+meter name": "scope""result comment": "long""data type": "文本型",
+meter name": "scope""result comment": "long""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "RemoveFile",
+
+"result comment": "HRESULT",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "SetFile",
+
+"result comment": "HRESULT",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "DownloadUrl",
+"comment": "_bstr_t DownloadUrl",
+"data type": "文本型"
+   },
+   {
+"parameter name": "downloadFilePath",
+"comment": "_bstr_t downloadFilePath",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DownloadMimeType",
+"comment": "_bstr_t DownloadMimeType",
+"data type": "文本型"
+   },
+   {
+"parameter name": "enclosureFilename",
+"comment": "_bstr_t enclosureFilename",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "IFeedFolder",
+"methods": [
+  {
+"method name": "GetFeeds",
+"result comment": "IDispatchPtr",
+"data type": "IFeed",
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "GetSubfolders",
+"result comment": "IDispatchPtr",
+"@嵌入式方法": "\"\""
+  },
+  {
+ name": "GetItemCount""data type": "整数""method name": "GetDownloadUrl""method name": "CreateFeed",
+ name": "GetItemCount""data type": "整数""method name": "GetDownloadUrl""result comment": "IDispatchPtr",
+ name": "GetItemCount""data type": "整数""method name": "GetDownloadUrl""data type": "IFeed",
+ name": "GetItemCount""data type": "整数""method name": "GetDownloadUrl""@嵌入式方法": "\"\"",
+ name": "GetItemCount""data type": "整数""method name": "GetDownloadUrl""parameters": [
+   {
+"parameter name": "feedName",
+"comment": "_bstr_t feedName",
+"data type": "文本型"
+   },
+   {
+"parameter name": "feedUrl",
+"comment": "_bstr_t feedUrl",
+"data type": "文本型"
+   }
+ name": "GetItemCount""data type": "整数""method name": "GetDownloadUrl"]
+  },
+  {
+
+"method name": "CreateSubfolder",
+
+"result comment": "IDispatchPtr",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "folderName",
+"comment": "_bstr_t folderName",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "ExistsFeed",
+
+"result comment": "VARIANT_BOOL",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "feedName",
+"comment": "_bstr_t feedName",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ethod name": "CreateSubfolder""method name": "GetFeed",
+ethod name": "CreateSubfolder""result comment": "IDispatchPtr",
+ethod name": "CreateSubfolder""@嵌入式方法": "\"\"",
+ethod name": "CreateSubfolder""parameters": [
+   {
+"parameter name": "feedName",
+"comment": "_bstr_t feedName",
+"data type": "文本型"
+   }
+ethod name": "CreateSubfolder"]
+  },
+  {
+data type": "文本型""method name": "ExistsSubfolder",
+data type": "文本型""result comment": "VARIANT_BOOL",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "folderName",
+"comment": "_bstr_t folderName",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "GetSubfolder",
+
+"result comment": "IDispatchPtr",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "folderName",
+"comment": "_bstr_t folderName",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "Delete",
+"result comment": "HRESULT",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetName",
+
+"result comment": "_bstr_t",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "GetName""method name": "Rename",
+thod name": "GetName""result comment": "HRESULT",
+thod name": "GetName""data type": "整数",
+thod name": "GetName""@嵌入式方法": "\"\"",
+thod name": "GetName""parameters": [
+   {
+"parameter name": "folderName",
+"comment": "_bstr_t folderName",
+"data type": "文本型"
+   }
+thod name": "GetName"]
+  },
+  {
+}"method name": "GetPath",
+}"result comment": "_bstr_t",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "feedName""method name": "Move",
+ameter name": "feedName""result comment": "HRESULT",
+ameter name": "feedName""data type": "整数",
+ameter name": "feedName""@嵌入式方法": "\"\"",
+ameter name": "feedName""parameters": [
+   {
+"parameter name": "newParentPath",
+"comment": "_bstr_t newParentPath",
+"data type": "文本型"
+   }
+ameter name": "feedName"]
+  },
+  {
+"method name": "GetParent",
+"result comment": "IDispatchPtr",
+"@嵌入式方法": "\"\""
+  },
+  {
+er name": "feedName""method name": "Move""method name": "GetIsRoot",
+er name": "feedName""method name": "Move""result comment": "VARIANT_BOOL",
+er name": "feedName""method name": "Move""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetTotalUnreadItemCount",
+}"result comment": "long",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetTotalItemCount",
+}"result comment": "long",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "GetPath""method name": "GetWatcher",
+thod name": "GetPath""result comment": "IDispatchPtr",
+thod name": "GetPath""@嵌入式方法": "\"\"",
+thod name": "GetPath""parameters": [
+   {
+"parameter name": "scope",
+"comment": "enum FEEDS_EVENTS_SCOPE scope",
+"data type": "整数"
+   },
+   {
+"parameter name": "mask",
+"comment": "enum FEEDS_EVENTS_MASK mask",
+"data type": "整数"
+   }
+thod name": "GetPath"]
+  }
+]
+ },
+ {
+"class name": "IFeedItem",
+"methods": [
+  {
+}"method name": "Xml",
+}"result comment": "_bstr_t",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "includeFlags",
+"comment": "enum FEEDS_XML_INCLUDE_FLAGS includeFlags",
+"data type": "整数"
+   }
+}]
+  },
+  {
+thod name": "GetTotalUnreadItemCount""method name": "GetTitle",
+thod name": "GetTotalUnreadItemCount""result comment": "_bstr_t",
+thod name": "GetTotalUnreadItemCount""data type": "文本型",
+thod name": "GetTotalUnreadItemCount""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetLink",
+
+"result comment": "_bstr_t",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "文本型""method name": "GetGuid",
+"data type": "文本型""result comment": "_bstr_t",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+ name": "GetName""method name": "Rename""method name": "GetDescription",
+ name": "GetName""method name": "Rename""result comment": "_bstr_t",
+ name": "GetName""method name": "Rename""data type": "文本型",
+ name": "GetName""method name": "Rename""@嵌入式方法": "\"\""
+  },
+  {
+name": "GetName""method name": "Rename""result comment": "_bstr_t""method name": "GetPubDate",
+name": "GetName""method name": "Rename""result comment": "_bstr_t""result comment": "DATE",
+name": "GetName""method name": "Rename""result comment": "_bstr_t""@嵌入式方法": "\"\""
+  },
+  {
+name": "GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments",
+name": "GetName""method name": "Rename""@嵌入式方法": "\"\"""result comment": "_bstr_t",
+name": "GetName""method name": "Rename""@嵌入式方法": "\"\"""data type": "文本型",
+name": "GetName""method name": "Rename""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+name": "GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetAuthor",
+name": "GetName""method name": "Rename""@嵌入式方法": "\"\"""result comment": "_bstr_t",
+name": "GetName""method name": "Rename""@嵌入式方法": "\"\"""data type": "文本型",
+name": "GetName""method name": "Rename""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+": "GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetAuthor""method name": "GetEnclosure",
+": "GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetAuthor""result comment": "IDispatchPtr",
+": "GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetAuthor""@嵌入式方法": "\"\""
+  },
+  {
+": "GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""method name": "GetIsRead",
+": "GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""result comment": "VARIANT_BOOL",
+": "GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""@嵌入式方法": "\"\""
+  },
+  {
+GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""method name": "GetIsRead""method name": "PutIsRead",
+GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""method name": "GetIsRead""result comment": "void",
+GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""method name": "GetIsRead""@嵌入式方法": "\"\"",
+GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""method name": "GetIsRead""parameters": [
+   {
+"parameter name": "IsRead",
+"comment": "VARIANT_BOOL IsRead",
+"data type": "逻辑型"
+   }
+GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""method name": "GetIsRead"]
+  },
+  {
+}"method name": "GetLocalId",
+}"result comment": "long",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "GetLocalId""method name": "GetParent",
+thod name": "GetLocalId""result comment": "IDispatchPtr",
+thod name": "GetLocalId""@嵌入式方法": "\"\""
+  },
+  {
+hod name": "GetLocalId""@嵌入式方法": "\"\"""method name": "Delete",
+hod name": "GetLocalId""@嵌入式方法": "\"\"""result comment": "HRESULT",
+hod name": "GetLocalId""@嵌入式方法": "\"\"""data type": "整数",
+hod name": "GetLocalId""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetDownloadUrl",
+
+"result comment": "_bstr_t",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "feedName""method name": "GetLastDownloadTime",
+ameter name": "feedName""result comment": "DATE",
+ameter name": "feedName""@嵌入式方法": "\"\""
+  },
+  {
+GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""method name": "GetIsRead""method name": "GetModified",
+GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""method name": "GetIsRead""result comment": "DATE",
+GetName""method name": "Rename""@嵌入式方法": "\"\"""method name": "GetComments""method name": "GetIsRead""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IFeedsEnum",
+"methods": [
+  {
+result comment": "IDispatchPtr""method name": "GetCount",
+result comment": "IDispatchPtr""result comment": "long",
+result comment": "IDispatchPtr""data type": "整数",
+result comment": "IDispatchPtr""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Item",
+
+"result comment": "IDispatchPtr",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "index",
+"comment": "long index",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"data type": "整数""method name": "Get_NewEnum",
+"data type": "整数""result comment": "IEnumVARIANTPtr",
+"data type": "整数""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "IFeedsManager",
+"methods": [
+  {
+
+"method name": "GetRootFolder",
+
+"result comment": "IDispatchPtr",
+
+"data type": "IFeedFolder",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "GetLocalId""method name": "IsSubscribed",
+thod name": "GetLocalId""result comment": "VARIANT_BOOL",
+thod name": "GetLocalId""data type": "逻辑型",
+thod name": "GetLocalId""@嵌入式方法": "\"\"",
+thod name": "GetLocalId""parameters": [
+   {
+"parameter name": "feedUrl",
+"comment": "_bstr_t feedUrl",
+"data type": "文本型"
+   }
+thod name": "GetLocalId"]
+  },
+  {
+}"method name": "ExistsFeed",
+}"result comment": "VARIANT_BOOL",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "feedPath",
+"comment": "_bstr_t feedPath",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+data type": "整数""result comment": "IEnumVARIANTPtr""method name": "GetFeed",
+data type": "整数""result comment": "IEnumVARIANTPtr""result comment": "IDispatchPtr",
+data type": "整数""result comment": "IEnumVARIANTPtr""data type": "IFeed",
+data type": "整数""result comment": "IEnumVARIANTPtr""@嵌入式方法": "\"\"",
+data type": "整数""result comment": "IEnumVARIANTPtr""parameters": [
+   {
+"parameter name": "feedPath",
+"comment": "_bstr_t feedPath",
+"data type": "文本型"
+   }
+data type": "整数""result comment": "IEnumVARIANTPtr"]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "GetFeedByUrl",
+"@嵌入式方法": "\"\"""result comment": "IDispatchPtr",
+"@嵌入式方法": "\"\"""data type": "IFeed",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "feedUrl",
+"comment": "_bstr_t feedUrl",
+"data type": "文本型"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+"method name": "ExistsFolder",
+"result comment": "VARIANT_BOOL",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "folderPath",
+"comment": "_bstr_t folderPath",
+"data type": "文本型"
+   }
+]
+  },
+  {
+r_t feedPath"method name": "GetFolder",
+r_t feedPath"result comment": "IDispatchPtr",
+r_t feedPath"@嵌入式方法": "\"\"",
+r_t feedPath"parameters": [
+   {
+"parameter name": "folderPath",
+"comment": "_bstr_t folderPath",
+"data type": "文本型"
+   }
+r_t feedPath]
+  },
+  {
+comment": "_bstr_t folderPath""method name": "DeleteFeed",
+comment": "_bstr_t folderPath""result comment": "HRESULT",
+comment": "_bstr_t folderPath""data type": "整数",
+comment": "_bstr_t folderPath""@嵌入式方法": "\"\"",
+comment": "_bstr_t folderPath""parameters": [
+   {
+"parameter name": "feedPath",
+"comment": "_bstr_t feedPath",
+"data type": "文本型"
+   }
+comment": "_bstr_t folderPath"]
+  },
+  {
+comment": "_bstr_t folderPath""method name": "DeleteFolder",
+comment": "_bstr_t folderPath""result comment": "HRESULT",
+comment": "_bstr_t folderPath""data type": "整数",
+comment": "_bstr_t folderPath""@嵌入式方法": "\"\"",
+comment": "_bstr_t folderPath""parameters": [
+   {
+"parameter name": "folderPath",
+"comment": "_bstr_t folderPath",
+"data type": "文本型"
+   }
+comment": "_bstr_t folderPath"]
+  },
+  {
+
+"method name": "BackgroundSync",
+
+"result comment": "HRESULT",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "action",
+"comment": "enum FEEDS_BACKGROUNDSYNC_ACTION action",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+_t feedPath"parameters": [
+"method name": "GetDefaultInterval",
+_t feedPath"parameters": [
+"result comment": "long",
+_t feedPath"parameters": [
+"data type": "整数",
+_t feedPath"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+omment": "_bstr_t folderPath""@嵌入式方法": "\"\"""method name": "PutDefaultInterval",
+omment": "_bstr_t folderPath""@嵌入式方法": "\"\"""result comment": "void",
+omment": "_bstr_t folderPath""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+omment": "_bstr_t folderPath""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "minutes",
+"comment": "long minutes",
+"data type": "整数"
+   }
+omment": "_bstr_t folderPath""@嵌入式方法": "\"\""]
+  },
+  {
+data type": "整数""method name": "AsyncSyncAll",
+data type": "整数""result comment": "HRESULT",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "Normalize",
+data type": "整数""result comment": "_bstr_t",
+data type": "整数""data type": "文本型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "feedXmlIn",
+"comment": "_bstr_t feedXmlIn",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "GetItemCountLimit",
+}"result comment": "long",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

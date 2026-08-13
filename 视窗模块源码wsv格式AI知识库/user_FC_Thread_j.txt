@@ -1,0 +1,814 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.线程\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______线程辅助函数",
+"@全局类": "真",
+"methods": [
+  {
+欲操作的变量 未运算前的值""method name": "WaitForSingleObject",
+欲操作的变量 未运算前的值""result comment": "具体查看 等待对象常量 这个里面的值",
+欲操作的变量 未运算前的值""static": true,
+欲操作的变量 未运算前的值""data type": "整数",
+欲操作的变量 未运算前的值""@嵌入式方法": "\"\"",
+欲操作的变量 未运算前的值""parameters": [
+   {
+"parameter name": "句柄",
+"comment": "对象的句柄 handle to object",
+"data type": "变整数"
+   },
+   {
+"parameter name": "等待超时",
+"comment": "-1表示一直等待 超时 time-out interval",
+"data type": "整数",
+"@默认值": "-1"
+   }
+欲操作的变量 未运算前的值"]
+  },
+  {
+操作的变量 未运算前的值"method name": "CreateEvent",
+操作的变量 未运算前的值"result comment": "返回创建的事件句柄",
+操作的变量 未运算前的值"static": true,
+操作的变量 未运算前的值"data type": "变整数",
+操作的变量 未运算前的值"@嵌入式方法": "\"\"",
+操作的变量 未运算前的值"parameters": [
+   {
+"parameter name": "是否手动设置信号",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否置有信号",
+"comment": "如果为真，则设置信号，否则为无信号状态",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "事件名称",
+"comment": "事件名称，如果为不填写，默认值表示创建 \n匿名事件",
+"@匹配类型": "通用基本型",
+"@默认值": "0"
+   }
+操作的变量 未运算前的值]
+  },
+  {
+
+"method name": "CloseHandle",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内核对象句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ameter name": "等待超时""method name": "OpenEvent",
+ameter name": "等待超时""static": true,
+ameter name": "等待超时""data type": "变整数",
+ameter name": "等待超时""@嵌入式方法": "\"\"",
+ameter name": "等待超时""parameters": [
+   {
+"parameter name": "事件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问权限",
+"data type": "OpenEvent常量",
+"@默认值": "OpenEvent常量.EVENT_ALL_ACCESS"
+   },
+   {
+"parameter name": "是否可继承句柄",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "等待超时"]
+  },
+  {
+ }"method name": "ResetEvent",
+ }"comment": "置事件无信号",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "事件句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+comment": "如果为真，则设置信号，否则为无信号状态""method name": "SetEvent",
+comment": "如果为真，则设置信号，否则为无信号状态""comment": "设置事件有信号",
+comment": "如果为真，则设置信号，否则为无信号状态""static": true,
+comment": "如果为真，则设置信号，否则为无信号状态""@嵌入式方法": "\"\"",
+comment": "如果为真，则设置信号，否则为无信号状态""parameters": [
+   {
+"parameter name": "事件句柄",
+"data type": "变整数"
+   }
+comment": "如果为真，则设置信号，否则为无信号状态"]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "PulseEvent",
+}"@嵌入式方法": "\"\"""comment": "The PulseEvent function sets the specified event object\nto the signaled state and then resets it to the nonsignaled state\nafter releasing the appropriate number of waiting threads. ",
+}"@嵌入式方法": "\"\"""static": true,
+}"@嵌入式方法": "\"\"""data type": "逻辑型",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "事件句柄",
+"data type": "变整数"
+   }
+}"@嵌入式方法": "\"\""]
+  }
+]
+ },
+ {
+"class name": "OpenEvent常量",
+"@常量类": "整数",
+"constants": [
+  {
+ameter name": "事件句柄""constant name": "EVENT_ALL_ACCESS",
+ameter name": "事件句柄""comment": "所有权限",
+ameter name": "事件句柄""initial value": "@EVENT_ALL_ACCESS"
+  },
+  {
+
+"constant name": "EVENT_MODIFY_STATE",
+
+"comment": "修改信号状态权限",
+
+"initial value": "@EVENT_MODIFY_STATE"
+  },
+  {
+meter name": "事件句柄""initial value": "@EVENT_ALL_ACCESS""constant name": "SYNCHRONIZE",
+meter name": "事件句柄""initial value": "@EVENT_ALL_ACCESS""initial value": "@SYNCHRONIZE"
+  }
+]
+ },
+ {
+"class name": "等待对象常量",
+"constants": [
+  {
+"initial value": "@EVENT_MODIFY_STATE""constant name": "WAIT_ABANDONED",
+"initial value": "@EVENT_MODIFY_STATE""data type": "整数",
+"initial value": "@EVENT_MODIFY_STATE""initial value": "@WAIT_ABANDONED"
+  },
+  {
+}"constant name": "WAIT_OBJECT_0",
+}"data type": "整数",
+}"initial value": "@WAIT_OBJECT_0"
+  },
+  {
+meter name": "事件句柄""comment": "所有权限""constant name": "WAIT_TIMEOUT",
+meter name": "事件句柄""comment": "所有权限""data type": "整数",
+meter name": "事件句柄""comment": "所有权限""initial value": "@WAIT_TIMEOUT"
+  }
+]
+ },
+ {
+"class name": "______线程基础函数",
+"@全局类": "真",
+"methods": [
+  {
+meter name": "事件句柄""comment": "所有权限""method name": "多线程_创建",
+meter name": "事件句柄""comment": "所有权限""result comment": "返回线程句柄",
+meter name": "事件句柄""comment": "所有权限""static": true,
+meter name": "事件句柄""comment": "所有权限""data type": "变整数",
+meter name": "事件句柄""comment": "所有权限""@嵌入式方法": "\"\"",
+meter name": "事件句柄""comment": "所有权限""parameters": [
+   {
+"parameter name": "回调函数",
+"comment": "一个参数 原型如右边   整数 WINAPI 回调函数(变整数 参数)  定义的时候注意设置前缀",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "线程ID",
+"comment": "这个是返回值，，传递一个变量，返回一个线程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否挂起",
+"comment": "创建的时候是否挂起状态，默认创建了就运行",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+meter name": "事件句柄""comment": "所有权限"]
+  },
+  {
+methods": [
+"method name": "多线程_投递消息",
+methods": [
+"static": true,
+methods": [
+"data type": "逻辑型",
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "线程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "多线程_等待",
+
+"comment": "可以设置一个时间，然后等待线程执行，调用此函数会等待线程执行完毕",
+
+"result comment": "具体查看 等待对象常量 ",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "线程句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "等待时间",
+"comment": "-1表示一直等待",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+"method name": "多线程_暂停",
+"comment": "暂停一个正在工作的线程",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "线程句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "多线程_取线程ID",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "线程消息类f",
+"methods": [
+  {
+"data type": "整数""method name": "线程创建完毕",
+"data type": "整数""comment": "这个只会在线程创建完毕时被调用一次",
+"data type": "整数""type": "event",
+"data type": "整数""data type": "整数",
+"data type": "整数""parameters": [
+   {
+"parameter name": "线程参数",
+"data type": "变整数"
+   }
+"data type": "整数"]
+  },
+  {
+"method name": "线程退出",
+"comment": "线程退出时调用",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "线程参数",
+"data type": "变整数"
+   }
+]
+  },
+  {
+methods": [
+"method name": "收到消息",
+methods": [
+"type": "event",
+methods": [
+"data type": "整数",
+methods": [
+"parameters": [
+   {
+"parameter name": "消息",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数"
+   }
+methods": [
+]
+  },
+  {
+}"method name": "工作函数",
+}"comment": "此函数会被调用多次\n此函数会不停的被调用，一般如果没什么事情，不要卡住此线程，否则消息\n循环收不到消息",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+ameter name": "参数""method name": "创建线程",
+ameter name": "参数""data type": "逻辑型",
+ameter name": "参数""parameters": [
+   {
+"parameter name": "线程参数",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否立即启动",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "参数"]
+  },
+  {
+"method name": "投递消息",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "消息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ameter name": "参数1""method name": "投递退出消息",
+ameter name": "参数1""comment": "发送退出消息循环消息 线程内部会维护者一个消息队列\n如果队列中还有其他消息没有执行完毕，此时退出消息不会被\n处理，当消息队列中没有其他消息时，只有有退出消息时，\n线程会退出",
+ameter name": "参数1""data type": "逻辑型",
+ameter name": "参数1""@禁止流程检查": "真"
+  },
+  {
+ameter name": "消息""method name": "等待",
+ameter name": "消息""comment": "可以设置一个时间，然后等待线程执行，调用此函数会等待线程执行完毕",
+ameter name": "消息""result comment": "具体查看 等待对象常量 ",
+ameter name": "消息""data type": "整数",
+ameter name": "消息""parameters": [
+   {
+"parameter name": "等待时间",
+"comment": "-1表示一直等待",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "消息"]
+  },
+  {
+
+"method name": "暂停",
+
+"comment": "暂停一个正在工作的线程",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+"@禁止流程检查": "真""method name": "继续",
+"@禁止流程检查": "真""comment": "恢复一个被暂停的线程"
+  }
+]
+ },
+ {
+"class name": "线程类f",
+"methods": [
+  {
+"method name": "创建线程",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "线程参数",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否立即启动",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+
+"method name": "工作函数",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "线程参数",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+@默认值": "真""method name": "等待",
+@默认值": "真""comment": "可以设置一个时间，然后等待线程执行，调用此函数会等待线程执行完毕",
+@默认值": "真""result comment": "具体查看 等待对象常量 ",
+@默认值": "真""data type": "整数",
+@默认值": "真""@嵌入式方法": "\"\"",
+@默认值": "真""parameters": [
+   {
+"parameter name": "等待时间",
+"comment": "-1表示一直等待",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "真"]
+  },
+  {
+ameter name": "参数2""method name": "暂停",
+ameter name": "参数2""comment": "暂停一个正在工作的线程",
+ameter name": "参数2""data type": "整数",
+ameter name": "参数2""@嵌入式方法": "\"\""
+  },
+  {
+默认值": "真""comment": "可以设置一个时间，然后等待线程执行，调用此函数会等待线程执行完毕""method name": "继续",
+默认值": "真""comment": "可以设置一个时间，然后等待线程执行，调用此函数会等待线程执行完毕""comment": "恢复一个被暂停的线程",
+默认值": "真""comment": "可以设置一个时间，然后等待线程执行，调用此函数会等待线程执行完毕""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "强制结束",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "返回值",
+"comment": "线程返回值 ",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+"method name": "取状态",
+"result comment": "返回值等于  STILL_ACTIVE  == 0x103 表示还在运行 ",
+"data type": "整数",
+"@禁止流程检查": "真"
+  }
+]
+ },
+ {
+"class name": "多线程类F",
+"methods": [
+  {
+
+"method name": "创建线程",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "线程参数",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否立即启动",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "结束线程",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "线程参数""method name": "暂停线程",
+ameter name": "线程参数""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+ameter name": "线程参数"]
+  },
+  {
+
+"method name": "恢复线程",
+
+"comment": "恢复暂停的线程",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "恢复所有线程",
+
+"comment": "恢复暂停的线程"
+  },
+  {
+
+"method name": "强制结束所有线程",
+
+"parameters": [
+   {
+"parameter name": "线程返回值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+eter name": "线程参数"]"method name": "取线程数",
+eter name": "线程参数"]"data type": "整数"
+  },
+  {
+
+"method name": "工作函数",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "线程",
+"data type": "线程类f"
+   },
+   {
+"parameter name": "线程参数",
+"data type": "变整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "临界区类f",
+"methods": [
+  {
+thod name": "强制结束所有线程""method name": "进入许可直到子程序结束离开许可",
+thod name": "强制结束所有线程""@嵌入式方法": "\"\"",
+thod name": "强制结束所有线程""@视窗.外部头文件": "\"Thread\\\\CVolFCThread.h\""
+  },
+  {
+@默认值": "真""method name": "进入许可区"
+  },
+  {
+": "真""method name": "进入许可区""method name": "离开许可区"
+  }
+]
+ },
+ {
+"class name": "原子锁_全局类",
+"comment": "https://docs.microsoft.com/en-us/windows/win32/sync/interlocked-variable-access",
+"methods": [
+  {
+
+"method name": "自增长整数",
+
+"comment": "功能，锁住一个变量，值增加1",
+
+"result comment": "返回自增后的值",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "要自增的变量",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ }"method name": "自减长整数",
+ }"result comment": "返回自减后的值",
+ }"static": true,
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "要自减的变量",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+}"data type": "长整数""method name": "自增整数",
+}"data type": "长整数""comment": "功能，锁住一个变量，值增加1",
+}"data type": "长整数""result comment": "返回自增后的值",
+}"data type": "长整数""static": true,
+}"data type": "长整数""data type": "整数",
+}"data type": "长整数""@嵌入式方法": "\"\"",
+}"data type": "长整数""parameters": [
+   {
+"parameter name": "要自增的变量",
+"data type": "整数"
+   }
+}"data type": "长整数"]
+  },
+  {
+]"method name": "自减整数",
+]"result comment": "返回自减后的值",
+]"static": true,
+]"data type": "长整数",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "要子减的变量",
+"data type": "长整数"
+   }
+]]
+  },
+  {
+ameter name": "要自增的变量""method name": "置整数",
+ameter name": "要自增的变量""result comment": "返回 欲操作的变量 未运算前的值",
+ameter name": "要自增的变量""static": true,
+ameter name": "要自增的变量""data type": "整数",
+ameter name": "要自增的变量""@嵌入式方法": "\"\"",
+ameter name": "要自增的变量""parameters": [
+   {
+"parameter name": "欲操作的变量",
+"data type": "整数"
+   },
+   {
+"parameter name": "参与运算的值",
+"data type": "整数"
+   }
+ameter name": "要自增的变量"]
+  },
+  {
+data type": "长整数""method name": "置长整数",
+data type": "长整数""result comment": "返回 欲操作的变量 未运算前的值",
+data type": "长整数""static": true,
+data type": "长整数""data type": "长整数",
+data type": "长整数""@嵌入式方法": "\"\"",
+data type": "长整数""parameters": [
+   {
+"parameter name": "欲操作的变量",
+"data type": "整数"
+   },
+   {
+"parameter name": "参与运算的值",
+"data type": "整数"
+   }
+data type": "长整数"]
+  },
+  {
+data type": "长整数""method name": "加整数",
+data type": "长整数""result comment": "返回 欲操作的变量 未运算前的值",
+data type": "长整数""static": true,
+data type": "长整数""data type": "整数",
+data type": "长整数""@嵌入式方法": "\"\"",
+data type": "长整数""parameters": [
+   {
+"parameter name": "欲操作的变量",
+"data type": "整数"
+   },
+   {
+"parameter name": "参与运算的值",
+"data type": "整数"
+   }
+data type": "长整数"]
+  },
+  {
+ata type": "长整数""parameters": [
+"method name": "加长整数",
+ata type": "长整数""parameters": [
+"result comment": "返回 欲操作的变量 未运算前的值",
+ata type": "长整数""parameters": [
+"static": true,
+ata type": "长整数""parameters": [
+"data type": "长整数",
+ata type": "长整数""parameters": [
+"@嵌入式方法": "\"\"",
+ata type": "长整数""parameters": [
+"parameters": [
+   {
+"parameter name": "欲操作的变量",
+"data type": "长整数"
+   },
+   {
+"parameter name": "参与运算的值",
+"data type": "长整数"
+   }
+ata type": "长整数""parameters": [
+]
+  },
+  {
+ta type": "长整数""parameters": [
+"@嵌入式方法": "\"\"""method name": "异或整数",
+ta type": "长整数""parameters": [
+"@嵌入式方法": "\"\"""result comment": "返回 欲操作的变量 未运算前的值",
+ta type": "长整数""parameters": [
+"@嵌入式方法": "\"\"""static": true,
+ta type": "长整数""parameters": [
+"@嵌入式方法": "\"\"""data type": "整数",
+ta type": "长整数""parameters": [
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+ta type": "长整数""parameters": [
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "欲操作的变量",
+"data type": "整数"
+   },
+   {
+"parameter name": "参与运算的值",
+"data type": "整数"
+   }
+ta type": "长整数""parameters": [
+"@嵌入式方法": "\"\""]
+  },
+  {
+"method name": "异或长整数",
+"result comment": "返回 欲操作的变量 未运算前的值",
+"static": true,
+"data type": "长整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "欲操作的变量",
+"data type": "长整数"
+   },
+   {
+"parameter name": "参与运算的值",
+"data type": "长整数"
+   }
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

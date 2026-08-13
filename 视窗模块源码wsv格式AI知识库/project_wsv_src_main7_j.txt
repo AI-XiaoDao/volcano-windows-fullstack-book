@@ -1,0 +1,83 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+SPC\plugins\vprj_win\wizard\template\service\project_wsv\src\main.wsv"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+SPC\plugins\vprj_win\wizard\template\service\project_wsv\src\main.wsv"package name": "火山.程序",
+SPC\plugins\vprj_win\wizard\template\service\project_wsv\src\main.wsv"classes": [
+ {
+"class name": "启动类",
+"base class": "程序类",
+"constants": [
+  {
+
+"constant name": "我的服务名称",
+
+"comment": "用作提供您的服务的名称,请根据需要自行更改.",
+
+"data type": "文本型",
+
+"initial value": "\"MyVolService\""
+  }
+],
+"methods": [
+  {
+
+"method name": "启动方法",
+
+"data type": "整数"
+  }
+]
+ },
+ {
+"class name": "我的服务处理器",
+"comment": "用作实现服务的具体功能",
+"base class": "服务处理类",
+"methods": [
+  {
+
+"method name": "准备",
+
+"comment": "  当服务准备开始运行前本方法被调用,用户继承类可以覆盖本方法\n以完成自己的处理准备工作,注意耗时不要太长.\n  注意: 在本方法中不能显示任何界面窗口(包括信息框),否则将会\n导致服务卡死.",
+
+"result comment": "返回准备工作是否成功,如果返回假,服务不会被运行.",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "启动参数数组",
+"comment": "提供所有的启动参数文本",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "处理",
+
+"comment": "服务启动后本方法被调用,用户继承类应该覆盖本方法以进行自己的服务处理循环.\n如果\"准备\"方法返回假,本方法不会被调用,否则必定在\"准备\"方法之后被调用.\n注意: 在本方法中不能显示任何界面窗口(包括信息框),否则将会导致服务卡死.",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "启动参数数组",
+"comment": "提供所有的启动参数文本",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "退出通知",
+"comment": "  注意: 在本处理方法的服务处理循环中,一旦发现本退出事件被置位(即\n\"退出通知.等待 (真)\"或\"退出通知.限时等待 (xxx)\"方法调用返回真),此时表示服务已经\n被操作系统服务管理器通知退出,就需要尽快退出本方法,否则可能会被操作系统强行中止.",
+"data type": "同步事件类"
+   }
+
+]
+  }
+]
+ }
+SPC\plugins\vprj_win\wizard\template\service\project_wsv\src\main.wsv]
+}

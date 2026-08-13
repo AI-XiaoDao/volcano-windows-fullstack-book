@@ -1,0 +1,968 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"增强位图操作".
+
+{
+问本程序中的接口需要引用模块"增强位图操作"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"增强位图操作"."package name": "火山.视窗.增强位图处理",
+问本程序中的接口需要引用模块"增强位图操作"."classes": [
+ {
+    "class name": "增强位图类",
+    "comment": "处理位图操作",
+    "@视窗.外部头文件": "\"lib\\\\bitmap24.h\"",
+    "@视窗.后缀文本": "\"public CFBitMap\"",
+    "methods": [
+  {
+   "@视窗.后缀文本": "\"public CFBitMap\"""method name": "从文件创建",
+   "@视窗.后缀文本": "\"public CFBitMap\"""comment": "从文件创建当前位图对象",
+   "@视窗.后缀文本": "\"public CFBitMap\"""static": true,
+   "@视窗.后缀文本": "\"public CFBitMap\"""data type": "逻辑型",
+   "@视窗.后缀文本": "\"public CFBitMap\"""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "本地文件路径",
+"comment": "提供bmp位图文件路径",
+"data type": "文本型"
+   }
+   "@视窗.后缀文本": "\"public CFBitMap\""]
+  },
+  {
+}"method name": "从指针创建",
+}"comment": "从指针创建位图对象",
+}"result comment": "创建成功返回真",
+}"static": true,
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "位图文件指针",
+"comment": "提供位图文件数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "位图文件大小",
+"comment": "提供位图大小",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "从字节集创建",
+"comment": "从字节集创建位图对象",
+"result comment": "创建成功返回真 ",
+"static": true,
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "位图字节集",
+"comment": "提供位图字节集数据 ",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+
+"method name": "从资源创建",
+
+"comment": "从资源创建位图对象",
+
+"result comment": "创建成功返回真",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "资源",
+"comment": "提供位图资源",
+"data type": "位图资源"
+   }
+
+]
+  },
+  {
+data type": "位图资源""method name": "取位图指针",
+data type": "位图资源""comment": "取当前位图对象指针",
+data type": "位图资源""result comment": "返回位图指针数据",
+data type": "位图资源""static": true,
+data type": "位图资源""data type": "变整数",
+data type": "位图资源""@嵌入式方法": "\"\"",
+data type": "位图资源""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   }
+data type": "位图资源"]
+  },
+  {
+
+"method name": "取位图大小",
+
+"comment": "取当前位图对象大小",
+
+"result comment": "返回位图大小,单位字节 ",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+
+"method name": "到字节集",
+
+"comment": "将当前位图对象转换成字节集数据",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "结果数据",
+"comment": "转换后的数据保存在此参数中",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+ }"method name": "取像素数据缓冲指针",
+ }"comment": "24位位图像素数据是BGR排列,32位位图像素数据是BGRA排列",
+ }"result comment": "返回图像数据缓冲指针",
+ }"static": true,
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   }
+ }]
+  },
+  {
+]"method name": "取像素数据数量",
+]"comment": "取出位图像素数据数量",
+]"static": true,
+]"data type": "整数",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   }
+]]
+  },
+  {
+
+"method name": "取像素数据字节集",
+
+"comment": "取出位图像素数据字节集",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "结果字节集",
+"comment": "结果保存在此参数中",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "旋转",
+
+"comment": "对当前位图对象进行旋转操作",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "旋转度数",
+"comment": "填写旋转角度0-360度",
+"data type": "整数"
+   },
+   {
+"parameter name": "旋转后的图片",
+"comment": "旋转后的位图保存在此参数中",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+"method name": "缩放",
+"comment": "对当前位图对象进行缩放操作",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "新宽度",
+"comment": "提供缩放后的新宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "新高度",
+"comment": "提供缩放后的新高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "缩放后的图片",
+"comment": "旋转后的位图保存在此参数中",
+"data type": "增强位图类"
+   }
+]
+  },
+  {
+
+"method name": "创建",
+
+"comment": "创建一个空的位图对象",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供要创建的位图宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供要创建的位图高度 ",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色数",
+"comment": "可以创建24位位图，或者32位",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "是否存在",
+
+"comment": "判断当前位图对象是否存在数据",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+
+"method name": "宽度",
+
+"comment": "读取当前位图对象宽度",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+}"method name": "高度",
+}"comment": "读取当前位图对象高度",
+}"static": true,
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   }
+}]
+  },
+  {
+
+"method name": "取坐标红色",
+
+"comment": "取当前位图对象指定坐标处的红色值",
+
+"static": true,
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供纵坐标",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取坐标绿色",
+
+"comment": "取当前位图对象指定坐标处的绿色值",
+
+"static": true,
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供纵坐标",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取坐标蓝色",
+
+"comment": "取当前位图对象指定坐标处的蓝色值",
+
+"static": true,
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供纵坐标",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "置坐标红色",
+"comment": "取当前位图对象指定坐标的红色值,并将红色修改成指定颜色值.",
+"result comment": " ",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色值",
+"comment": "提供新的颜色值",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "置坐标绿色",
+
+"comment": "取当前位图对象指定坐标的绿色值,并将红色修改成指定颜色值.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色值",
+"comment": "提供新的颜色值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+comment": "提供新的颜色值""method name": "置坐标蓝色",
+comment": "提供新的颜色值""comment": "取当前位图对象指定坐标的蓝色值,并将红色修改成指定颜色值.",
+comment": "提供新的颜色值""static": true,
+comment": "提供新的颜色值""@嵌入式方法": "\"\"",
+comment": "提供新的颜色值""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色值",
+"comment": "提供新的颜色值",
+"data type": "整数"
+   }
+comment": "提供新的颜色值"]
+  },
+  {
+
+"method name": "取坐标颜色",
+
+"comment": "取指定坐标的颜色值",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供纵坐标",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "置坐标颜色",
+}"comment": "设置指定坐标的颜色值",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色值",
+"comment": "提供要设置的新颜色",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "填充颜色",
+"comment": "给整个位图填充颜色",
+"static": true,
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "填充颜色",
+"comment": "提供要填充的颜色",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取红色通道数组",
+"comment": "取出所有的红色通道保存在数组中",
+"parameters": [
+   {
+"parameter name": "结果数组",
+"comment": "结果保存在此参数中",
+"data type": "整数数组类"
+   }
+]
+  },
+  {
+"method name": "取绿色通道数组",
+"comment": "取出所有的绿色通道保存在数组中",
+"parameters": [
+   {
+"parameter name": "结果数组",
+"comment": "结果保存在此参数中",
+"data type": "整数数组类"
+   }
+]
+  },
+  {
+ }"method name": "取蓝色通道数组",
+ }"comment": "取出所有的蓝色通道保存在数组中",
+ }"parameters": [
+   {
+"parameter name": "结果数组",
+"comment": "结果保存在此参数中",
+"data type": "整数数组类"
+   }
+ }]
+  },
+  {
+
+"method name": "颜色位数",
+
+"comment": "取出当前位图的颜色位数",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+data type": "增强位图类""method name": "取坐标像素黑白数组",
+data type": "增强位图类""comment": " 取坐标周围像素的情况,为黑色则设置真,白色设置假.\n 将整个位图的所有像素的情况记录保存在逻辑数组中.",
+data type": "增强位图类""static": true,
+data type": "增强位图类""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "数组",
+"comment": "结果保存到此参数",
+"data type": "逻辑型数组类"
+   }
+data type": "增强位图类"]
+  },
+  {
+
+"method name": "亮度",
+
+"comment": "设置当前位图亮度",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "亮度值",
+"comment": "范围-255到255",
+"data type": "整数"
+   },
+   {
+"parameter name": "结果位图",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+"method name": "二值化",
+"comment": "对当前位图进行二值化操作",
+"static": true,
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "阈值",
+"comment": "范围0-255",
+"data type": "整数"
+   },
+   {
+"parameter name": "结果位图",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+]
+  },
+  {
+
+"method name": "灰度",
+
+"comment": "对当前位图进行灰度处理",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "结果位图",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+}"method name": "裁剪",
+}"comment": "对位图进行裁剪操作",
+}"result comment": "成功返回真",
+}"static": true,
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "横坐标",
+"comment": "提供起始横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"comment": "提供起始纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供要裁剪的宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供要裁剪的高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "存放位图",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+}]
+  },
+  {
+ }"method name": "膨胀",
+ }"comment": "对位图进行膨胀特效处理,准备膨胀的位图必须是黑白图片才能进行膨胀特效处理.",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "结果图片",
+"comment": "返回膨胀后的位图",
+"data type": "增强位图类"
+   }
+ }]
+  },
+  {
+}"method name": "腐蚀",
+}"comment": "对当前位图进行腐蚀特效处理,准备腐蚀的位图必须是黑白图片才能进行腐蚀特效处理.",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "结果图片",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+}]
+  },
+  {
+}"method name": "马赛克",
+}"comment": "对位图进行马赛克处理",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "强度",
+"comment": "从1开始,数值越大马赛克强度越大",
+"data type": "整数"
+   },
+   {
+"parameter name": "结果图片",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+}]
+  },
+  {
+
+"method name": "反色",
+
+"comment": "对位图进行反色处理",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "结果图片",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+
+"method name": "中值滤波",
+
+"comment": "对位图进行中值滤波处理",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "滤波后的图片",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+ }"method name": "均值滤波",
+ }"comment": "对位图进行均值滤波处理",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "滤波后的图片",
+"comment": "处理结果保存在此参数中",
+"data type": "增强位图类"
+   }
+ }]
+  },
+  {
+ }"method name": "椒盐噪声",
+ }"comment": "对位图进行椒盐噪声处理",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "噪声数量",
+"comment": "数量越大噪点越多",
+"data type": "整数"
+   },
+   {
+"parameter name": "结果图片",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+ }]
+  },
+  {
+
+"method name": "轮廓",
+
+"comment": "取位图轮廓,只能取出字体类的位图轮廓,例如验证码,并且验证码必须进行二值化处理,才能使用.",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "结果图片",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+
+]
+  },
+  {
+
+"method name": "细化",
+
+"comment": "对位图进行细化特效处理,准备细化的位图必须是黑白图片才能进行细化特效处理.主要针对人物,树木,验证码等操作处理.",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "增强位图类"
+   },
+   {
+"parameter name": "结果图片",
+"comment": "结果保存在此参数中",
+"data type": "增强位图类"
+   }
+
+]
+  }
+    ]
+ }
+问本程序中的接口需要引用模块"增强位图操作".]
+}

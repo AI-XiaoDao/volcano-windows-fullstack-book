@@ -1,0 +1,6254 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"HPSocket网络通讯支持".
+
+{
+码,空指针则无掩码."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+码,空指针则无掩码."package name": "火山.视窗.网络",
+码,空指针则无掩码."comment": "HTTP服务端/客户端支持",
+码,空指针则无掩码."classes": [
+ {
+뗀ꡰŝ"class name": "HPHTTP服务器基础类",
+뗀ꡰŝ"comment": "★ 本类由\"飞翔的企鹅\"封装.\nHTTP服务器基础类.",
+뗀ꡰŝ"base class": "HPTCP服务器基础类",
+뗀ꡰŝ"@文档": "\"category = \\\"辅助类\\\"\"",
+뗀ꡰŝ"@禁止创建对象": "真",
+뗀ꡰŝ"methods": [
+  {
+1则会关闭当前连接.""method name": "本地协议版本",
+1则会关闭当前连接.""comment": "设置当前本地HTTP协议版本.",
+1则会关闭当前连接.""type": "property setter",
+1则会关闭当前连接.""parameters": [
+   {
+"parameter name": "版本",
+"data type": "HPHTTP协议版本"
+   }
+1则会关闭当前连接."]
+  },
+  {
+则会关闭当前连接.""type": "property setter""method name": "本地协议版本",
+则会关闭当前连接.""type": "property setter""comment": "获取当前本地所使用HTTP协议版本.",
+则会关闭当前连接.""type": "property setter""type": "property getter",
+则会关闭当前连接.""type": "property setter""data type": "HPHTTP协议版本",
+则会关闭当前连接.""type": "property setter""@禁止流程检查": "真"
+  },
+  {
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."method name": "自动启动通信",
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."comment": "获取HTTP的启动方式.",
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."result comment": "为真表示自动启动.",
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."type": "property getter",
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."data type": "逻辑型",
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."@嵌入式方法": "\"\""
+  },
+  {
+ꡰŝ"@禁止创建对象": "真""method name": "自动启动通信",
+ꡰŝ"@禁止创建对象": "真""comment": "设置HTTP的启动方式.",
+ꡰŝ"@禁止创建对象": "真""type": "property setter",
+ꡰŝ"@禁止创建对象": "真""parameters": [
+   {
+"parameter name": "自动",
+"comment": "为真表示自动启动.",
+"data type": "逻辑型"
+   }
+ꡰŝ"@禁止创建对象": "真"]
+  },
+  {
+data type": "逻辑型""method name": "释放延时",
+data type": "逻辑型""comment": "设置连接释放延时.",
+data type": "逻辑型""type": "property setter",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "时长",
+"comment": "单位:毫秒,默认3000毫秒.",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+data type": "整数""method name": "释放延时",
+data type": "整数""comment": "获取连接释放延时.",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "时长""method name": "启动HTTP通信",
+ameter name": "时长""comment": "启动HTTP通信.\n如当前组件设置为非自动启动HTTP通信时,需调用该方法启动.",
+ameter name": "时长""result comment": "返回是否启动成功.",
+ameter name": "时长""data type": "逻辑型",
+ameter name": "时长""@嵌入式方法": "\"\"",
+ameter name": "时长""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "时长"]
+  },
+  {
+
+"method name": "发送分片数据",
+
+"comment": "向对端发送Chunked数据分片.",
+
+"result comment": "返回是否发送成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "所欲向其发送数据的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所欲发送的数据分片.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所欲发送数据分片的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "扩展属性",
+"comment": "扩展属性.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "是否升级协议",
+"comment": "检查是否升级协议.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ameter name": "连接ID""method name": "是否为保持连接",
+ameter name": "连接ID""comment": "  在http早期,每个http请求都要求打开一个tpc socket连接,\n并且使用一次之后就断开这个tcp连接,使用keep-alive可以改\n善这种状态,即在一次TCP连接中可以持续发送多份数据而不会\n断开连接.通过使用keep-alive机制,可以减少tcp连接建立次数\n,也意味着可以减少TIME_WAIT状态连接,以此提高性能和提高ht\ntpd服务器的吞吐率.",
+ameter name": "连接ID""data type": "逻辑型",
+ameter name": "连接ID""@嵌入式方法": "\"\"",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+
+"method name": "取协议版本",
+
+"comment": "获取协议版本.",
+
+"data type": "短整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+data type": "变整数""method name": "取内容长度",
+data type": "变整数""comment": "获取内容长度.",
+data type": "变整数""data type": "长整数",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+ameter name": "连接ID""method name": "取内容类型",
+ameter name": "连接ID""comment": "获取内容类型.",
+ameter name": "连接ID""data type": "文本型",
+ameter name": "连接ID""@嵌入式方法": "\"\"",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+"method name": "取内容编码",
+"comment": "获取内容编码.",
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+hod name": "是否升级协议""method name": "取传输编码",
+hod name": "是否升级协议""comment": "获取传输编码.",
+hod name": "是否升级协议""data type": "文本型",
+hod name": "是否升级协议""@嵌入式方法": "\"\"",
+hod name": "是否升级协议""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+hod name": "是否升级协议"]
+  },
+  {
+meter name": "连接ID""@嵌入式方法": "\"\"""method name": "取协议升级类型",
+meter name": "连接ID""@嵌入式方法": "\"\"""comment": "获取协议升级类型.",
+meter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型",
+meter name": "连接ID""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+meter name": "连接ID""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+meter name": "连接ID""@嵌入式方法": "\"\""]
+  },
+  {
+ethod name": "取协议版本""method name": "取解析错误代码",
+ethod name": "取协议版本""comment": "获取解析错误代码",
+ethod name": "取协议版本""data type": "短整数",
+ethod name": "取协议版本""@禁止流程检查": "真",
+ethod name": "取协议版本""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "提供获取错误描述内容的指针.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ethod name": "取协议版本"]
+  },
+  {
+}"method name": "取请求头值",
+}"comment": " 取得指定请求头的值.\n  取得请求头中指定的值,例如,取请求头值(当前连接ID, \"User-Agent\"),将取得当前客户\n的浏览器类型.\n  请注意:如果您欲读的请求头名在请求头中不存在,或还未解析完毕,本方法将返回空对象.",
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "名称",
+"comment": "提供所欲获取请求头的名称.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+eter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""method name": "取请求头多值",
+eter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""comment": "获取指定多值的请求头.",
+eter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""result comment": "返回指定名称请求头对应的所有值.",
+eter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""data type": "文本数组类",
+eter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "名称",
+"comment": "提供所欲获取请求头的名称.",
+"data type": "文本型"
+   }
+eter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型"]
+  },
+  {
+ter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""data type": "文本数组类""method name": "取所有请求头",
+ter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""data type": "文本数组类""comment": "获取所有请求头.",
+ter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""data type": "文本数组类""data type": "HP请求头数组类",
+ter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""data type": "文本数组类""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ter name": "连接ID""@嵌入式方法": "\"\"""data type": "HPHTTP协议升级类型""data type": "文本数组类"]
+  },
+  {
+ "  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:""method name": "取所有请求头名",
+ "  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:""comment": "获取所有请求头名称.",
+ "  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:""data type": "文本数组类",
+ "  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ "  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:"]
+  },
+  {
+data type": "变整数""method name": "取Cookie",
+data type": "变整数""comment": "获取指定Cookie.",
+data type": "变整数""data type": "文本型",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+data type": "变整数"]
+  },
+  {
+ type": "变整数""method name": "取Cookie""method name": "取所有Cookie",
+ type": "变整数""method name": "取Cookie""comment": "获取所有Cookie.",
+ type": "变整数""method name": "取Cookie""data type": "HP请求头数组类",
+ type": "变整数""method name": "取Cookie""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ type": "变整数""method name": "取Cookie"]
+  },
+  {
+data type": "变整数""method name": "取WebSocket消息",
+data type": "变整数""comment": "获取当前WebSocket消息状态.",
+data type": "变整数""result comment": "是否获取成功.",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "掩码",
+"data type": "变整数"
+   },
+   {
+"parameter name": "总长度",
+"data type": "变整数"
+   },
+   {
+"parameter name": "BodyRemain",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+
+"method name": "发WebSocket消息",
+
+"comment": "向对端发送WebSocket消息.",
+
+"result comment": "返回是否发送成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "数据",
+"comment": "提供消息体数据缓冲区.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "消息体数据长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息总长度.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "回复请求",
+
+"comment": "向客户端回复HTTP请求.",
+
+"result comment": "返回是否回复成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "所欲回复的请求头内容,一个成员表示一个头.",
+"data type": "HP请求头数组类"
+   },
+   {
+"parameter name": "请求体",
+"comment": "所欲回复的请求体内容.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+"method name": "发送本地文件",
+"comment": "向客户端发送本地文件(4096KB以下).",
+"result comment": "返回是否发送成功.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文件路径",
+"comment": "提供所欲发送文件的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "所欲回复的请求头内容,一个成员表示一个头.",
+"data type": "HP请求头数组类"
+   }
+]
+  },
+  {
+ }"method name": "释放连接",
+ }"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.",
+ }"result comment": "返回是否操作成功.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+
+"method name": "取主机",
+
+"comment": "取得请求数据中连接主机地址\n本方法将取得客户请求中的Host主机地址.\n请注意:如果客户请求协议头中并无指定Host,本方法将返回当前服务器所监听地址和端口.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ameter name": "连接ID""method name": "取请求行URL域掩码",
+ameter name": "连接ID""comment": "获取请求行URL域掩码.",
+ameter name": "连接ID""result comment": "请参考\"HPURL字段\".",
+ameter name": "连接ID""data type": "短整数",
+ameter name": "连接ID""@嵌入式方法": "\"\"",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+}"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""method name": "取请求URL域值",
+}"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""comment": " 取得当前请求的URL域值\n  取得当前请求URL域值,例如,本机地址为192.168.0.103,客户发起GET请求如下请求:\n    \"http://192.168.0.103/image.png\",那么您可以通过使用本方法\"取请求URL域值\n(当前连接ID, HPURL字段.查询)\",取得\"/image.png\"Get参数.",
+}"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""data type": "文本型",
+}"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""@禁止流程检查": "真",
+}"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲取域",
+"data type": "HPURL字段"
+   }
+}"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接."]
+  },
+  {
+"method name": "取请求方式",
+"comment": "获取请求方法.",
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   }
+]
+  }
+뗀ꡰŝ]
+ },
+ {
+comment": "提供对端连接ID.""class name": "HP_HTTP服务器",
+comment": "提供对端连接ID.""comment": "★ 本类由\"飞翔的企鹅\"封装.\n  HP-HTTP服务器类.\n  本类为HP-HTTP服务器类,通过本类,允许用户自行搭建HTTP服务器,在您使用本类时,请您注意以下问题:\n    1.不得在服务器事件内执行HP系统方法,即\"断开连接\",\"停止\"等操作,否则将会造成线程崩溃.",
+comment": "提供对端连接ID.""base class": "HPHTTP服务器基础类",
+comment": "提供对端连接ID.""@文档": "\"category = \\\"HTTP服务器\\\"\"",
+comment": "提供对端连接ID.""@视窗.后缀文本": "\"public IHttpServerListener\"",
+comment": "提供对端连接ID.""methods": [
+  {
+"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""data type": "文本型""method name": "启动",
+"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""data type": "文本型""comment": "启动服务器并且监听指定端口号.",
+"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""data type": "文本型""result comment": "返回是否操作成功.",
+"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""data type": "文本型""data type": "逻辑型",
+"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""data type": "文本型""@嵌入式方法": "\"\"",
+"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""data type": "文本型""parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供所欲监听的地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供所欲监听的端口号. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   }
+"comment": "把连接放入释放队列,等待指定时间(释放延时)后关闭该连接.""data type": "文本型"]
+  },
+  {
+
+"method name": "开始握手",
+
+"comment": "  当客户端通过事件\"客户进入\"后,将会立即触发本事件,只有通过本事件,才会进行握手动作.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作, 客户端可与服务器建立正式连接.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "发送完毕",
+ }"comment": "当服务器发送数据成功后,将触发本事件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "数据进入",
+ }"comment": "当服务器成功接收数据后将触发本事件.",
+ }"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+发送数据成功后,将触发本事件."method name": "客户离开",
+发送数据成功后,将触发本事件."comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+发送数据成功后,将触发本事件."type": "event",
+发送数据成功后,将触发本事件."data type": "整数",
+发送数据成功后,将触发本事件."parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+发送数据成功后,将触发本事件.]
+  },
+  {
+data type": "变整数""method name": "服务器被关闭",
+data type": "变整数""comment": "当服务器被关闭后,将会触发本事件.",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数"
+  },
+  {
+data type": "HP错误码""method name": "启动完毕",
+data type": "HP错误码""comment": "服务器端启动完毕并开始监听后,将触发本事件.",
+data type": "HP错误码""type": "event",
+data type": "HP错误码""data type": "整数"
+  },
+  {
+成功接收数据后将触发本事件."method name": "客户进入",
+成功接收数据后将触发本事件."comment": "  当客户连接到服务器后,将会触发本事件,请注意,本事件下的连接并非是正式连接,\n只有该连接通过\"完成握手\"事件,才可以与服务器建立正式连接,本事件返回值拥有具体意义,请参考返回值说明.",
+成功接收数据后将触发本事件."result comment": "可选返回值:\n  0 = 本次操作成功, 将触发\"完成握手\"事件.\n  1 = 忽略本次操作, 将触发\"完成握手\"事件.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接.",
+成功接收数据后将触发本事件."type": "event",
+成功接收数据后将触发本事件."data type": "整数",
+成功接收数据后将触发本事件."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+成功接收数据后将触发本事件.]
+  },
+  {
+data type": "变整数""method name": "开始解析消息",
+data type": "变整数""comment": "  当客户请求数据时,将会首先触发本事件,本事件触发后,开始解析请求数据.\n  请注意:请不要再本事件中与客户进行数据发送,如果要向客户回复数据,请\n在事件\"消息解析完毕\"中回复.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+data type": "变整数""result comment": "返回-1则认定为解析错误并关闭该连接.",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+ta type": "变整数"]"method name": "请求行解析完毕",
+ta type": "变整数"]"comment": "  当服务器接收到客户请求后,将触发本事件,本事件将指定\n当前请求方式,和请求路径.例如:本机地址为192.168.0.103\n,浏览器端访问\"http://192.168.0.103/image.png\",本事件\n将解析出请求地址后面的\"/image.png\".",
+ta type": "变整数"]"result comment": "返回-1则认定为解析错误并关闭该连接.",
+ta type": "变整数"]"type": "event",
+ta type": "变整数"]"data type": "整数",
+ta type": "变整数"]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前请求方式",
+"comment": "当前客户请求方式,例如GET或POST.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前请求地址",
+"comment": "当前客户请求路径.为地址后面的参数.",
+"data type": "文本型"
+   }
+ta type": "变整数"]]
+  },
+  {
+}"method name": "状态行解析完成",
+}"comment": "状态行解析完成后本事件将被触发.",
+}"result comment": "返回-1则认定为解析错误并关闭该连接.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述内容.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "请求头进入",
+
+"comment": " 当服务器解析完毕请求后,将会通过本事件通知当前请求头.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求头名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "请求头解析完毕",
+
+"comment": " 当服务器解析请求头完毕后,将通过本事件通知用户.\n  请注意:本事件只是通知用户请求头解析完毕,不提供所解析的请\n求头数据,如果想要获取请求头数据,请添加事件\"请求头进入\",此事\n件下将会提供请求头名称和请求头值.",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "请求数据进入",
+
+"comment": "  当接收到HTTP BODY报文时本事件将被触发.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所收到的请求体数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所收到的请求体数据长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "分块头进入",
+ }"comment": "分块模式为HTTP1.1的特有模式,即在不确定长度时,将数据分块(Chunked)发送.\n  当接收到客户发送的分块请求头时,将会通过本事件通知用户,并且通过\n参数\"当前请求头长度\"为用户提供请求头数据长度.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+ }"result comment": "返回-1则认定为解析错误并关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "Chunked报文体数据长度.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+]"method name": "分块头解析完成",
+]"comment": "  当接收到客户发送的(Chunked)分块请求头并且解析完毕后,将通过本事件通知用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.  ",
+]"result comment": "返回-1则认定为解析错误并关闭该连接.",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]]
+  },
+  {
+"method name": "消息解析完毕",
+"comment": "  客户请求解析完毕.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ }"method name": "协议升级",
+ }"comment": "  当客户端主动升级协议后,将会触发本事件.\n  当客户端从HTTP1.0协议升级为HTTP1.1协议后,服务器将通过本事件通知\n用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+ }"result comment": "返回-1则会关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "协议类型",
+"data type": "HPHTTP协议升级类型"
+   }
+ }]
+  },
+  {
+"method name": "解析错误",
+"comment": "  当解析客户请求数据出错后,将会通过本事件通知用户.\n  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:\n    1. 在服务器解析事件中返回了-1或其他不正确的值.\n    2. 在服务器解析事件中主动与客户断开了连接.\n    3. 客户所发送的请求数据有误.\n  本事件返回值无具体意义,请返回默认值0.",
+"result comment": "返回-1则会关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误码",
+"data type": "HP错误码"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "正在解析WS数据头",
+ }"comment": "当解析WebSocket数据包头时本事件将被触发.",
+ }"result comment": "返回-1则会关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+ }"method name": "收到WS数据体",
+ }"comment": "当接收到WebSocket数据包体时本事件将被触发.",
+ }"result comment": "返回-1则会关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "WS数据接收完成",
+ }"comment": "当完整接收一个WebSocket数据包时本事件将被触发.",
+ }"result comment": "返回-1则会关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ }]
+  }
+comment": "提供对端连接ID."]
+ },
+ {
+}"class name": "HP_HTTP安全服务器",
+}"comment": "★ 本类由\"飞翔的企鹅\"封装.\n  HP-HTTP安全服务器类.\n  本类为HP-HTTP安全服务器类,通过本类,允许用户自行搭建HTTPS服务器,在您使用本类时,请您注意下问题:\n    1.不得在服务器事件内执行HP系统方法,即\"断开连接\",\"停止\"等操作,否则将会造成线程崩溃.\n    2.本服务器为安全服务器(HTTPS),在您启动服务器之前,请先执行方法\"初始化SSL\"环境,为服务器设置S\nSL证书文件,初始化SSL,否则将会导致服务器启动失败.",
+}"base class": "HPHTTP服务器基础类",
+}"@视窗.后缀文本": "\"public IHttpServerListener\"",
+}"@文档": "\"category = \\\"HTTP服务器\\\"\"",
+}"methods": [
+  {
+}"comment": "当完整接收一个WebSocket数据包时本事件将被触发.""method name": "握手模式",
+}"comment": "当完整接收一个WebSocket数据包时本事件将被触发.""comment": "设置通信组件SSL握手方式(默认为真,自动握手)",
+}"comment": "当完整接收一个WebSocket数据包时本事件将被触发.""type": "property setter",
+}"comment": "当完整接收一个WebSocket数据包时本事件将被触发.""parameters": [
+   {
+"parameter name": "自动",
+"comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.",
+"data type": "逻辑型"
+   }
+}"comment": "当完整接收一个WebSocket数据包时本事件将被触发."]
+  },
+  {
+ameter name": "数据""method name": "握手模式",
+ameter name": "数据""comment": "获取通信组件SSL握手方式.",
+ameter name": "数据""type": "property getter",
+ameter name": "数据""data type": "逻辑型",
+ameter name": "数据""@嵌入式方法": "\"\""
+  },
+  {
+data type": "字节集类""method name": "加密算法列表",
+data type": "字节集类""comment": "设置SSL加密算法列表.",
+data type": "字节集类""type": "property setter",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "算法",
+"data type": "文本型"
+   }
+data type": "字节集类"]
+  },
+  {
+meter name": "数据""comment": "获取通信组件SSL握手方式.""method name": "加密算法列表",
+meter name": "数据""comment": "获取通信组件SSL握手方式.""comment": "获取SSL加密算法列表.",
+meter name": "数据""comment": "获取通信组件SSL握手方式.""type": "property getter",
+meter name": "数据""comment": "获取通信组件SSL握手方式.""data type": "文本型",
+meter name": "数据""comment": "获取通信组件SSL握手方式.""@嵌入式方法": "\"\""
+  },
+  {
+ta type": "字节集类"]"method name": "启动",
+ta type": "字节集类"]"comment": "启动服务器并且监听指定端口号.\n注意:调用前请确保已初始化SSL环境成功,否则无法正确启动.",
+ta type": "字节集类"]"result comment": "返回是否操作成功.",
+ta type": "字节集类"]"data type": "逻辑型",
+ta type": "字节集类"]"@嵌入式方法": "\"\"",
+ta type": "字节集类"]"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供所欲监听的地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供所欲监听的端口号. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   }
+ta type": "字节集类"]]
+  },
+  {
+
+"method name": "初始化SSL环境",
+
+"comment": "初始化通信组件 SSL 环境参数.\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证或客户端可选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "SNI回调",
+"comment": "SNI回调函数指针(可选,如果为0则使用SNI默认回调函数).",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ameter name": "长度""method name": "初始化SSL环境_内存",
+ameter name": "长度""comment": "初始化通信组件SSL环境参数(从内存载入证书内容).\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+ameter name": "长度""result comment": "返回是否操作成功.",
+ameter name": "长度""data type": "逻辑型",
+ameter name": "长度""@禁止流程检查": "真",
+ameter name": "长度""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "SNI回调",
+"comment": "SNI回调函数指针(可选,如果为0则使用SNI默认回调函数).",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ameter name": "长度"]
+  },
+  {
+ameter name": "私钥文件""method name": "添加SNI主机证书",
+ameter name": "私钥文件""comment": "增加SNI主机证书.\n注意:需在初始化SSL环境成功后调用,可增加多个证书.",
+ameter name": "私钥文件""result comment": "返回大于0则添加成功,且该值为主机证书对应的索引,小于0则添加失败.",
+ameter name": "私钥文件""data type": "整数",
+ameter name": "私钥文件""@禁止流程检查": "真",
+ameter name": "私钥文件""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ameter name": "私钥文件"]
+  },
+  {
+使用的私钥密码,如无密码可为空."method name": "添加SNI主机证书_内存",
+使用的私钥密码,如无密码可为空."comment": "增加SNI主机证书(从内存载入证书内容).\n注意:需在初始化SSL环境成功后调用,可增加多个证书.",
+使用的私钥密码,如无密码可为空."result comment": "返回大于0则添加成功,且该值为主机证书对应的索引,小于0则添加失败.",
+使用的私钥密码,如无密码可为空."data type": "整数",
+使用的私钥密码,如无密码可为空."@禁止流程检查": "真",
+使用的私钥密码,如无密码可为空."parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+使用的私钥密码,如无密码可为空.]
+  },
+  {
+comment": "提供所欲使用的私钥密码,如无密码可为空.""method name": "绑定SNI主机域名",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""comment": "将指定主机域名绑定至已添加成功的SNI主机证书.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""result comment": "返回是否操作成功.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""@嵌入式方法": "\"\"",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""parameters": [
+   {
+"parameter name": "主机域名",
+"comment": "提供所欲绑定的主机域名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "证书索引",
+"comment": "提供SNI证书对应的索引,即\"添加SNI主机证书\"成功所返回的索引值.",
+"data type": "整数"
+   }
+comment": "提供所欲使用的私钥密码,如无密码可为空."]
+  },
+  {
+
+"method name": "清理SSL环境",
+
+"comment": "清理通信组件SSL运行环境,回收SSL相关内存.\n注意:当通信组件需要重设SSL信息时,请先调用该方法清空原有环境参数.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+omment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型""method name": "开始SSL握手",
+omment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型""comment": "启动SSL握手.\n注意:如果当前通信组件的\"握手模式\"为假时,需调用该方法握手,否则将导致连接失败.",
+omment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型""result comment": "返回是否操作成功.",
+omment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型""data type": "逻辑型",
+omment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型""@嵌入式方法": "\"\"",
+omment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "指定所欲与其握手的连接ID.",
+"data type": "变整数"
+   }
+omment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型"]
+  },
+  {
+
+"@嵌入式方法": "\"\"""method name": "开始握手",
+
+"@嵌入式方法": "\"\"""comment": "  当客户端通过事件\"客户进入\"后,将会立即触发本事件,只有通过本事件,才会进行握手动作.",
+
+"@嵌入式方法": "\"\"""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作, 客户端可与服务器建立正式连接.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+
+"@嵌入式方法": "\"\"""type": "event",
+
+"@嵌入式方法": "\"\"""data type": "整数",
+
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "发送完毕",
+
+"comment": "当服务器发送数据成功后,将触发本事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"data type": "整数""method name": "数据进入",
+"data type": "整数""comment": "当服务器成功接收数据后将触发本事件.",
+"data type": "整数""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+"data type": "整数""type": "event",
+"data type": "整数""data type": "整数",
+"data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+"data type": "整数"]
+  },
+  {
+@嵌入式方法": "\"\""]"method name": "客户离开",
+@嵌入式方法": "\"\""]"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+@嵌入式方法": "\"\""]"type": "event",
+@嵌入式方法": "\"\""]"data type": "整数",
+@嵌入式方法": "\"\""]"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+@嵌入式方法": "\"\""]]
+  },
+  {
+入式方法": "\"\""]]"method name": "服务器被关闭",
+入式方法": "\"\""]]"comment": "当服务器被关闭后,将会触发本事件.",
+入式方法": "\"\""]]"type": "event",
+入式方法": "\"\""]]"data type": "整数"
+  },
+  {
+data type": "整数""type": "event""method name": "启动完毕",
+data type": "整数""type": "event""comment": "服务器端启动完毕并开始监听后,将触发本事件.",
+data type": "整数""type": "event""type": "event",
+data type": "整数""type": "event""data type": "整数"
+  },
+  {
+data type": "整数""type": "event""method name": "客户进入",
+data type": "整数""type": "event""comment": "  当客户连接到服务器后,将会触发本事件,请注意,本事件下的连接并非是正式连接,\n只有该连接通过\"完成握手\"事件,才可以与服务器建立正式连接,本事件返回值拥有具体意义,请参考返回值说明.",
+data type": "整数""type": "event""result comment": "可选返回值:\n  0 = 本次操作成功, 将触发\"完成握手\"事件.\n  1 = 忽略本次操作, 将触发\"完成握手\"事件.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接.",
+data type": "整数""type": "event""type": "event",
+data type": "整数""type": "event""data type": "整数",
+data type": "整数""type": "event""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "整数""type": "event"]
+  },
+  {
+
+"method name": "开始解析消息",
+
+"comment": "  当客户请求数据时,将会首先触发本事件,本事件触发后,开始解析请求数据.\n  请注意:请不要再本事件中与客户进行数据发送,如果要向客户回复数据,请\n在事件\"消息解析完毕\"中回复.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "请求行解析完毕",
+ }"comment": "  当服务器接收到客户请求后,将触发本事件,本事件将指定\n当前请求方式,和请求路径.例如:本机地址为192.168.0.103\n,浏览器端访问\"http://192.168.0.103/image.png\",本事件\n将解析出请求地址后面的\"/image.png\".",
+ }"result comment": "返回-1则认定为解析错误并关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前请求方式",
+"comment": "当前客户请求方式,例如GET或POST.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前请求地址",
+"comment": "当前客户请求路径.为地址后面的参数.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "连接ID""method name": "状态行解析完成",
+ameter name": "连接ID""comment": "状态行解析完成后本事件将被触发.",
+ameter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述内容.",
+"data type": "文本型"
+   }
+ameter name": "连接ID"]
+  },
+  {
+]"method name": "请求头进入",
+]"comment": " 当服务器解析完毕请求后,将会通过本事件通知当前请求头.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+]"result comment": "返回-1则认定为解析错误并关闭该连接.",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求头名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头值",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+"type": "event""method name": "请求头解析完毕",
+"type": "event""comment": " 当服务器解析请求头完毕后,将通过本事件通知用户.\n  请注意:本事件只是通知用户请求头解析完毕,不提供所解析的请\n求头数据,如果想要获取请求头数据,请添加事件\"请求头进入\",此事\n件下将会提供请求头名称和请求头值..",
+"type": "event""result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event""type": "event",
+"type": "event""data type": "整数",
+"type": "event""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+"type": "event"]
+  },
+  {
+type": "event""data type": "整数""method name": "请求数据进入",
+type": "event""data type": "整数""comment": "  当接收到HTTP BODY报文时本事件将被触发.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+type": "event""data type": "整数""result comment": "返回-1则认定为解析错误并关闭该连接.",
+type": "event""data type": "整数""type": "event",
+type": "event""data type": "整数""data type": "整数",
+type": "event""data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所收到的请求体数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所收到的请求体数据长度.",
+"data type": "整数"
+   }
+type": "event""data type": "整数"]
+  },
+  {
+": "event""data type": "整数""method name": "请求数据进入""method name": "分块头进入",
+": "event""data type": "整数""method name": "请求数据进入""comment": "分块模式为HTTP1.1的特有模式,即在不确定长度时,将数据分块(Chunked)发送.\n  当接收到客户发送的分块请求头时,将会通过本事件通知用户,并且通过\n参数\"当前请求头长度\"为用户提供请求头数据长度.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+": "event""data type": "整数""method name": "请求数据进入""result comment": "返回-1则认定为解析错误并关闭该连接.",
+": "event""data type": "整数""method name": "请求数据进入""type": "event",
+": "event""data type": "整数""method name": "请求数据进入""data type": "整数",
+": "event""data type": "整数""method name": "请求数据进入""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "Chunked报文体数据长度.",
+"data type": "整数"
+   }
+": "event""data type": "整数""method name": "请求数据进入"]
+  },
+  {
+ameter name": "连接ID""method name": "分块头解析完成",
+ameter name": "连接ID""comment": "  当接收到客户发送的(Chunked)分块请求头并且解析完毕后,将通过本事件通知用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件. ",
+ameter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+ameter name": "连接ID""method name": "消息解析完毕",
+ameter name": "连接ID""comment": "  客户请求解析完毕.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+ameter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+
+"method name": "协议升级",
+
+"comment": "  当客户端主动升级协议后,将会触发本事件.\n  当客户端从HTTP1.0协议升级为HTTP1.1协议后,服务器将通过本事件通知\n用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则会关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "协议类型",
+"data type": "HPHTTP协议升级类型"
+   }
+
+]
+  },
+  {
+ameter name": "连接ID""method name": "解析错误",
+ameter name": "连接ID""comment": "  当解析客户请求数据出错后,将会通过本事件通知用户.\n  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:\n    1. 在服务器解析事件中返回了-1或其他不正确的值.\n    2. 在服务器解析事件中主动与客户断开了连接.\n    3. 客户所发送的请求数据有误.\n  本事件返回值无具体意义,请返回默认值0.",
+ameter name": "连接ID""result comment": "返回-1则会关闭该连接.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误码",
+"data type": "HP错误码"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型"
+   }
+ameter name": "连接ID"]
+  },
+  {
+"method name": "正在解析WS数据头",
+"comment": "当解析WebSocket数据包头时本事件将被触发.",
+"result comment": "返回-1则会关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+]
+  },
+  {
+
+"method name": "收到WS数据体",
+
+"comment": "当接收到WebSocket数据包体时本事件将被触发.",
+
+"result comment": "返回-1则会关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "WS数据接收完成",
+"comment": "当完整接收一个WebSocket数据包时本事件将被触发.",
+"result comment": "返回-1则会关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  }
+}]
+ },
+ {
+
+"class name": "HPHTTP代理基础类",
+
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\nHTTP代理基础类.",
+
+"base class": "HPTCP代理基础类",
+
+"@文档": "\"category = \\\"辅助类\\\"\"",
+
+"@禁止创建对象": "真",
+
+"methods": [
+  {
+ameter name": "数据""method name": "本地协议版本",
+ameter name": "数据""comment": "设置当前本地HTTP协议版本.",
+ameter name": "数据""type": "property setter",
+ameter name": "数据""parameters": [
+   {
+"parameter name": "版本",
+"data type": "HPHTTP协议版本"
+   }
+ameter name": "数据"]
+  },
+  {
+ }"method name": "本地协议版本",
+ }"comment": "获取当前本地所使用HTTP协议版本.",
+ }"type": "property getter",
+ }"data type": "HPHTTP协议版本",
+ }"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "自动启动通信",
+
+"comment": "获取HTTP的启动方式.",
+
+"result comment": "为真表示自动启动.",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+meter name": "数据""type": "property setter""method name": "自动启动通信",
+meter name": "数据""type": "property setter""comment": "设置HTTP的启动方式.",
+meter name": "数据""type": "property setter""type": "property setter",
+meter name": "数据""type": "property setter""parameters": [
+   {
+"parameter name": "自动",
+"comment": "为真表示自动启动.",
+"data type": "逻辑型"
+   }
+meter name": "数据""type": "property setter"]
+  },
+  {
+meter name": "数据""type": "property setter""method name": "启用Cookie",
+meter name": "数据""type": "property setter""comment": "设置是否使用Cookie,默认启用.",
+meter name": "数据""type": "property setter""type": "property setter",
+meter name": "数据""type": "property setter""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+meter name": "数据""type": "property setter"]
+  },
+  {
+}"method name": "启用Cookie",
+}"comment": "获取是否使用Cookie.",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "启动HTTP通信",
+"comment": "启动HTTP通信.\n如当前组件设置为非自动启动HTTP通信时,需调用该方法启动.",
+"result comment": "返回是否启动成功.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ethod name": "本地协议版本""method name": "发送分片数据",
+ethod name": "本地协议版本""comment": "向对端发送Chunked数据分片.",
+ethod name": "本地协议版本""result comment": "返回是否发送成功.",
+ethod name": "本地协议版本""data type": "逻辑型",
+ethod name": "本地协议版本""@禁止流程检查": "真",
+ethod name": "本地协议版本""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "所欲向其发送数据的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所欲发送的数据分片.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所欲发送数据分片的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "扩展属性",
+"comment": "扩展属性.",
+"data type": "文本型"
+   }
+ethod name": "本地协议版本"]
+  },
+  {
+pe": "event""data type": "整数"]"method name": "是否升级协议",
+pe": "event""data type": "整数"]"comment": "检查是否升级协议.",
+pe": "event""data type": "整数"]"data type": "逻辑型",
+pe": "event""data type": "整数"]"@嵌入式方法": "\"\"",
+pe": "event""data type": "整数"]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+pe": "event""data type": "整数"]]
+  },
+  {
+ "event""data type": "整数"]"method name": "是否升级协议""method name": "是否KeepAlive",
+ "event""data type": "整数"]"method name": "是否升级协议""comment": "检查是否有Keep-Alive标识.",
+ "event""data type": "整数"]"method name": "是否升级协议""data type": "逻辑型",
+ "event""data type": "整数"]"method name": "是否升级协议""@嵌入式方法": "\"\"",
+ "event""data type": "整数"]"method name": "是否升级协议""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ "event""data type": "整数"]"method name": "是否升级协议"]
+  },
+  {
+ "event""data type": "整数"]"method name": "是否升级协议""method name": "取协议版本",
+ "event""data type": "整数"]"method name": "是否升级协议""comment": "获取协议版本.",
+ "event""data type": "整数"]"method name": "是否升级协议""data type": "短整数",
+ "event""data type": "整数"]"method name": "是否升级协议""@嵌入式方法": "\"\"",
+ "event""data type": "整数"]"method name": "是否升级协议""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ "event""data type": "整数"]"method name": "是否升级协议"]
+  },
+  {
+event""data type": "整数"]"method name": "是否升级协议"]"method name": "取内容长度",
+event""data type": "整数"]"method name": "是否升级协议"]"comment": "获取内容长度.",
+event""data type": "整数"]"method name": "是否升级协议"]"data type": "长整数",
+event""data type": "整数"]"method name": "是否升级协议"]"@嵌入式方法": "\"\"",
+event""data type": "整数"]"method name": "是否升级协议"]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+event""data type": "整数"]"method name": "是否升级协议"]]
+  },
+  {
+}"method name": "取内容类型",
+}"comment": "获取内容类型.",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+ }"method name": "取内容编码",
+ }"comment": "获取内容编码.",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"method name": "取传输编码",
+}"comment": "获取传输编码.",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"method name": "取协议升级类型",
+"comment": "获取协议升级类型.",
+"data type": "HPHTTP协议升级类型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ameter name": "连接ID""method name": "取解析错误代码",
+ameter name": "连接ID""comment": "获取解析错误代码",
+ameter name": "连接ID""data type": "短整数",
+ameter name": "连接ID""@禁止流程检查": "真",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "提供获取错误描述内容的指针.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ameter name": "连接ID"]
+  },
+  {
+comment": "提供获取错误描述内容的指针.""method name": "取请求头值",
+comment": "提供获取错误描述内容的指针.""comment": " 取得指定请求头的值.\n  取得请求头中指定的值,例如,取请求头值(当前连接ID, \"User-Agent\"),将取得当前客户\n的浏览器类型.\n  请注意:如果您欲读的请求头名在请求头中不存在,或还未解析完毕,本方法将返回空对象.",
+comment": "提供获取错误描述内容的指针.""data type": "文本型",
+comment": "提供获取错误描述内容的指针.""@禁止流程检查": "真",
+comment": "提供获取错误描述内容的指针.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+comment": "提供获取错误描述内容的指针."]
+  },
+  {
+
+"method name": "取请求头多值",
+
+"comment": "获取指定多值的请求头.",
+
+"result comment": "返回指定名称请求头对应的所有值.",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "取所有请求头",
+ }"comment": "获取所有请求头.",
+ }"data type": "HP请求头数组类",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+
+"method name": "取所有请求头名",
+
+"comment": "获取所有请求头名称.",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+名称请求头对应的所有值."method name": "取Cookie",
+名称请求头对应的所有值."comment": "获取指定Cookie.",
+名称请求头对应的所有值."data type": "文本型",
+名称请求头对应的所有值."@禁止流程检查": "真",
+名称请求头对应的所有值."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+名称请求头对应的所有值.]
+  },
+  {
+data type": "变整数""method name": "取所有Cookie",
+data type": "变整数""comment": "获取所有Cookie.",
+data type": "变整数""data type": "HP请求头数组类",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+请求头对应的所有值.]"method name": "取WebSocket消息",
+请求头对应的所有值.]"comment": "获取当前WebSocket消息状态.",
+请求头对应的所有值.]"result comment": "是否获取成功.",
+请求头对应的所有值.]"data type": "逻辑型",
+请求头对应的所有值.]"@嵌入式方法": "\"\"",
+请求头对应的所有值.]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4个字节掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "总长度",
+"comment": "消息总长度.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "BodyRemain",
+"data type": "变整数"
+   }
+请求头对应的所有值.]]
+  },
+  {
+ }"method name": "发WebSocket消息",
+ }"comment": "向指定连接发送WebSocket消息.",
+ }"result comment": "返回是否发送成功.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针表示无掩码.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据",
+"comment": "提供消息体数据缓冲区.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "消息体数据长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息总长度.",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+]"method name": "发送请求",
+]"comment": "向服务端发送HTTP请求.",
+]"result comment": "返回是否发送成功.",
+]"data type": "逻辑型",
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求方法",
+"comment": "提供所欲使用的请求方法.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供请求路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "所欲发送的请求头内容,一个成员表示一个头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "请求体",
+"comment": "所欲发送的请求体内容.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+]]
+  },
+  {
+data type": "变整数""method name": "发送本地文件",
+data type": "变整数""comment": "向指定连接发送本地文件(4096KB以下).",
+data type": "变整数""result comment": "返回是否发送成功.",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文件路径",
+"comment": "提供所欲发送文件的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求方法",
+"comment": "提供所欲使用的请求方法.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供请求路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "所欲回复的请求头内容,一个成员表示一个头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+data type": "变整数"]
+  },
+  {
+
+"method name": "发送POST请求",
+
+"comment": "向指定连接发送POST请求.",
+
+"result comment": "返回是否发送成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交数据",
+"comment": "提供所欲提交的数据内容.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+ameter name": "请求路径""method name": "发送PUT请求",
+ameter name": "请求路径""comment": "向指定连接发送PUT请求.",
+ameter name": "请求路径""result comment": "返回是否发送成功.",
+ameter name": "请求路径""data type": "逻辑型",
+ameter name": "请求路径""@禁止流程检查": "真",
+ameter name": "请求路径""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交数据",
+"comment": "提供所欲提交的数据内容.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+ameter name": "请求路径"]
+  },
+  {
+"method name": "发送PATCH请求",
+"comment": "向指定连接发送PATCH请求.",
+"result comment": "返回是否发送成功.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交数据",
+"comment": "提供所欲提交的数据内容.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+comment": "提供所欲提交的数据内容.""method name": "发送GET请求",
+comment": "提供所欲提交的数据内容.""comment": "向指定连接发送GET请求.",
+comment": "提供所欲提交的数据内容.""result comment": "返回是否发送成功.",
+comment": "提供所欲提交的数据内容.""data type": "逻辑型",
+comment": "提供所欲提交的数据内容.""@禁止流程检查": "真",
+comment": "提供所欲提交的数据内容.""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+comment": "提供所欲提交的数据内容."]
+  },
+  {
+@默认值": "空对象""method name": "发送DELETE请求",
+@默认值": "空对象""comment": "向指定连接发送Delete请求.",
+@默认值": "空对象""result comment": "返回是否发送成功.",
+@默认值": "空对象""data type": "逻辑型",
+@默认值": "空对象""@禁止流程检查": "真",
+@默认值": "空对象""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+@默认值": "空对象"]
+  },
+  {
+data type": "HP请求头数组类""method name": "发送HEAD请求",
+data type": "HP请求头数组类""comment": "向指定连接发送Head请求.",
+data type": "HP请求头数组类""result comment": "返回是否发送成功.",
+data type": "HP请求头数组类""data type": "逻辑型",
+data type": "HP请求头数组类""@禁止流程检查": "真",
+data type": "HP请求头数组类""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+data type": "HP请求头数组类"]
+  },
+  {
+ata type": "HP请求头数组类""parameters": [
+"method name": "发送TRACE请求",
+ata type": "HP请求头数组类""parameters": [
+"comment": "向指定连接发送Trace请求.",
+ata type": "HP请求头数组类""parameters": [
+"result comment": "返回是否发送成功.",
+ata type": "HP请求头数组类""parameters": [
+"data type": "逻辑型",
+ata type": "HP请求头数组类""parameters": [
+"@禁止流程检查": "真",
+ata type": "HP请求头数组类""parameters": [
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+ata type": "HP请求头数组类""parameters": [
+]
+  },
+  {
+ }"method name": "发送OPTIONS请求",
+ }"comment": "向指定连接发送Options请求.",
+ }"result comment": "返回是否发送成功.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+data type": "变整数""method name": "发送CONNECT请求",
+data type": "变整数""comment": "向指定连接发送Connect请求.",
+data type": "变整数""result comment": "返回是否发送成功.",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "提供对端连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+data type": "变整数"]
+  },
+  {
+ata type": "变整数""data type": "逻辑型""method name": "取状态码",
+ata type": "变整数""data type": "逻辑型""comment": "获取HTTP状态码.",
+ata type": "变整数""data type": "逻辑型""result comment": "返回值参考\"HPHTTP状态码\"类.",
+ata type": "变整数""data type": "逻辑型""data type": "短整数",
+ata type": "变整数""data type": "逻辑型""@嵌入式方法": "\"\"",
+ata type": "变整数""data type": "逻辑型""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ata type": "变整数""data type": "逻辑型"]
+  }
+
+]
+ },
+ {
+"class name": "HP_HTTP代理类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.",
+"base class": "HPHTTP代理基础类",
+"@文档": "\"category = \\\"HTTP客户端\\\"\"",
+"@视窗.后缀文本": "\"public IHttpAgentListener\"",
+"methods": [
+  {
+ }"method name": "启动",
+ }"comment": "启动通信代理组件,启动完成后可开始连接远程服务器.",
+ }"result comment": "返回是否操作成功.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "绑定地址",
+"comment": "提供所欲绑定的地址,默认空绑定任意地址.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+methods": [
+"method name": "开始握手",
+methods": [
+"comment": "与服务端进行握手时将触发本事件.",
+methods": [
+"result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+methods": [
+"type": "event",
+methods": [
+"data type": "整数",
+methods": [
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+methods": [
+]
+  },
+  {
+ethods": [
+"type": "event""method name": "发送完毕",
+ethods": [
+"type": "event""comment": "当通信组件发送数据成功后,将触发本事件.",
+ethods": [
+"type": "event""type": "event",
+ethods": [
+"type": "event""data type": "整数",
+ethods": [
+"type": "event""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+ethods": [
+"type": "event"]
+  },
+  {
+thods": [
+"type": "event""data type": "整数""method name": "数据进入",
+thods": [
+"type": "event""data type": "整数""comment": "当通信组件成功接收数据后将触发本事件.",
+thods": [
+"type": "event""data type": "整数""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+thods": [
+"type": "event""data type": "整数""type": "event",
+thods": [
+"type": "event""data type": "整数""data type": "整数",
+thods": [
+"type": "event""data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+thods": [
+"type": "event""data type": "整数"]
+  },
+  {
+comment": "所接收到的数据.""method name": "通信发生错误",
+comment": "所接收到的数据.""comment": "当通信组件主动或被动与服务器断开后将触发本事件.",
+comment": "所接收到的数据.""type": "event",
+comment": "所接收到的数据.""data type": "整数",
+comment": "所接收到的数据.""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+comment": "所接收到的数据."]
+  },
+  {
+"method name": "代理被关闭",
+"comment": "当通信组件被关闭后,将会触发本事件.",
+"type": "event",
+"data type": "整数"
+  },
+  {
+ameter name": "连接ID""method name": "准备连接",
+ameter name": "连接ID""comment": "当通信组件启动之后,会触发一次本事件.",
+ameter name": "连接ID""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+
+"method name": "连接完成",
+
+"comment": "与服务端成功建立连接时本事件将被触发.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ameter name": "连接ID""method name": "开始解析消息",
+ameter name": "连接ID""comment": "  当客户请求数据时,将会首先触发本事件,本事件触发后,开始解析请求数据.\n  请注意:请不要再本事件中与客户进行数据发送,如果要向客户回复数据,请\n在事件\"消息解析完毕\"中回复.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+ameter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+meter name": "连接ID""parameters": [
+"method name": "请求行解析完毕",
+meter name": "连接ID""parameters": [
+"comment": "  当服务器接收到客户请求后,将触发本事件,本事件将指定\n当前请求方式,和请求路径.例如:本机地址为192.168.0.103\n,浏览器端访问\"http://192.168.0.103/image.png\",本事件\n将解析出请求地址后面的\"/image.png\".",
+meter name": "连接ID""parameters": [
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+meter name": "连接ID""parameters": [
+"type": "event",
+meter name": "连接ID""parameters": [
+"data type": "整数",
+meter name": "连接ID""parameters": [
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前请求方式",
+"comment": "当前客户请求方式,例如GET或POST.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前请求地址",
+"comment": "当前客户请求路径.为地址后面的参数.",
+"data type": "文本型"
+   }
+meter name": "连接ID""parameters": [
+]
+  },
+  {
+ent": "所接收到的数据.""method name": "通信发生错误""method name": "状态行解析完成",
+ent": "所接收到的数据.""method name": "通信发生错误""comment": "状态行解析完成后本事件将被触发.",
+ent": "所接收到的数据.""method name": "通信发生错误""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ent": "所接收到的数据.""method name": "通信发生错误""type": "event",
+ent": "所接收到的数据.""method name": "通信发生错误""data type": "整数",
+ent": "所接收到的数据.""method name": "通信发生错误""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述内容.",
+"data type": "文本型"
+   }
+ent": "所接收到的数据.""method name": "通信发生错误"]
+  },
+  {
+
+"method name": "请求头进入",
+
+"comment": " 当服务器解析完毕请求后,将会通过本事件通知当前请求头.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求头名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+请求路径.为地址后面的参数."method name": "请求头解析完毕",
+请求路径.为地址后面的参数."comment": " 当服务器解析请求头完毕后,将通过本事件通知用户.\n  请注意:本事件只是通知用户请求头解析完毕,不提供所解析的请\n求头数据,如果想要获取请求头数据,请添加事件\"请求头进入\",此事\n件下将会提供请求头名称和请求头值..",
+请求路径.为地址后面的参数."result comment": "返回-1则认定为解析错误并关闭该连接.",
+请求路径.为地址后面的参数."type": "event",
+请求路径.为地址后面的参数."data type": "整数",
+请求路径.为地址后面的参数."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+请求路径.为地址后面的参数.]
+  },
+  {
+ameter name": "请求头名称""method name": "请求数据进入",
+ameter name": "请求头名称""comment": "  当接收到HTTP BODY报文时本事件将被触发.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+ameter name": "请求头名称""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ameter name": "请求头名称""type": "event",
+ameter name": "请求头名称""data type": "整数",
+ameter name": "请求头名称""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所收到的请求体数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所收到的请求体数据长度.",
+"data type": "整数"
+   }
+ameter name": "请求头名称"]
+  },
+  {
+eter name": "请求头名称"]"method name": "分块头进入",
+eter name": "请求头名称"]"comment": "分块模式为HTTP1.1的特有模式,即在不确定长度时,将数据分块(Chunked)发送.\n  当接收到客户发送的分块请求头时,将会通过本事件通知用户,并且通过\n参数\"当前请求头长度\"为用户提供请求头数据长度.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+eter name": "请求头名称"]"result comment": "返回-1则认定为解析错误并关闭该连接.",
+eter name": "请求头名称"]"type": "event",
+eter name": "请求头名称"]"data type": "整数",
+eter name": "请求头名称"]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "Chunked报文体数据长度.",
+"data type": "整数"
+   }
+eter name": "请求头名称"]]
+  },
+  {
+eter name": "连接ID""parameters": [
+"parameters": [
+"method name": "分块头解析完成",
+eter name": "连接ID""parameters": [
+"parameters": [
+"comment": "  当接收到客户发送的(Chunked)分块请求头并且解析完毕后,将通过本事件通知用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件. ",
+eter name": "连接ID""parameters": [
+"parameters": [
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+eter name": "连接ID""parameters": [
+"parameters": [
+"type": "event",
+eter name": "连接ID""parameters": [
+"parameters": [
+"data type": "整数",
+eter name": "连接ID""parameters": [
+"parameters": [
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+eter name": "连接ID""parameters": [
+"parameters": [
+]
+  },
+  {
+
+"method name": "消息解析完毕",
+
+"comment": "  客户请求解析完毕.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "协议升级",
+
+"comment": "  当客户端主动升级协议后,将会触发本事件.\n  当客户端从HTTP1.0协议升级为HTTP1.1协议后,服务器将通过本事件通知\n用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则会关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "协议类型",
+"data type": "HPHTTP协议升级类型"
+   }
+
+]
+  },
+  {
+则认定为解析错误并关闭该连接."method name": "解析错误",
+则认定为解析错误并关闭该连接."comment": "  当解析客户请求数据出错后,将会通过本事件通知用户.\n  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:\n    1. 在服务器解析事件中返回了-1或其他不正确的值.\n    2. 在服务器解析事件中主动与客户断开了连接.\n    3. 客户所发送的请求数据有误.\n  本事件返回值无具体意义,请返回默认值0.",
+则认定为解析错误并关闭该连接."result comment": "返回-1则会关闭该连接.",
+则认定为解析错误并关闭该连接."type": "event",
+则认定为解析错误并关闭该连接."data type": "整数",
+则认定为解析错误并关闭该连接."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误码",
+"data type": "HP错误码"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型"
+   }
+则认定为解析错误并关闭该连接.]
+  },
+  {
+ }"method name": "正在解析WS数据头",
+ }"comment": "当解析WebSocket数据包头时本事件将被触发.",
+ }"result comment": "返回-1则会关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+
+"method name": "收到WS数据体",
+
+"comment": "当接收到WebSocket数据包体时本事件将被触发.",
+
+"result comment": "返回-1则会关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "WS数据接收完成",
+
+"comment": "当完整接收一个WebSocket数据包时本事件将被触发.",
+
+"result comment": "返回-1则会关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  }
+]
+ },
+ {
+
+"data type": "整数""class name": "HP_HTTP安全代理类",
+
+"data type": "整数""comment": "★ 本类由\"飞翔的企鹅\"封装.",
+
+"data type": "整数""base class": "HPHTTP代理基础类",
+
+"data type": "整数""@文档": "\"category = \\\"HTTP客户端\\\"\"",
+
+"data type": "整数""@视窗.后缀文本": "\"public IHttpAgentListener\"",
+
+"data type": "整数""methods": [
+  {
+data type": "变整数""method name": "握手模式",
+data type": "变整数""comment": "设置通信组件SSL握手方式(默认为真,自动握手)",
+data type": "变整数""type": "property setter",
+data type": "变整数""parameters": [
+   {
+"parameter name": "自动",
+"comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.",
+"data type": "逻辑型"
+   }
+data type": "变整数"]
+  },
+  {
+"parameters": [
+"method name": "握手模式",
+"parameters": [
+"comment": "获取通信组件SSL握手方式.",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "加密算法列表",
+"comment": "设置SSL加密算法列表.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "算法",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "加密算法列表",
+
+"comment": "获取SSL加密算法列表.",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "加密算法列表""method name": "启动",
+ethod name": "加密算法列表""comment": "启动通信代理组件,启动完成后可开始连接远程服务器.\n注意:调用前请确保已初始化SSL环境成功,否则无法正确启动.",
+ethod name": "加密算法列表""result comment": "返回是否操作成功.",
+ethod name": "加密算法列表""data type": "逻辑型",
+ethod name": "加密算法列表""@禁止流程检查": "真",
+ethod name": "加密算法列表""parameters": [
+   {
+"parameter name": "绑定地址",
+"comment": "提供所欲绑定的地址,默认空绑定任意地址.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ethod name": "加密算法列表"]
+  },
+  {
+
+"type": "property getter""method name": "初始化SSL环境",
+
+"type": "property getter""comment": "初始化通信组件 SSL 环境参数.\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+
+"type": "property getter""result comment": "返回是否操作成功.",
+
+"type": "property getter""data type": "逻辑型",
+
+"type": "property getter""@禁止流程检查": "真",
+
+"type": "property getter""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证或客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+"type": "property getter"]
+  },
+  {
+data type": "文本型""method name": "初始化SSL环境_内存",
+data type": "文本型""comment": "初始化通信组件SSL环境参数(从内存载入证书内容).\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+data type": "文本型""result comment": "返回是否操作成功.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "清理SSL环境",
+
+"comment": "清理通信组件SSL运行环境,回收SSL相关内存.\n注意:当通信组件需要重设SSL信息时,请先调用该方法清空原有环境参数.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"type": "property getter""@禁止流程检查": "真""method name": "开始SSL握手",
+"type": "property getter""@禁止流程检查": "真""comment": "启动SSL握手.\n注意:如果当前通信组件的\"握手模式\"为假时,需调用该方法握手,否则将导致连接失败.",
+"type": "property getter""@禁止流程检查": "真""result comment": "返回是否操作成功.",
+"type": "property getter""@禁止流程检查": "真""data type": "逻辑型",
+"type": "property getter""@禁止流程检查": "真""@嵌入式方法": "\"\"",
+"type": "property getter""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "指定所欲与其握手的连接ID.",
+"data type": "变整数"
+   }
+"type": "property getter""@禁止流程检查": "真"]
+  },
+  {
+@默认值": "HPSSL验证模式.无验证""method name": "开始握手",
+@默认值": "HPSSL验证模式.无验证""comment": "与服务端进行握手时将触发本事件.",
+@默认值": "HPSSL验证模式.无验证""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+@默认值": "HPSSL验证模式.无验证""type": "event",
+@默认值": "HPSSL验证模式.无验证""data type": "整数",
+@默认值": "HPSSL验证模式.无验证""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+@默认值": "HPSSL验证模式.无验证"]
+  },
+  {
+}"method name": "发送完毕",
+}"comment": "当通信组件发送数据成功后,将触发本事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"type": "event""method name": "数据进入",
+"type": "event""comment": "当通信组件成功接收数据后将触发本事件.",
+"type": "event""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+"type": "event""type": "event",
+"type": "event""data type": "整数",
+"type": "event""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+"type": "event"]
+  },
+  {
+type": "event""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.""method name": "通信发生错误",
+type": "event""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.""comment": "当通信组件主动或被动与服务器断开后将触发本事件.",
+type": "event""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.""type": "event",
+type": "event""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.""data type": "整数",
+type": "event""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+type": "event""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件."]
+  },
+  {
+data type": "整数""method name": "代理被关闭",
+data type": "整数""comment": "当通信组件被关闭后,将会触发本事件.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数"
+  },
+  {
+
+"method name": "准备连接",
+
+"comment": "当通信组件启动之后,会触发一次本事件.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ata type": "文本型""result comment": "返回是否操作成功.""method name": "连接完成",
+ata type": "文本型""result comment": "返回是否操作成功.""comment": "与服务端成功建立连接时本事件将被触发.",
+ata type": "文本型""result comment": "返回是否操作成功.""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+ata type": "文本型""result comment": "返回是否操作成功.""type": "event",
+ata type": "文本型""result comment": "返回是否操作成功.""data type": "整数",
+ata type": "文本型""result comment": "返回是否操作成功.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ata type": "文本型""result comment": "返回是否操作成功."]
+  },
+  {
+
+"method name": "开始解析消息",
+
+"comment": "  当客户请求数据时,将会首先触发本事件,本事件触发后,开始解析请求数据.\n  请注意:请不要再本事件中与客户进行数据发送,如果要向客户回复数据,请\n在事件\"消息解析完毕\"中回复.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "请求行解析完毕",
+"comment": "  当服务器接收到客户请求后,将触发本事件,本事件将指定\n当前请求方式,和请求路径.例如:本机地址为192.168.0.103\n,浏览器端访问\"http://192.168.0.103/image.png\",本事件\n将解析出请求地址后面的\"/image.png\".",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前请求方式",
+"comment": "当前客户请求方式,例如GET或POST.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前请求地址",
+"comment": "当前客户请求路径.为地址后面的参数.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "状态行解析完成",
+
+"comment": "状态行解析完成后本事件将被触发.",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述内容.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "连接ID""method name": "请求头进入",
+ameter name": "连接ID""comment": " 当服务器解析完毕请求后,将会通过本事件通知当前请求头.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+ameter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求头名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头值",
+"data type": "文本型"
+   }
+ameter name": "连接ID"]
+  },
+  {
+ameter name": "状态描述""method name": "请求头解析完毕",
+ameter name": "状态描述""comment": " 当服务器解析请求头完毕后,将通过本事件通知用户.\n  请注意:本事件只是通知用户请求头解析完毕,不提供所解析的请\n求头数据,如果想要获取请求头数据,请添加事件\"请求头进入\",此事\n件下将会提供请求头名称和请求头值..",
+ameter name": "状态描述""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ameter name": "状态描述""type": "event",
+ameter name": "状态描述""data type": "整数",
+ameter name": "状态描述""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "状态描述"]
+  },
+  {
+meter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.""method name": "请求数据进入",
+meter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.""comment": "  当接收到HTTP BODY报文时本事件将被触发.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+meter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.""result comment": "返回-1则认定为解析错误并关闭该连接.",
+meter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.""type": "event",
+meter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.""data type": "整数",
+meter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所收到的请求体数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所收到的请求体数据长度.",
+"data type": "整数"
+   }
+meter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接."]
+  },
+  {
+meter name": "连接ID""data type": "整数""method name": "分块头进入",
+meter name": "连接ID""data type": "整数""comment": "分块模式为HTTP1.1的特有模式,即在不确定长度时,将数据分块(Chunked)发送.\n  当接收到客户发送的分块请求头时,将会通过本事件通知用户,并且通过\n参数\"当前请求头长度\"为用户提供请求头数据长度.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+meter name": "连接ID""data type": "整数""result comment": "返回-1则认定为解析错误并关闭该连接.",
+meter name": "连接ID""data type": "整数""type": "event",
+meter name": "连接ID""data type": "整数""data type": "整数",
+meter name": "连接ID""data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "Chunked报文体数据长度.",
+"data type": "整数"
+   }
+meter name": "连接ID""data type": "整数"]
+  },
+  {
+"method name": "分块头解析完成",
+"comment": "  当接收到客户发送的(Chunked)分块请求头并且解析完毕后,将通过本事件通知用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件. ",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+"method name": "消息解析完毕",
+"comment": "  客户请求解析完毕.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+"method name": "协议升级",
+"comment": "  当客户端主动升级协议后,将会触发本事件.\n  当客户端从HTTP1.0协议升级为HTTP1.1协议后,服务器将通过本事件通知\n用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+"result comment": "返回-1则会关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "协议类型",
+"data type": "HPHTTP协议升级类型"
+   }
+]
+  },
+  {
+
+"method name": "解析错误",
+
+"comment": "  当解析客户请求数据出错后,将会通过本事件通知用户.\n  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:\n    1. 在服务器解析事件中返回了-1或其他不正确的值.\n    2. 在服务器解析事件中主动与客户断开了连接.\n    3. 客户所发送的请求数据有误.\n  本事件返回值无具体意义,请返回默认值0.",
+
+"result comment": "返回-1则会关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误码",
+"data type": "HP错误码"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "正在解析WS数据头",
+data type": "整数""comment": "当解析WebSocket数据包头时本事件将被触发.",
+data type": "整数""result comment": "返回-1则会关闭该连接.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+data type": "整数"]
+  },
+  {
+hod name": "分块头解析完成""method name": "收到WS数据体",
+hod name": "分块头解析完成""comment": "当接收到WebSocket数据包体时本事件将被触发.",
+hod name": "分块头解析完成""result comment": "返回-1则会关闭该连接.",
+hod name": "分块头解析完成""type": "event",
+hod name": "分块头解析完成""data type": "整数",
+hod name": "分块头解析完成""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+hod name": "分块头解析完成"]
+  },
+  {
+data type": "变整数""method name": "WS数据接收完成",
+data type": "变整数""comment": "当完整接收一个WebSocket数据包时本事件将被触发.",
+data type": "变整数""result comment": "返回-1则会关闭该连接.",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  }
+
+"data type": "整数"]
+ },
+ {
+od name": "分块头解析完成""type": "event""class name": "HPHTTP客户端基础类",
+od name": "分块头解析完成""type": "event""comment": "★ 本类由\"飞翔的企鹅\"封装.\nHTTP客户端基类,请使用其子类.",
+od name": "分块头解析完成""type": "event""base class": "HPTCP客户端基础类",
+od name": "分块头解析完成""type": "event""@文档": "\"category = \\\"辅助类\\\"\"",
+od name": "分块头解析完成""type": "event""@禁止创建对象": "真",
+od name": "分块头解析完成""type": "event""methods": [
+  {
+d name": "分块头解析完成""type": "event""@文档": "\"category = \\\"辅助类\\\"\"""method name": "是否升级协议",
+d name": "分块头解析完成""type": "event""@文档": "\"category = \\\"辅助类\\\"\"""comment": "检查是否升级协议.",
+d name": "分块头解析完成""type": "event""@文档": "\"category = \\\"辅助类\\\"\"""type": "property getter",
+d name": "分块头解析完成""type": "event""@文档": "\"category = \\\"辅助类\\\"\"""data type": "逻辑型",
+d name": "分块头解析完成""type": "event""@文档": "\"category = \\\"辅助类\\\"\"""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "是否保持连接",
+"comment": "检查是否有Keep-Alive标识.",
+"type": "property getter",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "协议版本",
+}"comment": "获取协议版本.",
+}"type": "property getter",
+}"data type": "短整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "内容长度",
+
+"comment": "获取内容长度.",
+
+"type": "property getter",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "内容类型",
+"@嵌入式方法": "\"\"""comment": "获取内容类型.",
+"@嵌入式方法": "\"\"""type": "property getter",
+"@嵌入式方法": "\"\"""data type": "文本型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "内容编码",
+}"comment": "获取内容编码.",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"type": "property getter""method name": "传输编码",
+
+"type": "property getter""comment": "获取传输编码.",
+
+"type": "property getter""type": "property getter",
+
+"type": "property getter""data type": "文本型",
+
+"type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+type": "property getter""method name": "协议升级类型",
+type": "property getter""comment": "获取协议升级类型.",
+type": "property getter""type": "property getter",
+type": "property getter""data type": "HPHTTP协议升级类型",
+type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+"type": "property getter""comment": "获取传输编码.""method name": "当前状态码",
+"type": "property getter""comment": "获取传输编码.""comment": "获取HTTP状态码.",
+"type": "property getter""comment": "获取传输编码.""result comment": "返回值参考\"HPHTTP状态码\"类.",
+"type": "property getter""comment": "获取传输编码.""data type": "短整数",
+"type": "property getter""comment": "获取传输编码.""@嵌入式方法": "\"\""
+  },
+  {
+"type": "property getter""method name": "自动启动通信",
+"type": "property getter""comment": "获取HTTP的启动方式.",
+"type": "property getter""result comment": "为真表示自动启动.",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "逻辑型",
+"type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "自动启动通信",
+}"comment": "设置HTTP的启动方式.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "自动",
+"comment": "为真表示自动启动.",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+"method name": "启用Cookie",
+"comment": "设置是否使用Cookie,默认启用.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+thod name": "自动启动通信""method name": "启用Cookie",
+thod name": "自动启动通信""comment": "获取是否使用Cookie.",
+thod name": "自动启动通信""type": "property getter",
+thod name": "自动启动通信""data type": "逻辑型",
+thod name": "自动启动通信""@嵌入式方法": "\"\""
+  },
+  {
+hod name": "自动启动通信""data type": "逻辑型""method name": "取解析错误代码",
+hod name": "自动启动通信""data type": "逻辑型""comment": "获取解析错误代码",
+hod name": "自动启动通信""data type": "逻辑型""data type": "短整数",
+hod name": "自动启动通信""data type": "逻辑型""@禁止流程检查": "真",
+hod name": "自动启动通信""data type": "逻辑型""parameters": [
+   {
+"parameter name": "错误描述",
+"comment": "提供获取错误描述内容的指针.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+hod name": "自动启动通信""data type": "逻辑型"]
+  },
+  {
+"method name": "发WebSocket消息",
+"comment": "向对端发送WebSocket消息.",
+"result comment": "返回是否发送成功.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针表示无掩码.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据",
+"comment": "提供消息体数据缓冲区.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "消息体数据长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息总长度.",
+"data type": "长整数"
+   }
+]
+  },
+  {
+
+"method name": "取WebSocket消息",
+
+"comment": "获取当前WebSocket消息状态.",
+
+"result comment": "是否获取成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4个字节掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "总长度",
+"comment": "消息总长度.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "BodyRemain",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+data type": "变整数""method name": "启动HTTP通信",
+data type": "变整数""comment": "启动HTTP通信.\n如当前组件设置为非自动启动HTTP通信时,需调用该方法启动.",
+data type": "变整数""result comment": "返回是否启动成功.",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "发送分片数据",
+ }"comment": "向对端发送Chunked数据分片.",
+ }"result comment": "返回是否发送成功.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "数据",
+"comment": "所欲发送的数据分片.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所欲发送数据分片的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "扩展属性",
+"comment": "扩展属性.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "数据长度""method name": "本地协议版本",
+ameter name": "数据长度""comment": "设置当前本地HTTP协议版本.",
+ameter name": "数据长度""type": "property setter",
+ameter name": "数据长度""parameters": [
+   {
+"parameter name": "版本",
+"data type": "HPHTTP协议版本"
+   }
+ameter name": "数据长度"]
+  },
+  {
+ }"method name": "本地协议版本",
+ }"comment": "获取当前本地所使用HTTP协议版本.",
+ }"type": "property getter",
+ }"data type": "HPHTTP协议版本",
+ }"@禁止流程检查": "真"
+  },
+  {
+meter name": "数据长度""type": "property setter""method name": "取请求头值",
+meter name": "数据长度""type": "property setter""comment": " 取得指定请求头的值.\n  取得请求头中指定的值,例如,取请求头值(当前连接ID, \"User-Agent\"),将取得当前客户\n的浏览器类型.\n  请注意:如果您欲读的请求头名在请求头中不存在,或还未解析完毕,本方法将返回空对象.",
+meter name": "数据长度""type": "property setter""data type": "文本型",
+meter name": "数据长度""type": "property setter""@禁止流程检查": "真",
+meter name": "数据长度""type": "property setter""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲获取请求头的名称.",
+"data type": "文本型"
+   }
+meter name": "数据长度""type": "property setter"]
+  },
+  {
+]"method name": "取请求头多值",
+]"comment": "获取指定多值的请求头.",
+]"result comment": "返回指定名称请求头对应的所有值.",
+]"data type": "文本数组类",
+]"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲获取请求头的名称.",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+}"method name": "取所有请求头",
+}"comment": "获取所有请求头.",
+}"data type": "HP请求头数组类"
+  },
+  {
+
+"method name": "取所有请求头名",
+
+"comment": "获取所有请求头名称.",
+
+"data type": "文本数组类"
+  },
+  {
+comment": "扩展属性.""method name": "取Cookie",
+comment": "扩展属性.""comment": "获取指定Cookie.",
+comment": "扩展属性.""data type": "文本型",
+comment": "扩展属性.""@禁止流程检查": "真",
+comment": "扩展属性.""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+comment": "扩展属性."]
+  },
+  {
+
+"method name": "取所有Cookie",
+
+"comment": "获取所有Cookie.",
+
+"data type": "HP请求头数组类"
+  },
+  {
+ }"method name": "发送请求",
+ }"comment": "向服务端发送HTTP请求.",
+ }"result comment": "返回是否发送成功.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "请求方法",
+"comment": "提供所欲使用的请求方法.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供请求路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "所欲发送的请求头内容,一个成员表示一个头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "请求体",
+"comment": "所欲发送的请求体内容.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+ata type": "文本型""result comment": "返回是否操作成功.""method name": "发送本地文件",
+ata type": "文本型""result comment": "返回是否操作成功.""comment": "向服务端发送本地文件(4096KB以下).",
+ata type": "文本型""result comment": "返回是否操作成功.""result comment": "返回是否发送成功.",
+ata type": "文本型""result comment": "返回是否操作成功.""data type": "逻辑型",
+ata type": "文本型""result comment": "返回是否操作成功.""@禁止流程检查": "真",
+ata type": "文本型""result comment": "返回是否操作成功.""parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "提供所欲发送文件的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求方法",
+"comment": "提供所欲使用的请求方法.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求路径",
+"comment": "提供请求路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "所欲回复的请求头内容,一个成员表示一个头.",
+"data type": "HP请求头数组类"
+   }
+ata type": "文本型""result comment": "返回是否操作成功."]
+  },
+  {
+}"method name": "发送POST请求",
+}"comment": "向服务端发送POST请求.",
+}"result comment": "返回是否发送成功.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类"
+   },
+   {
+"parameter name": "提交数据",
+"comment": "提供所欲提交的数据内容.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "发送PUT请求",
+}"comment": "向服务端发送PUT请求.",
+}"result comment": "返回是否发送成功.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类"
+   },
+   {
+"parameter name": "提交数据",
+"comment": "提供所欲提交的数据内容.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+ }"method name": "发送PATCH请求",
+ }"comment": "向服务端发送PATCH请求.",
+ }"result comment": "返回是否发送成功.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类"
+   },
+   {
+"parameter name": "提交数据",
+"comment": "提供所欲提交的数据内容.",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+
+"method name": "发送GET请求",
+
+"comment": "向服务端发送GET请求.",
+
+"result comment": "返回是否发送成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "发送DELETE请求",
+
+"comment": "向服务端发送Delete请求.",
+
+"result comment": "返回是否发送成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "发送HEAD请求",
+
+"comment": "向服务端发送Head请求.",
+
+"result comment": "返回是否发送成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "发送TRACE请求",
+data type": "文本型""comment": "向服务端发送Trace请求.",
+data type": "文本型""result comment": "返回是否发送成功.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "发送OPTIONS请求",
+
+"comment": "向服务端发送Options请求.",
+
+"result comment": "返回是否发送成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "发送CONNECT请求",
+
+"comment": "向服务端发送Connect请求.",
+
+"result comment": "返回是否发送成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "请求路径",
+"comment": "提供所欲发起请求的路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供发起请求所欲使用的请求头,一个成员表示一对请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   }
+
+]
+  }
+od name": "分块头解析完成""type": "event"]
+ },
+ {
+data type": "HP请求头数组类""class name": "HP_HTTP客户端",
+data type": "HP请求头数组类""comment": "★ 本类由\"飞翔的企鹅\"封装.",
+data type": "HP请求头数组类""base class": "HPHTTP客户端基础类",
+data type": "HP请求头数组类""@文档": "\"category = \\\"HTTP客户端\\\"\"",
+data type": "HP请求头数组类""@视窗.后缀文本": "\"public IHttpClientListener\"",
+data type": "HP请求头数组类""methods": [
+  {
+ }"method name": "启动",
+ }"comment": "启动客户端通信组件并连接至目标服务端.",
+ }"result comment": "返回是否操作成功.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+comment": "提供所欲发起请求的路径.""method name": "开始握手",
+comment": "提供所欲发起请求的路径.""comment": "当前客户端将与服务端握手时将触发本事件.",
+comment": "提供所欲发起请求的路径.""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+comment": "提供所欲发起请求的路径.""type": "event",
+comment": "提供所欲发起请求的路径.""data type": "整数",
+comment": "提供所欲发起请求的路径.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "提供所欲发起请求的路径."]
+  },
+  {
+发送Connect请求."method name": "发送完毕",
+发送Connect请求."comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+发送Connect请求."type": "event",
+发送Connect请求."data type": "整数",
+发送Connect请求."parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+发送Connect请求.]
+  },
+  {
+}"result comment": "返回是否操作成功.""method name": "数据进入",
+}"result comment": "返回是否操作成功.""comment": "当客户端成功接收数据后将触发本事件.",
+}"result comment": "返回是否操作成功.""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+}"result comment": "返回是否操作成功.""type": "event",
+}"result comment": "返回是否操作成功.""data type": "整数",
+}"result comment": "返回是否操作成功.""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+}"result comment": "返回是否操作成功."]
+  },
+  {
+"method name": "通信发生错误",
+"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+]
+  },
+  {
+"method name": "准备连接",
+"comment": "当客户端启动之后将触发本事件.",
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+启动之后将触发本事件."method name": "连接完成",
+启动之后将触发本事件."comment": "与服务端成功建立连接时本事件将被触发.",
+启动之后将触发本事件."result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+启动之后将触发本事件."type": "event",
+启动之后将触发本事件."data type": "整数",
+启动之后将触发本事件."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+启动之后将触发本事件.]
+  },
+  {
+"method name": "开始解析消息",
+"comment": "  当客户请求数据时,将会首先触发本事件,本事件触发后,开始解析请求数据.\n  请注意:请不要再本事件中与客户进行数据发送,如果要向客户回复数据,请\n在事件\"消息解析完毕\"中回复.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+启动之后将触发本事件."method name": "请求行解析完毕",
+启动之后将触发本事件."comment": "  当服务器接收到客户请求后,将触发本事件,本事件将指定\n当前请求方式,和请求路径.例如:本机地址为192.168.0.103\n,浏览器端访问\"http://192.168.0.103/image.png\",本事件\n将解析出请求地址后面的\"/image.png\".",
+启动之后将触发本事件."result comment": "返回-1则认定为解析错误并关闭该连接.",
+启动之后将触发本事件."type": "event",
+启动之后将触发本事件."data type": "整数",
+启动之后将触发本事件."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前请求方式",
+"comment": "当前客户请求方式,例如GET或POST.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前请求地址",
+"comment": "当前客户请求路径.为地址后面的参数.",
+"data type": "文本型"
+   }
+启动之后将触发本事件.]
+  },
+  {
+"method name": "状态行解析完成",
+"comment": "状态行解析完成后本事件将被触发.",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述内容.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+启动之后将触发本事件."method name": "请求头进入",
+启动之后将触发本事件."comment": " 当服务器解析完毕请求后,将会通过本事件通知当前请求头.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+启动之后将触发本事件."result comment": "返回-1则认定为解析错误并关闭该连接.",
+启动之后将触发本事件."type": "event",
+启动之后将触发本事件."data type": "整数",
+启动之后将触发本事件."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求头名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头值",
+"data type": "文本型"
+   }
+启动之后将触发本事件.]
+  },
+  {
+之后将触发本事件.]"method name": "请求头解析完毕",
+之后将触发本事件.]"comment": " 当服务器解析请求头完毕后,将通过本事件通知用户.\n  请注意:本事件只是通知用户请求头解析完毕,不提供所解析的请\n求头数据,如果想要获取请求头数据,请添加事件\"请求头进入\",此事\n件下将会提供请求头名称和请求头值..",
+之后将触发本事件.]"result comment": "返回-1则认定为解析错误并关闭该连接.",
+之后将触发本事件.]"type": "event",
+之后将触发本事件.]"data type": "整数",
+之后将触发本事件.]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+之后将触发本事件.]]
+  },
+  {
+
+"method name": "请求数据进入",
+
+"comment": "  当接收到HTTP BODY报文时本事件将被触发.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所收到的请求体数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所收到的请求体数据长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.""method name": "分块头进入",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.""comment": "分块模式为HTTP1.1的特有模式,即在不确定长度时,将数据分块(Chunked)发送.\n  当接收到客户发送的分块请求头时,将会通过本事件通知用户,并且通过\n参数\"当前请求头长度\"为用户提供请求头数据长度.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.""result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.""type": "event",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.""data type": "整数",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "Chunked报文体数据长度.",
+"data type": "整数"
+   }
+
+"result comment": "返回-1则认定为解析错误并关闭该连接."]
+  },
+  {
+
+"method name": "分块头解析完成",
+
+"comment": "  当接收到客户发送的(Chunked)分块请求头并且解析完毕后,将通过本事件通知用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件. ",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "消息解析完毕",
+"comment": "  客户请求解析完毕.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ata type": "文本型""result comment": "返回是否操作成功.""method name": "协议升级",
+ata type": "文本型""result comment": "返回是否操作成功.""comment": "  当客户端主动升级协议后,将会触发本事件.\n  当客户端从HTTP1.0协议升级为HTTP1.1协议后,服务器将通过本事件通知\n用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+ata type": "文本型""result comment": "返回是否操作成功.""result comment": "返回-1则会关闭该连接.",
+ata type": "文本型""result comment": "返回是否操作成功.""type": "event",
+ata type": "文本型""result comment": "返回是否操作成功.""data type": "整数",
+ata type": "文本型""result comment": "返回是否操作成功.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "协议类型",
+"data type": "HPHTTP协议升级类型"
+   }
+ata type": "文本型""result comment": "返回是否操作成功."]
+  },
+  {
+ }"method name": "解析错误",
+ }"comment": "  当解析客户请求数据出错后,将会通过本事件通知用户.\n  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:\n    1. 在服务器解析事件中返回了-1或其他不正确的值.\n    2. 在服务器解析事件中主动与客户断开了连接.\n    3. 客户所发送的请求数据有误.\n  本事件返回值无具体意义,请返回默认值0.",
+ }"result comment": "返回-1则会关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误码",
+"data type": "HP错误码"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"result comment": "返回-1则会关闭该连接.""method name": "正在解析WS数据头",
+}"result comment": "返回-1则会关闭该连接.""comment": "当解析WebSocket数据包头时本事件将被触发.",
+}"result comment": "返回-1则会关闭该连接.""result comment": "返回-1则会关闭该连接.",
+}"result comment": "返回-1则会关闭该连接.""type": "event",
+}"result comment": "返回-1则会关闭该连接.""data type": "整数",
+}"result comment": "返回-1则会关闭该连接.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+}"result comment": "返回-1则会关闭该连接."]
+  },
+  {
+ameter name": "掩码""method name": "收到WS数据体",
+ameter name": "掩码""comment": "当接收到WebSocket数据包体时本事件将被触发.",
+ameter name": "掩码""result comment": "返回-1则会关闭该连接.",
+ameter name": "掩码""type": "event",
+ameter name": "掩码""data type": "整数",
+ameter name": "掩码""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+ameter name": "掩码"]
+  },
+  {
+data type": "字节集类""method name": "WS数据接收完成",
+data type": "字节集类""comment": "当完整接收一个WebSocket数据包时本事件将被触发.",
+data type": "字节集类""result comment": "返回-1则会关闭该连接.",
+data type": "字节集类""type": "event",
+data type": "字节集类""data type": "整数",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "字节集类"]
+  }
+data type": "HP请求头数组类"]
+ },
+ {
+ata type": "字节集类""type": "event""class name": "HP_HTTP安全客户端类",
+ata type": "字节集类""type": "event""comment": "★ 本类由\"飞翔的企鹅\"封装.",
+ata type": "字节集类""type": "event""base class": "HPHTTP客户端基础类",
+ata type": "字节集类""type": "event""@文档": "\"category = \\\"HTTP客户端\\\"\"",
+ata type": "字节集类""type": "event""@视窗.后缀文本": "\"public IHttpClientListener\"",
+ata type": "字节集类""type": "event""methods": [
+  {
+er name": "掩码""method name": "收到WS数据体""method name": "启动",
+er name": "掩码""method name": "收到WS数据体""comment": "启动客户端通信组件并连接至目标服务端.\n注意:调用前请确保已初始化SSL环境成功,否则无法正确启动.",
+er name": "掩码""method name": "收到WS数据体""result comment": "返回是否操作成功.",
+er name": "掩码""method name": "收到WS数据体""data type": "逻辑型",
+er name": "掩码""method name": "收到WS数据体""@嵌入式方法": "\"\"",
+er name": "掩码""method name": "收到WS数据体""parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+er name": "掩码""method name": "收到WS数据体"]
+  },
+  {
+r name": "掩码""method name": "收到WS数据体""result comment": "返回是否操作成功.""method name": "握手模式",
+r name": "掩码""method name": "收到WS数据体""result comment": "返回是否操作成功.""comment": "设置通信组件SSL握手方式(默认为真,自动握手)",
+r name": "掩码""method name": "收到WS数据体""result comment": "返回是否操作成功.""type": "property setter",
+r name": "掩码""method name": "收到WS数据体""result comment": "返回是否操作成功.""parameters": [
+   {
+"parameter name": "自动",
+"comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.",
+"data type": "逻辑型"
+   }
+r name": "掩码""method name": "收到WS数据体""result comment": "返回是否操作成功."]
+  },
+  {
+data type": "逻辑型""method name": "握手模式",
+data type": "逻辑型""comment": "获取通信组件SSL握手方式.",
+data type": "逻辑型""type": "property getter",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "加密算法列表",
+"comment": "设置SSL加密算法列表.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "算法",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ata type": "逻辑型""data type": "逻辑型""method name": "加密算法列表",
+ata type": "逻辑型""data type": "逻辑型""comment": "获取SSL加密算法列表.",
+ata type": "逻辑型""data type": "逻辑型""type": "property getter",
+ata type": "逻辑型""data type": "逻辑型""data type": "文本型",
+ata type": "逻辑型""data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+comment": "设置SSL加密算法列表.""method name": "初始化SSL环境",
+comment": "设置SSL加密算法列表.""comment": "初始化通信组件 SSL 环境参数.\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+comment": "设置SSL加密算法列表.""result comment": "返回是否操作成功.",
+comment": "设置SSL加密算法列表.""data type": "逻辑型",
+comment": "设置SSL加密算法列表.""@禁止流程检查": "真",
+comment": "设置SSL加密算法列表.""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证或客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+comment": "设置SSL加密算法列表."]
+  },
+  {
+ata type": "逻辑型""@嵌入式方法": "\"\"""method name": "初始化SSL环境_内存",
+ata type": "逻辑型""@嵌入式方法": "\"\"""comment": "初始化通信组件SSL环境参数(从内存载入证书内容).\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+ata type": "逻辑型""@嵌入式方法": "\"\"""result comment": "返回是否操作成功.",
+ata type": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型",
+ata type": "逻辑型""@嵌入式方法": "\"\"""@禁止流程检查": "真",
+ata type": "逻辑型""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ata type": "逻辑型""@嵌入式方法": "\"\""]
+  },
+  {
+ta type": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境",
+ta type": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""comment": "清理通信组件SSL运行环境,回收SSL相关内存.\n注意:当通信组件需要重设SSL信息时,请先调用该方法清空原有环境参数.",
+ta type": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "验证模式""method name": "开始SSL握手",
+ameter name": "验证模式""comment": "启动SSL握手.\n注意:如果当前通信组件的\"握手模式\"为假时,需调用该方法握手,否则将导致连接失败.",
+ameter name": "验证模式""result comment": "返回是否操作成功.",
+ameter name": "验证模式""data type": "逻辑型",
+ameter name": "验证模式""@嵌入式方法": "\"\""
+  },
+  {
+ype": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境""method name": "开始握手",
+ype": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境""comment": "当前客户端将与服务端握手时将触发本事件.",
+ype": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+ype": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境""type": "event",
+ype": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境""data type": "整数",
+ype": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ype": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境"]
+  },
+  {
+e": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境"]"method name": "发送完毕",
+e": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境"]"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+e": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境"]"type": "event",
+e": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境"]"data type": "整数",
+e": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境"]"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+e": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "清理SSL环境"]]
+  },
+  {
+a type": "逻辑型""@嵌入式方法": "\"\""]"method name": "数据进入",
+a type": "逻辑型""@嵌入式方法": "\"\""]"comment": "当客户端成功接收数据后将触发本事件.",
+a type": "逻辑型""@嵌入式方法": "\"\""]"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+a type": "逻辑型""@嵌入式方法": "\"\""]"type": "event",
+a type": "逻辑型""@嵌入式方法": "\"\""]"data type": "整数",
+a type": "逻辑型""@嵌入式方法": "\"\""]"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+a type": "逻辑型""@嵌入式方法": "\"\""]]
+  },
+  {
+data type": "整数""method name": "通信发生错误",
+data type": "整数""comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "准备连接",
+"comment": "当客户端启动之后将触发本事件.",
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ }"method name": "连接完成",
+ }"comment": "与服务端成功建立连接时本事件将被触发.",
+ }"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+data type": "变整数""method name": "开始解析消息",
+data type": "变整数""comment": "  当客户请求数据时,将会首先触发本事件,本事件触发后,开始解析请求数据.\n  请注意:请不要再本事件中与客户进行数据发送,如果要向客户回复数据,请\n在事件\"消息解析完毕\"中回复.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+data type": "变整数""result comment": "返回-1则认定为解析错误并关闭该连接.",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+data type": "变整数""method name": "请求行解析完毕",
+data type": "变整数""comment": "  当服务器接收到客户请求后,将触发本事件,本事件将指定\n当前请求方式,和请求路径.例如:本机地址为192.168.0.103\n,浏览器端访问\"http://192.168.0.103/image.png\",本事件\n将解析出请求地址后面的\"/image.png\".",
+data type": "变整数""result comment": "返回-1则认定为解析错误并关闭该连接.",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前请求方式",
+"comment": "当前客户请求方式,例如GET或POST.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前请求地址",
+"comment": "当前客户请求路径.为地址后面的参数.",
+"data type": "文本型"
+   }
+data type": "变整数"]
+  },
+  {
+ethod name": "连接完成""method name": "状态行解析完成",
+ethod name": "连接完成""comment": "状态行解析完成后本事件将被触发.",
+ethod name": "连接完成""result comment": "返回-1则认定为解析错误并关闭当前连接.",
+ethod name": "连接完成""type": "event",
+ethod name": "连接完成""data type": "整数",
+ethod name": "连接完成""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述内容.",
+"data type": "文本型"
+   }
+ethod name": "连接完成"]
+  },
+  {
+ameter name": "连接ID""method name": "请求头进入",
+ameter name": "连接ID""comment": " 当服务器解析完毕请求后,将会通过本事件通知当前请求头.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+ameter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭当前连接.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求头名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头值",
+"data type": "文本型"
+   }
+ameter name": "连接ID"]
+  },
+  {
+"method name": "请求头解析完毕",
+"comment": " 当服务器解析请求头完毕后,将通过本事件通知用户.\n  请注意:本事件只是通知用户请求头解析完毕,不提供所解析的请\n求头数据,如果想要获取请求头数据,请添加事件\"请求头进入\",此事\n件下将会提供请求头名称和请求头值..",
+"result comment": "返回-1则认定为解析错误并关闭当前连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "请求数据进入",
+
+"comment": "  当接收到HTTP BODY报文时本事件将被触发.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则认定为解析错误并关闭当前连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所收到的请求体数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所收到的请求体数据长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "分块头进入",
+ }"comment": "分块模式为HTTP1.1的特有模式,即在不确定长度时,将数据分块(Chunked)发送.\n  当接收到客户发送的分块请求头时,将会通过本事件通知用户,并且通过\n参数\"当前请求头长度\"为用户提供请求头数据长度.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+ }"result comment": "返回-1则认定为解析错误并关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "Chunked报文体数据长度.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "分块头解析完成",
+
+"comment": "  当接收到客户发送的(Chunked)分块请求头并且解析完毕后,将通过本事件通知用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件. ",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "消息解析完毕",
+
+"comment": "  客户请求解析完毕.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则认定为解析错误并关闭当前连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "协议升级",
+
+"comment": "  当客户端主动升级协议后,将会触发本事件.\n  当客户端从HTTP1.0协议升级为HTTP1.1协议后,服务器将通过本事件通知\n用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+
+"result comment": "返回-1则会关闭当前连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "协议类型",
+"data type": "HPHTTP协议升级类型"
+   }
+
+]
+  },
+  {
+ }"method name": "解析错误",
+ }"comment": "  当解析客户请求数据出错后,将会通过本事件通知用户.\n  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:\n    1. 在服务器解析事件中返回了-1或其他不正确的值.\n    2. 在服务器解析事件中主动与客户断开了连接.\n    3. 客户所发送的请求数据有误.\n  本事件返回值无具体意义,请返回默认值0.",
+ }"result comment": "返回-1则会关闭当前连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误码",
+"data type": "HP错误码"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "正在解析WS数据头",
+ }"comment": "当解析WebSocket数据包头时本事件将被触发.",
+ }"result comment": "返回-1则会关闭当前连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+]"method name": "收到WS数据体",
+]"comment": "当接收到WebSocket数据包体时本事件将被触发.",
+]"result comment": "返回-1则会关闭当前连接.",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+]]
+  },
+  {
+comment": "所收到的请求体数据.""method name": "WS数据接收完成",
+comment": "所收到的请求体数据.""comment": "当完整接收一个WebSocket数据包时本事件将被触发.",
+comment": "所收到的请求体数据.""result comment": "返回-1则会关闭当前连接.",
+comment": "所收到的请求体数据.""type": "event",
+comment": "所收到的请求体数据.""data type": "整数",
+comment": "所收到的请求体数据.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "所收到的请求体数据."]
+  }
+ata type": "字节集类""type": "event"]
+ },
+ {
+"class name": "HPHTTP同步客户端基础类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\nHTTP同步客户端基类,请使用其子类.",
+"base class": "HPHTTP客户端基础类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+ata type": "字节集类""type": "event""method name": "连接超时",
+ata type": "字节集类""type": "event""comment": "设置连接超时.",
+ata type": "字节集类""type": "event""type": "property setter",
+ata type": "字节集类""type": "event""parameters": [
+   {
+"parameter name": "超时",
+"comment": "默认5000毫秒.",
+"data type": "整数"
+   }
+ata type": "字节集类""type": "event"]
+  },
+  {
+"type": "event""method name": "请求超时",
+"type": "event""comment": "设置请求超时.",
+"type": "event""type": "property setter",
+"type": "event""parameters": [
+   {
+"parameter name": "超时",
+"comment": "默认10000毫秒.",
+"data type": "整数"
+   }
+"type": "event"]
+  },
+  {
+"type": "event""method name": "连接超时",
+"type": "event""comment": "获取连接超时.",
+"type": "event""type": "property getter",
+"type": "event""data type": "整数",
+"type": "event""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "请求超时",
+ }"comment": "获取请求超时.",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取响应体",
+}"comment": "获取响应体.",
+}"data type": "字节集类",
+}"@禁止流程检查": "真"
+  },
+  {
+}"type": "property getter""method name": "发送URL请求",
+}"type": "property getter""comment": "向服务端发送HTTP URL请求.",
+}"type": "property getter""result comment": "返回是否发送成功.",
+}"type": "property getter""data type": "逻辑型",
+}"type": "property getter""@禁止流程检查": "真",
+}"type": "property getter""parameters": [
+   {
+"parameter name": "请求方法",
+"comment": "提供所欲请求的方法.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求地址",
+"comment": "提供所欲请求的URL地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"comment": "提供请求所欲提交的请求头.",
+"data type": "HP请求头数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "请求体",
+"comment": "提供请求所欲提交的请求体.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "强制重连",
+"comment": "是否强制重新连接(默认为假:当请求URL的主机和端口与现有连接一致时,重用现有连接).",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}"type": "property getter"]
+  }
+]
+ },
+ {
+ }"class name": "HP_HTTP同步客户端",
+ }"comment": "★ 本类由\"飞翔的企鹅\"封装.",
+ }"base class": "HPHTTP同步客户端基础类",
+ }"@文档": "\"category = \\\"HTTP客户端\\\"\"",
+ }"@视窗.后缀文本": "\"public IHttpClientListener\"",
+ }"methods": [
+  {
+"method name": "启动",
+"comment": "启动客户端通信组件并连接至目标服务端.",
+"result comment": "返回是否操作成功.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+
+"method name": "开始握手",
+
+"comment": "当前客户端将与服务端握手时将触发本事件.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "发送完毕",
+"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "数据进入",
+}"comment": "当客户端成功接收数据后将触发本事件.",
+}"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+thod name": "数据进入""method name": "通信发生错误",
+thod name": "数据进入""comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+thod name": "数据进入""type": "event",
+thod name": "数据进入""data type": "整数",
+thod name": "数据进入""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+thod name": "数据进入"]
+  },
+  {
+hod name": "数据进入""parameters": [
+"method name": "准备连接",
+hod name": "数据进入""parameters": [
+"comment": "当客户端启动之后将触发本事件.",
+hod name": "数据进入""parameters": [
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+hod name": "数据进入""parameters": [
+"type": "event",
+hod name": "数据进入""parameters": [
+"data type": "整数",
+hod name": "数据进入""parameters": [
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+hod name": "数据进入""parameters": [
+]
+  },
+  {
+ameter name": "关闭原因""method name": "连接完成",
+ameter name": "关闭原因""comment": "与服务端成功建立连接时本事件将被触发.",
+ameter name": "关闭原因""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+ameter name": "关闭原因""type": "event",
+ameter name": "关闭原因""data type": "整数",
+ameter name": "关闭原因""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "关闭原因"]
+  },
+  {
+
+"method name": "开始解析消息",
+
+"comment": "  当客户请求数据时,将会首先触发本事件,本事件触发后,开始解析请求数据.\n  请注意:请不要再本事件中与客户进行数据发送,如果要向客户回复数据,请\n在事件\"消息解析完毕\"中回复.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "请求行解析完毕",
+"comment": "  当服务器接收到客户请求后,将触发本事件,本事件将指定\n当前请求方式,和请求路径.例如:本机地址为192.168.0.103\n,浏览器端访问\"http://192.168.0.103/image.png\",本事件\n将解析出请求地址后面的\"/image.png\".",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前请求方式",
+"comment": "当前客户请求方式,例如GET或POST.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前请求地址",
+"comment": "当前客户请求路径.为地址后面的参数.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "当前请求方式""method name": "状态行解析完成",
+ameter name": "当前请求方式""comment": "状态行解析完成后本事件将被触发.",
+ameter name": "当前请求方式""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ameter name": "当前请求方式""type": "event",
+ameter name": "当前请求方式""data type": "整数",
+ameter name": "当前请求方式""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述内容.",
+"data type": "文本型"
+   }
+ameter name": "当前请求方式"]
+  },
+  {
+ }"method name": "请求头进入",
+ }"comment": " 当服务器解析完毕请求后,将会通过本事件通知当前请求头.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+ }"result comment": "返回-1则认定为解析错误并关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求头名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头值",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "请求头解析完毕",
+"comment": " 当服务器解析请求头完毕后,将通过本事件通知用户.\n  请注意:本事件只是通知用户请求头解析完毕,不提供所解析的请\n求头数据,如果想要获取请求头数据,请添加事件\"请求头进入\",此事\n件下将会提供请求头名称和请求头值..",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+comment": "当前客户请求路径.为地址后面的参数.""method name": "请求数据进入",
+comment": "当前客户请求路径.为地址后面的参数.""comment": "  当接收到HTTP BODY报文时本事件将被触发.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+comment": "当前客户请求路径.为地址后面的参数.""result comment": "返回-1则认定为解析错误并关闭该连接.",
+comment": "当前客户请求路径.为地址后面的参数.""type": "event",
+comment": "当前客户请求路径.为地址后面的参数.""data type": "整数",
+comment": "当前客户请求路径.为地址后面的参数.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所收到的请求体数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所收到的请求体数据长度.",
+"data type": "整数"
+   }
+comment": "当前客户请求路径.为地址后面的参数."]
+  },
+  {
+type": "event""method name": "分块头进入",
+type": "event""comment": "分块模式为HTTP1.1的特有模式,即在不确定长度时,将数据分块(Chunked)发送.\n  当接收到客户发送的分块请求头时,将会通过本事件通知用户,并且通过\n参数\"当前请求头长度\"为用户提供请求头数据长度.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+type": "event""result comment": "返回-1则认定为解析错误并关闭该连接.",
+type": "event""type": "event",
+type": "event""data type": "整数",
+type": "event""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "Chunked报文体数据长度.",
+"data type": "整数"
+   }
+type": "event"]
+  },
+  {
+"method name": "分块头解析完成",
+"comment": "  当接收到客户发送的(Chunked)分块请求头并且解析完毕后,将通过本事件通知用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件. ",
+"result comment": "返回-1则认定为解析错误并关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ }"method name": "消息解析完毕",
+ }"comment": "  客户请求解析完毕.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+ }"result comment": "返回-1则认定为解析错误并关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ked报文体数据长度."method name": "协议升级",
+ked报文体数据长度."comment": "  当客户端主动升级协议后,将会触发本事件.\n  当客户端从HTTP1.0协议升级为HTTP1.1协议后,服务器将通过本事件通知\n用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+ked报文体数据长度."result comment": "返回-1则会关闭该连接.",
+ked报文体数据长度."type": "event",
+ked报文体数据长度."data type": "整数",
+ked报文体数据长度."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "协议类型",
+"data type": "HPHTTP协议升级类型"
+   }
+ked报文体数据长度.]
+  },
+  {
+ }"method name": "解析错误",
+ }"comment": "  当解析客户请求数据出错后,将会通过本事件通知用户.\n  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:\n    1. 在服务器解析事件中返回了-1或其他不正确的值.\n    2. 在服务器解析事件中主动与客户断开了连接.\n    3. 客户所发送的请求数据有误.\n  本事件返回值无具体意义,请返回默认值0.",
+ }"result comment": "返回-1则会关闭该连接.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误码",
+"data type": "HP错误码"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ype": "event""result comment": "返回-1则认定为解析错误并关闭该连接.""method name": "正在解析WS数据头",
+ype": "event""result comment": "返回-1则认定为解析错误并关闭该连接.""comment": "当解析WebSocket数据包头时本事件将被触发.",
+ype": "event""result comment": "返回-1则认定为解析错误并关闭该连接.""result comment": "返回-1则会关闭该连接.",
+ype": "event""result comment": "返回-1则认定为解析错误并关闭该连接.""type": "event",
+ype": "event""result comment": "返回-1则认定为解析错误并关闭该连接.""data type": "整数",
+ype": "event""result comment": "返回-1则认定为解析错误并关闭该连接.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+ype": "event""result comment": "返回-1则认定为解析错误并关闭该连接."]
+  },
+  {
+"method name": "收到WS数据体",
+"comment": "当接收到WebSocket数据包体时本事件将被触发.",
+"result comment": "返回-1则会关闭该连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+]
+  },
+  {
+result comment": "返回-1则认定为解析错误并关闭该连接.""method name": "WS数据接收完成",
+result comment": "返回-1则认定为解析错误并关闭该连接.""comment": "当完整接收一个WebSocket数据包时本事件将被触发.",
+result comment": "返回-1则认定为解析错误并关闭该连接.""result comment": "返回-1则会关闭该连接.",
+result comment": "返回-1则认定为解析错误并关闭该连接.""type": "event",
+result comment": "返回-1则认定为解析错误并关闭该连接.""data type": "整数",
+result comment": "返回-1则认定为解析错误并关闭该连接.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+result comment": "返回-1则认定为解析错误并关闭该连接."]
+  }
+ }]
+ },
+ {
+}"class name": "HP_HTTP同步安全客户端",
+}"comment": "★ 本类由\"飞翔的企鹅\"封装.",
+}"base class": "HPHTTP同步客户端基础类",
+}"@文档": "\"category = \\\"HTTP客户端\\\"\"",
+}"@视窗.后缀文本": "\"public IHttpClientListener\"",
+}"methods": [
+  {
+"method name": "启动",
+"comment": "启动客户端通信组件并连接至目标服务端.\n注意:调用前请确保已初始化SSL环境成功,否则无法正确启动.",
+"result comment": "返回是否操作成功.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+ }"method name": "握手模式",
+ }"comment": "设置通信组件SSL握手方式(默认为真,自动握手)",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "自动",
+"comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+
+"method name": "握手模式",
+
+"comment": "获取通信组件SSL握手方式.",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "加密算法列表",
+}"comment": "设置SSL加密算法列表.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "算法",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ }"method name": "加密算法列表",
+ }"comment": "获取SSL加密算法列表.",
+ }"type": "property getter",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "初始化SSL环境",
+ }"comment": "初始化通信组件 SSL 环境参数.\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+ }"result comment": "返回是否操作成功.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证或客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ }]
+  },
+  {
+comment": "提供所欲使用的证书文件路径(客户端可选).""method name": "初始化SSL环境_内存",
+comment": "提供所欲使用的证书文件路径(客户端可选).""comment": "初始化通信组件SSL环境参数(从内存载入证书内容).\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+comment": "提供所欲使用的证书文件路径(客户端可选).""result comment": "返回是否操作成功.",
+comment": "提供所欲使用的证书文件路径(客户端可选).""data type": "逻辑型",
+comment": "提供所欲使用的证书文件路径(客户端可选).""@禁止流程检查": "真",
+comment": "提供所欲使用的证书文件路径(客户端可选).""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+comment": "提供所欲使用的证书文件路径(客户端可选)."]
+  },
+  {
+data type": "文本型""method name": "清理SSL环境",
+data type": "文本型""comment": "清理通信组件SSL运行环境,回收SSL相关内存.\n注意:当通信组件需要重设SSL信息时,请先调用该方法清空原有环境参数.",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+comment": "提供所欲使用的私钥密码,如无密码可为空.""method name": "开始SSL握手",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""comment": "启动SSL握手.\n注意:如果当前通信组件的\"握手模式\"为假时,需调用该方法握手,否则将导致连接失败.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""result comment": "返回是否操作成功.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "连接ID""method name": "开始握手",
+ameter name": "连接ID""comment": "当前客户端将与服务端握手时将触发本事件.",
+ameter name": "连接ID""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+ }"method name": "发送完毕",
+ }"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+comment": "提供所欲使用的私钥密码,如无密码可为空.""method name": "数据进入",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""comment": "当客户端成功接收数据后将触发本事件.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""type": "event",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "整数",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+comment": "提供所欲使用的私钥密码,如无密码可为空."]
+  },
+  {
+ }"method name": "通信发生错误",
+ }"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+ }]
+  },
+  {
+comment": "接收到的数据由该连接ID发过来.""method name": "准备连接",
+comment": "接收到的数据由该连接ID发过来.""comment": "当客户端启动之后将触发本事件.",
+comment": "接收到的数据由该连接ID发过来.""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+comment": "接收到的数据由该连接ID发过来.""type": "event",
+comment": "接收到的数据由该连接ID发过来.""data type": "整数",
+comment": "接收到的数据由该连接ID发过来.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "接收到的数据由该连接ID发过来."]
+  },
+  {
+comment": "提供所欲使用的私钥密码,如无密码可为空.""method name": "连接完成",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""comment": "与服务端成功建立连接时本事件将被触发.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""type": "event",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "整数",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "提供所欲使用的私钥密码,如无密码可为空."]
+  },
+  {
+ameter name": "连接ID""method name": "开始解析消息",
+ameter name": "连接ID""comment": "  当客户请求数据时,将会首先触发本事件,本事件触发后,开始解析请求数据.\n  请注意:请不要再本事件中与客户进行数据发送,如果要向客户回复数据,请\n在事件\"消息解析完毕\"中回复.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+ameter name": "连接ID""result comment": "返回-1则认定为解析错误并关闭该连接.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+成功建立连接时本事件将被触发."method name": "请求行解析完毕",
+成功建立连接时本事件将被触发."comment": "  当服务器接收到客户请求后,将触发本事件,本事件将指定\n当前请求方式,和请求路径.例如:本机地址为192.168.0.103\n,浏览器端访问\"http://192.168.0.103/image.png\",本事件\n将解析出请求地址后面的\"/image.png\".",
+成功建立连接时本事件将被触发."result comment": "返回-1则认定为解析错误并关闭该连接.",
+成功建立连接时本事件将被触发."type": "event",
+成功建立连接时本事件将被触发."data type": "整数",
+成功建立连接时本事件将被触发."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前请求方式",
+"comment": "当前客户请求方式,例如GET或POST.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前请求地址",
+"comment": "当前客户请求路径.为地址后面的参数.",
+"data type": "文本型"
+   }
+成功建立连接时本事件将被触发.]
+  },
+  {
+则认定为解析错误并关闭该连接."method name": "状态行解析完成",
+则认定为解析错误并关闭该连接."comment": "状态行解析完成后本事件将被触发.",
+则认定为解析错误并关闭该连接."result comment": "返回-1则认定为解析错误并关闭当前连接.",
+则认定为解析错误并关闭该连接."type": "event",
+则认定为解析错误并关闭该连接."data type": "整数",
+则认定为解析错误并关闭该连接."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "状态码",
+"comment": "HTTP状态码,参考\"HPHTTP状态码\"类.",
+"data type": "短整数"
+   },
+   {
+"parameter name": "状态描述",
+"comment": "HTTP状态描述内容.",
+"data type": "文本型"
+   }
+则认定为解析错误并关闭该连接.]
+  },
+  {
+}"method name": "请求头进入",
+}"comment": " 当服务器解析完毕请求后,将会通过本事件通知当前请求头.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件..",
+}"result comment": "返回-1则认定为解析错误并关闭当前连接.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "请求头名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头值",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+data type": "文本型""method name": "请求头解析完毕",
+data type": "文本型""comment": " 当服务器解析请求头完毕后,将通过本事件通知用户.\n  请注意:本事件只是通知用户请求头解析完毕,不提供所解析的请\n求头数据,如果想要获取请求头数据,请添加事件\"请求头进入\",此事\n件下将会提供请求头名称和请求头值..",
+data type": "文本型""result comment": "返回-1则认定为解析错误并关闭当前连接.",
+data type": "文本型""type": "event",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "变整数""method name": "请求数据进入",
+data type": "变整数""comment": "  当接收到HTTP BODY报文时本事件将被触发.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+data type": "变整数""result comment": "返回-1则认定为解析错误并关闭当前连接.",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所收到的请求体数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所收到的请求体数据长度.",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+"type": "event""method name": "分块头进入",
+"type": "event""comment": "  分块模式为HTTP1.1的特有模式,即在不确定长度时,将数据分块(Chunked)发送.\n  当接收到客户发送的分块请求头时,将会通过本事件通知用户,并且通过\n参数\"当前请求头长度\"为用户提供请求头数据长度.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+"type": "event""result comment": "返回-1则认定为解析错误并关闭当前连接.",
+"type": "event""type": "event",
+"type": "event""data type": "整数",
+"type": "event""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "Chunked报文体数据长度.",
+"data type": "整数"
+   }
+"type": "event"]
+  },
+  {
+}"method name": "分块头解析完成",
+}"comment": "  当接收到客户发送的分块(Chunked)请求头并且解析完毕后,将通过本事件通知用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.  ",
+}"result comment": "返回-1则认定为解析错误并关闭当前连接.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+comment": "所收到的请求体数据长度.""method name": "消息解析完毕",
+comment": "所收到的请求体数据长度.""comment": "  客户请求解析完毕.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+comment": "所收到的请求体数据长度.""result comment": "返回-1则认定为解析错误并关闭当前连接.",
+comment": "所收到的请求体数据长度.""type": "event",
+comment": "所收到的请求体数据长度.""data type": "整数",
+comment": "所收到的请求体数据长度.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "所收到的请求体数据长度."]
+  },
+  {
+thod name": "分块头解析完成""method name": "协议升级",
+thod name": "分块头解析完成""comment": "  当客户端主动升级协议后,将会触发本事件.\n  当客户端从HTTP1.0协议升级为HTTP1.1协议后,服务器将通过本事件通知\n用户.\n  本事件返回值拥有具体意义,请您参考如下返回值:\n    0  - 本次操作成功,默认返回值.\n    -1 - 本次操作失败,主动与客户断开连接.\n  请注意:如果本事件返回-1,将会触发事件\"解析错误\",您可以忽略本次\"解析\n错误\"事件.",
+thod name": "分块头解析完成""result comment": "返回-1则会关闭当前连接.",
+thod name": "分块头解析完成""type": "event",
+thod name": "分块头解析完成""data type": "整数",
+thod name": "分块头解析完成""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "协议类型",
+"data type": "HPHTTP协议升级类型"
+   }
+thod name": "分块头解析完成"]
+  },
+  {
+"method name": "解析错误",
+"comment": "  当解析客户请求数据出错后,将会通过本事件通知用户.\n  当解析客户请求数据出错后,将会触发本事件,触发本事件的原因大概如下:\n    1. 在服务器解析事件中返回了-1或其他不正确的值.\n    2. 在服务器解析事件中主动与客户断开了连接.\n    3. 客户所发送的请求数据有误.\n  本事件返回值无具体意义,请返回默认值0.",
+"result comment": "返回-1则会关闭当前连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "错误码",
+"data type": "HP错误码"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "正在解析WS数据头",
+
+"comment": "当解析WebSocket数据包头时本事件将被触发.",
+
+"result comment": "返回-1则会关闭当前连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ameter name": "消息长度""method name": "收到WS数据体",
+ameter name": "消息长度""comment": "当接收到WebSocket数据包体时本事件将被触发.",
+ameter name": "消息长度""result comment": "返回-1则会关闭当前连接.",
+ameter name": "消息长度""type": "event",
+ameter name": "消息长度""data type": "整数",
+ameter name": "消息长度""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+ameter name": "消息长度"]
+  },
+  {
+ameter name": "数据长度""method name": "WS数据接收完成",
+ameter name": "数据长度""comment": "当完整接收一个WebSocket数据包时本事件将被触发.",
+ameter name": "数据长度""result comment": "返回-1则会关闭当前连接.",
+ameter name": "数据长度""type": "event",
+ameter name": "数据长度""data type": "整数",
+ameter name": "数据长度""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "数据长度"]
+  }
+}]
+ }
+码,空指针则无掩码.]
+}

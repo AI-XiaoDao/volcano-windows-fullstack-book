@@ -1,0 +1,305 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.pdh\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"pdh\\\\FCVolPDH.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "性能计数器值_结构类",
+"base class": "结构基础类",
+"methods": [
+  {
+ "添加查询()""method name": "状态",
+ "添加查询()""type": "property getter",
+ "添加查询()""data type": "整数",
+ "添加查询()""@嵌入式方法": "\"\""
+  },
+  {
+"添加查询()""@嵌入式方法": "\"\"""method name": "整数值",
+"添加查询()""@嵌入式方法": "\"\"""type": "property getter",
+"添加查询()""@嵌入式方法": "\"\"""data type": "整数",
+"添加查询()""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+"添加查询()""@嵌入式方法": "\"\"""method name": "小数值",
+"添加查询()""@嵌入式方法": "\"\"""type": "property getter",
+"添加查询()""@嵌入式方法": "\"\"""data type": "小数",
+"添加查询()""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+()"method name": "文本值",
+()"type": "property getter",
+()"data type": "文本型",
+()"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "性能计数器值格式_常量类",
+"constants": [
+  {
+()"constant name": "原始值",
+()"data type": "整数",
+()"initial value": "@PDH_FMT_RAW"
+  },
+  {
+ "查询所有()""constant name": "多字节",
+ "查询所有()""data type": "整数",
+ "查询所有()""initial value": "@PDH_FMT_ANSI"
+  },
+  {
+
+"constant name": "文本",
+
+"data type": "整数",
+
+"initial value": "@PDH_FMT_UNICODE"
+  },
+  {
+
+"constant name": "整数值",
+
+"data type": "整数",
+
+"initial value": "@PDH_FMT_LONG"
+  },
+  {
+ "在时钟周期里面应该这样写" 注释 = "查询所有()" 注释 = "取查询结果状态(0)""constant name": "小数值",
+ "在时钟周期里面应该这样写" 注释 = "查询所有()" 注释 = "取查询结果状态(0)""data type": "整数",
+ "在时钟周期里面应该这样写" 注释 = "查询所有()" 注释 = "取查询结果状态(0)""initial value": "@PDH_FMT_DOUBLE"
+  },
+  {
+}"constant name": "长整数值",
+}"data type": "整数",
+}"initial value": "@PDH_FMT_LARGE"
+  },
+  {
+"data type": "整数""constant name": "NOSCALE",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@PDH_FMT_NOSCALE"
+  },
+  {
+nstant name": "长整数值""constant name": "一千",
+nstant name": "长整数值""data type": "整数",
+nstant name": "长整数值""initial value": "@PDH_FMT_1000"
+  },
+  {
+
+"constant name": "无数据",
+
+"data type": "整数",
+
+"initial value": "@PDH_FMT_NODATA"
+  },
+  {
+添加查询()""@嵌入式方法": "\"\"""data type": "整数""constant name": "NOCAP100",
+添加查询()""@嵌入式方法": "\"\"""data type": "整数""data type": "整数",
+添加查询()""@嵌入式方法": "\"\"""data type": "整数""initial value": "@PDH_FMT_NOCAP100"
+  }
+]
+ },
+ {
+"class name": "性能数据助手_全局类",
+"@视窗.外部头文件": "\"<Pdh.h>\"",
+"@视窗.外部库": "\"pdh.lib\"",
+"methods": [
+  {
+)"type": "property getter""method name": "打开查询器",
+)"type": "property getter""result comment": "0 表示成功",
+)"type": "property getter""static": true,
+)"type": "property getter""data type": "整数",
+)"type": "property getter""@嵌入式方法": "\"\"",
+)"type": "property getter""parameters": [
+   {
+"parameter name": "日志文件名称",
+"comment": "该参数用来指定日志文件的名字以获取性能数据，一般设置成NULL，表示实时获取数据。",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "用户数据指针",
+"comment": "和查询相关的值，不特别指定一般也是NULL。",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输出_查询句柄",
+"data type": "变整数"
+   }
+)"type": "property getter"]
+  },
+  {
+"method name": "添加计数器",
+"result comment": "0 表示成功",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "查询句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "计数器路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "输出_计数器句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+}"method name": "收集查询数据",
+}"result comment": "0 表示成功",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "查询句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+@默认值": "空对象""method name": "取计数器格式值",
+@默认值": "空对象""result comment": "0 表示成功",
+@默认值": "空对象""static": true,
+@默认值": "空对象""data type": "整数",
+@默认值": "空对象""@嵌入式方法": "\"\"",
+@默认值": "空对象""parameters": [
+   {
+"parameter name": "计数器句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "格式",
+"comment": "性能计数器值格式_常量类",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出_计数器类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出_计数器值",
+"data type": "性能计数器值_结构类"
+   }
+@默认值": "空对象"]
+  },
+  {
+"method name": "删除计数器",
+"result comment": "0表示成功 其他表示失败",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "计数器句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ameter name": "计数器句柄""method name": "关闭查询器",
+ameter name": "计数器句柄""result comment": "0 表示成功",
+ameter name": "计数器句柄""static": true,
+ameter name": "计数器句柄""data type": "整数",
+ameter name": "计数器句柄""@嵌入式方法": "\"\"",
+ameter name": "计数器句柄""parameters": [
+   {
+"parameter name": "查询句柄",
+"data type": "变整数"
+   }
+ameter name": "计数器句柄"]
+  }
+]
+ },
+ {
+"class name": "性能数据助手类",
+"methods": [
+  {
+ss name": "性能数据助手类""method name": "添加查询",
+ss name": "性能数据助手类""comment": "比如您要查询 cpu 内存 硬盘 网络 相关的，都可以添加进来\n然后时钟周期里面调用一下 查询所有 ，然后调用 取取查询结果 相关的函数\n",
+ss name": "性能数据助手类""data type": "逻辑型",
+ss name": "性能数据助手类""parameters": [
+   {
+"parameter name": "计数器路径",
+"comment": "例如  \n\"\\\\Process(_Total)\\\\% Processor Time\"\n\"\\\\Process(_Total)\\\\Working Set - Private\"\n\"\\\\Process(_Total)\\\\IO Read Bytes/sec\"\n\"\\\\Process(_Total)\\\\IO Write Bytes/sec\"\n等等\n这个网址里面有如何获取计数器路径的方法\nhttps://blog.csdn.net/fengyishang/article/details/46440135",
+"data type": "文本型"
+   }
+ss name": "性能数据助手类"]
+  },
+  {
+s name": "性能数据助手类""parameters": [
+"method name": "查询所有"
+  },
+  {
+meter name": "计数器句柄""parameters": [
+"method name": "取查询结果文本",
+meter name": "计数器句柄""parameters": [
+"comment": "得到计数器的值，每次调用取值之前，必须先调用收集数据一次\n假设您添加了三种计数器\n添加查询()\n添加查询()\n添加查询()\n在时钟周期里面应该这样写\n查询所有()\n取查询结果文本(0)\n取查询结果文本(1)\n取查询结果文本(1)",
+meter name": "计数器句柄""parameters": [
+"data type": "文本型",
+meter name": "计数器句柄""parameters": [
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "比如你调用了 3 次 添加计数器 那么 索引的取值范围就是 0 ，1 ，2",
+"data type": "整数"
+   }
+meter name": "计数器句柄""parameters": [
+]
+  },
+  {
+
+"method name": "取查询结果小数",
+
+"comment": "得到计数器的值，每次调用取值之前，必须先调用收集数据一次\n假设您添加了三种计数器\n添加查询()\n添加查询()\n添加查询()\n在时钟周期里面应该这样写\n查询所有()\n取查询结果小数(0)\n取查询结果小数(1)\n取查询结果小数(1)",
+
+"data type": "小数",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "比如你调用了 3 次 添加计数器 那么 索引的取值范围就是 0 ，1 ，2",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "取查询结果整数",
+"comment": "得到计数器的值，每次调用取值之前，必须先调用收集数据一次\n假设您添加了三种计数器\n添加查询()\n添加查询()\n添加查询()\n在时钟周期里面应该这样写\n查询所有()\n取查询结果整数(0)\n取查询结果整数(1)\n取查询结果整数(1)",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "比如你调用了 3 次 添加计数器 那么 索引的取值范围就是 0 ，1 ，2",
+"data type": "整数"
+   }
+]
+  },
+  {
+data type": "整数""method name": "取查询结果状态",
+data type": "整数""comment": "得到计数器的值，每次调用取值之前，必须先调用收集数据一次\n假设您添加了三种计数器\n添加查询()\n添加查询()\n添加查询()\n在时钟周期里面应该这样写\n查询所有()\n取查询结果状态(0)",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "索引",
+"comment": "比如你调用了 3 次 添加计数器 那么 索引的取值范围就是 0 ，1 ，2",
+"data type": "整数"
+   }
+data type": "整数"]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

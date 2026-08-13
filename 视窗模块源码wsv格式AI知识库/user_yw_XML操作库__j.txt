@@ -1,0 +1,399 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+㲠ꡰŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+㲠ꡰŝ"package name": "火山.仰望",
+㲠ꡰŝ"@文档": "\"category = \\\"XML操作库\\\"\"",
+㲠ꡰŝ"classes": [
+ {
+ꡰŝ"@文档": "\"category = \\\"XML操作库\\\"\"""class name": "XML解析构造类_",
+ꡰŝ"@文档": "\"category = \\\"XML操作库\\\"\"""base class": "COM对象类",
+ꡰŝ"@文档": "\"category = \\\"XML操作库\\\"\"""methods": [
+  {
+ŝ"@文档": "\"category = \\\"XML操作库\\\"\"""base class": "COM对象类""method name": "初始化_",
+ŝ"@文档": "\"category = \\\"XML操作库\\\"\"""base class": "COM对象类""data type": "逻辑型"
+  },
+  {
+ 文本数组类"method name": "创建空白_",
+ 文本数组类"data type": "逻辑型",
+ 文本数组类"parameters": [
+   {
+"parameter name": "根节点名",
+"data type": "文本型"
+   }
+ 文本数组类]
+  },
+  {
+}"method name": "创建自文件_",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"data type": "逻辑型""method name": "创建自文本_",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "XML文本",
+"data type": "文本型"
+   }
+"data type": "逻辑型"]
+  },
+  {
+        "method name": "到源码_",
+        "data type": "文本型",
+        "parameters": [
+   {
+"parameter name": "文本编码",
+"data type": "文本型",
+"@默认值": "\"UTF-16\""
+   },
+   {
+"parameter name": "换行文本",
+"comment": "\\r\\n",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "缩进文本",
+"comment": "\\t",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+        ]
+  },
+  {
+
+"method name": "到文本_",
+
+"comment": "取出所有节点的值文本",
+
+"data type": "文本型"
+  },
+  {
+"method name": "美化结构_",
+"comment": "只支持32位",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "XML文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "导出到文件_",
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+ }"method name": "取路径_",
+ }"type": "property getter",
+ }"data type": "文本型"
+  },
+  {
+ethod name": "取路径_""method name": "取根节点名_",
+ethod name": "取路径_""data type": "文本型"
+  },
+  {
+ethod name": "取路径_""method name": "解析索引路径_",
+ethod name": "取路径_""data type": "COM对象类",
+ethod name": "取路径_""parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   }
+ethod name": "取路径_"]
+  },
+  {
+ethod name": "取路径_""method name": "取父节点名_",
+ethod name": "取路径_""data type": "文本型",
+ethod name": "取路径_""parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   }
+ethod name": "取路径_"]
+  },
+  {
+ethod name": "取路径_""method name": "取节点名_",
+ethod name": "取路径_""data type": "文本型",
+ethod name": "取路径_""parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   }
+ethod name": "取路径_"]
+  },
+  {
+thod name": "取路径_""parameters": [
+"method name": "取节点值_",
+thod name": "取路径_""parameters": [
+"data type": "文本型",
+thod name": "取路径_""parameters": [
+"parameters": [
+   {
+"parameter name": "节点路径",
+"comment": "例如：\"body/data/row[0]/dm\"",
+"data type": "文本型"
+   }
+thod name": "取路径_""parameters": [
+]
+  },
+  {
+od name": "取路径_""parameters": [
+]"method name": "置节点值_",
+od name": "取路径_""parameters": [
+]"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新节点值",
+"data type": "文本型"
+   }
+od name": "取路径_""parameters": [
+]]
+  },
+  {
+od name": "取路径_""parameters": [
+]"method name": "是否有子节点_",
+od name": "取路径_""parameters": [
+]"data type": "逻辑型",
+od name": "取路径_""parameters": [
+]"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   }
+od name": "取路径_""parameters": [
+]]
+  },
+  {
+
+"method name": "取子节点数_",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "节点路径",
+"comment": "例如：\"body/data\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取属性数量_",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "取属性名_",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性索引",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"method name": "取属性值_",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "置属性值_",
+"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新属性值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "枚举子节点名_",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的子节点名称",
+"data type": "文本数组类"
+   }
+}]
+  },
+  {
+
+"method name": "枚举属性名和值_",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的名称",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "返回的值",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+}"method name": "删除节点_",
+}"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "删除属性_",
+}"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "取缩进源码_",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "源码文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "换行文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "缩进文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜索位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "缩进层级",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "插入节点_",
+"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "节点名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "节点值",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+"method name": "插入属性_",
+"parameters": [
+   {
+"parameter name": "节点路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "取所有节点名_",
+"data type": "文本数组类"
+  },
+  {
+}"method name": "递归取节点名_",
+}"data type": "文本数组类",
+}"parameters": [
+   {
+"parameter name": "节点路径",
+"comment": "例如：\"body/data/row\"、\"body/data/row[1]\"",
+"data type": "文本型"
+   }
+}]
+  }
+ꡰŝ"@文档": "\"category = \\\"XML操作库\\\"\""]
+ }
+㲠ꡰŝ]
+}

@@ -1,0 +1,157 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"人工智能".
+
+{
+问本程序中的接口需要引用模块"人工智能"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"人工智能"."package name": "火山.AI",
+问本程序中的接口需要引用模块"人工智能"."classes": [
+ {
+"class name": "阿里云问答类",
+"comment": "基于阿里云百炼AI问答服务,通过\"模型\"变量来切换模型,默认为deepseek-r1,支持阿里云百炼平台所有的文本对话模型.\n比如通义千问、DeepSeek、Llama、百川、ChatGLM、零一万物等.\n阿里云百炼官网申请密钥: https://bailian.console.aliyun.com/",
+"variables": [
+  {
+ 变整数 注释 = "设置回调函数所传入的\"用户数据\"参数.""variable name": "密钥",
+ 变整数 注释 = "设置回调函数所传入的\"用户数据\"参数.""comment": "提供秘钥\"sk-xxxxxxx\".",
+ 变整数 注释 = "设置回调函数所传入的\"用户数据\"参数.""static": true,
+ 变整数 注释 = "设置回调函数所传入的\"用户数据\"参数.""data type": "文本型"
+  },
+  {
+}"variable name": "模型",
+}"comment": "默认为deepseek-r1,支持阿里云百炼平台所有的文本对话模型.\n模型名称可以去阿里云百炼官网获取.",
+}"data type": "文本型",
+}"initial value": "\"deepseek-r1\"",
+}"@属性变量": "真"
+  }
+],
+"methods": [
+  {
+}"method name": "提问",
+}"parameters": [
+   {
+"parameter name": "欲提问的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否清除先前问答记录",
+"comment": "  如果本次提问为当前用户的首次提问或对话中不希望启用多轮对话支持,设置为真以自动清空本对象中记录的先前问答历史记录,避免内存一直被占用,\n否则设置为假,此时先前问答历史记录将一直被保存,用作在进行多轮对话时提供相关上下文信息. 多轮会话最大可用Token数可查询阿里云百炼官网介绍:\n  https://bailian.console.aliyun.com/?spm=5176.29619931.J__Z58Z6CX7MY__Ll8p1ZOR.1.74cd521cqb2Vgb&accounttraceid=a9382953620746809cb3b9471c096094bdje#/model-market/detail/deepseek-r1?tabKey=sdk",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "清除先前问答记录",
+}"comment": "清空本对象中记录的先前问答历史记录,避免内存一直被占用.\n注意: 先前问答历史记录被清除后在继续进行本次多轮对话时将无法提供历史问答上下文信息."
+  },
+  {
+
+"method name": "停止回答",
+
+"comment": "中途停止AI的回答"
+  },
+  {
+thod name": "提问""method name": "正在回答",
+thod name": "提问""type": "event",
+thod name": "提问""data type": "整数",
+thod name": "提问""parameters": [
+   {
+"parameter name": "回答结果",
+"data type": "阿里云问答结果类"
+   }
+thod name": "提问"]
+  }
+]
+ },
+ {
+"class name": "阿里云问答结果类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+}"variable name": "思考内容",
+}"data type": "文本型"
+  },
+  {
+}"variable name": "回答内容",
+}"data type": "文本型"
+  },
+  {
+ss name": "阿里云问答结果类""variable name": "完成原因",
+ss name": "阿里云问答结果类""data type": "文本型"
+  },
+  {
+}"variable name": "Token数",
+}"data type": "整数"
+  },
+  {
+ss name": "阿里云问答结果类""variable name": "错误原因",
+ss name": "阿里云问答结果类""comment": "发生错误后返回错误原因",
+ss name": "阿里云问答结果类""data type": "文本型"
+  }
+]
+ },
+ {
+"class name": "流式网络访问类",
+"comment": "针对AI流式响应封装的网络访问类",
+"variables": [
+  {
+
+"variable name": "传输对象",
+
+"data type": "网络传输类",
+
+"快速打开": "真"
+  }
+],
+"methods": [
+  {
+
+"method name": "网页访问",
+
+"comment": "访问结果将通过\"正在访问\"事件返回.",
+
+"parameters": [
+   {
+"parameter name": "网址",
+"comment": "提供所欲访问的网址内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "提供所欲使用的请求方式.",
+"data type": "网页访问方式",
+"@默认值": "网页访问方式.POST"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "设置本次请求所提交的数据,如果需要提交空请求体提供空对象即可.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交协议头",
+"comment": "提供本次请求所欲使用的附加协议头,协议头名称可重复.",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "正在访问",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "访问结果",
+"data type": "字节集类"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"人工智能".]
+}

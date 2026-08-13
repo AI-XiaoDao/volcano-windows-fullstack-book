@@ -1,0 +1,113 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"程序崩溃自动处理".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"程序崩溃自动处理".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"程序崩溃自动处理".
+
+"package name": "火山.视窗",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"程序崩溃自动处理".
+
+"classes": [
+ {
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).""class name": "程序崩溃处理类",
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).""comment": "★ 本类由\"飞翔的企鹅\"封装.\n用于在发布版程序异常后写出dump异常信息文件.\n注意:该类仅用于Release版本程序,Debug版本下将不会生效.",
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).""@视窗.外部库.release": "\"lib\\\\$(p)\\\\libdisasm.lib\\r\\nlib\\\\$(p)\\\\libbreakpad_client.lib\\r\\nlib\\\\$(p)\\\\libbreakpad.lib\"",
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).""@视窗.需求VS版本": "\"16-\"",
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).""@视窗.头文件搜寻目录": "\"lib\\\\include\"",
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).""@视窗.外部头文件": "\"vol_breakpad.h\"",
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).""@视窗.外部源文件.release": "\"lib\\\\include\\\\vol_breakpad.cpp\"",
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).""@禁止创建对象": "真",
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).""methods": [
+  {
+函数异常.""method name": "注册",
+函数异常.""comment": "调用本方法以注册异常管理.\n  注意:调用本方法会使编译器为当前程序生成调试信息并将其放在pdb输出文件中,在程序异常后首先会\n写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行).\n  异常调试方法:\n拿到dump错误信息文件,以及在编译程序后一同生成的pdb文件和程序文件,将其三者放入同一目录下,再将dump文件拖入Visual Studio调试即可.",
+函数异常.""static": true,
+函数异常.""@视窗.附加编译参数.release": "\"link:/DEBUG\"",
+函数异常.""@嵌入式方法": "\"\"",
+函数异常.""parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "请提供dump文件的保存目录.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回调方法",
+"comment": "俘获到程序异常后该回调方法将被执行.",
+"@匹配方法": "\"异常回调模板函数\""
+   },
+   {
+"parameter name": "处理类型",
+"comment": "提供所欲俘获异常的范围类型.",
+"data type": "处理异常类型",
+"@默认值": "处理异常类型.所有"
+   }
+函数异常."]
+  },
+  {
+息 = "0, 123321, 0, 0""method name": "异常回调模板函数",
+息 = "0, 123321, 0, 0""comment": "提供程序异常后回调方法的模板.",
+息 = "0, 123321, 0, 0""result comment": "返回值暂无意义.",
+息 = "0, 123321, 0, 0""static": true,
+息 = "0, 123321, 0, 0""data type": "逻辑型",
+息 = "0, 123321, 0, 0""parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "dump文件的写出路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "ID",
+"comment": "dump文件的唯一ID.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "写出成功",
+"comment": "dump文件是否写出成功.",
+"data type": "逻辑型"
+   }
+息 = "0, 123321, 0, 0"]
+  }
+ "写出dump文件到\"文件路径\"参数所指定的路径,而后将执行\"回调方法\"所指向的回调函数(并不确保一定能执行)."]
+ },
+ {
+"class name": "处理异常类型",
+"comment": "表示将要俘获的异常类型.",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "无",
+
+"comment": "不俘获任何异常.",
+
+"initial value": "@VolExceptionHandler::HandlerType::HANDLER_NONE"
+  },
+  {
+comment": "表示将要俘获的异常类型.""constant name": "未处理异常",
+comment": "表示将要俘获的异常类型.""comment": "仅俘获未被处理的异常.",
+comment": "表示将要俘获的异常类型.""initial value": "@VolExceptionHandler::HandlerType::HANDLER_EXCEPTION"
+  },
+  {
+息 = "0, 123321, 0, 0""constant name": "无效参数",
+息 = "0, 123321, 0, 0""comment": "俘获无效参数的异常.",
+息 = "0, 123321, 0, 0""initial value": "@VolExceptionHandler::HandlerType::HANDLER_INVALID_PARAMETER"
+  },
+  {
+}"constant name": "虚函数异常",
+}"comment": "俘获虚函数异常.",
+}"initial value": "@VolExceptionHandler::HandlerType::HANDLER_PURECALL"
+  },
+  {
+"initial value": "@VolExceptionHandler::HandlerType::HANDLER_PURECALL""constant name": "所有",
+"initial value": "@VolExceptionHandler::HandlerType::HANDLER_PURECALL""comment": "俘获所有程序异常.",
+"initial value": "@VolExceptionHandler::HandlerType::HANDLER_PURECALL""initial value": "@VolExceptionHandler::HandlerType::HANDLER_ALL"
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"程序崩溃自动处理".
+
+]
+}

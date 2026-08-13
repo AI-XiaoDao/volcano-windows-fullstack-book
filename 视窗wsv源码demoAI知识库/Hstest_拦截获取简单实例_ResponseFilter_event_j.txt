@@ -1,0 +1,210 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+鴂Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+鴂Ǹ"package name": "浏览器.事件",
+鴂Ǹ"classes": [
+ {
+"class name": "类_FBrowser_自定义初始化事件",
+"base class": "类_FBrowser_应用事件",
+"methods": [
+  {
+
+"method name": "即将处理命令行",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "进程类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "命令行",
+"data type": "类_FBrowser_命令行"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_初始化完毕",
+
+"@虚拟方法": "可覆盖"
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_自定义浏览器事件",
+"base class": "类_FBrowser_浏览器事件",
+"methods": [
+  {
+
+"method name": "浏览器_创建完毕",
+
+"@禁止流程检查": "真",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_控制台消息",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "日志级别",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "行",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_获取资源过滤器",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "响应",
+"data type": "类_FBrowser_响应"
+   },
+   {
+"parameter name": "设置资源过滤器",
+"comment": "调用该类中的“设置”方法设置返回资源过滤器，如果不需要则不设置,设置的资源过滤器不能为局部变量",
+"data type": "类_FBrowser_设置资源过滤器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_正在下载",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "下载",
+"data type": "类_FBrowser_下载"
+   },
+   {
+"parameter name": "下载回调",
+"data type": "类_FBrowser_正在下载回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_按下某键",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "按键事件",
+"data type": "FBrowser_按键事件"
+   },
+   {
+"parameter name": "系统事件",
+"data type": "FBrowser_系统事件"
+   },
+   {
+"parameter name": "是否快捷键",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将导航",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "用户动作",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否重定向",
+"data type": "逻辑型"
+   }
+
+]
+  }
+]
+ }
+鴂Ǹ]
+}

@@ -1,0 +1,2854 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件非MFC版本".
+
+{
+ 变整数"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ 变整数"package name": "LkuaiyHttp.com",
+ 变整数"classes": [
+ {
+"class name": "类_高速日志",
+"methods": [
+  {
+"package name": "LkuaiyHttp.com""method name": "写出日志",
+"package name": "LkuaiyHttp.com""data type": "逻辑型",
+"package name": "LkuaiyHttp.com""parameters": [
+   {
+"parameter name": "标识名称_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标识内容_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件目录_",
+"comment": "【文件目录全路径】默认为空，空代表运行目录，否则以该目录为准\n注意：目录后面一定要有\\，注意火山有转义符，\\\\=\\\n正确格式 C:\\\\PerfLogs\\\\\n错误格式：C:\\\\PerfLogs",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文件名称_",
+"comment": "默认为空，空代表直接生成日期文件  例如：2021-04-07\n如果不为空则按照本参数创建文件名  例如：XXX.txt",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+"package name": "LkuaiyHttp.com"]
+  }
+]
+ },
+ {
+ "szExeFile""class name": "类_全局",
+ "szExeFile""@文档": "\"category = \\\"程序调试\\\"\"",
+ "szExeFile""@全局类": "真",
+ "szExeFile""methods": [
+  {
+
+"method name": "全_信息框2",
+
+"comment": "显示一个信息框,等待用户单击按钮.",
+
+"result comment": "返回一个值告诉用户单击哪一个按钮.\n如果信息框有\"取消\"按钮,则按下 ESC 键与单击\"取消\"按钮的效果相同.",
+
+"static": true,
+
+"data type": "返回按钮类型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "提示信息",
+"comment": "提供具体的提示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "按钮",
+"comment": "由\"信息框按钮\"类中的各组常量值相加后的值,具体请见该类中的说明.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "窗口标题",
+"comment": "指定显示在信息框标题栏中的文本",
+"data type": "文本型",
+"@默认值": "\"信息:\""
+   }
+
+]
+  },
+  {
+comment": "提供具体的提示文本""method name": "字节集到集合文本",
+comment": "提供具体的提示文本""static": true,
+comment": "提供具体的提示文本""data type": "文本型",
+comment": "提供具体的提示文本""parameters": [
+   {
+"parameter name": "调试内容",
+"data type": "字节集类"
+   }
+comment": "提供具体的提示文本"]
+  },
+  {
+ }"method name": "集合文本到字节集",
+ }"static": true,
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "字节集文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "输出调试文本_新版",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所欲输出的数据",
+"comment": " ",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "取出内置资源文件_",
+"static": true,
+"data type": "字节集类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "资源文件",
+"data type": "视窗文件资源"
+   }
+]
+  }
+ "szExeFile"]
+ },
+ {
+szExeFile"]"class name": "类_全局锁",
+szExeFile"]"methods": [
+  {
+
+"method name": "进入许可区"
+  },
+  {
+}"method name": "离开许可区"
+  }
+szExeFile"]]
+ },
+ {
+zExeFile"]"methods": [
+"class name": "类_密码处理",
+zExeFile"]"methods": [
+"@视窗.外部头文件": "\"lib\\\\md5\\\\Lkymd5_.h\"",
+zExeFile"]"methods": [
+"@视窗.外部源文件": "\"lib\\\\md5\\\\Lkymd5_.cpp\"",
+zExeFile"]"methods": [
+"methods": [
+  {
+ExeFile"]"methods": [
+"@视窗.外部源文件": "\"lib\\\\md5\\\\Lkymd5_.cpp\"""method name": "校验_取字节集MD5",
+ExeFile"]"methods": [
+"@视窗.外部源文件": "\"lib\\\\md5\\\\Lkymd5_.cpp\"""data type": "文本型",
+ExeFile"]"methods": [
+"@视窗.外部源文件": "\"lib\\\\md5\\\\Lkymd5_.cpp\"""@禁止流程检查": "真",
+ExeFile"]"methods": [
+"@视窗.外部源文件": "\"lib\\\\md5\\\\Lkymd5_.cpp\"""parameters": [
+   {
+"parameter name": "缓冲区数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否小写",
+"comment": "默认小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ExeFile"]"methods": [
+"@视窗.外部源文件": "\"lib\\\\md5\\\\Lkymd5_.cpp\""]
+  },
+  {
+data type": "字节集类""method name": "密码强度检测",
+data type": "字节集类""data type": "文本型",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "pw",
+"data type": "文本型"
+   }
+data type": "字节集类"]
+  }
+zExeFile"]"methods": [
+]
+ },
+ {
+zExeFile"]"methods": [
+"class name": "类_剪辑版",
+zExeFile"]"methods": [
+"methods": [
+  {
+
+"method name": "剪辑版_删除监视器",
+
+"comment": "函数从剪贴板查看器链中删除指定的窗口。",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "要删除的窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "下一个窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "剪辑版_取格式数量",
+
+"comment": "可以不用调用 剪辑版_打开",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "剪辑版_清空",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "要清空的窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "剪辑版_枚举格式",
+
+"@嵌入式方法": "\"name = Clipboard_for\\nhas_body = true\"",
+
+"parameters": [
+   {
+"parameter name": "用来保存当前剪辑版可用格式",
+"data type": "整数"
+   },
+   {
+"parameter name": "指定剪辑版窗口句柄",
+"comment": "要与打开的剪贴板关联的窗口的句柄。\n如果此参数为空，则打开的剪贴板与当前任务关联。",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+"method name": "剪辑版_取所属窗口句柄",
+"comment": "取剪贴板当前所有者的窗口句柄",
+"result comment": "返回 剪辑版 当前所属的窗口句柄",
+"data type": "变整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""method name": "剪辑版_取监视窗口句柄",
+@嵌入式方法": "\"\"""comment": "返回监视窗口链中的 第一个窗口句柄",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "剪辑版_取队列号",
+
+"comment": "函数检索当前窗口站的剪贴板序列号。",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "剪辑版_取格式名称",
+
+"comment": "可以不用调用 剪辑版_打开",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "剪辑版格式",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "剪辑版_取打开剪辑版窗口句柄",
+"comment": "当前打开剪贴板的窗口的句柄。",
+"data type": "变整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "剪辑版_是否存在指定格式数据",
+}"comment": "如果存在 则返回指定格式的 整数标记，否则返回0",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "格式文本",
+"comment": "例如 \"VolNEPrgClipFormat\"  或者 \"CF_UNICODETEXT\" 等等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "剪辑版窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "剪辑版_取火山格式字节集",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "剪辑版_置火山格式字节集",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "要设置的字节集",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "剪辑版_注册自定义格式",
+
+"comment": "可以不用调用 剪辑版_打开",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "自定义格式文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "剪辑版_置监视窗口",
+}"comment": "如果函数成功，返回值将标识剪贴板查看器链中的下一个窗口。\n如果发生错误或剪贴板查看器链中没有其他窗口，则返回值为空。\n要获取扩展错误信息，请调用GetLastError。",
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "新监视窗口句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+
+"method name": "剪辑版_取字节集",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "剪辑版格式",
+"comment": "如果不填写格式，则使用 CVolMem 格式的数据",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "窗口句柄",
+"comment": "要与打开的剪贴板关联的窗口的句柄。\n如果此参数为空，则打开的剪贴板与当前任务关联。",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "剪辑版_取文本A",
+"data type": "逻辑型""data type": "字节集类",
+"data type": "逻辑型""@禁止流程检查": "真",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "要与打开的剪贴板关联的窗口的句柄。\n如果此参数为空，则打开的剪贴板与当前任务关联。",
+"data type": "变整数",
+"@默认值": "0"
+   }
+"data type": "逻辑型"]
+  },
+  {
+ata type": "逻辑型"]"method name": "剪辑版_取文本",
+ata type": "逻辑型"]"data type": "文本型",
+ata type": "逻辑型"]"@禁止流程检查": "真",
+ata type": "逻辑型"]"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "要与打开的剪贴板关联的窗口的句柄。\n如果此参数为空，则打开的剪贴板与当前任务关联。",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ata type": "逻辑型"]]
+  },
+  {
+
+"method name": "剪辑版_置字节集",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "要设置的内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "剪辑版格式",
+"comment": "如果不填写，则会注册默认 CVolMem格式 的剪辑版数据",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "窗口句柄",
+"comment": "要与打开的剪贴板关联的窗口的句柄。\n如果此参数为空，则打开的剪贴板与当前任务关联。",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "剪辑版_置文本A",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "要设置的内容",
+"comment": "用户自行确保 是以0结尾的 多字节集文本",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "窗口句柄",
+"comment": "要与打开的剪贴板关联的窗口的句柄。\n如果此参数为空，则打开的剪贴板与当前任务关联。",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "剪辑版_置文本",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "要设置的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口句柄",
+"comment": "要与打开的剪贴板关联的窗口的句柄。\n如果此参数为空，则打开的剪贴板与当前任务关联。",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ }]
+  }
+zExeFile"]"methods": [
+]
+ },
+ {
+"class name": "类_随机数",
+"@输出名": "\"FRadom\"",
+"methods": [
+  {
+@输出名": "\"FRadom\"""method name": "随机_置随机种子",
+@输出名": "\"FRadom\"""parameters": [
+   {
+"parameter name": "种子",
+"data type": "整数",
+"@默认值": "0"
+   }
+@输出名": "\"FRadom\""]
+  },
+  {
+
+"method name": "随机_取随机数",
+
+"comment": "使用效果 最小值0 最大值10 ，那么将产生0-9之间的随机数",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "最小数",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大数",
+"data type": "整数",
+"@默认值": "0x7fffff"
+   }
+
+]
+  },
+  {
+
+"method name": "随机_取零到九",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "位数",
+"data type": "整数"
+   },
+   {
+"parameter name": "首位不为零",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"method name": "随机_取大小写",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "位数",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "随机_取大小写数字",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "位数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "随机_取大写",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "位数",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ameter name": "位数""method name": "随机_取小写",
+ameter name": "位数""data type": "文本型",
+ameter name": "位数""parameters": [
+   {
+"parameter name": "位数",
+"data type": "整数"
+   }
+ameter name": "位数"]
+  }
+]
+ },
+ {
+"class name": "类_指针操作",
+"methods": [
+  {
+
+"method name": "指针_memcpy",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内存指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "指针_memcmp",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内存指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "指针_拷贝",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "目标指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要拷贝的指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "拷贝的大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "指针_取数据指针",
+ }"comment": "指针_到自定义类型 (测试类, 指针_取数据指针 (aa)).打印方法 ()",
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "对象",
+"@匹配类型": "所有类型"
+   }
+ }]
+  },
+  {
+ameter name": "拷贝的大小""method name": "指针_到自定义类型",
+ameter name": "拷贝的大小""comment": "指针_到自定义类型 (测试类, 指针_取数据指针 (aa)).打印方法 ()",
+ameter name": "拷贝的大小""@嵌入式方法": "\"\"",
+ameter name": "拷贝的大小""parameters": [
+   {
+"parameter name": "要强制转换的类型",
+"@需求类型": "数据类型",
+"@匹配类型": "所有类型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "参数",
+"data type": "变整数"
+   }
+ameter name": "拷贝的大小"]
+  },
+  {
+
+"method name": "指针_字节集智能指针添加",
+
+"comment": "智能指针\n参考案例：https://www.lkuaiy.com/rsdetails?id=16114965486005\n案例中的方法名叫做智能指针，这里改成了字节集智能指针添加\n你们参考案例的时候自行更改一下名称即可",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲操作字节集地址",
+"comment": "文本到多字节 (\"随便插入几个数据进去！\", 假)  必须填写假，不能含有结束符！！！\n格式：取变量地址（XXX字节集）",
+"data type": "变整数"
+   },
+   {
+"parameter name": "字节集指针",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "字节集长度",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "释放内存",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ameter name": "释放内存""method name": "指针_通用文本数组类",
+ameter name": "释放内存""comment": "通用文本数组类 \n参考案例：https://www.lkuaiy.com/rsdetails?id=16114969308238",
+ameter name": "释放内存""@禁止流程检查": "真",
+ameter name": "释放内存""parameters": [
+   {
+"parameter name": "欲操作文本数组地址",
+"comment": "文本到多字节 (\"随便插入几个数据进去！\", 假)  必须填写假，不能含有结束符！！！\n格式：取文本数组数据地址（XXX文本数组类）",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文本指针",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "释放空间",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "释放内存"]
+  },
+  {
+
+"method name": "指针_取文本数组数据地址",
+
+"comment": "参考案例：https://www.lkuaiy.com/rsdetails?id=16114969308238",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲操作文本数组类",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "指针_通用整数数组类",
+
+"comment": "通用整数数组类\n参考案例：https://www.lkuaiy.com/rsdetails?id=16114969308238 ",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲操作整数数组地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲加入数据",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "释放空间",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_系统功能",
+"@视窗.外部头文件": "\"nb30.h\"",
+"@视窗.外部头文件": "\"time.h\"",
+"@视窗.外部头文件": "\"stdio.h\"",
+"@视窗.外部头文件": "\"stdlib.h\"",
+"@视窗.外部库": "\"netapi32.lib\"",
+"@视窗.外部头文件": "\"windows.h\"",
+"methods": [
+  {
+@视窗.外部库": "\"netapi32.lib\"""method name": "立即重启自身",
+@视窗.外部库": "\"netapi32.lib\"""comment": "注意:请务必编译成EXE后在进行测试!"
+  },
+  {
+@视窗.外部库": "\"netapi32.lib\"""method name": "是否隐藏系统桌面",
+@视窗.外部库": "\"netapi32.lib\"""data type": "变整数",
+@视窗.外部库": "\"netapi32.lib\"""parameters": [
+   {
+"parameter name": "是否隐藏任务栏",
+"data type": "逻辑型"
+   }
+@视窗.外部库": "\"netapi32.lib\""]
+  },
+  {
+}"method name": "隐藏任务栏图标",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"method name": "创建快捷方式",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "快捷方式名称",
+"comment": "存放快捷方式的路径和名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "指向程序路径",
+"comment": "该程序的存放路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "取程序路径_",
+
+"comment": "取自身完整路径",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取特定目录_",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "目录类型",
+"comment": "#define CSIDL_DESKTOP                   0x0000        // <desktop>\n#define CSIDL_INTERNET                  0x0001        // Internet Explorer (icon on desktop)\n#define CSIDL_PROGRAMS                  0x0002        // Start Menu\\Programs\n#define CSIDL_CONTROLS                  0x0003        // My Computer\\Control Panel\n#define CSIDL_PRINTERS                  0x0004        // My Computer\\Printers\n#define CSIDL_PERSONAL                  0x0005        // My Documents\n#define CSIDL_FAVORITES                 0x0006        // <user name>\\Favorites\n#define CSIDL_STARTUP                   0x0007        // Start Menu\\Programs\\Startup\n#define CSIDL_RECENT                    0x0008        // <user name>\\Recent\n#define CSIDL_SENDTO                    0x0009        // <user name>\\SendTo\n#define CSIDL_BITBUCKET                 0x000a        // <desktop>\\Recycle Bin\n#define CSIDL_STARTMENU                 0x000b        // <user name>\\Start Menu\n#define CSIDL_MYDOCUMENTS               CSIDL_PERSONAL //  Personal was just a silly name for My Documents\n#define CSIDL_MYMUSIC                   0x000d        // \"My Music\" folder\n#define CSIDL_MYVIDEO                   0x000e        // \"My Videos\" folder\n#define CSIDL_DESKTOPDIRECTORY          0x0010        // <user name>\\Desktop\n#define CSIDL_DRIVES                    0x0011        // My Computer\n#define CSIDL_NETWORK                   0x0012        // Network Neighborhood (My Network Places)\n#define CSIDL_NETHOOD                   0x0013        // <user name>\\nethood\n#define CSIDL_FONTS                     0x0014        // windows\\fonts\n#define CSIDL_TEMPLATES                 0x0015\n#define CSIDL_COMMON_STARTMENU          0x0016        // All Users\\Start Menu\n#define CSIDL_COMMON_PROGRAMS           0X0017        // All Users\\Start Menu\\Programs\n#define CSIDL_COMMON_STARTUP            0x0018        // All Users\\Startup\n#define CSIDL_COMMON_DESKTOPDIRECTORY   0x0019        // All Users\\Desktop\n#define CSIDL_APPDATA                   0x001a        // <user name>\\Application Data\n#define CSIDL_PRINTHOOD                 0x001b        // <user name>\\PrintHood",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "选择文件夹",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "对话框标题",
+"data type": "文本型",
+"@默认值": "\"选择文件夹\""
+   }
+
+]
+  },
+  {
+"method name": "调用关机界面"
+  },
+  {
+}"method name": "窗口圆角化",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "椭圆宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "椭圆高度",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "变整数""method name": "禁止重复运行",
+data type": "变整数""parameters": [
+   {
+"parameter name": "软件标记",
+"comment": "请用英文字母标记",
+"data type": "文本型",
+"@默认值": "\"lky\""
+   }
+data type": "变整数"]
+  },
+  {
+ }"method name": "CreateEventA",
+ }"static": true,
+ }"@输出名": "\"CreateEventA\"",
+ }"@视窗.输入": "\"kernel32\"",
+ }"parameters": [
+   {
+"parameter name": "lpEventAttributes",
+"data type": "整数"
+   },
+   {
+"parameter name": "bManualReset",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "bInitialState",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "lpName",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "OpenEventA",
+}"static": true,
+}"data type": "整数",
+}"@输出名": "\"OpenEventA\"",
+}"@视窗.输入": "\"kernel32\"",
+}"parameters": [
+   {
+"parameter name": "dwDesiredAccess",
+"data type": "整数"
+   },
+   {
+"parameter name": "bInheritHandle",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "bInitialState",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "CreateRoundRectRgn",
+
+"static": true,
+
+"data type": "变整数",
+
+"@输出名": "\"CreateRoundRectRgn\"",
+
+"@视窗.输入": "\"gdi32\"",
+
+"parameters": [
+   {
+"parameter name": "左边",
+"data type": "整数"
+   },
+   {
+"parameter name": "顶边",
+"data type": "整数"
+   },
+   {
+"parameter name": "右边",
+"data type": "整数"
+   },
+   {
+"parameter name": "底边",
+"data type": "整数"
+   },
+   {
+"parameter name": "椭圆宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "椭圆高度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "SetWindowRgn",
+
+"static": true,
+
+"data type": "整数",
+
+"@输出名": "\"SetWindowRgn\"",
+
+"@视窗.输入": "\"user32\"",
+
+"parameters": [
+   {
+"parameter name": "hWnd",
+"data type": "变整数"
+   },
+   {
+"parameter name": "hRgn",
+"data type": "变整数"
+   },
+   {
+"parameter name": "bRedraw",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "DeleteObject",
+
+"static": true,
+
+"data type": "整数",
+
+"@输出名": "\"DeleteObject\"",
+
+"@视窗.输入": "\"gdi32\"",
+
+"parameters": [
+   {
+"parameter name": "hObject",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "SendMessageW",
+
+"static": true,
+
+"data type": "变整数",
+
+"@输出名": "\"SendMessageW\"",
+
+"@视窗.输入": "\"User32.dll\"",
+
+"parameters": [
+   {
+"parameter name": "hWnd",
+"data type": "变整数"
+   },
+   {
+"parameter name": "Msg",
+"data type": "整数"
+   },
+   {
+"parameter name": "wParam",
+"data type": "变整数"
+   },
+   {
+"parameter name": "lParam",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "PostMessageW",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@输出名": "\"PostMessageW\"",
+
+"@视窗.输入": "\"User32.dll\"",
+
+"parameters": [
+   {
+"parameter name": "hWnd",
+"data type": "变整数"
+   },
+   {
+"parameter name": "Msg",
+"data type": "整数"
+   },
+   {
+"parameter name": "wParam",
+"data type": "变整数"
+   },
+   {
+"parameter name": "lParam",
+"data type": "变整数"
+   }
+
+]
+  }
+]
+ },
+ {
+
+"class name": "类_系统杂项",
+
+"@视窗.外部头文件": "\"nb30.h\"",
+
+"@视窗.外部头文件": "\"time.h\"",
+
+"@全局类": "真",
+
+"methods": [
+  {
+"method name": "打开指定目录",
+"parameters": [
+   {
+"parameter name": "指定目录",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "取代码",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "位置",
+"comment": "从0开始",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "取字符",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "代码",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ass name": "类_系统杂项""method name": "延时",
+ass name": "类_系统杂项""@嵌入式方法": "\"\"",
+ass name": "类_系统杂项""parameters": [
+   {
+"parameter name": "时长",
+"data type": "整数"
+   }
+ass name": "类_系统杂项"]
+  },
+  {
+"method name": "超级延时",
+"parameters": [
+   {
+"parameter name": "时长",
+"comment": "微妙",
+"data type": "长整数"
+   }
+]
+  },
+  {
+
+"method name": "取运行目录",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "程序_取运行目录",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "程序_取名称与后缀",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "程序_取完整路径",
+
+"comment": "取自身完整路径",
+
+"data type": "文本型"
+  },
+  {
+"comment": "取自身完整路径""method name": "取启动时间",
+"comment": "取自身完整路径""comment": "WinBase.h",
+"comment": "取自身完整路径""data type": "整数",
+"comment": "取自身完整路径""@嵌入式方法": "\"\""
+  },
+  {
+"comment": "取自身完整路径""method name": "取启动时间64",
+"comment": "取自身完整路径""comment": "WinBase.h",
+"comment": "取自身完整路径""data type": "长整数",
+"comment": "取自身完整路径""@嵌入式方法": "\"\""
+  },
+  {
+comment": "取自身完整路径""data type": "长整数""method name": "取DLL函数地址",
+comment": "取自身完整路径""data type": "长整数""data type": "长整数",
+comment": "取自身完整路径""data type": "长整数""@嵌入式方法": "\"\"",
+comment": "取自身完整路径""data type": "长整数""parameters": [
+   {
+"parameter name": "DLL名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "函数名称",
+"@匹配类型": "所有类型"
+   }
+comment": "取自身完整路径""data type": "长整数"]
+  },
+  {
+
+"method name": "程序_是否64位",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+thod name": "程序_是否64位""method name": "取实例句柄",
+thod name": "程序_是否64位""data type": "变整数",
+thod name": "程序_是否64位""@禁止流程检查": "真",
+thod name": "程序_是否64位""parameters": [
+   {
+"parameter name": "模块名称",
+"comment": "模块名称 如果为空，则取当前程序的实例句柄",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+thod name": "程序_是否64位"]
+  },
+  {
+od name": "程序_是否64位"]"method name": "系统_是否64位",
+od name": "程序_是否64位"]"data type": "逻辑型",
+od name": "程序_是否64位"]"@禁止流程检查": "真"
+  },
+  {
+thod name": "程序_是否64位""method name": "隐藏系统桌面",
+thod name": "程序_是否64位""data type": "变整数",
+thod name": "程序_是否64位""@禁止流程检查": "真",
+thod name": "程序_是否64位""parameters": [
+   {
+"parameter name": "是否隐藏任务栏",
+"data type": "逻辑型"
+   }
+thod name": "程序_是否64位"]
+  },
+  {
+thod name": "程序_是否64位""method name": "隐藏系统任务栏",
+thod name": "程序_是否64位""parameters": [
+   {
+"parameter name": "是否隐藏任务栏",
+"data type": "逻辑型"
+   }
+thod name": "程序_是否64位"]
+  },
+  {
+
+"method name": "取屏幕宽度_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取屏幕高度_",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  }
+
+]
+ },
+ {
+
+"class name": "类_字节集操作",
+
+"methods": [
+  {
+
+"method name": "字节集_字节集取整数",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要取的成员",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "字节集_字节集取整数2",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "成员",
+"data type": "整数"
+   },
+   {
+"parameter name": "最小宽度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "字节集_字节集是否相等",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字节集1",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "字节集2",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+"method name": "字节集_UTF8去首零",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "UTF8数据",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+}"method name": "字节集_UTF8去尾零",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "UTF8数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+ }"method name": "字节集_字节集分割",
+ }"parameters": [
+   {
+"parameter name": "待分割字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "用作分割字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "结果字节集",
+"data type": "字节集数组类"
+   }
+ }]
+  },
+  {
+
+"method name": "字节集_替换",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "原始内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要替换的文本",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "用作替换的文本",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "字节集_寻找取右",
+
+"comment": "从字节集的右边按 欲寻找的字节集 开始寻找  如 字节集_取右边({105,108,121,13,10,83,101},{13,10}) 将返回 {83,101}，如果没有找到将会返回空",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "被查找的字节集",
+"comment": "被查找的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲查找的字节集",
+"comment": "欲寻找的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始位置",
+"comment": "默认从最右边寻找,欲寻找的字节集的起始寻找位置,一般情况都留空",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+"method name": "字节集_寻找取左",
+"comment": "从字节集的右边按 欲寻找的字节集 开始寻找  如 字节集_取右边({105,108,121,13,10,83,101},{13,10}) 将返回 {105,108,121}，如果没有找到将会返回空",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "被查找的字节集",
+"comment": "被查找的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲查找的字节集",
+"comment": "欲寻找的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始位置",
+"comment": "默认从最左边寻找,欲寻找的字节集的起始寻找位置,一般情况都留空，注意：必须大于0",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+
+"method name": "字节集_寻找取右_从左开始",
+
+"comment": "从字节集的左边按 欲寻找的字节集 开始寻找  如 字节集_取右边({105,108,121,13,10,83,101},{13,10}) 将返回 {83,101}，如果没有找到将会返回空",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "被查找的字节集",
+"comment": "被查找的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲查找的字节集",
+"comment": "欲寻找的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始位置",
+"comment": "默认从最右边寻找,欲寻找的字节集的起始寻找位置,一般情况都留空",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "字节集_寻找取左_从右开始",
+
+"comment": "从字节集的右边按 欲寻找的字节集 开始寻找  如 字节集_取右边({105,108,121,13,10,83,101},{13,10}) 将返回 {105,108,121}，如果没有找到将会返回空",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "被查找的字节集",
+"comment": "被查找的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲查找的字节集",
+"comment": "欲寻找的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始位置",
+"comment": "默认从最左边寻找,欲寻找的字节集的起始寻找位置,一般情况都留空，注意：必须大于0",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "字节集_反转字节集",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "字节集数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "字节集_取中间",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "要操作的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "前面字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "后面字节集",
+"data type": "字节集类"
+   }
+}]
+  }
+
+]
+ },
+ {
+"class name": "类_文本数组独有",
+"comment": "使用方法参考本案例：https://www.lkuaiy.com/rsdetails?id=13811608625019",
+"methods": [
+  {
+comment": "使用方法参考本案例：https://www.lkuaiy.com/rsdetails?id=13811608625019""method name": "初始化数据"
+  },
+  {
+
+"method name": "定义可重复数据",
+
+"parameters": [
+   {
+"parameter name": "重复数据",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "添加数据",
+
+"parameters": [
+   {
+"parameter name": "添加的文本数据",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "获取数据",
+
+"type": "property getter",
+
+"data type": "文本数组类"
+  }
+]
+ },
+ {
+"parameters": [
+"class name": "类_文本操作",
+"parameters": [
+"methods": [
+  {
+ameters": [
+"class name": "类_文本操作""method name": "文本_XSS防注入处理",
+ameters": [
+"class name": "类_文本操作""result comment": "返回防止注入后的值",
+ameters": [
+"class name": "类_文本操作""data type": "文本型",
+ameters": [
+"class name": "类_文本操作""parameters": [
+   {
+"parameter name": "XSS处理",
+"data type": "文本型"
+   },
+   {
+"parameter name": "自身域名",
+"comment": "例如：lkuaiy.com\n不需要带www",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否严格模式",
+"comment": "如果启用了严格模式，则以下符号会被替换为空。\n<\n>\n\"\n'\n(\n)\n&\n/",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否替换点号",
+"comment": "是否将小写.替换成大写。",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否替换http",
+"comment": "是否http://替换成http：/ /",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameters": [
+"class name": "类_文本操作"]
+  },
+  {
+
+"method name": "文本_取文本长度_易语言",
+
+"comment": "火山的取文本长度中文和英文都是1长度，本命令可以实现类似易语言的取文本长度  中文2  英文1",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "文本""method name": "文本_取文本中间_批量",
+ameter name": "文本""data type": "文本数组类",
+ameter name": "文本""parameters": [
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"data type": "整数",
+"@默认值": "0"
+   }
+ameter name": "文本"]
+  },
+  {
+eter name": "文本"]"method name": "文本_取出中间文本",
+eter name": "文本"]"data type": "文本型",
+eter name": "文本"]"parameters": [
+   {
+"parameter name": "欲取全文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "前面文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "后面文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜寻位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+eter name": "文本"]]
+  },
+  {
+}"method name": "文本_随机文本",
+}"data type": "文本型 ",
+}"parameters": [
+   {
+"parameter name": "随机文本数量",
+"data type": "整数",
+"@默认值": "36"
+   }
+}]
+  },
+  {
+"method name": "文本_分割文本_",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "待文本_分割文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果存放数组",
+"comment": ".",
+"data type": "文本数组类"
+   }
+]
+  },
+  {
+"method name": "文本_取汉字",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "字符串",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "文本_打乱数组",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "欲打乱的文本数组",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+}"method name": "文本_是否全数字",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字符串",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "文本_取中间高级",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "待取内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始查找位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "起始文本1",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "起始文本2",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否包含起始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+
+"method name": "文本_取右边",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "被查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲寻找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_按字数分割",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "需要分割的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "分割的字数",
+"comment": "需要分割的字数,默认11字手机号",
+"data type": "整数",
+"@默认值": "11"
+   }
+
+]
+  },
+  {
+
+"method name": "文本是否小写字母",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字符串",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "字符串""method name": "文本是否大写字母",
+ameter name": "字符串""data type": "逻辑型",
+ameter name": "字符串""parameters": [
+   {
+"parameter name": "字符串",
+"data type": "文本型"
+   }
+ameter name": "字符串"]
+  },
+  {
+
+"method name": "文本是否字母",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字符串",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_是否有中文",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字符串",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_是否全中文",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字符串",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取左边",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "被查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲寻找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始寻找位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "文本_替换",
+data type": "整数""data type": "文本型",
+data type": "整数""parameters": [
+   {
+"parameter name": "原始内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要替换的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用作替换的文本",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "文本_寻找文本",
+
+"comment": "失败返回 -1 成功 从0开始  ",
+
+"result comment": "返回找到的位置",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜索位置",
+"comment": "可以被省略。位置值从 0 开始。如果本参数被省略，默认为从被搜寻文本的首部开始。",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "文本_倒找文本",
+data type": "整数""comment": "此函数不区分大小写",
+data type": "整数""result comment": "没有找到返回-1",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜索位置",
+"comment": "可以被省略。位置值从 0 开始。如果本参数被省略，默认为从被搜寻文本的尾部开始。",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "整数"]
+  },
+  {
+data type": "逻辑型""method name": "文本_取左边_从左往右查找",
+data type": "逻辑型""comment": "默认从左边开始查找",
+data type": "逻辑型""data type": "文本型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否不区分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"comment": "默认找不到就返回空文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "文本_取右边_从左往右查找",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "逻辑型""method name": "文本_取右边_从右往左查找",
+data type": "逻辑型""data type": "文本型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"comment": "默认从尾部开始寻找",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "文本_取左边_从右往左查找",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始查找位置",
+"comment": "-1表示从尾部开始查找，必须小于原始文本长度；否则崩溃",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否不区分大小写",
+"comment": "默认不取分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  }
+"parameters": [
+]
+ },
+ {
+data type": "逻辑型""class name": "类_鼠键处理",
+data type": "逻辑型""comment": "具体案例课程参考：https://www.lkuaiy.com/VideoInsidePage?id=52481603076167&SingleSetVideoLink=55861603941560&Recommend=&page=1",
+data type": "逻辑型""methods": [
+  {
+
+"method name": "是否按下鼠标左键",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+data type": "逻辑型""method name": "是否按下鼠标右键",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+ata type": "逻辑型""@禁止流程检查": "真""method name": "是否按下鼠标滚轮",
+ata type": "逻辑型""@禁止流程检查": "真""data type": "逻辑型",
+ata type": "逻辑型""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+ata type": "逻辑型""@禁止流程检查": "真""method name": "全局热键监控",
+ata type": "逻辑型""@禁止流程检查": "真""data type": "逻辑型",
+ata type": "逻辑型""@禁止流程检查": "真""@禁止流程检查": "真",
+ata type": "逻辑型""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "按键代码",
+"data type": "整数"
+   }
+ata type": "逻辑型""@禁止流程检查": "真"]
+  }
+data type": "逻辑型"]
+ },
+ {
+ta type": "逻辑型""@禁止流程检查": "真""@禁止流程检查": "真""class name": "类_键鼠钩子类",
+ta type": "逻辑型""@禁止流程检查": "真""@禁止流程检查": "真""methods": [
+  {
+
+"method name": "定义拦截按键码",
+
+"parameters": [
+   {
+"parameter name": "参数_拦截按键码",
+"comment": "键名和值都是按键码\n例如：JSON对象类.置入整数值 (到文本 (按键码.F1键), 按键码.F1键)",
+"data type": "JSONCPP对象类"
+   }
+
+]
+  },
+  {
+comment": "键名和值都是按键码\n例如：JSON对象类.置入整数值 (到文本 (按键码.F1键), 按键码.F1键)""method name": "获取按键状态",
+comment": "键名和值都是按键码\n例如：JSON对象类.置入整数值 (到文本 (按键码.F1键), 按键码.F1键)""data type": "逻辑型",
+comment": "键名和值都是按键码\n例如：JSON对象类.置入整数值 (到文本 (按键码.F1键), 按键码.F1键)""@禁止流程检查": "真",
+comment": "键名和值都是按键码\n例如：JSON对象类.置入整数值 (到文本 (按键码.F1键), 按键码.F1键)""parameters": [
+   {
+"parameter name": "按键码",
+"data type": "整数"
+   }
+comment": "键名和值都是按键码\n例如：JSON对象类.置入整数值 (到文本 (按键码.F1键), 按键码.F1键)"]
+  },
+  {
+"method name": "拦截按键事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "按键码",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "键盘放开按键回调事件",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "放开按键",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "键盘按下按键回调事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "按下按键",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "鼠标放开按键回调事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "放开按键",
+"comment": "1代表左键，2代表右键，3代表中建",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "鼠标按下按键回调事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "按下按键",
+"comment": "1代表左键，2代表右键，3代表中建",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "鼠标移动回调事件",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "组合回调事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "按键码_",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否按下Ctrl",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否按下Alt",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否按下Shift",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否按下WIN键",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "放开还是按下",
+"comment": "真放开，假按下",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "内部回调方法",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "按键码",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "scanCode",
+"data type": "整数"
+   },
+   {
+"parameter name": "flags",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "滚轮是否转动",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "转动方向",
+"data type": "整数"
+   }
+
+]
+  }
+ta type": "逻辑型""@禁止流程检查": "真""@禁止流程检查": "真"]
+ },
+ {
+"class name": "类_进程操作",
+"comment": "具体用法参考：https://www.lkuaiy.com/rsdetails?id=16118451579772\n注意：案例中的类名可能改变，只是名称改变，参考案例是自行对比即可",
+"@视窗.外部头文件": "\"tlhelp32.h\\r\\ntchar.h\\r\\nstdio.h\\r\\nstdint.h\\r\\nvector\\r\\niostream\\r\\nconio.h\\r\\nwinsvc.h\"",
+"methods": [
+  {
+
+"method name": "关闭服务",
+
+"parameters": [
+   {
+"parameter name": "服务名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "结束进程_",
+
+"comment": "结束单个进程",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "结束进程2_",
+
+"comment": "结束多个同名进程",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "取指定进程ID_",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "进程是否存在",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "枚举所有进程",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "返回的进程信息",
+"data type": "类_进程信息数组"
+   }
+]
+  },
+  {
+
+"method name": "枚举进程ID下所有窗口句柄",
+
+"result comment": "返回该进程ID下的所有窗口",
+
+"data type": "变整数数组类",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "窗口句柄取标题",
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+"method name": "结束进程",
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   }
+]
+  },
+  {
+"parameters": [
+"method name": "根据进程名取进程路径",
+"parameters": [
+"data type": "文本型",
+"parameters": [
+"@禁止流程检查": "真",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "进程名称",
+"data type": "文本型"
+   }
+"parameters": [
+]
+  },
+  {
+"method name": "结束进程2",
+"parameters": [
+   {
+"parameter name": "进程名称",
+"data type": "文本型"
+   }
+]
+  }
+]
+ },
+ {
+parameters": [
+"class name": "类_鼠键相关",
+parameters": [
+"comment": "具体案例课程参考：https://www.lkuaiy.com/VideoInsidePage?id=52481603076167&SingleSetVideoLink=55861603941560&Recommend=&page=1",
+parameters": [
+"methods": [
+  {
+arameters": [
+"methods": [
+"method name": "鼠标_鼠标显示隐藏lky",
+arameters": [
+"methods": [
+"comment": "鼠标_显示隐藏",
+arameters": [
+"methods": [
+"result comment": "仰望星空",
+arameters": [
+"methods": [
+"static": true,
+arameters": [
+"methods": [
+"@禁止流程检查": "真",
+arameters": [
+"methods": [
+"parameters": [
+   {
+"parameter name": "隐藏类型",
+"comment": "假 = 隐藏；真 = 显示；",
+"data type": "逻辑型"
+   }
+arameters": [
+"methods": [
+]
+  },
+  {
+}"method name": "鼠标_左右键交换lky",
+}"comment": "鼠标左右键交换",
+}"result comment": "仰望星空",
+}"static": true,
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "是否交替",
+"comment": "是否左右交替",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "鼠标_取双击间隔时间lky",
+}"comment": "取鼠标双击间隔时间",
+}"result comment": "仰望星空",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+"data type": "整数""method name": "鼠标_移动到指定位置lky",
+"data type": "整数""comment": "移动鼠标位置,真成功,假失败",
+"data type": "整数""result comment": "利快云@仰望星空",
+"data type": "整数""static": true,
+"data type": "整数""data type": "逻辑型",
+"data type": "整数""@禁止流程检查": "真",
+"data type": "整数""parameters": [
+   {
+"parameter name": "x",
+"comment": "坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "y",
+"comment": "坐标",
+"data type": "整数"
+   }
+"data type": "整数"]
+  },
+  {
+comment": "坐标""method name": "鼠标_模拟左键双击lky",
+comment": "坐标""comment": "鼠标双击",
+comment": "坐标""result comment": "利快云@仰望星空",
+comment": "坐标""static": true,
+comment": "坐标""data type": "逻辑型",
+comment": "坐标""@禁止流程检查": "真",
+comment": "坐标""parameters": [
+   {
+"parameter name": "x",
+"comment": "坐标,被双击的坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "y",
+"comment": "坐标,被双击的坐标",
+"data type": "整数"
+   }
+comment": "坐标"]
+  },
+  {
+mment": "坐标"]"method name": "鼠标_模拟右键点击lky",
+mment": "坐标"]"comment": "鼠标右击",
+mment": "坐标"]"result comment": "利快云@仰望星空",
+mment": "坐标"]"static": true,
+mment": "坐标"]"data type": "逻辑型",
+mment": "坐标"]"@禁止流程检查": "真",
+mment": "坐标"]"parameters": [
+   {
+"parameter name": "x",
+"comment": "右击的坐标",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "y",
+"comment": "右击的坐标",
+"data type": "整数",
+"@默认值": "0"
+   }
+mment": "坐标"]]
+  },
+  {
+}"method name": "键盘_模拟快捷键",
+}"comment": "可以单键也可以组合键",
+}"static": true,
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "键代码",
+"comment": "例如：按键码.V键",
+"data type": "整数"
+   },
+   {
+"parameter name": "Ctrl",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Alt",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Shift",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Win",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+"method name": "键盘_键盘点击lky",
+"comment": "前台模拟键盘操作",
+"result comment": "仰望星空",
+"static": true,
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键代码",
+"data type": "整数"
+   },
+   {
+"parameter name": "状态",
+"comment": "1按下,2放开",
+"data type": "整数",
+"@默认值": "1"
+   }
+]
+  },
+  {
+ameter name": "状态""method name": "键盘_取大小写状态lky",
+ameter name": "状态""comment": "取当前的输入状态,返回真为大写,0小写,1大写",
+ameter name": "状态""result comment": "仰望星空",
+ameter name": "状态""static": true,
+ameter name": "状态""data type": "逻辑型",
+ameter name": "状态""@禁止流程检查": "真"
+  },
+  {
+data type": "整数""method name": "键盘_取小键盘状态lky",
+data type": "整数""comment": "取当前的输入状态,返回真为开返回1,返回假则为关返回0",
+data type": "整数""result comment": "仰望星空",
+data type": "整数""static": true,
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "键盘_模拟按下回车键lky",
+
+"comment": "模拟按下回车键",
+
+"result comment": "利快云@仰望星空",
+
+"static": true,
+
+"@禁止流程检查": "真"
+  }
+parameters": [
+]
+ },
+ {
+ }"class name": "类_进程信息数组",
+ }"comment": "具体用法参考：https://www.lkuaiy.com/rsdetails?id=16118451579772\n注意：案例中的类名可能改变，只是名称改变，参考案例是自行对比即可",
+ }"base class": "对象数组模板类",
+ }"@模板实现类": "\"类_进程信息数据\""
+ },
+ {
+}"@模板实现类": "\"类_进程信息数据\"""class name": "类_进程信息数据",
+}"@模板实现类": "\"类_进程信息数据\"""comment": "具体用法参考：https://www.lkuaiy.com/rsdetails?id=16118451579772\n注意：案例中的类名可能改变，只是名称改变，参考案例是自行对比即可",
+}"@模板实现类": "\"类_进程信息数据\"""variables": [
+  {
+"@模板实现类": "\"类_进程信息数据\"""variables": [
+"variable name": "结构的大小",
+"@模板实现类": "\"类_进程信息数据\"""variables": [
+"comment": "dwSize",
+"@模板实现类": "\"类_进程信息数据\"""variables": [
+"data type": "整数"
+  },
+  {
+}"variable name": "进程引用计数",
+}"comment": "cntUsage",
+}"data type": "整数"
+  },
+  {
+
+"variable name": "进程ID",
+
+"comment": "th32ProcessID ",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "进程默认堆ID",
+
+"comment": "th32DefaultHeapID ",
+
+"data type": "整数"
+  },
+  {
+"comment": "th32DefaultHeapID ""variable name": "进程模块ID",
+"comment": "th32DefaultHeapID ""comment": "th32ModuleID ",
+"comment": "th32DefaultHeapID ""data type": "整数"
+  },
+  {
+comment": "th32DefaultHeapID ""comment": "th32ModuleID ""variable name": "线程计数",
+comment": "th32DefaultHeapID ""comment": "th32ModuleID ""comment": "cntThreads ",
+comment": "th32DefaultHeapID ""comment": "th32ModuleID ""data type": "整数"
+  },
+  {
+
+"variable name": "父进程ID",
+
+"comment": "th32ParentProcessID ",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "线程优先权",
+
+"comment": "pcPriClassBase ",
+
+"data type": "整数"
+  },
+  {
+"variable name": "保留",
+"comment": "dwFlags ",
+"data type": "整数"
+  },
+  {
+data type": "整数""variable name": "进程文件名",
+data type": "整数""comment": "szExeFile ",
+data type": "整数""data type": "文本型"
+  }
+}"@模板实现类": "\"类_进程信息数据\""]
+ },
+ {
+}"@模板实现类": "\"类_进程信息数据\"""class name": "类_内存类",
+}"@模板实现类": "\"类_进程信息数据\"""methods": [
+  {
+
+"method name": "内存_申请lky",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内存大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "内存_释放lky",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "内存指针",
+"data type": "变整数"
+   }
+]
+  },
+  {
+"method name": "内存_写文本lky",
+"parameters": [
+   {
+"parameter name": "内存指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+]
+  }
+}"@模板实现类": "\"类_进程信息数据\""]
+ }
+ 变整数]
+}

@@ -1,0 +1,46 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months"package name": "火山.原创软件",
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months"@文档": "\"category = \\\"开源库.时间表达式\\\"\"",
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months"@视窗.外部头文件": "\"Croncpp\\\\CroncppTool.h\"",
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months"@视窗.外部库.win32": "\"Croncpp\\\\CroncppToolx86.lib\"",
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months"@视窗.附属文件.win32": "\"Croncpp\\\\CroncppToolx86.dll\"",
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months"@视窗.外部库.x64": "\"Croncpp\\\\CroncppToolx64.lib\"",
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months"@视窗.附属文件.x64": "\"Croncpp\\\\CroncppToolx64.dll\"",
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months"classes": [
+ {
+黰數ŝ"class name": "时间表达式类",
+黰數ŝ"comment": "帮助文档  https://github.com/mariusbancila/croncpp",
+黰數ŝ"methods": [
+  {
+ "method name": "解析",
+ "comment": "解析表达式 https://github.com/mariusbancila/croncpp",
+ "data type": "逻辑型",
+ "@禁止流程检查": "真",
+ "parameters": [
+   {
+"parameter name": "时间表达式",
+"comment": "注意 总共只有6个字段\n\nField         Required Allowed value * Allowed value (alternative 1) ** Allowed value (alternative 2) *** Allowed special characters\nseconds       yes      0-59 0-59 0-59 * , -\nminutes       yes      0-59 0-59 0-59 * , -\nhours         yes      0-23 0-23 0-23 * , -\ndays of month 1-31     1-31 1-31 1-31 * , - ? L W\nmonths        yes      1-12 0-11 1-12 * , -\ndays of week  yes      0-6 1-7 1-7 * , - ? L #\nyears         no       1970-2099 1970-2099 1970-2099 * , -\n\n* * * * * *   Every second\n*/5 * * * * ? Every 5 seconds\n0 */5 */2 * * ? Every 5 minutes, every 2 hours\n0 */2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months\n0 15 10 * * ? * 10:15 AM every day\n0 0/5 14 * * ? Every 5 minutes starting at 2 PM and ending at 2:55 PM, every day\n0 10,44 14 ? 3 WED 2:10 PM and at 2:44 PM every Wednesday of March\n0 15 10 ? * MON-FRI 10:15 AM every Monday, Tuesday, Wednesday, Thursday and Friday\n0 15 10 L * ? 10:15 AM on the last day of every month\n0 0 12 1/5 * ? 12 PM every 5 days every month, starting on the first day of the month\n0 11 11 11 11 ? Every November 11th at 11:11 AM",
+"data type": "文本型"
+   }
+ ]
+  },
+  {
+"comment": "解析表达式 https://github.com/mariusbancila/croncpp""method name": "取下一个时间",
+"comment": "解析表达式 https://github.com/mariusbancila/croncpp""data type": "长整数",
+"comment": "解析表达式 https://github.com/mariusbancila/croncpp""@嵌入式方法": "\"\"",
+"comment": "解析表达式 https://github.com/mariusbancila/croncpp""parameters": [
+   {
+"parameter name": "起始时间戳",
+"comment": "只支持10位的时间戳",
+"data type": "长整数"
+   }
+"comment": "解析表达式 https://github.com/mariusbancila/croncpp"]
+  }
+黰數ŝ]
+ }
+2 */2 ? */2 */2 Every 2 minutes, every 2 hours, every 2 days of the week, every 2 months]
+}

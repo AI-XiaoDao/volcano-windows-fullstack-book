@@ -1,0 +1,2844 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"FBrowser浏览器".
+
+{
+问本程序中的接口需要引用模块"FBrowser浏览器"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"FBrowser浏览器"."package name": "FBrowser.常量",
+问本程序中的接口需要引用模块"FBrowser浏览器"."comment": "浏览器各固定常量参数合集",
+问本程序中的接口需要引用模块"FBrowser浏览器"."classes": [
+ {
+"class name": "状态",
+"constants": [
+  {
+“每显示器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"constant name": "默认",
+“每显示器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"data type": "整数",
+“每显示器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"initial value": "0"
+  },
+  {
+每显示器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"data type": "整数""constant name": "启用",
+每显示器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"data type": "整数""data type": "整数",
+每显示器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"data type": "整数""initial value": "1"
+  },
+  {
+器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"constant name": "默认""constant name": "禁用",
+器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"constant name": "默认""data type": "整数",
+器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"constant name": "默认""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "日志级别",
+"constants": [
+  {
+1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；"constant name": "默认",
+1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；"data type": "整数",
+1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；"initial value": "0"
+  },
+  {
+持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；"constant name": "默认""constant name": "详细",
+持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；"constant name": "默认""data type": "整数",
+持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；"constant name": "默认""initial value": "1"
+  },
+  {
+}"constant name": "调试",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+"data type": "整数""constant name": "信息",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "3"
+  },
+  {
+a type": "整数""constant name": "信息""constant name": "警告",
+a type": "整数""constant name": "信息""data type": "整数",
+a type": "整数""constant name": "信息""initial value": "4"
+  },
+  {
+器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"constant name": "默认""constant name": "错误",
+器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"constant name": "默认""data type": "整数",
+器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用"constant name": "默认""initial value": "5"
+  },
+  {
+
+"constant name": "致命",
+
+"data type": "整数",
+
+"initial value": "6"
+  },
+  {
+ "相比 V1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；""constant name": "禁用",
+ "相比 V1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；""data type": "整数",
+ "相比 V1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；""initial value": "99"
+  }
+]
+ },
+ {
+"class name": "PDF打印_边框",
+"constants": [
+  {
+constants": [
+"constant name": "默认",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "0"
+  },
+  {
+"initial value": "2""constant name": "无",
+"initial value": "2""data type": "整数",
+"initial value": "2""initial value": "1"
+  },
+  {
+
+"constant name": "最小",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+ type": "整数""constant name": "信息""initial value": "4""constant name": "CUSTOM",
+ type": "整数""constant name": "信息""initial value": "4""data type": "整数",
+ type": "整数""constant name": "信息""initial value": "4""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "按键事件",
+"constants": [
+  {
+
+"constant name": "单击",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "按下",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+nstant name": "单击""constant name": "放开",
+nstant name": "单击""data type": "整数",
+nstant name": "单击""initial value": "2"
+  },
+  {
+"initial value": "1""constant name": "字符型",
+"initial value": "1""data type": "整数",
+"initial value": "1""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "触摸事件",
+"constants": [
+  {
+stant name": "单击""initial value": "2""constant name": "释放",
+stant name": "单击""initial value": "2""data type": "整数",
+stant name": "单击""initial value": "2""initial value": "0"
+  },
+  {
+tial value": "1""constant name": "字符型""constant name": "按压",
+tial value": "1""constant name": "字符型""data type": "整数",
+tial value": "1""constant name": "字符型""initial value": "1"
+  },
+  {
+V1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；""constant name": "移动",
+V1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；""data type": "整数",
+V1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；""initial value": "2"
+  },
+  {
+
+"constant name": "取消",
+
+"data type": "整数",
+
+"initial value": "3"
+  }
+]
+ },
+ {
+"class name": "事件标识",
+"constants": [
+  {
+"data type": "整数""constant name": "无",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "0"
+  },
+  {
+t name": "单击""initial value": "2""constant name": "释放""constant name": "CAPS_LOCK_ON",
+t name": "单击""initial value": "2""constant name": "释放""data type": "整数",
+t name": "单击""initial value": "2""constant name": "释放""initial value": "1"
+  },
+  {
+ss name": "事件标识""constant name": "shift按键",
+ss name": "事件标识""data type": "整数",
+ss name": "事件标识""initial value": "2"
+  },
+  {
+ type": "整数""constant name": "信息""initial value": "4""constant name": "ctrl键",
+ type": "整数""constant name": "信息""initial value": "4""data type": "整数",
+ type": "整数""constant name": "信息""initial value": "4""initial value": "4"
+  },
+  {
+
+"constant name": "ALT按键",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+s name": "事件标识""initial value": "2""constant name": "鼠标左键",
+s name": "事件标识""initial value": "2""data type": "整数",
+s name": "事件标识""initial value": "2""initial value": "16"
+  },
+  {
+
+"constant name": "鼠标中键",
+
+"data type": "整数",
+
+"initial value": "32"
+  },
+  {
+e": "整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键",
+e": "整数""constant name": "信息""initial value": "4""constant name": "ctrl键""data type": "整数",
+e": "整数""constant name": "信息""initial value": "4""constant name": "ctrl键""initial value": "64"
+  },
+  {
+
+"constant name": "COMMAND_DOWN",
+
+"data type": "整数",
+
+"initial value": "128"
+  },
+  {
+e": "整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "NUMLOCK键",
+e": "整数""constant name": "信息""initial value": "4""constant name": "ctrl键""data type": "整数",
+e": "整数""constant name": "信息""initial value": "4""constant name": "ctrl键""initial value": "256"
+  },
+  {
+"initial value": "3""constant name": "IS_KEY_PAD",
+"initial value": "3""data type": "整数",
+"initial value": "3""initial value": "512"
+  },
+  {
+
+"constant name": "IS_LEFT",
+
+"data type": "整数",
+
+"initial value": "1024"
+  },
+  {
+}"constant name": "IS_RIGHT",
+}"data type": "整数",
+}"initial value": "2048"
+  },
+  {
+"整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""constant name": "ALTGR_DOWN",
+"整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""data type": "整数",
+"整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""initial value": "4096"
+  }
+]
+ },
+ {
+"class name": "鼠标按键类型",
+"constants": [
+  {
+nstant name": "IS_RIGHT""constant name": "左键",
+nstant name": "IS_RIGHT""data type": "整数",
+nstant name": "IS_RIGHT""initial value": "0"
+  },
+  {
+nstant name": "IS_RIGHT""constant name": "中键",
+nstant name": "IS_RIGHT""data type": "整数",
+nstant name": "IS_RIGHT""initial value": "1"
+  },
+  {
+_AWARENESS_CONTEXT_UNAWARE_GDISCALED""constant name": "右键",
+_AWARENESS_CONTEXT_UNAWARE_GDISCALED""data type": "整数",
+_AWARENESS_CONTEXT_UNAWARE_GDISCALED""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "值类型",
+"constants": [
+  {
+RENESS_CONTEXT_UNAWARE_GDISCALED""constant name": "右键""constant name": "无效",
+RENESS_CONTEXT_UNAWARE_GDISCALED""constant name": "右键""comment": "VTYPE_INVALID",
+RENESS_CONTEXT_UNAWARE_GDISCALED""constant name": "右键""data type": "整数",
+RENESS_CONTEXT_UNAWARE_GDISCALED""constant name": "右键""initial value": "0"
+  },
+  {
+RENESS_CONTEXT_UNAWARE_GDISCALED""constant name": "右键""constant name": "空",
+RENESS_CONTEXT_UNAWARE_GDISCALED""constant name": "右键""comment": "VTYPE_NULL",
+RENESS_CONTEXT_UNAWARE_GDISCALED""constant name": "右键""data type": "整数",
+RENESS_CONTEXT_UNAWARE_GDISCALED""constant name": "右键""initial value": "1"
+  },
+  {
+整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""data type": "整数""constant name": "逻辑",
+整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""data type": "整数""comment": "VTYPE_BOOL",
+整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""data type": "整数""data type": "整数",
+整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""data type": "整数""initial value": "2"
+  },
+  {
+}"constant name": "整数型",
+}"comment": "VTYPE_INT",
+}"data type": "整数",
+}"initial value": "3"
+  },
+  {
+"comment": "VTYPE_INT""constant name": "双精度小数型",
+"comment": "VTYPE_INT""comment": "VTYPE_DOUBLE",
+"comment": "VTYPE_INT""data type": "整数",
+"comment": "VTYPE_INT""initial value": "4"
+  },
+  {
+}"constant name": "文本",
+}"comment": "VTYPE_STRING",
+}"data type": "整数",
+}"initial value": "5"
+  },
+  {
+}"constant name": "字节集型",
+}"comment": "VTYPE_BINARY",
+}"data type": "整数",
+}"initial value": "6"
+  },
+  {
+整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""data type": "整数""constant name": "字典值型",
+整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""data type": "整数""comment": "VTYPE_DICTIONARY",
+整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""data type": "整数""data type": "整数",
+整数""constant name": "信息""initial value": "4""constant name": "ctrl键""constant name": "鼠标右键""data type": "整数""initial value": "7"
+  },
+  {
+"comment": "VTYPE_STRING""constant name": "列表型",
+"comment": "VTYPE_STRING""comment": "VTYPE_LIST",
+"comment": "VTYPE_STRING""data type": "整数",
+"comment": "VTYPE_STRING""initial value": "8"
+  }
+]
+ },
+ {
+"class name": "资源类型",
+"constants": [
+  {
+ment": "VTYPE_STRING""constant name": "列表型""constant name": "主框架",
+ment": "VTYPE_STRING""constant name": "列表型""comment": "RT_MAIN_FRAME",
+ment": "VTYPE_STRING""constant name": "列表型""data type": "整数",
+ment": "VTYPE_STRING""constant name": "列表型""initial value": "0"
+  },
+  {
+comment": "VTYPE_INT""comment": "VTYPE_DOUBLE""constant name": "子框架",
+comment": "VTYPE_INT""comment": "VTYPE_DOUBLE""comment": "RT_SUB_FRAME",
+comment": "VTYPE_INT""comment": "VTYPE_DOUBLE""data type": "整数",
+comment": "VTYPE_INT""comment": "VTYPE_DOUBLE""initial value": "1"
+  },
+  {
+omment": "VTYPE_INT""comment": "VTYPE_DOUBLE""comment": "RT_SUB_FRAME""constant name": "样式表",
+omment": "VTYPE_INT""comment": "VTYPE_DOUBLE""comment": "RT_SUB_FRAME""comment": "RT_STYLESHEET",
+omment": "VTYPE_INT""comment": "VTYPE_DOUBLE""comment": "RT_SUB_FRAME""data type": "整数",
+omment": "VTYPE_INT""comment": "VTYPE_DOUBLE""comment": "RT_SUB_FRAME""initial value": "2"
+  },
+  {
+}"constant name": "脚本",
+}"comment": "RT_SCRIPT",
+}"data type": "整数",
+}"initial value": "3"
+  },
+  {
+}"constant name": "图片",
+}"comment": "RT_IMAGE",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+constants": [
+"constant name": "字体资源",
+constants": [
+"comment": "RT_FONT_RESOURCE",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "5"
+  },
+  {
+onstants": [
+"data type": "整数""constant name": "其他子资源",
+onstants": [
+"data type": "整数""comment": "RT_SUB_RESOURCE",
+onstants": [
+"data type": "整数""data type": "整数",
+onstants": [
+"data type": "整数""initial value": "6"
+  },
+  {
+onstants": [
+"data type": "整数""constant name": "对象",
+onstants": [
+"data type": "整数""comment": "RT_OBJECT",
+onstants": [
+"data type": "整数""data type": "整数",
+onstants": [
+"data type": "整数""initial value": "7"
+  },
+  {
+
+"constant name": "媒体",
+
+"comment": "RT_MEDIA",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+ants": [
+"data type": "整数""constant name": "对象""constant name": "WORKER",
+ants": [
+"data type": "整数""constant name": "对象""comment": "RT_WORKER",
+ants": [
+"data type": "整数""constant name": "对象""data type": "整数",
+ants": [
+"data type": "整数""constant name": "对象""initial value": "9"
+  },
+  {
+nstant name": "媒体""constant name": "共享_WORKER",
+nstant name": "媒体""comment": "RT_SHARED_WORKER",
+nstant name": "媒体""data type": "整数",
+nstant name": "媒体""initial value": "10"
+  },
+  {
+}"constant name": "预先载入",
+}"comment": "RT_PREFETCH",
+}"data type": "整数",
+}"initial value": "11"
+  },
+  {
+omment": "VTYPE_INT""comment": "VTYPE_DOUBLE""data type": "整数""constant name": "图标",
+omment": "VTYPE_INT""comment": "VTYPE_DOUBLE""data type": "整数""comment": "RT_FAVICON",
+omment": "VTYPE_INT""comment": "VTYPE_DOUBLE""data type": "整数""data type": "整数",
+omment": "VTYPE_INT""comment": "VTYPE_DOUBLE""data type": "整数""initial value": "12"
+  },
+  {
+
+"constant name": "XHR",
+
+"comment": "RT_XHR",
+
+"data type": "整数",
+
+"initial value": "13"
+  },
+  {
+constants": [
+"constant name": "PING",
+constants": [
+"comment": "RT_PING",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "14"
+  },
+  {
+
+"constant name": "服务_WORKER",
+
+"comment": "RT_SERVICE_WORKER",
+
+"data type": "整数",
+
+"initial value": "15"
+  },
+  {
+stant name": "媒体""comment": "RT_SHARED_WORKER""constant name": "CSP_报告",
+stant name": "媒体""comment": "RT_SHARED_WORKER""comment": "RT_CSP_REPORT",
+stant name": "媒体""comment": "RT_SHARED_WORKER""data type": "整数",
+stant name": "媒体""comment": "RT_SHARED_WORKER""initial value": "16"
+  },
+  {
+"initial value": "15""constant name": "插件资源",
+"initial value": "15""comment": "RT_PLUGIN_RESOURCE",
+"initial value": "15""data type": "整数",
+"initial value": "15""initial value": "17"
+  }
+]
+ },
+ {
+"class name": "来路策略",
+"constants": [
+  {
+initial value": "15""comment": "RT_PLUGIN_RESOURCE""constant name": "默认",
+initial value": "15""comment": "RT_PLUGIN_RESOURCE""comment": "REFERRER_POLICY_DEFAULT",
+initial value": "15""comment": "RT_PLUGIN_RESOURCE""data type": "整数",
+initial value": "15""comment": "RT_PLUGIN_RESOURCE""initial value": "0"
+  },
+  {
+}"constant name": "同源发送完整请求",
+}"comment": "REFERRER_POLICY_REDUCE_REFERRER_GRANULARITY_ON_TRANSITION_CROSS_ORIGIN",
+}"data type": "整数",
+}"initial value": "1"
+  },
+  {
+}"constant name": "异源合并请求",
+}"comment": "REFERRER_POLICY_ORIGIN_ONLY_ON_TRANSITION_CROSS_ORIGIN",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "不改变请求",
+
+"comment": "REFERRER_POLICY_NEVER_CLEAR_REFERRER",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+ss name": "来路策略""constant name": "原点请求",
+ss name": "来路策略""comment": "REFERRER_POLICY_ORIGIN",
+ss name": "来路策略""data type": "整数",
+ss name": "来路策略""initial value": "4"
+  },
+  {
+nstant name": "同源发送完整请求""constant name": "跨源清除请求",
+nstant name": "同源发送完整请求""comment": "REFERRER_POLICY_CLEAR_REFERRER_ON_TRANSITION_CROSS_ORIGIN",
+nstant name": "同源发送完整请求""data type": "整数",
+nstant name": "同源发送完整请求""initial value": "5"
+  },
+  {
+
+"constant name": "删除请求到源",
+
+"comment": "REFERRER_POLICY_ORIGIN_CLEAR_ON_TRANSITION_FROM_SECURE_TO_INSECURE",
+
+"data type": "整数",
+
+"initial value": "6"
+  },
+  {
+s name": "来路策略""initial value": "4""constant name": "清除请求",
+s name": "来路策略""initial value": "4""comment": "REFERRER_POLICY_NO_REFERRER",
+s name": "来路策略""initial value": "4""data type": "整数",
+s name": "来路策略""initial value": "4""initial value": "7"
+  },
+  {
+ name": "来路策略""initial value": "4""initial value": "7""constant name": "最后值",
+ name": "来路策略""initial value": "4""initial value": "7""comment": "REFERRER_POLICY_LAST_VALUE",
+ name": "来路策略""initial value": "4""initial value": "7""data type": "整数",
+ name": "来路策略""initial value": "4""initial value": "7""initial value": "7"
+  }
+]
+ },
+ {
+"class name": "进程",
+"constants": [
+  {
+}"constant name": "浏览器",
+}"comment": "PID_BROWSER",
+}"data type": "整数",
+}"initial value": "0"
+  },
+  {
+s name": "来路策略""initial value": "4""constant name": "渲染",
+s name": "来路策略""initial value": "4""comment": "PID_RENDERER",
+s name": "来路策略""initial value": "4""data type": "整数",
+s name": "来路策略""initial value": "4""initial value": "1"
+  }
+]
+ },
+ {
+"class name": "线程ID",
+"constants": [
+  {
+initial value": "15""comment": "RT_PLUGIN_RESOURCE""constant name": "UI",
+initial value": "15""comment": "RT_PLUGIN_RESOURCE""comment": "TID_UI",
+initial value": "15""comment": "RT_PLUGIN_RESOURCE""data type": "整数",
+initial value": "15""comment": "RT_PLUGIN_RESOURCE""initial value": "0"
+  },
+  {
+"initial value": "6""constant name": "文件背景",
+"initial value": "6""comment": "TID_FILE_BACKGROUND",
+"initial value": "6""data type": "整数",
+"initial value": "6""initial value": "1"
+  },
+  {
+
+"constant name": "文件",
+
+"comment": "TID_FILE",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "文件用户可见",
+
+"comment": "TID_FILE_USER_VISIBLE",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+initial value": "6""data type": "整数""constant name": "文件用户屏蔽",
+initial value": "6""data type": "整数""comment": "TID_FILE_USER_BLOCKING",
+initial value": "6""data type": "整数""data type": "整数",
+initial value": "6""data type": "整数""initial value": "3"
+  },
+  {
+}"constant name": "流程启动",
+}"comment": "TID_PROCESS_LAUNCHER",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+nitial value": "6""data type": "整数""data type": "整数""constant name": "IO",
+nitial value": "6""data type": "整数""data type": "整数""comment": "TID_IO",
+nitial value": "6""data type": "整数""data type": "整数""data type": "整数",
+nitial value": "6""data type": "整数""data type": "整数""initial value": "5"
+  },
+  {
+
+"constant name": "渲染",
+
+"comment": "TID_RENDERER",
+
+"data type": "整数",
+
+"initial value": "6"
+  }
+]
+ },
+ {
+"class name": "文件对话框",
+"comment": "位操作",
+"constants": [
+  {
+nstant name": "流程启动""constant name": "打开",
+nstant name": "流程启动""comment": "要求文件在允许用户选择它之前存在。",
+nstant name": "流程启动""data type": "整数",
+nstant name": "流程启动""initial value": "0"
+  },
+  {
+stant name": "流程启动""data type": "整数""constant name": "打开_多文件",
+stant name": "流程启动""data type": "整数""comment": "类似打开，但允许选择多个文件打开。",
+stant name": "流程启动""data type": "整数""data type": "整数",
+stant name": "流程启动""data type": "整数""initial value": "1"
+  },
+  {
+
+"constant name": "打开_文件夹",
+
+"comment": "与打开类似，但选择要打开的文件夹。",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+stant name": "流程启动""initial value": "0""constant name": "保存",
+stant name": "流程启动""initial value": "0""comment": "允许选择一个不存在的文件，如果该文件已经存在，则提示覆盖",
+stant name": "流程启动""initial value": "0""data type": "整数",
+stant name": "流程启动""initial value": "0""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "JS对话框类型",
+"constants": [
+  {
+"constant name": "警告",
+"comment": "JSDIALOGTYPE_ALERT",
+"data type": "整数",
+"initial value": "0"
+  },
+  {
+}"constant name": "确认",
+}"comment": "JSDIALOGTYPE_CONFIRM",
+}"data type": "整数",
+}"initial value": "1"
+  },
+  {
+}"constant name": "提示",
+}"comment": "JSDIALOGTYPE_PROMPT",
+}"data type": "整数",
+}"initial value": "2"
+  }
+]
+ },
+ {
+"class name": "焦点",
+"constants": [
+  {
+
+"constant name": "导航",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+"comment": "JSDIALOGTYPE_CONFIRM""constant name": "系统",
+"comment": "JSDIALOGTYPE_CONFIRM""data type": "整数",
+"comment": "JSDIALOGTYPE_CONFIRM""initial value": "1"
+  }
+]
+ },
+ {
+"class name": "拖动操作",
+"comment": "多种类型叠加位或",
+"constants": [
+  {
+ALOGTYPE_CONFIRM"constant name": "无",
+ALOGTYPE_CONFIRM"comment": "DRAG_OPERATION_NONE",
+ALOGTYPE_CONFIRM"data type": "整数",
+ALOGTYPE_CONFIRM"initial value": "0"
+  },
+  {
+_OPERATION_NONE"constant name": "复制",
+_OPERATION_NONE"comment": "DRAG_OPERATION_COPY",
+_OPERATION_NONE"data type": "整数",
+_OPERATION_NONE"initial value": "1"
+  },
+  {
+}"constant name": "链接",
+}"comment": "DRAG_OPERATION_LINK",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "泛型",
+
+"comment": "DRAG_OPERATION_GENERIC",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "私有",
+
+"comment": "DRAG_OPERATION_PRIVATE",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+"comment": "DRAG_OPERATION_GENERIC""constant name": "移动",
+"comment": "DRAG_OPERATION_GENERIC""comment": "DRAG_OPERATION_MOVE",
+"comment": "DRAG_OPERATION_GENERIC""data type": "整数",
+"comment": "DRAG_OPERATION_GENERIC""initial value": "16"
+  },
+  {
+"constant name": "删除",
+"comment": "DRAG_OPERATION_DELETE",
+"data type": "整数",
+"initial value": "32"
+  },
+  {
+}"constant name": "任何",
+}"comment": "DRAG_OPERATION_EVERY",
+}"data type": "整数",
+}"initial value": "-1"
+  }
+]
+ },
+ {
+"class name": "JSON解析",
+"constants": [
+  {
+"initial value": "-1""constant name": "RFC",
+"initial value": "-1""comment": "JSON_PARSER_RFC：Parses the input strictly according to RFC 4627. See comments in Chromium's base/json/json_reader.h file for known limitations/deviations from the RFC.",
+"initial value": "-1""data type": "整数",
+"initial value": "-1""initial value": "0"
+  },
+  {
+"data type": "整数""constant name": "允许逗号",
+"data type": "整数""comment": "JSON_PARSER_ALLOW_TRAILING_COMMAS：Allows commas to exist after the last element in structures.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "1"
+  }
+]
+ },
+ {
+"class name": "资源过滤器",
+"constants": [
+  {
+a type": "整数""constant name": "允许逗号""constant name": "需要更多数据",
+a type": "整数""constant name": "允许逗号""data type": "整数",
+a type": "整数""constant name": "允许逗号""initial value": "0"
+  },
+  {
+
+"constant name": "完成",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+"data type": "整数""constant name": "错误",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "菜单类型",
+"comment": "多种类型叠加位或",
+"constants": [
+  {
+comment": "DRAG_OPERATION_DELETE""constant name": "无",
+comment": "DRAG_OPERATION_DELETE""comment": "CM_TYPEFLAG_NONE",
+comment": "DRAG_OPERATION_DELETE""data type": "整数",
+comment": "DRAG_OPERATION_DELETE""initial value": "0"
+  },
+  {
+ss name": "JSON解析""constant name": "页面",
+ss name": "JSON解析""comment": "CM_TYPEFLAG_PAGE",
+ss name": "JSON解析""data type": "整数",
+ss name": "JSON解析""initial value": "1"
+  },
+  {
+"initial value": "1""constant name": "框架",
+"initial value": "1""comment": "CM_TYPEFLAG_FRAME",
+"initial value": "1""data type": "整数",
+"initial value": "1""initial value": "2"
+  },
+  {
+
+"constant name": "链接",
+
+"comment": "CM_TYPEFLAG_LINK",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+YPEFLAG_FRAME"constant name": "媒体",
+YPEFLAG_FRAME"comment": "CM_TYPEFLAG_MEDIA",
+YPEFLAG_FRAME"data type": "整数",
+YPEFLAG_FRAME"initial value": "8"
+  },
+  {
+pe": "整数""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本",
+pe": "整数""constant name": "允许逗号""constant name": "需要更多数据""comment": "CM_TYPEFLAG_SELECTION",
+pe": "整数""constant name": "允许逗号""constant name": "需要更多数据""data type": "整数",
+pe": "整数""constant name": "允许逗号""constant name": "需要更多数据""initial value": "16"
+  },
+  {
+}"constant name": "编辑框",
+}"comment": "CM_TYPEFLAG_EDITABLE",
+}"data type": "整数",
+}"initial value": "32"
+  }
+]
+ },
+ {
+"class name": "媒体类型",
+"constants": [
+  {
+
+"constant name": "空",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+ "整数""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片",
+ "整数""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""data type": "整数",
+ "整数""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""initial value": "1"
+  },
+  {
+tial value": "1""constant name": "框架""constant name": "视频",
+tial value": "1""constant name": "框架""data type": "整数",
+tial value": "1""constant name": "框架""initial value": "2"
+  },
+  {
+YPEFLAG_FRAME"constant name": "音频",
+YPEFLAG_FRAME"data type": "整数",
+YPEFLAG_FRAME"initial value": "3"
+  },
+  {
+}"constant name": "文件",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+"initial value": "4""constant name": "插件",
+"initial value": "4""data type": "整数",
+"initial value": "4""initial value": "5"
+  }
+]
+ },
+ {
+"class name": "媒体标识",
+"constants": [
+  {
+"constant name": "空",
+"data type": "整数",
+"initial value": "0"
+  },
+  {
+"constant name": "错误",
+"data type": "整数",
+"initial value": "1"
+  },
+  {
+constants": [
+"constant name": "暂停",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "2"
+  },
+  {
+LAG_FRAME"constant name": "音频""constant name": "静音",
+LAG_FRAME"constant name": "音频""data type": "整数",
+LAG_FRAME"constant name": "音频""initial value": "4"
+  },
+  {
+constants": [
+"constant name": "循环播放",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "8"
+  },
+  {
+LAG_FRAME"constant name": "音频""constant name": "可以保存",
+LAG_FRAME"constant name": "音频""data type": "整数",
+LAG_FRAME"constant name": "音频""initial value": "16"
+  },
+  {
+LAG_FRAME"constant name": "音频""constant name": "存在音频",
+LAG_FRAME"constant name": "音频""data type": "整数",
+LAG_FRAME"constant name": "音频""initial value": "32"
+  },
+  {
+"initial value": "8""constant name": "存在视频",
+"initial value": "8""data type": "整数",
+"initial value": "8""initial value": "64"
+  },
+  {
+tial value": "8""constant name": "存在视频""constant name": "控制根元素",
+tial value": "8""constant name": "存在视频""data type": "整数",
+tial value": "8""constant name": "存在视频""initial value": "128"
+  },
+  {
+}"constant name": "可以打印",
+}"data type": "整数",
+}"initial value": "256"
+  },
+  {
+}"constant name": "可以循环",
+}"data type": "整数",
+}"initial value": "512"
+  }
+]
+ },
+ {
+"class name": "编辑框标识",
+"constants": [
+  {
+
+"constant name": "空",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+ial value": "8""constant name": "存在视频""data type": "整数""constant name": "可以取消",
+ial value": "8""constant name": "存在视频""data type": "整数""data type": "整数",
+ial value": "8""constant name": "存在视频""data type": "整数""initial value": "1"
+  },
+  {
+"data type": "整数""constant name": "可以重做",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "2"
+  },
+  {
+data type": "整数""initial value": "2""constant name": "可以剪切",
+data type": "整数""initial value": "2""data type": "整数",
+data type": "整数""initial value": "2""initial value": "4"
+  },
+  {
+"data type": "整数""constant name": "可以复制",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "8"
+  },
+  {
+
+"constant name": "可以粘贴",
+
+"data type": "整数",
+
+"initial value": "16"
+  },
+  {
+ata type": "整数""initial value": "2""data type": "整数""constant name": "可以删除",
+ata type": "整数""initial value": "2""data type": "整数""data type": "整数",
+ata type": "整数""initial value": "2""data type": "整数""initial value": "32"
+  },
+  {
+ata type": "整数""initial value": "2""initial value": "4""constant name": "可以选择全部",
+ata type": "整数""initial value": "2""initial value": "4""data type": "整数",
+ata type": "整数""initial value": "2""initial value": "4""initial value": "64"
+  },
+  {
+
+"constant name": "可以翻译",
+
+"data type": "整数",
+
+"initial value": "128"
+  }
+]
+ },
+ {
+"class name": "V8性能属性",
+"constants": [
+  {
+}"constant name": "无",
+}"comment": "V8_PROPERTY_ATTRIBUTE_NONE",
+}"data type": "整数",
+}"initial value": "0"
+  },
+  {
+"initial value": "0""constant name": "只读",
+"initial value": "0""comment": "V8_PROPERTY_ATTRIBUTE_READONLY",
+"initial value": "0""data type": "整数",
+"initial value": "0""initial value": "1"
+  },
+  {
+al value": "8""constant name": "存在视频""data type": "整数""data type": "整数""constant name": "不能枚举",
+al value": "8""constant name": "存在视频""data type": "整数""data type": "整数""comment": "V8_PROPERTY_ATTRIBUTE_DONTENUM",
+al value": "8""constant name": "存在视频""data type": "整数""data type": "整数""data type": "整数",
+al value": "8""constant name": "存在视频""data type": "整数""data type": "整数""initial value": "2"
+  },
+  {
+"constant name": "不能删除",
+"comment": "V8_PROPERTY_ATTRIBUTE_DONTDELETE",
+"data type": "整数",
+"initial value": "4"
+  }
+]
+ },
+ {
+"class name": "V8访问控制",
+"constants": [
+  {
+""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "默认",
+""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""comment": "V8_ACCESS_CONTROL_DEFAULT",
+""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""data type": "整数",
+""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""initial value": "0"
+  },
+  {
+comment": "V8_PROPERTY_ATTRIBUTE_DONTDELETE""constant name": "可读",
+comment": "V8_PROPERTY_ATTRIBUTE_DONTDELETE""comment": "V8_ACCESS_CONTROL_ALL_CAN_READ",
+comment": "V8_PROPERTY_ATTRIBUTE_DONTDELETE""data type": "整数",
+comment": "V8_PROPERTY_ATTRIBUTE_DONTDELETE""initial value": "1"
+  },
+  {
+}"constant name": "可写",
+}"comment": "V8_ACCESS_CONTROL_ALL_CAN_WRITE",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+ta type": "整数""initial value": "2""data type": "整数""initial value": "32""constant name": "禁止覆盖",
+ta type": "整数""initial value": "2""data type": "整数""initial value": "32""comment": "V8_ACCESS_CONTROL_PROHIBITS_OVERWRITING",
+ta type": "整数""initial value": "2""data type": "整数""initial value": "32""data type": "整数",
+ta type": "整数""initial value": "2""data type": "整数""initial value": "32""initial value": "4"
+  }
+]
+ },
+ {
+"class name": "节点类型",
+"constants": [
+  {
+ss name": "节点类型""constant name": "无支持",
+ss name": "节点类型""comment": "DOM_NODE_TYPE_UNSUPPORTED",
+ss name": "节点类型""data type": "整数",
+ss name": "节点类型""initial value": "0"
+  },
+  {
+""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "元素",
+""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""comment": "DOM_NODE_TYPE_ELEMENT",
+""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""data type": "整数",
+""constant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""initial value": "1"
+  },
+  {
+"constant name": "属性",
+"comment": "DOM_NODE_TYPE_ATTRIBUTE",
+"data type": "整数",
+"initial value": "2"
+  },
+  {
+
+"constant name": "文本",
+
+"comment": "DOM_NODE_TYPE_TEXT",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "CDATA_SECTION",
+
+"comment": "DOM_NODE_TYPE_CDATA_SECTION",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "处理指令",
+
+"comment": "DOM_NODE_TYPE_PROCESSING_INSTRUCTIONS",
+
+"data type": "整数",
+
+"initial value": "5"
+  },
+  {
+"comment": "DOM_NODE_TYPE_CDATA_SECTION""constant name": "注释",
+"comment": "DOM_NODE_TYPE_CDATA_SECTION""comment": "DOM_NODE_TYPE_COMMENT",
+"comment": "DOM_NODE_TYPE_CDATA_SECTION""data type": "整数",
+"comment": "DOM_NODE_TYPE_CDATA_SECTION""initial value": "6"
+  },
+  {
+
+"constant name": "文档",
+
+"comment": "DOM_NODE_TYPE_DOCUMENT",
+
+"data type": "整数",
+
+"initial value": "7"
+  },
+  {
+nstant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "默认""constant name": "文档_类型",
+nstant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "默认""comment": "DOM_NODE_TYPE_DOCUMENT_TYPE",
+nstant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "默认""data type": "整数",
+nstant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "默认""initial value": "8"
+  },
+  {
+nstant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "元素""constant name": "文档_碎片",
+nstant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "元素""comment": "DOM_NODE_TYPE_DOCUMENT_FRAGMENT",
+nstant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "元素""data type": "整数",
+nstant name": "允许逗号""constant name": "需要更多数据""constant name": "文本""constant name": "图片""constant name": "元素""initial value": "9"
+  }
+]
+ },
+ {
+"class name": "节点文档类型",
+"constants": [
+  {
+"initial value": "7""constant name": "未知",
+"initial value": "7""comment": "DOM_DOCUMENT_TYPE_UNKNOWN",
+"initial value": "7""data type": "整数",
+"initial value": "7""initial value": "0"
+  },
+  {
+constants": [
+"constant name": "HTML",
+constants": [
+"comment": "DOM_DOCUMENT_TYPE_HTML",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "1"
+  },
+  {
+comment": "DOM_NODE_TYPE_CDATA_SECTION""comment": "DOM_NODE_TYPE_COMMENT""constant name": "XHTML",
+comment": "DOM_NODE_TYPE_CDATA_SECTION""comment": "DOM_NODE_TYPE_COMMENT""comment": "DOM_DOCUMENT_TYPE_XHTML",
+comment": "DOM_NODE_TYPE_CDATA_SECTION""comment": "DOM_NODE_TYPE_COMMENT""data type": "整数",
+comment": "DOM_NODE_TYPE_CDATA_SECTION""comment": "DOM_NODE_TYPE_COMMENT""initial value": "2"
+  },
+  {
+tants": [
+"constant name": "HTML""constant name": "插件",
+tants": [
+"constant name": "HTML""comment": "DOM_DOCUMENT_TYPE_PLUGIN",
+tants": [
+"constant name": "HTML""data type": "整数",
+tants": [
+"constant name": "HTML""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "SEEK",
+"constants": [
+  {
+
+"constant name": "CUR",
+
+"comment": "SEEK_CUR",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+}"constant name": "END",
+}"comment": "SEEK_END",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+}"constant name": "SET",
+}"comment": "SEEK_SET",
+}"data type": "整数",
+}"initial value": "0"
+  }
+]
+ },
+ {
+"class name": "JS返回值类型",
+"constants": [
+  {
+nstant name": "CUR""constant name": "无效",
+nstant name": "CUR""data type": "整数",
+nstant name": "CUR""initial value": "-1"
+  },
+  {
+"comment": "DOM_NODE_TYPE_TEXT""constant name": "空值",
+"comment": "DOM_NODE_TYPE_TEXT""data type": "整数",
+"comment": "DOM_NODE_TYPE_TEXT""initial value": "0"
+  },
+  {
+
+"constant name": "整数值",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+s": [
+"constant name": "HTML""constant name": "插件""constant name": "文本值",
+s": [
+"constant name": "HTML""constant name": "插件""data type": "整数",
+s": [
+"constant name": "HTML""constant name": "插件""initial value": "2"
+  },
+  {
+comment": "DOM_NODE_TYPE_TEXT""data type": "整数""constant name": "逻辑值",
+comment": "DOM_NODE_TYPE_TEXT""data type": "整数""data type": "整数",
+comment": "DOM_NODE_TYPE_TEXT""data type": "整数""initial value": "3"
+  },
+  {
+onstants": [
+"initial value": "1""constant name": "双精度小数值",
+onstants": [
+"initial value": "1""data type": "整数",
+onstants": [
+"initial value": "1""initial value": "4"
+  },
+  {
+ment": "DOM_NODE_TYPE_TEXT""constant name": "空值""constant name": "时间文本值",
+ment": "DOM_NODE_TYPE_TEXT""constant name": "空值""data type": "整数",
+ment": "DOM_NODE_TYPE_TEXT""constant name": "空值""initial value": "5"
+  },
+  {
+omment": "DOM_NODE_TYPE_TEXT""data type": "整数""data type": "整数""constant name": "数组值",
+omment": "DOM_NODE_TYPE_TEXT""data type": "整数""data type": "整数""data type": "整数",
+omment": "DOM_NODE_TYPE_TEXT""data type": "整数""data type": "整数""initial value": "6"
+  },
+  {
+
+"constant name": "数组缓存值",
+
+"data type": "整数",
+
+"initial value": "7"
+  },
+  {
+}"constant name": "方法值",
+}"data type": "整数",
+}"initial value": "8"
+  },
+  {
+}"constant name": "类值",
+}"data type": "整数",
+}"initial value": "9"
+  }
+]
+ },
+ {
+"class name": "文本输入类型",
+"constants": [
+  {
+"data type": "整数""constant name": "默认",
+"data type": "整数""comment": "CEF_TEXT_INPUT_MODE_DEFAULT",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "0"
+  },
+  {
+"initial value": "8""constant name": "无",
+"initial value": "8""comment": "CEF_TEXT_INPUT_MODE_NONE",
+"initial value": "8""data type": "整数",
+"initial value": "8""initial value": "1"
+  },
+  {
+"initial value": "7""constant name": "文本",
+"initial value": "7""comment": "CEF_TEXT_INPUT_MODE_TEXT",
+"initial value": "7""data type": "整数",
+"initial value": "7""initial value": "2"
+  },
+  {
+initial value": "8""data type": "整数""constant name": "电话",
+initial value": "8""data type": "整数""comment": "CEF_TEXT_INPUT_MODE_TEL",
+initial value": "8""data type": "整数""data type": "整数",
+initial value": "8""data type": "整数""initial value": "3"
+  },
+  {
+}"constant name": "链接",
+}"comment": "CEF_TEXT_INPUT_MODE_URL",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+initial value": "8""initial value": "1""constant name": "邮件",
+initial value": "8""initial value": "1""comment": "CEF_TEXT_INPUT_MODE_EMAIL",
+initial value": "8""initial value": "1""data type": "整数",
+initial value": "8""initial value": "1""initial value": "5"
+  },
+  {
+nitial value": "8""data type": "整数""data type": "整数""constant name": "数值",
+nitial value": "8""data type": "整数""data type": "整数""comment": "CEF_TEXT_INPUT_MODE_NUMERIC",
+nitial value": "8""data type": "整数""data type": "整数""data type": "整数",
+nitial value": "8""data type": "整数""data type": "整数""initial value": "6"
+  },
+  {
+initial value": "8""data type": "整数""constant name": "小数位",
+initial value": "8""data type": "整数""comment": "CEF_TEXT_INPUT_MODE_DECIMAL",
+initial value": "8""data type": "整数""data type": "整数",
+initial value": "8""data type": "整数""initial value": "7"
+  },
+  {
+ial value": "8""data type": "整数""constant name": "小数位""constant name": "搜索",
+ial value": "8""data type": "整数""constant name": "小数位""comment": "CEF_TEXT_INPUT_MODE_SEARCH",
+ial value": "8""data type": "整数""constant name": "小数位""data type": "整数",
+ial value": "8""data type": "整数""constant name": "小数位""initial value": "8"
+  },
+  {
+initial value": "7""data type": "整数""constant name": "最大",
+initial value": "7""data type": "整数""comment": "CEF_TEXT_INPUT_MODE_MAX",
+initial value": "7""data type": "整数""data type": "整数",
+initial value": "7""data type": "整数""initial value": "8"
+  }
+]
+ },
+ {
+"class name": "绘制元素类型",
+"constants": [
+  {
+ss name": "绘制元素类型""constant name": "视图",
+ss name": "绘制元素类型""comment": "PET_VIEW",
+ss name": "绘制元素类型""data type": "整数",
+ss name": "绘制元素类型""initial value": "0"
+  },
+  {
+initial value": "8""data type": "整数""constant name": "弹窗",
+initial value": "8""data type": "整数""comment": "PET_POPUP",
+initial value": "8""data type": "整数""data type": "整数",
+initial value": "8""data type": "整数""initial value": "1"
+  }
+]
+ },
+ {
+"class name": "清理缓存",
+"constants": [
+  {
+
+"constant name": "Appcache",
+
+"comment": "REMOVE_DATA_MASK_APPCACHE 应用缓存",
+
+"data type": "长整数",
+
+"initial value": "1"
+  },
+  {
+ial value": "8""data type": "整数""constant name": "小数位""constant name": "Cookies",
+ial value": "8""data type": "整数""constant name": "小数位""comment": "REMOVE_DATA_MASK_COOKIES",
+ial value": "8""data type": "整数""constant name": "小数位""data type": "长整数",
+ial value": "8""data type": "整数""constant name": "小数位""initial value": "2"
+  },
+  {
+}"constant name": "FileSystem",
+}"comment": "REMOVE_DATA_MASK_FILE_SYSTEMS 文件系统",
+}"data type": "长整数",
+}"initial value": "4"
+  },
+  {
+al value": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB",
+al value": "8""data type": "整数""constant name": "小数位""data type": "长整数""comment": "REMOVE_DATA_MASK_INDEXEDDB 索引数据库",
+al value": "8""data type": "整数""constant name": "小数位""data type": "长整数""data type": "长整数",
+al value": "8""data type": "整数""constant name": "小数位""data type": "长整数""initial value": "8"
+  },
+  {
+al value": "8""data type": "整数""constant name": "小数位""initial value": "2""constant name": "LocalStorage",
+al value": "8""data type": "整数""constant name": "小数位""initial value": "2""comment": "REMOVE_DATA_MASK_LOCAL_STORAGE 本地存储",
+al value": "8""data type": "整数""constant name": "小数位""initial value": "2""data type": "长整数",
+al value": "8""data type": "整数""constant name": "小数位""initial value": "2""initial value": "16"
+  },
+  {
+alue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""constant name": "ShaderCache",
+alue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""comment": "REMOVE_DATA_MASK_SHADER_CACHE",
+alue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""data type": "长整数",
+alue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "32"
+  },
+  {
+}"constant name": "WebSql",
+}"comment": "REMOVE_DATA_MASK_WEBSQL",
+}"data type": "长整数",
+}"initial value": "64"
+  },
+  {
+l value": "8""data type": "整数""constant name": "小数位""initial value": "2""comment": "REMOVE_DATA_MASK_LOCAL_STORAGE 本地存储""constant name": "ServiceWorkers",
+l value": "8""data type": "整数""constant name": "小数位""initial value": "2""comment": "REMOVE_DATA_MASK_LOCAL_STORAGE 本地存储""comment": "REMOVE_DATA_MASK_SERVICE_WORKERS",
+l value": "8""data type": "整数""constant name": "小数位""initial value": "2""comment": "REMOVE_DATA_MASK_LOCAL_STORAGE 本地存储""data type": "长整数",
+l value": "8""data type": "整数""constant name": "小数位""initial value": "2""comment": "REMOVE_DATA_MASK_LOCAL_STORAGE 本地存储""initial value": "128"
+  },
+  {
+alue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""constant name": "CacheStorage",
+alue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""comment": "REMOVE_DATA_MASK_CACHE_STORAGE",
+alue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""data type": "长整数",
+alue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "256"
+  },
+  {
+lue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "256""constant name": "PluginPrivateData",
+lue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "256""comment": "REMOVE_DATA_MASK_PLUGIN_PRIVATE_DATA",
+lue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "256""data type": "长整数",
+lue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "256""initial value": "512"
+  },
+  {
+}"constant name": "BackGroundFetch",
+}"comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH",
+}"data type": "长整数",
+}"initial value": "1024"
+  },
+  {
+"comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""constant name": "Conversions",
+"comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS",
+"comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""data type": "长整数",
+"comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""initial value": "2048"
+  },
+  {
+lue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "256""constant name": "全部",
+lue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "256""comment": "REMOVE_DATA_MASK_ALL",
+lue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "256""data type": "长整数",
+lue": "8""data type": "整数""constant name": "小数位""data type": "长整数""constant name": "IndexedDB""initial value": "256""initial value": "4294967295"
+  }
+]
+ },
+ {
+"class name": "缓存类型",
+"constants": [
+  {
+}"constant name": "临时",
+}"comment": "QUOTA_MANAGED_STORAGE_MASK_TEMPORARY 临时缓存",
+}"data type": "长整数",
+}"initial value": "1"
+  },
+  {
+nstant name": "临时""constant name": "永久",
+nstant name": "临时""comment": "QUOTA_MANAGED_STORAGE_MASK_PERSISTENT 永久缓存",
+nstant name": "临时""data type": "长整数",
+nstant name": "临时""initial value": "2"
+  },
+  {
+constants": [
+"constant name": "可用",
+constants": [
+"comment": "QUOTA_MANAGED_STORAGE_MASK_SYNCABLE 可用缓存",
+constants": [
+"data type": "长整数",
+constants": [
+"initial value": "4"
+  },
+  {
+}"constant name": "全部",
+}"comment": "QUOTA_MANAGED_STORAGE_MASK_ALL 全部缓存",
+}"data type": "长整数",
+}"initial value": "4294967295"
+  }
+]
+ },
+ {
+"class name": "URI保留规则",
+"constants": [
+  {
+"initial value": "0""constant name": "无",
+"initial value": "0""data type": "整数",
+"initial value": "0""initial value": "0"
+  },
+  {
+comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS""constant name": "正常",
+comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS""data type": "整数",
+comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS""initial value": "1"
+  },
+  {
+tial value": "0""constant name": "无""constant name": "空格",
+tial value": "0""constant name": "无""data type": "整数",
+tial value": "0""constant name": "无""initial value": "2"
+  },
+  {
+comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS""constant name": "路径分隔符",
+comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS""data type": "整数",
+comment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS""initial value": "3"
+  },
+  {
+
+"constant name": "Url特殊字符",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+omment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS""initial value": "3""constant name": "空格代替加号",
+omment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS""initial value": "3""data type": "整数",
+omment": "REMOVE_DATA_MASK_BACKGROUND_FETCH""comment": "REMOVE_DATA_MASK_CONVERSIONS""initial value": "3""initial value": "16"
+  }
+]
+ },
+ {
+"class name": "颜色类型",
+"constants": [
+  {
+"data type": "长整数""constant name": "RGBA",
+"data type": "长整数""comment": "RGBA with 8 bits per pixel (32bits total)",
+"data type": "长整数""data type": "整数",
+"data type": "长整数""initial value": "0"
+  },
+  {
+ value": "0""constant name": "无""constant name": "空格""constant name": "BGRA",
+ value": "0""constant name": "无""constant name": "空格""comment": "BGRA with 8 bits per pixel (32bits total)",
+ value": "0""constant name": "无""constant name": "空格""data type": "整数",
+ value": "0""constant name": "无""constant name": "空格""initial value": "1"
+  }
+]
+ },
+ {
+"class name": "透明类型",
+"constants": [
+  {
+value": "0""constant name": "无""constant name": "空格""initial value": "1""constant name": "OPAQUE",
+value": "0""constant name": "无""constant name": "空格""initial value": "1""comment": "没有透明度。忽略alpha组件",
+value": "0""constant name": "无""constant name": "空格""initial value": "1""data type": "整数",
+value": "0""constant name": "无""constant name": "空格""initial value": "1""initial value": "0"
+  },
+  {
+a type": "长整数""constant name": "RGBA""constant name": "PREMULTIPLIED",
+a type": "长整数""constant name": "RGBA""comment": "Transparency with pre-multiplied alpha component",
+a type": "长整数""constant name": "RGBA""data type": "整数",
+a type": "长整数""constant name": "RGBA""initial value": "1"
+  }
+]
+ },
+ {
+"class name": "请求标识",
+"constants": [
+  {
+
+"constant name": "无",
+
+"comment": "UR_FLAG_NONE",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+a type": "长整数""constant name": "RGBA""constant name": "跳过缓存",
+a type": "长整数""constant name": "RGBA""comment": "UR_FLAG_SKIP_CACHE",
+a type": "长整数""constant name": "RGBA""data type": "整数",
+a type": "长整数""constant name": "RGBA""initial value": "1"
+  },
+  {
+"initial value": "0""constant name": "只使用缓存",
+"initial value": "0""comment": "UR_FLAG_ONLY_FROM_CACHE",
+"initial value": "0""data type": "整数",
+"initial value": "0""initial value": "2"
+  },
+  {
+a type": "长整数""constant name": "RGBA""constant name": "禁用缓存",
+a type": "长整数""constant name": "RGBA""comment": "UR_FLAG_DISABLE_CACHE",
+a type": "长整数""constant name": "RGBA""data type": "整数",
+a type": "长整数""constant name": "RGBA""initial value": "4"
+  },
+  {
+LAG_SKIP_CACHE"constant name": "允许存储凭证",
+LAG_SKIP_CACHE"comment": "UR_FLAG_ALLOW_STORED_CREDENTIALS",
+LAG_SKIP_CACHE"data type": "整数",
+LAG_SKIP_CACHE"initial value": "8"
+  },
+  {
+a type": "长整数""constant name": "RGBA""constant name": "上载进度报告",
+a type": "长整数""constant name": "RGBA""comment": "UR_FLAG_REPORT_UPLOAD_PROGRESS",
+a type": "长整数""constant name": "RGBA""data type": "整数",
+a type": "长整数""constant name": "RGBA""initial value": "16"
+  },
+  {
+
+"constant name": "无下载数据",
+
+"comment": "UR_FLAG_NO_DOWNLOAD_DATA",
+
+"data type": "整数",
+
+"initial value": "32"
+  },
+  {
+ss name": "缓存类型""constant name": "NO_RETRY_ON_5XX",
+ss name": "缓存类型""comment": "UR_FLAG_NO_RETRY_ON_5XX",
+ss name": "缓存类型""data type": "整数",
+ss name": "缓存类型""initial value": "64"
+  },
+  {
+ type": "长整数""constant name": "RGBA""data type": "整数""constant name": "停止重定向",
+ type": "长整数""constant name": "RGBA""data type": "整数""comment": "UR_FLAG_STOP_ON_REDIRECT",
+ type": "长整数""constant name": "RGBA""data type": "整数""data type": "整数",
+ type": "长整数""constant name": "RGBA""data type": "整数""initial value": "128"
+  }
+]
+ },
+ {
+"class name": "过渡类型",
+"constants": [
+  {
+ss name": "过渡类型""constant name": "LINK",
+ss name": "过渡类型""data type": "整数",
+ss name": "过渡类型""initial value": "0"
+  },
+  {
+"constant name": "EXPLICIT",
+"data type": "整数",
+"initial value": "1"
+  },
+  {
+type": "长整数""constant name": "RGBA""data type": "整数""initial value": "128""constant name": "AUTO_SUBFRAME",
+type": "长整数""constant name": "RGBA""data type": "整数""initial value": "128""data type": "整数",
+type": "长整数""constant name": "RGBA""data type": "整数""initial value": "128""initial value": "3"
+  },
+  {
+"initial value": "0""constant name": "MANUAL_SUBFRAME",
+"initial value": "0""data type": "整数",
+"initial value": "0""initial value": "4"
+  },
+  {
+"initial value": "0""constant name": "FORM_SUBMIT",
+"initial value": "0""data type": "整数",
+"initial value": "0""initial value": "7"
+  },
+  {
+
+"constant name": "RELOAD",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+constants": [
+"constant name": "SOURCE_MASK",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "255"
+  },
+  {
+
+"constant name": "BLOCKED_FLAG",
+
+"data type": "整数",
+
+"initial value": "8388608"
+  },
+  {
+data type": "整数""initial value": "2""constant name": "FORWARD_BACK_FLAG",
+data type": "整数""initial value": "2""data type": "整数",
+data type": "整数""initial value": "2""initial value": "16777216"
+  },
+  {
+ata type": "整数""initial value": "2""data type": "整数""constant name": "DIRECT_LOAD_FLAG",
+ata type": "整数""initial value": "2""data type": "整数""data type": "整数",
+ata type": "整数""initial value": "2""data type": "整数""initial value": "33554432"
+  },
+  {
+}"constant name": "CHAIN_START_FLAG",
+}"data type": "整数",
+}"initial value": "268435456"
+  },
+  {
+}"constant name": "CHAIN_END_FLAG",
+}"data type": "整数",
+}"initial value": "536870912"
+  },
+  {
+initial value": "0""initial value": "7""constant name": "CLIENT_REDIRECT_FLAG",
+initial value": "0""initial value": "7""data type": "整数",
+initial value": "0""initial value": "7""initial value": "1073741824"
+  },
+  {
+AL_SUBFRAME"constant name": "SERVER_REDIRECT_FLAG",
+AL_SUBFRAME"data type": "整数",
+AL_SUBFRAME"initial value": "-2147483648"
+  },
+  {
+nstant name": "CHAIN_END_FLAG""constant name": "IS_REDIRECT_MASK",
+nstant name": "CHAIN_END_FLAG""data type": "整数",
+nstant name": "CHAIN_END_FLAG""initial value": "-1073741824"
+  },
+  {
+
+"constant name": "QUALIFIER_MASK",
+
+"data type": "整数",
+
+"initial value": "-256"
+  }
+]
+ },
+ {
+"class name": "音频通道布局",
+"constants": [
+  {
+}"constant name": "无",
+}"data type": "整数",
+}"initial value": "0"
+  },
+  {
+ta type": "整数""initial value": "2""data type": "整数""data type": "整数""constant name": "UNSUPPORTED",
+ta type": "整数""initial value": "2""data type": "整数""data type": "整数""data type": "整数",
+ta type": "整数""initial value": "2""data type": "整数""data type": "整数""initial value": "1"
+  },
+  {
+ER_REDIRECT_FLAG"constant name": "MONO",
+ER_REDIRECT_FLAG"data type": "整数",
+ER_REDIRECT_FLAG"initial value": "2"
+  },
+  {
+}"constant name": "STEREO",
+}"data type": "整数",
+}"initial value": "3"
+  },
+  {
+}"constant name": "_2_1",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+
+"constant name": "SURROUND",
+
+"data type": "整数",
+
+"initial value": "5"
+  },
+  {
+}"constant name": "_4_0",
+}"data type": "整数",
+}"initial value": "6"
+  },
+  {
+nstant name": "无""constant name": "_2_2",
+nstant name": "无""data type": "整数",
+nstant name": "无""initial value": "7"
+  },
+  {
+}"constant name": "QUAD",
+}"data type": "整数",
+}"initial value": "8"
+  },
+  {
+}"constant name": "_5_0",
+}"data type": "整数",
+}"initial value": "9"
+  },
+  {
+
+"constant name": "_5_1",
+
+"data type": "整数",
+
+"initial value": "10"
+  },
+  {
+EDIRECT_MASK"constant name": "_5_0_BACK",
+EDIRECT_MASK"data type": "整数",
+EDIRECT_MASK"initial value": "11"
+  },
+  {
+stant name": "CHAIN_END_FLAG""initial value": "-1073741824""constant name": "_5_1_BACK",
+stant name": "CHAIN_END_FLAG""initial value": "-1073741824""data type": "整数",
+stant name": "CHAIN_END_FLAG""initial value": "-1073741824""initial value": "12"
+  },
+  {
+"initial value": "10""constant name": "_7_0",
+"initial value": "10""data type": "整数",
+"initial value": "10""initial value": "13"
+  },
+  {
+}"constant name": "_7_1",
+}"data type": "整数",
+}"initial value": "14"
+  },
+  {
+
+"constant name": "_7_1_WIDE",
+
+"data type": "整数",
+
+"initial value": "15"
+  },
+  {
+stant name": "CHAIN_END_FLAG""initial value": "-1073741824""constant name": "STEREO_DOWNMIX",
+stant name": "CHAIN_END_FLAG""initial value": "-1073741824""data type": "整数",
+stant name": "CHAIN_END_FLAG""initial value": "-1073741824""initial value": "16"
+  },
+  {
+
+"constant name": "_2POINT1",
+
+"data type": "整数",
+
+"initial value": "17"
+  },
+  {
+}"constant name": "_3_1",
+}"data type": "整数",
+}"initial value": "18"
+  },
+  {
+}"constant name": "_4_1",
+}"data type": "整数",
+}"initial value": "19"
+  },
+  {
+nstant name": "_4_1""constant name": "_6_0",
+nstant name": "_4_1""data type": "整数",
+nstant name": "_4_1""initial value": "20"
+  },
+  {
+nt name": "_4_1""constant name": "_6_0""constant name": "_6_0_FRONT",
+nt name": "_4_1""constant name": "_6_0""data type": "整数",
+nt name": "_4_1""constant name": "_6_0""initial value": "21"
+  },
+  {
+
+"constant name": "HEXAGONAL",
+
+"data type": "整数",
+
+"initial value": "22"
+  },
+  {
+}"constant name": "_6_1",
+}"data type": "整数",
+}"initial value": "23"
+  },
+  {
+"data type": "整数""constant name": "_6_1_BACK",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "24"
+  },
+  {
+
+"constant name": "_6_1_FRONT",
+
+"data type": "整数",
+
+"initial value": "25"
+  },
+  {
+}"constant name": "_7_0_FRONT",
+}"data type": "整数",
+}"initial value": "26"
+  },
+  {
+nt name": "CHAIN_END_FLAG""constant name": "IS_REDIRECT_MASK""constant name": "_7_1_WIDE_BACK",
+nt name": "CHAIN_END_FLAG""constant name": "IS_REDIRECT_MASK""data type": "整数",
+nt name": "CHAIN_END_FLAG""constant name": "IS_REDIRECT_MASK""initial value": "27"
+  },
+  {
+"initial value": "26""constant name": "OCTAGONAL",
+"initial value": "26""data type": "整数",
+"initial value": "26""initial value": "28"
+  },
+  {
+}"constant name": "DISCRETE",
+}"data type": "整数",
+}"initial value": "29"
+  },
+  {
+nstant name": "无""constant name": "STEREO_AND_KEYBOARD_MIC",
+nstant name": "无""data type": "整数",
+nstant name": "无""initial value": "30"
+  },
+  {
+
+"constant name": "_4_1_QUAD_SIDE",
+
+"data type": "整数",
+
+"initial value": "31"
+  },
+  {
+tant name": "CHAIN_END_FLAG""initial value": "-1073741824""initial value": "16""constant name": "BITSTREAM",
+tant name": "CHAIN_END_FLAG""initial value": "-1073741824""initial value": "16""data type": "整数",
+tant name": "CHAIN_END_FLAG""initial value": "-1073741824""initial value": "16""initial value": "32"
+  },
+  {
+
+"constant name": "_5_1_4_DOWNMIX",
+
+"data type": "整数",
+
+"initial value": "33"
+  }
+]
+ },
+ {
+"class name": "快捷菜单_编辑类型",
+"constants": [
+  {
+}"constant name": "无",
+}"comment": "QuickMenuEditStateFlags  QM_EDITFLAG_NONE = 0,",
+}"data type": "整数",
+}"initial value": "0"
+  },
+  {
+
+"constant name": "可省略",
+
+"comment": "QM_EDITFLAG_CAN_ELLIPSIS = 1 << 0,",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+"data type": "整数""constant name": "可剪切",
+"data type": "整数""comment": "QM_EDITFLAG_CAN_CUT = 1 << 1,",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "2"
+  },
+  {
+nstant name": "_7_1""constant name": "可复制",
+nstant name": "_7_1""comment": "QM_EDITFLAG_CAN_COPY = 1 << 2,",
+nstant name": "_7_1""data type": "整数",
+nstant name": "_7_1""initial value": "4"
+  },
+  {
+nstant name": "无""constant name": "可粘贴",
+nstant name": "无""comment": "QM_EDITFLAG_CAN_PASTE = 1 << 3,",
+nstant name": "无""data type": "整数",
+nstant name": "无""initial value": "8"
+  }
+]
+ },
+ {
+"class name": "快捷菜单_事件标识",
+"constants": [
+  {
+data type": "整数""comment": "QM_EDITFLAG_CAN_CUT = 1 << 1,""constant name": "无",
+data type": "整数""comment": "QM_EDITFLAG_CAN_CUT = 1 << 1,""comment": "EVENTFLAG_NONE = 0,",
+data type": "整数""comment": "QM_EDITFLAG_CAN_CUT = 1 << 1,""data type": "整数",
+data type": "整数""comment": "QM_EDITFLAG_CAN_CUT = 1 << 1,""initial value": "0"
+  },
+  {
+
+"constant name": "CAPS_LOCK",
+
+"comment": "EVENTFLAG_CAPS_LOCK_ON = 1 << 0,",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "SHIFT",
+
+"comment": "EVENTFLAG_SHIFT_DOWN = 1 << 1,",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "CONTROL",
+
+"comment": "EVENTFLAG_CONTROL_DOWN = 1 << 2,",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "ALT",
+
+"comment": "EVENTFLAG_ALT_DOWN = 1 << 3,",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+"data type": "整数""constant name": "鼠标左键",
+"data type": "整数""comment": "EVENTFLAG_LEFT_MOUSE_BUTTON = 1 << 4,",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "16"
+  },
+  {
+}"constant name": "鼠标中键",
+}"comment": "EVENTFLAG_MIDDLE_MOUSE_BUTTON = 1 << 5,",
+}"data type": "整数",
+}"initial value": "32"
+  },
+  {
+data type": "整数""data type": "整数""constant name": "鼠标右键",
+data type": "整数""data type": "整数""comment": "EVENTFLAG_RIGHT_MOUSE_BUTTON = 1 << 6,",
+data type": "整数""data type": "整数""data type": "整数",
+data type": "整数""data type": "整数""initial value": "64"
+  }
+]
+ },
+ {
+"class name": "窗口打开配置",
+"constants": [
+  {
+ata type": "整数""data type": "整数""data type": "整数""constant name": "未知",
+ata type": "整数""data type": "整数""data type": "整数""data type": "整数",
+ata type": "整数""data type": "整数""data type": "整数""initial value": "0"
+  },
+  {
+ss name": "窗口打开配置""constant name": "当前选项卡",
+ss name": "窗口打开配置""data type": "整数",
+ss name": "窗口打开配置""initial value": "1"
+  },
+  {
+"comment": "EVENTFLAG_CONTROL_DOWN = 1 << 2,""constant name": "相同选项卡",
+"comment": "EVENTFLAG_CONTROL_DOWN = 1 << 2,""comment": " ",
+"comment": "EVENTFLAG_CONTROL_DOWN = 1 << 2,""data type": "整数",
+"comment": "EVENTFLAG_CONTROL_DOWN = 1 << 2,""initial value": "2"
+  },
+  {
+ type": "整数""data type": "整数""constant name": "鼠标右键""constant name": "新前台选项卡",
+ type": "整数""data type": "整数""constant name": "鼠标右键""data type": "整数",
+ type": "整数""data type": "整数""constant name": "鼠标右键""initial value": "3"
+  },
+  {
+
+"constant name": "新后台选项卡",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+}"constant name": "新弹窗",
+}"data type": "整数",
+}"initial value": "5"
+  },
+  {
+}"constant name": "新窗口",
+}"data type": "整数",
+}"initial value": "6"
+  },
+  {
+
+"constant name": "保存到桌面",
+
+"data type": "整数",
+
+"initial value": "7"
+  },
+  {
+
+"constant name": "匿名窗口",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+ta type": "整数""data type": "整数""data type": "整数""initial value": "0""constant name": "忽略执行",
+ta type": "整数""data type": "整数""data type": "整数""initial value": "0""data type": "整数",
+ta type": "整数""data type": "整数""data type": "整数""initial value": "0""initial value": "9"
+  },
+  {
+
+"constant name": "切换到选项卡",
+
+"data type": "整数",
+
+"initial value": "10"
+  },
+  {
+}"constant name": "新图片",
+}"data type": "整数",
+}"initial value": "11"
+  }
+]
+ },
+ {
+"class name": "媒体许可",
+"constants": [
+  {
+nstant name": "新图片""constant name": "无",
+nstant name": "新图片""comment": "CEF_MEDIA_PERMISSION_NONE No permission.",
+nstant name": "新图片""data type": "整数",
+nstant name": "新图片""initial value": "0"
+  },
+  {
+
+"constant name": "设备音频捕捉",
+
+"comment": "CEF_MEDIA_PERMISSION_DEVICE_AUDIO_CAPTURE = 1 << 0, Device audio capture permission.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+}"constant name": "设备视频捕捉",
+}"comment": "CEF_MEDIA_PERMISSION_DEVICE_VIDEO_CAPTURE = 1 << 1, Device video capture permission.",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "桌面音频捕捉",
+
+"comment": "CEF_MEDIA_PERMISSION_DESKTOP_AUDIO_CAPTURE = 1 << 2,Desktop audio capture permission",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "桌面视频捕捉",
+
+"comment": "CEF_MEDIA_PERMISSION_DESKTOP_VIDEO_CAPTURE = 1 << 3,Desktop video capture permission.",
+
+"data type": "整数",
+
+"initial value": "8"
+  }
+]
+ },
+ {
+"class name": "许可反馈",
+"constants": [
+  {
+}"constant name": "通过",
+}"data type": "整数",
+}"initial value": "0"
+  },
+  {
+nstant name": "桌面音频捕捉""constant name": "否决",
+nstant name": "桌面音频捕捉""data type": "整数",
+nstant name": "桌面音频捕捉""initial value": "1"
+  },
+  {
+nt name": "桌面音频捕捉""constant name": "否决""constant name": "驳回",
+nt name": "桌面音频捕捉""constant name": "否决""comment": " ",
+nt name": "桌面音频捕捉""constant name": "否决""data type": "整数",
+nt name": "桌面音频捕捉""constant name": "否决""initial value": "2"
+  },
+  {
+}"constant name": "忽略",
+}"data type": "整数",
+}"initial value": "3"
+  }
+]
+ },
+ {
+"class name": "菜单颜色类型",
+"constants": [
+  {
+"data type": "整数""constant name": "文本",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "0"
+  },
+  {
+}"constant name": "文本_激活",
+}"data type": "整数",
+}"initial value": "1"
+  },
+  {
+a type": "整数""constant name": "文本""constant name": "文本_快捷键",
+a type": "整数""constant name": "文本""comment": " ",
+a type": "整数""constant name": "文本""data type": "整数",
+a type": "整数""constant name": "文本""initial value": "2"
+  },
+  {
+a type": "整数""constant name": "文本""constant name": "文本_快捷键_激活",
+a type": "整数""constant name": "文本""data type": "整数",
+a type": "整数""constant name": "文本""initial value": "3"
+  },
+  {
+ type": "整数""constant name": "文本""comment": " ""constant name": "背景",
+ type": "整数""constant name": "文本""comment": " ""data type": "整数",
+ type": "整数""constant name": "文本""comment": " ""initial value": "4"
+  },
+  {
+t name": "桌面音频捕捉""constant name": "否决""comment": " ""constant name": "背景_激活",
+t name": "桌面音频捕捉""constant name": "否决""comment": " ""data type": "整数",
+t name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5"
+  },
+  {
+}"constant name": "计数",
+}"data type": "整数",
+}"initial value": "6"
+  }
+]
+ },
+ {
+"class name": "进程类型",
+"constants": [
+  {
+
+"constant name": "浏览器进程",
+
+"comment": "BrowserProcess",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+ type": "整数""constant name": "文本""initial value": "3""constant name": "渲染进程",
+ type": "整数""constant name": "文本""initial value": "3""comment": "RendererProcess",
+ type": "整数""constant name": "文本""initial value": "3""data type": "整数",
+ type": "整数""constant name": "文本""initial value": "3""initial value": "1"
+  },
+  {
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""constant name": "GPU进程",
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "GpuProcess",
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""data type": "整数",
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""initial value": "2"
+  },
+  {
+
+"constant name": "插件进程",
+
+"comment": "PpapiProcess",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "功能进程",
+
+"comment": "UtilityProcess",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+type": "整数""constant name": "文本""initial value": "3""comment": "RendererProcess""constant name": "合子进程",
+type": "整数""constant name": "文本""initial value": "3""comment": "RendererProcess""comment": "ZygoteProcess",
+type": "整数""constant name": "文本""initial value": "3""comment": "RendererProcess""data type": "整数",
+type": "整数""constant name": "文本""initial value": "3""comment": "RendererProcess""initial value": "5"
+  },
+  {
+name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "GpuProcess""constant name": "其他进程",
+name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "GpuProcess""comment": "OtherProcess",
+name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "GpuProcess""data type": "整数",
+name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "GpuProcess""initial value": "6"
+  }
+]
+ },
+ {
+"class name": "VIP过滤器",
+"constants": [
+  {
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""constant name": "修改匹配数据",
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "修改匹配数据，只会修改找到的第一个",
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""data type": "整数",
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""initial value": "0"
+  },
+  {
+name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "修改匹配数据，只会修改找到的第一个""constant name": "修改全部匹配数据",
+name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "修改匹配数据，只会修改找到的第一个""comment": "修改全部匹配的数据",
+name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "修改匹配数据，只会修改找到的第一个""data type": "整数",
+name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "修改匹配数据，只会修改找到的第一个""initial value": "1"
+  },
+  {
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""constant name": "插入匹配数据",
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""comment": "在匹配的数据后加入数据，只会加入一个",
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""data type": "整数",
+ name": "桌面音频捕捉""constant name": "否决""comment": " ""initial value": "5""initial value": "2"
+  },
+  {
+ type": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据",
+ type": "整数""constant name": "文本""initial value": "2""comment": "在全部匹配的数据后面加入数据",
+ type": "整数""constant name": "文本""initial value": "2""data type": "整数",
+ type": "整数""constant name": "文本""initial value": "2""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "VIP过滤器地址",
+"constants": [
+  {
+data type": "整数""data type": "整数""constant name": "完全匹配",
+data type": "整数""data type": "整数""comment": "和目标地址完全相等",
+data type": "整数""data type": "整数""data type": "整数",
+data type": "整数""data type": "整数""initial value": "0"
+  },
+  {
+constants": [
+"constant name": "模糊匹配",
+constants": [
+"comment": "完全模糊，注意还是要区分大小写",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "1"
+  },
+  {
+e": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""constant name": "模糊头匹配",
+e": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""comment": "头部模糊，资源地址只匹配尾部是否相同，注意还是要区分大小写",
+e": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""data type": "整数",
+e": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""initial value": "2"
+  },
+  {
+}"constant name": "模糊尾匹配",
+}"comment": "尾部模糊，资源地址的只匹配头部是否相同，注意还是要区分大小写",
+}"data type": "整数",
+}"initial value": "3"
+  },
+  {
+e": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""constant name": "正则匹配",
+e": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""comment": "正则匹配，使用正则匹配，查找的地址需是正则表达式",
+e": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""data type": "整数",
+e": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""initial value": "4"
+  }
+]
+ },
+ {
+"class name": "窗口风格",
+"constants": [
+  {
+"整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""constant name": "正则匹配""constant name": "风格",
+"整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""constant name": "正则匹配""data type": "整数",
+"整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""constant name": "正则匹配""initial value": "@GWL_STYLE"
+  },
+  {
+}"constant name": "扩展风格",
+}"data type": "整数",
+}"initial value": "@GWL_EXSTYLE"
+  }
+]
+ },
+ {
+"class name": "链接打开方式",
+"constants": [
+  {
+}"constant name": "未知",
+}"data type": "整数",
+}"initial value": "0"
+  },
+  {
+nstant name": "未知""constant name": "当前标签",
+nstant name": "未知""comment": "Current tab. This is the default in most cases.",
+nstant name": "未知""data type": "整数",
+nstant name": "未知""initial value": "1"
+  },
+  {
+nstant name": "扩展风格""constant name": "单例标签",
+nstant name": "扩展风格""comment": "Indicates that only one tab with the url should exist in the same window.",
+nstant name": "扩展风格""data type": "整数",
+nstant name": "扩展风格""initial value": "2"
+  },
+  {
+"data type": "整数""constant name": "新前景标签",
+"data type": "整数""comment": "Shift key + Middle mouse button or meta/ctrl key while clicking.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "3"
+  },
+  {
+nstant name": "功能进程""constant name": "新背景标签",
+nstant name": "功能进程""comment": "Middle mouse button or meta/ctrl key while clicking.",
+nstant name": "功能进程""data type": "整数",
+nstant name": "功能进程""initial value": "4"
+  },
+  {
+nt name": "功能进程""constant name": "新背景标签""constant name": "新弹窗",
+nt name": "功能进程""constant name": "新背景标签""comment": "New popup window.",
+nt name": "功能进程""constant name": "新背景标签""data type": "整数",
+nt name": "功能进程""constant name": "新背景标签""initial value": "5"
+  },
+  {
+t name": "功能进程""constant name": "新背景标签""initial value": "5""constant name": "新窗口",
+t name": "功能进程""constant name": "新背景标签""initial value": "5""comment": "Shift key while clicking.",
+t name": "功能进程""constant name": "新背景标签""initial value": "5""data type": "整数",
+t name": "功能进程""constant name": "新背景标签""initial value": "5""initial value": "6"
+  },
+  {
+ame": "功能进程""constant name": "新背景标签""constant name": "新弹窗""constant name": "保存到硬盘",
+ame": "功能进程""constant name": "新背景标签""constant name": "新弹窗""comment": "Alt key while clicking.",
+ame": "功能进程""constant name": "新背景标签""constant name": "新弹窗""data type": "整数",
+ame": "功能进程""constant name": "新背景标签""constant name": "新弹窗""initial value": "7"
+  },
+  {
+ name": "功能进程""constant name": "新背景标签""initial value": "5""initial value": "6""constant name": "非公开",
+ name": "功能进程""constant name": "新背景标签""initial value": "5""initial value": "6""comment": "New off-the-record (incognito) window.",
+ name": "功能进程""constant name": "新背景标签""initial value": "5""initial value": "6""data type": "整数",
+ name": "功能进程""constant name": "新背景标签""initial value": "5""initial value": "6""initial value": "8"
+  },
+  {
+t name": "功能进程""constant name": "新背景标签""data type": "整数""constant name": "忽略执行",
+t name": "功能进程""constant name": "新背景标签""data type": "整数""comment": "Special case error condition from the renderer.",
+t name": "功能进程""constant name": "新背景标签""data type": "整数""data type": "整数",
+t name": "功能进程""constant name": "新背景标签""data type": "整数""initial value": "9"
+  },
+  {
+me": "功能进程""constant name": "新背景标签""constant name": "新弹窗""comment": "Alt key while clicking.""constant name": "切换标签",
+me": "功能进程""constant name": "新背景标签""constant name": "新弹窗""comment": "Alt key while clicking.""comment": "Activates an existing tab containing the url, rather than navigating.\nThis is similar to SINGLETON_TAB, but searches across all windows from\nthe current profile and anonymity (instead of just the current one);\ncloses the current tab on switching if the current tab was the NTP with\nno session history; and behaves like CURRENT_TAB instead of\nNEW_FOREGROUND_TAB when no existing tab is found.",
+me": "功能进程""constant name": "新背景标签""constant name": "新弹窗""comment": "Alt key while clicking.""data type": "整数",
+me": "功能进程""constant name": "新背景标签""constant name": "新弹窗""comment": "Alt key while clicking.""initial value": "10"
+  },
+  {
+
+"constant name": "画中画",
+
+"comment": "Creates a new document picture-in-picture window showing a child WebView.",
+
+"data type": "整数",
+
+"initial value": "11"
+  }
+]
+ },
+ {
+"class name": "VIP授权类型",
+"constants": [
+  {
+
+"constant name": "永久",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+ss name": "VIP授权类型""constant name": "月卡",
+ss name": "VIP授权类型""data type": "整数",
+ss name": "VIP授权类型""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "VIP授权功能",
+"constants": [
+  {
+e": "功能进程""constant name": "新背景标签""constant name": "新弹窗""comment": "Alt key while clicking.""initial value": "10""constant name": "FingerPrint",
+e": "功能进程""constant name": "新背景标签""constant name": "新弹窗""comment": "Alt key while clicking.""initial value": "10""data type": "整数",
+e": "功能进程""constant name": "新背景标签""constant name": "新弹窗""comment": "Alt key while clicking.""initial value": "10""initial value": "1"
+  },
+  {
+ss name": "VIP授权功能""constant name": "wss",
+ss name": "VIP授权功能""data type": "整数",
+ss name": "VIP授权功能""initial value": "2"
+  },
+  {
+nstant name": "永久""constant name": "高级功能",
+nstant name": "永久""data type": "整数",
+nstant name": "永久""initial value": "4"
+  }
+]
+ },
+ {
+"class name": "Cookie同站",
+"constants": [
+  {
+
+"constant name": "未指明",
+
+"comment": "CEF_COOKIE_SAME_SITE_UNSPECIFIED",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+nt name": "永久""constant name": "高级功能""constant name": "无限制",
+nt name": "永久""constant name": "高级功能""comment": "CEF_COOKIE_SAME_SITE_NO_RESTRICTION",
+nt name": "永久""constant name": "高级功能""data type": "整数",
+nt name": "永久""constant name": "高级功能""initial value": "1"
+  },
+  {
+}"constant name": "宽松模式",
+}"comment": "CEF_COOKIE_SAME_SITE_LAX_MODE",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+name": "功能进程""constant name": "新背景标签""initial value": "5""initial value": "6""initial value": "8""constant name": "严格模式",
+name": "功能进程""constant name": "新背景标签""initial value": "5""initial value": "6""initial value": "8""comment": "CEF_COOKIE_SAME_SITE_STRICT_MODE",
+name": "功能进程""constant name": "新背景标签""initial value": "5""initial value": "6""initial value": "8""data type": "整数",
+name": "功能进程""constant name": "新背景标签""initial value": "5""initial value": "6""initial value": "8""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "Cookie优先级",
+"constants": [
+  {
+e": "整数""constant name": "文本""initial value": "3""constant name": "渲染进程""constant name": "低",
+e": "整数""constant name": "文本""initial value": "3""constant name": "渲染进程""comment": "CEF_COOKIE_PRIORITY_LOW",
+e": "整数""constant name": "文本""initial value": "3""constant name": "渲染进程""data type": "整数",
+e": "整数""constant name": "文本""initial value": "3""constant name": "渲染进程""initial value": "-1"
+  },
+  {
+ name": "功能进程""constant name": "新背景标签""data type": "整数""initial value": "9""constant name": "中",
+ name": "功能进程""constant name": "新背景标签""data type": "整数""initial value": "9""comment": "CEF_COOKIE_PRIORITY_MEDIUM",
+ name": "功能进程""constant name": "新背景标签""data type": "整数""initial value": "9""data type": "整数",
+ name": "功能进程""constant name": "新背景标签""data type": "整数""initial value": "9""initial value": "0"
+  },
+  {
+t name": "永久""constant name": "高级功能""initial value": "1""constant name": "高",
+t name": "永久""constant name": "高级功能""initial value": "1""comment": "CEF_COOKIE_PRIORITY_HIGH",
+t name": "永久""constant name": "高级功能""initial value": "1""data type": "整数",
+t name": "永久""constant name": "高级功能""initial value": "1""initial value": "1"
+  }
+]
+ },
+ {
+"class name": "事件数据类型",
+"@常量类": "整数",
+"constants": [
+  {
+constants": [
+"constant name": "资源处理器",
+constants": [
+"initial value": "@FBroBaseEventType::ResourceHandlerType"
+  },
+  {
+onstants": [
+"initial value": "@FBroBaseEventType::ResourceHandlerType""constant name": "资源过滤器",
+onstants": [
+"initial value": "@FBroBaseEventType::ResourceHandlerType""initial value": "@FBroBaseEventType::ResponseFilterType"
+  },
+  {
+"constant name": "初始化事件",
+"initial value": "@FBroBaseEventType::InitEventType"
+  },
+  {
+}"constant name": "浏览器事件",
+}"initial value": "@FBroBaseEventType::BroEventType"
+  },
+  {
+
+"constant name": "下载图片回调",
+
+"initial value": "@FBroBaseEventType::DownloadImageCallbackType"
+  },
+  {
+tants": [
+"constant name": "资源处理器""constant name": "打开文件对话框回调",
+tants": [
+"constant name": "资源处理器""initial value": "@FBroBaseEventType::FileDialogCallbackType"
+  },
+  {
+initial value": "@FBroBaseEventType::InitEventType""constant name": "打印为PDF回调",
+initial value": "@FBroBaseEventType::InitEventType""initial value": "@FBroBaseEventType::PdfPrintCallbackType"
+  },
+  {
+ants": [
+"constant name": "资源处理器""initial value": "@FBroBaseEventType::FileDialogCallbackType""constant name": "字符串回调",
+ants": [
+"constant name": "资源处理器""initial value": "@FBroBaseEventType::FileDialogCallbackType""initial value": "@FBroBaseEventType::StringVisitorType"
+  },
+  {
+}"constant name": "JS回调",
+}"initial value": "@FBroBaseEventType::JsCallbackType"
+  },
+  {
+": [
+"constant name": "资源处理器""initial value": "@FBroBaseEventType::FileDialogCallbackType""constant name": "字符串回调""constant name": "DOM回调",
+": [
+"constant name": "资源处理器""initial value": "@FBroBaseEventType::FileDialogCallbackType""constant name": "字符串回调""initial value": "@FBroBaseEventType::DOMVisitorType"
+  },
+  {
+}"constant name": "任务回调",
+}"initial value": "@FBroBaseEventType::TaskType"
+  },
+  {
+
+"constant name": "Cookie回调",
+
+"initial value": "@FBroBaseEventType::CookieVisitorType"
+  },
+  {
+}"constant name": "JS交换回调",
+}"initial value": "@FBroBaseEventType::QueryHandlerType"
+  },
+  {
+
+"constant name": "V8处理程序",
+
+"initial value": "@FBroBaseEventType::V8HandlerType"
+  },
+  {
+": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""data type": "整数""constant name": "V8存取器",
+": "整数""constant name": "文本""initial value": "2""constant name": "插入全部匹配数据""data type": "整数""initial value": "@FBroBaseEventType::V8AccessorType"
+  },
+  {
+"initial value": "@FBroBaseEventType::CookieVisitorType""constant name": "V8拦截器",
+"initial value": "@FBroBaseEventType::CookieVisitorType""initial value": "@FBroBaseEventType::V8InterceptorType"
+  },
+  {
+ name": "永久""constant name": "高级功能""initial value": "1""data type": "整数""constant name": "服务器事件",
+ name": "永久""constant name": "高级功能""initial value": "1""data type": "整数""initial value": "@FBroBaseEventType::ServerHandleType"
+  },
+  {
+
+"constant name": "扩展插件事件",
+
+"initial value": "@FBroBaseEventType::ExtensionHandlerType"
+  },
+  {
+}"constant name": "清理缓存回调",
+}"initial value": "@FBroBaseEventType::ClearCacheCallbackType"
+  },
+  {
+nstant name": "清理缓存回调""constant name": "开发者消息事件",
+nstant name": "清理缓存回调""initial value": "@FBroBaseEventType::DevToolsMessageObserverType"
+  },
+  {
+nt name": "清理缓存回调""constant name": "开发者消息事件""constant name": "VIP通用回调",
+nt name": "清理缓存回调""constant name": "开发者消息事件""initial value": "@FBroBaseEventType::GeneralResultCallbackType"
+  },
+  {
+}"constant name": "URL请求事件",
+}"initial value": "@FBroBaseEventType::URLRequestClientType"
+  }
+]
+ },
+ {
+"class name": "TLS版本",
+"@常量类": "整数",
+"constants": [
+  {
+"constant name": "空",
+"initial value": "0"
+  },
+  {
+nt name": "清理缓存回调""constant name": "开发者消息事件""constant name": "Version_1",
+nt name": "清理缓存回调""constant name": "开发者消息事件""initial value": "769"
+  },
+  {
+@常量类": "整数""constant name": "Version_1_1",
+@常量类": "整数""initial value": "790"
+  },
+  {
+"initial value": "@FBroBaseEventType::ClearCacheCallbackType""constant name": "Version_1_2",
+"initial value": "@FBroBaseEventType::ClearCacheCallbackType""initial value": "791"
+  },
+  {
+stant name": "初始化事件""constant name": "Version_1_3",
+stant name": "初始化事件""initial value": "792"
+  }
+]
+ },
+ {
+"class name": "URL请求状态",
+"@常量类": "整数",
+"constants": [
+  {
+@常量类": "整数""constant name": "未知",
+@常量类": "整数""comment": "UR_UNKNOWN",
+@常量类": "整数""initial value": "0"
+  },
+  {
+@常量类": "整数""constant name": "成功",
+@常量类": "整数""comment": "UR_SUCCESS",
+@常量类": "整数""initial value": "1"
+  },
+  {
+"initial value": "@FBroBaseEventType::ClearCacheCallbackType""constant name": "IO等待",
+"initial value": "@FBroBaseEventType::ClearCacheCallbackType""comment": "UR_IO_PENDING",
+"initial value": "@FBroBaseEventType::ClearCacheCallbackType""initial value": "2"
+  },
+  {
+@常量类": "整数""constant name": "取消",
+@常量类": "整数""comment": "UR_CANCELED",
+@常量类": "整数""initial value": "3"
+  },
+  {
+": "整数""constant name": "取消""constant name": "失败",
+": "整数""constant name": "取消""comment": "UR_FAILED",
+": "整数""constant name": "取消""initial value": "4"
+  }
+]
+ },
+ {
+"class name": "进程异常",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "非0退出",
+
+"comment": "TS_ABNORMAL_TERMINATION  Non-zero exit status",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "被终止",
+
+"comment": "TS_PROCESS_WAS_KILLED SIGKILL or task manager kill.",
+
+"initial value": "1"
+  },
+  {
+"comment": "TS_PROCESS_WAS_KILLED SIGKILL or task manager kill.""constant name": "段错误",
+"comment": "TS_PROCESS_WAS_KILLED SIGKILL or task manager kill.""comment": "TS_PROCESS_CRASHED Segmentation fault.",
+"comment": "TS_PROCESS_WAS_KILLED SIGKILL or task manager kill.""initial value": "2"
+  },
+  {
+@常量类": "整数""constant name": "内存超限",
+@常量类": "整数""comment": "TS_PROCESS_OOM Out of memory. Some platforms may use TS_PROCESS_CRASHED instead.",
+@常量类": "整数""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "屏幕方向类型",
+"@常量类": "整数",
+"constants": [
+  {
+@常量类": "整数""constant name": "默认",
+@常量类": "整数""comment": "不做修改",
+@常量类": "整数""initial value": "0"
+  },
+  {
+": "整数""constant name": "默认""constant name": "竖屏16_9",
+": "整数""constant name": "默认""comment": "kPortraitPrimary",
+": "整数""constant name": "默认""initial value": "1"
+  },
+  {
+
+"constant name": "竖屏4_3",
+
+"comment": "kPortraitSecondary",
+
+"initial value": "2"
+  },
+  {
+stant name": "初始化事件""constant name": "横屏16_9",
+stant name": "初始化事件""comment": "kLandscapePrimary",
+stant name": "初始化事件""initial value": "3"
+  },
+  {
+}"constant name": "横屏4_3",
+}"comment": "kLandscapeSecondary",
+}"initial value": "4"
+  }
+]
+ },
+ {
+"class name": "窗口运行风格",
+"@常量类": "整数",
+"constants": [
+  {
+dscapePrimary"constant name": "默认",
+dscapePrimary"comment": "CEF_RUNTIME_STYLE_DEFAULT 默认为谷歌风格",
+dscapePrimary"initial value": "0"
+  },
+  {
+
+"constant name": "谷歌",
+
+"comment": "CEF_RUNTIME_STYLE_CHROME 谷歌风格",
+
+"initial value": "1"
+  },
+  {
+dscapePrimary"constant name": "经典",
+dscapePrimary"comment": "CEF_RUNTIME_STYLE_ALLOY  CEF经典风格",
+dscapePrimary"initial value": "2"
+  }
+]
+ },
+ {
+"class name": "DPI模式",
+"@常量类": "整数",
+"constants": [
+  {
+dscapePrimary"constant name": "无感知",
+dscapePrimary"comment": "DPI_AWARENESS_CONTEXT_UNAWARE\n程处于“DPI 无感知”模式，系统会将应用 UI 按 96 DPI（100% 缩放）渲染，然后拉伸至高 DPI 显示器。这种方式会导致界面模糊（尤其是文字和矢量图形），但能兼容旧应用",
+dscapePrimary"initial value": "-1"
+  },
+  {
+pePrimary"constant name": "默认""constant name": "系统感知",
+pePrimary"constant name": "默认""comment": "DPI_AWARENESS_CONTEXT_SYSTEM_AWARE\n进程处于“系统 DPI 感知”模式，系统会根据当前显示器的 DPI 缩放 UI（如 125%、150%），但不会响应 DPI 变化（如窗口跨显示器移动时不会自动调整）。适合不需要动态适配的简单应用",
+pePrimary"constant name": "默认""initial value": "-2"
+  },
+  {
+
+"constant name": "按显示器感知",
+
+"comment": "DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE\n进程处于“每显示器 DPI 感知”模式，系统不会缩放 UI，应用需通过处理 WM_DPICHANGED 消息（窗口跨显示器移动时触发）手动调整布局。适合需要动态适配但不需要处理子窗口的应用",
+
+"initial value": "-3"
+  },
+  {
+nstant name": "按显示器感知""constant name": "按显示器感知V2",
+nstant name": "按显示器感知""comment": "DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2\n进程处于“Per-Monitor V2”模式，是推荐的 DPI 感知模式。\n相比 V1，它支持：① 动态 DPI 变化时自动缩放非客户区（标题栏、边框）；\n② 向所有子窗口发送 WM_DPICHANGED 消息（减少主窗口调整子控件的复杂度）；\n③ 自动缩放公用对话框（如文件选择框）。适合需要完善高 DPI 支持的现代应用",
+nstant name": "按显示器感知""initial value": "-4"
+  },
+  {
+
+"constant name": "GDI缩放",
+
+"comment": "DPI_AWARENESS_CONTEXT_UNAWARE_GDISCALED\n类似 UNAWARE，但系统会通过 GDI 缩放 UI（而非位图拉伸），减少模糊。但此模式已逐渐被 PER_MONITOR_AWARE_V2 取代，不建议新应用使用",
+
+"initial value": "-5"
+  }
+]
+ }
+问本程序中的接口需要引用模块"FBrowser浏览器".]
+}

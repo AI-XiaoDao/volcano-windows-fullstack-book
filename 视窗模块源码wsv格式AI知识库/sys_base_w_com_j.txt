@@ -1,0 +1,2061 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+= "category = \"COM操作\"""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+= "category = \"COM操作\"""package name": "火山.基本",
+= "category = \"COM操作\"""@文档": "\"category = \\\"COM操作\\\"\"",
+= "category = \"COM操作\"""classes": [
+ {
+"class name": "COM操作类",
+"comment": "提供一些COM全局操作支持",
+"@全局类": "真",
+"methods": [
+  {
+ꌤŝ"method name": "注册OCX",
+ꌤŝ"comment": "注册或取消注册OCX组件",
+ꌤŝ"result comment": "返回是否成功",
+ꌤŝ"static": true,
+ꌤŝ"data type": "逻辑型",
+ꌤŝ"@嵌入式方法": "\"\"",
+ꌤŝ"parameters": [
+   {
+"parameter name": "欲注册OCX文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为注册",
+"comment": "为真则注册,为假则取消注册.",
+"data type": "逻辑型"
+   }
+ꌤŝ]
+  },
+  {
+}"method name": "查看COM对象",
+}"comment": "启动一个对话框来显示所指定对象类型的COM接口信息.\n注意: 本方法只能在主界面线程中执行.",
+}"result comment": "成功返回真,失败返回假.",
+}"static": true,
+}"data type": "逻辑型",
+}"@视窗.外部头文件": "\"libs\\\\win_base\\\\include\\\\vol_com_inf.h\"",
+}"@视窗.外部源文件": "\"libs\\\\win_base\\\\cpp\\\\tr_vol_com_inf.cpp\"",
+}"@视窗.外部资源文件": "\"libs\\\\win_base\\\\cpp\\\\res\\\\vol_com_inf.rc\"",
+}"parameters": [
+   {
+"parameter name": "对象类型",
+"comment": "  指定对象的类型文本,可以为其可识别名称: 譬如\"Excel.Application\"/\"Word.Application\",\n也可以是其CLSID,如\"{0003088F-0000-0000-C000-000000000058}\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型库文件名",
+"comment": "  如果需要通过类型库才能访问指定对象,可在本参数中提供其类型库或类型库数据所在文件名.\n注意如果没有提供文件名,且在当前目录下无法找到该文件,系统将自动进行搜索.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "父窗口句柄",
+"comment": "提供对话框的父窗口句柄,为0表示使用默认父窗口.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "COM变体类型",
+"@文档": "\"category = \\\"COM操作.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ꌤŝ"constant name": "未知",
+ꌤŝ"initial value": "@VVT_UNKNOWN"
+  },
+  {
+"comment": "启动一个对话框来显示所指定对象类型的COM接口信息.\n注意: 本方法只能在主界面线程中执行.""constant name": "空",
+"comment": "启动一个对话框来显示所指定对象类型的COM接口信息.\n注意: 本方法只能在主界面线程中执行.""initial value": "@VVT_EMPTY"
+  },
+  {
+ameter name": "是否为注册""constant name": "错误值",
+ameter name": "是否为注册""initial value": "@VVT_ERROR"
+  },
+  {
+
+"constant name": "字节值",
+
+"initial value": "@VVT_SBYTE"
+  },
+  {
+"constant name": "短整数值",
+"initial value": "@VVT_SHORT"
+  },
+  {
+ment": "启动一个对话框来显示所指定对象类型的COM接口信息.\n注意: 本方法只能在主界面线程中执行.""constant name": "空""constant name": "整数值",
+ment": "启动一个对话框来显示所指定对象类型的COM接口信息.\n注意: 本方法只能在主界面线程中执行.""constant name": "空""initial value": "@VVT_INT"
+  },
+  {
+}"constant name": "长整数值",
+}"initial value": "@VVT_LONG"
+  },
+  {
+@常量类": "整数""constant name": "单精度小数值",
+@常量类": "整数""initial value": "@VVT_FLOAT"
+  },
+  {
+ꌤŝ"result comment": "返回是否成功""constant name": "小数值",
+ꌤŝ"result comment": "返回是否成功""initial value": "@VVT_DOUBLE"
+  },
+  {
+ameter name": "是否为注册""constant name": "日期值",
+ameter name": "是否为注册""initial value": "@VVT_DATE"
+  },
+  {
+}"constant name": "逻辑值",
+}"initial value": "@VVT_BOOL"
+  },
+  {
+constants": [
+"constant name": "文本值",
+constants": [
+"initial value": "@VVT_STR"
+  },
+  {
+}"constant name": "COM对象",
+}"comment": "其中可以用作存放火山对象",
+}"initial value": "@VVT_COM_OBJECT"
+  },
+  {
+}"constant name": "COM自动化对象",
+}"initial value": "@VVT_COM_DISPATCH"
+  },
+  {
+系统所使用的默认GUI字体对象"constant name": "错误值数组",
+系统所使用的默认GUI字体对象"initial value": "@VVT_ERROR_ARRAY"
+  },
+  {
+nstant name": "逻辑值""constant name": "字节值数组",
+nstant name": "逻辑值""initial value": "@VVT_SBYTE_ARRAY"
+  },
+  {
+ameter name": "对象类型""constant name": "短整数值数组",
+ameter name": "对象类型""initial value": "@VVT_SHORT_ARRAY"
+  },
+  {
+
+"constant name": "整数值数组",
+
+"initial value": "@VVT_INT_ARRAY"
+  },
+  {
+thod name": "查看COM对象""constant name": "长整数值数组",
+thod name": "查看COM对象""initial value": "@VVT_LONG_ARRAY"
+  },
+  {
+
+"constant name": "单精度小数值数组",
+
+"initial value": "@VVT_FLOAT_ARRAY"
+  },
+  {
+
+"constant name": "小数值数组",
+
+"initial value": "@VVT_DOUBLE_ARRAY"
+  },
+  {
+
+"constant name": "日期值数组",
+
+"initial value": "@VVT_DATE_ARRAY"
+  },
+  {
+
+"constant name": "逻辑值数组",
+
+"initial value": "@VVT_BOOL_ARRAY"
+  },
+  {
+ 逻辑型 @默认值 = 假"constant name": "文本值数组",
+ 逻辑型 @默认值 = 假"initial value": "@VVT_STR_ARRAY"
+  },
+  {
+
+"constant name": "COM对象数组",
+
+"initial value": "@VVT_COM_OBJECT_ARRAY"
+  },
+  {
+
+"initial value": "@VVT_SBYTE""constant name": "COM自动化对象数组",
+
+"initial value": "@VVT_SBYTE""initial value": "@VVT_COM_DISPATCH_ARRAY"
+  },
+  {
+_DOUBLE_ARRAY"constant name": "COM变体型数组",
+_DOUBLE_ARRAY"initial value": "@VVT_VARIANT_ARRAY"
+  }
+]
+ },
+ {
+"class name": "COM数组成员类型",
+"@文档": "\"category = \\\"COM操作.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "错误值",
+
+"initial value": "@VNET_ERROR"
+  },
+  {
+_LONG_ARRAY"constant name": "字节值",
+_LONG_ARRAY"initial value": "@VNET_SBYTE"
+  },
+  {
+
+"initial value": "@VVT_SBYTE""constant name": "短整数值",
+
+"initial value": "@VVT_SBYTE""initial value": "@VNET_SHORT"
+  },
+  {
+
+"constant name": "整数值",
+
+"initial value": "@VNET_INT"
+  },
+  {
+ 逻辑型 @默认值 = 假"constant name": "长整数值",
+ 逻辑型 @默认值 = 假"initial value": "@VNET_LONG"
+  },
+  {
+"initial value": "@VNET_INT""constant name": "单精度小数值",
+"initial value": "@VNET_INT""initial value": "@VNET_FLOAT"
+  },
+  {
+
+"constant name": "小数值",
+
+"initial value": "@VNET_DOUBLE"
+  },
+  {
+
+"constant name": "日期值",
+
+"initial value": "@VNET_DATE"
+  },
+  {
+
+"constant name": "逻辑值",
+
+"initial value": "@VNET_BOOL"
+  },
+  {
+
+"constant name": "文本值",
+
+"initial value": "@VNET_STR"
+  },
+  {
+
+"constant name": "COM对象型",
+
+"comment": "其中可以用作存放火山对象",
+
+"initial value": "@VNET_COM_OBJECT"
+  },
+  {
+
+"constant name": "COM自动化对象型",
+
+"initial value": "@VNET_COM_DISPATCH"
+  },
+  {
+
+"constant name": "COM变体型",
+
+"initial value": "@VNET_VARIANT"
+  }
+]
+ },
+ {
+"class name": "COM变体型",
+"comment": "用作封装COM操作中的VARIANT数据",
+"@别名": "\"CVolComVariant\"",
+"methods": [
+  {
+
+"method name": "清空",
+
+"comment": "将本对象的内容释放并清空.如果不调用本方法,则对象在退出其作用区域时会自动清空.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+"method name": "是否为空",
+"comment": "返回本对象的内容是否为空",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+]
+  },
+  {
+T_COM_OBJECT"method name": "取类型",
+T_COM_OBJECT"comment": "返回本对象中值的数据类型,如果无法识别,则返回\"COM变体类型.未知\".",
+T_COM_OBJECT"static": true,
+T_COM_OBJECT"data type": "COM变体类型",
+T_COM_OBJECT"@嵌入式方法": "\"\"",
+T_COM_OBJECT"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+T_COM_OBJECT]
+  },
+  {
+static": true"method name": "置类型",
+static": true"comment": "改变本对象中已有值的数据类型,根据需要改变值数据本身,返回是否成功.",
+static": true"static": true,
+static": true"data type": "逻辑型",
+static": true"@嵌入式方法": "\"\"",
+static": true"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲修改到的类型",
+"data type": "COM变体类型"
+   }
+static": true]
+  },
+  {
+ }"method name": "是否为数组",
+ }"comment": "返回本对象的值内容是否为数组数据",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+ }]
+  },
+  {
+ }"method name": "取数组成员数",
+ }"comment": "如果本对象中存放的是数组数据,执行本方法将返回其成员数目,否则将返回0.",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+ }]
+  },
+  {
+data type": "COM变体型""method name": "取数组成员尺寸",
+data type": "COM变体型""comment": "如果本对象中存放的是数组数据,执行本方法将返回其单个成员的存储尺寸(单位字节),否则将返回0.",
+data type": "COM变体型""static": true,
+data type": "COM变体型""data type": "整数",
+data type": "COM变体型""@嵌入式方法": "\"\"",
+data type": "COM变体型""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+data type": "COM变体型"]
+  },
+  {
+tatic": true"static": true"method name": "取数组数据尺寸",
+tatic": true"static": true"comment": "如果本对象中存放的是数组数据,执行本方法将返回其所有成员数据的总存储尺寸(单位字节),否则将返回0.\n本方法的调用结果等于: 取数组成员数 () * 取数组成员尺寸 ()",
+tatic": true"static": true"static": true,
+tatic": true"static": true"data type": "整数",
+tatic": true"static": true"@嵌入式方法": "\"\"",
+tatic": true"static": true"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+tatic": true"static": true]
+  },
+  {
+ameter name": "所操作本对象""method name": "取值",
+ameter name": "所操作本对象""comment": "返回本对象或本对象数组成员中的所指定类型数据值,如果类型不匹配将尝试自动转换.\n提示: 日期型的变体型数据可以通过\"小数\"类型取出.",
+ameter name": "所操作本对象""result comment": "成功将返回对应的值,失败如果是数值型将返回0,逻辑型将返回假,文本型将返回空文本.",
+ameter name": "所操作本对象""static": true,
+ameter name": "所操作本对象""@嵌入式方法": "\"\"",
+ameter name": "所操作本对象""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲读取值的类型",
+"comment": "提供所欲获取数据的数据类型",
+"@需求类型": "数据类型",
+"@匹配类型": "通用基本型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "所操作本对象"]
+  },
+  {
+"method name": "赋值",
+"comment": "将所指定类型的数据设置进本对象或本对象的数组成员中,其中的原有内容将被覆盖.",
+"result comment": "成功返回真,失败返回假.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲写入的值",
+"comment": "提供所欲写入的数据值",
+"@匹配类型": "通用基本型"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+parameters": [
+"method name": "取字节集",
+parameters": [
+"comment": "  如果本对象中所保存数据不为指针型(文本/对象)数据数组或者为结构型数据,\n则将其中的内容复制到所指定的结果参数字节集中.",
+parameters": [
+"result comment": "成功返回真,失败返回假.",
+parameters": [
+"static": true,
+parameters": [
+"data type": "逻辑型",
+parameters": [
+"@嵌入式方法": "\"\"",
+parameters": [
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "结果返回参数",
+"comment": "所获取的结果将填入此变量中,其中原有内容将被清除.",
+"data type": "字节集类"
+   }
+parameters": [
+]
+  },
+  {
+comment": "所获取的结果将填入此变量中,其中原有内容将被清除.""method name": "置字节集",
+comment": "所获取的结果将填入此变量中,其中原有内容将被清除.""comment": "将本对象的内容设置为所指定内容的字节数组,先前内容将被覆盖.",
+comment": "所获取的结果将填入此变量中,其中原有内容将被清除.""result comment": "成功返回真,失败返回假.",
+comment": "所获取的结果将填入此变量中,其中原有内容将被清除.""static": true,
+comment": "所获取的结果将填入此变量中,其中原有内容将被清除.""data type": "逻辑型",
+comment": "所获取的结果将填入此变量中,其中原有内容将被清除.""@嵌入式方法": "\"\"",
+comment": "所获取的结果将填入此变量中,其中原有内容将被清除.""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲写入的值",
+"data type": "字节集类"
+   }
+comment": "所获取的结果将填入此变量中,其中原有内容将被清除."]
+  },
+  {
+omment": "所获取的结果将填入此变量中,其中原有内容将被清除.""data type": "逻辑型""method name": "取COM对象",
+omment": "所获取的结果将填入此变量中,其中原有内容将被清除.""data type": "逻辑型""comment": "获取本对象或本对象数组成员中的所指定COM对象值",
+omment": "所获取的结果将填入此变量中,其中原有内容将被清除.""data type": "逻辑型""result comment": "成功返回真,失败返回假.",
+omment": "所获取的结果将填入此变量中,其中原有内容将被清除.""data type": "逻辑型""static": true,
+omment": "所获取的结果将填入此变量中,其中原有内容将被清除.""data type": "逻辑型""data type": "逻辑型",
+omment": "所获取的结果将填入此变量中,其中原有内容将被清除.""data type": "逻辑型""@嵌入式方法": "\"\"",
+omment": "所获取的结果将填入此变量中,其中原有内容将被清除.""data type": "逻辑型""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "结果返回参数",
+"comment": "所获取的结果将填入此变量中,其中原有内容将被覆盖.",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+omment": "所获取的结果将填入此变量中,其中原有内容将被清除.""data type": "逻辑型"]
+  },
+  {
+data type": "字节集类""method name": "取COM对象2",
+data type": "字节集类""comment": "读取并返回本对象或本对象数组成员中的指定名称COM对象值.\n执行本方法如果失败,返回内容为空的该类对象(COM对象类的\"是否为空\"方法返回真).",
+data type": "字节集类""static": true,
+data type": "字节集类""@嵌入式方法": "\"\"",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的返回值数据类型",
+"data type": "COM对象类",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "字节集类"]
+  },
+  {
+ }"method name": "置COM对象",
+ }"comment": "将所指定COM对象值设置进本对象或本对象的数组成员中,其中原有内容将被覆盖.",
+ }"result comment": "成功返回真,失败返回假.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲写入的值",
+"comment": "提供所欲写入的COM对象值",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+
+"method name": "置COM自动化对象",
+
+"comment": "将所指定COM自动对象值设置进本对象或本对象的数组成员中,其中原有内容将被覆盖.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲写入的值",
+"comment": "提供所欲写入的COM对象值,必须能转换到COM自动化对象(IDispatch),否则将置入空对象.",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "取火山对象",
+
+"comment": "  获取本对象中或本对象数组成员中所指定类型的火山对象参考,如果所存储的数据不为该类型的\n火山对象,将返回一个该类型的空火山对象(在该对象上调用\"是否为空对象\"方法返回真).",
+
+"result comment": "成功返回所存储的火山对象参考,失败返回一个空对象.",
+
+"static": true,
+
+"@视窗.返回参考": "真",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲获取对象类型",
+"comment": "提供所欲获取的火山对象的类型",
+"data type": "对象类",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+ }"method name": "置火山对象",
+ }"comment": "  根据所指定的火山对象数据,建立一个复制对象并将其设置进本对象或本对象的数组成\n员中,其中原有内容将被覆盖.",
+ }"result comment": "成功返回真,失败返回假.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲写入的值",
+"comment": "提供所欲写入的火山对象数据内容",
+"data type": "对象类"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+@默认值": "-1""method name": "取变体型",
+@默认值": "-1""comment": "获取本对象或本对象数组成员中的所指定变体型数据的内容",
+@默认值": "-1""result comment": "成功返回真,失败返回假.",
+@默认值": "-1""static": true,
+@默认值": "-1""data type": "逻辑型",
+@默认值": "-1""@禁止流程检查": "真",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "结果返回参数",
+"comment": "所获取的结果将填入此变量中,其中原有内容将被清除.",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "-1"]
+  },
+  {
+
+"method name": "置变体型",
+
+"comment": "将所指定变体型数据值设置进本对象或本对象的数组成员中,其中原有内容将被覆盖.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲写入的值",
+"comment": "提供所欲写入的变体数据内容",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "数组成员索引",
+"comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.""method name": "取数组",
+comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.""comment": "如果本对象中所保存数据为数组,则将其中的数据取出到所指定数组中.",
+comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.""result comment": "  返回所实际取出的数组成员数目,为\"所欲读取的成员数\"参数值和本对象数组\n中所实际存储成员数两者中的较小值.如果失败则返回0(注意正常也可能返回0).",
+comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.""static": true,
+comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.""data type": "整数",
+comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.""@嵌入式方法": "\"\"",
+comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员.""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所存储到的数组",
+"comment": "  提供用作存储所获取到数据的数组变量,本对象中的数组数据类型必须与该数\n组的数据类型匹配,否则将无法取出.",
+"@需求类型": "可写入变量",
+"@匹配类型": "通用基本型数组"
+   },
+   {
+"parameter name": "首成员索引位置",
+"comment": "提供欲在本对象数组数据中读取的首成员索引位置,从0开始.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲读取的成员数",
+"comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+comment": "  如果本对象内为数组型数据,且欲对数组内的某个成员进行访问,则可以在此参数中指\n定其成员索引值(从0开始且必须小于数组已有成员数),否则请保持本参数为默认值-1表\n示不为访问数组成员."]
+  },
+  {
+comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.""method name": "置数组",
+comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.""comment": "将所提供的数组数据填入本对象中,其中的原有内容将被覆盖.",
+comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.""result comment": "成功返回真,失败返回假.",
+comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.""static": true,
+comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.""data type": "逻辑型",
+comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.""@嵌入式方法": "\"\"",
+comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲置入的数组",
+"@匹配类型": "通用基本型数组"
+   },
+   {
+"parameter name": "首成员索引位置",
+"comment": "  提供所欲置入的\"所欲置入的数组\"数组中首成员索引位置,从0开始.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲置入的成员数",
+"comment": "  提供所欲置入的\"所欲置入的数组\"数组中成员数目,如果小于0则表\n示使用\"所欲置入的数组\"参数数组在\"首成员索引位置\"参数位置后的\n所有成员数目.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目."]
+  },
+  {
+}"method name": "取变体型数组",
+}"comment": "如果本对象中所保存数据为变体型数组,则将其中的数据取出到所指定数组中.",
+}"result comment": "  返回所实际取出的数组成员数目,为\"所欲读取的成员数\"参数值和本对象数组\n中所实际存储成员数两者中的较小值.如果失败则返回0(注意正常也可能返回0).",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所存储到的数组",
+"data type": "COM变体型 []",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "首成员索引位置",
+"comment": "提供所欲在本对象数组数据中读取的首成员索引位置,从0开始.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲读取的成员数",
+"comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "置变体型数组",
+data type": "整数""comment": "将所提供的数组数据填入本对象中,其中的原有内容将被覆盖.",
+data type": "整数""result comment": "成功返回真,失败返回假.",
+data type": "整数""static": true,
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲置入的数组",
+"data type": "COM变体型 []"
+   },
+   {
+"parameter name": "首成员索引位置",
+"comment": "  提供所欲置入的\"所欲置入的数组\"数组中首成员索引位置,从0开始.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲置入的成员数",
+"comment": "  提供所欲置入的\"所欲置入的数组\"数组中成员数目,如果小于0则表\n示使用\"所欲置入的数组\"参数数组在\"首成员索引位置\"参数位置后的\n所有成员数目.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "整数"]
+  },
+  {
+ta type": "整数"]"method name": "取COM对象数组",
+ta type": "整数"]"comment": "如果本对象中所保存数据为COM对象数组,则将其中的数据取出到所指定数组中.",
+ta type": "整数"]"result comment": "  返回所实际取出的数组成员数目,为\"所欲读取的成员数\"参数值和本对象数组\n中所实际存储成员数两者中的较小值.如果失败则返回0(注意正常也可能返回0).",
+ta type": "整数"]"static": true,
+ta type": "整数"]"data type": "整数",
+ta type": "整数"]"@嵌入式方法": "\"\"",
+ta type": "整数"]"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所存储到的数组",
+"data type": "COM对象类 []",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "首成员索引位置",
+"comment": "提供所欲在本对象数组数据中读取的首成员索引位置,从0开始.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲读取的成员数",
+"comment": "  提供所欲读取的本对象数组成员数目,如果小于0则表示使用\"所存储到的数组\"\n参数数组所定义的全部成员数目.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ta type": "整数"]]
+  },
+  {
+
+"method name": "置COM对象数组",
+
+"comment": "将所提供的数组数据填入本对象中,其中的原有内容将被覆盖.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲置入的数组",
+"data type": "COM对象类 []"
+   },
+   {
+"parameter name": "首成员索引位置",
+"comment": "  提供所欲置入的\"所欲置入的数组\"数组中首成员索引位置,从0开始.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲置入的成员数",
+"comment": "  提供所欲置入的\"所欲置入的数组\"数组中成员数目,如果小于0则表\n示使用\"所欲置入的数组\"参数数组在\"首成员索引位置\"参数位置后的\n所有成员数目.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "置COM自动化对象数组",
+
+"comment": "将所提供的数组数据填入本对象中,其中的原有内容将被覆盖.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "所欲置入的数组",
+"comment": "  提供所欲置入的COM对象,注意其必须能够转换为COM自动化对象(IDispatch),\n不能转换的将被抛弃.",
+"data type": "COM对象类 []"
+   },
+   {
+"parameter name": "首成员索引位置",
+"comment": "  提供所欲置入的\"所欲置入的数组\"数组中首成员索引位置,从0开始.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲置入的成员数",
+"comment": "  提供所欲置入的\"所欲置入的数组\"数组中成员数目,如果小于0则表\n示使用\"所欲置入的数组\"参数数组在\"首成员索引位置\"参数位置后的\n所有成员数目.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "创建数组",
+"parameters": [
+"comment": "  创建一个具有指定类型和指定成员数目的数组并将其填入本对象中,\n其中的原有内容将被覆盖.",
+"parameters": [
+"result comment": "成功返回真,失败返回假.",
+"parameters": [
+"static": true,
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"@嵌入式方法": "\"\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "成员类型",
+"comment": "提供数组成员的数据类型",
+"data type": "COM数组成员类型"
+   },
+   {
+"parameter name": "成员数目",
+"comment": "提供数组的初始成员数目",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+
+"method name": "加锁数组数据",
+
+"comment": "  如果本对象中的当前数据为数组,则将其加锁并返回其数据地址指针(可以进行读/写).\n  注意: 如果加锁成功,则在不再使用所获得的数据指针后,必须对应调用\"解锁数组数据\"\n方法一次,且期间不能清空本对象或修改本对象的数据类型,否则程序将出错.",
+
+"result comment": "成功返回非0数据指针值,失败返回0.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+
+"static": true"method name": "解锁数组数据",
+
+"static": true"comment": "  如果先前调用本对象的\"加锁数组数据\"方法成功,则在不再使用所获得的数据指针后,必须\n对应调用本方法一次,且期间不能清空本对象或修改本对象的数据类型,否则程序将出错.",
+
+"static": true"static": true,
+
+"static": true"@嵌入式方法": "\"\"",
+
+"static": true"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+
+"static": true]
+  },
+  {
+"method name": "取数据指针",
+"comment": "返回本对象中所记录的VARIANT数据的指针值,必定不为0.",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   }
+]
+  },
+  {
+parameters": [
+"@嵌入式方法": "\"\"""method name": "取结构成员值",
+parameters": [
+"@嵌入式方法": "\"\"""comment": "如果本变体型对象中保存的是结构型数据,则可以取出其中所指定名称的成员值.",
+parameters": [
+"@嵌入式方法": "\"\"""result comment": "成功返回对应的成员数据,失败所返回变体型对象为空(\"是否为空\"方法返回真).",
+parameters": [
+"@嵌入式方法": "\"\"""static": true,
+parameters": [
+"@嵌入式方法": "\"\"""data type": "COM变体型",
+parameters": [
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+parameters": [
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "成员名称",
+"comment": "提供所欲获取其数据的结构成员名称",
+"data type": "文本型"
+   }
+parameters": [
+"@嵌入式方法": "\"\""]
+  }
+]
+ },
+ {
+"class name": "COM变体型数组类",
+"comment": "COM变体型对象的数组管理类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"COM操作.辅助类\\\"\"",
+"@模板实现类": "\"COM变体型\""
+ },
+ {
+"class name": "COM初始化类",
+"comment": "  COM的初始化是以线程为单位的,也就是说,每个线程在使用COM之前,\n都必须初始化一次.在主线程中系统类库会自动初始化COM,在非主线程\n中如果欲使用COM,用户必须自行初始化.\n  定义一个本类的对象实例,该实例在类初始化时会自动初始化COM,在\n类清理时会自动释放COM.或者完全手动调用本类中的对应静态方法也\n可以初始化和清理COM(使用前初始化,使用完毕后清理).\n  注意: 在主线程中不需要再初始化COM,类库已经自动初始化.",
+"@文档": "\"category = \\\"COM操作\\\"\"",
+"methods": [
+  {
+
+"method name": "初始化COM",
+
+"comment": "手动初始化COM,返回是否成功.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "清理COM",
+
+"result comment": "手动清理COM,在此之前COM必须已经成功初始化过.",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "COM方法调用结果",
+"comment": "提供对COM对象方法进行调用后的结果状态码",
+"@文档": "\"category = \\\"COM操作.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ameter name": "所操作本对象""constant name": "成功",
+ameter name": "所操作本对象""initial value": "@CVolComObject::IRT_SUCCEEDED"
+  },
+  {
+ameter name": "所操作本对象""constant name": "对象为空",
+ameter name": "所操作本对象""initial value": "@CVolComObject::IRT_EMPTY_OBJECT"
+  },
+  {
+@常量类": "整数""constant name": "无法调用",
+@常量类": "整数""comment": "指定对象没有调用接口",
+@常量类": "整数""initial value": "@CVolComObject::IRT_CALLUNABLE"
+  },
+  {
+"constant name": "无类型信息",
+"comment": "指定对象没有找到对应类型信息",
+"initial value": "@CVolComObject::IRT_TYPE_INFO_NOT_FOUND"
+  },
+  {
+}"constant name": "参数数目错误",
+}"initial value": "@CVolComObject::IRT_BAD_PARAM_COUNT"
+  },
+  {
+nstant name": "参数数目错误""constant name": "参数类型无效",
+nstant name": "参数数目错误""comment": "无效的参数类型",
+nstant name": "参数数目错误""initial value": "@CVolComObject::IRT_BAD_VAR_TYPE"
+  },
+  {
+stant name": "无类型信息""constant name": "异常",
+stant name": "无类型信息""comment": "调用过程中发现异常",
+stant name": "无类型信息""initial value": "@CVolComObject::IRT_EXCEPTION"
+  },
+  {
+base class": "对象数组模板类""constant name": "未找到成员",
+base class": "对象数组模板类""comment": "未找到所欲调用的成员",
+base class": "对象数组模板类""initial value": "@CVolComObject::IRT_MEMBER_NOT_FOUND"
+  },
+  {
+"constant name": "不支持命名参数",
+"initial value": "@CVolComObject::IRT_NO_NAMED_ARGS"
+  },
+  {
+}"constant name": "溢出",
+}"initial value": "@CVolComObject::IRT_OVERFLOW"
+  },
+  {
+
+"constant name": "参数未找到",
+
+"comment": "未找到所指定的参数",
+
+"initial value": "@CVolComObject::IRT_PARAM_NOT_FOUND"
+  },
+  {
+"initial value": "@CVolComObject::IRT_PARAM_NOT_FOUND""constant name": "类型不匹配",
+"initial value": "@CVolComObject::IRT_PARAM_NOT_FOUND""comment": "参数的数据类型不匹配",
+"initial value": "@CVolComObject::IRT_PARAM_NOT_FOUND""initial value": "@CVolComObject::IRT_TYPE_MISMATCH"
+  },
+  {
+meter name": "所操作本对象""initial value": "@CVolComObject::IRT_SUCCEEDED""constant name": "必需参数被省略",
+meter name": "所操作本对象""initial value": "@CVolComObject::IRT_SUCCEEDED""comment": "必需的参数数据被省略",
+meter name": "所操作本对象""initial value": "@CVolComObject::IRT_SUCCEEDED""initial value": "@CVolComObject::IRT_PARAM_NOT_OPTIONAL"
+  },
+  {
+initial value": "@CVolComObject::IRT_TYPE_INFO_NOT_FOUND""constant name": "获取结果失败",
+initial value": "@CVolComObject::IRT_TYPE_INFO_NOT_FOUND""comment": "获取所返回结果失败",
+initial value": "@CVolComObject::IRT_TYPE_INFO_NOT_FOUND""initial value": "@CVolComObject::IRT_GET_RESULT_FAILED"
+  },
+  {
+"comment": "未找到所指定的参数""constant name": "其它",
+"comment": "未找到所指定的参数""comment": "其它原因导致调用失败",
+"comment": "未找到所指定的参数""initial value": "@CVolComObject::IRT_CALL_FAILED"
+  }
+]
+ },
+ {
+"class name": "COM对象类",
+"comment": "用作封装COM对象操作",
+"@别名": "\"CVolComObject\"",
+"methods": [
+  {
+"static": true"method name": "是否为空",
+"static": true"comment": "返回本对象的内容是否为空",
+"static": true"static": true,
+"static": true"data type": "逻辑型",
+"static": true"@嵌入式方法": "\"\"",
+"static": true"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   }
+"static": true]
+  },
+  {
+t name": "无类型信息""constant name": "异常""method name": "取COM对象指针",
+t name": "无类型信息""constant name": "异常""comment": "返回本对象中所记录的IUnknown接口指针值,如尚未设置(为空)则返回0.",
+t name": "无类型信息""constant name": "异常""static": true,
+t name": "无类型信息""constant name": "异常""data type": "变整数",
+t name": "无类型信息""constant name": "异常""@嵌入式方法": "\"\"",
+t name": "无类型信息""constant name": "异常""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   }
+t name": "无类型信息""constant name": "异常"]
+  },
+  {
+
+"method name": "置COM对象指针",
+
+"comment": "设置本对象中所记录的IUnknown接口指针值",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "所欲设置接口指针",
+"comment": "本参数值必须为有效的 IUnknown* 指针值或者0.",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+comment": "未找到所指定的参数""comment": "其它原因导致调用失败""method name": "置COM对象",
+comment": "未找到所指定的参数""comment": "其它原因导致调用失败""comment": "设置本对象中所记录的IUnknown接口指针值",
+comment": "未找到所指定的参数""comment": "其它原因导致调用失败""static": true,
+comment": "未找到所指定的参数""comment": "其它原因导致调用失败""@嵌入式方法": "\"\"",
+comment": "未找到所指定的参数""comment": "其它原因导致调用失败""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "所欲设置对象",
+"comment": "该对象中的IUnknown接口指针将被设置到本对象中",
+"data type": "COM对象类"
+   }
+comment": "未找到所指定的参数""comment": "其它原因导致调用失败"]
+  },
+  {
+data type": "COM对象类""method name": "清除",
+data type": "COM对象类""comment": "将本对象的内容释放并清空.\n如果不调用本方法,则对象在退出其作用区域时会自动被释放.",
+data type": "COM对象类""static": true,
+data type": "COM对象类""@嵌入式方法": "\"\"",
+data type": "COM对象类""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   }
+data type": "COM对象类"]
+  },
+  {
+"static": true"method name": "是否相等",
+"static": true"comment": "返回本对象的内容是否与指定对象的内容相等",
+"static": true"static": true,
+"static": true"data type": "逻辑型",
+"static": true"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "欲检查的对象",
+"data type": "COM对象类"
+   }
+"static": true]
+  },
+  {
+"comment": "设置本对象中所记录的IUnknown接口指针值""method name": "取火山对象",
+"comment": "设置本对象中所记录的IUnknown接口指针值""comment": "  获取本对象中存放的指定类型火山对象参考,如果所存储的数据不为该类型的火山对象,\n将返回一个该类型的空火山对象(在该对象上调用\"是否为空对象\"方法返回真).",
+"comment": "设置本对象中所记录的IUnknown接口指针值""result comment": "成功返回所存储的火山对象参考,失败返回一个空对象.",
+"comment": "设置本对象中所记录的IUnknown接口指针值""static": true,
+"comment": "设置本对象中所记录的IUnknown接口指针值""@视窗.返回参考": "真",
+"comment": "设置本对象中所记录的IUnknown接口指针值""@嵌入式方法": "\"\"",
+"comment": "设置本对象中所记录的IUnknown接口指针值""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "所欲获取对象类型",
+"comment": "提供所欲获取的火山对象的类型",
+"data type": "对象类",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   }
+"comment": "设置本对象中所记录的IUnknown接口指针值"]
+  },
+  {
+data type": "COM对象类""method name": "置火山对象",
+data type": "COM对象类""comment": "  将所指定的火山对象复制一份后置入本对象中,所置入对象可以通过\n\"取火山对象\"方法返回,本对象中的原有内容将被覆盖.",
+data type": "COM对象类""static": true,
+data type": "COM对象类""@嵌入式方法": "\"\"",
+data type": "COM对象类""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "所欲写入的值",
+"comment": "提供所欲写入的火山对象数据内容",
+"data type": "对象类"
+   }
+data type": "COM对象类"]
+  },
+  {
+data type": "COM对象类""method name": "创建",
+data type": "COM对象类""comment": "创建指定类型的 COM 对象并填入本对象中,本对象中的原有内容将被覆盖.",
+data type": "COM对象类""result comment": "成功返回真,否则返回假.",
+data type": "COM对象类""static": true,
+data type": "COM对象类""data type": "逻辑型",
+data type": "COM对象类""@嵌入式方法": "\"\"",
+data type": "COM对象类""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "对象类型",
+"comment": "  指定对象的类型文本,可以为其可识别名称: 譬如\"Excel.Application\"/\"Word.Application\",\n也可以是其CLSID,如\"{0003088F-0000-0000-C000-000000000058}\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型库文件名",
+"comment": "  如果需要通过类型库才能访问指定对象,可在本参数中提供其类型库或类型库数据所在文件名.\n注意如果没有提供文件名,且在当前目录下无法找到该文件,系统将自动进行搜索.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "COM对象类"]
+  },
+  {
+@默认值": "\"\"""method name": "获取",
+@默认值": "\"\"""comment": "获取当前操作系统中已经存在的指定类型 COM 对象并填入本对象中,本对象中的原有内容将被覆盖.",
+@默认值": "\"\"""result comment": "成功返回真,否则返回假.",
+@默认值": "\"\"""static": true,
+@默认值": "\"\"""data type": "逻辑型",
+@默认值": "\"\"""@嵌入式方法": "\"\"",
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "对象类型",
+"comment": "  指定对象的类型文本,可以为其可识别名称: 譬如\"Excel.Application\"/\"Word.Application\",\n也可以是其CLSID,如\"{0003088F-0000-0000-C000-000000000058}\".",
+"data type": "文本型"
+   }
+@默认值": "\"\""]
+  },
+  {
+"method name": "取接口",
+"comment": "获取本对象中的指定接口,然后将其填入所指定对象中,该对象中的原有内容将被覆盖.",
+"result comment": "成功返回真,失败返回假.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "接口标志符",
+"comment": "指定欲获取接口的具体名称或其全球唯一标志符(GUID),如\"IDispatch\",{B8AB1733C-F55B-4347-A61C-B257280F9967}等.\n如果本参数为空文本,则默认取出本对象的IUnknown基本接口.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲填写到的对象",
+"comment": "提供将所获取到的接口对象所填写到的对象,可以是本对象自身.",
+"data type": "COM对象类"
+   }
+]
+  },
+  {
+ }"method name": "取接口对象",
+ }"comment": "获取并返回本对象中的指定接口对象.\n执行本方法如果失败,返回内容为空的该类对象(COM对象类的\"是否为空\"方法返回真).",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "接口标志符",
+"comment": "指定欲获取接口的具体名称或其全球唯一标志符(GUID),如\"IDispatch\",{B8AB1733C-F55B-4347-A61C-B257280F9967}等.\n如果本参数为空文本,则默认取出本对象的IUnknown基本接口.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的接口对象数据类型",
+"data type": "COM对象类",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   }
+ }]
+  },
+  {
+ameter name": "所操作本对象""method name": "创建图片对象",
+ameter name": "所操作本对象""comment": "为指定图片创建对应的 COM 图片对象并填入本对象中,本对象中的原有内容将被覆盖.",
+ameter name": "所操作本对象""result comment": "成功返回真,失败返回假.",
+ameter name": "所操作本对象""static": true,
+ameter name": "所操作本对象""data type": "逻辑型",
+ameter name": "所操作本对象""@嵌入式方法": "\"\"",
+ameter name": "所操作本对象""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "所基于的位图对象",
+"data type": "位图对象类"
+   }
+ameter name": "所操作本对象"]
+  },
+  {
+"method name": "取回图片",
+"comment": "如果本对象为 COM 图片对象,则取回其具体图片数据.",
+"result comment": "成功返回真且将所获得的图片数据存放入\"结果存储字节集\"参数字节集中,失败返回假.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "结果存储字节集",
+"comment": "成功将所获得的图片数据置入此参数字节集中",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+"method name": "创建字体对象",
+"comment": "为指定字体数据创建对应的 COM 字体对象并填入本对象中,本对象中的原有内容将被覆盖.",
+"result comment": "成功返回真,失败返回假.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "所基于的字体对象",
+"data type": "字体对象类"
+   }
+]
+  },
+  {
+meter name": "所操作本对象""data type": "逻辑型""method name": "取回字体",
+meter name": "所操作本对象""data type": "逻辑型""comment": "如果本对象为 COM 字体对象,则取回其中的具体字体数据.",
+meter name": "所操作本对象""data type": "逻辑型""result comment": "成功所返回的字体对象不为空(其\"为空\"方法返回假),失败为空(其\"为空\"方法返回真).",
+meter name": "所操作本对象""data type": "逻辑型""static": true,
+meter name": "所操作本对象""data type": "逻辑型""data type": "字体对象类",
+meter name": "所操作本对象""data type": "逻辑型""@嵌入式方法": "\"\"",
+meter name": "所操作本对象""data type": "逻辑型""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   }
+meter name": "所操作本对象""data type": "逻辑型"]
+  },
+  {
+
+"method name": "取错误",
+
+"comment": "当读写对象属性/执行对象方法时,紧跟该语句后执行本方法可以检查其是否执行成功.",
+
+"result comment": "返回\"COM方法调用结果.成功\"表示上一方法执行成功,否则提供具体的错误类型值.",
+
+"static": true,
+
+"data type": "COM方法调用结果",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "是否成功",
+
+"comment": "当读写对象属性/执行对象方法时,紧跟该语句后执行本方法可以检查其是否执行成功.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+ameter name": "所操作本对象""method name": "读属性",
+ameter name": "所操作本对象""comment": "  读取并返回本对象中所指定名称属性的值.\n  执行本方法如果失败,\"所欲获取数据类型\"为数值型时返回0,为逻辑型时返回假,为文本型时返回空文本,为COM对象类或\nCOM变体型时返回内容为空的该类对象(COM对象类/COM变体型的\"是否为空\"方法返回真).\n  紧跟本方法后调用\"是否成功\"方法将返回本方法是否执行成功,调用\"取错误\"方法将返回具体的错误码值(成功将返回\n\"COM方法调用结果.成功\").",
+ameter name": "所操作本对象""static": true,
+ameter name": "所操作本对象""@嵌入式方法": "\"req_obj_param_pointer = true\"",
+ameter name": "所操作本对象""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "属性名称",
+"comment": "提供所欲读取属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的返回值数据类型.\n  注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"读对象型属性\".",
+"@匹配类型": "通用型",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "参数数据",
+"comment": "提供所有的具体调用参数.请注意以下事项:\n  1. 参数的数据类型只能为以下几种,否则本方法执行将失败:\n     A. 基本数据类型;\n     B. 基本数据类型对应的封装类,即:字节类/短整数类/字符类/整数类/变整数类/长整数类/单精度小数类/小数类/逻辑型类;\n     C. COM对象类;\n     D. COM变体型.\n  2. 如果所调用COM方法的某个参数将以参考的方式返回数据,对于基本数据类型数据,请提供对应类型的封装类对象,类库\n中将自动进行转换,对于非基本数据类型数据,直接提供对应的类对象即可;\n  3. 如果所调用COM方法的某个参数具有默认值且欲使用该默认值,提供\"取空基本对象 ()\"即可.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+ameter name": "所操作本对象"]
+  },
+  {
+ }"method name": "读对象型属性",
+ }"comment": "  读取并返回本对象中所指定名称COM对象类属性的值.\n  执行本方法如果失败,返回内容为空的该类对象(COM对象类的\"是否为空\"方法返回真).\n  紧跟本方法后调用\"是否成功\"方法将返回本方法是否执行成功,调用\"取错误\"方法将返回具体的错误码值(成功将返回\n\"COM方法调用结果.成功\").",
+ }"static": true,
+ }"@嵌入式方法": "\"req_obj_param_pointer = true\"",
+ }"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "属性名称",
+"comment": "提供所欲读取属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的返回值数据类型",
+"data type": "COM对象类",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "参数数据",
+"comment": "提供所有的具体调用参数.请注意以下事项:\n  1. 参数的数据类型只能为以下几种,否则本方法执行将失败:\n     A. 基本数据类型;\n     B. 基本数据类型对应的封装类,即:字节类/短整数类/字符类/整数类/变整数类/长整数类/单精度小数类/小数类/逻辑型类;\n     C. COM对象类;\n     D. COM变体型.\n  2. 如果所调用COM方法的某个参数将以参考的方式返回数据,对于基本数据类型数据,请提供对应类型的封装类对象,类库\n中将自动进行转换,对于非基本数据类型数据,直接提供对应的类对象即可;\n  3. 如果所调用COM方法的某个参数具有默认值且欲使用该默认值,提供\"取空基本对象 ()\"即可.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+ }]
+  },
+  {
+
+"method name": "读无参数属性",
+
+"comment": "  读取并返回本对象中所指定名称属性的值. 本方法用作读取无参数的COM属性值.\n  执行本方法如果失败,\"所欲获取数据类型\"为数值型时返回0,为逻辑型时返回假,为文本型时返回空文本,为COM对象类或\nCOM变体型时返回内容为空的该类对象(COM对象类/COM变体型的\"是否为空\"方法返回真).\n  紧跟本方法后调用\"是否成功\"方法将返回本方法是否执行成功,调用\"取错误\"方法将返回具体的错误码值(成功将返回\n\"COM方法调用结果.成功\").",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "属性名称",
+"comment": "提供所欲读取属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的返回值数据类型.\n  注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"读无参数对象型属性\".",
+"@匹配类型": "通用型",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "读无参数对象型属性",
+ }"comment": "  读取并返回本对象中所指定名称COM对象类属性的值. 本方法用作读取无参数的COM属性值.\n  执行本方法如果失败,返回内容为空的该类对象(COM对象类的\"是否为空\"方法返回真).\n  紧跟本方法后调用\"是否成功\"方法将返回本方法是否执行成功,调用\"取错误\"方法将返回具体的错误码值(成功将返回\n\"COM方法调用结果.成功\").",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "属性名称",
+"comment": "提供所欲读取属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的返回值数据类型",
+"data type": "COM对象类",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   }
+ }]
+  },
+  {
+ }"method name": "写属性",
+ }"comment": "设置本对象指定名称属性的值.",
+ }"result comment": "返回执行本方法是否成功.如果失败,紧跟本方法后调用\"取错误\"方法将返回具体的错误码值.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"req_obj_param_pointer = true\"",
+ }"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "属性名称",
+"comment": "提供所欲设置属性的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数数据",
+"comment": "提供所有的具体调用参数.请注意以下事项:\n  1. 参数的数据类型只能为以下几种,否则本方法执行将失败:\n     A. 基本数据类型;\n     B. 基本数据类型对应的封装类,即:字节类/短整数类/字符类/整数类/变整数类/长整数类/单精度小数类/小数类/逻辑型类;\n     C. COM对象类;\n     D. COM变体型.\n  2. 如果所调用COM方法的某个参数将以参考的方式返回数据,对于基本数据类型数据,请提供对应类型的封装类对象,类库\n中将自动进行转换,对于非基本数据类型数据,直接提供对应的类对象即可;\n  3. 如果所调用COM方法的某个参数具有默认值且欲使用该默认值,提供\"取空基本对象 ()\"即可.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+ }]
+  },
+  {
+]"method name": "写无参数属性",
+]"comment": "设置本对象指定名称属性的值. 本方法用作写无参数的COM属性值.",
+]"result comment": "返回执行本方法是否成功.如果失败,紧跟本方法后调用\"取错误\"方法将返回具体的错误码值.",
+]"static": true,
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "属性名称",
+"comment": "提供所欲设置属性的名称",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+data type": "COM对象类""method name": "方法",
+data type": "COM对象类""comment": "  执行本对象中所指定名称的方法,返回该方法执行后的结果值.\n  执行本方法如果失败,\"所欲获取数据类型\"为数值型时返回0,为逻辑型时返回假,为文本型时返回空文本,为COM对象类或\nCOM变体型时返回内容为空的该类对象(COM对象类/COM变体型的\"是否为空\"方法返回真).\n  紧跟本方法后调用\"是否成功\"方法将返回本方法是否执行成功,调用\"取错误\"方法将返回具体的错误码值(成功将返回\n\"COM方法调用结果.成功\").",
+data type": "COM对象类""static": true,
+data type": "COM对象类""@嵌入式方法": "\"req_obj_param_pointer = true\"",
+data type": "COM对象类""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "方法名称",
+"comment": "提供所欲执行方法的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的返回值数据类型.\n注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"对象型方法\".",
+"@匹配类型": "通用型",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "参数数据",
+"comment": "提供所有的具体调用参数.请注意以下事项:\n  1. 参数的数据类型只能为以下几种,否则本方法执行将失败:\n     A. 基本数据类型;\n     B. 基本数据类型对应的封装类,即:字节类/短整数类/字符类/整数类/变整数类/长整数类/单精度小数类/小数类/逻辑型类;\n     C. COM对象类;\n     D. COM变体型.\n  2. 如果所调用COM方法的某个参数将以参考的方式返回数据,对于基本数据类型数据,请提供对应类型的封装类对象,类库\n中将自动进行转换,对于非基本数据类型数据,直接提供对应的类对象即可;\n  3. 如果所调用COM方法的某个参数具有默认值且欲使用该默认值,提供\"取空基本对象 ()\"即可.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+data type": "COM对象类"]
+  },
+  {
+data type": "COM对象类""method name": "对象型方法",
+data type": "COM对象类""comment": "  执行本对象中所指定名称的方法,返回该方法执行后的结果值.\n  执行本方法如果失败,返回内容为空的该类对象(COM对象类的\"是否为空\"方法返回真).\n  紧跟本方法后调用\"是否成功\"方法将返回本方法是否执行成功,调用\"取错误\"方法将返回具体的错误码值(成功将返回\n\"COM方法调用结果.成功\").",
+data type": "COM对象类""static": true,
+data type": "COM对象类""@嵌入式方法": "\"req_obj_param_pointer = true\"",
+data type": "COM对象类""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "方法名称",
+"comment": "提供所欲执行方法的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的返回值数据类型",
+"data type": "COM对象类",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "参数数据",
+"comment": "提供所有的具体调用参数.请注意以下事项:\n  1. 参数的数据类型只能为以下几种,否则本方法执行将失败:\n     A. 基本数据类型;\n     B. 基本数据类型对应的封装类,即:字节类/短整数类/字符类/整数类/变整数类/长整数类/单精度小数类/小数类/逻辑型类;\n     C. COM对象类;\n     D. COM变体型.\n  2. 如果所调用COM方法的某个参数将以参考的方式返回数据,对于基本数据类型数据,请提供对应类型的封装类对象,类库\n中将自动进行转换,对于非基本数据类型数据,直接提供对应的类对象即可;\n  3. 如果所调用COM方法的某个参数具有默认值且欲使用该默认值,提供\"取空基本对象 ()\"即可.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+data type": "COM对象类"]
+  },
+  {
+ta type": "COM对象类"]"method name": "无返回值方法",
+ta type": "COM对象类"]"comment": "执行本对象中所指定名称的方法. 本方法用作执行无返回值COM方法或者执行COM方法但不需要返回数据.",
+ta type": "COM对象类"]"result comment": "返回执行本方法是否成功.如果失败,紧跟本方法后调用\"取错误\"方法将返回具体的错误码值.",
+ta type": "COM对象类"]"static": true,
+ta type": "COM对象类"]"data type": "逻辑型",
+ta type": "COM对象类"]"@嵌入式方法": "\"req_obj_param_pointer = true\"",
+ta type": "COM对象类"]"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "方法名称",
+"comment": "提供所欲执行方法的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数数据",
+"comment": "提供所有的具体调用参数.请注意以下事项:\n  1. 参数的数据类型只能为以下几种,否则本方法执行将失败:\n     A. 基本数据类型;\n     B. 基本数据类型对应的封装类,即:字节类/短整数类/字符类/整数类/变整数类/长整数类/单精度小数类/小数类/逻辑型类;\n     C. COM对象类;\n     D. COM变体型.\n  2. 如果所调用COM方法的某个参数将以参考的方式返回数据,对于基本数据类型数据,请提供对应类型的封装类对象,类库\n中将自动进行转换,对于非基本数据类型数据,直接提供对应的类对象即可;\n  3. 如果所调用COM方法的某个参数具有默认值且欲使用该默认值,提供\"取空基本对象 ()\"即可.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+ta type": "COM对象类"]]
+  },
+  {
+ta type": "COM对象类"]"method name": "无参数方法",
+ta type": "COM对象类"]"comment": "  执行本对象中所指定名称的方法,返回该方法执行后的结果值. 本方法用作执行无参数的COM方法.\n  执行本方法如果失败,\"所欲获取数据类型\"为数值型时返回0,为逻辑型时返回假,为文本型时返回空文本,为COM对象类或\nCOM变体型时返回内容为空的该类对象(COM对象类/COM变体型的\"是否为空\"方法返回真).\n  紧跟本方法后调用\"是否成功\"方法将返回本方法是否执行成功,调用\"取错误\"方法将返回具体的错误码值(成功将返回\n\"COM方法调用结果.成功\").",
+ta type": "COM对象类"]"static": true,
+ta type": "COM对象类"]"@嵌入式方法": "\"\"",
+ta type": "COM对象类"]"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "方法名称",
+"comment": "提供所欲执行方法的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的返回值数据类型.\n注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"无参数对象型方法\".",
+"@匹配类型": "通用型",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   }
+ta type": "COM对象类"]]
+  },
+  {
+comment": "提供所欲获得的返回值数据类型.\n注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"无参数对象型方法\".""method name": "无参数对象型方法",
+comment": "提供所欲获得的返回值数据类型.\n注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"无参数对象型方法\".""comment": "  执行本对象中所指定名称的方法,返回该方法执行后的结果值. 本方法用作执行无参数的COM方法.\n  执行本方法如果失败,返回内容为空的该类对象(COM对象类的\"是否为空\"方法返回真).\n  紧跟本方法后调用\"是否成功\"方法将返回本方法是否执行成功,调用\"取错误\"方法将返回具体的错误码值(成功将返回\n\"COM方法调用结果.成功\").",
+comment": "提供所欲获得的返回值数据类型.\n注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"无参数对象型方法\".""static": true,
+comment": "提供所欲获得的返回值数据类型.\n注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"无参数对象型方法\".""@嵌入式方法": "\"\"",
+comment": "提供所欲获得的返回值数据类型.\n注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"无参数对象型方法\".""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "方法名称",
+"comment": "提供所欲执行方法的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲获取数据类型",
+"comment": "提供所欲获得的返回值数据类型",
+"data type": "COM对象类",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   }
+comment": "提供所欲获得的返回值数据类型.\n注意: 只能为基本数据类型/常量类/COM对象类/COM变体型,否则本地编译器将编译出错.如果欲读取数据类型为\n\"COM对象类\"的继承类,请使用\"无参数对象型方法\"."]
+  },
+  {
+ type": "COM对象类"]]"method name": "无参数及返回值方法",
+ type": "COM对象类"]]"comment": "  执行本对象中所指定名称的方法. 本方法用作执行无参数且无返回值\nCOM方法或者执行无参数COM方法但不需要返回数据.",
+ type": "COM对象类"]]"result comment": "  返回执行本方法是否成功.如果失败,紧跟本方法后调用\"取错误\"方法\n将返回具体的错误码值.",
+ type": "COM对象类"]]"static": true,
+ type": "COM对象类"]]"data type": "逻辑型",
+ type": "COM对象类"]]"@嵌入式方法": "\"\"",
+ type": "COM对象类"]]"parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "方法名称",
+"comment": "提供所欲执行方法的名称",
+"data type": "文本型"
+   }
+ type": "COM对象类"]]]
+  },
+  {
+type": "COM对象类"]]"data type": "逻辑型""method name": "查看接口",
+type": "COM对象类"]]"data type": "逻辑型""comment": "启动一个对话框来显示本对象的COM接口信息.\n注意: 本方法只能在主界面线程中执行.",
+type": "COM对象类"]]"data type": "逻辑型""static": true,
+type": "COM对象类"]]"data type": "逻辑型""@视窗.外部头文件": "\"libs\\\\win_base\\\\include\\\\vol_com_inf.h\"",
+type": "COM对象类"]]"data type": "逻辑型""@视窗.外部源文件": "\"libs\\\\win_base\\\\cpp\\\\tr_vol_com_inf.cpp\"",
+type": "COM对象类"]]"data type": "逻辑型""@视窗.外部资源文件": "\"libs\\\\win_base\\\\cpp\\\\res\\\\vol_com_inf.rc\"",
+type": "COM对象类"]]"data type": "逻辑型""parameters": [
+   {
+"parameter name": "所操作本对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "父窗口句柄",
+"comment": "提供对话框的父窗口句柄,为0表示使用默认父窗口.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+type": "COM对象类"]]"data type": "逻辑型"]
+  }
+]
+ },
+ {
+"class name": "COM对象事件类",
+"comment": "用作提供对COM对象事件的挂接操作",
+"methods": [
+  {
+
+"method name": "接收到事件",
+
+"comment": "当接收到所挂接COM事件时,本事件被触发.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "来源COM对象",
+"comment": "提供挂接事件时所提供的来源COM对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "事件方法ID",
+"comment": "提供所触发的具体事件的对应COM方法ID值",
+"data type": "整数"
+   },
+   {
+"parameter name": "事件参数",
+"comment": "提供事件的所有参数数据",
+"data type": "COM变体型数组类"
+   },
+   {
+"parameter name": "事件返回值",
+"comment": "仅用作输出. 事件处理完毕后如果需要返回数据,请将所欲返回数据值填入到此参数变量中.",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+ameter name": "事件方法ID""method name": "挂接",
+ameter name": "事件方法ID""comment": "挂接指定COM对象的指定事件接口,返回是否成功.",
+ameter name": "事件方法ID""data type": "逻辑型",
+ameter name": "事件方法ID""@嵌入式方法": "\"\"",
+ameter name": "事件方法ID""parameters": [
+   {
+"parameter name": "来源COM对象",
+"comment": "提供欲挂接其中事件的具体COM对象.\n该对象在\"接收到事件\"事件方法中将反馈过去.",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "事件接口名称",
+"comment": "  提供所欲挂接的事件接口IID文本,如\"{bdfff072-497b-407b-a8f2-450d6e7b6827}\",\n如果为空文本,则自动去查找使用\"来源COM对象\"所实现的默认事件来源接口.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ameter name": "事件方法ID"]
+  },
+  {
+ameter name": "事件方法ID""method name": "取消挂接",
+ameter name": "事件方法ID""comment": "取消先前所挂接的COM事件",
+ameter name": "事件方法ID""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "COM字体类",
+"comment": "用作记录一个COM字体对象(IFontDisp)",
+"base class": "COM对象类",
+"methods": [
+  {
+
+"method name": "从描述文本创建字体",
+
+"comment": "从一个指定格式的字体描述文本创建字体对象",
+
+"result comment": "成功所返回的COM对象不为空(\"是否为空\"方法返回假),失败为空(\"是否为空\"方法返回真).",
+
+"static": true,
+
+"data type": "COM字体类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "字体描述文本",
+"comment": "  本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅,旋转角度单位为1/10度.\n  例子: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "创建默认GUI字体",
+}"comment": "创建操作系统所使用的默认GUI字体对象",
+}"result comment": "成功所返回的COM对象不为空(\"是否为空\"方法返回假),失败为空(\"是否为空\"方法返回真).",
+}"static": true,
+}"data type": "COM字体类",
+}"@禁止流程检查": "真"
+  },
+  {
+meter name": "事件方法ID""@嵌入式方法": "\"\"""method name": "创建字体",
+meter name": "事件方法ID""@嵌入式方法": "\"\"""comment": "从指定参数创建并返回一个字体对象",
+meter name": "事件方法ID""@嵌入式方法": "\"\"""result comment": "成功所返回的COM对象不为空(\"是否为空\"方法返回假),失败为空(\"是否为空\"方法返回真).",
+meter name": "事件方法ID""@嵌入式方法": "\"\"""static": true,
+meter name": "事件方法ID""@嵌入式方法": "\"\"""data type": "COM字体类",
+meter name": "事件方法ID""@嵌入式方法": "\"\"""@禁止流程检查": "真",
+meter name": "事件方法ID""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "字体名称",
+"comment": "提供所欲创建字体的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体尺寸",
+"comment": "提供所欲创建字体的尺寸,单位为磅.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否粗体",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否斜体",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否有下划线",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否有删除线",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "提供字体的旋转角度,单位为十分之一度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+meter name": "事件方法ID""@嵌入式方法": "\"\""]
+  }
+]
+ },
+ {
+"class name": "COM图片类",
+"comment": "用作记录一个COM图片对象(IPictureDisp)",
+"base class": "COM对象类",
+"methods": [
+  {
+事件时所提供的来源COM对象"method name": "从资源创建图片",
+事件时所提供的来源COM对象"comment": "载入所指定的位图资源(所支持格式: gif/bmp/emf/wmf/jpg//png/tif/ico),返回所载入的图片对象.",
+事件时所提供的来源COM对象"result comment": "成功所返回的COM对象不为空(\"是否为空\"方法返回假),失败为空(\"是否为空\"方法返回真).",
+事件时所提供的来源COM对象"static": true,
+事件时所提供的来源COM对象"data type": "COM图片类",
+事件时所提供的来源COM对象"@禁止流程检查": "真",
+事件时所提供的来源COM对象"parameters": [
+   {
+"parameter name": "所欲载入的位图",
+"data type": "位图资源"
+   }
+事件时所提供的来源COM对象]
+  },
+  {
+
+"method name": "从文件创建图片",
+
+"comment": "载入所指定的位图文件(所支持格式: gif/bmp/emf/wmf/jpg//png/tif/ico),返回所载入的图片对象.",
+
+"result comment": "成功所返回的COM对象不为空(\"是否为空\"方法返回假),失败为空(\"是否为空\"方法返回真).",
+
+"static": true,
+
+"data type": "COM图片类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的位图文件",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "从数据创建图片",
+"comment": "载入所指定的位图数据(所支持格式: gif/bmp/emf/wmf/jpg//png/tif/ico),返回所载入的图片对象.",
+"result comment": "成功所返回的COM对象不为空(\"是否为空\"方法返回假),失败为空(\"是否为空\"方法返回真).",
+"static": true,
+"data type": "COM图片类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "所欲载入的位图数据",
+"data type": "字节集类"
+   }
+]
+  }
+]
+ }
+= "category = \"COM操作\""]
+}

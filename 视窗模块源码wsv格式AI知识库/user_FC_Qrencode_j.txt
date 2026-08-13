@@ -1,0 +1,354 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.二维码Qrencode\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"Qrencode\\\\libqrencodeTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"Qrencode\\\\libqrencodeToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"Qrencode\\\\libqrencodeToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"Qrencode\\\\libqrencodeToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"Qrencode\\\\libqrencodeToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "二维码类f",
+"methods": [
+  {
+
+"method name": "类_清理"
+  },
+  {
+Ϡ敹ŝ"method name": "创建",
+Ϡ敹ŝ"result comment": "返回像素数据句柄",
+Ϡ敹ŝ"data type": "逻辑型",
+Ϡ敹ŝ"@禁止流程检查": "真",
+Ϡ敹ŝ"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "版本",
+"comment": "0-10 数字越大，图片越大",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "质量",
+"comment": " 0 1 2 3  0质量最低 3 质量最好",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "模式",
+"comment": " QR_MODE_NUL = -1,   ///< Terminator (NUL character). Internal use only\n QR_MODE_NUM = 0,    ///< Numeric mode\n QR_MODE_AN,         ///< Alphabet-numeric mode\n QR_MODE_8,          ///< 8-bit data mode (默认8位数)\n QR_MODE_KANJI,      ///< Kanji (shift-jis) mode\n QR_MODE_STRUCTURE,  ///< Internal use only\n QR_MODE_ECI,        ///< ECI mode\n QR_MODE_FNC1FIRST,  ///< FNC1, first position\n QR_MODE_FNC1SECOND, ///< FNC1, second position",
+"data type": "整数",
+"@默认值": "2"
+   }
+Ϡ敹ŝ]
+  },
+  {
+
+"method name": "取版本",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "像素句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ 字节集类"method name": "取宽度",
+ 字节集类"data type": "整数"
+  },
+  {
+
+"method name": "取高度",
+
+"data type": "整数"
+  },
+  {
+}"method name": "取像素数据指针",
+}"data type": "变整数"
+  },
+  {
+數ŝ"method name": "取像素数据大小",
+數ŝ"data type": "整数"
+  },
+  {
+"data type": "变整数""method name": "取像素数据",
+"data type": "变整数""data type": "字节集类"
+  },
+  {
+
+"method name": "取像素",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+0 数字越大，图片越大""method name": "到字节集",
+0 数字越大，图片越大""result comment": "返回像素数据句柄",
+0 数字越大，图片越大""static": true,
+0 数字越大，图片越大""data type": "字节集类",
+0 数字越大，图片越大""@禁止流程检查": "真",
+0 数字越大，图片越大""parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "版本",
+"comment": "0-10 数字越大，图片越大",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "质量",
+"comment": " 0 1 2 3  0质量最低 3 质量最好",
+"data type": "整数",
+"@默认值": "0"
+   }
+0 数字越大，图片越大"]
+  },
+  {
+数字越大，图片越大"]"method name": "到文件",
+数字越大，图片越大"]"comment": "24位图 ",
+数字越大，图片越大"]"static": true,
+数字越大，图片越大"]"data type": "逻辑型",
+数字越大，图片越大"]"@禁止流程检查": "真",
+数字越大，图片越大"]"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "位图文件保存路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "版本",
+"comment": "0-10 数字越大，图片越大",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "质量",
+"comment": " 0 1 2 3  0质量最低 3 质量最好",
+"data type": "整数",
+"@默认值": "0"
+   }
+数字越大，图片越大"]]
+  }
+]
+ },
+ {
+"class name": "______二维码Qrencode",
+"@全局类": "真",
+"methods": [
+  {
+@默认值": "0""method name": "二维码_取版本号",
+@默认值": "0""static": true,
+@默认值": "0""data type": "文本型",
+@默认值": "0""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "二维码_保存位图",
+
+"comment": "24位图 ",
+
+"result comment": "-1表示失败",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "位图文件保存路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "版本",
+"comment": "0-10 数字越大，图片越大",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "质量",
+"comment": " 0 1 2 3  0质量最低 3 质量最好",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "二维码_创建像素数据",
+}"result comment": "返回像素数据句柄",
+}"static": true,
+}"data type": "变整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "版本",
+"comment": "0-10 数字越大，图片越大",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "质量",
+"comment": " 0 1 2 3  0质量最低 3 质量最好",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "模式",
+"comment": " QR_MODE_NUL = -1,   ///< Terminator (NUL character). Internal use only\n QR_MODE_NUM = 0,    ///< Numeric mode\n QR_MODE_AN,         ///< Alphabet-numeric mode\n QR_MODE_8,          ///< 8-bit data mode (默认8位数)\n QR_MODE_KANJI,      ///< Kanji (shift-jis) mode\n QR_MODE_STRUCTURE,  ///< Internal use only\n QR_MODE_ECI,        ///< ECI mode\n QR_MODE_FNC1FIRST,  ///< FNC1, first position\n QR_MODE_FNC1SECOND, ///< FNC1, second position",
+"data type": "整数",
+"@默认值": "2"
+   }
+}]
+  },
+  {
+ }"method name": "二维码_取像素版本",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "像素句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+
+"method name": "二维码_取像素尺寸",
+
+"comment": "生成的二维码是一个正方形的，所以 宽或者高都是 尺寸",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "像素句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "二维码_取像素数据指针",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "像素句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "二维码_取像素数据大小",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "像素句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ameter name": "像素句柄""method name": "二维码_取像素",
+ameter name": "像素句柄""static": true,
+ameter name": "像素句柄""data type": "整数",
+ameter name": "像素句柄""@嵌入式方法": "\"\"",
+ameter name": "像素句柄""parameters": [
+   {
+"parameter name": "像素句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+ameter name": "像素句柄"]
+  },
+  {
+ }"method name": "二维码_销毁像素数据",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "像素句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+data type": "变整数""method name": "二维码_生成位图数据",
+data type": "变整数""result comment": "返回像素数据句柄",
+data type": "变整数""static": true,
+data type": "变整数""data type": "字节集类",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "版本",
+"comment": "0-10 数字越大，图片越大",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "质量",
+"comment": " 0 1 2 3  0质量最低 3 质量最好",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "变整数"]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

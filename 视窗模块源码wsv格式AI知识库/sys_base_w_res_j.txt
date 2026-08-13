@@ -1,0 +1,1012 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"package name": "火山.基本",
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"comment": "提供视窗资源相关类",
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"@文档": "\"category = \\\"资源\\\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"classes": [
+ {
+"class name": "字符串资源",
+"comment": "用作记录一个字符串资源",
+"@输出名": "\"@CVolWinStrRes\"",
+"@常量类": "文本到ID"
+ },
+ {
+"class name": "视窗文件资源",
+"comment": "  所有基于文件数据内容资源的基础类,所有以本类为基础类的资源将直接把\n相关文件的全部数据以RCDATA类型(除非继承类中使用\"@视窗.资源类型\"属性\n进行了修改)放入到编译后的目的程序资源段中.\n  如果初始值提供一个空文件名,将代表为空文件资源.空资源一般用作取消先\n前所已经设置资源的作用效果.",
+"@可插入程序类": "\"type = \\\"const, var\\\"\\r\\nprefix = 文件\\r\\nexplain = \\\"将所指定文件以资源的形式插入程序\\\"\\r\\nicon = \\\"@5\\\"\"",
+"@输出名": "\"@CVolWinFileRes\"",
+"@视窗.资源类型": "\"RCDATA\"",
+"@常量类": "文本到ID",
+"@值细节类型": "文件名"
+ },
+ {
+"class name": "图标资源",
+"comment": "  用作代表一个ico图标资源,本类资源将把所指定的ico图标数据以\nICON类型放入到编译后的目的程序资源段中.\n  如果初始值提供一个空文件名,将代表为空图标资源.",
+"base class": "视窗文件资源",
+"@可插入程序类": "\"type = \\\"const, var\\\"\\r\\nprefix = 图标\\r\\nexplain = \\\"将所指定图标文件以资源的形式插入程序\\\"\\r\\nicon = \\\"@11\\\"\"",
+"@视窗.资源类型": "\"ICON\"",
+"@常量类": "文本到ID",
+"@值细节类型": "文件名",
+"@附加文本": "\"图标文件(*.ico)|*.ico|\""
+ },
+ {
+"class name": "位图资源",
+"comment": "  用作代表一个通用位图资源,本类资源将把所指定的位图数据以\nRCDATA类型放入到编译后的目的程序资源段中.\n  如果初始值提供一个空文件名,将代表为空位图资源.",
+"base class": "视窗文件资源",
+"@可插入程序类": "\"type = \\\"const, var\\\"\\r\\nprefix = 图片\\r\\nexplain = \\\"将所指定图片文件以资源的形式插入程序\\\"\\r\\nicon = \\\"@9\\\"\"",
+"@视窗.资源类型": "\"RCDATA\"",
+"@常量类": "文本到ID",
+"@值细节类型": "文件名",
+"@附加文本": "\"所有图片文件|*.gif;*.bmp;*.emf;*.wmf;*.jpg;*.jpeg;*.png;*.tif;*.ico|GIF文件(*.gif)|*.gif|BMP文件(*.bmp)|*.bmp|EMF文件(*.emf)|*.emf|WMF文件(*.wmf)|*.wmf|JPG文件(*.jpg;*.jpeg)|*.jpg;*.jpeg|PNG文件(*.png)|*.png|TIFF文件(*.tif)|*.tif|ICO文件(*.ico)|*.ico|\""
+ },
+ {
+"class name": "BMP位图资源",
+"comment": "  用作代表一个BITMAP位图资源,本类资源将把所指定的位图数据以\nBITMAP类型放入到编译后的目的程序资源段中.\n  如果初始值提供一个空文件名,将代表为空BITMAP位图资源.",
+"base class": "视窗文件资源",
+"@可插入程序类": "\"type = \\\"const, var\\\"\\r\\nprefix = BMP位图\\r\\nexplain = \\\"将所指定BMP位图文件以资源的形式插入程序\\\"\\r\\nicon = \\\"@9\\\"\"",
+"@视窗.资源类型": "\"BITMAP\"",
+"@常量类": "文本到ID",
+"@值细节类型": "文件名",
+"@附加文本": "\"BMP图片文件(*.bmp)|*.bmp|\""
+ },
+ {
+"class name": "图片组资源",
+"comment": "  用作代表一个基于位图的图片组资源,本类资源将把所指定的位图数据以RCDATA\n类型放入到编译后的目的程序资源段中.\n  用来作为图片组的位图内容格式具有以下要求:\n  1. 必须为图片组中所有单个图片的横向排列组合,即图片组中单个图片的高度\n等于整个图片组位图的高度,图片组中所有单个图片的总宽度等于整个图片组位图\n的宽度;\n  2. 图片组中单个图片的宽度等于其高度,如果不为偶数值,则就近向上取偶\n(如:高度为15,则宽度为16);\n  3. 位图中的透明部分用洋红色(红绿蓝分量值分别为: 255, 0, 255)填充标记.",
+"base class": "位图资源",
+"@可插入程序类": "\"type = \\\"const, var\\\"\\r\\nprefix = 图片组\\r\\nexplain = \\\"将所指定图片组文件以资源的形式插入程序\\\"\\r\\nicon = \\\"@4\\\"\"",
+"@常量类": "文本到ID",
+"@值细节类型": "文件名",
+"@附加文本": "\"所有图片文件|*.gif;*.bmp;*.emf;*.wmf;*.jpg;*.jpeg;*.png;*.tif;*.ico|GIF文件(*.gif)|*.gif|BMP文件(*.bmp)|*.bmp|EMF文件(*.emf)|*.emf|WMF文件(*.wmf)|*.wmf|JPG文件(*.jpg;*.jpeg)|*.jpg;*.jpeg|PNG文件(*.png)|*.png|TIFF文件(*.tif)|*.tif|ICO文件(*.ico)|*.ico|\""
+ },
+ {
+"class name": "鼠标指针资源",
+"comment": "  用作代表一个鼠标指针图像资源,本类资源将把所指定的鼠标指针图片\n数据以CURSOR类型放入到编译后的目的程序资源段中.\n  如果初始值提供一个空文件名,将代表为空鼠标指针资源.",
+"base class": "视窗文件资源",
+"@可插入程序类": "\"type = \\\"const, var\\\"\\r\\nprefix = 鼠标指针\\r\\nexplain = \\\"将所指定鼠标指针文件以资源的形式插入程序\\\"\\r\\nicon = \\\"@9\\\"\"",
+"@视窗.资源类型": "\"CURSOR\"",
+"@常量类": "文本到ID",
+"@值细节类型": "文件名",
+"@附加文本": "\"鼠标指针文件(*.cur)|*.cur|\""
+ },
+ {
+"class name": "WAV资源",
+"comment": "用作代表一个wav声音文件资源.\n如果初始值提供一个空文件名,将代表为空wav资源.\n",
+"base class": "视窗文件资源",
+"@可插入程序类": "\"type = \\\"const, var\\\"\\r\\nprefix = WAV声音\\r\\nexplain = \\\"将所指定WAV音频文件以资源的形式插入程序\\\"\\r\\nicon = \\\"@3\\\"\"",
+"@视窗.资源类型": "\"WAVE\"",
+"@常量类": "文本到ID",
+"@值细节类型": "文件名",
+"@附加文本": "\"WAV声音文件(*.wav)|*.wav|\""
+ },
+ {
+"class name": "声音资源",
+"comment": "用作代表一个wav或mp3声音文件资源.\n如果初始值提供一个空文件名,将代表为空wav或mp3资源.",
+"base class": "视窗文件资源",
+"@可插入程序类": "\"type = \\\"const, var\\\"\\r\\nprefix = 声音\\r\\nexplain = \\\"将所指定WAV或MP3音频文件以资源的形式插入程序\\\"\\r\\nicon = \\\"@3\\\"\"",
+"@视窗.资源类型": "\"RCDATA\"",
+"@常量类": "文本到ID",
+"@值细节类型": "文件名",
+"@附加文本": "\"所有声音文件(*.wav;*.mp3)|*.wav;*.mp3|WAV声音文件(*.wav)|*.wav|MP3声音文件(*.mp3)|*.mp3|\""
+ },
+ {
+"class name": "空资源",
+"comment": "  提供以上各种资源所对应的空资源常量,空资源一般用作取消\n先前所已经设置资源的作用效果.",
+"constants": [
+  {
+
+"constant name": "空字符串",
+
+"data type": "字符串资源",
+
+"initial value": "\"\""
+  },
+  {
+
+"constant name": "空图标",
+
+"data type": "图标资源",
+
+"initial value": "\"\""
+  },
+  {
+
+"constant name": "空位图",
+
+"data type": "位图资源",
+
+"initial value": "\"\""
+  },
+  {
+
+"constant name": "空BMP位图",
+
+"data type": "BMP位图资源",
+
+"initial value": "\"\""
+  },
+  {
+
+"constant name": "空鼠标指针",
+
+"data type": "鼠标指针资源",
+
+"initial value": "\"\""
+  },
+  {
+
+"constant name": "空文件",
+
+"data type": "视窗文件资源",
+
+"initial value": "\"\""
+  },
+  {
+
+"constant name": "空WAV声音",
+
+"data type": "WAV资源",
+
+"initial value": "\"\""
+  },
+  {
+
+"constant name": "空声音",
+
+"data type": "声音资源",
+
+"initial value": "\"\""
+  }
+]
+ },
+ {
+"class name": "资源操作类",
+"@文档": "\"category = \\\"资源.处理类\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "载入字符串资源",
+
+"comment": "载入并返回所指定的字符串资源,载入失败将返回空文本.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的字符串",
+"data type": "字符串资源"
+   }
+
+]
+  },
+  {
+
+"method name": "载入字符串资源2",
+
+"comment": "载入并返回所指定的字符串资源",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的字符串",
+"data type": "字符串资源"
+   },
+   {
+"parameter name": "结果存储参数",
+"comment": "所载入的字符串资源将保存进此参数中,载入失败将置入空文本.",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "GDI资源类",
+"comment": "用作记录一个GDI对象的句柄,支持在不使用后自动对其进行释放.",
+"base class": "参考对象类",
+"@文档": "\"category = \\\"资源.处理类\\\"\"",
+"methods": [
+  {
+
+"method name": "为空",
+
+"comment": "返回本对象内是否未记录有一个非0句柄值",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取句柄值",
+
+"comment": "返回对象中所保存的GDI对象句柄值,不存在返回0.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "图标对象类",
+"comment": "用作记录一个图标句柄(HICON)及对应的相关操作",
+"base class": "GDI资源类",
+"@文档": "\"category = \\\"资源.处理类\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "置图标句柄值",
+
+"comment": "将一个所指定图标句柄(HICON)置入本对象中.",
+
+"result comment": "返回所置入的句柄值是否不为NULL",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的句柄值",
+"comment": "提供所欲置入的图标句柄值(HICON),调用方必须确保该句柄值的正确性.\n注意: 该句柄的释放工作将交由本对象负责,调用方不再需要管理.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否自动释放",
+"comment": "指定是否需要自动释放所置入的句柄值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "载入图标资源",
+
+"comment": "载入所指定的图标资源,返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源\n为空资源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "图标对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的图标",
+"data type": "图标资源"
+   }
+
+]
+  },
+  {
+
+"method name": "载入图标文件",
+
+"comment": "载入所指定的图标文件,返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源\n为空资源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "图标对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的图标文件",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "位图对象类",
+"comment": "用作记录一个bmp位图句柄(HBITMAP)及对应的相关操作",
+"base class": "GDI资源类",
+"@文档": "\"category = \\\"资源.处理类\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "载入位图资源",
+
+"comment": "  载入所指定的位图资源(所支持格式: gif/bmp/emf/wmf/jpg//png/tif/ico),\n返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源为空资\n源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "位图对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的位图",
+"data type": "位图资源"
+   }
+
+]
+  },
+  {
+
+"method name": "载入位图文件",
+
+"comment": "  载入所指定的位图文件(所支持格式: gif/bmp/emf/wmf/jpg//png/tif/ico),\n返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源为空资\n源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "位图对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的位图文件",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "载入位图数据",
+
+"comment": "  载入所指定的位图数据(所支持格式: gif/bmp/emf/wmf/jpg//png/tif/ico),\n返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源为空资\n源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "位图对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的位图数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "置位图句柄值",
+
+"comment": "将一个所指定位图句柄(HBITMAP)置入本对象中.",
+
+"result comment": "返回所置入的句柄值是否不为NULL",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的句柄值",
+"comment": "提供所欲置入的位图句柄值(HBITMAP),调用方必须确保该句柄值的正确性.\n注意: 该句柄的释放工作将交由本对象负责,调用方不再需要管理.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否自动释放",
+"comment": "指定是否需要自动释放所置入的句柄值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "取图片尺寸",
+
+"comment": "返回当前位图的尺寸,单位像素.\n如果当前尚未设置有效位图,则返回零尺寸.",
+
+"data type": "尺寸类"
+  },
+  {
+
+"method name": "取图片数据",
+
+"comment": "获取当前位图所对应的BMP图片文件数据",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据存放字节集",
+"comment": "用作存放所获得的BMP图片文件数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出宽度",
+"comment": "  指定图片的输出宽度. 如果小于0,参数值指定的是最终图片输出宽度相对于\n当前图片宽度的百分比(最小为10%); 如果等于0,则按图片原宽度输出; 如果\n大于0,指定输出图片的绝对宽度.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输出高度",
+"comment": "  指定图片的输出高度. 如果小于0,参数值指定的是最终图片输出高度相对于\n当前图片高度的百分比(最小为10%); 如果等于0,则按图片原高度输出; 如果\n大于0,指定输出图片的绝对高度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "写图片文件",
+
+"comment": "获取当前位图所对应的BMP图片文件数据,并将其写出到所指定名称的文件.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲写到的文件名",
+"comment": "提供所欲写到的BMP文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出宽度",
+"comment": "  指定图片的输出宽度. 如果小于0,参数值指定的是最终图片输出宽度相对于\n当前图片宽度的百分比(最小为10%); 如果等于0,则按图片原宽度输出; 如果\n大于0,指定输出图片的绝对宽度.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输出高度",
+"comment": "  指定图片的输出高度. 如果小于0,参数值指定的是最终图片输出高度相对于\n当前图片高度的百分比(最小为10%); 如果等于0,则按图片原高度输出; 如果\n大于0,指定输出图片的绝对高度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "图片组对象类",
+"comment": "用作记录一个图片组句柄(HIMAGELIST)及对应的相关操作",
+"base class": "GDI资源类",
+"@文档": "\"category = \\\"资源.处理类\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "置图片组句柄值",
+
+"comment": "将一个所指定图片组句柄(HIMAGELIST)置入本对象中.",
+
+"result comment": "返回所置入的句柄值是否不为NULL",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的句柄值",
+"comment": "提供所欲置入的图片组句柄值(HIMAGELIST),调用方必须确保该句柄值的正确性.\n注意: 该句柄的释放工作将交由本对象负责,调用方不再需要管理.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否自动释放",
+"comment": "指定是否需要自动释放所置入的句柄值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "载入图片组资源",
+
+"comment": "载入所指定的图片组资源,返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源\n为空资源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "图片组对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的图片组",
+"data type": "图片组资源"
+   }
+
+]
+  },
+  {
+
+"method name": "载入图片组文件",
+
+"comment": "载入所指定的图片组文件,返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源\n为空资源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "图片组对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的图片组文件",
+"comment": "  提供用作保存图片组的图片文件名,该图片文件的格式必须符合\n\"图片组资源\"类中所说明的要求.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "载入图片组数据",
+
+"comment": "载入所指定的图片组数据,返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源\n为空资源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "图片组对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的图片组文件数据",
+"data type": "字节集类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "标准鼠标指针类型",
+"comment": "提供各种视窗系统标准的鼠标指针类型",
+"@文档": "\"category = \\\"资源.处理类.辅助类\\\"\"",
+"@常量类": "变整数",
+"constants": [
+  {
+
+"constant name": "标准箭头型",
+
+"initial value": "@(INT_P)IDC_ARROW"
+  },
+  {
+
+"constant name": "十字型",
+
+"initial value": "@(INT_P)IDC_CROSS"
+  },
+  {
+
+"constant name": "文本编辑型",
+
+"initial value": "@(INT_P)IDC_IBEAM"
+  },
+  {
+
+"constant name": "沙漏型",
+
+"initial value": "@(INT_P)IDC_WAIT"
+  },
+  {
+
+"constant name": "箭头及问号型",
+
+"initial value": "@(INT_P)IDC_HELP"
+  },
+  {
+
+"constant name": "箭头及沙漏型",
+
+"initial value": "@(INT_P)IDC_APPSTARTING"
+  },
+  {
+
+"constant name": "禁止符型",
+
+"initial value": "@(INT_P)IDC_NO"
+  },
+  {
+
+"constant name": "四向箭头型",
+
+"initial value": "@(INT_P)IDC_SIZEALL"
+  },
+  {
+
+"constant name": "北东箭头型",
+
+"initial value": "@(INT_P)IDC_SIZENESW"
+  },
+  {
+
+"constant name": "北南箭头型",
+
+"initial value": "@(INT_P)IDC_SIZENS"
+  },
+  {
+
+"constant name": "北西箭头型",
+
+"initial value": "@(INT_P)IDC_SIZENWSE"
+  },
+  {
+
+"constant name": "西东箭头型",
+
+"initial value": "@(INT_P)IDC_SIZEWE"
+  },
+  {
+
+"constant name": "向上箭头型",
+
+"initial value": "@(INT_P)IDC_UPARROW"
+  },
+  {
+
+"constant name": "手型",
+
+"initial value": "@(INT_P)IDC_HAND"
+  }
+]
+ },
+ {
+"class name": "鼠标指针对象类",
+"comment": "用作记录一个鼠标指针句柄(HCURSOR)及对应的相关操作",
+"base class": "GDI资源类",
+"@文档": "\"category = \\\"资源.处理类\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "置鼠标指针句柄值",
+
+"comment": "将一个所指定鼠标指针句柄(HCURSOR)置入本对象中.",
+
+"result comment": "返回所置入的句柄值是否不为NULL",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的句柄值",
+"comment": "提供所欲置入的鼠标指针句柄值(HCURSOR),调用方必须确保该句柄值的正确性.\n注意: 该句柄的释放工作将交由本对象负责,调用方不再需要管理.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否自动释放",
+"comment": "指定是否需要自动释放所置入的句柄值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "载入鼠标指针资源",
+
+"comment": "载入所指定的鼠标指针资源,返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源\n为空资源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "鼠标指针对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的鼠标指针",
+"data type": "鼠标指针资源"
+   }
+
+]
+  },
+  {
+
+"method name": "载入鼠标指针文件",
+
+"comment": "载入所指定的鼠标指针文件,返回所载入的句柄对象.",
+
+"result comment": "  成功所返回的句柄对象不为空(\"为空\"方法返回假),失败或所提供资源\n为空资源则为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "鼠标指针对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的鼠标指针文件",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取标准鼠标指针",
+
+"comment": "获取所指定的标准鼠标指针资源,返回所载入的句柄对象.",
+
+"result comment": "成功所返回的句柄对象不为空(\"为空\"方法返回假),失败为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "鼠标指针对象类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲载入的鼠标指针",
+"data type": "标准鼠标指针类型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "字体对象类",
+"comment": "用作记录一个字体句柄(HFONT)及对应的相关操作",
+"base class": "GDI资源类",
+"@文档": "\"category = \\\"资源.处理类\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "置字体句柄值",
+
+"comment": "将一个所指定字体句柄(HFONT)置入本对象中.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的句柄值",
+"comment": "提供所欲置入的字体句柄值(HFONT),调用方必须确保该句柄值的正确性.\n注意: 该句柄的释放工作将交由本对象负责,调用方不再需要管理.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否自动释放",
+"comment": "指定是否需要自动释放所置入的句柄值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "磅字体尺寸到像素",
+
+"comment": "将以磅为单位的字体尺寸转换为以屏幕像素为单位的尺寸",
+
+"result comment": "返回转换尺寸结果,以屏幕像素为单位.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲转换的字体尺寸",
+"comment": "本尺寸以磅为单位",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "像素字体尺寸到磅",
+
+"comment": "将以屏幕像素为单位的字体尺寸转换为以磅为单位的尺寸",
+
+"result comment": "返回转换尺寸结果,以磅为单位.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲转换的字体尺寸",
+"comment": "本尺寸以屏幕像素为单位",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "从描述文本创建字体",
+
+"comment": "从一个指定格式的字体描述文本创建字体",
+
+"result comment": "成功所返回的句柄对象不为空(\"为空\"方法返回假),失败为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "字体对象类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "字体描述文本",
+"comment": "  本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅,旋转角度单位为1/10度.\n  例子: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取字体描述文本",
+
+"comment": "  返回当前字体的描述文本.\n  描述文本的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例子: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "创建字体",
+
+"comment": "从指定参数创建并返回一个字体对象",
+
+"result comment": "成功所返回的句柄对象不为空(\"为空\"方法返回假),失败为空(\"为空\"方法返回真).",
+
+"static": true,
+
+"data type": "字体对象类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "字体名称",
+"comment": "提供所欲创建字体的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体尺寸",
+"comment": "提供所欲创建字体的尺寸,单位为磅.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否粗体",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否斜体",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否有下划线",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否有删除线",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "提供字体的旋转角度,单位为十分之一度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "取默认GUI字体",
+
+"comment": "返回操作系统所使用的默认GUI字体",
+
+"result comment": "所返回字体对象必定有效",
+
+"static": true,
+
+"data type": "字体对象类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取字体句柄",
+
+"comment": "返回本对象中所保存的字体句柄,如果为NULL,则返回操作系统所使用的默认GUI字体句柄.",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取文本尺寸",
+
+"comment": "返回使用本字体在屏幕上绘制指定文本时所需要的尺寸,单位像素.",
+
+"data type": "尺寸类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲检查文本",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+]
+}

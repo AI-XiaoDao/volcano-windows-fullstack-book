@@ -1,0 +1,370 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.COM基础\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"<OAIdl.h>\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "IStream",
+"methods": [
+  {
+"method name": "Seek",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "dlibMove",
+"comment": "/* [in] */ LARGE_INTEGER dlibMove,",
+"data type": "长整数"
+   },
+   {
+"parameter name": "dwOrigin",
+"comment": "/* [in] */ DWORD dwOrigin,",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出_libNewPosition",
+"comment": "/* [annotation] */  ULARGE_INTEGER *plibNewPosition",
+"data type": "长整数"
+   }
+]
+  },
+  {
+"method name": "SetSize",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "libNewSize",
+"comment": "/* [in] */ ULARGE_INTEGER libNewSize",
+"data type": "长整数"
+   }
+]
+  },
+  {
+�ꌤŝ"method name": "CopyTo",
+�ꌤŝ"data type": "整数",
+�ꌤŝ"@嵌入式方法": "\"\"",
+�ꌤŝ"parameters": [
+   {
+"parameter name": "pstm",
+"comment": "/* [annotation][unique][in] */ _In_  IStream *pstm,",
+"data type": "IStream"
+   },
+   {
+"parameter name": "cb",
+"comment": "/* [in] */ ULARGE_INTEGER cb,",
+"data type": "长整数"
+   },
+   {
+"parameter name": "输出_pcbRead",
+"comment": "/* [annotation] */ _Out_opt_  ULARGE_INTEGER *pcbRead,",
+"data type": "长整数"
+   },
+   {
+"parameter name": "输出_pcbWritten",
+"comment": "_Out_opt_  ULARGE_INTEGER *pcbWritten) ",
+"data type": "长整数"
+   }
+�ꌤŝ]
+  },
+  {
+
+"method name": "Commit",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "grfCommitFlags",
+"comment": " /* [in] */ DWORD grfCommitFlags",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "Revert",
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "LockRegion",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "libOffset",
+"comment": "/* [in] */ ULARGE_INTEGER libOffset,",
+"data type": "长整数"
+   },
+   {
+"parameter name": "cb",
+"comment": "/* [in] */ ULARGE_INTEGER cb,",
+"data type": "长整数"
+   },
+   {
+"parameter name": "dwLockType",
+"comment": "/* [in] */ DWORD dwLockType",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "UnlockRegion",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "libOffset",
+"comment": "/* [in] */ ULARGE_INTEGER libOffset,",
+"data type": "长整数"
+   },
+   {
+"parameter name": "cb",
+"comment": "/* [in] */ ULARGE_INTEGER cb,",
+"data type": "长整数"
+   },
+   {
+"parameter name": "dwLockType",
+"comment": "/* [in] */ DWORD dwLockType",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"@嵌入式方法": "\"\"""method name": "Clone",
+
+"@嵌入式方法": "\"\"""data type": "整数",
+
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "ppstm",
+"comment": " /* [out] */ __RPC__deref_out_opt IStream **ppstm",
+"data type": "IStream"
+   }
+
+"@嵌入式方法": "\"\""]
+  }
+]
+ },
+ {
+"class name": "变体型类型_常量类",
+"comment": "enum VARENUM\n    {\n        VT_EMPTY = 0,\n        VT_NULL = 1,\n        VT_I2 = 2,\n        VT_I4 = 3,\n        VT_R4 = 4,\n        VT_R8 = 5,\n        VT_CY = 6,\n        VT_DATE = 7,\n        VT_BSTR = 8,\n        VT_DISPATCH = 9,\n        VT_ERROR = 10,\n        VT_BOOL = 11,\n        VT_VARIANT = 12,\n        VT_UNKNOWN = 13,\n        VT_DECIMAL = 14,\n        VT_I1 = 16,\n        VT_UI1 = 17,\n        VT_UI2 = 18,\n        VT_UI4 = 19,\n        VT_I8 = 20,\n        VT_UI8 = 21,\n        VT_INT = 22,\n        VT_UINT = 23,\n        VT_VOID = 24,\n        VT_HRESULT = 25,\n        VT_PTR = 26,\n        VT_SAFEARRAY = 27,\n        VT_CARRAY = 28,\n        VT_USERDEFINED = 29,\n        VT_LPSTR = 30,\n        VT_LPWSTR = 31,\n        VT_RECORD = 36,\n        VT_INT_PTR = 37,\n        VT_UINT_PTR = 38,\n        VT_FILETIME = 64,\n        VT_BLOB = 65,\n        VT_STREAM = 66,\n        VT_STORAGE = 67,\n        VT_STREAMED_OBJECT = 68,\n        VT_STORED_OBJECT = 69,\n        VT_BLOB_OBJECT = 70,\n        VT_CF = 71,\n        VT_CLSID = 72,\n        VT_VERSIONED_STREAM = 73,\n        VT_BSTR_BLOB = 0xfff,\n        VT_VECTOR = 0x1000,\n        VT_ARRAY = 0x2000,\n        VT_BYREF = 0x4000,\n        VT_RESERVED = 0x8000,\n        VT_ILLEGAL = 0xffff,\n        VT_ILLEGALMASKED = 0xfff,\n        VT_TYPEMASK = 0xfff\n    } ;\ntypedef ULONG PROPID;",
+"@常量类": "短整数"
+ },
+ {
+"class name": "变体型_结构类",
+"comment": "struct tagVARIANT\n    {\n    union \n        {\n        struct __tagVARIANT\n            {\n            VARTYPE vt;\n            WORD wReserved1;\n            WORD wReserved2;\n            WORD wReserved3;\n            union \n                {\n                LONGLONG llVal;\n                LONG lVal;\n                BYTE bVal;\n                SHORT iVal;\n                FLOAT fltVal;\n                DOUBLE dblVal;\n                VARIANT_BOOL boolVal;\n                VARIANT_BOOL __OBSOLETE__VARIANT_BOOL;\n                SCODE scode;\n                CY cyVal;\n                DATE date;\n                BSTR bstrVal;\n                IUnknown *punkVal;\n                IDispatch *pdispVal;\n                SAFEARRAY *parray;\n                BYTE *pbVal;\n                SHORT *piVal;\n                LONG *plVal;\n                LONGLONG *pllVal;\n                FLOAT *pfltVal;\n                DOUBLE *pdblVal;\n                VARIANT_BOOL *pboolVal;\n                VARIANT_BOOL *__OBSOLETE__VARIANT_PBOOL;\n                SCODE *pscode;\n                CY *pcyVal;\n                DATE *pdate;\n                BSTR *pbstrVal;\n                IUnknown **ppunkVal;\n                IDispatch **ppdispVal;\n                SAFEARRAY **pparray;\n                VARIANT *pvarVal;\n                PVOID byref;\n                CHAR cVal;\n                USHORT uiVal;\n                ULONG ulVal;\n                ULONGLONG ullVal;\n                INT intVal;\n                UINT uintVal;\n                DECIMAL *pdecVal;\n                CHAR *pcVal;\n                USHORT *puiVal;\n                ULONG *pulVal;\n                ULONGLONG *pullVal;\n                INT *pintVal;\n                UINT *puintVal;\n                struct __tagBRECORD\n                    {\n                    PVOID pvRecord;\n                    IRecordInfo *pRecInfo;\n                    }  __VARIANT_NAME_4;\n                }  __VARIANT_NAME_3;\n            }  __VARIANT_NAME_2;\n        DECIMAL decVal;\n        }  __VARIANT_NAME_1;\n    } ;",
+"base class": "结构基础类",
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+
+"@虚拟方法": "可覆盖",
+
+"@输出名": "\"GetDumpString\"",
+
+"@视窗.后缀文本": "\"override\"",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "类型",
+
+"type": "property getter",
+
+"data type": "短整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "长整数值",
+}"type": "property getter",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "整数值",
+"@嵌入式方法": "\"\"""type": "property getter",
+"@嵌入式方法": "\"\"""data type": "整数",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+入式方法": "\"\"""method name": "Clone""method name": "字节值",
+入式方法": "\"\"""method name": "Clone""type": "property getter",
+入式方法": "\"\"""method name": "Clone""data type": "字节",
+入式方法": "\"\"""method name": "Clone""@嵌入式方法": "\"\""
+  },
+  {
+式方法": "\"\"""method name": "Clone""type": "property getter""method name": "短整数值",
+式方法": "\"\"""method name": "Clone""type": "property getter""type": "property getter",
+式方法": "\"\"""method name": "Clone""type": "property getter""data type": "短整数",
+式方法": "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "单精度小数值",
+
+"type": "property getter",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+方法": "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值",
+方法": "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""type": "property getter",
+方法": "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""data type": "小数",
+方法": "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "逻辑值",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "文本值",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "libOffset""method name": "取指针",
+ameter name": "libOffset""comment": "结构体内部保存着一些指针",
+ameter name": "libOffset""data type": "变整数",
+ameter name": "libOffset""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "类型",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+"method name": "长整数值",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "长整数"
+   }
+]
+  },
+  {
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""method name": "整数值",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""type": "property setter",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""]
+  },
+  {
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""method name": "字节值",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""type": "property setter",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "值",
+"data type": "字节"
+   }
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""]
+  },
+  {
+ "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值""method name": "短整数值",
+ "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值""type": "property setter",
+ "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值""parameters": [
+   {
+"parameter name": "值",
+"data type": "短整数"
+   }
+ "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值"]
+  },
+  {
+data type": "长整数""method name": "单精度小数值",
+data type": "长整数""type": "property setter",
+data type": "长整数""parameters": [
+   {
+"parameter name": "值",
+"data type": "小数"
+   }
+data type": "长整数"]
+  },
+  {
+\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值"]"method name": "双精度小数值",
+\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值"]"type": "property setter",
+\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值"]"parameters": [
+   {
+"parameter name": "值",
+"data type": "小数"
+   }
+\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值"]]
+  },
+  {
+"method name": "逻辑值",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+ "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值""method name": "文本值",
+ "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值""comment": "此方法可能会内存泄漏，要解决这个问题，必须封装一个Com文本类",
+ "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值""type": "property setter",
+ "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值""parameters": [
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+ "\"\"""method name": "Clone""type": "property getter""@嵌入式方法": "\"\"""method name": "双精度小数值"]
+  }
+]
+ },
+ {
+"class name": "免注册COM调用模板",
+"comment": "针对的tlh 和 tli 有这两个文件的",
+"@模板基础类": "真"
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

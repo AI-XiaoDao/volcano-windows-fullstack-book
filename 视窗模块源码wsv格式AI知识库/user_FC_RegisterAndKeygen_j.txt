@@ -1,0 +1,83 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.离线注册与授权\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "生成授权类",
+"comment": "这个是软件卖家使用的哦，一般用来生成序列号哦，然后发送给  验证授权类 来使用哦",
+"methods": [
+  {
+ 生成授权类"method name": "生成注册码_到期不能用",
+ 生成授权类"data type": "文本型",
+ 生成授权类"parameters": [
+   {
+"parameter name": "硬件信息",
+"data type": "文本型"
+   },
+   {
+"parameter name": "到期时间",
+"data type": "文本型"
+   }
+ 生成授权类]
+  },
+  {
+}"method name": "生成注册码_生成永久有效",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "硬件信息",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ 生成授权类"method name": "生成注册码_生成会员等级",
+ 生成授权类"data type": "文本型",
+ 生成授权类"parameters": [
+   {
+"parameter name": "硬件信息",
+"data type": "文本型"
+   },
+   {
+"parameter name": "会员等级",
+"comment": "等级自定义哦",
+"data type": "整数",
+"@默认值": "0"
+   }
+ 生成授权类]
+  }
+]
+ },
+ {
+"class name": "验证授权类",
+"comment": "一般用在软件上面，获得序列号，丢给卖家，然后卖家通过 生成授权类 生成一个注册码给 软件，软件验证是否有效",
+"methods": [
+  {
+
+"method name": "获取硬件信息",
+
+"data type": "文本型"
+  },
+  {
+成授权类]"method name": "验证注册码是否有效",
+成授权类]"data type": "逻辑型",
+成授权类]"parameters": [
+   {
+"parameter name": "注册码",
+"comment": "这个参数必须对应  生成授权类.生成注册码  开头的函数的返回值",
+"data type": "文本型"
+   }
+成授权类]]
+  },
+  {
+        "method name": "取会员等级",
+        "data type": "整数"
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

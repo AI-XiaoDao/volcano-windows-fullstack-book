@@ -1,0 +1,1659 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+问本程序中的接口需要引用模块"PIV基础类"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"PIV基础类"."package name": "火山.PIV基础类",
+问本程序中的接口需要引用模块"PIV基础类"."comment": "  源码: https://github.com/Tencent/MMKV\n  版本: v2.2.1 / 2025-04-25\n  MMKV是腾讯开源的一个基于内存映射文件的持久化键值表,底层的\n序列化/反序列化使用protobuf实现,性能高,稳定性强.\n  从2015年中至今在微信上使用,其性能和稳定性经过了时间的验证.\n  注意: mmkv从1.3.6起不再支持旧的编译器和XP系统.\n  如果编译中出现\"LNK2019 无法解析的外部符号\"等报错,那是因为\n你的编译器版本老了(特别是绿色版的编译环境),建议安装VS 2019或\nVS 2022.",
+问本程序中的接口需要引用模块"PIV基础类"."@视窗.外部头文件": "\"MMKV\\\\include\\\\piv_MMKV.hpp\"",
+问本程序中的接口需要引用模块"PIV基础类"."@视窗.外部库": "\"MMKV\\\\lib\\\\$(p)\\\\$(d)\\\\mmkv_$(crt).lib\"",
+问本程序中的接口需要引用模块"PIV基础类"."@视窗.附加编译参数": "\"cpp: /std:c++17\"",
+问本程序中的接口需要引用模块"PIV基础类"."@视窗.需求VS版本": "\"16-\"",
+问本程序中的接口需要引用模块"PIV基础类"."classes": [
+ {
+本程序中的接口需要引用模块"PIV基础类"."classes": [
+"class name": "MMKV键值表",
+本程序中的接口需要引用模块"PIV基础类"."classes": [
+"comment": "一个基于内存映射文件的持久化键值表.\n 1. MMKV的内存占用基本与表文件相同;\n 2. 单个表不能保存超过4GB的数据;\n注意: 如果出现\"LNK2019 无法解析的外部符号\"等编译报错,\n请更新你的VS编译器.",
+本程序中的接口需要引用模块"PIV基础类"."classes": [
+"@文档": "\"category = \\\"数据处理.MMKV键值表\\\"\"",
+本程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名": "\"PivMMKV\"",
+本程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类",
+本程序中的接口需要引用模块"PIV基础类"."classes": [
+"methods": [
+  {
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类""method name": "全局初始化",
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类""comment": "在使用MMKV的功能之前,必须先执行本方法.\n*此静态方法需要以类名调用.",
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类""static": true,
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类""parameters": [
+   {
+"parameter name": "根目录",
+"comment": "提供MMKV表文件的保存路径,如果留空则自动设置为程序的当前位置.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "日志级别",
+"comment": "指定MMKV的日志级别,默认的\"无\"表示关闭日志记录;\n开启后会自动在控制台中输出日志,直到\"MMKV日志事件类\"接管日志记录的处理.",
+"data type": "MMKV日志级别",
+"@默认值": "MMKV日志级别.警告"
+   }
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类"]
+  },
+  {
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类""method name": "全局清理",
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类""comment": "可以在程序结束前执行本方法,但不执行也完全没问题.\n*在火山中不建议使用,此静态方法需要以类名调用.",
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类""static": true,
+程序中的接口需要引用模块"PIV基础类"."classes": [
+"@别名类型": "本地类""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取根目录",
+
+"comment": "获取全局MMKV表文件的保存目录,根目录在\"全局初始化\"时设置.\n*此静态方法需要以类名调用.",
+
+"result comment": "返回的路径尾部不带路径字符,若未初始化会返回空文本.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "备份表",
+}"comment": "将来源目录中指定表名的MMKV实例备份到目标目录.\n*此静态方法需要以类名调用.",
+}"result comment": "返回是否备份成功.",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "表名称",
+"comment": "所欲备份的键值表名称(mmapID)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标目录",
+"comment": "存放备份文件的目录路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "来源目录",
+"comment": "所欲备份的来源目录路径,即表文件所在的文件夹;\n如果为空则从MMKV的全局\"根目录\"备份数据.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+
+"method name": "恢复表",
+
+"comment": "将来源目录中指定表名的MMKV实例恢复到目标目录.\n*此静态方法需要以类名调用.",
+
+"result comment": "返回是否恢复成功.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "表名称",
+"comment": "所欲恢复的键值表名称(mmapID)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "来源目录",
+"comment": "所欲恢复的表文件所处的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标目录",
+"comment": "恢复文件的目标路径;\n如果为空则恢复文件到MMKV的全局\"根目录\"中.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "备份所有表",
+
+"comment": "将来源目录的所有MMKV键值表实例备份到目标目录.\n*此静态方法需要以类名调用.",
+
+"result comment": "返回成功备份的表数量.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "目标目录",
+"comment": "存放备份文件的目录路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "来源目录",
+"comment": "所欲备份的来源目录路径,即表文件所在的文件夹;\n如果为空则从MMKV的全局\"根目录\"备份数据.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+}"method name": "恢复所有表",
+}"comment": "将来源目录的所有MMKV键值表实例恢复到目标目录.\n*此静态方法需要以类名调用.",
+}"result comment": "返回成功恢复的表数量.",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "来源目录",
+"comment": "所欲恢复的表文件所处的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标目录",
+"comment": "恢复文件的目标路径;\n如果为空则恢复文件到MMKV的全局\"根目录\"中.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+}"method name": "校验表文件",
+}"comment": "检查指定的MMKV键值表文件是否有效.\n*此静态方法需要以类名调用.",
+}"result comment": "返回真表示文件有效,请勿使用本方法检测不存在的表文件,其返回结果未定义.",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "表名称",
+"comment": "所欲校验的键值表名称(mmapID)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "相对路径",
+"comment": "表文件所在的路径,如果为空则使用到MMKV的全局\"根目录\".",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+
+"method name": "删除表文件",
+
+"comment": "删除指定的MMKV键值表文件,包括数据文件和元文件(.crc).\n注: 如果当前表被打开,它将被自动关闭.\n*此静态方法需要以类名调用.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "表名称",
+"comment": "所欲删除的键值表名称(mmapID)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "相对路径",
+"comment": "表文件所在的路径,如果为空则使用到MMKV的全局\"根目录\".",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+"method name": "表是否存在",
+"comment": "检查指定名称的MMKV键值表文件是否已经存在.\n*此静态方法需要以类名调用.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+"parameters": [
+   {
+"parameter name": "表名称",
+"comment": "所欲检查的键值表名称(mmapID)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "相对路径",
+"comment": "表文件所在的路径,如果为空则使用到MMKV的全局\"根目录\".",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+}"method name": "打开",
+}"comment": "打开一个MMKV键值表,指定的表名不存在时会自动创建.\n 1. 调用本方法之前建议执行\"MMKV键值表.全局初始化\";\n 2. 如果未全局初始化,将自动使用默认值进行初始化;\n 3. 必须打开表后才能使用本类的其他动态方法;\n 4. 请慎重使用加密功能,因为无法判断密钥是否正确;\n 5. 如果用错误的密钥打开并写入了数据,之前的内容将被全部覆盖!!!",
+}"result comment": "返回-1表示打开表失败;\n1表示成功打开了一张有内容(键值对数量大于1)的旧表;\n0表示可能创建了一张新表,或者打开了一张没有内容的旧表,又或者使用了错误的密钥(这种情况必须慎重).",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "表名称",
+"comment": "键值表的名称(mmapID),留空时打开默认的表名\"mmkv.default\";\n提供的表名不存在时会自动创建,存在时会尝试打开;\n建议使用英文表名,因为中文会导致输出到控制台的日志乱码.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "模式",
+"comment": "请提供\"MMKV模式\"中的一或多个常量的\"位或\"组合值.\n默认是单进程模式,一张表只能被一个进程打开;\n多进程模式可以多个程序同时读写同一张表.",
+"data type": "MMKV模式",
+"@默认值": "MMKV模式.单进程"
+   },
+   {
+"parameter name": "密钥",
+"comment": "创建新表时提供密钥会加密键值表的内容,留空表示不加密;\n密钥长度不能大于16字节(超过会自动截断).\n若是打开旧表则必须提供正确的密钥,没加密的也必须留空;\n密钥错误时仍会打开表,但无法读取键值,如果置入了新的键值;\n这个表的内容将完全被新内容替换,之前的数据将无法找回,请慎重判断!!!",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "根路径",
+"comment": "留空时使用\"全局初始化\"设置的根目录,不为空则可以指定另一个保存路径;\n可以用绝对路径或相对路径(以程序的当前路径为根).",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+}"method name": "关闭",
+}"comment": "关闭已打开的表",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+}]
+  },
+  {
+}"method name": "导入",
+}"comment": "将另一个表的所有键值表导入到当前表,返回导入的数量.",
+}"static": true,
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "欲导入的表",
+"data type": "MMKV键值表"
+   }
+}]
+  },
+  {
+
+"method name": "取表名称",
+
+"comment": "获取当前所打开的键值表名称(mmapID)",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+
+]
+  },
+  {
+"method name": "是否多进程",
+"comment": "返回当前打开表的方式是否为多进程模式",
+"result comment": "返回真表示是多进程模式",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+]
+  },
+  {
+"method name": "是否只读",
+"comment": "返回当前打开表的方式是否为只读模式",
+"result comment": "返回真表示是多只读模式",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+]
+  },
+  {
+"method name": "取密钥",
+"comment": "获取当前MMKV键值表使用的密钥",
+"result comment": "返回空表示未加密",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+]
+  },
+  {
+"method name": "更改密钥",
+"comment": "提供一个密钥,可以将未加密的表变成加密的;\n若改为空密钥,也可以将一个加密的键值表变成不加密;\n当然本方法也可以用来更改现有的密钥.",
+"result comment": "返回更改密钥是否成功",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "新密钥",
+"comment": "所欲更改的新密钥,提供空密钥可以将MMKV键值表变成不加密.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "检查更改密钥",
+data type": "文本型""comment": "仅用于更改密钥,不会加密或解密任何数据.\n通常用于多进程模式,在其他进程更改了密钥之后调用本方法.",
+data type": "文本型""result comment": "返回更改密钥是否成功",
+data type": "文本型""static": true,
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "新密钥",
+"comment": "所欲检查更改的密钥",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "取总大小",
+
+"comment": "获取当前MMKV键值表文件占用空间的字节大小",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "取实际大小",
+"parameters": [
+"comment": "获取当前MMKV键值表的有效数据内容字节大小",
+"parameters": [
+"static": true,
+"parameters": [
+"data type": "变整数",
+"parameters": [
+"@嵌入式方法": "\"\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+"parameters": [
+]
+  },
+  {
+"method name": "释放空间",
+"comment": "MMKV在删除键值对后,不会释放对应的空间,调用本方法可以释放被占用的对应磁盘空间.\n这些多余空间会被新的键值对重新使用,一般无需特意释放.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+]
+  },
+  {
+data type": "MMKV键值表""method name": "清理缓存",
+data type": "MMKV键值表""comment": "如果遇到内存不足等警告时请调用本方法清理内存缓存;\n但之后仍会重新从文件中加载所有键值对.",
+data type": "MMKV键值表""static": true,
+data type": "MMKV键值表""@嵌入式方法": "\"\"",
+data type": "MMKV键值表""parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "保留空间",
+"comment": "是否在删除所有键后不改变文件大小,可以加快执行速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "MMKV键值表"]
+  },
+  {
+ta type": "MMKV键值表"]"method name": "执行同步",
+ta type": "MMKV键值表"]"comment": "一般不需要执行本方法,除非你担心(设备)电池不足.",
+ta type": "MMKV键值表"]"static": true,
+ta type": "MMKV键值表"]"@嵌入式方法": "\"\"",
+ta type": "MMKV键值表"]"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "同步模式",
+"comment": "假为异步模式",
+"data type": "逻辑型"
+   }
+ta type": "MMKV键值表"]]
+  },
+  {
+ta type": "MMKV键值表"]"method name": "锁定",
+ta type": "MMKV键值表"]"comment": "锁定当前键值表,不允许其他进程修改.\n*仅在多进程模式下使用.",
+ta type": "MMKV键值表"]"static": true,
+ta type": "MMKV键值表"]"@嵌入式方法": "\"\"",
+ta type": "MMKV键值表"]"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+ta type": "MMKV键值表"]]
+  },
+  {
+ta type": "MMKV键值表"]"method name": "解锁",
+ta type": "MMKV键值表"]"comment": "解锁当前键值表,允许其他进程修改同一张表.\n*仅在多进程模式下使用.",
+ta type": "MMKV键值表"]"static": true,
+ta type": "MMKV键值表"]"@嵌入式方法": "\"\"",
+ta type": "MMKV键值表"]"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+ta type": "MMKV键值表"]]
+  },
+  {
+ta type": "MMKV键值表"]"method name": "尝试锁定",
+ta type": "MMKV键值表"]"comment": "尝试锁定当前键值表,如果表已经被其他进程锁定将返回假.\n*仅在多进程模式下使用.",
+ta type": "MMKV键值表"]"static": true,
+ta type": "MMKV键值表"]"data type": "逻辑型",
+ta type": "MMKV键值表"]"@嵌入式方法": "\"\"",
+ta type": "MMKV键值表"]"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+ta type": "MMKV键值表"]]
+  },
+  {
+a type": "MMKV键值表"]"data type": "逻辑型""method name": "检查内容更改",
+a type": "MMKV键值表"]"data type": "逻辑型""comment": "检查内容是否被其他进程修改,本方法需要配合\"MMKV日志事件类\"使用;\n因为\"内容更改\"事件不是实时触发,如果其他进程修改过内容,调用本方法将立即触发事件.",
+a type": "MMKV键值表"]"data type": "逻辑型""static": true,
+a type": "MMKV键值表"]"data type": "逻辑型""@嵌入式方法": "\"\"",
+a type": "MMKV键值表"]"data type": "逻辑型""parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+a type": "MMKV键值表"]"data type": "逻辑型"]
+  },
+  {
+}"method name": "置入数值",
+}"comment": "将提供的数值设置为指定键名的键值",
+}"result comment": "返回是否成功",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲置入值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供要置入的数值",
+"@匹配类型": "通用数值型"
+   },
+   {
+"parameter name": "有效期",
+"comment": "设置所置入键值的有效期,单位为秒,本参数在\"启用自动过期\"后才生效.\n超过有效期后,置入的键值将在下一次回写时删除;\n0 表示永不过期; -1 表示使用\"启用自动过期\"时设置的全局有效期.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+}"method name": "置入逻辑值",
+}"comment": "将提供的逻辑值设置为指定键名的键值",
+}"result comment": "返回是否成功",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲置入值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供要置入的逻辑值",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "有效期",
+"comment": "设置所置入键值的有效期,单位为秒,本参数在\"启用自动过期\"后才生效.\n超过有效期后,置入的键值将在下一次回写时删除;\n0 表示永不过期; -1 表示使用\"启用自动过期\"时设置的全局有效期.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+"method name": "置入文本",
+"comment": "将提供的火山文本型设置为指定键名的键值.\n注: 本方法不会进行文本编码转换.",
+"result comment": "返回是否成功",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲置入值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供要置入的文本值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "有效期",
+"comment": "设置所置入键值的有效期,单位为秒,本参数在\"启用自动过期\"后才生效.\n超过有效期后,置入的键值将在下一次回写时删除;\n0 表示永不过期; -1 表示使用\"启用自动过期\"时设置的全局有效期.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+ }"method name": "置入文本U",
+ }"comment": "将提供的UTF-8文本设置为指定键名的键值",
+ }"result comment": "返回是否成功",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲置入值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供要置入的UTF-8文本值,支持类型:\n  标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "有效期",
+"comment": "设置所置入键值的有效期,单位为秒,本参数在\"启用自动过期\"后才生效.\n超过有效期后,置入的键值将在下一次回写时删除;\n0 表示永不过期; -1 表示使用\"启用自动过期\"时设置的全局有效期.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+"method name": "置入字节集",
+"comment": "将提供的字节集设置为指定键名的键值",
+"result comment": "返回是否成功",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲置入值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供要置入的键值",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "有效期",
+"comment": "设置所置入键值的有效期,单位为秒,本参数在\"启用自动过期\"后才生效.\n超过有效期后,置入的键值将在下一次回写时删除;\n0 表示永不过期; -1 表示使用\"启用自动过期\"时设置的全局有效期.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+@默认值": "-1""method name": "置入对象",
+@默认值": "-1""comment": "将提供的对象设置为指定键名的键值.\n本方法使用了对象序列化,可以置入对象中的成员值;",
+@默认值": "-1""result comment": "返回是否成功",
+@默认值": "-1""static": true,
+@默认值": "-1""data type": "逻辑型",
+@默认值": "-1""@嵌入式方法": "\"\"",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲置入值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供要置入的对象类",
+"data type": "对象类"
+   },
+   {
+"parameter name": "有效期",
+"comment": "设置所置入键值的有效期,单位为秒,本参数在\"启用自动过期\"后才生效.\n超过有效期后,置入的键值将在下一次回写时删除;\n0 表示永不过期; -1 表示使用\"启用自动过期\"时设置的全局有效期.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "-1"]
+  },
+  {
+认值": "-1"]"method name": "置入文本数组",
+认值": "-1"]"comment": "将提供的文本数组设置为指定键名的键值",
+认值": "-1"]"result comment": "返回是否成功",
+认值": "-1"]"static": true,
+认值": "-1"]"data type": "逻辑型",
+认值": "-1"]"@嵌入式方法": "\"\"",
+认值": "-1"]"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲置入值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供要置入的文本数组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "有效期",
+"comment": "设置所置入键值的有效期,单位为秒,本参数在\"启用自动过期\"后才生效.\n超过有效期后,置入的键值将在下一次回写时删除;\n0 表示永不过期; -1 表示使用\"启用自动过期\"时设置的全局有效期.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+认值": "-1"]]
+  },
+  {
+
+"method name": "置入文本数组U",
+
+"comment": "将提供的UTF-8文本数组设置为指定键名的键值",
+
+"result comment": "返回是否成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲置入值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供要置入的文本数组",
+"data type": "标准文本数组类U"
+   },
+   {
+"parameter name": "有效期",
+"comment": "设置所置入键值的有效期,单位为秒,本参数在\"启用自动过期\"后才生效.\n超过有效期后,置入的键值将在下一次回写时删除;\n0 表示永不过期; -1 表示使用\"启用自动过期\"时设置的全局有效期.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "取逻辑值",
+
+"comment": "获取指定键名中的逻辑值",
+
+"result comment": "成功时返回获取到的值,否则返回提供的默认值.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "获取失败时将返回此处的默认值",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否存在",
+"comment": "返回指定的键名是否存在",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+}"method name": "取整数",
+}"comment": "获取指定键名中的整数值",
+}"result comment": "成功时返回获取到的值,否则返回提供的默认值.",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "获取失败时将返回此处的默认值",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否存在",
+"comment": "返回指定的键名是否存在",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+}"method name": "取长整数",
+}"comment": "获取指定键名中的长整数值",
+}"result comment": "成功时返回获取到的值,否则返回提供的默认值.",
+}"static": true,
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "获取失败时将返回此处的默认值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否存在",
+"comment": "返回指定的键名是否存在",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+"method name": "取无符号整数",
+"comment": "获取指定键名中的无符号整数值",
+"result comment": "成功时返回获取到的值,否则返回提供的默认值.",
+"static": true,
+"data type": "无符号整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "获取失败时将返回此处的默认值",
+"data type": "无符号整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否存在",
+"comment": "返回指定的键名是否存在",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+"method name": "取无符号长整数",
+"comment": "获取指定键名中的无符号长整数值",
+"result comment": "成功时返回获取到的值,否则返回提供的默认值.",
+"static": true,
+"data type": "无符号长整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "获取失败时将返回此处的默认值",
+"data type": "无符号长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否存在",
+"comment": "返回指定的键名是否存在",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+"method name": "取小数",
+"comment": "获取指定键名中的小数值",
+"result comment": "成功时返回获取到的值,否则返回提供的默认值.",
+"static": true,
+"data type": "小数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "获取失败时将返回此处的默认值",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否存在",
+"comment": "返回指定的键名是否存在",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+ }"method name": "取单精度小数",
+ }"comment": "获取指定键名中的单精度小数值",
+ }"result comment": "成功时返回获取到的值,否则返回提供的默认值.",
+ }"static": true,
+ }"data type": "单精度小数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "获取失败时将返回此处的默认值",
+"data type": "单精度小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否存在",
+"comment": "返回指定的键名是否存在",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+data type": "单精度小数""method name": "取文本值",
+data type": "单精度小数""comment": "获取指定键名中的文本值",
+data type": "单精度小数""result comment": "返回获取到的文本值,键名不存在或值类型不正确时返回空文本.",
+data type": "单精度小数""static": true,
+data type": "单精度小数""data type": "文本型",
+data type": "单精度小数""@嵌入式方法": "\"\"",
+data type": "单精度小数""parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   }
+data type": "单精度小数"]
+  },
+  {
+
+"method name": "取文本值U",
+
+"comment": "获取指定键名中的UTF-8文本值",
+
+"result comment": "返回获取到的文本值,键名不存在或值类型不正确时返回空文本.",
+
+"static": true,
+
+"data type": "标准文本类U",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+ameter name": "键名""method name": "取字节集",
+ameter name": "键名""comment": "获取指定键名中的字节集值",
+ameter name": "键名""result comment": "返回获取到的字节集,键名不存在或值类型不正确时返回空字节集.",
+ameter name": "键名""static": true,
+ameter name": "键名""data type": "字节集类",
+ameter name": "键名""@嵌入式方法": "\"\"",
+ameter name": "键名""parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   }
+ameter name": "键名"]
+  },
+  {
+"method name": "取文本数组",
+"comment": "获取指定键名中的文本数组内容",
+"result comment": "返回是否成功",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "取回值",
+"comment": "获取的文本数组存放在此参数中",
+"data type": "文本数组类"
+   }
+]
+  },
+  {
+meter name": "键名""result comment": "返回获取到的字节集,键名不存在或值类型不正确时返回空字节集.""method name": "取文本数组U",
+meter name": "键名""result comment": "返回获取到的字节集,键名不存在或值类型不正确时返回空字节集.""comment": "获取指定键名中的UTF-8文本数组",
+meter name": "键名""result comment": "返回获取到的字节集,键名不存在或值类型不正确时返回空字节集.""result comment": "返回是否成功",
+meter name": "键名""result comment": "返回获取到的字节集,键名不存在或值类型不正确时返回空字节集.""static": true,
+meter name": "键名""result comment": "返回获取到的字节集,键名不存在或值类型不正确时返回空字节集.""data type": "逻辑型",
+meter name": "键名""result comment": "返回获取到的字节集,键名不存在或值类型不正确时返回空字节集.""@嵌入式方法": "\"\"",
+meter name": "键名""result comment": "返回获取到的字节集,键名不存在或值类型不正确时返回空字节集.""parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "取回值",
+"comment": "获取的文本数组存放在此参数中",
+"data type": "标准文本数组类U"
+   }
+meter name": "键名""result comment": "返回获取到的字节集,键名不存在或值类型不正确时返回空字节集."]
+  },
+  {
+
+"method name": "取出文本",
+
+"comment": "将指定键名中的文本数据获取到提供的文本型中",
+
+"result comment": "返回是否成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "取回值",
+"comment": "获取的文本值存放在此参数中",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "取出文本U",
+"comment": "将指定键名中的UTF-8文本值获取到提供的变量中",
+"result comment": "返回获取到的文本值,键名不存在或值类型不正确时返回空文本.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "取回值",
+"comment": "获取的文本值存放在此参数中",
+"data type": "标准文本类U"
+   }
+]
+  },
+  {
+ }"method name": "取出字节集",
+ }"comment": "将指定键名中的数据获取到提供的字节集中",
+ }"result comment": "返回是否成功",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "取回值",
+"comment": "获取的字节集存放在此参数中",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+ }"method name": "取出对象",
+ }"comment": "获取指定键名中的对象值.\n注: 本方法使用了对象序列化,请保证对象的类型跟\"置对象\"时的一样,否则结果不可预料.",
+ }"result comment": "返回是否成功",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取出值的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "取回对象",
+"comment": "获取的对象存放在此参数中",
+"data type": "对象类"
+   }
+ }]
+  },
+  {
+ }"method name": "取成员数",
+ }"comment": "获取当前MMKV键值表的键值对数量",
+ }"result comment": "返回0表示表的内容为空,或者\"打开\"表时提供了错误的密钥.",
+ }"static": true,
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "过滤到期键值",
+"comment": "是否过滤掉已经到期的键值对",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+
+"method name": "取键值对大小",
+
+"comment": "获取指定键值对实际占用的空间大小",
+
+"result comment": "键值对不存在时返回0.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "提供所欲取实际大小的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值实际大小",
+"comment": "为真时只返回值内容占用的实际大小;\n为假时返回整个键值对的实际大小.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+"method name": "是否存在键",
+"comment": "判断当前MMKV键值表是否存在指定键名",
+"result comment": "返回真表示键名存在.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲判断是否存在的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   }
+]
+  },
+  {
+}"method name": "取所有键名",
+}"comment": "获取当前MMKV键值表的所有键名",
+}"result comment": "返回键名的数量,跟\"取成员数\"的值一样.",
+}"static": true,
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名数组",
+"comment": "获取到的键名数组将存放在此文本数组类中.",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "过滤到期键名",
+"comment": "是否过滤掉已经过期的键值对",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+ }"method name": "取所有键名U",
+ }"comment": "获取当前MMKV键值表的所有键名",
+ }"static": true,
+ }"data type": "标准文本数组类U",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "过滤到期键名",
+"comment": "是否过滤掉已经过期的键值对",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+]"method name": "删除键值对",
+]"comment": "删除指定键名的键值对",
+]"static": true,
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲删除的键名,支持类型:\n 标准文本类U、文本视图类U、UTF8字节集、*文本型",
+"@匹配类型": "通用型"
+   }
+]]
+  },
+  {
+}"method name": "批量删除键值对",
+}"comment": "删除文本数组中所有指定键名的键值对",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名数组",
+"comment": "所欲删除的键名数组",
+"data type": "文本数组类"
+   }
+}]
+  },
+  {
+"method name": "批量删除键值对U",
+"comment": "删除文本数组中所有指定键名的键值对",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "键名数组",
+"comment": "所欲删除的键名数组",
+"data type": "标准文本数组类U"
+   }
+]
+  },
+  {
+ }"method name": "清空",
+ }"comment": "清空当前键值表,同时回收表文件占用的空间.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "保留空间",
+"comment": "是否在删除所有键后不改变文件大小,可以加快执行速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+@默认值": "假""method name": "启用自动过期",
+@默认值": "假""comment": "启用键值自动过期的功能,启用后支持在置入键值时设置有效期.\n超过有效期的键值将在下一次回写时自动删除.",
+@默认值": "假""static": true,
+@默认值": "假""data type": "逻辑型",
+@默认值": "假""@嵌入式方法": "\"\"",
+@默认值": "假""parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   },
+   {
+"parameter name": "有效期",
+"comment": "所有键值通用的有效期,单位为秒.\n所有创建或修改时间超过了指定秒数的键值,将在下一次完全回写时删除.\n为0表示没有通用的有效期,每个键值都有自己的有效期.",
+"data type": "整数"
+   }
+@默认值": "假"]
+  },
+  {
+}"method name": "禁用自动过期",
+}"comment": "禁用键值自动过期的功能",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本键值表",
+"data type": "MMKV键值表"
+   }
+}]
+  }
+本程序中的接口需要引用模块"PIV基础类"."classes": [
+]
+ },
+ {
+序中的接口需要引用模块"PIV基础类"."classes": [
+]"class name": "MMKV日志事件类",
+序中的接口需要引用模块"PIV基础类"."classes": [
+]"comment": "  MMKV默认将日志打印到控制台,并不会输出日志文件,\n定义本事件会立即接管MMKV的日志记录处理.\n  全局只能有一个实例能生效,以最后定义的为准.",
+序中的接口需要引用模块"PIV基础类"."classes": [
+]"@文档": "\"category = \\\"数据处理.MMKV键值表\\\"\"",
+序中的接口需要引用模块"PIV基础类"."classes": [
+]"methods": [
+  {
+
+"method name": "置日志级别",
+
+"comment": "设置MMKV的全局日志记录级别.\n低于该级别的日志不会被输出,设置为\"无\"时关闭日志记录.\n\"MMKV键值表.全局初始化\"时也可以设置日志级别.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "日志级别",
+"comment": "所欲设置的日志级别",
+"data type": "MMKV日志级别"
+   }
+
+]
+  },
+  {
+"method name": "内容更改",
+"comment": "当键值表的内容被其他进程改变时触发本事件,仅在多进程模式下有效.\n本事件的实时性无法得到保证,若内容已被其他进程修改,调用MMKV实例\n的\"检查内容更改\"才会立即触发事件.",
+"result comment": "此返回值无意义.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "表名称",
+"comment": "被其他进程更改的键值表名称(mmapID)",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "错误处理",
+ }"comment": "遇到错误时触发本事件",
+ }"result comment": "遇到错误时返回0表示丢弃所有数据(此为默认处理方式);\n返回1将尝试从文件中恢复可用数据.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "表名称",
+"comment": "出错的键值表名称(mmapID)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "错误类型",
+"comment": "错误的类型,只能是下列两个值之一:\n0: 循环冗余校验码(CRC)出错\n1: 获取文件长度失败",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "日志记录处理",
+
+"comment": "MMKV产生日志时将触发本事件.\nMMKV默认将日志打印到控制台,并不会输出日志文件,启用本事件后改为在此处理日志记录.\n例如你可以在此使用\"格式日志类.加入来源日志\"输出日志文件.",
+
+"result comment": "此返回值无意义.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "日志级别",
+"comment": "这条日志的记录级别,级别为\"无\"时会关闭日志记录.",
+"data type": "MMKV日志级别"
+   },
+   {
+"parameter name": "源文件名",
+"comment": "产生这条日志的MMKV项目源码文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "行号",
+"comment": "源文件中的具体行号,必须用相同版本的源码来对比.",
+"data type": "整数"
+   },
+   {
+"parameter name": "函数名称",
+"comment": "产生这条日志的函数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "消息内容",
+"comment": "日志的消息内容",
+"data type": "文本型"
+   }
+
+]
+  }
+序中的接口需要引用模块"PIV基础类"."classes": [
+]]
+ },
+ {
+"class name": "MMKV日志级别",
+"comment": "MMKV键值表的日志记录级别",
+"@文档": "\"category = \\\"数据处理.MMKV键值表.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "调试",
+
+"comment": "仅用于调试版,发布版本中不可用",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "信息",
+
+"comment": "默认级别",
+
+"initial value": "1"
+  },
+  {
+}"constant name": "警告",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "错误",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "无",
+
+"comment": "用于禁止所有日志消息",
+
+"initial value": "4"
+  }
+]
+ },
+ {
+
+"class name": "MMKV模式",
+
+"comment": "MMKV键值表的打开模式",
+
+"@文档": "\"category = \\\"数据处理.MMKV键值表.辅助类\\\"\"",
+
+"@别名": "\"MMKVMode\"",
+
+"@别名类型": "本地整数基本类型",
+
+"@有效值范围": "\"\"",
+
+"constants": [
+  {
+"initial value": "3""constant name": "单进程",
+"initial value": "3""comment": "MMKV键值表会被独占,只有当前进程能读写.",
+"initial value": "3""data type": "整数",
+"initial value": "3""initial value": "@MMKVMode::MMKV_SINGLE_PROCESS"
+  },
+  {
+
+"constant name": "多进程",
+
+"comment": "多个进程可以同时读写同一个MMKV键值表.",
+
+"data type": "整数",
+
+"initial value": "@MMKVMode::MMKV_MULTI_PROCESS"
+  },
+  {
+
+"constant name": "只读",
+
+"comment": "以只读模型打开MMKV键值表,注意在此模式下请勿置入键值,否则会导致程序崩溃.",
+
+"data type": "整数",
+
+"initial value": "@MMKVMode::MMKV_READ_ONLY"
+  }
+
+]
+ }
+问本程序中的接口需要引用模块"PIV基础类".]
+}

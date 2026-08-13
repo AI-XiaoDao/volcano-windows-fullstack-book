@@ -1,0 +1,2747 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+{
+ "TextAngle，文字的显示角度，以度为计量单位，逆时针方向为正。""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ "TextAngle，文字的显示角度，以度为计量单位，逆时针方向为正。""package name": "火山.锐浪",
+ "TextAngle，文字的显示角度，以度为计量单位，逆时针方向为正。""comment": "本文件放置包含基类对象和基础对象：\n1、基类对象：IGR对象、部件框、单元格、列格、节、报表节、分组节、文字框。\n2、基础对象：边框、报表字体、画笔、报表图片、文本格式。",
+ "TextAngle，文字的显示角度，以度为计量单位，逆时针方向为正。""@文档": "\"category = \\\"基础对象\\\"\"",
+ "TextAngle，文字的显示角度，以度为计量单位，逆时针方向为正。""classes": [
+ {
+ "TextFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""class name": "IGR对象",
+ "TextFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""comment": "Object，基类，基础对象，全部对象由此展开。",
+ "TextFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""base class": "COM对象类",
+ "TextFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""methods": [
+  {
+"TextFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""comment": "Object，基类，基础对象，全部对象由此展开。""method name": "取对象",
+"TextFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""comment": "Object，基类，基础对象，全部对象由此展开。""data type": "COM对象类"
+  },
+  {
+tFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""comment": "Object，基类，基础对象，全部对象由此展开。""method name": "取对象""method name": "置对象",
+tFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""comment": "Object，基类，基础对象，全部对象由此展开。""method name": "取对象""data type": "逻辑型",
+tFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""comment": "Object，基类，基础对象，全部对象由此展开。""method name": "取对象""parameters": [
+   {
+"parameter name": "对象",
+"data type": "COM对象类"
+   }
+tFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。""comment": "Object，基类，基础对象，全部对象由此展开。""method name": "取对象"]
+  },
+  {
+ameter name": "对象""method name": "标识",
+ameter name": "对象""type": "property getter",
+ameter name": "对象""data type": "文本型"
+  },
+  {
+"method name": "标识",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "标识文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "对象值复制",
+
+"comment": "Assign，将同类型的参数对象赋值到本对象。",
+
+"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+
+]
+  }
+ "TextFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。"]
+ },
+ {
+ameter name": "标识文本""class name": "部件框",
+ameter name": "标识文本""comment": "Control，基类，各种部件框的基接口，定义各种类型的部件框所具有的共同属性与方法。\n部件框是对报表中最基本可显示单元的统称，部件框在其父容器中占据一个矩形区域，部件框的内容输出在此矩形区域中。\n部件框包括背景填充方式与背景色、边框输出模式、以及具体类型的部件框的输出前景色。\n\n部件框几种布局方式之间的关系：\n按照优先级从高到底的顺序排列：对齐列-〉停靠-〉锚定-〉居中。\n就是说在几种布局方式之间如果存在逻辑条件冲突时，优先按照高级别的布局方式调整部件框的大小与位置。\n例如，将部件框的停靠方式设定为停靠左边缘（grdsLeft），而居中方式为水平居中（grcsHorizontal），则部件框将采用停靠左边缘的停靠方式，而忽略水平居中的居中方式。",
+ameter name": "标识文本""base class": "COM对象类",
+ameter name": "标识文本""methods": [
+  {
+}"method name": "对象值复制",
+}"comment": "Assign，将同类型的参数对象赋值到本对象。",
+}"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+}]
+  },
+  {
+ }"method name": "名称",
+ }"comment": "Name，部件框的名称，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。",
+ }"type": "property getter",
+ }"data type": "文本型"
+  },
+  {
+ethod name": "名称""method name": "名称",
+ethod name": "名称""comment": "Name，部件框的名称，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。",
+ethod name": "名称""type": "property setter",
+ethod name": "名称""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+ethod name": "名称"]
+  },
+  {
+度大于0时，只有当文字方向为默认值时才会生效，此时文字只能单行显示，文字对齐方式设定也不起作用，否则将按特定的文字方向显示文字。"method name": "获取父对象",
+度大于0时，只有当文字方向为默认值时才会生效，此时文字只能单行显示，文字对齐方式设定也不起作用，否则将按特定的文字方向显示文字。"comment": "Parent，父容器对象的 IUnknown 接口引用。",
+度大于0时，只有当文字方向为默认值时才会生效，此时文字只能单行显示，文字对齐方式设定也不起作用，否则将按特定的文字方向显示文字。"type": "property getter",
+度大于0时，只有当文字方向为默认值时才会生效，此时文字只能单行显示，文字对齐方式设定也不起作用，否则将按特定的文字方向显示文字。"data type": "COM对象类"
+  },
+  {
+"method name": "获取为文字框",
+"comment": "AsTextBox，转换本部件框为文字框基类的接口引用。\n只有当本部件框确实是文字基类框(TextBox)派生类的对象时，才能成功读取本属性值。文字基类派生的类包括：静态文本框、综合文本框、字段框、统计框、系统变量框。",
+"type": "property getter",
+"data type": "文字框"
+  },
+  {
+thod name": "名称""comment": "Name，部件框的名称，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。""method name": "获取为图表框",
+thod name": "名称""comment": "Name，部件框的名称，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。""comment": "AsChart，只有当本部件框确实是图表(Chart)时，才能成功读取本属性值。",
+thod name": "名称""comment": "Name，部件框的名称，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。""type": "property getter",
+thod name": "名称""comment": "Name，部件框的名称，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。""data type": "图表框"
+  },
+  {
+"method name": "获取为静态文字框",
+"comment": "AsStaticBox，将本部件框转换为静态框的接口引用。只有当本部件框确实是静态框(StaticBox)时，才能成功读取本属性值。",
+"type": "property getter",
+"data type": "静态文字框"
+  },
+  {
+ 文字方向枚举"method name": "获取为图形框",
+ 文字方向枚举"comment": "AsShapeBox，将本部件框转换为图形框的接口引用。只有当本部件框确实是图形框(ShapeBox)时，才能成功读取本属性值。",
+ 文字方向枚举"type": "property getter",
+ 文字方向枚举"data type": "图形框"
+  },
+  {
+
+"method name": "获取为系统变量框",
+
+"comment": "AsSystemVarBox，将本部件框转换为系统变量框的接口引用。只有当本部件框确实是系统变量框(SystemVarBox)时，才能成功读取本属性值。",
+
+"type": "property getter",
+
+"data type": "系统变量框"
+  },
+  {
+}"method name": "获取为字段框",
+}"comment": "AsFieldBox，将本部件框转换为字段框的接口引用。只有当本部件框确实是字段框(FieldBox)时，才能成功读取本属性值。\n",
+}"type": "property getter",
+}"data type": "字段框"
+  },
+  {
+
+"method name": "获取为统计框",
+
+"comment": "AsSummaryBox，将本部件框转换为统计框的接口引用。只有当本部件框确实是统计框(SummaryBox)时，才能成功读取本属性值。",
+
+"type": "property getter",
+
+"data type": "统计框"
+  },
+  {
+"method name": "获取为图像框",
+"comment": "AsPictureBox，将本部件框转换为图像框的接口引用。只有当本部件框确实是图像框(PictureBox)时，才能成功读取本属性值。",
+"type": "property getter",
+"data type": "图像框"
+  },
+  {
+
+"method name": "获取为RTF文字框",
+
+"comment": "AsRichTextBox，将本部件框转换为RTF文本框的接口引用。只有当本部件框确实是RTF文本框(RichTextBox)时，才能成功读取本属性值。",
+
+"type": "property getter",
+
+"data type": "RTF文字框"
+  },
+  {
+
+"method name": "获取为综合文字框",
+
+"comment": "AsMemoBox，转换本部件框为综合文本框的接口引用。只有当本部件框确实是综合文本框(MemoBox)时，才能成功读取本属性值。",
+
+"type": "property getter",
+
+"data type": "综合文字框"
+  },
+  {
+"data type": "统计框""method name": "获取为子报表框",
+"data type": "统计框""comment": "AsSubReport，转换本部件框为子报表的接口引用。只有当本部件框确实是子报表(MemoBox)时，才能成功读取本属性值。",
+"data type": "统计框""type": "property getter",
+"data type": "统计框""data type": "子报表框"
+  },
+  {
+thod name": "获取为统计框""method name": "获取为线段框",
+thod name": "获取为统计框""comment": "AsLine，将本部件框转换为线段的接口引用。只有当本部件框确实是线段(Line)时，才能成功读取本属性值。",
+thod name": "获取为统计框""type": "property getter",
+thod name": "获取为统计框""data type": "线段框"
+  },
+  {
+
+"method name": "获取为条码框",
+
+"comment": "AsBarcode，将本部件框转换为条码框的接口引用。只有当本部件框确实是条码框(Barcode)时，才能成功读取本属性值。",
+
+"type": "property getter",
+
+"data type": "条码框"
+  },
+  {
+type": "property getter""method name": "获取为自由表格",
+type": "property getter""comment": "AsFreeGrid，将本部件框转换为自由表格的接口引用。只有当本部件框确实是自由表格(FreeGrid)时，才能成功读取本属性值。",
+type": "property getter""type": "property getter",
+type": "property getter""data type": "自由表格"
+  },
+  {
+data type": "统计框""type": "property getter""method name": "获取边框",
+data type": "统计框""type": "property getter""comment": "Border，部件框的边框定义对象。",
+data type": "统计框""type": "property getter""type": "property getter",
+data type": "统计框""type": "property getter""data type": "边框"
+  },
+  {
+
+"method name": "获取字体",
+
+"comment": "Font，输出文字时使用的字体。1.当本属性值为空时，代表本部件使用父容器的字体。将本属性设置为NULL，使其使用缺省字体。",
+
+"type": "property getter",
+
+"data type": "报表字体"
+  },
+  {
+hod name": "获取为统计框""type": "property getter""method name": "部件框类型",
+hod name": "获取为统计框""type": "property getter""comment": "ControlType，获取本部件框的具体类型。\n1、静态文字框； 2、图形框； 3、系统变量框； 4、字段框； 5、统计框； 6、RTF文字框； 7、图像框； 8、综合文字框； 9、子报表框； 10、线段框； 11、图表框； 12、条码框； 13、自由表格框",
+hod name": "获取为统计框""type": "property getter""type": "property getter",
+hod name": "获取为统计框""type": "property getter""data type": "部件框类型枚举"
+  },
+  {
+}"method name": "光标",
+}"comment": "Cursor，指定在查询显示报表时，当鼠标光标位于该部件框上时要显示的鼠标光标类型。\n0、默认光标； 1、箭头光标； 2、放大光标； 3、手指光标； 4、确定光标； 5、否定光标",
+}"type": "property getter",
+}"data type": "光标类型枚举"
+  },
+  {
+�ꌤŝ"method name": "光标",
+�ꌤŝ"comment": "Cursor，指定在查询显示报表时，当鼠标光标位于该部件框上时要显示的鼠标光标类型。\n0、默认光标； 1、箭头光标； 2、放大光标； 3、手指光标； 4、确定光标； 5、否定光标",
+�ꌤŝ"type": "property setter",
+�ꌤŝ"parameters": [
+   {
+"parameter name": "光标类型枚举值",
+"data type": "光标类型枚举"
+   }
+�ꌤŝ]
+  },
+  {
+}"method name": "背景色",
+}"comment": "BackColor，部件框的背景色。如果 BackStyle 属性为 grbsTranparent 时，部件框生成时不填充背景，本属性此时被忽略掉。",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+}"method name": "背景色",
+}"comment": "BackColor，部件框的背景色。如果 BackStyle 属性为 grbsTranparent 时，部件框生成时不填充背景，本属性此时被忽略掉。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "颜色值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "光标类型枚举值""method name": "背景模式",
+ameter name": "光标类型枚举值""comment": "BackStyle，部件框显示时背景的填充方式。",
+ameter name": "光标类型枚举值""type": "property getter",
+ameter name": "光标类型枚举值""data type": "背景模式枚举"
+  },
+  {
+}"method name": "背景模式",
+}"comment": "BackStyle，部件框显示时背景的填充方式。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "背景模式枚举值",
+"data type": "背景模式枚举"
+   }
+}]
+  },
+  {
+ŝ]"method name": "居中方式",
+ŝ]"comment": "Center，指定水平与垂直方向的居中对齐方式。\n指定部件框在容器中水平与垂直方向上的居中对齐方式。\n指定部件框在水平与垂直方向上居中位于父容器的方式。通过部件框的 Center 属性指定部件框的居中方式(GRCenterStyle)。\n默认值是在两个方向都不居中(grcsNone)。如果在某个方向上居中，当父容器的大小发生改变时，部件框自动调整位置使自己一直居于父容器的中间。\n例如，如果将该属性设置为 grcsHorizontal，部件框始终在水平方向上居于父容器的正中间。",
+ŝ]"result comment": "0、无； 1、水平； 2、垂直； 3、水平垂直",
+ŝ]"type": "property getter",
+ŝ]"data type": "居中方式枚举"
+  },
+  {
+
+"method name": "居中方式",
+
+"comment": "Center，指定水平与垂直方向的居中对齐方式。\n指定部件框在容器中水平与垂直方向上的居中对齐方式。\n指定部件框在水平与垂直方向上居中位于父容器的方式。通过部件框的 Center 属性指定部件框的居中方式(GRCenterStyle)。\n默认值是在两个方向都不居中(grcsNone)。如果在某个方向上居中，当父容器的大小发生改变时，部件框自动调整位置使自己一直居于父容器的中间。\n例如，如果将该属性设置为 grcsHorizontal，部件框始终在水平方向上居于父容器的正中间。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "居中方式枚举值",
+"comment": "0、无； 1、水平； 2、垂直； 3、水平垂直",
+"data type": "居中方式枚举"
+   }
+
+]
+  },
+  {
+"type": "property getter""method name": "自定义绘制",
+"type": "property getter""comment": "CustomDraw，指定部件框是否为自绘部件框。\n指定部件框是否为自绘部件框，自绘部件框不会自动输出显示内容，而是会触发 ControlCustomDraw 报表事件；\n如本部件框果存在自绘脚本(CustomDrawScript)，则会执行该脚本。由报表开发者在事件中或事件脚本中实现部件框显示输出。",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "逻辑型"
+  },
+  {
+]"data type": "居中方式枚举""method name": "自定义绘制",
+]"data type": "居中方式枚举""comment": "CustomDraw，指定部件框是否为自绘部件框。\n指定部件框是否为自绘部件框，自绘部件框不会自动输出显示内容，而是会触发 ControlCustomDraw 报表事件；\n如本部件框果存在自绘脚本(CustomDrawScript)，则会执行该脚本。由报表开发者在事件中或事件脚本中实现部件框显示输出。",
+]"data type": "居中方式枚举""type": "property setter",
+]"data type": "居中方式枚举""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+]"data type": "居中方式枚举"]
+  },
+  {
+
+"method name": "自定义绘制脚本",
+
+"comment": "CustomDrawScript，指定部件框的自绘脚本代码，只有当部件框为自绘部件框时，此属性定义的脚本代码才会执行到。",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+"type": "property getter""method name": "自定义绘制脚本",
+"type": "property getter""comment": "CustomDrawScript，指定部件框的自绘脚本代码，只有当部件框为自绘部件框时，此属性定义的脚本代码才会执行到。",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "脚本文本",
+"data type": "文本型"
+   }
+"type": "property getter"]
+  },
+  {
+"type": "property getter""method name": "停靠方式",
+"type": "property getter""comment": "Dock，指定部件框停靠到父容器的哪一个边缘。\n指定部件框停靠到父容器的哪一个边缘或者可以停靠到所有边缘并充满父容器。通过部件框的 Dock 属性指定部件框的停靠方式（GRDockStyle）。\n默认值是不停靠到任何边缘（grdsNone）。部件框自动调整大小以使停靠边缘完全充满，部件框依照 Z 顺序停靠。\n例如，如果将该属性设置为 grdsLeft，部件框的左边缘将停靠到其父容器的左边缘，同时部件框的高度也变为父容器左边缘的高度。",
+"type": "property getter""result comment": "0、无； 1、左边； 2、上边； 3、右边； 4、下边； 5、充满",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "停靠方式枚举"
+  },
+  {
+"data type": "文本型""method name": "停靠方式",
+"data type": "文本型""comment": "Dock，指定部件框停靠到父容器的哪一个边缘。\n指定部件框停靠到父容器的哪一个边缘或者可以停靠到所有边缘并充满父容器。通过部件框的 Dock 属性指定部件框的停靠方式（GRDockStyle）。\n默认值是不停靠到任何边缘（grdsNone）。部件框自动调整大小以使停靠边缘完全充满，部件框依照 Z 顺序停靠。\n例如，如果将该属性设置为 grdsLeft，部件框的左边缘将停靠到其父容器的左边缘，同时部件框的高度也变为父容器左边缘的高度。",
+"data type": "文本型""type": "property setter",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "停靠方式枚举值",
+"comment": "0、无； 1、左边； 2、上边； 3、右边； 4、下边； 5、充满",
+"data type": "停靠方式枚举"
+   }
+"data type": "文本型"]
+  },
+  {
+}"method name": "前景色",
+}"comment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+}"method name": "前景色",
+}"comment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "颜色值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "左",
+}"comment": "Left，部件框的左端显示位置，以报表使用的计量单位表示的左端显示位置值，相对于父容器。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。",
+}"type": "property getter",
+}"data type": "小数"
+  },
+  {
+"method name": "左",
+"comment": "Left，部件框的左端显示位置，以报表使用的计量单位表示的左端显示位置值，相对于父容器。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "左距值",
+"data type": "小数"
+   }
+]
+  },
+  {
+"method name": "上",
+"comment": "Top，部件框的顶端显示位置，以报表使用的计量单位表示的顶端显示位置值，相对于父容器。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。",
+"type": "property getter",
+"data type": "小数"
+  },
+  {
+"data type": "文本型""method name": "上",
+"data type": "文本型""comment": "Top，部件框的顶端显示位置，以报表使用的计量单位表示的顶端显示位置值，相对于父容器。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。",
+"data type": "文本型""type": "property setter",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "上距值",
+"data type": "小数"
+   }
+"data type": "文本型"]
+  },
+  {
+data type": "小数""method name": "宽度",
+data type": "小数""comment": "Width，部件框的显示宽度，以报表使用的计量单位表示的显示宽度值。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。",
+data type": "小数""type": "property getter",
+data type": "小数""data type": "小数"
+  },
+  {
+
+"method name": "宽度",
+
+"comment": "Width，部件框的显示宽度，以报表使用的计量单位表示的显示宽度值。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "宽度值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+"data type": "文本型""method name": "高度",
+"data type": "文本型""comment": "Height，部件框的显示高度，以报表使用的计量单位表示的显示高度值。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。",
+"data type": "文本型""type": "property getter",
+"data type": "文本型""data type": "小数"
+  },
+  {
+"comment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。""method name": "高度",
+"comment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。""comment": "Height，部件框的显示高度，以报表使用的计量单位表示的显示高度值。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。",
+"comment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。""type": "property setter",
+"comment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。""parameters": [
+   {
+"parameter name": "高度值",
+"data type": "小数"
+   }
+"comment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。"]
+  },
+  {
+}"method name": "位置锁定",
+}"comment": "Locked，在设计器中设计报表时，是否锁定部件框的大小与位置。仅对报表在设计器中设计时有效。\n当本属性为是时，不能通过鼠标拖放操作改变部件框的大小与位置。",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+data type": "文本型""comment": "Height，部件框的显示高度，以报表使用的计量单位表示的显示高度值。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。""method name": "位置锁定",
+data type": "文本型""comment": "Height，部件框的显示高度，以报表使用的计量单位表示的显示高度值。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。""comment": "Locked，在设计器中设计报表时，是否锁定部件框的大小与位置。仅对报表在设计器中设计时有效。\n当本属性为是时，不能通过鼠标拖放操作改变部件框的大小与位置。",
+data type": "文本型""comment": "Height，部件框的显示高度，以报表使用的计量单位表示的显示高度值。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。""type": "property setter",
+data type": "文本型""comment": "Height，部件框的显示高度，以报表使用的计量单位表示的显示高度值。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+data type": "文本型""comment": "Height，部件框的显示高度，以报表使用的计量单位表示的显示高度值。\n以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。"]
+  },
+  {
+ameter name": "逻辑值""method name": "左边距",
+ameter name": "逻辑值""comment": "PaddingLeft，指定部件框输出内容的左边距，以屏幕像素为单位。",
+ameter name": "逻辑值""type": "property getter",
+ameter name": "逻辑值""data type": "整数"
+  },
+  {
+ment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。""method name": "高度""method name": "左边距",
+ment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。""method name": "高度""comment": "PaddingLeft，指定部件框输出内容的左边距，以屏幕像素为单位。",
+ment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。""method name": "高度""type": "property setter",
+ment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。""method name": "高度""parameters": [
+   {
+"parameter name": "像素值",
+"data type": "整数"
+   }
+ment": "ForeColor，部件框输出内容的前景色，一般表示输出文字的显示颜色。""method name": "高度"]
+  },
+  {
+"method name": "右边距",
+"comment": "PaddingRight，指定部件框输出内容的右边距，以屏幕像素为单位。",
+"type": "property getter",
+"data type": "整数"
+  },
+  {
+
+"method name": "右边距",
+
+"comment": "PaddingRight，指定部件框输出内容的右边距，以屏幕像素为单位。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "像素值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "上边距",
+"comment": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。",
+"type": "property getter",
+"data type": "整数"
+  },
+  {
+comment": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。""method name": "上边距",
+comment": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。""comment": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。",
+comment": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。""type": "property setter",
+comment": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。""parameters": [
+   {
+"parameter name": "像素值",
+"data type": "整数"
+   }
+comment": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。"]
+  },
+  {
+}"method name": "下边距",
+}"comment": "PaddingBottom，指定部件框输出内容的下边距，以屏幕像素为单位。",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+"type": "property getter""method name": "下边距",
+"type": "property getter""comment": "PaddingBottom，指定部件框输出内容的下边距，以屏幕像素为单位。",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "像素值",
+"data type": "整数"
+   }
+"type": "property getter"]
+  },
+  {
+ent": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。""method name": "上边距""method name": "打印类别",
+ent": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。""method name": "上边距""comment": "PrintType，部件框的打印输出方式：1、表单； 2、内容",
+ent": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。""method name": "上边距""type": "property getter",
+ent": "PaddingTop，指定部件框输出内容的上边距，以屏幕像素为单位。""method name": "上边距""data type": "打印类别枚举"
+  },
+  {
+
+"method name": "打印类别",
+
+"comment": "PrintType，部件框的打印输出方式：1、表单； 2、内容",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "打印类别枚举值",
+"data type": "打印类别枚举"
+   }
+
+]
+  },
+  {
+ }"method name": "伸展位移",
+ }"comment": "ShiftMode，指定部件框在其上层部件框发生高度自动伸展时，其垂直位置进行平移的方式。",
+ }"type": "property getter",
+ }"data type": "伸展位移枚举"
+  },
+  {
+ameter name": "像素值""method name": "伸展位移",
+ameter name": "像素值""comment": "ShiftMode，指定部件框在其上层部件框发生高度自动伸展时，其垂直位置进行平移的方式。",
+ameter name": "像素值""type": "property setter",
+ameter name": "像素值""parameters": [
+   {
+"parameter name": "伸展位移枚举值",
+"data type": "伸展位移枚举"
+   }
+ameter name": "像素值"]
+  },
+  {
+ameter name": "像素值""method name": "锚定",
+ameter name": "像素值""comment": "Anchor，指定部件框的哪些边缘锚定到其容器边缘。\n通过部件框的 Anchor 属性指定部件框的锚定方式(GRAnchorStyles)，Anchor 的值按位组合。默认值是 grasTop 和 grasLeft。\n一个部件框可以锚定到其父容器的一个或多个边缘。将部件框锚定到其父容器，可确保当调整父容器的大小时锚定的边缘与父容器的边缘的相对位置保持不变。\n例如一个部件框的 Anchor 属性值设置为 grasTop 和 grasBottom，当父容器的高度增加时，部件框的高度也同时伸展，以保持到父容器的上边缘和下边缘的距离不变。\n本属性值是 GRAnchorStyles 值的按位组合。默认值是 grasTop 和 grasLeft：1、左边； 2、上边； 4、右边； 8、下边",
+ameter name": "像素值""result comment": "锚定方式枚举  组合值：15 = 1+2+4+8 = 锚定方式枚举.左边 + 锚定方式枚举.上边 + 锚定方式枚举.右边 + 锚定方式枚举下边",
+ameter name": "像素值""type": "property getter",
+ameter name": "像素值""data type": "整数"
+  },
+  {
+"type": "property getter""method name": "锚定",
+"type": "property getter""comment": "Anchor，指定部件框的哪些边缘锚定到其容器边缘。\n通过部件框的 Anchor 属性指定部件框的锚定方式(GRAnchorStyles)，Anchor 的值按位组合。默认值是 grasTop 和 grasLeft。\n一个部件框可以锚定到其父容器的一个或多个边缘。将部件框锚定到其父容器，可确保当调整父容器的大小时锚定的边缘与父容器的边缘的相对位置保持不变。\n例如一个部件框的 Anchor 属性值设置为 grasTop 和 grasBottom，当父容器的高度增加时，部件框的高度也同时伸展，以保持到父容器的上边缘和下边缘的距离不变。\n本属性值是 GRAnchorStyles 值的按位组合。默认值是 grasTop 和 grasLeft：1、左边； 2、上边； 4、右边； 8、下边",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "锚定方式枚举值",
+"comment": "组合值：15 = 1+2+4+8 = 锚定方式枚举.左边 + 锚定方式枚举.上边 + 锚定方式枚举.右边 + 锚定方式枚举下边",
+"data type": "整数"
+   }
+"type": "property getter"]
+  },
+  {
+
+"method name": "对齐列",
+
+"comment": "AlignColumn，部件框水平位置对齐到明细网格列的名称，如果本属性值不为空时，配合 AlignColumnSide 属性一起指定部件框与列的对齐方式，部件框的水平位置将跟随列位置的改变而改变。\n指定部件框左端与右端位置与某一个或两个指定列的对齐方式。\n通过部件框的 AlignColumn,AlignColumnEx 与 AlignColumnSide 几个属性指定部件框对齐列的行为,AlignColumn 与 AlignColumnEx 指定对齐到那一个列或那两个列,AlignColumnSide 指定对齐到列的左端、右端或左右两端(GRAlignColumnStyle)。\n如果指定对齐到列,则部件框的左右端位置与宽度会随列的变化而变化,并始终保证对齐端的位置与列的对应端的位置保持一样,当对齐到列的左右两端时,部件框的宽度与列的宽度始终保持一样。\n如果本属性值不为空时，配合 AlignColumnSide 属性一起指定部件框与列的对齐方式，部件框的水平位置将跟随列位置的改变而改变。\n说明：AlignColumn 和 AlignColumnEx\nAlignColumnEx 与 AlignColumn 可以指定到不同的列，这样部件框就可以跨列对齐到不同的列。\n如果 AlignColumnEx 与 AlignColumn 只设定了其中之一的，则部件框只对齐到一个列。如果两者都没有设定，则部件框不会对齐到任何列。\nAlignColumnEx 与 AlignColumn 可以指定对齐到明细网格的左端或右端，其分别对应的属性值为“(GridLeft)”与“(GridRight)”，大小写不能错。\n代码类似如下：\nControl.AlignColumn = \"(GridLeft)\";\nControl.AlignColumnEx = \"(GridRight)\";",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "对齐列",
+
+"comment": "AlignColumn，部件框水平位置对齐到明细网格列的名称，如果本属性值不为空时，配合 AlignColumnSide 属性一起指定部件框与列的对齐方式，部件框的水平位置将跟随列位置的改变而改变。\n指定部件框左端与右端位置与某一个或两个指定列的对齐方式。\n通过部件框的 AlignColumn,AlignColumnEx 与 AlignColumnSide 几个属性指定部件框对齐列的行为,AlignColumn 与 AlignColumnEx 指定对齐到那一个列或那两个列,AlignColumnSide 指定对齐到列的左端、右端或左右两端(GRAlignColumnStyle)。\n如果指定对齐到列,则部件框的左右端位置与宽度会随列的变化而变化,并始终保证对齐端的位置与列的对应端的位置保持一样,当对齐到列的左右两端时,部件框的宽度与列的宽度始终保持一样。\n如果本属性值不为空时，配合 AlignColumnSide 属性一起指定部件框与列的对齐方式，部件框的水平位置将跟随列位置的改变而改变。\n说明：AlignColumn 和 AlignColumnEx\nAlignColumnEx 与 AlignColumn 可以指定到不同的列，这样部件框就可以跨列对齐到不同的列。\n如果 AlignColumnEx 与 AlignColumn 只设定了其中之一的，则部件框只对齐到一个列。如果两者都没有设定，则部件框不会对齐到任何列。\nAlignColumnEx 与 AlignColumn 可以指定对齐到明细网格的左端或右端，其分别对应的属性值为“(GridLeft)”与“(GridRight)”，大小写不能错。\n代码类似如下：\nControl.AlignColumn = \"(GridLeft)\";\nControl.AlignColumnEx = \"(GridRight)\";",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "列名称",
+"comment": "也可以：对齐列枚举.表格左端 = \"(GridLeft)\" 或 对齐列枚举.表格右端 = \"(GridRight)\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"type": "property getter""method name": "对齐列扩展",
+"type": "property getter""comment": "AlignColumnEx，指定部件框水平位置对齐到明细网格另一个列的名称。\nAlignColumn 和 AlignColumnEx\n如果本属性值不为空时，配合 AlignColumnSide 属性一起指定部件框与列的对齐方式，部件框的水平位置将跟随列位置的改变而改变。\nAlignColumnEx 与 AlignColumn 可以指定到不同的列，这样部件框就可以跨列对齐到不同的列。\n如果 AlignColumnEx 与 AlignColumn 只设定了其中之一的，则部件框只对齐到一个列。如果两者都没有设定，则部件框不会对齐到任何列。\nAlignColumnEx 与 AlignColumn 可以指定对齐到明细网格的左端或右端，其分别对应的属性值为“(GridLeft)”与“(GridRight)”，大小写不能错。\n代码类似如下：\nControl.AlignColumn = \"(GridLeft)\";\nControl.AlignColumnEx = \"(GridRight)\";",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "文本型"
+  },
+  {
+ }"method name": "对齐列扩展",
+ }"comment": "AlignColumnEx，指定部件框水平位置对齐到明细网格另一个列的名称。\nAlignColumn 和 AlignColumnEx\n如果本属性值不为空时，配合 AlignColumnSide 属性一起指定部件框与列的对齐方式，部件框的水平位置将跟随列位置的改变而改变。\nAlignColumnEx 与 AlignColumn 可以指定到不同的列，这样部件框就可以跨列对齐到不同的列。\n如果 AlignColumnEx 与 AlignColumn 只设定了其中之一的，则部件框只对齐到一个列。如果两者都没有设定，则部件框不会对齐到任何列。\nAlignColumnEx 与 AlignColumn 可以指定对齐到明细网格的左端或右端，其分别对应的属性值为“(GridLeft)”与“(GridRight)”，大小写不能错。\n代码类似如下：\nControl.AlignColumn = \"(GridLeft)\";\nControl.AlignColumnEx = \"(GridRight)\";",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "列名称",
+"comment": "也可以：对齐列枚举.表格左端 = \"(GridLeft)\" 或 对齐列枚举.表格右端 = \"(GridRight)\"",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "对齐列方式",
+ }"comment": "AlignColumnSide，部件框对齐到明细网格列的方式，注意：只有当部件框在分组头与分组尾中时才能使用本属性。\n注意：由 AlignColumn 或 AlignColumnEx 决定对齐对象。1、左对齐； 2、右对齐； 3、两端对齐",
+ }"type": "property getter",
+ }"data type": "对齐列方式枚举"
+  },
+  {
+ameter name": "打印类别枚举值""method name": "对齐列方式",
+ameter name": "打印类别枚举值""comment": "AlignColumnSide，部件框对齐到明细网格列的方式，注意：只有当部件框在分组头与分组尾中时才能使用本属性。\n注意：由 AlignColumn 或 AlignColumnEx 决定对齐对象。1、左对齐； 2、右对齐； 3、两端对齐",
+ameter name": "打印类别枚举值""type": "property setter",
+ameter name": "打印类别枚举值""parameters": [
+   {
+"parameter name": "对齐列方式枚举值",
+"data type": "对齐列方式枚举"
+   }
+ameter name": "打印类别枚举值"]
+  },
+  {
+}"method name": "可见性",
+}"comment": "Visible，是否显示部件框的标志，当此属性为假时，部件框在输出时将被忽略掉。",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+}"method name": "可见性",
+}"comment": "Visible，是否显示部件框的标志，当此属性为假时，部件框在输出时将被忽略掉。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+ameter name": "伸展位移枚举值""method name": "标识",
+ameter name": "伸展位移枚举值""comment": "Tag，部件框的标识值，可以按自己意愿任意使用本属性，如可以将此属性作为对象的身份标识。",
+ameter name": "伸展位移枚举值""type": "property getter",
+ameter name": "伸展位移枚举值""data type": "文本型"
+  },
+  {
+
+"method name": "标识",
+
+"comment": "Tag，部件框的标识值，可以按自己意愿任意使用本属性，如可以将此属性作为对象的身份标识。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "标识文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "锁定",
+"comment": "Lock，锁定类别枚举：0、不锁定； 1、锁定继承； 2、锁定对象； 3、锁定数据； 4、锁定数据行为； 5、完全锁定\n说明：除1，2两项外，其它项按从弱到强的顺序锁定控制对象，后一项包括前一项的锁定权限。报表主对象设置为“锁定继承”等同于“不锁定”。",
+"type": "property getter",
+"data type": "锁定类别枚举"
+  },
+  {
+"type": "property setter""method name": "锁定",
+"type": "property setter""comment": "Lock，锁定类别枚举：0、不锁定； 1、锁定继承； 2、锁定对象； 3、锁定数据； 4、锁定数据行为； 5、完全锁定\n说明：除1，2两项外，其它项按从弱到强的顺序锁定控制对象，后一项包括前一项的锁定权限。报表主对象设置为“锁定继承”等同于“不锁定”。",
+"type": "property setter""type": "property setter",
+"type": "property setter""parameters": [
+   {
+"parameter name": "锁定类别枚举值",
+"data type": "锁定类别枚举"
+   }
+"type": "property setter"]
+  },
+  {
+
+"method name": "设置边界",
+
+"comment": "SetBounds，设置部件框在其父容器中的边界位置。",
+
+"parameters": [
+   {
+"parameter name": "左",
+"comment": "左端位置",
+"data type": "小数"
+   },
+   {
+"parameter name": "上",
+"comment": "上端位置 ",
+"data type": "小数"
+   },
+   {
+"parameter name": "右",
+"comment": "右端位置 ",
+"data type": "小数"
+   },
+   {
+"parameter name": "下",
+"comment": "下端位置 ",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "默认绘制",
+"data type": "逻辑型""comment": "DrawDefault，按部件框本身行为输出显示内容，此方法只能在报表的 ControlCustomDraw 事件或部件框本身的自绘脚本(CustomDrawScript)中调用。\n例如：首先调用本方法输出部件框固有的显示内容，然后再输出一些额外的自定义内容。"
+  },
+  {
+
+"method name": "显示到前端",
+
+"comment": "BringToFront，将部件框带到 Z 顺序的前面。此部件框将在同一容器中的其它部件框之后输出显示，如果前面输出的部件框与其在位置上有重叠，则此部件框将覆盖前面输出的部件框。"
+  },
+  {
+ameter name": "下""method name": "显示到后端",
+ameter name": "下""comment": "SendToBack，将部件框发送到 Z 顺序的后面。此部件框将在同一容器中的其它部件框之前输出显示，如果后输出的部件框与其在位置上有重叠，则后输出的部件框将覆盖此部件框。"
+  },
+  {
+ }"method name": "载入鼠标指针",
+ }"comment": "LoadCursorFile，载入外部鼠标指针文件。",
+ }"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "全路径文件名称。",
+"data type": "文本型"
+   }
+ }]
+  }
+ameter name": "标识文本"]
+ },
+ {
+thod name": "显示到前端""class name": "单元格",
+thod name": "显示到前端""comment": "CellBase，基类，报表中各种单元格接口的基接口，之前叫单元格基类，其实应该叫单元格，(单元格(列格)、标题格、内容格、自由表格子格)。",
+thod name": "显示到前端""base class": "IGR对象",
+thod name": "显示到前端""methods": [
+  {
+
+"method name": "获取字体",
+
+"comment": "Font，显示单元格文字的字体定义对象。如果单元格是非自由格，此属性表示输出显示文本使用的字体，如果单元格是自由格，此属性表示单元格拥有的部件框的缺省字体。",
+
+"type": "property getter",
+
+"data type": "报表字体"
+  },
+  {
+
+"method name": "获取边框",
+
+"comment": "Border，绘制单元格的边框定义对象。",
+
+"type": "property getter",
+
+"data type": "边框"
+  },
+  {
+
+"method name": "获取文本格式",
+
+"comment": "TextFormat，输出单元格文字的格式定义对象。",
+
+"type": "property getter",
+
+"data type": "文本格式"
+  },
+  {
+}"method name": "获取部件框集合",
+}"comment": "Controls，本单元格所拥有的部件框集合对象。如果格不是自由格时，因非自由格不是部件框容器，所以本属性值为NULL。",
+}"type": "property getter",
+}"data type": "部件框集合"
+  },
+  {
+data type": "小数""method name": "背景色",
+data type": "小数""comment": "BackColor，指定单元格的背景色。如果 BackStyle 属性为 grbsTranparent 时，单元格生成时不填充背景，本属性此时被忽略掉。",
+data type": "小数""type": "property getter",
+data type": "小数""data type": "整数"
+  },
+  {
+
+"method name": "背景色",
+
+"comment": "BackColor，指定单元格的背景色。如果 BackStyle 属性为 grbsTranparent 时，单元格生成时不填充背景，本属性此时被忽略掉。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "颜色值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "前景色",
+
+"comment": "ForeColor，指定单元格的输出文本的文字颜色。注意：只有在单元格是非自由格时，才允许使用本属性。",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+"type": "property getter""method name": "前景色",
+"type": "property getter""comment": "ForeColor，指定单元格的输出文本的文字颜色。注意：只有在单元格是非自由格时，才允许使用本属性。",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "颜色值",
+"data type": "整数"
+   }
+"type": "property getter"]
+  },
+  {
+ype": "property getter"]"method name": "边框自定义",
+ype": "property getter"]"comment": "BorderCustom，指示单元格的边框是否自身特别定义。\n如果本属性值为否，则此单元格的边框按照“边框”属性中的定义来进行绘制，反之单元格不进行单独的边框绘制，而是由父对象在其外围输出行线或列线。",
+ype": "property getter"]"type": "property getter",
+ype": "property getter"]"data type": "逻辑型"
+  },
+  {
+pe": "property getter"]"data type": "逻辑型""method name": "边框自定义",
+pe": "property getter"]"data type": "逻辑型""comment": "BorderCustom，指示单元格的边框是否自身特别定义。\n如果本属性值为否，则此单元格的边框按照“边框”属性中的定义来进行绘制，反之单元格不进行单独的边框绘制，而是由父对象在其外围输出行线或列线。",
+pe": "property getter"]"data type": "逻辑型""type": "property setter",
+pe": "property getter"]"data type": "逻辑型""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+pe": "property getter"]"data type": "逻辑型"]
+  },
+  {
+"comment": "TextFormat，输出单元格文字的格式定义对象。""method name": "可伸展",
+"comment": "TextFormat，输出单元格文字的格式定义对象。""comment": "CanGrow，指定单元格在运行时是否可以伸展高度。如果文字要多行显示，应该将“文字自动绕行”属性设为“是”这样才会得到想要的伸展效果。",
+"comment": "TextFormat，输出单元格文字的格式定义对象。""type": "property getter",
+"comment": "TextFormat，输出单元格文字的格式定义对象。""data type": "逻辑型"
+  },
+  {
+": "property getter"]"data type": "逻辑型"]"method name": "可伸展",
+": "property getter"]"data type": "逻辑型"]"comment": "CanGrow，指定单元格在运行时是否可以伸展高度。如果文字要多行显示，应该将“文字自动绕行”属性设为“是”这样才会得到想要的伸展效果。",
+": "property getter"]"data type": "逻辑型"]"type": "property setter",
+": "property getter"]"data type": "逻辑型"]"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+": "property getter"]"data type": "逻辑型"]]
+  },
+  {
+"method name": "可收缩",
+"comment": "CanShrink，指定内容格在运行时是否可以收缩高度。",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+}"parameters": [
+"method name": "可收缩",
+}"parameters": [
+"comment": "CanShrink，指定内容格在运行时是否可以收缩高度。",
+}"parameters": [
+"type": "property setter",
+}"parameters": [
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+}"parameters": [
+]
+  },
+  {
+"data type": "报表字体""method name": "光标",
+"data type": "报表字体""comment": "Cursor，指定在查询显示报表时，在此单元格上显示的鼠标光标。\n0、默认光标； 1、箭头光标； 2、放大光标； 3、手指光标； 4、确定光标； 5、否定光标",
+"data type": "报表字体""type": "property getter",
+"data type": "报表字体""data type": "光标类型枚举"
+  },
+  {
+ }"method name": "光标",
+ }"comment": "Cursor，指定在查询显示报表时，在此单元格上显示的鼠标光标。\n0、默认光标； 1、箭头光标； 2、放大光标； 3、手指光标； 4、确定光标； 5、否定光标",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "光标类型枚举值",
+"data type": "光标类型枚举"
+   }
+ }]
+  },
+  {
+"method name": "自由格",
+"comment": "FreeCell，指定本单元格是否为自由格。\n当本属性为真时，单元格为自由格，单元格成为部件框容器，可以添加任意个数自由排列的部件框到单元格中；当本属性为假时，单元格不是部件框容器，不能向格中插入部件框，单元格本身可以显示输出文本。",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+"method name": "自由格",
+"comment": "FreeCell，指定本单元格是否为自由格。\n当本属性为真时，单元格为自由格，单元格成为部件框容器，可以添加任意个数自由排列的部件框到单元格中；当本属性为假时，单元格不是部件框容器，不能向格中插入部件框，单元格本身可以显示输出文本。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+"method name": "显示金额标签",
+"comment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "显示金额标签",
+
+"comment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "显示金额线",
+"comment": "ShowMoneyLine，指定是否在此单元格中将值显示成金额线格式。注意：只有在格不是自由格时，才允许使用本属性。",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+comment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""method name": "显示金额线",
+comment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""comment": "ShowMoneyLine，指定是否在此单元格中将值显示成金额线格式。注意：只有在格不是自由格时，才允许使用本属性。",
+comment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""type": "property setter",
+comment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+comment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。"]
+  },
+  {
+hod name": "自由格""method name": "左边距",
+hod name": "自由格""comment": "PaddingLeft，指定单元格输出文字的左边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。",
+hod name": "自由格""result comment": "默认值2",
+hod name": "自由格""type": "property getter",
+hod name": "自由格""data type": "整数"
+  },
+  {
+ }"method name": "左边距",
+ }"comment": "PaddingLeft，指定单元格输出文字的左边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "像素值",
+"comment": "默认值2",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "右边距",
+ }"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。",
+ }"result comment": "默认值1",
+ }"type": "property getter",
+ }"data type": "整数"
+  },
+  {
+hod name": "自由格""method name": "右边距",
+hod name": "自由格""comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。",
+hod name": "自由格""type": "property setter",
+hod name": "自由格""parameters": [
+   {
+"parameter name": "像素值",
+"comment": "默认值1",
+"data type": "整数"
+   }
+hod name": "自由格"]
+  },
+  {
+
+"method name": "上边距",
+
+"comment": "PaddingTop，指定单元格输出文字的上边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。",
+
+"result comment": "默认值1",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+parameters": [
+]"method name": "上边距",
+parameters": [
+]"comment": "PaddingTop，指定单元格输出文字的上边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。",
+parameters": [
+]"type": "property setter",
+parameters": [
+]"parameters": [
+   {
+"parameter name": "像素值",
+"comment": "默认值1",
+"data type": "整数"
+   }
+parameters": [
+]]
+  },
+  {
+}"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""method name": "下边距",
+}"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""comment": "PaddingBottom，指定单元格输出文字的下边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。",
+}"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""result comment": "默认值1",
+}"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter",
+}"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""data type": "整数"
+  },
+  {
+"comment": "PaddingTop，指定单元格输出文字的上边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""method name": "下边距",
+"comment": "PaddingTop，指定单元格输出文字的上边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""comment": "PaddingBottom，指定单元格输出文字的下边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。",
+"comment": "PaddingTop，指定单元格输出文字的上边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property setter",
+"comment": "PaddingTop，指定单元格输出文字的上边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""parameters": [
+   {
+"parameter name": "像素值",
+"comment": "默认值1",
+"data type": "整数"
+   }
+"comment": "PaddingTop，指定单元格输出文字的上边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。"]
+  },
+  {
+omment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""parameters": [
+"method name": "打印类别",
+omment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""parameters": [
+"comment": "PrintType，指定单元格的打印生成类别：1、表单； 2、内容",
+omment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""parameters": [
+"type": "property getter",
+omment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""parameters": [
+"data type": "打印类别枚举"
+  },
+  {
+property getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别",
+property getter"]"data type": "逻辑型"]"method name": "可伸展""comment": "PrintType，指定单元格的打印生成类别：1、表单； 2、内容",
+property getter"]"data type": "逻辑型"]"method name": "可伸展""type": "property setter",
+property getter"]"data type": "逻辑型"]"method name": "可伸展""parameters": [
+   {
+"parameter name": "打印类别枚举值",
+"data type": "打印类别枚举"
+   }
+property getter"]"data type": "逻辑型"]"method name": "可伸展"]
+  },
+  {
+omment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""type": "property setter""method name": "按需缩小字体",
+omment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""type": "property setter""comment": "ShrinkFontToFit，在单元格的显示区域不能完整显示出文字内容时，指定是否自动缩小文字大小让文字完整显示出来。\n在格为自由格时，此属性无效。 \n注意：缩小字体功能只有在打印与打印预览时才有效果，即查询显示时不支持字体缩小适应。",
+omment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""type": "property setter""type": "property getter",
+omment": "ShowMoneyLabel，指定是否在此单元格中显示金额标签。注意：只有在格不是自由格时，才允许使用本属性。""type": "property setter""data type": "逻辑型"
+  },
+  {
+erty getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别""method name": "按需缩小字体",
+erty getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别""comment": "ShrinkFontToFit，在单元格的显示区域不能完整显示出文字内容时，指定是否自动缩小文字大小让文字完整显示出来。\n在格为自由格时，此属性无效。 \n注意：缩小字体功能只有在打印与打印预览时才有效果，即查询显示时不支持字体缩小适应。",
+erty getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别""type": "property setter",
+erty getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+erty getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别"]
+  },
+  {
+}"method name": "锁定",
+}"comment": "Lock，锁定类别枚举：0、不锁定； 1、锁定继承； 2、锁定对象； 3、锁定数据； 4、锁定数据行为； 5、完全锁定\n说明：除1，2两项外，其它项按从弱到强的顺序锁定控制对象，后一项包括前一项的锁定权限。报表主对象设置为“锁定继承”等同于“不锁定”。",
+}"type": "property getter",
+}"data type": "锁定类别枚举"
+  },
+  {
+data type": "打印类别枚举""method name": "锁定",
+data type": "打印类别枚举""comment": "Lock，锁定类别枚举：0、不锁定； 1、锁定继承； 2、锁定对象； 3、锁定数据； 4、锁定数据行为； 5、完全锁定\n说明：除1，2两项外，其它项按从弱到强的顺序锁定控制对象，后一项包括前一项的锁定权限。报表主对象设置为“锁定继承”等同于“不锁定”。",
+data type": "打印类别枚举""type": "property setter",
+data type": "打印类别枚举""parameters": [
+   {
+"parameter name": "锁定类别枚举值",
+"data type": "锁定类别枚举"
+   }
+data type": "打印类别枚举"]
+  }
+thod name": "显示到前端"]
+ },
+ {
+operty getter"]"data type": "逻辑型"]"method name": "可伸展"]"class name": "列格",
+operty getter"]"data type": "逻辑型"]"method name": "可伸展"]"comment": "ColumnCell，基类，明细网格中单元格接口的基接口（之前叫单元格，其实应该叫列格，包含：标题格、内容格）。\n说明：明细网格的标题行与内容行的显示区域划分为一个个的单元格，单元格可以直接显示文字，也可以作为部件框容器使用，作为部件框容器的单元格称为自由格。\n标题行中的单元格称为标题格，内容行中的单元格称为内容格。",
+operty getter"]"data type": "逻辑型"]"method name": "可伸展"]"base class": "单元格",
+operty getter"]"data type": "逻辑型"]"method name": "可伸展"]"methods": [
+  {
+rty getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别""parameters": [
+"method name": "获取列",
+rty getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别""parameters": [
+"comment": "Column，本单元格对应的列的接口引用。\n单元格按照列的宽度与顺序进行排列，一个列对应有一个标题格与一个内容格。\n如果是组标题格，因为组标题格不存在唯一对应的某个列，所以本属性值为NULL。",
+rty getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别""parameters": [
+"type": "property getter",
+rty getter"]"data type": "逻辑型"]"method name": "可伸展""method name": "打印类别""parameters": [
+"data type": "列"
+  },
+  {
+"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""result comment": "默认值1""method name": "名称",
+"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""result comment": "默认值1""comment": "Name，指定单元格的名称标识。\n注意：当为内容格或当为标题格而不是组标题格时，即格存在对应列，格的名称与列的名称保持一致。\n当改变格的名称也同时改变列的名称，反之改变列的名称也同时改变格的名称。",
+"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""result comment": "默认值1""type": "property getter",
+"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""result comment": "默认值1""data type": "文本型"
+  },
+  {
+thod name": "锁定""method name": "名称",
+thod name": "锁定""comment": "Name，指定单元格的名称标识。\n注意：当为内容格或当为标题格而不是组标题格时，即格存在对应列，格的名称与列的名称保持一致。\n当改变格的名称也同时改变列的名称，反之改变列的名称也同时改变格的名称。",
+thod name": "锁定""type": "property setter",
+thod name": "锁定""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+thod name": "锁定"]
+  }
+operty getter"]"data type": "逻辑型"]"method name": "可伸展"]]
+ },
+ {
+
+"class name": "节",
+
+"comment": "Section，基类，报表各节的基接口，表示各种报表节相同的属性与方法。包括：页眉、页脚、报表节(报表头与报表尾)、列节(标题行与内容行)、分组节(分组头与分组尾)。\nGrid++Report 的显示由各种类型的节组成，每个节中包含一组部件框或单元格，部件框在生成时根据内容输出显示。\nGrid++Report 的报表节可以分成两大类：一是报表主对象直接拥有的报表节，包括报表头、报表尾、页眉、页脚；二是属于明细网格的报表节，包括标题行、内容行、分组头、分组尾。",
+
+"base class": "IGR对象",
+
+"methods": [
+  {
+operty getter"]"data type": "逻辑型"]"method name": "可伸展"]"method name": "获取父对象",
+operty getter"]"data type": "逻辑型"]"method name": "可伸展"]"comment": "Parent，父对象的IUnknown接口引用。",
+operty getter"]"data type": "逻辑型"]"method name": "可伸展"]"type": "property getter",
+operty getter"]"data type": "逻辑型"]"method name": "可伸展"]"data type": "COM对象类"
+  },
+  {
+"type": "property getter""method name": "获取字体",
+"type": "property getter""comment": "Font，报表节的缺省字体。",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "报表字体"
+  },
+  {
+od name": "自由格""type": "property getter""method name": "获取部件框集合",
+od name": "自由格""type": "property getter""comment": "Controls，获取拥有的部件框集合对象的接口引用。",
+od name": "自由格""type": "property getter""type": "property getter",
+od name": "自由格""type": "property getter""data type": "部件框集合"
+  },
+  {
+type": "property getter""type": "property getter""method name": "类型",
+type": "property getter""type": "property getter""comment": "SectionType，指示报表节的具体类型：1、页眉； 2、报表头； 3、报表尾； 4、页脚； 5、标题行； 6、内容行； 7、分组头； 8、分组尾",
+type": "property getter""type": "property getter""type": "property getter",
+type": "property getter""type": "property getter""data type": "整数"
+  },
+  {
+}"method name": "名称",
+}"comment": "Name，报表节的名称标识，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。",
+}"result comment": "子类中页眉、页脚、列节(标题行与内容行)、分组节(分组头与分组尾)不继承本属性。",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+erty getter"]"data type": "逻辑型"]"method name": "可伸展"]]"method name": "名称",
+erty getter"]"data type": "逻辑型"]"method name": "可伸展"]]"comment": "Name，报表节的名称标识，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。",
+erty getter"]"data type": "逻辑型"]"method name": "可伸展"]]"result comment": "子类中页眉、页脚、列节(标题行与内容行)、分组节(分组头与分组尾)不继承本属性。",
+erty getter"]"data type": "逻辑型"]"method name": "可伸展"]]"type": "property setter",
+erty getter"]"data type": "逻辑型"]"method name": "可伸展"]]"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+erty getter"]"data type": "逻辑型"]"method name": "可伸展"]]]
+  },
+  {
+"comment": "Name，报表节的名称标识，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。""method name": "背景色",
+"comment": "Name，报表节的名称标识，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。""comment": "BackColor，报表节的背景填充色。",
+"comment": "Name，报表节的名称标识，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。""type": "property getter",
+"comment": "Name，报表节的名称标识，采用26个英文字母(不区分大小写)和0-9这十个自然数,加上下划线'_'组成,共63个字符.不能出现其他字符。""data type": "整数"
+  },
+  {
+}"method name": "背景色",
+}"comment": "BackColor，报表节的背景填充色。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "颜色值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ype": "property getter""type": "property getter""data type": "整数""method name": "书签文本",
+ype": "property getter""type": "property getter""data type": "整数""comment": "BookmarkText，指定节的书签文本，文本中可以包含多种数据域。\n数据域定义在文本中，数据域通过“[#”与“#]”扩起来，中间包含的文字可以成功解析为数据域或表达式，数据域的定义文本在运行时将被数据域的值替换，反之文字将以原样输出。\n本属性的行为与综合文本框的“Text(文本)”属性是类似的。",
+ype": "property getter""type": "property getter""data type": "整数""type": "property getter",
+ype": "property getter""type": "property getter""data type": "整数""data type": "文本型"
+  },
+  {
+: "property getter""type": "property getter""data type": "整数""method name": "书签文本""method name": "书签文本",
+: "property getter""type": "property getter""data type": "整数""method name": "书签文本""comment": "BookmarkText，指定节的书签文本，文本中可以包含多种数据域。\n数据域定义在文本中，数据域通过“[#”与“#]”扩起来，中间包含的文字可以成功解析为数据域或表达式，数据域的定义文本在运行时将被数据域的值替换，反之文字将以原样输出。\n本属性的行为与综合文本框的“Text(文本)”属性是类似的。",
+: "property getter""type": "property getter""data type": "整数""method name": "书签文本""type": "property setter",
+: "property getter""type": "property getter""data type": "整数""method name": "书签文本""parameters": [
+   {
+"parameter name": "文本",
+"comment": "表达式文本",
+"data type": "文本型"
+   }
+: "property getter""type": "property getter""data type": "整数""method name": "书签文本"]
+  },
+  {
+"method name": "格式化脚本",
+"comment": "FormatScript，表示报表 SectionFormat 事件对应的脚本语言代码。\n在此脚本中可以改变节的 Visible 属性从而控制节的显示与隐藏，达到根据条件显示报表节。\n可以在此脚本中改变部件框的 Visible 属性从而控制部件框的显示与隐藏，达到根据条件显示部件框。\n可以在此脚本中改节与部件框的外观属性从而改变数据显式，让数据根据不同的条件显示出不同的样式。",
+"type": "property getter",
+"data type": "文本型"
+  },
+  {
+}"method name": "格式化脚本",
+}"comment": "FormatScript，表示报表 SectionFormat 事件对应的脚本语言代码。\n在此脚本中可以改变节的 Visible 属性从而控制节的显示与隐藏，达到根据条件显示报表节。\n可以在此脚本中改变部件框的 Visible 属性从而控制部件框的显示与隐藏，达到根据条件显示部件框。\n可以在此脚本中改节与部件框的外观属性从而改变数据显式，让数据根据不同的条件显示出不同的样式。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "脚本文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""method name": "可伸展",
+"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""comment": "CanGrow，指示节高度在运行时是否可以伸展的标志。报表运行时，如果本属性为真且节拥有可伸展的部件框，节的高度伸展幅度为所有拥有部件框的伸展高度之和。\n可伸展无效原因：设置“可伸展”属性后，如果文字要多行显示，应该将“文字自动换行”属性设为“是”，这样才会得到想要的伸展效果。如果是内容行中的自由格，应该将内容格的“可伸展”属性设为“是”。",
+"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""type": "property getter",
+"comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型"
+  },
+  {
+}"method name": "可伸展",
+}"comment": "CanGrow，指示节高度在运行时是否可以伸展的标志。报表运行时，如果本属性为真且节拥有可伸展的部件框，节的高度伸展幅度为所有拥有部件框的伸展高度之和。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "可收缩",
+}"comment": "CanShrink，指示节高度在运行时是否可以收缩的标志。报表运行时，如果本属性为真且节拥有可收缩的部件框，节的高度收缩幅度为所有拥有部件框的收缩高度之和。",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型""method name": "可收缩",
+comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型""comment": "CanShrink，指示节高度在运行时是否可以收缩的标志。报表运行时，如果本属性为真且节拥有可收缩的部件框，节的高度收缩幅度为所有拥有部件框的收缩高度之和。",
+comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型""type": "property setter",
+comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+comment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型"]
+  },
+  {
+mment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型"]"method name": "高度",
+mment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型"]"comment": "Height，报表节的高度。以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。\n以报表使用的计量单位表示的节的高度值，如果高度值为零，则本节再生成时将被忽略掉。",
+mment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型"]"type": "property getter",
+mment": "PaddingRight，指定单元格输出文字的右边距，以屏幕像素为单位。此属性仅在单元格为非自由格时才可用。""type": "property getter""data type": "逻辑型"]"data type": "小数"
+  },
+  {
+ }"method name": "高度",
+ }"comment": "Height，报表节的高度。以报表主对象的“计量单位(Unit)”属性指定的值为计量单位，默认计量单位为厘米。\n以报表使用的计量单位表示的节的高度值，如果高度值为零，则本节再生成时将被忽略掉。",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "高度值",
+"data type": "小数"
+   }
+ }]
+  },
+  {
+]"method name": "保持同页",
+]"comment": "KeepTogether，是否保持本节输出显示在同一页标志。",
+]"type": "property getter",
+]"data type": "逻辑型"
+  },
+  {
+ty getter"]"data type": "逻辑型"]"method name": "可伸展"]]]"method name": "保持同页",
+ty getter"]"data type": "逻辑型"]"method name": "可伸展"]]]"comment": "KeepTogether，是否保持本节输出显示在同一页标志。",
+ty getter"]"data type": "逻辑型"]"method name": "可伸展"]]]"type": "property setter",
+ty getter"]"data type": "逻辑型"]"method name": "可伸展"]]]"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+ty getter"]"data type": "逻辑型"]"method name": "可伸展"]]]]
+  },
+  {
+]"method name": "可见性",
+]"comment": "Visible，是否显示报表节的标志，当此属性为假时，报表节在输出时将被忽略掉。",
+]"type": "property getter",
+]"data type": "逻辑型"
+  },
+  {
+thod name": "可见性""method name": "可见性",
+thod name": "可见性""comment": "Visible，是否显示报表节的标志，当此属性为假时，报表节在输出时将被忽略掉。",
+thod name": "可见性""type": "property setter",
+thod name": "可见性""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+thod name": "可见性"]
+  },
+  {
+hod name": "可见性""comment": "Visible，是否显示报表节的标志，当此属性为假时，报表节在输出时将被忽略掉。""method name": "锁定",
+hod name": "可见性""comment": "Visible，是否显示报表节的标志，当此属性为假时，报表节在输出时将被忽略掉。""comment": "Lock，锁定类别枚举：0、不锁定； 1、锁定继承； 2、锁定对象； 3、锁定数据； 4、锁定数据行为； 5、完全锁定\n说明：除1，2两项外，其它项按从弱到强的顺序锁定控制对象，后一项包括前一项的锁定权限。报表主对象设置为“锁定继承”等同于“不锁定”。",
+hod name": "可见性""comment": "Visible，是否显示报表节的标志，当此属性为假时，报表节在输出时将被忽略掉。""type": "property getter",
+hod name": "可见性""comment": "Visible，是否显示报表节的标志，当此属性为假时，报表节在输出时将被忽略掉。""data type": "锁定类别枚举"
+  },
+  {
+"method name": "锁定",
+"comment": "Lock，锁定类别枚举：0、不锁定； 1、锁定继承； 2、锁定对象； 3、锁定数据； 4、锁定数据行为； 5、完全锁定\n说明：除1，2两项外，其它项按从弱到强的顺序锁定控制对象，后一项包括前一项的锁定权限。报表主对象设置为“锁定继承”等同于“不锁定”。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "锁定类别枚举值",
+"data type": "锁定类别枚举"
+   }
+]
+  }
+
+]
+ },
+ {
+data type": "锁定类别枚举""class name": "报表节",
+data type": "锁定类别枚举""comment": "ReportSection，基类，报表头与报表尾的基接口。表示报表头与报表尾的共同属性与方法。",
+data type": "锁定类别枚举""base class": "节",
+data type": "锁定类别枚举""methods": [
+  {
+
+"method name": "跟随明细网格居中",
+
+"comment": "CenterWithDetailGrid，指定本报表节是否跟随明细网格的居中显示而居中显示。",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+hod name": "可见性""parameters": [
+"method name": "跟随明细网格居中",
+hod name": "可见性""parameters": [
+"comment": "CenterWithDetailGrid，指定本报表节是否跟随明细网格的居中显示而居中显示。",
+hod name": "可见性""parameters": [
+"type": "property setter",
+hod name": "可见性""parameters": [
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+hod name": "可见性""parameters": [
+]
+  },
+  {
+
+"method name": "每页重复打印",
+
+"comment": "RepeatOnPage，打印输出时，是否在每页中重复显示的标志。",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+}"method name": "每页重复打印",
+}"comment": "RepeatOnPage，打印输出时，是否在每页中重复显示的标志。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+od name": "可见性""parameters": [
+"parameters": [
+"method name": "换新页",
+od name": "可见性""parameters": [
+"parameters": [
+"comment": "NewPage，指定新页的产生方式。",
+od name": "可见性""parameters": [
+"parameters": [
+"type": "property getter",
+od name": "可见性""parameters": [
+"parameters": [
+"data type": "换新页方式枚举"
+  },
+  {
+"data type": "逻辑型""method name": "换新页",
+"data type": "逻辑型""comment": "NewPage，指定新页的产生方式。",
+"data type": "逻辑型""type": "property setter",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "换新页方式枚举值",
+"data type": "换新页方式枚举"
+   }
+"data type": "逻辑型"]
+  }
+data type": "锁定类别枚举"]
+ },
+ {
+age，指定新页的产生方式。"class name": "列节",
+age，指定新页的产生方式。"comment": "ColumnSection，基类，明细网格的标题行与内容行的基接口。表示标题行与内容行的共同属性与方法。",
+age，指定新页的产生方式。"base class": "节",
+age，指定新页的产生方式。"methods": [
+  {
+ameter name": "换新页方式枚举值""method name": "光标",
+ameter name": "换新页方式枚举值""comment": "Cursor，指定在查询显示报表时，在本内容行上显示的鼠标光标。\n0、默认光标； 1、箭头光标； 2、放大光标； 3、手指光标； 4、确定光标； 5、否定光标",
+ameter name": "换新页方式枚举值""type": "property getter",
+ameter name": "换新页方式枚举值""data type": "光标类型枚举"
+  },
+  {
+data type": "小数""method name": "光标",
+data type": "小数""comment": "Cursor，指定在查询显示报表时，在本内容行上显示的鼠标光标。\n0、默认光标； 1、箭头光标； 2、放大光标； 3、手指光标； 4、确定光标； 5、否定光标",
+data type": "小数""type": "property setter",
+data type": "小数""parameters": [
+   {
+"parameter name": "光标类型枚举值",
+"data type": "光标类型枚举"
+   }
+data type": "小数"]
+  },
+  {
+"comment": "CenterWithDetailGrid，指定本报表节是否跟随明细网格的居中显示而居中显示。""method name": "获取明细网格",
+"comment": "CenterWithDetailGrid，指定本报表节是否跟随明细网格的居中显示而居中显示。""comment": "DetailGrid，获取拥有本节的明细网格的接口引用。",
+"comment": "CenterWithDetailGrid，指定本报表节是否跟随明细网格的居中显示而居中显示。""type": "property getter",
+"comment": "CenterWithDetailGrid，指定本报表节是否跟随明细网格的居中显示而居中显示。""data type": "明细网格"
+  },
+  {
+ameter name": "换新页方式枚举值""method name": "设置全部格背景色",
+ameter name": "换新页方式枚举值""comment": "SetCellsBackColor，改变节中全部格的背景色。",
+ameter name": "换新页方式枚举值""parameters": [
+   {
+"parameter name": "背景色",
+"comment": "指定新的背景颜色 ",
+"data type": "整数"
+   }
+ameter name": "换新页方式枚举值"]
+  },
+  {
+ameter name": "逻辑值""method name": "设置全部格前景色",
+ameter name": "逻辑值""comment": "SetCellsForeColor，改变节中全部格的前景色。",
+ameter name": "逻辑值""parameters": [
+   {
+"parameter name": "前景色",
+"comment": "指定新的文字颜色。",
+"data type": "整数"
+   }
+ameter name": "逻辑值"]
+  }
+age，指定新页的产生方式。]
+ },
+ {
+ }"class name": "分组节",
+ }"comment": "GroupSection，基类，分组头与分组尾的基接口，表示分组头与分组尾相同的属性与方法。",
+ }"base class": "节",
+ }"methods": [
+  {
+ }"method name": "获取分组",
+ }"comment": "Group，获取拥有本分组节的分组对象的接口引用。",
+ }"type": "property getter",
+ }"data type": "分组"
+  },
+  {
+
+"method name": "横向分页锁定",
+
+"comment": "HNewPageFixed，指定在横向分页打印时，分组头尾是否锁定始终打印页面左边的内容。\n在横向分页生成报表页面时，如果希望分组头或分组页始终显示输出左边的内容，应该设置本属性为“是”。否则分组头或分组页根据横向分页的偏移显示对应位置处的内容。",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+"type": "property getter""method name": "横向分页锁定",
+"type": "property getter""comment": "HNewPageFixed，指定在横向分页打印时，分组头尾是否锁定始终打印页面左边的内容。\n在横向分页生成报表页面时，如果希望分组头或分组页始终显示输出左边的内容，应该设置本属性为“是”。否则分组头或分组页根据横向分页的偏移显示对应位置处的内容。",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+"type": "property getter"]
+  },
+  {
+}"type": "property getter""method name": "分组保持同页",
+}"type": "property getter""comment": "KeepTogether，获取是否保持本分组节输出显示在相同页的标志。",
+}"type": "property getter""type": "property getter",
+}"type": "property getter""data type": "逻辑型"
+  },
+  {
+
+"method name": "分组保持同页",
+
+"comment": "KeepTogether，设置是否保持本分组节输出显示在相同页的标志。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+ameter name": "背景色""method name": "打印输出边框",
+ameter name": "背景色""comment": "PrintGridBorder，获取是否打印本分组节对应位置的明细网格边框。\n当本属性值为是时，且明细网格的边框不具有内层并没有阴影，则此分组头或分组尾的左右两边不输出表格的边框线。即有内层边框或有阴影时，此属性设置无效。",
+ameter name": "背景色""type": "property getter",
+ameter name": "背景色""data type": "逻辑型"
+  },
+  {
+"method name": "打印输出边框",
+"comment": "PrintGridBorder，设置是否打印本分组节对应位置的明细网格边框。\n当本属性值为是时，且明细网格的边框不具有内层并没有阴影，则此分组头或分组尾的左右两边不输出表格的边框线。即有内层边框或有阴影时，此属性设置无效。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+meter name": "背景色""type": "property getter""method name": "每页重复打印",
+meter name": "背景色""type": "property getter""comment": "RepeatOnPage，指定是否在新页中重复显示当前分组项的分组头。\n当本属性值为真时，如果一个分组项的所有行需要在多页显示，则在每页都显示分组头或分组尾。",
+meter name": "背景色""type": "property getter""type": "property getter",
+meter name": "背景色""type": "property getter""data type": "逻辑型"
+  },
+  {
+eter name": "逻辑值"]"method name": "每页重复打印",
+eter name": "逻辑值"]"comment": "RepeatOnPage，指定是否在新页中重复显示当前分组项的分组头。\n当本属性值为真时，如果一个分组项的所有行需要在多页显示，则在每页都显示分组头或分组尾。",
+eter name": "逻辑值"]"type": "property setter",
+eter name": "逻辑值"]"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+eter name": "逻辑值"]]
+  },
+  {
+
+"method name": "换新页",
+
+"comment": "NewPage，获取换新页的产生方式。",
+
+"type": "property getter",
+
+"data type": "换新页方式枚举"
+  },
+  {
+"method name": "换新页",
+"comment": "NewPage，设置换新页的产生方式。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "换新页方式枚举值",
+"data type": "换新页方式枚举"
+   }
+]
+  },
+  {
+
+"method name": "换新页栏",
+
+"comment": "NewPageColumn，指定强制换新页栏的方式。\n指定分组头尾在输出前与输出后产生新页栏的方式，此属性常用于多栏报表在分组开始或结束时产生新页栏。",
+
+"type": "property getter",
+
+"data type": "换新页栏方式枚举"
+  },
+  {
+ge，指定新页的产生方式。"base class": "节""method name": "换新页栏",
+ge，指定新页的产生方式。"base class": "节""comment": "NewPageColumn，指定强制换新页栏的方式。\n指定分组头尾在输出前与输出后产生新页栏的方式，此属性常用于多栏报表在分组开始或结束时产生新页栏。",
+ge，指定新页的产生方式。"base class": "节""type": "property setter",
+ge，指定新页的产生方式。"base class": "节""parameters": [
+   {
+"parameter name": "换新页栏方式枚举值",
+"data type": "换新页栏方式枚举"
+   }
+ge，指定新页的产生方式。"base class": "节"]
+  }
+ }]
+ },
+ {
+"comment": "NewPage，获取换新页的产生方式。""class name": "文字框",
+"comment": "NewPage，获取换新页的产生方式。""comment": "TextBox，基类，各种文字部件框的基接口，表示各种文字部件框的相同属性与方法。\n各种显示文本的部件框的统称，包括：静态框、字段框、统计框、系统变量框、综合文字框。\n◆要实现长篇幅文字跨页显示，必须满足以下几点要求：\n1、必须将部件框的“可伸展”属性设为“是”。 \n2、部件框框所在的报表节的“可伸展”属性也要设为“是”。 \n3、“文字格式”属性类别下的“文字对齐”属性的垂直对齐必须为上端，通常设置为“左上”。",
+"comment": "NewPage，获取换新页的产生方式。""base class": "部件框",
+"comment": "NewPage，获取换新页的产生方式。""methods": [
+  {
+
+"method name": "获取文本格式",
+
+"comment": "TextFormat，输出文字的格式定义对象。",
+
+"type": "property getter",
+
+"data type": "文本格式"
+  },
+  {
+
+"data type": "文本格式""method name": "显示金额标签",
+
+"data type": "文本格式""comment": "ShowMoneyLabel，指定是否在此文字框中显示金额标签。",
+
+"data type": "文本格式""type": "property getter",
+
+"data type": "文本格式""data type": "逻辑型"
+  },
+  {
+ }"method name": "显示金额标签",
+ }"result comment": "ShowMoneyLabel，指定是否在此文字框中显示金额标签。",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+}"type": "property setter""method name": "显示金额线",
+}"type": "property setter""comment": "ShowMoneyLine，指定是否显示成金额线格式。",
+}"type": "property setter""type": "property getter",
+}"type": "property setter""data type": "逻辑型"
+  },
+  {
+
+"method name": "显示金额线",
+
+"comment": "ShowMoneyLine，指定是否显示成金额线格式。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"comment": "TextFormat，输出文字的格式定义对象。""method name": "显示文字",
+
+"comment": "TextFormat，输出文字的格式定义对象。""comment": "DisplayText，获取文字框部件框的输出显示文本。只有在运行时才能使用本属性。",
+
+"comment": "TextFormat，输出文字的格式定义对象。""type": "property getter",
+
+"comment": "TextFormat，输出文字的格式定义对象。""data type": "文本型"
+  },
+  {
+ }"method name": "显示文字",
+ }"comment": "DisplayText，获取文字框部件框的输出显示文本。只有在运行时才能使用本属性。",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "显示文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "可伸展",
+ }"comment": "CanGrow，指示部件框高度在运行时是否可以伸展的标志。\n如果本属性为真，报表运行时部件框的设计时高度不足以完整显示出拥有的文本，则部件框的高足自动伸展到刚好能完整显示出拥有的文本。\n如果文字要多行显示，应该将“文字自动绕行”属性设为“是”这样才会得到想要的伸展效果。",
+ }"type": "property getter",
+ }"data type": "逻辑型"
+  },
+  {
+r name": "背景色""type": "property getter""method name": "每页重复打印""method name": "可伸展",
+r name": "背景色""type": "property getter""method name": "每页重复打印""comment": "CanGrow，指示部件框高度在运行时是否可以伸展的标志。\n如果本属性为真，报表运行时部件框的设计时高度不足以完整显示出拥有的文本，则部件框的高足自动伸展到刚好能完整显示出拥有的文本。\n如果文字要多行显示，应该将“文字自动绕行”属性设为“是”这样才会得到想要的伸展效果。",
+r name": "背景色""type": "property getter""method name": "每页重复打印""type": "property setter",
+r name": "背景色""type": "property getter""method name": "每页重复打印""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+r name": "背景色""type": "property getter""method name": "每页重复打印"]
+  },
+  {
+ameter name": "逻辑值""method name": "可收缩",
+ameter name": "逻辑值""comment": "CanShrink，指示部件框高度在运行时是否可以收缩的标志。\n如果本属性为真，报表运行时部件框的设计时高度大于完整显示出拥有的文本所需要的高度，则部件框的高度自动收缩到刚好能完整显示出拥有的文本。",
+ameter name": "逻辑值""type": "property getter",
+ameter name": "逻辑值""data type": "逻辑型"
+  },
+  {
+ }"method name": "可收缩",
+ }"comment": "CanShrink，指示部件框高度在运行时是否可以收缩的标志。\n如果本属性为真，报表运行时部件框的设计时高度大于完整显示出拥有的文本所需要的高度，则部件框的高度自动收缩到刚好能完整显示出拥有的文本。",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+ethod name": "可收缩""method name": "显示文字脚本",
+ethod name": "可收缩""comment": "GetDisplayTextScript，表示报表 TextBoxGetDisplayText 事件对应的脚本语言代码。\n在此脚本中改变文字部件框的显示文字，通过设置 DisplayText 属性的值实现改变文字部件框的显示文字。\n◆特别提示：在此脚本中，仅能设置 Sender 的 DisplayText 数据，对其它属性的设置可能是不起做用的，还有可能引发不可预料的异常。",
+ethod name": "可收缩""type": "property getter",
+ethod name": "可收缩""data type": "文本型"
+  },
+  {
+
+"method name": "显示文字脚本",
+
+"comment": "GetDisplayTextScript，表示报表 TextBoxGetDisplayText 事件对应的脚本语言代码。\n在此脚本中改变文字部件框的显示文字，通过设置 DisplayText 属性的值实现改变文字部件框的显示文字。\n◆特别提示：在此脚本中，仅能设置 Sender 的 DisplayText 数据，对其它属性的设置可能是不起做用的，还有可能引发不可预料的异常。\n//按某个字段的值设置文字框的显示文字\nvar a = Report.FieldByName(\"Field1\").AsBoolean;\nif (a) {\n  Sender.DisplayText = \"条件成立的显示文字\";\n}\nelse {\n  Sender.DisplayText = \"其它的显示文字\";\n}",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "脚本文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "换新页栏方式枚举值""method name": "按需缩小字体",
+ameter name": "换新页栏方式枚举值""comment": "ShrinkFontToFit，在文字框的显示区域不能完整显示出文字内容时，指定是否自动缩小文字大小让文字完整显示出来。\n◆注意：\n1、缩小字体功能只有在打印与打印预览时才有效果，即查询显示时不支持字体缩小适应。\n2、当文字格式的支持HTML标签属性开启时，缩小字体功能不会生效。",
+ameter name": "换新页栏方式枚举值""type": "property getter",
+ameter name": "换新页栏方式枚举值""data type": "逻辑型"
+  },
+  {
+ name": "背景色""type": "property getter""method name": "每页重复打印""parameters": [
+"method name": "按需缩小字体",
+ name": "背景色""type": "property getter""method name": "每页重复打印""parameters": [
+"comment": "ShrinkFontToFit，在文字框的显示区域不能完整显示出文字内容时，指定是否自动缩小文字大小让文字完整显示出来。\n◆注意：\n1、缩小字体功能只有在打印与打印预览时才有效果，即查询显示时不支持字体缩小适应。\n2、当文字格式的支持HTML标签属性开启时，缩小字体功能不会生效。",
+ name": "背景色""type": "property getter""method name": "每页重复打印""parameters": [
+"type": "property setter",
+ name": "背景色""type": "property getter""method name": "每页重复打印""parameters": [
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+ name": "背景色""type": "property getter""method name": "每页重复打印""parameters": [
+]
+  }
+"comment": "NewPage，获取换新页的产生方式。"]
+ },
+ {
+"class name": "边框",
+"comment": "Border，基础对象，所有报表对象的边框。",
+"base class": "COM对象类",
+"methods": [
+  {
+
+"method name": "对象值复制",
+
+"comment": "Assign，将同类型的参数对象赋值到本对象。",
+
+"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+data type": "COM对象类""method name": "获取画笔",
+data type": "COM对象类""comment": "Pen，绘制边框的画笔。",
+data type": "COM对象类""type": "property getter",
+data type": "COM对象类""data type": "画笔"
+  },
+  {
+
+"parameters": [
+"method name": "边框模式",
+
+"parameters": [
+"comment": "Styles，边框线的显示方式。",
+
+"parameters": [
+"result comment": "枚举值：1、画左； 2、画上； 4、画右； 8、画下\n组合值：15 = 1+2+4+8 = 边框模式枚举.画左 + 边框模式枚举.画上 + 边框模式枚举.画右 + 边框模式枚举.画下",
+
+"parameters": [
+"type": "property getter",
+
+"parameters": [
+"data type": "整数"
+  },
+  {
+"method name": "边框模式",
+"comment": "Styles，边框线的显示方式。 \n枚举值：1、画左； 2、画上； 4、画右； 8、画下",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "边框模式枚举值",
+"comment": "组合值：15 = 1+2+4+8 = 边框模式枚举.画左 + 边框模式枚举.画上 + 边框模式枚举.画右 + 边框模式枚举.画下",
+"data type": "整数"
+   }
+]
+  },
+  {
+rameters": [
+"method name": "边框模式""method name": "获取内框画笔",
+rameters": [
+"method name": "边框模式""comment": "InnerPen，绘制内层边框的画笔。",
+rameters": [
+"method name": "边框模式""type": "property getter",
+rameters": [
+"method name": "边框模式""data type": "画笔"
+  },
+  {
+ }"method name": "内框模式",
+ }"comment": "InnerStyles，内层边框线的显示方式。",
+ }"type": "property getter",
+ }"data type": "整数"
+  },
+  {
+}"method name": "内框模式",
+}"comment": "InnerStyles，内层边框线的显示方式。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "边框样式枚举值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "内层缩进",
+
+"comment": "InnerIndent，内层边框缩进量，以屏幕像素为单位。",
+
+"result comment": "默认值2",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+"type": "property getter""method name": "内层缩进",
+"type": "property getter""comment": "InnerIndent，内层边框缩进量，以屏幕像素为单位。",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "像素值",
+"comment": "默认值2",
+"data type": "整数"
+   }
+"type": "property getter"]
+  },
+  {
+
+"method name": "阴影宽度",
+
+"comment": "ShadowWidth，阴影的宽度，以屏幕像素为单位。",
+
+"result comment": "默认值4",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+thod name": "阴影宽度""method name": "阴影宽度",
+thod name": "阴影宽度""comment": "ShadowWidth，阴影的宽度，以屏幕像素为单位",
+thod name": "阴影宽度""type": "property setter",
+thod name": "阴影宽度""parameters": [
+   {
+"parameter name": "像素值",
+"comment": "默认值4",
+"data type": "整数"
+   }
+thod name": "阴影宽度"]
+  },
+  {
+
+"method name": "阴影颜色",
+
+"comment": "ShadowColor，阴影的颜色。",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "阴影颜色",
+
+"comment": "ShadowColor，阴影的颜色。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "颜色值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "显示阴影",
+
+"comment": "Shadow，是否显示阴影。",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "显示阴影",
+
+"comment": "Shadow，是否显示阴影。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  }
+]
+ },
+ {
+"comment": "Shadow，是否显示阴影。""class name": "报表字体",
+"comment": "Shadow，是否显示阴影。""comment": "Font，表示报表对象显示文字所使用字体的对象。\n表示报表对象显示文字所使用字体的对象。字体对象提供属性用来获取与设置字体定义，需要显示文本或需要为子对象提供缺省字体的报表对象拥有字体对象。\n当报表对象不使用其缺省字体时，它的字体对象拥有一个OLE字体对象，其字体定义由OLE字体对象表示，可以通过 OleFont 属性取得OLE字体对象的接口引用。\n当报表对象使用缺省字体时，其字体对象不拥有一个OLE字体对象，其字体定义来自其上级对象的字体定义，OleFont 属性为NULL。\n报表开发者可以在 SectionFormat 事件响应函数中改变触发事件报表节本身或其拥有的单元格或部件框的字体定义，从而改变对应文本的显示。\n通过设定字体对象的属性来改变字体定义，如果将 OleFont 属性设为NULL，将导致使用缺省字体。\nGrid++Report中拥有字体对象的报表对象有：\n  (1).报表主对象IGridppReport)。其字体对象定义整个报表的缺省字体。OleFont 属性永远不为NULL。\n  (3).明细网格(IGRDetailGrid),其字体对象定义其拥有的字节（标题行、内容行、分组头、分组尾）的缺省字体。其缺省字体来自报表主对象。\n  (2).报表节(IGRSection)。其字体对象定义其拥有全部部件框或单元格的缺省字体。如果报表节的类型为页眉、页脚、报表头、报表尾，其缺省字体来自报表主对象。\n      如果报表节的类型为标题行、内容行、分组头、分组尾，其缺省字体来自明细网格。\n  (4).单元格(IGRColumnCell)。如果为非自由格，其字体对象定义单元格文本的显示字体；如果为非自由格，其字体对象定义单元格拥有全部部件框的缺省字体。标题格的缺省字体来自标题行，内容格的缺省字体来自内容行。\n  (5).部件框(IGRControl)。其字体对象定义部件框文本的显示字体。其缺省字体来自父容器。",
+"comment": "Shadow，是否显示阴影。""base class": "COM对象类",
+"comment": "Shadow，是否显示阴影。""methods": [
+  {
+
+"method name": "对象值复制",
+
+"comment": "Assign，将同类型的参数对象赋值到本对象。",
+
+"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "名称",
+
+"comment": "Name，此字体对象的字体名称。",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+thod name": "可收缩""type": "property getter""method name": "名称",
+thod name": "可收缩""type": "property getter""comment": "Name，此字体对象的字体名称。",
+thod name": "可收缩""type": "property getter""type": "property setter",
+thod name": "可收缩""type": "property getter""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+thod name": "可收缩""type": "property getter"]
+  },
+  {
+}"method name": "粗体",
+}"comment": "Bold，该值指示此字体对象是否为粗体。",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+comment": "Shadow，是否显示阴影。""methods": [
+"method name": "粗体",
+comment": "Shadow，是否显示阴影。""methods": [
+"comment": "Bold，该值指示此字体对象是否为粗体。",
+comment": "Shadow，是否显示阴影。""methods": [
+"type": "property setter",
+comment": "Shadow，是否显示阴影。""methods": [
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+comment": "Shadow，是否显示阴影。""methods": [
+]
+  },
+  {
+ameter name": "逻辑值""method name": "斜体",
+ameter name": "逻辑值""comment": "Italic，指示此字体对象是否为斜体。",
+ameter name": "逻辑值""type": "property getter",
+ameter name": "逻辑值""data type": "逻辑型"
+  },
+  {
+"method name": "斜体",
+"comment": "Italic，指示此字体对象是否为斜体。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+comment": "Shadow，是否显示阴影。""methods": [
+"method name": "删除线",
+comment": "Shadow，是否显示阴影。""methods": [
+"comment": "Strikethrough，该值指示此字体对象是否指定通过该字体的横线。",
+comment": "Shadow，是否显示阴影。""methods": [
+"type": "property getter",
+comment": "Shadow，是否显示阴影。""methods": [
+"data type": "逻辑型"
+  },
+  {
+omment": "Shadow，是否显示阴影。""methods": [
+"data type": "逻辑型""method name": "删除线",
+omment": "Shadow，是否显示阴影。""methods": [
+"data type": "逻辑型""comment": "Strikethrough，该值指示此字体对象是否指定通过该字体的横线。",
+omment": "Shadow，是否显示阴影。""methods": [
+"data type": "逻辑型""type": "property setter",
+omment": "Shadow，是否显示阴影。""methods": [
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+omment": "Shadow，是否显示阴影。""methods": [
+"data type": "逻辑型"]
+  },
+  {
+ameter name": "对象类""method name": "下划线",
+ameter name": "对象类""comment": "Underline，该值指示此字体对象是否有下划线。",
+ameter name": "对象类""type": "property getter",
+ameter name": "对象类""data type": "逻辑型"
+  },
+  {
+ameter name": "逻辑值""method name": "下划线",
+ameter name": "逻辑值""comment": "Underline，该值指示此字体对象是否有下划线。",
+ameter name": "逻辑值""type": "property setter",
+ameter name": "逻辑值""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+ameter name": "逻辑值"]
+  },
+  {
+er name": "逻辑值""method name": "下划线""method name": "获取OLE字体",
+er name": "逻辑值""method name": "下划线""comment": "OleFont，IFont，如果报表对象使用缺省字体，此属性为NULL，反之此属性为一个有效的OLE字体对象的接口引用",
+er name": "逻辑值""method name": "下划线""type": "property getter",
+er name": "逻辑值""method name": "下划线""data type": "COM对象类"
+  },
+  {
+r name": "逻辑值""method name": "下划线""comment": "OleFont，IFont，如果报表对象使用缺省字体，此属性为NULL，反之此属性为一个有效的OLE字体对象的接口引用""method name": "设置OLE字体",
+r name": "逻辑值""method name": "下划线""comment": "OleFont，IFont，如果报表对象使用缺省字体，此属性为NULL，反之此属性为一个有效的OLE字体对象的接口引用""comment": "OleFont，IFont，如果报表对象使用缺省字体，此属性为NULL，反之此属性为一个有效的OLE字体对象的接口引用",
+r name": "逻辑值""method name": "下划线""comment": "OleFont，IFont，如果报表对象使用缺省字体，此属性为NULL，反之此属性为一个有效的OLE字体对象的接口引用""type": "property setter",
+r name": "逻辑值""method name": "下划线""comment": "OleFont，IFont，如果报表对象使用缺省字体，此属性为NULL，反之此属性为一个有效的OLE字体对象的接口引用""parameters": [
+   {
+"parameter name": "字体对象",
+"data type": "COM对象类"
+   }
+r name": "逻辑值""method name": "下划线""comment": "OleFont，IFont，如果报表对象使用缺省字体，此属性为NULL，反之此属性为一个有效的OLE字体对象的接口引用"]
+  },
+  {
+}"method name": "字号",
+}"comment": "Point，指示此字体对象的字体大小尺寸，一般此值等同字体在字体对话框中显示的大小值。",
+}"type": "property getter",
+}"data type": "小数"
+  },
+  {
+r name": "逻辑值""method name": "下划线""type": "property getter""method name": "字号",
+r name": "逻辑值""method name": "下划线""type": "property getter""comment": "Point，指示此字体对象的字体大小尺寸，一般此值等同字体在字体对话框中显示的大小值。",
+r name": "逻辑值""method name": "下划线""type": "property getter""type": "property setter",
+r name": "逻辑值""method name": "下划线""type": "property getter""parameters": [
+   {
+"parameter name": "字号值",
+"comment": "可以是小数值",
+"data type": "小数"
+   }
+r name": "逻辑值""method name": "下划线""type": "property getter"]
+  },
+  {
+comment": "可以是小数值""method name": "粗细度",
+comment": "可以是小数值""comment": "Weight，该值用数字指示此字体对象的字体粗细，比 Bold 属性更具灵活性。",
+comment": "可以是小数值""type": "property getter",
+comment": "可以是小数值""data type": "整数"
+  },
+  {
+"data type": "小数""method name": "粗细度",
+"data type": "小数""comment": "Weight，该值用数字指示此字体对象的字体粗细，比 Bold 属性更具灵活性。",
+"data type": "小数""type": "property setter",
+"data type": "小数""parameters": [
+   {
+"parameter name": "粗细度值",
+"comment": "550个是常规与粗体的临界值：由粗到细的字符。400等同于normal，而700等同于bold；如果权重低于550(FW_NORMAL 400和FW_BOLD 700的平均值)，则Bold属性也初始化为false。如果权重大于550，则Bold属性设置为true。\n可用值   值的说明\nnormal  缺省值。字体正常显示。\nbold    粗体\nbolder  比粗体更加粗\nlighter 比正常字体淡\n100 至少和200一样淡\n200 至少和100一样粗，至少和300一样淡\n300 至少和200一样粗，至少和400一样淡\n400 字体正常显示，相当于normal。\n500 至少和400一样粗，至少和600一样淡\n600 至少和500一样粗，至少和700一样淡\n700 粗体，相当于bold。\n800 至少和700一样粗，至少和800一样淡\n900 至少和800一样粗",
+"data type": "整数"
+   }
+"data type": "小数"]
+  },
+  {
+
+"type": "property setter""method name": "字符集",
+
+"type": "property setter""comment": "Charset，该值指定此字体对象使用的 GDI 字符集。",
+
+"type": "property setter""type": "property getter",
+
+"type": "property setter""data type": "整数"
+  },
+  {
+
+"method name": "字符集",
+
+"comment": "Charset，该值指定此字体对象使用的 GDI 字符集。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "粗细度值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "获取引用OLE字体",
+}"comment": "UsingOleFont，(IFont)\n当报表对象使用自己定义的字体时，此属性的值等于 OleFont 属性的值。\n当报表对象使用缺省字体时，此属性的值来自上级对象(或上上级)的 UsingOleFont 属性。\n注意：如果使用本属性取得的OLE字体对象的接口引用进行改变字体的操作，有可能改变的是上级报表对象，或上级报表对象的上级报表对象的字体定义。",
+}"type": "property getter",
+}"data type": "COM对象类"
+  },
+  {
+
+"method name": "克隆",
+
+"comment": "Clone，根据本队象复制产生一个新的报表字体对象。",
+
+"data type": "报表字体"
+  }
+"comment": "Shadow，是否显示阴影。"]
+ },
+ {
+data type": "小数""type": "property setter""class name": "画笔",
+data type": "小数""type": "property setter""comment": "Pen，基础对象，表示报表中绘制线条或边框的画笔对象。",
+data type": "小数""type": "property setter""base class": "COM对象类",
+data type": "小数""type": "property setter""methods": [
+  {
+}"method name": "对象值复制",
+}"comment": "Assign，将同类型的参数对象赋值到本对象。",
+}"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "颜色",
+data type": "整数""comment": "Color，指定绘制线条的眼色。",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "整数"
+  },
+  {
+
+"method name": "颜色",
+
+"comment": "Color，指定绘制线条的眼色。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "颜色值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "宽度",
+
+"comment": "Width，指定绘制线条的宽度。",
+
+"result comment": "帮助里以屏幕像素点为单位，实际上可以是小数。",
+
+"type": "property getter",
+
+"data type": "小数"
+  },
+  {
+name": "逻辑值""method name": "下划线""type": "property getter"]"method name": "宽度",
+name": "逻辑值""method name": "下划线""type": "property getter"]"comment": "Width，指定绘制线条的宽度。",
+name": "逻辑值""method name": "下划线""type": "property getter"]"type": "property setter",
+name": "逻辑值""method name": "下划线""type": "property getter"]"parameters": [
+   {
+"parameter name": "宽度值",
+"comment": "帮助里以屏幕像素点为单位，实际上可以是小数。",
+"data type": "小数"
+   }
+name": "逻辑值""method name": "下划线""type": "property getter"]]
+  },
+  {
+": "逻辑值""method name": "下划线""type": "property getter"]"method name": "宽度""method name": "类型",
+": "逻辑值""method name": "下划线""type": "property getter"]"method name": "宽度""comment": "Style，指定绘制的线条样式。",
+": "逻辑值""method name": "下划线""type": "property getter"]"method name": "宽度""type": "property getter",
+": "逻辑值""method name": "下划线""type": "property getter"]"method name": "宽度""data type": "画线笔类型枚举"
+  },
+  {
+"type": "property getter""method name": "类型",
+"type": "property getter""comment": "Style，指定绘制的线条样式。",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "画线笔类型枚举值",
+"data type": "画线笔类型枚举"
+   }
+"type": "property getter"]
+  }
+data type": "小数""type": "property setter"]
+ },
+ {
+
+"class name": "报表图片",
+
+"comment": "Picture，基础对象 全局使用对象(可多次创建变相清空内容值 或 创建多个对象)。",
+
+"base class": "COM对象类",
+
+"methods": [
+  {
+"method name": "对象值复制",
+"comment": "Assign，将同类型的参数对象赋值到本对象。",
+"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+]
+  },
+  {
+r，指定绘制线条的眼色。"method name": "高度",
+r，指定绘制线条的眼色。"comment": "Height，获取当前加载的图像的高度像素值。",
+r，指定绘制线条的眼色。"type": "property getter",
+r，指定绘制线条的眼色。"data type": "整数"
+  },
+  {
+"comment": "Picture，基础对象 全局使用对象(可多次创建变相清空内容值 或 创建多个对象)。""method name": "高度",
+"comment": "Picture，基础对象 全局使用对象(可多次创建变相清空内容值 或 创建多个对象)。""comment": "Height，获取当前加载的图像的高度像素值。",
+"comment": "Picture，基础对象 全局使用对象(可多次创建变相清空内容值 或 创建多个对象)。""type": "property setter",
+"comment": "Picture，基础对象 全局使用对象(可多次创建变相清空内容值 或 创建多个对象)。""parameters": [
+   {
+"parameter name": "高度值",
+"data type": "整数"
+   }
+"comment": "Picture，基础对象 全局使用对象(可多次创建变相清空内容值 或 创建多个对象)。"]
+  },
+  {
+"method name": "宽度",
+"comment": "Width，获取当前加载的图像的宽度像素值。",
+"type": "property getter",
+"data type": "整数"
+  },
+  {
+type": "property getter""method name": "宽度",
+type": "property getter""comment": "Width，获取当前加载的图像的宽度像素值。",
+type": "property getter""type": "property setter",
+type": "property getter""parameters": [
+   {
+"parameter name": "宽度值",
+"data type": "整数"
+   }
+type": "property getter"]
+  },
+  {
+pe": "property getter"]"method name": "类型",
+pe": "property getter"]"comment": "Type，获取当前加载的图像的类型。",
+pe": "property getter"]"type": "property getter",
+pe": "property getter"]"data type": "图像类型枚举"
+  },
+  {
+e": "property getter"]"data type": "图像类型枚举""method name": "类型",
+e": "property getter"]"data type": "图像类型枚举""comment": "Type，获取当前加载的图像的类型。",
+e": "property getter"]"data type": "图像类型枚举""type": "property setter",
+e": "property getter"]"data type": "图像类型枚举""parameters": [
+   {
+"parameter name": "图像类型枚举值",
+"data type": "图像类型枚举"
+   }
+e": "property getter"]"data type": "图像类型枚举"]
+  },
+  {
+"result comment": "帮助里以屏幕像素点为单位，实际上可以是小数。""method name": "图片",
+"result comment": "帮助里以屏幕像素点为单位，实际上可以是小数。""comment": "OlePicture，获取或设置图像对象关联的 OLE 图像对象。",
+"result comment": "帮助里以屏幕像素点为单位，实际上可以是小数。""type": "property getter",
+"result comment": "帮助里以屏幕像素点为单位，实际上可以是小数。""data type": "COM对象类"
+  },
+  {
+}"method name": "图片",
+}"comment": "OlePicture，获取或设置图像对象关联的 OLE 图像对象。",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "图片对象",
+"data type": "COM对象类"
+   }
+}]
+  },
+  {
+
+"method name": "从文件载入图片",
+
+"comment": "LoadFromFile，从指定磁盘本地文件或网络URL中载入图像数据。",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "图像文件路径名或图像数据URL。",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "从二进制载入图片",
+"data type": "逻辑型""comment": "LoadFromBinary，从二进制数据对象中载入图像数据。",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "二进制数据对象",
+"comment": "拥有图像数据的二进制对象。",
+"data type": "二进制数据"
+   }
+"data type": "逻辑型"]
+  },
+  {
+
+"method name": "从字段载入图片",
+
+"comment": "LoadFromField，从某个记录集字段中载入二进制数据。",
+
+"result comment": "指示载入是否成功。",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "数据字段",
+"comment": "对应的字段也应该是二进制类型的。",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "从内存载入图片",
+
+"comment": "LoadFromMemory，从内存中载入图像数据。",
+
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "pData，数据缓冲区内存地址。",
+"data type": "字节"
+   },
+   {
+"parameter name": "数据尺寸",
+"comment": "BytesCount，数据缓冲区的字节数。",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "保存到文件",
+ }"comment": "SaveToFile，将图像数据保存到磁盘本地文件或发送到网络URL。",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "渲染",
+
+"comment": "Render",
+
+"parameters": [
+   {
+"parameter name": "对象句柄",
+"comment": "hdc",
+"data type": "整数"
+   },
+   {
+"parameter name": "左",
+"comment": "Left",
+"data type": "整数"
+   },
+   {
+"parameter name": "上",
+"comment": "Top",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "Width",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "Height",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像对齐方式枚举值",
+"comment": "PictureAlignment 1、左上； 2、右上； 3、居中； 4、左下； 5、右下",
+"data type": "图像对齐方式枚举"
+   },
+   {
+"parameter name": "图像缩放方式枚举值",
+"comment": "PictureSizeMode  1、剪裁； 2、铺满； 3、缩放； 4、完整显示； 5、平铺",
+"data type": "图像缩放方式枚举"
+   },
+   {
+"parameter name": "背景颜色",
+"comment": "BackColor",
+"data type": "整数"
+   },
+   {
+"parameter name": "背景填充",
+"comment": "FillBack",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "图像透明模式枚举值",
+"comment": "Transparent 0、不透明； 1、叠加透明； 2、背景透明",
+"data type": "图像透明模式枚举"
+   },
+   {
+"parameter name": "图像旋转模式枚举值",
+"comment": "RotateMode  0、无； 1、左旋； 2、右旋； 3、颠倒； 4、镜像",
+"data type": "图像旋转模式枚举"
+   }
+
+]
+  }
+
+]
+ },
+ {
+"class name": "文本格式",
+"comment": "TextFormat，基础对象，在报表中显示文字时，表示文字格式信息的对象。\n◆要实现长篇幅文字跨页显示，必须满足以下几点要求：\n1、必须将部件框的“可伸展”属性设为“是”。 \n2、部件框框所在的报表节的“可伸展”属性也要设为“是”。 \n3、“文字格式”属性类别下的“文字对齐”属性的垂直对齐必须为上端，通常设置为“左上”。",
+"base class": "COM对象类",
+"methods": [
+  {
+
+"method name": "对象值复制",
+
+"comment": "Assign，将同类型的参数对象赋值到本对象。",
+
+"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "超长文字省略号",
+
+"comment": "EndEllipsis，是否用省略号(...)表示超出显示区域的文本。只有当文本不是多行显示时此属性才有意义。",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "超长文字省略号",
+
+"comment": "EndEllipsis，是否用省略号(...)表示超出显示区域的文本。只有当文本不是多行显示时此属性才有意义。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+ameter name": "逻辑值""method name": "支持HTML标签",
+ameter name": "逻辑值""comment": "HtmlTags，是否支持解析显示文字中的HTML标签。\n1、只支持部分HTML标签，支持的标签类型请参考帮助文档中“开发指南->...”的说明\n2、当本属性为是时，文字部件框的缩小字体功能不会生效。\n设置文字格式的“支持HTML标签”属性为“是”开启HTML标签解析功能。在文字中加上标签文字，在显示时就会把标签文字解析出来，标签文字本身不显示，其标注的文字将按对应效果显示。\n◆目前支持的标签有：\n1、<b>...</b> 文字粗体 \n2、<i>...</i> 文字斜体 \n3、<u>...</u> 文字下划线，下划线仅绘制在文字下 \n4、<U>...</U> 文字下划线，下划线延伸到行尾，即使没有文字，行也画满下划线 \n5、<strike>...</strike> 文字删除线 \n6、<p>...</p> 文字段落换行 \n7、<br> 或<br/> 文字段落换行 \n8、<sub>...</sub> 下标 \n9、<sup>...</sup> 上标 \n10、<font color=...>...</font> 文字颜色，颜色值支持两种表示方式：rgb与16进制，如:<font color=#FFAA88>，<font color=#RGB(255,128,64)> \n11、<font size=n>..........</font> 文字大小，参数n为字体的点数，可以带小数点 \n12、<font face=\"字体名称\">..........</font> 字体名称，参数为有效的字体名称 \n13、<icon>n</icon> 在文字中插入图标,n为从0开始的数字，分别表示不同的图标。 \n14、<img>n(w,h)</img> 在文字中插入显示报表图像集合中的一个图像，并要指定图像显示的宽度与高度；n、w、h都是纯数字，n为从1开始的数字，对应报表图像集合中的图像序号，w与h分别指定图像的显示宽度与高度，以屏幕像素为单位。 \n◆特别提示：Grid++Report 只支持部分HTML标签，一个HTML文档的内容一般没法在报表中正确展现出来。",
+ameter name": "逻辑值""type": "property getter",
+ameter name": "逻辑值""data type": "逻辑型"
+  },
+  {
+"parameters": [
+"method name": "支持HTML标签",
+"parameters": [
+"comment": "HtmlTags，是否支持解析显示文字中的HTML标签。\n1、只支持部分HTML标签，支持的标签类型请参考帮助文档中“开发指南->...”的说明\n2、当本属性为是时，文字部件框的缩小字体功能不会生效。\n设置文字格式的“支持HTML标签”属性为“是”开启HTML标签解析功能。在文字中加上标签文字，在显示时就会把标签文字解析出来，标签文字本身不显示，其标注的文字将按对应效果显示。\n◆目前支持的标签有：\n1、<b>...</b> 文字粗体 \n2、<i>...</i> 文字斜体 \n3、<u>...</u> 文字下划线，下划线仅绘制在文字下 \n4、<U>...</U> 文字下划线，下划线延伸到行尾，即使没有文字，行也画满下划线 \n5、<strike>...</strike> 文字删除线 \n6、<p>...</p> 文字段落换行 \n7、<br> 或<br/> 文字段落换行 \n8、<sub>...</sub> 下标 \n9、<sup>...</sup> 上标 \n10、<font color=...>...</font> 文字颜色，颜色值支持两种表示方式：rgb与16进制，如:<font color=#FFAA88>，<font color=#RGB(255,128,64)> \n11、<font size=n>..........</font> 文字大小，参数n为字体的点数，可以带小数点 \n12、<font face=\"字体名称\">..........</font> 字体名称，参数为有效的字体名称 \n13、<icon>n</icon> 在文字中插入图标,n为从0开始的数字，分别表示不同的图标。 \n14、<img>n(w,h)</img> 在文字中插入显示报表图像集合中的一个图像，并要指定图像显示的宽度与高度；n、w、h都是纯数字，n为从1开始的数字，对应报表图像集合中的图像序号，w与h分别指定图像的显示宽度与高度，以屏幕像素为单位。 \n◆特别提示：Grid++Report 只支持部分HTML标签，一个HTML文档的内容一般没法在报表中正确展现出来。",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+"parameters": [
+]
+  },
+  {
+base class": "COM对象类""method name": "文字对齐方式",
+base class": "COM对象类""comment": "TextAlign，文字的输出对齐方式。\n◆要实现长篇幅文字跨页显示，必须满足以下几点要求：\n1、必须将部件框的“可伸展”属性设为“是”。 \n2、部件框框所在的报表节的“可伸展”属性也要设为“是”。 \n3、“文字格式”属性类别下的“文字对齐”属性的垂直对齐必须为上端，通常设置为“左上”。",
+base class": "COM对象类""type": "property getter",
+base class": "COM对象类""data type": "文字对齐方式枚举"
+  },
+  {
+
+"method name": "文字对齐方式",
+
+"comment": "TextAlign，文字的输出对齐方式。 \n◆要实现长篇幅文字跨页显示，必须满足以下几点要求：\n1、必须将部件框的“可伸展”属性设为“是”。 \n2、部件框框所在的报表节的“可伸展”属性也要设为“是”。 \n3、“文字格式”属性类别下的“文字对齐”属性的垂直对齐必须为上端，通常设置为“左上”。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "文字对齐方式枚举值",
+"data type": "文字对齐方式枚举"
+   }
+
+]
+  },
+  {
+data type": "文字对齐方式枚举""method name": "文字自动绕行",
+data type": "文字对齐方式枚举""comment": "WordWrap，是否自动换行显示文本。",
+data type": "文字对齐方式枚举""type": "property getter",
+data type": "文字对齐方式枚举""data type": "逻辑型"
+  },
+  {
+"type": "property setter""method name": "文字自动绕行",
+"type": "property setter""comment": "WordWrap，是否自动换行显示文本。",
+"type": "property setter""type": "property setter",
+"type": "property setter""parameters": [
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+"type": "property setter"]
+  },
+  {
+ }"method name": "字间距",
+ }"comment": "CharacterSpacing，输出文字的字间距，以屏幕像素点为计量单位。\n当文字按任意角度显示时，字间距与行间距设置不会起作用。 \n在显示长篇文字(文字内容超过一页，如合同与公文等)时，为了防止文字换页时出现从中间截断的情况，应该将“行间距”或“字间距”属性的值设为大于0，如“0.5”或“1.0”。",
+ }"type": "property getter",
+ }"data type": "小数"
+  },
+  {
+"type": "property setter""method name": "字间距",
+"type": "property setter""comment": "CharacterSpacing，输出文字的字间距，以屏幕像素点为计量单位。\n当文字按任意角度显示时，字间距与行间距设置不会起作用。 \n在显示长篇文字(文字内容超过一页，如合同与公文等)时，为了防止文字换页时出现从中间截断的情况，应该将“行间距”或“字间距”属性的值设为大于0，如“0.5”或“1.0”。",
+"type": "property setter""type": "property setter",
+"type": "property setter""parameters": [
+   {
+"parameter name": "数值",
+"data type": "小数"
+   }
+"type": "property setter"]
+  },
+  {
+ameter name": "数值""method name": "行间距",
+ameter name": "数值""comment": "LineSpacing，输出文字的行间距，以屏幕像素点为计量单。\n当文字按任意角度显示时，字间距与行间距设置不会起作用。 \n在显示长篇文字(文字内容超过一页，如合同与公文等)时，为了防止文字换页时出现从中间截断的情况，应该将“行间距”或“字间距”属性的值设为大于0，如“0.5”或“1.0”。",
+ameter name": "数值""type": "property getter",
+ameter name": "数值""data type": "小数"
+  },
+  {
+"method name": "行间距",
+"comment": "LineSpacing，输出文字的行间距，以屏幕像素点为计量单。\n当文字按任意角度显示时，字间距与行间距设置不会起作用。 \n在显示长篇文字(文字内容超过一页，如合同与公文等)时，为了防止文字换页时出现从中间截断的情况，应该将“行间距”或“字间距”属性的值设为大于0，如“0.5”或“1.0”。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "数值",
+"data type": "小数"
+   }
+]
+  },
+  {
+ }"method name": "首字缩进",
+ }"comment": "FirstCharIndent，指定文字段落前第一个文字的缩进量，以屏幕像素为计量单位。",
+ }"type": "property getter",
+ }"data type": "小数"
+  },
+  {
+er name": "数值""method name": "行间距""method name": "首字缩进",
+er name": "数值""method name": "行间距""comment": "FirstCharIndent，指定文字段落前第一个文字的缩进量，以屏幕像素为计量单位。",
+er name": "数值""method name": "行间距""type": "property setter",
+er name": "数值""method name": "行间距""parameters": [
+   {
+"parameter name": "数值",
+"data type": "小数"
+   }
+er name": "数值""method name": "行间距"]
+  },
+  {
+ameter name": "数值""method name": "文字宽度比例",
+ameter name": "数值""comment": "FontWidthRatio，文字显示的宽度比例。\n当此属性值为1时，文字按原始比例输出；当此属性值大于1时，文字按拉宽的样式输出；当此属性值小于1时，文字按收窄的样式输出。",
+ameter name": "数值""type": "property getter",
+ameter name": "数值""data type": "小数"
+  },
+  {
+e": "property setter""method name": "文字自动绕行""method name": "文字宽度比例",
+e": "property setter""method name": "文字自动绕行""comment": "FontWidthRatio，文字显示的宽度比例。\n当此属性值为1时，文字按原始比例输出；当此属性值大于1时，文字按拉宽的样式输出；当此属性值小于1时，文字按收窄的样式输出。",
+e": "property setter""method name": "文字自动绕行""type": "property setter",
+e": "property setter""method name": "文字自动绕行""parameters": [
+   {
+"parameter name": "数值",
+"data type": "小数"
+   }
+e": "property setter""method name": "文字自动绕行"]
+  },
+  {
+data type": "逻辑型""method name": "段间距",
+data type": "逻辑型""comment": "ParagraphSpacing，输出文字的段落之间的间距，以屏幕像素点为计量单位。",
+data type": "逻辑型""type": "property getter",
+data type": "逻辑型""data type": "小数"
+  },
+  {
+
+"method name": "段间距",
+
+"comment": "ParagraphSpacing，输出文字的段落之间的间距，以屏幕像素点为计量单位。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "数值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+ }"method name": "文字角度",
+ }"comment": "TextAngle，文字的显示角度，以度为计量单位，逆时针方向为正。\n当文字角度大于0时，只有当文字方向为默认值时才会生效，此时文字只能单行显示，文字对齐方式设定也不起作用，否则将按特定的文字方向显示文字。",
+ }"type": "property getter",
+ }"data type": "小数"
+  },
+  {
+ata type": "逻辑型""comment": "ParagraphSpacing，输出文字的段落之间的间距，以屏幕像素点为计量单位。""method name": "文字方向",
+ata type": "逻辑型""comment": "ParagraphSpacing，输出文字的段落之间的间距，以屏幕像素点为计量单位。""comment": "TextOrientation，文字的显示方向。",
+ata type": "逻辑型""comment": "ParagraphSpacing，输出文字的段落之间的间距，以屏幕像素点为计量单位。""type": "property getter",
+ata type": "逻辑型""comment": "ParagraphSpacing，输出文字的段落之间的间距，以屏幕像素点为计量单位。""data type": "文字方向枚举"
+  },
+  {
+
+"method name": "文字方向",
+
+"comment": "TextOrientation，文字的显示方向。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "文字方向枚举值",
+"data type": "文字方向枚举"
+   }
+
+]
+  },
+  {
+"method name": "文字角度",
+"comment": "TextAngle，文字的显示角度，以度为计量单位，逆时针方向为正。\n当文字角度大于0时，只有当文字方向为默认值时才会生效，此时文字只能单行显示，文字对齐方式设定也不起作用，否则将按特定的文字方向显示文字。",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "数值",
+"data type": "小数"
+   }
+]
+  },
+  {
+"method name": "克隆",
+"comment": "Clone，根据本对象复制产生一个新的文字格式对象。",
+"data type": "文本格式"
+  }
+]
+ }
+ "TextAngle，文字的显示角度，以度为计量单位，逆时针方向为正。"]
+}

@@ -1,0 +1,180 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+⾀鴉Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+⾀鴉Ǹ"package name": "wss.事件",
+⾀鴉Ǹ"classes": [
+ {
+"class name": "类_FBrowser_自定义服务器事件",
+"base class": "类_FBrowser_服务器事件",
+"methods": [
+  {
+
+"method name": "服务器即将创建",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "服务器",
+"data type": "类_FBrowser_服务器"
+   }
+
+]
+  },
+  {
+
+"method name": "服务器即将销毁",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "服务器",
+"data type": "类_FBrowser_服务器"
+   }
+
+]
+  },
+  {
+
+"method name": "收到客户端连接",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "服务器",
+"data type": "类_FBrowser_服务器"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "收到客户端断开连接",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "服务器",
+"data type": "类_FBrowser_服务器"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "收到WebSocket请求",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "服务器",
+"data type": "类_FBrowser_服务器"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "客户端地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "回调",
+"data type": "类_FBrowser_回调"
+   }
+
+]
+  },
+  {
+
+"method name": "收到HTTP请求",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "服务器",
+"data type": "类_FBrowser_服务器"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "客户端地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   }
+
+]
+  },
+  {
+
+"method name": "收到WebSocket连接",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "服务器",
+"data type": "类_FBrowser_服务器"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "收到WebSocket消息",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "服务器",
+"data type": "类_FBrowser_服务器"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "注意数据转码,这里是UTF8编码",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ }
+⾀鴉Ǹ]
+}

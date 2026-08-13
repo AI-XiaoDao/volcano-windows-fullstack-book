@@ -1,0 +1,2056 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+변鳵Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+변鳵Ǹ"package name": "浏览器.事件",
+변鳵Ǹ"classes": [
+ {
+"class name": "类_FBrowser_自定义初始化事件",
+"base class": "类_FBrowser_应用事件",
+"methods": [
+  {
+
+"method name": "执行关闭完毕",
+
+"comment": "执行“FBrowser_关闭”成功后触发，框架所以资源释放完毕后触发这个事件,\n此事件是单独线程执行，如果要在这里面关闭窗口操控UI，最好投递到主线程或UI线程处理，否则跨线程可能会崩溃",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "是否结束程序",
+"comment": "由“FBrowser_关闭”的“结束程序”参数传递而来，可直接修改，设置为真直接关闭当前程序",
+"data type": "逻辑型类"
+   }
+
+]
+  },
+  {
+
+"method name": "即将处理命令行",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "进程类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "命令行",
+"data type": "类_FBrowser_命令行"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_初始化完毕",
+
+"@虚拟方法": "可覆盖"
+  },
+  {
+
+"method name": "请求环境初始化完毕",
+
+"comment": "OnRequestContextInitialized,请求环境、缓存目录等初始化完成事件",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "请求环境",
+"comment": "这里的环境不是全局，但可能是由全局分享而来，要注意判断",
+"data type": "类_FBrowser_请求环境"
+   }
+
+]
+  },
+  {
+
+"method name": "获取默认事件",
+
+"comment": "OnGetDefaultClient\n当谷歌模式下，内置某些谷歌功能需要调用事件的时候设置的默认事件;\n比如插件、谷歌UI自带添加浏览器按钮或开发者工具等内置创建浏览器的请求",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "当前要获取默认事件的浏览器，注意：这里浏览器并没有完全创建成功，只能做一些简单的操作",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "地址",
+"comment": "当前要获取事件的地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户额外配置",
+"comment": "这里面不单独设置事件即为使用内置默认不控制，要控制就需要自行设置浏览器事件",
+"data type": "类_FBrowser_用户额外配置"
+   }
+
+]
+  },
+  {
+
+"method name": "注册自定义方案",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "方案",
+"data type": "类_FBrowser_方案注册"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将启动子进程",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "命令行",
+"data type": "类_FBrowser_命令行"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将启动消息调度",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "延迟时间",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_即将初始化WebKit",
+
+"@虚拟方法": "可覆盖"
+  },
+  {
+
+"method name": "渲染_浏览器创建",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_即将销毁浏览器",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_即将创建V8环境",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "V8环境",
+"data type": "类_FBrowser_V8环境"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_即将释放V8环境",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "V8环境",
+"data type": "类_FBrowser_V8环境"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_即将捕获异常",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "V8环境",
+"data type": "类_FBrowser_V8环境"
+   },
+   {
+"parameter name": "V8异常",
+"data type": "类_FBrowser_V8异常"
+   },
+   {
+"parameter name": "V8堆栈踪迹",
+"data type": "类_FBrowser_V8堆栈踪迹"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_焦点节点改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "DOM节点",
+"data type": "类_FBrowser_DOM节点"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_收到消息",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "源进程",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息",
+"data type": "类_FBrowser_进程消息"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_载入状态被改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "是否读取中",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "可后退",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "可前进",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_载入开始",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "过渡类型",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_载入结束",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "状态码",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_载入错误",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "失败地址",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_自定义浏览器事件",
+"base class": "类_FBrowser_浏览器事件",
+"methods": [
+  {
+
+"method name": "浏览器_创建完毕",
+
+"@禁止流程检查": "真",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将打开新窗口",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "弹窗ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标框架名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户手势",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "弹出功能",
+"data type": "FBrowser_弹出功能"
+   },
+   {
+"parameter name": "窗口信息",
+"comment": "可设置",
+"data type": "FBrowser_窗口信息"
+   },
+   {
+"parameter name": "浏览器设置",
+"comment": "可设置",
+"data type": "FBrowser_浏览器配置"
+   },
+   {
+"parameter name": "无JS访问",
+"comment": "可设置,关闭JS容易出问题，不建议设置",
+"data type": "逻辑型类"
+   },
+   {
+"parameter name": "用户额外配置",
+"comment": "可设置,可通过此类可以设置打开新浏览器的额外信息，包括额外信息、禁用事件、用户标识等，如果不设置默认继承当前浏览器的设置",
+"data type": "类_FBrowser_用户额外配置"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_打开新窗口失败",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "browser",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "弹窗ID",
+"comment": "popup_id he |popup_id| value uniquely identifies the popup in the context of the opener browser",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将打开开发者窗口",
+
+"comment": "英文名：OnBeforeDevToolsPopup 说明：谷歌模式下非用户命令打开的开发者工具（例如：右键谷歌默认打开开发者菜单或者内置F12按键打开等）会触发此事件",
+
+"result comment": "返回真阻止当前操作，返回假继续",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "browser",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "窗口信息",
+"comment": "可设置",
+"data type": "FBrowser_窗口信息"
+   },
+   {
+"parameter name": "浏览器设置",
+"comment": "可设置",
+"data type": "FBrowser_浏览器配置"
+   },
+   {
+"parameter name": "使用默认窗口",
+"comment": "待验证，没测试出来效果",
+"data type": "逻辑型类"
+   },
+   {
+"parameter name": "用户额外配置",
+"comment": "可设置,可通过此类可以设置打开新浏览器的额外信息，包括额外信息、禁用事件、用户标识等，如果不设置默认继承当前浏览器的设置",
+"data type": "类_FBrowser_用户额外配置"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_控制台消息",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "日志级别",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "行",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将加载资源",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "请求回调",
+"data type": "类_FBrowser_回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将打开对话框",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "模式",
+"data type": "整数"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "过滤器",
+"data type": "FBrowser_文本数组"
+   },
+   {
+"parameter name": "扩展名",
+"comment": "accept_extensions",
+"data type": "FBrowser_文本数组"
+   },
+   {
+"parameter name": "接受类型",
+"comment": "accept_descriptions",
+"data type": "FBrowser_文本数组"
+   },
+   {
+"parameter name": "对话框回调",
+"data type": "类_FBrowser_对话框回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_获取资源处理器",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "设置资源处理器",
+"comment": "调用该类中的“设置”方法设置返回资源处理器，如果不需要则不设置,设置的资源处理器不能为局部变量",
+"data type": "类_FBrowser_设置资源处理器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_获取资源过滤器",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "响应",
+"data type": "类_FBrowser_响应"
+   },
+   {
+"parameter name": "设置资源过滤器",
+"comment": "调用该类中的“设置”方法设置返回资源过滤器，如果不需要则不设置,设置的资源过滤器不能为局部变量",
+"data type": "类_FBrowser_设置资源过滤器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_可下载",
+
+"comment": "CanDownload，返回真继续下载，返回假取消下载",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求方法",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将下载",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "下载",
+"data type": "类_FBrowser_下载"
+   },
+   {
+"parameter name": "推荐名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "下载回调",
+"data type": "类_FBrowser_即将下载回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_正在下载",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "下载",
+"data type": "类_FBrowser_下载"
+   },
+   {
+"parameter name": "下载回调",
+"data type": "类_FBrowser_正在下载回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_按下某键",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "按键事件",
+"data type": "FBrowser_按键事件"
+   },
+   {
+"parameter name": "系统事件",
+"data type": "FBrowser_系统事件"
+   },
+   {
+"parameter name": "是否快捷键",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将导航",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "用户动作",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否重定向",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将打开菜单",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "菜单环境",
+"data type": "类_FBrowser_菜单环境"
+   },
+   {
+"parameter name": "菜单模式",
+"data type": "类_FBrowser_菜单模式"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_菜单被调用",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "菜单环境",
+"data type": "类_FBrowser_菜单环境"
+   },
+   {
+"parameter name": "菜单模式",
+"data type": "类_FBrowser_菜单模式"
+   },
+   {
+"parameter name": "运行命令菜单回调",
+"data type": "类_FBrowser_运行命令菜单回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_菜单被点击",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "菜单环境",
+"data type": "类_FBrowser_菜单环境"
+   },
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "事件标识",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_收到消息",
+
+"comment": "英文名：OnProcessMessageReceived \n说明：在浏览器主进程中调用 返回真消息已被处理,消息不再保留",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "源进程",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息",
+"data type": "类_FBrowser_进程消息"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_从标签打开地址",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "目的地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目的配置",
+"comment": "参考:链接打开方式",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户行为",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_JS请求存储配额",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "源地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新大小",
+"data type": "长整数"
+   },
+   {
+"parameter name": "请求回调",
+"data type": "类_FBrowser_回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_请求证书错误",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   },
+   {
+"parameter name": "目标地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "SSL信息",
+"data type": "类_FBrowser_SSL信息"
+   },
+   {
+"parameter name": "请求回调",
+"data type": "类_FBrowser_回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_选择客户端证书",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "是否为代理",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "主机地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "X509证书清单",
+"data type": "类_FBrowser_X509证书数组"
+   },
+   {
+"parameter name": "选择证书回调",
+"data type": "类_FBrowser_选择证书回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_插件意外崩溃",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "插件路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_渲染视图",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_获得需授权证书",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "源地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为代理",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "主机",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "域名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "认证方案",
+"data type": "文本型"
+   },
+   {
+"parameter name": "授权回调",
+"data type": "类_FBrowser_授权回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_执行关闭",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将关闭",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_地址被改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_标题被改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_网页图标被改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "图标地址列表",
+"data type": "类_FBrowser_列表值"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_全屏模式被改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "全屏",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_工具栏被改变",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "内容",
+"data type": "FBrowser_文本"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_状态栏被改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_自动调整尺寸",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_加载进度被改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "进度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_光标被改变",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "光标句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "光标信息",
+"data type": "FBrowser_光标信息"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_重定向资源",
+
+"comment": "在浏览器主进程中调用 在“即将加载资源”修改请求才会触发",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "响应",
+"data type": "类_FBrowser_响应"
+   },
+   {
+"parameter name": "新地址",
+"comment": "可修改",
+"data type": "FBrowser_文本"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_响应资源",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "响应",
+"data type": "类_FBrowser_响应"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_资源加载完毕",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "响应",
+"data type": "类_FBrowser_响应"
+   },
+   {
+"parameter name": "状态",
+"data type": "整数"
+   },
+   {
+"parameter name": "资源大小",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_JS即将打开对话框",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "源地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对话框类型",
+"comment": "参考：JS对话框类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认提示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回调",
+"data type": "类_FBrowser_JS对话框回调"
+   },
+   {
+"parameter name": "禁止消息",
+"comment": "可设置",
+"data type": "逻辑型类"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_处理协议请求",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "允许操作系统执行",
+"comment": "可设置值",
+"data type": "逻辑型类"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_载入状态被改变",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "载入中",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否能后退",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否能前进",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_载入开始",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "过渡类型",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_载入结束",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "状态码",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_载入错误",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "错误码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "失败地址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_菜单被关闭",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_JS即将打开离开对话框",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "消息文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "重载",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "回调",
+"data type": "类_FBrowser_JS对话框回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_JS重置对话框",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_JS对话框关闭",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将失去焦点",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "下一个",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_请求焦点",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "源类型",
+"comment": "参考：焦点.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_收到焦点",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_查找返馈",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "数量",
+"data type": "整数"
+   },
+   {
+"parameter name": "选择位置",
+"data type": "FBrowser_矩形位置"
+   },
+   {
+"parameter name": "顺序",
+"data type": "整数"
+   },
+   {
+"parameter name": "最后更新",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_拖拽进入",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "拖拽数据",
+"data type": "类_FBrowser_拖拽数据"
+   },
+   {
+"parameter name": "拖动类型",
+"comment": "参考：拖动操作",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_拖拽区域改变",
+
+"comment": "待验证",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "拖拽位置",
+"data type": "FBrowser_拖拽位置数组"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_获取音频参数",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "browser",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "参数",
+"comment": "可修改",
+"data type": "FBrowser_音频参数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将创建框架",
+
+"comment": "OnFrameCreated",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "browser",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将连接框架",
+
+"comment": "OnFrameAttached",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "browser",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "再次连接",
+"comment": "reattached",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将拆离框架",
+
+"comment": "OnFrameDetached",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "browser",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将改变主框架",
+
+"comment": "OnMainFrameChanged",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "browser",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "旧框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "新框架",
+"data type": "类_FBrowser_框架"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将创建主框架Document",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"comment": "browser",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_自定义URL请求事件",
+"base class": "类_FBrowser_URL请求事件",
+"methods": [
+  {
+
+"method name": "开始创建",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"data type": "长整数"
+   },
+   {
+"parameter name": "URL请求",
+"data type": "类_FBrowser_URL请求"
+   }
+
+]
+  },
+  {
+
+"method name": "读取结束",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "获取到数据",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"data type": "长整数"
+   },
+   {
+"parameter name": "URL请求",
+"data type": "类_FBrowser_URL请求"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+
+]
+  }
+]
+ }
+변鳵Ǹ]
+}

@@ -1,0 +1,225 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.硬件特征\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"COM_WinHttp\\\\winhttpcom.tlh\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "WinHttpFC",
+"methods": [
+  {
+ "method name": "SetTimeouts",
+ "@嵌入式方法": "\"\"",
+ "parameters": [
+   {
+"parameter name": "解析超时",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "连接超时",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "发送超时",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "接收超时",
+"data type": "整数",
+"@默认值": "15000"
+   }
+ ]
+  },
+  {
+
+"method name": "SetProxy",
+
+"comment": "设置代理 https://docs.microsoft.com/zh-cn/windows/win32/winhttp/iwinhttprequest-setproxy?redirectedfrom=MSDN\nhttps://docs.microsoft.com/zh-cn/windows/win32/winhttp/iwinhttprequest-setcredentials\n",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "代理IP与端口",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代理方式",
+"comment": "HTTPREQUEST_PROXY_SETTING HTTPREQUEST_PROXYSETTING_DEFAULT = 0; 默认\nHTTPREQUEST_PROXY_SETTING HTTPREQUEST_PROXYSETTING_PRECONFIG = 0;\nHTTPREQUEST_PROXY_SETTING HTTPREQUEST_PROXYSETTING_DIRECT = 1;  直接访问\nHTTPREQUEST_PROXY_SETTING HTTPREQUEST_PROXYSETTING_PROXY = 2;   代理访问",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "旁域名",
+"comment": "我也不知道是做什么的",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+}"method name": "Open",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "方式",
+"comment": "GET , POST",
+"data type": "文本型"
+   },
+   {
+"parameter name": "网址",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "SetRequestHeader",
+data type": "整数""comment": "Open后调用 置协议头",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "协议名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议值",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "Send",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+@默认值": "空对象""method name": "GetResponseBody",
+@默认值": "空对象""data type": "字节集类",
+@默认值": "空对象""@禁止流程检查": "真"
+  },
+  {
+"parameters": [
+"method name": "GetResponseBodyText",
+"parameters": [
+"data type": "文本型",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "是否UTF8解码",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"parameters": [
+]
+  },
+  {
+data type": "文本型""method name": "GetResponseHeader",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "协议名",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "GetAllResponseHeaders",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetStatus",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetStatusText",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+@默认值": "真""method name": "WaitForResponse",
+@默认值": "真""data type": "逻辑型",
+@默认值": "真""@嵌入式方法": "\"\"",
+@默认值": "真""parameters": [
+   {
+"parameter name": "等待时间",
+"data type": "整数"
+   }
+@默认值": "真"]
+  },
+  {
+
+"method name": "SetClientCertificate",
+
+"comment": "设置证书",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "证书路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "SetAutoLogonPolicy",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "AutoLogonPolicy",
+"comment": "    AutoLogonPolicy_Always = 0,\n    AutoLogonPolicy_OnlyIfBypassProxy = 1,\n    AutoLogonPolicy_Never = 2",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+esponseHeader"method name": "启用重定向",
+esponseHeader"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "重定向次数",
+"data type": "整数",
+"@默认值": "15"
+   }
+esponseHeader]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

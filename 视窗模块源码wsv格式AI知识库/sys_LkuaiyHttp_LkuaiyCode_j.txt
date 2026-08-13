@@ -1,0 +1,52 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".
+
+{
+    "file description": "本文件为一个火山程序的可用公开接口描述json文本",
+    "package name": "LkuaiyHttp.com",
+    "comment": "本类主要储存官方的类库副本文件",
+    "classes": [
+ {
+    "class name": "官方库基类_网络传输类",
+    "comment": "编译库信息:libcurl/7.74.0 OpenSSL/1.1.1h zlib/1.2.11 libssh2/1.9.0\n官方网站:https://curl.se/",
+    "@视窗.头文件搜寻目录": "\"..\\\\curl\\\\lib\\\\include\\\\\"",
+    "@视窗.外部头文件": "\"vol_curl.h\"",
+    "@视窗.附属文件.non_static": "\"..\\\\curl\\\\lib\\\\$(p)\\\\libcurl.dll\\r\\n..\\\\curl\\\\lib\\\\$(p)\\\\zlib1.dll\"",
+    "@视窗.外部库.non_static": "\"..\\\\curl\\\\lib\\\\$(p)\\\\libcurl.lib\"",
+    "@视窗.外部库.static": "\"..\\\\curl\\\\lib\\\\$(p)\\\\static\\\\libcurl-$(d).lib\\r\\nCrypt32.lib\\r\\nWldap32.lib\"",
+    "@视窗.外部库.static": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\zlib\\\\1\\\\$(p)\\\\zlib-$(d).lib\"",
+    "@视窗.需求VS版本.static": "\"16-\"",
+    "@视窗.后缀文本": "\"public IVolNoticeReceiver\""
+ },
+ {
+"class name": "官方库基类_短信相关",
+"base class": "官方库基类_网络传输类",
+"@视窗.外部头文件": "\"stdio.h\\r\\nstring.h\\r\\niostream\\r\\nstring\\r\\nctime\"",
+"@视窗.头文件搜寻目录": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\openssl\\\\1\\\\include\"",
+"@视窗.附属文件.win32": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\openssl\\\\1\\\\win32\\\\bin\\\\libcrypto-1_1.dll\"",
+"@视窗.附属文件.x64": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\openssl\\\\1\\\\x64\\\\bin\\\\libcrypto-1_1-x64.dll\"",
+"@视窗.外部库": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\openssl\\\\1\\\\$(p)\\\\lib\\\\libcrypto.lib\"",
+"@视窗.外部头文件": "\"openssl\\\\evp.h\\r\\nopenssl\\\\aes.h\\r\\nopenssl\\\\des.h\\r\\nopenssl\\\\rsa.h\\r\\nopenssl\\\\pem.h\\r\\nopenssl\\\\hmac.h\""
+ },
+ {
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"class name": "变整数到用户数据哈希表",
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"base class": "通用哈希表模板类",
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"@文档": "\"category = \\\"数据处理\\\"\"",
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"@模板实现类": "\"变整数, 对象数组类\""
+ },
+ {
+e description": "本文件为一个火山程序的可用公开接口描述json文本",
+"class name": "变整数到用户数据哈希表""class name": "基类网络_FOFWebsocket信息类"
+ },
+ {
+"class name": "Code_FOF_用户数组",
+"comment": "最基本的对象类数组",
+"base class": "对象数组模板类",
+"@模板实现类": "\"FOFHTTP_用户数据\""
+ }
+    ]
+}

@@ -1,0 +1,1099 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"阿里云OSS对象储存".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"阿里云OSS对象储存".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"阿里云OSS对象储存".
+
+"package name": "火山.视窗.对象储存",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"阿里云OSS对象储存".
+
+"classes": [
+ {
+"class name": "阿里云对象储存类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n阿里云OSS-SDK(C++).",
+"@视窗.后缀文本": "\"public IVolNoticeReceiver\"",
+"@视窗.头文件搜寻目录": "\"lib\\\\include\"",
+"@视窗.外部头文件": "\"vol_oss_client.h\"",
+"@视窗.外部库": "\"third_party\\\\$(p)\\\\libcurl.lib\\r\\nthird_party\\\\$(p)\\\\libeay32.lib\\r\\nthird_party\\\\$(p)\\\\ssleay32.lib\\r\\nlib\\\\$(p)\\\\alibabacloud-oss-cpp-sdk-static-$(d).lib\"",
+"@视窗.附属文件": "\"third_party\\\\$(p)\\\\libcurl.dll\\r\\nthird_party\\\\$(p)\\\\libeay32.dll\\r\\nthird_party\\\\$(p)\\\\ssleay32.dll\\r\\nthird_party\\\\$(p)\\\\zlibwapi.dll\"",
+"@视窗.需求VS版本": "\"16-\"",
+"methods": [
+  {
+
+"method name": "初始化",
+
+"comment": "在阿里云对象储存SDK前必须调用该方法初始化后方可正常使用.",
+
+"parameters": [
+   {
+"parameter name": "节点",
+"comment": "提供所欲使用的服务器节点(Endpoint),例如杭州:\"http://oss-cn-hangzhou.aliyuncs.com\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Id",
+"comment": "提供所欲使用的AccessKey ID.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Secret",
+"comment": "提供所欲使用的AccessKey Secret.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "SecurityToken",
+"comment": "提供所欲使用的临时授权Token,无则提供空文本即可.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "自定配置",
+"comment": "提供所欲使用的自定义配置信息.",
+"data type": "阿里云对象储存配置类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+ }"method name": "上传限速",
+ }"comment": "设置在传输过程中所欲限定的上传速度.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "速度",
+"comment": "单位:Kb/s.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"comment": "设置在传输过程中所欲限定的上传速度.""method name": "上传限速",
+}"comment": "设置在传输过程中所欲限定的上传速度.""comment": "获取在传输过程中所限定的上传速度.",
+}"comment": "设置在传输过程中所欲限定的上传速度.""type": "property getter",
+}"comment": "设置在传输过程中所欲限定的上传速度.""data type": "整数",
+}"comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\""
+  },
+  {
+thod name": "初始化""method name": "下载限速",
+thod name": "初始化""comment": "设置在传输过程中所欲限定的下载速度.",
+thod name": "初始化""type": "property setter",
+thod name": "初始化""parameters": [
+   {
+"parameter name": "速度",
+"comment": "单位:Kb/s.",
+"data type": "整数"
+   }
+thod name": "初始化"]
+  },
+  {
+"comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\"""method name": "下载限速",
+"comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\"""comment": "获取在传输过程中所限定的下载速度.",
+"comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\"""type": "property getter",
+"comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\"""data type": "整数",
+"comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+输过程中所限定的下载速度."method name": "取最近错误码",
+输过程中所限定的下载速度."comment": "获取最近执行发生的错误码内容.",
+输过程中所限定的下载速度."data type": "文本型",
+输过程中所限定的下载速度."@禁止流程检查": "真"
+  },
+  {
+comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\"""data type": "整数""method name": "取最近错误信息",
+comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\"""data type": "整数""comment": "获取最近执行发生的错误信息内容.",
+comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\"""data type": "整数""data type": "文本型",
+comment": "设置在传输过程中所欲限定的上传速度.""@嵌入式方法": "\"\"""data type": "整数""@禁止流程检查": "真"
+  },
+  {
+"method name": "创建储存空间",
+"comment": "新建一个储存空间(Bucket).",
+"result comment": "返回创建的结果,创建失败将返回空对象,可使用\"取错误内容\"获取具体错误.",
+"data type": "阿里云储存空间类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲创建储存空间的名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "储存类型",
+"comment": "提供所欲使用的储存类型.",
+"data type": "阿里云储存空间类型",
+"@默认值": "阿里云储存空间类型.标准"
+   },
+   {
+"parameter name": "访问权限",
+"comment": "提供所欲使用的储存空间可访问类型.",
+"data type": "阿里云储存空间访问类型",
+"@默认值": "阿里云储存空间访问类型.默认"
+   },
+   {
+"parameter name": "容灾类型",
+"comment": "提供所欲使用的储存数据容灾类型.",
+"data type": "阿里云储存空间容灾类型",
+"@默认值": "阿里云储存空间容灾类型.本地冗余"
+   }
+]
+  },
+  {
+@默认值": "阿里云储存空间类型.标准""method name": "取储存空间列表",
+@默认值": "阿里云储存空间类型.标准""comment": "获取所有已存在的储存空间对象.",
+@默认值": "阿里云储存空间类型.标准""result comment": "获取失败将会返回空对象.",
+@默认值": "阿里云储存空间类型.标准""data type": "阿里云储存空间数组类",
+@默认值": "阿里云储存空间类型.标准""@禁止流程检查": "真",
+@默认值": "阿里云储存空间类型.标准""parameters": [
+   {
+"parameter name": "指定前缀",
+"comment": "指定本次仅获取该指定前缀名称的空间,空文本表示不指定.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "指定标记",
+"comment": "指定本次仅获取该标记名称(Marker)的空间,空文本表示不指定.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "获取数量",
+"comment": "本次获取空间的最大数量,默认获取100个.",
+"data type": "整数",
+"@默认值": "100"
+   }
+@默认值": "阿里云储存空间类型.标准"]
+  },
+  {
+@默认值": "阿里云储存空间访问类型.默认""method name": "取储存空间是否存在",
+@默认值": "阿里云储存空间访问类型.默认""comment": "以指定名称判断储存空间是否已存在.",
+@默认值": "阿里云储存空间访问类型.默认""result comment": "已存在返回真,否则返回假.",
+@默认值": "阿里云储存空间访问类型.默认""data type": "逻辑型",
+@默认值": "阿里云储存空间访问类型.默认""@禁止流程检查": "真",
+@默认值": "阿里云储存空间访问类型.默认""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定所欲检查的空间名称.",
+"data type": "文本型"
+   }
+@默认值": "阿里云储存空间访问类型.默认"]
+  },
+  {
+"method name": "取储存空间信息",
+"comment": "获取指定储存空间的详细信息.",
+"result comment": "如果获取失败将返回空对象.",
+"data type": "阿里云储存空间信息类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定所欲获取其信息的空间名称.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+获取其信息的空间名称."method name": "置储存空间访问权限",
+获取其信息的空间名称."comment": "设置指定储存空间的可访问权限(ACL).",
+获取其信息的空间名称."result comment": "返回本次设置是否成功.",
+获取其信息的空间名称."data type": "逻辑型",
+获取其信息的空间名称."@禁止流程检查": "真",
+获取其信息的空间名称."parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定所欲设置权限的空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问权限",
+"comment": "提供所欲使用的储存空间可访问类型.",
+"data type": "阿里云储存空间访问类型"
+   }
+获取其信息的空间名称.]
+  },
+  {
+data type": "整数""method name": "删除储存空间",
+data type": "整数""comment": "删除指定储存空间,删除前必须保证该储存空间为空.",
+data type": "整数""result comment": "返回本次操作是否成功.",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲删除的储存空间名称.",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+取其信息的空间名称."comment": "设置指定储存空间的可访问权限(ACL).""method name": "置储存空间授权策略",
+取其信息的空间名称."comment": "设置指定储存空间的可访问权限(ACL).""comment": "设置指定储存空间的授权策略.",
+取其信息的空间名称."comment": "设置指定储存空间的可访问权限(ACL).""result comment": "返回本次操作是否成功.",
+取其信息的空间名称."comment": "设置指定储存空间的可访问权限(ACL).""data type": "逻辑型",
+取其信息的空间名称."comment": "设置指定储存空间的可访问权限(ACL).""@禁止流程检查": "真",
+取其信息的空间名称."comment": "设置指定储存空间的可访问权限(ACL).""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲设置授权策略的空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "策略",
+"comment": "提供所欲设置的策略内容.",
+"data type": "文本型"
+   }
+取其信息的空间名称."comment": "设置指定储存空间的可访问权限(ACL)."]
+  },
+  {
+    "method name": "取储存空间授权策略",
+    "comment": "获取指定储存空间所使用的授权策略.",
+    "data type": "文本型",
+    "@禁止流程检查": "真",
+    "parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲获取其策略内容的空间名称.",
+"data type": "文本型"
+   }
+    ]
+  },
+  {
+ameter name": "名称""method name": "删储存空间授权策略",
+ameter name": "名称""comment": "删除指定储存空间所指定的授权策略.",
+ameter name": "名称""result comment": "返回本次操作是否成功.",
+ameter name": "名称""data type": "逻辑型",
+ameter name": "名称""@禁止流程检查": "真",
+ameter name": "名称""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲删除授权策略的储存空间名称.",
+"data type": "文本型"
+   }
+ameter name": "名称"]
+  },
+  {
+ }"method name": "置储存空间防盗链",
+ }"comment": "设置指定储存空间的防盗链策略.",
+ }"result comment": "返回本次操作是否成功.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲设置防盗链策略的储存空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内容",
+"comment": "提供所欲设置的防盗链内容,每个成员表示一条内容,例如\"http://www.referersample.com\".",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "允许空来源",
+"comment": "是否允许空的来源地址请求空间内容.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+}"parameters": [
+"method name": "取储存空间防盗链",
+}"parameters": [
+"comment": "获取指定储存空间的防盗链策略.",
+}"parameters": [
+"result comment": "返回所设置的防盗链,获取失败将返回空对象.",
+}"parameters": [
+"data type": "文本数组类",
+}"parameters": [
+"@禁止流程检查": "真",
+}"parameters": [
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲获取其防盗链策略的储存空间名称.",
+"data type": "文本型"
+   }
+}"parameters": [
+]
+  },
+  {
+ }"method name": "删储存空间防盗链",
+ }"comment": "将指定储存空间的防盗链策略清空.",
+ }"result comment": "返回本次操作是否成功.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲清空其防盗链策略的储存空间名称.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "允许空来源""method name": "开启访问日志记录",
+ameter name": "允许空来源""comment": "开启指定存储空间的访问日志记录",
+ameter name": "允许空来源""result comment": "返回本次操作是否成功.",
+ameter name": "允许空来源""data type": "逻辑型",
+ameter name": "允许空来源""@禁止流程检查": "真",
+ameter name": "允许空来源""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲操作的储存空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "日志前缀",
+"comment": "提供日志文件的文件名前缀.",
+"data type": "文本型",
+"@默认值": "\"VolDP\""
+   },
+   {
+"parameter name": "目标空间名称",
+"comment": "提供所欲开启访问日志记录的空间名称.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ameter name": "允许空来源"]
+  },
+  {
+@默认值": "\"\"""method name": "关闭访问日志记录",
+@默认值": "\"\"""comment": "关闭指定存储空间的访问日志记录",
+@默认值": "\"\"""result comment": "返回本次操作是否成功.",
+@默认值": "\"\"""data type": "逻辑型",
+@默认值": "\"\"""@禁止流程检查": "真",
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲操作的储存空间名称.",
+"data type": "文本型"
+   }
+@默认值": "\"\""]
+  },
+  {
+ }"method name": "置静态网站托管",
+ }"comment": "设置指定储存空间的静态网站托管.",
+ }"result comment": "返回本次操作是否成功.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲操作的储存空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "首页文件",
+"comment": "默认首页是您通过浏览器访问静态网站域名时,OSS返回的网站首页,例如\"index.html\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "错误文件",
+"comment": "默认404页是您通过浏览器访问Bucket内文件出现404错误时,OSS返回的错误页面,例如\"error.html\".",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+eter name": "允许空来源"]"method name": "删静态网站托管",
+eter name": "允许空来源"]"comment": "删除指定储存空间的静态网站托管配置.",
+eter name": "允许空来源"]"result comment": "返回本次操作是否成功.",
+eter name": "允许空来源"]"data type": "逻辑型",
+eter name": "允许空来源"]"@禁止流程检查": "真",
+eter name": "允许空来源"]"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲操作的储存空间名称.",
+"data type": "文本型"
+   }
+eter name": "允许空来源"]]
+  },
+  {
+"method name": "上传文件对象",
+"comment": "将指定的本地文件上传保存至目标储存空间中.",
+"result comment": "返回本次操作是否成功.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲操作的储存空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对象名称",
+"comment": "表示上传到储存空间后所欲使用的文件名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "本地文件路径",
+"comment": "提供所欲上传文件的完整路径,例如\"/users/local/myfile.txt\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户参数",
+"comment": "提供用户参数数据,进度回调函数中会返回该值.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"method name": "下载文件对象",
+"comment": "将储存空间中所储存的指定对象下载至本地.",
+"result comment": "返回本次操作是否成功.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲操作的储存空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对象名称",
+"comment": "提供所欲下载对象在储存空间中的名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "本地文件路径",
+"comment": "提供下载后对象保存的路径,例如\"/users/local/myfile.txt\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户参数",
+"comment": "提供用户参数数据,进度回调函数中会返回该值.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+
+"method name": "下载进度已改变",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "增量",
+"comment": "即相较于上次反馈所增加的数据尺寸(字节).",
+"data type": "整数"
+   },
+   {
+"parameter name": "已传输",
+"comment": "当前已传输的数据尺寸(字节).",
+"data type": "长整数"
+   },
+   {
+"parameter name": "总量",
+"comment": "本次所需要传输的总数据尺寸(字节).",
+"data type": "长整数"
+   },
+   {
+"parameter name": "用户参数",
+"comment": "所提供的用户参数值.",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ter name": "允许空来源"]"parameters": [
+"method name": "上传进度已改变",
+ter name": "允许空来源"]"parameters": [
+"type": "event",
+ter name": "允许空来源"]"parameters": [
+"data type": "整数",
+ter name": "允许空来源"]"parameters": [
+"parameters": [
+   {
+"parameter name": "增量",
+"comment": "即相较于上次反馈所增加的数据尺寸(字节).",
+"data type": "整数"
+   },
+   {
+"parameter name": "已传输",
+"comment": "当前已传输的数据尺寸(字节).",
+"data type": "长整数"
+   },
+   {
+"parameter name": "总量",
+"comment": "本次所需要传输的总数据尺寸(字节).",
+"data type": "长整数"
+   },
+   {
+"parameter name": "用户参数",
+"comment": "所提供的用户参数值.",
+"data type": "变整数"
+   }
+ter name": "允许空来源"]"parameters": [
+]
+  },
+  {
+
+"method name": "取文件对象列表",
+
+"comment": "获取指定储存空间中所储存的对象列表.",
+
+"result comment": "获取失败将会返回空对象.",
+
+"data type": "阿里云对象信息数组类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "提供所欲获取其对象列表的空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "指定前缀",
+"comment": "指定本次仅获取该指定前缀名称的对象,空文本表示不指定.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "指定标记",
+"comment": "指定本次仅获取该标记名称(Marker)的对象,空文本表示不指定.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "获取数量",
+"comment": "本次获取对象的最大数量,默认获取100个.",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+ameter name": "名称""method name": "删文件对象",
+ameter name": "名称""comment": "删除指定储存空间中的文件对象.",
+ameter name": "名称""result comment": "返回本次操作是否成功.",
+ameter name": "名称""data type": "逻辑型",
+ameter name": "名称""@禁止流程检查": "真",
+ameter name": "名称""parameters": [
+   {
+"parameter name": "空间名称",
+"comment": "提供所欲操作的储存空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对象名称",
+"comment": "提供所欲删除的对象名称(Key).",
+"data type": "文本型"
+   }
+ameter name": "名称"]
+  },
+  {
+
+"method name": "删多个文件对象",
+
+"comment": "删除指定储存空间中的多个文件对象.",
+
+"result comment": "返回本次操作是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "空间名称",
+"comment": "提供所欲操作的储存空间名称.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对象列表",
+"comment": "提供所欲删除的对象名称(Key)数组列表.",
+"data type": "文本数组类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "阿里云储存空间访问类型",
+"comment": "指定阿里云储存空间的文件可访问类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+tegory = \\\"辅助类\\\"\""constant name": "默认",
+tegory = \\\"辅助类\\\"\""initial value": "@CannedAccessControlList::Default"
+  },
+  {
+ethod name": "取文件对象列表""constant name": "公共读",
+ethod name": "取文件对象列表""initial value": "@CannedAccessControlList::PublicRead"
+  },
+  {
+
+"constant name": "公共读写",
+
+"initial value": "@CannedAccessControlList::PublicReadWrite"
+  },
+  {
+
+"constant name": "私有",
+
+"initial value": "@CannedAccessControlList::Private"
+  }
+]
+ },
+ {
+"class name": "阿里云储存空间类型",
+"comment": "指定阿里云储存空间的储存类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+r name": "允许空来源"]"parameters": [
+]"constant name": "标准",
+r name": "允许空来源"]"parameters": [
+]"initial value": "@StorageClass::Standard"
+  },
+  {
+eter name": "名称"]"constant name": "低频访问",
+eter name": "名称"]"initial value": "@StorageClass::IA"
+  },
+  {
+
+"constant name": "归档",
+
+"initial value": "@StorageClass::Archive"
+  },
+  {
+er name": "名称""method name": "删文件对象""constant name": "冷归档",
+er name": "名称""method name": "删文件对象""initial value": "@StorageClass::ColdArchive"
+  }
+]
+ },
+ {
+"class name": "阿里云储存空间容灾类型",
+"comment": "指定阿里云储存空间的数据容灾类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "无",
+
+"initial value": "0"
+  },
+  {
+"constant name": "本地冗余",
+"initial value": "1"
+  },
+  {
+ss name": "阿里云储存空间容灾类型""constant name": "同城冗余",
+ss name": "阿里云储存空间容灾类型""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "阿里云储存空间加密类型",
+"comment": "定义服务器端所使用的空间加密类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+云储存空间的数据容灾类型."constant name": "无",
+云储存空间的数据容灾类型."initial value": "@SSEAlgorithm::NotSet"
+  },
+  {
+}"constant name": "KMS",
+}"initial value": "@SSEAlgorithm::KMS"
+  },
+  {
+initial value": "1""constant name": "AES256",
+initial value": "1""initial value": "@SSEAlgorithm::AES256"
+  }
+]
+ },
+ {
+"class name": "阿里云储存空间版本控制类型",
+"comment": "列举储存空间版本控制的状态.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ss name": "阿里云储存空间类型""constant name": "无",
+ss name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet"
+  },
+  {
+}"constant name": "启用",
+}"initial value": "@SSEAlgorithm::Enabled"
+  },
+  {
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""constant name": "未启用",
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""initial value": "@SSEAlgorithm::Suspended"
+  }
+]
+ },
+ {
+"class name": "阿里云对象储存配置类",
+"comment": "用于在初始化阿里云对象储存SDK时所使用的配置选项.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"variables": [
+  {
+}"variable name": "用户代理",
+}"comment": "指定所欲使用的用户代理,指HTTP的User-Agent头.默认代理为aliyun-sdk-cpp/1.X.X.",
+}"data type": "文本型",
+}"initial value": "\"aliyun-sdk-cpp/1.9.0\"",
+}"@属性变量": "真"
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""variable name": "连接池数",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "连接池数,默认为16个.",
+@文档": "\"category = \\\"辅助类\\\"\"""data type": "整数",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "16",
+@文档": "\"category = \\\"辅助类\\\"\"""@属性变量": "真"
+  },
+  {
+"variable name": "请求超时",
+"comment": "请求超时时间.请求超时没有收到数据将会关闭连接,默认为10000ms.",
+"data type": "整数",
+"initial value": "10000",
+"@属性变量": "真"
+  },
+  {
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""variable name": "连接超时",
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "建立连接的超时时间.默认为5000ms.",
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""data type": "整数",
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""initial value": "5000",
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""@属性变量": "真"
+  },
+  {
+tegory = \\\"辅助类\\\"\""variable name": "代理协议",
+tegory = \\\"辅助类\\\"\""comment": "提供代理所欲使用的连接协议,1表示使用HTTP,2表示使用HTTPS.",
+tegory = \\\"辅助类\\\"\""data type": "整数",
+tegory = \\\"辅助类\\\"\""initial value": "1",
+tegory = \\\"辅助类\\\"\""@属性变量": "真"
+  },
+  {
+
+"variable name": "代理服务器",
+
+"comment": "提供代理服务器的连接地址.",
+
+"data type": "文本型",
+
+"@属性变量": "真"
+  },
+  {
+"variable name": "代理端口",
+"comment": "提供代理服务器的连接端口.",
+"data type": "整数",
+"@属性变量": "真"
+  },
+  {
+@属性变量": "真""variable name": "代理用户名",
+@属性变量": "真""comment": "提供代理服务器的连接用户名.",
+@属性变量": "真""data type": "文本型",
+@属性变量": "真""@属性变量": "真"
+  },
+  {
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""variable name": "代理密码",
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.",
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""data type": "文本型",
+s name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""@属性变量": "真"
+  },
+  {
+
+"variable name": "SSL证书校验",
+
+"comment": "是否开启SSL证书校验,默认开启.",
+
+"data type": "逻辑型",
+
+"initial value": "真",
+
+"@属性变量": "真"
+  },
+  {
+riable name": "SSL证书校验""variable name": "CA证书根目录",
+riable name": "SSL证书校验""comment": "用于设置CA证书根路径.",
+riable name": "SSL证书校验""data type": "文本型",
+riable name": "SSL证书校验""@属性变量": "真"
+  },
+  {
+}"variable name": "CA证书路径",
+}"comment": "用于设置CA证书路径.",
+}"data type": "文本型",
+}"@属性变量": "真"
+  },
+  {
+}"variable name": "CRC64校验",
+}"comment": "是否开启CRC64校验,默认开启.",
+}"data type": "逻辑型",
+}"initial value": "真",
+}"@属性变量": "真"
+  },
+  {
+ame": "阿里云储存空间类型""constant name": "无""variable name": "自动纠正时间",
+ame": "阿里云储存空间类型""constant name": "无""comment": "是否开启HTTP请求时间自动修正,默认开启.",
+ame": "阿里云储存空间类型""constant name": "无""data type": "逻辑型",
+ame": "阿里云储存空间类型""constant name": "无""initial value": "真",
+ame": "阿里云储存空间类型""constant name": "无""@属性变量": "真"
+  }
+]
+ },
+ {
+"class name": "阿里云储存空间类",
+"comment": "本类实例表示一个储存空间对象,即Bucket.",
+"@强制依赖": "\"阿里云对象储存类\"",
+"methods": [
+  {
+
+"method name": "取地域信息",
+
+"comment": "获取该储存空间的地域信息.",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "是否开启SSL证书校验,默认开启.""method name": "取空间名称",
+"comment": "是否开启SSL证书校验,默认开启.""comment": "获取该储存空间的名称信息.",
+"comment": "是否开启SSL证书校验,默认开启.""data type": "文本型",
+"comment": "是否开启SSL证书校验,默认开启.""@嵌入式方法": "\"\""
+  },
+  {
+"initial value": "真""method name": "取创建时间",
+"initial value": "真""comment": "获取该储存空间的创建时间信息.",
+"initial value": "真""data type": "文本型",
+"initial value": "真""@嵌入式方法": "\"\""
+  },
+  {
+@属性变量": "真""method name": "取内网端点",
+@属性变量": "真""comment": "获取该储存空间所处的内网端点.",
+@属性变量": "真""data type": "文本型",
+@属性变量": "真""@嵌入式方法": "\"\""
+  },
+  {
+存空间的创建时间信息."method name": "取外网端点",
+存空间的创建时间信息."comment": "获取该储存空间所处的外网端点.",
+存空间的创建时间信息."data type": "文本型",
+存空间的创建时间信息."@嵌入式方法": "\"\""
+  },
+  {
+ name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""method name": "取储存类型",
+ name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""comment": "获取该储存空间的储存类型.",
+ name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""data type": "阿里云储存空间类型",
+ name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取所属者ID",
+}"comment": "获取该空间所属者(owner)ID.",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "文本型""method name": "取所属者显示名称",
+"data type": "文本型""comment": "获取该空间所属者(owner)的显示名称.",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "阿里云储存空间信息类",
+"comment": "本类实例储存了一个储存空间的所有信息.",
+"@强制依赖": "\"阿里云对象储存类\"",
+"methods": [
+  {
+}"method name": "取地域信息",
+}"comment": "获取该储存空间的地域信息.",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+methods": [
+"method name": "取空间名称",
+methods": [
+"comment": "获取该储存空间的名称信息.",
+methods": [
+"data type": "文本型",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+ name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""method name": "取创建时间",
+ name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""comment": "获取该储存空间的创建时间信息.",
+ name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""data type": "文本型",
+ name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""@嵌入式方法": "\"\""
+  },
+  {
+"data type": "文本型""method name": "取内网端点",
+"data type": "文本型""comment": "获取该储存空间所处的内网端点.",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+comment": "本类实例储存了一个储存空间的所有信息.""method name": "取外网端点",
+comment": "本类实例储存了一个储存空间的所有信息.""comment": "获取该储存空间所处的外网端点.",
+comment": "本类实例储存了一个储存空间的所有信息.""data type": "文本型",
+comment": "本类实例储存了一个储存空间的所有信息.""@嵌入式方法": "\"\""
+  },
+  {
+tial value": "真""method name": "取创建时间""method name": "取储存类型",
+tial value": "真""method name": "取创建时间""comment": "获取该储存空间的储存类型.",
+tial value": "真""method name": "取创建时间""data type": "阿里云储存空间类型",
+tial value": "真""method name": "取创建时间""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取访问权限类型",
+}"comment": "获取该储存空间的可访问类型.",
+}"data type": "阿里云储存空间访问类型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""@嵌入式方法": "\"\"""method name": "取所属者ID",
+name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""@嵌入式方法": "\"\"""comment": "获取该空间所属者(owner)ID.",
+name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""@嵌入式方法": "\"\"""data type": "文本型",
+name": "阿里云储存空间类型""initial value": "@SSEAlgorithm::NotSet""comment": "提供代理服务器的连接密码.""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取所属者显示名称",
+}"comment": "获取该空间所属者(owner)的显示名称.",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "文本型""method name": "取数据容灾类型",
+"data type": "文本型""comment": "获取该储存空间的数据容灾类型.",
+"data type": "文本型""data type": "阿里云储存空间容灾类型",
+"data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+ethods": [
+"comment": "获取该储存空间的名称信息.""method name": "取注释信息",
+ethods": [
+"comment": "获取该储存空间的名称信息.""comment": "获取该储存空间的注释信息内容.",
+ethods": [
+"comment": "获取该储存空间的名称信息.""data type": "文本型",
+ethods": [
+"comment": "获取该储存空间的名称信息.""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取空间加密类型",
+
+"comment": "获取该储存空间所使用的加密类型.",
+
+"data type": "阿里云储存空间加密类型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "文本型""data type": "阿里云储存空间容灾类型""method name": "取KMS密钥ID",
+data type": "文本型""data type": "阿里云储存空间容灾类型""comment": "获取该储存空间的KMS密钥ID(仅当加密类型为KMS时).",
+data type": "文本型""data type": "阿里云储存空间容灾类型""data type": "文本型",
+data type": "文本型""data type": "阿里云储存空间容灾类型""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取空间版本控制状态",
+}"comment": "获取该储存空间当前的版本控制状态.",
+}"data type": "阿里云储存空间版本控制类型",
+}"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "阿里云对象信息类",
+"comment": "本类实例表示一个储存空间中对象的详情信息.",
+"@强制依赖": "\"阿里云对象储存类\"",
+"methods": [
+  {
+"comment": "获取该储存空间所使用的加密类型.""method name": "取对象名称",
+"comment": "获取该储存空间所使用的加密类型.""comment": "获取该对象的名称信息(Key).",
+"comment": "获取该储存空间所使用的加密类型.""data type": "文本型",
+"comment": "获取该储存空间所使用的加密类型.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取唯一标记",
+}"comment": "获取该对象的唯一标记信息(ETag).",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取内容尺寸",
+
+"comment": "获取该对象的数据内容尺寸.",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thods": [
+"comment": "获取该储存空间的名称信息.""comment": "获取该储存空间的注释信息内容.""method name": "取最后修改时间",
+thods": [
+"comment": "获取该储存空间的名称信息.""comment": "获取该储存空间的注释信息内容.""comment": "获对象的最后修改时间.",
+thods": [
+"comment": "获取该储存空间的名称信息.""comment": "获取该储存空间的注释信息内容.""data type": "文本型",
+thods": [
+"comment": "获取该储存空间的名称信息.""comment": "获取该储存空间的注释信息内容.""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取储存类型",
+
+"comment": "获取该对象的储存类型信息.",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+hods": [
+"comment": "获取该储存空间的名称信息.""comment": "获取该储存空间的注释信息内容.""@嵌入式方法": "\"\"""method name": "取对象类型",
+hods": [
+"comment": "获取该储存空间的名称信息.""comment": "获取该储存空间的注释信息内容.""@嵌入式方法": "\"\"""comment": "获取该对象的类型信息.",
+hods": [
+"comment": "获取该储存空间的名称信息.""comment": "获取该储存空间的注释信息内容.""@嵌入式方法": "\"\"""data type": "文本型",
+hods": [
+"comment": "获取该储存空间的名称信息.""comment": "获取该储存空间的注释信息内容.""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取所属者ID",
+}"comment": "获取该空间所属者(owner)ID.",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取所属者显示名称",
+}"comment": "获取该空间所属者(owner)的显示名称.",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "阿里云储存空间数组类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"阿里云储存空间类\""
+ },
+ {
+"class name": "阿里云对象信息数组类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"阿里云对象信息类\""
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"阿里云OSS对象储存".
+
+]
+}

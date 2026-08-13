@@ -1,0 +1,1342 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"package name": "火山.原创软件",
+"@文档": "\"category = \\\"开源库.OpenCV\\\"\"",
+"@视窗.外部头文件": "\"OpenCVSimple\\\\OpenCVTool.h\"",
+"@视窗.外部库.win32": "\"OpenCVSimple\\\\OpenCVSimplex86.lib\"",
+"@视窗.附属文件.win32": "\"OpenCVSimple\\\\OpenCVSimplex86.dll\"",
+"@视窗.外部库.x64": "\"OpenCVSimple\\\\OpenCVSimplex64.lib\"",
+"@视窗.附属文件.x64": "\"OpenCVSimple\\\\OpenCVSimplex64.dll\"",
+"classes": [
+ {
+ 图片操作类"class name": "视频设备类型常量类",
+ 图片操作类"comment": "       CAP_ANY          = 0,            //!< Auto detect == 0\n       CAP_VFW          = 200,          //!< Video For Windows (obsolete, removed)\n       CAP_V4L          = 200,          //!< V4L/V4L2 capturing support\n       CAP_V4L2         = CAP_V4L,      //!< Same as CAP_V4L\n       CAP_FIREWIRE     = 300,          //!< IEEE 1394 drivers\n       CAP_FIREWARE     = CAP_FIREWIRE, //!< Same value as CAP_FIREWIRE\n       CAP_IEEE1394     = CAP_FIREWIRE, //!< Same value as CAP_FIREWIRE\n       CAP_DC1394       = CAP_FIREWIRE, //!< Same value as CAP_FIREWIRE\n       CAP_CMU1394      = CAP_FIREWIRE, //!< Same value as CAP_FIREWIRE\n       CAP_QT           = 500,          //!< QuickTime (obsolete, removed)\n       CAP_UNICAP       = 600,          //!< Unicap drivers (obsolete, removed)\n       CAP_DSHOW        = 700,          //!< DirectShow (via videoInput)\n       CAP_PVAPI        = 800,          //!< PvAPI, Prosilica GigE SDK\n       CAP_OPENNI       = 900,          //!< OpenNI (for Kinect)\n       CAP_OPENNI_ASUS  = 910,          //!< OpenNI (for Asus Xtion)\n       CAP_ANDROID      = 1000,         //!< Android - not used\n       CAP_XIAPI        = 1100,         //!< XIMEA Camera API\n       CAP_AVFOUNDATION = 1200,         //!< AVFoundation framework for iOS (OS X Lion will have the same API)\n       CAP_GIGANETIX    = 1300,         //!< Smartek Giganetix GigEVisionSDK\n       CAP_MSMF         = 1400,         //!< Microsoft Media Foundation (via videoInput)\n       CAP_WINRT        = 1410,         //!< Microsoft Windows Runtime using Media Foundation\n       CAP_INTELPERC    = 1500,         //!< RealSense (former Intel Perceptual Computing SDK)\n       CAP_REALSENSE    = 1500,         //!< Synonym for CAP_INTELPERC\n       CAP_OPENNI2      = 1600,         //!< OpenNI2 (for Kinect)\n       CAP_OPENNI2_ASUS = 1610,         //!< OpenNI2 (for Asus Xtion and Occipital Structure sensors)\n       CAP_GPHOTO2      = 1700,         //!< gPhoto2 connection\n       CAP_GSTREAMER    = 1800,         //!< GStreamer\n       CAP_FFMPEG       = 1900,         //!< Open and record video file or stream using the FFMPEG library\n       CAP_IMAGES       = 2000,         //!< OpenCV Image Sequence (e.g. img_%02d.jpg)\n       CAP_ARAVIS       = 2100,         //!< Aravis SDK\n       CAP_OPENCV_MJPEG = 2200,         //!< Built-in OpenCV MotionJPEG codec\n       CAP_INTEL_MFX    = 2300,         //!< Intel MediaSDK\n       CAP_XINE         = 2400,         //!< XINE engine (Linux)",
+ 图片操作类"@常量类": "整数",
+ 图片操作类"constants": [
+  {
+图片操作类"constants": [
+"constant name": "任意设备",
+图片操作类"constants": [
+"comment": "    ",
+图片操作类"constants": [
+"initial value": "0"
+  }
+ 图片操作类]
+ },
+ {
+kage name": "火山.原创软件""class name": "视频操作类",
+kage name": "火山.原创软件""methods": [
+  {
+型 = 整数 @嵌入式方法 = """method name": "关闭",
+型 = 整数 @嵌入式方法 = """@嵌入式方法": "\"\""
+  },
+  {
+@视窗.外部头文件": "\"OpenCVSimple\\\\OpenCVTool.h\"""method name": "打开视频",
+@视窗.外部头文件": "\"OpenCVSimple\\\\OpenCVTool.h\"""data type": "逻辑型",
+@视窗.外部头文件": "\"OpenCVSimple\\\\OpenCVTool.h\"""@禁止流程检查": "真",
+@视窗.外部头文件": "\"OpenCVSimple\\\\OpenCVTool.h\"""parameters": [
+   {
+"parameter name": "视频地址",
+"comment": "可以是一个视频，或者是一个网络视频地址\nprotocol: //host:port/script_name?script_params|auth",
+"data type": "文本型"
+   },
+   {
+"parameter name": "设备类型",
+"data type": "视频设备类型常量类",
+"@默认值": "视频设备类型常量类.任意设备"
+   }
+@视窗.外部头文件": "\"OpenCVSimple\\\\OpenCVTool.h\""]
+  },
+  {
+ 小数"method name": "打开摄像头",
+ 小数"data type": "逻辑型",
+ 小数"@嵌入式方法": "\"\"",
+ 小数"parameters": [
+   {
+"parameter name": "摄像头索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "设备类型",
+"data type": "视频设备类型常量类",
+"@默认值": "视频设备类型常量类.任意设备"
+   }
+ 小数]
+  },
+  {
+数]"method name": "是否已打开",
+数]"data type": "逻辑型",
+数]"@嵌入式方法": "\"\""
+  },
+  {
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"method name": "取下一帧",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"data type": "逻辑型",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@嵌入式方法": "\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+   {
+"parameter name": "当前帧图片",
+"data type": "图片操作类"
+   }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+]
+  },
+  {
+at="method name": "当前帧时间戳",
+at="comment": "视频当前点的毫秒值或视频捕捉的时间戳",
+at="type": "property getter",
+at="data type": "整数",
+at="@嵌入式方法": "\"\""
+  },
+  {
+t="@嵌入式方法": "\"\"""method name": "总帧数",
+t="@嵌入式方法": "\"\"""comment": "下次将被捕获的0基索引的帧",
+t="@嵌入式方法": "\"\"""type": "property getter",
+t="@嵌入式方法": "\"\"""data type": "整数",
+t="@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+t="data type": "整数""method name": "帧率",
+t="data type": "整数""type": "property getter",
+t="data type": "整数""data type": "小数",
+t="data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+ = 空对象"method name": "宽度",
+ = 空对象"comment": "视频流帧的宽度",
+ = 空对象"type": "property getter",
+ = 空对象"data type": "整数",
+ = 空对象"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "高度",
+}"comment": "视频流帧的高.",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "亮度",
+
+"comment": "只对摄像头",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "对比度",
+"@嵌入式方法": "\"\"""comment": "只对摄像头",
+"@嵌入式方法": "\"\"""type": "property getter",
+"@嵌入式方法": "\"\"""data type": "整数",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+"type": "property getter""method name": "饱和度",
+"type": "property getter""comment": "只对摄像头",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "整数",
+"type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"method name": "色调",
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"comment": "只对摄像头",
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"type": "property getter",
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"data type": "整数",
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "增益",
+
+"comment": "只对摄像头",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+## 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"data type": "整数""method name": "曝光",
+## 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"data type": "整数""comment": "只对摄像头",
+## 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"data type": "整数""type": "property getter",
+## 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"data type": "整数""data type": "整数",
+## 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"parameters": [
+"data type": "整数""@嵌入式方法": "\"\""
+  }
+kage name": "火山.原创软件"]
+ },
+ {
+"class name": "视频保存类",
+"methods": [
+  {
+type": "property getter""@嵌入式方法": "\"\"""method name": "是否已经打开",
+type": "property getter""@嵌入式方法": "\"\"""data type": "逻辑型",
+type": "property getter""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+方法 = """method name": "打开",
+方法 = """comment": "注意，首先要装解码器的，如何判断系统中已经安装解码器 https://jingyan.baidu.com/article/27fa7326e7108907f9271f18.html\n一般得到的文件为空，一般都是解码器出问题了，一般用微软自带的 DIVX 编码器",
+方法 = """data type": "逻辑型",
+方法 = """@禁止流程检查": "真",
+方法 = """parameters": [
+   {
+"parameter name": "欲保存的文件路径",
+"comment": "例如  c:\\\\aa.mp4",
+"data type": "文本型"
+   },
+   {
+"parameter name": "视频类型",
+"comment": "X264 DIVX 只能四个字符。。。等等 ",
+"data type": "文本型",
+"@默认值": "\"DIVX\""
+   },
+   {
+"parameter name": "帧率",
+"data type": "小数",
+"@默认值": "15"
+   },
+   {
+"parameter name": "视频宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "视频高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否彩色",
+"comment": "如果为真表示是彩色的，否则就是灰色的",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+方法 = ""]
+  },
+  {
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""method name": "写入图片",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "如果得到的视频文件出错，那么请 把图片转换成BGR模式，只支持三通道，不支持BGRA四通道",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "图片",
+"data type": "图片操作类"
+   }
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\""]
+  },
+  {
+}"method name": "关闭",
+}"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+}"class name": "图片操作类",
+}"methods": [
+  {
+"method name": "类_初始化"
+  },
+  {
+
+"method name": "类_清理"
+  },
+  {
+hod name": "类_初始化""method name": "取像素数据指针",
+hod name": "类_初始化""data type": "变整数",
+hod name": "类_初始化""@嵌入式方法": "\"\""
+  },
+  {
+hod name": "类_初始化""method name": "取像素数据",
+hod name": "类_初始化""data type": "字节集类"
+  },
+  {
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "如果得到的视频文件出错，那么请 把图片转换成BGR模式，只支持三通道，不支持BGRA四通道""method name": "取感性区",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "如果得到的视频文件出错，那么请 把图片转换成BGR模式，只支持三通道，不支持BGRA四通道""@嵌入式方法": "\"\"",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "如果得到的视频文件出错，那么请 把图片转换成BGR模式，只支持三通道，不支持BGRA四通道""parameters": [
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "感性区域",
+"comment": "用来保存感性区域",
+"data type": "图片操作类"
+   }
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "如果得到的视频文件出错，那么请 把图片转换成BGR模式，只支持三通道，不支持BGRA四通道"]
+  },
+  {
+入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "如果得到的视频文件出错，那么请 把图片转换成BGR模式，只支持三通道，不支持BGRA四通道""@嵌入式方法": "\"\"""method name": "到文本",
+入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "如果得到的视频文件出错，那么请 把图片转换成BGR模式，只支持三通道，不支持BGRA四通道""@嵌入式方法": "\"\"""comment": "将图片格式化成  [ 255 255 255 ] 这样格式的文本",
+入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "如果得到的视频文件出错，那么请 把图片转换成BGR模式，只支持三通道，不支持BGRA四通道""@嵌入式方法": "\"\"""data type": "文本型"
+  },
+  {
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""method name": "从文件载入",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""data type": "逻辑型",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@禁止流程检查": "真",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "读入方式",
+"comment": "       IMREAD_UNCHANGED            = -1, //!< If set, return the loaded image as is (with alpha channel, otherwise it gets cropped). Ignore EXIF orientation.\n       IMREAD_GRAYSCALE            = 0,  //!< If set, always convert image to the single channel grayscale image (codec internal conversion).\n       IMREAD_COLOR                = 1,  //!< If set, always convert image to the 3 channel BGR color image.\n       IMREAD_ANYDEPTH             = 2,  //!< If set, return 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.\n       IMREAD_ANYCOLOR             = 4,  //!< If set, the image is read in any possible color format.\n       IMREAD_LOAD_GDAL            = 8,  //!< If set, use the gdal driver for loading the image.\n       IMREAD_REDUCED_GRAYSCALE_2  = 16, //!< If set, always convert image to the single channel grayscale image and the image size reduced 1/2.\n       IMREAD_REDUCED_COLOR_2      = 17, //!< If set, always convert image to the 3 channel BGR color image and the image size reduced 1/2.\n       IMREAD_REDUCED_GRAYSCALE_4  = 32, //!< If set, always convert image to the single channel grayscale image and the image size reduced 1/4.\n       IMREAD_REDUCED_COLOR_4      = 33, //!< If set, always convert image to the 3 channel BGR color image and the image size reduced 1/4.\n       IMREAD_REDUCED_GRAYSCALE_8  = 64, //!< If set, always convert image to the single channel grayscale image and the image size reduced 1/8.\n       IMREAD_REDUCED_COLOR_8      = 65, //!< If set, always convert image to the 3 channel BGR color image and the image size reduced 1/8.\n       IMREAD_IGNORE_ORIENTATION   = 128 //!< If set, do not rotate the image according to EXIF's orientation flag.",
+"data type": "整数",
+"@默认值": "1"
+   }
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "到文件",
+
+"comment": "保存到文件",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "到文件Ex",
+"comment": "保存到文件",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "       IMWRITE_JPEG_QUALITY        = 1,  //!< For JPEG, it can be a quality from 0 to 100 (the higher is the better). Default value is 95.\n       IMWRITE_JPEG_PROGRESSIVE    = 2,  //!< Enable JPEG features, 0 or 1, default is False.\n       IMWRITE_JPEG_OPTIMIZE       = 3,  //!< Enable JPEG features, 0 or 1, default is False.\n       IMWRITE_JPEG_RST_INTERVAL   = 4,  //!< JPEG restart interval, 0 - 65535, default is 0 - no restart.\n       IMWRITE_JPEG_LUMA_QUALITY   = 5,  //!< Separate luma quality level, 0 - 100, default is 0 - don't use.\n       IMWRITE_JPEG_CHROMA_QUALITY = 6,  //!< Separate chroma quality level, 0 - 100, default is 0 - don't use.\n       IMWRITE_PNG_COMPRESSION     = 16, //!< For PNG, it can be the compression level from 0 to 9. A higher value means a smaller size and longer compression time. If specified, strategy is changed to IMWRITE_PNG_STRATEGY_DEFAULT (Z_DEFAULT_STRATEGY). Default value is 1 (best speed setting).\n       IMWRITE_PNG_STRATEGY        = 17, //!< One of cv::ImwritePNGFlags, default is IMWRITE_PNG_STRATEGY_RLE.\n       IMWRITE_PNG_BILEVEL         = 18, //!< Binary level PNG, 0 or 1, default is 0.\n       IMWRITE_PXM_BINARY          = 32, //!< For PPM, PGM, or PBM, it can be a binary format flag, 0 or 1. Default value is 1.\n       IMWRITE_EXR_TYPE            = (3 << 4) + 0, /* 48 */ //!< override EXR storage type (FLOAT (FP32) is default)\n       IMWRITE_WEBP_QUALITY        = 64, //!< For WEBP, it can be a quality from 1 to 100 (the higher is the better). By default (without any parameter) and for quality above 100 the lossless compression is used.\n       IMWRITE_PAM_TUPLETYPE       = 128,//!< For PAM, sets the TUPLETYPE field to the corresponding string value that is defined for the format\n       IMWRITE_TIFF_RESUNIT = 256,//!< For TIFF, use to specify which DPI resolution unit to set; see libtiff documentation for valid values\n       IMWRITE_TIFF_XDPI = 257,//!< For TIFF, use to specify the X direction DPI\n       IMWRITE_TIFF_YDPI = 258, //!< For TIFF, use to specify the Y direction DPI\n       IMWRITE_TIFF_COMPRESSION = 259, //!< For TIFF, use to specify the image compression scheme. See libtiff for integer constants corresponding to compression formats. Note, for images whose depth is CV_32F, only libtiff's SGILOG compression scheme is used. For other supported depths, the compression scheme can be specified by this flag; LZW compression is the default.\n       IMWRITE_JPEG2000_COMPRESSION_X1000 = 272 //!< For JPEG2000, use to specify the target compression rate (multiplied by 1000). The value can be from 0 to 1000. Default is 1000.",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "整数"
+   }
+]
+  },
+  {
+ameter name": "视频宽度""method name": "到字节集",
+ameter name": "视频宽度""data type": "字节集类",
+ameter name": "视频宽度""parameters": [
+   {
+"parameter name": "文件格式",
+"comment": ".png  .jpg ",
+"data type": "文本型"
+   }
+ameter name": "视频宽度"]
+  },
+  {
+ameter name": "文件路径""method name": "到字节集扩展",
+ameter name": "文件路径""data type": "字节集类",
+ameter name": "文件路径""parameters": [
+   {
+"parameter name": "文件格式",
+"comment": ".png  .jpg ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "       IMWRITE_JPEG_QUALITY        = 1,  //!< For JPEG, it can be a quality from 0 to 100 (the higher is the better). Default value is 95.\n       IMWRITE_JPEG_PROGRESSIVE    = 2,  //!< Enable JPEG features, 0 or 1, default is False.\n       IMWRITE_JPEG_OPTIMIZE       = 3,  //!< Enable JPEG features, 0 or 1, default is False.\n       IMWRITE_JPEG_RST_INTERVAL   = 4,  //!< JPEG restart interval, 0 - 65535, default is 0 - no restart.\n       IMWRITE_JPEG_LUMA_QUALITY   = 5,  //!< Separate luma quality level, 0 - 100, default is 0 - don't use.\n       IMWRITE_JPEG_CHROMA_QUALITY = 6,  //!< Separate chroma quality level, 0 - 100, default is 0 - don't use.\n       IMWRITE_PNG_COMPRESSION     = 16, //!< For PNG, it can be the compression level from 0 to 9. A higher value means a smaller size and longer compression time. If specified, strategy is changed to IMWRITE_PNG_STRATEGY_DEFAULT (Z_DEFAULT_STRATEGY). Default value is 1 (best speed setting).\n       IMWRITE_PNG_STRATEGY        = 17, //!< One of cv::ImwritePNGFlags, default is IMWRITE_PNG_STRATEGY_RLE.\n       IMWRITE_PNG_BILEVEL         = 18, //!< Binary level PNG, 0 or 1, default is 0.\n       IMWRITE_PXM_BINARY          = 32, //!< For PPM, PGM, or PBM, it can be a binary format flag, 0 or 1. Default value is 1.\n       IMWRITE_EXR_TYPE            = (3 << 4) + 0, /* 48 */ //!< override EXR storage type (FLOAT (FP32) is default)\n       IMWRITE_WEBP_QUALITY        = 64, //!< For WEBP, it can be a quality from 1 to 100 (the higher is the better). By default (without any parameter) and for quality above 100 the lossless compression is used.\n       IMWRITE_PAM_TUPLETYPE       = 128,//!< For PAM, sets the TUPLETYPE field to the corresponding string value that is defined for the format\n       IMWRITE_TIFF_RESUNIT = 256,//!< For TIFF, use to specify which DPI resolution unit to set; see libtiff documentation for valid values\n       IMWRITE_TIFF_XDPI = 257,//!< For TIFF, use to specify the X direction DPI\n       IMWRITE_TIFF_YDPI = 258, //!< For TIFF, use to specify the Y direction DPI\n       IMWRITE_TIFF_COMPRESSION = 259, //!< For TIFF, use to specify the image compression scheme. See libtiff for integer constants corresponding to compression formats. Note, for images whose depth is CV_32F, only libtiff's SGILOG compression scheme is used. For other supported depths, the compression scheme can be specified by this flag; LZW compression is the default.\n       IMWRITE_JPEG2000_COMPRESSION_X1000 = 272 //!< For JPEG2000, use to specify the target compression rate (multiplied by 1000). The value can be from 0 to 1000. Default is 1000.",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数2",
+"comment": "质量。。。",
+"data type": "整数"
+   }
+ameter name": "文件路径"]
+  },
+  {
+ }"method name": "到JPG",
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "质量",
+"comment": "1 - 100",
+"data type": "整数",
+"@默认值": "95"
+   }
+ }]
+  },
+  {
+ }"method name": "到PNG",
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "质量",
+"comment": "0-9 数字越大，图片越小",
+"data type": "整数",
+"@默认值": "9"
+   }
+ }]
+  },
+  {
+}"method name": "到WEBP",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "质量",
+"comment": "0-100 数字越大，图片质量越好",
+"data type": "整数",
+"@默认值": "95"
+   }
+}]
+  },
+  {
+]"method name": "从指针载入",
+]"comment": "从内存图片的指针载入",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "读入模式",
+"comment": "       IMREAD_UNCHANGED            = -1, //!< If set, return the loaded image as is (with alpha channel, otherwise it gets cropped). Ignore EXIF orientation.\n       IMREAD_GRAYSCALE            = 0,  //!< If set, always convert image to the single channel grayscale image (codec internal conversion).\n       IMREAD_COLOR                = 1,  //!< If set, always convert image to the 3 channel BGR color image.\n       IMREAD_ANYDEPTH             = 2,  //!< If set, return 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.\n       IMREAD_ANYCOLOR             = 4,  //!< If set, the image is read in any possible color format.\n       IMREAD_LOAD_GDAL            = 8,  //!< If set, use the gdal driver for loading the image.\n       IMREAD_REDUCED_GRAYSCALE_2  = 16, //!< If set, always convert image to the single channel grayscale image and the image size reduced 1/2.\n       IMREAD_REDUCED_COLOR_2      = 17, //!< If set, always convert image to the 3 channel BGR color image and the image size reduced 1/2.\n       IMREAD_REDUCED_GRAYSCALE_4  = 32, //!< If set, always convert image to the single channel grayscale image and the image size reduced 1/4.\n       IMREAD_REDUCED_COLOR_4      = 33, //!< If set, always convert image to the 3 channel BGR color image and the image size reduced 1/4.\n       IMREAD_REDUCED_GRAYSCALE_8  = 64, //!< If set, always convert image to the single channel grayscale image and the image size reduced 1/8.\n       IMREAD_REDUCED_COLOR_8      = 65, //!< If set, always convert image to the 3 channel BGR color image and the image size reduced 1/8.\n       IMREAD_IGNORE_ORIENTATION   = 128 //!< If set, do not rotate the image according to EXIF's orientation flag.",
+"data type": "整数",
+"@默认值": "1"
+   }
+]]
+  },
+  {
+ameter name": "读入模式""method name": "从字节集载入",
+ameter name": "读入模式""data type": "逻辑型",
+ameter name": "读入模式""parameters": [
+   {
+"parameter name": "字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图片读入模式常量",
+"comment": "       IMREAD_UNCHANGED            = -1, //!< If set, return the loaded image as is (with alpha channel, otherwise it gets cropped). Ignore EXIF orientation.\n       IMREAD_GRAYSCALE            = 0,  //!< If set, always convert image to the single channel grayscale image (codec internal conversion).\n       IMREAD_COLOR                = 1,  //!< If set, always convert image to the 3 channel BGR color image.\n       IMREAD_ANYDEPTH             = 2,  //!< If set, return 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.\n       IMREAD_ANYCOLOR             = 4,  //!< If set, the image is read in any possible color format.\n       IMREAD_LOAD_GDAL            = 8,  //!< If set, use the gdal driver for loading the image.\n       IMREAD_REDUCED_GRAYSCALE_2  = 16, //!< If set, always convert image to the single channel grayscale image and the image size reduced 1/2.\n       IMREAD_REDUCED_COLOR_2      = 17, //!< If set, always convert image to the 3 channel BGR color image and the image size reduced 1/2.\n       IMREAD_REDUCED_GRAYSCALE_4  = 32, //!< If set, always convert image to the single channel grayscale image and the image size reduced 1/4.\n       IMREAD_REDUCED_COLOR_4      = 33, //!< If set, always convert image to the 3 channel BGR color image and the image size reduced 1/4.\n       IMREAD_REDUCED_GRAYSCALE_8  = 64, //!< If set, always convert image to the single channel grayscale image and the image size reduced 1/8.\n       IMREAD_REDUCED_COLOR_8      = 65, //!< If set, always convert image to the 3 channel BGR color image and the image size reduced 1/8.\n       IMREAD_IGNORE_ORIENTATION   = 128 //!< If set, do not rotate the image according to EXIF's orientation flag.",
+"data type": "整数",
+"@默认值": "1"
+   }
+ameter name": "读入模式"]
+  },
+  {
+ameter name": "类型""method name": "从像素数据载入",
+ameter name": "类型""data type": "逻辑型",
+ameter name": "类型""@禁止流程检查": "真",
+ameter name": "类型""parameters": [
+   {
+"parameter name": "像素数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "通道数",
+"comment": "最后一个参数 可选值 CV_8UC1 0  CV_8UC2 8  CV_8UC3 16 CV_8UC4 24",
+"data type": "整数",
+"@默认值": "3"
+   }
+ameter name": "类型"]
+  },
+  {
+
+"method name": "从像素字节数组载入",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "行数",
+"data type": "整数"
+   },
+   {
+"parameter name": "列数",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片类型",
+"comment": "默认  CV_8UC3 八位三通道  一个通道占用一个字节(八位)\nCV_8UC1 0  \nCV_8UC2 8  \nCV_8UC3 16 \nCV_8UC4 24",
+"data type": "整数"
+   },
+   {
+"parameter name": "行字节数",
+"comment": "如果不足，那么就补齐,一般可以不用填写，自动计算",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "像素数据",
+"@匹配类型": "通用数值型数组"
+   }
+
+]
+  },
+  {
+ }"method name": "从像素数据指针载入",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "像素数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "通道数",
+"data type": "整数",
+"@默认值": "3"
+   }
+ }]
+  },
+  {
+ }"method name": "创建",
+ }"comment": "调用此函数之后，才会有像素数据，否则是空图片的",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片类型",
+"comment": "默认  CV_8UC3 八位三通道  一个通道占用一个字节(八位)\nCV_8UC1 0  \nCV_8UC2 8  \nCV_8UC3 16 \nCV_8UC4 24",
+"data type": "整数",
+"@默认值": "16"
+   }
+ }]
+  },
+  {
+ }"method name": "填充零",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片类型",
+"comment": "#define CV_8U   0\n#define CV_8S   1\n#define CV_16U  2\n#define CV_16S  3\n#define CV_32S  4\n#define CV_32F  5\n#define CV_64F  6\n#define CV_16F  7",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "填充一",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片类型",
+"comment": "#define CV_8U   0\n#define CV_8S   1\n#define CV_16U  2\n#define CV_16S  3\n#define CV_32S  4\n#define CV_32F  5\n#define CV_64F  6\n#define CV_16F  7",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ameter name": "通道数""method name": "宽度",
+ameter name": "通道数""type": "property getter",
+ameter name": "通道数""data type": "整数",
+ameter name": "通道数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "高度",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "是否为空",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "通道数",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "行字节数",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "创建窗口",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "窗口名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口类型",
+"comment": "0 表示常规\n1 表示自动大小 此时不能设置窗口大小",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "整数"]
+  },
+  {
+ameter name": "高度""method name": "置窗口大小",
+ameter name": "高度""@嵌入式方法": "\"\"",
+ameter name": "高度""parameters": [
+   {
+"parameter name": "窗口名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   }
+ameter name": "高度"]
+  },
+  {
+}"method name": "显示",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "窗口名称",
+"data type": "文本型",
+"@默认值": "\"图片\""
+   }
+}]
+  },
+  {
+ameter name": "高度""method name": "等待按键",
+ameter name": "高度""result comment": "返回 键代码  也就是按键代码值",
+ameter name": "高度""data type": "整数",
+ameter name": "高度""@嵌入式方法": "\"\"",
+ameter name": "高度""parameters": [
+   {
+"parameter name": "等待时间",
+"data type": "整数",
+"@默认值": "1"
+   }
+ameter name": "高度"]
+  },
+  {
+}"method name": "赋值",
+}"comment": "将图片2赋值给本图片类 实现的功能是 Mat = Mat",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "图片2",
+"data type": "图片操作类"
+   }
+}]
+  },
+  {
+}"method name": "克隆",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "新图片",
+"data type": "图片操作类"
+   }
+}]
+  },
+  {
+"method name": "图片类型",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "算数运算",
+"comment": "两个图片算数运算 加减乘除\n例如 图片1 [1,0,0]\n     参与运算的图片 [2,0,0]\n图片1 + 参与运算的图片 等于 [3,0,0]",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "参与运算的图片",
+"data type": "图片操作类"
+   },
+   {
+"parameter name": "运算方式",
+"comment": "//nOperate 运算类型 可选值 1 2 3 4\n//1 == +\n//2 == -\n//3 == *\n//4 == /",
+"data type": "整数"
+   },
+   {
+"parameter name": "运算后的图片",
+"data type": "图片操作类"
+   }
+]
+  },
+  {
+ }"method name": "像素运算",
+ }"comment": "像素运算",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "参与运算的数值",
+"data type": "小数"
+   },
+   {
+"parameter name": "运算方式",
+"comment": "//nOperate 运算类型 可选值 1 2 3 4\n//1 == +\n//2 == -\n//3 == *\n//4 == /",
+"data type": "整数"
+   },
+   {
+"parameter name": "运算后的图片",
+"data type": "图片操作类"
+   }
+ }]
+  },
+  {
+"method name": "位运算",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "参与运算的图片",
+"comment": "当运算方式为 位取反的时候，这个参数是不需要的，可以填空对象",
+"data type": "图片操作类"
+   },
+   {
+"parameter name": "运算方式",
+"comment": "//位运算\n// 1 位与\n// 2 位或\n// 3 异或\n// 4 位取反",
+"data type": "整数"
+   },
+   {
+"parameter name": "运算后的图片",
+"data type": "图片操作类"
+   }
+]
+  },
+  {
+]"method name": "颜色模型转换",
+]"comment": "针对图像不同颜色模型的相互转换\n比如可以从 rgb 或者 bgr 转换为灰度图 等等",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "处理后的图片",
+"data type": "图片操作类"
+   },
+   {
+"parameter name": "转换方式",
+"comment": "    COLOR_BGR2BGRA     = 0, //!< add alpha channel to RGB or BGR image\n    COLOR_RGB2RGBA     = COLOR_BGR2BGRA,\n\n    COLOR_BGRA2BGR     = 1, //!< remove alpha channel from RGB or BGR image\n    COLOR_RGBA2RGB     = COLOR_BGRA2BGR,\n\n    COLOR_BGR2RGBA     = 2, //!< convert between RGB and BGR color spaces (with or without alpha channel)\n    COLOR_RGB2BGRA     = COLOR_BGR2RGBA,\n\n    COLOR_RGBA2BGR     = 3,\n    COLOR_BGRA2RGB     = COLOR_RGBA2BGR,\n\n    COLOR_BGR2RGB      = 4,\n    COLOR_RGB2BGR      = COLOR_BGR2RGB,\n\n    COLOR_BGRA2RGBA    = 5,\n    COLOR_RGBA2BGRA    = COLOR_BGRA2RGBA,\n\n    COLOR_BGR2GRAY     = 6, //!< convert between RGB/BGR and grayscale, @ref color_convert_rgb_gray \"color conversions\"\n    COLOR_RGB2GRAY     = 7,\n    COLOR_GRAY2BGR     = 8,\n    COLOR_GRAY2RGB     = COLOR_GRAY2BGR,\n    COLOR_GRAY2BGRA    = 9,\n    COLOR_GRAY2RGBA    = COLOR_GRAY2BGRA,\n    COLOR_BGRA2GRAY    = 10,\n    COLOR_RGBA2GRAY    = 11,\n\n    COLOR_BGR2BGR565   = 12, //!< convert between RGB/BGR and BGR565 (16-bit images)\n    COLOR_RGB2BGR565   = 13,\n    COLOR_BGR5652BGR   = 14,\n    COLOR_BGR5652RGB   = 15,\n    COLOR_BGRA2BGR565  = 16,\n    COLOR_RGBA2BGR565  = 17,\n    COLOR_BGR5652BGRA  = 18,\n    COLOR_BGR5652RGBA  = 19,\n\n    COLOR_GRAY2BGR565  = 20, //!< convert between grayscale to BGR565 (16-bit images)\n    COLOR_BGR5652GRAY  = 21,\n\n    COLOR_BGR2BGR555   = 22,  //!< convert between RGB/BGR and BGR555 (16-bit images)\n    COLOR_RGB2BGR555   = 23,\n    COLOR_BGR5552BGR   = 24,\n    COLOR_BGR5552RGB   = 25,\n    COLOR_BGRA2BGR555  = 26,\n    COLOR_RGBA2BGR555  = 27,\n    COLOR_BGR5552BGRA  = 28,\n    COLOR_BGR5552RGBA  = 29,\n\n    COLOR_GRAY2BGR555  = 30, //!< convert between grayscale and BGR555 (16-bit images)\n    COLOR_BGR5552GRAY  = 31,\n\n    COLOR_BGR2XYZ      = 32, //!< convert RGB/BGR to CIE XYZ, @ref color_convert_rgb_xyz \"color conversions\"\n    COLOR_RGB2XYZ      = 33,\n    COLOR_XYZ2BGR      = 34,\n    COLOR_XYZ2RGB      = 35,\n\n    COLOR_BGR2YCrCb    = 36, //!< convert RGB/BGR to luma-chroma (aka YCC), @ref color_convert_rgb_ycrcb \"color conversions\"\n    COLOR_RGB2YCrCb    = 37,\n    COLOR_YCrCb2BGR    = 38,\n    COLOR_YCrCb2RGB    = 39,\n\n    COLOR_BGR2HSV      = 40, //!< convert RGB/BGR to HSV (hue saturation value), @ref color_convert_rgb_hsv \"color conversions\"\n    COLOR_RGB2HSV      = 41,\n\n    COLOR_BGR2Lab      = 44, //!< convert RGB/BGR to CIE Lab, @ref color_convert_rgb_lab \"color conversions\"\n    COLOR_RGB2Lab      = 45,\n\n    COLOR_BGR2Luv      = 50, //!< convert RGB/BGR to CIE Luv, @ref color_convert_rgb_luv \"color conversions\"\n    COLOR_RGB2Luv      = 51,\n    COLOR_BGR2HLS      = 52, //!< convert RGB/BGR to HLS (hue lightness saturation), @ref color_convert_rgb_hls \"color conversions\"\n    COLOR_RGB2HLS      = 53,\n\n    COLOR_HSV2BGR      = 54, //!< backward conversions to RGB/BGR\n    COLOR_HSV2RGB      = 55,\n\n    COLOR_Lab2BGR      = 56,\n    COLOR_Lab2RGB      = 57,\n    COLOR_Luv2BGR      = 58,\n    COLOR_Luv2RGB      = 59,\n    COLOR_HLS2BGR      = 60,\n    COLOR_HLS2RGB      = 61,\n\n    COLOR_BGR2HSV_FULL = 66,\n    COLOR_RGB2HSV_FULL = 67,\n    COLOR_BGR2HLS_FULL = 68,\n    COLOR_RGB2HLS_FULL = 69,\n\n    COLOR_HSV2BGR_FULL = 70,\n    COLOR_HSV2RGB_FULL = 71,\n    COLOR_HLS2BGR_FULL = 72,\n    COLOR_HLS2RGB_FULL = 73,\n\n    COLOR_LBGR2Lab     = 74,\n    COLOR_LRGB2Lab     = 75,\n    COLOR_LBGR2Luv     = 76,\n    COLOR_LRGB2Luv     = 77,\n\n    COLOR_Lab2LBGR     = 78,\n    COLOR_Lab2LRGB     = 79,\n    COLOR_Luv2LBGR     = 80,\n    COLOR_Luv2LRGB     = 81,\n\n    COLOR_BGR2YUV      = 82, //!< convert between RGB/BGR and YUV\n    COLOR_RGB2YUV      = 83,\n    COLOR_YUV2BGR      = 84,\n    COLOR_YUV2RGB      = 85,\n\n    //! YUV 4:2:0 family to RGB\n    COLOR_YUV2RGB_NV12  = 90,\n    COLOR_YUV2BGR_NV12  = 91,\n    COLOR_YUV2RGB_NV21  = 92,\n    COLOR_YUV2BGR_NV21  = 93,\n    COLOR_YUV420sp2RGB  = COLOR_YUV2RGB_NV21,\n    COLOR_YUV420sp2BGR  = COLOR_YUV2BGR_NV21,\n\n    COLOR_YUV2RGBA_NV12 = 94,\n    COLOR_YUV2BGRA_NV12 = 95,\n    COLOR_YUV2RGBA_NV21 = 96,\n    COLOR_YUV2BGRA_NV21 = 97,\n    COLOR_YUV420sp2RGBA = COLOR_YUV2RGBA_NV21,\n    COLOR_YUV420sp2BGRA = COLOR_YUV2BGRA_NV21,\n\n    COLOR_YUV2RGB_YV12  = 98,\n    COLOR_YUV2BGR_YV12  = 99,\n    COLOR_YUV2RGB_IYUV  = 100,\n    COLOR_YUV2BGR_IYUV  = 101,\n    COLOR_YUV2RGB_I420  = COLOR_YUV2RGB_IYUV,\n    COLOR_YUV2BGR_I420  = COLOR_YUV2BGR_IYUV,\n    COLOR_YUV420p2RGB   = COLOR_YUV2RGB_YV12,\n    COLOR_YUV420p2BGR   = COLOR_YUV2BGR_YV12,\n\n    COLOR_YUV2RGBA_YV12 = 102,\n    COLOR_YUV2BGRA_YV12 = 103,\n    COLOR_YUV2RGBA_IYUV = 104,\n    COLOR_YUV2BGRA_IYUV = 105,\n    COLOR_YUV2RGBA_I420 = COLOR_YUV2RGBA_IYUV,\n    COLOR_YUV2BGRA_I420 = COLOR_YUV2BGRA_IYUV,\n    COLOR_YUV420p2RGBA  = COLOR_YUV2RGBA_YV12,\n    COLOR_YUV420p2BGRA  = COLOR_YUV2BGRA_YV12,\n\n    COLOR_YUV2GRAY_420  = 106,\n    COLOR_YUV2GRAY_NV21 = COLOR_YUV2GRAY_420,\n    COLOR_YUV2GRAY_NV12 = COLOR_YUV2GRAY_420,\n    COLOR_YUV2GRAY_YV12 = COLOR_YUV2GRAY_420,\n    COLOR_YUV2GRAY_IYUV = COLOR_YUV2GRAY_420,\n    COLOR_YUV2GRAY_I420 = COLOR_YUV2GRAY_420,\n    COLOR_YUV420sp2GRAY = COLOR_YUV2GRAY_420,\n    COLOR_YUV420p2GRAY  = COLOR_YUV2GRAY_420,\n\n    //! YUV 4:2:2 family to RGB\n    COLOR_YUV2RGB_UYVY = 107,\n    COLOR_YUV2BGR_UYVY = 108,\n    //COLOR_YUV2RGB_VYUY = 109,\n    //COLOR_YUV2BGR_VYUY = 110,\n    COLOR_YUV2RGB_Y422 = COLOR_YUV2RGB_UYVY,\n    COLOR_YUV2BGR_Y422 = COLOR_YUV2BGR_UYVY,\n    COLOR_YUV2RGB_UYNV = COLOR_YUV2RGB_UYVY,\n    COLOR_YUV2BGR_UYNV = COLOR_YUV2BGR_UYVY,\n\n    COLOR_YUV2RGBA_UYVY = 111,\n    COLOR_YUV2BGRA_UYVY = 112,\n    //COLOR_YUV2RGBA_VYUY = 113,\n    //COLOR_YUV2BGRA_VYUY = 114,\n    COLOR_YUV2RGBA_Y422 = COLOR_YUV2RGBA_UYVY,\n    COLOR_YUV2BGRA_Y422 = COLOR_YUV2BGRA_UYVY,\n    COLOR_YUV2RGBA_UYNV = COLOR_YUV2RGBA_UYVY,\n    COLOR_YUV2BGRA_UYNV = COLOR_YUV2BGRA_UYVY,\n\n    COLOR_YUV2RGB_YUY2 = 115,\n    COLOR_YUV2BGR_YUY2 = 116,\n    COLOR_YUV2RGB_YVYU = 117,\n    COLOR_YUV2BGR_YVYU = 118,\n    COLOR_YUV2RGB_YUYV = COLOR_YUV2RGB_YUY2,\n    COLOR_YUV2BGR_YUYV = COLOR_YUV2BGR_YUY2,\n    COLOR_YUV2RGB_YUNV = COLOR_YUV2RGB_YUY2,\n    COLOR_YUV2BGR_YUNV = COLOR_YUV2BGR_YUY2,\n\n    COLOR_YUV2RGBA_YUY2 = 119,\n    COLOR_YUV2BGRA_YUY2 = 120,\n    COLOR_YUV2RGBA_YVYU = 121,\n    COLOR_YUV2BGRA_YVYU = 122,\n    COLOR_YUV2RGBA_YUYV = COLOR_YUV2RGBA_YUY2,\n    COLOR_YUV2BGRA_YUYV = COLOR_YUV2BGRA_YUY2,\n    COLOR_YUV2RGBA_YUNV = COLOR_YUV2RGBA_YUY2,\n    COLOR_YUV2BGRA_YUNV = COLOR_YUV2BGRA_YUY2,\n\n    COLOR_YUV2GRAY_UYVY = 123,\n    COLOR_YUV2GRAY_YUY2 = 124,\n    //CV_YUV2GRAY_VYUY    = CV_YUV2GRAY_UYVY,\n    COLOR_YUV2GRAY_Y422 = COLOR_YUV2GRAY_UYVY,\n    COLOR_YUV2GRAY_UYNV = COLOR_YUV2GRAY_UYVY,\n    COLOR_YUV2GRAY_YVYU = COLOR_YUV2GRAY_YUY2,\n    COLOR_YUV2GRAY_YUYV = COLOR_YUV2GRAY_YUY2,\n    COLOR_YUV2GRAY_YUNV = COLOR_YUV2GRAY_YUY2,\n\n    //! alpha premultiplication\n    COLOR_RGBA2mRGBA    = 125,\n    COLOR_mRGBA2RGBA    = 126,\n\n    //! RGB to YUV 4:2:0 family\n    COLOR_RGB2YUV_I420  = 127,\n    COLOR_BGR2YUV_I420  = 128,\n    COLOR_RGB2YUV_IYUV  = COLOR_RGB2YUV_I420,\n    COLOR_BGR2YUV_IYUV  = COLOR_BGR2YUV_I420,\n\n    COLOR_RGBA2YUV_I420 = 129,\n    COLOR_BGRA2YUV_I420 = 130,\n    COLOR_RGBA2YUV_IYUV = COLOR_RGBA2YUV_I420,\n    COLOR_BGRA2YUV_IYUV = COLOR_BGRA2YUV_I420,\n    COLOR_RGB2YUV_YV12  = 131,\n    COLOR_BGR2YUV_YV12  = 132,\n    COLOR_RGBA2YUV_YV12 = 133,\n    COLOR_BGRA2YUV_YV12 = 134,\n\n    //! Demosaicing\n    COLOR_BayerBG2BGR = 46,\n    COLOR_BayerGB2BGR = 47,\n    COLOR_BayerRG2BGR = 48,\n    COLOR_BayerGR2BGR = 49,\n\n    COLOR_BayerBG2RGB = COLOR_BayerRG2BGR,\n    COLOR_BayerGB2RGB = COLOR_BayerGR2BGR,\n    COLOR_BayerRG2RGB = COLOR_BayerBG2BGR,\n    COLOR_BayerGR2RGB = COLOR_BayerGB2BGR,\n\n    COLOR_BayerBG2GRAY = 86,\n    COLOR_BayerGB2GRAY = 87,\n    COLOR_BayerRG2GRAY = 88,\n    COLOR_BayerGR2GRAY = 89,\n\n    //! Demosaicing using Variable Number of Gradients\n    COLOR_BayerBG2BGR_VNG = 62,\n    COLOR_BayerGB2BGR_VNG = 63,\n    COLOR_BayerRG2BGR_VNG = 64,\n    COLOR_BayerGR2BGR_VNG = 65,\n\n    COLOR_BayerBG2RGB_VNG = COLOR_BayerRG2BGR_VNG,\n    COLOR_BayerGB2RGB_VNG = COLOR_BayerGR2BGR_VNG,\n    COLOR_BayerRG2RGB_VNG = COLOR_BayerBG2BGR_VNG,\n    COLOR_BayerGR2RGB_VNG = COLOR_BayerGB2BGR_VNG,\n\n    //! Edge-Aware Demosaicing\n    COLOR_BayerBG2BGR_EA  = 135,\n    COLOR_BayerGB2BGR_EA  = 136,\n    COLOR_BayerRG2BGR_EA  = 137,\n    COLOR_BayerGR2BGR_EA  = 138,\n\n    COLOR_BayerBG2RGB_EA  = COLOR_BayerRG2BGR_EA,\n    COLOR_BayerGB2RGB_EA  = COLOR_BayerGR2BGR_EA,\n    COLOR_BayerRG2RGB_EA  = COLOR_BayerBG2BGR_EA,\n    COLOR_BayerGR2RGB_EA  = COLOR_BayerGB2BGR_EA,\n\n    //! Demosaicing with alpha channel\n    COLOR_BayerBG2BGRA = 139,\n    COLOR_BayerGB2BGRA = 140,\n    COLOR_BayerRG2BGRA = 141,\n    COLOR_BayerGR2BGRA = 142,\n\n    COLOR_BayerBG2RGBA = COLOR_BayerRG2BGRA,\n    COLOR_BayerGB2RGBA = COLOR_BayerGR2BGRA,\n    COLOR_BayerRG2RGBA = COLOR_BayerBG2BGRA,\n    COLOR_BayerGR2RGBA = COLOR_BayerGB2BGRA,\n\n    COLOR_COLORCVT_MAX  = 143",
+"data type": "整数"
+   },
+   {
+"parameter name": "通道数",
+"comment": "转换后的图片 通道数，必须填，如果原来的通道是 ARGB，您想要转换成rgb 那么这里就填3",
+"data type": "整数",
+"@默认值": "0"
+   }
+]]
+  },
+  {
+data type": "图片操作类""method name": "取颜色分量",
+data type": "图片操作类""data type": "整数",
+data type": "图片操作类""@嵌入式方法": "\"\"",
+data type": "图片操作类""parameters": [
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色分量索引",
+"comment": "可选值 0 1 2 3\n当通道数为1 时，这个只能填0\n当通道数为2 时  这个可以填 0 或者 1\n当通道数为3 时  这个可以填 0 或者 1 或者 2\n当通道数为4 时  这个可以填 0 或者 1 或者 2 或者 4\n注意，opencv默认颜色模型为 b g r a\n当通道数 大于等于3 时  索引0 取出来的是 颜色分量 b(blue  蓝色)\n                       索引1 取出来的是 颜色分量 g(green 绿色)\n                       索引2 取出来的是 颜色分量 r(red   红色)\n这个只有当通道数为4    索引3 取出来的是 颜色分量 a(alpha 透明度)\n\n如果您自己转换过颜色模型，那么请根据实际情况来取颜色分量",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "图片操作类"]
+  },
+  {
+ }"method name": "取索引颜色分量",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色分量索引",
+"comment": "可选值 0 1 2 3\n当通道数为1 时，这个只能填0\n当通道数为2 时  这个可以填 0 或者 1\n当通道数为3 时  这个可以填 0 或者 1 或者 2\n当通道数为4 时  这个可以填 0 或者 1 或者 2 或者 4\n注意，opencv默认颜色模型为 b g r a\n当通道数 大于等于3 时  索引0 取出来的是 颜色分量 b(blue  蓝色)\n                       索引1 取出来的是 颜色分量 g(green 绿色)\n                       索引2 取出来的是 颜色分量 r(red   红色)\n这个只有当通道数为4    索引3 取出来的是 颜色分量 a(alpha 透明度)\n\n如果您自己转换过颜色模型，那么请根据实际情况来取颜色分量",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+]"method name": "置颜色分量",
+]"data type": "整数",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "颜色分量索引",
+"comment": "可选值 0 1 2 3\n当通道数为1 时，这个只能填0\n当通道数为2 时  这个可以填 0 或者 1\n当通道数为3 时  这个可以填 0 或者 1 或者 2\n当通道数为4 时  这个可以填 0 或者 1 或者 2 或者 3\n注意，opencv默认颜色模型为 b g r a\n当通道数 大于等于3 时  索引0 取出来的是 颜色分量 b(blue  蓝色)\n                       索引1 取出来的是 颜色分量 g(green 绿色)\n                       索引2 取出来的是 颜色分量 r(red   红色)\n这个只有当通道数为4    索引3 取出来的是 颜色分量 a(alpha 透明度)\n\n如果您自己转换过颜色模型，那么请根据实际情况来取颜色分量",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "颜色分量值",
+"data type": "整数"
+   }
+]]
+  },
+  {
+
+"method name": "翻转",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "翻转后的图片",
+"data type": "图片操作类"
+   },
+   {
+"parameter name": "翻转方式",
+"comment": "大于 0: 沿y-轴翻转,\n等于 0: 沿x-轴翻转,\n小于 0: x、y轴同时翻转",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "填充",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "颜色分量1",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "颜色分量2",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "颜色分量3",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "颜色分量4",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+"method name": "画矩形",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "线条粗细",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "红色",
+"comment": "0-255",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "绿色",
+"comment": "0-255",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "蓝色",
+"comment": "0-255",
+"data type": "整数",
+"@默认值": "255"
+   },
+   {
+"parameter name": "透明度",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"method name": "画文本",
+"comment": "不支持中文",
+"parameters": [
+   {
+"parameter name": "要绘制的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "字体类型",
+"comment": "    FONT_HERSHEY_SIMPLEX        = 0, //!< normal size sans-serif font\n    FONT_HERSHEY_PLAIN          = 1, //!< small size sans-serif font\n    FONT_HERSHEY_DUPLEX         = 2, //!< normal size sans-serif font (more complex than FONT_HERSHEY_SIMPLEX)\n    FONT_HERSHEY_COMPLEX        = 3, //!< normal size serif font\n    FONT_HERSHEY_TRIPLEX        = 4, //!< normal size serif font (more complex than FONT_HERSHEY_COMPLEX)\n    FONT_HERSHEY_COMPLEX_SMALL  = 5, //!< smaller version of FONT_HERSHEY_COMPLEX\n    FONT_HERSHEY_SCRIPT_SIMPLEX = 6, //!< hand-writing style font\n    FONT_HERSHEY_SCRIPT_COMPLEX = 7, //!< more complex variant of FONT_HERSHEY_SCRIPT_SIMPLEX\n    FONT_ITALIC                 = 16 //!< flag for italic font",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "字体缩放",
+"data type": "小数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "粗细",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "线条类型",
+"comment": "    FILLED  = -1,\n    LINE_4  = 4, //!< 4-connected line\n    LINE_8  = 8, //!< 8-connected line\n    LINE_AA = 16 //!< antialiased line",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "是否从右下角开始",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "红色",
+"comment": "0-255",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "绿色",
+"comment": "0-255",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "蓝色",
+"comment": "0-255",
+"data type": "整数",
+"@默认值": "255"
+   },
+   {
+"parameter name": "透明度",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+
+"method name": "画文本2",
+
+"comment": "支持中文",
+
+"result comment": "返回文本宽度",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "要绘制的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "字体文件",
+"data type": "文本型",
+"@默认值": "\"C:\\\\Windows\\\\Fonts\\\\simhei.ttf\""
+   },
+   {
+"parameter name": "字体宽度",
+"data type": "整数",
+"@默认值": "20"
+   },
+   {
+"parameter name": "字体高度",
+"comment": "0 自动计算",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "字体透明度",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "红色",
+"comment": "0-255",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "绿色",
+"comment": "0-255",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "蓝色",
+"comment": "0-255",
+"data type": "整数",
+"@默认值": "255"
+   },
+   {
+"parameter name": "透明度",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "缩放",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "处理后的图片",
+"data type": "图片操作类"
+   },
+   {
+"parameter name": "缩放后的宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "缩放后的高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "缩放插值方式",
+"comment": "enum InterpolationFlags{\n    /** nearest neighbor interpolation */\n    INTER_NEAREST        = 0,\n    /** bilinear interpolation */\n    INTER_LINEAR         = 1,\n    /** bicubic interpolation */\n    INTER_CUBIC          = 2,\n    /** resampling using pixel area relation. It may be a preferred method for image decimation, as\n    it gives moire'-free results. But when the image is zoomed, it is similar to the INTER_NEAREST\n    method. */\n    INTER_AREA           = 3,\n    /** Lanczos interpolation over 8x8 neighborhood */\n    INTER_LANCZOS4       = 4,\n    /** Bit exact bilinear interpolation */\n    INTER_LINEAR_EXACT = 5,\n    /** mask for interpolation codes */\n    INTER_MAX            = 7,\n    /** flag, fills all of the destination image pixels. If some of them correspond to outliers in the\n    source image, they are set to zero */\n    WARP_FILL_OUTLIERS   = 8,\n    /** flag, inverse transformation\n\n    For example, #linearPolar or #logPolar transforms:\n    - flag is __not__ set: \\f$dst( \\rho , \\phi ) = src(x,y)\\f$\n    - flag is set: \\f$dst(x,y) = src( \\rho , \\phi )\\f$\n    */\n    WARP_INVERSE_MAP     = 16\n};",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "横向缩放比例",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向缩放比例",
+"data type": "小数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+ameter name": "纵向缩放比例""method name": "旋转",
+ameter name": "纵向缩放比例""@嵌入式方法": "\"\"",
+ameter name": "纵向缩放比例""parameters": [
+   {
+"parameter name": "处理后的图片",
+"data type": "图片操作类"
+   },
+   {
+"parameter name": "旋转角度",
+"data type": "整数"
+   }
+ameter name": "纵向缩放比例"]
+  },
+  {
+]"method name": "统计行",
+]"comment": "可以计算",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "处理后的图片",
+"data type": "图片操作类"
+   },
+   {
+"parameter name": "运算方式",
+"comment": "0 相加\n1 平均\n2 最大\n3 最小",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出图片的类型",
+"comment": "// -1 表示 输出图片类型和 输入类型一样，但是当 你调用了 REDUCE_SUM 相加的时候，数据类型肯定会变\n// 此时要手动指定输出类型，可以设置为 CV_32SC1 \n#define CV_8UC1 CV_MAKETYPE(CV_8U,1)\n#define CV_8UC2 CV_MAKETYPE(CV_8U,2)\n#define CV_8UC3 CV_MAKETYPE(CV_8U,3)\n#define CV_8UC4 CV_MAKETYPE(CV_8U,4)\n#define CV_8UC(n) CV_MAKETYPE(CV_8U,(n))\n\n#define CV_8SC1 CV_MAKETYPE(CV_8S,1)\n#define CV_8SC2 CV_MAKETYPE(CV_8S,2)\n#define CV_8SC3 CV_MAKETYPE(CV_8S,3)\n#define CV_8SC4 CV_MAKETYPE(CV_8S,4)\n#define CV_8SC(n) CV_MAKETYPE(CV_8S,(n))\n\n#define CV_16UC1 CV_MAKETYPE(CV_16U,1)\n#define CV_16UC2 CV_MAKETYPE(CV_16U,2)\n#define CV_16UC3 CV_MAKETYPE(CV_16U,3)\n#define CV_16UC4 CV_MAKETYPE(CV_16U,4)\n#define CV_16UC(n) CV_MAKETYPE(CV_16U,(n))",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]]
+  },
+  {
+
+"method name": "统计列",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "处理后的图片",
+"data type": "图片操作类"
+   },
+   {
+"parameter name": "运算方式",
+"comment": "0 相加\n1 平均\n2 最大\n3 最小",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出图片的类型",
+"comment": "// -1 表示 输出图片类型和 输入类型一样，但是当 你调用了 REDUCE_SUM 相加的时候，数据类型肯定会变\n// 此时要手动指定输出类型，可以设置为 CV_32SC1 \n#define CV_8UC1 CV_MAKETYPE(CV_8U,1)\n#define CV_8UC2 CV_MAKETYPE(CV_8U,2)\n#define CV_8UC3 CV_MAKETYPE(CV_8U,3)\n#define CV_8UC4 CV_MAKETYPE(CV_8U,4)\n#define CV_8UC(n) CV_MAKETYPE(CV_8U,(n))\n\n#define CV_8SC1 CV_MAKETYPE(CV_8S,1)\n#define CV_8SC2 CV_MAKETYPE(CV_8S,2)\n#define CV_8SC3 CV_MAKETYPE(CV_8S,3)\n#define CV_8SC4 CV_MAKETYPE(CV_8S,4)\n#define CV_8SC(n) CV_MAKETYPE(CV_8S,(n))\n\n#define CV_16UC1 CV_MAKETYPE(CV_16U,1)\n#define CV_16UC2 CV_MAKETYPE(CV_16U,2)\n#define CV_16UC3 CV_MAKETYPE(CV_16U,3)\n#define CV_16UC4 CV_MAKETYPE(CV_16U,4)\n#define CV_16UC(n) CV_MAKETYPE(CV_16U,(n))",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+"method name": "取整体最大外接矩形",
+"comment": "解释说明：\nsrcMat=\n[  0,   0,   0,   0,   0;\n   0,  44,  12,  22,   0;\n   0,  25,  26,  33,   0;\n   0,  11,  22,  44,   0;\n   0,   0,   0,   0,   0]\n处理后\ndesMat=\n[ 44,  12,  22;\n  25,  26,  33;\n  11,  22,  44]\n调用代码\n cv::Mat output;\n int x1, y1, x2, y2;\n if (FImage_reduceImage(&srcMat, &x1, &y1, &x2, &y2))\n {\n  FImage_GetRoi(&srcMat, x1, y1, x2 - x1+1, y2 - y1+1, &output);\n }",
+"result comment": "返回真，则有最大外接矩形，返回假则没有，",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "开始横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "开始纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束纵坐标",
+"data type": "整数"
+   }
+]
+  },
+  {
+@默认值": "-1""method name": "分离通道",
+@默认值": "-1""@嵌入式方法": "\"\"",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "通道1",
+"data type": "图片操作类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "通道2",
+"data type": "图片操作类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "通道3",
+"data type": "图片操作类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "通道4",
+"data type": "图片操作类",
+"@默认值": "空对象"
+   }
+@默认值": "-1"]
+  },
+  {
+@默认值": "空对象""method name": "合并通道",
+@默认值": "空对象""@嵌入式方法": "\"\"",
+@默认值": "空对象""parameters": [
+   {
+"parameter name": "通道1",
+"data type": "图片操作类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "通道2",
+"data type": "图片操作类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "通道3",
+"data type": "图片操作类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "通道4",
+"data type": "图片操作类",
+"@默认值": "空对象"
+   }
+@默认值": "空对象"]
+  }
+}]
+ },
+ {
+"class name": "轮廓矩形数组类",
+"methods": [
+  {
+
+"method name": "取数量",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "取矩形坐标",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "左边",
+"data type": "整数"
+   },
+   {
+"parameter name": "顶边",
+"data type": "整数"
+   },
+   {
+"parameter name": "右边",
+"data type": "整数"
+   },
+   {
+"parameter name": "底边",
+"data type": "整数"
+   }
+data type": "整数"]
+  }
+]
+ }
+]
+}

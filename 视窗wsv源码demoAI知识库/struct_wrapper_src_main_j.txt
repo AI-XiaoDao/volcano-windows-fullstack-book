@@ -1,0 +1,707 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+ "  2. 以\"结构类\"的方式直接封装C++结构,具体请见下面的\"Win字体选择信息\"封装.""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ "  2. 以\"结构类\"的方式直接封装C++结构,具体请见下面的\"Win字体选择信息\"封装.""package name": "火山.程序",
+ "  2. 以\"结构类\"的方式直接封装C++结构,具体请见下面的\"Win字体选择信息\"封装.""comment": "本程序用作演示将C++的结构封装到火山类,非封装用户不用阅读.\n将C++的结构封装到火山类有两种方法:\n\n  1. 使用\"结构基础类\"将所欲封装的C++结构整体包装进火山类中,然后定义对应的\n类属性用作访问C++结构中的成员(可以使用系统的\"插入新属性\"(Ctrl+Alt+I)功能快\n捷加入). 当需要提交所封装的C++结构数据给API时,可以调用\"结构基础类\"中的\n\"取结构指针\"和\"取结构尺寸\"方法. 具体例子请见下面的\"我的矩形类\";\n\n  2. 以\"结构类\"的方式直接封装C++结构,具体请见下面的\"Win字体选择信息\"封装.",
+ "  2. 以\"结构类\"的方式直接封装C++结构,具体请见下面的\"Win字体选择信息\"封装.""classes": [
+ {
+指针"和"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类",
+指针"和"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"base class": "程序类",
+指针"和"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"methods": [
+  {
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类""method name": "移动矩形",
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类""comment": "输入 OffsetRect API",
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类""static": true,
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类""data type": "逻辑型",
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类""@视窗.输入": "\"User32.dll\"",
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类""@输出名": "\"OffsetRect\"",
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类""parameters": [
+   {
+"parameter name": "矩形数据",
+"comment": "由于\"我的矩形类\"为以包装的方式封装,因此此处只能传递指针.\n对应C++数据类型为: RECT*",
+"data type": "变整数"
+   },
+   {
+"parameter name": "横向偏移",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向偏移",
+"data type": "整数"
+   }
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类"]
+  },
+  {
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类""method name": "启动方法",
+"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";"class name": "启动类""data type": "整数"
+  }
+指针"和"取结构尺寸"方法. 具体例子请见下面的"我的矩形类";]
+ },
+ {
+. 当需要提交所封装的C++结构数据给API时,可以调用"结构基础类"中的"class name": "我的矩形类",
+. 当需要提交所封装的C++结构数据给API时,可以调用"结构基础类"中的"comment": "用作封装C ++的RECT结构.\n注意: 在封装C++结构中的成员到属性时,可以使用系统的\"插入新属性\"(Ctrl+Alt+I)功能快捷加入.",
+. 当需要提交所封装的C++结构数据给API时,可以调用"结构基础类"中的"base class": "结构基础类",
+. 当需要提交所封装的C++结构数据给API时,可以调用"结构基础类"中的"methods": [
+  {
+}"method name": "左边",
+}"comment": "用作返回矩形的左边坐标",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "左边",
+"comment": "用作设置矩形的左边坐标",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "所欲设置坐标",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "顶边",
+
+"comment": "用作返回矩形的顶边坐标",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "整数""method name": "顶边",
+"data type": "整数""comment": "用作设置矩形的顶边坐标",
+"data type": "整数""type": "property setter",
+"data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置坐标",
+"data type": "整数"
+   }
+"data type": "整数"]
+  },
+  {
+
+"method name": "左上角",
+
+"comment": "用作返回矩形的左上角坐标",
+
+"type": "property getter",
+
+"data type": "我的位置类",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "左上角",
+}"comment": "用作设置矩形的左上角坐标",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "所欲设置坐标",
+"data type": "我的位置类"
+   }
+}]
+  },
+  {
+"method name": "输出",
+"comment": "\n"
+  }
+. 当需要提交所封装的C++结构数据给API时,可以调用"结构基础类"中的]
+ },
+ {
+data type": "我的位置类""class name": "我的位置类",
+data type": "我的位置类""comment": "用作封装C++的POINT结构",
+data type": "我的位置类""base class": "结构基础类",
+data type": "我的位置类""methods": [
+  {
+hod name": "输出""method name": "横坐标",
+hod name": "输出""comment": "用作返回横坐标",
+hod name": "输出""type": "property getter",
+hod name": "输出""data type": "整数",
+hod name": "输出""@嵌入式方法": "\"\""
+  },
+  {
+ata type": "我的位置类""comment": "用作封装C++的POINT结构""method name": "横坐标",
+ata type": "我的位置类""comment": "用作封装C++的POINT结构""comment": "用作设置横坐标",
+ata type": "我的位置类""comment": "用作封装C++的POINT结构""type": "property setter",
+ata type": "我的位置类""comment": "用作封装C++的POINT结构""parameters": [
+   {
+"parameter name": "所欲设置坐标",
+"data type": "整数"
+   }
+ata type": "我的位置类""comment": "用作封装C++的POINT结构"]
+  },
+  {
+a type": "我的位置类""comment": "用作封装C++的POINT结构"]"method name": "纵坐标",
+a type": "我的位置类""comment": "用作封装C++的POINT结构"]"comment": "用作返回纵坐标",
+a type": "我的位置类""comment": "用作封装C++的POINT结构"]"type": "property getter",
+a type": "我的位置类""comment": "用作封装C++的POINT结构"]"data type": "整数",
+a type": "我的位置类""comment": "用作封装C++的POINT结构"]"@嵌入式方法": "\"\""
+  },
+  {
+ type": "我的位置类""comment": "用作封装C++的POINT结构"]"@嵌入式方法": "\"\"""method name": "纵坐标",
+ type": "我的位置类""comment": "用作封装C++的POINT结构"]"@嵌入式方法": "\"\"""comment": "用作设置纵坐标",
+ type": "我的位置类""comment": "用作封装C++的POINT结构"]"@嵌入式方法": "\"\"""type": "property setter",
+ type": "我的位置类""comment": "用作封装C++的POINT结构"]"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲设置坐标",
+"data type": "整数"
+   }
+ type": "我的位置类""comment": "用作封装C++的POINT结构"]"@嵌入式方法": "\"\""]
+  },
+  {
+}"method name": "输出",
+}"comment": "\n"
+  }
+data type": "我的位置类"]
+ },
+ {
+ta type": "我的位置类"]"class name": "Win字体信息指针",
+ta type": "我的位置类"]"comment": "演示使用别名封装 LOGFONT C++结构指针.\n\"本地参考类型\"可以用作封装C++指针,对本类成员的访问会自动切换使用\"->\"指针访问符.\n注意: 如果想使用\"结构指针模板\"类中的\"创建\"/\"取数据尺寸\"方法,请注意别名定义规则. 见该方法处的描述.",
+ta type": "我的位置类"]"base class": "本地结构指针模板",
+ta type": "我的位置类"]"@别名": "\"LPLOGFONT\"",
+ta type": "我的位置类"]"@模板实现类": "\"Win字体信息指针\"",
+ta type": "我的位置类"]"variables": [
+  {
+
+"variable name": "尺寸",
+
+"comment": "别名类中可以定义变量,但是必须指定输出名. 此变量为\"假变量\",编译器并不会生成对应的变量声明代码.",
+
+"data type": "整数",
+
+"@输出名": "\"lfHeight\""
+  },
+  {
+
+"variable name": "宽度",
+
+"data type": "整数",
+
+"@输出名": "\"lfWidth\""
+  },
+  {
+"@输出名": "\"lfWidth\"""variable name": "角度",
+"@输出名": "\"lfWidth\"""data type": "整数",
+"@输出名": "\"lfWidth\"""@输出名": "\"lfEscapement\""
+  },
+  {
+@输出名": "\"lfWidth\"""data type": "整数""variable name": "方向",
+@输出名": "\"lfWidth\"""data type": "整数""data type": "整数",
+@输出名": "\"lfWidth\"""data type": "整数""@输出名": "\"lfOrientation\""
+  },
+  {
+data type": "我的位置类""variable name": "重度",
+data type": "我的位置类""data type": "整数",
+data type": "我的位置类""@输出名": "\"lfWeight\""
+  },
+  {
+
+"variable name": "斜体",
+
+"data type": "无符号字节",
+
+"@输出名": "\"lfItalic\""
+  },
+  {
+
+"variable name": "下划线",
+
+"data type": "无符号字节",
+
+"@输出名": "\"lfUnderline\""
+  },
+  {
+"@输出名": "\"lfItalic\"""variable name": "穿透线",
+"@输出名": "\"lfItalic\"""data type": "无符号字节",
+"@输出名": "\"lfItalic\"""@输出名": "\"lfStrikeOut\""
+  },
+  {
+"@输出名": "\"lfItalic\"""variable name": "字符集",
+"@输出名": "\"lfItalic\"""data type": "无符号字节",
+"@输出名": "\"lfItalic\"""@输出名": "\"lfCharSet\""
+  },
+  {
+riable name": "下划线""variable name": "输出精度",
+riable name": "下划线""data type": "无符号字节",
+riable name": "下划线""@输出名": "\"lfOutPrecision\""
+  },
+  {
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""variable name": "剪切精度",
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""data type": "无符号字节",
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfClipPrecision\""
+  },
+  {
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""variable name": "品质",
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""data type": "无符号字节",
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfQuality\""
+  },
+  {
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""variable name": "家族",
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""data type": "无符号字节",
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfPitchAndFamily\""
+  },
+  {
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""variable name": "名称",
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""data type": "字符 [32]",
+iable name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfFaceName\""
+  }
+ta type": "我的位置类"]]
+ },
+ {
+able name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfFaceName\"""class name": "窗口句柄",
+able name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfFaceName\"""comment": "演示如何封装基本数据类型",
+able name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfFaceName\"""base class": "扩展整数型模板",
+able name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfFaceName\"""@别名": "\"HWND\"",
+able name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfFaceName\"""@别名类型": "本地整数基本类型",
+able name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfFaceName\"""@有效值范围": "\"\"",
+able name": "下划线""@输出名": "\"lfOutPrecision\"""@输出名": "\"lfFaceName\"""@模板实现类": "\"窗口句柄\""
+ },
+ {
+"class name": "Win字体选择信息2",
+"comment": "演示使用别名封装 CHOOSEFONT C++结构.\n\"本地结构\"可以用作封装C++结构.",
+"base class": "本地结构模板",
+"@别名": "\"CHOOSEFONT\"",
+"@模板实现类": "\"Win字体选择信息2\"",
+"variables": [
+  {
+}"variable name": "最小尺寸",
+}"comment": "使用别名封装不需要按照结构成员的原本顺序排列",
+}"data type": "整数",
+}"@输出名": "\"nSizeMin\""
+  },
+  {
+
+"variable name": "最大尺寸",
+
+"data type": "整数",
+
+"@输出名": "\"nSizeMax\""
+  },
+  {
+@输出名": "\"lfItalic\"""@输出名": "\"lfStrikeOut\"""variable name": "结构尺寸",
+@输出名": "\"lfItalic\"""@输出名": "\"lfStrikeOut\"""data type": "无符号整数",
+@输出名": "\"lfItalic\"""@输出名": "\"lfStrikeOut\"""@输出名": "\"lStructSize\""
+  },
+  {
+
+"variable name": "属主窗口",
+
+"data type": "窗口句柄",
+
+"@输出名": "\"hwndOwner\""
+  },
+  {
+
+"variable name": "设备句柄",
+
+"data type": "变整数",
+
+"@输出名": "\"hDC\""
+  },
+  {
+}"variable name": "字体指针",
+}"data type": "Win字体信息指针",
+}"@输出名": "\"lpLogFont\""
+  },
+  {
+
+"variable name": "字体尺寸",
+
+"data type": "整数",
+
+"@输出名": "\"iPointSize\""
+  },
+  {
+"@输出名": "\"iPointSize\"""variable name": "标志",
+"@输出名": "\"iPointSize\"""comment": "实际上直接使用\"整数\"也可以,此处是为了演示无符号数据类型的使用.",
+"@输出名": "\"iPointSize\"""data type": "无符号整数",
+"@输出名": "\"iPointSize\"""@输出名": "\"Flags\""
+  },
+  {
+
+"variable name": "颜色",
+
+"comment": "本成员同时为属性变量,可以在属性表中使用.",
+
+"data type": "整数",
+
+"@输出名": "\"rgbColors\"",
+
+"@属性变量": "真",
+
+"@值细节类型": "颜色"
+  },
+  {
+}"variable name": "自定义数据",
+}"data type": "变整数",
+}"@输出名": "\"lCustData\""
+  },
+  {
+
+"variable name": "钩子",
+
+"data type": "通用指针",
+
+"@输出名": "\"lpfnHook\""
+  },
+  {
+}"variable name": "模板名",
+}"data type": "常量文本指针",
+}"@输出名": "\"lpTemplateName\""
+  },
+  {
+}"variable name": "实例句柄",
+}"data type": "变整数",
+}"@输出名": "\"hInstance\""
+  },
+  {
+
+"variable name": "风格",
+
+"data type": "文本指针",
+
+"@输出名": "\"lpszStyle\""
+  },
+  {
+}"variable name": "字体类型",
+}"data type": "无符号短整数",
+}"@输出名": "\"nFontType\""
+  }
+]
+ },
+ {
+"class name": "Win字体信息",
+"comment": "封装 LOGFONT C++结构",
+"@视窗.结构类": "0",
+"variables": [
+  {
+@视窗.结构类": "0""variable name": "lfWidth",
+@视窗.结构类": "0""data type": "整数"
+  },
+  {
+}"variable name": "lfEscapement",
+}"data type": "整数"
+  },
+  {
+
+"variable name": "lfOrientation",
+
+"data type": "整数"
+  },
+  {
+@输出名": "\"iPointSize\"""@输出名": "\"Flags\"""variable name": "lfWeight",
+@输出名": "\"iPointSize\"""@输出名": "\"Flags\"""data type": "整数"
+  },
+  {
+
+"variable name": "lfItalic",
+
+"data type": "字节"
+  },
+  {
+"data type": "变整数""variable name": "lfUnderline",
+"data type": "变整数""data type": "字节"
+  },
+  {
+"data type": "变整数""variable name": "lfStrikeOut",
+"data type": "变整数""data type": "字节"
+  },
+  {
+
+"variable name": "lfCharSet",
+
+"data type": "字节"
+  },
+  {
+}"variable name": "lfOutPrecision",
+}"data type": "字节"
+  },
+  {
+}"variable name": "lfClipPrecision",
+}"data type": "字节"
+  },
+  {
+ipPrecision"variable name": "lfQuality",
+ipPrecision"data type": "字节"
+  },
+  {
+
+"variable name": "lfPitchAndFamily",
+
+"data type": "字节"
+  },
+  {
+
+"variable name": "lfFaceName",
+
+"data type": "字符 [32]"
+  }
+]
+ },
+ {
+"class name": "Win字体选择信息",
+"comment": "封装 CHOOSEFONT C++结构",
+"@视窗.结构类": "0",
+"variables": [
+  {
+@视窗.结构类": "0""variable name": "lStructSize",
+@视窗.结构类": "0""data type": "整数"
+  },
+  {
+@视窗.结构类": "0""variable name": "hwndOwner",
+@视窗.结构类": "0""comment": "所有Windows句柄均为变整数",
+@视窗.结构类": "0""data type": "变整数"
+  },
+  {
+}"variable name": "hDC",
+}"data type": "变整数"
+  },
+  {
+视窗.结构类": "0""comment": "所有Windows句柄均为变整数""variable name": "lpLogFont",
+视窗.结构类": "0""comment": "所有Windows句柄均为变整数""comment": "所有指针均为变整数",
+视窗.结构类": "0""comment": "所有Windows句柄均为变整数""data type": "变整数"
+  },
+  {
+
+"variable name": "iPointSize",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "Flags",
+
+"data type": "整数"
+  },
+  {
+"data type": "整数""variable name": "rgbColors",
+"data type": "整数""data type": "整数"
+  },
+  {
+
+"variable name": "lCustData",
+
+"data type": "变整数"
+  },
+  {
+}"variable name": "lpfnHook",
+}"data type": "变整数"
+  },
+  {
+}"variable name": "lpTemplateName",
+}"data type": "文本型"
+  },
+  {
+}"variable name": "hInstance",
+}"data type": "变整数"
+  },
+  {
+}"variable name": "lpszStyle",
+}"data type": "文本型"
+  },
+  {
+}"variable name": "nFontType",
+}"data type": "短整数"
+  },
+  {
+"data type": "短整数""variable name": "___MISSING_ALIGNMENT__",
+"data type": "短整数""data type": "短整数"
+  },
+  {
+
+"variable name": "nSizeMin",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "nSizeMax",
+
+"data type": "整数"
+  }
+],
+"methods": [
+  {
+
+"method name": "显示字体选择对话框",
+
+"comment": "输入 ChooseFont API .\n此处直接在\"@视窗.输入\"属性值中指定了所输入API的名称,因此无需再通过\"@输出名\"属性指定.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@视窗.输入": "\"Comdlg32.dll?ChooseFontW\"",
+
+"parameters": [
+   {
+"parameter name": "字体选择信息",
+"comment": "在以结构类方式封装时,可以提供对应的结构类对象,编译器会自动转换为对应的数据指针.\n由于该API会修改传递过去的字体选择信息,因此需要定义\"@视窗.输出参数\"属性以在API调用后取回被修改的数据.",
+"data type": "Win字体选择信息",
+"@视窗.输出参数": "真"
+   }
+
+]
+  },
+  {
+}"method name": "取GDI对象信息",
+}"comment": "输入 GetObject API",
+}"static": true,
+}"data type": "整数",
+}"@视窗.输入": "\"Gdi32.dll\"",
+}"@输出名": "\"GetObjectW\"",
+}"parameters": [
+   {
+"parameter name": "GDI句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区尺寸",
+"data type": "整数"
+   },
+   {
+"parameter name": "缓冲区指针",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"method name": "取库存GDI对象句柄",
+"comment": "输入 GetStockObject API",
+"static": true,
+"data type": "变整数",
+"@视窗.输入": "\"Gdi32.dll\"",
+"@输出名": "\"GetStockObject\"",
+"parameters": [
+   {
+"parameter name": "GDI对象类型",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "选择字体",
+
+"static": true
+  }
+]
+ },
+ {
+"class name": "调色板入口",
+"comment": "封装 PALETTEENTRY C++结构,用作记录单个调色板入口数据.",
+"@视窗.结构类": "0",
+"variables": [
+  {
+"static": true"variable name": "peFlags",
+"static": true"data type": "字节"
+  }
+]
+ },
+ {
+static": true"data type": "字节""class name": "调色板信息",
+static": true"data type": "字节""comment": "封装 LOGPALETTE C++结构",
+static": true"data type": "字节""@视窗.结构类": "0",
+static": true"data type": "字节""variables": [
+  {
+tatic": true"data type": "字节""@视窗.结构类": "0""variable name": "palNumEntries",
+tatic": true"data type": "字节""@视窗.结构类": "0""data type": "短整数"
+  }
+static": true"data type": "字节"],
+static": true"data type": "字节""methods": [
+  {
+atic": true"data type": "字节"]"method name": "创建调色板",
+atic": true"data type": "字节"]"comment": "输入 CreatePalette API",
+atic": true"data type": "字节"]"result comment": "所有 Windows 句柄均为变整数",
+atic": true"data type": "字节"]"static": true,
+atic": true"data type": "字节"]"data type": "变整数",
+atic": true"data type": "字节"]"@视窗.输入": "\"Gdi32.dll?CreatePalette\"",
+atic": true"data type": "字节"]"parameters": [
+   {
+"parameter name": "信息",
+"comment": "由于是变长数据,因此需要以指针方式提供数据.",
+"data type": "变整数"
+   }
+atic": true"data type": "字节"]]
+  },
+  {
+
+"method name": "删除GDI句柄",
+
+"comment": "输入 DeleteObject API",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@视窗.输入": "\"Gdi32.dll?DeleteObject\"",
+
+"parameters": [
+   {
+"parameter name": "所欲删除的句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"parameters": [
+"method name": "测试调色板",
+
+"parameters": [
+"comment": "本方法用作演示如何封装变长尺寸 C++ 结构",
+
+"parameters": [
+"static": true
+  }
+static": true"data type": "字节"]
+ },
+ {
+}"class name": "窗口1",
+}"comment": "本窗口用作演示结构类数组的使用方法",
+}"base class": "窗口",
+}"@视窗.布局": "\"client_size = \\\"336, 256\\\"\"",
+}"标题": "\"多边形绘制演示\"",
+}"methods": [
+  {
+
+"method name": "绘制多边形",
+
+"comment": "输入 Polygon API",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@视窗.输入": "\"Gdi32.dll?Polygon\"",
+
+"parameters": [
+   {
+"parameter name": "设备句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "顶点数组",
+"comment": "为指向 POINT C++结构的数组",
+"data type": "变整数"
+   },
+   {
+"parameter name": "顶点数目",
+"comment": "提供\"顶点数组\"参数所指向顶点成员的数目",
+"data type": "整数"
+   }
+
+]
+  }
+}]
+ }
+ "  2. 以\"结构类\"的方式直接封装C++结构,具体请见下面的\"Win字体选择信息\"封装."]
+}

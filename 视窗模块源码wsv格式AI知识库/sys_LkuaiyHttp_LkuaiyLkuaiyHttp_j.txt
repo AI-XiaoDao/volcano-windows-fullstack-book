@@ -1,0 +1,3827 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".
+
+{
+ 整数"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ 整数"package name": "LkuaiyHttp.com",
+ 整数"comment": "本框架基于HP-Socket\n本框架上层HTTP代码由利快云封装开发，欢迎加入官方群：445790831\n不要问本框架效率如何，HPSocket的效率怎么样，本框架的效率就怎么样\n出现问题不要觉得是本框架的问题，本框架是基于HPSocket，HPSocket没有问题\n如果你确实检查了自己的代码，仍然觉得有问题，请在心里默念一百遍于HPSocket框架没有问题\n然后再检查是否是自己的问题\n学习本框架请一定加入官方群：445790831，群里提问请友善一点",
+ 整数"classes": [
+ {
+发端本次成功转发的数据长度""class name": "FOFHTTP_防火墙",
+发端本次成功转发的数据长度""comment": "注意：该版本的FOF已经支持了GET和POST的双防火墙！\n注意：如果使用了nginx反向代理，请务必将nginx反向代理的IP转发协议头设置为：X-Forwarded-For:\n友情提示：压力测试时请关闭本防火墙",
+发端本次成功转发的数据长度""methods": [
+  {
+端本次成功转发的数据长度"method name": "防火墙设置",
+端本次成功转发的数据长度"comment": "注意：如果使用了反向代理，请务必将反向代理的IP转发协议头设置为：X-Forwarded-For:",
+端本次成功转发的数据长度"parameters": [
+   {
+"parameter name": "触发时间_",
+"comment": "单位（秒）默认60秒",
+"data type": "整数",
+"@默认值": "60"
+   },
+   {
+"parameter name": "触发次数_",
+"comment": "单位次，如果在触发时间内超过了本次数则触发防火墙",
+"data type": "整数",
+"@默认值": "300"
+   },
+   {
+"parameter name": "限制时间_",
+"comment": "限制时间，默认限制两分钟",
+"data type": "整数",
+"@默认值": "120"
+   }
+端本次成功转发的数据长度]
+  },
+  {
+
+"method name": "启动状态",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "设置启动",
+
+"comment": "真代表启动，假代表不启动",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "启动状态",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "设置启动",
+"data type": "逻辑型""comment": "真代表启动，假代表不启动",
+"data type": "逻辑型""type": "property getter",
+"data type": "逻辑型""data type": "逻辑型"
+  },
+  {
+
+"method name": "防火墙逻辑",
+
+"comment": "返回假代表正常，返回真代表触发逻辑",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"comment": "用户的标识",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问URL",
+"data type": "文本型"
+   }
+
+]
+  }
+发端本次成功转发的数据长度"]
+ },
+ {
+本次成功转发的数据长度"]"class name": "FOFHTTP_配置项",
+本次成功转发的数据长度"]"variables": [
+  {
+comment": "用户的标识""variable name": "当前模式",
+comment": "用户的标识""comment": "本参数默认为模式2，模式2为稳定版\n请一如既往的设置本值为2即可",
+comment": "用户的标识""data type": "整数",
+comment": "用户的标识""initial value": "2"
+  },
+  {
+
+"variable name": "是否启用内置favicon图标",
+
+"comment": "如果本属性设置为真，就务必要设置内置favicon图标，可以直接使用读入文件()命令将favicon.ico读入给内置favicon图标属性",
+
+"data type": "逻辑型",
+
+"initial value": "假"
+  },
+  {
+转发的数据长度"]"class name": "FOFHTTP_配置项""variable name": "内置favicon图标",
+转发的数据长度"]"class name": "FOFHTTP_配置项""comment": "favicon.ico",
+转发的数据长度"]"class name": "FOFHTTP_配置项""data type": "字节集类"
+  },
+  {
+发的数据长度"]"class name": "FOFHTTP_配置项""comment": "favicon.ico""variable name": "允许文件上传最大尺寸",
+发的数据长度"]"class name": "FOFHTTP_配置项""comment": "favicon.ico""comment": "设置允许上传的最大尺寸，默认8M\n也就是只能上传8M以下的文件；该参数可自行设置服务端允许接受的最大文件",
+发的数据长度"]"class name": "FOFHTTP_配置项""comment": "favicon.ico""data type": "长整数",
+发的数据长度"]"class name": "FOFHTTP_配置项""comment": "favicon.ico""initial value": "8200000"
+  },
+  {
+内置favicon图标"variable name": "发送目录遍历模式",
+内置favicon图标"comment": "在FOF中项目目录可以设置多个，在使用【FOFHTTP_文件发送】的Get文件处理命令时，会根据设置的项目目录来发送文件\n本参数为1时代表发送文件时以正序遍历设置的项目目录发送文件\n本参数为2时代表发送文件时以倒序遍历设置的项目目录发送文件\n注意：如果使用了【绑定域名】属性绑定了域名目录，则该本属性无效",
+内置favicon图标"data type": "整数",
+内置favicon图标"initial value": "1"
+  },
+  {
+
+"variable name": "是否运行中文文件名",
+
+"comment": "如果本参数为真则类似JS、CSS、png等文件名称允许中文，为假遇见中文名称会发送失败",
+
+"data type": "逻辑型",
+
+"initial value": "真"
+  },
+  {
+
+"variable name": "绑定域名",
+
+"comment": "如果设置了本项,则只有绑定的域名才可以访问\n参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16483429594171356",
+
+"data type": "文本数组类"
+  },
+  {
+转发的数据长度"]"class name": "FOFHTTP_配置项""variable name": "长连接开启状态",
+转发的数据长度"]"class name": "FOFHTTP_配置项""comment": "是否支持【Connection: Keep-Alive】模式",
+转发的数据长度"]"class name": "FOFHTTP_配置项""data type": "逻辑型",
+转发的数据长度"]"class name": "FOFHTTP_配置项""initial value": "真"
+  },
+  {
+"data type": "文本数组类""variable name": "被攻击公告",
+"data type": "文本数组类""comment": "开启网站的被攻击被动公告模式\n为1的情况下：公告网站正在维护\n为2的情况下：公告网站正在被攻击\n\n当设置本属性后，用户将无法正常访问网站",
+"data type": "文本数组类""data type": "整数",
+"data type": "文本数组类""initial value": "0"
+  },
+  {
+"initial value": "真""variable name": "资源发送域名",
+"initial value": "真""comment": "不为空的情况下，文件资源将被转发到此域名，例如：\"https://bbs.lkuaiy.com\"\n也就是文件将会通过301跳转到本属性设置的域名",
+"initial value": "真""data type": "文本型"
+  },
+  {
+转发的数据长度"]"class name": "FOFHTTP_配置项""variable name": "资源发送域名头",
+转发的数据长度"]"class name": "FOFHTTP_配置项""comment": "在设置了资源发送域名的情况下需要设置本处\n本格式为：资源发送域名没有http://和https://的格式\n例如:bbs.lkuaiy.com",
+转发的数据长度"]"class name": "FOFHTTP_配置项""data type": "文本型"
+  },
+  {
+}"variable name": "不走资源发送域名路径",
+}"comment": "再设置了“资源发送域名”情况下\n例如有一个链接为：https://www.xxx.com/path/1234.html\n如果本处添加成员：\"path\" 则path路径下的所有文件不会走资源发送域名！",
+}"data type": "文本数组类"
+  },
+  {
+发的数据长度"]"class name": "FOFHTTP_配置项""comment": "在设置了资源发送域名的情况下需要设置本处\n本格式为：资源发送域名没有http://和https://的格式\n例如:bbs.lkuaiy.com""variable name": "资源发送模式",
+发的数据长度"]"class name": "FOFHTTP_配置项""comment": "在设置了资源发送域名的情况下需要设置本处\n本格式为：资源发送域名没有http://和https://的格式\n例如:bbs.lkuaiy.com""comment": "在【资源发送域名】属性不为空时触发\n0代表所有通过get文件发送函数发送的静态资源都将被【资源发送域名】转发\n1代表除掉js外的所有通过get文件发送函数发送的静态资源都将被【资源发送域名】转发\n2代表除掉js、css外的所有通过get文件发送函数发送的静态资源都将被【资源发送域名】转发",
+发的数据长度"]"class name": "FOFHTTP_配置项""comment": "在设置了资源发送域名的情况下需要设置本处\n本格式为：资源发送域名没有http://和https://的格式\n例如:bbs.lkuaiy.com""data type": "整数",
+发的数据长度"]"class name": "FOFHTTP_配置项""comment": "在设置了资源发送域名的情况下需要设置本处\n本格式为：资源发送域名没有http://和https://的格式\n例如:bbs.lkuaiy.com""initial value": "0"
+  },
+  {
+}"variable name": "开启跨域模式",
+}"data type": "逻辑型",
+}"initial value": "假"
+  },
+  {
+
+"variable name": "全局内容替换",
+
+"comment": "全局替换css、js、html内容\n例如：全局内容替换.置入文本值(\"我是替换的名称\",\"我是替换的内容\")\n此时当页面中有：\"我是替换的名称\"时，则会被替换为：\"我是替换的内容\"\n注意：只能置入文本值！",
+
+"data type": "JSONCPP对象类"
+  },
+  {
+"data type": "JSONCPP对象类""variable name": "安全路径模式",
+"data type": "JSONCPP对象类""data type": "逻辑型",
+"data type": "JSONCPP对象类""initial value": "真"
+  }
+本次成功转发的数据长度"]]
+ },
+ {
+"initial value": "假""class name": "FOFHTTP_页面缓存池",
+"initial value": "假""comment": "使用案例：https://www.lkuaiy.com/rsdetails?id=16257580412636\n本类只适合小数据缓存，理论上缓存的条数不建议超过10000条",
+"initial value": "假""methods": [
+  {
+initial value": "假""comment": "使用案例：https://www.lkuaiy.com/rsdetails?id=16257580412636\n本类只适合小数据缓存，理论上缓存的条数不建议超过10000条""method name": "初始化缓存路径并开启缓存",
+initial value": "假""comment": "使用案例：https://www.lkuaiy.com/rsdetails?id=16257580412636\n本类只适合小数据缓存，理论上缓存的条数不建议超过10000条""comment": "本类只适合小数据缓存，理论上缓存的条数不建议超过5000条",
+initial value": "假""comment": "使用案例：https://www.lkuaiy.com/rsdetails?id=16257580412636\n本类只适合小数据缓存，理论上缓存的条数不建议超过10000条""parameters": [
+   {
+"parameter name": "持久缓存文件夹路径",
+"comment": "必须是文件夹的全路径\n路径结尾必须腰带有/符号\n正确：C:/XXX/XXX/\n错误：C:/XXX/XXX",
+"data type": "文本型"
+   },
+   {
+"parameter name": "临时缓存文件夹路径",
+"comment": "必须是文件夹的全路径\n路径结尾必须腰带有/符号\n正确：C:/XXX/XXX/\n错误：C:/XXX/XXX\n本路径的所有文件会在服务启动的时候进行一次删除",
+"data type": "文本型"
+   },
+   {
+"parameter name": "持久缓存最大数",
+"comment": "注意：本参数全局有效\n新版本的FOF，缓存百万级无压力\n缓存的最大数量 不建议超过100万；峰值最多200万\n因MMKV的设计，100万的缓存将会占用180MB的内存。\n如果你使用了缓存功能，发现内存有增长，均属正常现象",
+"data type": "整数",
+"@默认值": "1000000"
+   },
+   {
+"parameter name": "是否清空临时缓存",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否清空持久缓存",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+initial value": "假""comment": "使用案例：https://www.lkuaiy.com/rsdetails?id=16257580412636\n本类只适合小数据缓存，理论上缓存的条数不建议超过10000条"]
+  },
+  {
+data type": "逻辑型""method name": "添加临时缓存",
+data type": "逻辑型""result comment": "返回0失败，返回1成功，返回2代表缓存已经存在，返回3代表缓存数量超过了缓存最大数，添加缓存失败",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "缓存字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "缓存标识",
+"comment": "不能有任何特殊字符，可以是URL等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "过期时间",
+"comment": "十位时间戳",
+"data type": "长整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+ }"method name": "读取临时缓存",
+ }"result comment": "返回0代表读取失败，返回1代表读取成功，返回2代表缓存已经过期，返回3代表缓存不存在",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "缓存字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "缓存标识",
+"comment": "不能有任何特殊字符，可以是URL等",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "临时缓存是否存在",
+
+"comment": "过期或者不存在都会返回假",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "缓存标识",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "过期时间""method name": "修改临时缓存时间",
+ameter name": "过期时间""comment": "如果缓存不存在则会重新添加缓存，返回0失败，返回1成功",
+ameter name": "过期时间""data type": "整数",
+ameter name": "过期时间""parameters": [
+   {
+"parameter name": "缓存标识",
+"comment": "不能有任何特殊字符，可以是URL等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "过期时间",
+"data type": "长整数"
+   }
+ameter name": "过期时间"]
+  },
+  {
+data type": "文本型""method name": "删除临时缓存",
+data type": "文本型""comment": "返回0代表缓存不存在",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "缓存标识",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "清空所有临时缓存",
+ }"comment": "清空所有缓存，请避免多线程执行本命令！"
+  },
+  {
+"data type": "逻辑型""method name": "添加持久缓存",
+"data type": "逻辑型""result comment": "返回0失败，返回1成功，返回2代表缓存已经存在，返回3代表缓存数量超过了缓存最大数，添加缓存失败",
+"data type": "逻辑型""data type": "整数",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "缓存字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "缓存标识",
+"comment": "不能有任何特殊字符，可以是URL等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "过期时间",
+"comment": "十位时间戳",
+"data type": "长整数"
+   }
+"data type": "逻辑型"]
+  },
+  {
+"parameters": [
+"method name": "读取持久缓存",
+"parameters": [
+"result comment": "返回0代表读取失败，返回1代表读取成功，返回2代表缓存已经过期，返回3代表缓存不存在",
+"parameters": [
+"data type": "整数",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "缓存字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "缓存标识",
+"comment": "不能有任何特殊字符，可以是URL等",
+"data type": "文本型"
+   }
+"parameters": [
+]
+  },
+  {
+}"method name": "持久缓存是否存在",
+}"comment": "过期或者不存在都会返回假",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "缓存标识",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "修改持久缓存时间",
+
+"comment": "如果缓存不存在则会重新添加缓存，返回0失败，返回1成功",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "缓存标识",
+"comment": "不能有任何特殊字符，可以是URL等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "过期时间",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "删除持久缓存",
+
+"comment": "返回0代表缓存不存在",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "缓存标识",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+comment": "不能有任何特殊字符，可以是URL等""method name": "清空所有持久缓存",
+comment": "不能有任何特殊字符，可以是URL等""comment": "清空所有缓存，请避免多线程执行本命令！"
+  }
+"initial value": "假"]
+ },
+ {
+
+"class name": "FOFHTTP_标签视图",
+
+"methods": [
+  {
+"initial value": "假""method name": "清空"
+  },
+  {
+
+"method name": "取视图成员数",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "获取全部标签",
+
+"data type": "文本型"
+  },
+  {
+omment": "不能有任何特殊字符，可以是URL等""comment": "清空所有缓存，请避免多线程执行本命令！""method name": "添加标签",
+omment": "不能有任何特殊字符，可以是URL等""comment": "清空所有缓存，请避免多线程执行本命令！""parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "必须要是utf8数据",
+"data type": "字节集类"
+   }
+omment": "不能有任何特殊字符，可以是URL等""comment": "清空所有缓存，请避免多线程执行本命令！"]
+  },
+  {
+data type": "字节集类""method name": "获取标签",
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   }
+data type": "字节集类"]
+  },
+  {
+}"method name": "删除标签",
+}"comment": "如果使用删除页面情况较多，建议开启线程安全",
+}"parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "更新标签",
+"comment": "如果使用更新页面情况较多，建议开启线程安全",
+"parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "必须要是utf8数据",
+"data type": "字节集类"
+   }
+]
+  }
+
+]
+ },
+ {
+}"class name": "FOFHTTP_链接数据",
+}"methods": [
+  {
+
+"method name": "获取全部链接",
+
+"data type": "文本型"
+  },
+  {
+omment": "不能有任何特殊字符，可以是URL等""comment": "清空所有缓存，请避免多线程执行本命令！""method name": "添加页面",
+omment": "不能有任何特殊字符，可以是URL等""comment": "清空所有缓存，请避免多线程执行本命令！""comment": "根据域名添加页面",
+omment": "不能有任何特殊字符，可以是URL等""comment": "清空所有缓存，请避免多线程执行本命令！""parameters": [
+   {
+"parameter name": "url_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "必须要是utf8数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "域名",
+"comment": "如果想要添加域名页面，请在本处填写绑定的域名【FOF配置.绑定域名.加入成员的成员】\n2022-4-8新增的参数，本参数不影响之前的功能，可以留空\n参数使用参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16493891957225531",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+omment": "不能有任何特殊字符，可以是URL等""comment": "清空所有缓存，请避免多线程执行本命令！"]
+  },
+  {
+
+"method name": "获取页面",
+
+"comment": "支持带?数据，例如你在添加页面的时候添加的是/aaaa\n但是你得到的请求是/aaaa?ssss=1111，这样的话依然会被本方法当成/aaaa处理；以方便得到正确的页面数据",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "url_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "域名",
+"comment": "如果想要获取域名页面，请在本处填写绑定的域名【FOF配置.绑定域名.加入成员的成员】\n2022-4-8新增的参数，本参数不影响之前的功能，可以留空\n参数使用参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16493891957225531",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+ameter name": "域名""method name": "清空",
+ameter name": "域名""comment": "如果使用删除页面情况较多，建议开启线程安全"
+  },
+  {
+ }"method name": "删除页面",
+ }"comment": "如果使用删除页面情况较多，建议开启线程安全",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "url_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "域名",
+"comment": "如果想要删除域名页面，请在本处填写绑定的域名【FOF配置.绑定域名.加入成员的成员】\n2022-4-8新增的参数，本参数不影响之前的功能，可以留空\n参数使用参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16493891957225531",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ }]
+  },
+  {
+}"method name": "更新页面",
+}"comment": "如果使用更新页面情况较多，建议开启线程安全",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "url_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "必须要是utf8数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "域名",
+"comment": "如果想要更新域名页面，请在本处填写绑定的域名【FOF配置.绑定域名.加入成员的成员】\n2022-4-8新增的参数，本参数不影响之前的功能，可以留空\n参数使用参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16493891957225531",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+}"comment": "如果使用删除页面情况较多，建议开启线程安全""method name": "视图是否存在",
+}"comment": "如果使用删除页面情况较多，建议开启线程安全""comment": "支持带?数据，例如你在添加页面的时候添加的是/aaaa\n但是你得到的请求是/aaaa?ssss=1111，这样的话依然会被本方法当成/aaaa处理；以方便得到正确的页面逻辑判断",
+}"comment": "如果使用删除页面情况较多，建议开启线程安全""data type": "逻辑型",
+}"comment": "如果使用删除页面情况较多，建议开启线程安全""parameters": [
+   {
+"parameter name": "url_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "域名",
+"comment": "如果想要判断域名，请在本处填写绑定的域名【FOF配置.绑定域名.加入成员的成员】\n2022-4-8新增的参数，本参数不影响之前的功能，可以留空\n参数使用参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16493891957225531",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}"comment": "如果使用删除页面情况较多，建议开启线程安全"]
+  },
+  {
+}"method name": "添加标签页面",
+}"parameters": [
+   {
+"parameter name": "url_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标签数据",
+"comment": "必须要是utf8数据",
+"data type": "FOFHTTP_标签视图"
+   },
+   {
+"parameter name": "域名",
+"comment": "如果想要添加域名标签页面，请在本处填写绑定的域名【FOF配置.绑定域名.加入成员的成员】\n2022-4-8新增的参数，本参数不影响之前的功能，可以留空\n参数使用参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16493891957225531",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+@默认值": "\"\"""method name": "获取标签页面",
+@默认值": "\"\"""comment": "支持带?数据，例如你在添加页面的时候添加的是/aaaa\n但是你得到的请求是/aaaa?ssss=1111，这样的话依然会被本方法当成/aaaa处理；以方便得到正确的页面数据",
+@默认值": "\"\"""data type": "FOFHTTP_标签视图",
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "url_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "域名",
+"comment": "如果想要获取域名标签页面，请在本处填写绑定的域名【FOF配置.绑定域名.加入成员的成员】\n2022-4-8新增的参数，本参数不影响之前的功能，可以留空\n参数使用参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16493891957225531",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+@默认值": "\"\""]
+  },
+  {
+
+"method name": "删除标签页面",
+
+"comment": "如果使用删除页面情况较多，建议开启线程安全",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "url_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "域名",
+"comment": "如果想要删除域名标签页面，请在本处填写绑定的域名【FOF配置.绑定域名.加入成员的成员】\n2022-4-8新增的参数，本参数不影响之前的功能，可以留空\n参数使用参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16493891957225531",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "更新标签页面",
+data type": "文本型""comment": "如果使用更新页面情况较多，建议开启线程安全",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "url_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标签数据",
+"comment": "必须要是utf8数据",
+"data type": "FOFHTTP_标签视图"
+   },
+   {
+"parameter name": "域名",
+"comment": "如果想要更新域名标签页面，请在本处填写绑定的域名【FOF配置.绑定域名.加入成员的成员】\n2022-4-8新增的参数，本参数不影响之前的功能，可以留空\n参数使用参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16493891957225531",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "文本型"]
+  }
+}]
+ },
+ {
+"class name": "FOFHTTP_待发资料",
+"comment": "用来处理用户的数据发送时的信息填写",
+"variables": [
+  {
+}"variable name": "请求Url",
+}"comment": "收到请求的Url，注意：默认该参数会自动获取",
+}"data type": "文本型",
+}"initial value": "\"\""
+  },
+  {
+comment": "用来处理用户的数据发送时的信息填写""variable name": "URL路径",
+comment": "用来处理用户的数据发送时的信息填写""comment": "URL当中的路径信息",
+comment": "用来处理用户的数据发送时的信息填写""data type": "文本型",
+comment": "用来处理用户的数据发送时的信息填写""initial value": "\"\""
+  },
+  {
+"variable name": "文件后缀",
+"comment": "收到请求的文件后缀，注意：只在Get下能够有效自动获取\n注意：用户可以自行更新,例如：html txt css  文件的扩展名",
+"data type": "文本型",
+"initial value": "\"\""
+  },
+  {
+}"variable name": "文件路径",
+}"comment": "收到请求的文件网页路径，例如：XXX/XXX/XXX/LLL/l.png\n注意：只在Get下能够有效自动",
+}"data type": "文本型",
+}"initial value": "\"\""
+  },
+  {
+omment": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""variable name": "解析参数",
+omment": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取",
+omment": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""data type": "文本型",
+omment": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""initial value": "\"\""
+  },
+  {
+
+"variable name": "文件名称",
+
+"comment": "可空，浏览器提示下载显示的文件名。默认为：空   案例：xxx.mp4\n注意：如果为空则直接显示，不为空就是下载文件的模式",
+
+"data type": "文本型",
+
+"initial value": "\"\""
+  },
+  {
+comment": "收到请求的文件后缀，注意：只在Get下能够有效自动获取\n注意：用户可以自行更新,例如：html txt css  文件的扩展名""variable name": "协议头类",
+comment": "收到请求的文件后缀，注意：只在Get下能够有效自动获取\n注意：用户可以自行更新,例如：html txt css  文件的扩展名""comment": "可空，自定义协议头类型，例如：Content-Encoding: gzip 已有的协议头不会被覆盖\n默认为空，需要自己设置",
+comment": "收到请求的文件后缀，注意：只在Get下能够有效自动获取\n注意：用户可以自行更新,例如：html txt css  文件的扩展名""data type": "文本型",
+comment": "收到请求的文件后缀，注意：只在Get下能够有效自动获取\n注意：用户可以自行更新,例如：html txt css  文件的扩展名""initial value": "\"\""
+  },
+  {
+
+"variable name": "页面标记",
+
+"comment": "可空，页面发送标记，判断是否已经发送过\n默认为空，需要自己设置",
+
+"data type": "文本型",
+
+"initial value": "\"\""
+  },
+  {
+omment": "用来处理用户的数据发送时的信息填写""data type": "文本型""variable name": "缓存时间",
+omment": "用来处理用户的数据发送时的信息填写""data type": "文本型""comment": "可空，设置页面的过期时间一般写：0；参数控制浏览器缓存，不影响“Cookies”   单位：分钟\n默认为0，需要自行设置",
+omment": "用来处理用户的数据发送时的信息填写""data type": "文本型""data type": "整数",
+omment": "用来处理用户的数据发送时的信息填写""data type": "文本型""initial value": "0"
+  },
+  {
+nt": "用来处理用户的数据发送时的信息填写""data type": "文本型""variable name": "缓存时间""variable name": "cookie",
+nt": "用来处理用户的数据发送时的信息填写""data type": "文本型""variable name": "缓存时间""data type": "FOFHTTP_Cookies"
+  }
+]
+ },
+ {
+
+"class name": "FOFHTTP_URL处理类",
+
+"base class": "扩展对象类",
+
+"@视窗.外部头文件": "\"<string>\\r\\n<map>\\r\\n<vector>\"",
+
+"methods": [
+  {
+mment": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取""method name": "创建",
+mment": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取""@嵌入式方法": "\"\"",
+mment": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取""parameters": [
+   {
+"parameter name": "地址",
+"comment": "完整的地址\n例如:http://www.lkuaiy.com/xxx/xxx/ccc?id=123",
+"data type": "文本型"
+   }
+mment": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]
+  },
+  {
+"@视窗.外部头文件": "\"<string>\\r\\n<map>\\r\\n<vector>\"""method name": "创建2",
+"@视窗.外部头文件": "\"<string>\\r\\n<map>\\r\\n<vector>\"""parameters": [
+   {
+"parameter name": "地址",
+"comment": "不需要完整的地址\n例如:/xxx/xxx/ccc?id=123\n注意：一定要以/开头",
+"data type": "文本型"
+   }
+"@视窗.外部头文件": "\"<string>\\r\\n<map>\\r\\n<vector>\""]
+  },
+  {
+"method name": "取路径",
+"data type": "文本型",
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "文本型""method name": "取域名",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取协议",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ent": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"method name": "取端口",
+ent": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"data type": "文本型",
+ent": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"@嵌入式方法": "\"\""
+  },
+  {
+nt": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"@嵌入式方法": "\"\"""method name": "取参数",
+nt": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"@嵌入式方法": "\"\"""data type": "文本型",
+nt": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+: "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"method name": "取端口""method name": "取指定参数",
+: "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"method name": "取端口""data type": "文本型",
+: "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"method name": "取端口""@嵌入式方法": "\"\"",
+: "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"method name": "取端口""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+: "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"method name": "取端口"]
+  },
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  }
+
+]
+ },
+ {
+ent": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助",
+ent": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"base class": "FOFHTTP_常用常量",
+ent": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"methods": [
+  {
+: "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助""method name": "生成内存验证码",
+: "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助""data type": "文本型",
+: "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助""parameters": [
+   {
+"parameter name": "背景颜色",
+"data type": "整数"
+   },
+   {
+"parameter name": "字体颜色",
+"data type": "整数"
+   },
+   {
+"parameter name": "干扰值",
+"comment": "1-20 越大图片月看不清楚，推荐10",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "返回的字节集",
+"data type": "字节集类"
+   }
+: "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助"]
+  },
+  {
+"用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助"]"method name": "Base数据转图片",
+"用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助"]"comment": "参考案例：https://www.lkuaiy.com/rsdetails?id=16152118109117",
+"用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助"]"data type": "字节集类",
+"用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助"]"parameters": [
+   {
+"parameter name": "Base图片数据",
+"data type": "文本型"
+   }
+"用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"class name": "FOFHTTP_HTTP辅助"]]
+  },
+  {
+t": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""method name": "取参数",
+t": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""data type": "文本型",
+t": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "参数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数名称不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+t": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""]
+  },
+  {
+@默认值": "假""method name": "取参数2",
+@默认值": "假""comment": "本方法要比取参数的执行效率更快\n参考案例：https://www.lkuaiy.com/rsdetails?id=45861614227136",
+@默认值": "假""data type": "文本型",
+@默认值": "假""parameters": [
+   {
+"parameter name": "参数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数后面名称",
+"comment": "注意：如果是最后一个参数后面已经没有其他的参数存在了，则这里直接留空",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "参数文本",
+"data type": "文本型"
+   }
+@默认值": "假"]
+  },
+  {
+@默认值": "假""method name": "取中文参数",
+@默认值": "假""comment": "如果参数中有中文文本，使用本命令取中文参数",
+@默认值": "假""data type": "文本型",
+@默认值": "假""parameters": [
+   {
+"parameter name": "参数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数文本",
+"data type": "文本型"
+   }
+@默认值": "假"]
+  },
+  {
+认值": "假"]"method name": "取参数_防SQL注入",
+认值": "假"]"comment": "本命令是在取参数的基础上增加了防止sql注入，可以过滤一些常规的sql注入文本\n注意：本方法会将关键字做一些处理，所以请参考是否适用于自己的项目",
+认值": "假"]"data type": "文本型",
+认值": "假"]"parameters": [
+   {
+"parameter name": "是否启用星号防护",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否启用单引号防护",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否启用逗号防护",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否启用加号防护",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "参数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数名称不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+认值": "假"]]
+  },
+  {
+认值": "假"]"method name": "取参数_Post文件",
+认值": "假"]"comment": "取出Form中提交的文件，其中enctype=\"multipart/form-data\"为Form必须属性",
+认值": "假"]"data type": "字节集类",
+认值": "假"]"parameters": [
+   {
+"parameter name": "Post数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "参数名称",
+"data type": "文本型"
+   }
+认值": "假"]]
+  },
+  {
+认值": "假"]"method name": "取参数_Post文件_小程序",
+认值": "假"]"data type": "字节集类",
+认值": "假"]"parameters": [
+   {
+"parameter name": "Post数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "小程序中，参数的文件名，也就是name属性的值",
+"data type": "文本型"
+   }
+认值": "假"]]
+  },
+  {
+}"method name": "取参数_Post文件名称",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "提交数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+ }"method name": "取参数_Post文件参数",
+ }"comment": "post上传文件中取非文件参数\n参考案例：https://www.lkuaiy.com/rsdetails?id=16148540358071",
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "Post数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "参数名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "解析标签",
+
+"comment": "替换字节集中的${xxx}这样格式的数据",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "模板文件",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标签名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标签值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "解析标签_文本",
+
+"comment": "替换文本中的${xxx}这样格式的数据",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "模板文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标签名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标签值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换次数",
+"comment": "默认-1，-1代表全部替换",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+ }"method name": "解析标签_字节集",
+ }"comment": "替换字节集中的${xxx}这样格式的数",
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "模板文件",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标签名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标签值",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "替换次数",
+"comment": "默认0，0代表全部替换",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+ameter name": "替换次数""method name": "解析GetPost请求",
+ameter name": "替换次数""comment": "传输一个URL，解析出【FOFHTTP_待发资料】数据",
+ameter name": "替换次数""data type": "FOFHTTP_待发资料",
+ameter name": "替换次数""parameters": [
+   {
+"parameter name": "请求Url",
+"data type": "文本型"
+   }
+ameter name": "替换次数"]
+  },
+  {
+ameter name": "标签值""method name": "重置解析参数",
+ameter name": "标签值""comment": "重新将URL变成解析参数",
+ameter name": "标签值""result comment": "返回重置后的解析参数",
+ameter name": "标签值""data type": "文本型",
+ameter name": "标签值""parameters": [
+   {
+"parameter name": "URL",
+"comment": "通过 用户数据_HTTP待发整理.请求URL获取",
+"data type": "文本型"
+   }
+ameter name": "标签值"]
+  },
+  {
+er name": "标签值""method name": "重置解析参数""method name": "数据防SQL注入处理",
+er name": "标签值""method name": "重置解析参数""comment": "注意：本方法会将关键字做一些处理，所以请参考是否适用于自己的项目",
+er name": "标签值""method name": "重置解析参数""data type": "文本型",
+er name": "标签值""method name": "重置解析参数""parameters": [
+   {
+"parameter name": "数据内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否启用星号防护",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否启用单引号防护",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否启用逗号防护",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否启用加号防护",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否启用流程关键字防护",
+"data type": "逻辑型"
+   }
+er name": "标签值""method name": "重置解析参数"]
+  },
+  {
+"method name": "取地址文件名称",
+"result comment": "失败返回空文本",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "文件地址",
+"comment": "可以取网页文件地址【http://xxx.xxx.xxx/123.zip】，也可以直接取实体文件地址【C:\\1.zip】",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "文件类型到扩展名",
+
+"comment": "将文件类型转换成扩展名",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "协议类型",
+"comment": "协议类型，例如：\"text/css\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "文件地址""method name": "取文件协议类型",
+ameter name": "文件地址""comment": "获取类似Content-Type: text/css、Content-Type: text/html这样的协议类型",
+ameter name": "文件地址""data type": "文本型",
+ameter name": "文件地址""parameters": [
+   {
+"parameter name": "文件类型",
+"comment": "例如：css、html等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "编码文本",
+"comment": "HTTP服务器启动时设置的系统编码",
+"data type": "文本型"
+   }
+ameter name": "文件地址"]
+  },
+  {
+
+"comment": "将文件类型转换成扩展名""method name": "Cookie类到Cookie文本",
+
+"comment": "将文件类型转换成扩展名""data type": "文本型",
+
+"comment": "将文件类型转换成扩展名""parameters": [
+   {
+"parameter name": "Cookie",
+"data type": "FOFHTTP_Cookies"
+   }
+
+"comment": "将文件类型转换成扩展名"]
+  },
+  {
+meter name": "文件地址""data type": "文本型""method name": "判断是否为Safari浏览器",
+meter name": "文件地址""data type": "文本型""data type": "逻辑型",
+meter name": "文件地址""data type": "文本型""parameters": [
+   {
+"parameter name": "协议头部",
+"data type": "文本型"
+   }
+meter name": "文件地址""data type": "文本型"]
+  },
+  {
+
+"method name": "判断是否为微信浏览器",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "协议头部",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "是否启用单引号防护""method name": "判断请求平台",
+ameter name": "是否启用单引号防护""result comment": "返回1为安卓手机，返回2为苹果手机，返回3代表为ios系统的终端设备，返回4代表是否为iPad，返回5代表是否为Safari系列WEB，返回0为WIN或其他平台",
+ameter name": "是否启用单引号防护""data type": "整数",
+ameter name": "是否启用单引号防护""parameters": [
+   {
+"parameter name": "协议头部",
+"data type": "文本型"
+   }
+ameter name": "是否启用单引号防护"]
+  },
+  {
+ }"method name": "压缩数据",
+ }"comment": "对指定数据进行Zlib压缩.",
+ }"result comment": "返回被压缩后的数据.",
+ }"data type": "字节集类",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "欲压缩数据",
+"comment": "提供所欲压缩的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "压缩级别",
+"comment": "0-9之间,级别越高压缩率越大,相应的压缩时间会变长.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "压缩位数",
+"comment": "8-15,表示处理raw deflate的方法.",
+"data type": "整数",
+"@默认值": "15"
+   },
+   {
+"parameter name": "压缩状态",
+"comment": "指定分配内存的等级,1-9之间,1会使用最低的内存,压缩时间最长.",
+"data type": "整数",
+"@默认值": "8"
+   },
+   {
+"parameter name": "压缩算法",
+"comment": "指定所欲使用的压缩算法.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+
+"method name": "解压数据",
+
+"comment": "对指定数据进行Zlib解压.",
+
+"result comment": "返回解压的结果.\n0->解压成功.\n-3->提供的解压数据不正确.\n-5->输出缓冲区尺寸不足,需要分配更大空间.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲解压数据",
+"comment": "提供所欲解压的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出缓冲区",
+"comment": "提供的字节集必须先预分配足够的空间.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "压缩位数",
+"comment": "8-15,表示处理raw deflate的方法.",
+"data type": "整数",
+"@默认值": "15"
+   }
+
+]
+  },
+  {
+
+"@禁止流程检查": "真""method name": "压缩数据_GZip",
+
+"@禁止流程检查": "真""comment": "对指定数据进行GZip压缩.",
+
+"@禁止流程检查": "真""result comment": "返回被压缩后的数据.",
+
+"@禁止流程检查": "真""data type": "字节集类",
+
+"@禁止流程检查": "真""@禁止流程检查": "真",
+
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "欲压缩数据",
+"comment": "提供所欲压缩的数据.",
+"data type": "字节集类"
+   }
+
+"@禁止流程检查": "真"]
+  },
+  {
+"method name": "解压数据_GZip",
+"comment": "对指定数据进行GZip解压.",
+"result comment": "返回被解压后的数据.",
+"data type": "字节集类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "欲解压数据",
+"comment": "提供所欲解压的数据.",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+]"method name": "Base64编码",
+]"comment": "将指定数据进行Base64编码.",
+]"result comment": "返回编码后的数据.",
+]"data type": "字节集类",
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "欲编码数据",
+"comment": "提供所欲进行编码的数据.",
+"data type": "字节集类"
+   }
+]]
+  },
+  {
+"comment": "将指定数据进行Base64编码.""method name": "Base64解码",
+"comment": "将指定数据进行Base64编码.""comment": "将指定数据进行Base64解码.",
+"comment": "将指定数据进行Base64编码.""result comment": "返回解码后的数据.",
+"comment": "将指定数据进行Base64编码.""data type": "字节集类",
+"comment": "将指定数据进行Base64编码.""@禁止流程检查": "真",
+"comment": "将指定数据进行Base64编码.""parameters": [
+   {
+"parameter name": "欲解码数据",
+"comment": "提供所欲进行解码的数据.",
+"data type": "字节集类"
+   }
+"comment": "将指定数据进行Base64编码."]
+  },
+  {
+ment": "将指定数据进行Base64编码.""method name": "Base64解码""method name": "Base64文本编码",
+ment": "将指定数据进行Base64编码.""method name": "Base64解码""comment": "将指定数据进行Base64编码.",
+ment": "将指定数据进行Base64编码.""method name": "Base64解码""result comment": "返回编码后的数据.",
+ment": "将指定数据进行Base64编码.""method name": "Base64解码""data type": "文本型",
+ment": "将指定数据进行Base64编码.""method name": "Base64解码""@禁止流程检查": "真",
+ment": "将指定数据进行Base64编码.""method name": "Base64解码""parameters": [
+   {
+"parameter name": "欲编码数据",
+"comment": "提供所欲进行编码的数据.",
+"data type": "文本型"
+   }
+ment": "将指定数据进行Base64编码.""method name": "Base64解码"]
+  },
+  {
+止流程检查": "真""method name": "压缩数据_GZip""method name": "Base64文本解码",
+止流程检查": "真""method name": "压缩数据_GZip""comment": "将指定数据进行Base64解码.",
+止流程检查": "真""method name": "压缩数据_GZip""result comment": "返回解码后的数据.",
+止流程检查": "真""method name": "压缩数据_GZip""data type": "文本型",
+止流程检查": "真""method name": "压缩数据_GZip""@禁止流程检查": "真",
+止流程检查": "真""method name": "压缩数据_GZip""parameters": [
+   {
+"parameter name": "欲解码数据",
+"comment": "提供所欲进行解码的数据.",
+"data type": "文本型"
+   }
+止流程检查": "真""method name": "压缩数据_GZip"]
+  },
+  {
+止流程检查": "真""method name": "压缩数据_GZip""method name": "URL文本编码",
+止流程检查": "真""method name": "压缩数据_GZip""comment": "将指定数据进行URL编码.",
+止流程检查": "真""method name": "压缩数据_GZip""result comment": "返回编码后的数据.",
+止流程检查": "真""method name": "压缩数据_GZip""data type": "文本型",
+止流程检查": "真""method name": "压缩数据_GZip""@禁止流程检查": "真",
+止流程检查": "真""method name": "压缩数据_GZip""parameters": [
+   {
+"parameter name": "欲编码数据",
+"comment": "提供所欲进行编码的数据.",
+"data type": "文本型"
+   }
+止流程检查": "真""method name": "压缩数据_GZip"]
+  },
+  {
+流程检查": "真""method name": "压缩数据_GZip""parameters": [
+"method name": "URL文本解码",
+流程检查": "真""method name": "压缩数据_GZip""parameters": [
+"comment": "将指定数据进行URL解码.",
+流程检查": "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.",
+流程检查": "真""method name": "压缩数据_GZip""parameters": [
+"data type": "文本型",
+流程检查": "真""method name": "压缩数据_GZip""parameters": [
+"@禁止流程检查": "真",
+流程检查": "真""method name": "压缩数据_GZip""parameters": [
+"parameters": [
+   {
+"parameter name": "欲解码数据",
+"comment": "提供所欲进行解码的数据.",
+"data type": "文本型"
+   }
+流程检查": "真""method name": "压缩数据_GZip""parameters": [
+]
+  },
+  {
+"method name": "中文转URL编码",
+"comment": "本方法与URL文本编码不同，可以处理一些特殊编码文本数据",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "中文文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"@禁止流程检查": "真""method name": "URL编码",
+
+"@禁止流程检查": "真""comment": "将指定数据进行URL编码.",
+
+"@禁止流程检查": "真""result comment": "返回编码后的数据.",
+
+"@禁止流程检查": "真""data type": "字节集类",
+
+"@禁止流程检查": "真""@禁止流程检查": "真",
+
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "欲编码数据",
+"comment": "提供所欲进行编码的数据.",
+"data type": "字节集类"
+   }
+
+"@禁止流程检查": "真"]
+  },
+  {
+程检查": "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""method name": "URL解码",
+程检查": "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""comment": "将指定数据进行URL解码.",
+程检查": "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""result comment": "返回解码后的数据.",
+程检查": "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""data type": "字节集类",
+程检查": "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""@禁止流程检查": "真",
+程检查": "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""parameters": [
+   {
+"parameter name": "欲解码数据",
+"comment": "提供所欲进行解码的数据.",
+"data type": "字节集类"
+   }
+程检查": "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据."]
+  },
+  {
+
+"method name": "解析参数转中文",
+
+"comment": "当解析参数属性的数据中有中文并是URL编码时，可以使用本命令",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "是否尾零",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  }
+ent": "用来处理用户的数据发送时的信息填写""initial value": "\"\"""comment": "收到请求的解析参数，注意：默认该参数会自动获取"]]
+ },
+ {
+: "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""method name": "URL解码""class name": "FOFHTTP_常用常量",
+: "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""method name": "URL解码""constants": [
+  {
+
+"constant name": "换行符",
+
+"data type": "文本型",
+
+"initial value": "\"\\r\\n\""
+  },
+  {
+
+"constant name": "HTML转义符",
+
+"data type": "文本型",
+
+"initial value": "\"&#161;\\r\\n&iexcl;\\r\\n&#193;\\r\\n&Aacute;\\t\\r\\n&#225;\\r\\n&aacute;\\r\\n&#162;\\r\\n&cent;\\r\\n&#194;\\r\\n&circ;\\r\\n&#226;\\r\\n&acirc;\\r\\n&#163;\\r\\n&pound;\\r\\n&#195;\\r\\n&Atilde;\\r\\n&#227;\\r\\n&atilde;\\r\\n&#164;\\r\\n&curren;\\r\\n&#196;\\r\\n&Auml;\\r\\n&#228;\\r\\n&auml;\\r\\n&#165;\\r\\n&yen;\\r\\n&#197;\\r\\n&ring;\\r\\n&#229;\\r\\n&aring;\\r\\n&#166;\\r\\n&brvbar;\\r\\n&#198;\\r\\n&AElig;\\r\\n&#230;\\r\\n&aelig;\\r\\n&#167;\\r\\n&sect;\\r\\n&#199;\\r\\n&Ccedil;\\r\\n&#231;\\r\\n&ccedil;\\r\\n&#168;\\r\\n&uml;\\r\\n&#200;\\r\\n&Egrave;\\r\\n&#232;\\r\\n&egrave;\\r\\n&#169;\\r\\n&copy;\\r\\n&#201;\\r\\n&Eacute;\\r\\n&#233;\\r\\n&eacute;\\r\\n&#170;\\r\\n&ordf;\\r\\n&#202;\\r\\n&Ecirc;\\r\\n&#234;\\r\\n&ecirc;\\r\\n&#171;\\r\\n&laquo;\\r\\n&#203;\\r\\n&Euml;\\r\\n&#235;\\r\\n&euml;\\r\\n&#172;\\r\\n&not;\\r\\n&#204;\\r\\n&Igrave;\\r\\n&#236;\\r\\n&igrave;\\r\\n&#173;\\r\\n&shy;\\r\\n&#205;\\r\\n&Iacute;\\r\\n&#237;\\r\\n&iacute;\\r\\n&#174;\\r\\n&reg;\\r\\n&#206;\\r\\n&Icirc;\\r\\n&#238;\\r\\n&icirc;\\r\\n&#175;\\r\\n&macr;\\r\\n&#207;\\r\\n&Iuml;\\r\\n&#239;\\r\\n&iuml;\\r\\n&#176;\\r\\n&deg;\\r\\n&#208;\\r\\n&ETH;\\r\\n&#240;\\r\\n&ieth;\\r\\n&#177;\\r\\n&plusmn;\\t\\r\\n&#209;\\r\\n&Ntilde;\\r\\n&#241;\\r\\n&ntilde;\\r\\n&#178;\\r\\n&sup2;\\r\\n&#210;\\r\\n&Ograve;\\t\\r\\n&#242;\\r\\n&ograve;\\r\\n&#179;\\r\\n&sup3;\\r\\n&#211;\\r\\n&Oacute;\\t\\r\\n&#243;\\r\\n&oacute;\\r\\n&#180;\\r\\n&acute;\\r\\n&#212;\\r\\n&Ocirc;\\r\\n&#244;\\r\\n&ocirc;\\r\\n&#181;\\r\\n&micro;\\r\\n&#213;\\r\\n&Otilde;\\r\\n&#245;\\r\\n&otilde;\\r\\n&#182;\\r\\n&para;\\r\\n&#214;\\r\\n&Ouml;\\r\\n&#246;\\r\\n&ouml;\\r\\n&#183;\\r\\n&middot;\\t\\r\\n&times;\\r\\n&#215;\\r\\n&times;\\r\\n&#247;\\r\\n&divide;\\r\\n&#184;\\r\\n&cedil;\\r\\n&#216;\\r\\n&Oslash;\\r\\n&#248;\\r\\n&oslash;\\r\\n&#185;\\r\\n&sup1;\\r\\n&#217;\\r\\n&Ugrave;\\t\\r\\n&#249;\\r\\n&ugrave;\\r\\n&#186;\\r\\n&ordm;\\r\\n&#218;\\r\\n&Uacute;\\t\\r\\n&#250;\\r\\n&uacute;\\r\\n&#187;\\r\\n&raquo;\\r\\n&#219;\\r\\n&Ucirc;\\r\\n&#251;\\r\\n&ucirc;\\r\\n&#188;\\r\\n&frac14;\\r\\n&#220;\\r\\n&Uuml;\\r\\n&#252;\\r\\n&uuml;\\r\\n&#189;\\r\\n&frac12;\\r\\n&#221;\\r\\n&Yacute;\\r\\n&#253;\\r\\n&yacute;\\r\\n&#190;\\r\\n&frac34;\\r\\n&#222;\\r\\n&THORN;\\r\\n&#254;\\r\\n&thorn;\\r\\n&#191;\\r\\n&iquest;\\r\\n&#223;\\r\\n&szlig;\\r\\n&#255;\\r\\n&yuml;\\r\\n&#192;\\r\\n&Agrave;\\t\\r\\n&#224;\\r\\n&agrave;\\r\\n&#34;\\r\\n&quot;\\r\\n&#38;\\r\\n&amp;\\r\\n&#60;\\r\\n&lt;\\r\\n&#62;\\r\\n&gt;\\r\\n&#160;\\r\\n&nbsp;\""
+  }
+: "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""method name": "URL解码"],
+: "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""method name": "URL解码""variables": [
+  {
+"data type": "文本型""variable name": "UTF8_换行符",
+"data type": "文本型""static": true,
+"data type": "文本型""data type": "字节集类"
+  },
+  {
+}"variable name": "UTF8_转义符",
+}"static": true,
+}"data type": "字节集类"
+  },
+  {
+
+"variable name": "UTF8_Cookie",
+
+"static": true,
+
+"data type": "字节集类"
+  },
+  {
+}"variable name": "UTF8_404页面",
+}"static": true,
+}"data type": "字节集类"
+  },
+  {
+data type": "文本型""data type": "字节集类""variable name": "UTF8_404漂亮页面",
+data type": "文本型""data type": "字节集类""static": true,
+data type": "文本型""data type": "字节集类""data type": "字节集类"
+  },
+  {
+}"variable name": "UTF8_404文件过大提示",
+}"static": true,
+}"data type": "字节集类"
+  },
+  {
+ata type": "文本型""data type": "字节集类""static": true"variable name": "UTF8_Post测试",
+ata type": "文本型""data type": "字节集类""static": true"static": true,
+ata type": "文本型""data type": "字节集类""static": true"data type": "字节集类"
+  },
+  {
+data type": "文本型""data type": "字节集类""variable name": "UTF8_空文本",
+data type": "文本型""data type": "字节集类""static": true,
+data type": "文本型""data type": "字节集类""data type": "字节集类"
+  },
+  {
+}"variable name": "UTF8_单横线",
+}"static": true,
+}"data type": "字节集类"
+  },
+  {
+ta type": "文本型""data type": "字节集类""static": true"data type": "字节集类""variable name": "UTF8_cookies开始",
+ta type": "文本型""data type": "字节集类""static": true"data type": "字节集类""static": true,
+ta type": "文本型""data type": "字节集类""static": true"data type": "字节集类""data type": "字节集类"
+  },
+  {
+
+"variable name": "UTF8_cookies结束",
+
+"static": true,
+
+"data type": "字节集类"
+  },
+  {
+"static": true"variable name": "UTF8_Get判断",
+"static": true"comment": "GET / HTTP/1.1",
+"static": true"static": true,
+"static": true"data type": "字节集类"
+  }
+: "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""method name": "URL解码"],
+: "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""method name": "URL解码""methods": [
+  {
+static": true"comment": "GET / HTTP/1.1""method name": "初始化常用常量",
+static": true"comment": "GET / HTTP/1.1""static": true
+  }
+: "真""method name": "压缩数据_GZip""parameters": [
+"result comment": "返回解码后的数据.""method name": "URL解码"]
+ },
+ {
+
+"class name": "FOFHTTP_Charset编码",
+
+"@常量类": "文本型",
+
+"constants": [
+  {
+}"constant name": "gb2312",
+}"comment": "中文编码",
+}"initial value": "\"text/html;charset=gb2312\""
+  },
+  {
+"constants": [
+"constant name": "iso_8859_1",
+"constants": [
+"comment": "西欧的编码，英文编码",
+"constants": [
+"initial value": "\"charset=iso-8859-1\""
+  },
+  {
+}"constant name": "utf_8",
+}"comment": "世界通用语言编码",
+}"initial value": "\"charset=utf-8\""
+  },
+  {
+
+"constant name": "big5",
+
+"comment": "繁体中文编码",
+
+"initial value": "\"charset=big5\""
+  },
+  {
+"initial value": "\"charset=utf-8\"""constant name": "euc_kr",
+"initial value": "\"charset=utf-8\"""comment": "韩文编码",
+"initial value": "\"charset=utf-8\"""initial value": "\"charset=euc-kr\""
+  }
+
+]
+ },
+ {
+}"class name": "FOFHTTP_Cookies",
+}"methods": [
+  {
+"methods": [
+"method name": "初始化",
+"methods": [
+"type": "property setter",
+"methods": [
+"parameters": [
+   {
+"parameter name": "协议头",
+"data type": "字节集类"
+   }
+"methods": [
+]
+  },
+  {
+"methods": [
+"method name": "协议头数据",
+"methods": [
+"type": "property getter",
+"methods": [
+"data type": "文本型"
+  },
+  {
+}"method name": "临时Cookie",
+}"comment": "注意：该方法只有在设置了Cookie写的情况下才能获取到Cookie，属于内部使用，一般不需要调用本方法。\n如果想要获取浏览器的Cookie，请直接使用Cookie数据方法",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+
+"method name": "Cookie数据",
+
+"comment": "cookies,文本，不要太长，协议头必须少于4096字节",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+}"method name": "Cookie数据",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "Cookie",
+"comment": "cookies,文本，不要太长，协议头必须少于4096字节",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+hods": [
+"method name": "初始化""method name": "格林到期时间",
+hods": [
+"method name": "初始化""type": "property getter",
+hods": [
+"method name": "初始化""data type": "文本型"
+  },
+  {
+"method name": "SameSite_Secure开启状态",
+"comment": "设置是否开启SameSite跨域Cookie\n注意：一定要为HTTPS的情况下本属性才可使用\n当你的浏览器出现了：Indicate whether to send a cookie in a cross-site request by specifying its SameSite attribute\n这样的提示的时候，我们就需要开启本状态",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "是否开启",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+"method name": "SameSite_Secure开启状态",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+"parameters": [
+"method name": "到期时间",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "设置时间信息",
+"comment": "Cookie失效的时间，单位：秒，默认为0，关闭浏览器立刻失效\n例如：这里填写60，则60秒后浏览器Cookie失效",
+"data type": "长整数",
+"@默认值": "0"
+   }
+"parameters": [
+]
+  },
+  {
+data type": "长整数""method name": "设置目录",
+data type": "长整数""type": "property setter",
+data type": "长整数""parameters": [
+   {
+"parameter name": "设置目录文本",
+"comment": "cookies，有效目录默认是“/”",
+"data type": "文本型"
+   }
+data type": "长整数"]
+  },
+  {
+data type": "逻辑型""method name": "设置目录",
+data type": "逻辑型""type": "property getter",
+data type": "逻辑型""data type": "文本型"
+  }
+}]
+ },
+ {
+"class name": "FOFHTTP_用户数据",
+"variables": [
+  {
+ameter name": "设置目录文本""variable name": "HTTP_用户IP",
+ameter name": "设置目录文本""comment": "例如：111.111.111.11",
+ameter name": "设置目录文本""data type": "文本型"
+  },
+  {
+ta type": "长整数"]"variable name": "HTTP_用户ID",
+ta type": "长整数"]"data type": "变整数"
+  },
+  {
+
+"variable name": "HTTP_请求类型",
+
+"comment": "1代表Get,2代表Post",
+
+"data type": "整数"
+  },
+  {
+}"variable name": "HTTP_提交数据",
+}"comment": "用来记录Post提交的数据",
+}"data type": "字节集类"
+  },
+  {
+
+"variable name": "HTTP_协议头数据",
+
+"comment": "整体的协议头数据",
+
+"data type": "字节集类"
+  },
+  {
+arameters": [
+]"variable name": "HTTP_是否格林时间",
+arameters": [
+]"comment": "是否发送格林时间，默认为真，如果你是进行HTTP页面处理，那么建议这里开启为真\n如果你只是用来做HTTP的接口，可以把这里设置为假（设置为假可以增加并发效率）",
+arameters": [
+]"data type": "逻辑型",
+arameters": [
+]"initial value": "真"
+  },
+  {
+tial value": "\"charset=utf-8\"""constant name": "euc_kr""variable name": "HTTP_待发整理",
+tial value": "\"charset=utf-8\"""constant name": "euc_kr""comment": "用户的待发送资料，里面会储存用户的请求URL、Cookies、文件的信息、类型、缓存时间、Cookie等各种信息",
+tial value": "\"charset=utf-8\"""constant name": "euc_kr""data type": "FOFHTTP_待发资料"
+  },
+  {
+"data type": "字节集类""variable name": "HTTP_请求开始时间",
+"data type": "字节集类""comment": "请求开始的时间戳，用于POST数据判断",
+"data type": "字节集类""data type": "长整数"
+  }
+],
+"methods": [
+  {
+}"method name": "HTTP_精准IP",
+}"comment": "从HTTP_XFFIP和HTTP_用户IP分别读取，如果HTTP_XFFIP为空则从HTTP_用户IP读取",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+"comment": "用来记录Post提交的数据""method name": "HTTP_XFFIP",
+"comment": "用来记录Post提交的数据""comment": "获取XFFIP，例如：111.111.111.11\n比如使用了nginx反向代理等  就需要使用本方法获取IP",
+"comment": "用来记录Post提交的数据""type": "property getter",
+"comment": "用来记录Post提交的数据""data type": "文本型"
+  },
+  {
+}"method name": "HTTP_获取自定义协议头",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "自定义协议头标识",
+"comment": "例如：\nHost:111.111.111.111    那么这里输入Host即可\ncat:1   那么这里输入cat即可",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "HTTP_Host",
+
+"comment": "访问的域名",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+}"method name": "HTTP_Host",
+}"comment": "访问的域名",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "参数_Host",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "HTTP_版本号",
+}"comment": "例如：HTTP/1.1",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+
+"method name": "HTTP_Accept",
+
+"comment": "协议类型，类似image/*,*/*，\nAccept 请求头用来告知（服务器）客户端可以处理的内容类型，这种内容类型用MIME类型来表示。\n借助内容协商机制, 服务器可以从诸多备选项中选择一项进行应用，并使用 Content-Type 应答头通知客户端它的选择。\n浏览器会基于请求的上下文来为这个请求头设置合适的值\n比如获取一个CSS层叠样式表时值与获取图片、视频或脚本文件时的值是不同的。",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+ameter name": "自定义协议头标识""method name": "HTTP_Referer",
+ameter name": "自定义协议头标识""comment": "HTTP Referer是header的一部分，当浏览器向web服务器发送请求的时候，一般会带上Referer\n告诉服务器我是从哪个页面链接过来的，服务器借此可以获得一些信息用于处理\n例如：我们可以用来取来源页面,用于判断来源,但是不一定可靠",
+ameter name": "自定义协议头标识""type": "property getter",
+ameter name": "自定义协议头标识""data type": "文本型"
+  },
+  {
+thod name": "HTTP_Accept""method name": "HTTP_User_Agent",
+thod name": "HTTP_Accept""comment": "浏览器UA，交互协议，协议头部,判断客户端等，也就是用户浏览器信息 系统版本 浏览器版本 等信息",
+thod name": "HTTP_Accept""type": "property getter",
+thod name": "HTTP_Accept""data type": "文本型"
+  },
+  {
+}"method name": "HTTP_Connection",
+}"comment": "连接状态，keep-alive（长连接）,如果为：Connection: keep-alive  Close表示客户端希望完成交互后断开。\nClose标志不同浏览器可能不同\n\n详细介绍参考：https://blog.csdn.net/mangoyiy/article/details/80941816",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "HTTP_Accept_Language",
+"data type": "文本型""comment": "用来说明访问者希望采用的语言或语言组合\n这样的话用户就可以根据自己偏好的语言来定制不同的内容\n例如：zh-CN,zh;q=0.9  代表浏览器支持的语言分别是简体中文和中文，优先支持简体中文",
+"data type": "文本型""type": "property getter",
+"data type": "文本型""data type": "文本型"
+  },
+  {
+}"method name": "HTTP_Upgrade",
+}"comment": "判断是不是协议升级，例如升级到websocket\nUpgrade: websocket",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "HTTP_Accept_Encoding",
+"data type": "文本型""comment": "Web服务器和浏览器之间压缩传输的”文本内容“的方法。 \nHTTP采用通用的压缩算法，比如gzip来压缩HTML,Javascript, CSS文件。 \n能大大减少网络传输的数据量，提高了用户显示网页的速度",
+"data type": "文本型""type": "property getter",
+"data type": "文本型""data type": "文本型"
+  },
+  {
+"type": "property getter""method name": "HTTP_Content_Length",
+"type": "property getter""comment": "数据的长度",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "整数"
+  },
+  {
+_Content_Length"method name": "HTTP_用户协议头标志",
+_Content_Length"comment": "FOFHTTP框架的自定义发送标记，标记文件信息，配合304命令使用。用来防止重复发送，减少流量使用，如果没有则返回空文本",
+_Content_Length"type": "property getter",
+_Content_Length"data type": "文本型"
+  }
+]
+ },
+ {
+Content_Length"comment": "FOFHTTP框架的自定义发送标记，标记文件信息，配合304命令使用。用来防止重复发送，减少流量使用，如果没有则返回空文本""class name": "FOFHTTP_文件发送",
+Content_Length"comment": "FOFHTTP框架的自定义发送标记，标记文件信息，配合304命令使用。用来防止重复发送，减少流量使用，如果没有则返回空文本""methods": [
+  {
+"method name": "Get文件处理",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+]
+  },
+  {
+
+"method name": "Post文件处理",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+
+]
+  },
+  {
+"method name": "Post数据组装",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+]
+  },
+  {
+ameter name": "用户数据""method name": "Get文件处理_HTTPS",
+ameter name": "用户数据""data type": "逻辑型",
+ameter name": "用户数据""parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+ameter name": "用户数据"]
+  },
+  {
+}"method name": "Post文件处理_HTTPS",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+}]
+  },
+  {
+"method name": "Post数据组装_HTTPS",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+]
+  }
+Content_Length"comment": "FOFHTTP框架的自定义发送标记，标记文件信息，配合304命令使用。用来防止重复发送，减少流量使用，如果没有则返回空文本"]
+ },
+ {
+}"class name": "FOFHTTP",
+}"base class": "FOFHTTP基类",
+}"methods": [
+  {
+}"method name": "编码方式",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "Charset编码",
+"comment": "默认：(FOFHTTP_Charset编码.utf-8),详情参考FOFHTTP_Charset编码",
+"data type": "FOFHTTP_Charset编码",
+"@默认值": "FOFHTTP_Charset编码.utf_8"
+   }
+}]
+  },
+  {
+data type": "变整数""method name": "初始化HTTP服务",
+data type": "变整数""comment": "本方法只需要执行一次，如果使用了销毁服务器命令则必须再次执行本命令"
+  },
+  {
+ }"method name": "启动HTTP服务",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "服务器地址",
+"comment": "欲绑定的服务端IP地址。默认0.0.0.0",
+"data type": "文本型",
+"@默认值": "\"0.0.0.0\""
+   },
+   {
+"parameter name": "服务器端口",
+"comment": "欲绑定的服务端端口",
+"data type": "整数",
+"@默认值": "9550"
+   },
+   {
+"parameter name": "最大连接数",
+"comment": "服务端允许接受客户连接请求的最大数量。（单位：个）数量跟服务器配置相关自行测试",
+"data type": "整数",
+"@默认值": "1000"
+   },
+   {
+"parameter name": "Charset编码",
+"comment": "默认：(FOFHTTP_Charset编码.utf-8),详情参考FOFHTTP_Charset编码",
+"data type": "FOFHTTP_Charset编码",
+"@默认值": "FOFHTTP_Charset编码.utf_8"
+   },
+   {
+"parameter name": "服务_名称",
+"comment": "内_服务名称，默认FOFHTTP框架,尽量不要使用中文",
+"data type": "文本型",
+"@默认值": "\"FOFHTTP\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "默认超时5秒断开",
+"data type": "整数",
+"@默认值": "5000"
+   },
+   {
+"parameter name": "最大线程",
+"comment": "服务端同一时刻内处理的最大并发数量\n通常设置为 2 * CPU + 2硬件性能决定线程并发能力。\n推荐默认或者100个线程以内。 CPU：代表处理器数量（单位：个）\n默认为",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "防火墙",
+"comment": "默认为空，空代表不启动",
+"data type": "FOFHTTP_防火墙",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "服务器配置",
+"comment": "详情参考FOFHTTP_配置项类，默认空对象",
+"data type": "FOFHTTP_配置项",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+comment": "详情参考FOFHTTP_配置项类，默认空对象""method name": "结束HTTP服务",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""comment": "使用本命令后可以再次直接使用启动服务来进行启动",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""data type": "逻辑型"
+  },
+  {
+comment": "详情参考FOFHTTP_配置项类，默认空对象""method name": "销毁HTTP服务",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""comment": "使用本命令后如果需要再次使用服务，必须进行一次初始化HTTP服务并启动HTTP服务"
+  },
+  {
+comment": "详情参考FOFHTTP_配置项类，默认空对象""method name": "断开服务客户",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""data type": "逻辑型",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数 "
+   }
+comment": "详情参考FOFHTTP_配置项类，默认空对象"]
+  },
+  {
+ameter name": "服务句柄""method name": "取项目目录",
+ameter name": "服务句柄""data type": "文本数组类"
+  },
+  {
+er name": "服务句柄""method name": "取项目目录""method name": "项目目录",
+er name": "服务句柄""method name": "取项目目录""comment": "项目文件的装载目录，可以重复使用本命令添加不同的项目路径，可以通过“取项目目录()”这个命令来获取所有的路径",
+er name": "服务句柄""method name": "取项目目录""type": "property setter",
+er name": "服务句柄""method name": "取项目目录""parameters": [
+   {
+"parameter name": "目录路径",
+"data type": "文本型"
+   }
+er name": "服务句柄""method name": "取项目目录"]
+  },
+  {
+er name": "服务句柄""method name": "取项目目录""method name": "项目目录",
+er name": "服务句柄""method name": "取项目目录""comment": "项目文件的装载目录,默认是直接返回项目目录数组的最后一个成员，也就是最后一次设置的项目路径",
+er name": "服务句柄""method name": "取项目目录""type": "property getter",
+er name": "服务句柄""method name": "取项目目录""data type": "文本型"
+  },
+  {
+r name": "服务句柄""method name": "取项目目录""parameters": [
+"method name": "项目目录2",
+r name": "服务句柄""method name": "取项目目录""parameters": [
+"comment": "项目文件的装载目录,返回第一位项目目录,如果使用了\"域名绑定项目目录\"命令，则需要使用本命令\n因为使用了\"域名绑定项目目录\"后，会根据协议头的host自动将当前域名的目录提升到第一位",
+r name": "服务句柄""method name": "取项目目录""parameters": [
+"type": "property getter",
+r name": "服务句柄""method name": "取项目目录""parameters": [
+"data type": "文本型"
+  },
+  {
+comment": "详情参考FOFHTTP_配置项类，默认空对象""method name": "域名绑定项目目录",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""comment": "项目文件的装载目录，可以重复使用本命令添加不同的项目路径，可以通过“取项目目录()”这个命令来获取所有的路径\n注意：与“属性写”的项目目录对比，本命令可以直接给域名绑定项目目录\n参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16483468270748346\n注意:必须开启FOF_配置项.绑定域名  属性才可以使用本命令！",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""parameters": [
+   {
+"parameter name": "目录路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "项目域名",
+"comment": "如果设置了FOF配置项的绑定域名属性，则这里需要表明对应的哪一个域名的项目目录；否则留空即可\n注意：一个域名只能绑定一个目录！\n注意：必须设置了FOF配置项的绑定域名属性，这里才会生效，否则输入了也无效！",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+comment": "详情参考FOFHTTP_配置项类，默认空对象"]
+  },
+  {
+}"method name": "清空项目目录"
+  },
+  {
+comment": "详情参考FOFHTTP_配置项类，默认空对象""method name": "路径文件是否存在",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""data type": "逻辑型",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "用户数据.HTTP_待发整理.文件路径",
+"data type": "文本型"
+   }
+comment": "详情参考FOFHTTP_配置项类，默认空对象"]
+  },
+  {
+comment": "详情参考FOFHTTP_配置项类，默认空对象""method name": "取客户IP",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""comment": "获取客户端连接地址 例如 127.0.0.1  ",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""data type": "文本型",
+comment": "详情参考FOFHTTP_配置项类，默认空对象""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "详情参考FOFHTTP_配置项类，默认空对象"]
+  },
+  {
+}"method name": "最后一次失败描述",
+}"comment": "获取最近一次失败操作的错误描述",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+thod name": "清空项目目录""method name": "最后一次失败代码",
+thod name": "清空项目目录""comment": "获取最近一次失败操作的错误代码",
+thod name": "清空项目目录""data type": "整数",
+thod name": "清空项目目录""parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+thod name": "清空项目目录"]
+  },
+  {
+ameter name": "pServer""method name": "获取客户端连接数",
+ameter name": "pServer""comment": "获取客户端连接数",
+ameter name": "pServer""data type": "整数",
+ameter name": "pServer""parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+ameter name": "pServer"]
+  },
+  {
+data type": "变整数""method name": "设置是否标记静默时间",
+data type": "变整数""comment": "设置是否标记静默时间（设置为 TRUE 时 DisconnectSilenceConnections() 和 GetSilencePeriod() 才有效，默认：TRUE）",
+data type": "变整数""parameters": [
+   {
+"parameter name": "服务句柄",
+"comment": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "bMarkSilence",
+"data type": "逻辑型"
+   }
+data type": "变整数"]
+  },
+  {
+meter name": "pServer""parameters": [
+"method name": "获取工作线程数量",
+meter name": "pServer""parameters": [
+"comment": "获取工作线程数量",
+meter name": "pServer""parameters": [
+"data type": "整数",
+meter name": "pServer""parameters": [
+"parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+meter name": "pServer""parameters": [
+]
+  },
+  {
+"method name": "获取最大连接数",
+"comment": "获取最大连接数",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ta type": "变整数"]"method name": "设置断开静默连接",
+ta type": "变整数"]"comment": "名称：断开静默连接 描述：断开超过指定时长的静默连接,TRUE-- 成功,FALSE-- 失败,/",
+ta type": "变整数"]"data type": "逻辑型",
+ta type": "变整数"]"parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "dwPeriod",
+"comment": "时长（毫秒）",
+"data type": "整数"
+   },
+   {
+"parameter name": "bForce",
+"comment": "是否强制断开连接",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ta type": "变整数"]]
+  },
+  {
+
+"method name": "取自定义协议头",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "协议头数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "需要取的协议",
+"comment": "协议头文本（例如：Referer:）  注意：不能包含换行符回车符等特殊符号",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "发送100继续",
+
+"comment": "HTTP/1.1 100 Continue 当POST第一个包为空提供数据长度，可以发送这个响应告诉客户端允许上传数据，用于提高处理JSON兼容性",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+data type": "变整数""method name": "发送101回复",
+data type": "变整数""comment": "HTTP/1.1 100 Continue 当POST第一个包为空提供数据长度，可以发送这个响应告诉客户端允许上传数据，用于提高处理JSON兼容性",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "自定义协议头",
+"comment": "例如：Content-Encoding:gzip",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+data type": "变整数"]
+  },
+  {
+@默认值": "空对象""method name": "发送301跳转",
+@默认值": "空对象""comment": "HTTP/1.1 301 Moved Permanently，让浏览器跳转到其它页面，并且设置浏览器的Cookies信息",
+@默认值": "空对象""data type": "逻辑型",
+@默认值": "空对象""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "跳转到地址URL /test.html",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+@默认值": "空对象"]
+  },
+  {
+"method name": "发送302跳转",
+"comment": "HTTP/1.1 302 Object moved，让浏览器跳转到其它页面，并且设置浏览器的Cookies信息",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "跳转到地址URL /test.html",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+]
+  },
+  {
+data type": "FOFHTTP_用户数据""method name": "发送303跳转",
+data type": "FOFHTTP_用户数据""comment": "HTTP/1.1 303 See Other，对于POST请求，它表示请求已经被处理",
+data type": "FOFHTTP_用户数据""data type": "逻辑型",
+data type": "FOFHTTP_用户数据""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "跳转到地址URL /test.html",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+data type": "FOFHTTP_用户数据"]
+  },
+  {
+"method name": "发送_304无更新",
+"comment": "HTTP/1.1 304 Not Modified",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+]
+  },
+  {
+ }"method name": "发送307跳转",
+ }"comment": "HTTP/1.1 307 Temporary Redirect，对于POST请求，表示请求还没有被处理，客户端应该跳转后重新发起POST请求",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "跳转到地址URL /test.html",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+ }]
+  },
+  {
+
+"method name": "发送404页面错误",
+
+"comment": "404 页面不存在 HTTP/1.1 404 Not Found  可以自定义错误页面",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "HTML页面数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+
+]
+  },
+  {
+
+"method name": "发送404漂亮页面",
+
+"comment": "404 页面不存在 HTTP/1.1 404 Not Found  可以自定义错误页面",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面提示",
+"comment": "页面的提示内容，本方法与发送404页面错误不同，本方法必须内置一段话语",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+
+]
+  },
+  {
+"method name": "发送500错误",
+"comment": "HTTP/1.1 500 Internal Server Error",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面错误信息",
+"comment": "页面错误信息数据",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+"method name": "发送自定义数据",
+"comment": "需要自己来组装所有的协议头",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "HTML页面数据",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+ }"method name": "发送页面数据",
+ }"comment": "发送数据，用户发送浏览器直接显示的数据，必须页面、图片等小数据。大数据使用发送文件命令",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "HTML页面数据\n注意：传递给本参数的字节集在本方法执行完毕后会被清空。",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "自定义协议头",
+"comment": "例如：Content-Encoding:gzip",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+}"method name": "发送下载文件",
+}"comment": "如果用户下载文件，请直接使用本命令\n参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16483422848569278",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文件数据",
+"comment": "注意：传递给本参数的字节集在本方法执行完毕后会被清空。",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "浏览器显示的下载的文件名称，例如：xxx.txt",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "自定义协议头",
+"comment": "例如：Content-Encoding:gzip",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+data type": "变整数""method name": "发送下载大文件",
+data type": "变整数""comment": "如果用户下载文件，请直接使用本命令\n参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16483424773868925",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文件路径",
+"comment": "要发送的文件全路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "浏览器显示的下载的文件名称，例如：xxx.txt",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "下载速度权重",
+"comment": "越大下载越快【不建议超过10】",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "自定义协议头",
+"comment": "例如：Content-Encoding:gzip",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+data type": "变整数"]
+  },
+  {
+comment": "例如：Content-Encoding:gzip""method name": "发送提示信息框",
+comment": "例如：Content-Encoding:gzip""comment": "发送提示信息框给用户",
+comment": "例如：Content-Encoding:gzip""data type": "逻辑型",
+comment": "例如：Content-Encoding:gzip""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "提示内容",
+"comment": "HTML页面数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+comment": "例如：Content-Encoding:gzip"]
+  },
+  {
+"method name": "发送跳出父框架",
+"comment": "iframe 子页面让父页面跳转",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "HTML页面数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+]
+  },
+  {
+ameter name": "下载速度权重""method name": "压力测试发送",
+ameter name": "下载速度权重""data type": "逻辑型",
+ameter name": "下载速度权重""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "下载速度权重"]
+  }
+}]
+ },
+ {
+"class name": "FOFHTTPS",
+"base class": "FOFHTTP基类",
+"methods": [
+  {
+ameter name": "连接ID""method name": "编码方式",
+ameter name": "连接ID""type": "property setter",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "Charset编码",
+"comment": "默认：(FOFHTTP_Charset编码.utf-8),详情参考FOFHTTP_Charset编码",
+"data type": "FOFHTTP_Charset编码",
+"@默认值": "FOFHTTP_Charset编码.utf_8"
+   }
+ameter name": "连接ID"]
+  },
+  {
+er name": "下载速度权重""method name": "压力测试发送""method name": "初始化HTTP服务",
+er name": "下载速度权重""method name": "压力测试发送""comment": "本方法只需要执行一次，如果使用了销毁服务器命令则必须再次执行本命令",
+er name": "下载速度权重""method name": "压力测试发送""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "SNI回调",
+"comment": "SNI回调函数指针(可选,如果为0则使用SNI默认回调函数).",
+"data type": "变整数",
+"@默认值": "0"
+   }
+er name": "下载速度权重""method name": "压力测试发送"]
+  },
+  {
+ame": "下载速度权重""method name": "压力测试发送""method name": "初始化HTTP服务""method name": "启动HTTP服务",
+ame": "下载速度权重""method name": "压力测试发送""method name": "初始化HTTP服务""data type": "逻辑型",
+ame": "下载速度权重""method name": "压力测试发送""method name": "初始化HTTP服务""parameters": [
+   {
+"parameter name": "服务器地址",
+"comment": "欲绑定的服务端IP地址。默认0.0.0.0",
+"data type": "文本型",
+"@默认值": "\"0.0.0.0\""
+   },
+   {
+"parameter name": "服务器端口",
+"comment": "欲绑定的服务端端口",
+"data type": "整数",
+"@默认值": "9550"
+   },
+   {
+"parameter name": "最大连接数",
+"comment": "服务端允许接受客户连接请求的最大数量。（单位：个）数量跟服务器配置相关自行测试",
+"data type": "整数",
+"@默认值": "1000"
+   },
+   {
+"parameter name": "Charset编码",
+"comment": "默认：(FOFHTTP_Charset编码.utf-8),详情参考FOFHTTP_Charset编码",
+"data type": "FOFHTTP_Charset编码",
+"@默认值": "FOFHTTP_Charset编码.utf_8"
+   },
+   {
+"parameter name": "服务_名称",
+"comment": "内_服务名称，默认FOFHTTP框架,尽量不要使用中文",
+"data type": "文本型",
+"@默认值": "\"FOFHTTP\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "默认超时5秒断开",
+"data type": "整数",
+"@默认值": "5000"
+   },
+   {
+"parameter name": "最大线程",
+"comment": "服务端同一时刻内处理的最大并发数量\n通常设置为 2 * CPU + 2硬件性能决定线程并发能力。\n推荐默认或者100个线程以内。 CPU：代表处理器数量（单位：个）\n默认为",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "防火墙",
+"comment": "默认为空，空代表不启动",
+"data type": "FOFHTTP_防火墙",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "服务器配置",
+"comment": "详情参考FOFHTTP_配置项类，默认空对象",
+"data type": "FOFHTTP_配置项",
+"@默认值": "空对象"
+   }
+ame": "下载速度权重""method name": "压力测试发送""method name": "初始化HTTP服务"]
+  },
+  {
+
+"method name": "结束HTTP服务",
+
+"comment": "使用本命令后可以再次直接使用启动服务来进行启动",
+
+"data type": "逻辑型"
+  },
+  {
+thod name": "结束HTTP服务""method name": "销毁HTTP服务",
+thod name": "结束HTTP服务""comment": "使用本命令后如果需要再次使用服务，必须进行一次初始化HTTP服务并启动HTTP服务"
+  },
+  {
+ameter name": "服务器配置""method name": "断开服务客户",
+ameter name": "服务器配置""data type": "逻辑型",
+ameter name": "服务器配置""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数 "
+   }
+ameter name": "服务器配置"]
+  },
+  {
+
+"method name": "取项目目录",
+
+"data type": "文本数组类"
+  },
+  {
+ }"method name": "项目目录",
+ }"comment": "项目文件的装载目录，可以重复使用本命令添加不同的项目路径，可以通过“取项目目录()”这个命令来获取所有的路径",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "目录路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "项目目录",
+
+"comment": "项目文件的装载目录,默认是直接返回项目目录数组的最后一个成员，也就是最后一次设置的项目路径",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "项目目录2",
+
+"comment": "项目文件的装载目录,返回第一位项目目录,如果使用了\"域名绑定项目目录\"命令，则需要使用本命令\n因为使用了\"域名绑定项目目录\"后，会根据协议头的host自动将当前域名的目录提升到第一位",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "域名绑定项目目录",
+
+"comment": "项目文件的装载目录，可以重复使用本命令添加不同的项目路径，可以通过“取项目目录()”这个命令来获取所有的路径\n注意：与“属性写”的项目目录对比，本命令可以直接给域名绑定项目目录\n参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16483468270748346\n注意:必须开启FOF_配置项.绑定域名  属性才可以使用本命令！",
+
+"parameters": [
+   {
+"parameter name": "目录路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "项目域名",
+"comment": "如果设置了FOF配置项的绑定域名属性，则这里需要表明对应的哪一个域名的项目目录；否则留空即可\n注意：一个域名只能绑定一个目录！\n注意：必须设置了FOF配置项的绑定域名属性，这里才会生效，否则输入了也无效！",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "清空项目目录"
+  },
+  {
+"comment": "项目文件的装载目录,默认是直接返回项目目录数组的最后一个成员，也就是最后一次设置的项目路径""method name": "路径文件是否存在",
+"comment": "项目文件的装载目录,默认是直接返回项目目录数组的最后一个成员，也就是最后一次设置的项目路径""data type": "逻辑型",
+"comment": "项目文件的装载目录,默认是直接返回项目目录数组的最后一个成员，也就是最后一次设置的项目路径""parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "用户数据.HTTP_待发整理.文件路径",
+"data type": "文本型"
+   }
+"comment": "项目文件的装载目录,默认是直接返回项目目录数组的最后一个成员，也就是最后一次设置的项目路径"]
+  },
+  {
+ }"method name": "取客户IP",
+ }"comment": "获取客户端连接地址 例如 127.0.0.1  ",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ }"method name": "最后一次失败描述",
+ }"comment": "获取最近一次失败操作的错误描述",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ }"method name": "最后一次失败代码",
+ }"comment": "获取最近一次失败操作的错误代码",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"method name": "获取客户端连接数",
+}"comment": "获取客户端连接数",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"method name": "设置是否标记静默时间",
+"comment": "设置是否标记静默时间（设置为 TRUE 时 DisconnectSilenceConnections() 和 GetSilencePeriod() 才有效，默认：TRUE）",
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"comment": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "bMarkSilence",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+"method name": "获取工作线程数量",
+"comment": "获取工作线程数量",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ }"method name": "获取最大连接数",
+ }"comment": "获取最大连接数",
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+data type": "变整数""method name": "设置断开静默连接",
+data type": "变整数""comment": "名称：断开静默连接 描述：断开超过指定时长的静默连接,TRUE-- 成功,FALSE-- 失败,/",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""parameters": [
+   {
+"parameter name": "pServer",
+"comment": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "dwPeriod",
+"comment": "时长（毫秒）",
+"data type": "整数"
+   },
+   {
+"parameter name": "bForce",
+"comment": "是否强制断开连接",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "变整数"]
+  },
+  {
+}"method name": "取自定义协议头",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "协议头数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "需要取的协议",
+"comment": "协议头文本（例如：Referer:）  注意：不能包含换行符回车符等特殊符号",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ type": "变整数""method name": "设置断开静默连接""method name": "发送100继续",
+ type": "变整数""method name": "设置断开静默连接""comment": "HTTP/1.1 100 Continue 当POST第一个包为空提供数据长度，可以发送这个响应告诉客户端允许上传数据，用于提高处理JSON兼容性",
+ type": "变整数""method name": "设置断开静默连接""data type": "逻辑型",
+ type": "变整数""method name": "设置断开静默连接""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ type": "变整数""method name": "设置断开静默连接"]
+  },
+  {
+
+"method name": "发送101回复",
+
+"comment": "HTTP/1.1 100 Continue 当POST第一个包为空提供数据长度，可以发送这个响应告诉客户端允许上传数据，用于提高处理JSON兼容性",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "自定义协议头",
+"comment": "例如：Content-Encoding:gzip",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "发送301跳转",
+
+"comment": "HTTP/1.1 301 Moved Permanently，让浏览器跳转到其它页面，并且设置浏览器的Cookies信息",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "跳转到地址URL /test.html",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+
+]
+  },
+  {
+ }"method name": "发送302跳转",
+ }"comment": "HTTP/1.1 302 Object moved，让浏览器跳转到其它页面，并且设置浏览器的Cookies信息",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "跳转到地址URL /test.html",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+ }]
+  },
+  {
+ }"method name": "发送303跳转",
+ }"comment": "HTTP/1.1 303 See Other，对于POST请求，它表示请求已经被处理",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "跳转到地址URL /test.html",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+ }]
+  },
+  {
+
+"method name": "发送_304无更新",
+
+"comment": "HTTP/1.1 304 Not Modified",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+
+]
+  },
+  {
+ }"method name": "发送307跳转",
+ }"comment": "HTTP/1.1 307 Temporary Redirect，对于POST请求，表示请求还没有被处理，客户端应该跳转后重新发起POST请求",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "跳转到地址URL /test.html",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+ }]
+  },
+  {
+ameter name": "跳转地址""method name": "发送404页面错误",
+ameter name": "跳转地址""comment": "404 页面不存在 HTTP/1.1 404 Not Found  可以自定义错误页面",
+ameter name": "跳转地址""data type": "逻辑型",
+ameter name": "跳转地址""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "HTML页面数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+ameter name": "跳转地址"]
+  },
+  {
+er name": "跳转地址""method name": "发送404页面错误""method name": "发送404漂亮页面",
+er name": "跳转地址""method name": "发送404页面错误""comment": "404 页面不存在 HTTP/1.1 404 Not Found  可以自定义错误页面",
+er name": "跳转地址""method name": "发送404页面错误""data type": "逻辑型",
+er name": "跳转地址""method name": "发送404页面错误""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面提示",
+"comment": "页面的提示内容，本方法与发送404页面错误不同，本方法必须内置一段话语",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "cookies 包括 设置文本,有效时间,有效目录三个参数",
+"data type": "FOFHTTP_用户数据"
+   }
+er name": "跳转地址""method name": "发送404页面错误"]
+  },
+  {
+data type": "FOFHTTP_用户数据""method name": "发送500错误",
+data type": "FOFHTTP_用户数据""comment": "HTTP/1.1 500 Internal Server Error",
+data type": "FOFHTTP_用户数据""data type": "逻辑型",
+data type": "FOFHTTP_用户数据""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面错误信息",
+"comment": "页面错误信息数据",
+"data type": "字节集类"
+   }
+data type": "FOFHTTP_用户数据"]
+  },
+  {
+ }"method name": "发送自定义数据",
+ }"comment": "需要自己来组装所有的协议头",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "HTML页面数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+ameter name": "服务句柄""method name": "发送页面数据",
+ameter name": "服务句柄""comment": "发送数据，用户发送浏览器直接显示的数据，必须页面、图片等小数据。大数据使用发送文件命令",
+ameter name": "服务句柄""data type": "逻辑型",
+ameter name": "服务句柄""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "页面数据",
+"comment": "HTML页面数据\n注意：传递给本参数的字节集在本方法执行完毕后会被清空。",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "自定义协议头",
+"comment": "例如：Content-Encoding:gzip",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+ameter name": "服务句柄"]
+  },
+  {
+data type": "文本数组类""method name": "发送下载文件",
+data type": "文本数组类""comment": "如果用户下载文件，请直接使用本命令\n参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16483422848569278",
+data type": "文本数组类""data type": "逻辑型",
+data type": "文本数组类""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文件数据",
+"comment": "注意：传递给本参数的字节集在本方法执行完毕后会被清空。",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "浏览器显示的下载的文件名称，例如：xxx.txt",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "自定义协议头",
+"comment": "例如：Content-Encoding:gzip",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+data type": "文本数组类"]
+  },
+  {
+ameter name": "自定义协议头""method name": "发送下载大文件",
+ameter name": "自定义协议头""comment": "如果用户下载文件，请直接使用本命令\n参考案例：https://www.lkuaiy.com/rsdetails?page=1&id=16483424773868925",
+ameter name": "自定义协议头""data type": "逻辑型",
+ameter name": "自定义协议头""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文件路径",
+"comment": "要发送的文件全路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "浏览器显示的下载的文件名称，例如：xxx.txt",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "下载速度权重",
+"comment": "越大下载越快【不建议超过10】",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "自定义协议头",
+"comment": "例如：Content-Encoding:gzip",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+ameter name": "自定义协议头"]
+  },
+  {
+ameter name": "自定义协议头""method name": "发送提示信息框",
+ameter name": "自定义协议头""comment": "发送提示信息框给用户",
+ameter name": "自定义协议头""data type": "逻辑型",
+ameter name": "自定义协议头""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "提示内容",
+"comment": "HTML页面数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+ameter name": "自定义协议头"]
+  },
+  {
+ameter name": "文件名称""method name": "发送跳出父框架",
+ameter name": "文件名称""comment": "iframe 子页面让父页面跳转",
+ameter name": "文件名称""data type": "逻辑型",
+ameter name": "文件名称""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "跳转地址",
+"comment": "HTML页面数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+ameter name": "文件名称"]
+  },
+  {
+comment": "HTML页面数据""method name": "压力测试发送",
+comment": "HTML页面数据""data type": "逻辑型",
+comment": "HTML页面数据""parameters": [
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "HTML页面数据"]
+  }
+]
+ },
+ {
+data type": "变整数""class name": "FOFHTTP转发服务器",
+data type": "变整数""comment": "★ 本类由\"飞翔的企鹅\"封装.\n实现TCP转发服务器,高并发线程安全.",
+data type": "变整数""variables": [
+  {
+
+"variable name": "当前转发位置_",
+
+"data type": "整数"
+  },
+  {
+
+"data type": "整数""variable name": "错误码_",
+
+"data type": "整数""data type": "整数"
+  }
+data type": "变整数"],
+data type": "变整数""methods": [
+  {
+ata type": "变整数""variables": [
+"method name": "停止"
+  },
+  {
+comment": "HTML页面数据""method name": "启动",
+comment": "HTML页面数据""comment": "初始化并启动转发服务器",
+comment": "HTML页面数据""result comment": "返回初始化结果",
+comment": "HTML页面数据""data type": "逻辑型",
+comment": "HTML页面数据""parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供所欲监听的地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"comment": "提供所欲监听的端口号. 有效端口号从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "转发地址",
+"comment": "提供所欲转发到的服务器地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转发端口",
+"comment": "提供所欲转发到的服务器端口. 有效端口号从0到65535.",
+"data type": "短整数数组类"
+   }
+comment": "HTML页面数据"]
+  },
+  {
+ }"method name": "取服务器对象",
+ }"comment": "获取当前转发端中所使用的服务器对象,可用于设置其各项属性或参数.",
+ }"data type": "HP_TCP服务器",
+ }"@视窗.返回参考": "真"
+  },
+  {
+comment": "HTML页面数据""method name": "取代理对象",
+comment": "HTML页面数据""comment": "获取当前转发端中所使用的代理端对象,可用于设置其各项属性或参数.",
+comment": "HTML页面数据""data type": "HP_TCP代理类",
+comment": "HTML页面数据""@视窗.返回参考": "真"
+  },
+  {
+
+"method name": "启动完毕",
+
+"comment": "当转发服务器启动后准备就绪时本事件将被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "本地地址",
+"comment": "转发端本地所监听的地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "本地端口",
+"comment": "转发端本地所监听的端口",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "客户离开",
+ }"comment": "当转发的客户端从转发目标端失去连接或从本地转发端失去连接时,本事件将被发送.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码",
+"data type": "HP错误码"
+   }
+ }]
+  },
+  {
+}"method name": "客户正在连接",
+}"comment": "当客户端准备连接到转发服务器时本事件将被发送",
+}"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+ameter name": "错误码""method name": "客户已连接",
+ameter name": "错误码""comment": "当客户端已成功连接到转发目标端时本事件被发送",
+ameter name": "错误码""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+ameter name": "错误码""type": "event",
+ameter name": "错误码""data type": "整数",
+ameter name": "错误码""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   }
+ameter name": "错误码"]
+  },
+  {
+]"method name": "转发被关闭",
+]"comment": "当转发服务器被关闭时本事件将被发送",
+]"type": "event",
+]"data type": "整数"
+  },
+  {
+]"method name": "数据转发成功",
+]"comment": "当转发服务器收到真实客户端发送的数据并成功转发至目标服务器时本事件将被发送,可用于流量统计.",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "当前转发端本次成功转发的数据内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "当前转发端本次成功转发的数据长度",
+"data type": "整数"
+   }
+]]
+  },
+  {
+"comment": "当转发服务器被关闭时本事件将被发送""method name": "数据接收成功",
+"comment": "当转发服务器被关闭时本事件将被发送""comment": "当转发服务器收到转发目标服务器发送的数据并成功转发至真实客户端时本事件将被发送,可用于流量统计.",
+"comment": "当转发服务器被关闭时本事件将被发送""type": "event",
+"comment": "当转发服务器被关闭时本事件将被发送""data type": "整数",
+"comment": "当转发服务器被关闭时本事件将被发送""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "当前转发端本次成功转发的数据内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "当前转发端本次成功转发的数据长度",
+"data type": "整数"
+   }
+"comment": "当转发服务器被关闭时本事件将被发送"]
+  }
+data type": "变整数"]
+ }
+ 整数]
+}

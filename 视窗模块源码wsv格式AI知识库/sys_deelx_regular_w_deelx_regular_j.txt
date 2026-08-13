@@ -1,0 +1,313 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+"package name": "火山.视窗.正则表达式",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+"comment": "封装自DEELX正则表达式库 http://www.regexlab.com/zh/deelx/",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+"@视窗.外部头文件": "\"Deelx\\\\DeelxTool.h\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+"@视窗.外部库.win32": "\"Deelx\\\\DeelxToolx86.lib\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+"@视窗.附属文件.win32": "\"Deelx\\\\DeelxToolx86.dll\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+"@视窗.外部库.x64": "\"Deelx\\\\DeelxToolx64.lib\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+"@视窗.附属文件.x64": "\"Deelx\\\\DeelxToolx64.dll\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+"classes": [
+ {
+"class name": "正则匹配模式",
+"comment": "提供了常用的正则匹配模式,其中的常量值可以使用\"位与\"或\"相加\"操作符组合起来使用.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@类用途": "访问静态成员",
+"constants": [
+  {
+徐ꡮŝ"constant name": "无",
+徐ꡮŝ"comment": "不使用任何匹配标记",
+徐ꡮŝ"data type": "整数",
+徐ꡮŝ"initial value": "@DEELX_NO_FLAG"
+  },
+  {
+constant name": "无""constant name": "单行模式",
+constant name": "无""comment": " 使小数点 \".\"可以匹配包含换行符（\\n）在内的任意字符.\n 默认情况下，小数点只匹配换行符以外的任意字符,不匹配换行符.",
+constant name": "无""data type": "整数",
+constant name": "无""initial value": "@DEELX_SINGLELINE"
+  },
+  {
+constant name": "无""constant name": "多行模式",
+constant name": "无""comment": "在指定了 多行模式(MULTILINE)之后,如果需要仅匹配字符串开始和结束位置,可以使用 \\A和 \\Z .",
+constant name": "无""data type": "整数",
+constant name": "无""initial value": "@DEELX_MULTILINE"
+  },
+  {
+constant name": "无""constant name": "全局模式",
+constant name": "无""comment": " 使 \\G可以用来匹配本次查找匹配的开始位置,对于连续的匹配来说,也就是上次匹配的结束位置.\n 默认情况下， \\G没有作用.",
+constant name": "无""data type": "整数",
+constant name": "无""initial value": "@DEELX_GLOBAL"
+  },
+  {
+
+"constant name": "忽略大小写",
+
+"comment": " 匹配时忽略大小写.默认情况下,正则表达式是要区分大小写的.\n 不管是否指定忽略大小写模式,字符类,比如 [A-Z]是要区分大小写的.",
+
+"data type": "整数",
+
+"initial value": "@DEELX_IGNORECASE"
+  },
+  {
+
+"constant name": "从右向左",
+
+"comment": "从右向左的进行匹配.从被匹配字符串的结束位置向前进行查找匹配,同时在表达式中也是右侧的表达式先进行匹配。",
+
+"data type": "整数",
+
+"initial value": "@DEELX_RIGHTTOLEFT"
+  },
+  {
+ JSON数组类 注释 = "存储匹配结果到本参数中""constant name": "扩展模式",
+ JSON数组类 注释 = "存储匹配结果到本参数中""comment": " 使本正则支持库忽略表达式中的空白字符,并且把从#开始到该行行末的内容视为注释.\n 默认情况下,正则表达式中的空格,换行等字符将可以匹配相应的字符.\n 指定了 扩展模式(EXTENDED)模式后,如果要在正则表达式中表示空白字符比如空格符号（space）时,应该用\\x20表示,如果要在表达式中表示 #符号，应该用 \\#表示.",
+ JSON数组类 注释 = "存储匹配结果到本参数中""data type": "整数",
+ JSON数组类 注释 = "存储匹配结果到本参数中""initial value": "@DEELX_EXTENDED"
+  }
+]
+ },
+ {
+"class name": "正则表达式类",
+"comment": "封装了DEELX正则表达式库,支持 单行模式(SINGLELINE)、多行模式(MULTILINE)、全局模式(GLOBAL)、忽略大小写(IGNORECASE)、从右向左(RIGHTTOLEFT)、扩展模式(EXTENDED) 等常见匹配模式.支持与 Perl 兼容的正则表达式语法.",
+"methods": [
+  {
+ss name": "正则表达式类""method name": "匹配",
+ss name": "正则表达式类""comment": "通过本方法进行正则匹配操作.",
+ss name": "正则表达式类""static": true,
+ss name": "正则表达式类""@嵌入式方法": "\"name = ForDeelx\\r\\nhas_body = true\"",
+ss name": "正则表达式类""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "正则表达式类"
+   },
+   {
+"parameter name": "要匹配的内容",
+"comment": "提供要匹配的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式文本",
+"comment": "提供表达式文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "匹配模式",
+"comment": "可以使用\"正则匹配模式\"类中各个常量值使用\"位与\"或\"相加\"操作符组合起来的值,默认为匹配多行.",
+"data type": "整数",
+"@默认值": "正则匹配模式.多行模式"
+   }
+ss name": "正则表达式类"]
+  },
+  {
+ameter name": "要匹配的内容""method name": "取匹配索引",
+ameter name": "要匹配的内容""comment": "本方法只能在\"匹配\"方法的子语句体中使用, 如果出错返回-1，否则返回当前匹配索引，从0 开始",
+ameter name": "要匹配的内容""data type": "整数",
+ameter name": "要匹配的内容""@嵌入式方法": "\"parent = ForDeelx\""
+  },
+  {
+
+"method name": "取子匹配文本",
+
+"comment": "本方法只能在\"匹配\"方法的子语句体中使用,取得与正则表达式中某个子表达式匹配的子文本.",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"parent = ForDeelx\"",
+
+"parameters": [
+   {
+"parameter name": "子匹配索引",
+"comment": "该参数对应与正则表达式中的一个子表达式（以圆括号标记）,子匹配索引从1开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"@嵌入式方法": "\"parent = ForDeelx\"""method name": "取匹配文本",
+"@嵌入式方法": "\"parent = ForDeelx\"""comment": "本方法只能在\"匹配\"方法的子语句体中使用,取得与整个正则表达式匹配的文本.",
+"@嵌入式方法": "\"parent = ForDeelx\"""data type": "文本型",
+"@嵌入式方法": "\"parent = ForDeelx\"""@嵌入式方法": "\"parent = ForDeelx\""
+  },
+  {
+"method name": "分组取子匹配文本",
+"comment": "本方法只能在\"匹配\"方法的子语句体中使用,通过分组名称取子匹配文本.",
+"data type": "文本型",
+"@嵌入式方法": "\"parent = \\\"ForDeelx\\\"\"",
+"parameters": [
+   {
+"parameter name": "分组名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+LX_MULTILINE"method name": "取子匹配数量",
+LX_MULTILINE"comment": "本方法只能在\"匹配\"方法的子语句体中使用.\n取出该正则的子表达式匹配到的数量,就是有几个()括住的子表达式",
+LX_MULTILINE"static": true,
+LX_MULTILINE"data type": "整数",
+LX_MULTILINE"@嵌入式方法": "\"parent = \\\"ForDeelx\\\"\"",
+LX_MULTILINE"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "正则表达式类"
+   }
+LX_MULTILINE]
+  }
+]
+ },
+ {
+"class name": "正则工具类",
+"comment": "提供常用正则匹配方法",
+"@全局类": "真",
+"methods": [
+  {
+X_MULTILINE"parameters": [
+"method name": "正则匹配到数组",
+X_MULTILINE"parameters": [
+"comment": "如果有子匹配文本就把子匹配文本取出来,否则就把匹配的文本取出来.",
+X_MULTILINE"parameters": [
+"result comment": "返回匹配数量",
+X_MULTILINE"parameters": [
+"static": true,
+X_MULTILINE"parameters": [
+"data type": "整数",
+X_MULTILINE"parameters": [
+"parameters": [
+   {
+"parameter name": "要匹配的内容",
+"comment": "提供要匹配的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"comment": "提供正则表达式文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "匹配结果",
+"comment": "匹配结果放到此参数中",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "匹配标志",
+"comment": "提供匹配模式,可以使用\"正则匹配模式\"类中各个常量值使用\"位与\"或\"相加\"操作符组合起来的值,默认为\"正则匹配模式.无\".",
+"data type": "整数",
+"@默认值": "正则匹配模式.无"
+   }
+X_MULTILINE"parameters": [
+]
+  },
+  {
+
+"method name": "正则文本替换",
+
+"comment": "通过本方法可以进行正则替换操作",
+
+"result comment": "如果替换失败则返回空文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "要匹配的内容",
+"comment": "提供要匹配的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"comment": "提供正则表达式文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用作替换的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始位置",
+"comment": "进行查找替换的开始位置.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "替换次数",
+"comment": "-1表示全部替换",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "匹配模式",
+"comment": "提供匹配模式,可以使用\"正则匹配模式\"类中各个常量值使用\"位与\"或\"相加\"操作符组合起来的值,默认无.",
+"data type": "整数",
+"@默认值": "正则匹配模式.无"
+   }
+
+]
+  },
+  {
+
+"method name": "正则匹配到JSON数组",
+
+"comment": "本方法可以将正则匹配结果,存储在JSON数组中.",
+
+"result comment": "返回匹配数量",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "要匹配的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"comment": "提供正则表达式文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "匹配结果",
+"comment": "存储匹配结果到本参数中",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "匹配标志",
+"comment": "提供匹配模式,可以使用\"正则匹配模式\"类中各个常量值使用\"位与\"或\"相加\"操作符组合起来的值,默认为\"正则匹配模式.无\".",
+"data type": "整数",
+"@默认值": "正则匹配模式.无"
+   }
+
+]
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"正则表达式支持库".
+
+]
+}

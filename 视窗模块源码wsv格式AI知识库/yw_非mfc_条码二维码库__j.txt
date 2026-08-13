@@ -1,0 +1,236 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\yw_非mfc_条码二维码库__p.txt"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\yw_非mfc_条码二维码库__p.txt"package name": "火山.仰望",
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\yw_非mfc_条码二维码库__p.txt"@文档": "\"category = \\\"条码二维码库\\\"\"",
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\yw_非mfc_条码二维码库__p.txt"classes": [
+ {
+"class name": "条码解析类_",
+"comment": "版本：0.23.90\nzbar使用了GNU LGPL 2.1许可",
+"@文档": "\"category = \\\"条码二维码库.条码二维码解析\\\"\"",
+"@视窗.外部头文件": "\"..\\\\tml\\\\zbar\\\\include\\\\zbar.h\"",
+"@视窗.外部库": "\"..\\\\tml\\\\zbar\\\\lib\\\\$(p)\\\\zbar.lib\\r\\n..\\\\tml\\\\zbar\\\\lib\\\\$(p)\\\\iconv.lib\\r\\n..\\\\tml\\\\zbar\\\\lib\\\\$(p)\\\\charset.lib\"",
+"@视窗.外部库": "\"winmm.lib\"",
+"methods": [
+  {
+ GP图形类"method name": "解析图片",
+ GP图形类"comment": "支持解析二维码及条形码",
+ GP图形类"result comment": "识别成功返回真",
+ GP图形类"data type": "逻辑型",
+ GP图形类"@禁止流程检查": "真",
+ GP图形类"parameters": [
+   {
+"parameter name": "条码数据",
+"comment": "图片数据",
+"data type": "字节集类",
+"@输出名": "\"picBin\""
+   },
+   {
+"parameter name": "返回的解码信息",
+"comment": "集合的信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的解码信息组",
+"comment": "分组信息",
+"data type": "解析结果组",
+"@输出名": "\"retArray\"",
+"@默认值": "空对象"
+   }
+ GP图形类]
+  }
+]
+ },
+ {
+"class name": "解析结果组",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"条码二维码库.条码二维码解析.附加类\\\"\"",
+"@模板实现类": "\"解码结果类\""
+ },
+ {
+"class name": "解码结果类",
+"base class": "扩展对象类",
+"@文档": "\"category = \\\"条码二维码库.条码二维码解析.附加类\\\"\"",
+"variables": [
+  {
+@视窗.外部库": "\"winmm.lib\"""variable name": "条码内容",
+@视窗.外部库": "\"winmm.lib\"""data type": "文本型",
+@视窗.外部库": "\"winmm.lib\"""@输出名": "\"content\""
+  },
+  {
+ GP图像类"variable name": "矩形",
+ GP图像类"data type": "矩形类",
+ GP图像类"@输出名": "\"rect\""
+  },
+  {
+ GP位图类"variable name": "类型",
+ GP位图类"data type": "文本型",
+ GP位图类"@输出名": "\"type\""
+  },
+  {
+ }"variable name": "方向",
+ }"data type": "文本型",
+ }"@输出名": "\"orientation\""
+  }
+]
+ },
+ {
+"class name": "二维码类_",
+"comment": "qrencode4.1.1版",
+"@视窗.外部头文件": "\"..\\\\tml\\\\qrencode.h\"",
+"@视窗.外部库.non_static": "\"..\\\\tml\\\\lib\\\\$(p)\\\\qrencode.lib\"",
+"methods": [
+  {
+GP位图类"@输出名": "\"type\"""method name": "生成二维码_",
+GP位图类"@输出名": "\"type\"""data type": "字节集类",
+GP位图类"@输出名": "\"type\"""@禁止流程检查": "真",
+GP位图类"@输出名": "\"type\"""parameters": [
+   {
+"parameter name": "二维码内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "缩放大小",
+"comment": "二维码大小随数字大小而变化",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "QR码版本",
+"comment": "数字越大,QR码的容量越大，如果指定为0，则库将选择适合输入数据的最小版本",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "容错级别",
+"comment": "0、7%　1、15%　2、25%　3、30%",
+"data type": "整数",
+"@默认值": "3"
+   },
+   {
+"parameter name": "红色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "绿色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "蓝色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "Logo数据",
+"comment": "二维码中间的Logo图标",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否圆化Logo",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否自动计算Logo",
+"comment": "自动计算Logo尺寸，按二维码总尺寸占比显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "Logo宽度",
+"comment": "是否自动Logo为真时，本参数失效",
+"data type": "小数",
+"@默认值": "50"
+   },
+   {
+"parameter name": "Logo高度",
+"comment": "是否自动Logo为真时，本参数失效",
+"data type": "小数",
+"@默认值": "50"
+   }
+GP位图类"@输出名": "\"type\""]
+  },
+  {
+@默认值": "50""method name": "取二维码尺寸_",
+@默认值": "50""data type": "尺寸类"
+  },
+  {
+"method name": "保存二维码_",
+"comment": "只保存原图(无Logo和改色后的)，“保存二维码2_”命令可保存带Logo和改色后的二维码",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "保存路径",
+"comment": "提供所欲写到的BMP文件名，例如“C:\\\\二维码.bmp”",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出宽度",
+"comment": "  指定图片的输出宽度. 如果小于0,参数值指定的是最终图片输出宽度相对于\n当前图片宽度的百分比(最小为10%); 如果等于0,则按图片原宽度输出; 如果\n大于0,指定输出图片的绝对宽度.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输出高度",
+"comment": "  指定图片的输出高度. 如果小于0,参数值指定的是最终图片输出高度相对于\n当前图片高度的百分比(最小为10%); 如果等于0,则按图片原高度输出; 如果\n大于0,指定输出图片的绝对高度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+ameter name": "保存路径""method name": "保存二维码2_",
+ameter name": "保存路径""comment": "与“保存二维码_”差别，本命令可保存带Logo和改色后的二维码",
+ameter name": "保存路径""data type": "逻辑型",
+ameter name": "保存路径""parameters": [
+   {
+"parameter name": "保存路径",
+"comment": "提供所欲写到的BMP文件名，例如“C:\\\\二维码.bmp”",
+"data type": "文本型"
+   }
+ameter name": "保存路径"]
+  },
+  {
+comment": "是否自动Logo为真时，本参数失效""method name": "修改二维码颜色",
+comment": "是否自动Logo为真时，本参数失效""comment": "在“生成二维码_”如有设置Logo，执行本命令时也将自动处理",
+comment": "是否自动Logo为真时，本参数失效""data type": "字节集类",
+comment": "是否自动Logo为真时，本参数失效""parameters": [
+   {
+"parameter name": "图片数据",
+"comment": "为空时修改内部生成的图片，不为空时则修改提供的图片",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "红色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "绿色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "蓝色比例",
+"comment": "-1 到 1 之间",
+"data type": "小数",
+"@默认值": "0"
+   }
+comment": "是否自动Logo为真时，本参数失效"]
+  }
+]
+ }
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\yw_非mfc_条码二维码库__p.txt]
+}

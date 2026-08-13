@@ -1,0 +1,430 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.deelx\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"Deelx\\\\DeelxToolEx.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"Deelx\\\\DeelxToolExx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"Deelx\\\\DeelxToolExx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"Deelx\\\\DeelxToolExx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"Deelx\\\\DeelxToolExx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "匹配模式_常量类",
+"constants": [
+  {
+
+"constant name": "NO_FLAG",
+
+"comment": "不使用任何匹配标记",
+
+"data type": "整数",
+
+"initial value": "@DEELX_NO_FLAG"
+  },
+  {
+
+"constant name": "SINGLELINE",
+
+"comment": "使小数点 \".\" 可以匹配包含换行符（\\n）在内的任意字符。默认情况下，小数点只匹配换行符以外的任意字符，不匹配换行符。",
+
+"data type": "整数",
+
+"initial value": "@DEELX_SINGLELINE"
+  },
+  {
+
+"constant name": "MULTILINE",
+
+"comment": "使 ^ 符号除了能够匹配字符串开始位置外，还能匹配换行符（\\n）之后的位置；使 $ 符号除了能够匹配字符串结束位置外，还能匹配换行符之前的位置。默认情况下， ^ 符号只能匹配字符串开始位置， $ 符号只能匹配字符串结束位置。\n\nSINGLELINE 和 MULTILINE 虽然听起来相互矛盾，但却是作用在不同的地方。因此它们是可以组合使用的。\n\n在指定了 MULTILINE 之后，如果需要仅匹配字符串开始和结束位置，可以使用 \\A 和 \\Z。\n\n\n--------------------------------------------------------------------------------\n",
+
+"data type": "整数",
+
+"initial value": "@DEELX_MULTILINE"
+  },
+  {
+
+"constant name": "GLOBAL",
+
+"comment": "使 \\G 可以用来匹配本次查找匹配的开始位置，对于连续的匹配来说，也就是上次匹配的结束位置。默认情况下， \\G 没有作用。\n\nDEELX 在进行替换操作（Replace）时，不管是否指定 GLOBAL 模式，DEELX 都可以进行所有的替换。是否指定 GLOBAL 模式只是对 \\G 起作用。如果希望进行有限次数的替换，可在替换操作时指定替换次数。\n",
+
+"data type": "整数",
+
+"initial value": "@DEELX_GLOBAL"
+  },
+  {
+
+"constant name": "IGNORECASE",
+
+"comment": "匹配时忽略大小写。默认情况下，正则表达式是要区分大小写的。不管是否指定忽略大小写模式，字符类，比如 [A-Z] 是要区分大小写的。",
+
+"data type": "整数",
+
+"initial value": "@DEELX_IGNORECASE"
+  },
+  {
+
+"constant name": "RIGHTTOLEFT",
+
+"comment": "从右向左的进行匹配。从被匹配字符串的结束位置向前进行查找匹配，同时，在表达式中也是右侧的表达式先进行匹配。\n\n表达式的写法仍然按原来的习惯：匹配次数修饰符（*, +, {n}, ……）仍然位于被修饰部分的右侧而不是左侧；^ 仍然匹配文本开始而不是文本结束；(?=xxx) 仍然是正向与搜索（向右预搜索），而不是向左；分组（group）编号仍然是从左向右进行编号；等等。\n\n不管整个表达式是否指定了 RightToLeft 模式，\"反向预搜索（反向零宽度断言）\" 内的表达式始终采用 RightToLeft 模式。\n",
+
+"data type": "整数",
+
+"initial value": "@DEELX_RIGHTTOLEFT"
+  },
+  {
+
+"constant name": "EXTENDED",
+
+"comment": "使 DEELX 忽略表达式中的空白字符，并且把从 # 开始到该行行末的内容视为注释。默认情况下，正则表达式中的空格，换行等字符将可以匹配相应的字符。指定了 EXTENDED 模式后，如果要在正则表达式中表示空白字符比如空格符号（space）时，应该用 \\x20 表示，如果要在表达式中表示 # 符号，应该用 \\# 表示。\n\n不管是否指定了 EXTENDED 模式，括号内以 ?# 号开始时，比如(?# xxx )，那么这一对括号以及包含的内容都始终作为注释而被忽略。\n",
+
+"data type": "整数",
+
+"initial value": "@DEELX_EXTENDED"
+  }
+]
+ },
+ {
+"class name": "______正则辅助函数"
+ },
+ {
+"class name": "正则表达式类f",
+"methods": [
+  {
+
+"method name": "匹配",
+
+"@嵌入式方法": "\"name = ForDeelx\\r\\nhas_body = true\"",
+
+"parameters": [
+   {
+"parameter name": "要匹配的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "匹配模式",
+"comment": "默认匹配多行",
+"data type": "整数",
+"@默认值": "匹配模式_常量类.MULTILINE"
+   },
+   {
+"parameter name": "开始位置",
+"comment": "默认从0位置开始匹配",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否拷贝要匹配的内容",
+"comment": "就是再内部备份一次第一个参数，这样即使第一个参数中的内容不存在了，也能正常工作，但是效率慢一点\n如果是再局部使用的话，我个人建议 这个参数设置为假，这样效率超高",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "取匹配索引",
+
+"comment": "如果出错 返回-1，否则返回当前匹配索引，从0 开始",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"parent = ForDeelx\""
+  },
+  {
+
+"method name": "取子匹配文本",
+
+"comment": "只能用在匹配函数包围中间",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"parent = ForDeelx\"",
+
+"parameters": [
+   {
+"parameter name": "子匹配索引",
+"comment": "从0开始 0表示匹配到的文本  大于0的索引表示 子匹配文本",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取匹配文本",
+
+"comment": "只能用在匹配函数包围中间",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"parent = ForDeelx\""
+  },
+  {
+
+"method name": "取匹配文本开始位置",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"parent = ForDeelx\""
+  },
+  {
+
+"method name": "取匹配文本结束位置",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"parent = ForDeelx\""
+  },
+  {
+
+"method name": "取子匹配文本开始位置",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"parent = ForDeelx\"",
+
+"parameters": [
+   {
+"parameter name": "子匹配索引",
+"comment": "从0开始 0表示匹配到的文本  大于0的索引表示 子匹配文本",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取子匹配文本结束位置",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"parent = ForDeelx\"",
+
+"parameters": [
+   {
+"parameter name": "子匹配索引",
+"comment": "从0开始 0表示匹配到的文本  大于0的索引表示 子匹配文本",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取子匹配文本_通过分组名字",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"parent = \\\"ForDeelx\\\"\"",
+
+"parameters": [
+   {
+"parameter name": "分组名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取子匹配数量",
+
+"comment": "只能用在匹配函数包围中间\n取出该正则的子表达式匹配到的数量 就是有几个 ()括住的 子表达式",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "______正则表达式辅助函数",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "正则_是否匹配文本",
+
+"comment": "用一个正则表达式来寻找文本中是否出现 表达式规定的文本，如果存在则返回真，否则假",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "源码内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "匹配标志",
+"data type": "整数",
+"@默认值": "匹配模式_常量类.NO_FLAG"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取中间_正则容器",
+
+"comment": "如果有子匹配文本就把子匹配文本取出来，否则就把 匹配的文本取出来",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "网页内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "匹配结果",
+"data type": "容器文本类"
+   },
+   {
+"parameter name": "匹配标志",
+"data type": "整数",
+"@默认值": "匹配模式_常量类.NO_FLAG"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取中间_正则数组",
+
+"comment": "如果有子匹配文本就把子匹配文本取出来，否则就把 匹配的文本取出来",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "网页内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "匹配结果",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "匹配标志",
+"data type": "整数",
+"@默认值": "匹配模式_常量类.NO_FLAG"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_替换_正则",
+
+"comment": "如果替换失败则返回空文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用作替换的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始位置",
+"comment": "进行查找替换的开始位置。默认(-1)表示根据是否是 RIGHTTOLEFT 自动决定开始位置。",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "替换次数",
+"comment": "-1表示全部替换",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "匹配模式",
+"data type": "整数",
+"@默认值": "匹配模式_常量类.NO_FLAG"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取中间_键值列表",
+
+"result comment": "返回匹配数量",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "网页内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来保存匹配值",
+"data type": "键值列表"
+   },
+   {
+"parameter name": "匹配标志",
+"data type": "整数",
+"@默认值": "匹配模式_常量类.NO_FLAG"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "______正则测试",
+"methods": [
+  {
+
+"method name": "开始测试"
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

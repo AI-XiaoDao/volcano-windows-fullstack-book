@@ -1,0 +1,856 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"FBrowser浏览器".
+
+{
+问本程序中的接口需要引用模块"FBrowser浏览器"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"FBrowser浏览器"."package name": "FBrowser.回调",
+问本程序中的接口需要引用模块"FBrowser浏览器"."comment": "各种浏览器事件回调和设置回调合集",
+问本程序中的接口需要引用模块"FBrowser浏览器"."classes": [
+ {
+"class name": "类_FBrowser_下载图片回调",
+"@视窗.后缀文本": "\"public FBroHsDownloadImageCallback\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+    "method name": "图片下载完成",
+    "@虚拟方法": "可覆盖",
+    "parameters": [
+   {
+"parameter name": "图片链接",
+"data type": "文本型"
+   },
+   {
+"parameter name": "状态码",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片",
+"data type": "类_FBrowser_图片"
+   }
+    ]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_打开文件对话框回调",
+"@视窗.后缀文本": "\"public FBroHsFileDialogCallback\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+data type": "整数""method name": "即将关闭文件对话框",
+data type": "整数""@虚拟方法": "可覆盖",
+data type": "整数""parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "多个以\";\"隔开",
+"data type": "文本型"
+   }
+data type": "整数"]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_打印为PDF回调",
+"@视窗.后缀文本": "\"public FBroHsPdfPrintCallback\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+    "method name": "即将完成打印",
+    "@虚拟方法": "可覆盖",
+    "parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否成功",
+"data type": "逻辑型"
+   }
+    ]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_字符串回调",
+"@视窗.后缀文本": "\"public FBroHsStringVisitor\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+   "parameters": [
+"method name": "回调",
+   "parameters": [
+"@虚拟方法": "可覆盖",
+   "parameters": [
+"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+   "parameters": [
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_JS回调",
+"@视窗.后缀文本": "\"public FBroHsJsCallback\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+ 整数"method name": "回调",
+ 整数"@虚拟方法": "可覆盖",
+ 整数"parameters": [
+   {
+"parameter name": "返回结果",
+"comment": "列表索引0为类指针；1为值类型，参考：JS返回值类型.；2为类型对应值",
+"data type": "类_FBrowser_列表值"
+   }
+ 整数]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_DOM回调",
+"@视窗.后缀文本": "\"public FBroHsDOMVisitor\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+整数"@虚拟方法": "可覆盖""method name": "回调",
+整数"@虚拟方法": "可覆盖""@虚拟方法": "可覆盖",
+整数"@虚拟方法": "可覆盖""parameters": [
+   {
+"parameter name": "DOM文档",
+"comment": "列表索引0为类指针，1为值类型，2为类型对应值",
+"data type": "类_FBrowser_DOM文档"
+   }
+整数"@虚拟方法": "可覆盖"]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_选择证书回调",
+"methods": [
+  {
+data type": "类_FBrowser_DOM文档""method name": "选择",
+data type": "类_FBrowser_DOM文档""parameters": [
+   {
+"parameter name": "证书",
+"data type": "类_FBrowser_X509证书"
+   }
+data type": "类_FBrowser_DOM文档"]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_授权回调",
+"methods": [
+  {
+
+"method name": "是否为空",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "继续",
+"parameters": [
+   {
+"parameter name": "用户名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"data type": "文本型"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_运行命令菜单回调",
+"comment": "CefRunContextMenuCallback",
+"methods": [
+  {
+"method name": "是否为空",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+rowser_选择证书回调"method name": "继续",
+rowser_选择证书回调"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "事件标识",
+"data type": "整数"
+   }
+rowser_选择证书回调]
+  },
+  {
+
+"method name": "取消"
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_即将下载回调",
+"comment": "CefBeforeDownloadCallback",
+"methods": [
+  {
+
+"method name": "是否为空",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "继续",
+
+"parameters": [
+   {
+"parameter name": "存放位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "弹出对话框",
+"data type": "逻辑型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_正在下载回调",
+"comment": "CefDownloadItemCallback",
+"methods": [
+  {
+}"method name": "是否为空",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+ss name": "类_FBrowser_字符串回调""method name": "取消"
+  },
+  {
+rowser_即将下载回调"method name": "暂停"
+  },
+  {
+ameter name": "证书""method name": "恢复"
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_对话框回调",
+"comment": "CefFileDialogCallback",
+"methods": [
+  {
+ta type": "类_FBrowser_DOM文档"]"method name": "是否为空",
+ta type": "类_FBrowser_DOM文档"]"data type": "逻辑型",
+ta type": "类_FBrowser_DOM文档"]"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "继续",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "设置要上传的文件路径",
+"data type": "FBrowser_文本数组"
+   }
+
+]
+  },
+  {
+thod name": "是否为空""method name": "取消"
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_JS对话框回调",
+"comment": "CefJSDialogCallback",
+"methods": [
+  {
+methods": [
+"method name": "是否为空",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "继续",
+"parameters": [
+   {
+"parameter name": "成功",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "用户输入",
+"comment": "设置要上传的文件路径",
+"data type": "文本型"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_任务回调",
+"@视窗.后缀文本": "\"public FBroHsTask\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+"method name": "执行",
+"@虚拟方法": "可覆盖"
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_Cookie回调",
+"@视窗.后缀文本": "\"public FBroHsCookieVisitor\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+hod name": "执行""method name": "开始",
+hod name": "执行""@虚拟方法": "可覆盖"
+  },
+  {
+}"method name": "结束",
+}"@虚拟方法": "可覆盖"
+  },
+  {
+ameter name": "密码""method name": "访问",
+ameter name": "密码""comment": "返回真继续，返回假停止获取",
+ameter name": "密码""data type": "逻辑型",
+ameter name": "密码""@虚拟方法": "可覆盖",
+ameter name": "密码""parameters": [
+   {
+"parameter name": "Cookie数据",
+"data type": "FBrowser_Cookie数据"
+   },
+   {
+"parameter name": "当前项",
+"data type": "整数"
+   },
+   {
+"parameter name": "总数",
+"data type": "整数"
+   },
+   {
+"parameter name": "删除当前cookie",
+"comment": "设置为真，则删除当前项",
+"data type": "逻辑型类"
+   }
+ameter name": "密码"]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_JS交互回调",
+"methods": [
+  {
+ameter name": "密码""method name": "是否为空",
+ameter name": "密码""data type": "逻辑型",
+ameter name": "密码""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "成功",
+
+"parameters": [
+   {
+"parameter name": "响应文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "失败",
+
+"parameters": [
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误文本",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_回调",
+"methods": [
+  {
+ameter name": "事件标识""method name": "是否为空",
+ameter name": "事件标识""data type": "逻辑型",
+ameter name": "事件标识""@禁止流程检查": "真"
+  },
+  {
+rowser_任务回调"method name": "继续"
+  },
+  {
+methods": [
+"method name": "取消"
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_资源忽略回调",
+"methods": [
+  {
+methods": [
+"method name": "是否为空",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真"
+  },
+  {
+methods": [
+"method name": "继续",
+methods": [
+"parameters": [
+   {
+"parameter name": "忽略大小",
+"data type": "长整数"
+   }
+methods": [
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_资源读取回调",
+"methods": [
+  {
+ }"method name": "是否为空",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "继续",
+ }"parameters": [
+   {
+"parameter name": "读取大小",
+"data type": "长整数"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_V8处理程序",
+"@视窗.后缀文本": "\"public FBroHsV8Handler\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+@禁止创建对象": "真""method name": "执行",
+@禁止创建对象": "真""comment": "返回假执行失败；返回真，通过返回值类指针返回数据",
+@禁止创建对象": "真""data type": "逻辑型",
+@禁止创建对象": "真""@虚拟方法": "可覆盖",
+@禁止创建对象": "真""parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "名字",
+"data type": "文本型"
+   },
+   {
+"parameter name": "项目",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "参数清单",
+"data type": "类_FBrowser_V8值数组"
+   },
+   {
+"parameter name": "设置返回V8值",
+"comment": "设置返回的V8值",
+"data type": "类_FBrowser_设置V8值"
+   },
+   {
+"parameter name": "返回异常文本",
+"comment": "设置返回的错误文本",
+"data type": "FBrowser_文本"
+   }
+@禁止创建对象": "真"]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_V8存取器",
+"@视窗.后缀文本": "\"public FBroHsV8Accessor\"",
+"methods": [
+  {
+ }"method name": "获取",
+ }"data type": "逻辑型",
+ }"@虚拟方法": "可覆盖",
+ }"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对象",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "设置返回值",
+"comment": "设置对象返回值",
+"data type": "类_FBrowser_设置V8值"
+   },
+   {
+"parameter name": "返回异常文本",
+"comment": "设置异常返回文本",
+"data type": "FBrowser_文本"
+   }
+ }]
+  },
+  {
+rowser_V8值数组"method name": "设置",
+rowser_V8值数组"data type": "逻辑型",
+rowser_V8值数组"@虚拟方法": "可覆盖",
+rowser_V8值数组"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对象",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "值",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "返回异常文本",
+"comment": "设置异常返回文本",
+"data type": "FBrowser_文本"
+   }
+rowser_V8值数组]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_V8拦截器",
+"@视窗.后缀文本": "\"public FBroHsV8Interceptor\"",
+"methods": [
+  {
+rowser_设置V8值"method name": "获取_名",
+rowser_设置V8值"data type": "逻辑型",
+rowser_设置V8值"@虚拟方法": "可覆盖",
+rowser_设置V8值"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对象",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "设置返回值",
+"comment": "设置对象返回值",
+"data type": "类_FBrowser_设置V8值"
+   },
+   {
+"parameter name": "返回异常文本",
+"comment": "设置异常返回文本",
+"data type": "FBrowser_文本"
+   }
+rowser_设置V8值]
+  },
+  {
+data type": "FBrowser_文本""method name": "设置_名",
+data type": "FBrowser_文本""data type": "逻辑型",
+data type": "FBrowser_文本""@虚拟方法": "可覆盖",
+data type": "FBrowser_文本""parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对象",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "值",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "返回异常文本",
+"comment": "设置异常返回文本",
+"data type": "FBrowser_文本"
+   }
+data type": "FBrowser_文本"]
+  },
+  {
+ }"method name": "获取_索引",
+ }"data type": "逻辑型",
+ }"@虚拟方法": "可覆盖",
+ }"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "对象",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "设置返回值",
+"comment": "设置对象返回值",
+"data type": "类_FBrowser_设置V8值"
+   },
+   {
+"parameter name": "返回异常文本",
+"comment": "设置异常返回文本",
+"data type": "FBrowser_文本"
+   }
+ }]
+  },
+  {
+ameter name": "Cookie数据""method name": "设置_索引",
+ameter name": "Cookie数据""data type": "逻辑型",
+ameter name": "Cookie数据""@虚拟方法": "可覆盖",
+ameter name": "Cookie数据""parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "对象",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "值",
+"data type": "类_FBrowser_V8值"
+   },
+   {
+"parameter name": "返回异常文本",
+"comment": "设置异常返回文本",
+"data type": "FBrowser_文本"
+   }
+ameter name": "Cookie数据"]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_插件资源回调",
+"comment": "CefGetExtensionResourceCallback",
+"methods": [
+  {
+"method name": "是否为空",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "继续",
+}"parameters": [
+   {
+"parameter name": "读取流",
+"data type": "类_FBrowser_读取流"
+   }
+}]
+  },
+  {
+"method name": "取消"
+  }
+]
+ },
+ {
+"class name": "类_FBrowserVIP_通用回调",
+"@视窗.后缀文本": "\"public FBroHsGeneralResultCallback\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+"method name": "数据回调",
+"@虚拟方法": "可覆盖",
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "标识ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "成功",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "列表数据回调",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "标识ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "成功",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "列表值",
+"data type": "类_FBrowser_列表值"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_快捷菜单回调",
+"comment": "CefRunQuickMenuCallback",
+"methods": [
+  {
+
+"method name": "是否为空",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "继续",
+ }"parameters": [
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "事件标识",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "取消"
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_媒体接入回调",
+"comment": "CefMediaAccessCallback",
+"methods": [
+  {
+ameter name": "成功""method name": "是否为空",
+ameter name": "成功""data type": "逻辑型",
+ameter name": "成功""@禁止流程检查": "真"
+  },
+  {
+data type": "整数""method name": "继续",
+data type": "整数""parameters": [
+   {
+"parameter name": "允许许可",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+data type": "文本型""method name": "取消"
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_权限提示回调",
+"comment": "CefPermissionPromptCallback",
+"methods": [
+  {
+data type": "整数""method name": "是否为空",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+}"method name": "继续",
+}"parameters": [
+   {
+"parameter name": "结果标识",
+"data type": "整数"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_清理缓存回调",
+"@视窗.后缀文本": "\"public FBroHsClearCacheCallback\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+
+"method name": "完成",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "是否成功",
+"comment": "执行成功为真，执行失败为假",
+"data type": "逻辑型"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"FBrowser浏览器".]
+}

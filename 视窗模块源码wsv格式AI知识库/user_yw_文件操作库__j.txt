@@ -1,0 +1,3162 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+ 变整数"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ 变整数"package name": "火山.仰望",
+ 变整数"@文档": "\"category = \\\"文件操作库\\\"\"",
+ 变整数"classes": [
+ {
+ = "GetPropW""class name": "文件属性类_",
+ = "GetPropW""@全局类": "真",
+ = "GetPropW""methods": [
+  {
+ 变整数"method name": "取文件属性_",
+ 变整数"result comment": "1、只读文件 2、隐藏文件 4、系统文件 16、子目录 32、存档文件 128、通常文件 256、临时文件",
+ 变整数"static": true,
+ 变整数"data type": "整数",
+ 变整数"@禁止流程检查": "真",
+ 变整数"parameters": [
+   {
+"parameter name": "目标文件",
+"data type": "文本型"
+   }
+ 变整数]
+  },
+  {
+    "method name": "置文件属性_",
+    "static": true,
+    "data type": "逻辑型",
+    "@禁止流程检查": "真",
+    "parameters": [
+   {
+"parameter name": "目标文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "0、取消所有 1、只读文件 2、隐藏文件 4、系统文件 16、子目录 32、存档文件 128、通常文件 256、临时文件\n通过值相加可以设置多个属性",
+"data type": "整数"
+   }
+    ]
+  }
+ = "GetPropW"]
+ },
+ {
+data type": "文本型""class name": "文本数据读取类_",
+data type": "文本型""comment": "用于快速便捷操作文本变量，快速取出指定行数据.\n操作流程如下:\n1、加载变量\n2、读入文本行、读入文本行2、删除文本行、修改文本行、插入文本行\n3、取出修改数据、取出修改数据2",
+data type": "文本型""@文档": "\"category = \\\"文件操作类.文本读写\\\"\"",
+data type": "文本型""methods": [
+  {
+变整数"data type": "整数""method name": "加载变量",
+变整数"data type": "整数""result comment": "返回文本总行数，错误返回-1",
+变整数"data type": "整数""data type": "整数",
+变整数"data type": "整数""parameters": [
+   {
+"parameter name": "文本变量",
+"comment": "参数一和二，只需要提供一个即可",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "字节集变量",
+"comment": "参数一和二，只需要提供一个即可",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "限制获取数量",
+"comment": "限制获取文本行的最大行数，为0表示返回全部行",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否为ANSI",
+"comment": "真：ANSI(多字节集)　假：UTF8　，本参数针对“字节集变量”参数起作用",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+变整数"data type": "整数"]
+  },
+  {
+ata type": "文本型""methods": [
+"method name": "取文本行数",
+ata type": "文本型""methods": [
+"comment": "先执行“加载变量”命令，再执行本命令",
+ata type": "文本型""methods": [
+"data type": "整数"
+  },
+  {
+data type": "字节集类""method name": "读入文本行",
+data type": "字节集类""comment": "先执行“加载变量”命令",
+data type": "字节集类""data type": "文本型",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   }
+data type": "字节集类"]
+  },
+  {
+ 变整数"method name": "读入文本行2",
+ 变整数"comment": "先执行“加载变量”命令",
+ 变整数"result comment": "如果加载的是文本变量，返回值用“字节集到文本 ()”转换",
+ 变整数"data type": "字节集类",
+ 变整数"parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   }
+ 变整数]
+  },
+  {
+ata type": "文本型""comment": "用于快速便捷操作文本变量，快速取出指定行数据.\n操作流程如下:\n1、加载变量\n2、读入文本行、读入文本行2、删除文本行、修改文本行、插入文本行\n3、取出修改数据、取出修改数据2""method name": "删除文本行",
+ata type": "文本型""comment": "用于快速便捷操作文本变量，快速取出指定行数据.\n操作流程如下:\n1、加载变量\n2、读入文本行、读入文本行2、删除文本行、修改文本行、插入文本行\n3、取出修改数据、取出修改数据2""comment": "先执行“加载变量”命令",
+ata type": "文本型""comment": "用于快速便捷操作文本变量，快速取出指定行数据.\n操作流程如下:\n1、加载变量\n2、读入文本行、读入文本行2、删除文本行、修改文本行、插入文本行\n3、取出修改数据、取出修改数据2""parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   }
+ata type": "文本型""comment": "用于快速便捷操作文本变量，快速取出指定行数据.\n操作流程如下:\n1、加载变量\n2、读入文本行、读入文本行2、删除文本行、修改文本行、插入文本行\n3、取出修改数据、取出修改数据2"]
+  },
+  {
+   "parameters": [
+"method name": "修改文本行",
+   "parameters": [
+"comment": "先执行“加载变量”命令",
+   "parameters": [
+"parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   },
+   {
+"parameter name": "新内容",
+"data type": "文本型"
+   }
+   "parameters": [
+]
+  },
+  {
+comment": "从0开始，0就是第一行""method name": "插入文本行",
+comment": "从0开始，0就是第一行""comment": "先执行“加载变量”命令",
+comment": "从0开始，0就是第一行""parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   },
+   {
+"parameter name": "新内容",
+"data type": "文本型"
+   }
+comment": "从0开始，0就是第一行"]
+  },
+  {
+
+"method name": "取出修改数据",
+
+"comment": "先执行“加载变量”命令",
+
+"data type": "文本型"
+  },
+  {
+加载变量”命令，再执行本命令"method name": "取出修改数据2",
+加载变量”命令，再执行本命令"comment": "先执行“加载变量”命令",
+加载变量”命令，再执行本命令"result comment": "如果加载的是文本变量，返回值用“字节集到文本 ()”转换",
+加载变量”命令，再执行本命令"data type": "字节集类"
+  },
+  {
+"method name": "取出修改数据3",
+"comment": "先执行“加载变量”命令",
+"result comment": "返回数组形式数据。如果加载的是文本变量，返回值用“字节集到文本 ()”转换",
+"data type": "字节集数组类"
+  },
+  {
+ }"method name": "关闭变量",
+ }"comment": "清空“加载变量”所加载的数据"
+  }
+data type": "文本型"]
+ },
+ {
+}"class name": "文档读取类_",
+}"comment": "用于快速读取超大文档，快速取出指定行数据.\n一、整文档读取操作流程：(一次性分析，文档越大时间越久)\n1、打开文件 2、取文本行数 3、读入文本行 4、关闭文件.\n\n二、文档分段读取操作流程：(按段分析，文档再大也可瞬间完成)\n1、加载文档_ 2、读取文档段落_ 3、读入文本行_段落 .\n\n三、可编辑文档操作流程：(不适合太大的文档，否则影响速度)\n1、打开文件 2、生成可编辑文档 3、删除文本行 4、修改文本行 5、插入文本行 6、保存文档.",
+}"@文档": "\"category = \\\"文件操作类.文本读写\\\"\"",
+}"methods": [
+  {
+ent": "从0开始，0就是第一行""method name": "插入文本行""method name": "打开文件",
+ent": "从0开始，0就是第一行""method name": "插入文本行""data type": "逻辑型",
+ent": "从0开始，0就是第一行""method name": "插入文本行""parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "打开方式",
+"comment": "默认是打开或创建",
+"data type": "打开方式",
+"@默认值": "打开方式.打开或创建"
+   },
+   {
+"parameter name": "共享模式",
+"comment": "默认是共享读写",
+"data type": "共享方式",
+"@默认值": "共享方式.共享读写"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "默认是读写",
+"data type": "访问方式",
+"@默认值": "访问方式.读写"
+   },
+   {
+"parameter name": "是否为ANSI",
+"comment": "真：ANSI(多字节集)　假：UTF8　",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ent": "从0开始，0就是第一行""method name": "插入文本行"]
+  },
+  {
+"method name": "关闭文件",
+"comment": "其它所有操作完成后，最后执行本命令"
+  },
+  {
+变整数"static": true"method name": "取文本行数",
+变整数"static": true"comment": "先执行“打开文件”，操作完毕后执行“关闭文件”.\n取出该文档共有多少行数据，顺便建立索引(一次性分析整个文档).",
+变整数"static": true"result comment": "错误返回－1，成功返回文档行数",
+变整数"static": true"data type": "长整数"
+  },
+  {
+}"method name": "读入文本行",
+}"comment": "先执行“打开文件”，首次会建立索引所以时间消耗会多些(一次性分析整个文档).\n读取文档中指定行的数据，首次会慢些",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   }
+}]
+  },
+  {
+comment": "先执行“加载变量”命令""method name": "生成可编辑文档",
+comment": "先执行“加载变量”命令""comment": "先执行“打开文件”，再执行本命令，最后可可执行“删除文本行、修改文本行、插入文本行”等.\n执行本命令后，可对该文档进行增删修操作。不推荐操作很大的文档",
+comment": "先执行“加载变量”命令""result comment": "错误返回－1，成功返回文档行数",
+comment": "先执行“加载变量”命令""data type": "长整数"
+  },
+  {
+comment": "先执行“加载变量”命令""method name": "删除文本行",
+comment": "先执行“加载变量”命令""comment": "先执行“打开文件”，再执行“生成可编辑文档”，最后执行本命令.\n删除文档中指定行数据，删除一行后，原行数序号会变动，整体会进行减位缩进，所以删除一行后需要重新给予新的指定行",
+comment": "先执行“加载变量”命令""data type": "逻辑型",
+comment": "先执行“加载变量”命令""parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   }
+comment": "先执行“加载变量”命令"]
+  },
+  {
+
+"method name": "修改文本行",
+
+"comment": "先执行“打开文件”，再执行“生成可编辑文档”，最后执行本命令.\n修改文档中指定行数据",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   },
+   {
+"parameter name": "新内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "插入文本行",
+
+"comment": "先执行“打开文件”，再执行“生成可编辑文档”，最后执行本命令.\n插入数据到文档中，可指定行号。插入后原序号将重新进行排列",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   },
+   {
+"parameter name": "新内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "保存文档",
+
+"comment": "对“生成可编辑文档”后所操作的文档，最后进行保存.\n保存后会同时关闭释放该文档，如还需进行修改等操作，请重新执行打开编辑",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "保存路径",
+"comment": "例如：“C:\\\\文档.txt”",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否覆盖原文件",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "加载文档_",
+
+"comment": "直接打开文档，支持超级大文件，无需担心缓慢.\n打开前无需关闭之前的，内部会自动关闭.\n此命令是打开文档，以5M为节点进行分段，返回段落数(并非行数)，然后执行“读取文档段落_”按段读取",
+
+"result comment": "返回文档段落总数，错误返回-1",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为ANSI",
+"comment": "真：ANSI(多字节集)　假：UTF8　",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "读取文档段落_",
+
+"comment": "先执行“加载文档_”，然后通过此命令跳转到指定段落",
+
+"result comment": "返回该段总行数，错误返回-1",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "指定段",
+"comment": "从0开始，段落范围参照“加载文档_”所返回的值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "读入文本行_段落",
+
+"comment": "先执行“读取文档段落_”，最后调用本命令，操作完毕执行“关闭文件”",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "指定行",
+"comment": "从0开始，0就是第一行",
+"data type": "整数"
+   }
+
+]
+  }
+}]
+ },
+ {
+
+"class name": "配置项类_",
+
+"comment": "功能同官方命令“读配置项”、“写配置项”；优点是除了支持ANSI，还支持UTF8编码，速度快等.\n执行顺序：\n1、打开配置文件.\n2、读配置项_　或　写配置项_.\n3、保存配置",
+
+"@文档": "\"category = \\\"文件操作类.INI配置读写\\\"\"",
+
+"methods": [
+  {
+"method name": "打开配置文件",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "配置文件名",
+"comment": "指定配置文件的名称,通常以\"ini\"作为文件名后缀.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件编码",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.多字节"
+   },
+   {
+"parameter name": "是否添加空格",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+ass name": "配置项类_""method name": "读配置项",
+ass name": "配置项类_""comment": "请先执行“打开配置文件”.\n读取并返回所指定配置文件中指定项目的文本内容.\n支持ANSI、UTF8等编码",
+ass name": "配置项类_""data type": "文本型",
+ass name": "配置项类_""parameters": [
+   {
+"parameter name": "节名",
+"comment": "指定欲读入配置项所处节的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "指定欲读入配置项在其节中的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "如果所指定配置项不存在,将返回此默认值文本.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "启用注释",
+"comment": "为真时将过滤注释内容",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "注释符号",
+"data type": "文本型",
+"@默认值": "\"//\""
+   }
+ass name": "配置项类_"]
+  },
+  {
+"method name": "写配置项",
+"comment": "请先执行“打开配置文件”，可以执行多项写入，最后执行一次“保存配置”即可.\n将指定文本内容写入指定配置项中或者删除指定的配置项或节,\n如果指定配置文件不存在,将会自动创建.\n支持ANSI、UTF8等编码",
+"result comment": "返回是否成功",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "指定欲写入配置项所处节的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲写入值",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "注释",
+"comment": "注释说明文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "注释位置",
+"comment": "0、节名下方　1、键值后面 (注：设置1是非通用型的ini文件)",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "注释符号",
+"data type": "文本型",
+"@默认值": "\"//\""
+   }
+]
+  },
+  {
+
+"method name": "删除配置项",
+
+"comment": "请先执行“打开配置文件”，可以执行多项删除，最后执行一次“保存配置”即可",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲删除的键,如果键名为空,则表示删除整个节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+ameter name": "是否为ANSI""method name": "取配置节名",
+ameter name": "是否为ANSI""comment": "请先执行“打开配置文件”.\n返回指定配置文件中所有已有节名的文本数组.\n支持ANSI、UTF8等编码",
+ameter name": "是否为ANSI""data type": "文本数组类"
+  },
+  {
+"method name": "取配置键名",
+"comment": "请先执行“打开配置文件”.\n返回指定配置文件中所有键名的文本数组.\n支持ANSI、UTF8等编码",
+"data type": "文本数组类",
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取所有键名的节",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"@文档": "\"category = \\\"文件操作类.INI配置读写\\\"\"""method name": "保存配置",
+"@文档": "\"category = \\\"文件操作类.INI配置读写\\\"\"""comment": "在执行“写配置项”后再执行本命令",
+"@文档": "\"category = \\\"文件操作类.INI配置读写\\\"\"""data type": "逻辑型"
+  }
+
+]
+ },
+ {
+comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.""class name": "INI配置文件操作类_",
+comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.""comment": "提供了简易的ini配置文件修改操作",
+comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.""@文档": "\"category = \\\"文件操作类.INI配置读写\\\"\"",
+comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.""@视窗.外部头文件": "\"piv\\\\encoding.hpp\\npiv\\\\SimpleIni.h\"",
+comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.""methods": [
+  {
+
+"method name": "清空",
+
+"comment": "释放本配置对象的所有内存数据",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+@默认值": "真""method name": "创建自文本",
+@默认值": "真""comment": "从文本型数据中读入ini配置数据,本方法会覆盖本类之前的数据.",
+@默认值": "真""result comment": "返回值大于等于0表示成功,小于0表示失败.",
+@默认值": "真""data type": "整数",
+@默认值": "真""@禁止流程检查": "真",
+@默认值": "真""parameters": [
+   {
+"parameter name": "配置内容",
+"data type": "文本型"
+   }
+@默认值": "真"]
+  },
+  {
+ameter name": "配置内容""method name": "创建自字节集",
+ameter name": "配置内容""comment": "从字节集数据中读入ini配置数据,本方法会覆盖本类之前的数据.",
+ameter name": "配置内容""result comment": "返回值大于等于0表示成功,小于0表示失败.",
+ameter name": "配置内容""data type": "整数",
+ameter name": "配置内容""@禁止流程检查": "真",
+ameter name": "配置内容""parameters": [
+   {
+"parameter name": "配置内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定字节集文本编码,文本编码必须对应,否则可能会乱码;\n其中\"未知\"等同多字节.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF8"
+   }
+ameter name": "配置内容"]
+  },
+  {
+默认值": "真""@禁止流程检查": "真""method name": "创建自文件",
+默认值": "真""@禁止流程检查": "真""comment": "  从指定的文件中读入ini配置数据,本方法会覆盖本类之前的数据.\n  注意: 读入配置后就会关闭文件,所以之后修改的配置并不会反映到\nini文件中,必须调用\"保存/保存文件\"才会将结果保存到文件.",
+默认值": "真""@禁止流程检查": "真""result comment": "返回值大于等于0表示成功,小于0表示失败.",
+默认值": "真""@禁止流程检查": "真""data type": "整数",
+默认值": "真""@禁止流程检查": "真""@禁止流程检查": "真",
+默认值": "真""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "所欲打开的ini配置文件,文件不存在时会自动创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定所打开ini文件的文本编码;\n首先会根据文件的BOM签名自动识别编码;\n若不存在签名,则以此参数指定的编码打开,\"未知\"等同多字节;\n文本编码必须选择正确,否则可能会乱码.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.未知"
+   },
+   {
+"parameter name": "自动保存",
+"comment": "是否在对象被释放之前自动保存更改到文件中;\n为假时必须手动调用\"保存\",否则可能丢失未保存的编辑内容;\n为真时,即使已经通过\"保存文件\"将配置数据保存到新文件中,\n仍会将更改保存到原文件.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+默认值": "真""@禁止流程检查": "真"]
+  },
+  {
+comment": "是否在对象被释放之前自动保存更改到文件中;\n为假时必须手动调用\"保存\",否则可能丢失未保存的编辑内容;\n为真时,即使已经通过\"保存文件\"将配置数据保存到新文件中,\n仍会将更改保存到原文件.""method name": "是否添加空格",
+comment": "是否在对象被释放之前自动保存更改到文件中;\n为假时必须手动调用\"保存\",否则可能丢失未保存的编辑内容;\n为真时,即使已经通过\"保存文件\"将配置数据保存到新文件中,\n仍会将更改保存到原文件.""comment": "设置是否在键值对的等号两边添加空格.\n 真: \"key = value\";\n 假: \"key=value\".",
+comment": "是否在对象被释放之前自动保存更改到文件中;\n为假时必须手动调用\"保存\",否则可能丢失未保存的编辑内容;\n为真时,即使已经通过\"保存文件\"将配置数据保存到新文件中,\n仍会将更改保存到原文件.""type": "property setter",
+comment": "是否在对象被释放之前自动保存更改到文件中;\n为假时必须手动调用\"保存\",否则可能丢失未保存的编辑内容;\n为真时,即使已经通过\"保存文件\"将配置数据保存到新文件中,\n仍会将更改保存到原文件.""parameters": [
+   {
+"parameter name": "是否添加",
+"comment": "默认为假",
+"data type": "逻辑型"
+   }
+comment": "是否在对象被释放之前自动保存更改到文件中;\n为假时必须手动调用\"保存\",否则可能丢失未保存的编辑内容;\n为真时,即使已经通过\"保存文件\"将配置数据保存到新文件中,\n仍会将更改保存到原文件."]
+  },
+  {
+@默认值": "空对象""method name": "是否添加空格",
+@默认值": "空对象""comment": "返回是否在等号两边添加空格",
+@默认值": "空对象""type": "property getter",
+@默认值": "空对象""data type": "逻辑型",
+@默认值": "空对象""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "打开文件",
+}"comment": "  本方法跟\"创建自文件\"一样,只是为了兼容以前的代码才保留.\n  从指定的文件中获取ini配置数据,本方法会覆盖本类之前的数据.\n  注意: 读入配置后就会关闭文件,所以之后修改的配置并不会反映到\nini文件中,必须调用\"保存/保存文件\"才会将结果保存到文件.",
+}"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "所欲打开的ini配置文件,文件不存在时会自动创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定所打开ini文件的文本编码;\n首先会根据文件的BOM签名自动识别编码;\n若不存在签名,则以此参数指定的编码打开,\"未知\"等同多字节;\n文本编码必须选择正确,否则可能会乱码.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.未知"
+   },
+   {
+"parameter name": "自动保存",
+"comment": "是否在对象被释放之前自动保存更改到文件中;\n为假时必须手动调用\"保存\",否则可能丢失未保存的编辑内容;\n为真时,即使已经通过\"保存文件\"将配置数据保存到新文件中,\n仍会将更改保存到原文件中.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+@默认值": "\"\"""method name": "保存",
+@默认值": "\"\"""comment": "覆盖保存所打开的ini文件.\n如果未执行过\"创建自文件/打开文件\",应当使用\"保存文件\".",
+@默认值": "\"\"""result comment": "返回值大于等于0表示成功,小于0表示失败.",
+@默认值": "\"\"""data type": "整数",
+@默认值": "\"\"""@禁止流程检查": "真"
+  },
+  {
+}"method name": "保存文件",
+}"comment": "将当前编辑的内容保存到指定的ini文件中",
+}"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "所欲保存内容的ini配置文件,如果文件不存在将自动创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定保存文件的文本编码,UTF8和UTF16会添加自动BOM签名,其中\"未知\"等同多字节.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF8"
+   }
+}]
+  },
+  {
+"method name": "取文件编码",
+"comment": "返回已打开ini配置文件的文本编码.\n若未成功执行过\"打开文件\",则返回\"文本编码类型.未知\".",
+"data type": "文本编码类型",
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "到文本",
+"comment": "将内存中的配置数据输出到文本",
+"data type": "文本型",
+"@禁止流程检查": "真"
+  },
+  {
+ameter name": "文本编码""method name": "到字节集",
+ameter name": "文本编码""comment": "将内存中的配置数据输出到字节集类.\n本方法不做编码转换,直接返回类的内部数据,内部只使用多字节和UTF8两种编码.",
+ameter name": "文本编码""data type": "字节集类",
+ameter name": "文本编码""@禁止流程检查": "真",
+ameter name": "文本编码""parameters": [
+   {
+"parameter name": "添加签名",
+"comment": "是否对UTF-8数据添加BOM签名(多字节无签名)",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否UTF8编码",
+"comment": "返回字节集的数据是否为UTF8编码,返回假则说明是多字节编码.",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+ameter name": "文本编码"]
+  },
+  {
+data type": "逻辑型类""method name": "取键值",
+data type": "逻辑型类""comment": "获取指定键的文本型键值",
+data type": "逻辑型类""data type": "文本型",
+data type": "逻辑型类""@嵌入式方法": "\"\"",
+data type": "逻辑型类""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲获取键值的节名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲获取键值的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "如果所指定键名不存在,将返回此默认值.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否有多个值",
+"comment": "返回当前键是否有多个值,为真时可以用\"取所有键值\"获取.",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+data type": "逻辑型类"]
+  },
+  {
+
+"method name": "置键值",
+
+"comment": "添加或更新一个节或文本型键值.",
+
+"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲添加或更新的节",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲添加或更新的键,留空表示创建一个空节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "键值",
+"comment": "所欲设置的键值,留空表示创建一个空节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "注释",
+"comment": "仅在第一次创建新的节或键名时才会写入注释.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "强制替换",
+"comment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "取所有节名",
+data type": "文本型""comment": "获取配置数据中所有节的名称",
+data type": "文本型""parameters": [
+   {
+"parameter name": "返回节名数组",
+"comment": "成功返回节名的数组",
+"data type": "文本数组类"
+   }
+data type": "文本型"]
+  },
+  {
+comment": "所欲添加或更新的节""method name": "取所有键名",
+comment": "所欲添加或更新的节""comment": "获取指定节中的所有唯一键名",
+comment": "所欲添加或更新的节""data type": "逻辑型",
+comment": "所欲添加或更新的节""@禁止流程检查": "真",
+comment": "所欲添加或更新的节""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取所有键名的节",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回键名数组",
+"comment": "成功返回键名的数组",
+"data type": "文本数组类"
+   }
+comment": "所欲添加或更新的节"]
+  },
+  {
+comment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""method name": "取所有键值",
+comment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""comment": "获取指定节指定键的所有键值",
+comment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""data type": "逻辑型",
+comment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真",
+comment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取键值的节名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取键值的键名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回值数组",
+"comment": "成功返回键值数组",
+"data type": "文本数组类"
+   }
+comment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值."]
+  },
+  {
+data type": "文本型""method name": "取节成员数",
+data type": "文本型""comment": "获取指定节的键数量",
+data type": "文本型""data type": "整数",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取键数量的节名",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "节名是否存在",
+}"comment": "检查指定的节是否存在",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲检查的节名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "键名是否存在",
+"@嵌入式方法": "\"\"""comment": "检查指定的键名是否存在",
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲检查键名的节名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲检查的键名",
+"data type": "文本型"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+omment": "所欲添加或更新的节""comment": "获取指定节中的所有唯一键名""method name": "删除配置",
+omment": "所欲添加或更新的节""comment": "获取指定节中的所有唯一键名""comment": "  删除整个节,或节中的某个键.\n  当\"是否允许重复键名\"为真时,将删除所有同名的键,\n如果要单独删除某个键值对,请用\"删除键值\".",
+omment": "所欲添加或更新的节""comment": "获取指定节中的所有唯一键名""result comment": "返回值大于等于0表示成功,小于0表示失败.",
+omment": "所欲添加或更新的节""comment": "获取指定节中的所有唯一键名""data type": "逻辑型",
+omment": "所欲添加或更新的节""comment": "获取指定节中的所有唯一键名""@禁止流程检查": "真",
+omment": "所欲添加或更新的节""comment": "获取指定节中的所有唯一键名""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲删除的键,如果键名为空,则表示删除整个节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "删除空节",
+"comment": "如果删除指定键后,节已经没有其他内容,是否把这个空节也删除掉?",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+omment": "所欲添加或更新的节""comment": "获取指定节中的所有唯一键名"]
+  },
+  {
+
+"method name": "删除键值",
+
+"comment": "删除整个节,或节中的某个键.如果提供了键值,则只删除对应的键.",
+
+"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲删除的键,如果键名为空,则表示删除整个节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "键值",
+"comment": "所欲删除的指定键值,如果留空则表示删除所有同名的键.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "删除空节",
+"comment": "如果删除指定键后,节已经没有其他内存,是否把这个空节也删除掉.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  }
+comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节."]
+ },
+ {
+omment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真""class name": "资源包类_",
+omment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真""comment": "将图标等N多文件打包成一个资源文件，支持读取修操作",
+omment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真""base class": "对象数组类",
+omment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真""@文档": "\"category = \\\"文件操作类.资源文件打包\\\"\"",
+omment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真""methods": [
+  {
+mment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真""comment": "将图标等N多文件打包成一个资源文件，支持读取修操作""method name": "加载资源包_",
+mment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真""comment": "将图标等N多文件打包成一个资源文件，支持读取修操作""data type": "逻辑型",
+mment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真""comment": "将图标等N多文件打包成一个资源文件，支持读取修操作""parameters": [
+   {
+"parameter name": "欲导入的包数据",
+"data type": "字节集类"
+   }
+mment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真""comment": "将图标等N多文件打包成一个资源文件，支持读取修操作"]
+  },
+  {
+
+"method name": "加载资源包_路径",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲导入的包文件",
+"comment": "文件路径＋名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "加载资源包_资源",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "欲导入的包数据",
+"data type": "视窗文件资源"
+   }
+"data type": "逻辑型"]
+  },
+  {
+"data type": "逻辑型""method name": "导出资源包_",
+"data type": "逻辑型""data type": "字节集类"
+  },
+  {
+"method name": "保存资源包_",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "保存路径",
+"comment": "提供路径和名称。例如：“C:\\\\资源.db”",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "添加_字节集",
+"comment": "添加字节集文件到资源包中",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "资源数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+comment": "提供路径和名称。例如：“C:\\\\资源.db”""method name": "添加_路径",
+comment": "提供路径和名称。例如：“C:\\\\资源.db”""comment": "添加路径文件到资源包中",
+comment": "提供路径和名称。例如：“C:\\\\资源.db”""data type": "逻辑型",
+comment": "提供路径和名称。例如：“C:\\\\资源.db”""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "默认为文件名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "资源路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密钥",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+comment": "提供路径和名称。例如：“C:\\\\资源.db”"]
+  },
+  {
+"method name": "读取_",
+"comment": "读取资源包中的文件信息",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密钥",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+
+"method name": "删除_",
+
+"comment": "删除资源包中的文件信息",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "修改_",
+}"comment": "修改资源包中的文件信息",
+}"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新文件名",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "新资源数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "新密钥",
+"comment": "不支持单独修改密钥",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+
+"method name": "修改_路径",
+
+"comment": "修改资源包中的文件信息",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新文件名",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "新资源路径",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "新密钥",
+"comment": "不支持单独修改密钥",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "清空_",
+
+"comment": "初始化为空资源包"
+  },
+  {
+comment": "不支持单独修改密钥""method name": "取资源尺寸_",
+comment": "不支持单独修改密钥""comment": "取资源包整体大小",
+comment": "不支持单独修改密钥""data type": "整数"
+  },
+  {
+"method name": "取资源数量_",
+"comment": "取资源包中资源总数",
+"data type": "整数"
+  },
+  {
+data type": "逻辑型""method name": "取资源名称_",
+data type": "逻辑型""comment": "取资源包中所有资源名称",
+data type": "逻辑型""data type": "文本数组类"
+  }
+omment": "  \"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.""@禁止流程检查": "真"]
+ },
+ {
+
+"comment": "删除资源包中的文件信息""class name": "资源文件类_",
+
+"comment": "删除资源包中的文件信息""@文档": "\"category = \\\"文件操作类.文件资源读写\\\"\"",
+
+"comment": "删除资源包中的文件信息""@全局类": "真",
+
+"comment": "删除资源包中的文件信息""methods": [
+  {
+
+"method name": "写出资源文件_",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲写到的文件路径名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲写出的资源文件名称",
+"data type": "视窗文件资源"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "读资源文件内容_",
+data type": "文本型""comment": "只能取文本资源内容",
+data type": "文本型""static": true,
+data type": "文本型""data type": "文本型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "资源文件",
+"data type": "视窗文件资源"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "字节集类""method name": "取出资源文件_",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""@禁止流程检查": "真",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "资源文件",
+"data type": "视窗文件资源"
+   }
+data type": "字节集类"]
+  }
+
+"comment": "删除资源包中的文件信息"]
+ },
+ {
+ type": "文本型""method name": "读资源文件内容_""class name": "文件读写类_",
+ type": "文本型""method name": "读资源文件内容_""@文档": "\"category = \\\"文件操作类.文件读写\\\"\"",
+ type": "文本型""method name": "读资源文件内容_""@全局类": "真",
+ type": "文本型""method name": "读资源文件内容_""methods": [
+  {
+@默认值": "空对象""method name": "文件读写_打开文件",
+@默认值": "空对象""comment": "成功返回大于0，返回文件句柄",
+@默认值": "空对象""static": true,
+@默认值": "空对象""data type": "变整数",
+@默认值": "空对象""@嵌入式方法": "\"\"",
+@默认值": "空对象""parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "打开方式",
+"comment": "默认是打开或创建",
+"data type": "打开方式",
+"@默认值": "打开方式.打开或创建"
+   },
+   {
+"parameter name": "共享模式",
+"comment": "默认是共享读写",
+"data type": "共享方式",
+"@默认值": "共享方式.共享读写"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "默认是读写",
+"data type": "访问方式",
+"@默认值": "访问方式.读写"
+   }
+@默认值": "空对象"]
+  },
+  {
+ }"method name": "文件读写_关闭文件",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+"method name": "文件读写_读入字节集",
+"comment": "先执行“文件读写_打开文件”.\n读入该文件中的数据",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "读入长度",
+"comment": "默认读取整个文件",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+认值": "空对象"]"method name": "文件读写_写出字节集",
+认值": "空对象"]"comment": "先执行“文件读写_打开文件”.\n将数据写入到文件中",
+认值": "空对象"]"result comment": "成功返回读取的长度",
+认值": "空对象"]"static": true,
+认值": "空对象"]"data type": "整数",
+认值": "空对象"]"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲写出的字节集",
+"data type": "字节集类"
+   }
+认值": "空对象"]]
+  },
+  {
+
+"method name": "文件读写_取文件尺寸",
+
+"comment": "先执行“文件读写_打开文件”",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+omment": "提供路径和名称。例如：“C:\\\\资源.db”""data type": "逻辑型""method name": "文件读写_移动读写位置",
+omment": "提供路径和名称。例如：“C:\\\\资源.db”""data type": "逻辑型""comment": "移动该文件的读写位置",
+omment": "提供路径和名称。例如：“C:\\\\资源.db”""data type": "逻辑型""result comment": "成功返回移动距离",
+omment": "提供路径和名称。例如：“C:\\\\资源.db”""data type": "逻辑型""static": true,
+omment": "提供路径和名称。例如：“C:\\\\资源.db”""data type": "逻辑型""data type": "长整数",
+omment": "提供路径和名称。例如：“C:\\\\资源.db”""data type": "逻辑型""@禁止流程检查": "真",
+omment": "提供路径和名称。例如：“C:\\\\资源.db”""data type": "逻辑型""parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "移动距离",
+"data type": "长整数"
+   },
+   {
+"parameter name": "移动方式",
+"comment": "默认是当前位置",
+"data type": "文件常量",
+"@默认值": "文件常量.当前位置"
+   }
+omment": "提供路径和名称。例如：“C:\\\\资源.db”""data type": "逻辑型"]
+  },
+  {
+"method name": "文件读写_移动读写位置到文件尾",
+"comment": "先执行“文件读写_打开文件”",
+"result comment": "成功返回移动距离",
+"static": true,
+"data type": "长整数",
+"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "移动方式",
+"comment": "默认是当前位置",
+"data type": "文件常量",
+"@默认值": "文件常量.当前位置"
+   }
+]
+  },
+  {
+"method name": "文件读写_取当前读写位置",
+"comment": "先执行“文件读写_打开文件”.\n取出该文件的当前读写位置",
+"static": true,
+"data type": "长整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+hod name": "文件读写_取当前读写位置""method name": "文件读写_置文件大小",
+hod name": "文件读写_取当前读写位置""comment": "预创建指定大小的文件",
+hod name": "文件读写_取当前读写位置""static": true,
+hod name": "文件读写_取当前读写位置""data type": "逻辑型",
+hod name": "文件读写_取当前读写位置""@禁止流程检查": "真",
+hod name": "文件读写_取当前读写位置""parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件大小",
+"data type": "长整数"
+   }
+hod name": "文件读写_取当前读写位置"]
+  },
+  {
+
+"method name": "文件读写_写出文本行",
+
+"comment": "先执行“文件读写_打开文件”，再执行本命令，最后执行“文件读写_关闭文件”.\n将新内容写到文件尾部",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "文件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内容",
+"comment": "写入的内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否换行",
+"comment": "连续写入的内容是否自动换行",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否为ANSI",
+"comment": "真：ANSI(多字节集)　假：UTF8　",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  }
+ type": "文本型""method name": "读资源文件内容_"]
+ },
+ {
+data type": "逻辑型""class name": "文件共享类_",
+data type": "逻辑型""@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\"",
+data type": "逻辑型""@全局类": "真",
+data type": "逻辑型""methods": [
+  {
+od name": "文件读写_取当前读写位置""comment": "预创建指定大小的文件""method name": "文件共享_开启共享",
+od name": "文件读写_取当前读写位置""comment": "预创建指定大小的文件""static": true,
+od name": "文件读写_取当前读写位置""comment": "预创建指定大小的文件""data type": "逻辑型",
+od name": "文件读写_取当前读写位置""comment": "预创建指定大小的文件""parameters": [
+   {
+"parameter name": "待处理的文件夹",
+"data type": "文本型"
+   },
+   {
+"parameter name": "共享名称",
+"comment": "默认为该文件夹名",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+od name": "文件读写_取当前读写位置""comment": "预创建指定大小的文件"]
+  },
+  {
+comment": "默认为该文件夹名""method name": "文件共享_关闭共享",
+comment": "默认为该文件夹名""static": true,
+comment": "默认为该文件夹名""data type": "逻辑型",
+comment": "默认为该文件夹名""parameters": [
+   {
+"parameter name": "待处理的文件夹",
+"data type": "文本型"
+   }
+comment": "默认为该文件夹名"]
+  },
+  {
+
+"method name": "文件共享_设置权限",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "待处理的文件夹",
+"data type": "文本型"
+   },
+   {
+"parameter name": "权限类型",
+"comment": "1、完全控制　2、拒绝访问",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  }
+data type": "逻辑型"]
+ },
+ {
+"class name": "打开方式",
+"@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+]"constant name": "新建",
+]"comment": "创建一个新文件,如果文件已经存在则返回失败",
+]"initial value": "@CREATE_NEW"
+  },
+  {
+
+"constant name": "新建或覆盖",
+
+"comment": "创建一个新文件,如果文件存在，则覆盖这个文件,并且清除其属性",
+
+"initial value": "@CREATE_ALWAYS"
+  },
+  {
+nstant name": "新建""constant name": "打开",
+nstant name": "新建""comment": "打开文件,如果文件不存在则打开失败",
+nstant name": "新建""initial value": "@OPEN_EXISTING"
+  },
+  {
+nstant name": "新建""constant name": "打开或创建",
+nstant name": "新建""comment": "如果文件则打开文件，如果不存在则会创建文件,此时和CREATE_NEW功能一样",
+nstant name": "新建""initial value": "@OPEN_ALWAYS"
+  },
+  {
+
+"constant name": "清空",
+
+"comment": "打开文件。 打开后，文件将被截断，因此其大小为零字节。 \n调用过程必须打开至少具有GENERIC_WRITE访问权限的文件。 如果文件不存在，该功能将失败。",
+
+"initial value": "@TRUNCATE_EXISTING"
+  }
+]
+ },
+ {
+}"class name": "共享方式",
+}"@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\"",
+}"@常量类": "整数",
+}"constants": [
+  {
+
+"parameters": [
+"constant name": "不共享",
+
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了",
+
+"parameters": [
+"initial value": "0"
+  },
+  {
+
+"data type": "逻辑型""constant name": "共享读",
+
+"data type": "逻辑型""comment": "例如两个软件同时操作 a.txt 如果指定这个标志，表示两个软件都可以对a.txt读  否则只有第一个打开a.txt 的可以操作，其他的不能",
+
+"data type": "逻辑型""initial value": "@FILE_SHARE_READ"
+  },
+  {
+"constant name": "共享写",
+"comment": "例如两个软件同时操作 a.txt 如果指定这个标志，表示两个软件都可以对a.txt写  否则只有第一个打开a.txt 的可以操作，其他的不能",
+"initial value": "@FILE_SHARE_WRITE"
+  },
+  {
+stant name": "共享写""constant name": "共享读写",
+stant name": "共享写""initial value": "@FILE_SHARE_WRITE|FILE_SHARE_READ"
+  },
+  {
+E_SHARE_WRITE"constant name": "共享删除",
+E_SHARE_WRITE"comment": "原理同上",
+E_SHARE_WRITE"initial value": "@FILE_SHARE_DELETE"
+  }
+}]
+ },
+ {
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""class name": "文件常量",
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\"",
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""@常量类": "整数",
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""constants": [
+  {
+omment": "默认为该文件夹名""data type": "逻辑型""constant name": "文件首",
+omment": "默认为该文件夹名""data type": "逻辑型""comment": "文件指针起始位置为文件起始位置，当调用SetFilePointerEx成功后，\n文件指针将指向liDistanceToMove指向的位置。\nFILE_BEGIN The starting point is zero or the beginning of the file. ",
+omment": "默认为该文件夹名""data type": "逻辑型""initial value": "@FILE_BEGIN"
+  },
+  {
+"constant name": "当前位置",
+"comment": "文件指针起始位置为当前文件指针指向的位置\nFILE_CURRENT The starting point is the current value of the file pointer. ",
+"initial value": "@FILE_CURRENT"
+  },
+  {
+nt": "默认为该文件夹名""data type": "逻辑型""constant name": "文件首""constant name": "文件尾",
+nt": "默认为该文件夹名""data type": "逻辑型""constant name": "文件首""comment": "文件指针起始位置为文件末尾\nFILE_END The starting point is the current end-of-file position. ",
+nt": "默认为该文件夹名""data type": "逻辑型""constant name": "文件首""initial value": "@FILE_END"
+  }
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了"]
+ },
+ {
+parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\"""class name": "访问方式",
+parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\"""@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\"",
+parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\"""@常量类": "整数",
+parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\"""constants": [
+  {
+t name": "共享写""constant name": "共享读写""constant name": "读",
+t name": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ"
+  },
+  {
+,如果文件不存在则打开失败"constant name": "写",
+,如果文件不存在则打开失败"initial value": "@GENERIC_WRITE"
+  },
+  {
+
+"comment": "打开文件。 打开后，文件将被截断，因此其大小为零字节。 \n调用过程必须打开至少具有GENERIC_WRITE访问权限的文件。 如果文件不存在，该功能将失败。""constant name": "读写",
+
+"comment": "打开文件。 打开后，文件将被截断，因此其大小为零字节。 \n调用过程必须打开至少具有GENERIC_WRITE访问权限的文件。 如果文件不存在，该功能将失败。""initial value": "@GENERIC_READ|GENERIC_WRITE"
+  }
+parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""@文档": "\"category = \\\"文件操作类.文件读写.附加类\\\"\""]
+ },
+ {
+ass name": "共享方式""class name": "文件访问权限类_",
+ass name": "共享方式""@文档": "\"category = \\\"文件操作类.访问权限\\\"\"",
+ass name": "共享方式""@全局类": "真",
+ass name": "共享方式""methods": [
+  {
+ name": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ""method name": "修改文件权限_",
+ name": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ""comment": "控制文件的访问权限，包括读取、写入、执行等操作",
+ name": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ""static": true,
+ name": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ""data type": "逻辑型",
+ name": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ""parameters": [
+   {
+"parameter name": "目标文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "-1、全部拒绝 -2、拒绝修改 -3、拒绝读取和执行 -4、拒绝读取 -5、拒绝写入.\n1、全部允许  2、允许修改 3、允许读取和执行 4、允许读取 5、允许写入",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ name": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ"]
+  }
+ass name": "共享方式"]
+ },
+ {
+E_SHARE_WRITE"class name": "文件监视类_",
+E_SHARE_WRITE"comment": "监视文件信息变动情况，例如：文件的新建、删除、修改、重命名，都将触发变动提示",
+E_SHARE_WRITE"@文档": "\"category = \\\"文件操作类.文件监视\\\"\"",
+E_SHARE_WRITE"methods": [
+  {
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""method name": "开始监视_",
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""comment": "参数1、参数2、参数3只需给一个即可，或全给。退出程序前请执行“停止监视_”，否则无法结束进程",
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""data type": "逻辑型",
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""parameters": [
+   {
+"parameter name": "监视目录",
+"comment": "例如：“C:\\\\目录A”",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "监视目录组",
+"comment": "与参数1一样，给的是数组形式，可加入多个目录",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "监视分区组",
+"comment": "给磁盘分区符号，监视某分区，可加入多个分区。如：“C:\\\\”",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+"parameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了"]
+  },
+  {
+ameter name": "监视目录""method name": "停止监视_",
+ameter name": "监视目录""comment": "退出程序前请执行停止，否则无法结束进程"
+  },
+  {
+er name": "监视目录""method name": "停止监视_""method name": "文件变动事件",
+er name": "监视目录""method name": "停止监视_""type": "event",
+er name": "监视目录""method name": "停止监视_""data type": "整数",
+er name": "监视目录""method name": "停止监视_""parameters": [
+   {
+"parameter name": "变动类型",
+"comment": "－1、出现错误　0、新建文件　1、删除文件　2、修改内容　3、重命名文件　4、未知变动",
+"data type": "整数"
+   },
+   {
+"parameter name": "根目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "错误提示",
+"data type": "文本型"
+   }
+er name": "监视目录""method name": "停止监视_"]
+  }
+E_SHARE_WRITE]
+ },
+ {
+ame": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ"]"class name": "文件监视类2_",
+ame": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ"]"comment": "通过NTFS的USN日志来监视文件和目录的更改，实现原理跟文件搜索软件Everything相同.\n 1. 监视USN日志的效率相当高，但只能在NTFS文件系统上使用;\n 2. USN日志会监视整个本地磁盘，但可以只输出特定目录下的更改记录;\n 3. 本类的接收事件在子线程中触发，每个盘符一条线程;\n 4. 程序需要以管理员权限运行;",
+ame": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ"]"@文档": "\"category = \\\"文件操作类.文件监视\\\"\"",
+ame": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ"]"@视窗.外部头文件": "\"piv\\\\UsnMonitor.hpp\"",
+ame": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ"]"methods": [
+  {
+ameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""method name": "开始监视_""method name": "开始监视_",
+ameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""method name": "开始监视_""comment": "开始监视某个本地磁盘中所有文件和目录的更改:\n 1. 指定的盘符必须为NTFS文件格式，且不能为网络驱动器;\n 2. 程序必须以管理员身份运行;\n 3. 可以重复调用本方法监视不同的盘符;\n监视多个目录：\n开始监视_(\"C\",A组变量)  其中A组变量里包含多个目录.\n开始监视_(\"D\",B组变量)  其中B组变量里包含多个目录.",
+ameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""method name": "开始监视_""data type": "逻辑型",
+ameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""method name": "开始监视_""@禁止流程检查": "真",
+ameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""method name": "开始监视_""parameters": [
+   {
+"parameter name": "盘符",
+"comment": "例如“C”",
+"data type": "文本型"
+   },
+   {
+"parameter name": "监视目录组",
+"comment": "可以将监视范围限定在所提供的一或多个目录中，请确保提供的目录已经存在.\n默认的空数组表示监视整个本地磁盘;\n注意: 本参数有效时，内部会维护一个包含文件夹主从关系的键值表，会占用较大内存.",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "延迟时间",
+"comment": "如果上次读取USN日志没有发现新的更改，将延迟指定的时间(单位为毫秒).",
+"data type": "整数",
+"@默认值": "50"
+   },
+   {
+"parameter name": "路径获取方式",
+"comment": "选择文件更改事件中\"当前路径\"的获取方式:\n 0 不获取路径(速度最快);\n 1 使用系统API获取,需要确保文件夹存在,文件夹被删除后会获取不了;\n 2 由本类维护一个数据表,即使文件夹被删除后仍能获取路径,\n但占用内存较大(Win11的系统盘需要500MB以上内存).",
+"data type": "整数",
+"@默认值": "1"
+   }
+ameters": [
+"comment": "不共享， 如果当前软件打开设备后，其他设备就不能打开操作了""method name": "开始监视_"]
+  },
+  {
+ }"method name": "停止监视_",
+ }"comment": "停止对某个盘的监视",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "删除USN日志",
+"comment": "是否删除(禁用)USN日志，删除操作是全局的，会影响其他使用了USN日志的软件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+ }"method name": "停止全部监视_",
+ }"comment": "停止对所有盘的监视",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+data type": "文本型""method name": "初始完毕事件",
+data type": "文本型""comment": "触发本事件后开始监视文件变动",
+data type": "文本型""type": "event",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "文本型""method name": "文件创建事件",
+data type": "文本型""comment": "监视到创建了新文件或目录",
+data type": "文本型""type": "event",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "文件删除事件",
+
+"comment": "监视到某个文件或目录被删除",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "延迟时间""method name": "文件内容改变事件",
+ameter name": "延迟时间""comment": "监视到某个文件的内容数据被修改",
+ameter name": "延迟时间""type": "event",
+ameter name": "延迟时间""data type": "整数",
+ameter name": "延迟时间""parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"data type": "文本型"
+   }
+ameter name": "延迟时间"]
+  },
+  {
+}"method name": "文件重命名事件",
+}"comment": "监视到某个文件或目录被重命名",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "旧名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "文件删到回收站事件",
+
+"comment": "监视到某个文件或目录被删除到回收站",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "原路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回收站路径",
+"comment": "删除到回收站后的完整路径(文件重命名事件为回收站内部使用的名称)",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文件移动事件",
+
+"comment": "监视到某个文件或目录被移动到同盘的另一个位置\n注: 移动到其他盘是触发\"文件删除事件\"事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "旧名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "原路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文件属性改变事件",
+
+"comment": "监视到某个文件或目录的属性被改变",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "更改原因",
+"comment": "文件或目录被更改的原因,请与\"文件变更常量\"的常量进行位与判断.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ata type": "文本型""type": "event""method name": "其它改变事件",
+ata type": "文本型""type": "event""comment": "监视到其他不常用的文件或目录的状态或属性被改变",
+ata type": "文本型""type": "event""type": "event",
+ata type": "文本型""type": "event""data type": "整数",
+ata type": "文本型""type": "event""parameters": [
+   {
+"parameter name": "盘符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "更改原因",
+"comment": "文件或目录被更改的原因,请与\"文件变更常量\"的常量进行位与判断.",
+"data type": "整数"
+   }
+ata type": "文本型""type": "event"]
+  }
+ame": "共享写""constant name": "共享读写""initial value": "@GENERIC_READ"]]
+ },
+ {
+
+"class name": "文件监视类3_",
+
+"@视窗.外部头文件": "\"windows.h\\r\\nfileapi.h\\r\\niostream\\r\\nstring\\r\\nvector\\r\\nchrono\\r\\nthread\\r\\nmutex\\r\\natomic\\r\\nunordered_map\\r\\nlocale\\r\\ncodecvt\\r\\nconio.h\\r\\ndeque\"",
+
+"@视窗.外部头文件.全局-100": "\"<chrono>\"",
+
+"methods": [
+  {
+"method name": "开始监视",
+"parameters": [
+   {
+"parameter name": "监视目录",
+"comment": "例如：“C:\\\\目录A”",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "预计文件数量",
+"comment": "预设瞬间文件变动缓存数",
+"data type": "整数",
+"@默认值": "5000"
+   }
+]
+  },
+  {
+}"method name": "停止监视"
+  },
+  {
+"method name": "文件变动事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "变动类型",
+"comment": "0、新建文件　1、删除文件　2、修改内容　3、重命名文件",
+"data type": "整数"
+   },
+   {
+"parameter name": "原文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "完整路径",
+"data type": "文本型"
+   }
+]
+  }
+
+]
+ },
+ {
+个文件或目录的属性被改变"class name": "文件定位类_",
+个文件或目录的属性被改变"@文档": "\"category = \\\"文件操作类.文件浏览\\\"\"",
+个文件或目录的属性被改变"@全局类": "真",
+个文件或目录的属性被改变"methods": [
+  {
+}"method name": "文件_定位打开文件",
+}"comment": "打开文件所在目录并选中文件",
+}"static": true,
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"@视窗.外部头文件": "\"<shlwapi.h>\"",
+}"@视窗.外部库": "\"shlwapi.lib\"",
+}"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "编辑模式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+目录的属性被改变"class name": "文件定位类_""method name": "文件_定位打开文件_多文件",
+目录的属性被改变"class name": "文件定位类_""comment": "打开文件所在目录并选中文件",
+目录的属性被改变"class name": "文件定位类_""static": true,
+目录的属性被改变"class name": "文件定位类_""data type": "逻辑型",
+目录的属性被改变"class name": "文件定位类_""@禁止流程检查": "真",
+目录的属性被改变"class name": "文件定位类_""@视窗.外部头文件": "\"<shlwapi.h>\"",
+目录的属性被改变"class name": "文件定位类_""@视窗.外部库": "\"shlwapi.lib\"",
+目录的属性被改变"class name": "文件定位类_""parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "需提供文件或文件夹的绝对路径",
+"data type": "文本数组类"
+   }
+目录的属性被改变"class name": "文件定位类_"]
+  }
+个文件或目录的属性被改变]
+ },
+ {
+"data type": "逻辑型""class name": "文件浏览类_",
+"data type": "逻辑型""@文档": "\"category = \\\"文件操作类.文件浏览\\\"\"",
+"data type": "逻辑型""@全局类": "真",
+"data type": "逻辑型""methods": [
+  {
+data type": "文本数组类""method name": "浏览选择文件_",
+data type": "文本数组类""result comment": "成功返回选中的文件名，失败或未选择则返回空文本",
+data type": "文本数组类""static": true,
+data type": "文本数组类""data type": "文本型",
+data type": "文本数组类""@禁止流程检查": "真",
+data type": "文本数组类""parameters": [
+   {
+"parameter name": "父窗口句柄",
+"comment": "父窗口的句柄，0表示无父窗口",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "对话框标题",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "默认文件名",
+"comment": "用作初始化对话框中的文件名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "过滤器",
+"comment": "例如 \"MP4文件(*.mp4;*.m4a)|*.mp4;*.m4a|所有文件(*.*)|*.*\"",
+"data type": "文本型",
+"@默认值": "\"所有文件(*.*)|*.*\""
+   },
+   {
+"parameter name": "初始过滤器",
+"comment": "指定初始过滤器在\"过滤器\"属性中的索引位置(从1开始),\r\n0为不指定初始过滤器,以第一个过滤器为初始项.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "初始目录",
+"comment": "指定打开对话框时自动跳转到的目录",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "默认文件后缀",
+"comment": "当用户没有输入文件的后缀名称时,自动使用这里的文件后缀名称.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "创建时提示",
+"comment": "如果输入的文件不存在,提示是否创建文件",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "禁止解析快捷方式",
+"comment": "选择快捷方式时默认解析为它指向的目标文件,设置为真时返回快捷方式文件本身.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不改变目录",
+"comment": "是否在对话框关闭后,将\"当前目录\"还原为打开对话框之前的目录.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "启用对话框",
+"comment": "指定一个自定义对话框模板",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "文本数组类"]
+  },
+  {
+a type": "逻辑型""class name": "文件浏览类_""method name": "文件_浏览选择文件",
+a type": "逻辑型""class name": "文件浏览类_""data type": "文本型"
+  },
+  {
+@默认值": "假""method name": "浏览选择多文件_",
+@默认值": "假""result comment": "成功返回文件列表数组",
+@默认值": "假""static": true,
+@默认值": "假""data type": "文本数组类",
+@默认值": "假""@禁止流程检查": "真",
+@默认值": "假""parameters": [
+   {
+"parameter name": "父窗口句柄",
+"comment": "父窗口的句柄,0表示无父窗口",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "对话框标题",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "过滤器",
+"comment": "例如 \"MP4文件(*.mp4;*.m4a)|*.mp4;*.m4a|所有文件(*.*)|*.*\"",
+"data type": "文本型",
+"@默认值": "\"所有文件(*.*)|*.*\""
+   },
+   {
+"parameter name": "初始过滤器",
+"comment": "指定初始过滤器在\"过滤器\"属性中的索引位置(从1开始),\r\n0为不指定初始过滤器,以第一个过滤器为初始项.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "初始目录",
+"comment": "指定打开对话框时自动跳转到的目录",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "不改变目录",
+"comment": "是否在对话框关闭后,将\"当前目录\"还原为打开对话框之前的目录.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "启用对话框",
+"comment": "指定一个自定义对话框模板",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@默认值": "假"]
+  },
+  {
+ }"method name": "文件_浏览选择多文件",
+ }"data type": "文本数组类"
+  },
+  {
+"method name": "浏览选择文件夹_",
+"comment": "只限于MFC中使用",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "初始目录",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+ }"method name": "文件_浏览选择文件夹",
+ }"data type": "文本型"
+  },
+  {
+
+"method name": "浏览选择文件夹2_",
+
+"comment": "支持文件和文件夹，支持非MFC使用",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "父窗口句柄",
+"comment": "父窗口的句柄，0表示无父窗口",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"请选择一个文件或文件夹\""
+   },
+   {
+"parameter name": "文件是否可选",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "文件_浏览选择文件夹2",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "浏览选择保存文件_",
+
+"result comment": "成功返回保存路径名",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "父窗口句柄",
+"comment": "父窗口的句柄，0：表示无父窗口",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "对话框标题",
+"comment": "文件对话框的标题，默认为\"保存\"",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "默认文件名",
+"comment": "用作初始化对话框中的文件名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "过滤器",
+"comment": "例如 \"MP4文件(*.mp4;*.m4a)|*.mp4;*.m4a|所有文件(*.*)|*.*\"",
+"data type": "文本型",
+"@默认值": "\"所有文件(*.*)|*.*\""
+   },
+   {
+"parameter name": "初始过滤器",
+"comment": "指定初始过滤器在\"过滤器\"属性中的索引位置(从1开始),\r\n0为不指定初始过滤器,以第一个过滤器为初始项.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "初始目录",
+"comment": "指定打开对话框时自动跳转到的目录",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "默认文件后缀",
+"comment": "当用户没有输入文件的后缀名称时,自动使用这里的文件后缀名称.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "文件覆盖提示",
+"comment": "如果选择的文件已经存在,提示是否覆盖",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "不改变目录",
+"comment": "是否在对话框关闭后,将\"当前目录\"还原为打开对话框之前的目录.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "启用对话框",
+"comment": "指定一个自定义对话框模板",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+对话框时自动跳转到的目录"method name": "文件_浏览选择保存文件",
+对话框时自动跳转到的目录"data type": "文本型"
+  }
+"data type": "逻辑型"]
+ },
+ {
+"data type": "逻辑型""class name": "文件尺寸类_",
+"data type": "逻辑型""@文档": "\"category = \\\"文件操作类.文件尺寸\\\"\"",
+"data type": "逻辑型""@全局类": "真",
+"data type": "逻辑型""methods": [
+  {
+data type": "逻辑型""@全局类": "真""method name": "取文件夹尺寸_",
+data type": "逻辑型""@全局类": "真""comment": "取出整个文件夹总大小",
+data type": "逻辑型""@全局类": "真""result comment": "单位为字节, 失败返回-1",
+data type": "逻辑型""@全局类": "真""static": true,
+data type": "逻辑型""@全局类": "真""data type": "长整数",
+data type": "逻辑型""@全局类": "真""@禁止流程检查": "真",
+data type": "逻辑型""@全局类": "真""parameters": [
+   {
+"parameter name": "文件夹路径",
+"data type": "文本型"
+   }
+data type": "逻辑型""@全局类": "真"]
+  },
+  {
+data type": "文本型""method name": "文件_取文件夹尺寸",
+data type": "文本型""comment": "取出整个文件夹总大小",
+data type": "文本型""data type": "长整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "文件夹路径",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "文本型""method name": "取文件目录尺寸_",
+data type": "文本型""comment": "支持文件和文件夹",
+data type": "文本型""result comment": "执行成功返回文件尺寸(单位字节)，返回-1表示错误",
+data type": "文本型""static": true,
+data type": "文本型""data type": "长整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "文件_取文件目录尺寸",
+
+"comment": "支持文件和文件夹",
+
+"data type": "长整数",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+
+]
+  }
+"data type": "逻辑型"]
+ },
+ {
+data type": "文本型""class name": "文件目录操作类_",
+data type": "文本型""@文档": "\"category = \\\"文件操作类.文件目录操作\\\"\"",
+data type": "文本型""@视窗.外部头文件": "\"shlwapi.h\"",
+data type": "文本型""@视窗.外部库": "\"shlwapi.lib\"",
+data type": "文本型""@全局类": "真",
+data type": "文本型""methods": [
+  {
+}"method name": "文件_取文件数",
+}"comment": "不含子级目录的文件",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件夹路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ata type": "文本型""static": true"method name": "文件_取文件数2",
+ata type": "文本型""static": true"comment": "含子级目录的文件",
+ata type": "文本型""static": true"static": true,
+ata type": "文本型""static": true"data type": "整数",
+ata type": "文本型""static": true"parameters": [
+   {
+"parameter name": "文件夹路径",
+"data type": "文本型"
+   }
+ata type": "文本型""static": true]
+  },
+  {
+}"method name": "文件_取子目录数",
+}"comment": "取一个文件夹下面的子目录数量，不含子级目录",
+}"result comment": "返回子目录数，失败返回-1",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件夹路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ameter name": "文件夹路径""method name": "文件_取子目录数2",
+ameter name": "文件夹路径""comment": "取一个文件夹下面的子目录数量，含子级目录",
+ameter name": "文件夹路径""static": true,
+ameter name": "文件夹路径""data type": "整数",
+ameter name": "文件夹路径""parameters": [
+   {
+"parameter name": "文件夹路径",
+"data type": "文本型"
+   }
+ameter name": "文件夹路径"]
+  },
+  {
+}"method name": "文件_文件大小转单位",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "文件大小",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+"comment": "取一个文件夹下面的子目录数量，不含子级目录""method name": "文件_文件大小转单位2",
+"comment": "取一个文件夹下面的子目录数量，不含子级目录""static": true,
+"comment": "取一个文件夹下面的子目录数量，不含子级目录""data type": "文本型",
+"comment": "取一个文件夹下面的子目录数量，不含子级目录""@禁止流程检查": "真",
+"comment": "取一个文件夹下面的子目录数量，不含子级目录""@视窗.外部头文件": "\"shlwapi.h\"",
+"comment": "取一个文件夹下面的子目录数量，不含子级目录""parameters": [
+   {
+"parameter name": "文件大小",
+"data type": "变整数"
+   }
+"comment": "取一个文件夹下面的子目录数量，不含子级目录"]
+  },
+  {
+"method name": "文件_取文件路径",
+"comment": "取文件路径中除名称外的部分",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "欲取其路径的文件名",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "文件_取上级文件路径",
+"comment": "例如：“C:\\\\a\\\\b\\\\c.txt”；“C:\\\\a\\\\b”，均能得到C:\\\\a",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否加尾路径",
+"comment": "结尾加上\\\\",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否返回根路径",
+"comment": "只剩下根路径时是否返回",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+}"method name": "文件_取文件名",
+}"comment": "返回所指定文件名的无路径部分，包含有扩展名",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+data type": "长整数""method name": "文件_取文件名2",
+data type": "长整数""comment": "返回所指定文件名的无路径部分，不包含扩展名",
+data type": "长整数""static": true,
+data type": "长整数""data type": "文本型",
+data type": "长整数""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+data type": "长整数"]
+  },
+  {
+
+"method name": "文件_取文件名3",
+
+"comment": "返回所指定文件名的无路径部分，支持正反斜杠",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否带提扩展名",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+]"method name": "文件_取文件路径尾名称",
+]"comment": "例如：“C:\\\\a\\\\b\\\\c.txt”；“C:\\\\a\\\\b”；“a\\\\b\\\\c.txt”，均能得到b目录",
+]"static": true,
+]"data type": "文本型",
+]"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否加尾路径",
+"comment": "结尾加上\\\\",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否返回根路径",
+"comment": "只剩下根路径时是否返回",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]]
+  },
+  {
+]"method name": "文件_取文件路径父名称",
+]"comment": "例如：“C:\\\\a\\\\b\\\\c.txt”；“C:\\\\a\\\\b”，均能得到a",
+]"static": true,
+]"data type": "文本型",
+]"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+
+"method name": "文件_取文件路径父项",
+
+"comment": "例如：“C:\\\\a\\\\b\\\\c.txt”；“C:\\\\a\\\\b”，均能得到C:\\\\",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "路径""method name": "文件_取扩展名",
+ameter name": "路径""static": true,
+ameter name": "路径""data type": "文本型",
+ameter name": "路径""@禁止流程检查": "真",
+ameter name": "路径""@视窗.外部头文件": "\"<shlwapi.h>\"",
+ameter name": "路径""@视窗.外部库": "\"Shlwapi.lib\"",
+ameter name": "路径""parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   }
+ameter name": "路径"]
+  },
+  {
+"data type": "文本型""method name": "文件_是否为文件",
+"data type": "文本型""static": true,
+"data type": "文本型""data type": "逻辑型",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "判断文件",
+"data type": "文本型"
+   }
+"data type": "文本型"]
+  },
+  {
+"static": true"method name": "文件_目录是否为空",
+"static": true"static": true,
+"static": true"data type": "逻辑型",
+"static": true"@禁止流程检查": "真",
+"static": true"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+"static": true]
+  },
+  {
+"static": true"method name": "文件_是否为文件夹",
+"static": true"static": true,
+"static": true"data type": "逻辑型",
+"static": true"parameters": [
+   {
+"parameter name": "判断文件",
+"data type": "文本型"
+   }
+"static": true]
+  },
+  {
+data type": "文本型""static": true"method name": "文件_文件是否被占用",
+data type": "文本型""static": true"static": true,
+data type": "文本型""static": true"data type": "逻辑型",
+data type": "文本型""static": true"@禁止流程检查": "真",
+data type": "文本型""static": true"@视窗.外部头文件": "\"<shlwapi.h>\"",
+data type": "文本型""static": true"@视窗.外部库": "\"Shlwapi.lib\"",
+data type": "文本型""static": true"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   }
+data type": "文本型""static": true]
+  },
+  {
+
+"method name": "文件_文件路径头是否合法",
+
+"comment": "判断是否以“C:\\\\”等开头的路径信息",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "文件_文件路径是否合法",
+ }"comment": "判断是否以“C:\\\\”等开头，并有文件名带扩展名结尾的路径信息",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+static": true"@禁止流程检查": "真""method name": "文件_文件路径尾_添加",
+static": true"@禁止流程检查": "真""comment": "如果路径以非\\\\结尾，将进行补充",
+static": true"@禁止流程检查": "真""static": true,
+static": true"@禁止流程检查": "真""@嵌入式方法": "\"\"",
+static": true"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "路径",
+"comment": "提供所欲处理的路径文本",
+"data type": "文本型"
+   }
+static": true"@禁止流程检查": "真"]
+  },
+  {
+ }"method name": "文件_文件路径尾_删除",
+ }"comment": "如果路径以\\\\结尾，将去除尾部\\\\",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"comment": "提供所欲处理的路径文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ethod name": "文件_文件路径是否合法""method name": "文件更名_",
+ethod name": "文件_文件路径是否合法""static": true,
+ethod name": "文件_文件路径是否合法""data type": "逻辑型",
+ethod name": "文件_文件路径是否合法""parameters": [
+   {
+"parameter name": "文件来源",
+"comment": "包含路径及名称。如：“C:\\\\测试.exe”",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新名称",
+"comment": "不含路径，单文件名。如“测试2.exe”",
+"data type": "文本型"
+   }
+ethod name": "文件_文件路径是否合法"]
+  },
+  {
+
+"method name": "删除文件_",
+
+"comment": "删除该目录下指定的文件或模糊指定的文件",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "文件目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件类型",
+"comment": "支持：1、*　2、*.*　3、aa.*　4、*.jpg　5、aa.jpg",
+"data type": "文本型"
+   },
+   {
+"parameter name": "包含子目录",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+]"method name": "删除文件2_",
+]"comment": "支持删除文件和目录",
+]"static": true,
+]"data type": "逻辑型",
+]"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+
+"method name": "删除文件_强制",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+
+]
+  }
+data type": "文本型"]
+ },
+ {
+
+"class name": "文件枚举类_",
+
+"@文档": "\"category = \\\"文件操作类.文件枚举\\\"\"",
+
+"@全局类": "真",
+
+"methods": [
+  {
+ameter name": "新名称""method name": "枚举文件_",
+ameter name": "新名称""comment": "支持枚举文件和文件夹",
+ameter name": "新名称""static": true,
+ameter name": "新名称""data type": "整数",
+ameter name": "新名称""@禁止流程检查": "真",
+ameter name": "新名称""parameters": [
+   {
+"parameter name": "欲枚举的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲查找的文件名",
+"comment": "* 为枚举所有文件;\n支持：1、*　2、*.*　3、aa.*　4、*.jpg　5、aa.jpg",
+"data type": "文本型",
+"@默认值": "\"*\""
+   },
+   {
+"parameter name": "返回的枚举文件",
+"comment": "需要带路径，请将“是否返回路径”设置为真",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的枚举目录",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否返回路径",
+"comment": "为真时，“返回枚举文件”里则会带上路径",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否枚举子目录",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否枚举隐藏文件",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "新名称"]
+  },
+  {
+"method name": "文件_枚举文件",
+"comment": "支持枚举文件和文件夹",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "欲枚举的目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲查找的文件名",
+"comment": "* 为枚举所有文件;\n支持：1、*　2、*.*　3、aa.*　4、*.jpg　5、aa.jpg",
+"data type": "文本型",
+"@默认值": "\"*\""
+   },
+   {
+"parameter name": "返回的枚举文件",
+"comment": "需要带路径，请将“是否返回路径”设置为真",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的枚举目录",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否返回路径",
+"comment": "为真时，“返回枚举文件”里则会带上路径",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否枚举子目录",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否枚举隐藏文件",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+"method name": "文件_删除空文件夹",
+"comment": "删除指定目录中所有空文件夹",
+"result comment": "返回删除的总数量",
+"static": true,
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "欲操作的目录",
+"comment": "例如：“C:\\\\测试目录”",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "是否枚举隐藏文件""method name": "FindClose_",
+ameter name": "是否枚举隐藏文件""static": true,
+ameter name": "是否枚举隐藏文件""data type": "逻辑型",
+ameter name": "是否枚举隐藏文件""@输出名": "\"FindClose\"",
+ameter name": "是否枚举隐藏文件""@视窗.输入": "\"Kernel32.dll\"",
+ameter name": "是否枚举隐藏文件""parameters": [
+   {
+"parameter name": "hFindFile",
+"data type": "变整数"
+   }
+ameter name": "是否枚举隐藏文件"]
+  },
+  {
+
+"method name": "FindNextFileW_",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@输出名": "\"FindNextFileW\"",
+
+"@视窗.输入": "\"Kernel32.dll\"",
+
+"parameters": [
+   {
+"parameter name": "hFindFile",
+"data type": "变整数"
+   },
+   {
+"parameter name": "lpFindFileData",
+"data type": "WIN32_FIND_DATAW_",
+"@视窗.输出参数": "真"
+   }
+
+]
+  },
+  {
+"method name": "FindFirstFileW_",
+"static": true,
+"data type": "变整数",
+"@输出名": "\"FindFirstFileW\"",
+"@视窗.输入": "\"Kernel32.dll\"",
+"parameters": [
+   {
+"parameter name": "lpFileName",
+"data type": "文本型"
+   },
+   {
+"parameter name": "lpFindFileData",
+"data type": "WIN32_FIND_DATAW_",
+"@视窗.输出参数": "真"
+   }
+]
+  }
+
+]
+ },
+ {
+}"class name": "WIN32_FIND_DATAW_",
+}"@文档": "\"category = \\\"文件操作类.文件枚举.附加类\\\"\"",
+}"@视窗.结构类": "0",
+}"variables": [
+  {
+data type": "文本型""variable name": "文件属性",
+data type": "文本型""data type": "整数"
+  },
+  {
+ }"variable name": "ftCreationTime",
+ }"data type": "FILETIME_"
+  },
+  {
+
+"variable name": "ftLastAccessTime",
+
+"data type": "FILETIME_"
+  },
+  {
+
+"data type": "FILETIME_""variable name": "ftLastWriteTime",
+
+"data type": "FILETIME_""data type": "FILETIME_"
+  },
+  {
+
+"variable name": "nFileSizeHigh",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "nFileSizeLow",
+
+"data type": "整数"
+  },
+  {
+"parameters": [
+"variable name": "dwReserved0",
+"parameters": [
+"data type": "整数"
+  },
+  {
+2_FIND_DATAW_"variable name": "dwReserved1",
+2_FIND_DATAW_"data type": "整数"
+  },
+  {
+"data type": "整数""variable name": "文件名称",
+"data type": "整数""data type": "字符 [260]"
+  },
+  {
+stAccessTime"variable name": "cAlternateFileName",
+stAccessTime"data type": "字符 [14]"
+  }
+}]
+ },
+ {
+data type": "文本数组类""class name": "FILETIME_",
+data type": "文本数组类""@文档": "\"category = \\\"文件操作类.文件枚举.附加类\\\"\"",
+data type": "文本数组类""@视窗.结构类": "0",
+data type": "文本数组类""variables": [
+  {
+2_FIND_DATAW_"variable name": "dwLowDateTime",
+2_FIND_DATAW_"data type": "整数"
+  },
+  {
+"variable name": "dwHighDateTime",
+"data type": "整数"
+  }
+data type": "文本数组类"]
+ },
+ {
+iable name": "dwHighDateTime""class name": "文件拖放类_",
+iable name": "dwHighDateTime""@文档": "\"category = \\\"文件操作类.文件拖放\\\"\"",
+iable name": "dwHighDateTime""methods": [
+  {
+ type": "文本型""variable name": "文件属性""method name": "启用拖放_",
+ type": "文本型""variable name": "文件属性""parameters": [
+   {
+"parameter name": "绑定组件句柄",
+"data type": "变整数"
+   }
+ type": "文本型""variable name": "文件属性"]
+  },
+  {
+ameter name": "是否返回路径""method name": "撤销拖放_",
+ameter name": "是否返回路径""parameters": [
+   {
+"parameter name": "所绑定的组件句柄",
+"data type": "变整数"
+   }
+ameter name": "是否返回路径"]
+  },
+  {
+riable name": "nFileSizeHigh""method name": "拖放事件",
+riable name": "nFileSizeHigh""type": "event",
+riable name": "nFileSizeHigh""data type": "整数",
+riable name": "nFileSizeHigh""parameters": [
+   {
+"parameter name": "接收到的文件",
+"data type": "文本数组类"
+   }
+riable name": "nFileSizeHigh"]
+  }
+iable name": "dwHighDateTime"]
+ },
+ {
+}"class name": "模拟拖放投递类_",
+}"@文档": "\"category = \\\"文件操作类.文件拖放\\\"\"",
+}"@全局类": "真",
+}"methods": [
+  {
+"method name": "拖放_发送文件拖放消息",
+"comment": "模拟文件拖放功能，将文件信息投递到软件里，完成模拟拖放文件",
+"static": true,
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文件名",
+"comment": "例如：“C:\\\\aa.txt”；此参数与下个参数只需设置一些即可",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文件名组",
+"comment": "提供多个文件。此参数与上个参数只需设置一些即可",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+]
+  }
+}]
+ }
+ 变整数]
+}

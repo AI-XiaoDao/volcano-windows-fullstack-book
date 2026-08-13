@@ -1,0 +1,659 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"队列操作库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+"class name": "队列类_",
+"comment": "翻译自易语言鱼刺队列",
+"methods": [
+  {
+
+"method name": "初始化队列_"
+  },
+  {
+
+"method name": "启用消息等待_",
+
+"comment": "启用了消息等待，当窗口关闭时需要调用“停止消息等待_”"
+  },
+  {
+
+"method name": "停止消息等待_"
+  },
+  {
+
+"method name": "置缓冲区大小_",
+
+"comment": "缓冲区大小建议是压入数据长度的倍数。（缓冲区大小不影响队列的容量）",
+
+"parameters": [
+   {
+"parameter name": "缓冲区大小",
+"comment": "单位：KB，默认1M  不能低于1024字节",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "压入字节集_",
+
+"comment": "与“压入文本_”是公用一个通道",
+
+"result comment": "成功返回真，失败返回假",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "压入文本_",
+
+"comment": "与“压入字节集_”是公用一个通道，压入文本就是压入字节集",
+
+"result comment": "成功返回真，失败返回假",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "弹出字节集_",
+
+"comment": "与“弹出文本_”是公用一个通道，弹字节集就是弹出文本",
+
+"result comment": "成功返回真，失败返回假",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "返回的内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "弹出文本_",
+
+"comment": "与“弹出字节集_”是公用一个通道，弹文本就是弹出字节集",
+
+"result comment": "成功返回真，失败返回假",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "返回的内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取队列长度_",
+
+"comment": "返回当前队列数量",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "队列事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字节集内容",
+"data type": "字节集类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "超级队列类_",
+"@视窗.外部头文件": "\"<queue>\"",
+"methods": [
+  {
+
+"method name": "启用消息等待_",
+
+"comment": "启用了消息等待，当窗口关闭时需要调用“停止消息等待_”"
+  },
+  {
+
+"method name": "停止消息等待_"
+  },
+  {
+
+"method name": "关闭队列加锁_",
+
+"comment": "默认是加锁状态"
+  },
+  {
+
+"method name": "开启队列加锁_",
+
+"comment": "默认是加锁状态"
+  },
+  {
+
+"method name": "压入对象类_",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "压入对象数组类_",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "对象数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "压入COM对象类_",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "压入整数_",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "压入小数_",
+
+"comment": "双精度",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "压入小数2_",
+
+"comment": "单精度",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "单精度小数"
+   }
+
+]
+  },
+  {
+
+"method name": "压入变整数_",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "压入文本_",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "压入字节集_",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "弹出对象类_",
+
+"result comment": "失败返回空对象",
+
+"data type": "对象类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "弹出对象数组类_",
+
+"result comment": "失败返回空对象数组",
+
+"data type": "对象数组类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "弹出整数_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "弹出小数_",
+
+"comment": "双精度",
+
+"data type": "小数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "弹出小数2_",
+
+"comment": "单精度",
+
+"data type": "单精度小数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "弹出变整数_",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "弹出文本_",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "弹出字节集_",
+
+"result comment": "失败返回空字节集",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "弹出COM对象类_",
+
+"result comment": "失败返回空对象",
+
+"data type": "COM对象类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取对象类队列数_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取对象数组队列数_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取COM对象队列数_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取整数队列数_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取小数队列数_",
+
+"comment": "双精度",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取小数队列数2_",
+
+"comment": "单精度",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取变整数队列数_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取文本队列数_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取字节集队列数_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "队列事件_对象类",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事件内容",
+"data type": "对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "队列事件_对象数组",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事件内容",
+"data type": "对象数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "队列事件_COM对象",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事件内容",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "队列事件_整数",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事件内容",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "队列事件_小数",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事件内容",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "队列事件_小数2",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事件内容",
+"data type": "单精度小数"
+   }
+
+]
+  },
+  {
+
+"method name": "队列事件_变整数",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事件内容",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "队列事件_文本",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事件内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "队列事件_字节集",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事件内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "队列事件_综合",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "消息类型",
+"comment": "1.对象类 2.对象数组 3.com对象 4.整数 5.双精度小数 6.单精度小数 7.变整数 8.文本 9.字节集",
+"data type": "整数"
+   },
+   {
+"parameter name": "对象类内容",
+"data type": "对象类"
+   },
+   {
+"parameter name": "对象数组类内容",
+"data type": "对象数组类"
+   },
+   {
+"parameter name": "COM对象类内容",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "整数内容",
+"data type": "整数"
+   },
+   {
+"parameter name": "小数内容",
+"data type": "小数"
+   },
+   {
+"parameter name": "小数内容2",
+"data type": "单精度小数"
+   },
+   {
+"parameter name": "变整数内容",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文本型内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字节集类内容",
+"data type": "字节集类"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

@@ -1,0 +1,2590 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC版ECharts图表组件".
+
+{
+ഀꌥŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ഀꌥŝ"package name": "火山.ECharts",
+ഀꌥŝ"comment": "火山MFC·Echarts图表控件,图表及元素样式参数配置.",
+ഀꌥŝ"classes": [
+ {
+ "class name": "文本样式类",
+ "comment": "图表元素的文字样式(textStyle)",
+ "base class": "图表组件基础类",
+ "@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+ "methods": [
+  {
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""method name": "文本颜色",
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""comment": "图表元素的文字的颜色",
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""type": "property setter",
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如 'rgb(128, 128, 128)' ,如果想要加上 alpha 通道,可以使用 RGBA,比如 'rgba(128, 128, 128, 0.5)'.\n也可以使用十六进制格式,比如 '#ccc'",
+"data type": "文本型"
+   }
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\""]
+  },
+  {
+ "method name": "透明度",
+ "comment": "文字的透明度,支持从 0 到 1 的小数数字,为0时不绘制该文字.",
+ "type": "property setter",
+ "parameters": [
+   {
+"parameter name": "透明度值",
+"comment": "0 到 1 的小数值",
+"data type": "小数",
+"@默认值": "1"
+   }
+ ]
+  },
+  {
+}"method name": "字体样式",
+}"comment": "文字字体的风格",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否斜体",
+"comment": "默认为通常风格,需要将字体设置为斜体时为真",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "使用斜体",
+}"comment": "将字体的风格设置为斜体",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否斜体",
+"comment": "默认为通常风格,需要将字体设置为斜体时为真",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+return idx * 100;  // 越往后的数据延迟越大."method name": "字体粗细",
+return idx * 100;  // 越往后的数据延迟越大."comment": "文字字体的粗细",
+return idx * 100;  // 越往后的数据延迟越大."type": "property setter",
+return idx * 100;  // 越往后的数据延迟越大."parameters": [
+   {
+"parameter name": "字体粗细值",
+"comment": "提供元素字体粗细常量",
+"data type": "元素字体粗细",
+"@默认值": "元素字体粗细.通常"
+   }
+return idx * 100;  // 越往后的数据延迟越大.]
+  },
+  {
+"method name": "字体粗细2",
+"comment": "文字字体的粗细",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "字体粗细值",
+"comment": "提供100-900的字体粗细值,400 等同于常量:元素字体粗细.通常,而 700 等同于元素字体粗细.粗体.",
+"data type": "整数",
+"@默认值": "400"
+   }
+]
+  },
+  {
+data type": "整数""method name": "字体系列",
+data type": "整数""comment": "文字的字体系列",
+data type": "整数""type": "property setter",
+data type": "整数""parameters": [
+   {
+"parameter name": "字体名称",
+"comment": "提供字体系列名称,可以是 'serif' , 'monospace', 'Arial', 'Courier New', 'Microsoft YaHei'...",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+comment": "文字字体的粗细""method name": "字体大小",
+comment": "文字字体的粗细""comment": "文字的字体大小",
+comment": "文字字体的粗细""type": "property setter",
+comment": "文字字体的粗细""parameters": [
+   {
+"parameter name": "字体大小",
+"comment": "提供字号大小",
+"data type": "整数",
+"@默认值": "12"
+   }
+comment": "文字字体的粗细"]
+  },
+  {
+
+"method name": "行高",
+
+"comment": "文本行高,如果没有设置,则会取父层级的.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "行高值",
+"comment": "行高,值默认12.",
+"data type": "整数",
+"@默认值": "12"
+   }
+
+]
+  },
+  {
+"method name": "文本显示宽度",
+"comment": "文本显示宽度",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "宽度",
+"comment": "宽度值",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"comment": "文本行高,如果没有设置,则会取父层级的.""method name": "文本显示高度",
+"comment": "文本行高,如果没有设置,则会取父层级的.""comment": "文本显示高度",
+"comment": "文本行高,如果没有设置,则会取父层级的.""type": "property setter",
+"comment": "文本行高,如果没有设置,则会取父层级的.""parameters": [
+   {
+"parameter name": "高度",
+"comment": "高度值",
+"data type": "整数",
+"@默认值": "0"
+   }
+"comment": "文本行高,如果没有设置,则会取父层级的."]
+  },
+  {
+parameters": [
+"method name": "文本边框颜色",
+parameters": [
+"comment": "文字本身的描边颜色",
+parameters": [
+"type": "property setter",
+parameters": [
+"parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如 'rgb(128, 128, 128)' ,如果想要加上 alpha 通道,可以使用 RGBA,比如 'rgba(128, 128, 128, 0.5)'.\n也可以使用十六进制格式,比如 '#ccc'",
+"data type": "文本型"
+   }
+parameters": [
+]
+  },
+  {
+parameters": [
+"method name": "文本边框宽度",
+parameters": [
+"comment": "文字本身的描边宽度",
+parameters": [
+"type": "property setter",
+parameters": [
+"parameters": [
+   {
+"parameter name": "边框宽度",
+"comment": "描边宽度",
+"data type": "整数",
+"@默认值": "0"
+   }
+parameters": [
+]
+  },
+  {
+arameters": [
+"parameters": [
+"method name": "文本边框类型",
+arameters": [
+"parameters": [
+"comment": "文字本身的描边边框线类型",
+arameters": [
+"parameters": [
+"type": "property setter",
+arameters": [
+"parameters": [
+"parameters": [
+   {
+"parameter name": "边框类型",
+"comment": "提供元素线条类型常量",
+"data type": "元素线条类型",
+"@默认值": "元素线条类型.无"
+   }
+arameters": [
+"parameters": [
+]
+  },
+  {
+ameter name": "边框类型""method name": "文本边框虚线阵列",
+ameter name": "边框类型""comment": "用以指定线条的虚线阵列,配合虚线偏移可实现更灵活的虚线效果.",
+ameter name": "边框类型""type": "property setter",
+ameter name": "边框类型""parameters": [
+   {
+"parameter name": "阵列数组文本",
+"comment": "提供一个数组文本 如:\"[5,10]\"",
+"data type": "文本型"
+   }
+ameter name": "边框类型"]
+  },
+  {
+data type": "文本型""method name": "文本边框虚线偏移",
+data type": "文本型""comment": "用于设置文本边框虚线的偏移量,可搭配虚线类型边框,实现灵活的虚线效果.",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "偏移量",
+"comment": "偏移量",
+"data type": "整数",
+"@默认值": "5"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "文本阴影颜色",
+}"comment": "文字本身的阴影颜色",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如 'rgb(128, 128, 128)' ,如果想要加上 alpha 通道,可以使用 RGBA,比如 'rgba(128, 128, 128, 0.5)'.\n也可以使用十六进制格式,比如 '#ccc'",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "文本阴影模糊大小",
+
+"comment": "文字本身的阴影模糊大小",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "模糊大小",
+"comment": "阴影模糊大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+]"method name": "文本阴影水平偏移",
+]"comment": "阴影水平方向上的偏移距离,此配置项生效的前提是设置了是否显示为真.",
+]"type": "property setter",
+]"parameters": [
+   {
+"parameter name": "偏移距离",
+"comment": "单位px",
+"data type": "整数",
+"@默认值": "0"
+   }
+]]
+  },
+  {
+
+"parameters": [
+"method name": "文本阴影垂直偏移",
+
+"parameters": [
+"comment": "阴影垂直方向上的偏移距离,此配置项生效的前提是设置了是否显示为真.",
+
+"parameters": [
+"type": "property setter",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "偏移距离",
+"comment": "单位px",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+"parameters": [
+]
+  },
+  {
+data type": "整数""method name": "富文本样式",
+data type": "整数""comment": "自定义富文本样式,利用和结合标签格式器,可以在标签中做出非常丰富的效果.",
+data type": "整数""type": "property setter",
+data type": "整数""parameters": [
+   {
+"parameter name": "自定义富文本样式",
+"comment": "提供一个对象文本,如:\"{style:{color: 'red',lineHeight: 10}, style2:{ height: 40, backgroundColor: { image: 'xxx/xxx.jpg'}}}\".\n其中 style 和 style2... 分别代表一个自定义风格,在标签格式器中可以引用这些风格来实现丰富的效果.",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "溢出截断",
+
+"comment": "文字超出宽度是否截断或者换行,当设置了宽度时有效.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "截断类型",
+"comment": "提供元素溢出截断类型常量",
+"data type": "元素溢出截断类型",
+"@默认值": "元素溢出截断类型.无"
+   }
+
+]
+  },
+  {
+
+"parameters": [
+"method name": "截断省略文本",
+
+"parameters": [
+"comment": "在溢出截断配置为'截断'时,可以通过该属性配置末尾显示的省略文本.",
+
+"parameters": [
+"type": "property setter",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "省略文本",
+"comment": "省略文本",
+"data type": "文本型",
+"@默认值": "\"...\""
+   }
+
+"parameters": [
+]
+  }
+ ]
+ },
+ {
+data type": "文本型""class name": "标签样式类",
+data type": "文本型""comment": "文本标签的文字样式",
+data type": "文本型""base class": "文本样式类",
+data type": "文本型""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+data type": "文本型""methods": [
+  {
+ameter name": "边框宽度""method name": "数值精度",
+ameter name": "边框宽度""comment": "文本标签中数值的小数点精度",
+ameter name": "边框宽度""type": "property setter",
+ameter name": "边框宽度""parameters": [
+   {
+"parameter name": "小数点精度",
+"comment": "可以指定如 2 表示保留两位小数.如果提供 -1 根据当前轴的值将自动判.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "边框宽度"]
+  },
+  {
+
+"comment": "文字超出宽度是否截断或者换行,当设置了宽度时有效.""method name": "格式器",
+
+"comment": "文字超出宽度是否截断或者换行,当设置了宽度时有效.""comment": "文本标签文字的格式化器",
+
+"comment": "文字超出宽度是否截断或者换行,当设置了宽度时有效.""type": "property setter",
+
+"comment": "文字超出宽度是否截断或者换行,当设置了宽度时有效.""parameters": [
+   {
+"parameter name": "格式化文本",
+"comment": "  提供一段格式化文本,可以是 例如: \"'文本 {value} 文本'\",其中 {value} 会被自动替换为对应轴或对应项的值.\n在系列中的字符串模板模板变量有：\n{a}:系列名  {b}:数据名  {c}:数据值  {d}:百分比.\n{@xxx}:数据中名为 'xxx' 的维度的值，如 {@product} 表示名为 'product' 的维度的值.\n{@[n]}:数据中维度 n 的值，如 {@[3]} 表示维度 3 的值，从 0 开始计数.\n在不同的图标组件当中格式器的用法也有所不同,详细使用方法请参考echarts官方文档.",
+"data type": "文本型"
+   }
+
+"comment": "文字超出宽度是否截断或者换行,当设置了宽度时有效."]
+  },
+  {
+@默认值": "元素溢出截断类型.无""method name": "格式器脚本",
+@默认值": "元素溢出截断类型.无""comment": "文本标签文字的格式化器",
+@默认值": "元素溢出截断类型.无""type": "property setter",
+@默认值": "元素溢出截断类型.无""parameters": [
+   {
+"parameter name": "格式器方法",
+"comment": "提供一个js方法(function)文本 在不同的图标组件当中格式器的用法也有所不同,详细使用方法请参考echarts官方文档.",
+"data type": "文本型"
+   }
+@默认值": "元素溢出截断类型.无"]
+  },
+  {
+ }"method name": "距轴距离",
+ }"comment": "文本标签距离轴的距离",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "距离",
+"comment": "距离轴的距离单位px",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+arameters": [
+"comment": "文字本身的描边颜色""method name": "位置",
+arameters": [
+"comment": "文字本身的描边颜色""comment": "文本标签的位置,在日历坐标系中设置周的位置(起始点,结束点)",
+arameters": [
+"comment": "文字本身的描边颜色""type": "property setter",
+arameters": [
+"comment": "文字本身的描边颜色""parameters": [
+   {
+"parameter name": "定位方式",
+"comment": "图表元素定位常量",
+"data type": "图表元素定位",
+"@默认值": "图表元素定位.内部居中"
+   }
+arameters": [
+"comment": "文字本身的描边颜色"]
+  },
+  {
+rameters": [
+"comment": "文字本身的描边颜色""parameters": [
+"method name": "位置2",
+rameters": [
+"comment": "文字本身的描边颜色""parameters": [
+"comment": "文本标签的位置",
+rameters": [
+"comment": "文字本身的描边颜色""parameters": [
+"type": "property setter",
+rameters": [
+"comment": "文字本身的描边颜色""parameters": [
+"parameters": [
+   {
+"parameter name": "定位坐标",
+"comment": "横向和纵向的坐标,提供一个数组文本,可以是\"[10, 10]\"这样的据对像素值,也可以是\"['10%', '10%']\"百分比值.",
+"data type": "文本型"
+   }
+rameters": [
+"comment": "文字本身的描边颜色""parameters": [
+]
+  },
+  {
+}"method name": "文字水平对齐",
+}"comment": "文字水平对齐方式默认自动",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "对齐方式",
+"comment": "提供元素水平对齐常量",
+"data type": "元素水平对齐",
+"@默认值": "元素水平对齐.自动"
+   }
+}]
+  },
+  {
+ameter name": "对齐方式""method name": "文字垂直对齐",
+ameter name": "对齐方式""comment": "文字垂直对齐方式默认自动",
+ameter name": "对齐方式""type": "property setter",
+ameter name": "对齐方式""parameters": [
+   {
+"parameter name": "对齐方式",
+"comment": "提供元素垂直对齐常量",
+"data type": "元素垂直对齐",
+"@默认值": "元素垂直对齐.自动"
+   }
+ameter name": "对齐方式"]
+  },
+  {
+
+"method name": "旋转角度",
+
+"comment": "文本标签旋转角度",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "旋转角度值",
+"comment": "从 -90 度到 90 度,正值是逆时针.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "与图形元素距离",
+}"comment": "距离图形元素的距离",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "距离",
+"comment": "单位像素",
+"data type": "整数"
+   }
+}]
+  },
+  {
+eter name": "对齐方式"]"method name": "与刻度线距离",
+eter name": "对齐方式"]"comment": "仪表盘中刻度文字标签与刻度线的距离",
+eter name": "对齐方式"]"type": "property setter",
+eter name": "对齐方式"]"parameters": [
+   {
+"parameter name": "距离",
+"comment": "单位像素",
+"data type": "整数"
+   }
+eter name": "对齐方式"]]
+  },
+  {
+"parameters": [
+"method name": "圆角半径",
+"parameters": [
+"comment": "图形四个角的圆角半径",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "圆角半径值",
+"comment": "可以是数值文本如:\"5\"统一设置四个角的圆角大小为5像素,也可以是个数组文本如:\"[5, 5, 0, 0]\"分别设置顺时针左上,右上,右下,左下四个角的圆角大小.",
+"data type": "文本型"
+   }
+"parameters": [
+]
+  },
+  {
+}"method name": "内边距",
+}"comment": "图形元素内边距,即元素的padding属性.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "标题内边距",
+"comment": "  默认各方向内边距为5,单位px可以是数值文本,接受数组文本分别设定上右下左边距.\n例:\"[5, 10]\"即为上5px下10px  \"[5,10,20,15,]\"即为上右下左分别为对应的像素尺寸.",
+"data type": "文本型",
+"@默认值": "\"5\""
+   }
+}]
+  },
+  {
+comment": "  默认各方向内边距为5,单位px可以是数值文本,接受数组文本分别设定上右下左边距.\n例:\"[5, 10]\"即为上5px下10px  \"[5,10,20,15,]\"即为上右下左分别为对应的像素尺寸.""method name": "颜色",
+comment": "  默认各方向内边距为5,单位px可以是数值文本,接受数组文本分别设定上右下左边距.\n例:\"[5, 10]\"即为上5px下10px  \"[5,10,20,15,]\"即为上右下左分别为对应的像素尺寸.""comment": "图表元素的颜色",
+comment": "  默认各方向内边距为5,单位px可以是数值文本,接受数组文本分别设定上右下左边距.\n例:\"[5, 10]\"即为上5px下10px  \"[5,10,20,15,]\"即为上右下左分别为对应的像素尺寸.""type": "property setter",
+comment": "  默认各方向内边距为5,单位px可以是数值文本,接受数组文本分别设定上右下左边距.\n例:\"[5, 10]\"即为上5px下10px  \"[5,10,20,15,]\"即为上右下左分别为对应的像素尺寸.""parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".\n也可以使用十六进制格式,比如 \"#ccc\" 一些特殊场景下还可以设置为\"null\"表示空,\"auto\"表示自适应.",
+"data type": "文本型"
+   }
+comment": "  默认各方向内边距为5,单位px可以是数值文本,接受数组文本分别设定上右下左边距.\n例:\"[5, 10]\"即为上5px下10px  \"[5,10,20,15,]\"即为上右下左分别为对应的像素尺寸."]
+  },
+  {
+
+"method name": "开启数字动画",
+
+"comment": "是否开启标签的数字动画",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否开启动画",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+ }"method name": "中心偏移",
+ }"comment": "相对于仪表盘中心的偏移位置",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "中心偏移值",
+"comment": "提供一个数组文本如:['50', '50%']数组第一项是水平方向的偏移,第二项是垂直方向的偏移.\n可以是绝对的数值,也可以是相对于仪表盘半径的百分比.",
+"data type": "文本型",
+"@默认值": "\"[0, 0]\""
+   }
+ }]
+  }
+data type": "文本型"]
+ },
+ {
+@默认值": "\"[0, 0]\"""class name": "日历标签样式类",
+@默认值": "\"[0, 0]\"""comment": "日历标签的文字样式",
+@默认值": "\"[0, 0]\"""base class": "标签样式类",
+@默认值": "\"[0, 0]\"""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+@默认值": "\"[0, 0]\"""methods": [
+  {
+}"type": "property setter""method name": "周起始日",
+}"type": "property setter""comment": "一周从周几开始,默认从周日开始.",
+}"type": "property setter""type": "property setter",
+}"type": "property setter""parameters": [
+   {
+"parameter name": "起始日",
+"comment": "取值0-6",
+"data type": "整数",
+"@默认值": "0"
+   }
+}"type": "property setter"]
+  },
+  {
+ameter name": "起始日""method name": "周显示设置",
+ameter name": "起始日""comment": "星期显示的效果，默认为'en' 可设置中英文以及自定义 下标0为对应星期天的文字显示",
+ameter name": "起始日""type": "property setter",
+ameter name": "起始日""parameters": [
+   {
+"parameter name": "显示效果",
+"comment": "'en':快捷设置英文 '['S', 'M', 'T', 'W', 'T', 'F', 'S']'.\n'cn':快捷设置中文 '['日', '一', '二', '三', '四', '五', '六']'.\n自定意设置:'['S', '一', 'T', '三', '', '五', 'S']'.",
+"data type": "文本型"
+   }
+ameter name": "起始日"]
+  }
+@默认值": "\"[0, 0]\""]
+ },
+ {
+几开始,默认从周日开始."class name": "线条样式类",
+几开始,默认从周日开始."comment": "线条样式(lineStyle)",
+几开始,默认从周日开始."base class": "颜色透明度阴影样式类",
+几开始,默认从周日开始."@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+几开始,默认从周日开始."methods": [
+  {
+开始,默认从周日开始."comment": "线条样式(lineStyle)""method name": "线宽",
+开始,默认从周日开始."comment": "线条样式(lineStyle)""comment": "线宽,即线条的粗细",
+开始,默认从周日开始."comment": "线条样式(lineStyle)""type": "property setter",
+开始,默认从周日开始."comment": "线条样式(lineStyle)""parameters": [
+   {
+"parameter name": "线宽值",
+"comment": "线宽值",
+"data type": "小数",
+"@默认值": "2"
+   }
+开始,默认从周日开始."comment": "线条样式(lineStyle)"]
+  },
+  {
+}"method name": "线条类型",
+}"comment": "线条类型",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "线条类型值",
+"comment": "提供元素线条类型常量",
+"data type": "元素线条类型",
+"@默认值": "元素线条类型.实线"
+   }
+}]
+  },
+  {
+"method name": "虚线偏移",
+"comment": "用于设置虚线的偏移量,配合线条类型实现",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "偏移距离",
+"comment": "偏移距离",
+"data type": "整数"
+   }
+]
+  }
+几开始,默认从周日开始.]
+ },
+ {
+"class name": "图形样式类",
+"comment": "图形样式(itemStyle)",
+"base class": "颜色透明度阴影样式类",
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+"methods": [
+  {
+}"method name": "边框颜色",
+}"comment": "图形的描边颜色",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如 'rgb(128, 128, 128)' ,如果想要加上 alpha 通道,可以使用 RGBA,比如 'rgba(128, 128, 128, 0.5)'.\n也可以使用十六进制格式,比如 '#ccc'",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"type": "property setter""method name": "地图区域颜色",
+"type": "property setter""comment": "地图区域的颜色",
+"type": "property setter""type": "property setter",
+"type": "property setter""parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如 'rgb(128, 128, 128)' ,如果想要加上 alpha 通道,可以使用 RGBA,比如 'rgba(128, 128, 128, 0.5)'.\n也可以使用十六进制格式,比如 '#ccc'",
+"data type": "文本型",
+"@默认值": "\"#eee\""
+   }
+"type": "property setter"]
+  },
+  {
+data type": "文本型""method name": "阴线颜色",
+data type": "文本型""comment": "K线图阴线图形颜色",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".\n也可以使用十六进制格式,比如 '#ccc' 设置为\"null\"表示空",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ata type": "文本型""comment": "K线图阴线图形颜色""method name": "阴线边框颜色",
+ata type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色",
+ata type": "文本型""comment": "K线图阴线图形颜色""type": "property setter",
+ata type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如 'rgb(128, 128, 128)' ,如果想要加上 alpha 通道,可以使用 RGBA,比如 'rgba(128, 128, 128, 0.5)'.\n也可以使用十六进制格式,比如 '#ccc' ",
+"data type": "文本型"
+   }
+ata type": "文本型""comment": "K线图阴线图形颜色"]
+  },
+  {
+ta type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色""method name": "边框宽度",
+ta type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色""comment": "描边线宽",
+ta type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色""type": "property setter",
+ta type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色""parameters": [
+   {
+"parameter name": "描边线宽",
+"comment": "为0时无描边",
+"data type": "整数",
+"@默认值": "0"
+   }
+ta type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色"]
+  },
+  {
+
+"method name": "边框线类型",
+
+"comment": "描边边框线类型",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "边框类型",
+"comment": "提供元素线条类型常量",
+"data type": "元素线条类型",
+"@默认值": "元素线条类型.实线"
+   }
+
+]
+  },
+  {
+
+"method name": "圆角半径",
+
+"comment": "图形四个角的圆角半径",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "圆角半径值",
+"comment": "可以是数值文本如:\"5\"统一设置四个角的圆角大小为5像素,也可以是个数组文本如:\"[5, 5, 0, 0]\"分别设置顺时针左上,右上,右下,左下四个角的圆角大小.",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+ta type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"class name": "区域填充样式类",
+ta type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图.",
+ta type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"base class": "颜色透明度阴影样式类",
+ta type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+ta type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"methods": [
+  {
+样式,设置后显示成区域面积图."method name": "起始位置",
+样式,设置后显示成区域面积图."comment": "  图形区域的起始位置,默认情况下,图形会从坐标轴轴线到数据间进行填充.\n如果需要填充的区域是坐标轴最大值到数据间，或者坐标轴最小值到数据间，则可以通过这个配置项进行设置。",
+样式,设置后显示成区域面积图."type": "property setter",
+样式,设置后显示成区域面积图."parameters": [
+   {
+"parameter name": "起始位置",
+"comment": "缺省值:0为自动填充坐标轴轴线到数据间的区域,1为填充坐标轴底部到数据间的区间,2为填充坐标轴顶部到数据间的区间.",
+"data type": "整数",
+"@默认值": "0"
+   }
+样式,设置后显示成区域面积图.]
+  }
+ta type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+]
+ },
+ {
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图.""class name": "悬停高亮类",
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图.""comment": "图表图形的高亮强调状态配置.",
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图.""base class": "图表参数基础类",
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图.""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图.""variables": [
+  {
+@默认值": "0""variable name": "标签样式",
+@默认值": "0""comment": "焦点悬停时文本标签的样式",
+@默认值": "0""data type": "标签样式类"
+  },
+  {
+置后显示成区域面积图."method name": "起始位置""variable name": "标签引导线",
+置后显示成区域面积图."method name": "起始位置""comment": "焦点悬停时标签引导线的样式",
+置后显示成区域面积图."method name": "起始位置""data type": "标签引导线类"
+  },
+  {
+置后显示成区域面积图."method name": "起始位置""variable name": "图形样式",
+置后显示成区域面积图."method name": "起始位置""comment": "焦点悬停时图形的样式",
+置后显示成区域面积图."method name": "起始位置""data type": "图形样式类"
+  },
+  {
+}"variable name": "线条样式",
+}"comment": "焦点悬停时线条的样式",
+}"data type": "线条样式类"
+  },
+  {
+置后显示成区域面积图."method name": "起始位置""variable name": "区域填充",
+置后显示成区域面积图."method name": "起始位置""comment": "焦点悬停时区域填充样式",
+置后显示成区域面积图."method name": "起始位置""data type": "区域填充样式类"
+  },
+  {
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""variable name": "端点标签",
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""comment": "焦点悬停时折线端点(结束点)标签的样式",
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""data type": "标签样式类"
+  }
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."],
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图.""methods": [
+  {
+ type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色"]"method name": "取文本",
+ type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色"]"comment": "将当前对象的图表配置参数转换成JSON文本",
+ type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色"]"data type": "文本型",
+ type": "文本型""comment": "K线图阴线图形颜色""comment": "K线图阴线图形的描边颜色"]"@禁止流程检查": "真"
+  },
+  {
+"method name": "移入放大",
+"comment": "是否开启鼠标移入在拐点标志上,饼图扇区上,以及不同系列的数据图形上的放大效果,默认为真.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "是否移入放大",
+"comment": "是否放大",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+}"method name": "移入放大尺寸",
+}"comment": "是否开启鼠标移入在拐点标志上,饼图扇区上,以及不同系列的数据图形上的放大的尺寸.开启移入放大有效",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "放大尺寸",
+"comment": "放大尺寸,单位像素.",
+"data type": "整数",
+"@默认值": "10"
+   }
+}]
+  },
+  {
+}"method name": "聚焦淡出",
+}"comment": "在高亮图形时,是否淡出其它数据的图形已达到聚焦的效果.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "聚焦淡出设置",
+"comment": "提供聚焦淡出方式常量",
+"data type": "聚焦淡出方式",
+"@默认值": "聚焦淡出方式.不淡出其他图形"
+   }
+}]
+  },
+  {
+"method name": "淡出范围",
+"comment": "在开启聚焦淡出的时候,可以配置淡出的范围.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "淡出设置",
+"comment": "提供聚焦淡出范围常量",
+"data type": "聚焦淡出范围",
+"@默认值": "聚焦淡出范围.系列"
+   }
+]
+  }
+a type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]
+ },
+ {
+data type": "聚焦淡出方式""class name": "淡出状态类",
+data type": "聚焦淡出方式""comment": "淡出状态样式设置",
+data type": "聚焦淡出方式""base class": "图表参数基础类",
+data type": "聚焦淡出方式""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+data type": "聚焦淡出方式""variables": [
+  {
+type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]"variable name": "标签样式",
+type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]"comment": "淡出状态文本标签的样式",
+type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]"data type": "标签样式类"
+  },
+  {
+ype": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]"data type": "标签样式类""variable name": "标签引导线",
+ype": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]"data type": "标签样式类""comment": "焦点悬停时标签引导线的样式",
+ype": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]"data type": "标签样式类""data type": "标签引导线类"
+  },
+  {
+ameter name": "聚焦淡出设置""variable name": "图形样式",
+ameter name": "聚焦淡出设置""comment": "淡出状态时图形的样式",
+ameter name": "聚焦淡出设置""data type": "图形样式类"
+  },
+  {
+"variable name": "线条样式",
+"comment": "淡出状态时线条的样式",
+"data type": "线条样式类"
+  },
+  {
+type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]"variable name": "区域填充",
+type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]"comment": "淡出状态时区域填充样式",
+type": "文本型""comment": "K线图阴线图形颜色""parameters": [
+"comment": "区域填充样式,设置后显示成区域面积图."]"data type": "区域填充样式类"
+  }
+data type": "聚焦淡出方式"],
+data type": "聚焦淡出方式""methods": [
+  {
+ameter name": "聚焦淡出设置""method name": "取文本",
+ameter name": "聚焦淡出设置""comment": "将当前对象的图表配置参数转换成JSON文本",
+ameter name": "聚焦淡出设置""data type": "文本型",
+ameter name": "聚焦淡出设置""@禁止流程检查": "真"
+  }
+data type": "聚焦淡出方式"]
+ },
+ {
+meter name": "聚焦淡出设置""comment": "淡出状态时图形的样式""class name": "选中状态类",
+meter name": "聚焦淡出设置""comment": "淡出状态时图形的样式""comment": "数据选中时的图形样式和标签样式",
+meter name": "聚焦淡出设置""comment": "淡出状态时图形的样式""base class": "图表参数基础类",
+meter name": "聚焦淡出设置""comment": "淡出状态时图形的样式""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+meter name": "聚焦淡出设置""comment": "淡出状态时图形的样式""variables": [
+  {
+ata type": "聚焦淡出方式""methods": [
+"variable name": "标签样式",
+ata type": "聚焦淡出方式""methods": [
+"comment": "选择状态下的标签样式",
+ata type": "聚焦淡出方式""methods": [
+"data type": "标签样式类"
+  },
+  {
+data type": "聚焦淡出方式""variable name": "标签引导线",
+data type": "聚焦淡出方式""comment": "选择状态下的标签引导线样式",
+data type": "聚焦淡出方式""data type": "标签引导线类"
+  },
+  {
+
+"variable name": "线条样式",
+
+"comment": "选择状态下的线条样式",
+
+"data type": "线条样式类"
+  },
+  {
+}"variable name": "图形样式",
+}"comment": "选择状态图形样式",
+}"data type": "图形样式类"
+  },
+  {
+}"variable name": "区域填充",
+}"comment": "选择状态区域填充样式",
+}"data type": "区域填充样式类"
+  },
+  {
+data type": "线条样式类""variable name": "端点标签",
+data type": "线条样式类""comment": "选择状态下折线端点(结束点)标签的样式",
+data type": "线条样式类""data type": "标签样式类"
+  }
+meter name": "聚焦淡出设置""comment": "淡出状态时图形的样式"],
+meter name": "聚焦淡出设置""comment": "淡出状态时图形的样式""methods": [
+  {
+}"method name": "取文本",
+}"comment": "将当前对象的图表配置参数转换成JSON文本",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  }
+meter name": "聚焦淡出设置""comment": "淡出状态时图形的样式"]
+ },
+ {
+下折线端点(结束点)标签的样式"class name": "轴线配置类",
+下折线端点(结束点)标签的样式"comment": "坐标轴轴线相关设置",
+下折线端点(结束点)标签的样式"base class": "图表参数基础类",
+下折线端点(结束点)标签的样式"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+下折线端点(结束点)标签的样式"variables": [
+  {
+
+"variable name": "线条样式",
+
+"comment": "坐标轴轴线样式配置",
+
+"data type": "线条样式类"
+  }
+下折线端点(结束点)标签的样式],
+下折线端点(结束点)标签的样式"methods": [
+  {
+
+"method name": "取文本",
+
+"comment": "将当前对象的图表配置参数转换成JSON文本",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否在零刻度",
+}"comment": "横轴或者纵轴的轴线是否在另一个轴的 0 刻度上,只有在另一个轴为数值轴且包含 0 刻度时有效.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否零刻度",
+"comment": "是否在零刻度",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+"parameters": [
+"method name": "零刻度轴索引",
+"parameters": [
+"comment": "当有双轴时,可以用这个属性手动指定,在哪个轴的 0 刻度上.",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "轴索引",
+"comment": "零刻度轴索引",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+"data type": "文本型""method name": "两端标记",
+"data type": "文本型""comment": "轴线两边的箭头",
+"data type": "文本型""type": "property setter",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "箭头类型",
+"comment": "提供标记图形形状常量",
+"data type": "标记图形形状",
+"@默认值": "标记图形形状.无"
+   }
+"data type": "文本型"]
+  },
+  {
+data type": "逻辑型""method name": "置两端标记",
+data type": "逻辑型""comment": "分别设置轴线两边的箭头",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "起始箭头",
+"comment": "起始箭头,提供标记图形形状常量",
+"data type": "标记图形形状",
+"@默认值": "标记图形形状.无"
+   },
+   {
+"parameter name": "末端箭头",
+"comment": "末端箭头,提供标记图形形状常量",
+"data type": "标记图形形状",
+"@默认值": "标记图形形状.无"
+   }
+data type": "逻辑型"]
+  },
+  {
+data type": "文本型""comment": "轴线两边的箭头""method name": "两端标记尺寸",
+data type": "文本型""comment": "轴线两边的箭头""comment": "轴线两边的箭头尺寸",
+data type": "文本型""comment": "轴线两边的箭头""type": "property setter",
+data type": "文本型""comment": "轴线两边的箭头""parameters": [
+   {
+"parameter name": "箭头尺寸",
+"comment": "箭头尺寸单位px",
+"data type": "整数"
+   }
+data type": "文本型""comment": "轴线两边的箭头"]
+  },
+  {
+}"method name": "两端标记偏移",
+}"comment": "轴线两边的箭头的偏移",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "偏移距离",
+"comment": "偏移距离单位px",
+"data type": "整数"
+   }
+}]
+  }
+下折线端点(结束点)标签的样式]
+ },
+ {
+@默认值": "标记图形形状.无""class name": "仪表盘配置类",
+@默认值": "标记图形形状.无""comment": "仪表盘独有的参数配置",
+@默认值": "标记图形形状.无""base class": "图表参数基础类",
+@默认值": "标记图形形状.无""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+@默认值": "标记图形形状.无""variables": [
+  {
+}"variable name": "标题",
+}"comment": "仪表盘标题配置",
+}"data type": "标签样式类"
+  },
+  {
+": "标记图形形状.无""class name": "仪表盘配置类""variable name": "指针",
+": "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置",
+": "标记图形形状.无""class name": "仪表盘配置类""data type": "仪表盘指针类"
+  },
+  {
+默认值": "标记图形形状.无""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""variable name": "针轴",
+默认值": "标记图形形状.无""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""comment": "表盘中指针的固定点(轴)",
+默认值": "标记图形形状.无""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"""data type": "仪表盘针轴类"
+  },
+  {
+标记图形形状.无""class name": "仪表盘配置类""variable name": "指针""variable name": "轴线",
+标记图形形状.无""class name": "仪表盘配置类""variable name": "指针""comment": "仪表盘轴线配置",
+标记图形形状.无""class name": "仪表盘配置类""variable name": "指针""data type": "仪表盘轴线类"
+  },
+  {
+标记图形形状.无""class name": "仪表盘配置类""variable name": "指针""variable name": "进度条",
+标记图形形状.无""class name": "仪表盘配置类""variable name": "指针""comment": "仪表盘的进度条配置",
+标记图形形状.无""class name": "仪表盘配置类""variable name": "指针""data type": "仪表盘进度条类"
+  },
+  {
+记图形形状.无""class name": "仪表盘配置类""variable name": "指针""comment": "仪表盘的进度条配置""variable name": "轴刻度",
+记图形形状.无""class name": "仪表盘配置类""variable name": "指针""comment": "仪表盘的进度条配置""comment": "仪表盘轴刻度样式配置",
+记图形形状.无""class name": "仪表盘配置类""variable name": "指针""comment": "仪表盘的进度条配置""data type": "轴刻度配置类"
+  },
+  {
+ }"variable name": "刻度标签",
+ }"comment": "仪表盘轴刻度标文本签样式配置",
+ }"data type": "标签样式类"
+  },
+  {
+riable name": "标题""variable name": "详情样式",
+riable name": "标题""comment": "仪表盘显示仪表详情",
+riable name": "标题""data type": "标签样式类"
+  },
+  {
+}"comment": "仪表盘轴刻度标文本签样式配置""variable name": "分割线样式",
+}"comment": "仪表盘轴刻度标文本签样式配置""comment": "仪表盘分隔线样式",
+}"comment": "仪表盘轴刻度标文本签样式配置""data type": "网格分割线类"
+  }
+@默认值": "标记图形形状.无"],
+@默认值": "标记图形形状.无""methods": [
+  {
+
+"method name": "取文本",
+
+"comment": "将当前对象的图表配置参数转换成JSON文本",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  }
+@默认值": "标记图形形状.无"]
+ },
+ {
+ta type": "文本型""comment": "轴线两边的箭头"]"class name": "仪表盘轴线类",
+ta type": "文本型""comment": "轴线两边的箭头"]"comment": "仪表盘专属轴线配置",
+ta type": "文本型""comment": "轴线两边的箭头"]"base class": "图表参数基础类",
+ta type": "文本型""comment": "轴线两边的箭头"]"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+ta type": "文本型""comment": "轴线两边的箭头"]"variables": [
+  {
+a type": "文本型""comment": "轴线两边的箭头"]"base class": "图表参数基础类""variable name": "线条样式",
+a type": "文本型""comment": "轴线两边的箭头"]"base class": "图表参数基础类""comment": "坐标轴轴线样式配置",
+a type": "文本型""comment": "轴线两边的箭头"]"base class": "图表参数基础类""data type": "线条样式类"
+  }
+ta type": "文本型""comment": "轴线两边的箭头"]],
+ta type": "文本型""comment": "轴线两边的箭头"]"methods": [
+  {
+a type": "文本型""comment": "轴线两边的箭头"]"base class": "图表参数基础类""method name": "取文本",
+a type": "文本型""comment": "轴线两边的箭头"]"base class": "图表参数基础类""comment": "将当前对象的图表配置参数转换成JSON文本",
+a type": "文本型""comment": "轴线两边的箭头"]"base class": "图表参数基础类""data type": "文本型",
+a type": "文本型""comment": "轴线两边的箭头"]"base class": "图表参数基础类""@禁止流程检查": "真"
+  },
+  {
+riable name": "标题""method name": "两端圆形",
+riable name": "标题""comment": "是否在两端显示成圆形",
+riable name": "标题""type": "property setter",
+riable name": "标题""parameters": [
+   {
+"parameter name": "是否在两端显示成圆形",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+riable name": "标题"]
+  },
+  {
+}"method name": "轴线颜色",
+}"comment": "仪表盘轴线颜色",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "可以被分成不同颜色的多段,每段的结束位置和颜色可以通过一个数组来表示.\n如:\"[[0.3, '#67e0e3'],[0.7, '#37a2da'],[1, '#fd666d']]\".\n每个成员的首成员代表轴线长度的百分比,(取值0-1).次成员为颜色值.",
+"data type": "文本型",
+"@默认值": "\"[[1, '#E6EBF8']]\""
+   }
+}]
+  }
+ta type": "文本型""comment": "轴线两边的箭头"]]
+ },
+ {
+: "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置""class name": "仪表盘指针类",
+: "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置""comment": "仪表盘指针配置",
+: "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置""base class": "图表参数基础类",
+: "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+: "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置""variables": [
+  {
+ "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置""base class": "图表参数基础类""variable name": "指针样式",
+ "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置""base class": "图表参数基础类""comment": "指针图形样式",
+ "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置""base class": "图表参数基础类""data type": "图形样式类"
+  }
+: "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置"],
+: "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置""methods": [
+  {
+"method name": "取文本",
+"comment": "将当前对象的图表配置参数转换成JSON文本",
+"data type": "文本型",
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "图形",
+}"comment": "指针标记的图形形状",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "图形类型",
+"comment": "提供标记图形形状常量",
+"data type": "标记图形形状",
+"@默认值": "标记图形形状.水滴"
+   }
+}]
+  },
+  {
+}"method name": "图形2",
+}"comment": "标记的图形,扩展方法,用于自定义图形.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "标记图形",
+"comment": "可以通过 'image://url' 设置为图片,其中 URL 为图片的链,或者 dataURI. 也可以通过 'path://' 将图标设置为任意的矢量路径.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"parameters": [
+"method name": "中心偏移",
+"parameters": [
+"comment": "相对于仪表盘中心的偏移位置",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "中心偏移值",
+"comment": "提供一个数组文本如:['50', '50%']数组第一项是水平方向的偏移,第二项是垂直方向的偏移.\n可以是绝对的数值,也可以是相对于仪表盘半径的百分比.",
+"data type": "文本型",
+"@默认值": "\"[0, 0]\""
+   }
+"parameters": [
+]
+  },
+  {
+}"method name": "长度",
+}"comment": "指针长度",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "长度值",
+"comment": "可以是绝对数值,也可以是相对于半径的半分比.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "宽度",
+"comment": "指针宽度",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "宽度值",
+"comment": "指针宽度",
+"data type": "整数"
+   }
+]
+  },
+  {
+comment": "指针宽度""method name": "保持图形比例",
+comment": "指针宽度""comment": "如果指针图形是 path:// 的形式,是否在缩放时保持该图形的长宽比.",
+comment": "指针宽度""type": "property setter",
+comment": "指针宽度""parameters": [
+   {
+"parameter name": "是否保持长宽比",
+"comment": "是否保持长宽比",
+"data type": "逻辑型"
+   }
+comment": "指针宽度"]
+  }
+: "标记图形形状.无""class name": "仪表盘配置类""comment": "仪表盘指针配置"]
+ },
+ {
+arameters": [
+]"class name": "仪表盘针轴类",
+arameters": [
+]"comment": "表盘中指针的固定点(轴)",
+arameters": [
+]"base class": "图表参数基础类",
+arameters": [
+]"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+arameters": [
+]"variables": [
+  {
+ }"variable name": "针轴样式",
+ }"comment": "进度条图形样式",
+ }"data type": "图形样式类"
+  }
+arameters": [
+]],
+arameters": [
+]"methods": [
+  {
+ariable name": "针轴样式""method name": "取文本",
+ariable name": "针轴样式""comment": "将当前对象的图表配置参数转换成JSON文本",
+ariable name": "针轴样式""data type": "文本型",
+ariable name": "针轴样式""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "图形",
+
+"comment": "针轴标记的图形形状",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "图形类型",
+"comment": "提供标记图形形状常量",
+"data type": "标记图形形状",
+"@默认值": "标记图形形状.水滴"
+   }
+
+]
+  },
+  {
+ameter name": "图形类型""method name": "图形2",
+ameter name": "图形类型""comment": "针轴的图形,扩展方法,用于自定义图形.",
+ameter name": "图形类型""type": "property setter",
+ameter name": "图形类型""parameters": [
+   {
+"parameter name": "标记图形",
+"comment": "可以通过 'image://url' 设置为图片,其中 URL 为图片的链,或者 dataURI. 也可以通过 'path://' 将图标设置为任意的矢量路径.",
+"data type": "文本型"
+   }
+ameter name": "图形类型"]
+  },
+  {
+data type": "文本型""method name": "尺寸",
+data type": "文本型""comment": "指针的固定点的大小",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "针轴大小",
+"comment": "针轴尺寸",
+"data type": "整数",
+"@默认值": "6"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "中心偏移",
+}"comment": "相对于仪表盘中心的偏移位置",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "中心偏移值",
+"comment": "提供一个数组文本如:['50', '50%']数组第一项是水平方向的偏移,第二项是垂直方向的偏移.\n可以是绝对的数值,也可以是相对于仪表盘半径的百分比.",
+"data type": "文本型",
+"@默认值": "\"[0, 0]\""
+   }
+}]
+  },
+  {
+
+"method name": "保持图形比例",
+
+"comment": "如果图形是 path:// 的形式,是否在缩放时保持该图形的长宽比.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否保持长宽比",
+"comment": "是否保持长宽比",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "显示在指针上面",
+"comment": "针轴固定点是否显示在指针上面",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "是否上方显示",
+"comment": "是否上方显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  }
+arameters": [
+]]
+ },
+ {
+type": "property setter""class name": "仪表盘进度条类",
+type": "property setter""comment": "仪表盘进度条配置",
+type": "property setter""base class": "图表参数基础类",
+type": "property setter""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+type": "property setter""variables": [
+  {
+data type": "文本型""variable name": "进度条样式",
+data type": "文本型""comment": "进度条图形样式",
+data type": "文本型""data type": "图形样式类"
+  }
+type": "property setter"],
+type": "property setter""methods": [
+  {
+
+"method name": "取文本",
+
+"comment": "将当前对象的图表配置参数转换成JSON文本",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+ata type": "文本型""comment": "进度条图形样式""method name": "宽度",
+ata type": "文本型""comment": "进度条图形样式""comment": "进度条宽度",
+ata type": "文本型""comment": "进度条图形样式""type": "property setter",
+ata type": "文本型""comment": "进度条图形样式""parameters": [
+   {
+"parameter name": "宽度值",
+"comment": "进度条宽度",
+"data type": "整数"
+   }
+ata type": "文本型""comment": "进度条图形样式"]
+  },
+  {
+ta type": "文本型""comment": "进度条图形样式""comment": "进度条宽度""method name": "多组重叠",
+ta type": "文本型""comment": "进度条图形样式""comment": "进度条宽度""comment": "多组数据时进度条是否重叠",
+ta type": "文本型""comment": "进度条图形样式""comment": "进度条宽度""type": "property setter",
+ta type": "文本型""comment": "进度条图形样式""comment": "进度条宽度""parameters": [
+   {
+"parameter name": "是否允许重叠",
+"comment": "是否允许重叠",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ta type": "文本型""comment": "进度条图形样式""comment": "进度条宽度"]
+  },
+  {
+a type": "文本型""comment": "进度条图形样式"]"method name": "两端圆形",
+a type": "文本型""comment": "进度条图形样式"]"comment": "是否在两端显示成圆形",
+a type": "文本型""comment": "进度条图形样式"]"type": "property setter",
+a type": "文本型""comment": "进度条图形样式"]"parameters": [
+   {
+"parameter name": "是否在两端显示成圆形",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+a type": "文本型""comment": "进度条图形样式"]]
+  },
+  {
+ }"method name": "裁剪溢出",
+ }"comment": "是否裁掉超出部分",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否裁剪",
+"comment": "是否裁掉超出部分",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  }
+type": "property setter"]
+ },
+ {
+]"class name": "轴刻度配置类",
+]"comment": "坐标轴刻度与次刻度相关设置",
+]"base class": "图表参数基础类",
+]"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+]"variables": [
+  {
+ }"variable name": "线条样式",
+ }"comment": "坐标轴刻度线线条样式",
+ }"data type": "线条样式类"
+  }
+]],
+]"methods": [
+  {
+ }"method name": "取文本",
+ }"comment": "将当前对象的图表配置参数转换成JSON文本",
+ }"data type": "文本型",
+ }"@禁止流程检查": "真"
+  },
+  {
+}"comment": "将当前对象的图表配置参数转换成JSON文本""method name": "与类目标签对齐",
+}"comment": "将当前对象的图表配置参数转换成JSON文本""comment": "在类目轴边界留白为真时候有效,可以保证刻度线和标签对齐.",
+}"comment": "将当前对象的图表配置参数转换成JSON文本""type": "property setter",
+}"comment": "将当前对象的图表配置参数转换成JSON文本""parameters": [
+   {
+"parameter name": "是否对齐",
+"comment": "真为对齐",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}"comment": "将当前对象的图表配置参数转换成JSON文本"]
+  },
+  {
+}"comment": "将当前对象的图表配置参数转换成JSON文本""method name": "刻度间隔",
+}"comment": "将当前对象的图表配置参数转换成JSON文本""comment": "坐标轴刻度的显示间隔,默认与轴的标签间隔一致,在类目轴中有效.",
+}"comment": "将当前对象的图表配置参数转换成JSON文本""type": "property setter",
+}"comment": "将当前对象的图表配置参数转换成JSON文本""parameters": [
+   {
+"parameter name": "间隔",
+"comment": "默认会采用标签不重叠的策略间隔显示标签.\n可以设置成 0 强制显示所有标签.\n如果设置为 1,表示『隔一个标签显示一个标签』,如果值为 2,表示隔两个标签显示一个标签,以此类推.",
+"data type": "整数"
+   }
+}"comment": "将当前对象的图表配置参数转换成JSON文本"]
+  },
+  {
+}"comment": "将当前对象的图表配置参数转换成JSON文本""method name": "刻度朝内",
+}"comment": "将当前对象的图表配置参数转换成JSON文本""comment": "坐标轴刻度是否朝内,默认朝外.",
+}"comment": "将当前对象的图表配置参数转换成JSON文本""type": "property setter",
+}"comment": "将当前对象的图表配置参数转换成JSON文本""parameters": [
+   {
+"parameter name": "是否刻度朝内",
+"comment": "真为朝内",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}"comment": "将当前对象的图表配置参数转换成JSON文本"]
+  },
+  {
+mment": "将当前对象的图表配置参数转换成JSON文本""method name": "刻度朝内""method name": "长度",
+mment": "将当前对象的图表配置参数转换成JSON文本""method name": "刻度朝内""comment": "坐标轴刻度的长度",
+mment": "将当前对象的图表配置参数转换成JSON文本""method name": "刻度朝内""type": "property setter",
+mment": "将当前对象的图表配置参数转换成JSON文本""method name": "刻度朝内""parameters": [
+   {
+"parameter name": "长度值",
+"comment": "长度值,单位为像素.",
+"data type": "整数",
+"@默认值": "5"
+   }
+mment": "将当前对象的图表配置参数转换成JSON文本""method name": "刻度朝内"]
+  },
+  {
+"comment": "将当前对象的图表配置参数转换成JSON文本""parameters": [
+"method name": "次刻度分割数",
+"comment": "将当前对象的图表配置参数转换成JSON文本""parameters": [
+"comment": "次刻度线分割数,",
+"comment": "将当前对象的图表配置参数转换成JSON文本""parameters": [
+"type": "property setter",
+"comment": "将当前对象的图表配置参数转换成JSON文本""parameters": [
+"parameters": [
+   {
+"parameter name": "分割数",
+"comment": "默认会分割成5段",
+"data type": "整数",
+"@默认值": "5"
+   }
+"comment": "将当前对象的图表配置参数转换成JSON文本""parameters": [
+]
+  },
+  {
+"method name": "分割刻度数",
+"comment": "分隔线之间分割的刻度数",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "刻度数",
+"comment": "默认会分割成5段",
+"data type": "整数",
+"@默认值": "5"
+   }
+]
+  },
+  {
+a type": "文本型""comment": "进度条图形样式"]"method name": "与轴线距离",
+a type": "文本型""comment": "进度条图形样式"]"comment": "刻度线与轴线的距离",
+a type": "文本型""comment": "进度条图形样式"]"type": "property setter",
+a type": "文本型""comment": "进度条图形样式"]"parameters": [
+   {
+"parameter name": "距离",
+"comment": "与轴线距离",
+"data type": "整数"
+   }
+a type": "文本型""comment": "进度条图形样式"]]
+  }
+]]
+ },
+ {
+]"class name": "网格分割线类",
+]"comment": "坐标轴在底板网格区域中的分隔线",
+]"base class": "图表参数基础类",
+]"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+]"variables": [
+  {
+"variables": [
+"variable name": "线条样式",
+"variables": [
+"comment": "坐标轴网格分割线的线条样式",
+"variables": [
+"data type": "线条样式类"
+  }
+]],
+]"methods": [
+  {
+"variables": [
+"method name": "取文本",
+"variables": [
+"comment": "将当前对象的图表配置参数转换成JSON文本",
+"variables": [
+"data type": "文本型",
+"variables": [
+"@禁止流程检查": "真"
+  },
+  {
+variables": [
+"data type": "文本型""method name": "显示间隔",
+variables": [
+"data type": "文本型""comment": "坐标轴分隔线的显示间隔,在类目轴中有效,",
+variables": [
+"data type": "文本型""type": "property setter",
+variables": [
+"data type": "文本型""parameters": [
+   {
+"parameter name": "间隔数",
+"comment": "默认会采用标签不重叠的策略间隔显示标签.\n0:强制显示所有标签,1:隔一个标签显示一个标签,2:隔两个标签显示一个标签,依此类推.",
+"data type": "整数"
+   }
+variables": [
+"data type": "文本型"]
+  },
+  {
+ }"method name": "长度",
+ }"comment": "分隔线线长",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "长度值",
+"comment": "可以是绝对数值,也可以是相对于半径的半分比.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "长度值""method name": "与轴线距离",
+ameter name": "长度值""comment": "与轴线的距离",
+ameter name": "长度值""type": "property setter",
+ameter name": "长度值""parameters": [
+   {
+"parameter name": "距离",
+"comment": "与轴线距离",
+"data type": "整数"
+   }
+ameter name": "长度值"]
+  }
+]]
+ },
+ {
+er name": "长度值""method name": "与轴线距离""class name": "网格分割区域类",
+er name": "长度值""method name": "与轴线距离""comment": "坐标轴在底板网格区域中的分隔区域",
+er name": "长度值""method name": "与轴线距离""base class": "图表参数基础类",
+er name": "长度值""method name": "与轴线距离""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+er name": "长度值""method name": "与轴线距离""variables": [
+  {
+r name": "长度值""method name": "与轴线距离""comment": "坐标轴在底板网格区域中的分隔区域""variable name": "区域填充",
+r name": "长度值""method name": "与轴线距离""comment": "坐标轴在底板网格区域中的分隔区域""comment": "分隔区域的样式设置",
+r name": "长度值""method name": "与轴线距离""comment": "坐标轴在底板网格区域中的分隔区域""data type": "区域填充样式类"
+  }
+er name": "长度值""method name": "与轴线距离"],
+er name": "长度值""method name": "与轴线距离""methods": [
+  {
+ }"method name": "取文本",
+ }"comment": "将当前对象的图表配置参数转换成JSON文本",
+ }"data type": "文本型",
+ }"@禁止流程检查": "真"
+  },
+  {
+r name": "长度值""method name": "与轴线距离""methods": [
+"method name": "显示间隔",
+r name": "长度值""method name": "与轴线距离""methods": [
+"comment": "坐标轴分隔区域的显示间隔,在类目轴中有效.",
+r name": "长度值""method name": "与轴线距离""methods": [
+"type": "property setter",
+r name": "长度值""method name": "与轴线距离""methods": [
+"parameters": [
+   {
+"parameter name": "间隔数",
+"comment": "默认会采用标签不重叠的策略间隔显示标签.\n0:强制显示所有标签,1:隔一个标签显示一个标签,2:隔两个标签显示一个标签,依此类推.",
+"data type": "整数"
+   }
+r name": "长度值""method name": "与轴线距离""methods": [
+]
+  }
+er name": "长度值""method name": "与轴线距离"]
+ },
+ {
+ameter name": "间隔数""class name": "标签引导线类",
+ameter name": "间隔数""comment": "标签引导线的样式配置.",
+ameter name": "间隔数""base class": "图表参数基础类",
+ameter name": "间隔数""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+ameter name": "间隔数""variables": [
+  {
+"variable name": "线条样式",
+"comment": "视觉引导线的线条样式",
+"data type": "线条样式类"
+  }
+ameter name": "间隔数"],
+ameter name": "间隔数""methods": [
+  {
+data type": "整数""method name": "取文本",
+data type": "整数""comment": "将当前对象的图表配置参数转换成JSON文本",
+data type": "整数""data type": "文本型",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "显示在图形上方",
+
+"comment": "视觉引导线是否显示在图形上方",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否上方显示",
+"comment": "是否上方显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "长度",
+
+"comment": "视觉引导线的长度",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "长度值",
+"comment": "长度值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "二段长度",
+"comment": "视觉引导线第二段的长度",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "长度值",
+"comment": "长度值",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "最小夹角",
+"comment": "限制引导线两端之间最小的夹角,以防止过小的夹角导致显示不美观.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "夹角值",
+"comment": "可以设置为 0 - 180 度",
+"data type": "整数"
+   }
+]
+  },
+  {
+ameter name": "长度值""method name": "平滑曲线",
+ameter name": "长度值""comment": "是否启用平滑视觉引导线,默认不平滑.",
+ameter name": "长度值""type": "property setter",
+ameter name": "长度值""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "默认关闭",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "长度值"]
+  }
+ameter name": "间隔数"]
+ },
+ {
+comment": "视觉引导线第二段的长度""class name": "图表标注类",
+comment": "视觉引导线第二段的长度""comment": "图表标注,标注线,标域配置.",
+comment": "视觉引导线第二段的长度""base class": "标记图形基础类",
+comment": "视觉引导线第二段的长度""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+comment": "视觉引导线第二段的长度""variables": [
+  {
+"parameters": [
+"variable name": "标签样式",
+"parameters": [
+"comment": "标线标签样式",
+"parameters": [
+"data type": "标签样式类"
+  },
+  {
+"variable name": "悬停高亮样式",
+"comment": "标线的高亮样式",
+"data type": "悬停高亮类"
+  },
+  {
+}"variable name": "线条样式",
+}"comment": "标线线条样式",
+}"data type": "线条样式类"
+  },
+  {
+"variable name": "图形样式",
+"comment": "标域的样式",
+"data type": "图形样式类"
+  }
+comment": "视觉引导线第二段的长度"],
+comment": "视觉引导线第二段的长度""methods": [
+  {
+}"method name": "取文本",
+}"comment": "将当前对象的图表配置参数转换成JSON文本",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "创建标注",
+}"comment": "创建一个标注配置",
+}"result comment": "返回标注配置类对象",
+}"data type": "标注配置类",
+}"@视窗.返回参考": "真",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "标注名称",
+"comment": "标注名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标注类型",
+"comment": "提供图表标注类型常量",
+"data type": "图表标注类型"
+   }
+}]
+  },
+  {
+"method name": "添加标注",
+"comment": "添加一个标注配置",
+"result comment": "返回所添加的对象",
+"data type": "标注配置类",
+"@视窗.返回参考": "真",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "数据对象",
+"comment": "提供标注配置类对象",
+"data type": "标注配置类"
+   }
+]
+  },
+  {
+ameter name": "数据对象""method name": "删除标注",
+ameter name": "数据对象""comment": "删除一个标注配置",
+ameter name": "数据对象""parameters": [
+   {
+"parameter name": "索引位置",
+"comment": "索引从0开始,-1表示最后一个",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "数据对象"]
+  },
+  {
+"method name": "取标注数",
+"comment": "取当前标注对象的标注配置数",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "标注配置类""method name": "取标注",
+data type": "标注配置类""comment": "取标注配置类对象",
+data type": "标注配置类""data type": "标注配置类",
+data type": "标注配置类""@视窗.返回参考": "真",
+data type": "标注配置类""@禁止流程检查": "真",
+data type": "标注配置类""parameters": [
+   {
+"parameter name": "索引位置",
+"comment": "索引从0开始 默认(-1)为最后一个",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "标注配置类"]
+  },
+  {
+
+"method name": "添加自定标线或标域",
+
+"comment": "向当前标注配置中添加一个自定义标线标域",
+
+"result comment": "返回所添加的自定义标线标域",
+
+"data type": "自定标线标域类",
+
+"@视窗.返回参考": "真",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据对象",
+"comment": "提供一个自定标线标域类对象",
+"data type": "自定标线标域类"
+   }
+
+]
+  },
+  {
+riable name": "线条样式""method name": "清空",
+riable name": "线条样式""comment": "清空当前标注配置"
+  }
+comment": "视觉引导线第二段的长度"]
+ },
+ {
+ameter name": "数据对象""class name": "标注配置类",
+ameter name": "数据对象""comment": "标注,标注线,标域的配置数据.",
+ameter name": "数据对象""base class": "标记图形基础类",
+ameter name": "数据对象""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+ameter name": "数据对象""variables": [
+  {
+meter name": "数据对象""comment": "标注,标注线,标域的配置数据.""variable name": "线条样式",
+meter name": "数据对象""comment": "标注,标注线,标域的配置数据.""comment": "标线的线条样式",
+meter name": "数据对象""comment": "标注,标注线,标域的配置数据.""data type": "线条样式类"
+  },
+  {
+
+"variable name": "标签样式",
+
+"comment": "标签样式",
+
+"data type": "标签样式类"
+  },
+  {
+"variable name": "悬停状态",
+"comment": "悬停高亮样式",
+"data type": "悬停高亮类"
+  }
+ameter name": "数据对象"],
+ameter name": "数据对象""methods": [
+  {
+}"method name": "取文本",
+}"comment": "将当前对象的图表配置参数转换成JSON文本",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+"data type": "标签样式类""method name": "标注类型",
+"data type": "标签样式类""comment": "特殊的标注类型,用于标注最大值最小值等.",
+"data type": "标签样式类""type": "property setter",
+"data type": "标签样式类""parameters": [
+   {
+"parameter name": "标注类型值",
+"comment": "提供图表标注类型常量",
+"data type": "图表标注类型"
+   }
+"data type": "标签样式类"]
+  },
+  {
+data type": "标签样式类""comment": "特殊的标注类型,用于标注最大值最小值等.""method name": "标注名称",
+data type": "标签样式类""comment": "特殊的标注类型,用于标注最大值最小值等.""comment": "标注名称,将会作为文字显示",
+data type": "标签样式类""comment": "特殊的标注类型,用于标注最大值最小值等.""type": "property setter",
+data type": "标签样式类""comment": "特殊的标注类型,用于标注最大值最小值等.""parameters": [
+   {
+"parameter name": "名称",
+"comment": "标注名称",
+"data type": "文本型"
+   }
+data type": "标签样式类""comment": "特殊的标注类型,用于标注最大值最小值等."]
+  },
+  {
+
+"method name": "标注值",
+
+"comment": "标注值,可以不设",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "标注值文本",
+"comment": "标注值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+meter name": "数据对象""base class": "标记图形基础类""method name": "标注坐标位置",
+meter name": "数据对象""base class": "标记图形基础类""comment": "标注的坐标,坐标格式视系列的坐标系而定,可以是直角坐标系上的横向位置,纵向位置,也可以是极坐标系上的半径,角度.例如 \"[121, 2323]\" 或 \"['aa', 998]\"",
+meter name": "数据对象""base class": "标记图形基础类""type": "property setter",
+meter name": "数据对象""base class": "标记图形基础类""parameters": [
+   {
+"parameter name": "坐标值",
+"comment": "提供一个数组文本",
+"data type": "文本型"
+   }
+meter name": "数据对象""base class": "标记图形基础类"]
+  },
+  {
+data type": "文本型""method name": "横向位置",
+data type": "文本型""comment": "相对图表容器的屏幕横向位置坐标",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "坐标值",
+"comment": "横向坐标,单位像素,也可以是百分比值如:\"10%\"",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+容器的屏幕横向位置坐标"method name": "纵向位置",
+容器的屏幕横向位置坐标"comment": "相对图表容器的纵向位置坐标",
+容器的屏幕横向位置坐标"type": "property setter",
+容器的屏幕横向位置坐标"parameters": [
+   {
+"parameter name": "坐标值",
+"comment": "纵向坐标,单位像素.也可以是百分比值如:\"10%\"",
+"data type": "文本型"
+   }
+容器的屏幕横向位置坐标]
+  },
+  {
+的屏幕横向位置坐标]"method name": "横轴位置",
+的屏幕横向位置坐标]"comment": "相对横轴刻度的位置坐标",
+的屏幕横向位置坐标]"type": "property setter",
+的屏幕横向位置坐标]"parameters": [
+   {
+"parameter name": "坐标值",
+"comment": "提供一个值文本,也可以是百分比值如:\"10%\"",
+"data type": "文本型"
+   }
+的屏幕横向位置坐标]]
+  },
+  {
+data type": "文本型""method name": "纵轴位置",
+data type": "文本型""comment": "相对纵轴刻度的位置坐标",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "坐标值",
+"comment": "提供一个值文本,也可以是百分比值如:\"10%\"",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "横轴位置2",
+}"comment": "相对横轴刻度的位置坐标",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "坐标值",
+"comment": "提供图表标注类型",
+"data type": "图表标注类型"
+   }
+}]
+  },
+  {
+eter name": "数据对象""comment": "标注,标注线,标域的配置数据.""comment": "标线的线条样式""method name": "纵轴位置2",
+eter name": "数据对象""comment": "标注,标注线,标域的配置数据.""comment": "标线的线条样式""comment": "相对纵轴刻度的位置坐标",
+eter name": "数据对象""comment": "标注,标注线,标域的配置数据.""comment": "标线的线条样式""type": "property setter",
+eter name": "数据对象""comment": "标注,标注线,标域的配置数据.""comment": "标线的线条样式""parameters": [
+   {
+"parameter name": "坐标值",
+"comment": "提供图表标注类型",
+"data type": "图表标注类型"
+   }
+eter name": "数据对象""comment": "标注,标注线,标域的配置数据.""comment": "标线的线条样式"]
+  },
+  {
+"method name": "维度索引",
+"comment": "在使用 标注类型 时有效,用于指定在哪个维度上指定最大值最小值，可以是 0:(横轴,半径轴）1:(纵轴,角度轴)默认使用第一个数值轴所在的维度",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供图表标注类型常量",
+"data type": "整数"
+   }
+]
+  },
+  {
+ }"method name": "维度名称",
+ }"comment": "在使用 标注类型 时有效,用于指定在哪个维度上指定最大值最小值，这可以是维度的直接名称，例如折线图时可以是x、angle等、K线图时可以是open、close等维度名称。",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "索引",
+"comment": "提供图表标注类型常量",
+"data type": "文本型"
+   }
+ }]
+  }
+ameter name": "数据对象"]
+ },
+ {
+ }"class name": "自定标线标域类",
+ }"comment": "自定标注线,标域的配置数据.",
+ }"base class": "参考对象类",
+ }"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+ }"variables": [
+  {
+ameter name": "数据对象""variable name": "起点配置",
+ameter name": "数据对象""comment": "用于设置标线,标域的起点配置参数",
+ameter name": "数据对象""data type": "标注配置类"
+  },
+  {
+data type": "文本型""variable name": "终点配置",
+data type": "文本型""comment": "用于设置标线,标域的终点配置参数",
+data type": "文本型""data type": "标注配置类"
+  }
+ }],
+ }"methods": [
+  {
+ type": "文本型""variable name": "终点配置""method name": "取文本",
+ type": "文本型""variable name": "终点配置""comment": "将当前对象的图表配置参数转换成JSON文本",
+ type": "文本型""variable name": "终点配置""data type": "文本型",
+ type": "文本型""variable name": "终点配置""@禁止流程检查": "真"
+  }
+ }]
+ },
+ {
+ata type": "文本型""comment": "相对纵轴刻度的位置坐标""class name": "刷选范围样式",
+ata type": "文本型""comment": "相对纵轴刻度的位置坐标""comment": "区域选择组件或视觉映射组件选中范围内或选中范围外的样式设定",
+ata type": "文本型""comment": "相对纵轴刻度的位置坐标""base class": "图表参数基础类",
+ata type": "文本型""comment": "相对纵轴刻度的位置坐标""@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+ata type": "文本型""comment": "相对纵轴刻度的位置坐标""methods": [
+  {
+]"method name": "标记图形",
+]"comment": "标记的图形形状",
+]"type": "property setter",
+]"parameters": [
+   {
+"parameter name": "图形类型",
+"comment": "提供标记图形形状常量",
+"data type": "标记图形形状"
+   }
+]]
+  },
+  {
+ethod name": "维度名称""method name": "标记图形2",
+ethod name": "维度名称""comment": "标记的图形,扩展方法,用于自定义图形.",
+ethod name": "维度名称""type": "property setter",
+ethod name": "维度名称""parameters": [
+   {
+"parameter name": "标记图形",
+"comment": "可以通过 'image://url' 设置为图片,其中 URL 为图片的链,或者 dataURI. 也可以通过 'path://' 将图标设置为任意的矢量路径.",
+"data type": "文本型"
+   }
+ethod name": "维度名称"]
+  },
+  {
+
+"method name": "颜色",
+
+"comment": "图表元素的颜色",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".\n也可以使用十六进制格式,比如 '#ccc'",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "颜色透明度",
+}"comment": "图形元素颜色的透明度支持从 0 到 1 的小数数字,为0时不绘制该图形.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "透明度值",
+"comment": "0 到 1 的小数值",
+"data type": "小数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+
+"method name": "颜色明暗度",
+
+"comment": "颜色的明暗度",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "明暗度值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "颜色饱和度",
+
+"comment": "颜色的饱和度",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "饱和度值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "透明度",
+"comment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "透明度值",
+"comment": "0 到 1 的小数值",
+"data type": "小数",
+"@默认值": "1"
+   }
+]
+  }
+ata type": "文本型""comment": "相对纵轴刻度的位置坐标"]
+ },
+ {
+"class name": "图表动画设置类",
+"comment": "设置图表及各组件的动画效果参数.",
+"base class": "图表参数基础类",
+"@文档": "\"category = \\\"图表配置参数.公用参数样式\\\"\"",
+"methods": [
+  {
+comment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""method name": "开启动画",
+comment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""comment": "是否开启动画",
+comment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""type": "property setter",
+comment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+   {
+"parameter name": "是否开启动画",
+"comment": "默认开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形."]
+  },
+  {
+omment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值",
+omment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"comment": "是否开启动画的阈值",
+omment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"type": "property setter",
+omment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"parameters": [
+   {
+"parameter name": "动画阈值",
+"comment": "单位毫秒,当单个系列显示的图形数量大于这个阈值时会关闭动画.",
+"data type": "整数",
+"@默认值": "2000"
+   }
+omment": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+]
+  },
+  {
+ameter name": "动画阈值""method name": "初始动画效果",
+ameter name": "动画阈值""comment": "初始动画效果",
+ameter name": "动画阈值""type": "property setter",
+ameter name": "动画阈值""parameters": [
+   {
+"parameter name": "动画效果类型",
+"comment": "提供图表动画效果常量",
+"data type": "图表动画效果",
+"@默认值": "图表动画效果.展开"
+   }
+ameter name": "动画阈值"]
+  },
+  {
+
+"method name": "初始动画时长",
+
+"comment": "初始动画的时长",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "动画时长",
+"comment": "默认为1000毫秒,即1秒.",
+"data type": "整数",
+"@默认值": "1000"
+   }
+
+]
+  },
+  {
+}"method name": "初始动画时长递增",
+}"comment": "设置每个数据图形初始动画的时长递增实现更戏剧的初始动画效果",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "递增时长",
+"comment": "动画依次递增时长",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "初始动画时长_脚本",
+}"comment": "初始动画的时长函数,可以通过每个数据返回不同的时间实现更戏剧的初始动画效果.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "动画时长脚本",
+"comment": "提供一个JS方法文本,该方法中的参数代表当前数据的索引 例如:\nfunction (idx) {\n    return idx * 100;  // 越往后的数据时长越大.\n}",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+meter name": "动画阈值""parameters": [
+"method name": "初始动画缓动效果",
+meter name": "动画阈值""parameters": [
+"comment": "初始动画的缓动效果",
+meter name": "动画阈值""parameters": [
+"type": "property setter",
+meter name": "动画阈值""parameters": [
+"parameters": [
+   {
+"parameter name": "缓动效果类型",
+"comment": "提供图表动画缓动效果常量",
+"data type": "图表动画缓动效果"
+   }
+meter name": "动画阈值""parameters": [
+]
+  },
+  {
+ter name": "动画阈值""parameters": [
+]"method name": "初始动画延迟",
+ter name": "动画阈值""parameters": [
+]"comment": "初始动画的延迟",
+ter name": "动画阈值""parameters": [
+]"type": "property setter",
+ter name": "动画阈值""parameters": [
+]"parameters": [
+   {
+"parameter name": "延迟时长",
+"comment": "单位毫秒",
+"data type": "整数"
+   }
+ter name": "动画阈值""parameters": [
+]]
+  },
+  {
+nt": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""method name": "初始动画延迟递增",
+nt": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""comment": "设置每个数据图形初始动画的延迟递增实现更戏剧的初始动画效果",
+nt": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""type": "property setter",
+nt": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""parameters": [
+   {
+"parameter name": "递增时长",
+"comment": "动画延迟依次递增时长",
+"data type": "整数"
+   }
+nt": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值"]
+  },
+  {
+t": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""parameters": [
+"method name": "初始动画延迟_脚本",
+t": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""parameters": [
+"comment": "初始动画的延迟函数,可以通过每个数据返回不同的时间实现更戏剧的初始动画效果.",
+t": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""parameters": [
+"type": "property setter",
+t": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""parameters": [
+"parameters": [
+   {
+"parameter name": "动画延迟脚本",
+"comment": "提供一个JS方法文本,该方法中的参数代表当前数据的索引 例如:\nfunction (idx) {\n    return idx * 100;  // 越往后的数据延迟越大.\n}",
+"data type": "文本型"
+   }
+t": "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""parameters": [
+]
+  },
+  {
+er name": "动画阈值""parameters": [
+]"type": "property setter""method name": "更新动画效果",
+er name": "动画阈值""parameters": [
+]"type": "property setter""comment": "更新数据时的动画效果",
+er name": "动画阈值""parameters": [
+]"type": "property setter""type": "property setter",
+er name": "动画阈值""parameters": [
+]"type": "property setter""parameters": [
+   {
+"parameter name": "动画效果类型",
+"comment": "提供图表动画效果常量",
+"data type": "图表动画效果",
+"@默认值": "图表动画效果.展开"
+   }
+er name": "动画阈值""parameters": [
+]"type": "property setter"]
+  },
+  {
+ "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""method name": "初始动画延迟递增""method name": "更新动画时长",
+ "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""method name": "初始动画延迟递增""comment": "数据更新动画的时长",
+ "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""method name": "初始动画延迟递增""type": "property setter",
+ "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""method name": "初始动画延迟递增""parameters": [
+   {
+"parameter name": "动画时长",
+"comment": "默认为1000毫秒,即1秒.",
+"data type": "整数",
+"@默认值": "1000"
+   }
+ "图形元素及其附属物(如文字标签)的透明度,支持从 0 到 1 的小数数字,为0时不绘制该图形.""parameters": [
+"method name": "动画开启阈值""method name": "初始动画延迟递增"]
+  },
+  {
+
+"method name": "更新动画时长递增",
+
+"comment": "数据更新动画的时长,设置每个数据返回不同的时长实现更戏剧的更新动画效果,",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "递增时长",
+"comment": "动画依次递增时长",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "更新动画时长_脚本",
+data type": "整数""comment": "数据更新动画的时长处理函数,设置每个数据返回不同的时长实现更戏剧的更新动画效果.",
+data type": "整数""type": "property setter",
+data type": "整数""parameters": [
+   {
+"parameter name": "动画时长脚本",
+"comment": "提供一个JS方法文本,该方法中的参数代表当前数据的索引 例如:\nfunction (idx) {\n    return idx * 100;  // 越往后的数据时长越大.\n}",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+comment": "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果",
+comment": "默认为1000毫秒,即1秒.""comment": "数据更新动画的缓动效果",
+comment": "默认为1000毫秒,即1秒.""type": "property setter",
+comment": "默认为1000毫秒,即1秒.""parameters": [
+   {
+"parameter name": "缓动效果类型",
+"comment": "提供图表动画缓动效果常量",
+"data type": "图表动画缓动效果"
+   }
+comment": "默认为1000毫秒,即1秒."]
+  },
+  {
+ent": "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果""method name": "更新动画延迟",
+ent": "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果""comment": "初始动画的延迟",
+ent": "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果""type": "property setter",
+ent": "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果""parameters": [
+   {
+"parameter name": "延迟时长",
+"comment": "单位毫秒",
+"data type": "整数"
+   }
+ent": "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果"]
+  },
+  {
+comment": "单位毫秒""method name": "更新动画延迟递增",
+comment": "单位毫秒""comment": "数据更新动画的延迟,设置每个数据返回不同的时间实现更戏剧的更新动画效果.",
+comment": "单位毫秒""type": "property setter",
+comment": "单位毫秒""parameters": [
+   {
+"parameter name": "递增时长",
+"comment": "动画延迟依次递增时长",
+"data type": "整数"
+   }
+comment": "单位毫秒"]
+  },
+  {
+: "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果""method name": "更新动画延迟""method name": "更新动画延迟_脚本",
+: "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果""method name": "更新动画延迟""comment": "数据更新动画的延迟处理函数,可以通过每个数据返回不同的时间实现更戏剧的初始动画效果.",
+: "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果""method name": "更新动画延迟""type": "property setter",
+: "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果""method name": "更新动画延迟""parameters": [
+   {
+"parameter name": "动画延迟脚本",
+"comment": "提供一个JS方法文本,该方法中的参数代表当前数据的索引 例如:\nfunction (idx) {\n    return idx * 100;  // 越往后的数据延迟越大.\n}",
+"data type": "文本型"
+   }
+: "默认为1000毫秒,即1秒.""method name": "更新动画缓动效果""method name": "更新动画延迟"]
+  }
+]
+ }
+ഀꌥŝ]
+}

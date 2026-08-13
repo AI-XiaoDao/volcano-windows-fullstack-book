@@ -1,0 +1,165 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+鳾Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+鳾Ǹ"package name": "VIP.回调",
+鳾Ǹ"classes": [
+ {
+"class name": "类_FBrowserVIP_网页截图",
+"base class": "类_FBrowserVIP_通用回调",
+"methods": [
+  {
+
+"method name": "数据回调",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "标识ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "成功",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowserVIP_取当前环境清单",
+"base class": "类_FBrowserVIP_通用回调",
+"methods": [
+  {
+
+"method name": "列表数据回调",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "标识ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "成功",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "列表值",
+"data type": "类_FBrowser_列表值"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowserVIP_JS执行回调",
+"base class": "类_FBrowserVIP_通用回调",
+"methods": [
+  {
+
+"method name": "数据回调",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "标识ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "成功",
+"comment": "执行成功为真，反正为假",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "如果执行出错会返回的是错误文本，执行成功返回执行的返回值，返回值格式为JSON文本格式",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"comment": "获取到的数据大小",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowserVIP_DOM反馈回调",
+"base class": "类_FBrowserVIP_通用回调",
+"variables": [
+  {
+
+"variable name": "help",
+
+"comment": "同步类，用于等待数据执行",
+
+"data type": "类_FBrowser_同步辅助类"
+  }
+],
+"methods": [
+  {
+
+"method name": "数据回调",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "标识ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "成功",
+"comment": "执行成功为真，反正为假",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "如果执行出错会返回的是错误文本，执行成功返回执行的返回值，返回值格式为JSON文本格式",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"comment": "获取到的数据大小",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ }
+鳾Ǹ]
+}

@@ -1,0 +1,143 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+骠㶠ŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+骠㶠ŝ"package name": "火山.程序",
+骠㶠ŝ"classes": [
+ {
+"class name": "启动类",
+"base class": "窗口程序类",
+"variables": [
+  {
+誰㶠ŝ"variable name": "主窗口对象",
+誰㶠ŝ"data type": "我的主窗口"
+  }
+],
+"methods": [
+  {
+ntity""method name": "启动方法",
+ntity""data type": "整数"
+  }
+]
+ },
+ {
+"class name": "支付宝支付服务器",
+"comment": "请求参数参考文档:https://opendocs.alipay.com/open/02e7gq?scene=20",
+"variables": [
+  {
+variables": [
+"variable name": "APPID",
+variables": [
+"comment": "app_id",
+variables": [
+"data type": "文本型",
+variables": [
+"@属性变量": "真"
+  },
+  {
+˂⿨�耀@                 }"variable name": "商品详细数据",
+˂⿨�耀@                 }"comment": "biz_content\n可使用\"生成商品内容\"方法生成数据.",
+˂⿨�耀@                 }"data type": "文本型"
+  },
+  {
+ 小数"variable name": "编码",
+ 小数"comment": "请求使用的编码格式，如utf-8,gbk,gb2312等(charset).",
+ 小数"data type": "文本型",
+ 小数"initial value": "\"utf-8\"",
+ 小数"@属性变量": "真"
+  },
+  {
+124868003|126232002|126252004""variable name": "回调地址",
+124868003|126232002|126252004""comment": "当支付成功后,支付宝服务器会向此地址发送post数据,反馈支付结果.\n如果没有提供地址,则需要用户手动查询支付结果(notify_url).",
+124868003|126232002|126252004""data type": "文本型",
+124868003|126232002|126252004""initial value": "\"\"",
+124868003|126232002|126252004""@属性变量": "真"
+  },
+  {
+ 逻辑型"variable name": "私钥数据",
+ 逻辑型"data type": "字节集类"
+  }
+],
+"methods": [
+  {
+小数"data type": "文本型""method name": "开始下单",
+小数"data type": "文本型""data type": "文本型"
+  },
+  {
+}"method name": "生成商品内容",
+}"comment": "商品参考文档：https://opendocs.alipay.com/open/cd12c885_alipay.trade.app.pay?pathHash=c0e35284&scene=20",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "商户订单唯一ID",
+"comment": "商户网站唯一订单号 (out_trade_no).\n由商家自定义，64个字符以内，仅支持字母、数字、下划线且需保证在商户端不重复。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "订单总金额",
+"comment": "订单总金额，单位为元，精确到小数点后两位 (total_amount)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "订单标题",
+"comment": "subject",
+"data type": "文本型"
+   },
+   {
+"parameter name": "订单商品列表",
+"comment": "goods_detail\n可空",
+"data type": "商品列表信息数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "绝对超时时间",
+"comment": "绝对超时时间，格式为yyyy-MM-dd HH:mm:ss (time_expire)\n可空",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "业务信息",
+"comment": "商户传入业务信息，具体值要和支付宝约定，应用于安全，营销等参数直传场景，格式为json格式(business_params)\n可空",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "回传参数",
+"comment": "公用回传参数，如果请求时传递了该参数, 则返回给商户时会回传该参数.\n支付宝只会在同步返回（包括跳转回商户网站）和异步通知时将该参数原样返回.\n本参数必须进行UrlEncode之后才可以发送给支付宝 (passback_params).\n可空",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "商户原始订单号",
+"comment": "merchant_order_no\n可空",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "商品列表信息数组类",
+"base class": "对象数组模板类",
+"@模板实现类": "\"商品列表信息\""
+ },
+ {
+"class name": "_全局操作",
+"@全局类": "真",
+"methods": [
+  {
+ss name": "_全局操作""method name": "写日志",
+ss name": "_全局操作""static": true,
+ss name": "_全局操作""parameters": [
+   {
+"parameter name": "日志",
+"data type": "文本型"
+   }
+ss name": "_全局操作"]
+  }
+]
+ }
+骠㶠ŝ]
+}

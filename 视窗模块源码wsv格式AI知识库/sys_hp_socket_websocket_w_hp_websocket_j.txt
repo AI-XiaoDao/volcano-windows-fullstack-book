@@ -1,0 +1,1002 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"WebSocket网络通讯支持".
+
+{
+问本程序中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"WebSocket网络通讯支持"."package name": "火山.视窗.网络",
+问本程序中的接口需要引用模块"WebSocket网络通讯支持"."classes": [
+ {
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\sys_hp_socket_websocket_w_hp_websocket_p.txt"class name": "Websocket客户端类2",
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\sys_hp_socket_websocket_w_hp_websocket_p.txt"comment": "封装HPsocket的WS客户端实现.\n本类相对\"Websocket客户端类\"新增了以下特性:\n  1. 所接收到的数据内部自动组包,当接收到全部数据后再触发数据接收事件;\n  2. 非异步连接时等待升级协议完成;\n  3. \"收到数据\"事件增加消息类型,用作判断所接收到的数据是文本还是字节集.",
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\sys_hp_socket_websocket_w_hp_websocket_p.txt"methods": [
+  {
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"method name": "连接",
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"comment": "向指定WS服务器发起连接请求.",
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"result comment": "如果\"异步连接\"参数为假,将返回本次连接服务器的结果,否则返回本地客户端通信组件的启动结果.",
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "逻辑型",
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "例如:ws://localhost:9010/ajaxchattest",
+"data type": "文本型"
+   },
+   {
+"parameter name": "附加头",
+"comment": "提供连接所欲使用的附加请求头,一个成员表示一组,例如:\"Origin:http://0.0.0.0\".",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "指定是否以异步通知(通过事件获取连接结果,本方法不会阻塞)方式连接到服务端.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+]
+  },
+  {
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"method name": "发送文本",
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"comment": "向服务器发送文本内容消息.",
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"result comment": "返回发送结果.",
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "逻辑型",
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供所欲发送的文本数据.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定所提供的内容是否需要以Utf8编码提交.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF8"
+   }
+中的接口需要引用模块"WebSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+]
+  },
+  {
+ 字节集类"method name": "发送数据",
+ 字节集类"comment": "向服务器发送二进制内容消息.",
+ 字节集类"result comment": "返回发送结果.",
+ 字节集类"data type": "逻辑型",
+ 字节集类"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲发送的数据.",
+"data type": "字节集类"
+   }
+ 字节集类]
+  },
+  {
+@默认值": "文本编码类型.UTF8""method name": "发送自定义消息",
+@默认值": "文本编码类型.UTF8""comment": "向服务器发送自定义消息.",
+@默认值": "文本编码类型.UTF8""result comment": "返回发送结果.",
+@默认值": "文本编码类型.UTF8""data type": "逻辑型",
+@默认值": "文本编码类型.UTF8""parameters": [
+   {
+"parameter name": "是否结束帧",
+"comment": "指定当前所发送的消息帧是否为结束帧.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "RSV",
+"comment": "指定所欲使用的扩展位数据.",
+"data type": "字节",
+"@默认值": "0"
+   },
+   {
+"parameter name": "操作码",
+"comment": "指定本次消息的操作码.",
+"data type": "字节",
+"@默认值": "2"
+   },
+   {
+"parameter name": "掩码",
+"comment": "指定本次发送消息所使用的掩码.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "数据",
+"comment": "指定本次所欲发送的数据内容.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "指定本次的消息长度,为0自动计算.",
+"data type": "整数",
+"@默认值": "0"
+   }
+@默认值": "文本编码类型.UTF8"]
+  },
+  {
+"method name": "关闭",
+"comment": "断开当前连接并释放资源.",
+"data type": "逻辑型"
+  },
+  {
+}"method name": "取通信对象",
+}"comment": "获取当前Websocket连接所使用的HP通信组件对象.",
+}"data type": "HP_HTTP客户端"
+  },
+  {
+comment": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象",
+comment": "指定本次所欲发送的数据内容.""comment": "获取当前Websocket连接所使用的HP通信组件对象.",
+comment": "指定本次所欲发送的数据内容.""data type": "HP_HTTP安全客户端类"
+  },
+  {
+ent": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""method name": "收到数据",
+ent": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""comment": "当接收到数据时本事件被触发,注意数据已经被自动内部组成一个完整的数据包.",
+ent": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""type": "event",
+ent": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""data type": "整数",
+ent": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""parameters": [
+   {
+"parameter name": "消息类型",
+"comment": "1=文本,2=字节集",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+ent": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象"]
+  },
+  {
+data type": "逻辑型""method name": "连接断开",
+data type": "逻辑型""type": "event",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被断开的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+data type": "逻辑型"]
+  },
+  {
+nt": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""comment": "当接收到数据时本事件被触发,注意数据已经被自动内部组成一个完整的数据包.""method name": "连接完成",
+nt": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""comment": "当接收到数据时本事件被触发,注意数据已经被自动内部组成一个完整的数据包.""type": "event",
+nt": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""comment": "当接收到数据时本事件被触发,注意数据已经被自动内部组成一个完整的数据包.""data type": "整数"
+  }
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\sys_hp_socket_websocket_w_hp_websocket_p.txt]
+ },
+ {
+t": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""comment": "当接收到数据时本事件被触发,注意数据已经被自动内部组成一个完整的数据包.""data type": "整数""class name": "Websocket客户端类",
+t": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""comment": "当接收到数据时本事件被触发,注意数据已经被自动内部组成一个完整的数据包.""data type": "整数""comment": "★ 本类由\"飞翔的企鹅\"封装.\n封装HPsocket的WS客户端实现.",
+t": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""comment": "当接收到数据时本事件被触发,注意数据已经被自动内部组成一个完整的数据包.""data type": "整数""methods": [
+  {
+
+"method name": "初始化SSL",
+
+"comment": "如欲启用SSL,需在\"连接\"方法之前初始化.",
+
+"result comment": "返回SSL初始化的结果.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证或客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+ameter name": "私钥文件""method name": "连接",
+ameter name": "私钥文件""comment": "向指定WS服务器发起连接请求.",
+ameter name": "私钥文件""result comment": "如果\"异步连接\"参数为假,将返回本次连接服务器的结果,否则返回本地客户端通信组件的启动结果.",
+ameter name": "私钥文件""data type": "逻辑型",
+ameter name": "私钥文件""parameters": [
+   {
+"parameter name": "地址",
+"comment": "例如:ws://localhost:9010/ajaxchattest",
+"data type": "文本型"
+   },
+   {
+"parameter name": "附加头",
+"comment": "提供连接所欲使用的附加请求头,一个成员表示一组,例如:\"Origin:http://0.0.0.0\".",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "指定是否以异步通知(通过事件获取连接结果,本方法不会阻塞)方式连接到服务端.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "私钥文件"]
+  },
+  {
+ }"method name": "发送文本",
+ }"comment": "向服务器发送文本内容消息.",
+ }"result comment": "返回发送结果.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供所欲发送的文本数据.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "UTF8编码",
+"comment": "指定所提供的内容是否需要以Utf8编码提交.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+}"method name": "发送数据",
+}"comment": "向服务器发送二进制内容消息.",
+}"result comment": "返回发送结果.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲发送的数据.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+ }"method name": "发送自定义消息",
+ }"comment": "向服务器发送自定义消息.",
+ }"result comment": "返回发送结果.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "是否结束帧",
+"comment": "指定当前所发送的消息帧是否为结束帧.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "RSV",
+"comment": "指定所欲使用的扩展位数据.",
+"data type": "字节",
+"@默认值": "0"
+   },
+   {
+"parameter name": "操作码",
+"comment": "指定本次消息的操作码.",
+"data type": "字节",
+"@默认值": "2"
+   },
+   {
+"parameter name": "掩码",
+"comment": "指定本次发送消息所使用的掩码.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "数据",
+"comment": "指定本次所欲发送的数据内容.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "指定本次的消息长度,为0自动计算.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "断开当前连接并释放资源.",
+
+"data type": "逻辑型"
+  },
+  {
+"data type": "逻辑型""method name": "取通信对象",
+"data type": "逻辑型""comment": "获取当前Websocket连接所使用的HP通信组件对象.",
+"data type": "逻辑型""data type": "HP_HTTP客户端"
+  },
+  {
+data type": "逻辑型""method name": "取SSL通信对象",
+data type": "逻辑型""comment": "获取当前Websocket连接所使用的HP通信组件对象.",
+data type": "逻辑型""data type": "HP_HTTP安全客户端类"
+  },
+  {
+
+"method name": "收到数据",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "连接断开",
+"parameters": [
+"type": "event",
+"parameters": [
+"data type": "整数",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被断开的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+"parameters": [
+]
+  },
+  {
+ameters": [
+"method name": "连接断开""method name": "连接完成",
+ameters": [
+"method name": "连接断开""type": "event",
+ameters": [
+"method name": "连接断开""data type": "整数"
+  },
+  {
+meters": [
+"method name": "连接断开""data type": "整数""method name": "正在解析数据头2",
+meters": [
+"method name": "连接断开""data type": "整数""comment": "当解析WebSocket数据包头时本事件将被触发.",
+meters": [
+"method name": "连接断开""data type": "整数""result comment": "本事件返回0则继续触发\"正在解析数据头\"事件,返回1则跳过\"正在解析数据头\"事件.",
+meters": [
+"method name": "连接断开""data type": "整数""type": "event",
+meters": [
+"method name": "连接断开""data type": "整数""data type": "整数",
+meters": [
+"method name": "连接断开""data type": "整数""parameters": [
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+meters": [
+"method name": "连接断开""data type": "整数"]
+  },
+  {
+"method name": "正在解析数据头",
+"comment": "当解析WebSocket数据包头时本事件将被触发.",
+"type": "event",
+"data type": "整数"
+  },
+  {
+}"method name": "数据接收完成",
+}"comment": "WS数据接收完毕后本事件被触发",
+}"type": "event",
+}"data type": "整数"
+  }
+t": "指定本次所欲发送的数据内容.""method name": "取SSL通信对象""comment": "当接收到数据时本事件被触发,注意数据已经被自动内部组成一个完整的数据包.""data type": "整数"]
+ },
+ {
+"class name": "Websocket服务端类",
+"methods": [
+  {
+methods": [
+"method name": "启动",
+methods": [
+"comment": "启动服务器并开始监听指定端口.",
+methods": [
+"result comment": "返回启动结果.",
+methods": [
+"data type": "逻辑型",
+methods": [
+"parameters": [
+   {
+"parameter name": "绑定地址",
+"comment": "提供所欲绑定的地址.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "监听端口",
+"comment": "提供所欲监听的端口号. 有效端口号从0到65535.",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "是否SSL",
+"comment": "指定是否以SSL服务器方式启动.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+methods": [
+]
+  },
+  {
+data type": "逻辑型""method name": "初始化SSL",
+data type": "逻辑型""comment": "如欲启用SSL,需在\"启动\"方法之前初始化.",
+data type": "逻辑型""result comment": "返回SSL初始化结果.",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证或客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "逻辑型"]
+  },
+  {
+"method name": "关闭",
+"comment": "断开当前服务器并释放资源.",
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "断开连接",
+
+"comment": "断开指定客户的连接",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "强制断开",
+"comment": "是否强制断开",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "自动心跳",
+
+"comment": "启动自动心跳功能：当客户端发送ping心跳请求过来，则服务端自动回复pong心跳。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否启动",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "发送心跳",
+
+"comment": "发送WS协议层心跳：ping/pong",
+
+"result comment": "返回发送结果",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "pong心跳",
+"comment": "为真则发送pong心跳，假则发送ping心跳。",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "接收完整数据包",
+
+"comment": "如果为真，则用【收到WS完整数据包体】这个事件接收数据\n为假则用【收到数据】这个事件接收数据，默认为假\n区别在于，【收到数据】事件是分包接收的，要把每个数据连接\n起来，当【数据接收完成】事件触发后所连接的包才是完整的。\n【收到WS完整数据包体】事件收到的数据是一个完完整整的WS数据包。",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否接收",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ameter name": "是否接收""method name": "客户端连接数",
+ameter name": "是否接收""comment": "获取当前通信组件的连接数",
+ameter name": "是否接收""type": "property getter",
+ameter name": "是否接收""data type": "整数"
+  },
+  {
+协议层心跳：ping/pong"method name": "取所有连接ID",
+协议层心跳：ping/pong"comment": "获取当前已连接的所有连接ID",
+协议层心跳：ping/pong"data type": "变整数数组类"
+  },
+  {
+
+"method name": "取连接时长",
+
+"comment": "获取某个客户端连接时长(毫秒).",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+}"method name": "工作线程数",
+}"comment": "设置工作线程数量(通常设置为 2 * CPU + 2).含义为: 所有连接所共用的线程数量.\n注意: 请按实际情况设置,组件会根据该值预分配内存,必须在启动服务器之前调用.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "线程数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "最大连接数",
+}"comment": "  设置通信组件所设置的最大连接数.注意:请按实际情况设置,\n组件会根据该值预分配内存,必须在启动服务器之前调用.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "欲设最大连接数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"comment": "获取某个客户端连接时长(毫秒).""method name": "发送文本",
+"comment": "获取某个客户端连接时长(毫秒).""comment": "向客户端发送文本内容消息.",
+"comment": "获取某个客户端连接时长(毫秒).""result comment": "返回发送结果.",
+"comment": "获取某个客户端连接时长(毫秒).""data type": "逻辑型",
+"comment": "获取某个客户端连接时长(毫秒).""parameters": [
+   {
+"parameter name": "客户ID",
+"comment": "提供所欲接收数据的客户ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内容",
+"comment": "提供所欲发送的文本内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "UTF8编码",
+"comment": "指定所提供的内容是否需要以Utf8编码提交.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"comment": "获取某个客户端连接时长(毫秒)."]
+  },
+  {
+ }"method name": "发送数据",
+ }"comment": "向客户端发送二进制内容消息.",
+ }"result comment": "返回发送结果.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "客户ID",
+"comment": "提供所欲接收数据的客户ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "提供所欲发送的数据.",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+ }"method name": "发送自定义消息",
+ }"comment": "向服务器发送自定义消息.",
+ }"result comment": "返回发送结果.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "客户ID",
+"comment": "提供所欲接收数据的客户ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否结束帧",
+"comment": "指定当前所发送的消息帧是否为结束帧.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "RSV",
+"comment": "指定所欲使用的扩展位数据.",
+"data type": "字节",
+"@默认值": "0"
+   },
+   {
+"parameter name": "操作码",
+"comment": "指定本次消息的操作码.",
+"data type": "字节",
+"@默认值": "2"
+   },
+   {
+"parameter name": "数据",
+"comment": "指定本次所欲发送的数据内容.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "指定本次的消息长度,为0自动计算.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+]"method name": "取通信对象",
+]"comment": "获取当前Websocket连接所使用的HP通信组件对象.",
+]"data type": "HP_HTTP服务器"
+  },
+  {
+
+"method name": "取SSL通信对象",
+
+"comment": "获取当前Websocket连接所使用的HP通信组件对象.",
+
+"data type": "HP_HTTP安全服务器"
+  },
+  {
+ameter name": "操作码""method name": "开始握手",
+ameter name": "操作码""comment": "当收到客户端的握手请求时本事件被发送.",
+ameter name": "操作码""type": "event",
+ameter name": "操作码""data type": "整数",
+ameter name": "操作码""parameters": [
+   {
+"parameter name": "客户ID",
+"data type": "变整数"
+   }
+ameter name": "操作码"]
+  },
+  {
+"method name": "已关闭",
+"comment": "当服务器被关闭时本事件被发送.",
+"type": "event",
+"data type": "整数"
+  },
+  {
+
+"method name": "收到数据",
+
+"comment": "当收到客户端发送过来的数据时本事件被发送，如果数据大于\n缓冲区尺寸，会分段接收，也就是一个数据会多次触发本事件\n如果要直接接收完整的数据，请用【收到WS完整数据包体】事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "客户ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+"method name": "收到WS完整数据包",
+"comment": "当接收完一个完整的WebSocket数据包体的时候会触发本事件.\n注意: 需要把\"接收完整数据包\"属性设置为真才会触发本事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留位",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x00 - 0x0F\n0x01：代表该数据为文本型数据\n0x02：代表该数据为二进制，图片、音频或压缩文件等等\n0x03-0x07：保留的非控制帧。\n0x08：用来指示即将断开连接\n0x09：代表ping心跳\n0x0A：代表pong心跳\n0x0B-0x0F：保留的非控制帧。",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "客户IP地址",
+"comment": "客户的远程IP地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "数据体长度.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "WebSocket接收到的完整数据体",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+"method name": "正在解析数据头2",
+"comment": "当解析WebSocket数据包头时本事件将被触发.",
+"result comment": "本事件返回0则继续触发\"正在解析数据头\"事件,返回1则跳过\"正在解析数据头\"事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "结束帧",
+"comment": "是否结束帧.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保留",
+"comment": "RSV1/RSV2/RSV3各1位.",
+"data type": "字节"
+   },
+   {
+"parameter name": "操作码",
+"comment": "操作码:0x0 - 0xF.",
+"data type": "字节"
+   },
+   {
+"parameter name": "掩码",
+"comment": "4字节掩码,空指针则无掩码.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息长度",
+"comment": "消息体长度.",
+"data type": "长整数"
+   }
+]
+  },
+  {
+data type": "整数""method name": "正在解析数据头",
+data type": "整数""comment": "当解析WebSocket数据包头时本事件将被触发.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "客户ID",
+"data type": "变整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "数据接收完成",
+
+"comment": "WS数据接收完毕后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "客户ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "客户进入",
+
+"comment": "当有客户端连接成功时本事件被发送.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "客户ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "客户离开",
+ }"comment": "当有已连接的客户端断开连接时本事件被发送.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "客户ID",
+"comment": "当前已连接的客户ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+ }]
+  },
+  {
+
+"method name": "数据发送完毕",
+
+"comment": "本服务器发送数据成功后本事件被发送.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "客户ID",
+"comment": "欲接收本次数据的客户端ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次发送的数据内容.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+ }"method name": "请求解析完成",
+ }"comment": "当服务器接收到客户请求后,将触发本事件,本事件将指定\n当前请求方式,和请求路径.例如:本机地址为192.168.0.103\n,WebSocket客户端连接：\"ws://192.168.0.103/love\",本事件\n将解析出请求地址后面的\"/love\".",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前请求方式",
+"comment": "当前客户请求方式,例如GET或POST.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前请求地址",
+"comment": "当前客户请求路径.为地址后面的参数.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "启动成功",
+"comment": "服务器端启动完毕并开始监听后,将触发本事件.",
+"type": "event",
+"data type": "整数"
+  }
+]
+ }
+问本程序中的接口需要引用模块"WebSocket网络通讯支持".]
+}

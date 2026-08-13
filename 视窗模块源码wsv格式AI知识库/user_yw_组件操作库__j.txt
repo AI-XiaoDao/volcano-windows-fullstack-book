@@ -1,0 +1,5000 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+ؐ舉ŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ؐ舉ŝ"package name": "火山.仰望",
+ؐ舉ŝ"@文档": "\"category = \\\"组件操作库\\\"\"",
+ؐ舉ŝ"classes": [
+ {
+舉ŝ"@文档": "\"category = \\\"组件操作库\\\"\"""class name": "日期框样式类_",
+舉ŝ"@文档": "\"category = \\\"组件操作库\\\"\"""@全局类": "真",
+舉ŝ"@文档": "\"category = \\\"组件操作库\\\"\"""methods": [
+  {
+型 = 逻辑型"method name": "组件_置日期框样式",
+型 = 逻辑型"static": true,
+型 = 逻辑型"parameters": [
+   {
+"parameter name": "日期框",
+"data type": "日期框"
+   },
+   {
+"parameter name": "时间样式",
+"comment": "日期格式文本：yy,yyyy(年)； M,MM(月)； d,dd(日) ；ddd(周几)； dddd(星期几)；\n时间格式文本：h,hh(12小时制)； H,HH(24小时制)； m,mm(分钟)； s,ss(秒)；\n其它格式文本：tt(上午或下午)；\n例如：M/d、yy/M/d、yyyy/MM/dd、yyyy年MM月dd日、yyyy年MM月dd日 ddd、yyyy年MM月dd日 dddd、h:m、yyyy/MM/dd dddd HH:mm:ss等。",
+"data type": "文本型",
+"@默认值": "\"yyyy-MM-dd HH:mm:ss\""
+   }
+型 = 逻辑型]
+  }
+舉ŝ"@文档": "\"category = \\\"组件操作库\\\"\""]
+ },
+ {
+标与子夹标题间隔""class name": "组件批量修改类_",
+标与子夹标题间隔""comment": "只支持MFC库",
+标与子夹标题间隔""base class": "窗口容器组件",
+标与子夹标题间隔""@文档": "\"category = \\\"组件操作库.组件批量操作\\\"\"",
+标与子夹标题间隔""methods": [
+  {
+型 = 鼠标指针资源 值 = "tb\\调节.cur""method name": "批量修改组件布局器_",
+型 = 鼠标指针资源 值 = "tb\\调节.cur""comment": "图片框、组件布局器，无法精确区分，可通过筛选参数来区分",
+型 = 鼠标指针资源 值 = "tb\\调节.cur""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "左边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所设置边框类型",
+"data type": "组件边框类型",
+"@默认值": "组件边框类型.单线边框式"
+   },
+   {
+"parameter name": "是否修改边框类型",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否可视",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否修改可视",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否透明",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改透明",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "筛选内容范围",
+"comment": "筛选组件标题或内容中是该内容(模糊筛选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "筛选宽度范围",
+"comment": "筛选编辑是该宽度。宽度和高度需要同时提供，内容范围参数和宽高参数只需要提供一种即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "筛选高度范围",
+"comment": "筛选编辑是该高度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+型 = 鼠标指针资源 值 = "tb\\调节.cur"]
+  },
+  {
+标题或内容中是该内容(模糊筛选)"method name": "批量修改组件布局器_底图",
+标题或内容中是该内容(模糊筛选)"comment": "图片框、组件布局器，无法精确区分，可通过筛选参数来区分",
+标题或内容中是该内容(模糊筛选)"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "底图",
+"comment": "参数二、三、四只需要提供一个即可",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "底图数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "底图文件",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "放置方式",
+"data type": "图片放置方式",
+"@默认值": "图片放置方式.图片居中"
+   },
+   {
+"parameter name": "是否修改放置方式",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "筛选内容范围",
+"comment": "筛选组件标题或内容中是该内容(模糊筛选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "筛选宽度范围",
+"comment": "筛选编辑是该宽度。宽度和高度需要同时提供，内容范围参数和宽高参数只需要提供一种即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "筛选高度范围",
+"comment": "筛选编辑是该高度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+标题或内容中是该内容(模糊筛选)]
+  },
+  {
+"method name": "批量修改选择框_",
+"comment": "按钮、超级按钮、单选框、颜色选择器、三态选择框、选择框、分组框，无法精确区分，可通过筛选参数来区分",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "标题",
+"comment": "默认不修改",
+"data type": "文本型",
+"@默认值": "\"|\""
+   },
+   {
+"parameter name": "字体描述文本",
+"comment": "默认不修改。本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例如: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否选中",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改选中",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "所设置边框类型",
+"data type": "组件边框类型",
+"@默认值": "组件边框类型.单线边框式"
+   },
+   {
+"parameter name": "是否修改边框类型",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否可视",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否修改可视",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "筛选内容范围",
+"comment": "筛选组件标题或内容中是该内容(模糊筛选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "筛选宽度范围",
+"comment": "筛选编辑是该宽度。宽度和高度需要同时提供，内容范围参数和宽高参数只需要提供一种即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "筛选高度范围",
+"comment": "筛选编辑是该高度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+ameter name": "筛选高度范围""method name": "批量修改单选框_",
+ameter name": "筛选高度范围""comment": "按钮、超级按钮、单选框、颜色选择器、三态选择框、选择框、分组框，无法精确区分，可通过筛选参数来区分",
+ameter name": "筛选高度范围""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "标题",
+"comment": "默认不修改",
+"data type": "文本型",
+"@默认值": "\"|\""
+   },
+   {
+"parameter name": "字体描述文本",
+"comment": "默认不修改。本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例如: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否选中",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改选中",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "所设置边框类型",
+"data type": "组件边框类型",
+"@默认值": "组件边框类型.单线边框式"
+   },
+   {
+"parameter name": "是否修改边框类型",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否可视",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否修改可视",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "筛选内容范围",
+"comment": "筛选组件标题或内容中是该内容(模糊筛选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "筛选宽度范围",
+"comment": "筛选编辑是该宽度。宽度和高度需要同时提供，内容范围参数和宽高参数只需要提供一种即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "筛选高度范围",
+"comment": "筛选编辑是该高度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "筛选高度范围"]
+  },
+  {
+
+"method name": "批量修改超级按钮_",
+
+"comment": "按钮、超级按钮、单选框、颜色选择器、三态选择框、选择框、分组框，无法精确区分，可通过筛选参数来区分",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "标题",
+"comment": "默认不修改",
+"data type": "文本型",
+"@默认值": "\"|\""
+   },
+   {
+"parameter name": "字体描述文本",
+"comment": "默认不修改。本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例如: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "对齐方式",
+"data type": "超级按钮对齐方式",
+"@默认值": "超级按钮对齐方式.图左文右"
+   },
+   {
+"parameter name": "是否修改对齐方式",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "绘制焦点",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改绘制焦点",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "绘制边框",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改绘制边框",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "压入方式",
+"data type": "超级按钮压入方式",
+"@默认值": "超级按钮压入方式.从上到下"
+   },
+   {
+"parameter name": "是否修改压入方式",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "按钮风格",
+"data type": "超级按钮风格",
+"@默认值": "超级按钮风格.平面风格"
+   },
+   {
+"parameter name": "是否修改风格",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "使用默认色",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否使用默认色",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "通常前景色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "点燃前景色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "焦点前景色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "通常背景色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "点燃背景色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "焦点背景色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所设置边框类型",
+"data type": "组件边框类型",
+"@默认值": "组件边框类型.单线边框式"
+   },
+   {
+"parameter name": "是否修改边框类型",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否可视",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否修改可视",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "筛选内容范围",
+"comment": "筛选组件标题或内容中是该内容(模糊筛选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "筛选宽度范围",
+"comment": "筛选编辑是该宽度。宽度和高度需要同时提供，内容范围参数和宽高参数只需要提供一种即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "筛选高度范围",
+"comment": "筛选编辑是该高度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+"method name": "批量修改按钮_",
+"comment": "按钮、超级按钮、单选框、颜色选择器、三态选择框、选择框、分组框，无法精确区分，可通过筛选参数来区分",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "标题",
+"comment": "默认不修改",
+"data type": "文本型",
+"@默认值": "\"|\""
+   },
+   {
+"parameter name": "字体描述文本",
+"comment": "默认不修改。本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例如: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所设置边框类型",
+"data type": "组件边框类型",
+"@默认值": "组件边框类型.单线边框式"
+   },
+   {
+"parameter name": "是否修改边框类型",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否可视",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否修改可视",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "筛选内容范围",
+"comment": "筛选组件标题或内容中是该内容(模糊筛选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "筛选宽度范围",
+"comment": "筛选编辑是该宽度。宽度和高度需要同时提供，内容范围参数和宽高参数只需要提供一种即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "筛选高度范围",
+"comment": "筛选编辑是该高度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+"method name": "批量修改标签_",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "标题",
+"comment": "默认不修改",
+"data type": "文本型",
+"@默认值": "\"|\""
+   },
+   {
+"parameter name": "字体描述文本",
+"comment": "默认不修改。本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例如: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "文本颜色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "背景颜色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所设置边框类型",
+"data type": "组件边框类型",
+"@默认值": "组件边框类型.单线边框式"
+   },
+   {
+"parameter name": "是否修改边框类型",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否可视",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否修改可视",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否透明",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改透明",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "筛选内容范围",
+"comment": "筛选组件标题或内容中是该内容(模糊筛选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "筛选宽度范围",
+"comment": "筛选编辑是该宽度。宽度和高度需要同时提供，内容范围参数和宽高参数只需要提供一种即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "筛选高度范围",
+"comment": "筛选编辑是该高度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+"method name": "批量修改标签_底图",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "底图",
+"comment": "参数二、三、四只需要提供一个即可",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "底图数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "底图文件",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "放置方式",
+"data type": "图片放置方式",
+"@默认值": "图片放置方式.图片居中"
+   },
+   {
+"parameter name": "是否修改放置方式",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "筛选内容范围",
+"comment": "筛选组件标题或内容中是该内容(模糊筛选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "筛选宽度范围",
+"comment": "筛选编辑是该宽度。宽度和高度需要同时提供，内容范围参数和宽高参数只需要提供一种即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "筛选高度范围",
+"comment": "筛选编辑是该高度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+data type": "逻辑型""method name": "批量修改编辑框_",
+data type": "逻辑型""comment": "编辑框、IP编辑框，无法精确区分，可通过筛选参数来区分",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内容",
+"comment": "默认不修改",
+"data type": "文本型",
+"@默认值": "\"|\""
+   },
+   {
+"parameter name": "字体描述文本",
+"comment": "默认不修改。本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例如: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "文本颜色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "背景颜色",
+"comment": "默认不修改",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所设置边框类型",
+"data type": "组件边框类型",
+"@默认值": "组件边框类型.单线边框式"
+   },
+   {
+"parameter name": "是否修改边框类型",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "输入方式",
+"data type": "编辑框输入方式",
+"@默认值": "编辑框输入方式.通常方式"
+   },
+   {
+"parameter name": "是否修改输入方式",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "光标起始位置",
+"comment": "从0开始，0光标在文本首位，-1时则在文本尾位",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否可视",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否修改可视",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否修改禁止",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "筛选内容范围",
+"comment": "筛选组件标题或内容中是该内容(模糊筛选)",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "筛选宽度范围",
+"comment": "筛选编辑是该宽度。宽度和高度需要同时提供，内容范围参数和宽高参数只需要提供一种即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "筛选高度范围",
+"comment": "筛选编辑是该高度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "逻辑型"]
+  }
+标与子夹标题间隔"]
+ },
+ {
+data type": "逻辑型""class name": "编辑框内容同步类_",
+data type": "逻辑型""base class": "窗口容器组件",
+data type": "逻辑型""@文档": "\"category = \\\"组件操作库.组件批量操作\\\"\"",
+data type": "逻辑型""methods": [
+  {
+
+"method name": "捕获组件_",
+
+"comment": "执行一次即可",
+
+"parameters": [
+   {
+"parameter name": "父窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "组件ID组",
+"data type": "整数数组类"
+   }
+
+]
+  },
+  {
+ }"method name": "捕获组件2_",
+ }"comment": "执行一次即可",
+ }"parameters": [
+   {
+"parameter name": "组件句柄组",
+"data type": "变整数数组类"
+   }
+ }]
+  },
+  {
+子夹标题间隔"]"method name": "同步组件_",
+子夹标题间隔"]"comment": "先执行捕获组件",
+子夹标题间隔"]"data type": "逻辑型",
+子夹标题间隔"]"parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "编辑框"
+   }
+子夹标题间隔"]]
+  }
+data type": "逻辑型"]
+ },
+ {
+@默认值": "-1""class name": "标签标题同步类_",
+@默认值": "-1""base class": "窗口容器组件",
+@默认值": "-1""@文档": "\"category = \\\"组件操作库.组件批量操作\\\"\"",
+@默认值": "-1""methods": [
+  {
+ }"method name": "捕获组件_",
+ }"comment": "执行一次即可",
+ }"parameters": [
+   {
+"parameter name": "父窗口句柄",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "组件ID组",
+"data type": "整数数组类"
+   }
+ }]
+  },
+  {
+ }"method name": "捕获组件2_",
+ }"comment": "执行一次即可",
+ }"parameters": [
+   {
+"parameter name": "组件句柄组",
+"data type": "变整数数组类"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "同步组件_",
+data type": "整数""comment": "先执行捕获组件",
+data type": "整数""data type": "逻辑型",
+data type": "整数""parameters": [
+   {
+"parameter name": "标题",
+"data type": "文本型"
+   }
+data type": "整数"]
+  }
+@默认值": "-1"]
+ },
+ {
+}"parameters": [
+"class name": "截图类_",
+}"parameters": [
+"comment": "本类只基于MFC或WTL使用",
+}"parameters": [
+"@文档": "\"category = \\\"组件操作库.截图操作\\\"\"",
+}"parameters": [
+"methods": [
+  {
+
+"method name": "弹出截图",
+
+"result comment": "返回截图数据",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "坐标颜色",
+"comment": "坐标值显示颜色",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   },
+   {
+"parameter name": "线框颜色",
+"comment": "截图线框颜色",
+"data type": "整数",
+"@默认值": "颜色类.蓝色"
+   },
+   {
+"parameter name": "线框背景色",
+"comment": " ",
+"data type": "整数",
+"@默认值": "0x383838"
+   },
+   {
+"parameter name": "提示颜色",
+"comment": "双击提示颜色",
+"data type": "整数",
+"@默认值": "颜色类.天蓝色"
+   },
+   {
+"parameter name": "图片格式",
+"comment": "返回图片数据类型　1、PNG　2、BMP　3、JPG　4、GIF",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "保存路径",
+"comment": "例如：“C:\\\\截图.png”；留空则不会自动保存图片",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "隐藏提示",
+"comment": "隐藏双击提示",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "初始宽度",
+"comment": "初始个截图框大小",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "初始高度",
+"comment": "初始个截图框大小",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+}"parameters": [
+]
+ },
+ {
+
+"class name": "窗口边框类_",
+
+"comment": "使用步骤:\n1、在窗口创建完毕事件下执行“创建边框_”\n2、在窗口尺寸被改变事件下执行“匹配尺寸_”",
+
+"base class": "组件布局器",
+
+"@文档": "\"category = \\\"组件操作库.窗口边框库\\\"\"",
+
+"@视窗.布局": "\"client_size = \\\"45, 30\\\"\"",
+
+"methods": [
+  {
+
+"method name": "创建边框_",
+
+"parameters": [
+   {
+"parameter name": "容器",
+"comment": "本对象",
+"data type": "窗口"
+   },
+   {
+"parameter name": "窗口标题",
+"data type": "文本型",
+"@默认值": "\"我的窗口\""
+   },
+   {
+"parameter name": "标题颜色",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   },
+   {
+"parameter name": "标题字体名称",
+"data type": "文本型",
+"@默认值": "\"微软雅黑\""
+   },
+   {
+"parameter name": "标题字体大小",
+"data type": "整数",
+"@默认值": "12"
+   },
+   {
+"parameter name": "标题是否加粗",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "标题对齐方式",
+"comment": "0、左对齐　1、居中",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "窗口图标左边",
+"comment": "窗口标题栏左侧图标距离左侧间隔",
+"data type": "整数",
+"@默认值": "12"
+   },
+   {
+"parameter name": "窗口图标宽度",
+"comment": "窗口标题栏左侧图标。高度则跟随上标题栏的高度",
+"data type": "整数",
+"@默认值": "22"
+   },
+   {
+"parameter name": "控件图标宽度",
+"comment": "窗口标题栏右侧图标",
+"data type": "整数",
+"@默认值": "27"
+   },
+   {
+"parameter name": "控件图标高度",
+"comment": "宽高，不可大于上边框高度。窗口标题栏右侧图标",
+"data type": "整数",
+"@默认值": "25"
+   },
+   {
+"parameter name": "控件是否居中",
+"comment": "窗口标题栏右侧图标是否居中显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "上边框高度",
+"data type": "整数",
+"@默认值": "42"
+   },
+   {
+"parameter name": "下边框高度",
+"data type": "整数",
+"@默认值": "30"
+   },
+   {
+"parameter name": "左右边框宽度",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "边框背景颜色",
+"comment": "窗口上下左右边框颜色",
+"data type": "整数",
+"@默认值": "0x804000"
+   },
+   {
+"parameter name": "控件热点背景颜色",
+"comment": "窗口标题栏右侧按钮",
+"data type": "整数",
+"@默认值": "0xAB5501"
+   },
+   {
+"parameter name": "控件按下背景颜色",
+"comment": "窗口标题栏右侧按钮，除关闭外",
+"data type": "整数",
+"@默认值": "0x7B3702"
+   },
+   {
+"parameter name": "控件关闭背景颜色",
+"comment": "窗口标题栏右侧关闭按钮",
+"data type": "整数",
+"@默认值": "0x0000FE"
+   },
+   {
+"parameter name": "控件按下关闭背景颜色",
+"comment": "窗口标题栏右侧关闭按钮",
+"data type": "整数",
+"@默认值": "0x00008C"
+   },
+   {
+"parameter name": "隐藏全屏按钮",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "隐藏最大化按钮",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "隐藏最小化按钮",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "隐藏皮肤按钮",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "窗口大小是否可调节",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "双击是否最大化",
+"comment": "双击标题栏时是否允许最大化",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "窗口圆角度数",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "窗口图标",
+"comment": "窗口标题栏左侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "关闭按钮图标",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "全屏按钮图标",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "最大化按钮图标",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "最小化按钮图标",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "皮肤按钮图标",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "隐藏附加按钮1",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加按钮2",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加按钮3",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加按钮4",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加按钮5",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加按钮6",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加按钮7",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加按钮8",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "附加按钮图标1",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标2",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标3",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标4",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标5",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标6",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标7",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标8",
+"comment": "窗口标题栏右侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "默认全屏最大化",
+"comment": "0、不改变 1、最大化 2、全屏",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "释放退出_",
+
+"comment": "窗口关闭时执行释放"
+  },
+  {
+"comment": "窗口关闭时执行释放""method name": "置改控件提示_",
+"comment": "窗口关闭时执行释放""comment": "修改标题栏按钮鼠标停留提示",
+"comment": "窗口关闭时执行释放""parameters": [
+   {
+"parameter name": "关闭提示",
+"data type": "文本型",
+"@默认值": "\"关闭\""
+   },
+   {
+"parameter name": "最大化提示",
+"data type": "文本型",
+"@默认值": "\"最大化\""
+   },
+   {
+"parameter name": "最小化提示",
+"data type": "文本型",
+"@默认值": "\"最小化\""
+   },
+   {
+"parameter name": "全屏提示",
+"data type": "文本型",
+"@默认值": "\"全屏\""
+   },
+   {
+"parameter name": "皮肤提示",
+"data type": "文本型",
+"@默认值": "\"皮肤\""
+   },
+   {
+"parameter name": "附加按钮1提示",
+"data type": "文本型",
+"@默认值": "\"附加1\""
+   },
+   {
+"parameter name": "附加按钮2提示",
+"data type": "文本型",
+"@默认值": "\"附加2\""
+   },
+   {
+"parameter name": "附加按钮3提示",
+"data type": "文本型",
+"@默认值": "\"附加3\""
+   },
+   {
+"parameter name": "附加按钮4提示",
+"data type": "文本型",
+"@默认值": "\"附加4\""
+   },
+   {
+"parameter name": "附加按钮5提示",
+"data type": "文本型",
+"@默认值": "\"附加5\""
+   },
+   {
+"parameter name": "附加按钮6提示",
+"data type": "文本型",
+"@默认值": "\"附加6\""
+   },
+   {
+"parameter name": "附加按钮7提示",
+"data type": "文本型",
+"@默认值": "\"附加7\""
+   },
+   {
+"parameter name": "附加按钮8提示",
+"data type": "文本型",
+"@默认值": "\"附加7\""
+   }
+"comment": "窗口关闭时执行释放"]
+  },
+  {
+
+"method name": "置控件图标_",
+
+"comment": "修改标题栏按钮图标及窗口图标；位图来源",
+
+"parameters": [
+   {
+"parameter name": "窗口图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "关闭按钮图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "全屏按钮图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "最大化按钮图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "最小化按钮图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "皮肤按钮图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标1",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标2",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标3",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标4",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标5",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标6",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标7",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "附加按钮图标8",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   }
+
+]
+  },
+  {
+ameter name": "附加按钮图标5""method name": "置控件图标2_",
+ameter name": "附加按钮图标5""comment": "修改标题栏按钮图标及窗口图标；字节集来源",
+ameter name": "附加按钮图标5""parameters": [
+   {
+"parameter name": "窗口图标",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "关闭按钮图标",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "全屏按钮图标",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "最大化按钮图标",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "最小化按钮图标",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "皮肤按钮图标",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加按钮图标1",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加按钮图标2",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加按钮图标3",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加按钮图标4",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加按钮图标5",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加按钮图标6",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加按钮图标7",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加按钮图标8",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+ameter name": "附加按钮图标5"]
+  },
+  {
+data type": "字节集类""method name": "置控件图标3_",
+data type": "字节集类""comment": "修改标题栏按钮图标及窗口图标；路径来源",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "窗口图标",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "关闭按钮图标",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "全屏按钮图标",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "最大化按钮图标",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "最小化按钮图标",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "皮肤按钮图标",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加按钮图标1",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加按钮图标2",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加按钮图标3",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加按钮图标4",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加按钮图标5",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加按钮图标6",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加按钮图标7",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加按钮图标8",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "字节集类"]
+  },
+  {
+
+"method name": "置控件热点色_",
+
+"comment": "窗口标题栏右侧按钮",
+
+"parameters": [
+   {
+"parameter name": "控件热点背景颜色",
+"comment": "窗口标题栏右侧按钮",
+"data type": "整数",
+"@默认值": "0xAB5501"
+   },
+   {
+"parameter name": "控件按下背景颜色",
+"comment": "窗口标题栏右侧按钮，除关闭外",
+"data type": "整数",
+"@默认值": "0x7B3702"
+   },
+   {
+"parameter name": "控件关闭背景颜色",
+"comment": "窗口标题栏右侧关闭按钮",
+"data type": "整数",
+"@默认值": "0x0000FE"
+   },
+   {
+"parameter name": "控件按下关闭背景颜色",
+"comment": "窗口标题栏右侧关闭按钮",
+"data type": "整数",
+"@默认值": "0x00008C"
+   }
+
+]
+  },
+  {
+"method name": "置控件状态_",
+"comment": "窗口标题栏右侧按钮",
+"parameters": [
+   {
+"parameter name": "隐藏全屏按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏最大化按钮",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "隐藏最小化按钮",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "隐藏皮肤按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加1按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加2按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加3按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加4按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加5按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加6按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加7按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "隐藏附加8按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+data type": "逻辑型""method name": "置边框背景颜色_",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "颜色",
+"comment": "窗口上下左右边框颜色",
+"data type": "整数",
+"@默认值": "0x804000"
+   }
+data type": "逻辑型"]
+  },
+  {
+ }"method name": "置边框尺寸_",
+ }"parameters": [
+   {
+"parameter name": "上边框高度",
+"data type": "整数",
+"@默认值": "42"
+   },
+   {
+"parameter name": "下边框高度",
+"data type": "整数",
+"@默认值": "22"
+   },
+   {
+"parameter name": "左右边框宽度",
+"data type": "整数",
+"@默认值": "2"
+   }
+ }]
+  },
+  {
+"method name": "置窗口标题_",
+"parameters": [
+   {
+"parameter name": "窗口标题",
+"data type": "文本型",
+"@默认值": "\"我的窗口\""
+   }
+]
+  },
+  {
+}"method name": "置窗口标题颜色_",
+}"parameters": [
+   {
+"parameter name": "标题颜色",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   }
+}]
+  },
+  {
+@默认值": "0x00008C""method name": "置窗口标题字体_",
+@默认值": "0x00008C""parameters": [
+   {
+"parameter name": "标题字体名称",
+"data type": "文本型",
+"@默认值": "\"微软雅黑\""
+   },
+   {
+"parameter name": "标题字体大小",
+"data type": "整数",
+"@默认值": "12"
+   },
+   {
+"parameter name": "标题是否加粗",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@默认值": "0x00008C"]
+  },
+  {
+@默认值": "真""method name": "置窗口标题对齐方式_",
+@默认值": "真""parameters": [
+   {
+"parameter name": "标题对齐方式",
+"comment": "0、左对齐　1、居中",
+"data type": "整数",
+"@默认值": "0"
+   }
+@默认值": "真"]
+  },
+  {
+data type": "整数""method name": "置入状态标签_",
+data type": "整数""comment": "在窗口底部栏中添加文字",
+data type": "整数""parameters": [
+   {
+"parameter name": "标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "标题颜色",
+"data type": "整数",
+"@默认值": "颜色类.浅灰色"
+   },
+   {
+"parameter name": "是否加间隔条",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "间隔条颜色",
+"data type": "整数",
+"@默认值": "0xA25100"
+   },
+   {
+"parameter name": "标题字体名称",
+"data type": "文本型",
+"@默认值": "\"宋体\""
+   },
+   {
+"parameter name": "标题字体大小",
+"data type": "整数",
+"@默认值": "9"
+   },
+   {
+"parameter name": "标题是否加粗",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "标题起始距离",
+"comment": "首个标题距离左侧边界距离",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "标题与间隔条距离",
+"comment": "右侧标题与左侧间隔条距离",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "提示内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "置警示标签标题_",
+ }"parameters": [
+   {
+"parameter name": "警示内容",
+"data type": "文本型",
+"@默认值": "\"窗口锁定中\""
+   },
+   {
+"parameter name": "标题颜色",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "背景颜色",
+"data type": "整数",
+"@默认值": "颜色类.黄色"
+   },
+   {
+"parameter name": "字体名称",
+"data type": "文本型",
+"@默认值": "\"微软雅黑\""
+   },
+   {
+"parameter name": "字体大小",
+"data type": "整数",
+"@默认值": "14"
+   },
+   {
+"parameter name": "是否加粗",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+
+"method name": "置状态标签标题_",
+
+"comment": "修改“置入状态标签_”所添加的标签",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "标签索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "新标题",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+@默认值": "假""method name": "置状态标签标题颜色_",
+@默认值": "假""comment": "修改“置入状态标签_”所添加的标签颜色",
+@默认值": "假""data type": "逻辑型",
+@默认值": "假""parameters": [
+   {
+"parameter name": "标签索引",
+"comment": "从0开始，默认-1表示修改所有",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "标题颜色",
+"data type": "整数",
+"@默认值": "颜色类.浅灰色"
+   }
+@默认值": "假"]
+  },
+  {
+认值": "假"]"method name": "置状态标签间隔条颜色_",
+认值": "假"]"comment": "修改“置入状态标签_”所添加的标签间隔条颜色",
+认值": "假"]"data type": "逻辑型",
+认值": "假"]"parameters": [
+   {
+"parameter name": "间隔条颜色",
+"data type": "整数",
+"@默认值": "0xA25100"
+   }
+认值": "假"]]
+  },
+  {
+"method name": "置状态标签提示_",
+"comment": "修改“置入状态标签_”所添加的标签的提示信息",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "标签索引",
+"comment": "从0开始",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提示内容",
+"data type": "文本型"
+   }
+]
+  },
+  {
+@默认值": "颜色类.浅灰色""method name": "置窗口可调状态_",
+@默认值": "颜色类.浅灰色""comment": "设置窗口大小是否可调",
+@默认值": "颜色类.浅灰色""parameters": [
+   {
+"parameter name": "窗口大小是否可调节",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+@默认值": "颜色类.浅灰色"]
+  },
+  {
+值": "假"]"parameters": [
+"method name": "置窗口拖动状态_",
+值": "假"]"parameters": [
+"comment": "点住边框时是否可移动窗口位置",
+值": "假"]"parameters": [
+"parameters": [
+   {
+"parameter name": "是否可拖",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+值": "假"]"parameters": [
+]
+  },
+  {
+": "假"]]"method name": "置标题栏双击状态_",
+": "假"]]"comment": "双击标题栏时是否允许最大化",
+": "假"]]"parameters": [
+   {
+"parameter name": "是否最大化",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+": "假"]]]
+  },
+  {
+ }"method name": "置原始位置_",
+ }"comment": "预置原始位置坐标，当窗口默认就是最大化时，点击最大化不会缩小窗口，通过本命令可改变此情况.\n本命令放在创建边框之后",
+ }"parameters": [
+   {
+"parameter name": "左边",
+"data type": "整数"
+   },
+   {
+"parameter name": "顶边",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+默认值": "颜色类.浅灰色""comment": "设置窗口大小是否可调""method name": "清空状态标签_",
+默认值": "颜色类.浅灰色""comment": "设置窗口大小是否可调""comment": "清空所有状态标签"
+  },
+  {
+data type": "逻辑型""method name": "匹配尺寸_",
+data type": "逻辑型""comment": "将本命令放在“我的主窗口_尺寸被改变”事件下",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "左间隔",
+"comment": "调整标题栏控件按钮",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "顶间隔",
+"comment": "调整标题栏控件按钮",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "主附间隔",
+"comment": "调整标题栏控件按钮，主控件与附控件之间间隔",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "逻辑型"]
+  },
+  {
+ta type": "逻辑型"]"method name": "皮肤点击事件",
+ta type": "逻辑型"]"type": "event",
+ta type": "逻辑型"]"data type": "整数"
+  },
+  {
+@默认值": "真""method name": "主控件点击事件",
+@默认值": "真""type": "event",
+@默认值": "真""data type": "整数",
+@默认值": "真""parameters": [
+   {
+"parameter name": "类型",
+"comment": "0、最小化 1、全屏 2、最大化 3、关闭 4、双击标题",
+"data type": "整数"
+   }
+@默认值": "真"]
+  },
+  {
+"method name": "附加控件点击事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "类型",
+"comment": "0、左键 1、右键",
+"data type": "整数"
+   },
+   {
+"parameter name": "控件序号",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "状态标签点击事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"comment": "0、左键 1、右键",
+"data type": "整数"
+   },
+   {
+"parameter name": "标签序号",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "警示标签点击事件",
+"type": "event",
+"data type": "整数"
+  },
+  {
+
+"data type": "整数""method name": "标题栏双击事件",
+
+"data type": "整数""type": "event",
+
+"data type": "整数""data type": "整数"
+  },
+  {
+"method name": "控件触发事件",
+"comment": "标题栏按钮",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "组件序号",
+"comment": "自定义序号",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否移入",
+"comment": "真：鼠标移入　假：鼠标移出",
+"data type": "逻辑型"
+   }
+]
+  }
+
+]
+ },
+ {
+"class name": "图片浏览框_",
+"comment": "支持图片浏览和图片轮播",
+"base class": "画板",
+"@文档": "\"category = \\\"组件操作库.图片浏览库\\\"\"",
+"methods": [
+  {
+"method name": "初始化浏览框_",
+"comment": "图片浏览命令，可重复执行本命令来实现重加载",
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "显示滚动条",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "开启鼠标滚轮功能",
+"comment": "0、关闭　1、开启缩放　2、开启滚动　3、智能选择模式(当只有高度超出屏幕时，使用滚动，宽度超出使用缩放)",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "滚轮调整尺寸",
+"comment": "缩放或滚动的尺寸比例",
+"data type": "整数",
+"@默认值": "50"
+   }
+]
+  },
+  {
+comment": "0、最小化 1、全屏 2、最大化 3、关闭 4、双击标题""method name": "置鼠标滚轮功能_",
+comment": "0、最小化 1、全屏 2、最大化 3、关闭 4、双击标题""comment": "图片浏览命令",
+comment": "0、最小化 1、全屏 2、最大化 3、关闭 4、双击标题""parameters": [
+   {
+"parameter name": "开启鼠标滚轮功能",
+"comment": "0、关闭　1、开启缩放　2、开启滚动　3、智能选择模式(当只有高度超出屏幕时，使用滚动，宽度超出使用缩放)",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "滚轮调整尺寸",
+"data type": "整数",
+"@默认值": "50"
+   }
+comment": "0、最小化 1、全屏 2、最大化 3、关闭 4、双击标题"]
+  },
+  {
+ }"method name": "同宽显示_",
+ }"comment": "图片浏览命令",
+ }"parameters": [
+   {
+"parameter name": "强制同宽",
+"comment": "假：当图片宽度大于显示区时同宽显示  真：一直同宽",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+comment": "0、关闭　1、开启缩放　2、开启滚动　3、智能选择模式(当只有高度超出屏幕时，使用滚动，宽度超出使用缩放)""method name": "缩略显示_",
+comment": "0、关闭　1、开启缩放　2、开启滚动　3、智能选择模式(当只有高度超出屏幕时，使用滚动，宽度超出使用缩放)""comment": "图片浏览命令"
+  },
+  {
+ }"method name": "实际大小_",
+ }"comment": "图片浏览命令"
+  },
+  {
+hod name": "警示标签点击事件""method name": "缩放图片_",
+hod name": "警示标签点击事件""comment": "图片浏览命令",
+hod name": "警示标签点击事件""parameters": [
+   {
+"parameter name": "类型",
+"comment": "1、放大 2、缩小",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "缩放尺寸",
+"comment": "每次缩放的尺寸",
+"data type": "整数",
+"@默认值": "50"
+   },
+   {
+"parameter name": "是否居中",
+"comment": "真：始终按居中  假：按当前中心点缩放",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+hod name": "警示标签点击事件"]
+  },
+  {
+@默认值": "50""method name": "加载图片_",
+@默认值": "50""comment": "单张图片;\n图片浏览命令",
+@默认值": "50""parameters": [
+   {
+"parameter name": "图片来源",
+"data type": "文本型"
+   }
+@默认值": "50"]
+  },
+  {
+}"parameters": [
+"method name": "加载图片2_",
+}"parameters": [
+"comment": "单张图片;\n图片浏览命令",
+}"parameters": [
+"parameters": [
+   {
+"parameter name": "图片来源",
+"data type": "字节集类"
+   }
+}"parameters": [
+]
+  },
+  {
+}"method name": "加载轮播图_",
+}"comment": "轮播图命令",
+}"parameters": [
+   {
+"parameter name": "图片来源",
+"comment": "图片尺寸要一致",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "浮点位置",
+"comment": "1、图内左侧 2、图内居中 3、图内右侧 4、图外底部左 5、图外底部中 6、隐藏浮点;\n当参数为4或5时，显示区高度将缩小25，也就是组件实际高度应为：图片高度＋25",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "浮点样式",
+"comment": "1、圆角 2、正方",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "浮点激活颜色",
+"data type": "整数",
+"@默认值": "颜色类.天蓝色"
+   },
+   {
+"parameter name": "浮点通常颜色",
+"data type": "整数",
+"@默认值": "颜色类.浅灰色"
+   },
+   {
+"parameter name": "底部颜色",
+"comment": "浮点位置为4或5时，本参数生效",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "圆角显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "轮播周期",
+"comment": "图片停留时间；不为0时，则自动轮播;\n单位：毫秒，1000毫秒 = 1秒",
+"data type": "整数",
+"@默认值": "2000"
+   },
+   {
+"parameter name": "移动距离",
+"comment": "通过修改本值来改变轮播速度，值越大速度越快",
+"data type": "整数",
+"@默认值": "7"
+   }
+}]
+  },
+  {
+@默认值": "颜色类.浅灰色""method name": "加载轮播图2_",
+@默认值": "颜色类.浅灰色""comment": "轮播图命令",
+@默认值": "颜色类.浅灰色""parameters": [
+   {
+"parameter name": "图片来源",
+"comment": "图片尺寸要一致",
+"data type": "字节集数组类"
+   },
+   {
+"parameter name": "浮点位置",
+"comment": "1、图内左侧 2、图内居中 3、图内右侧 4、图外底部左 5、图外底部中 6、隐藏浮点;\n当参数为4或5时，显示区高度将缩小25，也就是组件实际高度应为：图片高度＋25",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "浮点样式",
+"comment": "1、圆角 2、正方",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "浮点激活颜色",
+"data type": "整数",
+"@默认值": "颜色类.天蓝色"
+   },
+   {
+"parameter name": "浮点通常颜色",
+"data type": "整数",
+"@默认值": "颜色类.浅灰色"
+   },
+   {
+"parameter name": "底部颜色",
+"comment": "浮点位置为4或5时，本参数生效",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "圆角显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "轮播周期",
+"comment": "图片停留时间；不为0时，则自动轮播;\n单位：毫秒，1000毫秒 = 1秒",
+"data type": "整数",
+"@默认值": "2000"
+   },
+   {
+"parameter name": "移动距离",
+"comment": "通过修改本值来改变轮播速度，值越大速度越快",
+"data type": "整数",
+"@默认值": "7"
+   }
+@默认值": "颜色类.浅灰色"]
+  },
+  {
+
+"method name": "自适应滚动条_",
+
+"comment": "图片浏览命令"
+  },
+  {
+"method name": "到图片左_",
+"comment": "图片浏览命令"
+  },
+  {
+
+"method name": "到图片首_",
+
+"comment": "图片浏览命令"
+  },
+  {
+"comment": "图片浏览命令""method name": "到图片中_",
+"comment": "图片浏览命令""comment": "图片浏览命令"
+  },
+  {
+}"method name": "到图片尾_",
+}"comment": "图片浏览命令"
+  },
+  {
+"method name": "取显示图片_",
+"comment": "取当前显示区图片",
+"data type": "字节集类"
+  },
+  {
+
+"method name": "停止轮播_",
+
+"comment": "轮播图命令"
+  },
+  {
+}"method name": "启动轮播_",
+}"comment": "轮播图命令",
+}"parameters": [
+   {
+"parameter name": "轮播周期",
+"data type": "整数"
+   },
+   {
+"parameter name": "移动距离",
+"comment": "通过修改本值来改变轮播速度，值越大速度越快",
+"data type": "整数",
+"@默认值": "7"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "置轮播周期_",
+data type": "整数""comment": "轮播图命令",
+data type": "整数""parameters": [
+   {
+"parameter name": "轮播周期",
+"comment": "图片停留时间；不为0时，则自动轮播;\n单位：毫秒，1000毫秒 = 1秒",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "置轮播速度_",
+"comment": "轮播图命令",
+"parameters": [
+   {
+"parameter name": "移动距离",
+"comment": "通过修改本值来改变轮播速度，值越大速度越快",
+"data type": "整数",
+"@默认值": "7"
+   }
+]
+  },
+  {
+"comment": "轮播图命令""method name": "切换轮播图_",
+"comment": "轮播图命令""comment": "轮播图命令",
+"comment": "轮播图命令""parameters": [
+   {
+"parameter name": "图序",
+"comment": "从0开始",
+"data type": "整数"
+   }
+"comment": "轮播图命令"]
+  },
+  {
+omment": "轮播图命令"]"method name": "轮播图点击事件",
+omment": "轮播图命令"]"type": "event",
+omment": "轮播图命令"]"data type": "整数",
+omment": "轮播图命令"]"parameters": [
+   {
+"parameter name": "触发序",
+"comment": "从0开始",
+"data type": "整数"
+   }
+omment": "轮播图命令"]]
+  },
+  {
+data type": "整数""method name": "轮播图切换事件",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "触发序",
+"comment": "从0开始",
+"data type": "整数"
+   }
+data type": "整数"]
+  }
+]
+ },
+ {
+comment": "轮播图命令""parameters": [
+"class name": "纵向滚动条类_",
+comment": "轮播图命令""parameters": [
+"base class": "组件布局器",
+comment": "轮播图命令""parameters": [
+"@文档": "\"category = \\\"组件操作库.滚动条库\\\"\"",
+comment": "轮播图命令""parameters": [
+"@视窗.布局": "\"client_size = \\\"10, 350\\\"\"",
+comment": "轮播图命令""parameters": [
+"methods": [
+  {
+
+"method name": "获取焦点_"
+  },
+  {
+comment": "取当前显示区图片""method name": "初始化滚动条_",
+comment": "取当前显示区图片""result comment": "将返回2个成员句柄；1.滚动条　2.本容器　；可用于无事件触发时，绑定“挂接事件类_”",
+comment": "取当前显示区图片""data type": "变整数数组类",
+comment": "取当前显示区图片""parameters": [
+   {
+"parameter name": "展示区高度",
+"comment": "当前可视区高度，不包括隐藏部分，即滑块条滑动区域",
+"data type": "整数"
+   },
+   {
+"parameter name": "展示区总高度",
+"comment": "包括隐藏部份(显示区＋隐藏区)",
+"data type": "整数"
+   },
+   {
+"parameter name": "滚动条宽度",
+"comment": "默认为组件拖动大小",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "圆角度数",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "开启鼠标滚轮事件",
+"comment": "并将“开启滚动_”命令放入“窗口组件_滚轮被滚动”事件下调用",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "滚动面值",
+"comment": "鼠标滚轮滚动距离，本参数为比例值，非绝对值",
+"data type": "整数",
+"@默认值": "7"
+   },
+   {
+"parameter name": "标准鼠标指针",
+"comment": "1、箭头　2、手型　；为空则默认为自定义指针类型",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "滚动条背景色",
+"comment": "如果组件设置了颜色，将跟随组件颜色",
+"data type": "整数",
+"@默认值": "0xCBC5C1"
+   },
+   {
+"parameter name": "滚动条颜色",
+"data type": "整数",
+"@默认值": "0x8D8989"
+   },
+   {
+"parameter name": "滚动条激活色",
+"data type": "整数",
+"@默认值": "0x605C5C"
+   },
+   {
+"parameter name": "无滚动时样式",
+"comment": "1、显示　2、半隐藏　3、全隐藏",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "固定滑块高度",
+"comment": "默认为动态计算，当设置固定值后，滑块高度将被固定",
+"data type": "整数",
+"@默认值": "-1"
+   }
+comment": "取当前显示区图片"]
+  },
+  {
+data type": "整数""method name": "重置滚动条_",
+data type": "整数""comment": "当需滚动的内容长度发生改变时，需要重置滚动条范围",
+data type": "整数""parameters": [
+   {
+"parameter name": "展示区高度",
+"comment": "当前可视区高度，不包括隐藏部分，即滑块条滑动区域",
+"data type": "整数"
+   },
+   {
+"parameter name": "展示区总高度",
+"comment": "包括隐藏部份(显示区＋隐藏区)",
+"data type": "整数"
+   },
+   {
+"parameter name": "展示区总容器",
+"comment": "即需提供展示区总高度的组件，包括隐藏部份(显示区＋隐藏区)的组件;\n本参数为空，则按当前滚动条位置来重置。不为空则精确按照当前容器位置来重置",
+"data type": "组件布局器",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "固定滑块高度",
+"comment": "默认为动态计算，当设置固定值后，滑块高度将被固定",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "置滚动条颜色_",
+ }"parameters": [
+   {
+"parameter name": "滚动条背景色",
+"data type": "整数",
+"@默认值": "0xCBC5C1"
+   },
+   {
+"parameter name": "滚动条颜色",
+"data type": "整数",
+"@默认值": "0x8D8989"
+   },
+   {
+"parameter name": "滚动条激活色",
+"data type": "整数",
+"@默认值": "0x605C5C"
+   }
+ }]
+  },
+  {
+ameter name": "滚动条激活色""method name": "置滚动条鼠标指针_",
+ameter name": "滚动条激活色""parameters": [
+   {
+"parameter name": "鼠标资源",
+"data type": "鼠标指针资源"
+   }
+ameter name": "滚动条激活色"]
+  },
+  {
+ }"method name": "置滚动条尺寸_",
+ }"parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "圆角度数",
+"data type": "整数",
+"@默认值": "5"
+   }
+ }]
+  },
+  {
+}"method name": "置鼠标滚轮事件_",
+}"parameters": [
+   {
+"parameter name": "滚动距离",
+"data type": "整数",
+"@默认值": "7"
+   },
+   {
+"parameter name": "是否关闭滚轮事件",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+"method name": "置滚动条位置_",
+"parameters": [
+   {
+"parameter name": "位置",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "置滚动条到顶_",
+
+"comment": "最顶边"
+  },
+  {
+ }"method name": "置滚动条到中_",
+ }"comment": "中部"
+  },
+  {
+}"method name": "置滚动条到尾_",
+}"comment": "最底边"
+  },
+  {
+
+"method name": "取滚动条位置_",
+
+"data type": "整数"
+  },
+  {
+ameter name": "展示区高度""method name": "滚动条获得焦点_"
+  },
+  {
+er name": "展示区高度""method name": "滚动条获得焦点_""method name": "显示隐藏滚动条_",
+er name": "展示区高度""method name": "滚动条获得焦点_""comment": "将本命令放入“窗口组件_鼠标位置被移动，我的主窗口_鼠标位置被移动”事件下调用",
+er name": "展示区高度""method name": "滚动条获得焦点_""parameters": [
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否有焦点",
+"comment": "当显示滚动条时，使其焦点在容器上，离开后将归还原焦点",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+er name": "展示区高度""method name": "滚动条获得焦点_"]
+  },
+  {
+@默认值": "真""method name": "开启滚动_",
+@默认值": "真""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件",
+@默认值": "真""parameters": [
+   {
+"parameter name": "滚动距离",
+"comment": "判断滚动方向，下滚：<0　上滚：>0",
+"data type": "整数"
+   },
+   {
+"parameter name": "滚动面值",
+"comment": "鼠标滚轮滚动距离，本参数为比例值，非绝对值",
+"data type": "整数",
+"@默认值": "7"
+   }
+@默认值": "真"]
+  },
+  {
+"method name": "纵向改变事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "位置",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "挂接滚动条单击事件_",
+"comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用",
+"parameters": [
+   {
+"parameter name": "纵向位置",
+"data type": "整数"
+   }
+]
+  },
+  {
+默认值": "真""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件""method name": "滚动条鼠标单击事件_",
+默认值": "真""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件""type": "event",
+默认值": "真""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件""data type": "整数",
+默认值": "真""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件""parameters": [
+   {
+"parameter name": "类型",
+"comment": "0、按下 1、放开",
+"data type": "整数"
+   }
+默认值": "真""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件"]
+  },
+  {
+data type": "整数""method name": "挂接鼠标左键按下事件_",
+data type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用",
+data type": "整数""data type": "整数"
+  },
+  {
+ata type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用""method name": "挂接鼠标左键放开事件_",
+ata type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用"
+  }
+comment": "轮播图命令""parameters": [
+]
+ },
+ {
+mment": "轮播图命令""parameters": [
+]"class name": "横向滚动条类_",
+mment": "轮播图命令""parameters": [
+]"base class": "组件布局器",
+mment": "轮播图命令""parameters": [
+]"@文档": "\"category = \\\"组件操作库.滚动条库\\\"\"",
+mment": "轮播图命令""parameters": [
+]"@视窗.布局": "\"client_size = \\\"350, 10\\\"\"",
+mment": "轮播图命令""parameters": [
+]"methods": [
+  {
+ameter name": "滚动面值""method name": "获取焦点_"
+  },
+  {
+ }"method name": "初始化滚动条_",
+ }"result comment": "将返回2个成员句柄；1.滚动条　2.本容器　；可用于无事件触发时，绑定“挂接事件类_”",
+ }"data type": "变整数数组类",
+ }"parameters": [
+   {
+"parameter name": "展示区宽度",
+"comment": "当前可视区宽度，不包括隐藏部分，即滑块条滑动区域",
+"data type": "整数"
+   },
+   {
+"parameter name": "展示区总宽度",
+"comment": "包括隐藏部份(显示区＋隐藏区)",
+"data type": "整数"
+   },
+   {
+"parameter name": "滚动条高度",
+"comment": "默认为组件拖动大小",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "圆角度数",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "开启鼠标滚轮事件",
+"comment": "并将“开启滚动_”命令放入“窗口组件_滚轮被滚动”事件下调用",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "滚动面值",
+"comment": "鼠标滚轮滚动距离，本参数为比例值，非绝对值",
+"data type": "整数",
+"@默认值": "7"
+   },
+   {
+"parameter name": "标准鼠标指针",
+"comment": "1、箭头　2、手型　；为空则默认为自定义指针类型",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "滚动条背景色",
+"comment": "如果组件设置了颜色，将跟随组件颜色",
+"data type": "整数",
+"@默认值": "0xCBC5C1"
+   },
+   {
+"parameter name": "滚动条颜色",
+"data type": "整数",
+"@默认值": "0x8D8989"
+   },
+   {
+"parameter name": "滚动条激活色",
+"data type": "整数",
+"@默认值": "0x605C5C"
+   },
+   {
+"parameter name": "无滚动时样式",
+"comment": "1、显示　2、半隐藏　3、全隐藏",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "固定滑块宽度",
+"comment": "默认为动态计算，当设置固定值后，滑块宽度将被固定",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+}"method name": "重置滚动条_",
+}"comment": "当需滚动的内容宽度发生改变时，需要重置滚动条范围",
+}"parameters": [
+   {
+"parameter name": "展示区宽度",
+"comment": "当前可视区高度，不包括隐藏部分，即滑块条滑动区域",
+"data type": "整数"
+   },
+   {
+"parameter name": "展示区总宽度",
+"comment": "包括隐藏部份(显示区＋隐藏区)",
+"data type": "整数"
+   },
+   {
+"parameter name": "展示区总容器",
+"comment": "即需提供展示区总高度的组件，包括隐藏部份(显示区＋隐藏区)的组件;\n本参数为空，则按当前滚动条位置来重置。不为空则精确按照当前容器位置来重置",
+"data type": "组件布局器",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "固定滑块宽度",
+"comment": "默认为动态计算，当设置固定值后，滑块宽度将被固定",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+
+"method name": "置滚动条颜色_",
+
+"parameters": [
+   {
+"parameter name": "滚动条背景色",
+"data type": "整数",
+"@默认值": "0xCBC5C1"
+   },
+   {
+"parameter name": "滚动条颜色",
+"data type": "整数",
+"@默认值": "0x8D8989"
+   },
+   {
+"parameter name": "滚动条激活色",
+"data type": "整数",
+"@默认值": "0x605C5C"
+   }
+
+]
+  },
+  {
+ameter name": "开启鼠标滚轮事件""method name": "置滚动条鼠标指针_",
+ameter name": "开启鼠标滚轮事件""parameters": [
+   {
+"parameter name": "鼠标资源",
+"data type": "鼠标指针资源"
+   }
+ameter name": "开启鼠标滚轮事件"]
+  },
+  {
+}"method name": "置滚动条尺寸_",
+}"parameters": [
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "圆角度数",
+"data type": "整数",
+"@默认值": "5"
+   }
+}]
+  },
+  {
+@默认值": "0x8D8989""method name": "置鼠标滚轮事件_",
+@默认值": "0x8D8989""parameters": [
+   {
+"parameter name": "滚动距离",
+"data type": "整数",
+"@默认值": "7"
+   },
+   {
+"parameter name": "是否关闭滚轮事件",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@默认值": "0x8D8989"]
+  },
+  {
+}"method name": "置滚动条位置_",
+}"parameters": [
+   {
+"parameter name": "位置",
+"data type": "整数"
+   }
+}]
+  },
+  {
+comment": "即需提供展示区总高度的组件，包括隐藏部份(显示区＋隐藏区)的组件;\n本参数为空，则按当前滚动条位置来重置。不为空则精确按照当前容器位置来重置""method name": "置滚动条到顶_",
+comment": "即需提供展示区总高度的组件，包括隐藏部份(显示区＋隐藏区)的组件;\n本参数为空，则按当前滚动条位置来重置。不为空则精确按照当前容器位置来重置""comment": "最左边"
+  },
+  {
+}"method name": "置滚动条到中_",
+}"comment": "中部"
+  },
+  {
+ameter name": "鼠标资源""method name": "置滚动条到尾_",
+ameter name": "鼠标资源""comment": "最右边"
+  },
+  {
+"method name": "取滚动条位置_",
+"data type": "整数"
+  },
+  {
+
+"method name": "容器获得焦点_"
+  },
+  {
+er name": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_"
+  },
+  {
+]"method name": "显示隐藏滚动条_",
+]"comment": "将本命令放入“窗口组件_鼠标位置被移动，我的主窗口_鼠标位置被移动”事件下调用",
+]"parameters": [
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否有焦点",
+"comment": "当显示滚动条时，使其焦点在容器上，离开后将归还原焦点",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]]
+  },
+  {
+ame": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_""method name": "开启滚动_",
+ame": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件",
+ame": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_""parameters": [
+   {
+"parameter name": "滚动距离",
+"comment": "判断滚动方向，右滚：<0　左滚：>0",
+"data type": "整数"
+   },
+   {
+"parameter name": "滚动面值",
+"comment": "鼠标滚轮滚动距离，本参数为比例值，非绝对值",
+"data type": "整数",
+"@默认值": "7"
+   }
+ame": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_"]
+  },
+  {
+@默认值": "真""method name": "横向改变事件",
+@默认值": "真""type": "event",
+@默认值": "真""data type": "整数",
+@默认值": "真""parameters": [
+   {
+"parameter name": "位置",
+"data type": "整数"
+   }
+@默认值": "真"]
+  },
+  {
+thod name": "显示隐藏滚动条_""method name": "挂接滚动条单击事件_",
+thod name": "显示隐藏滚动条_""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用",
+thod name": "显示隐藏滚动条_""parameters": [
+   {
+"parameter name": "横向位置",
+"data type": "整数"
+   }
+thod name": "显示隐藏滚动条_"]
+  },
+  {
+"parameters": [
+"method name": "滚动条鼠标单击事件_",
+"parameters": [
+"type": "event",
+"parameters": [
+"data type": "整数",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "类型",
+"comment": "0、按下 1、放开",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+data type": "整数""method name": "挂接鼠标左键按下事件_",
+data type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用"
+  },
+  {
+eter name": "开启鼠标滚轮事件"]"method name": "挂接鼠标左键放开事件_",
+eter name": "开启鼠标滚轮事件"]"comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用"
+  }
+mment": "轮播图命令""parameters": [
+]]
+ },
+ {
+me": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件""class name": "滚动容器类_",
+me": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件""base class": "组件布局器",
+me": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件""@文档": "\"category = \\\"组件操作库.滚动容器库\\\"\"",
+me": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件""@视窗.布局": "\"client_size = \\\"500, 350\\\"\"",
+me": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件""methods": [
+  {
+ata type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用""method name": "初始化滚动容器_",
+ata type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用""comment": "将组件布局器页面绑定到滚动容器内",
+ata type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用""result comment": "将返回5个成员句柄；　1.纵向滚动条　2、纵向容器　3.横向滚动条　4、横向容器　5.本容器　；可用于无事件触发时，绑定“挂接事件类_”",
+ata type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用""data type": "变整数数组类",
+ata type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用""parameters": [
+   {
+"parameter name": "绑定布局器",
+"comment": "将布局器页面加入滚动容器内",
+"data type": "组件布局器"
+   },
+   {
+"parameter name": "布局器总宽度",
+"comment": "给出布局器页面的总宽度",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "布局器总高度",
+"comment": "给出布局器页面的总高度",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "滚动条宽高",
+"comment": "滚动条宽度或高度",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "圆角度数",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "开启鼠标滚轮事件",
+"comment": "并将“开启滚动_”命令放入“窗口组件_滚轮被滚动”事件下调用",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "滚动面值",
+"comment": "鼠标滚轮滚动距离，本参数为比例值，非绝对值",
+"data type": "整数",
+"@默认值": "7"
+   },
+   {
+"parameter name": "标准鼠标指针",
+"comment": "1、箭头　2、手型　；为空则默认为自定义指针类型",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "滚动条背景色",
+"comment": "如果组件设置了颜色，将跟随组件颜色",
+"data type": "整数",
+"@默认值": "0xCBC5C1"
+   },
+   {
+"parameter name": "滚动条颜色",
+"data type": "整数",
+"@默认值": "0x8D8989"
+   },
+   {
+"parameter name": "滚动条激活色",
+"data type": "整数",
+"@默认值": "0x605C5C"
+   },
+   {
+"parameter name": "无滚动时样式",
+"comment": "1、显示　2、半隐藏　3、全隐藏",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "隐藏滚动条",
+"comment": "-1、显示　1、隐藏纵向　2、隐藏横向　3、全部隐藏",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "滚动条是否浮动",
+"comment": "真：滚动条浮动在容器上方，会遮挡一部分容器； 假：与容器区隔开，不遮挡",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否有焦点",
+"comment": "当显示滚动条时，使其焦点在容器上，离开后将归还原焦点",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ata type": "整数""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用"]
+  },
+  {
+"method name": "重置滚动条_",
+"comment": "当需滚动的内容宽度发生改变时，需要重置滚动条范围",
+"parameters": [
+   {
+"parameter name": "展示区总宽度",
+"comment": "包括隐藏部份(显示区＋隐藏区)",
+"data type": "整数"
+   },
+   {
+"parameter name": "展示区总高度",
+"comment": "包括隐藏部份(显示区＋隐藏区)",
+"data type": "整数"
+   },
+   {
+"parameter name": "设置类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "展示区总容器",
+"comment": "即需提供展示区总高度的组件，包括隐藏部份(显示区＋隐藏区)的组件;\n本参数为空，则按当前滚动条位置来重置。不为空则精确按照当前容器位置来重置",
+"data type": "组件布局器",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+ameter name": "展示区总高度""method name": "置滚动条颜色_",
+ameter name": "展示区总高度""parameters": [
+   {
+"parameter name": "滚动条背景色",
+"data type": "整数",
+"@默认值": "0xCBC5C1"
+   },
+   {
+"parameter name": "滚动条颜色",
+"data type": "整数",
+"@默认值": "0x8D8989"
+   },
+   {
+"parameter name": "滚动条激活色",
+"data type": "整数",
+"@默认值": "0x605C5C"
+   },
+   {
+"parameter name": "设置类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "展示区总高度"]
+  },
+  {
+"method name": "置容器背景色_",
+"parameters": [
+   {
+"parameter name": "颜色",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "置滚动条鼠标指针_",
+"parameters": [
+   {
+"parameter name": "鼠标资源",
+"data type": "鼠标指针资源"
+   },
+   {
+"parameter name": "设置类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+"method name": "置滚动条尺寸_",
+"parameters": [
+   {
+"parameter name": "横向滑块条宽度",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "纵向滑块条高度",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "圆角度数",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "设置类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+@默认值": "0x8D8989""method name": "置鼠标滚轮事件_",
+@默认值": "0x8D8989""parameters": [
+   {
+"parameter name": "滚动距离",
+"data type": "整数",
+"@默认值": "7"
+   },
+   {
+"parameter name": "是否关闭滚轮事件",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "设置类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "0x8D8989"]
+  },
+  {
+
+"method name": "置滚动条位置_",
+
+"parameters": [
+   {
+"parameter name": "位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "设置类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "置滚动条到顶_",
+
+"comment": "最左边",
+
+"parameters": [
+   {
+"parameter name": "设置类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+ameter name": "是否关闭滚轮事件""method name": "置滚动条到中_",
+ameter name": "是否关闭滚轮事件""comment": "中部",
+ameter name": "是否关闭滚轮事件""parameters": [
+   {
+"parameter name": "设置类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "是否关闭滚轮事件"]
+  },
+  {
+ameter name": "设置类型""method name": "置滚动条到尾_",
+ameter name": "设置类型""comment": "最右边",
+ameter name": "设置类型""parameters": [
+   {
+"parameter name": "设置类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "设置类型"]
+  },
+  {
+
+"parameters": [
+"method name": "取滚动条位置_",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "返回横向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回纵向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "取类型",
+"comment": "-1、纵向＋横向　1、纵向　2、横向",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+"parameters": [
+]
+  },
+  {
+"method name": "显示隐藏滚动条_",
+"comment": "将本命令放入“窗口组件_鼠标位置被移动，我的主窗口_鼠标位置被移动”事件下调用",
+"parameters": [
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否有焦点",
+"comment": "当显示滚动条时，使其焦点在容器上，离开后将归还原焦点",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+comment": "-1、纵向＋横向　1、纵向　2、横向""method name": "开启滚动_",
+comment": "-1、纵向＋横向　1、纵向　2、横向""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件",
+comment": "-1、纵向＋横向　1、纵向　2、横向""parameters": [
+   {
+"parameter name": "滚动距离",
+"comment": "判断滚动方向，下滚：<0　上滚：>0",
+"data type": "整数"
+   },
+   {
+"parameter name": "滚动面值",
+"comment": "鼠标滚轮滚动距离，本参数为比例值，非绝对值",
+"data type": "整数",
+"@默认值": "7"
+   },
+   {
+"parameter name": "设置类型",
+"comment": "1、纵向　2、横向　3、纵向＋横向",
+"data type": "整数",
+"@默认值": "1"
+   }
+comment": "-1、纵向＋横向　1、纵向　2、横向"]
+  },
+  {
+@默认值": "-1""method name": "挂接鼠标左键按下事件_",
+@默认值": "-1""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "横向位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"data type": "整数"
+   }
+@默认值": "-1"]
+  },
+  {
+@默认值": "真""method name": "挂接鼠标左键放开事件_",
+@默认值": "真""comment": "用于外部“挂接事件类_”使用;\n当窗口本身无法触发事件时，通过“挂接事件类_”调用"
+  },
+  {
+data type": "整数""method name": "滚动条位置改变事件_",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "类型",
+"comment": "1、纵向　2、横向",
+"data type": "整数"
+   },
+   {
+"parameter name": "位置",
+"data type": "整数"
+   }
+data type": "整数"]
+  }
+me": "鼠标资源""method name": "置滚动条到尾_""method name": "滚动条获得焦点_""comment": "将本命令放入“窗口组件_滚轮被滚动”事件下调用;\n或用“鼠键钩子类_”中的鼠标滚轮事件"]
+ },
+ {
+data type": "整数""class name": "表格辅助类_",
+data type": "整数""@文档": "\"category = \\\"组件操作库.表格辅助库\\\"\"",
+data type": "整数""@全局类": "真",
+data type": "整数""methods": [
+  {
+"method name": "禁止超级列表框闪烁_",
+"static": true,
+"parameters": [
+   {
+"parameter name": "超级列表",
+"data type": "超级列表框"
+   }
+]
+  },
+  {
+ata type": "整数""type": "event""method name": "禁止超级列表框闪烁2_",
+ata type": "整数""type": "event""static": true,
+ata type": "整数""type": "event""@禁止流程检查": "真",
+ata type": "整数""type": "event""parameters": [
+   {
+"parameter name": "超级列表",
+"data type": "超级列表框"
+   }
+ata type": "整数""type": "event"]
+  },
+  {
+}"method name": "超级列表框自适应列宽_",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "超级列表",
+"data type": "超级列表框"
+   },
+   {
+"parameter name": "指定列",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "导入Excel到表格_",
+}"comment": "速度快",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "可以为Access，或Excel",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件密码",
+"comment": "Access文件专用",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文件类型",
+"comment": "1、Access　2、Excel",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "是否新版",
+"comment": "本参数指定Access或Excel版本,为假则使用2003以下连接方式,为真则使用2007版本连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "绑定组件",
+"comment": "可以为表格，也可为超级列表框",
+"data type": "窗口组件"
+   },
+   {
+"parameter name": "表格名",
+"comment": "Access或Excel中的表名称",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "表格列宽",
+"comment": "默认为70，成员数量必须与字段数量一致；\"表格\"类型专用",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "导入类型",
+"comment": "1、表格　2、超级列表框",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "筛选条件",
+"comment": "即用sql查询语句选取所需数据，例如：\"SELECT * FROM 商品表 WHERE 拼音码 ='yqkl'\" ；\nExcel需要这样：\"SELECT * FROM [商品表$] WHERE 拼音码 ='yqkl'\" ；\n设置了本条件，“表格名”参数可以为空",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+data type": "整数""method name": "导出到Excel_",
+data type": "整数""comment": "速度慢",
+data type": "整数""static": true,
+data type": "整数""data type": "逻辑型",
+data type": "整数""parameters": [
+   {
+"parameter name": "绑定组件",
+"comment": "表格或超级列表框",
+"data type": "窗口组件"
+   },
+   {
+"parameter name": "输出表名",
+"comment": "Excel中的保存表名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "导出类型",
+"comment": "1、表格 2、超级列表框",
+"data type": "整数",
+"@默认值": "1"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "列名转数字_",
+
+"comment": "将数字转为Excel工作中表列索引",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "列字母",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "整数数组类""method name": "数字转列名_",
+data type": "整数数组类""comment": "将Excel工作中表列索引，转换为列字母",
+data type": "整数数组类""static": true,
+data type": "整数数组类""data type": "文本型",
+data type": "整数数组类""parameters": [
+   {
+"parameter name": "列索引",
+"data type": "整数"
+   }
+data type": "整数数组类"]
+  },
+  {
+data type": "整数数组类""method name": "导出表格到Excel_",
+data type": "整数数组类""data type": "逻辑型",
+data type": "整数数组类""parameters": [
+   {
+"parameter name": "绑定组件",
+"comment": "表格或超级列表框",
+"data type": "窗口组件"
+   },
+   {
+"parameter name": "输出表名",
+"comment": "Excel中的保存表名",
+"data type": "文本型",
+"@默认值": "\"Sheet1\""
+   },
+   {
+"parameter name": "导出类型",
+"comment": "1、表格 2、超级列表框",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "是否静默保存",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "文件保存位置",
+"comment": "例如：“C:\\\\表格.xlsx”。默认保存至桌面，以??.xlsx命令",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "整数数组类"]
+  }
+data type": "整数"]
+ },
+ {
+data type": "整数""class name": "表格辅助类2_",
+data type": "整数""@文档": "\"category = \\\"组件操作库.表格辅助库\\\"\"",
+data type": "整数""@全局类": "真",
+data type": "整数""methods": [
+  {
+@默认值": "1""method name": "导入Excel到表格2_",
+@默认值": "1""comment": "调用了libxl，速度最快",
+@默认值": "1""static": true,
+@默认值": "1""parameters": [
+   {
+"parameter name": "绑定组件",
+"comment": "表格或超级列表框",
+"data type": "窗口组件"
+   },
+   {
+"parameter name": "导入类型",
+"comment": "1、表格　2、超级列表框",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "文件来源",
+"comment": "Excel文件来源",
+"data type": "文本型"
+   },
+   {
+"parameter name": "表格",
+"comment": "Excel中的表名称，留空则读取第一个表",
+"data type": "文本型",
+"@默认值": "\"Sheet1\""
+   },
+   {
+"parameter name": "是否包含表头",
+"comment": "当表数据的第一行为表头时，本参数设置为真，首行数据可当作表头导入显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "自动列宽",
+"comment": "按文件列宽自动匹配列宽。当本参数为假时，“固定列宽”设置才能生效",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "自动列宽2",
+"comment": "本参数为真时，将自动按内容匹配列宽。（\"自动列宽\"为真是按文件列宽）",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "固定列宽",
+"comment": "当“自动列宽”为假时，本参数才能生效。默认-1本不改变列宽",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "选择列组",
+"comment": "导入类型为表格时，表格列为选择框时，设置本参数，可自动处理选择状态",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+@默认值": "1"]
+  },
+  {
+comment": "本参数为真时，将自动按内容匹配列宽。（\"自动列宽\"为真是按文件列宽）""method name": "导出到Excel2_",
+comment": "本参数为真时，将自动按内容匹配列宽。（\"自动列宽\"为真是按文件列宽）""comment": "调用了libxl，速度最快",
+comment": "本参数为真时，将自动按内容匹配列宽。（\"自动列宽\"为真是按文件列宽）""static": true,
+comment": "本参数为真时，将自动按内容匹配列宽。（\"自动列宽\"为真是按文件列宽）""parameters": [
+   {
+"parameter name": "绑定组件",
+"comment": "表格或超级列表框",
+"data type": "窗口组件"
+   },
+   {
+"parameter name": "导出类型",
+"comment": "1、表格 2、超级列表框",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "表名",
+"comment": "Excel中的表名称",
+"data type": "文本型",
+"@默认值": "\"Sheet1\""
+   },
+   {
+"parameter name": "字体名称",
+"data type": "文本型",
+"@默认值": "\"宋体\""
+   },
+   {
+"parameter name": "字体大小",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "字体颜色",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "水平对齐",
+"comment": "0、常规 1、左对齐 2、居中 3、右对齐 4、两端对齐",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "垂直对齐",
+"comment": "0、靠上对齐 1、居中 2、靠下对齐 3、两端对齐",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "显示边框线",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "自动换行",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "自动列宽",
+"comment": "按内容自动匹配列宽。当本参数为假时，“固定列宽”设置才能生效",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "固定列宽",
+"comment": "按内容设置列宽。当“自动列宽”为假时，本参数才能生效",
+"data type": "整数",
+"@默认值": "15"
+   },
+   {
+"parameter name": "文件格式",
+"comment": "Exce格式  1、xls 2、xlsx",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "保存位置",
+"comment": "导出的Excel存放路径及名称。默认为桌面+\"导出表\"+随机时间名+.xlsx",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "导出后打开",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "选择列组",
+"comment": "导出类型为表格时，表格列为选择框时，设置本参数，可自动处理选择状态",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+comment": "本参数为真时，将自动按内容匹配列宽。（\"自动列宽\"为真是按文件列宽）"]
+  }
+data type": "整数"]
+ },
+ {
+data type": "整数""class name": "超级列表框辅助类_",
+data type": "整数""comment": "设置超级列表框行高度",
+data type": "整数""@文档": "\"category = \\\"组件操作库.超列辅助库\\\"\"",
+data type": "整数""methods": [
+  {
+"method name": "初始化_",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "卸载_",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "绑定句柄",
+"comment": "“初始化_”时所返回的句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "卸载所有_"
+  },
+  {
+}"method name": "置行高_",
+}"parameters": [
+   {
+"parameter name": "超级列表框",
+"data type": "超级列表框"
+   },
+   {
+"parameter name": "行高度",
+"data type": "整数"
+   }
+}]
+  }
+data type": "整数"]
+ },
+ {
+ }"class name": "超列结构类",
+ }"@文档": "\"category = \\\"组件操作库.超列辅助库.附加类\\\"\"",
+ }"@视窗.结构类": "0",
+ }"variables": [
+  {
+data type": "整数""variable name": "hwnd",
+data type": "整数""data type": "变整数"
+  },
+  {
+}"variable name": "hwndInsertAfter",
+}"data type": "变整数"
+  },
+  {
+ta type": "整数"]"variable name": "x",
+ta type": "整数"]"data type": "变整数"
+  },
+  {
+"variable name": "y",
+"data type": "变整数"
+  },
+  {
+
+"variable name": "cx",
+
+"data type": "变整数"
+  },
+  {
+@默认值": "假""variable name": "cy",
+@默认值": "假""data type": "变整数"
+  },
+  {
+
+"variable name": "flags",
+
+"data type": "变整数"
+  }
+ }]
+ },
+ {
+}"@视窗.结构类": "0""class name": "导航头类_",
+}"@视窗.结构类": "0""comment": "跟随窗口宽度：导航条.移动 (0, , 取用户区宽度 ())",
+}"@视窗.结构类": "0""base class": "组件布局器",
+}"@视窗.结构类": "0""@文档": "\"category = \\\"组件操作库.窗口导航库\\\"\"",
+}"@视窗.结构类": "0""@视窗.布局": "\"client_size = \\\"466, 32\\\"\"",
+}"@视窗.结构类": "0""methods": [
+  {
+}"method name": "初始化选择夹_",
+}"parameters": [
+   {
+"parameter name": "字体名称",
+"comment": "子夹标题字体名称",
+"data type": "文本型",
+"@默认值": "\"宋体\""
+   },
+   {
+"parameter name": "字体大小",
+"comment": "子夹标题字体大小",
+"data type": "整数",
+"@默认值": "9"
+   },
+   {
+"parameter name": "是否加粗",
+"comment": "子夹标题字体是否加粗",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "标题对齐方式",
+"comment": "子夹标题对齐方式 0、左对齐 1、居中",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "正常标题颜色",
+"comment": "子夹标题颜色",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "热点标题颜色",
+"comment": "子夹标题颜色",
+"data type": "整数",
+"@默认值": "颜色类.红色"
+   },
+   {
+"parameter name": "子夹正常背景颜色",
+"comment": "单子夹",
+"data type": "整数",
+"@默认值": "颜色类.默认色"
+   },
+   {
+"parameter name": "子夹热点背景颜色",
+"comment": "单子夹",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   },
+   {
+"parameter name": "左侧图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "图标大小",
+"comment": "左侧图标大小",
+"data type": "整数",
+"@默认值": "28"
+   },
+   {
+"parameter name": "左图标左侧间隔",
+"comment": "左侧图标距离左侧边界距离",
+"data type": "整数",
+"@默认值": "15"
+   },
+   {
+"parameter name": "右图标右侧间隔",
+"comment": "右侧图标距离右侧边界距离",
+"data type": "整数",
+"@默认值": "12"
+   },
+   {
+"parameter name": "图标标题间隔",
+"comment": "左侧图标与子夹标题间隔",
+"data type": "整数",
+"@默认值": "5"
+   },
+   {
+"parameter name": "图标隐藏方式",
+"comment": "0、全显 1、隐藏左图 2、隐藏右图 3、全部隐藏",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "隐藏下划线",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "下划线正常颜色",
+"data type": "整数",
+"@默认值": "颜色类.红色"
+   },
+   {
+"parameter name": "下划线热点颜色",
+"data type": "整数",
+"@默认值": "0xD9751E"
+   },
+   {
+"parameter name": "下划线位置",
+"comment": "1、顶部 2、底部",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "默认显示关闭",
+"comment": "子夹右侧关闭按钮",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "显示子夹间隔",
+"comment": "显示子夹间间隔条",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "子夹间隔颜色",
+"comment": "子夹间间隔条颜色",
+"data type": "整数",
+"@默认值": "颜色类.浅灰色"
+   },
+   {
+"parameter name": "子夹头是否透明",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "启用自定义指针",
+"comment": "启用内置定义的鼠标指针",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "正常指针",
+"comment": "默认为内置指针",
+"data type": "鼠标指针资源",
+"@默认值": "空资源.空鼠标指针"
+   },
+   {
+"parameter name": "关闭指针",
+"comment": "默认为内置指针",
+"data type": "鼠标指针资源",
+"@默认值": "空资源.空鼠标指针"
+   },
+   {
+"parameter name": "调节按钮指针",
+"comment": "默认为内置指针",
+"data type": "鼠标指针资源",
+"@默认值": "空资源.空鼠标指针"
+   }
+}]
+  },
+  {
+ameter name": "子夹间隔颜色""method name": "添加子夹_",
+ameter name": "子夹间隔颜色""result comment": "返回子夹索引",
+ameter name": "子夹间隔颜色""data type": "整数",
+ameter name": "子夹间隔颜色""parameters": [
+   {
+"parameter name": "子夹标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹图标",
+"comment": "默认为内置图标",
+"data type": "位图资源",
+"@默认值": "空资源.空位图"
+   },
+   {
+"parameter name": "子夹标记",
+"comment": "定义一个标记值",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提示信息",
+"comment": "定义一个鼠标停留时的提示",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "子夹宽度补充",
+"comment": "额外加宽子夹宽度",
+"data type": "整数",
+"@默认值": "10"
+   }
+ameter name": "子夹间隔颜色"]
+  },
+  {
+"@视窗.结构类": "0""@文档": "\"category = \\\"组件操作库.窗口导航库\\\"\"""method name": "锁定界面_",
+"@视窗.结构类": "0""@文档": "\"category = \\\"组件操作库.窗口导航库\\\"\"""comment": "锁定整个导航不允许操作",
+"@视窗.结构类": "0""@文档": "\"category = \\\"组件操作库.窗口导航库\\\"\"""parameters": [
+   {
+"parameter name": "是否锁定",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"@视窗.结构类": "0""@文档": "\"category = \\\"组件操作库.窗口导航库\\\"\""]
+  },
+  {
+ameter name": "子夹标记""method name": "置子夹名称_",
+ameter name": "子夹标记""data type": "逻辑型",
+ameter name": "子夹标记""parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "子夹新标题",
+"data type": "文本型"
+   }
+ameter name": "子夹标记"]
+  },
+  {
+"method name": "置子夹字体大小_",
+"comment": "子夹标题字体",
+"parameters": [
+   {
+"parameter name": "字体大小",
+"data type": "整数",
+"@默认值": "9"
+   }
+]
+  },
+  {
+@默认值": "\"\"""method name": "置子夹字体名称_",
+@默认值": "\"\"""comment": "子夹标题字体名称",
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "字体名称",
+"data type": "文本型",
+"@默认值": "\"宋体\""
+   }
+@默认值": "\"\""]
+  },
+  {
+
+"method name": "置子夹字体加粗_",
+
+"comment": "子夹标题字体加粗",
+
+"parameters": [
+   {
+"parameter name": "是否加粗",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+}"method name": "置子夹标题颜色_",
+}"comment": "子夹标题文字颜色",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "正常标题颜色",
+"data type": "整数",
+"@默认值": "颜色类.黑色"
+   },
+   {
+"parameter name": "热点标题颜色",
+"data type": "整数",
+"@默认值": "颜色类.红色"
+   }
+}]
+  },
+  {
+ameter name": "字体名称""method name": "置子夹标记_",
+ameter name": "字体名称""comment": "子夹标题文字颜色",
+ameter name": "字体名称""data type": "逻辑型",
+ameter name": "字体名称""parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "子夹标记",
+"data type": "文本型"
+   }
+ameter name": "字体名称"]
+  },
+  {
+
+"method name": "置子夹提示信息_",
+
+"comment": "子夹鼠标停留提示",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "提示信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+ }"method name": "置子夹标题对齐方式_",
+ }"comment": "子夹标题文字对齐方式",
+ }"parameters": [
+   {
+"parameter name": "对齐方式",
+"comment": "0、左对齐 1、居中",
+"data type": "整数",
+"@默认值": "1"
+   }
+ }]
+  },
+  {
+"method name": "置下划线状态_",
+"parameters": [
+   {
+"parameter name": "是否隐藏",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+}"method name": "置下划线颜色_",
+}"parameters": [
+   {
+"parameter name": "下划线正常颜色",
+"data type": "整数",
+"@默认值": "颜色类.红色"
+   },
+   {
+"parameter name": "下划线热点颜色",
+"data type": "整数",
+"@默认值": "0xD9751E"
+   }
+}]
+  },
+  {
+@视窗.结构类": "0""@文档": "\"category = \\\"组件操作库.窗口导航库\\\"\"""parameters": [
+"method name": "置下划线位置_",
+@视窗.结构类": "0""@文档": "\"category = \\\"组件操作库.窗口导航库\\\"\"""parameters": [
+"parameters": [
+   {
+"parameter name": "下划线位置",
+"comment": "1、顶部 2、底部",
+"data type": "整数",
+"@默认值": "2"
+   }
+@视窗.结构类": "0""@文档": "\"category = \\\"组件操作库.窗口导航库\\\"\"""parameters": [
+]
+  },
+  {
+ameter name": "调节按钮指针""method name": "置背景色_头部",
+ameter name": "调节按钮指针""parameters": [
+   {
+"parameter name": "子夹正常背景颜色",
+"data type": "整数",
+"@默认值": "颜色类.默认色"
+   },
+   {
+"parameter name": "子夹热点背景颜色",
+"data type": "整数",
+"@默认值": "颜色类.白色"
+   }
+ameter name": "调节按钮指针"]
+  },
+  {
+": "\"\"""method name": "置子夹字体名称_""method name": "置子夹间隔状态_",
+": "\"\"""method name": "置子夹字体名称_""comment": "是否显示子夹间间隔条",
+": "\"\"""method name": "置子夹字体名称_""parameters": [
+   {
+"parameter name": "是否隐藏",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+": "\"\"""method name": "置子夹字体名称_"]
+  },
+  {
+@默认值": "2""method name": "置子夹间隔颜色_",
+@默认值": "2""comment": "子夹间间隔条颜色",
+@默认值": "2""parameters": [
+   {
+"parameter name": "颜色",
+"data type": "整数",
+"@默认值": "颜色类.灰色"
+   }
+@默认值": "2"]
+  },
+  {
+ }"method name": "置子夹图标_",
+ }"comment": "修改选择夹左侧图标；位图来源",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "子夹图标",
+"data type": "位图资源"
+   }
+ }]
+  },
+  {
+}"data type": "逻辑型""method name": "置子夹图标2_",
+}"data type": "逻辑型""comment": "修改选择夹左侧图标；字节集来源",
+}"data type": "逻辑型""data type": "逻辑型",
+}"data type": "逻辑型""parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "子夹图标",
+"data type": "字节集类"
+   }
+}"data type": "逻辑型"]
+  },
+  {
+
+"method name": "置子夹图标3_",
+
+"comment": "修改选择夹左侧图标；路径来源",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "子夹图标",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "置鼠标指针_",
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "正常指针",
+"comment": "默认为内置指针",
+"data type": "鼠标指针资源",
+"@默认值": "空资源.空鼠标指针"
+   },
+   {
+"parameter name": "关闭指针",
+"comment": "默认为内置指针",
+"data type": "鼠标指针资源",
+"@默认值": "空资源.空鼠标指针"
+   },
+   {
+"parameter name": "调节按钮指针",
+"comment": "默认为内置指针",
+"data type": "鼠标指针资源",
+"@默认值": "空资源.空鼠标指针"
+   }
+"parameters": [
+]
+  },
+  {
+"method name": "置锁定状态_",
+"comment": "是否锁住选择夹，不允许操作",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始，-1表示全部锁定或全部解锁",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否锁定",
+"comment": "为真时则不允许关闭，但其它操作正常。本参数为真时，锁死才能生效",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否锁死",
+"comment": "为真时则不允许关闭及操作",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+
+"method name": "置双击状态_",
+
+"comment": "是否允许双击关闭选择夹",
+
+"parameters": [
+   {
+"parameter name": "允许关闭",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+comment": "是否锁住选择夹，不允许操作""method name": "置关闭状态_",
+comment": "是否锁住选择夹，不允许操作""comment": "当子夹显示不全时，点击了关闭，是否允许关闭",
+comment": "是否锁住选择夹，不允许操作""parameters": [
+   {
+"parameter name": "允许关闭",
+"comment": "真：直接关闭 假：不允许关闭，并自动显示完全",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "是否锁住选择夹，不允许操作"]
+  },
+  {
+
+"method name": "置关闭按钮显示状态_",
+
+"comment": "子夹右侧关闭按钮",
+
+"parameters": [
+   {
+"parameter name": "默认显示关闭",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+@默认值": "真""method name": "置跟随子夹热点区_",
+@默认值": "真""comment": "创建新子夹后，默认显示热点",
+@默认值": "真""parameters": [
+   {
+"parameter name": "是否关闭",
+"data type": "逻辑型"
+   }
+@默认值": "真"]
+  },
+  {
+}"method name": "置背景图_位图",
+}"parameters": [
+   {
+"parameter name": "图片",
+"data type": "位图资源"
+   },
+   {
+"parameter name": "显示方式",
+"comment": "0、图片居左上　1、图片平铺　2、图片居中　3、缩放图片",
+"data type": "整数",
+"@默认值": "3"
+   }
+}]
+  },
+  {
+"method name": "置背景图_文件",
+"parameters": [
+   {
+"parameter name": "图片",
+"comment": "图片详细路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "显示方式",
+"comment": "0、图片居左上　1、图片平铺　2、图片居中　3、缩放图片",
+"data type": "整数",
+"@默认值": "3"
+   }
+]
+  },
+  {
+ }"method name": "置背景图_字节集",
+ }"parameters": [
+   {
+"parameter name": "图片",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "显示方式",
+"comment": "0、图片居左上　1、图片平铺　2、图片居中　3、缩放图片",
+"data type": "整数",
+"@默认值": "3"
+   }
+ }]
+  },
+  {
+ }"method name": "置子夹关闭通知_",
+ }"comment": "在“子夹被关闭事件”中，提示是否需要确认关闭子夹",
+ }"parameters": [
+   {
+"parameter name": "是否通知",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+ameter name": "显示方式""method name": "置重画_",
+ameter name": "显示方式""parameters": [
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型"
+   }
+ameter name": "显示方式"]
+  },
+  {
+"method name": "确认关闭子夹_",
+"comment": "在“子夹被关闭事件”中使用本命令",
+"parameters": [
+   {
+"parameter name": "子夹标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹标记",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取子夹名称_",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   }
+]
+  },
+  {
+ameter name": "子夹索引""method name": "取子夹标记_",
+ameter name": "子夹索引""data type": "文本型",
+ameter name": "子夹索引""parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   }
+ameter name": "子夹索引"]
+  },
+  {
+comment": "从0开始""method name": "取子夹索引_",
+comment": "从0开始""comment": "两个参数只需要提供一个即可",
+comment": "从0开始""result comment": "未找到返回-1",
+comment": "从0开始""data type": "整数",
+comment": "从0开始""parameters": [
+   {
+"parameter name": "子夹标题",
+"comment": "本参数不为空则按标题查找",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "子夹标记",
+"comment": "本参数不为空则按标记查找",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+comment": "从0开始"]
+  },
+  {
+data type": "逻辑型""method name": "取子夹数目_",
+data type": "逻辑型""data type": "整数"
+  },
+  {
+ameter name": "是否通知""method name": "取所有子夹信息_",
+ameter name": "是否通知""result comment": "返回获取的子夹总数",
+ameter name": "是否通知""data type": "整数",
+ameter name": "是否通知""parameters": [
+   {
+"parameter name": "返回的子夹标题",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的子夹标记",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的子夹索引",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的子夹左边位",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的子夹宽度",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+ameter name": "是否通知"]
+  },
+  {
+
+"method name": "取子夹坐标_",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "返回的子夹左边位",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的子夹宽度",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的子夹标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+ata type": "逻辑型""data type": "整数""method name": "取活动子夹坐标_",
+ata type": "逻辑型""data type": "整数""data type": "逻辑型",
+ata type": "逻辑型""data type": "整数""parameters": [
+   {
+"parameter name": "返回的子夹左边位",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的子夹宽度",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的子夹标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ata type": "逻辑型""data type": "整数"]
+  },
+  {
+"method name": "取活动子夹名称_",
+"comment": "取当前活动子夹名称",
+"result comment": "空白表示未选中任何子夹",
+"data type": "文本型"
+  },
+  {
+
+"method name": "取活动子夹索引_",
+
+"comment": "取当前活动子夹索引",
+
+"result comment": "-1表示未选中任何子夹",
+
+"data type": "整数"
+  },
+  {
+ta type": "逻辑型""data type": "整数""data type": "逻辑型""method name": "取活动子夹标记_",
+ta type": "逻辑型""data type": "整数""data type": "逻辑型""comment": "取当前活动子夹标记",
+ta type": "逻辑型""data type": "整数""data type": "逻辑型""data type": "文本型"
+  },
+  {
+
+"method name": "删除子夹_",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ype": "逻辑型""data type": "整数""data type": "逻辑型""method name": "取活动子夹标记_""method name": "删除所有子夹_"
+  },
+  {
+}"method name": "交换子夹_",
+}"comment": "交换两个子夹的位置，包括索引",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "原索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "现索引",
+"comment": "从0开始",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "到首子夹_",
+
+"comment": "跳到首子夹_页面"
+  },
+  {
+
+"method name": "到尾子夹_",
+
+"comment": "跳到尾子夹_页面"
+  },
+  {
+}"method name": "跳转子夹_",
+}"comment": "直接跳到指定子夹处显示",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "子夹索引",
+"comment": "从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否强制跳转",
+"comment": "当处于锁定状态时是否强制跳转",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+ameter name": "原索引""method name": "尺寸改变自动归位_",
+ameter name": "原索引""comment": "大小改变后，子夹是否从0号开始显示",
+ameter name": "原索引""parameters": [
+   {
+"parameter name": "是否归位",
+"data type": "逻辑型"
+   }
+ameter name": "原索引"]
+  },
+  {
+}"method name": "子夹被关闭事件",
+}"comment": "子夹右侧关闭按钮",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "子夹标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹标记",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "询问关闭",
+"comment": "询问是否可关闭，确定关闭执行“确认关闭子夹_”命令",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "子夹被改变事件",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "原子夹索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "现子夹索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "子夹被松开事件",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "子夹标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹标记",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+@默认值": "假""method name": "子夹被单击事件",
+@默认值": "假""type": "event",
+@默认值": "假""data type": "整数",
+@默认值": "假""parameters": [
+   {
+"parameter name": "类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "子夹标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹标记",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹索引",
+"data type": "整数"
+   }
+@默认值": "假"]
+  },
+  {
+data type": "整数""method name": "子夹被双击事件",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "子夹标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹标记",
+"data type": "文本型"
+   },
+   {
+"parameter name": "子夹索引",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "子夹位置调整事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "方向",
+"comment": "1、左　2、右",
+"data type": "整数"
+   }
+]
+  }
+}"@视窗.结构类": "0"]
+ }
+ؐ舉ŝ]
+}

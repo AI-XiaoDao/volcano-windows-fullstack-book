@@ -1,0 +1,231 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.网络通讯.IXWebsocket\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"ixwebsocket\\\\ixwebsocketTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"ixwebsocket\\\\ixwebsocketToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"ixwebsocket\\\\ixwebsocketToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"ixwebsocket\\\\ixwebsocketToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"ixwebsocket\\\\ixwebsocketToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "网页套接字消息类型常量",
+"comment": "#define IxWebsocket_CallBackType_Message  0\n#define IxWebsocket_CallBackType_Open  1\n#define IxWebsocket_CallBackType_Close  2\n#define IxWebsocket_CallBackType_Error  3\n#define IxWebsocket_CallBackType_Ping  4\n#define IxWebsocket_CallBackType_Pong  5\n#define IxWebsocket_CallBackType_Fragment 6",
+"@常量类": "整数",
+"constants": [
+  {
+型 = 整数 @嵌入式方法 = """constant name": "消息",
+型 = 整数 @嵌入式方法 = """initial value": "0"
+  },
+  {
+�數ŝ"constant name": "打开",
+�數ŝ"initial value": "1"
+  },
+  {
+"constant name": "关闭",
+"initial value": "2"
+  },
+  {
+ 整数 注释 = "秒" @默认值 = 3"constant name": "错误",
+ 整数 注释 = "秒" @默认值 = 3"initial value": "3"
+  },
+  {
+數ŝ"initial value": "1""constant name": "Ping",
+數ŝ"initial value": "1""initial value": "4"
+  },
+  {
+    "constant name": "Pong",
+    "initial value": "5"
+  },
+  {
+ss name": "网页套接字消息类型常量""constant name": "帧",
+ss name": "网页套接字消息类型常量""initial value": "6"
+  }
+]
+ },
+ {
+"class name": "网页套接字发送常量",
+"comment": "#define IxWebsocket_MsgType_Bin  1\n#define IxWebsocket_MsgType_Text 2\n#define IxWebsocket_MsgType_Ping 3\n#define IxWebsocket_MsgType_Close 4",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "字节集",
+
+"initial value": "1"
+  },
+  {
+ 字节集类"constant name": "文本",
+ 字节集类"initial value": "2"
+  },
+  {
+}"constant name": "Ping",
+}"initial value": "3"
+  },
+  {
+
+"constant name": "关闭",
+
+"initial value": "4"
+  }
+]
+ },
+ {
+"class name": "网页套接字客户端类",
+"methods": [
+  {
+ame": "网页套接字消息类型常量""constant name": "帧""method name": "事件",
+ame": "网页套接字消息类型常量""constant name": "帧""type": "event",
+ame": "网页套接字消息类型常量""constant name": "帧""data type": "整数",
+ame": "网页套接字消息类型常量""constant name": "帧""parameters": [
+   {
+"parameter name": "消息类型",
+"data type": "网页套接字消息类型常量"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否字节集数据",
+"data type": "逻辑型"
+   }
+ame": "网页套接字消息类型常量""constant name": "帧"]
+  },
+  {
+methods": [
+"method name": "置附加协议头",
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "文本型"
+   }
+methods": [
+]
+  },
+  {
+"initial value": "4""method name": "启动",
+"initial value": "4""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "停止",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "取网址",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置网址",
+
+"parameters": [
+   {
+"parameter name": "网址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "发送",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "消息类型",
+"data type": "网页套接字发送常量",
+"@默认值": "网页套接字发送常量.字节集"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "启用自动重连",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "重连次数",
+"comment": "只有当 第一个参数为真时，这个才起用",
+"data type": "整数",
+"@默认值": "1000"
+   }
+data type": "文本型"]
+  },
+  {
+ta type": "文本型"]"method name": "是否自动重连",
+ta type": "文本型"]"data type": "逻辑型",
+ta type": "文本型"]"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "启用Pong",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "置Ping间隔时间",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "时间",
+"comment": "秒",
+"data type": "整数",
+"@默认值": "3"
+   }
+]
+  },
+  {
+@默认值": "空对象""method name": "取Ping间隔时间",
+@默认值": "空对象""data type": "整数",
+@默认值": "空对象""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "添加子协议",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "子协议",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ata type": "文本型""@嵌入式方法": "\"\"""method name": "置TlsPeerVerifyNone",
+ata type": "文本型""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

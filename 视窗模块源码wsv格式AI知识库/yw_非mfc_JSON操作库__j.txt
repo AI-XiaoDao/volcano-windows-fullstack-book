@@ -1,0 +1,5083 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+ "例如：json.置入整数值 (\"/数值/金额\", 1.8)  得到：{\"数值\":{\"金额\":1.8}}" 折叠 折叠2 @禁止流程检查 = 真"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ "例如：json.置入整数值 (\"/数值/金额\", 1.8)  得到：{\"数值\":{\"金额\":1.8}}" 折叠 折叠2 @禁止流程检查 = 真"package name": "火山.仰望",
+ "例如：json.置入整数值 (\"/数值/金额\", 1.8)  得到：{\"数值\":{\"金额\":1.8}}" 折叠 折叠2 @禁止流程检查 = 真"comment": "本库修改自“lyjdgkg”的yyjson",
+ "例如：json.置入整数值 (\"/数值/金额\", 1.8)  得到：{\"数值\":{\"金额\":1.8}}" 折叠 折叠2 @禁止流程检查 = 真"@文档": "\"category = \\\"JSON操作库\\\"\"",
+ "例如：json.置入整数值 (\"/数值/金额\", 1.8)  得到：{\"数值\":{\"金额\":1.8}}" 折叠 折叠2 @禁止流程检查 = 真"classes": [
+ {
+    "class name": "JSON辅助类_",
+    "@文档": "\"category = \\\"JSON操作库.yyjson简化\\\"\"",
+    "@全局类": "真",
+    "methods": [
+  {
+= "category = \"JSON操作库.Tencent\"""method name": "JSON_取所有键名",
+= "category = \"JSON操作库.Tencent\"""result comment": "返回总数，错误返回－1",
+= "category = \"JSON操作库.Tencent\"""static": true,
+= "category = \"JSON操作库.Tencent\"""data type": "整数",
+= "category = \"JSON操作库.Tencent\"""parameters": [
+   {
+"parameter name": "文本数据",
+"comment": "提供文本型JSON数据，参数一、二只需给一个即可",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "字节集数据",
+"comment": "提供字节集型JSON数据，参数一、二只需给一个即可",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键名组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+= "category = \"JSON操作库.Tencent\""]
+  },
+  {
+ "例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""method name": "JSON_取所有键值",
+ "例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""result comment": "返回总数，错误返回－1",
+ "例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""static": true,
+ "例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""data type": "整数",
+ "例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""parameters": [
+   {
+"parameter name": "文本数据",
+"comment": "提供文本型JSON数据，参数一、二只需给一个即可",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "字节集数据",
+"comment": "提供字节集型JSON数据，参数一、二只需给一个即可",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键值组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+ "例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}"]
+  },
+  {
+@默认值": "\"\"""method name": "JSON_枚举结构",
+@默认值": "\"\"""comment": "取出json数据中所有键名、键值、类型",
+@默认值": "\"\"""result comment": "返回总数，错误返回－1",
+@默认值": "\"\"""static": true,
+@默认值": "\"\"""data type": "整数",
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "文本数据",
+"comment": "提供文本型JSON数据，参数一、二只需给一个即可",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "字节集数据",
+"comment": "提供字节集型JSON数据，参数一、二只需给一个即可",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键名组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的类型组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键值组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+@默认值": "\"\""]
+  }
+    ]
+ },
+ {
+ }"class name": "JSON对象类_",
+ }"comment": "基于yyJson",
+ }"@文档": "\"category = \\\"JSON操作库.yyjson简化\\\"\"",
+ }"methods": [
+  {
+"method name": "创建自文本",
+"comment": "从JSON文本创建,返回是否成功.",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "内容",
+"comment": "必须是Json格式的文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "创建自字节集",
+data type": "文本型""comment": "从JSON字节集创建,返回是否成功.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "内容",
+"comment": "必须是Json格式的字节集",
+"data type": "字节集类"
+   }
+data type": "文本型"]
+  },
+  {
+parameters": [
+"method name": "清空",
+parameters": [
+"comment": "清空本对象中的数据"
+  },
+  {
+
+"method name": "成员数",
+
+"comment": "如果操作当前属性的是JSON对象类,则返回键数量.如果是JSON数组类,则返回数组成员数.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "成员数2",
+
+"comment": "如果操作当前属性的是JSON对象类,则返回键数量.如果是JSON数组类,则返回数组成员数.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供要判断的键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""parameters": [
+"method name": "到可读文本",
+"例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""parameters": [
+"comment": "把JSON转换成可读文本并格式化数据",
+"例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""parameters": [
+"data type": "文本型",
+"例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""parameters": [
+"parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   }
+"例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}""parameters": [
+]
+  },
+  {
+}"method name": "到字节集",
+}"comment": "把JSON格式化成UTF8的字节集",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+}"method name": "成员是否存在",
+}"comment": "判断指定键名是否存在.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供要判断的键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "置入文本值",
+"comment": "将指定的文本值置入当前JSON对象内指定名称键所对应的值中.",
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "查找",
+"comment": "真 = 先查找节点是否存在,存在则返回其节点,不存在则添加新节点.  \n假 = 不查找键是否存在,直接添加新节点,(注意: 若节点已存在则会造成节点重复,优点是性能好)",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+comment": "提供要判断的键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""method name": "置入字节集值",
+comment": "提供要判断的键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""comment": "将指定的字节集置入当前JSON对象内指定名称键所对应的值中.",
+comment": "提供要判断的键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "查找",
+"comment": "真 = 先查找节点是否存在,存在则返回其节点,不存在则添加新节点.  \n假 = 不查找键是否存在,直接添加新节点,(注意: 若节点已存在则会造成节点重复,优点是性能好)",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "提供要判断的键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])"]
+  },
+  {
+
+"method name": "置入整数值",
+
+"comment": "将指定的整数值置入当前JSON对象内指定名称键所对应的值中.",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "整数"
+   },
+   {
+"parameter name": "查找",
+"comment": "真 = 先查找节点是否存在,存在则返回其节点,不存在则添加新节点.  \n假 = 不查找键是否存在,直接添加新节点,(注意: 若节点已存在则会造成节点重复,优点是性能好)",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "置入长整数值",
+data type": "文本型""comment": "将指定的长整数值置入当前JSON对象内指定名称键所对应的值中.",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "长整数"
+   },
+   {
+"parameter name": "查找",
+"comment": "真 = 先查找节点是否存在,存在则返回其节点,不存在则添加新节点.  \n假 = 不查找键是否存在,直接添加新节点,(注意: 若节点已存在则会造成节点重复,优点是性能好)",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "置入小数值",
+
+"comment": "将指定的小数值置入当前JSON对象内指定名称键所对应的值中.",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "小数"
+   },
+   {
+"parameter name": "查找",
+"comment": "真 = 先查找节点是否存在,存在则返回其节点,不存在则添加新节点.  \n假 = 不查找键是否存在,直接添加新节点,(注意: 若节点已存在则会造成节点重复,优点是性能好)",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "置入逻辑值",
+
+"comment": "将指定的逻辑值置入当前JSON对象内指定名称键所对应的值中.",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "查找",
+"comment": "真 = 先查找节点是否存在,存在则返回其节点,不存在则添加新节点.  \n假 = 不查找键是否存在,直接添加新节点,(注意: 若节点已存在则会造成节点重复,优点是性能好)",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "置入对象值",
+data type": "文本型""comment": "将指定的JSON对象类置入当前JSON对象内指定名称键所对应的值中.",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要置入的对象",
+"comment": "提供要置入的JSON对象",
+"data type": "JSON对象类_"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "逻辑型""method name": "置入数组值",
+data type": "逻辑型""comment": "将指定JSON数组类添加到当前数组中.",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要置入的数组",
+"comment": "提供要置入的JSON数组",
+"data type": "JSON数组类_"
+   }
+data type": "逻辑型"]
+  },
+  {
+data type": "小数""method name": "取类型",
+data type": "小数""comment": "返回键名称对应键值的类型",
+data type": "小数""data type": "文本型",
+data type": "小数""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+data type": "小数"]
+  },
+  {
+
+"method name": "取类型2",
+
+"comment": "返回键名称对应键值的类型",
+
+"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ata type": "小数""parameters": [
+"method name": "取路径类型",
+ata type": "小数""parameters": [
+"comment": "返回键名称对应键值的类型",
+ata type": "小数""parameters": [
+"data type": "文本型",
+ata type": "小数""parameters": [
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+ata type": "小数""parameters": [
+]
+  },
+  {
+ }"method name": "取路径类型2",
+ }"comment": "返回键名称对应键值的类型",
+ }"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "取所有键名",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""comment": "把JSON对象里面的所有\"键名称\"都加入到文本数组类中.",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""result comment": "返回数量",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""data type": "整数",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""parameters": [
+   {
+"parameter name": "键名数组",
+"comment": "结果保存在此参数中.",
+"data type": "文本数组类"
+   }
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]"]
+  },
+  {
+}"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型""method name": "取所有键值",
+}"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型""comment": "把JSON对象里面的所有\"键值\"都加入到文本数组类中.",
+}"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型""result comment": "返回数量",
+}"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型""data type": "整数",
+}"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型""parameters": [
+   {
+"parameter name": "键值数组",
+"comment": "结果保存在此参数中.",
+"data type": "文本数组类"
+   }
+}"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型"]
+  },
+  {
+data type": "文本型""method name": "取所有键名键值",
+data type": "文本型""comment": "把JSON对象里面的所有\"键名称,键值,类型\"都加入到文本数组类中",
+data type": "文本型""result comment": "返回数量",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名数组",
+"comment": "结果保存在此参数中",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "键值数组",
+"comment": "结果保存在此参数中",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "键类型数组",
+"comment": "结果保存在此参数中",
+"data type": "文本数组类"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "取对象值",
+ }"comment": "取出指定键名的JSON对象类",
+ }"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的对象值保存在此参数中.",
+"data type": "JSON对象类_"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "取数组值",
+data type": "文本型""comment": "取出指定键名的JSON数组类",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的数组值保存在此参数中.",
+"data type": "JSON数组类_"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "取文本值",
+ }"comment": "取出指定键名所对应的键值.",
+ }"result comment": "返回键值",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "取字节集值",
+}"comment": "取出指定键名所对应的键值.",
+}"result comment": "返回键值",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "取整数值",
+}"comment": "取出指定键名所对应的键值.",
+}"result comment": "返回对应的整数值",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "取长整数值",
+}"comment": "取出指定键名所对应的键值.",
+}"result comment": "返回对应的长整数值",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "取逻辑值",
+
+"comment": "取出指定键名所对应的键值.",
+
+"result comment": "返回对应的逻辑值",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "取小数值",
+data type": "文本型""comment": "取出指定键名所对应的键值.",
+data type": "文本型""result comment": "返回对应的小数值",
+data type": "文本型""data type": "小数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "取路径对象值",
+
+"comment": "取出指定路径位置的JSON对象类",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的对象值保存在此参数中",
+"data type": "JSON对象类_"
+   }
+
+]
+  },
+  {
+"method name": "取路径数组值",
+"comment": "取出指定路径位置的JSON数组类",
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的数组值保存在此参数中.",
+"data type": "JSON数组类_"
+   }
+]
+  },
+  {
+ }"method name": "删除成员",
+ }"comment": "删除指定键名",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ata type": "文本型""parameters": [
+"method name": "删除路径成员",
+ata type": "文本型""parameters": [
+"comment": "删除指定路径处的成员",
+ata type": "文本型""parameters": [
+"data type": "逻辑型",
+ata type": "文本型""parameters": [
+"parameters": [
+   {
+"parameter name": "所删除成员路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "删除数量",
+"comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量",
+"data type": "变整数",
+"@默认值": "1"
+   }
+ata type": "文本型""parameters": [
+]
+  },
+  {
+comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量""method name": "交换对象节点",
+comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量""comment": "根据键名交换对象下节点",
+comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量""result comment": "成功返回真, 失败返回假",
+comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量""data type": "逻辑型",
+comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量""parameters": [
+   {
+"parameter name": "键名1",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名2",
+"data type": "文本型"
+   }
+comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量"]
+  },
+  {
+ameter name": "所欲访问的路径""method name": "交换对象节点2",
+ameter name": "所欲访问的路径""comment": "根据索引交换对象下节点",
+ameter name": "所欲访问的路径""data type": "逻辑型",
+ameter name": "所欲访问的路径""parameters": [
+   {
+"parameter name": "索引1",
+"comment": "要交换的数组索引1,从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "索引2",
+"comment": "要交换的数组索引2,从0开始",
+"data type": "整数"
+   }
+ameter name": "所欲访问的路径"]
+  },
+  {
+
+"method name": "交换路径节点",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "路径1",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0] RFC 6901标准",
+"data type": "文本型"
+   },
+   {
+"parameter name": "路径2",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0] RFC 6901标准",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "路径2""method name": "键名是否存在",
+ameter name": "路径2""comment": "判断该节点是否存在",
+ameter name": "路径2""data type": "逻辑型",
+ameter name": "路径2""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+ameter name": "路径2"]
+  }
+ }]
+ },
+ {
+"class name": "JSON数组类_",
+"comment": "基于yyJson",
+"@文档": "\"category = \\\"JSON操作库.yyjson简化\\\"\"",
+"methods": [
+  {
+}"method name": "创建自文本",
+}"comment": "从JSON文本创建,返回是否成功.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "内容",
+"comment": "必须是Json格式的文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+methods": [
+"method name": "创建自字节集",
+methods": [
+"comment": "从JSON字节集创建,返回是否成功.",
+methods": [
+"data type": "逻辑型",
+methods": [
+"parameters": [
+   {
+"parameter name": "内容",
+"comment": "必须是Json格式的字节集",
+"data type": "字节集类"
+   }
+methods": [
+]
+  },
+  {
+ameter name": "路径2""method name": "清空",
+ameter name": "路径2""comment": "清空本对象中的数据"
+  },
+  {
+}"method name": "成员数",
+}"comment": "如果操作当前属性的是JSON对象类,则返回键数量.如果是JSON数组类,则返回数组成员数.",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+meter name": "路径2""comment": "清空本对象中的数据""method name": "成员数2",
+meter name": "路径2""comment": "清空本对象中的数据""comment": "如果操作当前属性的是JSON对象类,则返回键数量.如果是JSON数组类,则返回数组成员数.",
+meter name": "路径2""comment": "清空本对象中的数据""data type": "整数",
+meter name": "路径2""comment": "清空本对象中的数据""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供要判断的键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+meter name": "路径2""comment": "清空本对象中的数据"]
+  },
+  {
+data type": "文本型""method name": "到可读文本",
+data type": "文本型""comment": "把JSON转换成可读文本并格式化数据",
+data type": "文本型""data type": "文本型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "到字节集",
+ }"comment": "把JSON格式化成UTF8的字节集",
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+ameter name": "构造标志""method name": "路径是否存在",
+ameter name": "构造标志""comment": "判断指定路径处的成员是否存在",
+ameter name": "构造标志""data type": "逻辑型",
+ameter name": "构造标志""parameters": [
+   {
+"parameter name": "所检测成员路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+ameter name": "构造标志"]
+  },
+  {
+"method name": "置入文本值",
+"comment": "将指定文本添加到当前数组中",
+"parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供要添加的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+@默认值": "-1""method name": "置入字节集值",
+@默认值": "-1""comment": "将指定字节集添加到当前数组中",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供要添加的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "-1"]
+  },
+  {
+data type": "字节集类""method name": "置入整数值",
+data type": "字节集类""comment": "将指定整数添加到当前数组中",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供要添加的整数",
+"data type": "整数"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "字节集类"]
+  },
+  {
+}"method name": "置入逻辑值",
+}"comment": "将指定逻辑添加到当前数组中",
+}"parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供要添加的逻辑值",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+}"method name": "置入长整数值",
+}"comment": "将指定长整数添加到当前数组中",
+}"parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供要添加的长整数",
+"data type": "长整数"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+data type": "长整数""method name": "置入小数值",
+data type": "长整数""comment": "将指定小数添加到当前数组中",
+data type": "长整数""parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供要添加的小数",
+"data type": "小数"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "长整数"]
+  },
+  {
+data type": "逻辑型""method name": "置入对象值",
+data type": "逻辑型""comment": "将指定JSON对象类添加到当前数组中.",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "要置入的对象",
+"comment": "提供要添加的JSON对象类",
+"data type": "JSON对象类_"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后..",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "逻辑型"]
+  },
+  {
+comment": "提供要添加的逻辑值""method name": "置入数组值",
+comment": "提供要添加的逻辑值""comment": "将指定JSON数组类添加到当前数组中.",
+comment": "提供要添加的逻辑值""parameters": [
+   {
+"parameter name": "要置入的数组",
+"comment": "提供要添加的JSON数组类对象",
+"data type": "JSON数组类_"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后..",
+"data type": "整数",
+"@默认值": "-1"
+   }
+comment": "提供要添加的逻辑值"]
+  },
+  {
+
+"method name": "取类型",
+
+"comment": "返回键名称对应键值的类型",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "取类型2",
+"comment": "返回键名称对应键值的类型",
+"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ameter name": "索引""method name": "取路径类型",
+ameter name": "索引""comment": "返回键名称对应键值的类型",
+ameter name": "索引""data type": "文本型",
+ameter name": "索引""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+ameter name": "索引"]
+  },
+  {
+ameter name": "索引""method name": "取路径类型2",
+ameter name": "索引""comment": "返回键名称对应键值的类型",
+ameter name": "索引""result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型",
+ameter name": "索引""data type": "整数",
+ameter name": "索引""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+ameter name": "索引"]
+  },
+  {
+ameter name": "路径""method name": "取对象值",
+ameter name": "路径""comment": "取出指定索引位置的JSON对象类",
+ameter name": "路径""parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的对象值保存在此参数中",
+"data type": "JSON对象类_"
+   }
+ameter name": "路径"]
+  },
+  {
+
+"method name": "取数组值",
+
+"comment": "取出指定索引位置的JSON数组类",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的数组值保存在此参数中.",
+"data type": "JSON数组类_"
+   }
+
+]
+  },
+  {
+ameter name": "保存取出的对象""method name": "取文本值",
+ameter name": "保存取出的对象""comment": "取出指定索引位置的文本值",
+ameter name": "保存取出的对象""data type": "文本型",
+ameter name": "保存取出的对象""parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+ameter name": "保存取出的对象"]
+  },
+  {
+}"method name": "取字节集值",
+}"comment": "取出指定索引位置的字节集值",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取整数值",
+
+"comment": "取出指定索引位置的整数值",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取长整数值",
+
+"comment": "取出指定索引位置的长整数值",
+
+"data type": "长整数",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取逻辑值",
+
+"comment": "取出指定索引位置的逻辑值",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "取小数值",
+}"comment": "取出指定索引位置的小数值",
+}"data type": "小数",
+}"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "取路径对象值",
+}"comment": "取出指定路径位置的JSON对象类",
+}"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的对象值保存在此参数中",
+"data type": "JSON对象类_"
+   }
+}]
+  },
+  {
+comment": "取出的对象值保存在此参数中""method name": "取路径数组值",
+comment": "取出的对象值保存在此参数中""comment": "取出指定路径位置的JSON数组类",
+comment": "取出的对象值保存在此参数中""parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的数组值保存在此参数中.",
+"data type": "JSON数组类_"
+   }
+comment": "取出的对象值保存在此参数中"]
+  },
+  {
+"method name": "取路径文本值",
+"comment": "取出指定路径位置的文本值",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"parameters": [
+"method name": "取路径字节集值",
+
+"parameters": [
+"comment": "取出指定路径位置的字节集值",
+
+"parameters": [
+"data type": "字节集类",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+
+"parameters": [
+]
+  },
+  {
+}"method name": "取路径整数值",
+}"comment": "取出指定路径位置的整数值",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "取路径长整数值",
+"comment": "取出指定路径位置的长整数值",
+"data type": "长整数",
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "取路径逻辑值",
+
+"comment": "取出指定路径位置的逻辑值",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "取路径小数值",
+"comment": "取出指定路径位置的小数值",
+"data type": "小数",
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "删除成员",
+}"comment": "删除指定索引位置处的成员",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "所删除成员索引位置",
+"comment": "索引位置从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "删除数量",
+"comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量",
+"data type": "变整数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+
+"method name": "删除路径成员",
+
+"comment": "删除指定路径处的成员",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所删除成员路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "删除数量",
+"comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量",
+"data type": "变整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "交换数组节点",
+
+"comment": "根据索引交换数组成员节点",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "索引1",
+"comment": "要交换的数组索引1,从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "索引2",
+"comment": "要交换的数组索引2,从0开始",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "交换路径节点",
+data type": "整数""data type": "逻辑型",
+data type": "整数""parameters": [
+   {
+"parameter name": "路径1",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0] RFC 6901标准",
+"data type": "文本型"
+   },
+   {
+"parameter name": "路径2",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0] RFC 6901标准",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "替换文本值",
+"comment": "将指定的文本值替换到指定索引位置",
+"parameters": [
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "路径2""method name": "替换字节集值",
+ameter name": "路径2""comment": "将指定的字节集值替换到指定索引位置",
+ameter name": "路径2""parameters": [
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "字节集类"
+   }
+ameter name": "路径2"]
+  },
+  {
+hod name": "取路径长整数值""method name": "替换整数值",
+hod name": "取路径长整数值""comment": "将指定的整数值替换到指定索引位置",
+hod name": "取路径长整数值""parameters": [
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "整数"
+   }
+hod name": "取路径长整数值"]
+  },
+  {
+
+"method name": "替换长整数值",
+
+"comment": "将指定的长整数值替换到指定索引位置",
+
+"parameters": [
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+}"method name": "替换小数值",
+}"comment": "将指定的小数值替换到指定索引位置",
+}"parameters": [
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "小数"
+   }
+}]
+  },
+  {
+"method name": "替换逻辑值",
+"comment": "将指定的逻辑值替换到指定索引位置",
+"parameters": [
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+ethod name": "替换长整数值""method name": "替换对象值",
+ethod name": "替换长整数值""comment": "将指定的JSON对象类替换到指定索引位置",
+ethod name": "替换长整数值""parameters": [
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "要替换的对象",
+"comment": "提供新值",
+"data type": "JSON对象类_"
+   }
+ethod name": "替换长整数值"]
+  },
+  {
+hod name": "替换长整数值"]"method name": "替换数组值",
+hod name": "替换长整数值"]"comment": "将指定的JSON数组类替换到指定索引位置",
+hod name": "替换长整数值"]"parameters": [
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "要替换的数组",
+"comment": "提供新值",
+"data type": "JSON数组类_"
+   }
+hod name": "替换长整数值"]]
+  },
+  {
+comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.""method name": "替换路径文本值",
+comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.""comment": "将指定的文本值替换到指定路径位置",
+comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.""parameters": [
+   {
+"parameter name": "要替换的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "文本型"
+   }
+comment": "索引从0开始,索引不存在将直接添加成员到该索引位置."]
+  },
+  {
+comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.""method name": "替换路径字节集值",
+comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.""comment": "将指定的字节集值替换到指定路径位置",
+comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.""parameters": [
+   {
+"parameter name": "要替换的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "字节集类"
+   }
+comment": "索引从0开始,索引不存在将直接添加成员到该索引位置."]
+  },
+  {
+mment": "索引从0开始,索引不存在将直接添加成员到该索引位置."]"method name": "替换路径整数值",
+mment": "索引从0开始,索引不存在将直接添加成员到该索引位置."]"comment": "将指定的整数值替换到指定路径位置",
+mment": "索引从0开始,索引不存在将直接添加成员到该索引位置."]"parameters": [
+   {
+"parameter name": "要替换的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "整数"
+   }
+mment": "索引从0开始,索引不存在将直接添加成员到该索引位置."]]
+  },
+  {
+comment": "提供新值""method name": "替换路径长整数值",
+comment": "提供新值""comment": "将指定的长整数值替换到指定路径位置",
+comment": "提供新值""parameters": [
+   {
+"parameter name": "要替换的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "长整数"
+   }
+comment": "提供新值"]
+  },
+  {
+}"method name": "替换路径小数值",
+}"comment": "将指定的小数值替换到指定路径位置",
+}"parameters": [
+   {
+"parameter name": "要替换的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "小数"
+   }
+}]
+  },
+  {
+comment": "提供新值""method name": "替换路径逻辑值",
+comment": "提供新值""comment": "将指定的逻辑值替换到指定路径位置",
+comment": "提供新值""parameters": [
+   {
+"parameter name": "要替换的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "逻辑型"
+   }
+comment": "提供新值"]
+  },
+  {
+data type": "文本型""method name": "替换路径对象值",
+data type": "文本型""comment": "将指定的JSON对象类替换到指定路径位置",
+data type": "文本型""parameters": [
+   {
+"parameter name": "要替换的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要替换的对象",
+"comment": "提供新值",
+"data type": "JSON对象类_"
+   }
+data type": "文本型"]
+  },
+  {
+comment": "提供新值""method name": "替换路径数组值",
+comment": "提供新值""comment": "将指定的JSON数组类替换到指定路径位置",
+comment": "提供新值""parameters": [
+   {
+"parameter name": "要替换的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要替换的数组",
+"comment": "提供新值",
+"data type": "JSON数组类_"
+   }
+comment": "提供新值"]
+  },
+  {
+
+"method name": "键值是否存在",
+
+"comment": "判断该节点是否存在",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+thod name": "键值是否存在""class name": "JSON对象类_解析",
+thod name": "键值是否存在""comment": "基于yyJson",
+thod name": "键值是否存在""@文档": "\"category = \\\"JSON操作库.yyjson简化\\\"\"",
+thod name": "键值是否存在""methods": [
+  {
+
+"method name": "创建自文本",
+
+"comment": "从JSON文本创建,返回是否成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"comment": "必须是Json格式的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "创建自字节集",
+}"comment": "从JSON字节集创建,返回是否成功.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "内容",
+"comment": "必须是Json格式的字节集",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+thod name": "创建自文本""method name": "清空",
+thod name": "创建自文本""comment": "清空本对象中的数据"
+  },
+  {
+"method name": "成员数",
+"comment": "如果操作当前属性的是JSON对象类,则返回键数量.如果是JSON数组类,则返回数组成员数.",
+"type": "property getter",
+"data type": "整数"
+  },
+  {
+
+"method name": "成员数2",
+
+"comment": "如果操作当前属性的是JSON对象类,则返回键数量.如果是JSON数组类,则返回数组成员数.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供要判断的键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "到可读文本",
+ }"comment": "把JSON转换成可读文本并格式化数据",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   }
+ }]
+  },
+  {
+"method name": "到字节集",
+"comment": "把JSON格式化成UTF8的字节集",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+ }"method name": "成员是否存在",
+ }"comment": "判断指定键名是否存在.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供要判断的键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+comment": "把JSON格式化成UTF8的字节集""method name": "取类型",
+comment": "把JSON格式化成UTF8的字节集""comment": "返回键名称对应键值的类型",
+comment": "把JSON格式化成UTF8的字节集""data type": "文本型",
+comment": "把JSON格式化成UTF8的字节集""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+comment": "把JSON格式化成UTF8的字节集"]
+  },
+  {
+omment": "把JSON格式化成UTF8的字节集""comment": "返回键名称对应键值的类型""method name": "取类型2",
+omment": "把JSON格式化成UTF8的字节集""comment": "返回键名称对应键值的类型""comment": "返回键名称对应键值的类型",
+omment": "把JSON格式化成UTF8的字节集""comment": "返回键名称对应键值的类型""result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型",
+omment": "把JSON格式化成UTF8的字节集""comment": "返回键名称对应键值的类型""data type": "整数",
+omment": "把JSON格式化成UTF8的字节集""comment": "返回键名称对应键值的类型""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+omment": "把JSON格式化成UTF8的字节集""comment": "返回键名称对应键值的类型"]
+  },
+  {
+ent": "把JSON格式化成UTF8的字节集""method name": "取类型""method name": "取路径类型",
+ent": "把JSON格式化成UTF8的字节集""method name": "取类型""comment": "返回键名称对应键值的类型",
+ent": "把JSON格式化成UTF8的字节集""method name": "取类型""data type": "文本型",
+ent": "把JSON格式化成UTF8的字节集""method name": "取类型""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+ent": "把JSON格式化成UTF8的字节集""method name": "取类型"]
+  },
+  {
+nt": "把JSON格式化成UTF8的字节集""method name": "取类型""comment": "返回键名称对应键值的类型""method name": "取路径类型2",
+nt": "把JSON格式化成UTF8的字节集""method name": "取类型""comment": "返回键名称对应键值的类型""comment": "返回键名称对应键值的类型",
+nt": "把JSON格式化成UTF8的字节集""method name": "取类型""comment": "返回键名称对应键值的类型""result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型",
+nt": "把JSON格式化成UTF8的字节集""method name": "取类型""comment": "返回键名称对应键值的类型""data type": "整数",
+nt": "把JSON格式化成UTF8的字节集""method name": "取类型""comment": "返回键名称对应键值的类型""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+nt": "把JSON格式化成UTF8的字节集""method name": "取类型""comment": "返回键名称对应键值的类型"]
+  },
+  {
+data type": "文本型""method name": "取所有键名",
+data type": "文本型""comment": "把JSON对象里面的所有\"键名称\"都加入到文本数组类中.",
+data type": "文本型""result comment": "返回数量",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名数组",
+"comment": "结果保存在此参数中.",
+"data type": "文本数组类"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "取所有键值",
+
+"comment": "把JSON对象里面的所有\"键值\"都加入到文本数组类中.",
+
+"result comment": "返回数量",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "键值数组",
+"comment": "结果保存在此参数中.",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+"method name": "取所有键名键值",
+"comment": "把JSON对象里面的所有\"键名称,键值,类型\"都加入到文本数组类中",
+"result comment": "返回数量",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "键名数组",
+"comment": "结果保存在此参数中",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "键值数组",
+"comment": "结果保存在此参数中",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "键类型数组",
+"comment": "结果保存在此参数中",
+"data type": "文本数组类"
+   }
+]
+  },
+  {
+
+"method name": "取对象值",
+
+"comment": "取出指定键名的JSON对象类",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的对象值保存在此参数中.",
+"data type": "JSON对象类_"
+   }
+
+]
+  },
+  {
+
+"method name": "取数组值",
+
+"comment": "取出指定键名的JSON数组类",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的数组值保存在此参数中.",
+"data type": "JSON数组类_"
+   }
+
+]
+  },
+  {
+"method name": "取文本值",
+"comment": "取出指定键名所对应的键值.",
+"result comment": "返回键值",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+]
+  },
+  {
+comment": "取出后的数组值保存在此参数中.""method name": "取字节集值",
+comment": "取出后的数组值保存在此参数中.""comment": "取出指定键名所对应的键值.",
+comment": "取出后的数组值保存在此参数中.""result comment": "返回键值",
+comment": "取出后的数组值保存在此参数中.""data type": "字节集类",
+comment": "取出后的数组值保存在此参数中.""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+comment": "取出后的数组值保存在此参数中."]
+  },
+  {
+}"method name": "取整数值",
+}"comment": "取出指定键名所对应的键值.",
+}"result comment": "返回对应的整数值",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""method name": "取长整数值",
+comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""comment": "取出指定键名所对应的键值.",
+comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""result comment": "返回对应的长整数值",
+comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""data type": "长整数",
+comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])"]
+  },
+  {
+data type": "文本数组类""method name": "取逻辑值",
+data type": "文本数组类""comment": "取出指定键名所对应的键值.",
+data type": "文本数组类""result comment": "返回对应的逻辑值",
+data type": "文本数组类""data type": "逻辑型",
+data type": "文本数组类""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+data type": "文本数组类"]
+  },
+  {
+ameter name": "键名称""method name": "取小数值",
+ameter name": "键名称""comment": "取出指定键名所对应的键值.",
+ameter name": "键名称""result comment": "返回对应的小数值",
+ameter name": "键名称""data type": "小数",
+ameter name": "键名称""parameters": [
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])",
+"data type": "文本型"
+   }
+ameter name": "键名称"]
+  },
+  {
+}"method name": "取路径对象值",
+}"comment": "取出指定路径位置的JSON对象类",
+}"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的对象值保存在此参数中",
+"data type": "JSON对象类_"
+   }
+}]
+  },
+  {
+
+"method name": "取路径数组值",
+
+"comment": "取出指定路径位置的JSON数组类",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的数组值保存在此参数中.",
+"data type": "JSON数组类_"
+   }
+
+]
+  }
+thod name": "键值是否存在"]
+ },
+ {
+ }"class name": "JSON数组类_解析",
+ }"comment": "基于yyJson",
+ }"@文档": "\"category = \\\"JSON操作库.yyjson简化\\\"\"",
+ }"methods": [
+  {
+"method name": "创建自文本",
+"comment": "从JSON文本创建,返回是否成功.",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "内容",
+"comment": "必须是Json格式的文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "创建自字节集",
+
+"comment": "从JSON字节集创建,返回是否成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"comment": "必须是Json格式的字节集",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""method name": "清空",
+comment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""comment": "清空本对象中的数据"
+  },
+  {
+ameter name": "内容""method name": "成员数",
+ameter name": "内容""comment": "如果操作当前属性的是JSON对象类,则返回键数量.如果是JSON数组类,则返回数组成员数.",
+ameter name": "内容""type": "property getter",
+ameter name": "内容""data type": "整数"
+  },
+  {
+omment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""comment": "清空本对象中的数据""method name": "到可读文本",
+omment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""comment": "清空本对象中的数据""comment": "把JSON转换成可读文本并格式化数据",
+omment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""comment": "清空本对象中的数据""data type": "文本型",
+omment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""comment": "清空本对象中的数据""parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   }
+omment": "提供键名,支持传递JSON路径。路径必须以“/”开头，如：“/name”，支持多路径“/array/0”(等于 arrat[0])""comment": "清空本对象中的数据"]
+  },
+  {
+
+"method name": "到字节集",
+
+"comment": "把JSON格式化成UTF8的字节集",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "路径是否存在",
+
+"comment": "判断指定路径处的成员是否存在",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所检测成员路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "取类型",
+}"comment": "返回键名称对应键值的类型",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"method name": "取类型2",
+"comment": "返回键名称对应键值的类型",
+"result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ }"method name": "取路径类型",
+ }"comment": "返回键名称对应键值的类型",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "路径""method name": "取路径类型2",
+ameter name": "路径""comment": "返回键名称对应键值的类型",
+ameter name": "路径""result comment": "1、文本型 2、整数型 3、长整数型 4、小数型 5、逻辑型 6、对象型 7、数组型",
+ameter name": "路径""data type": "整数",
+ameter name": "路径""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+ameter name": "路径"]
+  },
+  {
+"method name": "取对象值",
+"comment": "取出指定索引位置的JSON对象类",
+"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的对象值保存在此参数中",
+"data type": "JSON对象类_"
+   }
+]
+  },
+  {
+索引位置的JSON对象类"method name": "取数组值",
+索引位置的JSON对象类"comment": "取出指定索引位置的JSON数组类",
+索引位置的JSON对象类"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的数组值保存在此参数中.",
+"data type": "JSON数组类_"
+   }
+索引位置的JSON对象类]
+  },
+  {
+"method name": "取文本值",
+"comment": "取出指定索引位置的文本值",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "取字节集值",
+
+"comment": "取出指定索引位置的字节集",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "取整数值",
+data type": "整数""comment": "取出指定索引位置的整数值",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类_"
+   },
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "取长整数值",
+}"comment": "取出指定索引位置的长整数值",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取逻辑值",
+
+"comment": "取出指定索引位置的逻辑值",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"comment": "取出指定索引位置的长整数值""method name": "取小数值",
+"comment": "取出指定索引位置的长整数值""comment": "取出指定索引位置的小数值",
+"comment": "取出指定索引位置的长整数值""data type": "小数",
+"comment": "取出指定索引位置的长整数值""parameters": [
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+"comment": "取出指定索引位置的长整数值"]
+  },
+  {
+ameter name": "所欲访问的索引位置""method name": "取路径对象值",
+ameter name": "所欲访问的索引位置""comment": "取出指定路径位置的JSON对象类",
+ameter name": "所欲访问的索引位置""parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的对象值保存在此参数中",
+"data type": "JSON对象类_"
+   }
+ameter name": "所欲访问的索引位置"]
+  },
+  {
+路径位置的JSON对象类"method name": "取路径数组值",
+路径位置的JSON对象类"comment": "取出指定路径位置的JSON数组类",
+路径位置的JSON对象类"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径。必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的数组值保存在此参数中.",
+"data type": "JSON数组类_"
+   }
+路径位置的JSON对象类]
+  },
+  {
+"method name": "取路径文本值",
+"comment": "取出指定路径位置的文本值",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "取路径字节集值",
+
+"comment": "取出指定路径位置的字节集值",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "取路径整数值",
+data type": "文本型""comment": "取出指定路径位置的整数值",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "取路径长整数值",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""comment": "取出指定路径位置的长整数值",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""data type": "长整数",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]"]
+  },
+  {
+data type": "文本型""method name": "取路径逻辑值",
+data type": "文本型""comment": "取出指定路径位置的逻辑值",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+comment": "取出的对象值保存在此参数中""method name": "取路径小数值",
+comment": "取出的对象值保存在此参数中""comment": "取出指定路径位置的小数值",
+comment": "取出的对象值保存在此参数中""data type": "小数",
+comment": "取出的对象值保存在此参数中""parameters": [
+   {
+"parameter name": "所欲访问的路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+comment": "取出的对象值保存在此参数中"]
+  }
+ }]
+ },
+ {
+]"class name": "JSON解析对象类_yy",
+]"comment": "解析类根节点",
+]"base class": "JSON解析数组类_yy",
+]"@文档": "\"category = \\\"JSON操作库.yyjson.解析对象\\\"\"",
+]"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"",
+]"@视窗.外部头文件": "\"..\\\\json\\\\yyjson\\\\include\\\\yyjson_hs2.h\"",
+]"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"",
+]"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"",
+]"@视窗.后缀文本": "\"public yy_doc\"",
+]"methods": [
+  {
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""method name": "清空",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""comment": "局部变量无需调用,重新解析 或 类销毁 会自动清空.",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""@禁止流程检查": "真"
+  },
+  {
+ta type": "文本型"]"method name": "创建自文本",
+ta type": "文本型"]"comment": "解析Unicode文本",
+ta type": "文本型"]"result comment": "成功返回真, 失败返回假",
+ta type": "文本型"]"data type": "逻辑型",
+ta type": "文本型"]"@嵌入式方法": "\"\"",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "json",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+ta type": "文本型"]]
+  },
+  {
+}"method name": "创建自字节集",
+}"comment": "解析UTF8字节集",
+}"result comment": "成功返回真, 失败返回假",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "json",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+@默认值": "0""method name": "创建自指针",
+@默认值": "0""comment": "解析UTF8数据指针",
+@默认值": "0""result comment": "成功返回真, 失败返回假",
+@默认值": "0""data type": "逻辑型",
+@默认值": "0""@嵌入式方法": "\"\"",
+@默认值": "0""parameters": [
+   {
+"parameter name": "json指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"data type": "变整数"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+@默认值": "0"]
+  },
+  {
+"method name": "创建自文件",
+"comment": "从uft8文件解析创建 (注意: yyjson是将文件一次性读入到内存后再进行解析创建.)",
+"result comment": "创建成功返回真, 失败返回假(旧数据将被清空).",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"method name": "错误类型",
+"comment": "取解析失败时的错误代码",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "错误描述",
+"comment": "取解析失败时的错误描述信息",
+"type": "property getter",
+"data type": "文本型",
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "错误位置",
+
+"comment": "取解析失败时的错误位置(utf8编码下的位置)",
+
+"type": "property getter",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否已解析",
+
+"comment": "判断是否已经解析",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"type": "property getter""method name": "键值总数",
+
+"type": "property getter""comment": "取JSON键和值的总数量",
+
+"type": "property getter""type": "property getter",
+
+"type": "property getter""data type": "变整数",
+
+"type": "property getter""@嵌入式方法": "\"\""
+  }
+]]
+ },
+ {
+ }"class name": "JSON解析数组类_yy",
+ }"comment": "全类型解析类节点",
+ }"@文档": "\"category = \\\"JSON操作库.yyjson.解析数组\\\"\"",
+ }"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"",
+ }"@视窗.外部头文件": "\"..\\\\json\\\\yyjson\\\\include\\\\yyjson_hs2.h\"",
+ }"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"",
+ }"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"",
+ }"@视窗.后缀文本": "\"virtual public yy_val\"",
+ }"methods": [
+  {
+}"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效",
+}"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""comment": "查询节点是否有效",
+}"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter",
+}"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""data type": "逻辑型",
+}"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""@嵌入式方法": "\"\""
+  },
+  {
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""comment": "根据键名取对象的子节点",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""data type": "JSON解析数组类_yy",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""@嵌入式方法": "\"\"",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""parameters": [
+   {
+"parameter name": "键名",
+"comment": "不支持路径,若要取路径节点[取路径节点]方法",
+"data type": "文本型"
+   }
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter"]
+  },
+  {
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取成员节点",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""comment": "根据索引取容器(对象型/数组型)成员节点",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""data type": "JSON解析数组类_yy",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""@嵌入式方法": "\"\"",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "变整数"
+   }
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter"]
+  },
+  {
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点""method name": "取路径节点",
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点""comment": "根据路径取节点(RFC 6901标准)",
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点""data type": "JSON解析数组类_yy",
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点""@嵌入式方法": "\"\"",
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]
+  },
+  {
+
+"method name": "取对象成员键名",
+
+"comment": "取对象指定索引位置键名",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "类型",
+"comment": "取当前节点类型",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""comment": "取当前节点的子类型",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""type": "property getter",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""data type": "整数",
+comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""@嵌入式方法": "\"\""
+  },
+  {
+hod name": "类型""method name": "类型名称",
+hod name": "类型""comment": "取当前节点类型的名称",
+hod name": "类型""type": "property getter",
+hod name": "类型""data type": "文本型",
+hod name": "类型""@嵌入式方法": "\"\""
+  },
+  {
+窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""method name": "成员数",
+窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""comment": "取数组或对象的成员数量",
+窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""type": "property getter",
+窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""data type": "整数",
+窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真"
+  },
+  {
+}"method name": "逻辑值",
+}"comment": "取当前节点的逻辑值",
+}"result comment": "成功返回具体值, 失败返回假",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "逻辑值""method name": "整数值",
+thod name": "逻辑值""comment": "取当前节点的整数值,若节点为文本值时,则会自动转换为数值",
+thod name": "逻辑值""type": "property getter",
+thod name": "逻辑值""data type": "整数",
+thod name": "逻辑值""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "长整数值",
+
+"comment": "取当前节点的长整数值,若节点为文本值时,则会自动转换为数值",
+
+"type": "property getter",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ent": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值",
+ent": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""comment": "取当前节点的双精度小数值,若节点为文本值时,则会自动转换为数值",
+ent": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""type": "property getter",
+ent": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""data type": "小数",
+ent": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""@嵌入式方法": "\"\""
+  },
+  {
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""method name": "文本值",
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""comment": "取当前节点的文本值",
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""type": "property getter",
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型",
+.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""@嵌入式方法": "\"\""
+  },
+  {
+外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型""method name": "字节集值",
+外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型""comment": "取当前节点的字节集节点值",
+外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型""type": "property getter",
+外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型""data type": "字节集类"
+  },
+  {
+: "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""method name": "可读文本",
+: "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""comment": "将当前节点的值转换为可读文本\n由于是通过转换的方式,大数数值有可能与原始json不同",
+: "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""type": "property getter",
+: "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""data type": "文本型",
+: "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""@禁止流程检查": "真"
+  },
+  {
+ "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""type": "property getter""method name": "到可读文本",
+ "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""type": "property getter""comment": "将容器型节点(对象型/数组型)构造为JSON文本数据",
+ "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""type": "property getter""data type": "文本型",
+ "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""type": "property getter""@嵌入式方法": "\"\"",
+ "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""type": "property getter""parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   }
+ "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]""method name": "子类型""method name": "小数值""type": "property getter"]
+  },
+  {
+
+"method name": "到字节集",
+
+"comment": "将容器型节点(对象型/数组型)构造为JSON UTF8字节集数据",
+
+"result comment": "UTF8编码",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "是否为容器",
+
+"comment": "判断当前节点是否为 对象型 或 数组型",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"method name": "是否为对象型",
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"comment": "判断当前节点是否为对象型",
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"type": "property getter",
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"data type": "逻辑型",
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"@嵌入式方法": "\"\""
+  },
+  {
+外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型""method name": "是否为数组型",
+外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型""comment": "判断当前节点是否为数组型",
+外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型""type": "property getter",
+外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型""data type": "逻辑型",
+外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "是否有效""@禁止流程检查": "真""data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"method name": "是否为对象型""method name": "是否为逻辑值",
+": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"method name": "是否为对象型""comment": "判断当前节点是否为逻辑值",
+": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"method name": "是否为对象型""type": "property getter",
+": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"method name": "是否为对象型""data type": "逻辑型",
+": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"method name": "是否为对象型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为数值",
+
+"comment": "判断当前节点是否为数值(整数/长整数/小数)",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"type": "property getter""method name": "是否为整数值",
+"type": "property getter""comment": "判断当前节点是否为整数值",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "逻辑型",
+"type": "property getter""@禁止流程检查": "真"
+  },
+  {
+type": "property getter""type": "property getter""method name": "是否为长整数值",
+type": "property getter""type": "property getter""comment": "判断当前节点是否为长整数值",
+type": "property getter""type": "property getter""type": "property getter",
+type": "property getter""type": "property getter""data type": "逻辑型",
+type": "property getter""type": "property getter""@禁止流程检查": "真"
+  },
+  {
+": "property getter""type": "property getter""method name": "是否为长整数值""method name": "是否为小数值",
+": "property getter""type": "property getter""method name": "是否为长整数值""comment": "判断当前节点是否为双精度小数值",
+": "property getter""type": "property getter""method name": "是否为长整数值""type": "property getter",
+": "property getter""type": "property getter""method name": "是否为长整数值""data type": "逻辑型",
+": "property getter""type": "property getter""method name": "是否为长整数值""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为文本值",
+
+"comment": "判断当前节点是否为文本值",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为null值",
+
+"comment": "判断当前节点是否为null值",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+type": "property getter""data type": "逻辑型""method name": "取所有键名_",
+type": "property getter""data type": "逻辑型""result comment": "返回总数，错误返回-1",
+type": "property getter""data type": "逻辑型""data type": "整数",
+type": "property getter""data type": "逻辑型""parameters": [
+   {
+"parameter name": "待解析数据",
+"comment": "参数一与参数二只需要提供一个即可",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "待解析数据2",
+"comment": "UTF8字节集，参数一与参数二只需要提供一个即可",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键名组",
+"comment": "如果解析的数据只有数组部份，本参数将为空",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键值组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的类型组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+type": "property getter""data type": "逻辑型"]
+  }
+ }]
+ },
+ {
+
+"class name": "JSON解析对象类迭代器_yy",
+
+"comment": "遍历对象时建议使用迭代器,性能高\nyyjson采用的是单向链表储存数据,仅支持正向迭代",
+
+"@文档": "\"category = \\\"JSON操作库.yyjson.解析对象\\\"\"",
+
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"",
+
+"@视窗.外部头文件": "\"..\\\\json\\\\yyjson\\\\include\\\\yyjson_hs2.h\"",
+
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"",
+
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"",
+
+"methods": [
+  {
+"comment": "遍历对象时建议使用迭代器,性能高\nyyjson采用的是单向链表储存数据,仅支持正向迭代""method name": "初始化",
+"comment": "遍历对象时建议使用迭代器,性能高\nyyjson采用的是单向链表储存数据,仅支持正向迭代""comment": "初始化解析类节点",
+"comment": "遍历对象时建议使用迭代器,性能高\nyyjson采用的是单向链表储存数据,仅支持正向迭代""result comment": "成功返回真, 失败返回假",
+"comment": "遍历对象时建议使用迭代器,性能高\nyyjson采用的是单向链表储存数据,仅支持正向迭代""data type": "逻辑型",
+"comment": "遍历对象时建议使用迭代器,性能高\nyyjson采用的是单向链表储存数据,仅支持正向迭代""@禁止流程检查": "真",
+"comment": "遍历对象时建议使用迭代器,性能高\nyyjson采用的是单向链表储存数据,仅支持正向迭代""parameters": [
+   {
+"parameter name": "解析类节点",
+"data type": "JSON解析数组类_yy"
+   },
+   {
+"parameter name": "开始位置",
+"comment": "位置从0开始",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "上限次数",
+"comment": "允许迭代次数, 默认为迭代失败为止",
+"data type": "变整数",
+"@默认值": "-1"
+   }
+"comment": "遍历对象时建议使用迭代器,性能高\nyyjson采用的是单向链表储存数据,仅支持正向迭代"]
+  },
+  {
+次数, 默认为迭代失败为止"method name": "迭代键名节点",
+次数, 默认为迭代失败为止"comment": "迭代键值对",
+次数, 默认为迭代失败为止"result comment": "迭代成功返回真, 失败返回假",
+次数, 默认为迭代失败为止"data type": "逻辑型",
+次数, 默认为迭代失败为止"@禁止流程检查": "真",
+次数, 默认为迭代失败为止"parameters": [
+   {
+"parameter name": "结果键名",
+"comment": "结果将保存到传递的变量内",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果节点",
+"comment": "结果将保存到传递的变量内",
+"data type": "JSON解析数组类_yy"
+   }
+次数, 默认为迭代失败为止]
+  },
+  {
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"method name": "迭代键名",
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"comment": "迭代键",
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"result comment": "迭代成功返回真, 失败返回假",
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"data type": "逻辑型",
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"@禁止流程检查": "真",
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]"parameters": [
+   {
+"parameter name": "结果键名",
+"comment": "结果将保存到传递的变量内",
+"data type": "文本型"
+   }
+部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""type": "property getter""method name": "取节点"]]
+  },
+  {
+data type": "JSON解析数组类_yy""method name": "迭代节点",
+data type": "JSON解析数组类_yy""comment": "迭代值",
+data type": "JSON解析数组类_yy""result comment": "迭代成功返回真, 失败返回假",
+data type": "JSON解析数组类_yy""data type": "逻辑型",
+data type": "JSON解析数组类_yy""@禁止流程检查": "真",
+data type": "JSON解析数组类_yy""parameters": [
+   {
+"parameter name": "结果节点",
+"comment": "结果将保存到传递的变量内",
+"data type": "JSON解析数组类_yy"
+   }
+data type": "JSON解析数组类_yy"]
+  },
+  {
+}"method name": "取所有键名_",
+}"result comment": "返回总数，错误返回-1",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "待解析数据",
+"comment": "参数一与参数二只需要提供一个即可",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "待解析数据2",
+"comment": "UTF8字节集，参数一与参数二只需要提供一个即可",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键名组",
+"comment": "如果解析的数据只有数组部份，本参数将为空",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键值组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的类型组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+}]
+  }
+
+]
+ },
+ {
+ }"class name": "JSON解析数组类迭代器_yy",
+ }"comment": "遍历数组时建议使用迭代器,性能高\nyyjson采用的是单向链表储存数据,仅支持正向迭代",
+ }"@文档": "\"category = \\\"JSON操作库.yyjson.解析数组\\\"\"",
+ }"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"",
+ }"@视窗.外部头文件": "\"..\\\\json\\\\yyjson\\\\include\\\\yyjson_hs2.h\"",
+ }"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"",
+ }"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"",
+ }"methods": [
+  {
+解析数组类迭代器_yy"method name": "初始化",
+解析数组类迭代器_yy"data type": "逻辑型",
+解析数组类迭代器_yy"@禁止流程检查": "真",
+解析数组类迭代器_yy"parameters": [
+   {
+"parameter name": "解析类节点",
+"data type": "JSON解析数组类_yy"
+   },
+   {
+"parameter name": "开始位置",
+"comment": "位置从0开始, 超过最大长度则初始化失败",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "上限次数",
+"comment": "允许迭代次数, 默认为迭代失败为止",
+"data type": "变整数",
+"@默认值": "-1"
+   }
+解析数组类迭代器_yy]
+  },
+  {
+
+"method name": "迭代节点",
+
+"comment": "迭代下一个",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果节点",
+"data type": "JSON解析数组类_yy"
+   }
+
+]
+  },
+  {
+解析数组类迭代器_yy"method name": "取所有键名_",
+解析数组类迭代器_yy"result comment": "返回总数，错误返回-1",
+解析数组类迭代器_yy"data type": "整数",
+解析数组类迭代器_yy"parameters": [
+   {
+"parameter name": "待解析数据",
+"comment": "参数一与参数二只需要提供一个即可",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "待解析数据2",
+"comment": "UTF8字节集，参数一与参数二只需要提供一个即可",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键名组",
+"comment": "如果解析的数据只有数组部份，本参数将为空",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的键值组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的类型组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+解析数组类迭代器_yy]
+  }
+ }]
+ },
+ {
+"class name": "JSON构造对象类_yy",
+"comment": "构造类根节点",
+"base class": "JSON构造数组类_yy",
+"@文档": "\"category = \\\"JSON操作库.yyjson.构造对象\\\"\"",
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"",
+"@视窗.外部头文件": "\"..\\\\json\\\\yyjson\\\\include\\\\yyjson_hs2.h\"",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"",
+"@视窗.后缀文本": "\"public yy_mut_doc\"",
+"methods": [
+  {
+methods": [
+"method name": "清空",
+methods": [
+"comment": "清空数据"
+  },
+  {
+@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""method name": "初始化空对象",
+@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""comment": "构造json前先进行初始化配置，将json创建为空对象 {}",
+@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""result comment": "创建成功返回真, 失败返回假(旧数据将被清空).",
+@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""data type": "逻辑型",
+@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"""@嵌入式方法": "\"\""
+  },
+  {
+@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""method name": "初始化空数组",
+@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""comment": "构造json前先进行初始化配置，将json创建为空数组 []",
+@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""result comment": "创建成功返回真, 失败返回假(旧数据将被清空).",
+@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""data type": "逻辑型",
+@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "创建自文本",
+"comment": "从文本解析创建",
+"result comment": "创建成功返回真, 失败返回假(旧数据将被清空).",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "json",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+ethods": [
+"comment": "清空数据""method name": "创建自字节集",
+ethods": [
+"comment": "清空数据""comment": "从字节集(UTF8编码)解析创建",
+ethods": [
+"comment": "清空数据""result comment": "创建成功返回真, 失败返回假(旧数据将被清空).",
+ethods": [
+"comment": "清空数据""data type": "逻辑型",
+ethods": [
+"comment": "清空数据""@禁止流程检查": "真",
+ethods": [
+"comment": "清空数据""parameters": [
+   {
+"parameter name": "json",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+ethods": [
+"comment": "清空数据"]
+  },
+  {
+
+"method name": "创建自指针",
+
+"comment": "从指针(UTF8编码数据)解析创建",
+
+"result comment": "创建成功返回真, 失败返回假(旧数据将被清空).",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "json指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"data type": "变整数"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"parameters": [
+"method name": "创建自文件",
+
+"parameters": [
+"comment": "从uft8文件解析创建 (注意: yyjson是将文件一次性读入到内存后再进行解析创建.)",
+
+"parameters": [
+"result comment": "创建成功返回真, 失败返回假(旧数据将被清空).",
+
+"parameters": [
+"data type": "逻辑型",
+
+"parameters": [
+"@禁止流程检查": "真",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+"parameters": [
+]
+  },
+  {
+@默认值": "0""method name": "创建自解析类节点",
+@默认值": "0""comment": "从 JSON解析数组类_yy 拷贝数据创建, \n必须为容器节点(对象型/数组型),否则将创建失败",
+@默认值": "0""result comment": "创建成功返回真, 失败返回假(旧数据将被清空).",
+@默认值": "0""data type": "逻辑型",
+@默认值": "0""@嵌入式方法": "\"\"",
+@默认值": "0""parameters": [
+   {
+"parameter name": "解析类节点",
+"data type": "JSON解析数组类_yy"
+   }
+@默认值": "0"]
+  },
+  {
+"method name": "错误类型",
+"comment": "取 解析创建 时的错误代码",
+"result comment": "错误代码",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "错误描述",
+
+"comment": "取 解析创建 时的错误描述",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "错误位置",
+
+"comment": "取 解析创建 时的错误位置 (utf8编码下的位置)",
+
+"type": "property getter",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+@默认值": "0""method name": "是否已创建",
+@默认值": "0""comment": "判断是否已经创建",
+@默认值": "0""type": "property getter",
+@默认值": "0""data type": "逻辑型",
+@默认值": "0""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "置空值",
+}"comment": "禁止将根节点置为非容器值,直接返回假",
+}"data type": "逻辑型",
+}"@虚拟方法": "不可覆盖"
+  }
+]
+ },
+ {
+
+"class name": "JSON构造数组类_yy",
+
+"comment": "全类型构造类节点",
+
+"@文档": "\"category = \\\"JSON操作库.yyjson.构造数组\\\"\"",
+
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"",
+
+"@视窗.外部头文件": "\"..\\\\json\\\\yyjson\\\\include\\\\yyjson_hs2.h\"",
+
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"",
+
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"",
+
+"@视窗.后缀文本": "\"virtual public yy_mut_val\"",
+
+"methods": [
+  {
+
+"method name": "是否有效",
+
+"comment": "查询节点是否有效",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""method name": "取节点",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""comment": "根据键名取对象的子节点",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""data type": "JSON构造数组类_yy",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""@禁止流程检查": "真",
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""parameters": [
+   {
+"parameter name": "键名",
+"comment": "不支持路径,若要取路径节点[取路径节点]系列方法",
+"data type": "文本型"
+   }
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\""]
+  },
+  {
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""method name": "取成员节点",
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""comment": "根据索引取容器(对象型/数组型)成员节点",
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""data type": "JSON构造数组类_yy",
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""@禁止流程检查": "真",
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "变整数"
+   }
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\""]
+  },
+  {
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""method name": "取路径节点",
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""comment": "根据路径取节点(RFC 6901标准)",
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""data type": "JSON构造数组类_yy",
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""@禁止流程检查": "真",
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   }
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\""]
+  },
+  {
+data type": "整数""method name": "添加路径节点",
+data type": "整数""comment": "根据路径添加节点  \n特殊转义符: ~k表示指定为键名(比如: /~k0 节点不存在时创建键名为\"0\"的节点而非数组索引)  \n注意: 新添加的节点为null型   ",
+data type": "整数""data type": "JSON构造数组类_yy",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0] RFC 6901标准",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+comment": "不支持路径,若要取路径节点[取路径节点]系列方法""method name": "删除路径节点",
+comment": "不支持路径,若要取路径节点[取路径节点]系列方法""comment": "根据路径删除指定节点((RFC 6901标准))",
+comment": "不支持路径,若要取路径节点[取路径节点]系列方法""data type": "逻辑型",
+comment": "不支持路径,若要取路径节点[取路径节点]系列方法""@嵌入式方法": "\"\"",
+comment": "不支持路径,若要取路径节点[取路径节点]系列方法""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数组删除数量",
+"comment": "目标节点为数组成员时生效\n例子: [1,2,3,4,5,6] 执行 删除路径节点(\"/0\",3) 结果为 [4,5,6]",
+"data type": "变整数",
+"@默认值": "1"
+   }
+comment": "不支持路径,若要取路径节点[取路径节点]系列方法"]
+  },
+  {
+"method name": "交换路径节点",
+"comment": "交换路径节点",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "路径1",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0] RFC 6901标准",
+"data type": "文本型"
+   },
+   {
+"parameter name": "路径2",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0] RFC 6901标准",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "路径1""method name": "取路径整数值",
+ameter name": "路径1""comment": "根据路径取整数值,路径不存在则自动构造并设置为默认值.   \n注意: 如果节点无效,也将返回默认值",
+ameter name": "路径1""data type": "整数",
+ameter name": "路径1""@禁止流程检查": "真",
+ameter name": "路径1""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "配置不存在时返回的默认值",
+"data type": "整数",
+"@默认值": "0"
+   }
+ameter name": "路径1"]
+  },
+  {
+comment": "配置不存在时返回的默认值""method name": "取路径长整数值",
+comment": "配置不存在时返回的默认值""comment": "根据路径取长整数值,路径不存在则自动构造并设置为默认值.   \n注意: 如果节点无效,也将返回默认值",
+comment": "配置不存在时返回的默认值""data type": "长整数",
+comment": "配置不存在时返回的默认值""@禁止流程检查": "真",
+comment": "配置不存在时返回的默认值""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "配置不存在时返回的默认值",
+"data type": "长整数",
+"@默认值": "0"
+   }
+comment": "配置不存在时返回的默认值"]
+  },
+  {
+data type": "文本型""method name": "取路径逻辑值",
+data type": "文本型""comment": "根据路径取逻辑值,路径不存在则自动构造并设置为默认值.   \n注意: 如果节点无效,也将返回默认值",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "配置不存在时返回的默认值",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "取路径小数值",
+ }"comment": "根据路径取小数值,路径不存在则自动构造并设置为默认值.   \n注意: 如果节点无效,也将返回默认值",
+ }"data type": "小数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "配置不存在时返回的默认值",
+"data type": "小数",
+"@默认值": "0.0"
+   }
+ }]
+  },
+  {
+
+"method name": "取路径文本值",
+
+"comment": "根据路径取文本值,路径不存在则自动构造并设置为默认值.  \n注意: 如果节点无效,也将返回默认值",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "必须以\"/\"开头(如\"/name\"),支持多路径 \"/array/0\" 等于 arrat[0]",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "配置不存在时返回的默认值",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "取对象成员键名",
+
+"comment": "根据索引取对象节点的成员键名",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "添加对象节点",
+
+"comment": "说明: 新添加的节点为null型  \n使用例子: 添加对象节点(\"key\").文本值 = \"str\" 在当前节点下添加 \"key\":\"str\" 键值对",
+
+"result comment": "成功返回有效的节点, 失败返回无效的节点",
+
+"data type": "JSON构造数组类_yy",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "键名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "查找",
+"comment": "真 = 先查找节点是否存在,存在则返回其节点,不存在则添加新节点.  \n假 = 不查找键是否存在,直接添加新节点,(注意: 若节点已存在则会造成节点重复,优点是性能好)",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "删除对象节点",
+"parameters": [
+"comment": "注意: 删除的时候不会进行节点的内存释放,将在构造类被销毁时统一释放内存 (yyjson的缺点)",
+"parameters": [
+"result comment": "成功返回真, 失败返回假",
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"@嵌入式方法": "\"\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "键名",
+"data type": "文本型"
+   }
+"parameters": [
+]
+  },
+  {
+
+"method name": "交换对象节点",
+
+"comment": "根据键名交换对象下节点",
+
+"result comment": "成功返回真, 失败返回假",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "键名1",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名2",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"@禁止流程检查": "真""method name": "交换对象成员节点",
+"@禁止流程检查": "真""comment": "根据索引交换对象下节点",
+"@禁止流程检查": "真""result comment": "成功返回真, 失败返回假",
+"@禁止流程检查": "真""data type": "逻辑型",
+"@禁止流程检查": "真""@嵌入式方法": "\"\"",
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "索引1",
+"comment": "要交换的对象索引1,从0开始",
+"data type": "变整数"
+   },
+   {
+"parameter name": "索引2",
+"comment": "要交换的对象索引2,从0开始",
+"data type": "变整数"
+   }
+"@禁止流程检查": "真"]
+  },
+  {
+}"method name": "取数组节点",
+}"comment": "根据索引取成员节点",
+}"result comment": "成功返回有效的节点, 失败返回无效的节点",
+}"data type": "JSON构造数组类_yy",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+
+"method name": "添加数组节点",
+
+"comment": "在数组尾部加入一个节点",
+
+"result comment": "成功返回一个null值节点, 失败返回空节点",
+
+"data type": "JSON构造数组类_yy",
+
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "插入数组节点",
+"comment": "在数组指定位置插入一个节点",
+"result comment": "成功返回一个null值节点, 失败返回空节点",
+"data type": "JSON构造数组类_yy",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "插入的位置,从0开始. 如果位置超过 数组长度 + 1 则插入失败",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+data type": "变整数""method name": "删除数组节点",
+data type": "变整数""comment": "在数组指定位置删除节点",
+data type": "变整数""result comment": "成功返回真, 失败返回假",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "索引",
+"comment": "删除的位置,从0开始",
+"data type": "变整数"
+   },
+   {
+"parameter name": "删除数量",
+"comment": "从索引位置开始,需要删除的节点数量,如果超过数量则删除最大数量",
+"data type": "变整数",
+"@默认值": "1"
+   }
+data type": "变整数"]
+  },
+  {
+data type": "变整数""method name": "交换数组节点",
+data type": "变整数""comment": "根据索引交换数组成员节点",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "索引1",
+"comment": "要交换的数组索引1,从0开始",
+"data type": "变整数"
+   },
+   {
+"parameter name": "索引2",
+"comment": "要交换的数组索引2,从0开始",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+data type": "变整数""method name": "置空值",
+data type": "变整数""comment": "置当前节点为null值",
+data type": "变整数""result comment": "成功返回真, 失败返回假",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""@虚拟方法": "可覆盖"
+  },
+  {
+ }"method name": "置空对象",
+ }"comment": "将当前节点类型置为空对象",
+ }"result comment": "返回当前节点",
+ }"data type": "JSON构造数组类_yy",
+ }"@禁止流程检查": "真"
+  },
+  {
+}"@禁止流程检查": "真""method name": "置空数组",
+}"@禁止流程检查": "真""comment": "将当前节点类型置为空数组",
+}"@禁止流程检查": "真""result comment": "返回当前节点",
+}"@禁止流程检查": "真""data type": "JSON构造数组类_yy",
+}"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+ata type": "变整数""comment": "根据索引交换数组成员节点""method name": "置解析类_节点",
+ata type": "变整数""comment": "根据索引交换数组成员节点""comment": "将当前节点置为解析类容器节点数据",
+ata type": "变整数""comment": "根据索引交换数组成员节点""data type": "逻辑型",
+ata type": "变整数""comment": "根据索引交换数组成员节点""@嵌入式方法": "\"\"",
+ata type": "变整数""comment": "根据索引交换数组成员节点""parameters": [
+   {
+"parameter name": "解析类节点",
+"data type": "JSON解析数组类_yy"
+   }
+ata type": "变整数""comment": "根据索引交换数组成员节点"]
+  },
+  {
+"@禁止流程检查": "真""result comment": "返回当前节点""method name": "置JSON文本",
+"@禁止流程检查": "真""result comment": "返回当前节点""comment": "将当前节点置入JSON数据",
+"@禁止流程检查": "真""result comment": "返回当前节点""data type": "逻辑型",
+"@禁止流程检查": "真""result comment": "返回当前节点""@嵌入式方法": "\"\"",
+"@禁止流程检查": "真""result comment": "返回当前节点""parameters": [
+   {
+"parameter name": "json",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+"@禁止流程检查": "真""result comment": "返回当前节点"]
+  },
+  {
+ameter name": "索引""method name": "置JSON字节集",
+ameter name": "索引""comment": "将当前节点置入字节集(UTF8)JSON数据",
+ameter name": "索引""data type": "逻辑型",
+ameter name": "索引""@禁止流程检查": "真",
+ameter name": "索引""parameters": [
+   {
+"parameter name": "json",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "解析标志",
+"comment": "参考常量[解析标志_yy.]系列",
+"data type": "整数",
+"@默认值": "0"
+   }
+ameter name": "索引"]
+  },
+  {
+meter name": "索引""@禁止流程检查": "真""method name": "类型",
+meter name": "索引""@禁止流程检查": "真""comment": "取当前节点类型",
+meter name": "索引""@禁止流程检查": "真""type": "property getter",
+meter name": "索引""@禁止流程检查": "真""data type": "整数",
+meter name": "索引""@禁止流程检查": "真""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "子类型",
+
+"comment": "取当前节点子类型",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "类型名称",
+
+"comment": "取当前节点类型名称",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "解析标志""method name": "成员数",
+ameter name": "解析标志""comment": "取数组节点或对象节点的成员数量",
+ameter name": "解析标志""type": "property getter",
+ameter name": "解析标志""data type": "整数",
+ameter name": "解析标志""@嵌入式方法": "\"\""
+  },
+  {
+"@禁止流程检查": "真""data type": "JSON构造数组类_yy""method name": "整数值",
+"@禁止流程检查": "真""data type": "JSON构造数组类_yy""comment": "置当前节点为整数值,不能向根节点置入,否则根节点将丢失",
+"@禁止流程检查": "真""data type": "JSON构造数组类_yy""type": "property setter",
+"@禁止流程检查": "真""data type": "JSON构造数组类_yy""parameters": [
+   {
+"parameter name": "数值",
+"data type": "整数"
+   }
+"@禁止流程检查": "真""data type": "JSON构造数组类_yy"]
+  },
+  {
+meter name": "解析标志""data type": "整数""method name": "整数值",
+meter name": "解析标志""data type": "整数""comment": "取整数节点值",
+meter name": "解析标志""data type": "整数""result comment": "若节点为文本值时会自动转换",
+meter name": "解析标志""data type": "整数""type": "property getter",
+meter name": "解析标志""data type": "整数""data type": "整数",
+meter name": "解析标志""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+comment": "要交换的数组索引1,从0开始""method name": "长整数值",
+comment": "要交换的数组索引1,从0开始""comment": "置当前节点为长整数值,不能向根节点置入,否则根节点将丢失",
+comment": "要交换的数组索引1,从0开始""type": "property setter",
+comment": "要交换的数组索引1,从0开始""parameters": [
+   {
+"parameter name": "数值",
+"data type": "长整数"
+   }
+comment": "要交换的数组索引1,从0开始"]
+  },
+  {
+}"method name": "长整数值",
+}"comment": "取长整数节点值",
+}"result comment": "若节点为文本值时会自动转换",
+}"type": "property getter",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "小数值",
+}"comment": "置当前节点为小数值,不能向根节点置入,否则根节点将丢失",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "数值",
+"data type": "小数"
+   }
+}]
+  },
+  {
+meter name": "索引""comment": "将当前节点置入字节集(UTF8)JSON数据""method name": "小数值",
+meter name": "索引""comment": "将当前节点置入字节集(UTF8)JSON数据""comment": "取小数节点值",
+meter name": "索引""comment": "将当前节点置入字节集(UTF8)JSON数据""result comment": "若节点为文本值时会自动转换",
+meter name": "索引""comment": "将当前节点置入字节集(UTF8)JSON数据""type": "property getter",
+meter name": "索引""comment": "将当前节点置入字节集(UTF8)JSON数据""data type": "小数",
+meter name": "索引""comment": "将当前节点置入字节集(UTF8)JSON数据""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "逻辑值",
+}"comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""method name": "逻辑值",
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""comment": "取逻辑节点值",
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""type": "property getter",
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""data type": "逻辑型",
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "文本值",
+"comment": "置当前节点为文本值,不能向根节点置入,否则根节点将丢失",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""method name": "文本值",
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""comment": "取文本节点值",
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""type": "property getter",
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""data type": "文本型",
+meter name": "解析标志""comment": "取数组节点或对象节点的成员数量""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "字节集值",
+ }"comment": "置当前节点为字节集,不能向根节点置入,否则根节点将丢失",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "值",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+r name": "解析标志""comment": "取数组节点或对象节点的成员数量""method name": "文本值""method name": "字节集值",
+r name": "解析标志""comment": "取数组节点或对象节点的成员数量""method name": "文本值""comment": "取字节集节点值",
+r name": "解析标志""comment": "取数组节点或对象节点的成员数量""method name": "文本值""type": "property getter",
+r name": "解析标志""comment": "取数组节点或对象节点的成员数量""method name": "文本值""data type": "字节集类"
+  },
+  {
+}"method name": "文本值_UTF8",
+}"comment": "置当前节点为文本值(UTF8字节集),不能向根节点置入,否则根节点将丢失 (内部是以utf8编码储存,有utf8数据将节省转码时间)",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "值",
+"comment": "文本字节集，其它编码可能会导致异常",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+"comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""method name": "可读文本",
+"comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""comment": "将所有类型值转换为文本\n由于是通过转换的方式,大数数值有可能与原始json不同",
+"comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""type": "property getter",
+"comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""data type": "文本型",
+"comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""@禁止流程检查": "真"
+  },
+  {
+comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""type": "property getter""method name": "到可读文本",
+comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""type": "property getter""comment": "取容器JSON文本(对象型/数组型)",
+comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""type": "property getter""data type": "文本型",
+comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""type": "property getter""@嵌入式方法": "\"\"",
+comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""type": "property getter""parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   }
+comment": "置当前节点为逻辑值,不能向根节点置入,否则根节点将丢失""type": "property getter"]
+  },
+  {
+ }"method name": "到字节集",
+ }"comment": "取容器JSON_UTF8字节集(对象型/数组型)",
+ }"result comment": "UTF8编码",
+ }"data type": "字节集类",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "构造标志",
+"data type": "整数",
+"@默认值": "构造标志_yy.默认模式"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+ethod name": "到字节集""method name": "是否为容器",
+ethod name": "到字节集""comment": "判断节点是否为 对象型 或 数组型",
+ethod name": "到字节集""type": "property getter",
+ethod name": "到字节集""data type": "逻辑型",
+ethod name": "到字节集""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "是否为对象型",
+"comment": "判断节点是否为对象型",
+"type": "property getter",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "是否为数组型",
+ }"comment": "判断节点是否为数组型",
+ }"type": "property getter",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+comment": "指定在所转换到的结果文本字节集中是否包括结束零字符""method name": "是否为逻辑值",
+comment": "指定在所转换到的结果文本字节集中是否包括结束零字符""comment": "判断节点是否为逻辑值",
+comment": "指定在所转换到的结果文本字节集中是否包括结束零字符""type": "property getter",
+comment": "指定在所转换到的结果文本字节集中是否包括结束零字符""data type": "逻辑型",
+comment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\""
+  },
+  {
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""method name": "是否为数值",
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""comment": "判断节点是否为数值(整数 长整数 小数)",
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""type": "property getter",
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""data type": "逻辑型",
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否为整数值",
+}"comment": "判断节点是否为整数值",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""method name": "是否为长整数值",
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""comment": "判断节点是否为长整数值",
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""type": "property getter",
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""data type": "逻辑型",
+omment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否为小数值",
+}"comment": "判断节点是否为双精度小数值",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为文本值",
+
+"comment": "判断节点是否为文本值",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否为空值",
+}"comment": "判断节点是否为null值",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  }
+
+]
+ },
+ {
+"comment": "判断节点是否为文本值""class name": "JSON构造对象类迭代器_yy",
+"comment": "判断节点是否为文本值""comment": "遍历对象时建议使用迭代器,性能高   \nyyjson采用的是单向链表储存数据,仅支持正向迭代",
+"comment": "判断节点是否为文本值""@文档": "\"category = \\\"JSON操作库.yyjson.构造对象\\\"\"",
+"comment": "判断节点是否为文本值""@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"",
+"comment": "判断节点是否为文本值""@视窗.外部头文件": "\"..\\\\json\\\\yyjson\\\\include\\\\yyjson_hs2.h\"",
+"comment": "判断节点是否为文本值""@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"",
+"comment": "判断节点是否为文本值""@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"",
+"comment": "判断节点是否为文本值""methods": [
+  {
+comment": "判断节点是否为文本值""@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""method name": "初始化",
+comment": "判断节点是否为文本值""@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""comment": "初始化构造类节点",
+comment": "判断节点是否为文本值""@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""data type": "逻辑型",
+comment": "判断节点是否为文本值""@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""@禁止流程检查": "真",
+comment": "判断节点是否为文本值""@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"""parameters": [
+   {
+"parameter name": "构造类节点",
+"data type": "JSON构造数组类_yy"
+   },
+   {
+"parameter name": "开始位置",
+"comment": "位置从0开始, 超过最大长度则初始化失败",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "上限次数",
+"comment": "允许迭代次数, 默认为迭代失败为止",
+"data type": "变整数",
+"@默认值": "-1"
+   }
+comment": "判断节点是否为文本值""@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\""]
+  },
+  {
+"method name": "迭代键名节点",
+"comment": "迭代键值",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "结果键名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果节点",
+"data type": "JSON构造数组类_yy"
+   }
+]
+  },
+  {
+"method name": "迭代键名",
+"comment": "迭代键",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "结果键名",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "迭代节点",
+"comment": "迭代值",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "结果节点",
+"data type": "JSON构造数组类_yy"
+   }
+]
+  }
+"comment": "判断节点是否为文本值"]
+ },
+ {
+
+"class name": "JSON构造数组类迭代器_yy",
+
+"comment": "遍历数组时建议使用迭代器,性能高   \nyyjson采用的是单向链表储存数据,仅支持正向迭代",
+
+"@文档": "\"category = \\\"JSON操作库.yyjson.构造数组\\\"\"",
+
+"@视窗.头文件搜寻目录": "\"..\\\\json\\\\yyjson\\\\include\"",
+
+"@视窗.外部头文件": "\"..\\\\json\\\\yyjson\\\\include\\\\yyjson_hs2.h\"",
+
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_hs.cpp\"",
+
+"@视窗.外部源文件": "\"..\\\\json\\\\yyjson\\\\src\\\\yyjson_.c\"",
+
+"methods": [
+  {
+omment": "判断节点是否为文本值"]"method name": "初始化",
+omment": "判断节点是否为文本值"]"comment": "初始化构造类节点",
+omment": "判断节点是否为文本值"]"data type": "逻辑型",
+omment": "判断节点是否为文本值"]"@禁止流程检查": "真",
+omment": "判断节点是否为文本值"]"parameters": [
+   {
+"parameter name": "构造类节点",
+"data type": "JSON构造数组类_yy"
+   },
+   {
+"parameter name": "开始位置",
+"comment": "位置从0开始, 超过最大长度则初始化失败",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "上限次数",
+"comment": "允许迭代次数, 默认为迭代失败为止",
+"data type": "变整数",
+"@默认值": "-1"
+   }
+omment": "判断节点是否为文本值"]]
+  },
+  {
+"method name": "迭代节点",
+"comment": "迭代值",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "构造类节点",
+"data type": "JSON构造数组类_yy"
+   }
+]
+  }
+
+]
+ },
+ {
+hod name": "迭代节点""class name": "解析标志_yy",
+hod name": "迭代节点""comment": "多项标志可用 连续位或() 来叠加",
+hod name": "迭代节点""@文档": "\"category = \\\"JSON操作库.yyjson.附加类\\\"\"",
+hod name": "迭代节点""constants": [
+  {
+"comment": "遍历数组时建议使用迭代器,性能高   \nyyjson采用的是单向链表储存数据,仅支持正向迭代""constant name": "默认",
+"comment": "遍历数组时建议使用迭代器,性能高   \nyyjson采用的是单向链表储存数据,仅支持正向迭代""comment": "默认模式",
+"comment": "遍历数组时建议使用迭代器,性能高   \nyyjson采用的是单向链表储存数据,仅支持正向迭代""data type": "整数",
+"comment": "遍历数组时建议使用迭代器,性能高   \nyyjson采用的是单向链表储存数据,仅支持正向迭代""initial value": "@YYJSON_READ_NOFLAG"
+  },
+  {
+name": "迭代节点""class name": "解析标志_yy""constant name": "原位解析",
+name": "迭代节点""class name": "解析标志_yy""comment": "原位解析,会破坏源变量内容,可以提高解析速度.",
+name": "迭代节点""class name": "解析标志_yy""data type": "整数",
+name": "迭代节点""class name": "解析标志_yy""initial value": "@YYJSON_READ_INSITU"
+  },
+  {
+": "迭代节点""class name": "解析标志_yy""constant name": "原位解析""constant name": "完成时停止",
+": "迭代节点""class name": "解析标志_yy""constant name": "原位解析""comment": "解析完成直接返回,JSON后面还有内容则不报错.如: \"{\"name\":\"yyjson\"}{\"age\":1}\"",
+": "迭代节点""class name": "解析标志_yy""constant name": "原位解析""data type": "整数",
+": "迭代节点""class name": "解析标志_yy""constant name": "原位解析""initial value": "@YYJSON_READ_STOP_WHEN_DONE"
+  },
+  {
+
+"constant name": "允许尾随逗号",
+
+"comment": "允许在对象或数组的末尾使用单个尾随逗号. 如: [1,2,] 或 {\"name\":\"yyjson\",}",
+
+"data type": "整数",
+
+"initial value": "@YYJSON_READ_ALLOW_TRAILING_COMMAS"
+  },
+  {
+mment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""comment": "判断节点是否为长整数值""constant name": "允许注释",
+mment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""comment": "判断节点是否为长整数值""comment": "允许C样式的单行和多行注释. 如: \"//注释\" \"/*注释*/\"",
+mment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""comment": "判断节点是否为长整数值""data type": "整数",
+mment": "指定在所转换到的结果文本字节集中是否包括结束零字符""@嵌入式方法": "\"\"""comment": "判断节点是否为长整数值""initial value": "@YYJSON_READ_ALLOW_COMMENTS"
+  },
+  {
+comment": "迭代键值""constant name": "允许nan_inf",
+comment": "迭代键值""comment": "允许nan/inf数字或文字，如1e999、nan、inf、无穷大.",
+comment": "迭代键值""data type": "整数",
+comment": "迭代键值""initial value": "@YYJSON_READ_ALLOW_INF_AND_NAN"
+  }
+hod name": "迭代节点"]
+ },
+ {
+
+"class name": "解析错误_yy",
+
+"comment": "解析时错误类型",
+
+"@文档": "\"category = \\\"JSON操作库.yyjson.附加类\\\"\"",
+
+"constants": [
+  {
+ass name": "解析错误_yy""constant name": "成功",
+ass name": "解析错误_yy""data type": "整数",
+ass name": "解析错误_yy""initial value": "@YYJSON_READ_SUCCESS"
+  },
+  {
+
+"constant name": "无效参数",
+
+"data type": "整数",
+
+"initial value": "@YYJSON_READ_ERROR_INVALID_PARAMETER"
+  },
+  {
+comment": "迭代键值""constant name": "分配内存失败",
+comment": "迭代键值""data type": "整数",
+comment": "迭代键值""initial value": "@YYJSON_READ_ERROR_MEMORY_ALLOCATION"
+  },
+  {
+ent": "迭代键值""constant name": "分配内存失败""constant name": "内容为空",
+ent": "迭代键值""constant name": "分配内存失败""data type": "整数",
+ent": "迭代键值""constant name": "分配内存失败""initial value": "@YYJSON_READ_ERROR_EMPTY_CONTENT"
+  },
+  {
+ass name": "解析错误_yy""constant name": "意外内容",
+ass name": "解析错误_yy""comment": "已解析完成，但是后面还有内容",
+ass name": "解析错误_yy""data type": "整数",
+ass name": "解析错误_yy""initial value": "@YYJSON_READ_ERROR_UNEXPECTED_CONTENT"
+  },
+  {
+hod name": "迭代节点""constant name": "意外结束",
+hod name": "迭代节点""comment": "未解析完成就碰到文本 结束符",
+hod name": "迭代节点""data type": "整数",
+hod name": "迭代节点""initial value": "@YYJSON_READ_ERROR_UNEXPECTED_END"
+  },
+  {
+}"constant name": "非法字符",
+}"data type": "整数",
+}"initial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER"
+  },
+  {
+}"constant name": "逗号结尾",
+}"comment": "数组或对象以逗号结尾",
+}"data type": "整数",
+}"initial value": "@YYJSON_READ_ERROR_JSON_STRUCTURE"
+  },
+  {
+"initial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""constant name": "无效注释",
+"initial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""comment": "含有注释内容 或 注释内容异常",
+"initial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""data type": "整数",
+"initial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""initial value": "@YYJSON_READ_ERROR_INVALID_COMMENT"
+  },
+  {
+"data type": "整数""constant name": "无效数值",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@YYJSON_READ_ERROR_INVALID_NUMBER"
+  },
+  {
+data type": "整数""initial value": "@YYJSON_READ_ERROR_INVALID_NUMBER""constant name": "无效文本",
+data type": "整数""initial value": "@YYJSON_READ_ERROR_INVALID_NUMBER""data type": "整数",
+data type": "整数""initial value": "@YYJSON_READ_ERROR_INVALID_NUMBER""initial value": "@YYJSON_READ_ERROR_INVALID_STRING"
+  },
+  {
+
+"constant name": "无效指数",
+
+"data type": "整数",
+
+"initial value": "@YYJSON_READ_ERROR_LITERAL"
+  },
+  {
+
+"constant name": "打开文件失败",
+
+"data type": "整数",
+
+"initial value": "@YYJSON_READ_ERROR_FILE_OPEN"
+  },
+  {
+
+"constant name": "读取文件错误",
+
+"data type": "整数",
+
+"initial value": "@YYJSON_READ_ERROR_FILE_READ"
+  }
+
+]
+ },
+ {
+}"class name": "构造标志_yy",
+}"comment": "多项标志可用 连续位或() 来叠加",
+}"@文档": "\"category = \\\"JSON操作库.yyjson.附加类\\\"\"",
+}"constants": [
+  {
+tial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""constant name": "无效注释""constant name": "默认模式",
+tial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""constant name": "无效注释""comment": "默认模式",
+tial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""constant name": "无效注释""data type": "整数",
+tial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""constant name": "无效注释""initial value": "@YYJSON_WRITE_NOFLAG"
+  },
+  {
+ial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""constant name": "无效注释""comment": "默认模式""constant name": "格式化JSON",
+ial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""constant name": "无效注释""comment": "默认模式""comment": "格式化JSON",
+ial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""constant name": "无效注释""comment": "默认模式""data type": "整数",
+ial value": "@YYJSON_READ_ERROR_UNEXPECTED_CHARACTER""constant name": "无效注释""comment": "默认模式""initial value": "@YYJSON_WRITE_PRETTY"
+  },
+  {
+"initial value": "@YYJSON_READ_ERROR_LITERAL""constant name": "转义UNICODE",
+"initial value": "@YYJSON_READ_ERROR_LITERAL""comment": "将unicode转义为“\\uxxx”，使输出仅为ASCII。",
+"initial value": "@YYJSON_READ_ERROR_LITERAL""data type": "整数",
+"initial value": "@YYJSON_READ_ERROR_LITERAL""initial value": "@YYJSON_WRITE_ESCAPE_UNICODE"
+  },
+  {
+}"constant name": "转义正斜杠",
+}"comment": "转义“/”为“\\/”",
+}"data type": "整数",
+}"initial value": "@YYJSON_WRITE_ESCAPE_SLASHES"
+  },
+  {
+}"constant name": "输出nan_inf",
+}"comment": "将inf和nan数字输出为“inf”和“nan”文字 (非标准JSON)",
+}"data type": "整数",
+}"initial value": "@YYJSON_WRITE_ALLOW_INF_AND_NAN"
+  },
+  {
+}"constant name": "输出nan_inf_为null",
+}"comment": "将inf和nan数字输出为 null (非标准JSON)",
+}"data type": "整数",
+}"initial value": "@YYJSON_WRITE_INF_AND_NAN_AS_NULL"
+  }
+}]
+ },
+ {
+SON_READ_SUCCESS"class name": "构造错误_yy",
+SON_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)",
+SON_READ_SUCCESS"@文档": "\"category = \\\"JSON操作库.yyjson.附加类\\\"\"",
+SON_READ_SUCCESS"constants": [
+  {
+内容 或 注释内容异常"constant name": "成功",
+内容 或 注释内容异常"data type": "整数",
+内容 或 注释内容异常"initial value": "@YYJSON_WRITE_SUCCESS"
+  },
+  {
+}"constant name": "无效参数",
+}"data type": "整数",
+}"initial value": "@YYJSON_WRITE_ERROR_INVALID_PARAMETER"
+  },
+  {
+
+"constant name": "分配内存失败",
+
+"data type": "整数",
+
+"initial value": "@YYJSON_WRITE_ERROR_MEMORY_ALLOCATION"
+  },
+  {
+}"constant name": "值类型无效",
+}"data type": "整数",
+}"initial value": "@YYJSON_WRITE_ERROR_INVALID_VALUE_TYPE"
+  },
+  {
+nstant name": "分配内存失败""constant name": "数值异常",
+nstant name": "分配内存失败""data type": "整数",
+nstant name": "分配内存失败""initial value": "@YYJSON_WRITE_ERROR_NAN_OR_INF"
+  },
+  {
+"initial value": "@YYJSON_WRITE_ERROR_MEMORY_ALLOCATION""constant name": "打开文件失败",
+"initial value": "@YYJSON_WRITE_ERROR_MEMORY_ALLOCATION""data type": "整数",
+"initial value": "@YYJSON_WRITE_ERROR_MEMORY_ALLOCATION""initial value": "@YYJSON_WRITE_ERROR_FILE_OPEN"
+  },
+  {
+
+"constant name": "关闭文件失败",
+
+"data type": "整数",
+
+"initial value": "@YYJSON_READ_ERROR_FILE_READ"
+  }
+SON_READ_SUCCESS]
+ },
+ {
+onstant name": "关闭文件失败""class name": "类型_yy",
+onstant name": "关闭文件失败""comment": "节点的数据类型",
+onstant name": "关闭文件失败""@文档": "\"category = \\\"JSON操作库.yyjson.附加类\\\"\"",
+onstant name": "关闭文件失败""constants": [
+  {
+ON_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""constant name": "无",
+ON_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""comment": "0",
+ON_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""data type": "字节",
+ON_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE"
+  },
+  {
+SON_TYPE_NONE"constant name": "NULL值",
+SON_TYPE_NONE"comment": "2",
+SON_TYPE_NONE"data type": "字节",
+SON_TYPE_NONE"initial value": "@YYJSON_TYPE_NULL"
+  },
+  {
+
+"constant name": "逻辑值",
+
+"comment": "3",
+
+"data type": "字节",
+
+"initial value": "@YYJSON_TYPE_BOOL"
+  },
+  {
+}"constant name": "数值",
+}"comment": "4",
+}"data type": "字节",
+}"initial value": "@YYJSON_TYPE_NUM"
+  },
+  {
+N_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""constant name": "文本值",
+N_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""comment": "5",
+N_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""data type": "字节",
+N_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""initial value": "@YYJSON_TYPE_STR"
+  },
+  {
+}"constant name": "数组型",
+}"comment": "6",
+}"data type": "字节",
+}"initial value": "@YYJSON_TYPE_ARR"
+  },
+  {
+_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""comment": "5""constant name": "对象型",
+_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""comment": "5""comment": "7",
+_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""comment": "5""data type": "字节",
+_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""comment": "5""initial value": "@YYJSON_TYPE_OBJ"
+  }
+onstant name": "关闭文件失败"]
+ },
+ {
+onstant name": "关闭文件失败""class name": "子类型_yy",
+onstant name": "关闭文件失败""comment": "当节点类型为 [类型_yy.数值] 或  [类型_yy.逻辑值] 时详细的类型",
+onstant name": "关闭文件失败""@文档": "\"category = \\\"JSON操作库.yyjson.附加类\\\"\"",
+onstant name": "关闭文件失败""constants": [
+  {
+nstant name": "关闭文件失败""constants": [
+"constant name": "无",
+nstant name": "关闭文件失败""constants": [
+"comment": "0",
+nstant name": "关闭文件失败""constants": [
+"data type": "字节",
+nstant name": "关闭文件失败""constants": [
+"initial value": "@YYJSON_SUBTYPE_NONE"
+  },
+  {
+_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""initial value": "@YYJSON_TYPE_STR""constant name": "false",
+_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""initial value": "@YYJSON_TYPE_STR""comment": "0",
+_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""initial value": "@YYJSON_TYPE_STR""data type": "字节",
+_READ_SUCCESS"comment": "构造时错误类型 (暂时未封装相应功能)""initial value": "@YYJSON_TYPE_NONE""initial value": "@YYJSON_TYPE_STR""initial value": "@YYJSON_SUBTYPE_FALSE"
+  },
+  {
+ON_TYPE_NONE"initial value": "@YYJSON_TYPE_NULL""constant name": "true",
+ON_TYPE_NONE"initial value": "@YYJSON_TYPE_NULL""comment": "8",
+ON_TYPE_NONE"initial value": "@YYJSON_TYPE_NULL""data type": "字节",
+ON_TYPE_NONE"initial value": "@YYJSON_TYPE_NULL""initial value": "@YYJSON_SUBTYPE_TRUE"
+  },
+  {
+stant name": "关闭文件失败"]"constant name": "无符长整型",
+stant name": "关闭文件失败"]"comment": "0",
+stant name": "关闭文件失败"]"data type": "字节",
+stant name": "关闭文件失败"]"initial value": "@YYJSON_SUBTYPE_UINT"
+  },
+  {
+"data type": "字节""constant name": "长整型",
+"data type": "字节""comment": "8",
+"data type": "字节""data type": "字节",
+"data type": "字节""initial value": "@YYJSON_SUBTYPE_SINT"
+  },
+  {
+data type": "字节""initial value": "@YYJSON_SUBTYPE_SINT""constant name": "双精度小数",
+data type": "字节""initial value": "@YYJSON_SUBTYPE_SINT""comment": "16",
+data type": "字节""initial value": "@YYJSON_SUBTYPE_SINT""data type": "字节",
+data type": "字节""initial value": "@YYJSON_SUBTYPE_SINT""initial value": "@YYJSON_SUBTYPE_REAL"
+  }
+onstant name": "关闭文件失败"]
+ },
+ {
+
+"class name": "JSON类_TX",
+
+"comment": "Tencent json;\n本库改自于“到底是为了什么”",
+
+"@文档": "\"category = \\\"JSON操作库.Tencent\\\"\"",
+
+"@视窗.外部头文件": "\"..\\\\json\\\\document.h\\r\\n..\\\\json\\\\writer.h\\r\\n..\\\\json\\\\stringbuffer.h\\r\\n..\\\\json\\\\pointer.h\"",
+
+"methods": [
+  {
+"methods": [
+"method name": "创建自文本",
+"methods": [
+"comment": "解析成功返回真 否则假",
+"methods": [
+"data type": "逻辑型",
+"methods": [
+"@禁止流程检查": "真",
+"methods": [
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+"methods": [
+]
+  },
+  {
+SON_SUBTYPE_NONE"method name": "取文本值",
+SON_SUBTYPE_NONE"comment": "支持路径取值  语法参考备注  如果类型不对将报错  ;\n例如：{\"姓名\":\"张三\"}  取：json.取文本值 (\"/姓名\");\n例如：{\"名称\":{\"姓名\":\"张三\"}}  取：json.取文本值 (\"/名称/姓名\")",
+SON_SUBTYPE_NONE"data type": "文本型",
+SON_SUBTYPE_NONE"@禁止流程检查": "真",
+SON_SUBTYPE_NONE"parameters": [
+   {
+"parameter name": "路径",
+"comment": "①/id ②/id/qid ③/id/0/cid ④/id/c1/c11 ⑤/id/a/0/w ⑥/id/0/s/len ⑦/id/0/s/0/d  ⑧/id/wid/1",
+"data type": "文本型"
+   }
+SON_SUBTYPE_NONE]
+  },
+  {
+hods": [
+"method name": "创建自文本""method name": "取整数值",
+hods": [
+"method name": "创建自文本""comment": "支持路径取值  语法参考备注  如果类型不对将报错 ;\n例如：{\"年龄\":18}  取：json.取整数值 (\"/年龄\");\n例如：{\"数值\":{\"年龄\":18}}  取：json.取整数值 (\"/数值/年龄\")",
+hods": [
+"method name": "创建自文本""data type": "整数",
+hods": [
+"method name": "创建自文本""@禁止流程检查": "真",
+hods": [
+"method name": "创建自文本""parameters": [
+   {
+"parameter name": "路径",
+"comment": "①/id ②/id/qid ③/id/0/cid ④/id/c1/c11 ⑤/id/a/0/w ⑥/id/0/s/len ⑦/id/0/s/0/d  ⑧/id/wid/1     ",
+"data type": "文本型"
+   }
+hods": [
+"method name": "创建自文本"]
+  },
+  {
+ON_SUBTYPE_NONE"parameters": [
+"method name": "取长整数值",
+ON_SUBTYPE_NONE"parameters": [
+"comment": "支持路径取值  语法参考备注  如果类型不对将报错 ;\n例如：{\"年龄\":18}  取：json.取整数值 (\"/年龄\");\n例如：{\"数值\":{\"年龄\":18}}  取：json.取整数值 (\"/数值/年龄\")",
+ON_SUBTYPE_NONE"parameters": [
+"data type": "长整数",
+ON_SUBTYPE_NONE"parameters": [
+"@禁止流程检查": "真",
+ON_SUBTYPE_NONE"parameters": [
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "①/id ②/id/qid ③/id/0/cid ④/id/c1/c11 ⑤/id/a/0/w ⑥/id/0/s/len ⑦/id/0/s/0/d  ⑧/id/wid/1     ",
+"data type": "文本型"
+   }
+ON_SUBTYPE_NONE"parameters": [
+]
+  },
+  {
+SON_SUBTYPE_NONE"method name": "取小数值",
+SON_SUBTYPE_NONE"comment": "支持路径取值  语法参考备注  如果类型不对将报错 ;\n例如：{\"金额\":1.8}  取：json.取小数值 (\"/金额\");\n例如：{\"数值\":{\"金额\":1.8}}  取：json.取小数值 (\"/数值/金额\")",
+SON_SUBTYPE_NONE"data type": "小数",
+SON_SUBTYPE_NONE"@禁止流程检查": "真",
+SON_SUBTYPE_NONE"parameters": [
+   {
+"parameter name": "路径",
+"comment": "①/id ②/id/qid ③/id/0/cid ④/id/c1/c11 ⑤/id/a/0/w ⑥/id/0/s/len ⑦/id/0/s/0/d  ⑧/id/wid/1     ",
+"data type": "文本型"
+   }
+SON_SUBTYPE_NONE]
+  },
+  {
+
+"method name": "取单精度小数值",
+
+"comment": "支持路径取值  语法参考备注  如果类型不对将报错 虽然是取 float 但火山没有此类型 返回时自动转为double ",
+
+"data type": "小数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "①/id ②/id/qid ③/id/0/cid ④/id/c1/c11 ⑤/id/a/0/w ⑥/id/0/s/len ⑦/id/0/s/0/d  ⑧/id/wid/1     ",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "取逻辑值",
+"comment": "支持路径取值  语法参考备注  如果类型不对将报错 ;\n例如：{\"确定\":true}  取：json.取逻辑值 (\"/确定\");\n例如：{\"结果\":{\"确定\":true}}  取：json.取逻辑值 (\"/结果/确定\")",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "①/id ②/id/qid ③/id/0/cid ④/id/c1/c11 ⑤/id/a/0/w ⑥/id/0/s/len ⑦/id/0/s/0/d  ⑧/id/wid/1     ",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "到可读文本",
+"comment": "取 ：后面的内容  可以调试输出解析的内容 或 查看修改后的内容    ",
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "留空为取出所有json数据 ①/id ②/id/qid ③/id/0/cid ④/id/c1/c11 ⑤/id/a/0/w ⑥/id/0/s/len ⑦/id/0/s/0/d  ⑧/id/wid/1     ",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+
+"method name": "取类型",
+
+"comment": "0 null  1false 2true 3object 4array 5string 6number",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取数组成员数",
+
+"comment": "    如果不是数组 或者路径不对 将出错",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"comment": "留空为取根目录所有文本 ①/id ②/id/qid ③/id/0/cid ④/id/c1/c11 ⑤/id/a/0/w ⑥/id/0/s/len ⑦/id/0/s/0/d  ⑧/id/wid/1     ",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+}"method name": "成员是否存在",
+}"comment": "[注意：必须精确到\"成员名\"]  无法判断 数组成员的下标成员  必须精确到 某个具体数组型成员的下标成员中的成员名\n例：\"name\";[{\"id\":\"1\",\"pid\":\"2\"},{...},...]为数组  无法判断name的成员0  只能判断\"id\"  /name/0/id  ",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "路径",
+"comment": " 例如 /id     /name/0/qid 【0是name数组成员0】\n①/id ②/id/qid ③/id/0/cid ④/id/c1/c11 ⑤/id/a/0/w ⑥/id/0/s/len ⑦/id/0/s/0/d  ⑧/id/wid/1  ",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+data type": "文本型""method name": "成员是否为文本",
+data type": "文本型""comment": "成员是否为文本型",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "成员是否为整数",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "成员是否为长整数",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "成员是否为无符号整数",
+ }"comment": " ",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+]"method name": "成员是否为无符号长整数",
+]"comment": "成员是否为文本型",
+]"data type": "逻辑型",
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+data type": "文本型""method name": "成员是否为小数",
+data type": "文本型""comment": "Double",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+@禁止流程检查": "真""method name": "成员是否为单精度小数",
+@禁止流程检查": "真""comment": "Float",
+@禁止流程检查": "真""data type": "逻辑型",
+@禁止流程检查": "真""@禁止流程检查": "真",
+@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+@禁止流程检查": "真"]
+  },
+  {
+"parameters": [
+"method name": "成员是否为逻辑型",
+"parameters": [
+"comment": "IsBool",
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"@禁止流程检查": "真",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+"parameters": [
+]
+  },
+  {
+data type": "文本型""method name": "成员是否为真",
+data type": "文本型""comment": "True ",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "成员是否为假",
+
+"comment": " False",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+禁止流程检查": "真""parameters": [
+"method name": "成员是否为空",
+禁止流程检查": "真""parameters": [
+"comment": "IsNull",
+禁止流程检查": "真""parameters": [
+"data type": "逻辑型",
+禁止流程检查": "真""parameters": [
+"@禁止流程检查": "真",
+禁止流程检查": "真""parameters": [
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+禁止流程检查": "真""parameters": [
+]
+  },
+  {
+parameters": [
+"parameters": [
+"method name": "成员是否为数组",
+parameters": [
+"parameters": [
+"comment": "IsArray",
+parameters": [
+"parameters": [
+"data type": "逻辑型",
+parameters": [
+"parameters": [
+"@禁止流程检查": "真",
+parameters": [
+"parameters": [
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+parameters": [
+"parameters": [
+]
+  },
+  {
+arameters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字",
+arameters": [
+"parameters": [
+"parameters": [
+"comment": " ",
+arameters": [
+"parameters": [
+"parameters": [
+"data type": "逻辑型",
+arameters": [
+"parameters": [
+"parameters": [
+"@禁止流程检查": "真",
+arameters": [
+"parameters": [
+"parameters": [
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+arameters": [
+"parameters": [
+"parameters": [
+]
+  },
+  {
+eters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""method name": "成员是否为Object",
+eters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""comment": " Object",
+eters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""data type": "逻辑型",
+eters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""@禁止流程检查": "真",
+eters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+eters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字"]
+  },
+  {
+ters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""data type": "逻辑型""method name": "成员是否可无损转换为小数",
+ters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""data type": "逻辑型""comment": " 检查数字是否可以无损地转换为双精度数字 ",
+ters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""data type": "逻辑型""data type": "逻辑型",
+ters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""data type": "逻辑型""@禁止流程检查": "真",
+ters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""data type": "逻辑型""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+ters": [
+"parameters": [
+"parameters": [
+"method name": "成员是否为数字""data type": "逻辑型"]
+  },
+  {
+ }"method name": "成员是否可无损转换为单精度小数",
+ }"comment": " 检查数字是否可以无损地转换为浮点数。  ",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "删除所有成员"
+  },
+  {
+}"comment": " 检查数字是否可以无损地转换为浮点数。  ""method name": "删除成员",
+}"comment": " 检查数字是否可以无损地转换为浮点数。  ""comment": "删除成员   支持删除 根路径成员   数组类型的成员  数组类型成员的下标成员 ;\n例如：{\"姓名\":\"张三\",\"年龄\":18}  删除：json.删除成员 (\"/姓名\") ;\n例如：{\"名称\":{\"姓名\":\"张三\"},\"名称2\":{\"年龄\":18}}  删除：json.删除成员 (\"/名称2\") \n/pid/wid     /pid/wid/0    /name/1/required ",
+}"comment": " 检查数字是否可以无损地转换为浮点数。  ""data type": "逻辑型",
+}"comment": " 检查数字是否可以无损地转换为浮点数。  ""@禁止流程检查": "真",
+}"comment": " 检查数字是否可以无损地转换为浮点数。  ""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+}"comment": " 检查数字是否可以无损地转换为浮点数。  "]
+  },
+  {
+ameter name": "路径""method name": "置入文本值",
+ameter name": "路径""comment": "添加成员  也可以修改值  支持路径  根据所提供路径也可以插入数组 ;\n例如：json.置入文本值 (\"/姓名\", \"张三\")  得到：{\"姓名\":\"张三\"};\n例如：json.置入文本值 (\"/名称/姓名\", \"张三\")  得到：{\"名称\":{\"姓名\":\"张三\"}} ",
+ameter name": "路径""@禁止流程检查": "真",
+ameter name": "路径""parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+ameter name": "路径"]
+  },
+  {
+ }"method name": "置入整数值",
+ }"comment": "添加成员 也可以修改值  支持路径  根据所提供路径也可以插入数组 ;\n例如：json.置入整数值 (\"/年龄\", 18)  得到：{\"年龄\":18};\n例如：json.置入整数值 (\"/数值/年龄\", 18)  得到：{\"数值\":{\"年龄\":18}}",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "置入长整数值",
+ }"comment": "添加成员 也可以修改值  支持路径  根据所提供路径也可以插入数组 ;\n例如：json.置入整数值 (\"/年龄\", 18)  得到：{\"年龄\":18};\n例如：json.置入整数值 (\"/数值/年龄\", 18)  得到：{\"数值\":{\"年龄\":18}}",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+
+"method name": "置入小数值",
+
+"comment": "添加成员 也可以修改值  支持路径  根据所提供路径也可以插入数组 ;\n例如：json.置入整数值 (\"/金额\", 1.8)  得到：{\"金额\":1.8};\n例如：json.置入整数值 (\"/数值/金额\", 1.8)  得到：{\"数值\":{\"金额\":1.8}}",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+"method name": "置入逻辑值",
+"comment": "添加成员 也可以修改值  支持路径  根据所提供路径也可以插入数组 ;\n例如：json.置入逻辑值 (\"/确定\", 真)  得到：{\"确定\":true};\n例如：json.置入逻辑值 (\"/结果/确定\", 真)  得到：{\"结果\":{\"确定\":true}}",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+hod name": "置入逻辑值""method name": "置入对象值",
+hod name": "置入逻辑值""comment": "添加Object成员      目前只能嵌套 尚未实现2个json合并拼接",
+hod name": "置入逻辑值""@禁止流程检查": "真",
+hod name": "置入逻辑值""parameters": [
+   {
+"parameter name": "路径",
+"comment": "不允许\"\"  目前尚未实现2个json合并",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Object",
+"data type": "JSON类_TX"
+   }
+hod name": "置入逻辑值"]
+  },
+  {
+data type": "逻辑型""method name": "取路径所有键名",
+data type": "逻辑型""comment": "取指定路径下所有 成员 名",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "路径",
+"comment": "\"\"为根目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名数组",
+"data type": "文本数组类"
+   }
+data type": "逻辑型"]
+  }
+
+]
+ }
+ "例如：json.置入整数值 (\"/数值/金额\", 1.8)  得到：{\"数值\":{\"金额\":1.8}}" 折叠 折叠2 @禁止流程检查 = 真]
+}

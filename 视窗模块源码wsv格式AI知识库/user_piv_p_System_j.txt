@@ -1,0 +1,4279 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+n<CVolMem> buffer;"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+n<CVolMem> buffer;"package name": "火山.PIV基础类",
+n<CVolMem> buffer;"comment": "https://github.com/SaierMe/piv",
+n<CVolMem> buffer;"classes": [
+ {
+当前对象>.GetViewSize()"class name": "系统辅助类",
+当前对象>.GetViewSize()"comment": "一些未分类的全局辅助方法",
+当前对象>.GetViewSize()"@文档": "\"category = \\\"系统操作\\\"\"",
+当前对象>.GetViewSize()"@别名": "\"//\"",
+当前对象>.GetViewSize()"@别名类型": "本地类",
+当前对象>.GetViewSize()"@类用途": "访问静态成员",
+当前对象>.GetViewSize()"@全局类": "真",
+当前对象>.GetViewSize()"methods": [
+  {
+  if (!@<返回版本格式文本>.IsNullObject())"method name": "取执行文件路径",
+  if (!@<返回版本格式文本>.IsNullObject())"comment": "返回当前被执行程序文件的完整路径(带文件名).",
+  if (!@<返回版本格式文本>.IsNullObject())"static": true,
+  if (!@<返回版本格式文本>.IsNullObject())"data type": "文本型",
+  if (!@<返回版本格式文本>.IsNullObject())"@禁止流程检查": "真"
+  },
+  {
+NT_P)@<当前对象>.GetPtr(@<读写位置>)"method name": "禁止重复运行",
+NT_P)@<当前对象>.GetPtr(@<读写位置>)"comment": "禁止当前程序多开运行",
+NT_P)@<当前对象>.GetPtr(@<读写位置>)"static": true,
+NT_P)@<当前对象>.GetPtr(@<读写位置>)"parameters": [
+   {
+"parameter name": "标识文本",
+"comment": "请用英文字母标记,尽量输复杂一点的文本",
+"data type": "文本型"
+   }
+NT_P)@<当前对象>.GetPtr(@<读写位置>)]
+  },
+  {
+ }"method name": "取最后错误信息",
+ }"comment": "获取最后一次错误的代码和描述信息.",
+ }"result comment": "成功返回错误信息,失败返回空文本.",
+ }"static": true,
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "错误信息格式",
+"comment": "%u为错误代码,%s为错误信息,这两个格式替代符 的前后顺序不能改动.",
+"data type": "文本型",
+"@默认值": "\"最后错误(%u): %s\""
+   }
+ }]
+  },
+  {
+ if (!@<返回版本格式文本>.IsNullObject())"static": true"method name": "取指定错误信息",
+ if (!@<返回版本格式文本>.IsNullObject())"static": true"comment": "获取指定错误的代码的描述信息.",
+ if (!@<返回版本格式文本>.IsNullObject())"static": true"result comment": "成功返回错误信息,失败返回空文本.",
+ if (!@<返回版本格式文本>.IsNullObject())"static": true"static": true,
+ if (!@<返回版本格式文本>.IsNullObject())"static": true"data type": "文本型",
+ if (!@<返回版本格式文本>.IsNullObject())"static": true"@禁止流程检查": "真",
+ if (!@<返回版本格式文本>.IsNullObject())"static": true"parameters": [
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误信息格式",
+"comment": "%u为错误代码,%s为错误信息,这两个格式替代符 的前后顺序不能改动.",
+"data type": "文本型",
+"@默认值": "\"错误(%u): %s\""
+   }
+ if (!@<返回版本格式文本>.IsNullObject())"static": true]
+  },
+  {
+ }"method name": "取机器码_VMP",
+ }"comment": "VMProtect的辅助函数,可以将HWID中各硬件的机器码解析出来,返回不包含网卡特征的另一种机器码格式.",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "HWID",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "写文本数组注册项",
+data type": "文本型""comment": "在Windows注册表中保存或建立指定的文本数组(REG_MULTI_SZ)注册表项",
+data type": "文本型""result comment": "返回是否成功",
+data type": "文本型""static": true,
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "根目录",
+"data type": "注册表根目录类型"
+   },
+   {
+"parameter name": "全路径注册项名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲写入值",
+"data type": "文本数组类"
+   }
+data type": "文本型"]
+  },
+  {
+}"data type": "文本型""method name": "写文本数组注册项2",
+}"data type": "文本型""comment": "在Windows注册表中保存或建立指定的文本数组(REG_MULTI_SZ)注册表项",
+}"data type": "文本型""result comment": "返回是否成功",
+}"data type": "文本型""static": true,
+}"data type": "文本型""data type": "逻辑型",
+}"data type": "文本型""@禁止流程检查": "真",
+}"data type": "文本型""parameters": [
+   {
+"parameter name": "根目录",
+"data type": "注册表根目录类型"
+   },
+   {
+"parameter name": "表项路径",
+"comment": "提供表项所处的注册表路径文本,路径分隔符为'\\\\'字符.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "表项名称",
+"comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲写入值",
+"data type": "文本数组类"
+   }
+}"data type": "文本型"]
+  },
+  {
+
+"method name": "取文本数组注册项",
+
+"comment": "在Windows注册表中返回指定的文本数组(REG_MULTI_SZ)注册表项值",
+
+"static": true,
+
+"data type": "文本数组类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "根目录",
+"data type": "注册表根目录类型"
+   },
+   {
+"parameter name": "全路径注册项名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "取文本数组注册项2",
+"comment": "在Windows注册表中返回指定的文本数组(REG_MULTI_SZ)注册表项值",
+"static": true,
+"data type": "文本数组类",
+"parameters": [
+   {
+"parameter name": "根目录",
+"data type": "注册表根目录类型"
+   },
+   {
+"parameter name": "表项路径",
+"comment": "提供表项所处的注册表路径文本,路径分隔符为'\\\\'字符.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "表项名称",
+"comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"data type": "文本型""method name": "全局处理事件",
+}"data type": "文本型""comment": "暂时转让控制权,以便让Windows操作系统有机会处理其它的如用户键盘或鼠标输入等事件.\n直到操作系统处理并发送完程序消息队列中的所有事件后,本方法才会返回.",
+}"data type": "文本型""static": true
+  },
+  {
+ }"method name": "添加拖放消息过滤",
+ }"comment": "*官方的\"允许拖放\"已经支持该功能,已经没用处了.\n在UIPI\"用户界面特权隔离\"消息过滤器中增加拖放消息.\n\"以管理员身份运行\"时必须调用本方法,否则将收不到拖放消息.\n本方法用来配合官方窗口类的拖放文件.",
+ }"static": true,
+ }"@编译条件": "\"PIV_ENABLE_OBSOLETE\""
+  },
+  {
+"method name": "移除拖放消息过滤",
+"comment": "*官方的\"允许拖放\"已经支持该功能,已经没用处了.\n从UIPI\"用户界面特权隔离\"消息过滤器中移除拖放消息.\n调用本方法后,\"以管理员身份运行\"时将收不到拖放消息.\n本方法用来配合官方窗口类的拖放文件.",
+"static": true,
+"@编译条件": "\"PIV_ENABLE_OBSOLETE\""
+  },
+  {
+data type": "文本数组类""method name": "添加拖放消息过滤2",
+data type": "文本数组类""comment": "*官方的\"允许拖放\"已经支持该功能,已经没用处了.\n跟\"添加拖放消息过滤\"不同是本方法可以只对某个窗口组件起作用.",
+data type": "文本数组类""static": true,
+data type": "文本数组类""@编译条件": "\"PIV_ENABLE_OBSOLETE\"",
+data type": "文本数组类""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+data type": "文本数组类"]
+  },
+  {
+}"data type": "文本型""method name": "移除拖放消息过滤2",
+}"data type": "文本型""comment": "*官方的\"允许拖放\"已经支持该功能,已经没用处了.\n跟\"移除拖放消息过滤\"不同是本方法可以只对某个窗口组件起作用.",
+}"data type": "文本型""static": true,
+}"data type": "文本型""@编译条件": "\"PIV_ENABLE_OBSOLETE\"",
+}"data type": "文本型""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+}"data type": "文本型"]
+  }
+当前对象>.GetViewSize()]
+ },
+ {
+"class name": "剪贴板类",
+"comment": "封装了一些剪贴板的功能",
+"@文档": "\"category = \\\"系统操作\\\"\"",
+"@别名": "\"//\"",
+"@别名类型": "本地类",
+"@类用途": "访问静态成员",
+"methods": [
+  {
+}"data type": "文本型""method name": "复制文件到剪贴板",
+}"data type": "文本型""comment": "将文件复制到剪贴板,之后可以在文件资源管理器等地方粘贴来复制文件.",
+}"data type": "文本型""result comment": "返回是否成功",
+}"data type": "文本型""static": true,
+}"data type": "文本型""data type": "逻辑型",
+}"data type": "文本型""parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   }
+}"data type": "文本型"]
+  },
+  {
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""method name": "剪切文件到剪贴板",
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""comment": "将文件剪切到剪贴板,之后可以在文件资源管理器等地方粘贴来移动文件.",
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""result comment": "返回是否成功",
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""static": true,
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""data type": "逻辑型",
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   }
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本."]
+  },
+  {
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""method name": "复制多个文件到剪贴板",
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""comment": "将多个文件复制到剪贴板,之后可以在文件资源管理器等地方粘贴来复制文件.",
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""result comment": "返回是否成功",
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""static": true,
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""data type": "逻辑型",
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本.""parameters": [
+   {
+"parameter name": "文件列表",
+"data type": "文本数组类"
+   }
+comment": "提供表项的具体名称,如欲读取注册项默认值,请提供空文本."]
+  },
+  {
+"data type": "文本型""data type": "逻辑型""method name": "剪切多个文件到剪贴板",
+"data type": "文本型""data type": "逻辑型""comment": "将多个文件剪切到剪贴板,之后可以在文件资源管理器等地方粘贴来移动文件.",
+"data type": "文本型""data type": "逻辑型""result comment": "返回是否成功",
+"data type": "文本型""data type": "逻辑型""static": true,
+"data type": "文本型""data type": "逻辑型""data type": "逻辑型",
+"data type": "文本型""data type": "逻辑型""parameters": [
+   {
+"parameter name": "文件列表",
+"data type": "文本数组类"
+   }
+"data type": "文本型""data type": "逻辑型"]
+  },
+  {
+ }"method name": "取剪贴板文件",
+ }"comment": "获取剪贴板中保存的文件,同时判断是复制文件还是剪切文件.",
+ }"result comment": "0表示获取失败,1表示复制文件,2表示剪切文件.",
+ }"static": true,
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "文件列表",
+"comment": "从剪贴板获取的文件列表",
+"data type": "文本数组类",
+"@输出名": "\"aFileList\""
+   }
+ }]
+  },
+  {
+}"comment": "获取剪贴板中保存的文件,同时判断是复制文件还是剪切文件.""method name": "粘贴文件自剪贴板",
+}"comment": "获取剪贴板中保存的文件,同时判断是复制文件还是剪切文件.""comment": "将剪贴板中的文件粘贴到指定的位置,自动识别是复制文件还是剪切文件.",
+}"comment": "获取剪贴板中保存的文件,同时判断是复制文件还是剪切文件.""result comment": "返回是否成功",
+}"comment": "获取剪贴板中保存的文件,同时判断是复制文件还是剪切文件.""static": true,
+}"comment": "获取剪贴板中保存的文件,同时判断是复制文件还是剪切文件.""data type": "逻辑型",
+}"comment": "获取剪贴板中保存的文件,同时判断是复制文件还是剪切文件.""parameters": [
+   {
+"parameter name": "目标位置",
+"comment": "粘贴文件的目标位置,请以\\\\结尾",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否覆盖",
+"comment": "默认覆盖目标位置的同名文件: 如果不覆盖,自动将粘贴的文件改名.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}"comment": "获取剪贴板中保存的文件,同时判断是复制文件还是剪切文件."]
+  },
+  {
+@默认值": "真""method name": "置剪贴板图像",
+@默认值": "真""comment": "将位图对象类置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.",
+@默认值": "真""result comment": "返回是否成功",
+@默认值": "真""static": true,
+@默认值": "真""data type": "逻辑型",
+@默认值": "真""@禁止流程检查": "真",
+@默认值": "真""parameters": [
+   {
+"parameter name": "位图",
+"data type": "位图对象类"
+   }
+@默认值": "真"]
+  },
+  {
+
+"method name": "置剪贴板图像文件",
+
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.",
+
+"result comment": "返回是否成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "图片文件",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取剪贴板图像",
+
+"comment": "获取剪贴板中的位图数据\n之后可以用\"CxImage图像处理支持\"转换图像格式\n图像处理类.创建自位图对象 (位图对象)\n图像处理类.保存到文件 (保存路径, 图像格式类型.PNG格式)",
+
+"result comment": "返回是否成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "位图",
+"comment": "获取的位图对象",
+"data type": "位图对象类"
+   }
+
+]
+  },
+  {
+
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""method name": "取剪贴板图像到文件",
+
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""comment": "获取剪贴板中的位图数据,并保存为位图文件",
+
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功",
+
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""static": true,
+
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""data type": "逻辑型",
+
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""@禁止流程检查": "真",
+
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""parameters": [
+   {
+"parameter name": "位图文件",
+"comment": "保存的目标文件名(包含完整路径),文件后缀为 .bmp",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否覆盖",
+"comment": "默认覆盖目标位置的同名文件: 如果不覆盖,自动将粘贴的文件改名",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop."]
+  }
+]
+ },
+ {
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功""class name": "通用文件对话框",
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功""comment": "调用系统的文件对话框选择文件",
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功""@文档": "\"category = \\\"文件操作\\\"\"",
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功""@别名": "\"//\"",
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功""@别名类型": "本地类",
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功""@类用途": "访问静态成员",
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功""methods": [
+  {
+"method name": "打开文件",
+"comment": "调用系统的文件对话框选择打开文件.",
+"result comment": "返回是否成功,成功时在\"文件名\"参数中返回全路径文件名.\n如失败或取消打开文件,则\"文件名\"参数返回空文本.",
+"static": true,
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "用作初始化对话框中的文件名编辑框内容,以及返回用户所选择的全路径文件名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "过滤器",
+"comment": "要选择的文件后缀,过滤器文本由单个或多个成对的文本串组成.\n每对文本串的第一个提供显示文本,如:\"文本文件(*.txt)\",\n第二个指定实际的过滤匹配符,如: \"*.txt\".\n所有各文本串之间用\"|\"号隔开.\n例如 \"MP4文件(*.mp4;*.m4a)|*.mp4;*.m4a|所有文件(*.*)|*.*\"\n留空则不显示过滤器,可以选择所有类型的文件.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "父窗口句柄",
+"comment": "父窗口的句柄,0表示无父窗口.\n打开选择对话框时将阻止对父窗口的操作.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "标题",
+"comment": "文件对话框的标题,默认为\"打开\"",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "初始过滤器",
+"comment": "指定初始过滤器在\"过滤器\"属性中的索引位置(从1开始).\n0为不指定初始过滤器,以第一个过滤器为初始项.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "初始目录",
+"comment": "指定打开对话框时自动跳转到的目录",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "默认文件后缀",
+"comment": "当用户没有输入文件的后缀名称时,自动使用这里的文件后缀名称.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "创建时提示",
+"comment": "如果输入的文件不存在,提示是否创建文件",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "禁止解析快捷方式",
+"comment": "选择快捷方式时默认解析为它指向的目标文件,设置为真时返回快捷方式文件本身.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不改变目录",
+"comment": "是否在对话框关闭后,将\"当前目录\"还原为打开对话框之前的目录.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+"method name": "打开选择多个文件",
+"comment": "调用系统的文件对话框选择打开文件,允许多选.",
+"result comment": "成功返回文件名的数量,失败或未选择文件返回0.",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "文件名列表",
+"comment": "成功在此返回文件名数组.不建议打开超过1000个文件,否则可能会因为缓冲区不足而失败.",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "过滤器",
+"comment": "要选择的文件后缀,过滤器文本由单个或多个成对的文本串组成.\n每对文本串的第一个提供显示文本,如:\"文本文件(*.txt)\",\n第二个指定实际的过滤匹配符,如: \"*.txt\".\n所有各文本串之间用\"|\"号隔开.\n例如 \"MP4文件(*.mp4;*.m4a)|*.mp4;*.m4a|所有文件(*.*)|*.*\"\n留空则不显示过滤器,可以选择所有类型的文件.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "父窗口句柄",
+"comment": "父窗口的句柄,0表示无父窗口.\n打开选择对话框时将阻止对父窗口的操作.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "标题",
+"comment": "文件对话框的标题,默认为\"打开\"",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "初始过滤器",
+"comment": "指定初始过滤器在\"过滤器\"属性中的索引位置(从1开始).\n0为不指定初始过滤器,以第一个过滤器为初始项.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "初始目录",
+"comment": "指定打开对话框时自动跳转到的目录",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "不改变目录",
+"comment": "是否在对话框关闭后,将\"当前目录\"还原为打开对话框之前的目录.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+data type": "整数""method name": "保存文件",
+data type": "整数""comment": "调用系统的文件对话框选择保存文件.",
+data type": "整数""result comment": "  返回是否成功,成功时在\"文件名\"参数中返回全路径文件名.\n  如失败或取消打开文件,则\"文件名\"参数返回空文本.",
+data type": "整数""static": true,
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "用作初始化对话框中的文件名编辑框内容,以及返回用户所选择的全路径文件名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "过滤器",
+"comment": "要选择的文件后缀,过滤器文本由单个或多个成对的文本串组成.\n每对文本串的第一个提供显示文本,如:\"文本文件(*.txt)\",\n第二个指定实际的过滤匹配符,如: \"*.txt\".\n所有各文本串之间用\"|\"号隔开.\n例如 \"MP4文件(*.mp4;*.m4a)|*.mp4;*.m4a|所有文件(*.*)|*.*\"\n留空则不显示过滤器,可以选择所有类型的文件.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "父窗口句柄",
+"comment": "父窗口的句柄,0表示无父窗口.\n打开选择对话框时将阻止对父窗口的操作.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "标题",
+"comment": "文件对话框的标题,默认为\"保存\"",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "初始过滤器",
+"comment": "指定初始过滤器在\"过滤器\"属性中的索引位置(从1开始).\n0为不指定初始过滤器,以第一个过滤器为初始项.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "初始目录",
+"comment": "指定打开对话框时自动跳转到的目录",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "默认文件后缀",
+"comment": "当用户没有输入文件的后缀名称时,自动使用这里的文件后缀名称.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "文件覆盖提示",
+"comment": "如果选择的文件已经存在,提示是否覆盖",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "不改变目录",
+"comment": "是否在对话框关闭后,将\"当前目录\"还原为打开对话框之前的目录.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "整数"]
+  },
+  {
+data type": "整数""method name": "选择文件夹",
+data type": "整数""comment": "调用系统的文件对话框选择文件夹,并返回路径.\n注: 本方法最低系统要求为Windows Vista\n",
+data type": "整数""result comment": "成功返回选中的文件夹路径,取消或失败返回空文本.",
+data type": "整数""static": true,
+data type": "整数""data type": "文本型",
+data type": "整数""@视窗.外部头文件": "\"shobjidl_core.h\"",
+data type": "整数""@视窗.预定义宏": "\"_WIN32_WINNT=0x0600\"",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "父窗口句柄",
+"comment": "父窗口的句柄,0表示无父窗口.\n打开选择对话框时将阻止对父窗口的操作.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "标题",
+"comment": "文件对话框的标题,默认为\"选择文件夹\"",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "按钮标题",
+"comment": "打开的标题,默认为\"选择文件夹\"",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+data type": "整数"]
+  }
+"comment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功"]
+ },
+ {
+}"class name": "文件拖放类",
+}"comment": "给窗口组件启用文件拖放功能",
+}"@文档": "\"category = \\\"文件操作\\\"\"",
+}"methods": [
+  {
+omment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功"]"method name": "文件被拖放",
+omment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功"]"comment": "拖放操作的回调事件",
+omment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功"]"type": "event",
+omment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功"]"data type": "整数",
+omment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功"]"parameters": [
+   {
+"parameter name": "所拖放文件",
+"comment": "拖放操作接收到的文件",
+"data type": "文本数组类"
+   }
+omment": "从图片文件读入位图数,然后置入到剪贴板中,之后可以粘贴到其他支持位图的软件,比如QQ、Photoshop.""result comment": "返回是否成功"]]
+  },
+  {
+data type": "文本型""method name": "是否启用",
+data type": "文本型""comment": "返回当前是否启用了文件拖放",
+data type": "文本型""type": "property getter",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "启用拖放",
+
+"comment": "启用文件拖放,并选择需要绑定的窗口组件",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "绑定组件",
+"comment": "所欲绑定到拖放的窗口组件句柄(可使用\"取窗口句柄\"获取)",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+@默认值": "空对象""method name": "禁用拖放",
+@默认值": "空对象""comment": "停止拖放功能"
+  }
+}]
+ },
+ {
+ata type": "整数""result comment": "成功返回选中的文件夹路径,取消或失败返回空文本.""class name": "字体枚举类",
+ata type": "整数""result comment": "成功返回选中的文件夹路径,取消或失败返回空文本.""comment": "枚举系统字体",
+ata type": "整数""result comment": "成功返回选中的文件夹路径,取消或失败返回空文本.""@文档": "\"category = \\\"系统操作\\\"\"",
+ata type": "整数""result comment": "成功返回选中的文件夹路径,取消或失败返回空文本.""methods": [
+  {
+"method name": "取系统字体列表",
+"comment": "枚举系统中的字体到文本数组类中",
+"result comment": "成功返回字体数量",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "字体列表",
+"comment": "返回的字体列表",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "字符集",
+"comment": "指定返回哪个字符集的字体,默认为系统当前的区域设置.",
+"data type": "字体字符集类",
+"@默认值": "字体字符集类.默认"
+   },
+   {
+"parameter name": "检索字体",
+"comment": "为空返回所有字体, 否则只返回指定名称的字体(文本超长将被忽略),可用于判断指定的字体是否存在.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "窗口句柄",
+"comment": "可空",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"method name": "枚举系统字体",
+"comment": "枚举系统中的字体,然后在\"字体回调\"事件中处理找到的字体.",
+"parameters": [
+   {
+"parameter name": "字符集",
+"comment": "指定返回哪个字符集的字体,默认为系统当前的区域设置.",
+"data type": "字体字符集类",
+"@默认值": "字体字符集类.默认"
+   },
+   {
+"parameter name": "检索字体",
+"comment": "为空返回所有字体, 否则只返回指定名称的字体(文本超长将被忽略).",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "窗口句柄",
+"comment": "可空",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+中的字体到文本数组类中"method name": "字体回调",
+中的字体到文本数组类中"comment": "执行\"枚举系统字体\"后,本事件会收到枚举的字体,每次事件返回一个字体",
+中的字体到文本数组类中"result comment": "返回0继续枚举下一个字体,返回任意的非0整数将停止枚举.",
+中的字体到文本数组类中"type": "event",
+中的字体到文本数组类中"data type": "整数",
+中的字体到文本数组类中"parameters": [
+   {
+"parameter name": "字体名称",
+"comment": "找到的字体名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体类型",
+"comment": " 找到的字体类型,这是一个组合值.\n 可以通过\"是否设备字体\"、\"是否栅格字体\"、\"是否TrueType字体\"等方法判断.",
+"data type": "整数"
+   }
+中的字体到文本数组类中]
+  },
+  {
+ameter name": "检索字体""method name": "是否设备字体",
+ameter name": "检索字体""comment": "检查字体的类型是否为设备字体(DEVICE_FONTTYPE)",
+ameter name": "检索字体""result comment": "返回是否为设备字体",
+ameter name": "检索字体""data type": "逻辑型",
+ameter name": "检索字体""@嵌入式方法": "\"\"",
+ameter name": "检索字体""parameters": [
+   {
+"parameter name": "字体类型",
+"comment": "为\"字体回调\"事件中的\"字体类型\"参数.",
+"data type": "整数"
+   }
+ameter name": "检索字体"]
+  },
+  {
+ata type": "文本型""data type": "逻辑型""method name": "是否栅格字体",
+ata type": "文本型""data type": "逻辑型""comment": "检查字体的类型是否为栅格字体(RASTER_FONTTYPE)",
+ata type": "文本型""data type": "逻辑型""result comment": "返回是否为栅格字体",
+ata type": "文本型""data type": "逻辑型""data type": "逻辑型",
+ata type": "文本型""data type": "逻辑型""@嵌入式方法": "\"\"",
+ata type": "文本型""data type": "逻辑型""parameters": [
+   {
+"parameter name": "字体类型",
+"comment": "为\"字体回调\"事件中的\"字体类型\"参数.",
+"data type": "整数"
+   }
+ata type": "文本型""data type": "逻辑型"]
+  },
+  {
+"method name": "是否TrueType字体",
+"comment": "检查字体的类型是否为TrueType字体(TRUETYPE_FONTTYPE)",
+"result comment": "返回是否为TrueType字体",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "字体类型",
+"comment": "为\"字体回调\"事件中的\"字体类型\"参数.",
+"data type": "整数"
+   }
+]
+  }
+ata type": "整数""result comment": "成功返回选中的文件夹路径,取消或失败返回空文本."]
+ },
+ {
+"class name": "字体字符集类",
+"comment": "\"字体枚举类\"的辅助类",
+"@文档": "\"category = \\\"系统操作.辅助类\\\"\"",
+"@常量类": "短整数",
+"constants": [
+  {
+字体到文本数组类中]"constant name": "ANSI",
+字体到文本数组类中]"initial value": "@ANSI_CHARSET"
+  },
+  {
+
+"constant name": "波罗的语族",
+
+"initial value": "@BALTIC_CHARSET"
+  },
+  {
+字体到文本数组类中]"constant name": "繁体中文BIG5码",
+字体到文本数组类中]"initial value": "@CHINESEBIG5_CHARSET"
+  },
+  {
+ }"constant name": "默认",
+ }"comment": "默认字符集基于当前系统的区域设置. 例如系统区域设置为\"简体中文(中国)\"时,它被设置为GB2312字符集.",
+ }"initial value": "@DEFAULT_CHARSET"
+  },
+  {
+体到文本数组类中]"initial value": "@ANSI_CHARSET""constant name": "东欧",
+体到文本数组类中]"initial value": "@ANSI_CHARSET""initial value": "@EASTEUROPE_CHARSET"
+  },
+  {
+data type": "逻辑型""constant name": "简体中文GB2312",
+data type": "逻辑型""initial value": "@GB2312_CHARSET"
+  },
+  {
+
+"constant name": "希腊文",
+
+"initial value": "@GREEK_CHARSET"
+  },
+  {
+nstant name": "希腊文""constant name": "韩文",
+nstant name": "希腊文""initial value": "@HANGUL_CHARSET"
+  },
+  {
+
+"constant name": "MAC",
+
+"initial value": "@MAC_CHARSET"
+  },
+  {
+nstant name": "MAC""constant name": "OEM",
+nstant name": "MAC""comment": "指定与操作系统相关的字符集.",
+nstant name": "MAC""initial value": "@OEM_CHARSET"
+  },
+  {
+
+"constant name": "俄语",
+
+"initial value": "@RUSSIAN_CHARSET"
+  },
+  {
+体到文本数组类中]"initial value": "@CHINESEBIG5_CHARSET""constant name": "日文SHIFTJIS",
+体到文本数组类中]"initial value": "@CHINESEBIG5_CHARSET""initial value": "@SHIFTJIS_CHARSET"
+  },
+  {
+FTJIS_CHARSET"constant name": "符号",
+FTJIS_CHARSET"initial value": "@SYMBOL_CHARSET"
+  },
+  {
+ }"constant name": "土耳其语",
+ }"initial value": "@TURKISH_CHARSET"
+  },
+  {
+}"initial value": "@TURKISH_CHARSET""constant name": "越南语",
+}"initial value": "@TURKISH_CHARSET""initial value": "@VIETNAMESE_CHARSET"
+  },
+  {
+itial value": "@TURKISH_CHARSET""constant name": "越南语""constant name": "JOHAB",
+itial value": "@TURKISH_CHARSET""constant name": "越南语""comment": "韩国版Windows系统",
+itial value": "@TURKISH_CHARSET""constant name": "越南语""initial value": "@JOHAB_CHARSET"
+  },
+  {
+
+"constant name": "阿拉伯文",
+
+"comment": "中东版Windows系统",
+
+"initial value": "@ARABIC_CHARSET"
+  },
+  {
+}"constant name": "希伯来文",
+}"comment": "中东版Windows系统",
+}"initial value": "@HEBREW_CHARSET"
+  },
+  {
+"comment": "中东版Windows系统""constant name": "泰文",
+"comment": "中东版Windows系统""comment": "泰国版Windows系统",
+"comment": "中东版Windows系统""initial value": "@THAI_CHARSET"
+  }
+]
+ },
+ {
+
+"class name": "管道命令行类",
+
+"comment": "启动一个命令行提示符进程,通过匿名管道让当前进程和命令行之间交互传递输出输入信息.",
+
+"@文档": "\"category = \\\"系统操作\\\"\"",
+
+"methods": [
+  {
+"method name": "是否已启动",
+"comment": "返回当前是否已启动命令行控制台",
+"type": "property getter",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+ass name": "管道命令行类""method name": "是否空闲",
+ass name": "管道命令行类""comment": "返回当前是否处于空闲状态,返回假表示正在执行命令.\n  注意: 本方法通过检查最后输出的字符是否为'>'来判断命令是否执行完毕,\n如果命令在执行的过程中输出了'>'字符,将可能无法获取正确的结果.",
+ass name": "管道命令行类""type": "property getter",
+ass name": "管道命令行类""data type": "逻辑型",
+ass name": "管道命令行类""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "收到输出信息",
+
+"comment": "启动命令行提示符或执行命令后,在此返回命令的输出信息.",
+
+"result comment": "此返回值无意义",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "输出信息",
+"comment": "  命令行提示符打印在屏幕上的文本,请根据命令行的编码\n使用\"多字节到文本\"或\"UTF8到文本\"等命令转换到文本型.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+ss name": "管道命令行类""data type": "逻辑型""method name": "启动命令行",
+ss name": "管道命令行类""data type": "逻辑型""comment": "启动命令行提示符进程,并建立匿名管道.\n类初始化时会自动启动,除非你执行过\"关闭命令行\",否则不需要手动调用本方法.",
+ss name": "管道命令行类""data type": "逻辑型""data type": "逻辑型",
+ss name": "管道命令行类""data type": "逻辑型""@禁止流程检查": "真",
+ss name": "管道命令行类""data type": "逻辑型""parameters": [
+   {
+"parameter name": "刷新时间",
+"comment": "读取屏幕信息的间隔",
+"data type": "整数",
+"@默认值": "200"
+   }
+ss name": "管道命令行类""data type": "逻辑型"]
+  },
+  {
+s name": "管道命令行类""data type": "逻辑型""@禁止流程检查": "真""method name": "执行命令",
+s name": "管道命令行类""data type": "逻辑型""@禁止流程检查": "真""comment": "在命令行提示符中执行一条命令,如果当前有正在运行的命令,执行会失败.",
+s name": "管道命令行类""data type": "逻辑型""@禁止流程检查": "真""data type": "逻辑型",
+s name": "管道命令行类""data type": "逻辑型""@禁止流程检查": "真""@禁止流程检查": "真",
+s name": "管道命令行类""data type": "逻辑型""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "执行命令",
+"comment": "提供你要执行的命令,后面不需要添加回车符.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为UTF8",
+"comment": "是否以UTF-8编码要执行的命令,否则为ANSI本地多字节编码",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+s name": "管道命令行类""data type": "逻辑型""@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "终止命令",
+
+"comment": "在命令行提示符中发出CTRL+C信号,终止正在执行的命令."
+  },
+  {
+ameter name": "刷新时间""method name": "关闭命令行",
+ameter name": "刷新时间""comment": "关闭命令行提示符",
+ameter name": "刷新时间""@禁止流程检查": "真"
+  }
+
+]
+ },
+ {
+}"class name": "磁盘管理类",
+}"comment": "需要管理员权限",
+}"@文档": "\"category = \\\"文件操作\\\"\"",
+}"@别名": "\"//\"",
+}"@别名类型": "本地类",
+}"@类用途": "访问静态成员",
+}"methods": [
+  {
+"@别名类型": "本地类""method name": "删除卷装载点",
+"@别名类型": "本地类""comment": "删除驱动器号或装载的文件夹.",
+"@别名类型": "本地类""result comment": "返回是否成功.",
+"@别名类型": "本地类""static": true,
+"@别名类型": "本地类""data type": "逻辑型",
+"@别名类型": "本地类""@嵌入式方法": "\"\"",
+"@别名类型": "本地类""parameters": [
+   {
+"parameter name": "卷装载路径",
+"comment": " 所欲删除的驱动器号或装载的文件夹.\n 需要以反斜杠结尾,例如\"X:\\\"或\"Y:\\\\MountX\\\".",
+"data type": "文本型"
+   }
+"@别名类型": "本地类"]
+  },
+  {
+data type": "文本型""method name": "置卷装载点",
+data type": "文本型""comment": "将卷与另一卷上的驱动器号或目录相关联.",
+data type": "文本型""result comment": "返回是否成功.",
+data type": "文本型""static": true,
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "卷装载路径",
+"comment": " 所欲与卷关联的用户模式路径.\n 这可以是驱动器号(例如\"X:\")或另一卷上的目录(例如\"Y:\\MountX\").\n 文本必须以反斜杠\"\\\"结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "卷GUID",
+"comment": " 卷的GUID路径(可用\"取卷装载点路径\"获取).\n 字符串格式必须为\"\\\\?\\Volume{GUID}\\\",其中GUID是卷的标识GUID,\n \"\\\\?\\\"用于关闭路径解析,在路径中会被忽略.",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ameter name": "卷装载路径""method name": "取卷装载点路径",
+ameter name": "卷装载路径""comment": "获取与指定卷装载点(驱动器号、卷GUID路径或装载的文件夹)关联的卷GUID路径.",
+ameter name": "卷装载路径""result comment": "返回是否成功,成功将在\"卷GUID\"中返回结果.",
+ameter name": "卷装载路径""static": true,
+ameter name": "卷装载路径""data type": "逻辑型",
+ameter name": "卷装载路径""@禁止流程检查": "真",
+ameter name": "卷装载路径""parameters": [
+   {
+"parameter name": "卷装载路径",
+"comment": " 所欲取卷GUID路径的已装载文件夹的路径(例如\"Y:\\MountX\\\")或驱动器号(例如\"X:\\\").\n 文本必须以反斜杠\"\\\"结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "卷GUID",
+"comment": " 返回获取的卷GUID路径.\n 此路径的格式为\"\\\\?\\Volume{GUID}\\\",其中GUID是卷的标识GUID.\n 如果该卷有多个卷GUID路径,则只返回装载管理器缓存中的第一个路径.",
+"data type": "文本型"
+   }
+ameter name": "卷装载路径"]
+  }
+}]
+ },
+ {
+data type": "文本型""class name": "全局内存管理类",
+data type": "文本型""comment": "  各种内存管理都是在堆中分配内存,但因为分配器的机制不同,不能交叉使用,\n比如\"分配内存\"的地址不能用\"释放全局内存\"来释放.\n  由于部分系统API需要使用\"释放全局内存\"释放,所以本类的封装还是有意义的.\n  本类只封装了固定地址一种应用方法,未封装另一种可移动内存对象.\n  本类的开销比\"分配内存\"大,如非必要不建议使用.\n  全局内存和本地内存只在Win16系统中有区别,在Win32以上系统中这两者无区别.",
+data type": "文本型""@文档": "\"category = \\\"内存操作\\\"\"",
+data type": "文本型""@禁止创建对象": "真",
+data type": "文本型""@编译条件": "\"PIV_ENABLE_OBSOLETE\"",
+data type": "文本型""methods": [
+  {
+
+"method name": "分配全局内存",
+
+"comment": "  在堆中分配一段所指定尺寸的全局内存,返回所分配内存的地址.\n  注意: 所返回的内存地址在不再使用后必须使用\"释放全局内存\"\n方法将其释放(除非调用了\"重分配全局内存\"方法将其重新分配).",
+
+"result comment": "成功返回所分配内存的地址指针,失败返回0.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲分配内存的尺寸",
+"comment": "  提供所欲分配内存的尺寸,必须大于0.\n  实际分配的内存可能会大于该值,可以用\"取全局内存尺寸\"获取实际尺寸.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否清零",
+"comment": "是否将所分配的内容空间清除为字节值零.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+ }"method name": "重分配全局内存",
+ }"comment": "重新分配先前所已分配内存的尺寸或属性,返回重分配后的内存地址指针.\n注意: 先前内存中的数据内容将被保留,即使本方法返回了不同的地址指针.",
+ }"result comment": "成功返回所重分配内存的地址指针,失败返回0.",
+ }"static": true,
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "先前所分配内存地址",
+"comment": "  提供先前调用\"分配内存\"或\"重分配内存\"方法所返回的内存地址指针,注\n意所提供的先前内存地址指针在重分配后将不再有效(注意本方法也可能返\n回相同的地址指针值).",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲重分配内存的尺寸",
+"comment": "提供所欲重新分配内存的尺寸,必须大于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否清零",
+"comment": "如果新尺寸大于原尺寸,是否在新增的内存区域清零.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "取全局内存尺寸",
+data type": "整数""comment": "获取指定全局内存地址的实际尺寸,实际分配的尺寸可能会大于分配时指定要分配的尺寸.",
+data type": "整数""result comment": "成功返回字节单位的尺寸,失败或地址已被释放返回0.",
+data type": "整数""static": true,
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "全局内存地址",
+"comment": "提供\"分配全局内存\"或\"重分配全局内存\"返回的全局内存地址.",
+"data type": "变整数"
+   }
+data type": "整数"]
+  },
+  {
+ameter name": "所欲分配内存的尺寸""method name": "释放全局内存",
+ameter name": "所欲分配内存的尺寸""comment": "释放先前调用\"分配全局内存\"或\"重分配全局内存\"方法所分配的全局内存.",
+ameter name": "所欲分配内存的尺寸""result comment": "成功返回0,失败返回原来的内存地址.",
+ameter name": "所欲分配内存的尺寸""static": true,
+ameter name": "所欲分配内存的尺寸""data type": "变整数",
+ameter name": "所欲分配内存的尺寸""@嵌入式方法": "\"\"",
+ameter name": "所欲分配内存的尺寸""parameters": [
+   {
+"parameter name": "先前所分配内存地址",
+"comment": "  提供先前调用\"分配全局内存\"或\"重分配全局内存\"方法所返回的内存地址指针,\n注意所提供的内存地址指针在释放后将不再有效.",
+"data type": "变整数"
+   }
+ameter name": "所欲分配内存的尺寸"]
+  }
+data type": "文本型"]
+ },
+ {
+ameter name": "所欲分配内存的尺寸""class name": "本地内存管理类",
+ameter name": "所欲分配内存的尺寸""comment": "  各种内存管理都是在堆中分配内存,但因为分配器的机制不同,不能交叉使用,\n比如\"分配内存\"的地址不能用\"释放本地内存\"来释放.\n  由于部分系统API需要使用\"释放本地内存\"释放,所以本类的封装还是有意义的.\n  本类只封装了固定地址一种应用方法,未封装另一种可移动内存对象.\n  本类的开销比\"分配内存\"大,如非必要不建议使用.\n  全局内存和本地内存只在Win16系统中有区别,在Win32以上系统中这两者无区别.",
+ameter name": "所欲分配内存的尺寸""@文档": "\"category = \\\"内存操作\\\"\"",
+ameter name": "所欲分配内存的尺寸""@禁止创建对象": "真",
+ameter name": "所欲分配内存的尺寸""@编译条件": "\"PIV_ENABLE_OBSOLETE\"",
+ameter name": "所欲分配内存的尺寸""methods": [
+  {
+meter name": "所欲分配内存的尺寸""static": true"method name": "分配本地内存",
+meter name": "所欲分配内存的尺寸""static": true"comment": "  在堆中分配一段所指定尺寸的本地内存,返回所分配内存的地址.\n  注意: 所返回的内存地址在不再使用后必须使用\"释放本地内存\"\n方法将其释放(除非调用了\"重分配本地内存\"方法将其重新分配).",
+meter name": "所欲分配内存的尺寸""static": true"result comment": "成功返回所分配内存的地址指针,失败返回0.",
+meter name": "所欲分配内存的尺寸""static": true"static": true,
+meter name": "所欲分配内存的尺寸""static": true"data type": "变整数",
+meter name": "所欲分配内存的尺寸""static": true"@嵌入式方法": "\"\"",
+meter name": "所欲分配内存的尺寸""static": true"parameters": [
+   {
+"parameter name": "所欲分配内存的尺寸",
+"comment": "  提供所欲分配内存的尺寸,必须大于0.\n  实际分配的内存可能会大于该值,可以用\"取全局内存尺寸\"获取实际尺寸.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否清零",
+"comment": "是否将所分配的内容空间清除为字节值零.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+meter name": "所欲分配内存的尺寸""static": true]
+  },
+  {
+ }"method name": "重分配本地内存",
+ }"comment": "重新分配先前所已分配内存的尺寸或属性,返回重分配后的内存地址指针.\n注意: 先前内存中的数据内容将被保留,即使本方法返回了不同的地址指针.",
+ }"result comment": "成功返回所重分配内存的地址指针,失败返回0.",
+ }"static": true,
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "先前所分配内存地址",
+"comment": "  提供先前调用\"分配内存\"或\"重分配内存\"方法所返回的内存地址指针,注\n意所提供的先前内存地址指针在重分配后将不再有效(注意本方法也可能返\n回相同的地址指针值).",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲重分配内存的尺寸",
+"comment": "提供所欲重新分配内存的尺寸,必须大于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否清零",
+"comment": "如果新尺寸大于原尺寸,是否在新增的内存区域清零.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+"method name": "取本地内存尺寸",
+"comment": "获取指定全局内存地址的实际尺寸,实际分配的尺寸可能会大于分配时指定要分配的尺寸.",
+"result comment": "成功返回字节单位的尺寸,失败或地址已被释放返回0.",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "全局内存地址",
+"comment": "提供\"分配全局内存\"或\"重分配全局内存\"返回的全局内存地址.",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "释放本地内存",
+
+"comment": "释放先前调用\"分配本地内存\"或\"重分配本地内存\"方法所分配的本地内存.",
+
+"result comment": "成功返回0,失败返回原来的内存地址.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "先前所分配内存地址",
+"comment": "  提供先前调用\"分配本地内存\"或\"重分配本地内存\"方法所返回的内存地址指针,\n注意所提供的内存地址指针在释放后将不再有效.",
+"data type": "变整数"
+   }
+
+]
+  }
+ameter name": "所欲分配内存的尺寸"]
+ },
+ {
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+"class name": "程序信息类",
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+"comment": "用于获取程序文件的版本信息",
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@文档": "\"category = \\\"系统操作\\\"\"",
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@视窗.外部库": "\"Version.lib\"",
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@全局类": "真",
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名": "\"//\"",
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名类型": "本地类",
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@类用途": "访问静态成员",
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+"methods": [
+  {
+ter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名": "\"//\"""method name": "取程序版本",
+ter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名": "\"//\"""comment": "获取程序文件的完整版本信息,取自版本信息资源的StringFileInfo结构.\n注意: 由于火山程序的版本信息比较别扭,本方法只能获取火山程序的\"版本名称\"属性,\n如果要获取\"版本号\",请使用\"取文件版本\"或\"取产品版本\".",
+ter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名": "\"//\"""result comment": "返回是否成功",
+ter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名": "\"//\"""static": true,
+ter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名": "\"//\"""data type": "逻辑型",
+ter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名": "\"//\"""@禁止流程检查": "真",
+ter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名": "\"//\"""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "包含完整路径的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "版本信息",
+"data type": "程序版本信息类"
+   }
+ter name": "所欲分配内存的尺寸""static": true"parameters": [
+"@别名": "\"//\""]
+  },
+  {
+ameter name": "版本信息""method name": "取程序文件版本",
+ameter name": "版本信息""comment": "返回程序文件的文件版本字符串,取自版本信息资源的StringFileInfo结构.",
+ameter name": "版本信息""result comment": "成功返回文件版本(等同火山程序的\"版本名称\"属性)",
+ameter name": "版本信息""static": true,
+ameter name": "版本信息""data type": "文本型",
+ameter name": "版本信息""@禁止流程检查": "真",
+ameter name": "版本信息""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "包含完整路径的文件名",
+"data type": "文本型"
+   }
+ameter name": "版本信息"]
+  },
+  {
+
+"method name": "取文件版本",
+
+"comment": "返回程序文件的文件版本,取自版本信息资源的VS_FIXEDFILEINFO结构.\n调用失败返回-1,长整数的版本号更适合比较,但不直观.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "包含完整路径的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回版本格式文本",
+"comment": "在本参数中返回类似\"1.1.0.0\"格式的文本版本号,更适合于展示.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "取产品版本",
+data type": "文本型""comment": "返回程序文件的产品版本,取自版本信息资源的VS_FIXEDFILEINFO结构.\n调用失败返回-1,长整数的版本号更适合比较,但不直观.",
+data type": "文本型""static": true,
+data type": "文本型""data type": "长整数",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "包含完整路径的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回版本格式文本",
+"comment": "在本参数中返回类似\"1.1.0.0\"格式的文本版本号,更适合于展示.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+data type": "文本型"]
+  }
+eter name": "所欲分配内存的尺寸""static": true"parameters": [
+]
+ },
+ {
+"class name": "程序版本信息类",
+"comment": "程序文件版本信息的辅助类",
+"base class": "扩展对象类",
+"@文档": "\"category = \\\"系统操作.辅助类\\\"\"",
+"variables": [
+  {
+
+"variable name": "注释",
+
+"comment": "(可能为空)Comments,与文件关联的注释.",
+
+"data type": "文本型"
+  },
+  {
+@默认值": "空对象""variable name": "公司名称",
+@默认值": "空对象""comment": "CompanyName,生成文件的公司的名称.",
+@默认值": "空对象""data type": "文本型"
+  },
+  {
+
+"parameters": [
+"variable name": "文件说明",
+
+"parameters": [
+"comment": "FileDescription,文件说明.",
+
+"parameters": [
+"data type": "文本型"
+  },
+  {
+"parameters": [
+"comment": "FileDescription,文件说明.""variable name": "文件版本",
+"parameters": [
+"comment": "FileDescription,文件说明.""comment": "FileVersion,文件的版本号.",
+"parameters": [
+"comment": "FileDescription,文件说明.""data type": "文本型"
+  },
+  {
+
+"variable name": "内部名称",
+
+"comment": "InternalName,文件的内部名称. 如果不存在内部名称,则该属性将包含文件的原始名称(不带扩展名).",
+
+"data type": "文本型"
+  },
+  {
+}"variable name": "版权",
+}"comment": "LegalCopyright,包括所有声明的完整文本、合法符号、版权日期等.",
+}"data type": "文本型"
+  },
+  {
+
+"variable name": "法律商标",
+
+"comment": "(可能为空)LegalTrademarks,应用到文件的商标和注册商标.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "原始文件名",
+
+"comment": "OriginalFilename,创建文件时使用的名称.",
+
+"data type": "文本型"
+  },
+  {
+": "空对象""variable name": "公司名称""variable name": "产品名称",
+": "空对象""variable name": "公司名称""comment": "ProductName,与此文件一起发行的产品的名称.",
+": "空对象""variable name": "公司名称""data type": "文本型"
+  },
+  {
+}"variable name": "产品版本",
+}"comment": "ProductVersion,与此文件一起发行的产品的版本.",
+}"data type": "文本型"
+  },
+  {
+
+"variable name": "私有版本",
+
+"comment": "(可能为空)PrivateBuild,文件私有版本的信息.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "特殊版本",
+
+"comment": "(可能为空)SpecialBuild,文件的特殊内部版本信息.",
+
+"data type": "文本型"
+  },
+  {
+"comment": "(可能为空)PrivateBuild,文件私有版本的信息.""variable name": "语言",
+"comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言",
+"comment": "(可能为空)PrivateBuild,文件私有版本的信息.""data type": "文本型"
+  }
+],
+"methods": [
+  {
+comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""method name": "取展示内容",
+comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.",
+comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@虚拟方法": "可覆盖",
+comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言"]
+  }
+]
+ },
+ {
+comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""class name": "程序版本信息数组类",
+comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""base class": "对象数组模板类",
+comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"",
+comment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@模板实现类": "\"程序版本信息类\""
+ },
+ {
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""class name": "磁盘监视类",
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""comment": "通过NTFS的USN日志来监视文件和目录的更改,实现原理跟文件搜索软件Everything相同.\n 1. 监视USN日志的效率相当高,但只能在NTFS文件系统上使用;\n 2. USN日志会监视整个本地磁盘,但可以只输出特定目录下的更改记录;\n 3. 本类的接收事件在子线程中触发,每个盘符一条线程;\n 4. 程序需要以管理员权限运行;",
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""base class": "PIV对象类",
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""@文档": "\"category = \\\"文件操作\\\"\"",
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""@视窗.外部头文件": "\"src\\\\piv_UsnMonitor.hpp\"",
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""methods": [
+  {
+
+"method name": "枚举所有盘符",
+
+"comment": "获取所有的盘符,返回盘符数量.",
+
+"result comment": "成功返回盘符数量,失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "盘符数组",
+"comment": "成功返回包含所有盘符的数组",
+"data type": "字符数组类"
+   },
+   {
+"parameter name": "仅枚举本地磁盘",
+"comment": "默认剔除光驱及网络驱动器,如需枚举所有盘符请设置为假.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"method name": "开始监视",
+"comment": "开始监视某个本地磁盘中所有文件和目录的更改:\n 1. 指定的盘符必须为NTFS文件格式,且不能为网络驱动器;\n 2. 程序必须以管理员身份运行;\n 3. 可以重复调用本方法以监视不同的盘符;",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "盘符",
+"comment": "提供本地磁盘的盘符(不区分大小写),请以单引号输入,如: 'C'",
+"data type": "字符"
+   },
+   {
+"parameter name": "监视目录组",
+"comment": "可以将监视范围限定在所提供的一或多个目录中,请确保提供的目录已经存在.\n默认的空数组表示监视整个本地磁盘;\n注意: 本参数有效时,内部会维护一个包含文件夹主从关系的键值表,会占用较大内存.",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "延迟时间",
+"comment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).",
+"data type": "整数",
+"@默认值": "1000"
+   },
+   {
+"parameter name": "路径获取方式",
+"comment": "选择文件更改事件中\"当前路径\"的获取方式:\n 0 不获取路径(速度最快);\n 1 使用系统API获取,需要确保文件夹存在,文件夹被删除后会获取不了;\n 2 由本类维护一个数据表,即使文件夹被删除后仍能获取路径,\n但占用内存较大(Win11的系统盘需要500MB以上内存).",
+"data type": "整数",
+"@默认值": "1"
+   }
+]
+  },
+  {
+comment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""method name": "停止监视",
+comment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.",
+comment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""data type": "逻辑型",
+comment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""@禁止流程检查": "真",
+comment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""parameters": [
+   {
+"parameter name": "盘符",
+"comment": "提供本地磁盘的盘符(不区分大小写),请以单引号输入,如: 'C'",
+"data type": "字符"
+   },
+   {
+"parameter name": "删除USN日志",
+"comment": "是否删除(禁用)USN日志;\n注意: 删除操作是全局的,会影响其他使用了USN日志的软件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒)."]
+  },
+  {
+omment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.""method name": "全部停止",
+omment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.""comment": "停止所有正在运行的监视,本方法会阻塞当前线程直到全部停止.\n注: 类析构时会自动停止监视所有盘符.",
+omment": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取监视盘符",
+
+"comment": "获取当前正在监视的所有盘符,返回监视的盘符数量.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "盘符数组",
+"comment": "返回所有正在监视的盘符",
+"data type": "字符数组类"
+   }
+
+]
+  },
+  {
+nt": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.""method name": "全部停止""method name": "初始化完毕",
+nt": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.""method name": "全部停止""comment": "USN日志初始化完毕后将发送一次本事件,表示将开始监视文件的更改.",
+nt": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.""method name": "全部停止""type": "event",
+nt": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.""method name": "全部停止""data type": "整数",
+nt": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.""method name": "全部停止""parameters": [
+   {
+"parameter name": "盘符",
+"comment": "当前监视的盘符",
+"data type": "字符"
+   }
+nt": "如果上次读取USN日志没有发现新的更改,将延迟指定的时间(单位为毫秒).""comment": "停止监视某个本地磁盘,返回是否实际停止了监视.\n注: 类析构时会自动停止监视所有盘符.""method name": "全部停止"]
+  },
+  {
+"method name": "文件被创建",
+"comment": "监视到创建了新文件或目录",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "盘符",
+"comment": "当前监视的盘符",
+"data type": "字符"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "触发更改的文件或目录名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"comment": "本次更改的所在路径,以路径符结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间戳",
+"comment": "本次更改的文件时间戳(非Unix时间戳)",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "属性值",
+"comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0",
+"data type": "整数"
+   }
+]
+  },
+  {
+comment": "本次更改的所在路径,以路径符结尾.""method name": "文件被删除",
+comment": "本次更改的所在路径,以路径符结尾.""comment": "监视到某个文件或目录被删除",
+comment": "本次更改的所在路径,以路径符结尾.""type": "event",
+comment": "本次更改的所在路径,以路径符结尾.""data type": "整数",
+comment": "本次更改的所在路径,以路径符结尾.""parameters": [
+   {
+"parameter name": "盘符",
+"comment": "当前监视的盘符",
+"data type": "字符"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "触发更改的文件或目录名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"comment": "本次更改的所在路径,以路径符结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间戳",
+"comment": "本次更改的文件时间戳(非Unix时间戳)",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "属性值",
+"comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0",
+"data type": "整数"
+   }
+comment": "本次更改的所在路径,以路径符结尾."]
+  },
+  {
+comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0""method name": "文件内容改变",
+comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0""comment": "监视到某个文件的内容数据被修改",
+comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0""type": "event",
+comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0""data type": "整数",
+comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0""parameters": [
+   {
+"parameter name": "盘符",
+"comment": "当前监视的盘符",
+"data type": "字符"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "触发更改的文件或目录名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"comment": "本次更改的所在路径,以路径符结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "更改原因",
+"comment": "文件或目录被更改的原因,请与\"USN更改原因\"的常量进行位与判断.",
+"data type": "整数"
+   },
+   {
+"parameter name": "时间戳",
+"comment": "本次更改的文件时间戳(非Unix时间戳)",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "属性值",
+"comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0",
+"data type": "整数"
+   }
+comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0"]
+  },
+  {
+}"method name": "文件被重命名",
+}"comment": "监视到某个文件或目录被重命名",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "盘符",
+"comment": "当前监视的盘符",
+"data type": "字符"
+   },
+   {
+"parameter name": "旧名称",
+"comment": "重命名前的旧名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新名称",
+"comment": "重命名后的新名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"comment": "本次更改的所在路径,以路径符结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间戳",
+"comment": "本次更改的文件时间戳(非Unix时间戳)",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "属性值",
+"comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "被删到回收站",
+
+"comment": "监视到某个文件或目录被删除到回收站",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "盘符",
+"comment": "当前监视的盘符",
+"data type": "字符"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "被删除到回收站之前的原名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "原路径",
+"comment": "被删除文件的原始路径,以路径符结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回收站路径",
+"comment": "删除到回收站后的完整路径(文件被重命名为回收站内部使用的名称)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间戳",
+"comment": "本次更改的文件时间戳(非Unix时间戳)",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "属性值",
+"comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "文件被移动",
+}"comment": "监视到某个文件或目录被移动到同盘的另一个位置\n注: 移动到其他盘是触发\"文件被删除\"事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "盘符",
+"comment": "当前监视的盘符",
+"data type": "字符"
+   },
+   {
+"parameter name": "旧名称",
+"comment": "文件移动前的旧名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新名称",
+"comment": "文件移动后的新名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "原路径",
+"comment": "文件移动前的原路径,以路径符结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新路径",
+"comment": "文件移动后的新路径,以路径符结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间戳",
+"comment": "本次更改的文件时间戳(非Unix时间戳)",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "属性值",
+"comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "文件时间结构""method name": "文件属性改变",
+data type": "文件时间结构""comment": "监视到某个文件或目录的属性被改变",
+data type": "文件时间结构""type": "event",
+data type": "文件时间结构""data type": "整数",
+data type": "文件时间结构""parameters": [
+   {
+"parameter name": "盘符",
+"comment": "当前监视的盘符",
+"data type": "字符"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "触发更改的文件或目录名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"comment": "本次更改的所在路径,以路径符结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "更改原因",
+"comment": "文件或目录被更改的原因,请与\"USN更改原因\"的常量进行位与判断.",
+"data type": "整数"
+   },
+   {
+"parameter name": "时间戳",
+"comment": "本次更改的文件时间戳(非Unix时间戳)",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "属性值",
+"comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0",
+"data type": "整数"
+   }
+data type": "文件时间结构"]
+  },
+  {
+ }"method name": "其他状态改变",
+ }"comment": "监视到其他不常用的文件或目录的状态或属性被改变",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "盘符",
+"comment": "当前监视的盘符",
+"data type": "字符"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "触发更改的文件或目录名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前路径",
+"comment": "本次更改的所在路径,以路径符结尾.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "更改原因",
+"comment": "文件或目录被更改的原因,请与\"USN更改原因\"的常量进行位与判断.",
+"data type": "整数"
+   },
+   {
+"parameter name": "时间戳",
+"comment": "本次更改的文件时间戳(非Unix时间戳)",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "属性值",
+"comment": "文件或目录的属性值,为\"文件属性\"常量的组合值;\n可用\"位与\"计算来判断是否具有某个属性;\n如: 为子目录 = 位与 (属性值, 文件属性.子目录) != 0",
+"data type": "整数"
+   }
+ }]
+  }
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\""]
+ },
+ {
+
+"class name": "USN更改原因",
+
+"comment": "USN日志的文件更改理由常量",
+
+"@文档": "\"category = \\\"文件操作.辅助类\\\"\"",
+
+"constants": [
+  {
+
+"constant name": "覆盖数据",
+
+"comment": "文件或目录中的流数据被覆盖",
+
+"data type": "整数",
+
+"initial value": "@USN_REASON_DATA_OVERWRITE"
+  },
+  {
+data type": "整数""constant name": "扩展数据",
+data type": "整数""comment": "文件的流被附加了数据",
+data type": "整数""data type": "整数",
+data type": "整数""initial value": "@USN_REASON_DATA_EXTEND"
+  },
+  {
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""constant name": "截断数据",
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""comment": "文件的流数据被截断",
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""data type": "整数",
+omment": "(可能为空)PrivateBuild,文件私有版本的信息.""comment": "程序的语言""@文档": "\"category = \\\"系统操作.辅助类\\\"\"""initial value": "@USN_REASON_DATA_TRUNCATION"
+  },
+  {
+"constant name": "覆盖命名数据",
+"comment": "文件或目录中的命名流数据被覆盖",
+"data type": "整数",
+"initial value": "@USN_REASON_NAMED_DATA_OVERWRITE"
+  },
+  {
+data type": "整数""constant name": "扩展命名数据",
+data type": "整数""comment": "文件或目录中的命名流被附加了数据",
+data type": "整数""data type": "整数",
+data type": "整数""initial value": "@USN_REASON_NAMED_DATA_EXTEND"
+  },
+  {
+ata type": "整数""comment": "文件或目录中的命名流被附加了数据""constant name": "截断命名数据",
+ata type": "整数""comment": "文件或目录中的命名流被附加了数据""comment": "文件或目录中的命名流被截断",
+ata type": "整数""comment": "文件或目录中的命名流被附加了数据""data type": "整数",
+ata type": "整数""comment": "文件或目录中的命名流被附加了数据""initial value": "@USN_REASON_NAMED_DATA_TRUNCATION"
+  },
+  {
+data type": "整数""constant name": "创建文件",
+data type": "整数""comment": "创建文件或目录",
+data type": "整数""data type": "整数",
+data type": "整数""initial value": "@USN_REASON_FILE_CREATE"
+  },
+  {
+
+"constant name": "删除文件",
+
+"comment": "文件或目录被删除",
+
+"data type": "整数",
+
+"initial value": "@USN_REASON_FILE_DELETE"
+  },
+  {
+
+"constant name": "扩展属性改变",
+
+"comment": "用户对文件或目录的扩展属性进行了更改.\n基于Windows的应用程序无法访问这些NTFS文件系统属性.",
+
+"data type": "整数",
+
+"initial value": "@USN_REASON_EA_CHANGE"
+  },
+  {
+}"constant name": "安全权限改变",
+}"comment": "文件或目录的访问权限被改变",
+}"data type": "整数",
+}"initial value": "@USN_REASON_SECURITY_CHANGE"
+  },
+  {
+"data type": "整数""constant name": "重命名前旧名称",
+"data type": "整数""comment": "文件或目录被重命名,当前USN_RECORD结构体中的文件名为旧名称.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@USN_REASON_RENAME_OLD_NAME"
+  },
+  {
+data type": "整数""initial value": "@USN_REASON_RENAME_OLD_NAME""constant name": "重命名后新名称",
+data type": "整数""initial value": "@USN_REASON_RENAME_OLD_NAME""comment": "文件或目录被重命名,当前USN_RECORD结构体中的文件名为新名称.",
+data type": "整数""initial value": "@USN_REASON_RENAME_OLD_NAME""data type": "整数",
+data type": "整数""initial value": "@USN_REASON_RENAME_OLD_NAME""initial value": "@USN_REASON_RENAME_NEW_NAME"
+  },
+  {
+}"constant name": "索引属性改变",
+}"comment": "用户更改了FILE_ATTRIBUTE_NOT_CONTENT_INDEXED属性.",
+}"data type": "整数",
+}"initial value": "@USN_REASON_INDEXABLE_CHANGE"
+  },
+  {
+
+"constants": [
+"constant name": "基本信息被改变",
+
+"constants": [
+"comment": "用户更改了一个或多个文件或目录的属性(例如:只读、隐藏、系统、存档或稀疏属性),或者更改了一个或多个时间戳.",
+
+"constants": [
+"data type": "整数",
+
+"constants": [
+"initial value": "@USN_REASON_BASIC_INFO_CHANGE"
+  },
+  {
+}"constant name": "硬链接改变",
+}"comment": "此文件被添加或移除了一个NTFS硬链接",
+}"data type": "整数",
+}"initial value": "@USN_REASON_HARD_LINK_CHANGE"
+  },
+  {
+
+"constant name": "压缩状态改变",
+
+"comment": "文件或目录的压缩状态改变",
+
+"data type": "整数",
+
+"initial value": "@USN_REASON_COMPRESSION_CHANGE"
+  },
+  {
+a type": "整数""constant name": "重命名前旧名称""constant name": "加密状态改变",
+a type": "整数""constant name": "重命名前旧名称""comment": "文件或目录被加密或解密",
+a type": "整数""constant name": "重命名前旧名称""data type": "整数",
+a type": "整数""constant name": "重命名前旧名称""initial value": "@USN_REASON_ENCRYPTION_CHANGE"
+  },
+  {
+"comment": "用户更改了FILE_ATTRIBUTE_NOT_CONTENT_INDEXED属性.""constant name": "标识符改变",
+"comment": "用户更改了FILE_ATTRIBUTE_NOT_CONTENT_INDEXED属性.""comment": "文件或目录的对象标识符被改变",
+"comment": "用户更改了FILE_ATTRIBUTE_NOT_CONTENT_INDEXED属性.""data type": "整数",
+"comment": "用户更改了FILE_ATTRIBUTE_NOT_CONTENT_INDEXED属性.""initial value": "@USN_REASON_OBJECT_ID_CHANGE"
+  },
+  {
+}"constant name": "重解析点改变",
+}"comment": "文件或目录的NTFS重解析点属性被添加、更改或删除.",
+}"data type": "整数",
+}"initial value": "@USN_REASON_REPARSE_POINT_CHANGE"
+  },
+  {
+"data type": "整数""constant name": "命名流改变",
+"data type": "整数""comment": "文件或目录被被添加、重命名或移除了一个命名流.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@USN_REASON_STREAM_CHANGE"
+  },
+  {
+
+"constant name": "事务改变",
+
+"comment": "通过TxF事务修改给定的流",
+
+"data type": "整数",
+
+"initial value": "@USN_REASON_TRANSACTED_CHANGE"
+  },
+  {
+"comment": "文件或目录的压缩状态改变""constant name": "完整性改变",
+"comment": "文件或目录的压缩状态改变""comment": "用户更改了给定流的FILE_ATTRIBUTE_INTEGRITY_STREAM属性的状态 USN_REASON_INTEGRITY_CHANGE",
+"comment": "文件或目录的压缩状态改变""data type": "整数",
+"comment": "文件或目录的压缩状态改变""initial value": "0x00800000"
+  },
+  {
+comment": "文件或目录的压缩状态改变""comment": "用户更改了给定流的FILE_ATTRIBUTE_INTEGRITY_STREAM属性的状态 USN_REASON_INTEGRITY_CHANGE""constant name": "关闭文件",
+comment": "文件或目录的压缩状态改变""comment": "用户更改了给定流的FILE_ATTRIBUTE_INTEGRITY_STREAM属性的状态 USN_REASON_INTEGRITY_CHANGE""comment": "关闭文件或目录(大部分更改以关闭文件结束)",
+comment": "文件或目录的压缩状态改变""comment": "用户更改了给定流的FILE_ATTRIBUTE_INTEGRITY_STREAM属性的状态 USN_REASON_INTEGRITY_CHANGE""data type": "整数",
+comment": "文件或目录的压缩状态改变""comment": "用户更改了给定流的FILE_ATTRIBUTE_INTEGRITY_STREAM属性的状态 USN_REASON_INTEGRITY_CHANGE""initial value": "@USN_REASON_CLOSE"
+  }
+
+]
+ },
+ {
+}"class name": "文件读写类EX",
+}"comment": "用作支持读写所指定名称的文件",
+}"@文档": "\"category = \\\"文件操作\\\"\"",
+}"@视窗.外部头文件": "\"src\\\\piv_file.hpp\"",
+}"@别名": "\"PivFile\"",
+}"@别名类型": "本地类",
+}"variables": [
+  {
+}"variable name": "自动关闭文件",
+}"comment": "是否在类析构时自动关闭文件,\"打开文件\"时默认为真,\"打开句柄\"默认为假.",
+}"data type": "逻辑型",
+}"@输出名": "\"AutoClose\""
+  },
+  {
+
+"variable name": "文件句柄",
+
+"comment": "文件句柄(HANDLE),未打开文件时为\"无效值\".",
+
+"data type": "PIV.类型.通用句柄",
+
+"@输出名": "\"hFile\""
+  }
+}],
+}"methods": [
+  {
+"@视窗.外部头文件": "\"src\\\\piv_file.hpp\"""method name": "打开文件",
+"@视窗.外部头文件": "\"src\\\\piv_file.hpp\"""comment": "打开所指定的文件,以对文件进行读写操作,返回是否打开成功.\n先前被打开的文件将被自动关闭.",
+"@视窗.外部头文件": "\"src\\\\piv_file.hpp\"""static": true,
+"@视窗.外部头文件": "\"src\\\\piv_file.hpp\"""data type": "逻辑型",
+"@视窗.外部头文件": "\"src\\\\piv_file.hpp\"""@嵌入式方法": "\"\"",
+"@视窗.外部头文件": "\"src\\\\piv_file.hpp\"""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "欲打开的文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问权限",
+"comment": "提供\"映射文件访问权限\"常量,设置文件的访问权限",
+"data type": "文件访问权限",
+"@默认值": "文件访问权限.读写"
+   },
+   {
+"parameter name": "共享模式",
+"comment": "指定限制其它进程操作此文件的方式",
+"data type": "文件共享模式",
+"@默认值": "文件共享模式.禁止写"
+   },
+   {
+"parameter name": "创建方式",
+"comment": "提供\"映射文件创建方式\"常量,设置是打开一个已经存在的文件还是创建一个新文件.",
+"data type": "文件创建方式",
+"@默认值": "文件创建方式.打开或创建"
+   }
+"@视窗.外部头文件": "\"src\\\\piv_file.hpp\""]
+  },
+  {
+
+"method name": "打开句柄",
+
+"comment": "打开所指定的文件句柄,以对文件进行读写操作,返回是否打开成功.\n先前被打开的文件将被自动关闭.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "欲打开的文件句柄",
+"comment": "提供所欲打开的外部文件句柄",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+@默认值": "文件共享模式.禁止写""method name": "关闭文件",
+@默认值": "文件共享模式.禁止写""static": true,
+@默认值": "文件共享模式.禁止写""@嵌入式方法": "\"\"",
+@默认值": "文件共享模式.禁止写""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+@默认值": "文件共享模式.禁止写"]
+  },
+  {
+"method name": "是否已打开",
+"comment": "返回是否已经打开了文件",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+]
+  },
+  {
+data type": "文件读写类EX""method name": "交换",
+data type": "文件读写类EX""comment": "将本对象的内容跟另一个对象交换,即交换当前打开的文件.",
+data type": "文件读写类EX""static": true,
+data type": "文件读写类EX""@嵌入式方法": "\"\"",
+data type": "文件读写类EX""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "所欲交换的对象",
+"data type": "文件读写类EX"
+   }
+data type": "文件读写类EX"]
+  },
+  {
+}"method name": "取文件句柄",
+}"comment": "如果当前已经打开了文件,返回其句柄值,否则返回-1.",
+}"static": true,
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+}]
+  },
+  {
+data type": "文件读写类EX""method name": "取文件长度",
+data type": "文件读写类EX""comment": "返回当前被打开文件的长度,单位为字节.\n如果当前尚未打开文件或失败,将返回-1.",
+data type": "文件读写类EX""static": true,
+data type": "文件读写类EX""data type": "长整数",
+data type": "文件读写类EX""@嵌入式方法": "\"\"",
+data type": "文件读写类EX""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+data type": "文件读写类EX"]
+  },
+  {
+ameter name": "当前对象""method name": "置文件长度",
+ameter name": "当前对象""comment": "设置当前被打开文件的长度,返回是否成功.\n注: 设置成功后会移动到文件末尾.",
+ameter name": "当前对象""static": true,
+ameter name": "当前对象""data type": "逻辑型",
+ameter name": "当前对象""@嵌入式方法": "\"\"",
+ameter name": "当前对象""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "欲设置的长度",
+"comment": "新长度大于现有长度的区域将以0字节填充;\n新长度小于现有长度则截断文件.",
+"data type": "长整数"
+   }
+ameter name": "当前对象"]
+  },
+  {
+"parameters": [
+"method name": "刷新文件",
+"parameters": [
+"comment": "刷新当前被打开文件的缓冲区并将所有缓冲数据写入文件.\n注: 文件的写出操作,会先将数据写入磁盘的缓冲区,缓冲区满后才实际写入到磁盘文件.\n执行本方法可以立即将修改保存到磁盘,以降低在程序崩溃或电源故障时丢失数据的风险.",
+"parameters": [
+"static": true,
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"@嵌入式方法": "\"\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+"parameters": [
+]
+  },
+  {
+ameter name": "当前对象""method name": "锁住文件",
+ameter name": "当前对象""comment": "在有若干个进程访问同一个文件的环境中,使用本方法可以拒绝其它进程\n对被打开文件中的某个区域进行读写访问.",
+ameter name": "当前对象""static": true,
+ameter name": "当前对象""data type": "逻辑型",
+ameter name": "当前对象""@嵌入式方法": "\"\"",
+ameter name": "当前对象""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "欲加锁数据的偏移位置",
+"comment": "指定欲加锁区域在文件中的偏移位置",
+"data type": "长整数"
+   },
+   {
+"parameter name": "欲加锁数据的尺寸",
+"comment": "指定欲加锁区域的尺寸,单位字节.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "加锁重试时间",
+"comment": "本参数指定加锁失败后反复进行重试的毫秒数.为0表示一旦失败立即返回;\n为-1则反复进行重试直到加锁成功为止(将阻塞当前线程).",
+"data type": "整数",
+"@默认值": "0"
+   }
+ameter name": "当前对象"]
+  },
+  {
+
+"method name": "解锁文件",
+
+"comment": "解除由\"锁住文件\"命令对文件所进行的锁定,返回是否成功.\n注意: 本方法调用时所提供的参数值必须与调用\"锁住文件\"方法时所提供的参数值完全一致.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "欲解锁数据的偏移位置",
+"comment": "指定欲解锁区域在文件中的偏移位置",
+"data type": "长整数"
+   },
+   {
+"parameter name": "欲解锁数据的尺寸",
+"comment": "指定欲解锁区域的尺寸,单位字节.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取读写位置",
+
+"comment": "返回当前被打开文件的当前读/写位置,位置值从0开始.\n如果当前尚未打开文件或失败,将返回-1.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+
+]
+  },
+  {
+data type": "文件读写类EX""method name": "移动读写位置",
+data type": "文件读写类EX""comment": "设置下一次读或写操作的位置,返回是否成功.\n注: 读写位置可以大于物理文件尺寸,使用\"置文件尾\"可以截断或扩展文件大小.",
+data type": "文件读写类EX""static": true,
+data type": "文件读写类EX""data type": "逻辑型",
+data type": "文件读写类EX""@嵌入式方法": "\"\"",
+data type": "文件读写类EX""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "基准移动位置",
+"comment": "指定从文件中开始移动的基准位置",
+"data type": "文件基准位置",
+"@默认值": "文件基准位置.文件首"
+   },
+   {
+"parameter name": "移动距离",
+"comment": "指定相对于起始移动位置的移动尺寸,单位字节.",
+"@匹配类型": "通用整数型"
+   }
+data type": "文件读写类EX"]
+  },
+  {
+ata type": "文件读写类EX""static": true"method name": "移到文件首",
+ata type": "文件读写类EX""static": true"comment": "设置下一次读或写操作的位置到文件首部,返回是否成功.",
+ata type": "文件读写类EX""static": true"static": true,
+ata type": "文件读写类EX""static": true"data type": "逻辑型",
+ata type": "文件读写类EX""static": true"@嵌入式方法": "\"\"",
+ata type": "文件读写类EX""static": true"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+ata type": "文件读写类EX""static": true]
+  },
+  {
+"method name": "移到文件尾",
+"comment": "设置下一次读或写操作的位置到文件尾部,返回是否成功.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+]
+  },
+  {
+"method name": "置文件尾",
+"comment": "将文件的当前读写位置设置为文件末尾(即物理文件大小),可用于截断或扩展文件大小.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+]
+  },
+  {
+@嵌入式方法": "\"\"""method name": "是否在文件尾",
+@嵌入式方法": "\"\"""comment": "返回当前读写位置是否已经处于文件数据的尾部",
+@嵌入式方法": "\"\"""static": true,
+@嵌入式方法": "\"\"""data type": "逻辑型",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "是否为判断文本已读完",
+"comment": "如果本参数值为真,且下一即将读入的字符值为'\\0'或26(文本结束标志),\n或者当前读写位置已处于文件数据的尾部,方法将返回真",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否为Unicode文本",
+"comment": "指定文本文件的编码类型是否为UTF-16;\n如果是UTF-8或多字节编码,请设置为假.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+ }"method name": "读",
+ }"comment": "从文件的当前读写位置读入指定的基本类型数据并返回.\n如果读入失败,将自动将当前文件读写位置移到文件尾部.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "欲获取的数据类型",
+"comment": "提供所欲读入的基本数据类型",
+"@需求类型": "数据类型",
+"@匹配类型": "通用非文本基本型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "缺省值",
+"comment": "如果读入失败,则返回此处的值",
+"@匹配类型": "等于前参数值类型"
+   }
+ }]
+  },
+  {
+@匹配类型": "等于前参数值类型""method name": "读字符",
+@匹配类型": "等于前参数值类型""comment": "获取文件当前读写位置的字符值(char),如果读到文本尾部则返回-1.\n注意: 请确保当前的数据是UTF-8或本地多字节编码文本.\n如果读入失败,将自动将当前文件读写位置移到文件尾部.",
+@匹配类型": "等于前参数值类型""static": true,
+@匹配类型": "等于前参数值类型""data type": "整数",
+@匹配类型": "等于前参数值类型""@嵌入式方法": "\"\"",
+@匹配类型": "等于前参数值类型""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+@匹配类型": "等于前参数值类型"]
+  },
+  {
+@需求类型": "数据类型""method name": "读宽字符",
+@需求类型": "数据类型""comment": "获取文件当前读写位置的宽字符值(wchar_t),如果读到文本尾部则返回-1.\n注意: 请确保当前的数据是UTF-16LE编码文本.\n如果读入失败,会将当前的读写位置移到尾部.",
+@需求类型": "数据类型""static": true,
+@需求类型": "数据类型""data type": "整数",
+@需求类型": "数据类型""@嵌入式方法": "\"\"",
+@需求类型": "数据类型""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   }
+@需求类型": "数据类型"]
+  },
+  {
+ }"method name": "读入数据",
+ }"comment": "从文件的当前读写位置读入基本类型数值,返回实际读入的字节数.\n如果读入失败,将自动将当前文件读写位置移到文件尾部.",
+ }"result comment": "返回实际读入的字节数,失败返回0.",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "所读入数据的变量",
+"comment": "提供所欲返回的基本类型值变量(不能提供立即数)",
+"@需求类型": "可写入变量",
+"@匹配类型": "通用非文本基本型"
+   }
+ }]
+  },
+  {
+ }"method name": "写出数据",
+ }"comment": "将所指定数据写出到文件中当前读写位置,返回实际写出的字节数.",
+ }"result comment": "返回实际写出的字节数,失败返回0.",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "所欲写出的数据",
+"comment": "提供所欲写入的基本数值.\n如欲明确指定其数据类型,可以使用强制类型转换操作符.",
+"@匹配类型": "通用非文本基本型"
+   }
+ }]
+  },
+  {
+"method name": "读入文本",
+"comment": "从文件的当前读写位置读取一段文本数据,返回实际读入的字节长度.\n如果该数据中存在字符值0或26(文本结束标志),将仅返回该字符之前的数据(后续读写将跳过该字符).\n如果读入失败,将自动将当前文件读写位置移到文件尾部.",
+"result comment": "返回实际读入的字节数,失败返回0.",
+"static": true,
+"data type": "长整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "存放读入文本的变量",
+"comment": "读入的文本数据将存放在此参数中",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲读入的最多字符数",
+"comment": "指定欲读入文本数据的最多字符数目.\n如果为-1,则读入当前读写位置后的所有文本.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+]
+  },
+  {
+ }"method name": "读入一行",
+ }"comment": "从文件的当前读写位置读取一行文本数据,行末的换行符将被抛弃.\n如果读入失败,将自动将当前文件读写位置移到文件尾部.\n注意: 未自动跳过空行,如果返回值<=2且文本为空,则可能是读到空行了.",
+ }"result comment": "返回实际读入的字节数(包括被抛弃的换行符),失败返回0.",
+ }"static": true,
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "存放读入文本的变量",
+"comment": "读入的文本数据将存放在此参数中",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+ }]
+  },
+  {
+@默认值": "-1""method name": "写出文本",
+@默认值": "-1""comment": "写出一段指定编码的文本数据到文件中当前读写位置处,返回实际写出的字节数.",
+@默认值": "-1""result comment": "返回实际写出的字节数,失败返回0.",
+@默认值": "-1""static": true,
+@默认值": "-1""data type": "长整数",
+@默认值": "-1""@嵌入式方法": "\"\"",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "所欲写出的文本",
+"comment": "所欲写出的文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定是否在所写出文本后添加写出一个'\\0'字符\n注意: 请勿在纯文本文件中写出结束零字符!",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+@默认值": "-1"]
+  },
+  {
+ameter name": "存放读入文本的变量""method name": "写文本行",
+ameter name": "存放读入文本的变量""comment": "写出一段指定编码的文本数据并附加\"\\r\\n\"换行符到文件中当前读写位置处,\n返回实际写出的字节数.",
+ameter name": "存放读入文本的变量""result comment": "返回实际写出的字节数,失败返回0.",
+ameter name": "存放读入文本的变量""static": true,
+ameter name": "存放读入文本的变量""data type": "长整数",
+ameter name": "存放读入文本的变量""@嵌入式方法": "\"\"",
+ameter name": "存放读入文本的变量""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "所欲写出的文本",
+"comment": "所欲写出的文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+ameter name": "存放读入文本的变量"]
+  },
+  {
+ameter name": "当前对象""method name": "读入字节集",
+ameter name": "当前对象""comment": "从文件中当前读写位置读取一段字节集数据,返回实际读入的字节数.\n如果读入失败,将自动将当前文件读写位置移到文件尾部.",
+ameter name": "当前对象""result comment": "返回实际读入的字节数,失败返回0.",
+ameter name": "当前对象""static": true,
+ameter name": "当前对象""data type": "长整数",
+ameter name": "当前对象""@嵌入式方法": "\"\"",
+ameter name": "当前对象""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "存放数据的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲读入数据的尺寸",
+"comment": "所欲从文件中读入的数据长度,单位为字节.\n如果读取中途到达了文件尾部,将只读取部分长度.",
+"@匹配类型": "通用整数型"
+   }
+ameter name": "当前对象"]
+  },
+  {
+ }"method name": "写出字节集",
+ }"comment": "写出一个字节集数据到文件中当前读写位置处,返回实际写出的字节长度.\n如果写入后的尺寸超过了文件尾部,将自动扩展文件的尺寸.",
+ }"result comment": "返回实际写出的字节数,失败返回0.",
+ }"static": true,
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "欲写出的字节集数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+data type": "文本编码类型""method name": "读指针数据",
+data type": "文本编码类型""comment": "从文件中当前读写位置读出一段数据到指定的指针中,并返回实际读入的字节数.\n如果读入失败,将自动将当前文件读写位置移到文件尾部.",
+data type": "文本编码类型""result comment": "返回实际读入的字节数,失败返回0.",
+data type": "文本编码类型""static": true,
+data type": "文本编码类型""data type": "长整数",
+data type": "文本编码类型""@嵌入式方法": "\"\"",
+data type": "文本编码类型""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "提供一个内存地址,用于存放从文件中读入的数据.\n该指针必须分配了足够的内存空间(大于等于\"数据尺寸\"的长度).",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "数据尺寸",
+"comment": "所欲从文件中读入的数据长度,单位为字节.\n如果到达了文件尾部,将只读取部分长度.",
+"@匹配类型": "通用整数型"
+   }
+data type": "文本编码类型"]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "写指针数据",
+}"@嵌入式方法": "\"\"""comment": "写出一段指针数据到文件中当前读写位置处,返回实际写出的字节数.",
+}"@嵌入式方法": "\"\"""result comment": "返回实际写出的字节数,失败返回0.",
+}"@嵌入式方法": "\"\"""static": true,
+}"@嵌入式方法": "\"\"""data type": "长整数",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "欲写出数据的指针",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "数据尺寸",
+"comment": "欲写出的数据尺寸,如果写出后的尺寸超过了文件尾部,将自动扩展文件的尺寸.",
+"@匹配类型": "通用整数型"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+@匹配类型": "通用整数型""method name": "读入数组数据",
+@匹配类型": "通用整数型""comment": "从文件中当前读写位置读取并返回指定类型的数组数据,返回实际读入的字节数.\n如果读入失败,将自动将当前文件读写位置移到文件尾部.",
+@匹配类型": "通用整数型""result comment": "返回实际读入的字节数,失败返回0.",
+@匹配类型": "通用整数型""static": true,
+@匹配类型": "通用整数型""data type": "长整数",
+@匹配类型": "通用整数型""@嵌入式方法": "\"\"",
+@匹配类型": "通用整数型""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "所读入数据的存储变量",
+"comment": "所读入数据将存放到此数组变量中;\n所读入数据的尺寸将由此变量的存储空间尺寸决定.",
+"@需求类型": "可写入变量",
+"@匹配类型": "通用非文本基本型数组"
+   }
+@匹配类型": "通用整数型"]
+  },
+  {
+meter name": "当前对象""static": true"method name": "写出数组数据",
+meter name": "当前对象""static": true"comment": "将所指定数组数据写出到文件中当前读写位置,返回实际写出的字节数.",
+meter name": "当前对象""static": true"result comment": "返回实际写出的字节数,失败返回0.",
+meter name": "当前对象""static": true"static": true,
+meter name": "当前对象""static": true"data type": "长整数",
+meter name": "当前对象""static": true"@嵌入式方法": "\"\"",
+meter name": "当前对象""static": true"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "所欲写出的数组",
+"comment": "所写出数据的尺寸将由此数组变量的存储空间尺寸决定",
+"@匹配类型": "通用非文本基本型数组"
+   }
+meter name": "当前对象""static": true]
+  },
+  {
+ }"method name": "删除数据",
+ }"comment": "删除已打开文件中的部分数据,返回是否成功.\n注意: 本方法效率不高,成功删除部分数据后会改变文件的实际大小.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "文件读写类EX"
+   },
+   {
+"parameter name": "起始位置",
+"comment": "提供所欲删除数据的起始位置偏移,从0开始.\n-1表示从当前的读写位置开始删除.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "删除长度",
+"comment": "所欲删除的长度,必须大于0.",
+"data type": "长整数"
+   }
+ }]
+  }
+}]
+ },
+ {
+comment": "所写出数据的尺寸将由此数组变量的存储空间尺寸决定""class name": "内存映射文件类EX",
+comment": "所写出数据的尺寸将由此数组变量的存储空间尺寸决定""comment": "本类提供内存映射文件创建/读/写操作的支持,相比核心库的支持了像文件流一样的顺序读写能力.\n注意: 本类的\"尾部\"等同于文件的EOF,即最后一个可读写地址的后面.\n由于映射内存不能像磁盘文件那样扩展长度,所以到达尾部后将无法继续写入数据.",
+comment": "所写出数据的尺寸将由此数组变量的存储空间尺寸决定""@文档": "\"category = \\\"文件操作\\\"\"",
+comment": "所写出数据的尺寸将由此数组变量的存储空间尺寸决定""@视窗.外部头文件": "\"src\\\\piv_file.hpp\"",
+comment": "所写出数据的尺寸将由此数组变量的存储空间尺寸决定""@别名": "\"PivFileMapping\"",
+comment": "所写出数据的尺寸将由此数组变量的存储空间尺寸决定""@别名类型": "本地类",
+comment": "所写出数据的尺寸将由此数组变量的存储空间尺寸决定""methods": [
+  {
+"method name": "创建映射文件",
+"comment": "从提供的文件路径创建内存映射文件",
+"result comment": "执行成功返回真,否则返回假.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "文件名称",
+"comment": "欲创建内存映射文件的文件全路径名称.\n如果不创建真实的磁盘文件,只映射在内存中,则可以留空.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "访问权限",
+"comment": "提供\"映射文件访问权限\"常量,设置文件的访问权限",
+"data type": "文件访问权限",
+"@默认值": "文件访问权限.读写"
+   },
+   {
+"parameter name": "共享模式",
+"comment": "指定限制其它进程操作此文件的方式",
+"data type": "文件共享模式",
+"@默认值": "文件共享模式.禁止写"
+   },
+   {
+"parameter name": "创建方式",
+"comment": "提供\"映射文件创建方式\"常量,设置是打开一个已经存在的文件还是创建一个新文件.",
+"data type": "映射文件创建方式",
+"@默认值": "映射文件创建方式.打开或创建"
+   },
+   {
+"parameter name": "映射尺寸",
+"comment": "欲创建内存映射文件的文件大小.\n如果是打开一个已经存在的文件,可以指定该值为0,表示创建的内存映射文件大小和文件本身大小是一致的.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "内存页保护",
+"comment": "提供内存映射文件的页面保护属性,指定文件映射到内存后是否允许读和写.",
+"data type": "整数",
+"@默认值": "内存页面保护属性.读写"
+   },
+   {
+"parameter name": "内存映射名称",
+"comment": "创建内存映射文件的名称,其它进程可以通过该名称打开内存映射文件.该参数可以为空,表示创建一个没有名称的内存映射文件.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+ }"method name": "创建自文件句柄",
+ }"comment": "从文件句柄创建内存映射文件",
+ }"result comment": "执行成功返回真,否则返回假.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "文件句柄",
+"comment": "提供一个外部打开的文件句柄,本对象不会关闭该句柄.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "映射尺寸",
+"comment": "欲创建内存映射文件的文件大小.\n如果是打开一个已经存在的文件,可以指定该值为0,表示创建的内存映射文件大小和文件本身大小是一致的.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "内存页保护",
+"comment": "提供内存映射文件的页面保护属性,指定文件映射到内存后是否允许读和写.",
+"data type": "整数",
+"@默认值": "内存页面保护属性.读写"
+   },
+   {
+"parameter name": "内存映射名称",
+"comment": "创建内存映射文件的名称,其它进程可以通过该名称打开内存映射文件.该参数可以为空,表示创建一个没有名称的内存映射文件.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+ }]
+  },
+  {
+
+"method name": "创建映射内存",
+
+"comment": "创建一个不关联实际磁盘文件,只映射到内存的内存映射文件.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "映射尺寸",
+"comment": "欲创建内存映射文件的文件大小,默认4096字节(4K).如果是打开一个已经存在的文件,可以指定该值为0,表示创建的内存映射文件大小和文件本身大小是一致的.",
+"data type": "长整数",
+"@默认值": "4096"
+   },
+   {
+"parameter name": "内存页保护",
+"comment": "提供内存映射文件的页面保护属性,指定文件映射到内存后是否允许读和写.",
+"data type": "整数",
+"@默认值": "内存页面保护属性.读写"
+   },
+   {
+"parameter name": "内存映射名称",
+"comment": "创建内存映射文件的名称,其它进程可以通过该名称打开内存映射文件.该参数可以为空,表示创建一个没有名称的内存映射文件.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+ameter name": "内存页保护""method name": "打开映射文件",
+ameter name": "内存页保护""comment": "打开一个其他进程创建的内存映射文件",
+ameter name": "内存页保护""result comment": "执行成功返回真,否则返回假.",
+ameter name": "内存页保护""static": true,
+ameter name": "内存页保护""data type": "逻辑型",
+ameter name": "内存页保护""@嵌入式方法": "\"\"",
+ameter name": "内存页保护""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "内存映射名称",
+"comment": "其他进程创建的内存映射文件名称.\n名称可以具有\"Global\\\"或\"Local\\\"前缀,以显式打开全局命名空间或会话命名空间中的对象.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问权限",
+"comment": "提供内存映射文件的访问权限,能使用哪些权限由创建内存映射文件时的参数决定.",
+"data type": "整数",
+"@默认值": "映射文件访问权限.读写"
+   }
+ameter name": "内存页保护"]
+  },
+  {
+comment": "提供内存映射文件的页面保护属性,指定文件映射到内存后是否允许读和写.""method name": "关闭映射文件",
+comment": "提供内存映射文件的页面保护属性,指定文件映射到内存后是否允许读和写.""comment": "关闭并释放已经创建或打开的内存映射文件,关闭后先前所取得的已映射内存指针不可再使用.",
+comment": "提供内存映射文件的页面保护属性,指定文件映射到内存后是否允许读和写.""static": true,
+comment": "提供内存映射文件的页面保护属性,指定文件映射到内存后是否允许读和写.""@嵌入式方法": "\"\"",
+comment": "提供内存映射文件的页面保护属性,指定文件映射到内存后是否允许读和写.""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+comment": "提供内存映射文件的页面保护属性,指定文件映射到内存后是否允许读和写."]
+  },
+  {
+ameter name": "当前对象""method name": "是否已打开",
+ameter name": "当前对象""comment": "返回是否已经创建或打开了内存映射文件",
+ameter name": "当前对象""static": true,
+ameter name": "当前对象""data type": "逻辑型",
+ameter name": "当前对象""@嵌入式方法": "\"\"",
+ameter name": "当前对象""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+ameter name": "当前对象"]
+  },
+  {
+]"method name": "交换",
+]"comment": "将本对象的内容跟另一个对象交换,即交换当前创建的内存映射文件.",
+]"static": true,
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "所欲交换的对象",
+"data type": "内存映射文件类EX"
+   }
+]]
+  },
+  {
+"method name": "取文件句柄",
+"comment": "返回所映射磁盘文件的文件句柄,句柄无效时返回-1.\n注意: \"创建映射内存\"不会产生有效的文件句柄.",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+]
+  },
+  {
+ameter name": "当前对象""method name": "映射到内存",
+ameter name": "当前对象""comment": "将一个创建完毕或已打开的内存映射文件的全部或一部分映射到进程的内存空间中.\n注意: 必须成功执行本方法后,才能进行后续的读写操作!",
+ameter name": "当前对象""result comment": "执行成功返回真,否则返回假.",
+ameter name": "当前对象""static": true,
+ameter name": "当前对象""data type": "逻辑型",
+ameter name": "当前对象""@嵌入式方法": "\"\"",
+ameter name": "当前对象""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "起始位置",
+"comment": "映射到内存的文件起始位置.注意该值一定要是系统分配内存的分配粒度.\n如Windows的分配粒度是64k(即0x10000),\n所以该值一定要是64k的倍数,否则会执行出错,起始位置的值从0开始.",
+"@默认值": "0",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "映射尺寸",
+"comment": "映射到内存的字节数量,该值等于0代表从起始位置开始文件其余部分全部映射到内存.",
+"@默认值": "0",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "访问权限",
+"comment": "提供内存映射文件的访问权限,能使用哪些权限由创建内存映射文件时的参数决定.",
+"data type": "整数",
+"@默认值": "映射文件访问权限.读写"
+   }
+ameter name": "当前对象"]
+  },
+  {
+ameter name": "访问权限""method name": "解除映射",
+ameter name": "访问权限""comment": "\"映射到内存\"方法的反操作,将已经映射到内存的文件解除映射.\n注意: 解除映射后先前所获取的数据指针不能再使用,也不能再进行读写操作.",
+ameter name": "访问权限""result comment": "执行成功返回真,否则返回假.",
+ameter name": "访问权限""static": true,
+ameter name": "访问权限""data type": "逻辑型",
+ameter name": "访问权限""@嵌入式方法": "\"\"",
+ameter name": "访问权限""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+ameter name": "访问权限"]
+  },
+  {
+ameter name": "访问权限""method name": "刷新映射文件",
+ameter name": "访问权限""comment": "将已映射内存中的数据真实写入到对应磁盘文件(调用\"创建映射文件\"方法时指定)中.\n注: 映射视图的内存页修改,可能会先在内存中缓存,待共享计数归零才延后写入到磁盘中.\n执行本方法可以立即将修改保存到磁盘,以降低在程序崩溃或电源故障时丢失数据的风险.",
+ameter name": "访问权限""result comment": "执行成功返回真,否则返回假.",
+ameter name": "访问权限""static": true,
+ameter name": "访问权限""data type": "逻辑型",
+ameter name": "访问权限""@嵌入式方法": "\"\"",
+ameter name": "访问权限""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+ameter name": "访问权限"]
+  },
+  {
+meter name": "访问权限""@嵌入式方法": "\"\"""method name": "读",
+meter name": "访问权限""@嵌入式方法": "\"\"""comment": "从已映射内存中读入指定的基本类型数据并返回.\n注: 如果读入失败,会将当前的读写位置移到尾部.",
+meter name": "访问权限""@嵌入式方法": "\"\"""static": true,
+meter name": "访问权限""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+meter name": "访问权限""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "欲获取的数据类型",
+"comment": "提供所欲读入的基本数据类型",
+"@需求类型": "数据类型",
+"@匹配类型": "通用非文本基本型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "缺省值",
+"comment": "如果读入失败,则返回此处的值",
+"@匹配类型": "匹配前参数值类型"
+   }
+meter name": "访问权限""@嵌入式方法": "\"\""]
+  },
+  {
+"method name": "读字符",
+"comment": "返回当前读写位置的字符值(char),如果读到文本尾部则返回-1.\n注: 如果读入失败,会将当前的读写位置移到尾部.",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+]
+  },
+  {
+@返回值类型": "0""method name": "读宽字符",
+@返回值类型": "0""comment": "返回当前读写位置的宽字符值(wchar_t),如果读到文本尾部则返回-1.\n注: 如果读入失败,会将当前的读写位置移到尾部.",
+@返回值类型": "0""static": true,
+@返回值类型": "0""data type": "整数",
+@返回值类型": "0""@嵌入式方法": "\"\"",
+@返回值类型": "0""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+@返回值类型": "0"]
+  },
+  {
+ter name": "访问权限""@嵌入式方法": "\"\""]"method name": "读字节集",
+ter name": "访问权限""@嵌入式方法": "\"\""]"comment": "从已映射内存中读入数据,返回实际读入的字节数.",
+ter name": "访问权限""@嵌入式方法": "\"\""]"result comment": "返回实际读入的字节数,失败返回0.",
+ter name": "访问权限""@嵌入式方法": "\"\""]"static": true,
+ter name": "访问权限""@嵌入式方法": "\"\""]"data type": "变整数",
+ter name": "访问权限""@嵌入式方法": "\"\""]"@嵌入式方法": "\"\"",
+ter name": "访问权限""@嵌入式方法": "\"\""]"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "存放数据的字节集",
+"comment": "提供字节集变量,存放从内存映射文件中读出的数据,作为方法的返回值.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "读取长度",
+"comment": "从已映射内存中读入数据的长度,单位为字节.\n如果已映射内存的剩余空间不足,将只读取部分长度.",
+"data type": "变整数"
+   }
+ter name": "访问权限""@嵌入式方法": "\"\""]]
+  },
+  {
+ameter name": "读取长度""method name": "写字节集",
+ameter name": "读取长度""comment": "向已映射内存中写出数据,返回实际写出的字节数.",
+ameter name": "读取长度""result comment": "返回实际写出的字节数,失败返回0.",
+ameter name": "读取长度""static": true,
+ameter name": "读取长度""data type": "变整数",
+ameter name": "读取长度""@嵌入式方法": "\"\"",
+ameter name": "读取长度""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "欲写出的字节集",
+"comment": "欲写出的数据,如果数据长度超过已映射内存的边界,将只能写出部分数据.",
+"data type": "字节集类"
+   }
+ameter name": "读取长度"]
+  },
+  {
+"method name": "读数据",
+"comment": "从已映射内存中读出基本类型数值,返回实际读入的字节数.\n注: 如果读入失败,会将当前的读写位置移到尾部.",
+"result comment": "返回实际读入的字节数,失败返回0.",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "所读入数据的变量",
+"comment": "提供所欲返回的基本类型值变量(不能提供立即数)",
+"@需求类型": "可写入变量",
+"@匹配类型": "通用非文本基本型"
+   }
+]
+  },
+  {
+comment": "提供所欲返回的基本类型值变量(不能提供立即数)""method name": "写数据",
+comment": "提供所欲返回的基本类型值变量(不能提供立即数)""comment": "向已映射内存中写出基本类型数值,返回实际写出的字节数.\n注: 写出失败不会移动读写位置.",
+comment": "提供所欲返回的基本类型值变量(不能提供立即数)""result comment": "返回实际写出的字节数,失败返回0.",
+comment": "提供所欲返回的基本类型值变量(不能提供立即数)""static": true,
+comment": "提供所欲返回的基本类型值变量(不能提供立即数)""data type": "整数",
+comment": "提供所欲返回的基本类型值变量(不能提供立即数)""@嵌入式方法": "\"\"",
+comment": "提供所欲返回的基本类型值变量(不能提供立即数)""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "所欲写出的数据",
+"comment": "提供所欲写出的基本数值.\n如欲明确指定其数据类型,可以使用强制类型转换操作符.",
+"@匹配类型": "通用非文本基本型"
+   }
+comment": "提供所欲返回的基本类型值变量(不能提供立即数)"]
+  },
+  {
+返回值类型": "0""parameters": [
+"method name": "读文本",
+返回值类型": "0""parameters": [
+"comment": "从当前读写位置读取一段文本数据,返回实际读入的字节长度.\n如果该数据中存在字符值0或26(文本结束标志),将仅返回该字符之前的数据(后续读写将跳过该字符).\n注: 如果读入失败,将返回并0且自动将当前读写位置移到尾部(EOF).",
+返回值类型": "0""parameters": [
+"result comment": "返回实际读入的字节数,失败返回0.",
+返回值类型": "0""parameters": [
+"static": true,
+返回值类型": "0""parameters": [
+"data type": "长整数",
+返回值类型": "0""parameters": [
+"@嵌入式方法": "\"\"",
+返回值类型": "0""parameters": [
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "存放读入文本的变量",
+"comment": "读入的文本数据将存放在此参数中",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲读入的最多字符数",
+"comment": "指定欲读入文本数据的最多字符数目.\n如果为-1,则读入当前读写位置后的所有文本.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+返回值类型": "0""parameters": [
+]
+  },
+  {
+"method name": "读文本行",
+"comment": "从当前读写位置读取一行文本数据,行末的换行符将被抛弃.\n注: 如果读入失败,将返回并0且自动将当前读写位置移到尾部(EOF).",
+"result comment": "返回实际读入的字节数(包括被抛弃的换行符),失败返回0.",
+"static": true,
+"data type": "长整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "存放读入文本的变量",
+"comment": "读入的文本数据将存放在此参数中",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+]
+  },
+  {
+}"method name": "写文本",
+}"comment": "写出一段指定编码的文本数据到已映射内存的当前读写位置处,返回实际写出的字节数.\n注: 如果已映射内存的剩余空间不足,将只写出部分文本.",
+}"result comment": "返回实际写出的字节数,失败返回0.",
+}"static": true,
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "所欲写出的文本",
+"comment": "所欲写出的文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定是否在所写出文本后添加写出一个'\\0'字符\n注意: 请勿在纯文本文件中写出结束零字符!",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+}]
+  },
+  {
+omment": "提供所欲返回的基本类型值变量(不能提供立即数)""@嵌入式方法": "\"\"""method name": "写文本行",
+omment": "提供所欲返回的基本类型值变量(不能提供立即数)""@嵌入式方法": "\"\"""comment": "写出指定编码的文本数据并附加\"\\r\\n\"换行符到已映射内存的当前读写位置处,返回实际写出的字节数.\n注: 如果已映射内存的剩余空间不足,将只写出部分文本.",
+omment": "提供所欲返回的基本类型值变量(不能提供立即数)""@嵌入式方法": "\"\"""result comment": "返回实际写出的字节数,失败返回0.",
+omment": "提供所欲返回的基本类型值变量(不能提供立即数)""@嵌入式方法": "\"\"""static": true,
+omment": "提供所欲返回的基本类型值变量(不能提供立即数)""@嵌入式方法": "\"\"""data type": "长整数",
+omment": "提供所欲返回的基本类型值变量(不能提供立即数)""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+omment": "提供所欲返回的基本类型值变量(不能提供立即数)""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "所欲写出的文本",
+"comment": "所欲写出的文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+omment": "提供所欲返回的基本类型值变量(不能提供立即数)""@嵌入式方法": "\"\""]
+  },
+  {
+ }"method name": "读内存",
+ }"comment": "从已映射内存中读入一段数据到指定的指针中,返回实际读入的字节数.",
+ }"result comment": "返回实际读入的字节数,失败返回0.",
+ }"static": true,
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "提供一个内存地址,用于存放从内存映射文件中读入的数据.\n该指针必须分配了足够的内存空间(大于等于\"数据尺寸\"的长度).",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "数据尺寸",
+"comment": "从已映射内存中读入数据的长度,单位为字节.\n如果已映射内存的剩余空间不足,将只读取部分长度.",
+"@匹配类型": "通用整数型"
+   }
+ }]
+  },
+  {
+
+"method name": "写内存",
+
+"comment": "向已映射内存中写出一段数据,返回实际写出的字节数.",
+
+"result comment": "返回实际写出的字节数,失败返回0.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "欲写出数据的指针",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "数据尺寸",
+"comment": "欲写出的数据的尺寸.\n如果长度超过已映射内存的剩余空间,将只写出部分数据.",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+
+"method name": "删除数据",
+
+"comment": "删除已映射内存中的部分数据,删除成功后,会按删除长度将已映射内存的尾部数据清零.",
+
+"result comment": "返回是否成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "起始位置",
+"comment": "从已映射内存中删除的数据的起始位置偏移,从0开始.\n-1表示从当前的读写位置开始删除.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "删除长度",
+"comment": "所欲删除的长度,必须大于0.\n如果删除的范围超过了已映射内存的边界,将删除失败.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ }"method name": "取读写位置",
+ }"comment": "返回已映射内存的当前读/写位置,有效范围为0到映射内存长度,\n执行读写操作将移动读写位置.",
+ }"result comment": "如果当前尚未映射到内存或失败,将返回-1.",
+ }"static": true,
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+ }]
+  },
+  {
+}"data type": "长整数""method name": "移动读写位置",
+}"data type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功.",
+}"data type": "长整数""static": true,
+}"data type": "长整数""data type": "逻辑型",
+}"data type": "长整数""@嵌入式方法": "\"\"",
+}"data type": "长整数""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "基准移动位置",
+"comment": "指定从文件中开始移动的基准位置",
+"data type": "文件基准位置",
+"@默认值": "文件基准位置.文件首"
+   },
+   {
+"parameter name": "移动距离",
+"comment": "指定相对于起始移动位置的移动尺寸,单位字节.",
+"@匹配类型": "通用整数型"
+   }
+}"data type": "长整数"]
+  },
+  {
+
+"method name": "移到首部",
+
+"comment": "设置下一次读或写操作的位置到映射内存首部,返回是否成功.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+
+]
+  },
+  {
+"data type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功.""method name": "移到尾部",
+"data type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功.""comment": "设置下一次读或写操作的位置到映射内存尾部,返回是否成功.\n注: 这里的尾部等同于EOF,即读写位置等于映射长度.",
+"data type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功.""static": true,
+"data type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功.""data type": "逻辑型",
+"data type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功.""@嵌入式方法": "\"\"",
+"data type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功.""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+"data type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]
+  },
+  {
+ }"method name": "是否在尾部",
+ }"comment": "返回当前读写位置是否已经处于映射内存尾部(EOF).",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+ }]
+  },
+  {
+data type": "内存映射文件类EX""method name": "取数据指针",
+data type": "内存映射文件类EX""comment": "取得已映射内存的地址,用于后续对其进行内存修改和复制操作.\n注: 本方法不会移动读写位置.",
+data type": "内存映射文件类EX""result comment": "执行成功返回数据地址指针,否则返回0.",
+data type": "内存映射文件类EX""static": true,
+data type": "内存映射文件类EX""data type": "变整数",
+data type": "内存映射文件类EX""@嵌入式方法": "\"\"",
+data type": "内存映射文件类EX""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   },
+   {
+"parameter name": "读写位置",
+"comment": "从已映射内存中读出的数据的起始位置偏移,从0开始.\n默认为首地址,-1表示当前的读写位置.",
+"data type": "长整数",
+"@默认值": "0"
+   }
+data type": "内存映射文件类EX"]
+  },
+  {
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"method name": "取文件长度",
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"comment": "返回当前被打开磁盘文件的长度,单位为字节.",
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"result comment": "如果当前尚未打开磁盘文件或失败,将返回-1.",
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"static": true,
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"data type": "长整数",
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"@嵌入式方法": "\"\"",
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]]
+  },
+  {
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"method name": "取映射长度",
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"comment": "返回内存映射文件被映射到内存空间的尺寸,单位为字节.",
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"static": true,
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"data type": "长整数",
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"@嵌入式方法": "\"\"",
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+ata type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]]
+  },
+  {
+ }"method name": "取内存页长度",
+ }"comment": "返回内存映射文件被映射到内存空间的页面尺寸,单位为字节.\n该值必定是4096的倍数.",
+ }"static": true,
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存映射文件类EX"
+   }
+ }]
+  }
+comment": "所写出数据的尺寸将由此数组变量的存储空间尺寸决定"]
+ },
+ {
+ta type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"class name": "内存流读写类",
+ta type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"comment": "提供内存流的读写操作支持,本类不会拷贝内存数据.",
+ta type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@文档": "\"category = \\\"文件操作\\\"\"",
+ta type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@视窗.外部头文件": "\"src\\\\piv_file.hpp\"",
+ta type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@别名": "\"PivMemStream\"",
+ta type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@别名类型": "本地类",
+ta type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"methods": [
+  {
+a type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@别名": "\"PivMemStream\"""method name": "打开数据",
+a type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@别名": "\"PivMemStream\"""comment": "打开一段内存数据,之后可以顺序读写数据的内容.\n本类不会拷贝数据,请保证数据的生命周期.",
+a type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@别名": "\"PivMemStream\"""static": true,
+a type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@别名": "\"PivMemStream\"""data type": "逻辑型",
+a type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@别名": "\"PivMemStream\"""@嵌入式方法": "\"\"",
+a type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@别名": "\"PivMemStream\"""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "数据地址",
+"comment": "所欲打开的内存数据地址,请保证其生命周期.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "数据尺寸",
+"comment": "内存数据的字节长度",
+"@匹配类型": "通用整数型"
+   }
+a type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"@别名": "\"PivMemStream\""]
+  },
+  {
+ype": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"class name": "内存流读写类""method name": "打开资源",
+ype": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"class name": "内存流读写类""comment": "打开一个视窗文件资源,直接读取资源里的内容.\n注意: 资源具有全程序生命周期,但只读,请勿使用本类的\"写\"命令.",
+ype": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"class name": "内存流读写类""static": true,
+ype": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"class name": "内存流读写类""data type": "逻辑型",
+ype": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"class name": "内存流读写类""@嵌入式方法": "\"\"",
+ype": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"class name": "内存流读写类""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "资源ID",
+"comment": "所欲打开的文件资源",
+"data type": "视窗文件资源"
+   }
+ype": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+"class name": "内存流读写类"]
+  },
+  {
+ }"method name": "读",
+ }"comment": "从内存数据中读入指定的基本类型值并返回.\n注: 如果读入失败,会将当前的读写位置移到尾部.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "欲获取的数据类型",
+"comment": "提供所欲读入的基本数据类型",
+"@需求类型": "数据类型",
+"@匹配类型": "通用非文本基本型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "缺省值",
+"comment": "如果读入失败,则返回此处的值",
+"@匹配类型": "匹配前参数值类型"
+   }
+ }]
+  },
+  {
+
+"method name": "读字符",
+
+"comment": "返回当前读写位置的字符值(char),如果读到文本尾部则返回-1.\n注: 如果读入失败,会将当前的读写位置移到尾部.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   }
+
+]
+  },
+  {
+"method name": "读宽字符",
+"comment": "返回当前读写位置的宽字符值(wchar_t),如果读到文本尾部则返回-1.\n注: 如果读入失败,会将当前的读写位置移到尾部.",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   }
+]
+  },
+  {
+
+"method name": "读字节集",
+
+"comment": "从内存中读入数据到字节集,返回实际读入的字节数.",
+
+"result comment": "返回实际读入的字节数,失败返回0.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "存放数据的字节集",
+"comment": "提供字节集变量,存放读出的数据,作为方法的返回值.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "读取长度",
+"comment": "读入数据的长度,单位为字节.\n如果的剩余空间不足,将只读取部分长度.",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "写字节集",
+ }"comment": "向内存数据中写出数据,返回实际写出的字节数.",
+ }"result comment": "返回实际写出的字节数,失败返回0.",
+ }"static": true,
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "欲写出的字节集",
+"comment": "欲写出的数据,如果数据长度超过内存数据长度,将只能写出部分数据.",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "读数据",
+"@嵌入式方法": "\"\"""comment": "从内存中读出基本类型数值,返回实际读入的字节数.\n注: 如果读入失败,会将当前的读写位置移到尾部.",
+"@嵌入式方法": "\"\"""result comment": "返回实际读入的字节数,失败返回0.",
+"@嵌入式方法": "\"\"""static": true,
+"@嵌入式方法": "\"\"""data type": "整数",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "所读入数据的变量",
+"comment": "提供所欲返回的基本类型值变量(不能提供立即数)",
+"@需求类型": "可写入变量",
+"@匹配类型": "通用非文本基本型"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+@嵌入式方法": "\"\"""parameters": [
+"method name": "写数据",
+@嵌入式方法": "\"\"""parameters": [
+"comment": "向内存写出基本类型数值,返回实际写出的字节数.\n注: 写出失败不会移动读写位置.",
+@嵌入式方法": "\"\"""parameters": [
+"result comment": "返回实际写出的字节数,失败返回0.",
+@嵌入式方法": "\"\"""parameters": [
+"static": true,
+@嵌入式方法": "\"\"""parameters": [
+"data type": "整数",
+@嵌入式方法": "\"\"""parameters": [
+"@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""parameters": [
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "所欲写出的数据",
+"comment": "提供所欲写出的基本数值.\n如欲明确指定其数据类型,可以使用强制类型转换操作符.",
+"@匹配类型": "通用非文本基本型"
+   }
+@嵌入式方法": "\"\"""parameters": [
+]
+  },
+  {
+data type": "内存流读写类""method name": "读文本",
+data type": "内存流读写类""comment": "从当前读写位置读取一段文本数据,返回实际读入的字节长度.\n如果该数据中存在字符值0或26(文本结束标志),将仅返回该字符之前的数据(后续读写将跳过该字符).\n如果读入失败,将返回并0且自动将当前读写位置移到尾部(EOF).",
+data type": "内存流读写类""result comment": "返回实际读入的字节数,失败返回0.",
+data type": "内存流读写类""static": true,
+data type": "内存流读写类""data type": "长整数",
+data type": "内存流读写类""@嵌入式方法": "\"\"",
+data type": "内存流读写类""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "存放读入文本的变量",
+"comment": "读入的文本数据将存放在此参数中",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲读入的最多字符数",
+"comment": "指定欲读入文本数据的最多字符数目.\n如果为-1,则读入当前读写位置后的所有文本.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+data type": "内存流读写类"]
+  },
+  {
+data type": "内存流读写类""method name": "读文本行",
+data type": "内存流读写类""comment": "从当前读写位置读取一行文本数据,行末的换行符将被抛弃.\n如果读入失败,将返回并0且自动将当前读写位置移到尾部(EOF).",
+data type": "内存流读写类""result comment": "返回实际读入的字节数(包括被抛弃的换行符),失败返回0.",
+data type": "内存流读写类""static": true,
+data type": "内存流读写类""data type": "长整数",
+data type": "内存流读写类""@嵌入式方法": "\"\"",
+data type": "内存流读写类""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "存放读入文本的变量",
+"comment": "读入的文本数据将存放在此参数中",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+data type": "内存流读写类"]
+  },
+  {
+
+"method name": "写文本",
+
+"comment": "写出一段指定编码的文本数据到内存的当前读写位置处,返回实际写出的字节数.\n如果内存的剩余空间不足,将只写出部分文本.",
+
+"result comment": "返回实际写出的字节数,失败返回0.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "所欲写出的文本",
+"comment": "所欲写出的文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定是否在所写出文本后添加写出一个'\\0'字符\n注意: 请勿在纯文本文件中写出结束零字符!",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+
+]
+  },
+  {
+"method name": "写文本行",
+"comment": "写出指定编码的文本数据并附加\"\\r\\n\"换行符到内存的当前读写位置处,返回实际写出的字节数.\n如果内存的剩余空间不足,将只写出部分文本.",
+"result comment": "返回实际写出的字节数,失败返回0.",
+"static": true,
+"data type": "长整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "所欲写出的文本",
+"comment": "所欲写出的文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定文本的编码类型",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+]
+  },
+  {
+ }"method name": "读内存",
+ }"comment": "从内存中读入一段数据到指定的指针中,返回实际读入的字节数.",
+ }"result comment": "返回实际读入的字节数,失败返回0.",
+ }"static": true,
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "欲保存到的内存地址",
+"comment": "提供一个内存地址,用于存放从内存映射文件中读入的数据.\n该指针必须分配了足够的内存空间(大于等于\"数据尺寸\"的长度).",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "欲读入数据尺寸",
+"comment": "从已映射内存中读入数据的长度,单位为字节.\n如果已映射内存的剩余空间不足,将只读取部分长度.",
+"@匹配类型": "通用整数型"
+   }
+ }]
+  },
+  {
+ }"method name": "写内存",
+ }"comment": "向内存写出一段数据,返回实际写出的字节数.",
+ }"result comment": "返回实际写出的字节数,失败返回0.",
+ }"static": true,
+ }"data type": "长整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "欲写出的数据指针",
+"comment": "欲写出数据的指针",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "欲写出数据尺寸",
+"comment": "欲写出的数据的尺寸\n如果长度超过内存的剩余空间,将只写出部分数据.",
+"@匹配类型": "通用整数型"
+   }
+ }]
+  },
+  {
+ }"method name": "删除数据",
+ }"comment": "删除内存中的部分数据,删除成功后,会按删除长度将尾部的数据清零.",
+ }"result comment": "返回是否成功",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "起始位置",
+"comment": "从内存中删除的数据的起始位置偏移,从0开始.\n-1表示从当前的读写位置开始删除.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "删除长度",
+"comment": "所欲删除的长度,必须大于0.\n如果删除的范围超过了内存的边界,将删除失败.",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+data type": "长整数""method name": "取读写位置",
+data type": "长整数""comment": "返回内存的当前读/写位置,有效范围为0到内存数据长度,\n注: 执行读写操作将移动读写位置.\n如果当前尚未打开内存或失败,将返回-1.",
+data type": "长整数""static": true,
+data type": "长整数""data type": "长整数",
+data type": "长整数""@嵌入式方法": "\"\"",
+data type": "长整数""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   }
+data type": "长整数"]
+  },
+  {
+ata type": "长整数""data type": "长整数""method name": "移动读写位置",
+ata type": "长整数""data type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功.",
+ata type": "长整数""data type": "长整数""static": true,
+ata type": "长整数""data type": "长整数""data type": "逻辑型",
+ata type": "长整数""data type": "长整数""@嵌入式方法": "\"\"",
+ata type": "长整数""data type": "长整数""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "基准移动位置",
+"comment": "指定从文件中开始移动的基准位置",
+"data type": "文件基准位置",
+"@默认值": "文件基准位置.文件首"
+   },
+   {
+"parameter name": "移动距离",
+"comment": "指定相对于起始移动位置的移动尺寸,单位字节.",
+"@匹配类型": "通用整数型"
+   }
+ata type": "长整数""data type": "长整数"]
+  },
+  {
+comment": "所欲写出的文本数据""method name": "移到首部",
+comment": "所欲写出的文本数据""comment": "设置下一次读或写操作的位置到内存首部,返回是否成功.",
+comment": "所欲写出的文本数据""static": true,
+comment": "所欲写出的文本数据""data type": "逻辑型",
+comment": "所欲写出的文本数据""@嵌入式方法": "\"\"",
+comment": "所欲写出的文本数据""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   }
+comment": "所欲写出的文本数据"]
+  },
+  {
+mment": "所欲写出的文本数据"]"method name": "移到尾部",
+mment": "所欲写出的文本数据"]"comment": "设置下一次读或写操作的位置到内存尾部,返回是否成功.\n注: 这里的尾部等同于EOF,即读写位置等于内存数据长度.",
+mment": "所欲写出的文本数据"]"static": true,
+mment": "所欲写出的文本数据"]"data type": "逻辑型",
+mment": "所欲写出的文本数据"]"@嵌入式方法": "\"\"",
+mment": "所欲写出的文本数据"]"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   }
+mment": "所欲写出的文本数据"]]
+  },
+  {
+}"method name": "是否在尾部",
+}"comment": "返回当前读写位置是否已经处于内存尾部(EOF).",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   }
+}]
+  },
+  {
+}"method name": "取数据指针",
+}"comment": "取得内存数据的地址,用于后续对其进行内存修改和复制操作.\n注: 本方法不会移动读写位置.",
+}"result comment": "执行成功返回数据地址指针,否则返回0.",
+}"static": true,
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   },
+   {
+"parameter name": "读写位置",
+"comment": "从内存中读出的数据的起始位置偏移,从0开始.\n默认为首地址,-1表示当前的读写位置.",
+"data type": "长整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "取当前指针",
+
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.",
+
+"result comment": "执行成功返回数据地址指针,否则返回0.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   }
+
+]
+  },
+  {
+
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""method name": "取长度",
+
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""comment": "返回内存数据的尺寸,单位为字节.",
+
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true,
+
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""data type": "长整数",
+
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""@嵌入式方法": "\"\"",
+
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "内存流读写类"
+   }
+
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置."]
+  }
+ta type": "长整数""comment": "设置下一次读或写操作的位置,返回是否成功."]"parameters": [
+]
+ },
+ {
+返回数据地址指针,否则返回0."class name": "文件访问权限",
+返回数据地址指针,否则返回0."comment": "提供文件的访问权限",
+返回数据地址指针,否则返回0."@文档": "\"category = \\\"文件操作.辅助类\\\"\"",
+返回数据地址指针,否则返回0."@常量类": "整数",
+返回数据地址指针,否则返回0."constants": [
+  {
+
+"constant name": "读入",
+
+"comment": "允许从指定文件读入数据",
+
+"initial value": "@GENERIC_READ"
+  },
+  {
+"comment": "允许从指定文件读入数据""constant name": "写出",
+"comment": "允许从指定文件读入数据""comment": "允许写出数据到文件",
+"comment": "允许从指定文件读入数据""initial value": "@GENERIC_WRITE"
+  },
+  {
+nstant name": "读入""constant name": "读写",
+nstant name": "读入""comment": "允许从文件中读入数据或者写出数据到文件",
+nstant name": "读入""initial value": "@(GENERIC_READ | GENERIC_WRITE)"
+  },
+  {
+
+"constant name": "执行",
+
+"comment": "允许执行文件",
+
+"initial value": "@GENERIC_EXECUTE"
+  },
+  {
+nstant name": "读入""constant name": "全部",
+nstant name": "读入""comment": "允许文件的所有访问权限(读写和执行)",
+nstant name": "读入""initial value": "@GENERIC_ALL"
+  }
+返回数据地址指针,否则返回0.]
+ },
+ {
+nstant name": "读入""class name": "文件共享模式",
+nstant name": "读入""comment": "提供文件在进程之间的各种共享模式",
+nstant name": "读入""@文档": "\"category = \\\"文件操作.辅助类\\\"\"",
+nstant name": "读入""@常量类": "整数",
+nstant name": "读入""constants": [
+  {
+nstant name": "执行""constant name": "无限制",
+nstant name": "执行""comment": "允许其它程序任意读写此文件",
+nstant name": "执行""initial value": "@(FILE_SHARE_WRITE | FILE_SHARE_READ)"
+  },
+  {
+stant name": "读入""comment": "允许文件的所有访问权限(读写和执行)""constant name": "禁止读",
+stant name": "读入""comment": "允许文件的所有访问权限(读写和执行)""comment": "禁止其它进程读此文件",
+stant name": "读入""comment": "允许文件的所有访问权限(读写和执行)""initial value": "@FILE_SHARE_WRITE"
+  },
+  {
+回数据地址指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写",
+回数据地址指针,否则返回0."comment": "提供文件的访问权限""comment": "禁止其它进程写此文件",
+回数据地址指针,否则返回0."comment": "提供文件的访问权限""initial value": "@FILE_SHARE_READ"
+  },
+  {
+回数据地址指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止读写",
+回数据地址指针,否则返回0."comment": "提供文件的访问权限""comment": "禁止其它进程读写此文件",
+回数据地址指针,否则返回0."comment": "提供文件的访问权限""initial value": "0"
+  }
+nstant name": "读入"]
+ },
+ {
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true"class name": "文件创建方式",
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true"comment": "提供文件创建方式常量",
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true"@文档": "\"category = \\\"文件操作.辅助类\\\"\"",
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true"@常量类": "整数",
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true"constants": [
+  {
+
+"constant name": "创建新文件",
+
+"comment": "创建新文件,如果文件已经存在则创建失败.",
+
+"initial value": "@CREATE_NEW"
+  },
+  {
+址指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""constant name": "创建并覆盖",
+址指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""comment": "创建新的文件并覆盖现有文件",
+址指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""initial value": "@CREATE_ALWAYS"
+  },
+  {
+指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""comment": "创建新的文件并覆盖现有文件""constant name": "打开已存在",
+指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""comment": "创建新的文件并覆盖现有文件""comment": "打开已存在的现有文件",
+指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""comment": "创建新的文件并覆盖现有文件""initial value": "@OPEN_EXISTING"
+  },
+  {
+址指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""constant name": "打开或创建",
+址指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""comment": "打开文件如果文件不存在就创建一个新的文件",
+址指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""initial value": "@OPEN_ALWAYS"
+  },
+  {
+
+"constant name": "覆盖已存在",
+
+"comment": "打开已存在的现有文件并将它覆盖,文件不存在即创建失败.",
+
+"initial value": "@TRUNCATE_EXISTING"
+  }
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]
+ },
+ {
+omment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]"class name": "映射文件访问权限",
+omment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]"comment": "提供内存映射文件的访问权限",
+omment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]"@文档": "\"category = \\\"文件操作.辅助类\\\"\"",
+omment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]"constants": [
+  {
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true"constant name": "全部",
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true"comment": "允许读/写映射文件的视图(不包括执行),在\"映射到内存\"方法中等效于\"读写\".\n需要在创建映射文件对象时使用\"读写\"或\"可执行_读写\"的内存页保护.",
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true"data type": "整数",
+"comment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true"initial value": "@FILE_MAP_ALL_ACCESS"
+  },
+  {
+mment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]"constants": [
+"constant name": "读入",
+mment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]"constants": [
+"comment": "允许读取映射文件的视图,写操作将导致访问冲突.\n需要在创建映射文件对象时使用包含\"读\"属性的内存页保护.",
+mment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]"constants": [
+"data type": "整数",
+mment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]"constants": [
+"initial value": "@FILE_MAP_READ"
+  },
+  {
+}"constant name": "写出",
+}"comment": "允许写出数据到映射文件的视图,使用\"映射到内存\"时等效于\"读写\".\n需要在创建映射文件对象时使用\"读写\"或\"可执行_读写\"的内存页保护.",
+}"data type": "整数",
+}"initial value": "@FILE_MAP_WRITE"
+  },
+  {
+指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""initial value": "@OPEN_ALWAYS""constant name": "读写",
+指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""initial value": "@OPEN_ALWAYS""comment": "允许读写映射文件的视图",
+指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""initial value": "@OPEN_ALWAYS""data type": "整数",
+指针,否则返回0."comment": "提供文件的访问权限""constant name": "禁止写""initial value": "@OPEN_ALWAYS""initial value": "@(FILE_MAP_READ | FILE_MAP_WRITE)"
+  },
+  {
+"data type": "整数""constant name": "执行",
+"data type": "整数""comment": "允许执行映射文件的视图.\n需要在创建映射文件对象时使用包含\"执行\"属性的内存页保护.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@FILE_MAP_EXECUTE"
+  }
+omment": "取得内存数据当前读写位置的指针.\n注: 本方法不会移动读写位置.""static": true]]
+ }
+n<CVolMem> buffer;]
+}

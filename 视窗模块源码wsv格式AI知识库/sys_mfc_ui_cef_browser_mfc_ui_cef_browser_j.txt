@@ -1,0 +1,3591 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC版最新CEF浏览器".
+
+{
+外部库 = "src\\cef\\lib\\$(p)_$(d)\\libcef.lib\r\nsrc\\cef\\lib\\$(p)_$(d)\\libcef_dll_wrapper.lib""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+外部库 = "src\\cef\\lib\\$(p)_$(d)\\libcef.lib\r\nsrc\\cef\\lib\\$(p)_$(d)\\libcef_dll_wrapper.lib""package name": "火山.MFC界面.浏览器",
+外部库 = "src\\cef\\lib\\$(p)_$(d)\\libcef.lib\r\nsrc\\cef\\lib\\$(p)_$(d)\\libcef_dll_wrapper.lib""classes": [
+ {
+窗口组件 = "icon=\"@64\"\r\ndefault_size = \"200, 200\"\r\npreview_unsupported""class name": "CEF字节集类",
+窗口组件 = "icon=\"@64\"\r\ndefault_size = \"200, 200\"\r\npreview_unsupported""comment": "用作在CEF中保存一段字节集数据",
+窗口组件 = "icon=\"@64\"\r\ndefault_size = \"200, 200\"\r\npreview_unsupported""methods": [
+  {
+
+"method name": "创建",
+
+"comment": "创建并返回一个本类对象实例",
+
+"static": true,
+
+"data type": "CEF字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲复制数据",
+"comment": "提供欲复制到本对象中的字节集数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+此地址为脚本开发者提供错误来源.""method name": "是否为空",
+此地址为脚本开发者提供错误来源.""comment": "返回本对象是否为空",
+此地址为脚本开发者提供错误来源.""data type": "逻辑型",
+此地址为脚本开发者提供错误来源.""@禁止流程检查": "真"
+  },
+  {
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""method name": "复制",
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""comment": "建立并返回一个本对象的复制对象,该对象将复制本对象中的所有数据内容.",
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""data type": "CEF字节集类"
+  },
+  {
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""method name": "取数据指针",
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""comment": "返回本对象中数据的指针值,如不存在将返回0.",
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""data type": "变整数",
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""method name": "取数据尺寸",
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""comment": "返回本对象中数据的尺寸",
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""data type": "整数",
+地址为脚本开发者提供错误来源.""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+址为脚本开发者提供错误来源.""@禁止流程检查": "真""@禁止流程检查": "真""method name": "取数据",
+址为脚本开发者提供错误来源.""@禁止流程检查": "真""@禁止流程检查": "真""comment": "获取本对象中指定尺寸的数据",
+址为脚本开发者提供错误来源.""@禁止流程检查": "真""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "起始偏移",
+"comment": "指定欲获取数据在本对象中的起始偏移位置,必须大于等于0.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "欲获取数据尺寸",
+"comment": "提供欲获取数据的尺寸,为-1表示获取起始偏移之后的所有数据.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "保存到字节集",
+"comment": "用作存储所获得的数据,必须大于等于0.",
+"data type": "字节集类",
+"@需求类型": "可写入变量"
+   }
+址为脚本开发者提供错误来源.""@禁止流程检查": "真""@禁止流程检查": "真"]
+  }
+窗口组件 = "icon=\"@64\"\r\ndefault_size = \"200, 200\"\r\npreview_unsupported"]
+ },
+ {
+"class name": "CEF颜色类型",
+"comment": "提供CEF颜色的具体类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+data type": "整数""constant name": "RGBA8888",
+data type": "整数""comment": "32位像素格式,每个像素值使用4个字节保存,顺序为\"红/绿/蓝/透明度\"字节值.\n这是许多跨平台图形库和现代系统(如 macOS、iOS)中常见的格式.",
+data type": "整数""initial value": "@cef_color_type_t::CEF_COLOR_TYPE_RGBA_8888"
+  },
+  {
+data type": "整数""constant name": "BGRA8888",
+data type": "整数""comment": "32位像素格式,每个像素值使用4个字节保存,顺序为\"蓝/绿/红/透明度\"字节值.",
+data type": "整数""initial value": "@cef_color_type_t::CEF_COLOR_TYPE_BGRA_8888"
+  }
+]
+ },
+ {
+}"class name": "CEF透明度类型",
+}"comment": "提供CEF透明度的具体类型",
+}"@文档": "\"category = \\\"辅助类\\\"\"",
+}"@常量类": "整数",
+}"constants": [
+  {
+ass name": "CEF透明度类型""constant name": "不透明",
+ass name": "CEF透明度类型""comment": "图像完全不透明，没有透明度。Alpha 通道（如果存在）将被忽略。整个图像被视为 100% 不透明。",
+ass name": "CEF透明度类型""initial value": "@cef_alpha_type_t::CEF_ALPHA_TYPE_OPAQUE"
+  },
+  {
+ type": "整数""constant name": "BGRA8888""constant name": "预乘透明度",
+ type": "整数""constant name": "BGRA8888""comment": "像素的颜色分量（R, G, B）的值已经乘以了 Alpha (A) 值。\n在存储时：R' = R * A, G' = G * A, B' = B * A。\n像素数据中存储的是 (R', G', B', A)。",
+ type": "整数""constant name": "BGRA8888""initial value": "@cef_alpha_type_t::CEF_ALPHA_TYPE_PREMULTIPLIED"
+  },
+  {
+"@常量类": "整数""constant name": "后乘透明度",
+"@常量类": "整数""comment": "颜色分量（R, G, B）和 Alpha 分量是独立存储的。颜色值是原始的，未经过 Alpha 缩放。\n像素数据中直接存储原始颜色和透明度：(R, G, B, A)。\n在渲染时，引擎需要先计算 R * A, G * A, B * A，然后再进行混合。\nPNG 文件解码后的原始输出通常是这种格式。",
+"@常量类": "整数""initial value": "@cef_alpha_type_t::CEF_ALPHA_TYPE_POSTMULTIPLIED"
+  }
+}]
+ },
+ {
+}"class name": "CEF图像",
+}"comment": "对应CEF浏览器中处理的图像",
+}"methods": [
+  {
+
+"method name": "创建",
+
+"comment": "创建并返回一个本类对象实例",
+
+"static": true,
+
+"data type": "CEF图像",
+
+"@禁止流程检查": "真"
+  },
+  {
+data type": "整数""method name": "是否为空",
+data type": "整数""comment": "返回本对象是否为空",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+"@常量类": "整数""method name": "加入位图",
+"@常量类": "整数""comment": "将指定位图数据加入本对象中,返回是否成功.",
+"@常量类": "整数""data type": "逻辑型",
+"@常量类": "整数""@禁止流程检查": "真",
+"@常量类": "整数""parameters": [
+   {
+"parameter name": "图像宽度",
+"comment": "指定\"图像数据\"参数中图像的实际宽度(单位像素).\n注意: 这个尺寸是相对于\"设备缩放因子\"的。例如，设备缩放因子=2.0 且 图像宽度=32 意味着这个图像是为 2x 缩放设计的，其逻辑尺寸是 32 / 2.0 = 16。",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像高度",
+"comment": "指定\"图像数据\"参数中图像的实际高度(单位像素).",
+"data type": "整数"
+   },
+   {
+"parameter name": "图像数据",
+"comment": "提供具体的图像数据,其格式及尺寸必须与本方法中的其它参数保持一致.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "设备缩放因子",
+"comment": "指定了这组像素数据所对应的设备缩放因子 (Device Scale Factor)。\n作用: 允许一个本类对象存储同一图像的多个分辨率版本，以适应不同 DPI 的屏幕。\n设备缩放因子 = 1.0: 对应 1x 分辨率 (标准 DPI)。\n设备缩放因子 = 2.0: 对应 2x 分辨率 (如 Retina 屏幕)，图像尺寸是 1x 版本的两倍。\n示例: 如果你想为一个逻辑尺寸为 16x16 的图标提供 1x 和 2x 支持：\n调用 加入位图 (1.0, 16, 16, ...) 添加一个 16x16 的图像。\n调用 加入位图 (2.0, 32, 32, ...) 添加一个 32x32 的高清版本。\nCEF 会根据当前显示器的 DPI 自动选择最合适的版本。",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "颜色类型",
+"comment": "指定\"图像数据\"参数中图像的颜色格式",
+"data type": "CEF颜色类型",
+"@默认值": "CEF颜色类型.RGBA8888"
+   },
+   {
+"parameter name": "透明度类型",
+"comment": "指定\"图像数据\"参数中图像的透明度格式",
+"data type": "CEF透明度类型",
+"@默认值": "CEF透明度类型.不透明"
+   }
+"@常量类": "整数"]
+  },
+  {
+
+"method name": "加入PNG图像",
+
+"comment": "将指定PNG格式图像数据加入本对象中,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供具体的PNG格式图像数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "设备缩放因子",
+"comment": "指定了这组像素数据所对应的设备缩放因子 (Device Scale Factor).\n有关\"设备缩放因子\",参见\"加入位图\"方法的\"设备缩放因子\"参数解释.",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+
+]
+  },
+  {
+
+"method name": "加入JPEG图像",
+
+"comment": "将指定JPEG格式图像数据加入本对象中,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "图像数据",
+"comment": "提供具体的JPEG格式图像数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "设备缩放因子",
+"comment": "指定了这组像素数据所对应的设备缩放因子 (Device Scale Factor).\n有关\"设备缩放因子\",参见\"加入位图\"方法的\"设备缩放因子\"参数解释.",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+
+]
+  },
+  {
+ }"method name": "宽度",
+ }"comment": "返回图像宽度",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "高度",
+ }"comment": "返回图像高度",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+ameter name": "图像宽度""method name": "是否有指定分辨率图像",
+ameter name": "图像宽度""comment": "返回本对象中是否已经为指定的设备缩放因子添加了图像数据.\n这是在处理高 DPI (HiDPI) 显示时非常重要的一个方法，因为它允许你在添加或使用图像数据之前，先查询其状态，避免重复添加或确保所需分辨率的数据已存在。",
+ameter name": "图像宽度""data type": "逻辑型",
+ameter name": "图像宽度""@禁止流程检查": "真",
+ameter name": "图像宽度""parameters": [
+   {
+"parameter name": "设备缩放因子",
+"comment": "提供所欲检查的设备缩放因子 (Device Scale Factor).\n有关\"设备缩放因子\",参见\"加入位图\"方法的\"设备缩放因子\"参数解释.",
+"data type": "小数"
+   }
+ameter name": "图像宽度"]
+  },
+  {
+}"@禁止流程检查": "真""method name": "删除指定分辨率图像",
+}"@禁止流程检查": "真""comment": "删除本对象中为指定的设备缩放因子所添加的图像数据,返回是否成功.",
+}"@禁止流程检查": "真""data type": "逻辑型",
+}"@禁止流程检查": "真""@禁止流程检查": "真",
+}"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "设备缩放因子",
+"comment": "提供所欲处理的设备缩放因子 (Device Scale Factor).\n有关\"设备缩放因子\",参见\"加入位图\"方法的\"设备缩放因子\"参数解释.",
+"data type": "小数"
+   }
+}"@禁止流程检查": "真"]
+  },
+  {
+ethod name": "加入JPEG图像""method name": "取指定分辨率信息",
+ethod name": "加入JPEG图像""comment": "获取已添加到本对象中的匹配特定缩放因子表示的详细信息,返回是否成功.",
+ethod name": "加入JPEG图像""data type": "逻辑型",
+ethod name": "加入JPEG图像""@禁止流程检查": "真",
+ethod name": "加入JPEG图像""parameters": [
+   {
+"parameter name": "期望缩放因子",
+"comment": "指定希望匹配的设备缩放因子。\n如: 1.0 (1x), 2.0 (2x HiDPI)。\n作为查询的“提示”或“目标”。CEF 会尝试找到最接近这个值的已添加图像。",
+"data type": "小数"
+   },
+   {
+"parameter name": "匹配缩放因子",
+"comment": "用作返回所实际匹配到的缩放因子.\n例如: 如果你请求 1.25 ，而图像只有 1.0 和 2.0 的表示，CEF 可以选择一个“最佳匹配”（例如 1.0），然后通过本参数告诉你：“你要 1.25，但我给了你 1.0 的版本”。",
+"data type": "小数类",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "匹配图像宽度",
+"comment": "用作返回所实际匹配到图像的宽度(单位像素).",
+"data type": "整数类",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "匹配图像高度",
+"comment": "用作返回所实际匹配到图像的高度(单位像素).",
+"data type": "整数类",
+"@需求类型": "可写入变量"
+   }
+ethod name": "加入JPEG图像"]
+  },
+  {
+
+"method name": "取位图数据",
+
+"comment": "返回本对象中最匹配所要求分辨率的图像数据",
+
+"result comment": "成功返回所获得的图像字节集,失败所返回对象的内容为空.",
+
+"data type": "CEF字节集类",
+
+"parameters": [
+   {
+"parameter name": "期望缩放因子",
+"comment": "指定希望匹配的设备缩放因子。\n如: 1.0 (1x), 2.0 (2x HiDPI)。\n作为查询的“提示”或“目标”。CEF 会尝试找到最接近这个值的已添加图像。",
+"data type": "小数"
+   },
+   {
+"parameter name": "期望颜色类型",
+"comment": "指定所期望输出的图像颜色格式",
+"data type": "CEF颜色类型",
+"@默认值": "CEF颜色类型.RGBA8888"
+   },
+   {
+"parameter name": "期望透明度类型",
+"comment": "指定所期望输出的图像透明度格式",
+"data type": "CEF透明度类型",
+"@默认值": "CEF透明度类型.不透明"
+   },
+   {
+"parameter name": "匹配图像宽度",
+"comment": "用作返回所实际匹配到图像的宽度(单位像素).",
+"data type": "整数类",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "匹配图像高度",
+"comment": "用作返回所实际匹配到图像的高度(单位像素).",
+"data type": "整数类",
+"@需求类型": "可写入变量"
+   }
+
+]
+  },
+  {
+
+"method name": "取PNG位图数据",
+
+"comment": "返回本对象中最匹配所要求分辨率的PNG格式图像数据",
+
+"result comment": "成功返回所获得的图像字节集,失败所返回对象的内容为空.",
+
+"data type": "CEF字节集类",
+
+"parameters": [
+   {
+"parameter name": "期望缩放因子",
+"comment": "指定希望匹配的设备缩放因子。\n如: 1.0 (1x), 2.0 (2x HiDPI)。\n作为查询的“提示”或“目标”。CEF 会尝试找到最接近这个值的已添加图像。",
+"data type": "小数"
+   },
+   {
+"parameter name": "是否包含透明度",
+"comment": "指定所输出的图像数据是否包含透明度通道值",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "匹配图像宽度",
+"comment": "用作返回所实际匹配到图像的宽度(单位像素).",
+"data type": "整数类",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "匹配图像高度",
+"comment": "用作返回所实际匹配到图像的高度(单位像素).",
+"data type": "整数类",
+"@需求类型": "可写入变量"
+   }
+
+]
+  },
+  {
+"method name": "取JPEG位图数据",
+"comment": "返回本对象中最匹配所要求分辨率的JPEG格式图像数据.\n注意: 由于JPEG格式不支持透明度,源位图中的透明度通道值将被抛弃.",
+"result comment": "成功返回所获得的图像字节集,失败所返回对象的内容为空.",
+"data type": "CEF字节集类",
+"parameters": [
+   {
+"parameter name": "期望缩放因子",
+"comment": "指定希望匹配的设备缩放因子。\n如: 1.0 (1x), 2.0 (2x HiDPI)。\n作为查询的“提示”或“目标”。CEF 会尝试找到最接近这个值的已添加图像。",
+"data type": "小数"
+   },
+   {
+"parameter name": "期望压缩级别",
+"comment": "指定所输出JPEG图像数据的期望压缩级别,有效值从0(最低)到100(最高).",
+"data type": "整数"
+   },
+   {
+"parameter name": "匹配图像宽度",
+"comment": "用作返回所实际匹配到图像的宽度(单位像素).",
+"data type": "整数类",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "匹配图像高度",
+"comment": "用作返回所实际匹配到图像的高度(单位像素).",
+"data type": "整数类",
+"@需求类型": "可写入变量"
+   }
+]
+  }
+}]
+ },
+ {
+"result comment": "成功返回所获得的图像字节集,失败所返回对象的内容为空.""class name": "CEF页面框架",
+"result comment": "成功返回所获得的图像字节集,失败所返回对象的内容为空.""comment": "提供CEF页面中的一个框架",
+"result comment": "成功返回所获得的图像字节集,失败所返回对象的内容为空.""methods": [
+  {
+ }"method name": "是否为空",
+ }"comment": "返回本框架对象是否为空,为空则不能进行任何操作.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "是否为空""method name": "是否为主框架",
+ethod name": "是否为空""comment": "返回本框架是否为页面的主框架",
+ethod name": "是否为空""data type": "逻辑型",
+ethod name": "是否为空""@禁止流程检查": "真"
+  },
+  {
+"method name": "是否为焦点框架",
+"comment": "返回本框架是否为页面的焦点框架",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+comment": "用作返回所实际匹配到图像的宽度(单位像素).""method name": "取框架名",
+comment": "用作返回所实际匹配到图像的宽度(单位像素).""comment": "返回本框架的名称",
+comment": "用作返回所实际匹配到图像的宽度(单位像素).""data type": "文本型",
+comment": "用作返回所实际匹配到图像的宽度(单位像素).""@禁止流程检查": "真"
+  },
+  {
+ethod name": "是否为空""method name": "取框架标识符",
+ethod name": "是否为空""comment": "返回本框架的标识符文本",
+ethod name": "是否为空""data type": "文本型",
+ethod name": "是否为空""@禁止流程检查": "真"
+  },
+  {
+thod name": "是否为空""data type": "文本型""method name": "取父框架",
+thod name": "是否为空""data type": "文本型""comment": "返回本框架的父框架",
+thod name": "是否为空""data type": "文本型""result comment": "如果不存在父框架,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).",
+thod name": "是否为空""data type": "文本型""data type": "CEF页面框架",
+thod name": "是否为空""data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+ameter name": "匹配图像高度""method name": "取链接地址",
+ameter name": "匹配图像高度""comment": "返回本框架中当前浏览内容的链接地址",
+ameter name": "匹配图像高度""data type": "文本型",
+ameter name": "匹配图像高度""@禁止流程检查": "真"
+  },
+  {
+parameters": [
+"method name": "跳转",
+parameters": [
+"comment": "设置本框架中当前浏览的链接地址",
+parameters": [
+"parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "提供所欲跳转到的链接地址",
+"data type": "文本型"
+   }
+parameters": [
+]
+  },
+  {
+meters": [
+"method name": "跳转""method name": "载入内容",
+meters": [
+"method name": "跳转""comment": "设置本框架中当前浏览的页面内容",
+meters": [
+"method name": "跳转""parameters": [
+   {
+"parameter name": "页面内容",
+"comment": "提供所欲浏览的HTML页面内容文本",
+"data type": "文本型"
+   }
+meters": [
+"method name": "跳转"]
+  },
+  {
+meters": [
+"method name": "跳转""method name": "取源代码",
+meters": [
+"method name": "跳转""comment": "返回本框架中当前所浏览页面内容的HTML源代码",
+meters": [
+"method name": "跳转""data type": "文本型",
+meters": [
+"method name": "跳转""@嵌入式方法": "\"\""
+  },
+  {
+meters": [
+"method name": "跳转""method name": "取显示文本",
+meters": [
+"method name": "跳转""comment": "返回本框架中当前所浏览页面内容的可显示文本",
+meters": [
+"method name": "跳转""data type": "文本型",
+meters": [
+"method name": "跳转""@嵌入式方法": "\"\""
+  },
+  {
+meters": [
+"method name": "跳转""method name": "查看源代码",
+meters": [
+"method name": "跳转""comment": "启动文本外部编辑器查看本框架中当前所浏览页面内容的HTML源代码"
+  },
+  {
+}"method name": "Post访问",
+}"comment": "以Post方式访问所指定的URL",
+}"@嵌入式方法": "\"req_obj_param_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "提供所欲访问的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问头",
+"comment": "  每个项目为\"属性名=属性值\"格式,多个项目之间使用换行符'\\n'\n分隔. 如: \"MyHead1=value\\nMyHead2=value\".\n  无则为空文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲传递数据",
+"comment": "提供所有欲传递过去的数据",
+"data type": "字节集类",
+"@可扩展": "\"\""
+   }
+}]
+  },
+  {
+@可扩展": "\"\"""method name": "执行JS脚本",
+@可扩展": "\"\"""comment": "执行所指定的JS脚本代码",
+@可扩展": "\"\"""parameters": [
+   {
+"parameter name": "JS代码",
+"comment": "提供所欲执行的JavaScript脚本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "链接地址",
+"comment": "  提供脚本所对应的链接地址,当脚本执行遇到问题时,浏览器\n将访问此地址为脚本开发者提供错误来源.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "起始行号",
+"comment": "提供出错报告的基准行号",
+"data type": "整数",
+"@默认值": "1"
+   }
+@可扩展": "\"\""]
+  },
+  {
+
+"method name": "全部选择",
+
+"comment": "选择本框架中的所有内容"
+  },
+  {
+ }"method name": "复制",
+ }"comment": "将本框架中的被选择内容复制到剪贴板"
+  },
+  {
+中的被选择内容复制到剪贴板"method name": "撤销",
+中的被选择内容复制到剪贴板"comment": "在本框架中执行\"撤销\"命令"
+  },
+  {
+ameter name": "所欲传递数据""method name": "重做",
+ameter name": "所欲传递数据""comment": "在本框架中执行\"重做\"命令"
+  },
+  {
+": "\"\"""method name": "执行JS脚本""method name": "剪切",
+": "\"\"""method name": "执行JS脚本""comment": "在本框架中执行\"剪切\"命令"
+  },
+  {
+comment": "提供所欲执行的JavaScript脚本内容""method name": "粘贴",
+comment": "提供所欲执行的JavaScript脚本内容""comment": "在本框架中执行\"粘贴\"命令",
+comment": "提供所欲执行的JavaScript脚本内容""parameters": [
+   {
+"parameter name": "是否匹配文本样式",
+"comment": "如果为真,则粘贴剪贴板内容时匹配目标位置的文本样式,而不是保留原始格式.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "提供所欲执行的JavaScript脚本内容"]
+  },
+  {
+\"\"""method name": "执行JS脚本""method name": "剪切""method name": "删除",
+\"\"""method name": "执行JS脚本""method name": "剪切""comment": "在本框架中执行\"删除\"命令"
+  }
+"result comment": "成功返回所获得的图像字节集,失败所返回对象的内容为空."]
+ },
+ {
+mment": "提供所欲执行的JavaScript脚本内容"]"class name": "CEF时间",
+mment": "提供所欲执行的JavaScript脚本内容"]"@文档": "\"category = \\\"辅助类\\\"\"",
+mment": "提供所欲执行的JavaScript脚本内容"]"variables": [
+  {
+ment": "提供所欲执行的JavaScript脚本内容"]"variables": [
+"variable name": "年",
+ment": "提供所欲执行的JavaScript脚本内容"]"variables": [
+"data type": "整数"
+  },
+  {
+的被选择内容复制到剪贴板"comment": "在本框架中执行\"撤销\"命令""variable name": "月",
+的被选择内容复制到剪贴板"comment": "在本框架中执行\"撤销\"命令""comment": "从1到12",
+的被选择内容复制到剪贴板"comment": "在本框架中执行\"撤销\"命令""data type": "整数"
+  },
+  {
+
+"variable name": "日",
+
+"comment": "从1到31",
+
+"data type": "整数"
+  },
+  {
+的被选择内容复制到剪贴板"comment": "在本框架中执行\"撤销\"命令""variable name": "星期几",
+的被选择内容复制到剪贴板"comment": "在本框架中执行\"撤销\"命令""comment": "提供具体为星期几,从0开始,0代表星期天.",
+的被选择内容复制到剪贴板"comment": "在本框架中执行\"撤销\"命令""data type": "整数"
+  },
+  {
+ }"variable name": "时",
+ }"comment": "从0到23",
+ }"data type": "整数"
+  },
+  {
+data type": "整数""variable name": "分",
+data type": "整数""comment": "从0到59",
+data type": "整数""data type": "整数"
+  },
+  {
+"variable name": "秒",
+"comment": "从0到59",
+"data type": "整数"
+  },
+  {
+"variable name": "毫秒",
+"comment": "从0到999",
+"data type": "整数"
+  }
+mment": "提供所欲执行的JavaScript脚本内容"]]
+ },
+ {
+}"comment": "从0到23""class name": "CEFCookie信息",
+}"comment": "从0到23""comment": "提供CEF的Cookie信息",
+}"comment": "从0到23""@文档": "\"category = \\\"辅助类\\\"\"",
+}"comment": "从0到23""variables": [
+  {
+mment": "从0到23""class name": "CEFCookie信息""variable name": "名称",
+mment": "从0到23""class name": "CEFCookie信息""comment": "提供Cookie的名称",
+mment": "从0到23""class name": "CEFCookie信息""data type": "文本型"
+  },
+  {
+t": "从0到23""class name": "CEFCookie信息""variable name": "名称""variable name": "值",
+t": "从0到23""class name": "CEFCookie信息""variable name": "名称""comment": "提供Cookie的值",
+t": "从0到23""class name": "CEFCookie信息""variable name": "名称""data type": "文本型"
+  },
+  {
+}"variable name": "域名",
+}"comment": "  如果域名为空文本,则将创建一个主机Cookie来替换此域名Cookie.\n  域名Cookie存储时将以句点'.'字符为开头并对所有下属子域名可见,\n而主机Cookie不会如此.",
+}"data type": "文本型"
+  },
+  {
+}"variable name": "路径",
+}"comment": "如果路径非空,则只有在此路径下的链接地址网页才能获取此Cookie值.",
+}"data type": "文本型"
+  },
+  {
+
+"variable name": "仅安全链接使用",
+
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送",
+
+"data type": "逻辑型"
+  },
+  {
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""variable name": "仅普通链接使用",
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""comment": "如果为真则本Cookie只在 Http 请求下才会发送",
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""data type": "逻辑型"
+  },
+  {
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""variable name": "是否会过期",
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""comment": "指定本Cookie是否会过期",
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""data type": "逻辑型"
+  },
+  {
+}"variable name": "过期时间",
+}"comment": "如果\"是否会过期\"为真,则提供具体的过期时间.",
+}"data type": "CEF时间"
+  },
+  {
+}"variable name": "创建时间",
+}"comment": "本成员由CEF自动维护(用户无需填写),用作提供本Cookie的创建时间.",
+}"data type": "CEF时间"
+  },
+  {
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""variable name": "最后访问时间",
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""comment": "本成员由CEF自动维护(用户无需填写),用作提供本Cookie的最后访问时间.",
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""data type": "CEF时间"
+  }
+}"comment": "从0到23"]
+ },
+ {
+"class name": "CEF日志记录级别",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""constant name": "默认",
+"comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""initial value": "@cef_log_severity_t::LOGSEVERITY_DEFAULT"
+  },
+  {
+
+"constant name": "详细",
+
+"initial value": "@cef_log_severity_t::LOGSEVERITY_VERBOSE"
+  },
+  {
+@常量类": "整数""constant name": "信息",
+@常量类": "整数""comment": "指定仅记录\"信息\"及其以上级别的日志条目",
+@常量类": "整数""initial value": "@cef_log_severity_t::LOGSEVERITY_INFO"
+  },
+  {
+comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""data type": "逻辑型""constant name": "警告",
+comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""data type": "逻辑型""comment": "指定仅记录\"警告\"及其以上级别的日志条目",
+comment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""data type": "逻辑型""initial value": "@cef_log_severity_t::LOGSEVERITY_WARNING"
+  },
+  {
+omment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""data type": "逻辑型""comment": "指定仅记录\"警告\"及其以上级别的日志条目""constant name": "错误",
+omment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""data type": "逻辑型""comment": "指定仅记录\"警告\"及其以上级别的日志条目""comment": "指定仅记录\"错误\"及其以上级别的日志条目",
+omment": "如果为真则本Cookie只在 Https 安全链接请求下才会发送""data type": "逻辑型""comment": "指定仅记录\"警告\"及其以上级别的日志条目""initial value": "@cef_log_severity_t::LOGSEVERITY_ERROR"
+  },
+  {
+常量类": "整数""initial value": "@cef_log_severity_t::LOGSEVERITY_INFO""constant name": "禁止",
+常量类": "整数""initial value": "@cef_log_severity_t::LOGSEVERITY_INFO""comment": "指定禁止记录日志",
+常量类": "整数""initial value": "@cef_log_severity_t::LOGSEVERITY_INFO""initial value": "@cef_log_severity_t::LOGSEVERITY_DISABLE"
+  }
+]
+ },
+ {
+riable name": "仅安全链接使用""class name": "PDF打印边距类型",
+riable name": "仅安全链接使用""@文档": "\"category = \\\"辅助类\\\"\"",
+riable name": "仅安全链接使用""@常量类": "整数",
+riable name": "仅安全链接使用""constants": [
+  {
+常量类": "整数""initial value": "@cef_log_severity_t::LOGSEVERITY_INFO""constant name": "默认",
+常量类": "整数""initial value": "@cef_log_severity_t::LOGSEVERITY_INFO""initial value": "@cef_pdf_print_margin_type_t::PDF_PRINT_MARGIN_DEFAULT"
+  },
+  {
+le name": "仅安全链接使用""class name": "PDF打印边距类型""constant name": "无",
+le name": "仅安全链接使用""class name": "PDF打印边距类型""initial value": "@cef_pdf_print_margin_type_t::PDF_PRINT_MARGIN_NONE"
+  },
+  {
+
+"constant name": "最小",
+
+"initial value": "@cef_pdf_print_margin_type_t::PDF_PRINT_MARGIN_MINIMUM"
+  },
+  {
+
+"constant name": "自定义",
+
+"initial value": "@cef_pdf_print_margin_type_t::PDF_PRINT_MARGIN_CUSTOM"
+  }
+riable name": "仅安全链接使用"]
+ },
+ {
+ss name": "CEF日志记录级别""class name": "CEF许可状态",
+ss name": "CEF日志记录级别""@文档": "\"category = \\\"辅助类\\\"\"",
+ss name": "CEF日志记录级别""@常量类": "整数",
+ss name": "CEF日志记录级别""constants": [
+  {
+le name": "仅安全链接使用""class name": "PDF打印边距类型""constant name": "默认",
+le name": "仅安全链接使用""class name": "PDF打印边距类型""comment": "允许还是禁止由对应默认值决定",
+le name": "仅安全链接使用""class name": "PDF打印边距类型""initial value": "@cef_state_t::STATE_DEFAULT"
+  },
+  {
+le name": "仅安全链接使用""class name": "PDF打印边距类型""constant name": "允许",
+le name": "仅安全链接使用""class name": "PDF打印边距类型""initial value": "@cef_state_t::STATE_ENABLED"
+  },
+  {
+ame": "仅安全链接使用""class name": "PDF打印边距类型""constant name": "允许""constant name": "禁止",
+ame": "仅安全链接使用""class name": "PDF打印边距类型""constant name": "允许""initial value": "@cef_state_t::STATE_DISABLED"
+  }
+ss name": "CEF日志记录级别"]
+ },
+ {
+ name": "CEF日志记录级别"]"class name": "CEF鼠标键类型",
+ name": "CEF日志记录级别"]"@文档": "\"category = \\\"辅助类\\\"\"",
+ name": "CEF日志记录级别"]"constants": [
+  {
+"comment": "如果\"是否会过期\"为真,则提供具体的过期时间.""constant name": "左键",
+"comment": "如果\"是否会过期\"为真,则提供具体的过期时间.""data type": "整数",
+"comment": "如果\"是否会过期\"为真,则提供具体的过期时间.""initial value": "1"
+  },
+  {
+"data type": "CEF时间""constant name": "中键",
+"data type": "CEF时间""data type": "整数",
+"data type": "CEF时间""initial value": "2"
+  },
+  {
+}"constant name": "右键",
+}"data type": "整数",
+}"initial value": "4"
+  }
+ name": "CEF日志记录级别"]]
+ },
+ {
+ name": "CEF日志记录级别"]"class name": "CEF缩放命令",
+ name": "CEF日志记录级别"]"@文档": "\"category = \\\"辅助类\\\"\"",
+ name": "CEF日志记录级别"]"@常量类": "整数",
+ name": "CEF日志记录级别"]"constants": [
+  {
+tegory = \\\"辅助类\\\"\""constant name": "放大",
+tegory = \\\"辅助类\\\"\""initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_OUT"
+  },
+  {
+
+"constant name": "重置",
+
+"initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET"
+  },
+  {
+
+"constant name": "缩小",
+
+"initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_IN"
+  }
+ name": "CEF日志记录级别"]]
+ },
+ {
+}"class name": "CEF下载结束原因",
+}"@文档": "\"category = \\\"辅助类\\\"\"",
+}"@常量类": "整数"
+ },
+ {
+nstant name": "最小""class name": "CEF下载中断原因",
+nstant name": "最小""@文档": "\"category = \\\"辅助类\\\"\"",
+nstant name": "最小""@常量类": "整数",
+nstant name": "最小""constants": [
+  {
+}"constant name": "无",
+}"comment": "未中断",
+}"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_NONE"
+  },
+  {
+}"constant name": "文件操作失败",
+}"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_FAILED"
+  },
+  {
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_FAILED""constant name": "文件无访问权限",
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_FAILED""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_ACCESS_DENIED"
+  },
+  {
+
+"constant name": "磁盘空间不足",
+
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_NO_SPACE"
+  },
+  {
+"initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET""constant name": "文件名太长",
+"initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET""comment": "目录或文件名太长",
+"initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_NAME_TOO_LONG"
+  },
+  {
+initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET""comment": "目录或文件名太长""constant name": "文件太大",
+initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET""comment": "目录或文件名太长""comment": "文件太大超出了文件系统管理能力",
+initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET""comment": "目录或文件名太长""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_TOO_LARGE"
+  },
+  {
+"constant name": "文件包含病毒",
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_VIRUS_INFECTED"
+  },
+  {
+"constant name": "打开太多的文件",
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_TRANSIENT_ERROR"
+  },
+  {
+"initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET""constant name": "文件被阻塞",
+"initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET""comment": "文件操作被系统本地策略阻塞",
+"initial value": "@cef_zoom_command_t::CEF_ZOOM_COMMAND_RESET""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_BLOCKED"
+  },
+  {
+stant name": "打开太多的文件""constant name": "安全检查失败",
+stant name": "打开太多的文件""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_SECURITY_CHECK_FAILED"
+  },
+  {
+name": "CEF日志记录级别"]"constants": [
+"constant name": "文件太短",
+name": "CEF日志记录级别"]"constants": [
+"comment": "试图在打开文件时越过了文件的末尾（作为恢复先前中断的下载的一部分）",
+name": "CEF日志记录级别"]"constants": [
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_TOO_SHORT"
+  },
+  {
+
+"constant name": "不匹配散列值",
+
+"comment": "部分文件内容与期望的散列值不匹配",
+
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH"
+  },
+  {
+}"constant name": "源和目标相同",
+}"comment": "所下载文件的源和目标地址相同",
+}"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_SAME_AS_SOURCE"
+  },
+  {
+"constant name": "网络出错",
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_NETWORK_FAILED"
+  },
+  {
+
+"constant name": "网络超时",
+
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_NETWORK_TIMEOUT"
+  },
+  {
+
+"constant name": "网络连接断开",
+
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_NETWORK_DISCONNECTED"
+  },
+  {
+}"constant name": "服务器下线",
+}"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_NETWORK_SERVER_DOWN"
+  },
+  {
+}"constant name": "无效的网络请求",
+}"comment": "如: 不被支持的协议,无效的连接地址,被策略所禁止.",
+}"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_NETWORK_INVALID_REQUEST"
+  },
+  {
+
+"constant name": "服务器操作失败",
+
+"comment": "服务器通知操作已经失败",
+
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_FAILED"
+  },
+  {
+}"constant name": "不支持范围请求",
+}"comment": "服务器不支持范围请求",
+}"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_NO_RANGE"
+  },
+  {
+name": "CEF日志记录级别"]"@常量类": "整数""constant name": "数据不存在",
+name": "CEF日志记录级别"]"@常量类": "整数""comment": "服务器上不存在所请求的数据",
+name": "CEF日志记录级别"]"@常量类": "整数""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_BAD_CONTENT"
+  },
+  {
+
+"constant name": "无授权访问",
+
+"comment": "所访问的资源在服务器上没有授权",
+
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_UNAUTHORIZED"
+  },
+  {
+超出了文件系统管理能力"constant name": "证书问题",
+超出了文件系统管理能力"comment": "服务器证书问题",
+超出了文件系统管理能力"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_CERT_PROBLEM"
+  },
+  {
+"comment": "服务器不支持范围请求""constant name": "禁止访问服务器",
+"comment": "服务器不支持范围请求""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_FORBIDDEN"
+  },
+  {
+
+"constant name": "服务器不可达",
+
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_UNREACHABLE"
+  },
+  {
+}"constant name": "内容长度无效",
+}"comment": "  服务器发送过来的数据尺寸小于\"content-length\"头字段中指定的尺寸,这将导致连接过早关闭,\n或者\"content-length\"头字段值无效. 下载仅当存在强力验证器时被中断,否则将视作下载完成.",
+}"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_CONTENT_LENGTH_MISMATCH"
+  },
+  {
+
+"constant name": "重定向出错",
+
+"comment": "发生了意外的跨域重定向",
+
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_CROSS_ORIGIN_REDIRECT"
+  },
+  {
+stant name": "网络出错""constant name": "被用户中止",
+stant name": "网络出错""comment": "下载操作被用户中止",
+stant name": "网络出错""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_USER_CANCELED"
+  },
+  {
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_UNREACHABLE""constant name": "浏览器被用户关闭",
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_SERVER_UNREACHABLE""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_USER_SHUTDOWN"
+  },
+  {
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""constant name": "浏览器崩溃",
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_CRASH"
+  }
+nstant name": "最小"]
+ },
+ {
+"comment": "发生了意外的跨域重定向""class name": "CEF下载项信息",
+"comment": "发生了意外的跨域重定向""comment": "提供一个正在下载项目的相关信息.\n注意: 不能新建本类对象或对本类对象进行赋值,只能在处理\"下载更新\"事件时使用所提供的\"下载项\"参数.",
+"comment": "发生了意外的跨域重定向""@禁止创建对象": "真",
+"comment": "发生了意外的跨域重定向""methods": [
+  {
+tant name": "网络出错""comment": "下载操作被用户中止""method name": "是否为空",
+tant name": "网络出错""comment": "下载操作被用户中止""comment": "返回本对象是否为空,为空则不能取出任何信息.\n处理\"下载更新\"事件接收到的\"下载项\"参数必定不为空.",
+tant name": "网络出错""comment": "下载操作被用户中止""data type": "逻辑型",
+tant name": "网络出错""comment": "下载操作被用户中止""@嵌入式方法": "\"\""
+  },
+  {
+ant name": "网络出错""comment": "下载操作被用户中止""comment": "返回本对象是否为空,为空则不能取出任何信息.\n处理\"下载更新\"事件接收到的\"下载项\"参数必定不为空.""method name": "是否正在下载",
+ant name": "网络出错""comment": "下载操作被用户中止""comment": "返回本对象是否为空,为空则不能取出任何信息.\n处理\"下载更新\"事件接收到的\"下载项\"参数必定不为空.""comment": "返回本项目是否正在下载中",
+ant name": "网络出错""comment": "下载操作被用户中止""comment": "返回本对象是否为空,为空则不能取出任何信息.\n处理\"下载更新\"事件接收到的\"下载项\"参数必定不为空.""data type": "逻辑型",
+ant name": "网络出错""comment": "下载操作被用户中止""comment": "返回本对象是否为空,为空则不能取出任何信息.\n处理\"下载更新\"事件接收到的\"下载项\"参数必定不为空.""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "是否已下载完毕",
+
+"comment": "返回本项目是否已经下载完毕",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "是否被中止",
+}"comment": "返回本项目的下载是否已经被中止",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""method name": "是否被中断",
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""comment": "返回本项目的下载是否已经因为某种原因被中断",
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""data type": "逻辑型",
+"initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""@禁止流程检查": "真"
+  },
+  {
+initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""data type": "逻辑型""method name": "取中断原因",
+initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""data type": "逻辑型""comment": "如果\"是否被中断\"方法返回真,则返回具体的中断原因.",
+initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""data type": "逻辑型""data type": "CEF下载中断原因",
+initial value": "@cef_download_interrupt_reason_t::CEF_DOWNLOAD_INTERRUPT_REASON_FILE_HASH_MISMATCH""data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+nstant name": "内容长度无效""method name": "取下载速度",
+nstant name": "内容长度无效""comment": "返回当前下载速度,单位: 字节/秒.",
+nstant name": "内容长度无效""data type": "长整数",
+nstant name": "内容长度无效""@禁止流程检查": "真"
+  },
+  {
+nstant name": "内容长度无效""method name": "取下载进度",
+nstant name": "内容长度无效""comment": "返回当前已经下载的百分比,有效值在 0 到 100 之间,返回 -1 表示数据总尺寸未知,无法计算百分比.",
+nstant name": "内容长度无效""data type": "整数",
+nstant name": "内容长度无效""@禁止流程检查": "真"
+  },
+  {
+nt name": "网络出错""comment": "下载操作被用户中止""comment": "返回本对象是否为空,为空则不能取出任何信息.\n处理\"下载更新\"事件接收到的\"下载项\"参数必定不为空.""@禁止流程检查": "真""method name": "取需下载总尺寸",
+nt name": "网络出错""comment": "下载操作被用户中止""comment": "返回本对象是否为空,为空则不能取出任何信息.\n处理\"下载更新\"事件接收到的\"下载项\"参数必定不为空.""@禁止流程检查": "真""comment": "返回欲下载数据的总尺寸,单位字节.",
+nt name": "网络出错""comment": "下载操作被用户中止""comment": "返回本对象是否为空,为空则不能取出任何信息.\n处理\"下载更新\"事件接收到的\"下载项\"参数必定不为空.""@禁止流程检查": "真""data type": "长整数",
+nt name": "网络出错""comment": "下载操作被用户中止""comment": "返回本对象是否为空,为空则不能取出任何信息.\n处理\"下载更新\"事件接收到的\"下载项\"参数必定不为空.""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+载数据的总尺寸,单位字节."method name": "取已下载尺寸",
+载数据的总尺寸,单位字节."comment": "返回已经下载数据的尺寸,单位字节.",
+载数据的总尺寸,单位字节."data type": "长整数",
+载数据的总尺寸,单位字节."@禁止流程检查": "真"
+  },
+  {
+数据的总尺寸,单位字节."@禁止流程检查": "真""method name": "取起始时间",
+数据的总尺寸,单位字节."@禁止流程检查": "真""comment": "返回下载操作的起始时间",
+数据的总尺寸,单位字节."@禁止流程检查": "真""data type": "CEF时间"
+  },
+  {
+nstant name": "无授权访问""method name": "取结束时间",
+nstant name": "无授权访问""comment": "返回下载操作的结束时间",
+nstant name": "无授权访问""data type": "CEF时间"
+  },
+  {
+nt name": "无授权访问""method name": "取结束时间""method name": "取文件保存路径",
+nt name": "无授权访问""method name": "取结束时间""comment": "取文件已保存或正在保存的完整路径,为空文本表示下载尚未开始、被取消或路径不可用.",
+nt name": "无授权访问""method name": "取结束时间""data type": "文本型"
+  },
+  {
+stant name": "内容长度无效""comment": "返回当前已经下载的百分比,有效值在 0 到 100 之间,返回 -1 表示数据总尺寸未知,无法计算百分比.""method name": "取当前地址",
+stant name": "内容长度无效""comment": "返回当前已经下载的百分比,有效值在 0 到 100 之间,返回 -1 表示数据总尺寸未知,无法计算百分比.""comment": "返回当前下载链接地址",
+stant name": "内容长度无效""comment": "返回当前已经下载的百分比,有效值在 0 到 100 之间,返回 -1 表示数据总尺寸未知,无法计算百分比.""data type": "文本型"
+  },
+  {
+}"method name": "取最初地址",
+}"comment": "返回在进行任何重定位操作前的最初下载链接地址",
+}"data type": "文本型"
+  },
+  {
+}"method name": "取推荐文件名",
+}"comment": "返回本下载项推荐保存到的文件名",
+}"data type": "文本型"
+  },
+  {
+}"method name": "取内容展示方式",
+}"comment": "返回 HTTP 响应头中的\"Content-Disposition\"字段值.\n\"Content-Disposition\"响应头指示回复的内容该以何种形式展示,主要有两种类型:\n1. inline: 在页面内显示;\n2. attachment: 作为附件下载,通常指定文件名. 其中\"filename\"字段提供所建议的文件名.",
+}"data type": "文本型"
+  },
+  {
+thod name": "取内容展示方式""method name": "取媒体类型",
+thod name": "取内容展示方式""comment": "返回下载项对应的媒体类型",
+thod name": "取内容展示方式""data type": "文本型"
+  }
+"comment": "发生了意外的跨域重定向"]
+ },
+ {
+下载数据的尺寸,单位字节."class name": "CEF窗口打开位置",
+下载数据的尺寸,单位字节."comment": "定义了用户点击链接或调用 window.open() 时,目标页面应如何被打开.",
+下载数据的尺寸,单位字节."@文档": "\"category = \\\"辅助类\\\"\"",
+下载数据的尺寸,单位字节."@常量类": "整数",
+下载数据的尺寸,单位字节."constants": [
+  {
+hod name": "取内容展示方式""data type": "文本型""constant name": "未知",
+hod name": "取内容展示方式""data type": "文本型""comment": "未识别的位置，不应出现。",
+hod name": "取内容展示方式""data type": "文本型""initial value": "@cef_window_open_disposition_t::CEF_WOD_UNKNOWN"
+  },
+  {
+hod name": "取内容展示方式""data type": "文本型""constant name": "当前标签页",
+hod name": "取内容展示方式""data type": "文本型""comment": "在当前页面加载目标 URL。这是大多数链接点击的默认行为。",
+hod name": "取内容展示方式""data type": "文本型""initial value": "@cef_window_open_disposition_t::CEF_WOD_CURRENT_TAB"
+  },
+  {
+
+"constant name": "单例标签页",
+
+"comment": "确保同一个窗口内只有一个该 URL 的标签页。如果已存在，则激活它；否则创建新标签页。",
+
+"initial value": "@cef_window_open_disposition_t::CEF_WOD_SINGLETON_TAB"
+  },
+  {
+}"constant name": "前台新标签页",
+}"comment": "在前台（立即聚焦）打开一个新标签页。触发：Ctrl/Cmd + 点击链接 或 中键点击（部分配置）。",
+}"initial value": "@cef_window_open_disposition_t::CEF_WOD_NEW_FOREGROUND_TAB"
+  },
+  {
+"comment": "在前台（立即聚焦）打开一个新标签页。触发：Ctrl/Cmd + 点击链接 或 中键点击（部分配置）。""constant name": "后台新标签页",
+"comment": "在前台（立即聚焦）打开一个新标签页。触发：Ctrl/Cmd + 点击链接 或 中键点击（部分配置）。""comment": "在后台（不聚焦）打开一个新标签页。触发：通常由程序逻辑指定，或某些扩展行为。",
+"comment": "在前台（立即聚焦）打开一个新标签页。触发：Ctrl/Cmd + 点击链接 或 中键点击（部分配置）。""initial value": "@cef_window_open_disposition_t::CEF_WOD_NEW_BACKGROUND_TAB"
+  },
+  {
+t name": "内容长度无效""comment": "返回当前已经下载的百分比,有效值在 0 到 100 之间,返回 -1 表示数据总尺寸未知,无法计算百分比.""method name": "取当前地址""constant name": "新弹出窗口",
+t name": "内容长度无效""comment": "返回当前已经下载的百分比,有效值在 0 到 100 之间,返回 -1 表示数据总尺寸未知,无法计算百分比.""method name": "取当前地址""comment": "打开一个独立的弹出式窗口（通常无地址栏、工具栏等，由 window.open() 控制）。",
+t name": "内容长度无效""comment": "返回当前已经下载的百分比,有效值在 0 到 100 之间,返回 -1 表示数据总尺寸未知,无法计算百分比.""method name": "取当前地址""initial value": "@cef_window_open_disposition_t::CEF_WOD_NEW_POPUP"
+  },
+  {
+}"constant name": "新窗口",
+}"comment": "打开一个全新的浏览器窗口。触发：Shift + 点击链接。",
+}"initial value": "@cef_window_open_disposition_t::CEF_WOD_NEW_WINDOW"
+  },
+  {
+
+"constant name": "保存到磁盘",
+
+"comment": "不打开页面，而是下载链接指向的文件。触发：Alt + 点击链接。",
+
+"initial value": "@cef_window_open_disposition_t::CEF_WOD_SAVE_TO_DISK"
+  },
+  {
+ name": "取内容展示方式""method name": "取媒体类型""constant name": "无痕模式",
+ name": "取内容展示方式""method name": "取媒体类型""comment": "在新的隐私（Incognito）窗口中打开链接。",
+ name": "取内容展示方式""method name": "取媒体类型""initial value": "@cef_window_open_disposition_t::CEF_WOD_OFF_THE_RECORD"
+  },
+  {
+
+"constant name": "忽略操作",
+
+"comment": "特殊错误状态，来自渲染进程，表示该操作应被忽略（如脚本阻止了默认行为）。",
+
+"initial value": "@cef_window_open_disposition_t::CEF_WOD_IGNORE_ACTION"
+  },
+  {
+nstant name": "忽略操作""constant name": "切换到标签页",
+nstant name": "忽略操作""comment": "搜索所有同配置文件（Profile）的窗口，如果找到相同 URL 的标签页，则激活它；否则退化为\"当前标签页\"或\"前台新标签页\"。比\"单例标签页\"范围更广。",
+nstant name": "忽略操作""initial value": "@cef_window_open_disposition_t::CEF_WOD_SWITCH_TO_TAB"
+  },
+  {
+}"constant name": "新画中画窗口",
+}"comment": "创建一个新的画中画（PiP）窗口，用于显示视频或特定内容（现代特性）。",
+}"initial value": "@cef_window_open_disposition_t::CEF_WOD_NEW_PICTURE_IN_PICTURE"
+  }
+下载数据的尺寸,单位字节.]
+ },
+ {
+nstant name": "前台新标签页""class name": "CEF文本类",
+nstant name": "前台新标签页""comment": "用作代表一段在CEF中保存的文本数据",
+nstant name": "前台新标签页""@文档": "\"category = \\\"辅助类\\\"\"",
+nstant name": "前台新标签页""@别名类型": "本地类",
+nstant name": "前台新标签页""@别名": "\"CefString\"",
+nstant name": "前台新标签页""methods": [
+  {
+"method name": "取文本",
+"comment": "获取其中保存的文本数据",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "CEF文本",
+"data type": "CEF文本类"
+   }
+]
+  }
+nstant name": "前台新标签页"]
+ },
+ {
+一段在CEF中保存的文本数据"class name": "CEF头字段表",
+一段在CEF中保存的文本数据"comment": "用作提供CEF中的HTML头部信息中的字段列表",
+一段在CEF中保存的文本数据"base class": "多值哈希表模板类",
+一段在CEF中保存的文本数据"@文档": "\"category = \\\"辅助类\\\"\"",
+一段在CEF中保存的文本数据"@模板实现类": "\"CEF文本类, CEF文本类\""
+ },
+ {
+
+"class name": "CEF3浏览器",
+
+"comment": "基于CEF3最新版本(141.0.11)的 HTML 浏览器.\n注意:\n1. 旧版本的\"CEF浏览器\"组件已经被放弃并从系统类库中删除,如果您需要,\n请到 https://www.voldp.com/downloads/old_cef_browser_ctrl.rar 处下载后解压到火山系统安装目录下即可;\n2. 本组件所使用的 CEF3 浏览器基于的是多进程机制,因此使用了本组件的应用程序会被启动多个进程实例,这是正\n常的不会影响到用户程序的执行;\n3. 不能在控制台程序和动态链接库程序中使用本组件.",
+
+"base class": "窗口组件",
+
+"@视窗.后缀文本": "\"public ICefWebBrowserEventListener\"",
+
+"@视窗.窗口组件": "\"icon=\\\"@64\\\"\\r\\ndefault_size = \\\"200, 200\\\"\\r\\npreview_unsupported\"",
+
+"@视窗.头文件搜寻目录": "\"src\\\\cef\"",
+
+"@视窗.外部头文件.全局": "\"src\\\\mfc_ui_cef_web_browser.h\"",
+
+"@视窗.外部源文件": "\"src\\\\mfc_ui_cef_web_browser.cpp\"",
+
+"@视窗.外部库": "\"src\\\\cef\\\\lib\\\\$(p)_$(d)\\\\libcef.lib\\r\\nsrc\\\\cef\\\\lib\\\\$(p)_$(d)\\\\libcef_dll_wrapper.lib\"",
+
+"@视窗.附属文件": "\"src\\\\cef\\\\client\\\\$(p)\\\\release\"",
+
+"@视窗.需求VS版本": "\"16-\"",
+
+"@视窗.编译信息.console": "\"err:由于cef浏览器需消息循环支持,不能在控制台程序项目中使用本组件.\"",
+
+"@视窗.编译信息.dll": "\"err:由于cef浏览器需要子进程支持,不能在动态链接库程序项目中使用本组件.\"",
+
+"methods": [
+  {
+段在CEF中保存的文本数据"comment": "用作提供CEF中的HTML头部信息中的字段列表""method name": "函数被执行",
+段在CEF中保存的文本数据"comment": "用作提供CEF中的HTML头部信息中的字段列表""comment": "当使用\"函数\"属性登记的JS函数在网页中被执行时,本事件被触发.",
+段在CEF中保存的文本数据"comment": "用作提供CEF中的HTML头部信息中的字段列表""type": "event",
+段在CEF中保存的文本数据"comment": "用作提供CEF中的HTML头部信息中的字段列表""data type": "整数",
+段在CEF中保存的文本数据"comment": "用作提供CEF中的HTML头部信息中的字段列表""parameters": [
+   {
+"parameter name": "函数名",
+"comment": "提供所执行函数的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数表",
+"comment": "提供所有的调用参数",
+"data type": "文本数组类"
+   }
+段在CEF中保存的文本数据"comment": "用作提供CEF中的HTML头部信息中的字段列表"]
+  },
+  {
+comment": "提供所有的调用参数""method name": "链接地址被改变",
+comment": "提供所有的调用参数""comment": "在当前所浏览页面链接地址被改变后,本事件被触发.",
+comment": "提供所有的调用参数""type": "event",
+comment": "提供所有的调用参数""data type": "整数",
+comment": "提供所有的调用参数""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "提供所改变到的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架标识符",
+"comment": "提供其中链接地址被改变的框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   }
+comment": "提供所有的调用参数"]
+  },
+  {
+comment": "提供所有的调用参数""method name": "标题被改变",
+comment": "提供所有的调用参数""comment": "在当前所浏览页面的窗口标题被改变后,本事件被触发.",
+comment": "提供所有的调用参数""type": "event",
+comment": "提供所有的调用参数""data type": "整数",
+comment": "提供所有的调用参数""parameters": [
+   {
+"parameter name": "标题",
+"comment": "提供所改变到的标题文本",
+"data type": "文本型"
+   }
+comment": "提供所有的调用参数"]
+  },
+  {
+comment": "提供所有的调用参数""method name": "收藏夹图标改变",
+comment": "提供所有的调用参数""comment": "  当网页加载过程中,浏览器解析到 <link rel=\"icon\"> 或 <link rel=\"shortcut icon\"> 标签,\n从而发现网站的收藏夹图标的链接地址发生变化时,本事件被发送.",
+comment": "提供所有的调用参数""type": "event",
+comment": "提供所有的调用参数""data type": "整数",
+comment": "提供所有的调用参数""parameters": [
+   {
+"parameter name": "图标链接地址",
+"comment": "提供所有收藏夹图标的链接地址,至少有一个成员.",
+"data type": "文本数组类"
+   }
+comment": "提供所有的调用参数"]
+  },
+  {
+
+"method name": "载入进度改变",
+
+"comment": "当页面资源（如 HTML、CSS、JS、图片等）加载状态发生变化时,都会发送本事件,并传入一个表示整体加载进度的百分比数值.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "载入进度",
+"comment": "提供具体的载入进度百分比,值从0到100之间.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "媒体访问权限改变",
+
+"comment": "当网页对摄像头和/或麦克风的访问状态发生了改变后发送本事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "是否能捕获视频",
+"comment": "表示浏览器当前是否具有视频捕获权限(例如摄像头)",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否能捕获音频",
+"comment": "表示浏览器当前是否具有音频捕获权限(例如麦克风)",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "全屏模式被改变",
+"comment": "在当前所浏览页面的全屏模式被改变后,本事件被触发.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "是否全屏",
+"comment": "提供所切换到的全屏模式",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+ }"method name": "显示提示文本",
+ }"comment": "在需要显示提示文本时,本事件被触发.",
+ }"result comment": "返回0继续显示提示文本,返回1自行管理提示文本的显示禁止后续的自动显示.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "提示文本",
+"comment": "提供所欲显示的提示文本,可以修改本参数值以改变所显示的提示文本.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "显示状态信息",
+"comment": "在需要显示状态信息时,本事件被触发.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "状态信息",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "逻辑型""method name": "显示控制台信息",
+data type": "逻辑型""comment": "在需要显示控制台信息时,本事件被触发.",
+data type": "逻辑型""result comment": "返回0允许显示,返回1禁止显示.",
+data type": "逻辑型""type": "event",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "控制台信息",
+"data type": "文本型"
+   },
+   {
+"parameter name": "源文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "行号",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+ }"method name": "即将弹出窗口",
+ }"comment": "在浏览器即将打开一个窗口前发送本事件.\nCEF将所有通过 window.open() 脚本或\"点击链接\"触发的目标页面加载行为,都抽象为一个统一的\"窗口打开请求\".\n这个抽象不仅包括真正的新窗口/新标签页,也包括:\n1. 在当前窗口打开 (\"CEF窗口打开位置.当前标签页\");\n2. 在新窗口打开 (\"CEF窗口打开位置.新窗口\");\n3. 在新标签页打开 (\"CEF窗口打开位置.前台新标签页\");\n4. 在后台标签页打开 (\"CEF窗口打开位置.后台新标签页\")\n5. 弹出窗口 (\"CEF窗口打开位置.新弹出窗口\").\n因此,本事件的名字虽然叫\"即将弹出窗口\",但其实际职责是: 在任何\"窗口打开\"请求执行前,进行拦截和控制.",
+ }"result comment": "返回0允许打开,返回1改为在当前框架内部打开,返回-1禁止打开.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "提供即将打开的弹出窗口所浏览的链接地址,注意可能为空文本(如调用 window.open 不传参).",
+"data type": "文本型"
+   },
+   {
+"parameter name": "源框架标识符",
+"comment": "提供发起弹出请求的源页面框架(即打开新窗口的那个\"父页面\"),为空文本表示为主框架.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "弹窗ID",
+"comment": "为一个唯一标识值,用于在 CEF 内部唯一地标记本次弹窗请求.",
+"data type": "整数"
+   },
+   {
+"parameter name": "目标框架名",
+"comment": "提供所弹出新窗口的目标框架名称(如 \"_blank\", \"myWindow\"等),也可能为空文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口打开位置",
+"comment": "提供新窗口的打开位置",
+"data type": "CEF窗口打开位置"
+   },
+   {
+"parameter name": "是否为用户手动",
+"comment": "为真表示本操作为由于用户手动操作导致(譬如鼠标左键单击链接),为假表示为通过程序打开.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否禁止JS访问",
+"comment": "用作接收一个逻辑值,处理本事件时置入真则新窗口无法通过 window.opener 访问原窗口(更安全).",
+"data type": "逻辑型类"
+   }
+ }]
+  },
+  {
+
+"method name": "载入状态被改变",
+
+"comment": "在当前页面的载入状态被改变时发送本事件.\n本事件在\"开始载入\"事件之前发送一次,在\"载入出错\"或\"载入完毕\"事件之后被发送一次.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "是否正在载入",
+"comment": "提供是否还正在载入当前页面",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "能否后退",
+"comment": "提供当前页面是否能够后退",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "能否前进",
+"comment": "提供当前页面是否能够前进",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+ethod name": "载入状态被改变""method name": "开始载入",
+ethod name": "载入状态被改变""comment": "在当前页面内某个框架开始载入内容时发送本事件,所有子框架的本事件将在主框架的本事件之后发送.",
+ethod name": "载入状态被改变""type": "event",
+ethod name": "载入状态被改变""data type": "整数",
+ethod name": "载入状态被改变""parameters": [
+   {
+"parameter name": "框架标识符",
+"comment": "提供所开始载入的页面框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   }
+ethod name": "载入状态被改变"]
+  },
+  {
+
+"type": "event""method name": "载入完毕",
+
+"type": "event""comment": "  在当前页面内某个框架成功载入完毕后发送本事件,\n所有子框架的本事件将在主框架的本事件之前发送.",
+
+"type": "event""type": "event",
+
+"type": "event""data type": "整数",
+
+"type": "event""parameters": [
+   {
+"parameter name": "HTTP状态码",
+"comment": "提供对应的HTTP状态码",
+"data type": "整数"
+   },
+   {
+"parameter name": "框架标识符",
+"comment": "提供所载入完毕的页面框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   }
+
+"type": "event"]
+  },
+  {
+"method name": "载入出错",
+"comment": "在当前页面内某个框架载入失败后发送本事件",
+"result comment": "返回0进行默认处理(显示出错信息),返回1禁止默认处理.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "错误码",
+"comment": "提供载入出错时的错误码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误文本",
+"comment": "提供载入出错时的具体错误文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "出错链接地址",
+"comment": "提供载入出错时的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "框架标识符",
+"comment": "提供载入出错的页面框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "浏览器被创建",
+"comment": "当CEF浏览器对象被创建后发送本事件",
+"type": "event",
+"data type": "整数"
+  },
+  {
+}"method name": "浏览器被关闭",
+}"comment": "当CEF浏览器对象被关闭后发送本事件",
+}"type": "event",
+}"data type": "整数"
+  },
+  {
+comment": "在需要显示状态信息时,本事件被触发.""method name": "即将跳转",
+comment": "在需要显示状态信息时,本事件被触发.""comment": "在某框架的当前浏览内容即将跳转前发送本事件",
+comment": "在需要显示状态信息时,本事件被触发.""result comment": "返回0允许跳转,返回1禁止跳转.",
+comment": "在需要显示状态信息时,本事件被触发.""type": "event",
+comment": "在需要显示状态信息时,本事件被触发.""data type": "整数",
+comment": "在需要显示状态信息时,本事件被触发.""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "提供即将跳转到的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "跳转方法",
+"comment": "提供跳转时所使用的方法(POST/GET/...)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "头字段表",
+"comment": "提供跳转时所提供的HTML头字段列表",
+"data type": "CEF头字段表"
+   },
+   {
+"parameter name": "是否为用户手动",
+"comment": "为真表示本操作为由于用户手动操作导致(譬如鼠标左键单击链接),为假表示为通过程序打开.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否重定位",
+"comment": "是否进行了重定位",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "框架标识符",
+"comment": "提供对应的页面框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   }
+comment": "在需要显示状态信息时,本事件被触发."]
+  },
+  {
+
+"method name": "即将跳转到新浏览器",
+
+"comment": "当即将在某框架中打开并跳转一个新浏览器前本事件被发送,主要用作拦截和自定义网页中\"在新窗口/标签页中打开链接\"的行为.",
+
+"result comment": "返回0允许跳转,返回1禁止跳转.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "提供即将跳转到的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为用户手动",
+"comment": "为真表示本操作为由于用户手动操作导致(譬如鼠标左键单击链接),为假表示为通过程序打开.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "框架标识符",
+"comment": "提供对应的页面框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口打开位置",
+"comment": "提供窗口的打开位置",
+"data type": "CEF窗口打开位置"
+   }
+
+]
+  },
+  {
+omment": "在需要显示状态信息时,本事件被触发.""result comment": "返回0允许跳转,返回1禁止跳转.""method name": "JS对话框",
+omment": "在需要显示状态信息时,本事件被触发.""result comment": "返回0允许跳转,返回1禁止跳转.""comment": "当需要显示JS对话框时,本事件被发送.",
+omment": "在需要显示状态信息时,本事件被触发.""result comment": "返回0允许跳转,返回1禁止跳转.""result comment": "  返回0显示默认对话框,返回1表示显示了自己的替代对话框,返回2表示\n显示了自己的替代对话框且用户是通过单击\"确认\"按钮关闭该对话框的.\n  注意: 如果欲显示自己的对话框,该对话框必须是模态的.",
+omment": "在需要显示状态信息时,本事件被触发.""result comment": "返回0允许跳转,返回1禁止跳转.""type": "event",
+omment": "在需要显示状态信息时,本事件被触发.""result comment": "返回0允许跳转,返回1禁止跳转.""data type": "整数",
+omment": "在需要显示状态信息时,本事件被触发.""result comment": "返回0允许跳转,返回1禁止跳转.""parameters": [
+   {
+"parameter name": "对话框类型",
+"comment": "提供所欲显示JS对话框的类型: 0:警告对话框; 1:确认对话框; 2:提示对话框",
+"data type": "整数"
+   },
+   {
+"parameter name": "来源链接地址",
+"comment": "提供对应的来源链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "来源链接地址显示文本",
+"comment": "提供来源链接地址的对应显示用文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "信息文本",
+"comment": "提供对应信息文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认提示文本",
+"comment": "本参数仅当对话框类型为提示对话框时有效,用作提供对应的默认提示文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户输入结果",
+"comment": "  本参数仅当事件处理程序返回非0值(即显示自己的对话框)时有效,用作返回\n用户在所显示自定义对话框中的输入内容到CEF浏览器.",
+"data type": "文本型"
+   }
+omment": "在需要显示状态信息时,本事件被触发.""result comment": "返回0允许跳转,返回1禁止跳转."]
+  },
+  {
+"method name": "离开对话框",
+"comment": "当需要显示离开当前页面的确认对话框时,本事件被发送.",
+"result comment": "  返回0显示默认对话框,返回1表示显示了自己的替代对话框,返回2表示\n显示了自己的替代对话框且用户是通过单击\"确认\"按钮关闭该对话框的.\n  注意: 如果欲显示自己的对话框,该对话框必须是模态的.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "信息文本",
+"comment": "提供对应信息文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为重载",
+"comment": "提供当前操作是否为重载现行页面",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+comment": "提供发起弹出请求的源页面框架(即打开新窗口的那个\"父页面\"),为空文本表示为主框架.""method name": "默认对话框被关闭",
+comment": "提供发起弹出请求的源页面框架(即打开新窗口的那个\"父页面\"),为空文本表示为主框架.""comment": "当CEF实现的默认对话框被关闭后,本事件被发送.",
+comment": "提供发起弹出请求的源页面框架(即打开新窗口的那个\"父页面\"),为空文本表示为主框架.""type": "event",
+comment": "提供发起弹出请求的源页面框架(即打开新窗口的那个\"父页面\"),为空文本表示为主框架.""data type": "整数"
+  },
+  {
+ }"method name": "重置对话框状态",
+ }"comment": "当需要取消任何正在等待的对话框并重置所有已保存的对话框状态时,会发送本事件.\n如果当前有文件选择对话框(或其他由 CEF 触发的对话框)正处于\"等待用户响应\"的状态(即已弹出但用户还未点击\"打开\"或\"取消\"),CEF 会尝试取消它.\nCEF 内部可能会为对话框保存一些临时状态(例如上次打开的目录、过滤器设置、窗口位置等),本事件通知这些内部状态将被重置或清除.\n无论当前是否有对话框正在等待,只要发生诸如页面导航之类的事件,就会发送本事件. 例如:\n用户点击链接跳转到新页面; 执行了 window.location.href = \"...\"; 页面通过 history.pushState 或单页应用（SPA）路由发生了变化等.\n接收到本事件后,应该进行类似以下清理工作:\n1. 清理你为该浏览器实例保存的任何与对话框相关的临时变量;\n2. 重置 UI 标志(如\"等待文件选择\"指示器);\n3. 取消与该页面关联的、依赖于对话框结果的异步任务.",
+ }"type": "event",
+ }"data type": "整数"
+  },
+  {
+ethod name": "重置对话框状态""method name": "PDF打印完毕",
+ethod name": "重置对话框状态""comment": "当调用\"开始打印到PDF\"方法返回真且\"等待打印完毕\"参数值为假时,打印完毕后将会发送本事件.",
+ethod name": "重置对话框状态""type": "event",
+ethod name": "重置对话框状态""data type": "整数",
+ethod name": "重置对话框状态""parameters": [
+   {
+"parameter name": "PDF文件名",
+"comment": "提供所打印到的PDF文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否打印成功",
+"comment": "提供是否打印成功",
+"data type": "逻辑型"
+   }
+ethod name": "重置对话框状态"]
+  },
+  {
+data type": "文本型""method name": "获得Cookie",
+data type": "文本型""comment": "当调用\"枚举Cookie\"方法后,每枚举到一个Cookie时,发送一次本事件.",
+data type": "文本型""result comment": "返回1停止继续枚举;\n返回0继续枚举;\n返回-1删除当前cookie并继续枚举;\n返回-2删除当前cookie并停止继续枚举.",
+data type": "文本型""type": "event",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "cookie",
+"comment": "提供所枚举到的Cookie信息",
+"data type": "CEFCookie信息"
+   },
+   {
+"parameter name": "为最后一个",
+"comment": "提供当前所所枚举到的Cookie是否为最后一个能枚举到的Cookie.",
+"data type": "逻辑型"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "取验证信息",
+ }"comment": "当浏览器需要用户提供验证信息时,本事件被发送.",
+ }"result comment": "返回1表示已经提供了有效的用户名和密码,返回0表示未提供且中止对应的网络请求.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "来源链接地址",
+"comment": "提供对应的来源链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "主机",
+"comment": "提供欲访问主机的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供欲访问端口号",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为代理服务器",
+"comment": "为真表示欲访问的主机为代理服务器",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "域名",
+"comment": "本参数有可能为空文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "验证协议",
+"comment": "提供所使用的验证协议,譬如\"basic\"/\"digest\",有可能为空文本(如果所访问主机为FTP服务器).",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"comment": "事件处理方法需要在本参数中填入所提供的访问授权用户名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "事件处理方法需要在本参数中填入所提供的访问授权密码",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+comment": "为真表示欲访问的主机为代理服务器""method name": "证书验证错误",
+comment": "为真表示欲访问的主机为代理服务器""comment": "  当 CEF 尝试加载一个 HTTPS 资源（如网页、API 调用）时，如果服务器的 SSL 证书无法通过浏览器的\n安全验证（例如，证书过期、自签名、域名不匹配、被吊销等），CEF 会发送此事件，让你有机会决定如何\n处理这个安全风险，而不是直接中断连接并显示错误页面。",
+comment": "为真表示欲访问的主机为代理服务器""result comment": "返回0将使用默认行为(通常是显示一个\"您的连接不是私密连接\"的错误页面,并中断连接),返回1忽略此错误.",
+comment": "为真表示欲访问的主机为代理服务器""type": "event",
+comment": "为真表示欲访问的主机为代理服务器""data type": "整数",
+comment": "为真表示欲访问的主机为代理服务器""parameters": [
+   {
+"parameter name": "错误码",
+"comment": "提供具体的CEF错误码值,有关证书验证失败的常见值有:\n-200: 证书的通用名称 (CN) 或主题备用名称 (SAN) 与请求的域名不匹配;\n-201: 证书已过期或尚未生效;\n-202: 证书颁发机构 (CA) 不受信任(例如: 自签名证书);\n-203: 证书本身包含错误;\n-206: 证书已被吊销.\n还有很多其它错误值,具体请查阅相关CEF API文档.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所请求链接地址",
+"comment": "提供发生错误的 HTTPS 请求的完整链接地址",
+"data type": "文本型"
+   }
+comment": "为真表示欲访问的主机为代理服务器"]
+  },
+  {
+ameter name": "所请求链接地址""method name": "渲染视图已就绪",
+ameter name": "所请求链接地址""comment": "本事件将在以下情况下被发送:\n1. 浏览器创建完成: 当你创建一个新浏览器后, CEF 会启动渲染进程,当这个进程初始化完毕,主渲染视图建立后,就会发送本事件;\n2. 渲染进程重启: 如果渲染进程由于崩溃等原因被 CEF 重新启动,在新的渲染进程和视图准备就绪后,也会再次发送本事件.\n在 CEF 的架构中,浏览器进程和渲染进程是分离的,你在主进程中(浏览器进程)调用的许多方法(尤其是与 JavaScript 和 DOM 相关的),需要通过 IPC (进程间通信) 发送到渲染进程去执行.\n在接收到本事件之前,渲染进程可能尚未完全启动,或者主渲染视图还未创建. 此时调用\"执行JS脚本\"方法可能会失败或被静默丢弃,尝试注入 JavaScript 或访问 DOM 可能不会生效.\n一旦接收到本事件,你就有了一个可靠的保证: 渲染视图已经存在,可以安全地执行 JavaScript 和与页面内容交互,此时是执行初始化 JavaScript 代码和设置页面环境的最佳时机.",
+ameter name": "所请求链接地址""type": "event",
+ameter name": "所请求链接地址""data type": "整数"
+  },
+  {
+}"method name": "主框架文档已就绪",
+}"comment": "接收到本事件标志着一个关键的、比\"渲染视图已就绪\"事件更精确的页面加载阶段: 主页面框架的 HTML 文档对象 (Document Object) 已经在渲染进程中创建并可用.\n本事件在页面加载生命周期中的非常早期被发送,具体时机是:\n1. 渲染进程已经启动(\"渲染视图已就绪\"事件已经或即将被调用);\n2. 主框架的文档对象(即 window.document)已经创建.\n但是此时HTML文档可能尚未完全解析,\"<script>\"和\"<link>\"标签引用的外部资源(如 CSS、JavaScript 文件)可能还在下载中,DOM 树可能只构建了一部分.\n在 CEF 的架构中,本事件解决了一个长期存在的痛点:\n1. \"渲染视图已就绪\"事件的局限性:\n  该事件只保证渲染视图存在,可以接收 IPC 消息,但它不保证\"window.document\"对象已经创建,在此事件触发后立即执行: 执行JS脚本(\"document.getElementById('...')\"),\n可能会失败,因为 document 可能还不存在或为空.\n2. 本事件的优势:\n  接收到本事件可以明确确定: document 对象现在存在了,这是最早可以安全地执行依赖于 document 对象的 JavaScript 的时机,它比\"载入状态被改变\"事件(\"是否正在载入\"参数为假)早得多,\n允许你更早地介入页面加载过程。\n主要用途: 本事件是执行最早期 JavaScript 注入(如: 注入\"启动器\"脚本,为后续的 JS 执行做准备)和修改页面初始环境的理想时机.\n各种相关事件特性对比(发送时机 / 是否保证 document 存在 / 用途):\n\"浏览器被创建\": 在浏览器进程创建了浏览器对象后发送 / document不存在 / 用作初始化浏览器对象、窗口等;\n\"渲染视图已就绪\": 在渲染进程已创建渲染视图后发送 / document不确定存在 / 可以发送 IPC,但 JS 执行可能失败;\n\"主框架文档已就绪\": 主框架的 document 对象创建后发送 / document已存在 / 最早安全执行 JS 的时机;\n\"载入状态被改变\"事件(\"是否正在载入\"参数为假): 页面(主框架)完全加载后发送 / document已存在 / 可以执行依赖完整资源和 DOM 的操作.",
+}"type": "event",
+}"data type": "整数"
+  },
+  {
+er name": "所请求链接地址""method name": "渲染视图已就绪""method name": "是否允许下载",
+er name": "所请求链接地址""method name": "渲染视图已就绪""comment": "当浏览器在下载指定URL前,本事件被发送.",
+er name": "所请求链接地址""method name": "渲染视图已就绪""result comment": "返回0表示允许下载,返回1表示不允许下载.",
+er name": "所请求链接地址""method name": "渲染视图已就绪""type": "event",
+er name": "所请求链接地址""method name": "渲染视图已就绪""data type": "整数",
+er name": "所请求链接地址""method name": "渲染视图已就绪""parameters": [
+   {
+"parameter name": "下载链接地址",
+"comment": "提供对应的下载链接URL地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求方法",
+"comment": "提供对应的请求方法名称,如: \"GET\", \"POST\" 等.",
+"data type": "文本型"
+   }
+er name": "所请求链接地址""method name": "渲染视图已就绪"]
+  },
+  {
+"type": "event""method name": "即将下载",
+"type": "event""comment": "当浏览器即将下载指定URL时,本事件被发送.",
+"type": "event""result comment": "返回0表示正常下载,返回1时进行如下默认处理: 浏览器为Alloy风格就取消下载,为Chrome风格就显示下载框架.",
+"type": "event""type": "event",
+"type": "event""data type": "整数",
+"type": "event""parameters": [
+   {
+"parameter name": "下载链接地址",
+"comment": "提供对应的下载链接URL地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "推荐文件名",
+"comment": "提供所推荐使用的下载数据保存到的本地文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存到文件名",
+"comment": "用作接收保存到文件名.\n用户在处理本事件时,可以在其中填写一个全路径的本地文件名,下载数据将被保存到该文件中.\n如果未填写,则将把推荐文件名和系统临时目录组合起来建立默认文件名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否显示文件对话框",
+"comment": "用作接收是否显示文件另存为对话框.\n用户在处理本事件时,将本参数设置为真将显示文件另存为对话框以获取保存到文件名,为假则不显示.",
+"data type": "逻辑型类"
+   }
+"type": "event"]
+  },
+  {
+comment": "提供对应的下载链接URL地址""method name": "下载更新",
+comment": "提供对应的下载链接URL地址""comment": "当浏览器正在下载的项目进度或其它信息更新后,本事件被发送.",
+comment": "提供对应的下载链接URL地址""result comment": "返回0表示继续下载,返回1表示暂停该项目下载,返回-1表示中止该项目下载.",
+comment": "提供对应的下载链接URL地址""type": "event",
+comment": "提供对应的下载链接URL地址""data type": "整数",
+comment": "提供对应的下载链接URL地址""parameters": [
+   {
+"parameter name": "下载项ID",
+"comment": "提供当前下载项的ID值,必定不为0. 可以将其保存起来在\"暂停下载\"/\"继续下载\"/\"中止下载\"/\"是否已下载结束\"等方法中使用.",
+"data type": "整数"
+   },
+   {
+"parameter name": "下载项",
+"comment": "提供下载项的当前信息,必定不为空. 注意: 只能在处理本事件时使用,不能将其保存起来在以后使用.",
+"data type": "CEF下载项信息"
+   },
+   {
+"parameter name": "刚开始下载",
+"comment": "提供本次更新是否为开始下载后的首次更新,用户可以在接收到此类型事件后进行一些初始化工作.",
+"data type": "逻辑型"
+   }
+comment": "提供对应的下载链接URL地址"]
+  },
+  {
+comment": "提供当前下载项的ID值,必定不为0. 可以将其保存起来在\"暂停下载\"/\"继续下载\"/\"中止下载\"/\"是否已下载结束\"等方法中使用.""method name": "下载结束",
+comment": "提供当前下载项的ID值,必定不为0. 可以将其保存起来在\"暂停下载\"/\"继续下载\"/\"中止下载\"/\"是否已下载结束\"等方法中使用.""comment": "当浏览器结束下载指定项目(下载完成/被中止/被中断/已超时)后,本事件被发送.\n发送本事件之前,必定已经发送了\"刚开始下载\"参数为真的\"下载更新\"事件.",
+comment": "提供当前下载项的ID值,必定不为0. 可以将其保存起来在\"暂停下载\"/\"继续下载\"/\"中止下载\"/\"是否已下载结束\"等方法中使用.""type": "event",
+comment": "提供当前下载项的ID值,必定不为0. 可以将其保存起来在\"暂停下载\"/\"继续下载\"/\"中止下载\"/\"是否已下载结束\"等方法中使用.""data type": "整数",
+comment": "提供当前下载项的ID值,必定不为0. 可以将其保存起来在\"暂停下载\"/\"继续下载\"/\"中止下载\"/\"是否已下载结束\"等方法中使用.""parameters": [
+   {
+"parameter name": "下载项ID",
+"comment": "提供已结束下载项的ID值,必定不为0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束原因",
+"comment": "提供下载结束的具体原因",
+"data type": "CEF下载结束原因"
+   },
+   {
+"parameter name": "中断原因",
+"comment": "如果\"结束原因\"参数值为\"CEF下载结束原因.被中断\",提供具体中断原因.",
+"data type": "CEF下载中断原因"
+   }
+comment": "提供当前下载项的ID值,必定不为0. 可以将其保存起来在\"暂停下载\"/\"继续下载\"/\"中止下载\"/\"是否已下载结束\"等方法中使用."]
+  },
+  {
+
+"method name": "图像下载完毕",
+
+"comment": "当调用\"下载图像\"方法后,无论下载成功还是失败,都会被发送本事件,用作提供下载结果.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "图像链接地址",
+"comment": "提供所下载的图像链接地址,与调用\"下载图像\"方法时所传入的对应参数一致.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "响应状态码",
+"comment": "HTTP响应状态码: 200: 成功; 404: 文件未找到; 403: 禁止访问; 其他非 200 值均表示失败.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所下载图像",
+"comment": "提供下载并解码后的图像对象.\n如果下载成功且图像有效,这是一个有效不为空(\"是否为空\"方法返回假)的CEF图像实例.\n如果下载失败(网络错误、HTTP 错误、不是有效图像等),将返回为空的CEF图像实例.",
+"data type": "CEF图像"
+   }
+
+]
+  },
+  {
+ }"method name": "获得查找结果",
+ }"comment": "当调用\"查找\"方法后,将发送本事件以报告查找结果.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "匹配项总数",
+"comment": "提供页面中匹配项的总数.\n如果为 0，表示未找到任何匹配。\n这个值可能在搜索过程中动态变化（例如，页面动态加载内容时）。",
+"data type": "整数"
+   },
+   {
+"parameter name": "矩形位置",
+"comment": "当前激活的匹配项(即被高亮显示的那个)在窗口坐标系下的矩形区域.\n注意: 是相对于整个浏览器窗口的位置，不是网页内的相对位置。",
+"data type": "矩形类"
+   },
+   {
+"parameter name": "匹配项序号",
+"comment": "当前激活的匹配项的序号,为从 1 到\"匹配项总数\".\n如: 如果有 5 个匹配,当前高亮的是第 3 个,则本参数值为 3 .",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为最终更新",
+"comment": "提供是否是本次搜索的最终结果更新.\n为假: 搜索仍在进行中,\"匹配项总数\"和\"匹配项序号\"参数值可能不完整,CEF 可能会在新内容加载后再次发送本事件.\n为真: 搜索已完成.\"匹配项总数\"和\"匹配项序号\"参数是最终的、完整的值.\n注意: 应该只在本参数值为真时更新 UI 的最终状态(如\"未找到\"或\"X/Y\"),在本参数值为假时,可以显示\"搜索中...\"或暂时性的计数.",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "框架被创建",
+data type": "文本型""comment": "当浏览器中的任意一个页面框架被成功创建后发送本事件",
+data type": "文本型""type": "event",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "框架标识符",
+"comment": "提供对应的页面框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "框架被销毁",
+ }"comment": "当一个页面框架即将被销毁前(如页面关闭、<iframe> 被移除)发送本事件",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "框架标识符",
+"comment": "提供对应的页面框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+comment": "提供对应的页面框架标识符,为空文本表示为主框架.""method name": "框架被附加",
+comment": "提供对应的页面框架标识符,为空文本表示为主框架.""comment": "当一个页面框架附加到浏览器的 DOM 树中时(例如动态添加 <iframe> 到页面)发送本事件",
+comment": "提供对应的页面框架标识符,为空文本表示为主框架.""type": "event",
+comment": "提供对应的页面框架标识符,为空文本表示为主框架.""data type": "整数",
+comment": "提供对应的页面框架标识符,为空文本表示为主框架.""parameters": [
+   {
+"parameter name": "框架标识符",
+"comment": "提供对应的页面框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为重新挂接",
+"comment": "  参数值为假: 表示该框架是首次被附加到文档. 通常发生在: 页面初始加载时主框架的附加; 动态创建一个新的 <iframe> 并插入 DOM,这是一个\"从无到有\"的挂载过程;\n  参数值为真: 表示该框架之前已被附加过,后来被移除,现在又被重新插入 DOM. 通常发生在: JavaScript 操作 DOM，如 appendChild() 一个之前被移除的 <iframe> 元素,\n框架在 display:none 或从 DOM 移除后又被恢复,此时框架的内部状态（如 JavaScript 上下文）可能仍然存在.",
+"data type": "逻辑型"
+   }
+comment": "提供对应的页面框架标识符,为空文本表示为主框架."]
+  },
+  {
+}"type": "event""method name": "框架被移除",
+}"type": "event""comment": "当一个页面框架从浏览器的 DOM 树中被移除时(但尚未销毁)发送本事件",
+}"type": "event""type": "event",
+}"type": "event""data type": "整数",
+}"type": "event""parameters": [
+   {
+"parameter name": "框架标识符",
+"comment": "提供对应的页面框架标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   }
+}"type": "event"]
+  },
+  {
+"method name": "主框架改变",
+"comment": "当浏览器的主页面框架发生变更时(例如页面跳转、历史记录导航导致主框架更换)发送本事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "原主框架标识符",
+"comment": "提供对应的页面框架标识符,为空文本表示为当前主框架.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新主框架标识符",
+"comment": "提供对应的页面框架标识符,为空文本表示为当前主框架.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "浏览器按下某键1",
+
+"comment": "当用户在浏览器上按下某个按键时,本事件将在页面中 JaveScript 脚本处理该按键事件之前发送,可以用作拦截JS中对该按键的处理.",
+
+"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续发送给页面中 JaveScript 脚本或进行系统默认处理.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "键代码",
+"comment": "为\"按键码\"类中的常量值,注意不包括辅助键组合状态值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "浏览器放开某键1",
+ }"comment": "当用户在浏览器上放下某个按键时,本事件将在页面中 JaveScript 脚本处理该按键事件之前发送,可以用作拦截JS中对该按键的处理.",
+ }"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续发送给页面中 JaveScript 脚本或进行系统默认处理.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "键代码",
+"comment": "为\"按键码\"类中的常量值,注意不包括辅助键组合状态值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "浏览器按下某键2",
+
+"comment": "当用户在浏览器上按下某个按键时,本事件将在页面中 JaveScript 脚本处理该按键事件之后发送.",
+
+"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续系统默认处理.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "键代码",
+"comment": "为\"按键码\"类中的常量值,注意不包括辅助键组合状态值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "浏览器放开某键2",
+}"comment": "当用户在浏览器上放下某个按键时,本事件将在页面中 JaveScript 脚本处理该按键事件之后发送.",
+}"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续系统默认处理.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "键代码",
+"comment": "为\"按键码\"类中的常量值,注意不包括辅助键组合状态值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "背景颜色",
+
+"comment": "返回当前所设置的本组件本身的背景颜色值",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "背景颜色",
+data type": "整数""comment": "设置本组件本身的背景颜色值",
+data type": "整数""type": "property setter",
+data type": "整数""@值细节类型": "颜色支持默认",
+data type": "整数""@视窗.设置时机": "组件创建前",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "链接地址",
+}"comment": "返回主框架所浏览页面的链接地址",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+架所浏览页面的链接地址"method name": "链接地址",
+架所浏览页面的链接地址"comment": "将当前网页主框架跳转到所指定的链接地址",
+架所浏览页面的链接地址"type": "property setter",
+架所浏览页面的链接地址"@视窗.设置时机": "组件创建前后",
+架所浏览页面的链接地址"parameters": [
+   {
+"parameter name": "所欲跳转到的链接地址",
+"data type": "文本型"
+   }
+架所浏览页面的链接地址]
+  },
+  {
+
+"method name": "标准字体",
+
+"comment": "设置本组件所使用的标准字体家族名称",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前",
+
+"parameters": [
+   {
+"parameter name": "所欲设置字体家族名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "定宽字体",
+
+"comment": "设置本组件所使用的定宽字体家族名称",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前",
+
+"parameters": [
+   {
+"parameter name": "所欲设置字体家族名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "衬线字体",
+"comment": "设置本组件所使用的衬线字体家族名称",
+"type": "property setter",
+"@视窗.设置时机": "组件创建前",
+"parameters": [
+   {
+"parameter name": "所欲设置字体家族名",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "无衬线字体",
+}"comment": "设置本组件所使用的无衬线字体家族名称",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前",
+}"parameters": [
+   {
+"parameter name": "所欲设置字体家族名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ameter name": "辅助键状态""method name": "草书字体",
+ameter name": "辅助键状态""comment": "设置本组件所使用的草书字体家族名称",
+ameter name": "辅助键状态""type": "property setter",
+ameter name": "辅助键状态""@视窗.设置时机": "组件创建前",
+ameter name": "辅助键状态""parameters": [
+   {
+"parameter name": "所欲设置字体家族名",
+"data type": "文本型"
+   }
+ameter name": "辅助键状态"]
+  },
+  {
+]"method name": "虚幻字体",
+]"comment": "设置本组件所使用的虚幻字体家族名称",
+]"type": "property setter",
+]"@视窗.设置时机": "组件创建前",
+]"parameters": [
+   {
+"parameter name": "所欲设置字体家族名",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+]"method name": "默认字体尺寸",
+]"comment": "设置本组件所使用的默认字体尺寸",
+]"type": "property setter",
+]"@视窗.设置时机": "组件创建前",
+]"parameters": [
+   {
+"parameter name": "所欲设置字体尺寸",
+"comment": "单位像素",
+"data type": "整数"
+   }
+]]
+  },
+  {
+@视窗.设置时机": "组件创建前""method name": "默认定宽字体尺寸",
+@视窗.设置时机": "组件创建前""comment": "设置本组件所使用的默认定宽字体尺寸",
+@视窗.设置时机": "组件创建前""type": "property setter",
+@视窗.设置时机": "组件创建前""@视窗.设置时机": "组件创建前",
+@视窗.设置时机": "组件创建前""parameters": [
+   {
+"parameter name": "所欲设置字体尺寸",
+"comment": "单位像素",
+"data type": "整数"
+   }
+@视窗.设置时机": "组件创建前"]
+  },
+  {
+
+"method name": "最小字体尺寸",
+
+"comment": "设置本组件所使用的最小字体尺寸",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前",
+
+"parameters": [
+   {
+"parameter name": "所欲设置字体尺寸",
+"comment": "单位像素",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "最小逻辑字体尺寸",
+
+"comment": "设置本组件所使用的最小逻辑字体尺寸",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前",
+
+"parameters": [
+   {
+"parameter name": "所欲设置字体尺寸",
+"comment": "单位像素",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "禁止右键菜单",
+ }"comment": "返回是否禁止在浏览器上弹出右键菜单",
+ }"type": "property getter",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "禁止右键菜单",
+}"comment": "设置是否禁止在浏览器上弹出右键菜单",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+
+"method name": "缩放级别",
+
+"comment": "返回本浏览器的缩放级别",
+
+"type": "property getter",
+
+"data type": "小数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "缩放级别",
+
+"comment": "设置本浏览器的缩放级别",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的缩放级别",
+"comment": "必须大于等于0",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+@视窗.设置时机": "组件创建前""method name": "默认编码",
+@视窗.设置时机": "组件创建前""comment": "返回所使用的网页内容默认编码,如果为空,则将使用\"ISO-8859-1\".",
+@视窗.设置时机": "组件创建前""type": "property getter",
+@视窗.设置时机": "组件创建前""data type": "文本型",
+@视窗.设置时机": "组件创建前""@嵌入式方法": "\"\""
+  },
+  {
+视窗.设置时机": "组件创建前""comment": "返回所使用的网页内容默认编码,如果为空,则将使用\"ISO-8859-1\".""method name": "默认编码",
+视窗.设置时机": "组件创建前""comment": "返回所使用的网页内容默认编码,如果为空,则将使用\"ISO-8859-1\".""comment": "设置所使用的网页内容默认编码,如果为空,则将使用\"ISO-8859-1\".",
+视窗.设置时机": "组件创建前""comment": "返回所使用的网页内容默认编码,如果为空,则将使用\"ISO-8859-1\".""type": "property setter",
+视窗.设置时机": "组件创建前""comment": "返回所使用的网页内容默认编码,如果为空,则将使用\"ISO-8859-1\".""@视窗.设置时机": "组件创建前",
+视窗.设置时机": "组件创建前""comment": "返回所使用的网页内容默认编码,如果为空,则将使用\"ISO-8859-1\".""parameters": [
+   {
+"parameter name": "所欲设置的编码类型",
+"data type": "文本型"
+   }
+视窗.设置时机": "组件创建前""comment": "返回所使用的网页内容默认编码,如果为空,则将使用\"ISO-8859-1\"."]
+  },
+  {
+}"method name": "是否载入图像",
+}"comment": "返回是否允许从网络上载入远程图像(本地缓存图像始终被允许)",
+}"type": "property getter",
+}"data type": "CEF许可状态",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否载入图像",
+}"comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前",
+}"parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+}]
+  },
+  {
+}"method name": "是否允许JS",
+}"comment": "返回是否允许执行JavaScript脚本",
+}"type": "property getter",
+}"data type": "CEF许可状态",
+}"@嵌入式方法": "\"\""
+  },
+  {
+允许执行JavaScript脚本"method name": "是否允许JS",
+允许执行JavaScript脚本"comment": "设置是否允许执行JavaScript脚本",
+允许执行JavaScript脚本"type": "property setter",
+允许执行JavaScript脚本"@视窗.设置时机": "组件创建前",
+允许执行JavaScript脚本"parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+允许执行JavaScript脚本]
+  },
+  {
+
+"method name": "允许JS访问剪贴板",
+
+"comment": "返回是否允许JavaScript脚本访问系统剪贴板",
+
+"type": "property getter",
+
+"data type": "CEF许可状态",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "CEF许可状态""method name": "允许JS访问剪贴板",
+"data type": "CEF许可状态""comment": "设置是否允许JavaScript脚本访问系统剪贴板",
+"data type": "CEF许可状态""type": "property setter",
+"data type": "CEF许可状态""@视窗.设置时机": "组件创建前",
+"data type": "CEF许可状态""parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+"data type": "CEF许可状态"]
+  },
+  {
+"data type": "CEF许可状态""method name": "是否允许使用WebGL",
+"data type": "CEF许可状态""comment": "返回是否允许使用WebGL",
+"data type": "CEF许可状态""type": "property getter",
+"data type": "CEF许可状态""data type": "CEF许可状态",
+"data type": "CEF许可状态""@嵌入式方法": "\"\""
+  },
+  {
+"parameters": [
+"method name": "是否允许使用WebGL",
+"parameters": [
+"comment": "设置是否允许使用WebGL.\n注意: WebGL需要对应计算机硬件支持,因此即使被许可使用,也有可能不会工作.",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"@视窗.设置时机": "组件创建前",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+"parameters": [
+]
+  },
+  {
+ameters": [
+"method name": "是否允许使用WebGL""method name": "允许远端字体",
+ameters": [
+"method name": "是否允许使用WebGL""comment": "设置是否允许从远端源处下载字体",
+ameters": [
+"method name": "是否允许使用WebGL""type": "property setter",
+ameters": [
+"method name": "是否允许使用WebGL""@视窗.设置时机": "组件创建前",
+ameters": [
+"method name": "是否允许使用WebGL""parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+ameters": [
+"method name": "是否允许使用WebGL"]
+  },
+  {
+
+"method name": "允许JS关闭窗口",
+
+"comment": "设置是否允许JavaScript脚本关闭不是通过JavaScript脚本打开的窗口.\nJavaScript脚本始终可以关闭通过JavaScript脚本打开的或者没有前进/回退历史的窗口.",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前",
+
+"parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+
+]
+  },
+  {
+
+"method name": "允许缩小图片",
+
+"comment": "设置是否允许将过大的独立图片缩小到匹配页面",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前",
+
+"parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+
+]
+  },
+  {
+
+"method name": "允许调整编辑框尺寸",
+
+"comment": "设置是否允许用户通过拖拽多行编辑框(\"<textarea>\"元素)的右下角来调整其尺寸",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前",
+
+"parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+
+]
+  },
+  {
+ }"method name": "允许TAB键导航",
+ }"comment": "控制是否允许用户使用 Tab 键在网页上的链接之间进行导航",
+ }"type": "property setter",
+ }"@视窗.设置时机": "组件创建前",
+ }"parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+ }]
+  },
+  {
+ }"method name": "允许本地存储",
+ }"comment": "控制是否启用浏览器的本地存储（localStorage）功能",
+ }"type": "property setter",
+ }"@视窗.设置时机": "组件创建前",
+ }"parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+ }]
+  },
+  {
+data type": "CEF许可状态""method name": "显示状态提示气泡",
+data type": "CEF许可状态""comment": "控制是否显示浏览器底部的状态提示气泡(当鼠标悬停在链接上时显示URL提示)",
+data type": "CEF许可状态""type": "property setter",
+data type": "CEF许可状态""@视窗.设置时机": "组件创建前",
+data type": "CEF许可状态""parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+data type": "CEF许可状态"]
+  },
+  {
+"comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""method name": "显示缩放比例提示气泡",
+"comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""comment": "控制当用户进行页面缩放操作时,是否显示缩放比例提示气泡.",
+"comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""type": "property setter",
+"comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""@视窗.设置时机": "组件创建前",
+"comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""parameters": [
+   {
+"parameter name": "许可状态",
+"data type": "CEF许可状态"
+   }
+"comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)"]
+  },
+  {
+comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""type": "property setter""method name": "初始化",
+comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""type": "property setter""comment": "  默认情况下,类库会自动以默认参数初始化CEF运行时环境,如果需要以特定的方式初始化,可以\n调用本方法进行手动初始化.\n  请注意:\n  1. 本方法只能调用一次,后续再次调用将不起作用;\n  2. 本方法并不必须一定要调用,如果没有调用,将自动以默认参数初始化CEF运行时环境.",
+comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""type": "property setter""static": true,
+comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""type": "property setter""@嵌入式方法": "\"\"",
+comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""type": "property setter""parameters": [
+   {
+"parameter name": "配置参数表",
+"comment": "  提供所需要指定的所有CEF配置参数,具体格式为: 每个参数之间使用换行符'\\n'分隔,参数如果存在值,\n则名称和值之间使用等号'='分隔. 如: \"disable-web-security\\nenable-system-flash=1\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户代理",
+"comment": "提供HTTP头中的\"User-Agent\"值,为空文本表示使用默认值.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "缓存目录",
+"comment": "提供缓存数据的存放目录,为空文本表示使用内存空间缓存(此时将不会持续化保存任何缓存数据,包括Cookie).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否缓存会话Cookie",
+"comment": "  指定是否在缓存目录中持续保存会话中所使用的临时Cookie,设置本参数为真则必须同时设置非\n空文本的有效缓存目录.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "背景颜色",
+"comment": "提供浏览器的背景颜色",
+"data type": "整数",
+"@默认值": "0x383838"
+   },
+   {
+"parameter name": "远程调试端口",
+"comment": "提供远程调试端口号,为0表示禁用.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "日志记录级别",
+"comment": "提供具体日志记录级别",
+"data type": "CEF日志记录级别",
+"@默认值": "CEF日志记录级别.禁止"
+   },
+   {
+"parameter name": "日志记录文件名",
+"comment": "提供日志记录文件名,为空文本表示使用默认文件名.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理服务器",
+"comment": "提供所使用的代理服务器地址,为空文本表示无.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+comment": "设置是否允许从网络上载入远程图像(本地缓存图像始终被允许)""type": "property setter"]
+  },
+  {
+comment": "提供所使用的代理服务器地址,为空文本表示无.""method name": "使用线程消息循环",
+comment": "提供所使用的代理服务器地址,为空文本表示无.""comment": "调用本方法指示编译CEF3时使用其线程方式的消息循环,如果不调用本方法,将会将CEF3的消息循环整合进当前程序自身的消息循环中(默认方式).\n注意: 本方法为编译时处理方法,系统在编译时只要检测到用户程序实际执行流程中任意位置调用了此方法,就启用对应的编译特性,和方法本身是否被执行到没有任何关系.",
+comment": "提供所使用的代理服务器地址,为空文本表示无.""static": true,
+comment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.预定义宏": "\"_VOL_CEF_MULTI_THREADED_MESSAGE_LOOP\"",
+comment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\""
+  },
+  {
+ata type": "CEF许可状态""parameters": [
+"method name": "函数",
+ata type": "CEF许可状态""parameters": [
+"comment": "返回所有欲在本浏览器中登记的JS函数名列表,多个函数名之间使用逗号分隔.",
+ata type": "CEF许可状态""parameters": [
+"type": "property getter",
+ata type": "CEF许可状态""parameters": [
+"data type": "文本型",
+ata type": "CEF许可状态""parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+omment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""method name": "函数",
+omment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""comment": "设置所有欲在本浏览器中登记的JS函数名列表,多个函数名之间使用逗号分隔.",
+omment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""type": "property setter",
+omment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""@视窗.设置时机": "组件创建前",
+omment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""parameters": [
+   {
+"parameter name": "函数名列表",
+"comment": "提供所有欲在本浏览器中登记的JS函数名列表,多个函数名之间使用逗号分隔.",
+"data type": "文本型"
+   }
+omment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\""]
+  },
+  {
+mment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""@视窗.设置时机": "组件创建前""method name": "是否初始化成功",
+mment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""@视窗.设置时机": "组件创建前""comment": "返回CEF运行时环境是否已经初始化成功",
+mment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""@视窗.设置时机": "组件创建前""static": true,
+mment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""@视窗.设置时机": "组件创建前""data type": "逻辑型",
+mment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""@视窗.设置时机": "组件创建前""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "载入文本",
+
+"comment": "载入所指定的HTML文本内容",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "框架标识符",
+"comment": "提供欲置入内容的页面框架的标识符,为空文本表示为主框架.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "欲载入文本",
+"comment": "提供欲载入的HTML格式的文本内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "能否后退",
+
+"comment": "返回当前页面能否进行后退操作",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+ameter name": "欲载入文本""method name": "后退",
+ameter name": "欲载入文本""comment": "后退当前页面"
+  },
+  {
+}"method name": "能否前进",
+}"comment": "返回当前页面能否进行前进操作",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+ment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""@视窗.设置时机": "组件创建前""comment": "返回CEF运行时环境是否已经初始化成功""method name": "前进",
+ment": "提供所使用的代理服务器地址,为空文本表示无.""@视窗.编译信息": "\"基于线程消息循环版本编译CEF3浏览器\"""@视窗.设置时机": "组件创建前""comment": "返回CEF运行时环境是否已经初始化成功""comment": "前进当前页面"
+  },
+  {
+"comment": "返回当前页面能否进行前进操作""method name": "是否正在载入",
+"comment": "返回当前页面能否进行前进操作""comment": "返回当前是否正在载入文档",
+"comment": "返回当前页面能否进行前进操作""data type": "逻辑型",
+"comment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"
+  },
+  {
+comment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""method name": "重载",
+comment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""comment": "重新载入当前文档",
+comment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "是否忽略缓存",
+"comment": "指定是否不从当前缓存中载入文档",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "停止载入",
+
+"comment": "指定是否停止载入当前文档"
+  },
+  {
+mment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]"method name": "是否已载入",
+mment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]"comment": "返回当前是否已经载入了一个文档",
+mment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]"data type": "逻辑型",
+mment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]"@禁止流程检查": "真"
+  },
+  {
+ment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]"comment": "返回当前是否已经载入了一个文档""method name": "取ID",
+ment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]"comment": "返回当前是否已经载入了一个文档""comment": "返回本浏览器的全局唯一ID值",
+ment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]"comment": "返回当前是否已经载入了一个文档""result comment": "如果本浏览器组件尚未创建,将返回0.",
+ment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]"comment": "返回当前是否已经载入了一个文档""data type": "整数",
+ment": "返回当前页面能否进行前进操作""@禁止流程检查": "真"]"comment": "返回当前是否已经载入了一个文档""@禁止流程检查": "真"
+  },
+  {
+是否已经载入了一个文档"method name": "为弹出窗口",
+是否已经载入了一个文档"comment": "返回本浏览器是否为弹出窗口",
+是否已经载入了一个文档"data type": "逻辑型",
+是否已经载入了一个文档"@禁止流程检查": "真"
+  },
+  {
+否已经载入了一个文档"@禁止流程检查": "真""method name": "取主框架",
+否已经载入了一个文档"@禁止流程检查": "真""comment": "返回当前页面中的主框架",
+否已经载入了一个文档"@禁止流程检查": "真""result comment": "如果失败,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).",
+否已经载入了一个文档"@禁止流程检查": "真""data type": "CEF页面框架",
+否已经载入了一个文档"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+已经载入了一个文档"@禁止流程检查": "真""result comment": "如果失败,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).""method name": "取焦点框架",
+已经载入了一个文档"@禁止流程检查": "真""result comment": "如果失败,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).""comment": "返回当前页面中的焦点框架",
+已经载入了一个文档"@禁止流程检查": "真""result comment": "如果失败,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).""result comment": "如果失败,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).",
+已经载入了一个文档"@禁止流程检查": "真""result comment": "如果失败,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).""data type": "CEF页面框架",
+已经载入了一个文档"@禁止流程检查": "真""result comment": "如果失败,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取框架",
+
+"comment": "返回当前页面中具有指定ID的框架",
+
+"result comment": "如果失败,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).",
+
+"data type": "CEF页面框架",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "框架标识符",
+"comment": "提供所欲获取页面框架的标识符,为空文本表示为主框架.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"data type": "逻辑型""method name": "取指定名称框架",
+
+"data type": "逻辑型""comment": "返回当前页面中具有指定名称的框架",
+
+"data type": "逻辑型""result comment": "如果失败,所返回框架将为空(\"CEF页面框架.是否为空\"方法返回真).",
+
+"data type": "逻辑型""data type": "CEF页面框架",
+
+"data type": "逻辑型""@禁止流程检查": "真",
+
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "框架名称",
+"comment": "提供所欲获取页面框架的名称",
+"data type": "文本型"
+   }
+
+"data type": "逻辑型"]
+  },
+  {
+thod name": "取框架""method name": "取框架数目",
+thod name": "取框架""comment": "返回当前页面中所有框架的数目",
+thod name": "取框架""data type": "整数",
+thod name": "取框架""@禁止流程检查": "真"
+  },
+  {
+览器组件尚未创建,将返回0."method name": "取所有框架标识符",
+览器组件尚未创建,将返回0."comment": "获取当前页面中所有框架的标识符",
+览器组件尚未创建,将返回0."result comment": "返回所获取框架的数目",
+览器组件尚未创建,将返回0."data type": "整数",
+览器组件尚未创建,将返回0."@嵌入式方法": "\"\"",
+览器组件尚未创建,将返回0."parameters": [
+   {
+"parameter name": "结果存放参数",
+"comment": "获取的所有框架标识符将存放入此数组参数中",
+"data type": "文本数组类"
+   }
+览器组件尚未创建,将返回0.]
+  },
+  {
+omment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+"method name": "取所有框架名称",
+omment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+"comment": "获取当前页面中所有框架的名称",
+omment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+"result comment": "返回所获取框架的数目",
+omment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+"data type": "整数",
+omment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+"@嵌入式方法": "\"\"",
+omment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+"parameters": [
+   {
+"parameter name": "结果存放参数",
+"comment": "获取的所有框架名称将存放入此数组参数中",
+"data type": "文本数组类"
+   }
+omment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+]
+  },
+  {
+ment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+]"method name": "启动开发工具",
+ment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+]"comment": "启动并显示开发工具窗口",
+ment": "返回当前页面能否进行前进操作""@禁止流程检查": "真""parameters": [
+]"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "结束开发工具",
+}"comment": "如果当前已经启动显示了开发工具窗口,则将其退出."
+  },
+  {
+"method name": "开发工具是否启动",
+"comment": "返回当前是否已经启动显示了开发工具窗口",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "开始下载",
+
+"comment": "开始下载所指定链接地址中的文件,本下载操作会触发本类中的所有下载相关事件.",
+
+"parameters": [
+   {
+"parameter name": "下载链接地址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "文本数组类""method name": "下载图像",
+data type": "文本数组类""comment": "下载一个图像(通常是网页中的图片或网站图标)并获取其数据.\n下载完毕会发送\"图像下载完毕\"事件(无论下载成功还是失败,都会被发送一次且仅一次).",
+data type": "文本数组类""@嵌入式方法": "\"\"",
+data type": "文本数组类""parameters": [
+   {
+"parameter name": "图像链接地址",
+"comment": "提供要下载的图像的完整链接地址,必须是一个有效的、可访问的图像 URL.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图像最大尺寸",
+"comment": "指定下载图像的最大尺寸(以像素为单位),这里指的是图像的宽度和高度,而不是文件大小.\n作用: CEF 会自动缩放下载的图像,确保其宽度和高度都不超过此值.\n例如: 如果一张图片是 2000x1500 像素，而本参数值等于512,那么 CEF 返回的图像数据将是缩放到 512x384 或更小的版本.\n目的: 防止加载过大的图片导致内存占用过高; 优化性能,特别是当最终显示尺寸很小时(如缩略图、图标).\n建议值: 对于网站图标,通常设为 64 或 128; 对于普通图片预览,可根据 UI 设计设定(如 512, 1024).",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为网站图标",
+"comment": "  当设置为真时,CEF 会应用一些针对网站图标的特殊处理逻辑: 可能会尝试从常见的路径(如 /favicon.ico)加载,\n可能会对响应头进行更严格的检查,内部可能会使用不同的缓存策略.\n  如果你只是下载普通图片,应设置为假.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否不使用缓存",
+"comment": "设置为真强制从网络重新下载,不使用任何缓存的副本.\n设置为假允许使用缓存,如果图像已缓存且未过期,将直接使用缓存版本,速度更快.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "文本数组类"]
+  },
+  {
+data type": "逻辑型""method name": "打印",
+data type": "逻辑型""comment": "打印当前页面内容"
+  },
+  {
+}"method name": "打印到PDF",
+}"comment": "开始打印当前页面内容到指定的PDF文件",
+}"result comment": "返回是否开始打印成功",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "PDF文件名",
+"comment": "提供所欲打印到的PDF文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "等待打印完毕",
+"comment": "  指定是否一直等待打印到PDF完毕后才返回,如果为假,则打印完毕后会发送\"PDF打印完毕\"事件.\n  注意: 如果本参数值为假,则本方法返回真只能说明开始打印成功,并不意味着打印本身已经成功,\n打印本身是否成功在接收到\"PDF打印完毕\"事件后由其\"是否打印成功\"参数值提供.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "页眉模板",
+"comment": "提供显示在页面顶部的文本模板,支持特定的变量和简单的 HTML 标签.如果为空,则不显示页眉.\n支持的变量和类:\n1. 页码相关:\n当前页码: <span class='pageNumber'></span> ;\n总页数: <span class='totalPages'></span> .\n2. 日期时间相关:\n打印日期: <span class='date'></span> ;\n打印时间: <span class='time'></span> ;\n页面标题: <span class='title'></span> .\n示例,设置包含多种信息的页眉:\n  \"<div style='width: 100%; font-size: 8px; font-family: Arial; padding: 5px; border-bottom: 1px solid #ccc;'>\n<span style='float: left;'><span class='title'></span></span><span style='float: center;'>第 <span class='pageNumber'>\n</span> 页 / 共 <span class='totalPages'></span> 页</span><span style='float: right;'>打印日期: <span class='date'></span>\n</span><div style='clear: both;'></div></div>\" .\n以下是几个常用的页眉和页脚模板示例:\n1. 简洁商务风格:\n  页眉: \"<div style='width: 100%; font-size: 9px; font-family: Arial; padding: 8px 0; border-bottom: 1px solid #ddd;'>\n<span style='float: left;'><span class='title'></span></span><span style='float: right;'>机密文档</span>\n<div style='clear: both;'></div></div>\";\n  页脚: \"<div style='width: 100%; font-size: 8px; font-family: Arial; padding: 8px 0; border-top: 1px solid #ddd; color: #666;'>\n<span style='float: left;'>打印于: <span class='date'></span></span><span style='float: center;'>第 <span class='pageNumber'>\n</span> 页 / 共 <span class='totalPages'></span> 页</span><span style='float: right;'>© 2024 公司名称</span>\n<div style='clear: both;'></div></div>\".\n2. 居中页码风格:\n  页眉: \"<div style='text-align: center; font-size: 10px; color: #333; padding: 5px 0;'><span class='title'></span></div>\";\n  页脚: \"<div style='text-align: center; font-size: 9px; color: #666; padding: 10px 0;'>第 <span class='pageNumber'></span> 页</div>\".\n3. 报告文档风格:\n  页眉: \"<div style='width: 100%; font-size: 8px; font-family: Arial; padding: 6px 0; background-color: #f5f5f5;'>\n<span style='float: left;'>项目报告书</span><span style='float: center;'>版本: 1.0</span><span style='float: right;'>\n<span class='date'></span></span><div style='clear: both;'></div></div>\";\n  页脚: \"<div style='width: 100%; font-size: 8px; font-family: Arial; padding: 6px 0; color: #888;'>\n<span style='float: left;'>部门: 技术部</span><span style='float: center;'>第 <span class='pageNumber'></span> 页 / 共 <span class='totalPages'>\n</span> 页</span><span style='float: right;'>审批人: 张三</span><div style='clear: both;'></div></div>\".\n4. 极简风格:\n  页眉 - 只有一条细线:  \"<div style='border-bottom: 0.5px solid #eee; height: 1px;'></div>\";\n  页脚: \"<div style='text-align: center; font-size: 8px; color: #999; padding: 5px;'><span class='pageNumber'>\n</span> / <span class='totalPages'></span></div>\".\n5. 法律文档风格:\n  页眉: \"<div style='width: 100%; font-size: 7px; font-family: Arial; padding: 4px 0; border-bottom: 1px solid #000;'>\n<span style='float: left;'>合同编号: HT-2024-001</span><span style='float: right;'>机密级别: 内部</span>\n<div style='clear: both;'></div></div>\";\n  页脚: \"<div style='width: 100%; font-size: 7px; font-family: Arial; padding: 4px 0; border-top: 1px solid #000;'>\n<span style='float: left;'>© 2024 律师事务所 版权所有</span><span style='float: center;'>第 <span class='pageNumber'></span> 页</span>\n<span style='float: right;'>打印时间: <span class='date'></span> <span class='time'></span></span><div style='clear: both;'></div></div>\".\n使用提示:\n字体大小: 通常使用 7-10px;\n颜色: 使用灰色系 (#666, #888, #999) 避免太醒目;\n布局: 使用 float 进行左中右布局,最后用 clear: both 清除浮动.\n间距: 适当使用 padding 增加可读性;\n边框: 使用细边框分隔内容区域.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "页脚模板",
+"comment": "提供显示在页面底部的文本模板,模板格式见\"页眉模板\"参数.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "页宽",
+"comment": "提供输出页面宽度,单位为微米(0.001毫米).如果页宽或页高任一项小于等于0,则使用默认A4纸张尺寸.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "页高",
+"comment": "提供输出页面高度,单位为微米(0.001毫米).如果页宽或页高任一项小于等于0,则使用默认A4纸张尺寸.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "边距类型",
+"comment": "提供边距的打印类型",
+"data type": "PDF打印边距类型",
+"@默认值": "PDF打印边距类型.默认"
+   },
+   {
+"parameter name": "自定义边距",
+"comment": "当\"边距类型\"为\"PDF打印边距类型.自定义\"时提供对应的各边边距,单位为微米(0.001毫米).",
+"data type": "矩形类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "横向打印",
+"comment": "指定是否横向打印",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "打印背景图",
+"comment": "指定是否打印页面的背景图",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "缩放比例",
+"comment": "指定打印时所使用的缩放比例,1表示100%,如果小于等于0则使用默认值1.",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "使用CSS定义尺寸",
+"comment": "控制打印时是否优先使用 CSS 中通过 @page 规则定义的页面尺寸,而不是用户设置的打印机页面尺寸.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "打印范围",
+"comment": "控制在打印文档时只打印指定的页面范围,如果为空字符串,则打印所有页面. 格式示例:\n\"1-5,8,10-12\": 打印第1-5页、第8页、第10-12页.\n\"1,3,5\": 打印第1、3、5页.\n\"2-\": 打印从第2页到最后一页.\n\"-5\": 打印从第1页到第5页.\n\"\": 打印所有页面(默认).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否生成结构信息",
+"comment": "控制生成的 PDF 文件是否包含结构辅助标签(标题、段落、列表、表格等),以提升可访问性.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否生成文档大纲",
+"comment": "控制生成的 PDF 文件是否包含基于文档标题结构的可导航大纲(书签)",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+data type": "逻辑型""method name": "枚举Cookie",
+data type": "逻辑型""comment": "枚举所有现有Cookie,每枚举到一个Cookie,就发送一个对应的\"获得Cookie\"事件.\nCookie枚举以其最长路径排序,如果路径相同,则以创建时间从早到晚排序.",
+data type": "逻辑型""result comment": "返回真表示枚举操作启动成功,返回假表示无法访问Cookie.",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "匹配链接地址",
+"comment": "如果不为空文本,则仅当匹配此链接地址的Cookie才会被枚举.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "仅普通链接",
+"comment": "如果为真,则仅枚举\"CEFCookie信息.仅普通链接使用\"成员值为真的Cookie.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "逻辑型"]
+  },
+  {
+ameter name": "页高""method name": "置Cookie",
+ameter name": "页高""comment": "设置所指定的Cookie",
+ameter name": "页高""result comment": "成功返回真,失败返回假.",
+ameter name": "页高""static": true,
+ameter name": "页高""data type": "逻辑型",
+ameter name": "页高""@禁止流程检查": "真",
+ameter name": "页高""parameters": [
+   {
+"parameter name": "链接地址",
+"comment": "提供所对应的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Cookie",
+"comment": "提供对应的Cookie信息",
+"data type": "CEFCookie信息"
+   }
+ameter name": "页高"]
+  },
+  {
+meter name": "页高""@禁止流程检查": "真""method name": "删除Cookie",
+meter name": "页高""@禁止流程检查": "真""comment": "删除所有匹配的Cookie",
+meter name": "页高""@禁止流程检查": "真""result comment": "成功返回真,失败返回假.",
+meter name": "页高""@禁止流程检查": "真""static": true,
+meter name": "页高""@禁止流程检查": "真""data type": "逻辑型",
+meter name": "页高""@禁止流程检查": "真""@禁止流程检查": "真",
+meter name": "页高""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "匹配链接地址",
+"comment": "提供用作匹配的链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Cookie名称",
+"comment": "提供用作匹配的Cookie名称",
+"data type": "文本型"
+   }
+meter name": "页高""@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "刷新Cookie存储",
+
+"comment": "将所有后备Cookie数据刷新存储到磁盘",
+
+"result comment": "成功返回真,无法访问Cookie返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+eter name": "页高""@禁止流程检查": "真""comment": "删除所有匹配的Cookie""method name": "获取输入焦点",
+eter name": "页高""@禁止流程检查": "真""comment": "删除所有匹配的Cookie""comment": "将输入焦点设置到浏览器",
+eter name": "页高""@禁止流程检查": "真""comment": "删除所有匹配的Cookie""parameters": [
+   {
+"parameter name": "是否获得焦点",
+"comment": "指定是否为获得焦点",
+"data type": "逻辑型"
+   }
+eter name": "页高""@禁止流程检查": "真""comment": "删除所有匹配的Cookie"]
+  },
+  {
+
+"method name": "取浏览器窗口句柄",
+
+"comment": "获取浏览器窗口(注意不是本组件)的窗口句柄,不存在返回0",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+comment": "提供用作匹配的Cookie名称""method name": "取父浏览器窗口句柄",
+comment": "提供用作匹配的Cookie名称""comment": "获取打开本浏览器窗口的父浏览器的窗口句柄.\n如果本浏览器窗口不为弹出式窗口,将返回0.",
+comment": "提供用作匹配的Cookie名称""data type": "变整数",
+comment": "提供用作匹配的Cookie名称""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "能否缩放",
+
+"comment": "返回本浏览器是否支持使用指定的缩放操作命令",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲检测的缩放命令",
+"data type": "CEF缩放命令"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "缩放",
+"parameters": [
+"comment": "执行指定的缩放操作命令",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "欲执行的缩放命令",
+"data type": "CEF缩放命令"
+   }
+"parameters": [
+]
+  },
+  {
+"@禁止流程检查": "真""method name": "取默认缩放级别",
+"@禁止流程检查": "真""comment": "返回浏览器中内容的默认缩放级别.\n缩放级别:\n推荐范围为 -10.0 到 10.0, 典型缩放级别如:\n  -10.0: 最小缩放 (约 10%);\n  -5.0: 较小缩放;\n  0.0: 原始大小 (100%);\n  1.0: 约 110%;\n  2.0: 约 125%;\n  3.0: 约 150%;\n  5.0: 约 200%;\n  10.0: 最大缩放 (约 500%).",
+"@禁止流程检查": "真""data type": "小数",
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+thod name": "能否缩放""method name": "取当前缩放级别",
+thod name": "能否缩放""comment": "返回浏览器中内容的当前缩放级别. 有关\"缩放级别\"的说明见\"取默认缩放级别\"方法.",
+thod name": "能否缩放""data type": "小数",
+thod name": "能否缩放""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "置当前缩放级别",
+ }"comment": "设置浏览器中内容的当前缩放级别. 有关\"缩放级别\"的说明见\"取默认缩放级别\"方法.",
+ }"parameters": [
+   {
+"parameter name": "欲设置缩放级别",
+"data type": "小数"
+   }
+ }]
+  },
+  {
+data type": "小数""method name": "发送按键事件",
+data type": "小数""comment": "发送所指定的按键事件到浏览器",
+data type": "小数""@嵌入式方法": "\"\"",
+data type": "小数""parameters": [
+   {
+"parameter name": "键代码",
+"comment": "为\"按键码\"类中的常量值,注意不包括辅助键组合状态值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "提供辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "为按键放开事件",
+"comment": "  为真表示发送按键放开事件(WM_SYSKEYUP/WM_KEYUP),否则将发送\n按键按下事件(WM_SYSKEYDOWN/WM_KEYDOWN).",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "为系统按键事件",
+"comment": "  为真表示发送系统按键事件(WM_SYSKEYDOWN/WM_SYSKEYUP),否则将\n发送非系统按键事件(WM_KEYDOWN/WM_KEYUP)",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "小数"]
+  },
+  {
+ameter name": "为按键放开事件""method name": "发送字符事件",
+ameter name": "为按键放开事件""comment": "发送所指定的字符输入事件到浏览器",
+ameter name": "为按键放开事件""@嵌入式方法": "\"\"",
+ameter name": "为按键放开事件""parameters": [
+   {
+"parameter name": "字符编码",
+"comment": "提供所欲发送的字符",
+"data type": "字符"
+   }
+ameter name": "为按键放开事件"]
+  },
+  {
+er name": "为按键放开事件""method name": "发送字符事件""method name": "发送字符串事件",
+er name": "为按键放开事件""method name": "发送字符事件""comment": "发送所指定的字符串文本输入事件到浏览器",
+er name": "为按键放开事件""method name": "发送字符事件""@嵌入式方法": "\"\"",
+er name": "为按键放开事件""method name": "发送字符事件""parameters": [
+   {
+"parameter name": "字符串文本",
+"comment": "提供所欲发送的字符串文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字符间隔时间",
+"comment": "提供发送每个字符时的中间间隔时间,单位毫秒.",
+"data type": "整数",
+"@默认值": "30"
+   }
+er name": "为按键放开事件""method name": "发送字符事件"]
+  },
+  {
+]"method name": "发送鼠标单击事件",
+]"comment": "发送所指定的鼠标键单击事件到浏览器",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "所单击按键类型",
+"comment": "为\"CEF鼠标键类型\"类中的常量值之一",
+"data type": "整数"
+   },
+   {
+"parameter name": "横向位置",
+"comment": "提供所单击位置在浏览器窗口中的横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "提供所单击位置在浏览器窗口中的纵向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "提供辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "鼠标键状态",
+"comment": "提供鼠标按键的按下状态,为\"CEF鼠标键类型\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "单击次数",
+"comment": "提供所单击的次数",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "是否为鼠标键放开",
+"comment": "为真表示为鼠标键放开,否则为鼠标键被按下.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]]
+  },
+  {
+comment": "为真表示为鼠标键放开,否则为鼠标键被按下.""method name": "发送鼠标移动事件",
+comment": "为真表示为鼠标键放开,否则为鼠标键被按下.""comment": "发送所指定的鼠标移动事件到浏览器",
+comment": "为真表示为鼠标键放开,否则为鼠标键被按下.""@嵌入式方法": "\"\"",
+comment": "为真表示为鼠标键放开,否则为鼠标键被按下.""parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "提供当前鼠标位置在浏览器窗口中的横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "提供当前鼠标位置在浏览器窗口中的纵向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "提供辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "鼠标键状态",
+"comment": "提供鼠标按键的按下状态,为\"CEF鼠标键类型\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否为鼠标离开",
+"comment": "提供是否为鼠标离开该位置",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "为真表示为鼠标键放开,否则为鼠标键被按下."]
+  },
+  {
+ }"method name": "发送鼠标滚轮事件",
+ }"comment": "发送所指定的鼠标滚轮事件到浏览器",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "提供当前鼠标位置在浏览器窗口中的横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "提供当前鼠标位置在浏览器窗口中的纵向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "提供辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "鼠标键状态",
+"comment": "提供鼠标按键的按下状态,为\"CEF鼠标键类型\"类中各常量值的组合.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "横向滚动距离",
+"comment": "提供滚轮横向滚动距离,小于0页面向左滚动,大于0页面向右滚动.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向滚动距离",
+"comment": "提供滚轮纵向滚动距离,小于0页面向上滚动,大于0页面向下滚动.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+
+"method name": "暂停下载",
+
+"comment": "暂停指定项目的下载",
+
+"result comment": "找到所指定的下载项返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "下载项ID",
+"comment": "指定欲处理下载项目的ID,该ID在\"下载更新\"事件中提供.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "下载项ID""method name": "继续下载",
+ameter name": "下载项ID""comment": "继续下载先前被暂停的项目",
+ameter name": "下载项ID""result comment": "找到所指定的下载项返回真,否则返回假.",
+ameter name": "下载项ID""data type": "逻辑型",
+ameter name": "下载项ID""@嵌入式方法": "\"\"",
+ameter name": "下载项ID""parameters": [
+   {
+"parameter name": "下载项ID",
+"comment": "指定欲处理下载项目的ID,该ID在\"下载更新\"事件中提供.",
+"data type": "整数"
+   }
+ameter name": "下载项ID"]
+  },
+  {
+定的下载项返回真,否则返回假."method name": "中止下载",
+定的下载项返回真,否则返回假."comment": "中止指定项目的下载",
+定的下载项返回真,否则返回假."result comment": "找到所指定的下载项返回真,否则返回假.",
+定的下载项返回真,否则返回假."data type": "逻辑型",
+定的下载项返回真,否则返回假."@嵌入式方法": "\"\"",
+定的下载项返回真,否则返回假."parameters": [
+   {
+"parameter name": "下载项ID",
+"comment": "指定欲处理下载项目的ID,该ID在\"下载更新\"事件中提供.",
+"data type": "整数"
+   }
+定的下载项返回真,否则返回假.]
+  },
+  {
+eter name": "下载项ID"]"method name": "下载是否已结束",
+eter name": "下载项ID"]"comment": "返回指定的项目是否已经下载结束(该项目不存在/下载完成/被中止/被中断/已超时)",
+eter name": "下载项ID"]"data type": "逻辑型",
+eter name": "下载项ID"]"@嵌入式方法": "\"\"",
+eter name": "下载项ID"]"parameters": [
+   {
+"parameter name": "下载项ID",
+"comment": "指定欲处理下载项目的ID,该ID在\"下载更新\"事件中提供.",
+"data type": "整数"
+   }
+eter name": "下载项ID"]]
+  },
+  {
+meter name": "下载项ID""data type": "逻辑型""method name": "查找",
+meter name": "下载项ID""data type": "逻辑型""comment": "在当前网页内容中执行文本搜索,并通过发送\"获得查找结果\"事件来获取匹配结果.",
+meter name": "下载项ID""data type": "逻辑型""parameters": [
+   {
+"parameter name": "欲搜索文本",
+"comment": "提供要搜索的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "区分大小写",
+"comment": "指定是否区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "正向搜寻",
+"comment": "指定搜索方向.为真表示向前(从当前位置到页面末尾)搜索,为假表示向后(从当前位置到页面开头)搜索.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "查找下一项",
+"comment": "  本参数值为假或\"欲搜索文本\"和\"区分大小写\"参数值相对上一次调用发生改变: 清除之前的高亮开始\n一次全新的搜索,否则继续搜索下一个(或上一个,取决于\"正向搜寻\"参数值)匹配项.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+meter name": "下载项ID""data type": "逻辑型"]
+  },
+  {
+
+"method name": "停止查找",
+
+"comment": "停止当前正在进行的文本搜索并控制搜索高亮显示.它通常在用户关闭\"查找\"面板或按下\"Esc\"键时调用.",
+
+"parameters": [
+   {
+"parameter name": "是否清除高亮",
+"comment": "控制停止搜索后,页面上的搜索高亮是否被清除.\n为真: 停止搜索并清除所有高亮. 页面恢复到搜索前的状态,所有匹配项的黄色/橙色背景消失.\n为假: 停止搜索但保留当前高亮. 当前激活的匹配项仍然保持高亮状态,方便用户继续查看.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+}"method name": "启用可访问状态",
+}"comment": "本方法用于启用或禁用浏览器的可访问性支持.\n作用场景:\n1. 屏幕阅读器支持 - 为视障用户提供内容朗读;\n2. 辅助技术 - 支持其他可访问性工具和软件;\n3. 自动化测试 - 某些自动化框架需要可访问性支持.\n注意事项:\n1. 通常在浏览器创建后调用;\n2. 改变状态可能会影响性能;\n3. 只在确实需要时可启用,否则建议使用默认状态.\n这个方法让开发者能够根据应用程序的需求灵活控制可访问性功能的开关.",
+}"parameters": [
+   {
+"parameter name": "欲启用状态",
+"data type": "CEF许可状态"
+   }
+}]
+  },
+  {
+ }"method name": "置静音静态",
+ }"comment": "设置浏览器的音频静音状态",
+ }"parameters": [
+   {
+"parameter name": "是否静音",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+]"method name": "是否静音",
+]"comment": "返回浏览器当前是否处于静音状态",
+]"data type": "逻辑型",
+]"@禁止流程检查": "真"
+  },
+  {
+器当前是否处于静音状态"method name": "是否全屏",
+器当前是否处于静音状态"comment": "返回浏览器当前是否处于全屏状态",
+器当前是否处于静音状态"data type": "逻辑型",
+器当前是否处于静音状态"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "退出全屏",
+ }"comment": "强制浏览器退出全屏显示模式",
+ }"parameters": [
+   {
+"parameter name": "是否导致尺寸变化",
+"comment": "指示退出全屏是否会导致尺寸变化:\n为真: 退出全屏会导致浏览器窗口/视图调整大小;\n为假: 退出全屏不会导致尺寸变化.",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+data type": "逻辑型""method name": "执行JS脚本",
+data type": "逻辑型""comment": "在浏览器的主页面框架内执行所指定的JS脚本代码",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "JS代码",
+"comment": "提供所欲执行的JavaScript脚本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "链接地址",
+"comment": "  提供脚本所对应的链接地址,当脚本执行遇到问题时,浏览器\n将访问此地址为脚本开发者提供错误来源.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "起始行号",
+"comment": "提供出错报告的基准行号",
+"data type": "整数",
+"@默认值": "1"
+   }
+data type": "逻辑型"]
+  }
+
+]
+ }
+外部库 = "src\\cef\\lib\\$(p)_$(d)\\libcef.lib\r\nsrc\\cef\\lib\\$(p)_$(d)\\libcef_dll_wrapper.lib"]
+}

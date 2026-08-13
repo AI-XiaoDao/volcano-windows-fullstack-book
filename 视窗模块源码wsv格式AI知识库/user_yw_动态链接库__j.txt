@@ -1,0 +1,864 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+횠ꌤŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+횠ꌤŝ"package name": "火山.仰望",
+횠ꌤŝ"@文档": "\"category = \\\"动态链接库\\\"\"",
+횠ꌤŝ"classes": [
+ {
+态 类型 = 变整数 折叠"class name": "动态内存加载类_",
+态 类型 = 变整数 折叠"comment": "支持动态加载DLL及内存加载DLL;\n内存加载DLL，不支持加载MFC的DLL;\n注：调试状态可能无效，可以编译后测试",
+态 类型 = 变整数 折叠"@文档": "\"category = \\\"动态链接库.动态内存\\\"\"",
+态 类型 = 变整数 折叠"@视窗.外部头文件": "\"ncjz\\\\peloader.h\"",
+态 类型 = 变整数 折叠"methods": [
+  {
+    "method name": "加载内存DLL_",
+    "comment": "例如：新建个“DLL变量”字节集类，属性名设置“@视窗.值文件”，属性值中加载非MFC的DLL即可",
+    "data type": "变整数",
+    "@嵌入式方法": "\"\"",
+    "parameters": [
+   {
+"parameter name": "DLL数据指针",
+"comment": "例如：DLL变量.取字节集指针 ()",
+"data type": "变整数"
+   },
+   {
+"parameter name": "DLL数据长度",
+"comment": "例如：DLL变量.取字节集长度 ()",
+"data type": "整数"
+   }
+    ]
+  },
+  {
+comment": "例如：DLL变量.取字节集指针 ()""method name": "取内存函数地址_",
+comment": "例如：DLL变量.取字节集指针 ()""data type": "变整数",
+comment": "例如：DLL变量.取字节集指针 ()""@禁止流程检查": "真",
+comment": "例如：DLL变量.取字节集指针 ()""parameters": [
+   {
+"parameter name": "DLL句柄",
+"comment": "“加载内存DLL_”的返回值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "DLL函数输出名",
+"comment": "即DLL中，@输出名",
+"data type": "文本型"
+   }
+comment": "例如：DLL变量.取字节集指针 ()"]
+  },
+  {
+omment": "例如：DLL变量.取字节集指针 ()""parameters": [
+"method name": "取内存函数地址2_",
+omment": "例如：DLL变量.取字节集指针 ()""parameters": [
+"data type": "变整数",
+omment": "例如：DLL变量.取字节集指针 ()""parameters": [
+"@禁止流程检查": "真",
+omment": "例如：DLL变量.取字节集指针 ()""parameters": [
+"parameters": [
+   {
+"parameter name": "DLL句柄",
+"comment": "“加载内存DLL_”的返回值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "函数索引",
+"data type": "整数"
+   }
+omment": "例如：DLL变量.取字节集指针 ()""parameters": [
+]
+  },
+  {
+
+"method name": "释放内存DLL_",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "DLL句柄",
+"comment": "“加载内存DLL_”的返回值",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+瑷ŝ"method name": "执行函数_有返回值",
+瑷ŝ"comment": "如果本命令在x86下不可用，可使用“执行函数_”",
+瑷ŝ"@嵌入式方法": "\"\"",
+瑷ŝ"parameters": [
+   {
+"parameter name": "函数地址",
+"comment": "例如“取内存函数地址_”的返回值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "返回值类型",
+"@匹配类型": "通用非文本基本型",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "参数",
+"comment": "\n",
+"@匹配类型": "所有类型",
+"@可扩展": "\"\""
+   }
+瑷ŝ]
+  },
+  {
+ethod name": "释放内存DLL_""method name": "执行函数_无返回值",
+ethod name": "释放内存DLL_""comment": "如果本命令在x86下不可用，可使用“执行函数_”",
+ethod name": "释放内存DLL_""@嵌入式方法": "\"\"",
+ethod name": "释放内存DLL_""parameters": [
+   {
+"parameter name": "函数地址",
+"comment": "例如“取内存函数地址_”的返回值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数",
+"@匹配类型": "所有类型",
+"@可扩展": "\"\""
+   }
+ethod name": "释放内存DLL_"]
+  },
+  {
+内存函数地址_”的返回值"method name": "执行函数_无参数",
+内存函数地址_”的返回值"data type": "变整数",
+内存函数地址_”的返回值"@禁止流程检查": "真",
+内存函数地址_”的返回值"parameters": [
+   {
+"parameter name": "函数地址",
+"comment": "例如“取内存函数地址_”的返回值",
+"data type": "变整数"
+   }
+内存函数地址_”的返回值]
+  },
+  {
+}"method name": "执行函数_无参数2",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "函数地址",
+"comment": "例如“取内存函数地址_”的返回值",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+ameter name": "函数索引""method name": "执行函数_",
+ameter name": "函数索引""comment": "如果x86下“执行函数_有返回值”或无返回值，不可用，可调用本命令",
+ameter name": "函数索引""result comment": "有返回值就填写类型 没有就留空",
+ameter name": "函数索引""data type": "变整数",
+ameter name": "函数索引""parameters": [
+   {
+"parameter name": "函数地址",
+"comment": "例如“取内存函数地址_”的返回值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "DLL参数数量",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "返回结果",
+"comment": "指定一个可写入的变量指针，存放返回数据值(DLL方法返回值)，无返回值可填0",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数一",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数二",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数三",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数四",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数五",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数六",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数七",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数八",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数九",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数十",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数十一",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数十二",
+"data type": "变整数",
+"@默认值": "-1"
+   }
+ameter name": "函数索引"]
+  },
+  {
+"method name": "执行函数2_",
+"comment": "如果x86下“执行函数_有返回值”或无返回值，不可用，可调用本命令",
+"result comment": "有返回值就填写类型 没有就留空",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "函数地址",
+"comment": "例如“取内存函数地址_”的返回值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "DLL参数数量",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "返回结果",
+"comment": "指定一个可写入的变量指针，存放返回数据值(DLL方法返回值)，无返回值可填0",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数一",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数二",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数三",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数四",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数五",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数六",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数七",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数八",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数九",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数十",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数十一",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "参数十二",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+ameter name": "参数十二""method name": "动态加载窗口_",
+ameter name": "参数十二""comment": "加载DLL窗口，已高度封装的命令;\n正常步骤：;动态加载DLL_、取函数地址_、执行函数_",
+ameter name": "参数十二""parameters": [
+   {
+"parameter name": "DLL文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DLL函数输出名",
+"comment": "即DLL中，@输出名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "主窗口对象",
+"comment": "可以用“本对象”，或“取程序().主窗口对象”",
+"data type": "对象类"
+   },
+   {
+"parameter name": "附加指针",
+"comment": "用于传递其它对象指针等，DLL中第二个参数接收此指针",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "附加指针2",
+"comment": "用于传递其它对象指针等，DLL中第三个参数接收此指针",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回的DLL句柄",
+"comment": "成功则返回动态加载的DLL句柄",
+"data type": "变整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的DLL窗口句柄",
+"comment": "成功返回DLL里窗口句柄",
+"data type": "变整数类",
+"@默认值": "空对象"
+   }
+ameter name": "参数十二"]
+  },
+  {
+
+"method name": "动态加载DLL_",
+
+"comment": "返回DLL句柄",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "DLL文件路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "对象类""method name": "动态释放DLL_",
+data type": "对象类""data type": "逻辑型",
+data type": "对象类""@禁止流程检查": "真",
+data type": "对象类""parameters": [
+   {
+"parameter name": "DLL句柄",
+"data type": "变整数"
+   }
+data type": "对象类"]
+  },
+  {
+"method name": "动态释放所有DLL_",
+"data type": "逻辑型"
+  },
+  {
+ameter name": "DLL函数输出名""method name": "取函数地址_",
+ameter name": "DLL函数输出名""comment": "返回公开函数的地址",
+ameter name": "DLL函数输出名""data type": "变整数",
+ameter name": "DLL函数输出名""@禁止流程检查": "真",
+ameter name": "DLL函数输出名""parameters": [
+   {
+"parameter name": "DLL句柄",
+"comment": "加载dll 返回值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "DLL函数输出名",
+"comment": "即DLL中，@输出名",
+"data type": "文本型"
+   }
+ameter name": "DLL函数输出名"]
+  },
+  {
+
+"method name": "指针是否有效_",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "指针",
+"data type": "变整数"
+   }
+
+]
+  }
+态 类型 = 变整数 折叠]
+ },
+ {
+
+"class name": "动态链接库类_",
+
+"@文档": "\"category = \\\"动态链接库.动态链接\\\"\"",
+
+"methods": [
+  {
+"method name": "动态加载窗口_",
+"comment": "加载DLL窗口，已高度封装的命令;\n正常步骤：;动态加载DLL_、取函数地址_、执行函数_",
+"result comment": "返回DLL句柄",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "DLL文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DLL函数输出名",
+"comment": "即DLL中，@输出名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DLL参数数量",
+"comment": "0、无参数 1、一个参数 2、两个参数",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "主窗口对象",
+"comment": "可以用“本对象”，或“取程序().主窗口对象”",
+"data type": "对象类"
+   },
+   {
+"parameter name": "附加指针",
+"comment": "用于传递其它对象指针等，DLL中第二个参数接收此指针",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "附加指针2",
+"comment": "用于传递其它对象指针等，DLL中第三个参数接收此指针",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回的DLL句柄",
+"comment": "成功则返回动态加载的DLL句柄",
+"data type": "变整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的DLL窗口句柄",
+"comment": "成功返回DLL里窗口句柄",
+"data type": "变整数类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+data type": "变整数""method name": "动态加载窗口2_",
+data type": "变整数""comment": "加载DLL窗口，已高度封装的命令;\n正常步骤：;动态加载DLL_、取函数地址_、执行函数_",
+data type": "变整数""result comment": "返回DLL句柄",
+data type": "变整数""data type": "变整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "DLL文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DLL函数输出名",
+"comment": "即DLL中，@输出名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DLL参数数量",
+"comment": "0、无参数 1、一个参数 2、两个参数",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "附加参数1",
+"comment": "用于传递其它对象指针等，DLL中第一个参数接收此指针",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "附加参数2",
+"comment": "用于传递其它对象指针等，DLL中第二个参数接收此指针",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回的DLL句柄",
+"comment": "成功则返回动态加载的DLL句柄",
+"data type": "变整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的DLL窗口句柄",
+"comment": "成功返回DLL里窗口句柄",
+"data type": "变整数类",
+"@默认值": "空对象"
+   }
+data type": "变整数"]
+  },
+  {
+"method name": "动态加载DLL_",
+"comment": "返回DLL句柄",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "DLL文件路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ta type": "变整数"]"method name": "动态释放DLL_",
+ta type": "变整数"]"data type": "逻辑型",
+ta type": "变整数"]"parameters": [
+   {
+"parameter name": "DLL句柄",
+"data type": "变整数"
+   }
+ta type": "变整数"]]
+  },
+  {
+@默认值": "空对象""method name": "动态释放所有DLL_",
+@默认值": "空对象""data type": "逻辑型"
+  },
+  {
+ }"method name": "动态重载DLL_",
+ }"comment": "重新加载上一个DLL;\n即使用过\"动态加载DLL_()\",并且\"动态释放DLL_\"过的，可直接再次加载",
+ }"data type": "变整数"
+  },
+  {
+parameters": [
+"method name": "取函数地址_",
+parameters": [
+"comment": "返回公开函数的地址",
+parameters": [
+"data type": "变整数",
+parameters": [
+"parameters": [
+   {
+"parameter name": "DLL句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "DLL函数输出名",
+"comment": "即DLL中，@输出名",
+"data type": "文本型"
+   }
+parameters": [
+]
+  },
+  {
+": "空对象""method name": "动态释放所有DLL_""method name": "取函数数量_",
+": "空对象""method name": "动态释放所有DLL_""comment": "返回DLL函数数量",
+": "空对象""method name": "动态释放所有DLL_""data type": "整数",
+": "空对象""method name": "动态释放所有DLL_""@禁止流程检查": "真",
+": "空对象""method name": "动态释放所有DLL_""parameters": [
+   {
+"parameter name": "DLL文件路径",
+"data type": "文本型"
+   }
+": "空对象""method name": "动态释放所有DLL_"]
+  },
+  {
+ameter name": "DLL句柄""method name": "执行函数_",
+ameter name": "DLL句柄""data type": "变整数",
+ameter name": "DLL句柄""parameters": [
+   {
+"parameter name": "函数地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "DLL参数数量",
+"comment": "0、无参数 1、一个参数 2、两个参数。。。",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回结果",
+"comment": "指定一个可写入的变量指针，存放返回数据值(DLL方法返回值)，无返回值可填0",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数3",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数4",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数5",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数6",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数7",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数8",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数9",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数10",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数11",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数12",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ameter name": "DLL句柄"]
+  },
+  {
+
+"method name": "执行函数2_",
+
+"comment": "该函数会自动加载DLL(无需先“动态加载DLL_”等),使用完后会立即释放DLL，成功调用返回真",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "DLL文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DLL函数输出名",
+"comment": "即DLL中，@输出名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DLL参数数量",
+"comment": "0、无参数 1、一个参数 2、两个参数。。。",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回结果",
+"comment": "指定一个可写入的变量指针，存放返回数据值(DLL方法返回值)，无返回值可填0",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数3",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数4",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数5",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数6",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数7",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数8",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数9",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数10",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数11",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数12",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+"method name": "取模块句柄_",
+"comment": "成功则返回DLL模块句柄，0表示失败。",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "DLL文件路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "参数4""method name": "指针是否有效_",
+ameter name": "参数4""data type": "逻辑型",
+ameter name": "参数4""parameters": [
+   {
+"parameter name": "指针",
+"data type": "变整数"
+   }
+ameter name": "参数4"]
+  }
+
+]
+ },
+ {
+data type": "变整数类""class name": "函数地址类_",
+data type": "变整数类""@文档": "\"category = \\\"动态链接库.函数地址\\\"\"",
+data type": "变整数类""@全局类": "真",
+data type": "变整数类""methods": [
+  {
+data type": "变整数""method name": "取执行文件名_DLL",
+data type": "变整数""result comment": "返回首个DLL，未找到返回空",
+data type": "变整数""static": true,
+data type": "变整数""data type": "文本型",
+data type": "变整数""parameters": [
+   {
+"parameter name": "返回的所有DLL",
+"comment": "如果有多个DLL，则返回所有",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否返回路径",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "变整数"]
+  },
+  {
+comment": "如果有多个DLL，则返回所有""method name": "取系统API地址_",
+comment": "如果有多个DLL，则返回所有""static": true,
+comment": "如果有多个DLL，则返回所有""data type": "变整数",
+comment": "如果有多个DLL，则返回所有""parameters": [
+   {
+"parameter name": "API名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "库名称",
+"comment": "用于接收当前API所在的库文件",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+comment": "如果有多个DLL，则返回所有"]
+  },
+  {
+mment": "如果有多个DLL，则返回所有"]"method name": "取API函数入口",
+mment": "如果有多个DLL，则返回所有"]"static": true,
+mment": "如果有多个DLL，则返回所有"]"data type": "变整数",
+mment": "如果有多个DLL，则返回所有"]"@禁止流程检查": "真",
+mment": "如果有多个DLL，则返回所有"]"parameters": [
+   {
+"parameter name": "动态链接库",
+"data type": "文本型",
+"@输出名": "\"Dynamiclinklibrary\""
+   },
+   {
+"parameter name": "欲截获的函数名",
+"data type": "文本型",
+"@输出名": "\"Functionname\""
+   }
+mment": "如果有多个DLL，则返回所有"]]
+  }
+data type": "变整数类"]
+ }
+횠ꌤŝ]
+}

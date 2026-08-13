@@ -1,0 +1,762 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+= "category = \"网络\"""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+= "category = \"网络\"""package name": "火山.基本",
+= "category = \"网络\"""comment": "提供网络操作支持相关类",
+= "category = \"网络\"""@文档": "\"category = \\\"网络\\\"\"",
+= "category = \"网络\"""@视窗.外部源文件": "\"libs\\\\win_base\\\\cpp\\\\vol_network.cpp\"",
+= "category = \"网络\"""classes": [
+ {
+"class name": "网络通信",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "取主机名",
+
+"comment": "返回本机的主机名,用作在网络通讯中标志本机地址.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "通信测试",
+
+"comment": "测试与指定主机是否能够正常通讯,返回被测试主机的通讯响应时间(单位毫秒).如果无法通讯或者测试失败,返回-1.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "被测试主机地址",
+"comment": "提供被测试主机地址,可以为主机名或IP地址等.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最长等待时间",
+"comment": "指定最长等待被测试主机响应的时间,单位为毫秒,超过此时间即认为无法与被测试主机通讯.",
+"data type": "整数",
+"@默认值": "10000"
+   }
+
+]
+  },
+  {
+
+"method name": "转换为主机名",
+
+"comment": "将指定的 IP 地址转换为其主机名,如果失败返回空文本.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲转换IP地址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "转换为IP地址",
+
+"comment": "将指定的主机名转换为其 IP 地址,如果失败返回空文本.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲转换主机名",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "数据报",
+"@视窗.后缀文本": "\"public IVolSocketInterface\"",
+"methods": [
+  {
+ }"method name": "数据到达",
+ }"comment": "当有数据到达后,会产生本事件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "所接收到的数据",
+"comment": "提供所接收到的数据,必定不为空字节集.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "对方地址",
+"comment": "提供数据来源方的IP地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "对方端口",
+"comment": "提供数据来源方的端口",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+]"method name": "端口",
+]"comment": "指定监听数据到达的端口号,如果为0表示不监听数据到达. 如果不进行设置,默认值为0.\n注意,修改端口后,如果先前设置有相关传输选项(譬如多播相关),需要重新设置.",
+]"type": "property setter",
+]"parameters": [
+   {
+"parameter name": "所欲监听的端口号",
+"comment": "可以是大于 0 小于 32767 的任何自定整数值",
+"data type": "整数"
+   }
+]]
+  },
+  {
+ }"method name": "端口",
+ }"comment": "返回当前所设置的监听数据到达的端口号",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "初始化",
+
+"comment": "初始化本对象,如果\"端口\"属性值不为0,则开始在其所指定的端口上监听数据到达. 返回是否成功.\n注意,本对象初始化后,如果先前设置有相关传输选项(譬如多播相关),需要重新设置.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+]"method name": "发送数据",
+]"comment": "发送数据到指定主机上的指定端口,本对象必须已经初始化. 成功返回真,失败返回假.",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+]"parameters": [
+   {
+"parameter name": "接收主机地址",
+"comment": "可以为主机名/IP地址等.如果提供空文本,则在指定端口广播欲发送数据.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "接收主机端口号",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲发送的所有数据",
+"comment": "提供所欲发送的所有数据,可以为基本数据类型或字节集类数据.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+]]
+  },
+  {
+
+"method name": "置多播传出接口",
+
+"comment": "设置通过本对象发送多播数据时所使用的本地传出接口地址.\n此选项不会更改用于接收多播数据的本地默认接口地址.\n除非本机具有多个网络接口或多个IP地址,否则不用设置本选项直接使用本地默认接口地址即可.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "主机地址",
+"comment": "可以为主机名/IP地址等,用作提供多播输出接口使用的本地地址,为空文本表示回送到本地默认接口.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "置多播超时TTL",
+
+"comment": "设置多播流量关联的超时 TTL 值.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"comment": "  提供所欲设置的超时TTL值,有效值范围在0到255之间,\n当转发的次数大于等于此值时,则不再转发.",
+"data type": "整数",
+"@默认值": "255"
+   }
+
+]
+  },
+  {
+
+"method name": "是否允许多播回送",
+
+"comment": "  本对象如果加入到一个或多个多播组,此方法指定是否接收通过所选多播接口发\n送到这些多播组的传出数据包的副本. 默认情况下,本选项值为真.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "是否允许回送",
+"comment": "  此参数值为真时本对象将接收当前计算机发送的匹配多播数据包,为假时即使本\n对象的关联套接字在环回接口上打开,也不会接收从本地计算机发送的多播数据包.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "加入多播组",
+
+"comment": "加入指定多播接口中的指定多播组. 可以同时加入多个多播组.\n多播组的程序操作步骤顺序大致如下:\n  1. 设置多播超时TTL值 (可选)\n  2. 设置是否允许多播回送 (可选)\n  3. 加入多播组\n  4. 发送/接收数据 (发送数据到多播组主机地址即可发送数据到此整个多播组)\n  5. 离开多播组\n注意: 在Windows系统下使用多播组注意设置系统防火墙.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "多播组主机地址",
+"comment": "可以为主机名/IP地址等,用作提供具体加入的多播组主机地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "多播接口地址",
+"comment": "提供所使用多播接口的本地地址,为空文本表示使用本地默认多播接口地址.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "离开多播组",
+
+"comment": "离开指定多播接口中的指定多播组",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "多播组主机地址",
+"comment": "可以为主机名/IP地址等,用作提供具体离开的多播组主机地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "多播接口地址",
+"comment": "提供所使用多播接口的本地地址,为空文本表示使用本地默认多播接口地址.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "客户",
+"@视窗.后缀文本": "\"public IVolSocketInterface\"",
+"methods": [
+  {
+
+"method name": "数据到达",
+
+"comment": "当服务器端将数据发送过来后,会产生本事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "所接收到的数据",
+"comment": "提供所接收到的数据,必定不为空字节集.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "连接断开",
+
+"comment": "当连接被服务器端断开后,会产生本事件.",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "连接",
+
+"comment": "连接到指定主机上的指定端口,该主机上的该端口必须已经被某一服务器监听.\n成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "服务器地址",
+"comment": "可以为主机名/IP地址等",
+"data type": "文本型"
+   },
+   {
+"parameter name": "服务器端口号",
+"comment": "该端口必须已经被服务器组件监听",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "断开连接",
+
+"comment": "断开与服务器的已有连接",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "发送数据",
+
+"comment": "在成功建立与服务器的连接后,发送数据到服务器端组件.\n成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "所欲发送的所有数据",
+"comment": "提供所欲发送的所有数据,可以为基本数据类型或字节集类数据.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+
+]
+  },
+  {
+]"method name": "发送数据2",
+]"comment": "在成功建立与服务器的连接后,发送数据到服务器端组件.\n成功返回真,失败返回假.",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+]"parameters": [
+   {
+"parameter name": "最长等待时间",
+"comment": "指定等待发送成功的最长时间,单位为秒.如果为-1,表示为无限等待.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲发送的所有数据",
+"comment": "提供所欲发送的所有数据,可以为基本数据类型或字节集类数据.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+]]
+  },
+  {
+"method name": "是否已连接",
+"comment": "返回当前是否已经连接到了服务器",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "服务器",
+"@视窗.后缀文本": "\"public IVolSocketInterface\"",
+"methods": [
+  {
+@视窗.后缀文本": "\"public IVolSocketInterface\"""method name": "数据到达",
+@视窗.后缀文本": "\"public IVolSocketInterface\"""comment": "当有客户端数据到达后,会产生本事件.",
+@视窗.后缀文本": "\"public IVolSocketInterface\"""type": "event",
+@视窗.后缀文本": "\"public IVolSocketInterface\"""data type": "整数",
+@视窗.后缀文本": "\"public IVolSocketInterface\"""parameters": [
+   {
+"parameter name": "客户地址",
+"comment": "提供所对应客户的地址文本: IP地址 + 端口",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所接收到的数据",
+"comment": "提供所接收到的数据,必定不为空字节集.",
+"data type": "字节集类"
+   }
+@视窗.后缀文本": "\"public IVolSocketInterface\""]
+  },
+  {
+}"method name": "客户进入",
+}"comment": "当有新客户连接入本服务器后,会产生本事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "所进入客户地址",
+"comment": "提供所进入客户的地址文本: IP地址 + 端口",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "客户离开",
+}"comment": "当有已连接客户断开与本服务器的连接后,会产生本事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "所离开客户地址",
+"comment": "提供所离开客户的地址文本: IP地址 + 端口",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "端口",
+
+"comment": "指定监听客户连接的端口号,如果不进行设置,默认为19730.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲监听的端口号",
+"comment": "可以是大于 0 小于 32767 的任何自定整数值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "端口",
+
+"comment": "返回当前所设置的监听数据到达的端口号",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+所设置的监听数据到达的端口号"method name": "开始监听",
+所设置的监听数据到达的端口号"comment": "开始在\"端口\"属性所指定的端口上监听客户端连接及数据到达,返回是否成功.",
+所设置的监听数据到达的端口号"data type": "逻辑型",
+所设置的监听数据到达的端口号"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "停止监听",
+
+"comment": "断开所有已连接客户端(注意不会发送\"客户离开\"事件),停止监听端口.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+所设置的监听数据到达的端口号"method name": "发送数据",
+所设置的监听数据到达的端口号"comment": "向指定已经连接进来的客户发送数据. 成功返回真,失败返回假.",
+所设置的监听数据到达的端口号"data type": "逻辑型",
+所设置的监听数据到达的端口号"@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+所设置的监听数据到达的端口号"parameters": [
+   {
+"parameter name": "接收客户地址",
+"comment": "为\"数据到达\"/\"客户进入\"事件或\"取客户\"方法中所提供的客户地址文本,为空文本表示向所有现有客户发送数据.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最长等待时间",
+"comment": "指定等待发送到每个客户成功的最长时间,单位为秒.如果为-1,表示为无限等待.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所欲发送的所有数据",
+"comment": "提供所欲发送的所有数据,可以为基本数据类型或字节集类数据.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+所设置的监听数据到达的端口号]
+  },
+  {
+}"method name": "断开客户",
+}"comment": "断开与指定客户之间的连接,发送\"客户离开\"事件.",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "欲断开客户",
+"comment": "为\"数据到达\"/\"客户进入\"事件或\"取客户\"方法中所提供的客户地址文本,为空文本表示断开所有现有客户.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "取客户数目",
+
+"comment": "返回当前所有已经连接客户的数目",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取客户",
+
+"comment": "返回所指定索引位置处已连接客户的地址文本",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "客户索引位置",
+"comment": "提供所欲获取已连接客户的索引位置,必须大于等于0且小于\"取客户数目\"方法的返回值,如索引值无效将返回空文本.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+thod name": "断开客户""method name": "取客户句柄",
+thod name": "断开客户""comment": "返回所指定索引位置处已连接客户的 HSOCKET 句柄值",
+thod name": "断开客户""data type": "变整数",
+thod name": "断开客户""@嵌入式方法": "\"\"",
+thod name": "断开客户""parameters": [
+   {
+"parameter name": "客户索引位置",
+"comment": "提供所欲获取已连接客户的索引位置,必须大于等于0且小于\"取客户数目\"方法的返回值,如索引值无效将返回-1.",
+"data type": "整数"
+   }
+thod name": "断开客户"]
+  },
+  {
+ }"method name": "查找客户句柄",
+ }"comment": "返回所指定地址文本客户所对应的 HSOCKET 句柄值,不存在返回0.",
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "客户地址文本",
+"comment": "为\"数据到达\"/\"客户进入\"事件或\"取客户\"方法中所提供的客户地址文本",
+"data type": "文本型"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "服务器2",
+"comment": "提供直接基于SOCKET句柄进行高效网络操作的服务器类.\n注意: 相比\"服务器\"类,本类未在内部维护已连接客户列表,用户需要自行管理.",
+"@视窗.后缀文本": "\"public IVolSocketInterface\"",
+"methods": [
+  {
+
+"method name": "数据到达",
+
+"comment": "当有客户端数据到达后,会产生本事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "客户句柄",
+"comment": "提供所对应客户的SOCKET句柄值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所接收到的数据",
+"comment": "提供所接收到的数据,必定不为空字节集.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "客户进入",
+
+"comment": "当有新客户连接入本服务器后,会产生本事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "客户句柄",
+"comment": "提供所对应客户的SOCKET句柄值",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "客户离开",
+
+"comment": "当有已连接客户断开与本服务器的连接后,会产生本事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "客户句柄",
+"comment": "提供所对应客户的SOCKET句柄值",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "端口",
+
+"comment": "指定监听客户连接的端口号,如果不进行设置,默认为19730.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲监听的端口号",
+"comment": "可以是大于 0 小于 32767 的任何自定整数值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "端口",
+
+"comment": "返回当前所设置的监听数据到达的端口号",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+comment": "可以是大于 0 小于 32767 的任何自定整数值""method name": "启动",
+comment": "可以是大于 0 小于 32767 的任何自定整数值""comment": "开始在\"端口\"属性所指定的端口上监听客户端连接及数据到达,返回是否成功.",
+comment": "可以是大于 0 小于 32767 的任何自定整数值""data type": "逻辑型",
+comment": "可以是大于 0 小于 32767 的任何自定整数值""@禁止流程检查": "真"
+  },
+  {
+omment": "可以是大于 0 小于 32767 的任何自定整数值""@禁止流程检查": "真""method name": "停止",
+omment": "可以是大于 0 小于 32767 的任何自定整数值""@禁止流程检查": "真""comment": "停止监听端口,断开与所有客户的连接,如需再使用本对象,需要重新启动.",
+omment": "可以是大于 0 小于 32767 的任何自定整数值""@禁止流程检查": "真""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "发送数据",
+
+"comment": "向指定已经连接进来的客户发送数据. 成功返回真,失败返回假.\n本方法支持在多线程环境下运行.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "客户句柄",
+"comment": "为\"数据到达\"/\"客户进入\"事件或\"取客户\"方法中所提供的客户SOCKET句柄值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "最长等待时间",
+"comment": "指定等待发送到每个客户成功的最长时间,单位为秒.如果为-1,表示为无限等待.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所欲发送的所有数据",
+"comment": "提供所欲发送的所有数据,可以为基本数据类型或字节集类数据.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+
+]
+  },
+  {
+data type": "变整数""method name": "断开客户",
+data type": "变整数""comment": "断开与指定客户之间的连接(注意不会发送\"客户离开\"事件).\n本方法支持在多线程环境下运行.",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "客户句柄",
+"comment": "为\"数据到达\"/\"客户进入\"事件或\"取客户\"方法中所提供的客户SOCKET句柄值",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+data type": "变整数""method name": "取客户地址",
+data type": "变整数""comment": "成功返回所指定客户的地址文本(格式为\"IP地址:端口\"),失败返回空文本.",
+data type": "变整数""static": true,
+data type": "变整数""data type": "文本型",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "客户句柄",
+"comment": "为\"数据到达\"/\"客户进入\"事件或\"取客户\"方法中所提供的客户SOCKET句柄值",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  }
+]
+ }
+= "category = \"网络\""]
+}

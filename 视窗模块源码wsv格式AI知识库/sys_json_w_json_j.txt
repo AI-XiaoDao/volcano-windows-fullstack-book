@@ -1,0 +1,1510 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"JSON数据访问支持".
+
+{
+问本程序中的接口需要引用模块"JSON数据访问支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"JSON数据访问支持"."package name": "火山视窗.JSON操作",
+问本程序中的接口需要引用模块"JSON数据访问支持"."classes": [
+ {
+"class name": "JSON基础类",
+"comment": "不要直接使用本类,请使用\"JSON数组类\"或\"JSON对象类\",来操作JSON数据.\n2021.05.12升级至jsoncpp-1.9.4.\n2025.08.09升级至jsoncpp-1.9.7.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@视窗.头文件搜寻目录": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\json\\\\2\\\\jsoncpp-1.9.7\\\\include\"",
+"@视窗.外部头文件": "\"JsoncppTool.h\"",
+"@视窗.外部源文件": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\json\\\\2\\\\jsoncpp-1.9.7\\\\src\\\\json_reader.cpp\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\json\\\\2\\\\jsoncpp-1.9.7\\\\src\\\\json_value.cpp\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\json\\\\2\\\\jsoncpp-1.9.7\\\\src\\\\json_writer.cpp\\r\\n..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\json\\\\2\\\\jsoncpp-1.9.7\\\\src\\\\JsoncppTool.cpp\"",
+"@视窗.后缀文本": "\"public CJsonObject\"",
+"@视窗.需求VS版本": "\"14-\"",
+"@输出到部件": "假",
+"methods": [
+  {
+methods": [
+"method name": "启用顺序输出",
+methods": [
+"comment": "调用本方法以启用JSON顺序输出文本,即\"到可读文本\"时键值的顺序将遵循添加该键值时的顺序.",
+methods": [
+"static": true,
+methods": [
+"@视窗.预定义宏": "\"JSON_CPP_SEQUE_OUTPUT\""
+  },
+  {
+ = 7 注释 = "表示JSON对象类""method name": "启用线程安全",
+ = 7 注释 = "表示JSON对象类""comment": "   如果调用了此方法,那么模块内部会自动加锁,多线程操作时会处于安全状态.\n   如果不调用此方法,则模块不保证线程安全.\n   此时用户应该自行确保不同线程操作的时候,不要出现一个线程读一个线程写,另外一个线程\n删除的情况,否则会引起程序的崩溃.",
+ = 7 注释 = "表示JSON对象类""static": true,
+ = 7 注释 = "表示JSON对象类""@视窗.预定义宏": "\"JSON_CPP_THREAD_SAFE\""
+  },
+  {
+ "表示空值""method name": "到可读文本",
+ "表示空值""comment": " 把JSON转换成可读文本并格式化数据.\n 例如:\n {\n  \"query\": \"VolDev\",\n  \"locations\": [\n     100,\n     101\n  ]\n }",
+ "表示空值""data type": "文本型",
+ "表示空值""@嵌入式方法": "\"\"",
+ "表示空值""parameters": [
+   {
+"parameter name": "是否格式化",
+"comment": "提供真将会进行格式化操作,则会用空格换行进行格式化.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否不转义",
+"comment": "如果假,遇到中文则会以这种方式显示\"\\0xfbfe\\0xfafd\",填写真将显示为正常的中文字符.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ "表示空值"]
+  },
+  {
+
+"method name": "到字节集",
+
+"comment": "把JSON格式化成UTF8的字节集",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "是否格式化",
+"comment": "如果格式化,则会用空格换行进行格式化操作.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否使用UTF8编码",
+"comment": "如果真将进行UTF8编码字节集.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+}"method name": "创建自字节集",
+}"comment": "从一段UTF8字节集载入,务必保证载入的字节集数据是JSON数据.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "必须是utf8的字节集",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "创建自文本",
+
+"comment": "从JSON文本创建,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"comment": "必须是Json格式的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"data type": "逻辑型""method name": "清空",
+
+"data type": "逻辑型""comment": "清空本对象中的数据",
+
+"data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+"data type": "逻辑型""comment": "清空本对象中的数据""method name": "是否为空",
+"data type": "逻辑型""comment": "清空本对象中的数据""comment": "返回本对象的内容是否为空",
+"data type": "逻辑型""comment": "清空本对象中的数据""data type": "逻辑型",
+"data type": "逻辑型""comment": "清空本对象中的数据""@嵌入式方法": "\"\""
+  },
+  {
+]"method name": "成员数",
+]"comment": "如果操作当前属性的是\"JSON对象类\",则返回键数量.如果是\"JSON数组类\",则返回数组成员数.",
+]"type": "property getter",
+]"data type": "整数",
+]"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "JSON数组类",
+"comment": "通过本类可对JSON数组进行操作",
+"base class": "JSON基础类",
+"@输出到部件": "假",
+"methods": [
+  {
+"comment": "从一段UTF8字节集载入,务必保证载入的字节集数据是JSON数据.""method name": "到文本数组",
+"comment": "从一段UTF8字节集载入,务必保证载入的字节集数据是JSON数据.""comment": "  将当前JSON数组的每个成员取出,转换成文本数组,\n并将其存放到所指定的结果文本数组参数中.",
+"comment": "从一段UTF8字节集载入,务必保证载入的字节集数据是JSON数据.""static": true,
+"comment": "从一段UTF8字节集载入,务必保证载入的字节集数据是JSON数据.""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "结果数组",
+"comment": "结果保存在此参数中",
+"data type": "文本数组类"
+   }
+"comment": "从一段UTF8字节集载入,务必保证载入的字节集数据是JSON数据."]
+  },
+  {
+"method name": "删除成员",
+"comment": "删除指定索引位置处的成员",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所删除成员索引位置",
+"comment": "索引位置从0开始",
+"data type": "整数"
+   }
+]
+  },
+  {
+数型""method name": "删除路径成员",
+数型""comment": "删除指定路径处的成员",
+数型""static": true,
+数型""@嵌入式方法": "\"\"",
+数型""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所删除成员路径",
+"comment": "提供JSON路径",
+"data type": "文本型"
+   }
+数型"]
+  },
+  {
+}"method name": "是否存在",
+}"comment": "判断指定索引位置处的成员是否存在",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所检测成员索引位置",
+"comment": "索引值从0开始",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "路径是否存在",
+}"comment": "判断指定路径处的成员是否存在",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所检测成员路径",
+"comment": "提供JSON路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ }"method name": "取类型",
+ }"comment": "返回指定索引位置处成员的对应类型",
+ }"static": true,
+ }"data type": "JSON类型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问成员索引位置",
+"comment": "索引值从0开始.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "取路径类型",
+ }"comment": "返回指定路径处成员的对应类型",
+ }"static": true,
+ }"data type": "JSON类型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问成员路径",
+"comment": "提供JSON路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "替换文本值",
+ }"comment": "将指定的文本值替换到指定索引位置",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "替换路径文本值",
+
+"comment": "将指定的文本值替换到指定路径位置",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的路径",
+"comment": "提供JSON路径,路径不存在将直接添加成员到该路径位置.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "替换整数值",
+"parameters": [
+"comment": "将指定的整数值替换到指定索引位置",
+"parameters": [
+"static": true,
+"parameters": [
+"@嵌入式方法": "\"\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+}"method name": "替换路径整数值",
+}"comment": "将指定的整数值替换到指定路径位置",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的路径",
+"comment": "提供JSON路径,路径不存在将直接添加成员到该路径位置.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "替换长整数值",
+data type": "整数""comment": "将指定的长整数值替换到指定索引位置",
+data type": "整数""static": true,
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "长整数"
+   }
+data type": "整数"]
+  },
+  {
+data type": "文本型""method name": "替换路径长整数值",
+data type": "文本型""comment": "将指定的长整数值替换到指定路径位置",
+data type": "文本型""static": true,
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的路径",
+"comment": "提供JSON路径,路径不存在将直接添加成员到该路径位置.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "长整数"
+   }
+data type": "文本型"]
+  },
+  {
+ameter name": "值内容""method name": "替换小数值",
+ameter name": "值内容""comment": "将指定的小数值替换到指定索引位置",
+ameter name": "值内容""static": true,
+ameter name": "值内容""@嵌入式方法": "\"\"",
+ameter name": "值内容""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "小数"
+   }
+ameter name": "值内容"]
+  },
+  {
+data type": "小数""method name": "替换路径小数值",
+data type": "小数""comment": "将指定的小数值替换到指定路径位置",
+data type": "小数""static": true,
+data type": "小数""@嵌入式方法": "\"\"",
+data type": "小数""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的路径",
+"comment": "提供JSON路径,路径不存在将直接添加成员到该路径位置.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "小数"
+   }
+data type": "小数"]
+  },
+  {
+
+"method name": "替换逻辑值",
+
+"comment": "将指定的逻辑值替换到指定索引位置",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "替换路径逻辑值",
+"comment": "将指定的逻辑值替换到指定路径位置",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的路径",
+"comment": "提供JSON路径,路径不存在将直接添加成员到该路径位置.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供新值",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+ }"method name": "替换对象值",
+ }"comment": "将指定的JSON对象类替换到指定索引位置",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "要替换的对象",
+"comment": "提供新值",
+"data type": "JSON对象类"
+   }
+ }]
+  },
+  {
+}"comment": "将指定的JSON对象类替换到指定索引位置""method name": "替换路径对象值",
+}"comment": "将指定的JSON对象类替换到指定索引位置""comment": "将指定的JSON对象类替换到指定路径位置",
+}"comment": "将指定的JSON对象类替换到指定索引位置""static": true,
+}"comment": "将指定的JSON对象类替换到指定索引位置""@嵌入式方法": "\"\"",
+}"comment": "将指定的JSON对象类替换到指定索引位置""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的路径",
+"comment": "索引从0开始,索引不存在将直接添加成员该到索引位置.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要替换的对象",
+"comment": "提供新值",
+"data type": "JSON对象类"
+   }
+}"comment": "将指定的JSON对象类替换到指定索引位置"]
+  },
+  {
+"method name": "替换数组值",
+"comment": "将指定的JSON数组类替换到指定索引位置",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的索引",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "要替换的数组",
+"comment": "提供新值",
+"data type": "JSON数组类"
+   }
+]
+  },
+  {
+data type": "JSON数组类""method name": "替换路径数组值",
+data type": "JSON数组类""comment": "将指定的JSON数组类替换到指定路径位置",
+data type": "JSON数组类""static": true,
+data type": "JSON数组类""@嵌入式方法": "\"\"",
+data type": "JSON数组类""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要替换的路径",
+"comment": "索引从0开始,索引不存在将直接添加成员到该索引位置.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要替换的数组",
+"comment": "提供新值",
+"data type": "JSON数组类"
+   }
+data type": "JSON数组类"]
+  },
+  {
+ata type": "JSON数组类""@嵌入式方法": "\"\"""method name": "取文本值",
+ata type": "JSON数组类""@嵌入式方法": "\"\"""comment": "取出指定索引位置的文本值",
+ata type": "JSON数组类""@嵌入式方法": "\"\"""static": true,
+ata type": "JSON数组类""@嵌入式方法": "\"\"""data type": "文本型",
+ata type": "JSON数组类""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+ata type": "JSON数组类""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+ata type": "JSON数组类""@嵌入式方法": "\"\""]
+  },
+  {
+ }"method name": "取路径文本值",
+ }"comment": "取出指定路径位置的文本值",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的路径",
+"comment": "参数提供JSON路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "取整数值",
+}"comment": "取出指定索引位置的整数值",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "取路径整数值",
+}"comment": "取出指定路径位置的整数值",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ameter name": "所欲访问的路径""method name": "取长整数值",
+ameter name": "所欲访问的路径""comment": "取出指定索引位置的长整数值",
+ameter name": "所欲访问的路径""static": true,
+ameter name": "所欲访问的路径""data type": "长整数",
+ameter name": "所欲访问的路径""@嵌入式方法": "\"\"",
+ameter name": "所欲访问的路径""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+ameter name": "所欲访问的路径"]
+  },
+  {
+
+"method name": "取路径长整数值",
+
+"comment": "取出指定路径位置的长整数值",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取逻辑值",
+
+"comment": "取出指定索引位置的逻辑值",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+]"method name": "取路径逻辑值",
+]"comment": "取出指定路径位置的逻辑值",
+]"static": true,
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+"method name": "取小数值",
+"comment": "取出指定索引位置的小数值",
+"static": true,
+"data type": "小数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取路径小数值",
+"comment": "取出指定路径位置的小数值",
+"static": true,
+"data type": "小数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+meter name": "所欲访问的路径""parameters": [
+"method name": "取对象值",
+meter name": "所欲访问的路径""parameters": [
+"comment": "取出指定索引位置的JSON对象类",
+meter name": "所欲访问的路径""parameters": [
+"static": true,
+meter name": "所欲访问的路径""parameters": [
+"@嵌入式方法": "\"\"",
+meter name": "所欲访问的路径""parameters": [
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的对象值保存在此参数中",
+"data type": "JSON对象类"
+   }
+meter name": "所欲访问的路径""parameters": [
+]
+  },
+  {
+ }"method name": "取路径对象值",
+ }"comment": "取出指定路径位置的JSON对象类",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的对象值保存在此参数中",
+"data type": "JSON对象类"
+   }
+ }]
+  },
+  {
+}"comment": "取出指定路径位置的JSON对象类""method name": "取数组值",
+}"comment": "取出指定路径位置的JSON对象类""comment": "取出指定索引位置的JSON数组类",
+}"comment": "取出指定路径位置的JSON对象类""static": true,
+}"comment": "取出指定路径位置的JSON对象类""@嵌入式方法": "\"\"",
+}"comment": "取出指定路径位置的JSON对象类""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的索引位置",
+"comment": "索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出的数组值保存在此参数中.",
+"data type": "JSON数组类"
+   }
+}"comment": "取出指定路径位置的JSON对象类"]
+  },
+  {
+"method name": "取路径数组值",
+"comment": "取出指定路径位置的JSON数组类",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "所欲访问的路径",
+"comment": "提供JSON路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的数组值保存在此参数中.",
+"data type": "JSON数组类"
+   }
+]
+  },
+  {
+data type": "JSON数组类""method name": "置入文本值",
+data type": "JSON数组类""comment": "将指定文本添加到当前数组中",
+data type": "JSON数组类""static": true,
+data type": "JSON数组类""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "内容",
+"comment": "提供要添加的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "JSON数组类"]
+  },
+  {
+
+"method name": "置入整数值",
+
+"comment": "将指定整数添加到当前数组中",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "内容",
+"comment": "提供要添加的整数",
+"data type": "整数"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "置入逻辑值",
+data type": "整数""comment": "将指定逻辑添加到当前数组中",
+data type": "整数""static": true,
+data type": "整数""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "内容",
+"comment": "提供要添加的逻辑值",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "置入长整数值",
+"comment": "将指定长整数添加到当前数组中",
+"static": true,
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "内容",
+"comment": "提供要添加的长整数",
+"data type": "长整数"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+
+"method name": "置入小数值",
+
+"comment": "将指定小数添加到当前数组中",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "内容",
+"comment": "提供要添加的小数",
+"data type": "小数"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+ }"method name": "置入对象值",
+ }"comment": "将指定JSON对象类添加到当前数组中.",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要置入的对象",
+"comment": "提供要添加的JSON对象类",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后..",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+"method name": "置入数组值",
+"comment": "将指定JSON数组类添加到当前数组中.",
+"static": true,
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "要置入的数组",
+"comment": "提供要添加的JSON数组类对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "从0开始,为-1则添加到最后..",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+
+"method name": "排序",
+
+"comment": "对当前数组进行排序",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON数组类"
+   },
+   {
+"parameter name": "是否从大到小",
+"comment": "默认从大到小排序",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "JSON对象类",
+"comment": "通过本类可对JSON对象进行操作.",
+"base class": "JSON基础类",
+"@输出到部件": "假",
+"methods": [
+  {
+methods": [
+"method name": "删除成员",
+methods": [
+"comment": "删除指定键名",
+methods": [
+"static": true,
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   }
+methods": [
+]
+  },
+  {
+"method name": "成员是否存在",
+"comment": "判断指定键名是否存在.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供要判断的键名,支持传递JSON路径.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "取类型",
+
+"comment": "返回键名称对应键值的类型",
+
+"static": true,
+
+"data type": "JSON类型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "置入文本值",
+
+"comment": "将指定的文本值置入当前JSON对象内指定名称键所对应的值中.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+comment": "提供键名,支持传递JSON路径.""method name": "置入整数值",
+comment": "提供键名,支持传递JSON路径.""comment": "将指定的整数值置入当前JSON对象内指定名称键所对应的值中.",
+comment": "提供键名,支持传递JSON路径.""static": true,
+comment": "提供键名,支持传递JSON路径.""@嵌入式方法": "\"\"",
+comment": "提供键名,支持传递JSON路径.""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "整数"
+   }
+comment": "提供键名,支持传递JSON路径."]
+  },
+  {
+ameter name": "值内容""method name": "置入长整数值",
+ameter name": "值内容""comment": "将指定的长整数值置入当前JSON对象内指定名称键所对应的值中.",
+ameter name": "值内容""static": true,
+ameter name": "值内容""@嵌入式方法": "\"\"",
+ameter name": "值内容""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "长整数"
+   }
+ameter name": "值内容"]
+  },
+  {
+mment": "提供键名,支持传递JSON路径."]"method name": "置入小数值",
+mment": "提供键名,支持传递JSON路径."]"comment": "将指定的小数值置入当前JSON对象内指定名称键所对应的值中.",
+mment": "提供键名,支持传递JSON路径."]"static": true,
+mment": "提供键名,支持传递JSON路径."]"@嵌入式方法": "\"\"",
+mment": "提供键名,支持传递JSON路径."]"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "小数"
+   }
+mment": "提供键名,支持传递JSON路径."]]
+  },
+  {
+data type": "文本型""method name": "置入逻辑值",
+data type": "文本型""comment": "将指定的逻辑值置入当前JSON对象内指定名称键所对应的值中.",
+data type": "文本型""static": true,
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值内容",
+"comment": "提供键值",
+"data type": "逻辑型"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "JSON对象类""method name": "取文本值",
+data type": "JSON对象类""comment": "取出指定键名所对应的键值.",
+data type": "JSON对象类""result comment": "返回键值",
+data type": "JSON对象类""static": true,
+data type": "JSON对象类""data type": "文本型",
+data type": "JSON对象类""@嵌入式方法": "\"\"",
+data type": "JSON对象类""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   }
+data type": "JSON对象类"]
+  },
+  {
+}"method name": "置入对象值",
+}"comment": "将指定的JSON对象类置入当前JSON对象内指定名称键所对应的值中.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要置入的对象",
+"comment": "提供要置入的JSON对象",
+"data type": "JSON对象类"
+   }
+}]
+  },
+  {
+}"method name": "置入数组值",
+}"comment": "将指定的JSON数组类置入当前JSON对象内指定名称键所对应的值中.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要置入的数组",
+"comment": "提供要置入的JSON数组",
+"data type": "JSON数组类"
+   }
+}]
+  },
+  {
+"method name": "取整数值",
+"comment": "取出指定键名所对应的键值.",
+"result comment": "返回对应的整数值",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+]"method name": "取长整数值",
+]"comment": "取出指定键名所对应的键值.",
+]"result comment": "返回对应的长整数值",
+]"static": true,
+]"data type": "长整数",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+"method name": "取逻辑值",
+"comment": "取出指定键名所对应的键值.",
+"result comment": "返回对应的逻辑值",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ata type": "JSON对象类""result comment": "返回键值""method name": "取小数值",
+ata type": "JSON对象类""result comment": "返回键值""comment": "取出指定键名所对应的键值.",
+ata type": "JSON对象类""result comment": "返回键值""result comment": "返回对应的小数值",
+ata type": "JSON对象类""result comment": "返回键值""static": true,
+ata type": "JSON对象类""result comment": "返回键值""data type": "小数",
+ata type": "JSON对象类""result comment": "返回键值""@嵌入式方法": "\"\"",
+ata type": "JSON对象类""result comment": "返回键值""parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   }
+ata type": "JSON对象类""result comment": "返回键值"]
+  },
+  {
+
+"method name": "取对象值",
+
+"comment": "取出指定键名的JSON对象类",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的对象值保存在此参数中.",
+"data type": "JSON对象类"
+   }
+
+]
+  },
+  {
+]"method name": "取数组值",
+]"comment": "取出指定键名的JSON数组类",
+]"static": true,
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "所操作的本对象",
+"data type": "JSON对象类"
+   },
+   {
+"parameter name": "键名称",
+"comment": "提供键名,支持传递JSON路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存取出的对象",
+"comment": "取出后的数组值保存在此参数中.",
+"data type": "JSON数组类"
+   }
+]]
+  },
+  {
+数组值保存在此参数中."method name": "取所有键名",
+数组值保存在此参数中."comment": "把JSON对象里面的所有\"键名称\"都加入到文本数组类中.",
+数组值保存在此参数中."parameters": [
+   {
+"parameter name": "键名数组",
+"comment": "结果保存在此参数中.",
+"data type": "文本数组类"
+   }
+数组值保存在此参数中.]
+  }
+]
+ },
+ {
+"class name": "JSON类型",
+"comment": "用来判断键值类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+"constant name": "空",
+"comment": "表示空值",
+"initial value": "0"
+  },
+  {
+存在此参数中."method name": "取所有键名""constant name": "整数值",
+存在此参数中."method name": "取所有键名""comment": "表示整数值",
+存在此参数中."method name": "取所有键名""initial value": "1"
+  },
+  {
+}"constant name": "无符号整数值",
+}"comment": "表示无符号整数值",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "小数值",
+
+"comment": "表示小数型",
+
+"initial value": "3"
+  },
+  {
+存在此参数中."method name": "取所有键名""constant name": "文本值",
+存在此参数中."method name": "取所有键名""comment": "表示文本型",
+存在此参数中."method name": "取所有键名""initial value": "4"
+  },
+  {
+}"constant name": "逻辑值",
+}"comment": "表示逻辑型",
+}"initial value": "5"
+  },
+  {
+ }"constant name": "键值列表",
+ }"comment": "表示JSON数组类",
+ }"initial value": "6"
+  },
+  {
+nstant name": "逻辑值""constant name": "键值表",
+nstant name": "逻辑值""comment": "表示JSON对象类",
+nstant name": "逻辑值""initial value": "7"
+  }
+]
+ }
+问本程序中的接口需要引用模块"JSON数据访问支持".]
+}

@@ -1,0 +1,224 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".
+
+{
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."package name": "LkuaiyHttp.com",
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."classes": [
+ {
+"class name": "类_编码转换",
+"@全局类": "真",
+"@禁止继承": "真",
+"@视窗.外部头文件": "\"lib\\\\EncodecTest\\\\EncodecLKY.h\"",
+"@视窗.外部源文件": "\"lib\\\\EncodecTest\\\\EncodecLKY.cpp\"",
+"methods": [
+  {
+@禁止继承": "真""method name": "Utf8ToUnicode",
+@禁止继承": "真""data type": "文本型",
+@禁止继承": "真""@禁止流程检查": "真",
+@禁止继承": "真""parameters": [
+   {
+"parameter name": "Utf8",
+"data type": "变整数"
+   }
+@禁止继承": "真"]
+  },
+  {
+
+"method name": "AsciiToUnicode",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "Ascii",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+}"method name": "UnicodeToUtf8",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "Unicode",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+]"method name": "UicodeToAscii",
+]"data type": "字节集类",
+]"parameters": [
+   {
+"parameter name": "Uicode",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+
+"method name": "编码_utf8转Unicode",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "要转换的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+"method name": "编码_utf8转火山文本",
+"comment": "Unicode",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "要转换的数据",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+data type": "字节集类""method name": "编码_Unicode转Utf8",
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "要转换的文本",
+"data type": "文本型"
+   }
+data type": "字节集类"]
+  },
+  {
+}"method name": "编码_Unicode转Ascii",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "要转换的文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "编码_Ascii转Unicode",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "MemBuf",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要转换的长度",
+"comment": "如果为-1 则 取的是字节集长度",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+"method name": "编码_到十六进制文本",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "分隔符",
+"comment": "默认不使用分隔符",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "前缀",
+"comment": "默认不添加前缀",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "分组数",
+"comment": "//分组 例如 分组数2 那么就是 0001 0203\n//如果分组数是1 那么就是     00 01 02 03",
+"data type": "整数",
+"@默认值": "1"
+   }
+]
+  },
+  {
+
+"method name": "编码_十六进制到字节集",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "格式文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "分隔符",
+"comment": "默认不使用分隔符",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "前缀",
+"comment": "默认不添加前缀",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+}"method name": "编码_URL编码",
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "要编码的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否不编码特殊符号",
+"comment": "如果为真则不会编码等号或者符号",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+
+"method name": "编码_URL解码",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "要解码的文本",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".]
+}

@@ -1,0 +1,1366 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV扩展类".
+
+{
+ꮐ脛ŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ꮐ脛ŝ"package name": "火山.PIV扩展类",
+ꮐ脛ŝ"comment": "网络传输相关的类库\nhttps://github.com/SaierMe/piv",
+ꮐ脛ŝ"classes": [
+ {
+"class name": "Curl传输类",
+"comment": "基于\"Curl网络传输\"的网络传输类,增加了多线程接口.\n本类专供\"并发网络访问类\"使用,普通用户请使用官方的网络传输类.",
+"base class": "网络传输类",
+"@文档": "\"category = \\\"高并发网络访问\\\"\"",
+"variables": [
+  {
+comment": "基于\"Curl网络传输\"的网络传输类,增加了多线程接口.\n本类专供\"并发网络访问类\"使用,普通用户请使用官方的网络传输类.""variable name": "成_访问类型",
+comment": "基于\"Curl网络传输\"的网络传输类,增加了多线程接口.\n本类专供\"并发网络访问类\"使用,普通用户请使用官方的网络传输类.""comment": "0=网页访问, 1=下载, 2=上传(未写)...",
+comment": "基于\"Curl网络传输\"的网络传输类,增加了多线程接口.\n本类专供\"并发网络访问类\"使用,普通用户请使用官方的网络传输类.""data type": "整数"
+  },
+  {
+file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"variable name": "成_返回结果",
+file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"comment": "保存网页访问的返回结果,每次请求前需要调用\"重置参数\".",
+file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类"
+  },
+  {
+ile description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类""variable name": "成_响应头",
+ile description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类""comment": "保存响应头数组,每次请求前需要调用\"重置参数\".",
+ile description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类""data type": "文本数组类"
+  },
+  {
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类""comment": "保存响应头数组,每次请求前需要调用\"重置参数\".""variable name": "成_文件路径",
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类""comment": "保存响应头数组,每次请求前需要调用\"重置参数\".""comment": "下载的文件保存在此位置中,请以\"\\\\\"结尾,开始下载之前,本参数会修改为最终的全路径文件名.",
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类""comment": "保存响应头数组,每次请求前需要调用\"重置参数\".""data type": "文本型"
+  },
+  {
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类""comment": "保存响应头数组,每次请求前需要调用\"重置参数\".""variable name": "成_类指针",
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类""comment": "保存响应头数组,每次请求前需要调用\"重置参数\".""comment": "\"并发网络访问类\"的实例指针.",
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "字节集类""comment": "保存响应头数组,每次请求前需要调用\"重置参数\".""data type": "变整数"
+  },
+  {
+file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"variable name": "成_文件操作",
+file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"comment": "每次请求前需要调用\"重置参数\".",
+file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "文件读写类EX"
+  },
+  {
+ile description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "文件读写类EX""variable name": "成_下载信息",
+ile description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "文件读写类EX""data type": "Curl下载信息指针"
+  }
+],
+"methods": [
+  {
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "文件读写类EX""data type": "Curl下载信息指针""method name": "取会话句柄",
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "文件读写类EX""data type": "Curl下载信息指针""comment": "获取当前的会话句柄,用于Curl的多线程接口.",
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "文件读写类EX""data type": "Curl下载信息指针""data type": "变整数",
+le description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "文件读写类EX""data type": "Curl下载信息指针""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "重置参数",
+}"comment": "重置选项和各种列表,准备下一次请求."
+  },
+  {
+}"method name": "添加会话句柄",
+}"comment": "将当前的会话句柄添加到多会话句柄中.",
+}"result comment": "请参考\"多会话状态码\"中所提供的常量定义.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+ }"method name": "移除会话句柄",
+ }"comment": "将当前的会话句柄从多会话句柄中移除.",
+ }"result comment": "请参考\"多会话状态码\"中所提供的常量定义.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+"method name": "创建多会话句柄",
+"comment": "创建一个Curl多会话句柄.",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "释放多会话句柄",
+
+"comment": "释放Curl多会话句柄.",
+
+"result comment": "请参考\"多会话状态码\"中所提供的常量定义.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "发送多会话请求",
+
+"comment": "在添加会话句柄后,调用本方法以发送多会话请求.\n注意:本方法为异步操作,会立即返回.",
+
+"result comment": "请参考\"多会话状态码\"中所提供的常量定义.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "传输数量",
+"comment": "请传入整数变量,返回仍在传输的会话数量",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   }
+
+]
+  },
+  {
+}"method name": "取多会话信息",
+}"comment": "读取多会话的栈信息,返回CURL信息指针.\n由于执行失败会返回空指针,执行后调用该参数必须先判断指针是否为空.",
+}"static": true,
+}"data type": "CURL信息指针",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息队列数",
+"comment": "返回剩余的消息队列数",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   }
+}]
+  },
+  {
+ }"method name": "轮询",
+ }"comment": "轮询多句柄,等待有任务完成的通知.",
+ }"result comment": "请参考\"多会话状态码\"中所提供的常量定义.",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "超时时间",
+"comment": "毫秒",
+"data type": "整数"
+   },
+   {
+"parameter name": "完成任务数",
+"comment": "请传入整数变量,返回完成的任务数量",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   }
+ }]
+  },
+  {
+
+"method name": "唤醒",
+
+"comment": "可以从任何线程调用,使\"轮询\"立即返回,而不需要等待到达超时时间.",
+
+"result comment": "请参考\"多会话状态码\"中所提供的常量定义.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+}"method name": "取多会话错误描述",
+}"comment": "根据指定的返回值代码获取对应的描述内容.",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "错误码",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "错误码""method name": "置多会话单主机最大连接数",
+ameter name": "错误码""comment": "设置多会话的单主机最大连接数,达到限制后会话将处于挂起状态.",
+ameter name": "错误码""result comment": "请参考\"多会话状态码\"中所提供的常量定义.",
+ameter name": "错误码""static": true,
+ameter name": "错误码""data type": "整数",
+ameter name": "错误码""@嵌入式方法": "\"\"",
+ameter name": "错误码""parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "最大连接数",
+"comment": "默认为0,无限制.",
+"data type": "整数"
+   }
+ameter name": "错误码"]
+  },
+  {
+ }"method name": "置多会话最大连接数",
+ }"comment": "设置多会话最大同时打开的连接数.",
+ }"result comment": "请参考\"多会话状态码\"中所提供的常量定义.",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "最大连接",
+"comment": "默认为0,无限制.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "置多会话连接缓存大小",
+}"comment": "设置多会话的连接缓存大小.",
+}"result comment": "请参考\"多会话状态码\"中所提供的常量定义.",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "多会话句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "最大值",
+"comment": "内部自动设置的默认值为简易会话句柄的4倍.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取下载文件名",
+
+"comment": "  从响应头中获取下载的文件名,必须在获取到响应头之后使用.\n  如果获取不到文件名,将返回\"<现行时间戳的十六进制文本>.downlaod\"作为默认文件名.",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "是否UTF8",
+"comment": "  如果响应头没有声明文件名的编码,则以该选项确定用UTF8还是多字节进行转码.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "高并发网络访问类",
+"comment": "基于Curl的多线程接口封装的并发网络访问类,提供异步的网页访问和下载功能.",
+"@文档": "\"category = \\\"高并发网络访问\\\"\"",
+"methods": [
+  {
+ss name": "高并发网络访问类""method name": "Cookie管理文件",
+ss name": "高并发网络访问类""comment": "提供Cookie管理文件,如果为空对象则不会管理Cookie内容(可使用\"提交协议头/提交Cookie\"参数自行提交).\n如提供空文本则表示在内存中管理Cookie(非持久化储存),如果指定了文件则表示持久化储存管理Cookie.",
+ss name": "高并发网络访问类""type": "property setter",
+ss name": "高并发网络访问类""parameters": [
+   {
+"parameter name": "文件",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+ss name": "高并发网络访问类"]
+  },
+  {
+data type": "文本型""method name": "启动连接池",
+data type": "文本型""comment": "必须启动连接池才会开始进行网络传输,可以在投递任务后执行.",
+data type": "文本型""result comment": "返回是否启动成功,重复运行本方法会返回假.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "最大并发数",
+"comment": "网络传输的最大并发数(最小值为1),也等于Curl会话句柄的最大数量.",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "最大任务数",
+"comment": "最大可提交的任务数量,0为不限制数量. 超过此上限后投递任务会返回失败.\n提交任务过多时,任务队列会占用较大的内存.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "轮询时间",
+"comment": "轮询是否有任务完成的超时等待时间,单位为毫秒.该时间会影响批量发起请求的间隔.",
+"data type": "整数",
+"@默认值": "200"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "销毁连接池",
+ }"comment": "当你不再使用本类时,应当手动调用本方法提前释放被占用的资源.\n类析构时会自动调用."
+  },
+  {
+ethod name": "销毁连接池""method name": "最大并发数",
+ethod name": "销毁连接池""comment": "返回网络传输的最大并发数",
+ethod name": "销毁连接池""type": "property getter",
+ethod name": "销毁连接池""data type": "整数"
+  },
+  {
+data type": "文本型""method name": "最大并发数",
+data type": "文本型""comment": "设置网络传输的最大并发数",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "上限值",
+"data type": "整数"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "任务上限数",
+
+"comment": "返回最大可提交的任务数量,0为不限制数量.\n提交任务过多时,任务队列会占用较大的内存,应适度限制.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+"data type": "整数""method name": "任务上限数",
+"data type": "整数""comment": "设置最大可提交的任务数量,0为不限制数量.",
+"data type": "整数""type": "property setter",
+"data type": "整数""parameters": [
+   {
+"parameter name": "上限值",
+"data type": "整数"
+   }
+"data type": "整数"]
+  },
+  {
+
+"method name": "执行任务数",
+
+"comment": "获取当前正在执行的任务数量",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+}"method name": "剩余任务数",
+}"comment": "获取剩余的任务数量",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+}"method name": "投递下载",
+}"comment": "下载指定网址的文件,传输过程中会响应\"下载进度改变\"事件,下载结束后将响应\"下载完毕\".\n支持断点续传(需目标服务器支持).",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "网址",
+"comment": "提供所欲访问的网址内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存位置",
+"comment": "提供下载的保存位置,留空为\"运行目录\\download\\\".目录不存在时会自动创建,如路径错误或不能访问,会直接返回假.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "提供所欲使用的请求方式.",
+"data type": "网页访问方式",
+"@默认值": "网页访问方式.GET"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "设置本次请求所提交的数据,非POST请求也支持提交请求体,如需携带请求体务必保证该参数不为空对象,如果需要提交空请求体提供空文本内容即可.\n如果提交信息为JSON数据,会自动加入协议头\"Content type 'application/json;charset=UTF-8\",无需你手动添加.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交协议头",
+"comment": "提供本次请求所欲使用的附加协议头,每个成员表示一个协议,默认已设置Accept-Language和User-Agent.",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookie",
+"comment": "提供本次请求所欲使用的Cookie内容,注意该参数提交的内容不会同步到\"Cookie管理文件\"(不会写出至管理文件).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "最大下载速度",
+"comment": "限定最大下载速度,单位:字节/秒,为0表示不限制.如1024等于1KB/秒;1024*1024等于1MB/秒.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "代理地址",
+"comment": "提供所欲使用的代理地址,支持多种协议(http,https,socks4,socks4a,socks5,socks5h),例如(http协议):http://127.0.0.1:8080",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理账号",
+"comment": "提供代理地址所需的用户名.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"comment": "提供代理地址所需的用户密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "指定本次完成整个请求所限定的超时时间,为-1时不限制,单位:毫秒.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "重定向次数",
+"comment": "欲遵循网站重定向的最大次数,为-1时无限制,为0时禁止重定向.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "忽略SSL错误",
+"comment": "是否忽略任何SSL验证相关错误,即不验证证书也不验证服务器(如使用了代理将会被一同忽略).",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否优先",
+"comment": "是否优先执行该任务,为真时将压入到任务队列的首部,否则压入到尾部.优先时不受任务上限数限制.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "投递下载2",
+}"comment": "下载指定网址的文件,传输过程中会响应\"下载进度改变\"事件,下载结束后将响应\"下载完毕\".\n支持断点续传(需目标服务器支持).\n与\"投递下载\"命令基本一致,不同的是本方法提交的请求体内容为字节集类型.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "网址",
+"comment": "提供所欲访问的网址内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存位置",
+"comment": "提供下载的保存位置,留空为\"运行目录\\download\\\".目录不存在时会自动创建,如路径错误或不能访问,会直接返回假.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "提供所欲使用的请求方式.",
+"data type": "网页访问方式",
+"@默认值": "网页访问方式.GET"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "设置本次请求所提交的数据,非POST请求也支持提交请求体,如需携带请求体务必保证该参数不为空对象,如果需要提交空请求体提供空字节集即可.\n如果提交信息为JSON数据,会自动加入协议头\"Content type 'application/json;charset=UTF-8\",无需你手动添加.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交协议头",
+"comment": "提供本次请求所欲使用的附加协议头,每个成员表示一个协议,默认已设置Accept-Language和User-Agent.",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookie",
+"comment": "提供本次请求所欲使用的Cookie内容,注意该参数提交的内容不会同步到\"Cookie管理文件\"(不会写出至管理文件).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "最大下载速度",
+"comment": "限定最大下载速度,单位:字节/秒,为0表示不限制.如1024等于1KB/秒;1024*1024等于1MB/秒.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "代理地址",
+"comment": "提供所欲使用的代理地址,支持多种协议(http,https,socks4,socks4a,socks5,socks5h),例如(http协议):http://127.0.0.1:8080",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理账号",
+"comment": "提供代理地址所需的用户名.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"comment": "提供代理地址所需的用户密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "指定本次完成整个请求所限定的超时时间,为-1时不限制,单位:毫秒.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "重定向次数",
+"comment": "欲遵循网站重定向的最大次数,为-1时无限制,为0时禁止重定向.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "忽略SSL错误",
+"comment": "是否忽略任何SSL验证相关错误,即不验证证书也不验证服务器(如使用了代理将会被一同忽略).",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否优先",
+"comment": "是否优先执行该任务,为真时将压入到任务队列的首部,否则压入到尾部.优先时不受任务上限数限制.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+
+"method name": "投递网页访问",
+
+"comment": "对指定网址发送请求,当传输结束后,请在\"网页访问完毕\"事件中获取响应内容.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "网址",
+"comment": "提供所欲访问的网址内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "提供所欲使用的请求方式.",
+"data type": "网页访问方式",
+"@默认值": "网页访问方式.GET"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "设置本次请求所提交的数据,非POST请求也支持提交请求体,如需携带请求体务必保证该参数不为空对象,如果需要提交空请求体提供空文本内容即可.\n如果提交信息为JSON数据,会自动加入协议头\"Content type 'application/json;charset=UTF-8\",无需你手动添加.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交协议头",
+"comment": "提供本次请求所欲使用的附加协议头,每个成员表示一个协议.默认已设置Accept-Language和User-Agent.",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookie",
+"comment": "提供本次请求所欲使用的Cookie内容,注意该参数提交的内容不会同步到\"Cookie管理文件\"(不会写出至管理文件).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "内容编码",
+"comment": "指定所欲请求服务器使用的内容编码(压缩)方式,即\"Accept-Encoding\"协议内容,例如\"gzip, deflate, br\",提供空文本则自动选择,提供空对象则禁用.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理地址",
+"comment": "提供所欲使用的代理地址,支持多种协议(http,https,socks4,socks4a,socks5,socks5h),例如(http协议):http://127.0.0.1:8080",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理账号",
+"comment": "提供代理地址所需的用户名.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"comment": "提供代理地址所需的用户密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "指定本次完成整个请求所限定的超时时间,为-1时不限制,单位:毫秒.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "重定向次数",
+"comment": "欲遵循网站重定向的最大次数,为-1时无限制,为0时禁止重定向.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "忽略SSL错误",
+"comment": "是否忽略任何SSL验证相关错误,即不验证证书也不验证服务器(如使用了代理将会被一同忽略).",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否优先",
+"comment": "是否优先执行该任务,为真时将压入到任务队列的首部,否则压入到尾部.优先时不受任务上限数限制.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ameter name": "是否优先""method name": "投递网页访问2",
+ameter name": "是否优先""comment": "对指定网址发送请求,当传输结束后,请在\"网页访问完毕\"事件中获取响应内容.\n与\"投递网页访问\"命令基本一致,不同的是本方法提交的请求体内容为字节集类型.",
+ameter name": "是否优先""data type": "逻辑型",
+ameter name": "是否优先""parameters": [
+   {
+"parameter name": "网址",
+"comment": "提供所欲访问的网址内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "提供所欲使用的请求方式.",
+"data type": "网页访问方式",
+"@默认值": "网页访问方式.GET"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "设置本次请求所提交的数据,非POST请求也支持提交请求体,如需携带请求体务必保证该参数不为空对象,如果需要提交空请求体提供空字节集即可.\n如果提交信息为JSON数据,会自动加入协议头\"Content type 'application/json;charset=UTF-8\",无需你手动添加.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交协议头",
+"comment": "提供本次请求所欲使用的附加协议头,每个成员表示一个协议.默认已设置Accept-Language和User-Agent.",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookie",
+"comment": "提供本次请求所欲使用的Cookie内容,注意该参数提交的内容不会同步到\"Cookie管理文件\"(不会写出至管理文件).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "内容编码",
+"comment": "指定所欲请求服务器使用的内容编码(压缩)方式,即\"Accept-Encoding\"协议内容,例如\"gzip, deflate, br\",提供空文本则自动选择,提供空对象则禁用.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理地址",
+"comment": "提供所欲使用的代理地址,支持多种协议(http,https,socks4,socks4a,socks5,socks5h),例如(http协议):http://127.0.0.1:8080",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理账号",
+"comment": "提供代理地址所需的用户名.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"comment": "提供代理地址所需的用户密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "指定本次完成整个请求所限定的超时时间,为-1时不限制,单位:毫秒.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "重定向次数",
+"comment": "欲遵循网站重定向的最大次数,为-1时无限制,为0时禁止重定向.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "忽略SSL错误",
+"comment": "是否忽略任何SSL验证相关错误,即不验证证书也不验证服务器(如使用了代理将会被一同忽略).",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否优先",
+"comment": "是否优先执行该任务,为真时将压入到任务队列的首部,否则压入到尾部.优先时不受任务上限数限制.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "是否优先"]
+  },
+  {
+ }"method name": "全部暂停",
+ }"comment": "暂停所有传输"
+  },
+  {
+ethod name": "全部暂停""method name": "全部恢复",
+ethod name": "全部暂停""comment": "恢复所有传输"
+  },
+  {
+thod name": "全部暂停""comment": "恢复所有传输""method name": "清空任务",
+thod name": "全部暂停""comment": "恢复所有传输""comment": "清空所有已投递的网络传输任务,传输中的任务仍会继续完成."
+  },
+  {
+
+"method name": "下载进度改变",
+
+"comment": "开始下载后,最长每隔1秒响应本事件,当下载进度发生变化时,会立即响应.\n即使暂停下载后,仍每隔一秒发送本事件.",
+
+"result comment": "返回0继续传输,返回非0则中止传输.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "传输对象",
+"comment": "本次下载所用的实例对象.",
+"data type": "Curl传输类"
+   },
+   {
+"parameter name": "下载地址",
+"comment": "本次访问请求的地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "下载总量",
+"comment": "预计需要下载的字节数,断点续传和分块下载时不等于文件大小.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "当前下载",
+"comment": "当前已下载的字节数.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ }"method name": "下载完毕",
+ }"comment": "下载结束后,将会响应本事件.\n为免阻塞连接池,请尽快返回,如有耗时操作请在线程中执行.",
+ }"result comment": "该返回值无意义.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "传输对象",
+"comment": "本次下载所用的实例对象.",
+"data type": "Curl传输类"
+   },
+   {
+"parameter name": "下载地址",
+"comment": "本次访问请求的地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "下载响应",
+"comment": "本次下载返回的响应头和结果.离开本事件后,该对象立即释放.",
+"data type": "网络下载响应类"
+   }
+ }]
+  },
+  {
+ }"method name": "网页访问完毕",
+ }"comment": "网页访问结束后,将会响应本事件.\n为免阻塞连接池,请尽快返回,如有耗时操作请在线程中执行.",
+ }"result comment": "该返回值无意义.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "传输对象",
+"comment": "本次网页访问所用的实例对象.",
+"data type": "Curl传输类"
+   },
+   {
+"parameter name": "访问地址",
+"comment": "本次访问请求的地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问响应",
+"comment": "本次访问返回的请求结果和响应.离开本事件后,该对象立即释放.",
+"data type": "网页访问响应类"
+   }
+ }]
+  }
+]
+ },
+ {
+ }"class name": "多会话状态码",
+ }"comment": "提供\"Curl传输类\"中的一些结果码返回值定义.",
+ }"@文档": "\"category = \\\"高并发网络访问.辅助类\\\"\"",
+ }"constants": [
+  {
+}"constant name": "成功",
+}"comment": "表示执行成功.",
+}"data type": "整数",
+}"initial value": "0"
+  },
+  {
+}"constant name": "多句柄错误",
+}"comment": "传入的句柄不是有效的多句柄.",
+}"data type": "整数",
+}"initial value": "1"
+  },
+  {
+}"constant name": "简易句柄错误",
+}"comment": "简易句柄有问题或不可用.可能是此句柄不是有效的简易句柄,或者它已经被用于其他多句柄.",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+}"constant name": "内存不足",
+}"comment": "表示内存不足无法申请空间.",
+}"data type": "整数",
+}"initial value": "3"
+  },
+  {
+"data type": "整数""constant name": "内部错误",
+"data type": "整数""comment": "只有libcurl出现bug时返回此代码,请反馈给官方.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "4"
+  },
+  {
+data type": "整数""data type": "整数""constant name": "套接字错误",
+data type": "整数""data type": "整数""comment": "传入的套接字不是libcurl已经知道的有效套接字.",
+data type": "整数""data type": "整数""data type": "整数",
+data type": "整数""data type": "整数""initial value": "5"
+  },
+  {
+ata type": "整数""data type": "整数""initial value": "5""constant name": "无法识别选项",
+ata type": "整数""data type": "整数""initial value": "5""comment": "无法识别的选项.",
+ata type": "整数""data type": "整数""initial value": "5""data type": "整数",
+ata type": "整数""data type": "整数""initial value": "5""initial value": "6"
+  },
+  {
+}"result comment": "该返回值无意义.""constant name": "已被添加",
+}"result comment": "该返回值无意义.""comment": "此简易会话句柄已经添加到多句柄中,无法重复添加.",
+}"result comment": "该返回值无意义.""data type": "整数",
+}"result comment": "该返回值无意义.""initial value": "7"
+  },
+  {
+
+"constant name": "递归的回调",
+
+"comment": "回调函数出现递归.",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+}"constant name": "唤醒失败",
+}"comment": "唤醒不可用或失败.",
+}"data type": "整数",
+}"initial value": "9"
+  },
+  {
+}"constant name": "参数错误",
+}"comment": "函数调用了一个错误的参数.",
+}"data type": "整数",
+}"initial value": "10"
+  },
+  {
+}"constant name": "回调方法中止",
+}"comment": "多句柄的回调方法返回了错误.",
+}"data type": "整数",
+}"initial value": "11"
+  }
+ }]
+ },
+ {
+nstant name": "参数错误""class name": "网络下载响应类",
+nstant name": "参数错误""comment": "下载所返回的响应内容.",
+nstant name": "参数错误""base class": "扩展对象类",
+nstant name": "参数错误""@文档": "\"category = \\\"高并发网络访问.辅助类\\\"\"",
+nstant name": "参数错误""variables": [
+  {
+stant name": "参数错误""comment": "下载所返回的响应内容.""variable name": "下载地址",
+stant name": "参数错误""comment": "下载所返回的响应内容.""comment": "本次请求的网址.",
+stant name": "参数错误""comment": "下载所返回的响应内容.""data type": "文本型",
+stant name": "参数错误""comment": "下载所返回的响应内容.""@属性变量": "真"
+  },
+  {
+}"variable name": "文件名",
+}"comment": "本次请求解析到的原始文件名(不含路径),不一定是最终保存的文件名.",
+}"data type": "文本型",
+}"@属性变量": "真"
+  },
+  {
+}"variable name": "文件路径",
+}"comment": "本次请求实际保存的全路径文件名.为空表示还没开始下载就失败了.",
+}"data type": "文本型",
+}"@属性变量": "真"
+  },
+  {
+
+"variable name": "文件大小",
+
+"comment": "本次请求所下载的文件大小.",
+
+"data type": "长整数",
+
+"@属性变量": "真"
+  },
+  {
+riable name": "文件大小""variable name": "Cookies",
+riable name": "文件大小""comment": "本次请求所返回的Cookie内容.",
+riable name": "文件大小""data type": "文本型",
+riable name": "文件大小""@属性变量": "真"
+  },
+  {
+}"variable name": "响应头",
+}"comment": "本次请求所接收到服务器的响应头内容.",
+}"data type": "文本数组类",
+}"@属性变量": "真"
+  },
+  {
+"data type": "文本数组类""variable name": "重定向地址",
+"data type": "文本数组类""comment": "本次请求最终的重定向地址.",
+"data type": "文本数组类""data type": "文本型",
+"data type": "文本数组类""@属性变量": "真"
+  },
+  {
+
+"variable name": "重定向次数",
+
+"comment": "本次请求所遵循重定向的次数.",
+
+"data type": "整数",
+
+"@属性变量": "真"
+  },
+  {
+}"variable name": "响应码",
+}"comment": "本次请求的HTTP状态码.",
+}"data type": "整数",
+}"@属性变量": "真"
+  },
+  {
+所返回的Cookie内容."variable name": "下载耗时",
+所返回的Cookie内容."comment": "本次请求所耗下载时长(毫秒).",
+所返回的Cookie内容."data type": "长整数",
+所返回的Cookie内容."@属性变量": "真"
+  },
+  {
+返回的Cookie内容."data type": "长整数""variable name": "平均下载速度",
+返回的Cookie内容."data type": "长整数""comment": "本次请求的平均下载速度(字节/秒).",
+返回的Cookie内容."data type": "长整数""data type": "长整数",
+返回的Cookie内容."data type": "长整数""@属性变量": "真"
+  }
+nstant name": "参数错误"],
+nstant name": "参数错误""methods": [
+  {
+}"method name": "取展示内容",
+}"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.",
+}"@虚拟方法": "可覆盖",
+}"@输出名": "\"GetDumpString\"",
+}"@视窗.后缀文本": "\"override\"",
+}"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+}]
+  }
+nstant name": "参数错误"]
+ },
+ {
+"class name": "CURL信息指针",
+"comment": "\"取多会话信息\"所返回的结果.",
+"base class": "PIV指针模板",
+"@文档": "\"category = \\\"高并发网络访问.辅助类\\\"\"",
+"@模板实现类": "\"CURL信息指针\"",
+"@别名": "\"CURLMsg*\"",
+"variables": [
+  {
+
+"variable name": "信息",
+
+"comment": "1 CURLMSG_DONE 表示传输完成,其他值未定义",
+
+"data type": "整数",
+
+"@输出名": "\"msg\""
+  },
+  {
+"comment": "1 CURLMSG_DONE 表示传输完成,其他值未定义""variable name": "whatever",
+"comment": "1 CURLMSG_DONE 表示传输完成,其他值未定义""comment": "message-specific data",
+"comment": "1 CURLMSG_DONE 表示传输完成,其他值未定义""data type": "通用指针",
+"comment": "1 CURLMSG_DONE 表示传输完成,其他值未定义""@输出名": "\"data.whatever\""
+  }
+],
+"methods": [
+  {
+
+"method name": "会话句柄",
+
+"comment": "\"信息\"为1时返回会话句柄",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本结构指针",
+"data type": "CURL信息指针"
+   }
+
+]
+  },
+  {
+data type": "CURL信息指针""method name": "返回码",
+data type": "CURL信息指针""comment": "网络传输的返回码,请参考\"执行状态码\"中所提供的常量定义.",
+data type": "CURL信息指针""static": true,
+data type": "CURL信息指针""type": "property getter",
+data type": "CURL信息指针""data type": "变整数",
+data type": "CURL信息指针""@嵌入式方法": "\"\"",
+data type": "CURL信息指针""parameters": [
+   {
+"parameter name": "本结构指针",
+"data type": "CURL信息指针"
+   }
+data type": "CURL信息指针"]
+  }
+]
+ },
+ {
+"class name": "网络辅助类",
+"comment": "网络相关的辅助方法(弃用)",
+"@文档": "\"category = \\\"网络辅助\\\"\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+@文档": "\"category = \\\"网络辅助\\\"\"""method name": "检查删除网址路径",
+@文档": "\"category = \\\"网络辅助\\\"\"""comment": "删除网址末尾的斜杠",
+@文档": "\"category = \\\"网络辅助\\\"\"""static": true,
+@文档": "\"category = \\\"网络辅助\\\"\"""parameters": [
+   {
+"parameter name": "网址路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转换到小写",
+"comment": "是否将\"网址路径\"转换到小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@文档": "\"category = \\\"网络辅助\\\"\""]
+  },
+  {
+comment": "是否将\"网址路径\"转换到小写""method name": "解析URL参数",
+comment": "是否将\"网址路径\"转换到小写""comment": "分析URL的参数,注意本方法会修改参数里的请求URL",
+comment": "是否将\"网址路径\"转换到小写""result comment": "返回参数",
+comment": "是否将\"网址路径\"转换到小写""static": true,
+comment": "是否将\"网址路径\"转换到小写""data type": "文本型",
+comment": "是否将\"网址路径\"转换到小写""parameters": [
+   {
+"parameter name": "请求URL",
+"comment": "如果有参数，会返回无参数的请求URL",
+"data type": "文本型"
+   },
+   {
+"parameter name": "删除URL尾部路径字符",
+"comment": "删除网址末尾的斜杠,并将URL转换到小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "是否将\"网址路径\"转换到小写"]
+  },
+  {
+comment": "是否将\"网址路径\"转换到小写""method name": "取参数",
+comment": "是否将\"网址路径\"转换到小写""comment": "取GET或POST请求中的参数",
+comment": "是否将\"网址路径\"转换到小写""static": true,
+comment": "是否将\"网址路径\"转换到小写""data type": "文本型",
+comment": "是否将\"网址路径\"转换到小写""parameters": [
+   {
+"parameter name": "参数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "URL取参数",
+"comment": "  为真时在URL中取参数\n  post设为假,get的设为真",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否URL解码",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "是否将\"网址路径\"转换到小写"]
+  },
+  {
+comment": "是否将\"网址路径\"转换到小写""method name": "取参数POST",
+comment": "是否将\"网址路径\"转换到小写""comment": "POST专用的取参数,导入UTF8数据",
+comment": "是否将\"网址路径\"转换到小写""static": true,
+comment": "是否将\"网址路径\"转换到小写""data type": "文本型",
+comment": "是否将\"网址路径\"转换到小写""parameters": [
+   {
+"parameter name": "参数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "提交数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否URL解码",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "是否将\"网址路径\"转换到小写"]
+  },
+  {
+ameter name": "是否URL解码""method name": "取ETag",
+ameter name": "是否URL解码""comment": "使用了七牛云公开的算法\nhttps://developer.qiniu.com/kodo/1231/appendix#qiniu-etag",
+ameter name": "是否URL解码""static": true,
+ameter name": "是否URL解码""data type": "文本型",
+ameter name": "是否URL解码""parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+ameter name": "是否URL解码"]
+  },
+  {
+}"method name": "取文件ETag",
+}"comment": "使用了七牛云公开的算法\nhttps://developer.qiniu.com/kodo/1231/appendix#qiniu-etag",
+}"result comment": "失败返回空文本",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "密码处理",
+}"comment": "将密码进行密钥派生处理.\nPOST进来的密码都需要经过处理,再跟数据库上的密码对比.",
+}"result comment": "返回加密后的密码",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "密码",
+"comment": "POST进来的明文密码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "前缀",
+"comment": "加密之前在密码前加盐",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+}"method name": "生成SessionID",
+}"comment": "生成唯一的session ID",
+}"result comment": "返回Session ID",
+}"static": true,
+}"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "文件路径到URL",
+"data type": "文本型""comment": "将完整的文件路径转换成子URL路径",
+"data type": "文本型""result comment": "返回的子URL路径",
+"data type": "文本型""static": true,
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "根目录",
+"comment": "返回的URL会减去根目录,如果提供的文件路径是相对路径,可以留空.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+"data type": "文本型"]
+  },
+  {
+comment": "返回的URL会减去根目录,如果提供的文件路径是相对路径,可以留空.""method name": "检查补全网址",
+comment": "返回的URL会减去根目录,如果提供的文件路径是相对路径,可以留空.""comment": "检查并补全网址前面的 http:// 或 https://",
+comment": "返回的URL会减去根目录,如果提供的文件路径是相对路径,可以留空.""static": true,
+comment": "返回的URL会减去根目录,如果提供的文件路径是相对路径,可以留空.""data type": "文本型",
+comment": "返回的URL会减去根目录,如果提供的文件路径是相对路径,可以留空.""parameters": [
+   {
+"parameter name": "网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "https",
+"comment": "在网址不完整时才有效",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "返回的URL会减去根目录,如果提供的文件路径是相对路径,可以留空."]
+  },
+  {
+"method name": "是否合法网址",
+"comment": "使用正则表达式匹配网址是否合法",
+"static": true,
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "网址",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "是否IP地址",
+}"comment": "使用正则表达式匹配IP地址是否合法",
+}"static": true,
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "IP地址",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "网页访问",
+}"comment": "使用curl库访问网页,返回文本",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "编码",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF8"
+   }
+}]
+  },
+  {
+
+"method name": "网页访问2",
+
+"comment": "使用curl库访问网页,返回字节集",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ }
+ꮐ脛ŝ]
+}

@@ -1,0 +1,6031 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+{
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"package name": "火山.锐浪",
+"comment": "本文件集中放置对锐浪常量的封装。",
+"@文档": "\"category = \\\"常量枚举\\\"\"",
+"classes": [
+ {
+ = "DocFormat" 注释 = "报表""class name": "GR标识类",
+ = "DocFormat" 注释 = "报表""comment": "类CLSID和事件IID",
+ = "DocFormat" 注释 = "报表""constants": [
+  {
+= "DocFormat" 注释 = "报表""constants": [
+"constant name": "CLSID_报表",
+= "DocFormat" 注释 = "报表""constants": [
+"data type": "文本型",
+= "DocFormat" 注释 = "报表""constants": [
+"initial value": "\"{F9364159-6AED-4F9C-8BAF-D7C7ED6160A8}\""
+  },
+  {
+classes": [
+"constant name": "IID_报表事件",
+classes": [
+"data type": "文本型",
+classes": [
+"initial value": "\"{330F80F5-4568-4F70-BFCB-683D3B90FEBB}\""
+  },
+  {
+
+"constant name": "CLSID_打印显示器",
+
+"data type": "文本型",
+
+"initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\""
+  },
+  {
+
+"constant name": "IID_打印显示器事件",
+
+"data type": "文本型",
+
+"initial value": "\"{A9E920A1-C722-4A81-9FCF-4D5EBFFA21F4}\""
+  },
+  {
+
+"constant name": "CLSID_查询显示器",
+
+"data type": "文本型",
+
+"initial value": "\"{1B5EA181-A38D-4F42-88B2-6AF74CF6D6C0}\""
+  },
+  {
+nstant name": "CLSID_打印显示器""constant name": "IID_查询显示器事件",
+nstant name": "CLSID_打印显示器""data type": "文本型",
+nstant name": "CLSID_打印显示器""initial value": "\"{2564DCE8-FEDB-4EB6-B7F9-5026F7F1041E}\""
+  },
+  {
+lasses": [
+"data type": "文本型""constant name": "CLSID_报表设计器",
+lasses": [
+"data type": "文本型""data type": "文本型",
+lasses": [
+"data type": "文本型""initial value": "\"{6EDD80CB-9F08-4C71-B406-479E5CB80FCE}\""
+  },
+  {
+"initial value": "\"{1B5EA181-A38D-4F42-88B2-6AF74CF6D6C0}\"""constant name": "IID_报表设计器事件",
+"initial value": "\"{1B5EA181-A38D-4F42-88B2-6AF74CF6D6C0}\"""data type": "文本型",
+"initial value": "\"{1B5EA181-A38D-4F42-88B2-6AF74CF6D6C0}\"""initial value": "\"{B89F92F4-5E58-413E-8E73-4A0B28B9E9BF}\""
+  }
+ = "DocFormat" 注释 = "报表"]
+ },
+ {
+initial value": "\"{1B5EA181-A38D-4F42-88B2-6AF74CF6D6C0}\"""initial value": "\"{B89F92F4-5E58-413E-8E73-4A0B28B9E9BF}\"""class name": "事件_报表",
+initial value": "\"{1B5EA181-A38D-4F42-88B2-6AF74CF6D6C0}\"""initial value": "\"{B89F92F4-5E58-413E-8E73-4A0B28B9E9BF}\"""comment": "event 报表事件ID枚举，事件就是 Grid++Report 在运行时各种报表对象在执行特定的任务时所发出的消息，通知操作的发生。\n报表开发者通过对事件的响应处理，可以控制报表的行为，让 Grid++Report 完成特定的任务。",
+initial value": "\"{1B5EA181-A38D-4F42-88B2-6AF74CF6D6C0}\"""initial value": "\"{B89F92F4-5E58-413E-8E73-4A0B28B9E9BF}\"""constants": [
+  {
+"data type": "文本型""constant name": "初始化事件",
+"data type": "文本型""comment": "Initialize，在报表生成开始时触发。\n在报表准备生成时触发，报表每生成一次触发一次本事件，此事件也是报表生成过程中最先触发的事件。\n可以在此事件中对报表进行定义，即可以改变报表模板数据，如重新载入报表模板数据，以编程的方式定义报表。\n在此事件中，可以将在其它事件中使用的对象接口指针或对象属性等数据用变量缓存下来，以供后面直接使用，提高程序运行效率。\n在除此事件之外的其它事件中，除了 SectionFormat 事件可以对事件触发节对象及其拥有的子对象的显示外观属性进行修改外，禁止对报表进行重新定义，即不允许增减报表对象与改变报表对象的属性。",
+"data type": "文本型""data type": "整数",
+"data type": "文本型""initial value": "1"
+  },
+  {
+"initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""constant name": "请求记录数据",
+"initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""comment": "FetchRecord，在报表生成时且以推模式向报表提供数据，报表主对象请求数据时触发。\n如果没有定义数据库连接串与查询SQL，或指定在运行时不从数据库连接串与查询SQL设置中取得明细记录数据，则FetchRecord 事件在报表请求数据时触发，报表每生成一次触发一次本事件，只有具有明细网格的报表才会触发此事件。\n报表开发者必须响应此事件，且只能在此事件中向记录集填充记录。报表开发者使用记录集接口与字段接口的属性与方法向记录集填充记录。\n注意：Delphi 与 C++Builder 的包装类定义了一个 DataSet 属性，并对 FetchRecord 事件在包装类中进行了响应，如果设置了 DataSet 属性值，则会把 DataSet 属性关联记录集对象中的数据填入到 Grid++Report 中。\n因此在Delphi 与 C++Builder 中一般通过设置 DataSet 属性来提供明细记录数据。",
+"initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数",
+"initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""initial value": "2"
+  },
+  {
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""initial value": "2""constant name": "提交记录前",
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""initial value": "2""comment": "BeforePostRecord，在向报表中填入记录数据的过程中，每当提交一条记录之前触发本事件。\n在每提交一条记录时，触发一次本事件。报表开发者可以在此事件中设定各个字段的值，这样就可以对记录数据进行最后的调整。\n如某些字段的值不能直接从数据源中的得来，而是根据一定的运算求得，则可以在此事件中处理。\n不管是根据查询SQL取得的数据，还是通过 FetchRecord 事件提供的数据，在每提交一条记录之前都会触发本事件。",
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""initial value": "2""data type": "整数",
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""initial value": "2""initial value": "3"
+  },
+  {
+a type": "文本型""constant name": "初始化事件""constant name": "排序前",
+a type": "文本型""constant name": "初始化事件""comment": "BeforeSort，当要对记录集中的记录进行重新排序之前触发本事件。在此事件中可以重新设置明细记录集的 SortFields 属性，随后排序将按新设定的字段进行。\n如果报表的记录集指定了排序字段，在 ProcessBegin 之前会触发 BeforeSort 事件。",
+a type": "文本型""constant name": "初始化事件""data type": "整数",
+a type": "文本型""constant name": "初始化事件""initial value": "4"
+  },
+  {
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""constant name": "运行时错误",
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""comment": "RuntimeError，",
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""data type": "整数",
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "5"
+  },
+  {
+
+"constant name": "请求字段显示文字",
+
+"comment": "FieldGetDisplayText，当字段对象准备生成其显示文本时触发。\n报表在输出显示时，当部件框需要取关联字段的显示文本时触发本事件。在此事件中可以对触发事件的字段对象的显示文本(DisplayText)属性赋值，使字段的显示文本是报表开发者自定义的。\n例如在财务报表中，需要将负数用红字显示，就可以在此事件处理函数中将负号从显示文本中去掉，在 SectionFormat 事件处理函数中将对应显示部件框的前景色(ForeColor)设为红色。\n注意：FieldGetDisplayForamt 事件会频繁触发，在此事件中不应该执行运行开销大的任务，在此事件响应函数中使用的对象接口指针最好在 Initialize 事件处理函数中缓存到变量中。",
+
+"data type": "整数",
+
+"initial value": "20"
+  },
+  {
+}"constant name": "请求文字框显示文字",
+}"comment": "TextBoxGetDisplayText，当文字类型的部件框准备生成其显示文本时触发。（20190910发现也包含：标题格、内容格、自由表格子格）\n报表在输出显示时，当文字部件输出文字时触发本事件。在此事件中可以对触发事件的文字部件框对象的显示文本(DisplayText)属性赋值，使显示文本是报表开发者自定义的。\n此事件类同 FieldGetDisplayText。",
+}"data type": "整数",
+}"initial value": "22"
+  },
+  {
+"initial value": "20""constant name": "格式化报表节",
+"initial value": "20""comment": "SectionFormat，当报表节在输出之前触发。包括查询显示与打印生成显示。\n在每个报表节即将显示之前触发。当报表输出在查询显示器中，每当窗口要进行自画时，当前可见的节在显示时会触发本事件，节如果是重复显示的，同一节还会多次触发。\n当报表在打印或打印预览时，首先要生成打印页面数据，在页面中显示每个节之前触发本事件。可以通过取报表的当前显示状态（DispalyMode）属性确定事件是由查询显示器自画时触发，还是由生成打印页面时触发。\n注意：SectionForamt 事件会频繁触发，在此事件中不应该执行运行开销大的任务，在此事件响应函数中使用的对象接口指针最好在 Initialize 事件处理函数中缓存到变量中。",
+"initial value": "20""data type": "整数",
+"initial value": "20""initial value": "23"
+  },
+  {
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""constant name": "部件框自定义绘制",
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""comment": "ControlCustomDraw，报表部件框自绘事件。",
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""data type": "整数",
+initial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "24"
+  },
+  {
+tial value": "20""constant name": "格式化报表节""constant name": "图表请求数据",
+tial value": "20""constant name": "格式化报表节""comment": "ChartRequestData，当报表中的图表运行时，会触发本事件来请求加载图表数据。",
+tial value": "20""constant name": "格式化报表节""data type": "整数",
+tial value": "20""constant name": "格式化报表节""initial value": "25"
+  },
+  {
+nitial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "24""constant name": "开始处理记录",
+nitial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "24""comment": "ProcessBegin，当报表准备对填入的数据进行分析处理之前触发本事件。\n报表在获得记录集的明细数据之后，会对明细数据进行运算处理。在开始处理之前触发 ProcessBegin 事件，在完成处理之时触发 ProcessEnd 事件。\n在 ProcessBegin 与 ProcessEnd 之间在处理每条明细数据时都会触发一次 ProcessRecord。",
+nitial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "24""data type": "整数",
+nitial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "24""initial value": "30"
+  },
+  {
+}"constant name": "结束处理记录",
+}"comment": "ProcessEnd，当报表对填入的数据进行分析处理完成之后触发本事件。",
+}"data type": "整数",
+}"initial value": "31"
+  },
+  {
+
+"constant name": "分组开始",
+
+"comment": "GroupBegin，在生成报表数据时，当定义了页分组，在开始生成明细网格关联的每一页时，每个页分组将触发一次本事件。\n报表在生成的过程中，会按顺序逐条处理每个记录，如果报表定义有分组，每当一个分组项开始时，触发 GroupBegin 事件，每当一个分组项结束时，触发 GroupEnd 事件。\n如果要对分组进行自定义的复杂统计，可以在 GroupBegin 事件函数中设定运算的初值，在 ProcessRecord 事件中对每条记录进行累积运算，在 GroupEnd 事件中对运算的结果进行最后的运算。",
+
+"data type": "整数",
+
+"initial value": "32"
+  },
+  {
+
+"constant name": "分组结束",
+
+"comment": "GroupEnd，在生成报表数据时，当定义了页分组，在结束生成明细网格关联的每一页时，每个页分组将触发一次本事件。",
+
+"data type": "整数",
+
+"initial value": "33"
+  },
+  {
+}"constant name": "处理记录",
+}"comment": "ProcessRecord，当报表生成时，会按顺序遍历每一条记录，每当遍历一条记录时触发本事件。\n报表在生成的过程中，会按顺序逐条处理每个记录，在每处理一条记录之前，都会触发一次本事件，只有具有明细网格的报表才会触发此事件。\n如果要对报表数据进行自定义的统计运算，就应该在此事件中取记录数据进行运算，将计算结果保存到参数对象或程序中的变量中。\n在此事件中可以调用 IGRDetailGrid 接口的 StartNewGroup 方法指定前一个分组项的结束与后一个分组项的开始，从而实现自定义的分组。",
+}"data type": "整数",
+}"initial value": "34"
+  },
+  {
+"comment": "GroupEnd，在生成报表数据时，当定义了页分组，在结束生成明细网格关联的每一页时，每个页分组将触发一次本事件。""constant name": "页处理记录",
+"comment": "GroupEnd，在生成报表数据时，当定义了页分组，在结束生成明细网格关联的每一页时，每个页分组将触发一次本事件。""comment": "PageProcessRecord，当报表在生成打印数据时，会再次按顺序遍历每一条记录，每当遍历一条记录时触发本事件。此事件只有当报表将输出到打印机或打印预览时才会触发。\n报表在生成打印页面的过程中，会再次按顺序逐条处理每个记录，在每处理一条记录之前，都会触发一次本事件，只有具有明细网格的报表才会触发此事件。\n在页分组中，如果要对报表数据进行自定义的统计运算，就应该在此事件中取记录数据进行运算，将计算结果保存到参数对象或程序中的变量中。",
+"comment": "GroupEnd，在生成报表数据时，当定义了页分组，在结束生成明细网格关联的每一页时，每个页分组将触发一次本事件。""data type": "整数",
+"comment": "GroupEnd，在生成报表数据时，当定义了页分组，在结束生成明细网格关联的每一页时，每个页分组将触发一次本事件。""initial value": "35"
+  },
+  {
+ type": "文本型""constant name": "初始化事件""data type": "整数""constant name": "页开始",
+ type": "文本型""constant name": "初始化事件""data type": "整数""comment": "PageStart，在开始生成每一页时，将触发一次本事件。\n如果进行打印页面数据生成，在每页开始时触发 PageStart 事件， 在每页结束时触发 PageEnd 事件。",
+ type": "文本型""constant name": "初始化事件""data type": "整数""data type": "整数",
+ type": "文本型""constant name": "初始化事件""data type": "整数""initial value": "36"
+  },
+  {
+"initial value": "34""constant name": "页结束",
+"initial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。",
+"initial value": "34""data type": "整数",
+"initial value": "34""initial value": "37"
+  },
+  {
+}"constant name": "页面生成前",
+}"comment": "GeneratePagesBegin，在产生打印页面数据之前触发本事件。",
+}"data type": "整数",
+}"initial value": "38"
+  },
+  {
+itial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "24""data type": "整数""constant name": "页面生成后",
+itial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "24""data type": "整数""comment": "GeneratePagesEnd，在产生打印页面数据完成后触发本事件。",
+itial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "24""data type": "整数""data type": "整数",
+itial value": "\"{44CBB5DE-5AFB-4C3D-8F3F-0F70CA5372AD}\"""data type": "整数""initial value": "24""data type": "整数""initial value": "39"
+  },
+  {
+
+"constant name": "打印前",
+
+"comment": "PrintBegin，在开始打印报表之前，触发本事件。",
+
+"data type": "整数",
+
+"initial value": "40"
+  },
+  {
+initial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""constant name": "打印后",
+initial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""comment": "PrintEnd，在结束打印报表之后，触发本事件。",
+initial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""data type": "整数",
+initial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""initial value": "41"
+  },
+  {
+}"constant name": "打印页",
+}"comment": "PrintPage，在打印每一页报表页面时触发本事件。",
+}"data type": "整数",
+}"initial value": "42"
+  },
+  {
+
+"constant name": "打印中止",
+
+"comment": "PrintAborted，当打印任务中途取消时触发本事件。",
+
+"data type": "整数",
+
+"initial value": "43"
+  },
+  {
+nitial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""initial value": "41""constant name": "导出报表前",
+nitial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""initial value": "41""comment": "ExportBegin，在报表导出任务执行之前触发本事件。\n在报表导出任务执行之前触发 ExportBegin 事件，在报表导出任务执行之后触发 ExportEnd 事件。在 ExportBegin 事件中可以改变导出选项，重新控制导出行为。 ",
+nitial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""initial value": "41""data type": "整数",
+nitial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""initial value": "41""initial value": "50"
+  },
+  {
+nitial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""initial value": "41""constant name": "导出报表后",
+nitial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""initial value": "41""comment": "ExportEnd，在报表导出任务完成时触发本事件。",
+nitial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""initial value": "41""data type": "整数",
+nitial value": "34""comment": "PageEnd，在结束生成每一页时，将触发一次本事件。""initial value": "41""initial value": "51"
+  },
+  {
+
+"constant name": "显示预览界面",
+
+"comment": "ShowPreviewWnd，在显示默认打印预览窗口时触发本事件。可以在本事件响应中通过 IGRPrintViewer 控件接口对默认预览窗口进行自定义。",
+
+"data type": "整数",
+
+"initial value": "60"
+  },
+  {
+}"constant name": "显示设计界面",
+}"comment": "ShowDesignerWnd，预留事件接口",
+}"data type": "整数",
+}"initial value": "61"
+  },
+  {
+}"constant name": "超链接文本被点击",
+}"comment": "HyperlinkClick，预留事件接口",
+}"data type": "整数",
+}"initial value": "65"
+  }
+initial value": "\"{1B5EA181-A38D-4F42-88B2-6AF74CF6D6C0}\"""initial value": "\"{B89F92F4-5E58-413E-8E73-4A0B28B9E9BF}\""]
+ },
+ {
+}"class name": "事件_查询显示器",
+}"comment": "event 查询显示器事件ID枚举",
+}"constants": [
+  {
+"comment": "event 查询显示器事件ID枚举""constant name": "被单击事件",
+"comment": "event 查询显示器事件ID枚举""comment": "Click，为了和系统事件区分，尾部加“事件”二字。",
+"comment": "event 查询显示器事件ID枚举""data type": "整数",
+"comment": "event 查询显示器事件ID枚举""initial value": "-600"
+  },
+  {
+nstant name": "页面生成前""constant name": "被双击事件",
+nstant name": "页面生成前""comment": "DblClick，为了和系统事件区分，尾部加“事件”二字。",
+nstant name": "页面生成前""data type": "整数",
+nstant name": "页面生成前""initial value": "-601"
+  },
+  {
+comment": "event 查询显示器事件ID枚举""initial value": "-600""constant name": "按下某键事件",
+comment": "event 查询显示器事件ID枚举""initial value": "-600""comment": "KeyDown，为了和系统事件区分，尾部加“事件”二字。",
+comment": "event 查询显示器事件ID枚举""initial value": "-600""data type": "整数",
+comment": "event 查询显示器事件ID枚举""initial value": "-600""initial value": "-602"
+  },
+  {
+}"constant name": "字符输入事件",
+}"comment": "KeyPress，为了和系统事件区分，尾部加“事件”二字。",
+}"data type": "整数",
+}"initial value": "-603"
+  },
+  {
+nstant name": "页面生成前""constant name": "放开某键事件",
+nstant name": "页面生成前""comment": "KeyUp，为了和系统事件区分，尾部加“事件”二字。",
+nstant name": "页面生成前""data type": "整数",
+nstant name": "页面生成前""initial value": "-604"
+  },
+  {
+}"constant name": "鼠标键按下",
+}"comment": "MouseDown，在查询显示器上鼠标按钮按下时触发。",
+}"data type": "整数",
+}"initial value": "-605"
+  },
+  {
+stant name": "页面生成前""data type": "整数""constant name": "鼠标位置移动",
+stant name": "页面生成前""data type": "整数""comment": "MouseMove",
+stant name": "页面生成前""data type": "整数""data type": "整数",
+stant name": "页面生成前""data type": "整数""initial value": "-606"
+  },
+  {
+}"constant name": "鼠标键放开",
+}"comment": "MouseUp，在查询显示器上鼠标按钮按下再释放时触发。",
+}"data type": "整数",
+}"initial value": "-607"
+  },
+  {
+}"constant name": "部件框被单击",
+}"comment": "ControlClick",
+}"data type": "整数",
+}"initial value": "1"
+  },
+  {
+"data type": "整数""constant name": "部件框被双击",
+"data type": "整数""comment": "ControlDblClick",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "2"
+  },
+  {
+data type": "整数""comment": "ControlDblClick""constant name": "报表节被单击",
+data type": "整数""comment": "ControlDblClick""comment": "SectionClick",
+data type": "整数""comment": "ControlDblClick""data type": "整数",
+data type": "整数""comment": "ControlDblClick""initial value": "3"
+  },
+  {
+
+"constant name": "报表节被双击",
+
+"comment": "SectionDblClick",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+nstant name": "报表节被双击""constant name": "内容格被单击",
+nstant name": "报表节被双击""comment": "ContentCellClick",
+nstant name": "报表节被双击""data type": "整数",
+nstant name": "报表节被双击""initial value": "5"
+  },
+  {
+"data type": "整数""constant name": "内容格被双击",
+"data type": "整数""comment": "ContentCellDblClick",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "6"
+  },
+  {
+a type": "整数""constant name": "部件框被双击""constant name": "标题格被单击",
+a type": "整数""constant name": "部件框被双击""comment": "TitleCellClick",
+a type": "整数""constant name": "部件框被双击""data type": "整数",
+a type": "整数""constant name": "部件框被双击""initial value": "7"
+  },
+  {
+
+"constant name": "标题格被双击",
+
+"comment": "TitleCellDblClick",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+
+"constant name": "列布局发生改变",
+
+"comment": "ColumnLayoutChange，当列的显示宽度或顺序发生改变时触发。",
+
+"data type": "整数",
+
+"initial value": "9"
+  },
+  {
+
+"constant name": "选中格改变",
+
+"comment": "SelectionCellChange",
+
+"data type": "整数",
+
+"initial value": "10"
+  },
+  {
+
+"constant name": "图表图形被单击",
+
+"comment": "ChartClickSeries",
+
+"data type": "整数",
+
+"initial value": "11"
+  },
+  {
+
+"constant name": "图表图形被双击",
+
+"comment": "ChartDblClickSeries",
+
+"data type": "整数",
+
+"initial value": "12"
+  },
+  {
+}"constant name": "图表图例被单击",
+}"comment": "ChartClickLegend",
+}"data type": "整数",
+}"initial value": "13"
+  },
+  {
+"data type": "整数""constant name": "图表图例被双击",
+"data type": "整数""comment": "ChartDblClickLegend",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "14"
+  },
+  {
+"data type": "整数""constant name": "分批次填充数据",
+"data type": "整数""comment": "BatchFetchRecord，此事件目前仅提供给WEB报表插件，C/S报表组件分批次请求数据还是触发报表引擎对象的 FetchRecord 事件。",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "15"
+  },
+  {
+
+"constant name": "状态被改变",
+
+"comment": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。",
+
+"data type": "整数",
+
+"initial value": "22"
+  },
+  {
+}"constant name": "关闭按钮被点击",
+}"comment": "CloseButtonClick",
+}"data type": "整数",
+}"initial value": "29"
+  },
+  {
+nstant name": "状态被改变""constant name": "自定义按钮被点击",
+nstant name": "状态被改变""comment": "CustomButtonClick",
+nstant name": "状态被改变""data type": "整数",
+nstant name": "状态被改变""initial value": "30"
+  },
+  {
+"initial value": "29""constant name": "工具栏按钮被点击",
+"initial value": "29""comment": "ToolbarCommandClick，5和6不会产生反馈事件。",
+"initial value": "29""data type": "整数",
+"initial value": "29""initial value": "31"
+  }
+}]
+ },
+ {
+"class name": "事件_打印显示器",
+"comment": "event 打印显示器事件ID枚举",
+"constants": [
+  {
+
+"constant name": "被单击事件",
+
+"comment": "Click，为了和系统事件区分，尾部加“事件”二字。",
+
+"data type": "整数",
+
+"initial value": "-600"
+  },
+  {
+stant name": "状态被改变""comment": "CustomButtonClick""constant name": "被双击事件",
+stant name": "状态被改变""comment": "CustomButtonClick""comment": "DblClick，为了和系统事件区分，尾部加“事件”二字。",
+stant name": "状态被改变""comment": "CustomButtonClick""data type": "整数",
+stant name": "状态被改变""comment": "CustomButtonClick""initial value": "-601"
+  },
+  {
+
+"constant name": "按下某键事件",
+
+"comment": "KeyDown，为了和系统事件区分，尾部加“事件”二字。",
+
+"data type": "整数",
+
+"initial value": "-602"
+  },
+  {
+
+"constant name": "字符输入事件",
+
+"comment": "KeyPress，为了和系统事件区分，尾部加“事件”二字。",
+
+"data type": "整数",
+
+"initial value": "-603"
+  },
+  {
+nstant name": "字符输入事件""constant name": "放开某键事件",
+nstant name": "字符输入事件""comment": "KeyUp，为了和系统事件区分，尾部加“事件”二字。",
+nstant name": "字符输入事件""data type": "整数",
+nstant name": "字符输入事件""initial value": "-604"
+  },
+  {
+}"constant name": "鼠标键按下",
+}"comment": "MouseDown",
+}"data type": "整数",
+}"initial value": "-605"
+  },
+  {
+}"constant name": "鼠标位置移动",
+}"comment": "MouseMove",
+}"data type": "整数",
+}"initial value": "-606"
+  },
+  {
+"initial value": "-606""constant name": "鼠标键放开",
+"initial value": "-606""comment": "MouseUp",
+"initial value": "-606""data type": "整数",
+"initial value": "-606""initial value": "-607"
+  },
+  {
+}"constant name": "当前页被改变",
+}"comment": "CurPageChange",
+}"data type": "整数",
+}"initial value": "21"
+  },
+  {
+"data type": "整数""constant name": "状态被改变",
+"data type": "整数""comment": "StatusChange",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "22"
+  },
+  {
+data type": "整数""comment": "StatusChange""constant name": "标尺被单击",
+data type": "整数""comment": "StatusChange""comment": "RulerClick",
+data type": "整数""comment": "StatusChange""data type": "整数",
+data type": "整数""comment": "StatusChange""initial value": "23"
+  },
+  {
+
+"constant name": "标尺被双击",
+
+"comment": "RulerDblClick",
+
+"data type": "整数",
+
+"initial value": "24"
+  },
+  {
+nstant name": "标尺被双击""constant name": "页被单击",
+nstant name": "标尺被双击""comment": "PageClick",
+nstant name": "标尺被双击""data type": "整数",
+nstant name": "标尺被双击""initial value": "27"
+  },
+  {
+"data type": "整数""constant name": "页被双击",
+"data type": "整数""comment": "PageDblClick",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "28"
+  },
+  {
+"comment": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""constant name": "关闭按钮被点击",
+"comment": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""comment": "CloseButtonClick",
+"comment": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""data type": "整数",
+"comment": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""initial value": "29"
+  },
+  {
+eButtonClick"constant name": "自定义按钮被点击",
+eButtonClick"comment": "CustomButtonClick",
+eButtonClick"data type": "整数",
+eButtonClick"initial value": "30"
+  },
+  {
+a type": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击",
+a type": "整数""constant name": "状态被改变""comment": "ToolbarCommandClick，5和6不会产生反馈事件。",
+a type": "整数""constant name": "状态被改变""data type": "整数",
+a type": "整数""constant name": "状态被改变""initial value": "31"
+  }
+]
+ },
+ {
+}"class name": "事件_报表设计器",
+}"comment": "event 报表设计器事件ID枚举",
+}"constants": [
+  {
+comment": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""data type": "整数""constant name": "设计区右键菜单",
+comment": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""data type": "整数""comment": "LayoutPanelContextMenu，当在报表布局窗口中执行打开关联弹出式菜单时触发本事件。",
+comment": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""data type": "整数""data type": "整数",
+comment": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""data type": "整数""initial value": "1"
+  },
+  {
+ type": "整数""constant name": "状态被改变""initial value": "31""constant name": "属性区右键菜单",
+ type": "整数""constant name": "状态被改变""initial value": "31""comment": "InspectorContextMenu，当属性侦测窗口的数据发生变化时触发本事件。",
+ type": "整数""constant name": "状态被改变""initial value": "31""data type": "整数",
+ type": "整数""constant name": "状态被改变""initial value": "31""initial value": "2"
+  },
+  {
+"constant name": "对象区右键菜单",
+"comment": "ExplorerContextMenu，当在对象浏览窗口中执行打开关联弹出式菜单时触发本事件。",
+"data type": "整数",
+"initial value": "3"
+  },
+  {
+ent": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""data type": "整数""constant name": "设计区右键菜单""constant name": "侦测属性改变",
+ent": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""data type": "整数""constant name": "设计区右键菜单""comment": "InspectorChange，当属性侦测窗口的数据发生变化时触发本事件。",
+ent": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""data type": "整数""constant name": "设计区右键菜单""data type": "整数",
+ent": "StatusChange，当控件的查看状态发生改变时触发本事件。当改变分页查看方式，以及改变当前浏览页时都会触发本事件。""data type": "整数""constant name": "设计区右键菜单""initial value": "4"
+  },
+  {
+pe": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""constant name": "数据改变",
+pe": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""comment": "DataChange，当修改了报表定义时触发本事件。",
+pe": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""data type": "整数",
+pe": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""initial value": "5"
+  },
+  {
+pe": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""constant name": "打开报表",
+pe": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""comment": "OpenRepor，当执行设计器工具栏中的打开按钮时触发本事件。",
+pe": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""data type": "整数",
+pe": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""initial value": "6"
+  },
+  {
+e": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""comment": "OpenRepor，当执行设计器工具栏中的打开按钮时触发本事件。""constant name": "保存报表",
+e": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""comment": "OpenRepor，当执行设计器工具栏中的打开按钮时触发本事件。""comment": "SaveReport，当执行设计器工具栏中的保存按钮时触发本事件。",
+e": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""comment": "OpenRepor，当执行设计器工具栏中的打开按钮时触发本事件。""data type": "整数",
+e": "整数""constant name": "状态被改变""constant name": "工具栏按钮被点击""comment": "OpenRepor，当执行设计器工具栏中的打开按钮时触发本事件。""initial value": "7"
+  },
+  {
+ButtonClick"initial value": "30""constant name": "将执行动作",
+ButtonClick"initial value": "30""comment": "BeforeDoAction，在报表执行每个任务动作前触发本事件，任务动作对应DoAction方法所能执行的任务。",
+ButtonClick"initial value": "30""data type": "整数",
+ButtonClick"initial value": "30""initial value": "8"
+  },
+  {
+uttonClick"initial value": "30""data type": "整数""constant name": "请求数据",
+uttonClick"initial value": "30""data type": "整数""comment": "RequestData，当进入报表设计器的查询视图或预览视图时，会触发本事件来请求生成报表的数据。",
+uttonClick"initial value": "30""data type": "整数""data type": "整数",
+uttonClick"initial value": "30""data type": "整数""initial value": "9"
+  }
+}]
+ },
+ {
+
+"class name": "语言类型枚举",
+
+"comment": "Language 指定当前应用的界面语言，各种语言对应的标识常数，可用十六进制表示。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+
+"constant name": "简体中文",
+
+"comment": "2052，0x0804",
+
+"initial value": "2052"
+  },
+  {
+"constant name": "繁体中文",
+"comment": "1028，0x0404",
+"initial value": "1028"
+  },
+  {
+
+"constant name": "英语",
+
+"comment": "1033，0x0409",
+
+"initial value": "1033"
+  },
+  {
+}"constant name": "俄语",
+}"comment": "1049，0x0419",
+}"initial value": "1049"
+  },
+  {
+}"constant name": "日语",
+}"comment": "1041，0x0411",
+}"initial value": "1041"
+  },
+  {
+"initial value": "1041""constant name": "朝鲜语",
+"initial value": "1041""comment": "1042，0x0412",
+"initial value": "1041""initial value": "1042"
+  },
+  {
+nstant name": "俄语""constant name": "德语",
+nstant name": "俄语""comment": "1031，0x00407",
+nstant name": "俄语""initial value": "1031"
+  },
+  {
+}"constant name": "法语",
+}"comment": "1036，0x040c",
+}"initial value": "1036"
+  },
+  {
+"initial value": "1036""constant name": "意大利语",
+"initial value": "1036""comment": "1040，0x0410",
+"initial value": "1036""initial value": "1040"
+  },
+  {
+
+"constant name": "西班牙语",
+
+"comment": "1034，0x040a",
+
+"initial value": "1034"
+  },
+  {
+nstant name": "法语""constant name": "葡萄牙语",
+nstant name": "法语""comment": "2070，0x0816",
+nstant name": "法语""initial value": "2070"
+  }
+
+]
+ },
+ {
+
+"class name": "报表显示模式枚举",
+
+"comment": "GRReportDisplayMode 指定报表的输出显示模式。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+onClick"initial value": "30""constant name": "将执行动作""constant name": "查询显示",
+onClick"initial value": "30""constant name": "将执行动作""comment": "1 grrdmScreenView，正在查询显示器中报表处于自画过程中。",
+onClick"initial value": "30""constant name": "将执行动作""initial value": "1"
+  },
+  {
+nt name": "法语""constant name": "葡萄牙语""constant name": "预览显示",
+nt name": "法语""constant name": "葡萄牙语""comment": "2 grrdmPrintGenerate，报表处于打印显示器页面生成过程中。",
+nt name": "法语""constant name": "葡萄牙语""initial value": "2"
+  },
+  {
+}"constant name": "空闲",
+}"comment": "3 grrdmIdle，报表不处于任何生成显示过程中。",
+}"initial value": "3"
+  }
+
+]
+ },
+ {
+"class name": "计量单位枚举",
+"comment": "GRUnit 指定表示报表元素大小与位置的计量单位。",
+"@常量类": "整数",
+"constants": [
+  {
+nstant name": "西班牙语""constant name": "厘米",
+nstant name": "西班牙语""comment": "1 grmuCm 以厘米为单位表示报表部件的尺寸与位置。",
+nstant name": "西班牙语""initial value": "1"
+  },
+  {
+stant name": "西班牙语""comment": "1 grmuCm 以厘米为单位表示报表部件的尺寸与位置。""constant name": "英寸",
+stant name": "西班牙语""comment": "1 grmuCm 以厘米为单位表示报表部件的尺寸与位置。""comment": "2 grmuInch 以英寸为单位表示报表部件的尺寸与位置。",
+stant name": "西班牙语""comment": "1 grmuCm 以厘米为单位表示报表部件的尺寸与位置。""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "脚本语言枚举",
+"comment": "GRScriptType 表示在报表中内置的脚本语言类型。",
+"@常量类": "整数",
+"constants": [
+  {
+stant name": "西班牙语""comment": "1 grmuCm 以厘米为单位表示报表部件的尺寸与位置。""constant name": "JScript格式",
+stant name": "西班牙语""comment": "1 grmuCm 以厘米为单位表示报表部件的尺寸与位置。""comment": "1 grstJScript JScript 脚本语言。",
+stant name": "西班牙语""comment": "1 grmuCm 以厘米为单位表示报表部件的尺寸与位置。""initial value": "1"
+  },
+  {
+"constant name": "VBScript格式",
+"comment": "2 grstVBScript VBScript 脚本语言。",
+"initial value": "2"
+  }
+]
+ },
+ {
+@常量类": "整数""class name": "文档类型枚举",
+@常量类": "整数""comment": "GRDocType 指定报表模板的文档类型。以文本格式打开报表模板文件,可以看到不同文档类型保存的报表模板数据的差异。",
+@常量类": "整数""@常量类": "整数",
+@常量类": "整数""constants": [
+  {
+
+"constant name": "对象格式",
+
+"comment": "1 grdtObject 按对象方式保存模板数据,此种格式为 Grid++Report 自有格式,内容非常直观易理解。",
+
+"initial value": "1"
+  },
+  {
+"initial value": "1""constant name": "JSON格式",
+"initial value": "1""comment": "2 grdtJSON 按 JSON 格式保存报表模板数据,完全符合 JSON 规范要求。",
+"initial value": "1""initial value": "2"
+  },
+  {
+"initial value": "1""constant name": "注册格式",
+"initial value": "1""comment": "3 grdtRegister 6.6.5.0 改变报表模板存储方式,让WEB无限分发版的各种注册方式共享相同的报表模板",
+"initial value": "1""initial value": "3"
+  }
+@常量类": "整数"]
+ },
+ {
+
+"class name": "存储格式枚举",
+
+"comment": "GRStorageFormat 表示报表模板数据的存储格式。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"constant name": "文本",
+"comment": "1 grsfText 文本格式。",
+"initial value": "1"
+  },
+  {
+
+"constant name": "二进制",
+
+"comment": "2 grsfBinary 二进制格式。",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "Base64编码",
+
+"comment": "3 grsfBinBase64 Base64编码格式,Base64编码是用可见的ASCII字符表示二进制数据。",
+
+"initial value": "3"
+  }
+
+]
+ },
+ {
+
+"class name": "文本编码枚举",
+
+"comment": "GRTextEncodeMode 指定文字的编码类型",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"constant name": "Ansi码",
+"comment": "1 grtemAnsi ANSI编码",
+"initial value": "1"
+  },
+  {
+stant name": "VBScript格式""constant name": "UTF8码",
+stant name": "VBScript格式""comment": "2 grtemUTF8 UTF-8编码,数据最前面有2个字节的标识数据。",
+stant name": "VBScript格式""initial value": "2"
+  },
+  {
+}"constant name": "Unicode码",
+}"comment": "3 grtemUnicode Unicode编码",
+}"initial value": "3"
+  },
+  {
+量类": "整数"]"constant name": "UTF8Pure码",
+量类": "整数"]"comment": "4 grtemUTF8Pure UTF-8编码,数据最前面没有标识",
+量类": "整数"]"initial value": "4"
+  },
+  {
+stant name": "Ansi码""constant name": "UTF8WithHead码",
+stant name": "Ansi码""comment": "5 grtemUTF8WithHead 此项同grtemUTF8,特别注意:枚举值也应为 2",
+stant name": "Ansi码""initial value": "5"
+  }
+
+]
+ },
+ {
+t name": "Ansi码""constant name": "UTF8WithHead码""class name": "内码表枚举",
+t name": "Ansi码""constant name": "UTF8WithHead码""comment": "CodePage 指定报表内部进行文字编码转换的内码表\n当此属性为0时，将采用 Windows 系统默认的内码表进行文字砖换。具体的有效值可以在MSDN文档中按关键字“Code Page Identifiers”或“WideCharToMultiByte”进行查询。",
+t name": "Ansi码""constant name": "UTF8WithHead码""@常量类": "整数",
+t name": "Ansi码""constant name": "UTF8WithHead码""constants": [
+  {
+"constant name": "ANSI",
+"comment": "default to ANSI code page",
+"initial value": "0"
+  },
+  {
+
+"constant name": "OEM",
+
+"comment": "default to OEM  code page",
+
+"initial value": "1"
+  },
+  {
+"constant name": "MAC",
+"comment": "default to MAC  code page",
+"initial value": "2"
+  },
+  {
+
+"constant name": "current_ANSI",
+
+"comment": "current thread's ANSI code page",
+
+"initial value": "3"
+  },
+  {
+comment": "default to MAC  code page""constant name": "Japanese",
+comment": "default to MAC  code page""comment": "ANSI/OEM - Japanese, Shift-JIS",
+comment": "default to MAC  code page""initial value": "932"
+  },
+  {
+}"constant name": "Simplified",
+}"comment": "ANSI/OEM - Simplified Chinese (PRC, Singapore)",
+}"initial value": "936"
+  },
+  {
+}"constant name": "Korean",
+}"comment": "ANSI/OEM - Korean (Unified Hangeul Code) ",
+}"initial value": "949"
+  },
+  {
+
+"constant name": "Traditional",
+
+"comment": "ANSI/OEM - Traditional Chinese (Taiwan; Hong Kong SAR, PRC) ",
+
+"initial value": "950"
+  },
+  {
+
+"constant name": "utf_7",
+
+"comment": "utf-7 Unicode (UTF-7)",
+
+"initial value": "65000"
+  },
+  {
+"comment": "default to OEM  code page""constant name": "utf_8",
+"comment": "default to OEM  code page""comment": "utf-8 Unicode (UTF-8)【默认设置】",
+"comment": "default to OEM  code page""initial value": "65001"
+  }
+t name": "Ansi码""constant name": "UTF8WithHead码"]
+ },
+ {
+}"class name": "报表节类型枚举",
+}"comment": "GRSectionType 指定报表节的具体类型",
+}"@常量类": "整数",
+}"constants": [
+  {
+name": "Ansi码""constant name": "UTF8WithHead码"]"constant name": "页眉",
+name": "Ansi码""constant name": "UTF8WithHead码"]"comment": "1 grstPageHeader",
+name": "Ansi码""constant name": "UTF8WithHead码"]"initial value": "1"
+  },
+  {
+}"constant name": "报表头",
+}"comment": "2 grstReportHeader",
+}"initial value": "2"
+  },
+  {
+nstant name": "报表头""constant name": "报表尾",
+nstant name": "报表头""comment": "3 grstReportFooter",
+nstant name": "报表头""initial value": "3"
+  },
+  {
+"@常量类": "整数""constant name": "页脚",
+"@常量类": "整数""comment": "4 grstPageFooter",
+"@常量类": "整数""initial value": "4"
+  },
+  {
+stPageFooter"constant name": "标题行",
+stPageFooter"comment": "5 grstColumnTitle",
+stPageFooter"initial value": "5"
+  },
+  {
+stReportFooter"constant name": "内容行",
+stReportFooter"comment": "6 grstColumnContent",
+stReportFooter"initial value": "6"
+  },
+  {
+tPageFooter"initial value": "5""constant name": "分组头",
+tPageFooter"initial value": "5""comment": "7 grstGroupHeader",
+tPageFooter"initial value": "5""initial value": "7"
+  },
+  {
+@常量类": "整数""initial value": "4""constant name": "分组尾",
+@常量类": "整数""initial value": "4""comment": "8 grstGroupFooter",
+@常量类": "整数""initial value": "4""initial value": "8"
+  }
+}]
+ },
+ {
+"class name": "部件框类型枚举",
+"comment": "GRControlType 指定部件框的具体类型",
+"@常量类": "整数",
+"constants": [
+  {
+"constant name": "静态文字框",
+"comment": "1 grctStaticBox",
+"initial value": "1"
+  },
+  {
+
+"constant name": "图形框",
+
+"comment": "2 grctShapeBox",
+
+"initial value": "2"
+  },
+  {
+}"constant name": "系统变量框",
+}"comment": "3 grctSystemVarBox",
+}"initial value": "3"
+  },
+  {
+"constant name": "字段框",
+"comment": "4 grctFieldBox",
+"initial value": "4"
+  },
+  {
+"comment": "3 grctSystemVarBox""constant name": "统计框",
+"comment": "3 grctSystemVarBox""comment": "5 grctSummaryBox",
+"comment": "3 grctSystemVarBox""initial value": "5"
+  },
+  {
+"constant name": "RTF文字框",
+"comment": "6 grctRichTextBox",
+"initial value": "6"
+  },
+  {
+initial value": "1""constant name": "图像框",
+initial value": "1""comment": "7 grctPicture",
+initial value": "1""initial value": "7"
+  },
+  {
+nitial value": "1""initial value": "7""constant name": "综合文字框",
+nitial value": "1""initial value": "7""comment": "8 grctMemoBox",
+nitial value": "1""initial value": "7""initial value": "8"
+  },
+  {
+nitial value": "1""comment": "7 grctPicture""constant name": "子报表框",
+nitial value": "1""comment": "7 grctPicture""comment": "9 grctSubReport",
+nitial value": "1""comment": "7 grctPicture""initial value": "9"
+  },
+  {
+}"constant name": "线段框",
+}"comment": "10 grctLine",
+}"initial value": "10"
+  },
+  {
+"initial value": "2""constant name": "图表框",
+"initial value": "2""comment": "11 grctChart",
+"initial value": "2""initial value": "11"
+  },
+  {
+initial value": "2""comment": "11 grctChart""constant name": "条码框",
+initial value": "2""comment": "11 grctChart""comment": "12 grctBarcode",
+initial value": "2""comment": "11 grctChart""initial value": "12"
+  },
+  {
+nitial value": "2""comment": "11 grctChart""comment": "12 grctBarcode""constant name": "自由表格框",
+nitial value": "2""comment": "11 grctChart""comment": "12 grctBarcode""comment": "13 grctFreeGrid",
+nitial value": "2""comment": "11 grctChart""comment": "12 grctBarcode""initial value": "13"
+  }
+]
+ },
+ {
+ctSubReport"class name": "锁定类别枚举",
+ctSubReport"comment": "GRLockType 说明：除1，2两项外，其它项按从弱到强的顺序锁定控制对象，后一项包括前一项的锁定权限。报表主对象设置为“锁定继承”等同于“不锁定”。",
+ctSubReport"@常量类": "整数",
+ctSubReport"constants": [
+  {
+"comment": "10 grctLine""constant name": "不锁定",
+"comment": "10 grctLine""comment": "0 grltNone，指定对象没有锁定，可以全部权限进行设计。",
+"comment": "10 grctLine""initial value": "0"
+  },
+  {
+"comment": "10 grctLine""constant name": "锁定继承",
+"comment": "10 grctLine""comment": "1 grltInherited，指定对象的锁定控制来自父级对象，与父级对象保持一样的锁定控制。",
+"comment": "10 grctLine""initial value": "1"
+  },
+  {
+}"constant name": "锁定对象",
+}"comment": "2 grltObject，指定对象自身不能删除，其子对象不能删除与增加。如记录集锁定对象后，现有的字段不能删除，也不能增加新的字段。",
+}"initial value": "2"
+  },
+  {
+comment": "10 grctLine""comment": "1 grltInherited，指定对象的锁定控制来自父级对象，与父级对象保持一样的锁定控制。""constant name": "锁定数据",
+comment": "10 grctLine""comment": "1 grltInherited，指定对象的锁定控制来自父级对象，与父级对象保持一样的锁定控制。""comment": "3 grltData，在锁定对象的基础上，再增加对象的数据相关的属性锁定控制，如明细网格不能改变数据连接串与查询SQL，字段框不能修改关联的“数据字段”。",
+comment": "10 grctLine""comment": "1 grltInherited，指定对象的锁定控制来自父级对象，与父级对象保持一样的锁定控制。""initial value": "3"
+  },
+  {
+
+"constant name": "锁定数据行为",
+
+"comment": "4 grltDataAction，在锁定数据的基础上，再增加对报表生成行为相关的锁定控制，主要体现为不能编辑“行为”与“脚本”类别的属性设置。",
+
+"initial value": "4"
+  },
+  {
+}"constant name": "完全锁定",
+}"comment": "5 grltAll，对象完全不能编辑修改。",
+}"initial value": "5"
+  }
+ctSubReport]
+ },
+ {
+comment": "10 grctLine""initial value": "1""class name": "边框模式枚举",
+comment": "10 grctLine""initial value": "1""comment": "GRBorderStyles (组合值)，指定是否画部件框的上下左右边框线的组合方式。",
+comment": "10 grctLine""initial value": "1""constants": [
+  {
+omment": "10 grctLine""initial value": "1""comment": "GRBorderStyles (组合值)，指定是否画部件框的上下左右边框线的组合方式。""constant name": "画左",
+omment": "10 grctLine""initial value": "1""comment": "GRBorderStyles (组合值)，指定是否画部件框的上下左右边框线的组合方式。""comment": "1 grbsDrawLeft 部件框或明细网格显示左边边框线。",
+omment": "10 grctLine""initial value": "1""comment": "GRBorderStyles (组合值)，指定是否画部件框的上下左右边框线的组合方式。""data type": "整数",
+omment": "10 grctLine""initial value": "1""comment": "GRBorderStyles (组合值)，指定是否画部件框的上下左右边框线的组合方式。""initial value": "1"
+  },
+  {
+"initial value": "5""constant name": "画上",
+"initial value": "5""comment": "2 grbsDrawTop 部件框或明细网格显示上边边框线。",
+"initial value": "5""data type": "整数",
+"initial value": "5""initial value": "2"
+  },
+  {
+}"constant name": "画右",
+}"comment": "4 grbsDrawRight 部件框或明细网格显示右边边框线。",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+}"constant name": "画下",
+}"comment": "8 grbsDrawBottom 部件框或明细网格显示下边边框线。",
+}"data type": "整数",
+}"initial value": "8"
+  }
+comment": "10 grctLine""initial value": "1"]
+ },
+ {
+"class name": "锚定方式枚举",
+"comment": "GRAnchorStyles (组合值)，指定部件框如何锚定到其容器的边缘。\n如果将部件框锚定到其容器的边缘，当调整该容器的大小时，该部件框与指定边缘间的距离保持不变。\n例如，如果将控件锚定到其容器的右边缘，则当调整该容器的大小时，该控件的右边缘与容器的右边缘之间的距离保持不变。\n可以将控件锚定到任何控件边缘的组合上。如果将控件锚定到其容器的相对边缘上（例如，锚定到顶部和底部），当调整容器的大小时，控件大小就会随之改变。",
+"constants": [
+  {
+"initial value": "8""constant name": "左边",
+"initial value": "8""comment": "1 grasLeft 该部件框锚定到其容器的左边缘。",
+"initial value": "8""data type": "整数",
+"initial value": "8""initial value": "1"
+  },
+  {
+}"constant name": "上边",
+}"comment": "2 grasTop 该部件框锚定到其容器的上边缘。",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+comment": "10 grctLine""initial value": "1""constant name": "右边",
+comment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。",
+comment": "10 grctLine""initial value": "1""data type": "整数",
+comment": "10 grctLine""initial value": "1""initial value": "4"
+  },
+  {
+}"constant name": "下边",
+}"comment": "8 grasBottom 该部件框锚定到其容器的下边缘。",
+}"data type": "整数",
+}"initial value": "8"
+  }
+]
+ },
+ {
+"initial value": "2""class name": "停靠方式枚举",
+"initial value": "2""comment": "GRDockStyle 指定部件框停靠的位置和方式。\n当部件框停靠到其容器的一条边缘时，调整容器的大小时，始终使部件框与那条边缘对齐。\n如果多个部件框停靠到一条边缘，那么这些部件框将按照它们的 Z 顺序并排出现，部件框在 Z 顺序中的位置越高，距离容器边缘就越远。\n如果选择了 Left、Right、Top 或 Bottom，则调整部件框的指定边缘和相对边缘的尺寸至包含部件框的相应边缘的尺寸。\n如果选择了 Fill，则调整部件框的所有四条边以匹配包含部件框的边缘。",
+"initial value": "2""@常量类": "整数",
+"initial value": "2""constants": [
+  {
+comment": "10 grctLine""initial value": "0""constant name": "无",
+comment": "10 grctLine""initial value": "0""comment": "0 grdsNone 该部件框未停靠",
+comment": "10 grctLine""initial value": "0""initial value": "0"
+  },
+  {
+omment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""constant name": "左边",
+omment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""comment": "1 grdsLeft 该部件框的左边缘停靠在父容器的左边缘。",
+omment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""initial value": "1"
+  },
+  {
+"comment": "2 grasTop 该部件框锚定到其容器的上边缘。""constant name": "上边",
+"comment": "2 grasTop 该部件框锚定到其容器的上边缘。""comment": "2 grdsTop 该部件框的上边缘停靠在父容器的顶端。",
+"comment": "2 grasTop 该部件框锚定到其容器的上边缘。""initial value": "2"
+  },
+  {
+mment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""initial value": "1""constant name": "右边",
+mment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""initial value": "1""comment": "3 grdsRight 该部件框的右边缘停靠在父容器的右边缘。",
+mment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""initial value": "1""initial value": "3"
+  },
+  {
+dsNone 该部件框未停靠"constant name": "下边",
+dsNone 该部件框未停靠"comment": "4 grdsBottom 该部件框的下边缘停靠在父容器的底部。",
+dsNone 该部件框未停靠"initial value": "4"
+  },
+  {
+}"constant name": "充满",
+}"comment": "5 grdsFill 部件框的各个边缘分别停靠在父容器的各个边缘,并且适当调整大小。",
+}"initial value": "5"
+  }
+"initial value": "2"]
+ },
+ {
+ment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""initial value": "1""initial value": "3""class name": "伸展位移枚举",
+ment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""initial value": "1""initial value": "3""comment": "GRShiftMode 指定部件框在其上部的部件框自动伸展高度时在垂直方向进行平移的方式。",
+ment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""initial value": "1""initial value": "3""@常量类": "整数",
+ment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""initial value": "1""initial value": "3""constants": [
+  {
+nstant name": "充满""constant name": "不进行位移",
+nstant name": "充满""comment": "1 grsmNever 不进行位移。",
+nstant name": "充满""initial value": "1"
+  },
+  {
+
+"constant name": "总是进行位移",
+
+"comment": "2 grsmAlways 总是进行位移。",
+
+"initial value": "2"
+  },
+  {
+smAlways 总是进行位移。"constant name": "重叠时位移",
+smAlways 总是进行位移。"comment": "3 grsmWhenOverLapped 只有与上部部件框在垂直方向有重叠时才进行位移。",
+smAlways 总是进行位移。"initial value": "3"
+  }
+ment": "10 grctLine""initial value": "1""comment": "4 grasRight 该部件框锚定到其容器的右边缘。""initial value": "1""initial value": "3"]
+ },
+ {
+dsNone 该部件框未停靠"class name": "居中方式枚举",
+dsNone 该部件框未停靠"comment": "GRCenterStyle 指定用来在容器中居中对齐部件框的方式。",
+dsNone 该部件框未停靠"@常量类": "整数",
+dsNone 该部件框未停靠"constants": [
+  {
+"constant name": "不应用",
+"comment": "0 grcsNone 部件框在父容器中不居中对齐。",
+"initial value": "0"
+  },
+  {
+mAlways 总是进行位移。"comment": "3 grsmWhenOverLapped 只有与上部部件框在垂直方向有重叠时才进行位移。""constant name": "水平",
+mAlways 总是进行位移。"comment": "3 grsmWhenOverLapped 只有与上部部件框在垂直方向有重叠时才进行位移。""comment": "1 grcsHorizontal 部件框始终位于父容器水平方向的正中间。",
+mAlways 总是进行位移。"comment": "3 grsmWhenOverLapped 只有与上部部件框在垂直方向有重叠时才进行位移。""initial value": "1"
+  },
+  {
+
+"constant name": "垂直",
+
+"comment": "2 grcsVertical 部件框始终位于父容器垂直方向的正中间。",
+
+"initial value": "2"
+  },
+  {
+"comment": "2 grcsVertical 部件框始终位于父容器垂直方向的正中间。""constant name": "水平垂直",
+"comment": "2 grcsVertical 部件框始终位于父容器垂直方向的正中间。""comment": "3 grcsBoth 部件框始终位于父容器水平与垂直方向的正中间。",
+"comment": "2 grcsVertical 部件框始终位于父容器垂直方向的正中间。""initial value": "3"
+  }
+dsNone 该部件框未停靠]
+ },
+ {
+
+"class name": "对齐列方式枚举",
+
+"comment": "GRAlignColumnStyle 指定用来对齐部件框到明细网格列方式。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"comment": "GRAlignColumnStyle 指定用来对齐部件框到明细网格列方式。""constant name": "左端",
+"comment": "GRAlignColumnStyle 指定用来对齐部件框到明细网格列方式。""comment": "1 gracsLeft 对齐到列的左端。",
+"comment": "GRAlignColumnStyle 指定用来对齐部件框到明细网格列方式。""initial value": "1"
+  },
+  {
+smNever 不进行位移。"constant name": "右端",
+smNever 不进行位移。"comment": "2 gracsRight 对齐到列的右端。",
+smNever 不进行位移。"initial value": "2"
+  },
+  {
+Always 总是进行位移。"comment": "3 grsmWhenOverLapped 只有与上部部件框在垂直方向有重叠时才进行位移。""comment": "1 grcsHorizontal 部件框始终位于父容器水平方向的正中间。""constant name": "左右两端",
+Always 总是进行位移。"comment": "3 grsmWhenOverLapped 只有与上部部件框在垂直方向有重叠时才进行位移。""comment": "1 grcsHorizontal 部件框始终位于父容器水平方向的正中间。""comment": "3 gracsBoth 对齐到列的左右两端,部件框宽度与列保持一致。",
+Always 总是进行位移。"comment": "3 grsmWhenOverLapped 只有与上部部件框在垂直方向有重叠时才进行位移。""comment": "1 grcsHorizontal 部件框始终位于父容器水平方向的正中间。""initial value": "3"
+  }
+
+]
+ },
+ {
+}"class name": "对齐列枚举",
+}"comment": "对齐到明细网格的左右专用，可以和列名称一样使用。",
+}"@常量类": "文本型",
+}"constants": [
+  {
+"constant name": "表格左端",
+"comment": "用于部件框“对齐列”属性，可以指定对齐到明细网格的左端",
+"initial value": "\"(GridLeft)\""
+  },
+  {
+"comment": "GRAlignColumnStyle 指定用来对齐部件框到明细网格列方式。""constant name": "表格右端",
+"comment": "GRAlignColumnStyle 指定用来对齐部件框到明细网格列方式。""comment": "用于部件框“对齐列”属性，可以指定对齐到明细网格的右端",
+"comment": "GRAlignColumnStyle 指定用来对齐部件框到明细网格列方式。""initial value": "\"(GridRight)\""
+  }
+}]
+ },
+ {
+ne 该部件框未停靠"class name": "居中方式枚举""class name": "背景模式枚举",
+ne 该部件框未停靠"class name": "居中方式枚举""comment": "GRBackStyle 指定部件再显示时用来填充其所占区域背景的方式。",
+ne 该部件框未停靠"class name": "居中方式枚举""@常量类": "整数",
+ne 该部件框未停靠"class name": "居中方式枚举""constants": [
+  {
+"comment": "对齐到明细网格的左右专用，可以和列名称一样使用。""constant name": "填充",
+"comment": "对齐到明细网格的左右专用，可以和列名称一样使用。""comment": "1 grbkNormal 部件框使用背景色填充他占据的矩形区域。",
+"comment": "对齐到明细网格的左右专用，可以和列名称一样使用。""initial value": "1"
+  },
+  {
+comment": "对齐到明细网格的左右专用，可以和列名称一样使用。""initial value": "1""constant name": "透明",
+comment": "对齐到明细网格的左右专用，可以和列名称一样使用。""initial value": "1""comment": "2 grbkTransparent 部件框背景透明,允许任何背景图像或其他部件框透过自身显示。",
+comment": "对齐到明细网格的左右专用，可以和列名称一样使用。""initial value": "1""initial value": "2"
+  }
+ne 该部件框未停靠"class name": "居中方式枚举"]
+ },
+ {
+}"class name": "打印类别枚举",
+}"comment": "GRPrintType\n包括两种打印类别：报表表单数据（Form），报表内容数据（Content）。\n打印生成时，如果指定打印生成方式（PrintGenerateStyle）为只输出报表内容数据（OnlyContent）,则只输出打印类别为报表内容数据的报表元素，其它打印类别为报表表单数据的报表元素将不会输出。\n在只输出报表内容数据时，报表节的背景色不会填充，明细网格的边框线与行列线也不会输出。在只输出报表内容数据的打印生成方式特别适用于进行票据套打与现存格式报表的套打。\n打印生成时，如果指定印生成方式（PrintGenerateStyle）为输出报表表单数据（OnlyForm）,生成方式与只输出报表内容数据（OnlyContent）反之对应。在此种方式下，明细网格的记录数据不会应用到，明细行的生成与明细记录不对应，不填充明细记录页可以输出报表表单数据。\n报表表单数据一般只生成一页，用来制作票据与固定格式报表的印刷模版。\n打印生成时，如果指定印生成方式（PrintGenerateStyle）为输出全部数据（All）,则所有数据都会输出，这也是我们平时最多用到的方式。\n可以指定打印类别的报表元素包括部件框，明细网格标题格，明细网格内容格。",
+}"@常量类": "整数",
+}"constants": [
+  {
+"@常量类": "文本型""constant name": "表单",
+"@常量类": "文本型""comment": "1 grptForm 表单固定数据,在套打输出内容时不输出。",
+"@常量类": "文本型""initial value": "1"
+  },
+  {
+nitial value": "2"]"constant name": "内容",
+nitial value": "2"]"comment": "2 grptContent 表单内容数据,在套打输出内容时输出。",
+nitial value": "2"]"initial value": "2"
+  }
+}]
+ },
+ {
+类": "文本型""constant name": "表单""class name": "光标类型枚举",
+类": "文本型""constant name": "表单""comment": "GRDisplayCursor 指定查询显示报表时,可供使用的鼠标光标类型。",
+类": "文本型""constant name": "表单""@常量类": "整数",
+类": "文本型""constant name": "表单""constants": [
+  {
+}"constant name": "默认光标",
+}"comment": "0 grdcDefault",
+}"initial value": "0"
+  },
+  {
+}"constant name": "普通箭头光标",
+}"comment": "1 grdcArrow",
+}"initial value": "1"
+  },
+  {
+"constant name": "放大镜光标",
+"comment": "2 grdcMagnify",
+"initial value": "2"
+  },
+  {
+
+"constant name": "手指光标",
+
+"comment": "3 grdcFinger",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "肯定光标",
+
+"comment": "4 grdcAffirm",
+
+"initial value": "4"
+  },
+  {
+}"constant name": "否定光标",
+}"comment": "5 grdcNegative",
+}"initial value": "5"
+  }
+类": "文本型""constant name": "表单"]
+ },
+ {
+"class name": "文字方向枚举",
+"comment": "GRTextOrientation 指定综合文字框的各种文字行向。",
+"@常量类": "整数",
+"constants": [
+  {
+: "文本型""constant name": "表单"]"constant name": "默认",
+: "文本型""constant name": "表单"]"comment": "0 grtoDefault 默认方式,按从左到右,从上到下方式显示文字。",
+: "文本型""constant name": "表单"]"initial value": "0"
+  },
+  {
+}"constant name": "从上至下从左至右0",
+}"comment": "5 grtoU2DL2R0 按从上到下,从左到右方式显示文字,文字不旋转。",
+}"initial value": "5"
+  },
+  {
+nstant name": "从上至下从左至右0""constant name": "从上至下从右至左0",
+nstant name": "从上至下从左至右0""comment": "9 grtoU2DR2L0 按从上到下,从右到左方式显示文字,文字不旋转。",
+nstant name": "从上至下从左至右0""initial value": "9"
+  },
+  {
+@常量类": "整数""constant name": "从下至上从左至右1",
+@常量类": "整数""comment": "22 grtoD2UL2R1 按从下到上,从左到右方式显示文字,文字旋转。",
+@常量类": "整数""initial value": "22"
+  },
+  {
+stant name": "从上至下从左至右0""initial value": "9""constant name": "从上至下从右至左1",
+stant name": "从上至下从左至右0""initial value": "9""comment": "25 grtoU2DR2L1 按从上到下,从右到左方式显示文字,文字旋转。",
+stant name": "从上至下从左至右0""initial value": "9""initial value": "25"
+  },
+  {
+}"constant name": "从左到右从下到上脊背模式",
+}"comment": "38 grtoL2RD2U0 按从左到右,从下到上方式显示文字,适合用来进行脊背打印,字体应该选择旋转的,即字体名称前带'@'符号。",
+}"initial value": "38"
+  },
+  {
+tant name": "从上至下从左至右0""initial value": "9""initial value": "25""constant name": "从左到右从下到上且旋转",
+tant name": "从上至下从左至右0""initial value": "9""initial value": "25""comment": "54 grtoL2RD2U1 按从左到右,从下到上方式显示文字,文字旋转,适合用来进行脊背打印。",
+tant name": "从上至下从左至右0""initial value": "9""initial value": "25""initial value": "54"
+  },
+  {
+常量类": "整数""initial value": "22""constant name": "镜像翻转",
+常量类": "整数""initial value": "22""comment": "58 grtoInvert倒影方式。",
+常量类": "整数""initial value": "22""initial value": "58"
+  }
+]
+ },
+ {
+"class name": "文字对齐方式枚举",
+"comment": "GRTextAlign 指定文字在显示区域的输出对齐方式。\n使用文字对齐的报表元素包括:各种文字显示部件,非自由格的明细网格标题格与内容格。",
+"@常量类": "整数",
+"constants": [
+  {
+"constant name": "左上",
+"comment": "17 grtaTopLeft 内容在垂直方向上顶部对齐,在水平方向上左边对齐。",
+"initial value": "17"
+  },
+  {
+常量类": "整数""initial value": "22""constant name": "中上",
+常量类": "整数""initial value": "22""comment": "18 grtaTopCenter 内容在垂直方向上顶部对齐,在水平方向上居中对齐。",
+常量类": "整数""initial value": "22""initial value": "18"
+  },
+  {
+tant name": "从上至下从左至右0""initial value": "9""initial value": "25""constant name": "右上",
+tant name": "从上至下从左至右0""initial value": "9""initial value": "25""comment": "20 grtaTopRight 内容在垂直方向上顶部对齐,在水平方向上右边对齐。",
+tant name": "从上至下从左至右0""initial value": "9""initial value": "25""initial value": "20"
+  },
+  {
+"initial value": "38""constant name": "左中",
+"initial value": "38""comment": "33 grtaMiddleLeft 内容在垂直方向上中间对齐,在水平方向上左边对齐。",
+"initial value": "38""initial value": "33"
+  },
+  {
+ant name": "从上至下从左至右0""initial value": "9""initial value": "25""initial value": "54""constant name": "中中",
+ant name": "从上至下从左至右0""initial value": "9""initial value": "25""initial value": "54""comment": "34 grtaMiddleCenter 内容在垂直方向上中间对齐,在水平方向上居中对齐。",
+ant name": "从上至下从左至右0""initial value": "9""initial value": "25""initial value": "54""initial value": "34"
+  },
+  {
+}"constant name": "右中",
+}"comment": "36 grtaMiddleRight 内容在垂直方向上中间对齐,在水平方向上右边对齐。",
+}"initial value": "36"
+  },
+  {
+"comment": "36 grtaMiddleRight 内容在垂直方向上中间对齐,在水平方向上右边对齐。""constant name": "左下",
+"comment": "36 grtaMiddleRight 内容在垂直方向上中间对齐,在水平方向上右边对齐。""comment": "65 grtaBottomLeft 内容在垂直方向上底边对齐,在水平方向上左边对齐。",
+"comment": "36 grtaMiddleRight 内容在垂直方向上中间对齐,在水平方向上右边对齐。""initial value": "65"
+  },
+  {
+: "整数""initial value": "22""constant name": "镜像翻转""constant name": "中下",
+: "整数""initial value": "22""constant name": "镜像翻转""comment": "66 grtaBottomCenter 内容在垂直方向上底边对齐,在水平方向上居中对齐。",
+: "整数""initial value": "22""constant name": "镜像翻转""initial value": "66"
+  },
+  {
+数""initial value": "22""constant name": "镜像翻转""constant name": "中下""constant name": "右下",
+数""initial value": "22""constant name": "镜像翻转""constant name": "中下""comment": "68 grtaBottomRight 内容在垂直方向上底边对齐,在水平方向上右边对齐。",
+数""initial value": "22""constant name": "镜像翻转""constant name": "中下""initial value": "68"
+  },
+  {
+
+"constant name": "靠上端两端分散对齐",
+
+"comment": "144 grtaTopJustiy 内容在垂直方向上顶部对齐,在水平方向上两端分散对齐。",
+
+"initial value": "144"
+  },
+  {
+ment": "36 grtaMiddleRight 内容在垂直方向上中间对齐,在水平方向上右边对齐。""constant name": "左下""constant name": "垂直居中两端分散对齐",
+ment": "36 grtaMiddleRight 内容在垂直方向上中间对齐,在水平方向上右边对齐。""constant name": "左下""comment": "160 grtaMiddleJustiy 内容在垂直方向上中间对齐,在水平方向上两端分散对齐。",
+ment": "36 grtaMiddleRight 内容在垂直方向上中间对齐,在水平方向上右边对齐。""constant name": "左下""initial value": "160"
+  },
+  {
+}"constant name": "靠下端两端分散对齐",
+}"comment": "192 grtaBottomJustiy 内容在垂直方向上底边对齐,在水平方向上两端分散对齐。",
+}"initial value": "192"
+  }
+]
+ },
+ {
+"class name": "文本对齐方式枚举",
+"comment": "GRStringAlignment 指定文本字符串相对于其布局矩形的对齐方式。",
+"@常量类": "整数",
+"constants": [
+  {
+"initial value": "38""constant name": "近端",
+"initial value": "38""comment": "1 grsaNear 定文本靠近布局对齐。在左到右布局中,近端位置是左。在右到左布局中,近端位置是右。",
+"initial value": "38""initial value": "1"
+  },
+  {
+
+"constant name": "居中",
+
+"comment": "2 grsaCenter 指定文本在布局矩形中居中对齐。",
+
+"initial value": "2"
+  },
+  {
+}"constant name": "远端",
+}"comment": "3 grsaFar 指定文本远离布局矩形的原点位置对齐。在左到右布局中,远端位置是右。在右到左布局中,远端位置是左。",
+}"initial value": "3"
+  }
+]
+ },
+ {
+nstant name": "远端""class name": "字段类型枚举",
+nstant name": "远端""comment": "GRFieldType 指定字段对象的具体类型。",
+nstant name": "远端""@常量类": "整数",
+nstant name": "远端""constants": [
+  {
+
+"constant name": "字符型",
+
+"comment": "1 grftString",
+
+"initial value": "1"
+  },
+  {
+}"constant name": "整数型",
+}"comment": "2 grftInteger",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "浮点数",
+
+"comment": "3 grftFloat",
+
+"initial value": "3"
+  },
+  {
+constants": [
+"constant name": "货币型",
+constants": [
+"comment": "4 grftCurrency",
+constants": [
+"initial value": "4"
+  },
+  {
+"initial value": "1""constant name": "布尔型",
+"initial value": "1""comment": "5 grftBoolean",
+"initial value": "1""initial value": "5"
+  },
+  {
+initial value": "1""comment": "5 grftBoolean""constant name": "日期时间",
+initial value": "1""comment": "5 grftBoolean""comment": "6 grftDateTime",
+initial value": "1""comment": "5 grftBoolean""initial value": "6"
+  },
+  {
+constants": [
+"constant name": "二进制",
+constants": [
+"comment": "7 grftBinary",
+constants": [
+"initial value": "7"
+  }
+nstant name": "远端"]
+ },
+ {
+
+"class name": "参数类型枚举",
+
+"comment": "GRParameterDataType  指示参数对象值的具体数据类型。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+
+"constant name": "字符型",
+
+"comment": "1 grptString 字符串类型,可以为任意长度。",
+
+"initial value": "1"
+  },
+  {
+"initial value": "1""constant name": "整数型",
+"initial value": "1""comment": "2 grptInteger 整数类型,可以设定格式化串。",
+"initial value": "1""initial value": "2"
+  },
+  {
+数""initial value": "22""constant name": "镜像翻转""constant name": "中下""constant name": "浮点数",
+数""initial value": "22""constant name": "镜像翻转""constant name": "中下""comment": "3 grptFloat 浮点数类型,可以设定格式化串。",
+数""initial value": "22""constant name": "镜像翻转""constant name": "中下""initial value": "3"
+  },
+  {
+"comment": "GRParameterDataType  指示参数对象值的具体数据类型。""constant name": "布尔型",
+"comment": "GRParameterDataType  指示参数对象值的具体数据类型。""comment": "5 grptBoolean 逻辑型或布尔类型,可以真值与假值的显示文字。",
+"comment": "GRParameterDataType  指示参数对象值的具体数据类型。""initial value": "5"
+  },
+  {
+""initial value": "22""constant name": "镜像翻转""constant name": "中下""comment": "3 grptFloat 浮点数类型,可以设定格式化串。""constant name": "日期时间",
+""initial value": "22""constant name": "镜像翻转""constant name": "中下""comment": "3 grptFloat 浮点数类型,可以设定格式化串。""comment": "6 grptDateTime 日期时间类型,可以设定格式化串。",
+""initial value": "22""constant name": "镜像翻转""constant name": "中下""comment": "3 grptFloat 浮点数类型,可以设定格式化串。""initial value": "6"
+  }
+
+]
+ },
+ {
+
+"class name": "标记类型枚举",
+
+"comment": "GRPointMarkerStyle 指定数据项显示图案。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"constant name": "无图案",
+"comment": "-1 grpmsNone",
+"initial value": "-1"
+  },
+  {
+
+"constant name": "方框",
+
+"comment": "0 grpmsSquare",
+
+"initial value": "0"
+  },
+  {
+comment": "GRParameterDataType  指示参数对象值的具体数据类型。""comment": "5 grptBoolean 逻辑型或布尔类型,可以真值与假值的显示文字。""constant name": "框内勾",
+comment": "GRParameterDataType  指示参数对象值的具体数据类型。""comment": "5 grptBoolean 逻辑型或布尔类型,可以真值与假值的显示文字。""comment": "1 grpmsSquareCheck",
+comment": "GRParameterDataType  指示参数对象值的具体数据类型。""comment": "5 grptBoolean 逻辑型或布尔类型,可以真值与假值的显示文字。""initial value": "1"
+  },
+  {
+
+"constant name": "框内叉",
+
+"comment": "2 grpmsSquareCross",
+
+"initial value": "2"
+  },
+  {
+"comment": "GRPointMarkerStyle 指定数据项显示图案。""constant name": "圆形",
+"comment": "GRPointMarkerStyle 指定数据项显示图案。""comment": "3 grpmsCircle",
+"comment": "GRPointMarkerStyle 指定数据项显示图案。""initial value": "3"
+  },
+  {
+}"constant name": "圆内点",
+}"comment": "4 grpmsCirclePoint",
+}"initial value": "4"
+  },
+  {
+}"constant name": "圆内叉",
+}"comment": "5 grpmsCircleCross",
+}"initial value": "5"
+  },
+  {
+
+"constant name": "钻石形",
+
+"comment": "6 grpmsDimond",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "三角形",
+
+"comment": "7 grpmsTriangle",
+
+"initial value": "7"
+  },
+  {
+pmsCircleCross"constant name": "交叉",
+pmsCircleCross"comment": "8 grpmsCross",
+pmsCircleCross"initial value": "8"
+  },
+  {
+"initial value": "5""constant name": "米字叉",
+"initial value": "5""comment": "9 grpmsCross4",
+"initial value": "5""initial value": "9"
+  },
+  {
+tial value": "5""constant name": "米字叉""constant name": "四角星",
+tial value": "5""constant name": "米字叉""comment": "10 grpmsStar4",
+tial value": "5""constant name": "米字叉""initial value": "10"
+  },
+  {
+pmsCircleCross"constant name": "五角星",
+pmsCircleCross"comment": "11 grpmsStar5",
+pmsCircleCross"initial value": "11"
+  },
+  {
+}"constant name": "六角星",
+}"comment": "12 grpmsStar6",
+}"initial value": "12"
+  },
+  {
+ial value": "5""constant name": "米字叉""initial value": "10""constant name": "十角星",
+ial value": "5""constant name": "米字叉""initial value": "10""comment": "13 grpmsStar10",
+ial value": "5""constant name": "米字叉""initial value": "10""initial value": "13"
+  }
+
+]
+ },
+ {
+}"class name": "图形类型枚举",
+}"comment": "GRShapeType 指定图形部件框的具体类型。",
+}"@常量类": "整数",
+}"constants": [
+  {
+"constant name": "圆",
+"comment": "1 grsbtCircle",
+"initial value": "1"
+  },
+  {
+"@常量类": "整数""constant name": "椭圆",
+"@常量类": "整数""comment": "2 grsbtEllipse",
+"@常量类": "整数""initial value": "2"
+  },
+  {
+"constant name": "矩形",
+"comment": "3 grsbtRectangle",
+"initial value": "3"
+  },
+  {
+}"constant name": "圆角矩形",
+}"comment": "4 grsbtRoundRect",
+}"initial value": "4"
+  },
+  {
+ial value": "5""constant name": "米字叉""comment": "10 grpmsStar4""constant name": "圆角正方形",
+ial value": "5""constant name": "米字叉""comment": "10 grpmsStar4""comment": "5 grsbtRoundSquare",
+ial value": "5""constant name": "米字叉""comment": "10 grpmsStar4""initial value": "5"
+  },
+  {
+comment": "3 grsbtRectangle""constant name": "正方形",
+comment": "3 grsbtRectangle""comment": "6 grsbtSquare",
+comment": "3 grsbtRectangle""initial value": "6"
+  },
+  {
+"comment": "GRParameterDataType  指示参数对象值的具体数据类型。""constant name": "直线",
+"comment": "GRParameterDataType  指示参数对象值的具体数据类型。""comment": "7 grsbtLine",
+"comment": "GRParameterDataType  指示参数对象值的具体数据类型。""initial value": "7"
+  }
+}]
+ },
+ {
+msCircleCross"initial value": "8""class name": "画线笔类型枚举",
+msCircleCross"initial value": "8""comment": "GRPenStyle 画线条时,指定画线笔的类型。",
+msCircleCross"initial value": "8""@常量类": "整数",
+msCircleCross"initial value": "8""constants": [
+  {
+
+"constant name": "实线",
+
+"comment": "0 grpsSolid",
+
+"initial value": "0"
+  },
+  {
+nstant name": "实线""constant name": "段虚线",
+nstant name": "实线""comment": "1 grpsDash",
+nstant name": "实线""initial value": "1"
+  },
+  {
+
+"constant name": "点虚线",
+
+"comment": "2 grpsDot",
+
+"initial value": "2"
+  },
+  {
+sCircleCross"initial value": "8""comment": "GRPenStyle 画线条时,指定画线笔的类型。""constant name": "点段虚线",
+sCircleCross"initial value": "8""comment": "GRPenStyle 画线条时,指定画线笔的类型。""comment": "3 grpsDashDot",
+sCircleCross"initial value": "8""comment": "GRPenStyle 画线条时,指定画线笔的类型。""initial value": "3"
+  },
+  {
+}"constant name": "双点段虚线",
+}"comment": "4 grpsDashDotDot",
+}"initial value": "4"
+  },
+  {
+psDashDotDot"constant name": "无",
+psDashDotDot"comment": "5 grpsClear 不画线，6.0虽取消，但仍可用",
+psDashDotDot"initial value": "5"
+  }
+msCircleCross"initial value": "8"]
+ },
+ {
+nstant name": "双点段虚线""class name": "线条类型枚举",
+nstant name": "双点段虚线""comment": "GRLineType 虽隐藏，仍可用",
+nstant name": "双点段虚线""@常量类": "整数",
+nstant name": "双点段虚线""constants": [
+  {
+}"constant name": "左上至右下",
+}"comment": "0 图形框_类型枚举_线_斜线\\",
+}"initial value": "0"
+  },
+  {
+}"constant name": "左下至右上",
+}"comment": "1 图形框_类型枚举_线_斜线/",
+}"initial value": "1"
+  },
+  {
+"initial value": "0""constant name": "左上至右上",
+"initial value": "0""comment": "2 图形框_类型枚举_线_上横线",
+"initial value": "0""initial value": "2"
+  },
+  {
+框_类型枚举_线_上横线"constant name": "左中至右中",
+框_类型枚举_线_上横线"comment": "3 图形框_类型枚举_线_中横线",
+框_类型枚举_线_上横线"initial value": "3"
+  },
+  {
+_类型枚举_线_上横线"comment": "3 图形框_类型枚举_线_中横线""constant name": "左下至右下",
+_类型枚举_线_上横线"comment": "3 图形框_类型枚举_线_中横线""comment": "4 图形框_类型枚举_线_下横线",
+_类型枚举_线_上横线"comment": "3 图形框_类型枚举_线_中横线""initial value": "4"
+  },
+  {
+"comment": "0 图形框_类型枚举_线_斜线\\""constant name": "左上至左下",
+"comment": "0 图形框_类型枚举_线_斜线\\""comment": "5 图形框_类型枚举_线_左竖线",
+"comment": "0 图形框_类型枚举_线_斜线\\""initial value": "5"
+  },
+  {
+"initial value": "0""constant name": "上中至下中",
+"initial value": "0""comment": "6 图形框_类型枚举_线_中竖线",
+"initial value": "0""initial value": "6"
+  },
+  {
+"initial value": "0""constant name": "右上至右下",
+"initial value": "0""comment": "7 图形框_类型枚举_线_右竖线",
+"initial value": "0""initial value": "7"
+  }
+nstant name": "双点段虚线"]
+ },
+ {
+}"class name": "系统变量枚举",
+}"comment": "GRSystemVarType 指定系统变量部件框应用的系统变量类型。\ngrsvPageCount(页数)，grsvPageNumber(页号)，grsvGroupPageCount(分组页数)，grsvGroupPageNo(分组页号)等打印页面相关的系统变量只在产生打印页面数据时有效，在查询显示报表时，应避免对这些系统变量的使用。\n关于分组相关的系统变量必须通过序号指定对应的分组。\n如果是在表达式的系统变量函数中，或接口调用 SystemVarValue2 方法中，通过参数提供分组序号。如果是系统变量框，通过“分组序号”属性指定分组。\n分组相关的系统变量如下：\ngrsvGroupNo(分组序号)\ngrsvGroupCount(分组数)\ngrsvGroupRowNo(分组项行号)\ngrsvGroupRowCount(分组项行数)\ngrsvGroupPageNo(分组项页号)\ngrsvGroupPageCount(分组项页数)\n关于分组页号与页数的更进一步说明：\n1、为了产生分组页号与页数信息，必须设置对应分组头与分组尾的“可见性”属性为“是”，且其“高度”属性值大于0。\n2、如果实际不需要显示分组头与分组尾，可以在其“格式化脚本”上写脚本代码“Sender.Visible = false;”，这样可以在运行时将分组头与分组尾隐藏不显示。\n3、分组页号页数在查询显示报表时不会得到正确的值，所以不应在查询显示报表时显示分组页号页数。",
+}"@常量类": "整数",
+}"constants": [
+  {
+initial value": "0""initial value": "2""constant name": "当前日期时间",
+initial value": "0""initial value": "2""comment": "1 grsvCurrentDateTime 计算机的当前日期时间。",
+initial value": "0""initial value": "2""initial value": "1"
+  },
+  {
+stant name": "实线""comment": "1 grpsDash""constant name": "总页数",
+stant name": "实线""comment": "1 grpsDash""comment": "2 grsvPageCount 总页数。",
+stant name": "实线""comment": "1 grpsDash""initial value": "2"
+  },
+  {
+"constant name": "当前页号",
+"comment": "3 grsvPageNumber 当前页号。",
+"initial value": "3"
+  },
+  {
+"initial value": "1""constant name": "记录号",
+"initial value": "1""comment": "4 grsvRecordNo 明细记录的当前记录号,从1开始计数。",
+"initial value": "1""initial value": "4"
+  },
+  {
+initial value": "0""initial value": "2""constant name": "行号",
+initial value": "0""initial value": "2""comment": "8 grsvRowNo 明细网格的当前行号,从1开始计数。",
+initial value": "0""initial value": "2""initial value": "8"
+  },
+  {
+
+"constant name": "分组项序号",
+
+"comment": "9 roupOrderNo 分组项序号,最内层分组的项序号 6.0转移至SystemVarValue2，这里也可用。",
+
+"initial value": "9"
+  },
+  {
+"initial value": "9""constant name": "记录数",
+"initial value": "9""comment": "19 grsvRecordCount 明细记录的记录数。",
+"initial value": "9""initial value": "19"
+  }
+}]
+ },
+ {
+}"class name": "分组变量枚举",
+}"comment": "SystemVarValue2 获取的分组变量\n如果是在表达式的系统变量函数中，或接口调用 SystemVarValue2 方法中，通过参数提供分组序号。如果是系统变量框，通过“分组序号”属性指定分组。\n分组相关的系统变量如下：\ngrsvGroupNo(分组序号)\ngrsvGroupCount(分组数)\ngrsvGroupRowNo(分组项行号)\ngrsvGroupRowCount(分组项行数)\ngrsvGroupPageNo(分组项页号)\ngrsvGroupPageCount(分组项页数)\n关于分组页号与页数的更进一步说明：\n1、为了产生分组页号与页数信息，必须设置对应分组头与分组尾的“可见性”属性为“是”，且其“高度”属性值大于0。\n2、如果实际不需要显示分组头与分组尾，可以在其“格式化脚本”上写脚本代码“Sender.Visible = false;”，这样可以在运行时将分组头与分组尾隐藏不显示。\n3、分组页号页数在查询显示报表时不会得到正确的值，所以不应在查询显示报表时显示分组页号页数。",
+}"@常量类": "整数",
+}"constants": [
+  {
+"initial value": "9""constant name": "分组序号",
+"initial value": "9""comment": "20 grsvGroupNo，分组序号，某个分组内的序号，与分组项个数关联，序号从1开始",
+"initial value": "9""initial value": "20"
+  },
+  {
+nitial value": "0""initial value": "2""comment": "8 grsvRowNo 明细网格的当前行号,从1开始计数。""constant name": "分组项数",
+nitial value": "0""initial value": "2""comment": "8 grsvRowNo 明细网格的当前行号,从1开始计数。""comment": "21 grsvGroupCount，分组数，某个分组产生的分组项个数（全程变量，全程统一值）",
+nitial value": "0""initial value": "2""comment": "8 grsvRowNo 明细网格的当前行号,从1开始计数。""initial value": "21"
+  },
+  {
+initial value": "0""initial value": "2""constant name": "分组项行号",
+initial value": "0""initial value": "2""comment": "22 grsvGroupRowNo，分组项行号，在一个分组内重启序号，序号从1开始",
+initial value": "0""initial value": "2""initial value": "22"
+  },
+  {
+stant name": "实线""comment": "1 grpsDash""constant name": "分组项行数",
+stant name": "实线""comment": "1 grpsDash""comment": "23 grsvGroupRowCount，分组项行数，某个分组项包含的明细记录(行)数",
+stant name": "实线""comment": "1 grpsDash""initial value": "23"
+  },
+  {
+
+"constant name": "分组项页号",
+
+"comment": "24 grsvGroupPageNo，分组项页号",
+
+"initial value": "24"
+  },
+  {
+}"constant name": "分组项页数",
+}"comment": "25 grsvGroupPageCount，分组项页数",
+}"initial value": "25"
+  }
+}]
+ },
+ {
+ial value": "0""initial value": "2""constant name": "分组项行号""class name": "分组保持同页方式枚举",
+ial value": "0""initial value": "2""constant name": "分组项行号""comment": "GRGrpKpTogetherStyle 指定分组头行与本分组项其他行在打印输出时聚集在相同页的方式。",
+ial value": "0""initial value": "2""constant name": "分组项行号""@常量类": "整数",
+ial value": "0""initial value": "2""constant name": "分组项行号""constants": [
+  {
+value": "0""initial value": "2""constant name": "分组项行号""class name": "分组保持同页方式枚举""constant name": "不应用",
+value": "0""initial value": "2""constant name": "分组项行号""class name": "分组保持同页方式枚举""comment": "1 grgktsNone 不要求分组头行与本分组项其他行打印输出聚集在相同页。",
+value": "0""initial value": "2""constant name": "分组项行号""class name": "分组保持同页方式枚举""initial value": "1"
+  },
+  {
+}"constant name": "第一个记录行",
+}"comment": "2 grgktsFirstDetail 要求分组头行与本分组项的第一个明细记录行打印输出在相同页。",
+}"initial value": "2"
+  },
+  {
+value": "0""initial value": "2""constant name": "分组项行号""class name": "分组保持同页方式枚举""constant name": "整个",
+value": "0""initial value": "2""constant name": "分组项行号""class name": "分组保持同页方式枚举""comment": "3 grgktsAll 要求分组头行与本分组项的其他所有行尽量打印输出在相同页。",
+value": "0""initial value": "2""constant name": "分组项行号""class name": "分组保持同页方式枚举""initial value": "3"
+  }
+ial value": "0""initial value": "2""constant name": "分组项行号"]
+ },
+ {
+al value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"class name": "分组头对齐方式枚举",
+al value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"comment": "GROCGroupHeaderVAlign 指定占列式分组头在整个分组列区域的垂直方向上对齐位置。",
+al value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"@常量类": "整数",
+al value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"constants": [
+  {
+l value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"constants": [
+"constant name": "上端",
+l value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"constants": [
+"comment": "1 grbaTop 占列式分组头显示在整个分组列区域的顶部。",
+l value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"constants": [
+"initial value": "1"
+  },
+  {
+
+"constant name": "下端",
+
+"comment": "2 grbaBottom 占列式分组头显示在整个分组列区域的底部。",
+
+"initial value": "2"
+  },
+  {
+al value": "0""initial value": "2""constant name": "分组项行号""@常量类": "整数""constant name": "居中",
+al value": "0""initial value": "2""constant name": "分组项行号""@常量类": "整数""comment": "3 grbaMiddle 占列式分组头显示在整个分组列区域的中部(垂直方向)。",
+al value": "0""initial value": "2""constant name": "分组项行号""@常量类": "整数""initial value": "3"
+  }
+al value": "0""initial value": "2""constant name": "分组项行号""constants": [
+]
+ },
+ {
+
+"class name": "条码文字位置枚举",
+
+"comment": "GRBarcodeCaptionPosition 表示条形码文字的输出位置。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+
+"constant name": "无",
+
+"comment": "1 grbcpNone 条形码的文字不显示。",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "上端",
+
+"comment": "2 grbcpAbove 条形码的文字显示在上端。",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "下端",
+
+"comment": "3 grbcpBelow 条形码的文字显示在下端。",
+
+"initial value": "3"
+  }
+
+]
+ },
+ {
+"class name": "条形码方向枚举",
+"comment": "GRBarcodeDirection 表示条形码图形的输出方向。",
+"@常量类": "整数",
+"constants": [
+  {
+l value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"@常量类": "整数""constant name": "从左到右",
+l value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"@常量类": "整数""comment": "1 LeftToRight 从左到右。",
+l value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"@常量类": "整数""initial value": "1"
+  },
+  {
+ value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"constants": [
+"initial value": "1""constant name": "从右到左",
+ value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"constants": [
+"initial value": "1""comment": "2 RightToLeft 从右到左。",
+ value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"constants": [
+"initial value": "1""initial value": "2"
+  },
+  {
+al value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"constant name": "从上到下",
+al value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"comment": "3 TopToBottom 从上到下。",
+al value": "0""initial value": "2""constant name": "分组项行号""constants": [
+"initial value": "3"
+  },
+  {
+pToBottom 从上到下。"constant name": "从下到上",
+pToBottom 从上到下。"comment": "4 BottomToTop 从下到上。",
+pToBottom 从上到下。"initial value": "4"
+  }
+]
+ },
+ {
+"comment": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举",
+"comment": "2 grbcpAbove 条形码的文字显示在上端。""comment": "GRBarcodeType 指定条形码的各种类型。",
+"comment": "2 grbcpAbove 条形码的文字显示在上端。""@常量类": "整数",
+"comment": "2 grbcpAbove 条形码的文字显示在上端。""constants": [
+  {
+"constant name": "Code25Intlv",
+"comment": "Code25 Interleaved",
+"initial value": "1"
+  },
+  {
+}"constant name": "Code25Ind",
+}"comment": "Code25 Industrial",
+}"initial value": "2"
+  },
+  {
+"constant name": "Code25Matrix",
+"comment": "Code25 Matrix",
+"initial value": "3"
+  },
+  {
+
+"constant name": "Code39",
+
+"comment": "Code39",
+
+"initial value": "4"
+  },
+  {
+ment": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X",
+ment": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""comment": "Code39X",
+ment": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""initial value": "5"
+  },
+  {
+ent": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""comment": "Code39X""constant name": "Code128A",
+ent": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""comment": "Code39X""comment": "Code128A",
+ent": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""comment": "Code39X""initial value": "6"
+  },
+  {
+initial value": "1""constant name": "Code128B",
+initial value": "1""comment": "Code128B",
+initial value": "1""initial value": "7"
+  },
+  {
+": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""constant name": "Code128C",
+": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C",
+": "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8"
+  },
+  {
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""constant name": "Code93",
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""comment": "Code93",
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "9"
+  },
+  {
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8""constant name": "Code93X",
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8""comment": "Code93 Extended",
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8""initial value": "10"
+  },
+  {
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""constant name": "CodeMSI",
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""comment": "CodeMSI",
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11"
+  },
+  {
+ grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8""constant name": "Code93X""constant name": "CodePostNet",
+ grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8""constant name": "Code93X""comment": "CodePostNet",
+ grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8""constant name": "Code93X""initial value": "12"
+  },
+  {
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8""constant name": "CodeCodabar",
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8""comment": "CodeCodabar",
+: "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""initial value": "8""initial value": "13"
+  },
+  {
+ghtToLeft 从右到左。"constant name": "CodeEAN8",
+ghtToLeft 从右到左。"comment": "CodeEAN8,商品码,数据只能为数字",
+ghtToLeft 从右到左。"initial value": "14"
+  },
+  {
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""constant name": "CodeEAN13",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""comment": "CodeEAN13,商品码,数据只能为数字。如果进行数据校验,提供12位数字数据,否则13位数字数据",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""initial value": "15"
+  },
+  {
+}"constant name": "CodeUPC_A",
+}"comment": "CodeUPC_A,商品码,数据只能为数字",
+}"initial value": "16"
+  },
+  {
+}"constant name": "CodeUPC_E0",
+}"comment": "CodeUPC_E0,商品码,数据只能为数字",
+}"initial value": "17"
+  },
+  {
+"initial value": "17""constant name": "CodeUPC_E1",
+"initial value": "17""comment": "CodeUPC_E1,商品码,数据只能为数字",
+"initial value": "17""initial value": "18"
+  },
+  {
+}"constant name": "CodeUPC_Supp2",
+}"comment": "CodeUPC_Supp2",
+}"initial value": "19"
+  },
+  {
+}"constant name": "CodeUPC_Supp5",
+}"comment": "CodeUPC_Supp5",
+}"initial value": "20"
+  },
+  {
+}"constant name": "CodeEAN128A",
+}"comment": "CodeEAN128A",
+}"initial value": "21"
+  },
+  {
+htToLeft 从右到左。"initial value": "14""constant name": "CodeEAN128B",
+htToLeft 从右到左。"initial value": "14""comment": "CodeEAN128B",
+htToLeft 从右到左。"initial value": "14""initial value": "22"
+  },
+  {
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""comment": "CodeMSI""constant name": "CodeEAN128C",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""comment": "CodeMSI""comment": "CodeEAN128C",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""comment": "CodeMSI""initial value": "23"
+  },
+  {
+
+"constant name": "Code128Auto",
+
+"comment": "Code128Auto Code128自动编码",
+
+"initial value": "24"
+  },
+  {
+initial value": "17""comment": "CodeUPC_E1,商品码,数据只能为数字""constant name": "CodeEAN128Auto",
+initial value": "17""comment": "CodeUPC_E1,商品码,数据只能为数字""comment": "CodeEAN128, GS1-128Code",
+initial value": "17""comment": "CodeUPC_E1,商品码,数据只能为数字""initial value": "25"
+  },
+  {
+}"constant name": "ITF_14",
+}"comment": "ITF_14",
+}"initial value": "26"
+  },
+  {
+"comment": "ITF_14""constant name": "Pharmacode_1T",
+"comment": "ITF_14""comment": "Pharmacode One-Track 单轨(药品二进制码) 6.8.7.0增加",
+"comment": "ITF_14""initial value": "27"
+  },
+  {
+
+"constant name": "Pharmacode_2T",
+
+"comment": "Pharmacode Two-Track 双轨(药品二进制码) 6.8.7.0增加",
+
+"initial value": "28"
+  },
+  {
+}"constant name": "PDF_417",
+}"comment": "二维码PDF417",
+}"initial value": "50"
+  },
+  {
+}"constant name": "QRCode",
+}"comment": "二维码QRCode",
+}"initial value": "51"
+  },
+  {
+nstant name": "PDF_417""constant name": "DataMatrix",
+nstant name": "PDF_417""comment": "二维码DataMatrix",
+nstant name": "PDF_417""initial value": "52"
+  },
+  {
+
+"constant name": "GS1_DataMatrix",
+
+"comment": "二维码GS1 DataMatrix,以GS1标准编码数据生成 DataMatrix 码",
+
+"initial value": "53"
+  },
+  {
+nstant name": "GS1_DataMatrix""constant name": "GS1_QRCode",
+nstant name": "GS1_DataMatrix""comment": "二维码GS1 QRCode,以GS1标准编码数据生成 QRCode 码",
+nstant name": "GS1_DataMatrix""initial value": "54"
+  }
+"comment": "2 grbcpAbove 条形码的文字显示在上端。"]
+ },
+ {
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""class name": "DataM编码枚举",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""comment": "GRDtmxEncoding 指定二维码DataMatrix的数据编码方式。",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""@常量类": "整数",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""constants": [
+  {
+}"constant name": "自动选择",
+}"comment": "2 grdtmxeAuto 由程序根据数据自动选择编码方式",
+}"initial value": "2"
+  },
+  {
+ghtToLeft 从右到左。"constant name": "Ascii码",
+ghtToLeft 从右到左。"comment": "3 grdtmxeAscii Ascii编码方式",
+ghtToLeft 从右到左。"initial value": "3"
+  },
+  {
+}"constant name": "C40码",
+}"comment": "4 grdtmxeC40 C40编码方式",
+}"initial value": "4"
+  },
+  {
+}"constant name": "Text码",
+}"comment": "5 grdtmxeText Text编码方式",
+}"initial value": "5"
+  },
+  {
+}"constant name": "X12码",
+}"comment": "6 grdtmxeX12 X12编码方式",
+}"initial value": "6"
+  },
+  {
+"initial value": "6""constant name": "Edifact码",
+"initial value": "6""comment": "7 grdtmxeEdifact Edifact编码方式",
+"initial value": "6""initial value": "7"
+  },
+  {
+}"constant name": "Base256码",
+}"comment": "8 grdtmxeBase256 Base256编码方式",
+}"initial value": "8"
+  }
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11"]
+ },
+ {
+}"class name": "DataM矩阵维度枚举",
+}"comment": "GRDtmxMatrixSize 指定二维码DataMatrix的图形模块矩阵维数",
+}"@常量类": "整数",
+}"constants": [
+  {
+
+"constant name": "自动选择",
+
+"comment": "grdtmxmsAuto",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "维度10x10",
+
+"comment": "grdtmxms10x10",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "维度12x12",
+
+"comment": "grdtmxms12x12",
+
+"initial value": "5"
+  },
+  {
+nstant name": "自动选择""constant name": "维度14x14",
+nstant name": "自动选择""comment": "grdtmxms14x14",
+nstant name": "自动选择""initial value": "6"
+  },
+  {
+nitial value": "17""comment": "CodeUPC_E1,商品码,数据只能为数字""comment": "CodeEAN128, GS1-128Code""constant name": "维度16x16",
+nitial value": "17""comment": "CodeUPC_E1,商品码,数据只能为数字""comment": "CodeEAN128, GS1-128Code""comment": "grdtmxms16x16",
+nitial value": "17""comment": "CodeUPC_E1,商品码,数据只能为数字""comment": "CodeEAN128, GS1-128Code""initial value": "7"
+  },
+  {
+"initial value": "5""constant name": "维度18x18",
+"initial value": "5""comment": "grdtmxms18x18",
+"initial value": "5""initial value": "8"
+  },
+  {
+initial value": "5""comment": "grdtmxms18x18""constant name": "维度20x20",
+initial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20",
+initial value": "5""comment": "grdtmxms18x18""initial value": "9"
+  },
+  {
+"initial value": "5""constant name": "维度22x22",
+"initial value": "5""comment": "grdtmxms22x22",
+"initial value": "5""initial value": "10"
+  },
+  {
+"initial value": "5""constant name": "维度24x24",
+"initial value": "5""comment": "grdtmxms24x24",
+"initial value": "5""initial value": "11"
+  },
+  {
+"comment": "grdtmxms12x12""constant name": "维度26x26",
+"comment": "grdtmxms12x12""comment": "grdtmxms26x26",
+"comment": "grdtmxms12x12""initial value": "12"
+  },
+  {
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""constant name": "维度32x32",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""comment": "grdtmxms32x32",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""initial value": "13"
+  },
+  {
+
+"constant name": "维度36x36",
+
+"comment": "grdtmxms36x36",
+
+"initial value": "14"
+  },
+  {
+nstant name": "维度36x36""constant name": "维度40x40",
+nstant name": "维度36x36""comment": "grdtmxms40x40",
+nstant name": "维度36x36""initial value": "15"
+  },
+  {
+}"constant name": "维度44x44",
+}"comment": "grdtmxms44x44",
+}"initial value": "16"
+  },
+  {
+nstant name": "维度44x44""constant name": "维度48x48",
+nstant name": "维度44x44""comment": "grdtmxms48x48",
+nstant name": "维度44x44""initial value": "17"
+  },
+  {
+"comment": "grdtmxms44x44""constant name": "维度52x52",
+"comment": "grdtmxms44x44""comment": "grdtmxms52x52",
+"comment": "grdtmxms44x44""initial value": "18"
+  },
+  {
+}"constant name": "维度64x64",
+}"comment": "grdtmxms64x64",
+}"initial value": "19"
+  },
+  {
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""constant name": "维度72x72",
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""comment": "grdtmxms72x72",
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""initial value": "20"
+  },
+  {
+
+"constant name": "维度80x80",
+
+"comment": "grdtmxms80x80",
+
+"initial value": "21"
+  },
+  {
+"comment": "grdtmxms64x64""constant name": "维度88x88",
+"comment": "grdtmxms64x64""comment": "grdtmxms88x88",
+"comment": "grdtmxms64x64""initial value": "22"
+  },
+  {
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""constant name": "维度96x96",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""comment": "grdtmxms96x96",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""initial value": "23"
+  },
+  {
+ghtToLeft 从右到左。"constant name": "维度104x104",
+ghtToLeft 从右到左。"comment": "grdtmxms104x104",
+ghtToLeft 从右到左。"initial value": "24"
+  },
+  {
+
+"constant name": "维度120x120",
+
+"comment": "grdtmxms120x120",
+
+"initial value": "25"
+  },
+  {
+comment": "grdtmxms64x64""comment": "grdtmxms88x88""constant name": "维度132x132",
+comment": "grdtmxms64x64""comment": "grdtmxms88x88""comment": "grdtmxms132x132",
+comment": "grdtmxms64x64""comment": "grdtmxms88x88""initial value": "26"
+  },
+  {
+mxms132x132"constant name": "维度144x144",
+mxms132x132"comment": "grdtmxms144x144",
+mxms132x132"initial value": "27"
+  },
+  {
+
+"constant name": "维度8x18",
+
+"comment": "grdtmxms8x18",
+
+"initial value": "28"
+  },
+  {
+
+"constant name": "维度8x32",
+
+"comment": "grdtmxms8x32",
+
+"initial value": "29"
+  },
+  {
+
+"constant name": "维度12x26",
+
+"comment": "grdtmxms12x26",
+
+"initial value": "30"
+  },
+  {
+
+"constant name": "维度12x36",
+
+"comment": "grdtmxms12x36",
+
+"initial value": "31"
+  },
+  {
+ment": "ITF_14""constant name": "Pharmacode_1T""constant name": "维度16x36",
+ment": "ITF_14""constant name": "Pharmacode_1T""comment": "grdtmxms16x36",
+ment": "ITF_14""constant name": "Pharmacode_1T""initial value": "32"
+  },
+  {
+
+"constant name": "维度16x48",
+
+"comment": "grdtmxms16x48",
+
+"initial value": "33"
+  }
+}]
+ },
+ {
+"class name": "换新页栏方式枚举",
+"comment": "GRNewPageColumnStyle 在打印生成明细网格的分组头时,指定是否强制产生新页列的方式。",
+"@常量类": "整数",
+"constants": [
+  {
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""constant name": "不应用",
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""comment": "1 grncsNone 分组头在任何时候都不另起新页栏。",
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""initial value": "1"
+  },
+  {
+"comment": "grdtmxms12x36""constant name": "页栏前",
+"comment": "grdtmxms12x36""comment": "2 grncsBefore 分组头在打印输出之前另起新页栏进行输出。",
+"comment": "grdtmxms12x36""initial value": "2"
+  },
+  {
+"initial value": "28""constant name": "页栏后",
+"initial value": "28""comment": "3 grncsAfter 分组头在打印输出之后另起新页栏。后续内容输出在新页栏中。",
+"initial value": "28""initial value": "3"
+  },
+  {
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""constant name": "页栏前与页栏后",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""comment": "4 grncsBeforeAfter 分组头在打印输出之前与之后都另起新页栏。",
+ "2 grbcpAbove 条形码的文字显示在上端。""class name": "条码类型枚举""constant name": "Code39X""comment": "Code128C""initial value": "11""initial value": "4"
+  }
+]
+ },
+ {
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""class name": "换新页方式枚举",
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""comment": "GRNewPageStyle 在打印生成报表节时,指定是否强制产生新页的方式。",
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""@常量类": "整数",
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20""constants": [
+  {
+
+"constant name": "不应用",
+
+"comment": "1 grnpsNone 报表节不强制产生新页。",
+
+"initial value": "1"
+  },
+  {
+initial value": "28""initial value": "3""constant name": "节前",
+initial value": "28""initial value": "3""comment": "2 grnpsBefore 报表节在打印输出之前要求产生新页,保证本节在新页中输出。",
+initial value": "28""initial value": "3""initial value": "2"
+  },
+  {
+}"constant name": "节后",
+}"comment": "3 grnpsAfter 报表节在打印输出之后要求产生新页,保证本节之后的后续节在新页中输出。",
+}"initial value": "3"
+  },
+  {
+"comment": "3 grnpsAfter 报表节在打印输出之后要求产生新页,保证本节之后的后续节在新页中输出。""constant name": "节前与节后",
+"comment": "3 grnpsAfter 报表节在打印输出之后要求产生新页,保证本节之后的后续节在新页中输出。""comment": "4 grnpsBeforeAfter 报表节在打印输出之前与之后要求产生新页。",
+"comment": "3 grnpsAfter 报表节在打印输出之后要求产生新页,保证本节之后的后续节在新页中输出。""initial value": "4"
+  }
+nitial value": "5""comment": "grdtmxms18x18""comment": "grdtmxms20x20"]
+ },
+ {
+nstant name": "节后""class name": "页栏输出方向枚举",
+nstant name": "节后""comment": "GRPageColumnDirection 在明细网格打印生成时,如果生成多栏报表,指定明细网格的各种行的在各页栏中的输出次序。",
+nstant name": "节后""@常量类": "整数",
+nstant name": "节后""constants": [
+  {
+}"constant name": "先从上到下再左到右",
+}"comment": "1 grpcdDownAcross 按从上到下,再从左到右的顺序在页栏中打印输出。",
+}"initial value": "1"
+  },
+  {
+}"constant name": "先从左到右再上到下",
+}"comment": "2 grpcdAcrossDown 按从左到右,再从上到下的顺序在页栏中打印输出。",
+}"initial value": "2"
+  },
+  {
+"initial value": "1""constant name": "先从上到下且等分",
+"initial value": "1""comment": "3 grpcdDownAcrossEqual 按从上到下,再从左到右的顺序在页栏中打印输出,保持每栏输出基本一样多的数据。",
+"initial value": "1""initial value": "3"
+  }
+nstant name": "节后"]
+ },
+ {
+
+"class name": "重复方式枚举",
+
+"comment": "GRRepeatStyle 指定明细网格标题的重复输出方式。\n如果为不重复输出方式（None），则只在明细网格打印生成的开始时输出一次标题。如果为每页重复方式（OnPage)或每页列重复方式（OnPageColumn）,则在明细网格打印生成的开始时与产生新页或新页列时输出标题。\n如果为在分组头上重复方式（OnGroupHeader），则在明细网格打印生成的开始时不输出报表头，而是在每个分组头输出后输出标题。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"constants": [
+"constant name": "不应用",
+"constants": [
+"comment": "1 grrsNone 明细网格标题不重复输出。",
+"constants": [
+"initial value": "1"
+  },
+  {
+
+"constant name": "新页",
+
+"comment": "2 grrsOnPage 明细网格标题在每页重复输出。",
+
+"initial value": "2"
+  },
+  {
+}"constant name": "新页栏",
+}"comment": "4 grrsOnPageColumn 明细网格标题在每个页栏重复输出。",
+}"initial value": "4"
+  },
+  {
+"@常量类": "整数""constant name": "新分组头",
+"@常量类": "整数""comment": "8 grrsOnGroupHeader 明细网格标题在最内层的分组头之后重复输出。",
+"@常量类": "整数""initial value": "8"
+  },
+  {
+类": "整数""constant name": "新分组头""constant name": "新分组头新页",
+类": "整数""constant name": "新分组头""comment": "10 grrsOnGroupHeaderPage 明细网格标题在每页与最内层的分组头之后重复输出。",
+类": "整数""constant name": "新分组头""initial value": "10"
+  }
+
+]
+ },
+ {
+": "整数""constant name": "新分组头""initial value": "10""class name": "周期类型枚举",
+": "整数""constant name": "新分组头""initial value": "10""comment": "GRPeriodType 表示按日期期间交叉的交叉表日期期间的类型。",
+": "整数""constant name": "新分组头""initial value": "10""@常量类": "整数",
+": "整数""constant name": "新分组头""initial value": "10""constants": [
+  {
+"@常量类": "整数""constant name": "无",
+"@常量类": "整数""comment": "0 grptNone",
+"@常量类": "整数""initial value": "0"
+  },
+  {
+类": "整数""constant name": "新分组头""constant name": "天",
+类": "整数""constant name": "新分组头""comment": "1 grptDay",
+类": "整数""constant name": "新分组头""initial value": "1"
+  },
+  {
+@常量类": "整数""initial value": "0""constant name": "周",
+@常量类": "整数""initial value": "0""comment": "2 grptWeek",
+@常量类": "整数""initial value": "0""initial value": "2"
+  },
+  {
+常量类": "整数""initial value": "0""comment": "2 grptWeek""constant name": "三个月",
+常量类": "整数""initial value": "0""comment": "2 grptWeek""comment": "3 grptThirdMonth",
+常量类": "整数""initial value": "0""comment": "2 grptWeek""initial value": "3"
+  },
+  {
+量类": "整数""initial value": "0""comment": "2 grptWeek""initial value": "3""constant name": "半月",
+量类": "整数""initial value": "0""comment": "2 grptWeek""initial value": "3""comment": "4 grptHalfMonth",
+量类": "整数""initial value": "0""comment": "2 grptWeek""initial value": "3""initial value": "4"
+  },
+  {
+
+"constant name": "月",
+
+"comment": "5 grptMonth",
+
+"initial value": "5"
+  },
+  {
+: "整数""constant name": "新分组头""initial value": "10""@常量类": "整数""constant name": "季度",
+: "整数""constant name": "新分组头""initial value": "10""@常量类": "整数""comment": "6 grptQuarter",
+: "整数""constant name": "新分组头""initial value": "10""@常量类": "整数""initial value": "6"
+  },
+  {
+}"constant name": "半年",
+}"comment": "7 grptHalfYear",
+}"initial value": "7"
+  },
+  {
+ "整数""constant name": "新分组头""initial value": "10""@常量类": "整数""initial value": "6""constant name": "年",
+ "整数""constant name": "新分组头""initial value": "10""@常量类": "整数""initial value": "6""comment": "8 grptYear",
+ "整数""constant name": "新分组头""initial value": "10""@常量类": "整数""initial value": "6""initial value": "8"
+  },
+  {
+常量类": "整数""initial value": "0""comment": "2 grptWeek""constant name": "日历表",
+常量类": "整数""initial value": "0""comment": "2 grptWeek""comment": "9 grptCalendar",
+常量类": "整数""initial value": "0""comment": "2 grptWeek""initial value": "9"
+  }
+": "整数""constant name": "新分组头""initial value": "10"]
+ },
+ {
+": "整数""constant name": "新分组头""initial value": "10""class name": "图像对齐方式枚举",
+": "整数""constant name": "新分组头""initial value": "10""comment": "GRPictureAlignment 指定图像框中图像显示的对齐方式。",
+": "整数""constant name": "新分组头""initial value": "10""@常量类": "整数",
+": "整数""constant name": "新分组头""initial value": "10""constants": [
+  {
+"constant name": "左上",
+"comment": "1 grpaTopLeft 图像的左上角紧靠图像框的左上角显示。",
+"initial value": "1"
+  },
+  {
+initial value": "1""constant name": "右上",
+initial value": "1""comment": "2 grpaTopRight 图像的右上角紧靠图像框的右上角显示。",
+initial value": "1""initial value": "2"
+  },
+  {
+
+"constant name": "居中",
+
+"comment": "3 grpaCenter 图像居中显示在图像框中。",
+
+"initial value": "3"
+  },
+  {
+}"constant name": "左下",
+}"comment": "4 grpaBottomLeft 图像的左下角紧靠图像框的左下角显示。",
+}"initial value": "4"
+  },
+  {
+"initial value": "4""constant name": "右下",
+"initial value": "4""comment": "5 grpaBottomRight 图像的右下角紧靠图像框的右下角显示。",
+"initial value": "4""initial value": "5"
+  }
+": "整数""constant name": "新分组头""initial value": "10"]
+ },
+ {
+"comment": "3 grpaCenter 图像居中显示在图像框中。""class name": "图像旋转模式枚举",
+"comment": "3 grpaCenter 图像居中显示在图像框中。""comment": "GRPictureRotateMode 指定图像显示时的旋转方式。",
+"comment": "3 grpaCenter 图像居中显示在图像框中。""@常量类": "整数",
+"comment": "3 grpaCenter 图像居中显示在图像框中。""constants": [
+  {
+}"constant name": "不旋转",
+}"comment": "0 grprmNone",
+}"initial value": "0"
+  },
+  {
+整数""constant name": "新分组头""initial value": "10""class name": "图像对齐方式枚举""constant name": "左旋",
+整数""constant name": "新分组头""initial value": "10""class name": "图像对齐方式枚举""comment": "1 grprmLeft",
+整数""constant name": "新分组头""initial value": "10""class name": "图像对齐方式枚举""initial value": "1"
+  },
+  {
+}"constant name": "右旋",
+}"comment": "2 grprmRight",
+}"initial value": "2"
+  },
+  {
+数""constant name": "新分组头""initial value": "10""class name": "图像对齐方式枚举""comment": "1 grprmLeft""constant name": "颠倒",
+数""constant name": "新分组头""initial value": "10""class name": "图像对齐方式枚举""comment": "1 grprmLeft""comment": "3 grprmFlip",
+数""constant name": "新分组头""initial value": "10""class name": "图像对齐方式枚举""comment": "1 grprmLeft""initial value": "3"
+  },
+  {
+
+"constant name": "镜像",
+
+"comment": "4 grprmMirror",
+
+"initial value": "4"
+  }
+"comment": "3 grpaCenter 图像居中显示在图像框中。"]
+ },
+ {
+}"class name": "图像缩放方式枚举",
+}"comment": "GRPictureSizeMode 指定图像框中图像的显示缩放方式。",
+}"@常量类": "整数",
+}"constants": [
+  {
+"comment": "3 grpaCenter 图像居中显示在图像框中。""constant name": "修剪",
+"comment": "3 grpaCenter 图像居中显示在图像框中。""comment": "1 grpsmClip 图像不进行缩放,按原始尺寸显示。",
+"comment": "3 grpaCenter 图像居中显示在图像框中。""initial value": "1"
+  },
+  {
+"comment": "4 grprmMirror""constant name": "铺满",
+"comment": "4 grprmMirror""comment": "2 grpsmStretch 图像伸缩到完全显示到图像框中。",
+"comment": "4 grprmMirror""initial value": "2"
+  },
+  {
+nstant name": "右旋""constant name": "缩放",
+nstant name": "右旋""comment": "3 grpsmZoom 根据图像框的大小图像保持宽高比例伸缩至某一方向完全铺满。",
+nstant name": "右旋""initial value": "3"
+  },
+  {
+"comment": "4 grprmMirror""constant name": "完整显示",
+"comment": "4 grprmMirror""comment": "4 grpsmEnsureFullView 如果图像不能在图像框中完全显示,根据图像框的大小图像保持宽高比例伸缩至某一方向完全铺满。反之图像保持原始尺寸显示。",
+"comment": "4 grprmMirror""initial value": "4"
+  },
+  {
+ment": "4 grprmMirror""constant name": "完整显示""constant name": "平铺",
+ment": "4 grprmMirror""constant name": "完整显示""comment": "5 grpsmTile 平铺多次显示图像,铺满整个显示区域。",
+ment": "4 grprmMirror""constant name": "完整显示""initial value": "5"
+  }
+}]
+ },
+ {
+
+"class name": "图像透明模式枚举",
+
+"comment": "GRPictureTransparentMode 指定图像透明显示的方式",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+}"constant name": "不透明",
+}"comment": "0 grptmNone",
+}"initial value": "0"
+  },
+  {
+"@常量类": "整数""constant name": "叠加透明",
+"@常量类": "整数""comment": "1 grptmOverlying",
+"@常量类": "整数""initial value": "1"
+  },
+  {
+}"constant name": "背景透明",
+}"comment": "2 grptmBackground",
+}"initial value": "2"
+  }
+
+]
+ },
+ {
+"initial value": "2""class name": "图像类型枚举",
+"initial value": "2""comment": "GRPictureType 指定图像类型。",
+"initial value": "2""@常量类": "整数",
+"initial value": "2""constants": [
+  {
+initial value": "2""@常量类": "整数""constant name": "未知类型",
+initial value": "2""@常量类": "整数""comment": "0 grptUnknown",
+initial value": "2""@常量类": "整数""initial value": "0"
+  },
+  {
+
+"constant name": "BMP格式",
+
+"comment": "1 grptBMP",
+
+"initial value": "1"
+  },
+  {
+comment": "4 grprmMirror""comment": "4 grpsmEnsureFullView 如果图像不能在图像框中完全显示,根据图像框的大小图像保持宽高比例伸缩至某一方向完全铺满。反之图像保持原始尺寸显示。""constant name": "GIF格式",
+comment": "4 grprmMirror""comment": "4 grpsmEnsureFullView 如果图像不能在图像框中完全显示,根据图像框的大小图像保持宽高比例伸缩至某一方向完全铺满。反之图像保持原始尺寸显示。""comment": "2 grptGIF",
+comment": "4 grprmMirror""comment": "4 grpsmEnsureFullView 如果图像不能在图像框中完全显示,根据图像框的大小图像保持宽高比例伸缩至某一方向完全铺满。反之图像保持原始尺寸显示。""initial value": "2"
+  },
+  {
+}"constant name": "JPEG格式",
+}"comment": "3 grptJPEG",
+}"initial value": "3"
+  },
+  {
+comment": "4 grprmMirror""comment": "4 grpsmEnsureFullView 如果图像不能在图像框中完全显示,根据图像框的大小图像保持宽高比例伸缩至某一方向完全铺满。反之图像保持原始尺寸显示。""constant name": "PNG格式",
+comment": "4 grprmMirror""comment": "4 grpsmEnsureFullView 如果图像不能在图像框中完全显示,根据图像框的大小图像保持宽高比例伸缩至某一方向完全铺满。反之图像保持原始尺寸显示。""comment": "4 grptPNG",
+comment": "4 grprmMirror""comment": "4 grpsmEnsureFullView 如果图像不能在图像框中完全显示,根据图像框的大小图像保持宽高比例伸缩至某一方向完全铺满。反之图像保持原始尺寸显示。""initial value": "4"
+  },
+  {
+}"constant name": "ICON格式",
+}"comment": "5 grptICON",
+}"initial value": "5"
+  },
+  {
+
+"constant name": "TIFF格式",
+
+"comment": "6 grptTIFF",
+
+"initial value": "6"
+  },
+  {
+"initial value": "3""constant name": "WMF格式",
+"initial value": "3""comment": "7 grptWMF",
+"initial value": "3""initial value": "10"
+  }
+"initial value": "2"]
+ },
+ {
+"initial value": "6""class name": "打印策略枚举",
+"initial value": "6""comment": "GRColumnPrintAdaptMethod 打印生成时，明细网格列对输出页面的适应方法。\n在打印输出到纸张页面中，输出列的总宽度与页面的输出宽度（除掉左右页边距的宽度）很可能不一样，系统可以采用几种方法来处理列的输出。\n如采用调整列的宽度以适应输出区域的宽度，则系统根据每个列的设计宽度按比列调整其打印输出宽度，使所有打印输出列的打印输出总宽度与打印输出区域宽度保持一样；\n如果列的设计总宽度小于输出区域宽度，所有列的打印宽度将放大，反之则缩小。",
+"initial value": "6""@常量类": "整数",
+"initial value": "6""constants": [
+  {
+initial value": "3""comment": "7 grptWMF""constant name": "丢弃",
+initial value": "3""comment": "7 grptWMF""comment": "1 grcpamDiscard 在打印输出时,超出页面输出范围的列内容将被忽略掉,即不输出显示。",
+initial value": "3""comment": "7 grptWMF""initial value": "1"
+  },
+  {
+tial value": "2""class name": "图像类型枚举""constant name": "绕行",
+tial value": "2""class name": "图像类型枚举""comment": "2 grcpamWrap 在打印输出时,超出页面输出范围的列内容将另起新行输出显示。",
+tial value": "2""class name": "图像类型枚举""initial value": "2"
+  },
+  {
+initial value": "6""constants": [
+"constant name": "缩放适应",
+initial value": "6""constants": [
+"comment": "3 grcpamResizeToFit 在打印输出时,根据列的宽度按比列将所有要输出的列的总宽度调整到页面输出区域的宽度。",
+initial value": "6""constants": [
+"initial value": "3"
+  },
+  {
+nitial value": "6""constants": [
+"comment": "3 grcpamResizeToFit 在打印输出时,根据列的宽度按比列将所有要输出的列的总宽度调整到页面输出区域的宽度。""constant name": "按需缩小适应",
+nitial value": "6""constants": [
+"comment": "3 grcpamResizeToFit 在打印输出时,根据列的宽度按比列将所有要输出的列的总宽度调整到页面输出区域的宽度。""comment": "4 grcpamShrinkToFit 在打印输出时,如果列的总宽度超出页面输出范围,与grcpamResizeToFit相同,反之按设计时宽度输出。",
+nitial value": "6""constants": [
+"comment": "3 grcpamResizeToFit 在打印输出时,根据列的宽度按比列将所有要输出的列的总宽度调整到页面输出区域的宽度。""initial value": "4"
+  },
+  {
+"initial value": "2""constant name": "横向分页先纵向",
+"initial value": "2""comment": "5 grcpamToNewPage 在打印输出时,超出页面输出范围的列内容将另起新页输出显示,按先从上到下的顺序输出。",
+"initial value": "2""initial value": "5"
+  },
+  {
+initial value": "3""initial value": "10""constant name": "横向分页先横向",
+initial value": "3""initial value": "10""comment": "6 grcpamToNewPageEx 在打印输出时,超出页面输出范围的列内容将另起新页输出显示,按先从左到右的顺序输出。",
+initial value": "3""initial value": "10""initial value": "6"
+  },
+  {
+}"constant name": "横向分页并重复锁定列先纵向",
+}"comment": "7 grcpamToNewPageRFC 在打印输出时,超出页面输出范围的列内容将另起新页输出显示,且左边的固定列在每页中重复输出,按先从上到下的顺序输出。",
+}"initial value": "7"
+  },
+  {
+comment": "3 grpaCenter 图像居中显示在图像框中。""constants": [
+"constant name": "横向分页并重复锁定列先横向",
+comment": "3 grpaCenter 图像居中显示在图像框中。""constants": [
+"comment": "8 grcpamToNewPageRFCEx 在打印输出时,超出页面输出范围的列内容将另起新页输出显示,且左边的固定列在每页中重复输出,按先从左到右的顺序输出。",
+comment": "3 grpaCenter 图像居中显示在图像框中。""constants": [
+"initial value": "8"
+  },
+  {
+}"constant name": "排除分组绕行",
+}"comment": "9 grcpamWrapExcludeGroup 类同 grcpamWrap,但分组头尾不另起新行。",
+}"initial value": "9"
+  }
+"initial value": "6"]
+ },
+ {
+}"class name": "打印生成方式枚举",
+}"comment": "GRPrintGenerateStyle 指示打印页面的生成方式。\n打印生成时，如果指定打印生成方式为只输出报表内容数据（OnlyContent）,则只输出打印类别为报表内容数据的报表元素，其它打印类别为报表表单数据的报表元素将不会输出。\n在只输出报表内容数据时，报表节的背景色不会填充，明细网格的边框线与行列线也不会输出。在只输出报表内容数据的打印生成方式特别适用于进行票据套打与现存格式报表的套打。\n打印生成时，如果指定印生成方式为输出报表表单数据（OnlyForm）,生成方式与只输出报表内容数据（OnlyContent）反之对应。\n在此种方式下，明细网格的记录数据不会被应用，明细行的生成与明细记录不对应，不填充明细记录页也可以输出报表表单数据。报表表单数据一般只生成一页。此种模式一般用来制作票据与固定格式报表的印刷模版。\n打印生成时，如果指定印生成方式（PrintGenerateStyle）为输出全部数据（All）,则所有数据都会输出，这也是我们平时最多用到的方式。\n使用打印页面的生成方式的地方有： 在IGridppReport接口中执行PrintEx与PrintViewEx方法中可以指定打印页面的生成方式，另可以设定打印预览查看器的打印页面的生成方式（GenerateStyle）属性。",
+}"@常量类": "整数",
+}"constants": [
+  {
+"constant name": "仅表单",
+"comment": "1 grpgsOnlyForm 只生成报表表单数据。",
+"initial value": "1"
+  },
+  {
+ial value": "3""comment": "7 grptWMF""constant name": "丢弃""constant name": "仅内容",
+ial value": "3""comment": "7 grptWMF""constant name": "丢弃""comment": "2 grpgsOnlyContent 只生成报表内容数据。",
+ial value": "3""comment": "7 grptWMF""constant name": "丢弃""initial value": "2"
+  },
+  {
+"initial value": "9""constant name": "全部",
+"initial value": "9""comment": "3 grpgsAll 生成报表所有数据。",
+"initial value": "9""initial value": "3"
+  },
+  {
+}"constant name": "预览全部",
+}"comment": "4 grpgsPreviewAll 预览报表全部内容,但只打印出内容数据。",
+}"initial value": "4"
+  }
+}]
+ },
+ {
+
+"class name": "打印页面类型枚举",
+
+"comment": "GRPrintPageType 指定打印时输出页的类型。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+}"constant name": "全部页",
+}"comment": "1 grpptAllSelectionPages 输出选定页范围内的所有页。",
+}"initial value": "1"
+  },
+  {
+
+"constant name": "奇数页",
+
+"comment": "2 grpptOddSelectionPages 输出选定页范围内的奇数页。",
+
+"initial value": "2"
+  },
+  {
+}"constant name": "偶数页",
+}"comment": "3 grpptEvenSelectionPages 输出选定页范围内的偶数页。",
+}"initial value": "3"
+  }
+
+]
+ },
+ {
+
+"class name": "打印页范围类型枚举",
+
+"comment": "GRPrintRangeType 指定打印时选定页范围的类型。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"comment": "GRPrintRangeType 指定打印时选定页范围的类型。""constant name": "全部页",
+"comment": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。",
+"comment": "GRPrintRangeType 指定打印时选定页范围的类型。""initial value": "1"
+  },
+  {
+
+"constant name": "当前页",
+
+"comment": "2 grprtCurrentPage 定当前页,只有在从打印御览状态中执行打印任务时才有效。",
+
+"initial value": "2"
+  },
+  {
+pgsAll 生成报表所有数据。"constant name": "选定页",
+pgsAll 生成报表所有数据。"comment": "3 grprtSelectionPages 指定的页范围。",
+pgsAll 生成报表所有数据。"initial value": "3"
+  }
+
+]
+ },
+ {
+"class name": "逐份打印方式枚举",
+"comment": "GRCollateKind 逐份打印类型",
+"@常量类": "整数",
+"constants": [
+  {
+comment": "GRCollateKind 逐份打印类型""constant name": "默认",
+comment": "GRCollateKind 逐份打印类型""comment": "0 Default 由打印机确定是否逐份打印",
+comment": "GRCollateKind 逐份打印类型""initial value": "0"
+  },
+  {
+"comment": "GRPrintPageType 指定打印时输出页的类型。""constant name": "逐份",
+"comment": "GRPrintPageType 指定打印时输出页的类型。""comment": "1 Collate",
+"comment": "GRPrintPageType 指定打印时输出页的类型。""initial value": "1"
+  },
+  {
+comment": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""constant name": "不逐份",
+comment": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""comment": "2 NotCollate",
+comment": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2"
+  }
+]
+ },
+ {
+omment": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举",
+omment": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""comment": "GRSharePrintSetupOption (组合值) 指定各个共享全局打印参数的项目。",
+omment": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""constants": [
+  {
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""constant name": "页面边距",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""comment": "1 grspsoPaperMargin 页边距项目,对应上、下、左,右页边距属性。",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""data type": "整数",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""initial value": "1"
+  },
+  {
+ent": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""constant name": "不逐份""constant name": "纸张类型",
+ent": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""constant name": "不逐份""comment": "2 grspsoPaperKind 纸张类型项目,对应纸张类型与大小属性。",
+ent": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""constant name": "不逐份""data type": "整数",
+ent": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""constant name": "不逐份""initial value": "2"
+  },
+  {
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""constant name": "不逐份""initial value": "2""constant name": "纸张打印方向",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""constant name": "不逐份""initial value": "2""comment": "3 grspsoPaperOrientation 纸张的打印方向项目。",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""constant name": "不逐份""initial value": "2""data type": "整数",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""constant name": "不逐份""initial value": "2""initial value": "4"
+  },
+  {
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""constant name": "纸张进纸来源",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""comment": "4 grspsoPaperSource 纸张的进纸来源项目。",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""data type": "整数",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""initial value": "8"
+  },
+  {
+ent": "GRCollateKind 逐份打印类型""constant name": "默认""constant name": "当前选定打印机",
+ent": "GRCollateKind 逐份打印类型""constant name": "默认""comment": "5 grspsoSelectedPrinter 当前选定的打印机项目,对应打印机名称属性。",
+ent": "GRCollateKind 逐份打印类型""constant name": "默认""data type": "整数",
+ent": "GRCollateKind 逐份打印类型""constant name": "默认""initial value": "16"
+  }
+omment": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2"]
+ },
+ {
+}"class name": "每页版数枚举",
+}"comment": "GRSheetPages 指定打印输出时每页输出版数",
+}"@常量类": "整数",
+}"constants": [
+  {
+"constant name": "每页排1版",
+"comment": "1 grsp1Pages 指定版面数为1,也就是最常规的单版面输出方式",
+"initial value": "1"
+  },
+  {
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""constant name": "每页排2版",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""comment": "2 grsp2Pages 指定版面数为2",
+nt": "GRPrintRangeType 指定打印时选定页范围的类型。""comment": "1 grprtAllPages 选定全部页。""initial value": "2""class name": "共享打印参数枚举""initial value": "2"
+  },
+  {
+
+"constant name": "每页排4版",
+
+"comment": "3 grsp4Pages 指定版面数为4",
+
+"initial value": "3"
+  },
+  {
+nt": "GRCollateKind 逐份打印类型""constant name": "默认""data type": "整数""constant name": "每页排6版",
+nt": "GRCollateKind 逐份打印类型""constant name": "默认""data type": "整数""comment": "4 grsp6Pages 指定版面数为6",
+nt": "GRCollateKind 逐份打印类型""constant name": "默认""data type": "整数""initial value": "4"
+  },
+  {
+"initial value": "3""constant name": "每页排8版",
+"initial value": "3""comment": "5 grsp8Pages 指定版面数为8",
+"initial value": "3""initial value": "5"
+  },
+  {
+"constants": [
+"constant name": "每页排16版",
+"constants": [
+"comment": "6 grsp16Pages 指定版面数为16",
+"constants": [
+"initial value": "6"
+  }
+}]
+ },
+ {
+constants": [
+"initial value": "6""class name": "图表类型枚举",
+constants": [
+"initial value": "6""comment": "GRChartType 表示图表的类型。",
+constants": [
+"initial value": "6""@常量类": "整数",
+constants": [
+"initial value": "6""constants": [
+  {
+
+"constant name": "柱图",
+
+"comment": "1 grctBarChart 柱图。",
+
+"initial value": "1"
+  },
+  {
+"comment": "1 grctBarChart 柱图。""constant name": "饼图",
+"comment": "1 grctBarChart 柱图。""comment": "2 grctPieChart 饼图。",
+"comment": "1 grctBarChart 柱图。""initial value": "2"
+  },
+  {
+"comment": "1 grctBarChart 柱图。""constant name": "折线图",
+"comment": "1 grctBarChart 柱图。""comment": "3 grctLineChart 折线图。",
+"comment": "1 grctBarChart 柱图。""initial value": "3"
+  },
+  {
+
+"constant name": "叠加柱图",
+
+"comment": "4 grctStackedBarChart 叠加柱图",
+
+"initial value": "4"
+  },
+  {
+}"constant name": "散列点图",
+}"comment": "5 grctXYScatterChart 散列点图",
+}"initial value": "5"
+  },
+  {
+}"constant name": "散列点连线图",
+}"comment": "6 grctXYLineChart 散列点连线图",
+}"initial value": "6"
+  },
+  {
+"initial value": "4""constant name": "连曲线图",
+"initial value": "4""comment": "7 grctCurveLineChart 连曲线图",
+"initial value": "4""initial value": "7"
+  },
+  {
+ctLineChart 折线图。"constant name": "散列点连曲线图",
+ctLineChart 折线图。"comment": "8 grctXYCurveLineChart 散列点连曲线图",
+ctLineChart 折线图。"initial value": "8"
+  },
+  {
+ctLineChart 折线图。"constant name": "气泡图",
+ctLineChart 折线图。"comment": "9 grctBubble 气泡图",
+ctLineChart 折线图。"initial value": "9"
+  },
+  {
+tLineChart 折线图。"comment": "9 grctBubble 气泡图""constant name": "百分比柱状图",
+tLineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图",
+tLineChart 折线图。"comment": "9 grctBubble 气泡图""initial value": "10"
+  },
+  {
+tLineChart 折线图。"comment": "9 grctBubble 气泡图""constant name": "横向柱状图",
+tLineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "11 grctColumnChart 横向柱状图",
+tLineChart 折线图。"comment": "9 grctBubble 气泡图""initial value": "11"
+  },
+  {
+LineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""constant name": "横向叠加柱状图",
+LineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""comment": "12 grctStackedColumnChart 横向叠加柱状图",
+LineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""initial value": "12"
+  },
+  {
+ineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""initial value": "12""constant name": "横向百分比柱状图",
+ineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""initial value": "12""comment": "13 grctStackedColumn100Chart 横向百分比柱状图",
+ineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""initial value": "12""initial value": "13"
+  }
+constants": [
+"initial value": "6"]
+ },
+ {
+"class name": "统计函数枚举",
+"comment": "GRSummaryFun 指定统计部件框应用的统计函数。",
+"@常量类": "整数",
+"constants": [
+  {
+LineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""constant name": "合计",
+LineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""comment": "1 grsfSum 统计某个字段的合计值。",
+LineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""initial value": "1"
+  },
+  {
+constants": [
+"initial value": "6""constant name": "平均",
+constants": [
+"initial value": "6""comment": "2 grsfAvg 统计某个字段的平均值。",
+constants": [
+"initial value": "6""initial value": "2"
+  },
+  {
+}"constant name": "数目",
+}"comment": "3 grsfCount 统计明细记录的个数。",
+}"initial value": "3"
+  },
+  {
+"initial value": "3""constant name": "最小值",
+"initial value": "3""comment": "4 grsfMin 找出某个字段的最小值。",
+"initial value": "3""initial value": "4"
+  },
+  {
+}"constant name": "最大值",
+}"comment": "5 grsfMax 找出某个字段的最大值。",
+}"initial value": "5"
+  },
+  {
+ineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""initial value": "1""constant name": "方差",
+ineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""initial value": "1""comment": "6 grsfVar",
+ineChart 折线图。"comment": "9 grctBubble 气泡图""comment": "10 grctStackedBar100Chart 百分比柱状图""initial value": "1""initial value": "6"
+  },
+  {
+
+"constant name": "总体方差",
+
+"comment": "7 grsfVarP",
+
+"initial value": "7"
+  },
+  {
+}"constant name": "标准偏差",
+}"comment": "8 grsfStdDev",
+}"initial value": "8"
+  },
+  {
+}"constant name": "总体标准偏差",
+}"comment": "9 grsfStdDevP",
+}"initial value": "9"
+  },
+  {
+"comment": "8 grsfStdDev""constant name": "平均偏差",
+"comment": "8 grsfStdDev""comment": "10 grsfAveDev",
+"comment": "8 grsfStdDev""initial value": "10"
+  },
+  {
+"constants": [
+"constant name": "偏差平方和",
+"constants": [
+"comment": "11 grsfDevSq",
+"constants": [
+"initial value": "11"
+  },
+  {
+constants": [
+"initial value": "11""constant name": "空值个数",
+constants": [
+"initial value": "11""comment": "12 grsfCountBlank",
+constants": [
+"initial value": "11""initial value": "12"
+  },
+  {
+ment": "8 grsfStdDev""constant name": "平均偏差""constant name": "非空值个数",
+ment": "8 grsfStdDev""constant name": "平均偏差""comment": "13 grsfCountA",
+ment": "8 grsfStdDev""constant name": "平均偏差""initial value": "13"
+  },
+  {
+initial value": "4""initial value": "7""constant name": "非重复值个数",
+initial value": "4""initial value": "7""comment": "14 grsfDistinct",
+initial value": "4""initial value": "7""initial value": "14"
+  },
+  {
+initial value": "3""comment": "4 grsfMin 找出某个字段的最小值。""constant name": "非空值平均",
+initial value": "3""comment": "4 grsfMin 找出某个字段的最小值。""comment": "15 grsfAvgA",
+initial value": "3""comment": "4 grsfMin 找出某个字段的最小值。""initial value": "15"
+  },
+  {
+"constants": [
+"constant name": "第N个最小值",
+"constants": [
+"comment": "16 grsfMinN",
+"constants": [
+"initial value": "16"
+  },
+  {
+
+"constant name": "第N个最大值",
+
+"comment": "17 grsfMaxN",
+
+"initial value": "17"
+  },
+  {
+}"constant name": "字符最小值",
+}"comment": "18 grsfStrMin",
+}"initial value": "18"
+  },
+  {
+}"constant name": "字符最大值",
+}"comment": "19 grsfStrMax",
+}"initial value": "19"
+  },
+  {
+"initial value": "19""constant name": "非空方差",
+"initial value": "19""comment": "20 grsfVarA",
+"initial value": "19""initial value": "20"
+  },
+  {
+}"constant name": "非空总体方差",
+}"comment": "21 grsfVarPA",
+}"initial value": "21"
+  },
+  {
+nstant name": "字符最大值""constant name": "非空标准偏差",
+nstant name": "字符最大值""comment": "22 grsfStdDevA",
+nstant name": "字符最大值""initial value": "22"
+  },
+  {
+
+"constant name": "非空总体标准偏差",
+
+"comment": "23 grsfStdDevPA",
+
+"initial value": "23"
+  },
+  {
+initial value": "19""comment": "20 grsfVarA""constant name": "非空平均偏差",
+initial value": "19""comment": "20 grsfVarA""comment": "24 grsfAveDevA",
+initial value": "19""comment": "20 grsfVarA""initial value": "24"
+  },
+  {
+
+"constant name": "非空偏差平方和",
+
+"comment": "25 grsfDevSqA",
+
+"initial value": "25"
+  },
+  {
+nstant name": "非空总体标准偏差""constant name": "绝对值合计",
+nstant name": "非空总体标准偏差""comment": "26 grsfSumAbs",
+nstant name": "非空总体标准偏差""initial value": "26"
+  },
+  {
+"comment": "25 grsfDevSqA""constant name": "累计",
+"comment": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。",
+"comment": "25 grsfDevSqA""initial value": "27"
+  },
+  {
+}"constant name": "组累计",
+}"comment": "28 grsfGroupSumAcc 组累计，在上级组内累计，开始一个新分组，重新累计。",
+}"initial value": "28"
+  },
+  {
+comment": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。""constant name": "串接",
+comment": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。""comment": "29 grsfJoin，拼接，将数据显示文字拼接在一起。如果是统计框，字段之间的分隔符号由“格式”属性值确定，如果要换行，加入\"\\n\"字符。20210315-6.810版本增加",
+comment": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。""initial value": "29"
+  },
+  {
+comment": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。""constant name": "非重复串接",
+comment": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。""comment": "30 grsfJoinUnique，非重复拼接，重复项只拼接一次。20210315-6.810版本增加",
+comment": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。""initial value": "30"
+  }
+]
+ },
+ {
+
+"class name": "系统图像枚举",
+
+"comment": "GRSystemImage 指定报表引擎中的系统内建图像。\nGrid++Report 在报表引擎中定义了一些系统内建图像。图片框可以将其图像序号指定为某个枚举项的值来关联某个系统图像,从而在图像框中显示系统图像。\n另也可以调用 IGRPictureBox 接口的 AttachSystemImage 方法来关联系统图像。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+
+"constant name": "未选中3D单选框",
+
+"comment": "-10 grsiRadio3DUnchecked 值为-10,3D形式的无线按钮(Radio)非选中标志。",
+
+"initial value": "-10"
+  },
+  {
+
+"constant name": "选中3D单选框",
+
+"comment": "-9 grsiRadio3DChecked 值为-9,3D形式的无线按钮(Radio)选中标志。",
+
+"initial value": "-9"
+  },
+  {
+ass name": "系统图像枚举""constant name": "向上箭头",
+ass name": "系统图像枚举""comment": "-8 grsiArrowUp 值为-8,朝上箭头标志。",
+ass name": "系统图像枚举""initial value": "-8"
+  },
+  {
+ent": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。""constant name": "非重复串接""constant name": "向下箭头",
+ent": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。""constant name": "非重复串接""comment": "-7 grsiArrowDown 值为-7,朝下箭头标志。",
+ent": "25 grsfDevSqA""comment": "27 grsfSumAcc 全程累计，从开始到当前行的合计。""constant name": "非重复串接""initial value": "-7"
+  },
+  {
+"initial value": "-10""constant name": "否定标志",
+"initial value": "-10""comment": "-6 grsiNegative 值为-6,否定标志。",
+"initial value": "-10""initial value": "-6"
+  },
+  {
+}"constant name": "肯定标志",
+}"comment": "-5 grsiAffirm 值为-5,肯定标志。",
+}"initial value": "-5"
+  },
+  {
+nstant name": "非空偏差平方和""constant name": "未选中3D",
+nstant name": "非空偏差平方和""comment": "-4 grsi3DUnchecked 值为-4,3D形式的非选中标志。",
+nstant name": "非空偏差平方和""initial value": "-4"
+  },
+  {
+"comment": "-5 grsiAffirm 值为-5,肯定标志。""constant name": "选中3D",
+"comment": "-5 grsiAffirm 值为-5,肯定标志。""comment": "-3 grsi3DChecked 值为-3,3D形式的选中标志。",
+"comment": "-5 grsiAffirm 值为-5,肯定标志。""initial value": "-3"
+  },
+  {
+}"constant name": "未选中",
+}"comment": "-2 grsiUnchecked 值为-2,非选中标志。",
+}"initial value": "-2"
+  },
+  {
+stant name": "非空偏差平方和""comment": "-4 grsi3DUnchecked 值为-4,3D形式的非选中标志。""constant name": "选中",
+stant name": "非空偏差平方和""comment": "-4 grsi3DUnchecked 值为-4,3D形式的非选中标志。""comment": "-1 grsiChecked 值为-1,选中标志。",
+stant name": "非空偏差平方和""comment": "-4 grsi3DUnchecked 值为-4,3D形式的非选中标志。""initial value": "-1"
+  }
+
+]
+ },
+ {
+
+"class name": "导出图像类型枚举",
+
+"comment": "GRExportImageType 指定在导出图像文件时可用的各种图像格式。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"constant name": "BMP图",
+"comment": "greitBMP Bitmap 位图图像格式。",
+"initial value": "1"
+  },
+  {
+comment": "greitBMP Bitmap 位图图像格式。""constant name": "PNG图",
+comment": "greitBMP Bitmap 位图图像格式。""comment": "greitPNG PNG 图像格式。",
+comment": "greitBMP Bitmap 位图图像格式。""initial value": "2"
+  },
+  {
+omment": "greitBMP Bitmap 位图图像格式。""initial value": "2""constant name": "JPEG图",
+omment": "greitBMP Bitmap 位图图像格式。""initial value": "2""comment": "greitJPEG JPEG 图像格式。",
+omment": "greitBMP Bitmap 位图图像格式。""initial value": "2""initial value": "3"
+  },
+  {
+
+"constant name": "GIF图",
+
+"comment": "GIF 图像格式，还未实现",
+
+"initial value": "4"
+  },
+  {
+tant name": "非空偏差平方和""comment": "-4 grsi3DUnchecked 值为-4,3D形式的非选中标志。""initial value": "-1""constant name": "TIFF图",
+tant name": "非空偏差平方和""comment": "-4 grsi3DUnchecked 值为-4,3D形式的非选中标志。""initial value": "-1""comment": "greitTIFF TIFF 图像格式。",
+tant name": "非空偏差平方和""comment": "-4 grsi3DUnchecked 值为-4,3D形式的非选中标志。""initial value": "-1""initial value": "5"
+  }
+
+]
+ },
+ {
+
+"class name": "导出类型枚举",
+
+"comment": "GRExportType 指定数据导出的类型。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+
+"constant name": "导出XLS",
+
+"comment": "1 gretXLS 导出Excel文件。",
+
+"initial value": "1"
+  },
+  {
+nstant name": "导出XLS""constant name": "导出TXT",
+nstant name": "导出XLS""comment": "2 gretTXT 导出文本文件。",
+nstant name": "导出XLS""initial value": "2"
+  },
+  {
+}"constant name": "导出HTM",
+}"comment": "3 gretHTM 导出Html超文本文件。",
+}"initial value": "3"
+  },
+  {
+}"constant name": "导出RTF",
+}"comment": "4 gretRTF 导出RTF文件。",
+}"initial value": "4"
+  },
+  {
+"initial value": "4""constant name": "导出PDF",
+"initial value": "4""comment": "5 gretPDF 导出PDF格式文件。",
+"initial value": "4""initial value": "5"
+  },
+  {
+nstant name": "导出HTM""constant name": "导出CSV",
+nstant name": "导出HTM""comment": "6 gretCSV 导出CSV格式文件。",
+nstant name": "导出HTM""initial value": "6"
+  },
+  {
+}"constant name": "导出IMG",
+}"comment": "7 gretIMG 导出图像文件，支持多种图像格式。",
+}"initial value": "7"
+  }
+
+]
+ },
+ {
+"class name": "PDF安全限制项枚举",
+"comment": "GRPDFDocPermission 指定PDF文档的安全性限制类型。",
+"@常量类": "整数",
+"constants": [
+  {
+stant name": "导出HTM""comment": "6 gretCSV 导出CSV格式文件。""constant name": "允许打印",
+stant name": "导出HTM""comment": "6 gretCSV 导出CSV格式文件。""comment": "1 grpdpPrint 是否允许打印。",
+stant name": "导出HTM""comment": "6 gretCSV 导出CSV格式文件。""initial value": "1"
+  },
+  {
+"comment": "7 gretIMG 导出图像文件，支持多种图像格式。""constant name": "允许更改文档",
+"comment": "7 gretIMG 导出图像文件，支持多种图像格式。""comment": "2 grpdpEditAll 是否允许完整修改文档。",
+"comment": "7 gretIMG 导出图像文件，支持多种图像格式。""initial value": "2"
+  },
+  {
+}"constant name": "允许复制内容",
+}"comment": "3 grpdpCopy 是否允许复制文档内容。",
+}"initial value": "3"
+  },
+  {
+nstant name": "导出IMG""constant name": "允许编辑",
+nstant name": "导出IMG""comment": "4 grpdpEdit 是否允许修改文档。",
+nstant name": "导出IMG""initial value": "4"
+  }
+]
+ },
+ {
+
+"class name": "打印旋转枚举",
+
+"comment": "GRDrawRotation 目前仅用于打印输出时指定旋转角度。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+ass name": "打印旋转枚举""constant name": "不旋转",
+ass name": "打印旋转枚举""comment": "0 grprRotate0",
+ass name": "打印旋转枚举""initial value": "0"
+  },
+  {
+nt name": "导出IMG""constant name": "允许编辑""constant name": "旋转90度",
+nt name": "导出IMG""constant name": "允许编辑""comment": "1 grprRotate90",
+nt name": "导出IMG""constant name": "允许编辑""initial value": "1"
+  },
+  {
+ss name": "打印旋转枚举""initial value": "0""constant name": "旋转180度",
+ss name": "打印旋转枚举""initial value": "0""comment": "2 grprRotate180",
+ss name": "打印旋转枚举""initial value": "0""initial value": "2"
+  },
+  {
+
+"constant name": "旋转270度",
+
+"comment": "3 grprRotate270",
+
+"initial value": "3"
+  }
+
+]
+ },
+ {
+"class name": "双面打印方式枚举",
+"comment": "GRDuplexKind 表示报表对双面打印的应用方式。",
+"@常量类": "整数",
+"constants": [
+  {
+s name": "打印旋转枚举""initial value": "0""comment": "2 grprRotate180""constant name": "默认",
+s name": "打印旋转枚举""initial value": "0""comment": "2 grprRotate180""comment": "0 grdkDefault 打印机默认的双面打印设置。",
+s name": "打印旋转枚举""initial value": "0""comment": "2 grprRotate180""initial value": "0"
+  },
+  {
+constants": [
+"constant name": "单面打印",
+constants": [
+"comment": "1 grdkSimplex 单面打印。",
+constants": [
+"initial value": "1"
+  },
+  {
+nstant name": "导出RTF""constant name": "双面垂直打印",
+nstant name": "导出RTF""comment": "2 grdkVertical 双面垂直打印。",
+nstant name": "导出RTF""initial value": "2"
+  },
+  {
+}"constant name": "双面水平打印",
+}"comment": "3 grdkHorizontal 双面水平打印。",
+}"initial value": "3"
+  }
+]
+ },
+ {
+
+"class name": "纸张方向枚举",
+
+"comment": "GRPaperOrientation 指定生成打印页面时在纸张中的输出方向。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+}"constant name": "默认",
+}"comment": "0 grpoDefault 应用打印机当前设置的纸张输出方向",
+}"initial value": "0"
+  },
+  {
+
+"constant name": "纵向",
+
+"comment": "1 grpoPortrait 纸张输出方向为纵向。",
+
+"initial value": "1"
+  },
+  {
+nstant name": "纵向""constant name": "横向",
+nstant name": "纵向""comment": "2 grpoLandscape 纸张输出方向为横向。",
+nstant name": "纵向""initial value": "2"
+  }
+
+]
+ },
+ {
+"class name": "纸张来源枚举",
+"comment": "GRPaperSourceKind 指定打印机的各种纸张来源方式。",
+"@常量类": "整数",
+"constants": [
+  {
+constants": [
+"constant name": "默认",
+constants": [
+"comment": "grpskDefault 打印机默认。",
+constants": [
+"initial value": "0"
+  },
+  {
+nstant name": "默认""constant name": "上部纸盒",
+nstant name": "默认""comment": "grpskUpper 打印机的上层纸盒(如果打印机只有一个纸盒,那么这个纸盒就是上层纸盒)。",
+nstant name": "默认""initial value": "1"
+  },
+  {
+}"constant name": "下部纸盒",
+}"comment": "grpskLower 打印机的下层纸盒。",
+}"initial value": "2"
+  },
+  {
+}"constant name": "中部纸盒",
+}"comment": "grpskMiddle 打印机的中层纸盒。",
+}"initial value": "3"
+  },
+  {
+}"constant name": "手动送纸器",
+}"comment": "grpskManual 以手动方式送入的纸张。",
+}"initial value": "4"
+  },
+  {
+tants": [
+"constant name": "默认""constant name": "信封纸盒",
+tants": [
+"constant name": "默认""comment": "grpskEnvelope 信封。",
+tants": [
+"constant name": "默认""initial value": "5"
+  },
+  {
+"comment": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器",
+"comment": "1 grpoPortrait 纸张输出方向为纵向。""comment": "grpskManualFeed 以手动方式送入的信封。",
+"comment": "1 grpoPortrait 纸张输出方向为纵向。""initial value": "6"
+  },
+  {
+nstant name": "导出RTF""constant name": "自动选择",
+nstant name": "导出RTF""comment": "grpskAutomaticFeed 自动送入的纸张。",
+nstant name": "导出RTF""initial value": "7"
+  },
+  {
+}"constant name": "跟踪送纸器",
+}"comment": "grpskTractorFeed 牵引器送纸。",
+}"initial value": "8"
+  },
+  {
+"comment": "grpskTractorFeed 牵引器送纸。""constant name": "小号纸盒",
+"comment": "grpskTractorFeed 牵引器送纸。""comment": "grpskSmallFormat 小纸。",
+"comment": "grpskTractorFeed 牵引器送纸。""initial value": "9"
+  },
+  {
+
+"constant name": "大号纸盒",
+
+"comment": "grpskLargeFormat 大纸。",
+
+"initial value": "10"
+  },
+  {
+comment": "grpskTractorFeed 牵引器送纸。""comment": "grpskSmallFormat 小纸。""constant name": "大容量纸盒",
+comment": "grpskTractorFeed 牵引器送纸。""comment": "grpskSmallFormat 小纸。""comment": "grpskLargeCapacity 打印机的大容量纸盒。",
+comment": "grpskTractorFeed 牵引器送纸。""comment": "grpskSmallFormat 小纸。""initial value": "11"
+  },
+  {
+"initial value": "8""constant name": "磁带纸盒",
+"initial value": "8""comment": "grpskCassette 卡式纸盒。",
+"initial value": "8""initial value": "14"
+  },
+  {
+
+"constant name": "格式源纸盒",
+
+"comment": "grpskFormSource 打印机的默认送纸盒。",
+
+"initial value": "15"
+  },
+  {
+"comment": "grpskFormSource 打印机的默认送纸盒。""constant name": "自定义纸盒",
+"comment": "grpskFormSource 打印机的默认送纸盒。""comment": "grpskCustom 打印机特定的纸张来源。",
+"comment": "grpskFormSource 打印机的默认送纸盒。""initial value": "256"
+  }
+]
+ },
+ {
+"comment": "grpskTractorFeed 牵引器送纸。""class name": "标准纸张类型枚举",
+"comment": "grpskTractorFeed 牵引器送纸。""comment": "PaperSize GRPaperKind 参考Windows SDK中DEVMODE的成员dmPaperSize的说明。",
+"comment": "grpskTractorFeed 牵引器送纸。""@常量类": "整数",
+"comment": "grpskTractorFeed 牵引器送纸。""constants": [
+  {
+ment": "grpskFormSource 打印机的默认送纸盒。""constant name": "自定义纸盒""constant name": "Default",
+ment": "grpskFormSource 打印机的默认送纸盒。""constant name": "自定义纸盒""comment": "默认纸张设置",
+ment": "grpskFormSource 打印机的默认送纸盒。""constant name": "自定义纸盒""initial value": "255"
+  },
+  {
+
+"constant name": "Custom",
+
+"comment": "其中256代表自定义纸张，但定义为自定义纸张时，可以设置纸张宽度与长度属性指定打印纸张的大小。",
+
+"initial value": "256"
+  },
+  {
+ment": "grpskTractorFeed 牵引器送纸。""class name": "标准纸张类型枚举""constant name": "Letter",
+ment": "grpskTractorFeed 牵引器送纸。""class name": "标准纸张类型枚举""comment": "Letter 1",
+ment": "grpskTractorFeed 牵引器送纸。""class name": "标准纸张类型枚举""initial value": "1"
+  },
+  {
+}"constant name": "LetterSmall",
+}"comment": "LetterSmall 2",
+}"initial value": "2"
+  },
+  {
+}"constant name": "Tabloid",
+}"comment": "Tabloid 3",
+}"initial value": "3"
+  },
+  {
+nstant name": "LetterSmall""constant name": "Ledger",
+nstant name": "LetterSmall""comment": "Ledger 4",
+nstant name": "LetterSmall""initial value": "4"
+  },
+  {
+
+"constant name": "Legal",
+
+"comment": "Legal 5",
+
+"initial value": "5"
+  },
+  {
+
+"constant name": "Statement",
+
+"comment": "Statement 6",
+
+"initial value": "6"
+  },
+  {
+nstant name": "Legal""constant name": "Executive",
+nstant name": "Legal""comment": "Executive 7",
+nstant name": "Legal""initial value": "7"
+  },
+  {
+}"constant name": "A3",
+}"comment": "A3 8",
+}"initial value": "8"
+  },
+  {
+nstant name": "A3""constant name": "A4",
+nstant name": "A3""comment": "A4 9",
+nstant name": "A3""initial value": "9"
+  },
+  {
+ment": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""constant name": "A4Small",
+ment": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "A4Small 10",
+ment": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "10"
+  },
+  {
+nstant name": "A3""constant name": "A5",
+nstant name": "A3""comment": "A5 11",
+nstant name": "A3""initial value": "11"
+  },
+  {
+}"constant name": "A6",
+}"comment": "A6 70",
+}"initial value": "70"
+  },
+  {
+
+"constant name": "B4",
+
+"comment": "B4 12",
+
+"initial value": "12"
+  },
+  {
+"comment": "A3 8""constant name": "B5",
+"comment": "A3 8""comment": "B5 13",
+"comment": "A3 8""initial value": "13"
+  },
+  {
+"initial value": "70""constant name": "B6",
+"initial value": "70""comment": "B6 88",
+"initial value": "70""initial value": "88"
+  },
+  {
+}"constant name": "Folio",
+}"comment": "Folio 14",
+}"initial value": "14"
+  },
+  {
+
+"constant name": "Quarto",
+
+"comment": "Quarto 15",
+
+"initial value": "15"
+  },
+  {
+ment": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""constant name": "L10X14",
+ment": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16",
+ment": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16"
+  },
+  {
+
+"constant name": "L11X17",
+
+"comment": "11X17 17",
+
+"initial value": "17"
+  },
+  {
+ent": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""constant name": "L12X11",
+ent": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""comment": "12X11 90",
+ent": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""initial value": "90"
+  },
+  {
+}"constant name": "Note",
+}"comment": "Note 18",
+}"initial value": "18"
+  },
+  {
+stant name": "A3""comment": "A5 11""constant name": "CSheet",
+stant name": "A3""comment": "A5 11""comment": "CSheet 24",
+stant name": "A3""comment": "A5 11""initial value": "24"
+  },
+  {
+
+"constant name": "DSheet",
+
+"comment": "DSheet 25",
+
+"initial value": "25"
+  },
+  {
+tant name": "A3""comment": "A5 11""comment": "CSheet 24""constant name": "ESheet",
+tant name": "A3""comment": "A5 11""comment": "CSheet 24""comment": "ESheet 26",
+tant name": "A3""comment": "A5 11""comment": "CSheet 24""initial value": "26"
+  },
+  {
+ent": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9",
+ent": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""comment": "Envelope9 19",
+ent": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""initial value": "19"
+  },
+  {
+"comment": "DSheet 25""constant name": "Envelope10",
+"comment": "DSheet 25""comment": "Envelope10 20",
+"comment": "DSheet 25""initial value": "20"
+  },
+  {
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""constant name": "Envelope11",
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""comment": "Envelope11 21",
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""initial value": "21"
+  },
+  {
+comment": "DSheet 25""initial value": "20""constant name": "Envelope12",
+comment": "DSheet 25""initial value": "20""comment": "Envelope12 22",
+comment": "DSheet 25""initial value": "20""initial value": "22"
+  },
+  {
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""constant name": "Envelope14",
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""comment": "Envelope14 23",
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""initial value": "23"
+  },
+  {
+ent": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "EnvelopeC5",
+ent": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""comment": "EnvelopeC5 28",
+ent": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""initial value": "28"
+  },
+  {
+}"constant name": "EnvelopeC3",
+}"comment": "EnvelopeC3 29",
+}"initial value": "29"
+  },
+  {
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""constant name": "EnvelopeC4",
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""comment": "EnvelopeC4 30",
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""initial value": "30"
+  },
+  {
+}"constant name": "EnvelopeC6",
+}"comment": "EnvelopeC6 31",
+}"initial value": "31"
+  },
+  {
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""constant name": "EnvelopeC65",
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""comment": "EnvelopeC65 32",
+: "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""comment": "10X14 16""constant name": "Envelope9""initial value": "32"
+  },
+  {
+}"constant name": "EnvelopeB4",
+}"comment": "EnvelopeB4 33",
+}"initial value": "33"
+  },
+  {
+
+"constant name": "EnvelopeB5",
+
+"comment": "EnvelopeB5 34",
+
+"initial value": "34"
+  },
+  {
+"initial value": "34""constant name": "EnvelopeB6",
+"initial value": "34""comment": "EnvelopeB6 35",
+"initial value": "34""initial value": "35"
+  },
+  {
+initial value": "34""initial value": "35""constant name": "EnvelopeDL",
+initial value": "34""initial value": "35""comment": "EnvelopeDL 27",
+initial value": "34""initial value": "35""initial value": "27"
+  },
+  {
+nitial value": "34""initial value": "35""comment": "EnvelopeDL 27""constant name": "EnvelopeItaly",
+nitial value": "34""initial value": "35""comment": "EnvelopeDL 27""comment": "EnvelopeItaly 36",
+nitial value": "34""initial value": "35""comment": "EnvelopeDL 27""initial value": "36"
+  },
+  {
+
+"constant name": "EnvelopeMonarch",
+
+"comment": "EnvelopeMonarch 37",
+
+"initial value": "37"
+  },
+  {
+nstant name": "EnvelopeMonarch""constant name": "EnvelopePersonal",
+nstant name": "EnvelopeMonarch""comment": "EnvelopePersonal 38",
+nstant name": "EnvelopeMonarch""initial value": "38"
+  },
+  {
+"comment": "EnvelopeMonarch 37""constant name": "Fanfold",
+"comment": "EnvelopeMonarch 37""comment": "Fanfold 39",
+"comment": "EnvelopeMonarch 37""initial value": "39"
+  },
+  {
+comment": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "P16K",
+comment": "EnvelopeMonarch 37""comment": "Fanfold 39""comment": "P16K 93",
+comment": "EnvelopeMonarch 37""comment": "Fanfold 39""initial value": "93"
+  },
+  {
+nitial value": "34""initial value": "35""comment": "EnvelopeDL 27""constant name": "P32K",
+nitial value": "34""initial value": "35""comment": "EnvelopeDL 27""comment": "P32K 94",
+nitial value": "34""initial value": "35""comment": "EnvelopeDL 27""initial value": "94"
+  }
+"comment": "grpskTractorFeed 牵引器送纸。"]
+ },
+ {
+nstant name": "EnvelopeB5""class name": "鼠标键枚举",
+nstant name": "EnvelopeB5""comment": "GRMouseButton 指定鼠标按钮",
+nstant name": "EnvelopeB5""@常量类": "整数",
+nstant name": "EnvelopeB5""constants": [
+  {
+comment": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键",
+comment": "EnvelopeMonarch 37""comment": "Fanfold 39""comment": "grmbLeft",
+comment": "EnvelopeMonarch 37""comment": "Fanfold 39""initial value": "1"
+  },
+  {
+ent": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键""constant name": "右键",
+ent": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键""comment": "grmbRight",
+ent": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键""initial value": "2"
+  },
+  {
+comment": "EnvelopeMonarch 37""initial value": "39""constant name": "中键",
+comment": "EnvelopeMonarch 37""initial value": "39""comment": "grmbMiddle",
+comment": "EnvelopeMonarch 37""initial value": "39""initial value": "3"
+  }
+nstant name": "EnvelopeB5"]
+ },
+ {
+nt": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""initial value": "90""class name": "功能键枚举",
+nt": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""initial value": "90""comment": "GRShiftStates 在鼠标与键盘事件中，指定事件触发时鼠标与键盘的状态。",
+nt": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""initial value": "90""@常量类": "整数",
+nt": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""initial value": "90""constants": [
+  {
+ent": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键""constant name": "功能键Shift",
+ent": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键""comment": "grssShift 指示键盘‘Shift’键按下标志。",
+ent": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键""initial value": "1"
+  },
+  {
+t": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""initial value": "90""@常量类": "整数""constant name": "功能键Alt",
+t": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""initial value": "90""@常量类": "整数""comment": "grssAlt 指示键盘‘Alt’键按下标志。",
+t": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""initial value": "90""@常量类": "整数""initial value": "2"
+  },
+  {
+tant name": "EnvelopeB5"]"constant name": "功能键Ctrl",
+tant name": "EnvelopeB5"]"comment": "grssCtrl 指示键盘‘Ctrl’键按下标志。",
+tant name": "EnvelopeB5"]"initial value": "4"
+  },
+  {
+"comment": "grpskTractorFeed 牵引器送纸。""constant name": "鼠标左键",
+"comment": "grpskTractorFeed 牵引器送纸。""comment": "grssLeft 指示鼠标左键按下标志。",
+"comment": "grpskTractorFeed 牵引器送纸。""initial value": "8"
+  },
+  {
+nt": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键""initial value": "1""constant name": "鼠标右键",
+nt": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键""initial value": "1""comment": "grssRight 指示鼠标右键按下标志。",
+nt": "EnvelopeMonarch 37""comment": "Fanfold 39""constant name": "左键""initial value": "1""initial value": "16"
+  },
+  {
+
+"constant name": "鼠标中键",
+
+"comment": "grssMiddle 指示鼠标中键按下标志。",
+
+"initial value": "32"
+  },
+  {
+
+"constant name": "鼠标双击",
+
+"comment": "grssDouble 指示鼠标双击标志。",
+
+"initial value": "64"
+  }
+nt": "1 grpoPortrait 纸张输出方向为纵向。""constant name": "手动信封送纸器""initial value": "16""initial value": "90"]
+ },
+ {
+}"class name": "显示器边框样式枚举",
+}"comment": "GRViewerBorderStyle 查询显示器和打印显示器公用",
+}"@常量类": "整数",
+}"constants": [
+  {
+}"constant name": "固定3D",
+}"initial value": "1"
+  },
+  {
+ass name": "显示器边框样式枚举""constant name": "固定单边",
+ass name": "显示器边框样式枚举""initial value": "2"
+  },
+  {
+}"constant name": "无",
+}"initial value": "3"
+  }
+}]
+ },
+ {
+"class name": "查看模式枚举",
+"comment": "GRPrintViewMode 在打印预览查看器中，指定查看模式。",
+"@常量类": "整数",
+"constants": [
+  {
+comment": "GRPrintViewMode 在打印预览查看器中，指定查看模式。""constant name": "连续",
+comment": "GRPrintViewMode 在打印预览查看器中，指定查看模式。""comment": "打印显示器显示模式 连续页模式，所有页面按顺序在垂直方向上显示，通过垂直滚动可以连续察看。",
+comment": "GRPrintViewMode 在打印预览查看器中，指定查看模式。""initial value": "1"
+  },
+  {
+@常量类": "整数""constant name": "单页",
+@常量类": "整数""comment": "打印显示器显示模式 单页模式，只在打印预览窗口中显示一页打印页面。",
+@常量类": "整数""initial value": "2"
+  },
+  {
+
+"constant name": "多页",
+
+"comment": "打印显示器显示模式 多页模式，在打印预览窗口中同时显示多页打印页面。",
+
+"initial value": "3"
+  }
+]
+ },
+ {
+}"class name": "预览编辑模式枚举",
+}"comment": "GRPreviewEditMode 指定报表预览时文字的即时编辑模式。",
+}"@常量类": "整数",
+}"constants": [
+  {
+"constant name": "禁用",
+"comment": "grpemDisable 不开启文字编辑功能。 ",
+"initial value": "1"
+  },
+  {
+"constants": [
+"constant name": "单击编辑",
+"constants": [
+"comment": "grpemClickToEdit 单击文字进行即时编辑。 ",
+"constants": [
+"initial value": "2"
+  },
+  {
+initial value": "1""constant name": "双击编辑",
+initial value": "1""comment": "grpemDblClickToEdit 双击文字进行即时编辑。 ",
+initial value": "1""initial value": "3"
+  }
+}]
+ },
+ {
+comment": "grpemDisable 不开启文字编辑功能。 ""class name": "打印显示器选项枚举",
+comment": "grpemDisable 不开启文字编辑功能。 ""comment": "GRPrintViewerOption  指定打印显示器某个选项参数",
+comment": "grpemDisable 不开启文字编辑功能。 ""@常量类": "整数",
+comment": "grpemDisable 不开启文字编辑功能。 ""constants": [
+  {
+}"constant name": "显示控制菜单",
+}"comment": "grpvoShowContentMenu 显示弹出式关联菜单。 ",
+}"initial value": "1"
+  },
+  {
+}"constant name": "双击切换视图模式",
+}"comment": "grpvoDblClickSwitchViewMode 鼠标双击切换查看方式。 ",
+}"initial value": "2"
+  }
+comment": "grpemDisable 不开启文字编辑功能。 "]
+ },
+ {
+}"class name": "查询显示器选项枚举",
+}"comment": "GRDisplayViewerOption  指定查询显示器某个选项参数",
+}"@常量类": "整数",
+}"constants": [
+  {
+"initial value": "2""constant name": "显示控制菜单",
+"initial value": "2""comment": "查询显示器右键菜单",
+"initial value": "2""initial value": "1"
+  }
+}]
+ },
+ {
+"initial value": "2""class name": "打印显示器按钮枚举",
+"initial value": "2""comment": "GRToolControlType 指定打印显示器控件中工具栏上的按钮、编辑框与组合框的类型。",
+"initial value": "2""@常量类": "整数",
+"initial value": "2""constants": [
+  {
+
+"constant name": "分隔",
+
+"comment": "1 grtctSep 指定分隔空隙 ",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "打印设置",
+
+"comment": "2 grtctPrint 指定打印设置按钮 ",
+
+"initial value": "2"
+  },
+  {
+initial value": "2""constants": [
+"constant name": "页面设置",
+initial value": "2""constants": [
+"comment": "3 grtctPageSetup 指定页面设置按钮 ",
+initial value": "2""constants": [
+"initial value": "3"
+  },
+  {
+}"constant name": "打印机设置",
+}"comment": "4 grtctPrinterSetup 指定打印机设置按钮",
+}"initial value": "4"
+  },
+  {
+"initial value": "1""constant name": "导出",
+"initial value": "1""comment": "5 grtctExport 指定数据导出按钮（数据导出多种格式文件功能的下拉菜单项主按钮，本身不会产生事件）",
+"initial value": "1""initial value": "5"
+  },
+  {
+"@常量类": "整数""constant name": "邮件",
+"@常量类": "整数""comment": "6 grtctMail 指定发送邮件按钮（导出多种格式文件并发送邮件功能的下拉菜单项主按钮，本身不会产生事件）",
+"@常量类": "整数""initial value": "6"
+  },
+  {
+}"constant name": "保存报表文档",
+}"comment": "7 grtctSaveDocument 指定保存为 Grid++Report 文档文件按钮",
+}"initial value": "7"
+  },
+  {
+"initial value": "7""constant name": "连续",
+"initial value": "7""comment": "8 grtctContinuousPage 指定连续页查看模式按钮",
+"initial value": "7""initial value": "8"
+  },
+  {
+}"constant name": "单页",
+}"comment": "9 grtctSinglePage 指定单页查看模式按钮 ",
+}"initial value": "9"
+  },
+  {
+initial value": "1""initial value": "5""constant name": "多页",
+initial value": "1""initial value": "5""comment": "10 grtctMultiPage 指定多页查看模式按钮",
+initial value": "1""initial value": "5""initial value": "10"
+  },
+  {
+
+"constant name": "放大",
+
+"comment": "11 grtctZoomIn 指定放大显示比例按钮 ",
+
+"initial value": "11"
+  },
+  {
+
+"constant name": "缩小",
+
+"comment": "12 grtctZoomOut 指定缩小显示比例按钮 ",
+
+"initial value": "12"
+  },
+  {
+initial value": "1""initial value": "5""constant name": "缩放百分比",
+initial value": "1""initial value": "5""comment": "13 grtctZoomPercent 指定显示百分比下拉列表组合框 ",
+initial value": "1""initial value": "5""initial value": "13"
+  },
+  {
+nstant name": "打印机设置""constant name": "上一页",
+nstant name": "打印机设置""comment": "14 grtctPriorPage 指定前一页按钮 ",
+nstant name": "打印机设置""initial value": "14"
+  },
+  {
+
+"constant name": "下一页",
+
+"comment": "15 grtctNextPage 指定后一页按钮 ",
+
+"initial value": "15"
+  },
+  {
+stant name": "打印机设置""initial value": "14""constant name": "首页",
+stant name": "打印机设置""initial value": "14""comment": "16 grtctFirstPage 指定首页按钮 ",
+stant name": "打印机设置""initial value": "14""initial value": "16"
+  },
+  {
+
+"constant name": "尾页",
+
+"comment": "17 grtctLastPage 指定尾页按钮 ",
+
+"initial value": "17"
+  },
+  {
+"comment": "4 grtctPrinterSetup 指定打印机设置按钮""constant name": "当前页号",
+"comment": "4 grtctPrinterSetup 指定打印机设置按钮""comment": "18 grtctCurPageNo 指定当前显示页编辑框 ",
+"comment": "4 grtctPrinterSetup 指定打印机设置按钮""initial value": "18"
+  },
+  {
+nt name": "打印机设置""constant name": "上一页""constant name": "关闭",
+nt name": "打印机设置""constant name": "上一页""comment": "19 grtctClose 指定关闭按钮 ",
+nt name": "打印机设置""constant name": "上一页""initial value": "19"
+  },
+  {
+nstant name": "尾页""constant name": "剪切",
+nstant name": "尾页""comment": "20 grtctClip 指定内容复制粘贴按钮组合，包含3个按钮：鼠标拖动、鼠标选定、复制到剪贴板",
+nstant name": "尾页""initial value": "20"
+  },
+  {
+nitial value": "1""initial value": "5""comment": "13 grtctZoomPercent 指定显示百分比下拉列表组合框 ""constant name": "刷新",
+nitial value": "1""initial value": "5""comment": "13 grtctZoomPercent 指定显示百分比下拉列表组合框 ""comment": "21 grtctRefresh 指定刷新按钮 ",
+nitial value": "1""initial value": "5""comment": "13 grtctZoomPercent 指定显示百分比下拉列表组合框 ""initial value": "21"
+  },
+  {
+initial value": "7""comment": "8 grtctContinuousPage 指定连续页查看模式按钮""constant name": "书签",
+initial value": "7""comment": "8 grtctContinuousPage 指定连续页查看模式按钮""comment": "22 grtctBookmark 指定书签按钮 ",
+initial value": "7""comment": "8 grtctContinuousPage 指定连续页查看模式按钮""initial value": "22"
+  },
+  {
+
+"constant name": "导出XLS文件",
+
+"comment": "50 grtctExportXLS 指定导出 Excel 菜单项 ",
+
+"initial value": "50"
+  },
+  {
+}"constant name": "导出TXT文件",
+}"comment": "51 grtctExportTXT 指定导出 Text 菜单项 ",
+}"initial value": "51"
+  },
+  {
+"comment": "51 grtctExportTXT 指定导出 Text 菜单项 ""constant name": "导出HTM文件",
+"comment": "51 grtctExportTXT 指定导出 Text 菜单项 ""comment": "52 grtctExportHTM 指定导出 html 菜单项 ",
+"comment": "51 grtctExportTXT 指定导出 Text 菜单项 ""initial value": "52"
+  },
+  {
+nstant name": "导出XLS文件""constant name": "导出RTF文件",
+nstant name": "导出XLS文件""comment": "53 grtctExportRTF 指定导出 RTF 菜单项 ",
+nstant name": "导出XLS文件""initial value": "53"
+  },
+  {
+nt name": "导出XLS文件""constant name": "导出RTF文件""constant name": "导出PDF文件",
+nt name": "导出XLS文件""constant name": "导出RTF文件""comment": "54 grtctExportPDF 指定导出 PDF 菜单项 ",
+nt name": "导出XLS文件""constant name": "导出RTF文件""initial value": "54"
+  },
+  {
+
+"constant name": "导出CSV文件",
+
+"comment": "55 grtctExportCSV 指定导出 CSV 菜单项 ",
+
+"initial value": "55"
+  },
+  {
+ment": "51 grtctExportTXT 指定导出 Text 菜单项 ""constant name": "导出HTM文件""constant name": "导出IMG文件",
+ment": "51 grtctExportTXT 指定导出 Text 菜单项 ""constant name": "导出HTM文件""comment": "56 grtctExportIMG 指定导出图像菜单项 ",
+ment": "51 grtctExportTXT 指定导出 Text 菜单项 ""constant name": "导出HTM文件""initial value": "56"
+  },
+  {
+}"constant name": "导出XLS文件按钮",
+}"comment": "60 grtctExportXLSBtn 指定导出 Excel 按钮 ",
+}"initial value": "60"
+  },
+  {
+"comment": "60 grtctExportXLSBtn 指定导出 Excel 按钮 ""constant name": "导出PDF文件按钮",
+"comment": "60 grtctExportXLSBtn 指定导出 Excel 按钮 ""comment": "61 grtctExportPDFBtn 指定导出 PDF 按钮",
+"comment": "60 grtctExportXLSBtn 指定导出 Excel 按钮 ""initial value": "61"
+  },
+  {
+}"constant name": "邮件发送XLS文件",
+}"comment": "65 grtctMailXLS 指定导出 Excel 并发送Email菜单项 ",
+}"initial value": "65"
+  },
+  {
+}"constant name": "邮件发送TXT文件",
+}"comment": "66 grtctMailTXT 指定导出 Text 并发送Email菜单项 ",
+}"initial value": "66"
+  },
+  {
+"initial value": "66""constant name": "邮件发送HTM文件",
+"initial value": "66""comment": "67 grtctMailHTM 指定导出 html 并发送Email菜单项 ",
+"initial value": "66""initial value": "67"
+  },
+  {
+
+"constant name": "邮件发送RTF文件",
+
+"comment": "68 grtctMailRTF 指定导出 RTF 并发送Email菜单项",
+
+"initial value": "68"
+  },
+  {
+nstant name": "邮件发送XLS文件""constant name": "邮件发送PDF文件",
+nstant name": "邮件发送XLS文件""comment": "69 grtctMailPDF 指定导出 PDF 并发送Email菜单项 ",
+nstant name": "邮件发送XLS文件""initial value": "69"
+  },
+  {
+}"constant name": "邮件发送CSV文件",
+}"comment": "70 grtctMailCSV 指定导出 CSV 并发送Email菜单项 ",
+}"initial value": "70"
+  },
+  {
+"initial value": "70""constant name": "邮件发送IMG文件",
+"initial value": "70""comment": "71 grtctMailIMG 指定导出图像并发送Email菜单项 ",
+"initial value": "70""initial value": "71"
+  },
+  {
+
+"constant name": "邮件发送报表文档",
+
+"comment": "72 grtctMailSaveDocument 指定保存为 Grid++Report 文档并发送Email菜单项",
+
+"initial value": "72"
+  }
+"initial value": "2"]
+ },
+ {
+"comment": "65 grtctMailXLS 指定导出 Excel 并发送Email菜单项 ""class name": "查询显示器按钮枚举",
+"comment": "65 grtctMailXLS 指定导出 Excel 并发送Email菜单项 ""comment": "GRToolControlType2 指定报表查询显示器控件的工具栏中的各个按钮。",
+"comment": "65 grtctMailXLS 指定导出 Excel 并发送Email菜单项 ""@常量类": "整数",
+"comment": "65 grtctMailXLS 指定导出 Excel 并发送Email菜单项 ""constants": [
+  {
+}"constant name": "分隔",
+}"comment": "1 grdtctSep 指定分隔按钮",
+}"initial value": "1"
+  },
+  {
+
+"constant name": "打印设置",
+
+"comment": "2 grdtctPrint 指定打印设置按钮",
+
+"initial value": "2"
+  },
+  {
+nstant name": "打印设置""constant name": "页面设置",
+nstant name": "打印设置""comment": "3 grdtctPageSetup 指定打印页面设置按钮",
+nstant name": "打印设置""initial value": "3"
+  },
+  {
+stant name": "邮件发送XLS文件""comment": "69 grtctMailPDF 指定导出 PDF 并发送Email菜单项 ""constant name": "打印机设置",
+stant name": "邮件发送XLS文件""comment": "69 grtctMailPDF 指定导出 PDF 并发送Email菜单项 ""comment": "4 grdtctPrinterSetup 指定打印机设置按钮",
+stant name": "邮件发送XLS文件""comment": "69 grtctMailPDF 指定导出 PDF 并发送Email菜单项 ""initial value": "4"
+  },
+  {
+nt name": "打印设置""constant name": "页面设置""constant name": "导出",
+nt name": "打印设置""constant name": "页面设置""comment": "5 grdtctExport 指定数据导出按钮（数据导出多种格式文件功能的下拉菜单项主按钮，本身不会产生事件）",
+nt name": "打印设置""constant name": "页面设置""initial value": "5"
+  },
+  {
+"initial value": "72""constant name": "邮件",
+"initial value": "72""comment": "6 grdtctMail 指定邮件发送按钮（导出多种格式文件并发送邮件功能的下拉菜单项主按钮，本身不会产生事件）",
+"initial value": "72""initial value": "6"
+  },
+  {
+}"constant name": "保存报表文档",
+}"comment": "7 grdtctSaveDocument 指定保存打印文档按钮 ",
+}"initial value": "7"
+  },
+  {
+ment": "65 grtctMailXLS 指定导出 Excel 并发送Email菜单项 ""class name": "查询显示器按钮枚举""constant name": "上一页",
+ment": "65 grtctMailXLS 指定导出 Excel 并发送Email菜单项 ""class name": "查询显示器按钮枚举""comment": "14 grdtctPriorPage 指定上一页按钮",
+ment": "65 grtctMailXLS 指定导出 Excel 并发送Email菜单项 ""class name": "查询显示器按钮枚举""initial value": "14"
+  },
+  {
+"comment": "1 grdtctSep 指定分隔按钮""constant name": "下一页",
+"comment": "1 grdtctSep 指定分隔按钮""comment": "15 grdtctNextPage 指定下一页按钮",
+"comment": "1 grdtctSep 指定分隔按钮""initial value": "15"
+  },
+  {
+"initial value": "72""constant name": "首页",
+"initial value": "72""comment": "16 grdtctFirstPage 指定首页按钮",
+"initial value": "72""initial value": "16"
+  },
+  {
+
+"constant name": "尾页",
+
+"comment": "17 grdtctLastPage 指定最后页按钮",
+
+"initial value": "17"
+  },
+  {
+"initial value": "72""constant name": "当前页号",
+"initial value": "72""comment": "18 grdtctCurPageNo 指定页号编辑框",
+"initial value": "72""initial value": "18"
+  },
+  {
+
+"constant name": "关闭",
+
+"comment": "19 grdtctClose 指定关闭按钮",
+
+"initial value": "19"
+  },
+  {
+"comment": "1 grdtctSep 指定分隔按钮""constant name": "刷新",
+"comment": "1 grdtctSep 指定分隔按钮""comment": "21 grdtctRefresh 指定刷新按钮",
+"comment": "1 grdtctSep 指定分隔按钮""initial value": "21"
+  },
+  {
+nstant name": "关闭""constant name": "分页方式",
+nstant name": "关闭""comment": "25 grdtctDividePage 指定明细网格数据分页方式组合框与每页行数编辑框",
+nstant name": "关闭""initial value": "25"
+  },
+  {
+}"constant name": "查找文本框",
+}"comment": "30 grdtctFindTextBox 指定查找编辑框",
+}"initial value": "30"
+  },
+  {
+}"constant name": "查找按钮",
+}"comment": "31 grdtctFind 指定查找按钮",
+}"initial value": "31"
+  },
+  {
+}"constant name": "继续查找按钮",
+}"comment": "32 grdtctFindAgain 指定继续查找按钮",
+}"initial value": "32"
+  },
+  {
+comment": "1 grdtctSep 指定分隔按钮""initial value": "21""constant name": "显示查找对话框钮",
+comment": "1 grdtctSep 指定分隔按钮""initial value": "21""comment": "33 grdtctFindDlg 指定查找对话框按钮",
+comment": "1 grdtctSep 指定分隔按钮""initial value": "21""initial value": "33"
+  },
+  {
+
+"constant name": "打印预览",
+
+"comment": "40 grdtctPrintPreview 指定打印预览按钮",
+
+"initial value": "40"
+  },
+  {
+}"constant name": "打印应用布局",
+}"comment": "41 grdtctPostLayout 指定打印提交布局选取框",
+}"initial value": "41"
+  },
+  {
+}"constant name": "导出XLS文件",
+}"comment": "50 grdtctExportXLS 指定导出 Excel 菜单项",
+}"initial value": "50"
+  },
+  {
+"initial value": "50""constant name": "导出TXT文件",
+"initial value": "50""comment": "51 grdtctExportTXT 指定导出文本菜单项",
+"initial value": "50""initial value": "51"
+  },
+  {
+nstant name": "打印应用布局""constant name": "导出HTM文件",
+nstant name": "打印应用布局""comment": "52 grdtctExportHTM 指定导出 HTML 菜单项",
+nstant name": "打印应用布局""initial value": "52"
+  },
+  {
+}"constant name": "导出RTF文件",
+}"comment": "53 grdtctExportRTF 指定导出 RTF 菜单项",
+}"initial value": "53"
+  },
+  {
+"initial value": "53""constant name": "导出PDF文件",
+"initial value": "53""comment": "54 grdtctExportPDF 指定导出 PDF 菜单项",
+"initial value": "53""initial value": "54"
+  },
+  {
+
+"constant name": "导出CSV文件",
+
+"comment": "55 grdtctExportCSV 指定导出 CSV 菜单项",
+
+"initial value": "55"
+  },
+  {
+
+"constant name": "导出IMG文件",
+
+"comment": "56 grdtctExportIMG 指定导出图像菜单项",
+
+"initial value": "56"
+  },
+  {
+
+"constant name": "导出XLS文件按钮",
+
+"comment": "60 grdtctExportXLSBtn 指定导出 Excel 按钮",
+
+"initial value": "60"
+  },
+  {
+"comment": "32 grdtctFindAgain 指定继续查找按钮""constant name": "导出PDF文件按钮",
+"comment": "32 grdtctFindAgain 指定继续查找按钮""comment": "61 grdtctExportPDFBtn 指定导出 PDF 按钮",
+"comment": "32 grdtctFindAgain 指定继续查找按钮""initial value": "61"
+  },
+  {
+comment": "32 grdtctFindAgain 指定继续查找按钮""comment": "61 grdtctExportPDFBtn 指定导出 PDF 按钮""constant name": "邮件发送XLS文件",
+comment": "32 grdtctFindAgain 指定继续查找按钮""comment": "61 grdtctExportPDFBtn 指定导出 PDF 按钮""comment": "65 grdtctMailXLS 指定导出 Excel 并发送Email菜单项",
+comment": "32 grdtctFindAgain 指定继续查找按钮""comment": "61 grdtctExportPDFBtn 指定导出 PDF 按钮""initial value": "65"
+  },
+  {
+nstant name": "导出CSV文件""constant name": "邮件发送TXT文件",
+nstant name": "导出CSV文件""comment": "66 grdtctMailTXT 指定导出文本并发送Email菜单项",
+nstant name": "导出CSV文件""initial value": "66"
+  },
+  {
+stant name": "打印应用布局""comment": "52 grdtctExportHTM 指定导出 HTML 菜单项""constant name": "邮件发送HTM文件",
+stant name": "打印应用布局""comment": "52 grdtctExportHTM 指定导出 HTML 菜单项""comment": "67 grdtctMailHTM 指定导出 HTML 并发送Email菜单项",
+stant name": "打印应用布局""comment": "52 grdtctExportHTM 指定导出 HTML 菜单项""initial value": "67"
+  },
+  {
+comment": "32 grdtctFindAgain 指定继续查找按钮""initial value": "61""constant name": "邮件发送RTF文件",
+comment": "32 grdtctFindAgain 指定继续查找按钮""initial value": "61""comment": "68 grdtctMailRTF 指定导出 RTF 并发送Email菜单项",
+comment": "32 grdtctFindAgain 指定继续查找按钮""initial value": "61""initial value": "68"
+  },
+  {
+
+"constant name": "邮件发送PDF文件",
+
+"comment": "69 grdtctMailPDF 指定导出 PDF 并发送Email菜单项",
+
+"initial value": "69"
+  },
+  {
+"comment": "69 grdtctMailPDF 指定导出 PDF 并发送Email菜单项""constant name": "邮件发送CSV文件",
+"comment": "69 grdtctMailPDF 指定导出 PDF 并发送Email菜单项""comment": "70 grdtctMailCSV 指定导出 CSV 并发送Email菜单项",
+"comment": "69 grdtctMailPDF 指定导出 PDF 并发送Email菜单项""initial value": "70"
+  },
+  {
+
+"constant name": "邮件发送IMG文件",
+
+"comment": "71 grdtctMailIMG 指定导出图像并发送Email菜单项",
+
+"initial value": "71"
+  },
+  {
+
+"constant name": "列显示功能",
+
+"comment": "80 grdtctColumnVisible 指定打开列可见性设置对话框按钮",
+
+"initial value": "80"
+  }
+"comment": "65 grtctMailXLS 指定导出 Excel 并发送Email菜单项 "]
+ },
+ {
+"class name": "设计器窗口布局枚举",
+"comment": "GRDesignerWindowLayout 表示报表设计器的报表布局窗口在整个控件中的布局位置",
+"@常量类": "整数",
+"constants": [
+  {
+constants": [
+"constant name": "设计区居左",
+constants": [
+"comment": "grdwlLayoutAtLeft 设计区停靠在左边。 ",
+constants": [
+"initial value": "1"
+  },
+  {
+
+"constant name": "设计区居右",
+
+"comment": "grdwlLayoutAtRight 设计区停靠在右边。",
+
+"initial value": "2"
+  }
+]
+ },
+ {
+"initial value": "2""class name": "设计器属性项枚举",
+"initial value": "2""comment": "GRPropertyCategory  (用在“属性项”接口里是组合值，也可单一使用) 表示属性的组类别显示。",
+"initial value": "2""constants": [
+  {
+"comment": "grdwlLayoutAtRight 设计区停靠在右边。""constant name": "设计",
+"comment": "grdwlLayoutAtRight 设计区停靠在右边。""comment": "grpcDesign 设计属性组",
+"comment": "grdwlLayoutAtRight 设计区停靠在右边。""data type": "整数",
+"comment": "grdwlLayoutAtRight 设计区停靠在右边。""initial value": "1"
+  },
+  {
+
+"constant name": "布局",
+
+"comment": "grpcLayout 布局属性组",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+"comment": "55 grdtctExportCSV 指定导出 CSV 菜单项""constant name": "外观",
+"comment": "55 grdtctExportCSV 指定导出 CSV 菜单项""comment": "grpcAppearance 外观属性组",
+"comment": "55 grdtctExportCSV 指定导出 CSV 菜单项""data type": "整数",
+"comment": "55 grdtctExportCSV 指定导出 CSV 菜单项""initial value": "4"
+  },
+  {
+"initial value": "2""constant name": "数据",
+"initial value": "2""comment": "grpcData 数据属性组",
+"initial value": "2""data type": "整数",
+"initial value": "2""initial value": "8"
+  },
+  {
+}"constant name": "行为",
+}"comment": "grpcAction 行为属性组",
+}"data type": "整数",
+}"initial value": "16"
+  },
+  {
+"comment": "55 grdtctExportCSV 指定导出 CSV 菜单项""constant name": "脚本",
+"comment": "55 grdtctExportCSV 指定导出 CSV 菜单项""comment": "grpcEvent 事件脚本属性组",
+"comment": "55 grdtctExportCSV 指定导出 CSV 菜单项""data type": "整数",
+"comment": "55 grdtctExportCSV 指定导出 CSV 菜单项""initial value": "32"
+  },
+  {
+}"constant name": "其它",
+}"comment": "grpcMisc 其它杂项属性组",
+}"data type": "整数",
+}"initial value": "2048"
+  }
+"initial value": "2"]
+ },
+ {
+
+"class name": "设计器视图枚举",
+
+"comment": "GRDesignerViewMode  (组合值) 指示设计器的各种运行视图",
+
+"constants": [
+  {
+}"constant name": "普通视图",
+}"comment": "grvmInNormalDesign 指示设计器的各种运行视图之普通视图。",
+}"data type": "整数",
+}"initial value": "1"
+  },
+  {
+}"constant name": "页面视图",
+}"comment": "grvmInPageDesign 指示设计器的各种运行视图之页面视图。",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+"data type": "整数""constant name": "预览视图",
+"data type": "整数""comment": "grvmInPrint 指示设计器的各种运行视图之预览视图。",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "4"
+  },
+  {
+}"constant name": "查询视图",
+}"comment": "grvmInDisplay 指示设计器的各种运行视图之查询视图。",
+}"data type": "整数",
+}"initial value": "8"
+  },
+  {
+a type": "整数""constant name": "预览视图""constant name": "脚本",
+a type": "整数""constant name": "预览视图""comment": "grvmInScript (这个貌似没用)",
+a type": "整数""constant name": "预览视图""data type": "整数",
+a type": "整数""constant name": "预览视图""initial value": "16"
+  }
+
+]
+ },
+ {
+
+"class name": "设计器视图模式枚举",
+
+"comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"constants": [
+"constant name": "仅普通",
+"constants": [
+"comment": "grvsOnlyNormal",
+"constants": [
+"initial value": "1"
+  },
+  {
+ type": "整数""constant name": "预览视图""comment": "grvmInScript (这个貌似没用)""constant name": "仅页面",
+ type": "整数""constant name": "预览视图""comment": "grvmInScript (这个貌似没用)""comment": "grvsOnlyPage",
+ type": "整数""constant name": "预览视图""comment": "grvmInScript (这个貌似没用)""initial value": "2"
+  },
+  {
+}"constant name": "普通和页面",
+}"comment": "grvsNormalPage",
+}"initial value": "3"
+  },
+  {
+
+"constant name": "普通和预览",
+
+"comment": "grvsNomalPrint",
+
+"initial value": "5"
+  },
+  {
+}"constant name": "页面和预览",
+}"comment": "grvsPagePrint",
+}"initial value": "6"
+  },
+  {
+
+"constant name": "普通和页面及预览",
+
+"comment": "grvsNomalPagePrint",
+
+"initial value": "7"
+  },
+  {
+comment": "GRDesignerWindowLayout 表示报表设计器的报表布局窗口在整个控件中的布局位置""constant name": "普通和查询",
+comment": "GRDesignerWindowLayout 表示报表设计器的报表布局窗口在整个控件中的布局位置""comment": "原未公开组合，新增",
+comment": "GRDesignerWindowLayout 表示报表设计器的报表布局窗口在整个控件中的布局位置""initial value": "9"
+  },
+  {
+}"constant name": "页面和查询",
+}"comment": "原未公开组合，新增",
+}"initial value": "10"
+  },
+  {
+
+"constant name": "普通和页面及查询",
+
+"comment": "原未公开组合，新增",
+
+"initial value": "11"
+  },
+  {
+"initial value": "10""constant name": "普通和预览及查询",
+"initial value": "10""comment": "grvsNomalPrintDisplay",
+"initial value": "10""initial value": "13"
+  },
+  {
+nstant name": "页面和预览""constant name": "页面和预览及查询",
+nstant name": "页面和预览""comment": "grvsPagePrintDisplay",
+nstant name": "页面和预览""initial value": "14"
+  },
+  {
+"comment": "grvsPagePrint""constant name": "普通和页面及预览和查询",
+"comment": "grvsPagePrint""comment": "grvsNomalPagePrintDisplay 全部",
+"comment": "grvsPagePrint""initial value": "15"
+  }
+
+]
+ },
+ {
+
+"class name": "设计器选项枚举",
+
+"comment": "GRDesignerOption (在“选项”接口里是组合值，也可单一使用)，表示定制报表设计器行为的选项。",
+
+"constants": [
+  {
+stant name": "页面和预览""initial value": "14""constant name": "显示标尺",
+stant name": "页面和预览""initial value": "14""comment": "grdoShowRuler 指定是否显示标尺。",
+stant name": "页面和预览""initial value": "14""data type": "整数",
+stant name": "页面和预览""initial value": "14""initial value": "1"
+  },
+  {
+}"constant name": "允许弹出关联菜单",
+}"comment": "grdoCanPopupMenu 指定是否允许打开右键关联菜单。",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+"comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""constant name": "显示属性编辑窗",
+"comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""comment": "grdoShowInspector 指定是否显示属性编辑窗口。",
+"comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数",
+"comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""initial value": "4"
+  },
+  {
+"initial value": "5""constant name": "显示属性对象下拉框",
+"initial value": "5""comment": "grdoShowInspectorObjectPicker 指定是否显示属性编辑窗口的对象下拉选取框。",
+"initial value": "5""data type": "整数",
+"initial value": "5""initial value": "8"
+  },
+  {
+
+"constant name": "显示对象浏览器",
+
+"comment": "grdoShowExplorer 指定是否显示对象浏览窗口。",
+
+"data type": "整数",
+
+"initial value": "16"
+  },
+  {
+}"constant name": "显示工具栏",
+}"comment": "grdoShowToolbar 指定是否显示工具栏。",
+}"data type": "整数",
+}"initial value": "32"
+  },
+  {
+nstant name": "显示对象浏览器""constant name": "显示节线",
+nstant name": "显示对象浏览器""comment": "grdoShowSectionLine 在报表进入页面视图时，指定是否显示节分隔线。",
+nstant name": "显示对象浏览器""data type": "整数",
+nstant name": "显示对象浏览器""initial value": "256"
+  },
+  {
+"initial value": "32""constant name": "显示边距线",
+"initial value": "32""comment": "grdoShowMarginLine 在报表进入页面视图时，指定是否显示边距分隔线。",
+"initial value": "32""data type": "整数",
+"initial value": "32""initial value": "512"
+  },
+  {
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""constant name": "允许改变节高",
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanResizeSection 指定是否可以调整节的高度。",
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""data type": "整数",
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""initial value": "1024"
+  },
+  {
+"initial value": "32""constant name": "允许改变边距",
+"initial value": "32""comment": "grdoCanChangeMargin 指定是否可以调整页面边距。",
+"initial value": "32""data type": "整数",
+"initial value": "32""initial value": "2048"
+  },
+  {
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""constant name": "允许删除对象",
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanDeleteObject 指定是否可以删除对象。",
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""data type": "整数",
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""initial value": "4096"
+  },
+  {
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""constant name": "开启即时编辑",
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoEnableQuickEdit 指定是否开启即时编辑功能。",
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""data type": "整数",
+comment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""initial value": "8192"
+  },
+  {
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanResizeSection 指定是否可以调整节的高度。""constant name": "自动展开报表树",
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanResizeSection 指定是否可以调整节的高度。""comment": "grdoAutoExpandReportTree 自动展开对象浏览窗口一级对象（目前暂未开放）",
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanResizeSection 指定是否可以调整节的高度。""data type": "整数",
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanResizeSection 指定是否可以调整节的高度。""initial value": "16384"
+  },
+  {
+
+"constant name": "锁定属性可编辑",
+
+"comment": "grdoLockPropertyEditable 指定是否允许改变锁定（Lock）属性，如果关闭本选项，则对象上的锁定设置是固定的，让锁定属性变为只读(值为：32768)。",
+
+"data type": "整数",
+
+"initial value": "32768"
+  },
+  {
+}"constant name": "显示网格工具栏按钮集合",
+}"comment": "grdoShowDTCollectionBtns 指定是否显示明细网格的工具栏上的几个打开集合对话框的按钮(值为：1048576)。",
+}"data type": "整数",
+}"initial value": "1048576"
+  },
+  {
+nstant name": "锁定属性可编辑""constant name": "允许自动生成字段",
+nstant name": "锁定属性可编辑""comment": "grdoCanAutoGenFields 指定是否允许根据明细查询SQL自动产生字段定义(值为：2097152)。",
+nstant name": "锁定属性可编辑""data type": "整数",
+nstant name": "锁定属性可编辑""initial value": "2097152"
+  },
+  {
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanResizeSection 指定是否可以调整节的高度。""constant name": "允许自动生成列",
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanResizeSection 指定是否可以调整节的高度。""comment": "grdoCanAutoGenColumns 指定是否允许根据字段定义自动产生列定义(值为：4194304)。",
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanResizeSection 指定是否可以调整节的高度。""data type": "整数",
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanResizeSection 指定是否可以调整节的高度。""initial value": "4194304"
+  },
+  {
+"data type": "整数""constant name": "允许自动生成参数",
+"data type": "整数""comment": "grdoCanAutoGenParameters 指定是否允许根据报表主对象的查询SQL自动产生参数定义(值为：8388608)。",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "8388608"
+  },
+  {
+ type": "整数""constant name": "预览视图""data type": "整数""constant name": "显示网格工具栏",
+ type": "整数""constant name": "预览视图""data type": "整数""comment": "grdoShowDetailGridToolbar 指定是否显示明细网格的工具栏(值为：16777216)。",
+ type": "整数""constant name": "预览视图""data type": "整数""data type": "整数",
+ type": "整数""constant name": "预览视图""data type": "整数""initial value": "16777216"
+  },
+  {
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanDeleteObject 指定是否可以删除对象。""constant name": "显示网格列标尺",
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanDeleteObject 指定是否可以删除对象。""comment": "grdoShowDetailGridColumnRuler 指定是否显示明细网格的列标尺(值为：33554432)。",
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanDeleteObject 指定是否可以删除对象。""data type": "整数",
+omment": "GRDesignerViewStyle 指示设计器组合显示的视图模式。""data type": "整数""comment": "grdoCanDeleteObject 指定是否可以删除对象。""initial value": "33554432"
+  },
+  {
+stant name": "锁定属性可编辑""initial value": "2097152""constant name": "允许改变记录集的数据源与SQL",
+stant name": "锁定属性可编辑""initial value": "2097152""comment": "grdoCanModifyDBSettings 指定是否可以设置记录集的数据源连接串与查询SQL(值为：67108864)。",
+stant name": "锁定属性可编辑""initial value": "2097152""data type": "整数",
+stant name": "锁定属性可编辑""initial value": "2097152""initial value": "67108864"
+  },
+  {
+e": "整数""constant name": "预览视图""data type": "整数""constant name": "显示网格工具栏""constant name": "允许查看并编辑数据源连接串",
+e": "整数""constant name": "预览视图""data type": "整数""constant name": "显示网格工具栏""comment": "grdoShowDBConnectionString 指定是否允许查看并编辑数据源连接串。",
+e": "整数""constant name": "预览视图""data type": "整数""constant name": "显示网格工具栏""data type": "整数",
+e": "整数""constant name": "预览视图""data type": "整数""constant name": "显示网格工具栏""initial value": "134217728"
+  }
+
+]
+ },
+ {
+
+"class name": "选中对象类型枚举",
+
+"comment": "GRSelectionObjectType 指定设计器当前选中的对象类型。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"@常量类": "整数""constant name": "报表对象",
+"@常量类": "整数""comment": "1  grdssReport 选中对象为报表主对象。",
+"@常量类": "整数""initial value": "1"
+  },
+  {
+}"constant name": "页眉",
+}"comment": "2  grdssPageHeader 选中对象为页眉。",
+}"initial value": "2"
+  },
+  {
+"constant name": "页脚",
+"comment": "3  grdssPageFooter 选中对象为页脚。",
+"initial value": "3"
+  },
+  {
+
+"constant name": "报表头",
+
+"comment": "4  grdssReportHeader 选中对象为报表头。",
+
+"initial value": "4"
+  },
+  {
+@常量类": "整数""comment": "1  grdssReport 选中对象为报表主对象。""constant name": "报表尾",
+@常量类": "整数""comment": "1  grdssReport 选中对象为报表主对象。""comment": "5  grdssReportFooter 选中对象为报表尾。",
+@常量类": "整数""comment": "1  grdssReport 选中对象为报表主对象。""initial value": "5"
+  },
+  {
+
+"constant name": "部件框",
+
+"comment": "6  grdssControlSingle 选中对象为单个部件框。",
+
+"initial value": "6"
+  },
+  {
+nstant name": "报表头""constant name": "明细网格",
+nstant name": "报表头""comment": "8  grdssDetailGrid 选中对象为明细网格。",
+nstant name": "报表头""initial value": "8"
+  },
+  {
+"comment": "6  grdssControlSingle 选中对象为单个部件框。""constant name": "列",
+"comment": "6  grdssControlSingle 选中对象为单个部件框。""comment": "9  grdssColumn 选中对象为列。",
+"comment": "6  grdssControlSingle 选中对象为单个部件框。""initial value": "9"
+  },
+  {
+"comment": "6  grdssControlSingle 选中对象为单个部件框。""constant name": "内容格",
+"comment": "6  grdssControlSingle 选中对象为单个部件框。""comment": "10  grdssColumnContentCell 选中对象为内容格。",
+"comment": "6  grdssControlSingle 选中对象为单个部件框。""initial value": "10"
+  },
+  {
+}"constant name": "标题格",
+}"comment": "11  grdssColumnTitleCell 选中对象为标题格。",
+}"initial value": "11"
+  },
+  {
+comment": "6  grdssControlSingle 选中对象为单个部件框。""comment": "10  grdssColumnContentCell 选中对象为内容格。""constant name": "内容行",
+comment": "6  grdssControlSingle 选中对象为单个部件框。""comment": "10  grdssColumnContentCell 选中对象为内容格。""comment": "12  grdssColumnContent 选中对象为明细内容行。",
+comment": "6  grdssControlSingle 选中对象为单个部件框。""comment": "10  grdssColumnContentCell 选中对象为内容格。""initial value": "12"
+  },
+  {
+comment": "6  grdssControlSingle 选中对象为单个部件框。""comment": "10  grdssColumnContentCell 选中对象为内容格。""constant name": "标题行",
+comment": "6  grdssControlSingle 选中对象为单个部件框。""comment": "10  grdssColumnContentCell 选中对象为内容格。""comment": "13  grdssColumnTitle 选中对象为标题行。",
+comment": "6  grdssControlSingle 选中对象为单个部件框。""comment": "10  grdssColumnContentCell 选中对象为内容格。""initial value": "13"
+  },
+  {
+}"constant name": "分组",
+}"comment": "14  grdssGroup 选中对象为分组。",
+}"initial value": "14"
+  },
+  {
+}"constant name": "分组头",
+}"comment": "15  grdssGroupHeader 选中对象为分组头。",
+}"initial value": "15"
+  },
+  {
+comment": "3  grdssPageFooter 选中对象为页脚。""constant name": "分组尾",
+comment": "3  grdssPageFooter 选中对象为页脚。""comment": "16  grdssGroupFooter 选中对象为分组尾。",
+comment": "3  grdssPageFooter 选中对象为页脚。""initial value": "16"
+  },
+  {
+"initial value": "14""constant name": "记录集",
+"initial value": "14""comment": "17  grdssRecordset 选中对象为记录集。",
+"initial value": "14""initial value": "17"
+  },
+  {
+nt name": "报表头""constant name": "明细网格""constant name": "字段",
+nt name": "报表头""constant name": "明细网格""comment": "18  grdssField 选中对象为字段。",
+nt name": "报表头""constant name": "明细网格""initial value": "18"
+  },
+  {
+nt name": "报表头""constant name": "明细网格""constant name": "参数",
+nt name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。",
+nt name": "报表头""constant name": "明细网格""initial value": "19"
+  },
+  {
+t name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。""constant name": "交叉表",
+t name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。""comment": "20  grdssCrossTab 选中对象为交叉表。",
+t name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。""initial value": "20"
+  },
+  {
+t name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。""constant name": "图表轴",
+t name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。""comment": "30  grdssChartAxis 选中对象为图表轴。",
+t name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。""initial value": "30"
+  },
+  {
+ name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。""comment": "20  grdssCrossTab 选中对象为交叉表。""constant name": "图表序列",
+ name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。""comment": "20  grdssCrossTab 选中对象为交叉表。""comment": "31  grdssChartSeries 选中对象为图表序列。",
+ name": "报表头""constant name": "明细网格""comment": "19  grdssParameter 选中对象为参数。""comment": "20  grdssCrossTab 选中对象为交叉表。""initial value": "31"
+  },
+  {
+nstant name": "分组头""constant name": "自由表格列",
+nstant name": "分组头""comment": "51  grdssFreeGridColumn 选中对象为自由表格列。",
+nstant name": "分组头""initial value": "51"
+  },
+  {
+stant name": "分组头""comment": "51  grdssFreeGridColumn 选中对象为自由表格列。""constant name": "自由表格行",
+stant name": "分组头""comment": "51  grdssFreeGridColumn 选中对象为自由表格列。""comment": "52  grdssFreeGridRow 选中对象为自由表格行。",
+stant name": "分组头""comment": "51  grdssFreeGridColumn 选中对象为自由表格列。""initial value": "52"
+  },
+  {
+}"constant name": "自由表格子格",
+}"comment": "53  grdssFreeGridCell 选中对象为自由表格子格。",
+}"initial value": "53"
+  }
+
+]
+ },
+ {
+
+"class name": "设计器动作枚举",
+
+"comment": "GRDesignerAction 指定执行报表设计器动作的类型。\n在报表设计器IGRDesigner接口DoAction与IsActionEnabled方法中，指定动作的类型。",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+"constant name": "撤销",
+"comment": " 101  grdaEditUndo  恢复操作。",
+"initial value": "101"
+  },
+  {
+initial value": "101""constant name": "重做",
+initial value": "101""comment": " 102  grdaEditRedo  重复操作。",
+initial value": "101""initial value": "102"
+  },
+  {
+}"constant name": "剪切",
+}"comment": " 103  grdaEditCut  剪切操作。",
+}"initial value": "103"
+  },
+  {
+
+"constant name": "粘贴",
+
+"comment": " 104  grdaEditPaste  粘贴操作。",
+
+"initial value": "104"
+  },
+  {
+
+"constant name": "复制",
+
+"comment": " 105  grdaEditCopy  复制操作。",
+
+"initial value": "105"
+  },
+  {
+
+"constant name": "删除",
+
+"comment": " 106  grdaEditDelete  删除当前选中的报表元素。",
+
+"initial value": "106"
+  },
+  {
+
+"constant name": "全选",
+
+"comment": " 107  grdaEditSelectAll  全选操作，根据当前的选中对象，执行相应全部选中对象任务。",
+
+"initial value": "107"
+  },
+  {
+}"constant name": "自动调整文字框大小",
+}"comment": " 201  grdaAutoSizeControl  根据文字框地显示文本自动调整框的大小，使文本刚好完整显示出来。",
+}"initial value": "201"
+  },
+  {
+
+"constant name": "自动生成列",
+
+"comment": " 202  grdaAutoGenColumn  根据记录集的字段定义，自动生成列的定义。如果已经处在列，已存在的列将被删除。",
+
+"initial value": "202"
+  },
+  {
+nstant name": "自动调整文字框大小""constant name": "自动生成字段",
+nstant name": "自动调整文字框大小""comment": " 203  grdaAutoGenField  根据明细网格的记录集数据源取数设置自动生成报表字段定义。",
+nstant name": "自动调整文字框大小""initial value": "203"
+  },
+  {
+}"constant name": "报表节前移",
+}"comment": " 204  grdaSectionMoveUp  将当前选中报表头或报标尾的显示顺序前移。",
+}"initial value": "204"
+  },
+  {
+}"constant name": "报表节后移",
+}"comment": " 205  grdaSectionMoveDown  将当前选中报表头或报标尾的显示顺序后移。",
+}"initial value": "205"
+  },
+  {
+"comment": " 205  grdaSectionMoveDown  将当前选中报表头或报标尾的显示顺序后移。""constant name": "自动生成参数",
+"comment": " 205  grdaSectionMoveDown  将当前选中报表头或报标尾的显示顺序后移。""comment": " 206  grdaAutoGenParameter  根据报表主对象上的参数数据源取数设置自动生成报表参数定义。",
+"comment": " 205  grdaSectionMoveDown  将当前选中报表头或报标尾的显示顺序后移。""initial value": "206"
+  },
+  {
+nstant name": "报表节后移""constant name": "自动生成数据集字段",
+nstant name": "报表节后移""comment": " 207  grdaAutoGenRecordsetField  自动生成数据集字段",
+nstant name": "报表节后移""initial value": "207"
+  },
+  {
+stant name": "报表节后移""initial value": "207""constant name": "打开页面设置对话框",
+stant name": "报表节后移""initial value": "207""comment": " 301  grdaReportPaperSetting  打开页面设置对话框。",
+stant name": "报表节后移""initial value": "207""initial value": "301"
+  },
+  {
+
+"constant name": "打开数据绑定对话框",
+
+"comment": " 302  grdaSetupDBQuery  打开明细网格的记录集数据源取数设置对话框。",
+
+"initial value": "302"
+  },
+  {
+}"constant name": "打开参数集合对话框",
+}"comment": " 303  grdaReportParameterCollection  打开参数集合对话框。",
+}"initial value": "303"
+  },
+  {
+}"constant name": "打开分组集合对话框",
+}"comment": " 304  grdaReportGroupCollection  打开分组集合对话框。",
+}"initial value": "304"
+  },
+  {
+}"constant name": "打开列集合对话框",
+}"comment": " 305  grdaReportColumnCollection  打开列集合对话框。",
+}"initial value": "305"
+  },
+  {
+nstant name": "报表节后移""constant name": "打开字段集合对话框",
+nstant name": "报表节后移""comment": " 306  grdaReportFieldCollection  打开字段集合对话框。",
+nstant name": "报表节后移""initial value": "306"
+  },
+  {
+"comment": " 305  grdaReportColumnCollection  打开列集合对话框。""constant name": "打开列标题布局对话框",
+"comment": " 305  grdaReportColumnCollection  打开列集合对话框。""comment": " 307  grdaReportColumnTitleLayout  打开列标题布局对话框。",
+"comment": " 305  grdaReportColumnCollection  打开列集合对话框。""initial value": "307"
+  },
+  {
+nstant name": "打开列集合对话框""constant name": "浏览脚本对话框",
+nstant name": "打开列集合对话框""comment": " 308  grdaBrowseScriptCode  打开报表脚本浏览窗口。",
+nstant name": "打开列集合对话框""initial value": "308"
+  },
+  {
+comment": " 305  grdaReportColumnCollection  打开列集合对话框。""initial value": "307""constant name": "退出子报表设计",
+comment": " 305  grdaReportColumnCollection  打开列集合对话框。""initial value": "307""comment": " 309  grdaExitSubReportDesign  退出当前子报表设计，返回到其主表设计。",
+comment": " 305  grdaReportColumnCollection  打开列集合对话框。""initial value": "307""initial value": "309"
+  },
+  {
+}"constant name": "打开参数查询对话框",
+}"comment": " 310  grdaSetupParamDBQuery  打开报表主对象的参数数据源取数设置对话框。",
+}"initial value": "310"
+  },
+  {
+
+"constant name": "打开数据集设置对话框",
+
+"comment": " 311  grdaSetupRecordsetDBQuery  打开数据集设置对话框",
+
+"initial value": "311"
+  },
+  {
+}"constant name": "缩放设置",
+}"comment": " 313  grdaZoomSetting  缩放设置",
+}"initial value": "313"
+  },
+  {
+
+"constant name": "自由表格合并单元格",
+
+"comment": " 351  grdaFreeGridCellMerge  自由表格合并单元格",
+
+"initial value": "351"
+  },
+  {
+"comment": " 313  grdaZoomSetting  缩放设置""constant name": "自由表格拆分单元格",
+"comment": " 313  grdaZoomSetting  缩放设置""comment": " 352  grdaFreeGridCellSplit  自由表格拆分单元格",
+"comment": " 313  grdaZoomSetting  缩放设置""initial value": "352"
+  },
+  {
+}"constant name": "自由表格左边插入列",
+}"comment": " 353  grdaFreeGridColumnInsertLeft  自由表格左边插入列",
+}"initial value": "353"
+  },
+  {
+}"constant name": "自由表格右边插入列",
+}"comment": " 354  rdaFreeGridColumnInsertRight  自由表格右边插入列",
+}"initial value": "354"
+  },
+  {
+}"constant name": "自由表格列左移",
+}"comment": " 355  grdaFreeGridColumnMoveLeft  自由表格列左移",
+}"initial value": "355"
+  },
+  {
+
+"constant name": "自由表格列右移",
+
+"comment": " 356  grdaFreeGridColumnMoveRight  自由表格列右移",
+
+"initial value": "356"
+  },
+  {
+comment": " 313  grdaZoomSetting  缩放设置""comment": " 352  grdaFreeGridCellSplit  自由表格拆分单元格""constant name": "自由表格列移动至",
+comment": " 313  grdaZoomSetting  缩放设置""comment": " 352  grdaFreeGridCellSplit  自由表格拆分单元格""comment": " 357  rdaFreeGridColumnMoveTo  自由表格列移动至",
+comment": " 313  grdaZoomSetting  缩放设置""comment": " 352  grdaFreeGridCellSplit  自由表格拆分单元格""initial value": "357"
+  },
+  {
+"initial value": "354""constant name": "自由表格上面插入行",
+"initial value": "354""comment": " 358  grdaFreeGridRowInsertUp  自由表格上面插入行",
+"initial value": "354""initial value": "358"
+  },
+  {
+
+"constant name": "自由表格下面插入行",
+
+"comment": " 359  grdaFreeGridRowInsertDown  自由表格下面插入行",
+
+"initial value": "359"
+  },
+  {
+"initial value": "359""constant name": "自由表格行向上移动",
+"initial value": "359""comment": " 360  grdaFreeGridRowMoveUp  自由表格行向上移动",
+"initial value": "359""initial value": "360"
+  },
+  {
+
+"constant name": "自由表格行向下移动",
+
+"comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动",
+
+"initial value": "361"
+  },
+  {
+}"constant name": "自由表格行移动至",
+}"comment": " 362  grdaFreeGridRowMoveTo  自由表格行移动至",
+}"initial value": "362"
+  },
+  {
+"initial value": "362""constant name": "自由表格删除列",
+"initial value": "362""comment": " 363  grdaFreeGridColumnDelete  自由表格删除列",
+"initial value": "362""initial value": "363"
+  },
+  {
+
+"constant name": "自由表格删除行",
+
+"comment": " 364  grdaFreeGridRowDelete  自由表格删除行",
+
+"initial value": "364"
+  },
+  {
+
+"constant name": "自由表格平均行高",
+
+"comment": " 365  grdaFreeGridRowAvgHeight 自由表格平均行高",
+
+"initial value": "365"
+  },
+  {
+nstant name": "自由表格行移动至""constant name": "自由表格平均列宽",
+nstant name": "自由表格行移动至""comment": " 366  grdaFreeGridColumnAvgWidth 自由表格平均列宽",
+nstant name": "自由表格行移动至""initial value": "366"
+  },
+  {
+}"constant name": "自由表格自动调整节高度",
+}"comment": " 370  grdaFreeGridSectionAutoHeight  自由表格自动调整节高度",
+}"initial value": "370"
+  },
+  {
+"initial value": "364""constant name": "增加报表头",
+"initial value": "364""comment": " 401  grdaInsertReportHeader  插入一个报表头",
+"initial value": "364""initial value": "401"
+  },
+  {
+"comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""constant name": "增加报表尾",
+"comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""comment": " 402  grdaInsertReportFooter  插入一个报表尾",
+"comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""initial value": "402"
+  },
+  {
+ent": " 313  grdaZoomSetting  缩放设置""comment": " 352  grdaFreeGridCellSplit  自由表格拆分单元格""constant name": "自由表格列移动至""constant name": "增加页眉",
+ent": " 313  grdaZoomSetting  缩放设置""comment": " 352  grdaFreeGridCellSplit  自由表格拆分单元格""constant name": "自由表格列移动至""comment": " 403  grdaInsertPageHeader  插入页眉",
+ent": " 313  grdaZoomSetting  缩放设置""comment": " 352  grdaFreeGridCellSplit  自由表格拆分单元格""constant name": "自由表格列移动至""initial value": "403"
+  },
+  {
+comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""comment": " 402  grdaInsertReportFooter  插入一个报表尾""constant name": "增加页脚",
+comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""comment": " 402  grdaInsertReportFooter  插入一个报表尾""comment": " 404  grdaInsertPageFooter  插入页脚",
+comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""comment": " 402  grdaInsertReportFooter  插入一个报表尾""initial value": "404"
+  },
+  {
+}"constant name": "增加明细网格",
+}"comment": " 405  grdaInsertDetailGrid  插入明细网格",
+}"initial value": "405"
+  },
+  {
+}"constant name": "增加分组",
+}"comment": " 406  grdaInsertGroup  插入一个分组",
+}"initial value": "406"
+  },
+  {
+nstant name": "增加分组""constant name": "增加字段",
+nstant name": "增加分组""comment": " 407  grdaInsertField  插入字段",
+nstant name": "增加分组""initial value": "407"
+  },
+  {
+comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""comment": " 402  grdaInsertReportFooter  插入一个报表尾""constant name": "增加列",
+comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""comment": " 402  grdaInsertReportFooter  插入一个报表尾""comment": " 408  grdaInsertColumn  插入列",
+comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""comment": " 402  grdaInsertReportFooter  插入一个报表尾""initial value": "408"
+  },
+  {
+stant name": "增加分组""initial value": "407""constant name": "增加参数",
+stant name": "增加分组""initial value": "407""comment": " 409  grdaInsertParameter  插入参数",
+stant name": "增加分组""initial value": "407""initial value": "409"
+  },
+  {
+}"constant name": "对齐到左端",
+}"comment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐",
+}"initial value": "501"
+  },
+  {
+tant name": "增加分组""initial value": "407""initial value": "409""constant name": "对齐到右端",
+tant name": "增加分组""initial value": "407""initial value": "409""comment": " 502  grdaFormatAlignRight  使选中的多个部件框右端对齐",
+tant name": "增加分组""initial value": "407""initial value": "409""initial value": "502"
+  },
+  {
+comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""initial value": "402""constant name": "对齐到水平居中",
+comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""initial value": "402""comment": " 503  grdaFormatAlignCenter  使选中的多个部件框水平居中对齐",
+comment": " 361  grdaFreeGridRowMoveDown  自由表格行向下移动""initial value": "402""initial value": "503"
+  },
+  {
+"comment": " 406  grdaInsertGroup  插入一个分组""constant name": "对齐到顶端",
+"comment": " 406  grdaInsertGroup  插入一个分组""comment": " 504  grdaFormatAlignTop  使选中的多个部件框上端对齐",
+"comment": " 406  grdaInsertGroup  插入一个分组""initial value": "504"
+  },
+  {
+
+"constant name": "对齐到垂直居中",
+
+"comment": " 505  grdaFormatAlignMiddle  使选中的多个部件框垂直居中对齐",
+
+"initial value": "505"
+  },
+  {
+"comment": " 505  grdaFormatAlignMiddle  使选中的多个部件框垂直居中对齐""constant name": "对齐到底端",
+"comment": " 505  grdaFormatAlignMiddle  使选中的多个部件框垂直居中对齐""comment": " 506  grdaFormatAlignBottom  使选中的多个部件框底端对齐",
+"comment": " 505  grdaFormatAlignMiddle  使选中的多个部件框垂直居中对齐""initial value": "506"
+  },
+  {
+nt name": "增加分组""constant name": "增加字段""constant name": "对齐到栅格",
+nt name": "增加分组""constant name": "增加字段""comment": " 507  grdaFormatAlignToGrid  使选中的部件框左上角对齐到设计格点",
+nt name": "增加分组""constant name": "增加字段""initial value": "507"
+  },
+  {
+ame": "增加分组""constant name": "增加字段""constant name": "对齐到栅格""constant name": "调整到宽度相同",
+ame": "增加分组""constant name": "增加字段""constant name": "对齐到栅格""comment": " 508  grdaFormatSizeSameWidth  使选中的多个部件框宽度相同",
+ame": "增加分组""constant name": "增加字段""constant name": "对齐到栅格""initial value": "508"
+  },
+  {
+ant name": "增加分组""initial value": "407""initial value": "409""initial value": "502""constant name": "调整到高度相同",
+ant name": "增加分组""initial value": "407""initial value": "409""initial value": "502""comment": " 509  grdaFormatSizeSameHeight  使选中的多个部件框高度相同",
+ant name": "增加分组""initial value": "407""initial value": "409""initial value": "502""initial value": "509"
+  },
+  {
+"initial value": "501""constant name": "调整到大小相同",
+"initial value": "501""comment": " 510  grdaFormatSizeSameBoth  使选中的多个部件框大小相同",
+"initial value": "501""initial value": "510"
+  },
+  {
+"comment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐""constant name": "调整到栅格点",
+"comment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐""comment": " 511  grdaFormatSizeToGrid  使选中的部件框四角伸缩到最近设计格点",
+"comment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐""initial value": "511"
+  },
+  {
+comment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐""initial value": "511""constant name": "垂直间距相等",
+comment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐""initial value": "511""comment": " 512  grdaFormatSpaceEquallyVertical  使选中的多个部件框垂直间距相等",
+comment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐""initial value": "511""initial value": "512"
+  },
+  {
+
+"constant name": "增加垂直间距",
+
+"comment": " 513  grdaFormatSpaceIncreaseVertical  使选中的多个部件框垂直间距增大",
+
+"initial value": "513"
+  },
+  {
+
+"constant name": "减小垂直间距",
+
+"comment": " 514  grdaFormatSpaceDecreaseVertical  使选中的多个部件框垂直间距减小",
+
+"initial value": "514"
+  },
+  {
+nstant name": "对齐到垂直居中""constant name": "水平间距相等",
+nstant name": "对齐到垂直居中""comment": " 515  grdaFormatSpaceEquallyHorizontal  使选中的多个部件框水平间距相等",
+nstant name": "对齐到垂直居中""initial value": "515"
+  },
+  {
+omment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐""initial value": "511""initial value": "512""constant name": "增加水平间距",
+omment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐""initial value": "511""initial value": "512""comment": " 516  grdaFormatSpaceIncreaseHorizontal  使选中的多个部件框水平间距增大",
+omment": " 501  grdaFormatAlignLeft  使选中的多个部件框左端对齐""initial value": "511""initial value": "512""initial value": "516"
+  },
+  {
+}"constant name": "减小水平间距",
+}"comment": " 517  grdaFormatSpaceDecreaseHorizontal  使选中的多个部件框水平间距减小",
+}"initial value": "517"
+  },
+  {
+nstant name": "对齐到垂直居中""constant name": "清除水平间距",
+nstant name": "对齐到垂直居中""comment": " 518  grdaFormatSpaceRemoveHorizontal  去除选中的多个部件框的水平间距",
+nstant name": "对齐到垂直居中""initial value": "518"
+  },
+  {
+initial value": "501""initial value": "510""constant name": "清除垂直间距",
+initial value": "501""initial value": "510""comment": " 519  grdaFormatSpaceRemoveVertical  去除选中的多个部件框的垂直间距",
+initial value": "501""initial value": "510""initial value": "519"
+  },
+  {
+
+"constant name": "置显示顺序到前端",
+
+"comment": " 520  grdaFormatOrderBringToFron  将选中部件框的 Z 顺序置于最上层",
+
+"initial value": "520"
+  },
+  {
+
+"constant name": "置显示顺序到后端",
+
+"comment": " 521  grdaFormatOrderSendToBack  将选中部件框的 Z 顺序置于最下层",
+
+"initial value": "521"
+  },
+  {
+
+"constant name": "字体删除线",
+
+"comment": " 600  grdaFormatFontStrikethrough  改变字体删除线",
+
+"initial value": "600"
+  },
+  {
+ant name": "增加分组""initial value": "407""initial value": "409""initial value": "502""constant name": "字体粗细",
+ant name": "增加分组""initial value": "407""initial value": "409""initial value": "502""comment": " 601  grdaFormatFontBold  使选中文字框的文字按粗体显示",
+ant name": "增加分组""initial value": "407""initial value": "409""initial value": "502""initial value": "601"
+  },
+  {
+
+"constant name": "字体倾斜",
+
+"comment": " 602  grdaFormatFontItalic  使选中文字框的文字按斜体显示",
+
+"initial value": "602"
+  },
+  {
+
+"constant name": "字体下画线",
+
+"comment": " 603  grdaFormatFontUnderline  使选中文字框的文字加下划线显示",
+
+"initial value": "603"
+  },
+  {
+
+"constant name": "文字左上对齐",
+
+"comment": " 604  grdaFormatTextAlignTopLeft  使选中文字框的文字按左上对齐显示",
+
+"initial value": "604"
+  },
+  {
+
+"constant name": "文字中上对齐",
+
+"comment": " 605  grdaFormatTextAlignTopCenter  使选中文字框的文字按中上对齐显示",
+
+"initial value": "605"
+  },
+  {
+}"constant name": "文字右上对齐",
+}"comment": " 606  grdaFormatTextAlignTopRight  使选中文字框的文字按右上对齐显示",
+}"initial value": "606"
+  },
+  {
+}"constant name": "文字左中对齐",
+}"comment": " 607  grdaFormatTextAlignMiddleLeft  使选中文字框的文字按左中对齐显示",
+}"initial value": "607"
+  },
+  {
+"comment": " 603  grdaFormatFontUnderline  使选中文字框的文字加下划线显示""constant name": "文字中中对齐",
+"comment": " 603  grdaFormatFontUnderline  使选中文字框的文字加下划线显示""comment": " 608  grdaFormatTextAlignMiddleCenter  使选中文字框的文字按中中对齐显示",
+"comment": " 603  grdaFormatFontUnderline  使选中文字框的文字加下划线显示""initial value": "608"
+  },
+  {
+}"constant name": "文字右中对齐",
+}"comment": " 609  grdaFormatTextAlignMiddleRight  使选中文字框的文字按右中对齐显示",
+}"initial value": "609"
+  },
+  {
+}"constant name": "文字左下对齐",
+}"comment": " 610  grdaFormatTextAlignBottomLeft  使选中文字框的文字按左下对齐显示",
+}"initial value": "610"
+  },
+  {
+}"constant name": "文字中下对齐",
+}"comment": " 611  grdaFormatTextAlignBottomCenter  使选中文字框的文字按中下对齐显示",
+}"initial value": "611"
+  },
+  {
+"initial value": "605""constant name": "文字右下对齐",
+"initial value": "605""comment": " 612  grdaFormatTextAlignBottomRight  使选中文字框的文字按右下对齐显示",
+"initial value": "605""initial value": "612"
+  },
+  {
+
+"constant name": "文字方向为默认方式",
+
+"comment": " 613  grdaFormatTextOrientationDefault  设定选中文字框的文字方向为默认方式",
+
+"initial value": "613"
+  },
+  {
+"comment": " 613  grdaFormatTextOrientationDefault  设定选中文字框的文字方向为默认方式""constant name": "文字方向上到下左到右不旋转",
+"comment": " 613  grdaFormatTextOrientationDefault  设定选中文字框的文字方向为默认方式""comment": " 614  grdaFormatTextOrientationU2DL2R0  设定选中文字框的文字方向为从上到下，从左到右方式显示文字，文字不旋转。",
+"comment": " 613  grdaFormatTextOrientationDefault  设定选中文字框的文字方向为默认方式""initial value": "614"
+  },
+  {
+nstant name": "文字方向为默认方式""constant name": "文字方向上到下左到右且旋转",
+nstant name": "文字方向为默认方式""comment": " 615  grdaFormatTextOrientationD2UL2R1  设定选中文字框的文字方向为从下到上，从左到右方式显示文字，文字旋转。",
+nstant name": "文字方向为默认方式""initial value": "615"
+  },
+  {
+stant name": "文字方向为默认方式""initial value": "615""constant name": "文字方向上到下右到左不旋转",
+stant name": "文字方向为默认方式""initial value": "615""comment": " 616  grdaFormatTextOrientationU2DR2L0  设定选中文字框的文字方向为从上到下，从右到左方式显示文字，文字不旋转。",
+stant name": "文字方向为默认方式""initial value": "615""initial value": "616"
+  },
+  {
+
+"constant name": "文字方向上到下右到左且旋转",
+
+"comment": " 617  grdaFormatTextOrientationU2DR2L1  设定选中文字框的文字方向为按从上到下，从右到左方式显示文字，文字旋转。",
+
+"initial value": "617"
+  },
+  {
+initial value": "501""comment": " 510  grdaFormatSizeSameBoth  使选中的多个部件框大小相同""constant name": "文字方向为倒影方式",
+initial value": "501""comment": " 510  grdaFormatSizeSameBoth  使选中的多个部件框大小相同""comment": " 618  grdaFormatTextOrientationInvert  设定选中文字框的文字方向为倒影方式",
+initial value": "501""comment": " 510  grdaFormatSizeSameBoth  使选中的多个部件框大小相同""initial value": "618"
+  },
+  {
+}"constant name": "文字方向左到右下到上脊背模式",
+}"comment": " 619  grdaFormatTextOrientationL2RD2U0  文字方向左到右下到上脊背模式",
+}"initial value": "619"
+  },
+  {
+}"constant name": "文字方向左到右下到上且旋转",
+}"comment": " 620  grdaFormatTextOrientationL2RD2U1  文字方向左到右下到上且旋转",
+}"initial value": "620"
+  },
+  {
+nstant name": "文字方向为默认方式""constant name": "文字左对齐",
+nstant name": "文字方向为默认方式""comment": " 621  grdaFormatTextAlignLeft  文字左对齐",
+nstant name": "文字方向为默认方式""initial value": "621"
+  },
+  {
+"comment": " 620  grdaFormatTextOrientationL2RD2U1  文字方向左到右下到上且旋转""constant name": "文字居中对齐",
+"comment": " 620  grdaFormatTextOrientationL2RD2U1  文字方向左到右下到上且旋转""comment": " 622  grdaFormatTextAlignCenter  文字居中对齐",
+"comment": " 620  grdaFormatTextOrientationL2RD2U1  文字方向左到右下到上且旋转""initial value": "622"
+  },
+  {
+nstant name": "文字方向左到右下到上且旋转""constant name": "文字右对齐",
+nstant name": "文字方向左到右下到上且旋转""comment": " 623  grdaFormatTextAlignRight  文字右对齐",
+nstant name": "文字方向左到右下到上且旋转""initial value": "623"
+  },
+  {
+comment": " 620  grdaFormatTextOrientationL2RD2U1  文字方向左到右下到上且旋转""initial value": "622""constant name": "文字两端对齐",
+comment": " 620  grdaFormatTextOrientationL2RD2U1  文字方向左到右下到上且旋转""initial value": "622""comment": " 624  grdaFormatTextAlignJustify  文字两端对齐",
+comment": " 620  grdaFormatTextOrientationL2RD2U1  文字方向左到右下到上且旋转""initial value": "622""initial value": "624"
+  },
+  {
+}"constant name": "文字顶端对齐",
+}"comment": " 625  grdaFormatTextAlignTop  文字顶端对齐",
+}"initial value": "625"
+  },
+  {
+
+"constant name": "文字中间对齐",
+
+"comment": " 626  grdaFormatTextAlignMiddle  文字中间对齐",
+
+"initial value": "626"
+  },
+  {
+}"constant name": "文字下端对齐",
+}"comment": " 627  grdaFormatTextAlignBottom  文字下端对齐",
+}"initial value": "627"
+  }
+
+]
+ },
+ {
+}"class name": "报表类名枚举",
+}"comment": "Class类名文本，便于设计器属性栏操作枚举的接口。",
+}"@常量类": "文本型",
+}"constants": [
+  {
+}"constant name": "报表",
+}"comment": "IGridppReport",
+}"initial value": "\"Report\""
+  },
+  {
+"initial value": "627""constant name": "明细网格",
+"initial value": "627""comment": "DetailGrid",
+"initial value": "627""initial value": "\"DetailGrid\""
+  },
+  {
+initial value": "627""comment": "DetailGrid""constant name": "交叉表",
+initial value": "627""comment": "DetailGrid""comment": "CrossTab",
+initial value": "627""comment": "DetailGrid""initial value": "\"CrossTab\""
+  },
+  {
+initial value": "627""comment": "DetailGrid""constant name": "列",
+initial value": "627""comment": "DetailGrid""comment": "Column",
+initial value": "627""comment": "DetailGrid""initial value": "\"Column\""
+  },
+  {
+initial value": "627""comment": "DetailGrid""constant name": "记录集",
+initial value": "627""comment": "DetailGrid""comment": "Recordset",
+initial value": "627""comment": "DetailGrid""initial value": "\"Recordset\""
+  },
+  {
+}"constant name": "字段",
+}"comment": "Field",
+}"initial value": "\"Field\""
+  },
+  {
+initial value": "627""comment": "DetailGrid""constant name": "参数",
+initial value": "627""comment": "DetailGrid""comment": "Parameter",
+initial value": "627""comment": "DetailGrid""initial value": "\"Parameter\""
+  },
+  {
+ial value": "627""comment": "DetailGrid""constant name": "参数""constant name": "节",
+ial value": "627""comment": "DetailGrid""constant name": "参数""comment": "<基类> 节：页眉、页脚、报表节(报表头与报表尾)、列节(标题行与内容行)、分组节(分组头与分组尾)",
+ial value": "627""comment": "DetailGrid""constant name": "参数""initial value": "\"Section\""
+  },
+  {
+"comment": " 626  grdaFormatTextAlignMiddle  文字中间对齐""constant name": "页眉",
+"comment": " 626  grdaFormatTextAlignMiddle  文字中间对齐""comment": "PageHeader",
+"comment": " 626  grdaFormatTextAlignMiddle  文字中间对齐""initial value": "\"PageHeader\""
+  },
+  {
+
+"constant name": "页脚",
+
+"comment": "PageFooter",
+
+"initial value": "\"PageFooter\""
+  },
+  {
+nstant name": "页脚""constant name": "报表节",
+nstant name": "页脚""comment": "<基类> 报表节：报表头、报表尾",
+nstant name": "页脚""initial value": "\"ReportSection\""
+  },
+  {
+stant name": "页脚""comment": "<基类> 报表节：报表头、报表尾""constant name": "报表头",
+stant name": "页脚""comment": "<基类> 报表节：报表头、报表尾""comment": "报表头 ReportHeader",
+stant name": "页脚""comment": "<基类> 报表节：报表头、报表尾""initial value": "\"ReportHeader\""
+  },
+  {
+ReportHeader"constant name": "报表尾",
+ReportHeader"comment": "报表尾 ReportFooter",
+ReportHeader"initial value": "\"ReportFooter\""
+  },
+  {
+eportHeader"comment": "报表尾 ReportFooter""constant name": "列节",
+eportHeader"comment": "报表尾 ReportFooter""comment": "<基类> 列节 ColumnSection：标题行、内容行",
+eportHeader"comment": "报表尾 ReportFooter""initial value": "\"ColumnSection\""
+  },
+  {
+nstant name": "页脚""constant name": "标题行",
+nstant name": "页脚""comment": "标题行 ColumnTitle",
+nstant name": "页脚""initial value": "\"ColumnTitle\""
+  },
+  {
+nstant name": "页脚""constant name": "内容行",
+nstant name": "页脚""comment": "内容行 ColumnContent",
+nstant name": "页脚""initial value": "\"ColumnContent\""
+  },
+  {
+"comment": "Field""constant name": "分组节",
+"comment": "Field""comment": "<基类> 分组节 GroupSection：分组(分组头、分组尾)",
+"comment": "Field""initial value": "\"GroupSection\""
+  },
+  {
+comment": "Field""initial value": "\"GroupSection\"""constant name": "分组",
+comment": "Field""initial value": "\"GroupSection\"""comment": "分组 Group",
+comment": "Field""initial value": "\"GroupSection\"""initial value": "\"Group\""
+  },
+  {
+stant name": "页脚""initial value": "\"ColumnContent\"""constant name": "分组头",
+stant name": "页脚""initial value": "\"ColumnContent\"""comment": "分组头 GroupHeader",
+stant name": "页脚""initial value": "\"ColumnContent\"""initial value": "\"GroupHeader\""
+  },
+  {
+}"constant name": "分组尾",
+}"comment": "分组尾 GroupFooter",
+}"initial value": "\"GroupFooter\""
+  },
+  {
+
+"constant name": "单元格",
+
+"comment": "<基类> 单元格CellBase，包含各种单元格：单元格（标题格、内容格）、自由表格子格",
+
+"initial value": "\"CellBase\""
+  },
+  {
+tHeader"comment": "报表尾 ReportFooter""constant name": "列节""constant name": "列格",
+tHeader"comment": "报表尾 ReportFooter""constant name": "列节""comment": "<基类> 列格ColumnCell，包含：标题格、内容格",
+tHeader"comment": "报表尾 ReportFooter""constant name": "列节""initial value": "\"ColumnCell\""
+  },
+  {
+}"constant name": "标题格",
+}"comment": "标题格 ColumnTitleCell",
+}"initial value": "\"ColumnTitleCell\""
+  },
+  {
+}"constant name": "内容格",
+}"comment": "内容格 ColumnContentCell",
+}"initial value": "\"ColumnContentCell\""
+  },
+  {
+"initial value": "\"ColumnTitleCell\"""constant name": "部件框",
+"initial value": "\"ColumnTitleCell\"""comment": "<基类> 部件框 所有部件框",
+"initial value": "\"ColumnTitleCell\"""initial value": "\"Control\""
+  },
+  {
+stant name": "页脚""initial value": "\"ReportSection\"""constant name": "文字框",
+stant name": "页脚""initial value": "\"ReportSection\"""comment": "<基类> 部件框_文字框：静态文字框StaticBox、系统变量框SystemVarBox、字段框FieldBox、统计框SummaryBox、综合文字框MemoBox",
+stant name": "页脚""initial value": "\"ReportSection\"""initial value": "\"TextBox\""
+  },
+  {
+"initial value": "\"ColumnTitleCell\"""constant name": "静态文字框",
+"initial value": "\"ColumnTitleCell\"""comment": "静态文字框 StaticBox",
+"initial value": "\"ColumnTitleCell\"""initial value": "\"StaticBox\""
+  },
+  {
+
+"constant name": "系统变量框",
+
+"comment": "系统变量框 SystemVarBox",
+
+"initial value": "\"SystemVarBox\""
+  },
+  {
+"initial value": "\"ColumnTitleCell\"""constant name": "字段框",
+"initial value": "\"ColumnTitleCell\"""comment": "字段框 FieldBox",
+"initial value": "\"ColumnTitleCell\"""initial value": "\"FieldBox\""
+  },
+  {
+t name": "页脚""initial value": "\"ReportSection\"""constant name": "文字框""constant name": "统计框",
+t name": "页脚""initial value": "\"ReportSection\"""constant name": "文字框""comment": "统计框 SummaryBox",
+t name": "页脚""initial value": "\"ReportSection\"""constant name": "文字框""initial value": "\"SummaryBox\""
+  },
+  {
+initial value": "\"ColumnTitleCell\"""initial value": "\"Control\"""constant name": "综合文字框",
+initial value": "\"ColumnTitleCell\"""initial value": "\"Control\"""comment": "综合文字框 MemoBox",
+initial value": "\"ColumnTitleCell\"""initial value": "\"Control\"""initial value": "\"MemoBox\""
+  },
+  {
+nitial value": "\"ColumnTitleCell\"""initial value": "\"Control\"""initial value": "\"MemoBox\"""constant name": "图形框",
+nitial value": "\"ColumnTitleCell\"""initial value": "\"Control\"""initial value": "\"MemoBox\"""comment": "图形框 ShapeBox",
+nitial value": "\"ColumnTitleCell\"""initial value": "\"Control\"""initial value": "\"MemoBox\"""initial value": "\"ShapeBox\""
+  },
+  {
+ name": "页脚""initial value": "\"ReportSection\"""constant name": "文字框""comment": "统计框 SummaryBox""constant name": "RTF文字框",
+ name": "页脚""initial value": "\"ReportSection\"""constant name": "文字框""comment": "统计框 SummaryBox""comment": "RTF文字框 RichTextBox",
+ name": "页脚""initial value": "\"ReportSection\"""constant name": "文字框""comment": "统计框 SummaryBox""initial value": "\"RichTextBox\""
+  },
+  {
+}"constant name": "图像框",
+}"comment": "图像框 PictureBox",
+}"initial value": "\"PictureBox\""
+  },
+  {
+}"constant name": "子报表框",
+}"comment": "子报表框 SubReport",
+}"initial value": "\"SubReport\""
+  },
+  {
+
+"constant name": "线段框",
+
+"comment": "线段框 Line",
+
+"initial value": "\"Line\""
+  },
+  {
+nitial value": "\"ColumnTitleCell\"""initial value": "\"Control\"""initial value": "\"MemoBox\"""constant name": "条码框",
+nitial value": "\"ColumnTitleCell\"""initial value": "\"Control\"""initial value": "\"MemoBox\"""comment": "条码框 Barcode",
+nitial value": "\"ColumnTitleCell\"""initial value": "\"Control\"""initial value": "\"MemoBox\"""initial value": "\"Barcode\""
+  },
+  {
+}"constant name": "图表框",
+}"comment": "图表框 Chart",
+}"initial value": "\"Chart\""
+  },
+  {
+}"constant name": "图表轴",
+}"comment": "图表轴 ChartAxis",
+}"initial value": "\"ChartAxis\""
+  },
+  {
+"initial value": "\"Chart\"""constant name": "图表序列",
+"initial value": "\"Chart\"""comment": "图表序列 ChartSeries",
+"initial value": "\"Chart\"""initial value": "\"ChartSeries\""
+  },
+  {
+}"constant name": "自由表格框",
+}"comment": "自由表格框 FreeGrid",
+}"initial value": "\"FreeGrid\""
+  },
+  {
+"initial value": "\"FreeGrid\"""constant name": "自由表格行",
+"initial value": "\"FreeGrid\"""comment": "自由表格行 FreeGridRow",
+"initial value": "\"FreeGrid\"""initial value": "\"FreeGridRow\""
+  },
+  {
+}"constant name": "自由表格列",
+}"comment": "自由表格列 FreeGridColumn",
+}"initial value": "\"FreeGridColumn\""
+  },
+  {
+"comment": "自由表格列 FreeGridColumn""constant name": "自由表格子格",
+"comment": "自由表格列 FreeGridColumn""comment": "自由表格子格 FreeGridCell",
+"comment": "自由表格列 FreeGridColumn""initial value": "\"FreeGridCell\""
+  }
+}]
+ },
+ {
+
+"class name": "报表类属性组枚举",
+
+"comment": "Class类对象属性项里某一属性组文本(帮助文件里面查不到的信息)，便于设计器属性栏操作枚举的部分接口。",
+
+"@常量类": "文本型",
+
+"constants": [
+  {
+initial value": "\"FreeGrid\"""initial value": "\"FreeGridRow\"""constant name": "边框",
+initial value": "\"FreeGrid\"""initial value": "\"FreeGridRow\"""initial value": "\"Border\""
+  },
+  {
+
+"constant name": "位置",
+
+"initial value": "\"Location\""
+  },
+  {
+comment": "自由表格列 FreeGridColumn""comment": "自由表格子格 FreeGridCell""constant name": "大小",
+comment": "自由表格列 FreeGridColumn""comment": "自由表格子格 FreeGridCell""initial value": "\"Size\""
+  },
+  {
+
+"constant name": "边距",
+
+"initial value": "\"Padding\""
+  },
+  {
+
+"constant name": "对齐明细列",
+
+"initial value": "\"AlignDetailColumn\""
+  },
+  {
+comment": "自由表格列 FreeGridColumn""comment": "自由表格子格 FreeGridCell""constant name": "文字格式",
+comment": "自由表格列 FreeGridColumn""comment": "自由表格子格 FreeGridCell""initial value": "\"TextFormatGroup\""
+  },
+  {
+ignDetailColumn\""constant name": "财务金额线",
+ignDetailColumn\""initial value": "\"MoneyLine\""
+  },
+  {
+xtFormatGroup\""constant name": "文档格式",
+xtFormatGroup\""comment": "报表",
+xtFormatGroup\""initial value": "\"DocFormat\""
+  },
+  {
+行 FreeGridRow"constant name": "设计栅格点",
+行 FreeGridRow"comment": "报表",
+行 FreeGridRow"initial value": "\"DesignGrid\""
+  },
+  {
+
+"constant name": "共享打印设置",
+
+"comment": "报表",
+
+"initial value": "\"SharePrintSetupOption\""
+  }
+
+]
+ }
+]
+}

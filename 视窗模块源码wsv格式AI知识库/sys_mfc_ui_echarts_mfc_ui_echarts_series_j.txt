@@ -1,0 +1,1764 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC版ECharts图表组件".
+
+{
+问本程序中的接口需要引用模块"MFC版ECharts图表组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"MFC版ECharts图表组件"."package name": "火山.ECharts",
+问本程序中的接口需要引用模块"MFC版ECharts图表组件"."comment": "火山MFC·Echarts图表控件.图表数据相关参数配置",
+问本程序中的接口需要引用模块"MFC版ECharts图表组件"."classes": [
+ {
+"class name": "图表系列类",
+"comment": "  图表系列,(对应option.series配置项中的一个成员) 系列是指：一组数值以及他们映射成的图.不仅表示数据,也表示数据映射成为的图.\n所以,一个系列包含的要素至少有:一组数值,图表类型,以及其他的关于这些数据如何映射成图的参数.",
+"base class": "图表参数基础类",
+"@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"",
+"variables": [
+  {
+"variable name": "数据集",
+"comment": "当前系列的数据集,内部每个成员都是以对象形式表示的系列数据.",
+"data type": "系列数据集类"
+  },
+  {
+ 文本型"variable name": "提示框",
+ 文本型"comment": "为当前系列设置特定的提示框",
+ 文本型"data type": "图表提示框类"
+  },
+  {
+撠敺ŝ"variable name": "标签样式",
+撠敺ŝ"comment": "数据文本标签样式设置",
+撠敺ŝ"data type": "标签样式类"
+  },
+  {
+象配置参数转换成JSON文本"variable name": "标签引导线",
+象配置参数转换成JSON文本"comment": "数据文本标签的引导线样式设置",
+象配置参数转换成JSON文本"data type": "标签引导线类"
+  },
+  {
+配置参数转换成JSON文本"data type": "标签引导线类""variable name": "线条样式",
+配置参数转换成JSON文本"data type": "标签引导线类""comment": "图形线条样式设置",
+配置参数转换成JSON文本"data type": "标签引导线类""data type": "线条样式类"
+  },
+  {
+}"variable name": "图形样式",
+}"comment": "数据图形样式设置",
+}"data type": "图形样式类"
+  },
+  {
+敺ŝ"data type": "标签样式类""variable name": "区域填充",
+敺ŝ"data type": "标签样式类""comment": "区域填充样式设置",
+敺ŝ"data type": "标签样式类""data type": "区域填充样式类"
+  },
+  {
+配置参数转换成JSON文本"comment": "数据文本标签的引导线样式设置""variable name": "悬停状态",
+配置参数转换成JSON文本"comment": "数据文本标签的引导线样式设置""comment": "数据图形在鼠标悬停时的高亮样式设置",
+配置参数转换成JSON文本"comment": "数据文本标签的引导线样式设置""data type": "悬停高亮类"
+  },
+  {
+ŝ"data type": "标签样式类""data type": "区域填充样式类""variable name": "淡出状态",
+ŝ"data type": "标签样式类""data type": "区域填充样式类""comment": "数据图形在淡出状态时的样式设置,当悬停高亮设置中开启聚焦淡出效果时有效.",
+ŝ"data type": "标签样式类""data type": "区域填充样式类""data type": "淡出状态类"
+  },
+  {
+䗐敺ŝ"variable name": "选中状态",
+䗐敺ŝ"comment": "数据图形在选中状态时的样式设置",
+䗐敺ŝ"data type": "选中状态类"
+  },
+  {
+转换成JSON文本"data type": "标签引导线类""variable name": "线条样式""variable name": "标注",
+转换成JSON文本"data type": "标签引导线类""variable name": "线条样式""comment": "标注点设置",
+转换成JSON文本"data type": "标签引导线类""variable name": "线条样式""data type": "图表标注类"
+  },
+  {
+}"variable name": "标线",
+}"comment": "标注线设置",
+}"data type": "图表标注类"
+  },
+  {
+"data type": "图表标注类""variable name": "标域",
+"data type": "图表标注类""comment": "标注域设置",
+"data type": "图表标注类""data type": "图表标注类"
+  },
+  {
+}"variable name": "动画设置",
+}"comment": "本系列的动画参数设置",
+}"data type": "图表动画设置类"
+  },
+  {
+riable name": "动画设置""variable name": "折线端点标签",
+riable name": "动画设置""comment": "折线端点(结束点)标签的样式",
+riable name": "动画设置""data type": "标签样式类"
+  },
+  {
+ "variable name": "柱条背景样式",
+ "comment": "柱状图的柱条样式设置",
+ "data type": "图形样式类"
+  },
+  {
+data type": "系列数据集类""variable name": "仪表盘",
+data type": "系列数据集类""comment": "仪表盘专有配置",
+data type": "系列数据集类""data type": "仪表盘配置类"
+  }
+],
+"methods": [
+  {
+}"method name": "取文本",
+}"comment": "将当前对象的图表配置参数转换成JSON文本",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "图表类型",
+}"comment": "图标的类型",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "图表类型值",
+"comment": "提供图表类型常量",
+"data type": "图表类型"
+   }
+}]
+  },
+  {
+"comment": "柱状图的柱条样式设置""method name": "系列名称",
+"comment": "柱状图的柱条样式设置""comment": "系列名称,用于提示框的显示,图例筛选,或在生成图表时更新数据和配置项时用于指定对应的系列.",
+"comment": "柱状图的柱条样式设置""type": "property setter",
+"comment": "柱状图的柱条样式设置""parameters": [
+   {
+"parameter name": "名称",
+"comment": "系列名称",
+"data type": "文本型"
+   }
+"comment": "柱状图的柱条样式设置"]
+  },
+  {
+
+"method name": "数据_文本",
+
+"comment": "以文本方式设置当前系列的数据,系列中的数据内容数组,数组项通常为具体的数据项.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "数据内容文本",
+"comment": "提供一个数组文本,每个成员表示一个数据节点值.成员值的类型根据不同图表类型可以为数值或文本和对象文本.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "使用坐标系",
+
+"comment": "该系列使用的坐标系",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "坐标系",
+"comment": "提供坐标系类型常量",
+"data type": "坐标系类型"
+   }
+
+]
+  },
+  {
+集"method name": "横轴索引",
+集"comment": "提供该系列使用的横轴索引,在单个图表实例中存在多个横轴的时候有用.",
+集"type": "property setter",
+集"parameters": [
+   {
+"parameter name": "索引值",
+"comment": "横坐标轴索引",
+"data type": "整数"
+   }
+集]
+  },
+  {
+ameter name": "数据内容文本""method name": "纵轴索引",
+ameter name": "数据内容文本""comment": "提供该系列使用的纵轴索引,在单个图表实例中存在多个纵轴的时候有用.",
+ameter name": "数据内容文本""type": "property setter",
+ameter name": "数据内容文本""parameters": [
+   {
+"parameter name": "索引值",
+"comment": "纵坐标轴索引",
+"data type": "整数"
+   }
+ameter name": "数据内容文本"]
+  },
+  {
+}"method name": "极坐标索引",
+}"comment": "使用的极坐标系的索引,在单个图表实例中存在多个极坐标系的时候有用.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "索引值",
+"comment": "极坐标索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "雷达坐标索引",
+
+"comment": "使用的雷达坐标系的索引,在单个图表实例中存在多个雷达坐标系的时候有用.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "索引值",
+"comment": "雷达坐标索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"type": "property setter""method name": "地理坐标索引",
+"type": "property setter""comment": "使用的地理坐标系的索引,在单个图表实例中存在多个地理坐标系的时候有用.",
+"type": "property setter""type": "property setter",
+"type": "property setter""parameters": [
+   {
+"parameter name": "索引值",
+"comment": "地理坐标系索引",
+"data type": "整数"
+   }
+"type": "property setter"]
+  },
+  {
+type": "property setter""parameters": [
+"method name": "日历坐标索引",
+type": "property setter""parameters": [
+"comment": "使用的日历坐标系的索引,在单个图表实例中存在多个日历坐标系的时候有用.",
+type": "property setter""parameters": [
+"type": "property setter",
+type": "property setter""parameters": [
+"parameters": [
+   {
+"parameter name": "索引值",
+"comment": "日历坐标系索引",
+"data type": "整数"
+   }
+type": "property setter""parameters": [
+]
+  },
+  {
+ype": "property setter"]"method name": "标记图形",
+ype": "property setter"]"comment": "标记的图形",
+ype": "property setter"]"type": "property setter",
+ype": "property setter"]"parameters": [
+   {
+"parameter name": "标记图形",
+"comment": "提供标记图形形状常量",
+"data type": "标记图形形状",
+"@默认值": "标记图形形状.空心圆型"
+   }
+ype": "property setter"]]
+  },
+  {
+
+"method name": "标记图形2",
+
+"comment": "标记的图形,扩展方法,用于自定义图形.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "标记图形",
+"comment": "可以通过 'image://url' 设置为图片,其中 URL 为图片的链,或者 dataURI. 也可以通过 'path://' 将图标设置为任意的矢量路径.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "标记图形尺寸",
+
+"comment": "图形标记大小",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "标记大小",
+"comment": "标记大小值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "标记图形尺寸2",
+ }"comment": "图形标记大小",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "标记大小",
+"comment": "可以设置成诸如'10'这样单一的数值文本,也可以用数组分开表示宽和高,例如 '[20, 10]' 表示标记宽为20,高为10.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "标记图形旋转角度",
+}"comment": "标记图形旋转角度",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "旋转角度",
+"comment": "正值表示逆时针旋转",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "标记图形保持比例",
+data type": "整数""comment": "如果标记图形是 path:// 的形式,是否在缩放时保持该图形的长宽比.",
+data type": "整数""type": "property setter",
+data type": "整数""parameters": [
+   {
+"parameter name": "是否保持长宽比",
+"comment": "是否保持长宽比",
+"data type": "逻辑型"
+   }
+data type": "整数"]
+  },
+  {
+ethod name": "标记图形尺寸2""method name": "标记图形偏移",
+ethod name": "标记图形尺寸2""comment": "标记相对于原本位置的偏移",
+ethod name": "标记图形尺寸2""type": "property setter",
+ethod name": "标记图形尺寸2""parameters": [
+   {
+"parameter name": "偏移值文本",
+"comment": "  提供一个具有两个成员的js数组文本,成员可以是绝对的像素值,也可以是相对的百分比.\n如:\"[0, '-50%']\" 首个成员代表横向偏移距离,第二个成员代表纵向偏移距离.",
+"data type": "文本型"
+   }
+ethod name": "标记图形尺寸2"]
+  },
+  {
+data type": "整数""method name": "显示标记图形",
+data type": "整数""comment": "是否显示标记图形,",
+data type": "整数""type": "property setter",
+data type": "整数""parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "如果为假则只有在提示框点亮的时候显示",
+"data type": "逻辑型"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "显示所有标记图形",
+ }"comment": "只在主轴为类目轴时有效,默认如果有足够空间则显示标志图形,否则随主轴标签间隔隐藏策略.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示所有图形 假为随主轴标签间隔隐藏策略",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+
+"method name": "启用图例点亮联动高亮",
+
+"comment": "是否启用图例点亮时的联动高亮.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "默认启用",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+}"type": "property setter""method name": "启用悬停动画",
+}"type": "property setter""comment": "是否开启悬停在数据图形上的动画效果",
+}"type": "property setter""type": "property setter",
+}"type": "property setter""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "默认启用",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}"type": "property setter"]
+  },
+  {
+}"method name": "圆形半径",
+}"comment": "涉及圆形元素的内外半径.如饼图,仪表盘,旭日图的内外半径.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "内外半径值",
+"comment": "  可以是像\"75\"这样的具体像素值,可以是像 \"75%\"这样相对于容器高宽的百分比来直接设置外半径,\n还可以像\"['75%',50]\"这样的数组文本来分别设置外半径和内半径.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+comment": "真为显示所有图形 假为随主轴标签间隔隐藏策略""method name": "垂直排列",
+comment": "真为显示所有图形 假为随主轴标签间隔隐藏策略""comment": "图形的排列方式,如漏斗图朝向",
+comment": "真为显示所有图形 假为随主轴标签间隔隐藏策略""type": "property setter",
+comment": "真为显示所有图形 假为随主轴标签间隔隐藏策略""parameters": [
+   {
+"parameter name": "是否垂直排列",
+"comment": "真为垂直排列,假为水平排列.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "真为显示所有图形 假为随主轴标签间隔隐藏策略"]
+  },
+  {
+@默认值": "真""method name": "鼠标样式",
+@默认值": "真""comment": "鼠标悬浮时在图形元素上时鼠标的样式.",
+@默认值": "真""type": "property setter",
+@默认值": "真""parameters": [
+   {
+"parameter name": "悬停时鼠标样式",
+"comment": "同 CSS 的 cursor",
+"data type": "文本型"
+   }
+@默认值": "真"]
+  },
+  {
+
+"method name": "静默",
+
+"comment": "图形是否不响应和触发鼠标事件",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否静默",
+"comment": "默认为假,即响应和触发鼠标事件",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+}"method name": "平滑曲线",
+}"comment": "折线图是否平滑曲线显示.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "默认关闭",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+pe": "property setter"]"comment": "标记的图形""method name": "平滑单调性",
+pe": "property setter"]"comment": "标记的图形""comment": "折线平滑后是否在一个维度上保持单调性,通常在双数值轴上使用.",
+pe": "property setter"]"comment": "标记的图形""type": "property setter",
+pe": "property setter"]"comment": "标记的图形""parameters": [
+   {
+"parameter name": "坐标轴",
+"comment": "可以设置成'x' 或 'y'来指明是在横轴或纵轴上保持单调性.",
+"data type": "文本型"
+   }
+pe": "property setter"]"comment": "标记的图形"]
+  },
+  {
+
+"method name": "采样策略",
+
+"comment": "在数据量远大于像素点时候的降采样策略,开启后可以有效的优化图表的绘制效率,默认关闭,也就是全部绘制不过滤数据点.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "过滤点采样策略",
+"comment": "提供系列数据采样策略常量",
+"data type": "系列数据采样策略"
+   }
+
+]
+  },
+  {
+认值": "真"]"method name": "阶梯线图",
+认值": "真"]"comment": "折线图是否显示成阶梯线图.",
+认值": "真"]"type": "property setter",
+认值": "真"]"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "默认关闭",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+认值": "真"]]
+  },
+  {
+ }"method name": "阶梯线图拐点",
+ }"comment": "折线图是否显示成阶梯线图及拐点设置",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "拐点设置",
+"comment": "提供图表元素定位常量 (仅支持:起始点,中点,结束点 )",
+"data type": "图表元素定位",
+"@默认值": "图表元素定位.起始点"
+   }
+ }]
+  },
+  {
+ }"method name": "是否连接空数据",
+ }"comment": "是否连接空数据.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否连接",
+"comment": "是否连接",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+ }"method name": "裁剪溢出",
+ }"comment": "是否裁剪超出坐标系部分的图形",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否裁剪",
+"comment": "具体裁剪效果根据系列决定:\n散点图/带有涟漪特效动画的散点(气泡)图:忽略中心点超出坐标系的图形,但是不裁剪单个图形.\n柱状图:裁掉完全超出的柱子，但是不会裁剪只超出部分的柱子.\n折线图:裁掉所有超出坐标系的折线部分，拐点图形的逻辑按照散点图处理.\n路径图:裁掉所有超出坐标系的部分.\nK 线图:忽略整体都超出坐标系的图形,但是不裁剪单个图形.\n自定义系列:裁掉所有超出坐标系的部分.\n除了自定义系列,其它系列的默认值都为 真 即开启裁剪,如果你觉得不想要裁剪的话,可以设置成 假 关闭.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+thod name": "平滑曲线""method name": "数据堆叠",
+thod name": "平滑曲线""comment": "同个类目轴上系列配置相同的堆叠值后,后一个系列的值会在前一个系列的值上相加",
+thod name": "平滑曲线""type": "property setter",
+thod name": "平滑曲线""parameters": [
+   {
+"parameter name": "堆叠值",
+"comment": "提供一个堆叠值文本",
+"data type": "文本型",
+"@默认值": "\"总量\""
+   }
+thod name": "平滑曲线"]
+  },
+  {
+ameter name": "是否静默""method name": "显示背景",
+ameter name": "是否静默""comment": "是否显示柱状图柱条的背景色",
+ameter name": "是否静默""type": "property setter",
+ameter name": "是否静默""parameters": [
+   {
+"parameter name": "是否显示背景颜色",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "是否静默"]
+  },
+  {
+od name": "平滑曲线"]"method name": "柱条宽度",
+od name": "平滑曲线"]"comment": "柱条的宽度,不设时自适应.柱状图系列生效.",
+od name": "平滑曲线"]"type": "property setter",
+od name": "平滑曲线"]"parameters": [
+   {
+"parameter name": "宽度值文本",
+"comment": "可以是绝对值例如\"40\"或者百分数例如\"60%\"百分数基于自动计算出的每一类目的宽度",
+"data type": "文本型"
+   }
+od name": "平滑曲线"]]
+  },
+  {
+data type": "文本型""method name": "柱条最大宽度",
+data type": "文本型""comment": "柱条的最大宽度,比 柱条宽度 优先级高.",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "宽度值文本",
+"comment": "可以是绝对值例如\"40\"或者百分数例如\"60%\"百分数基于自动计算出的每一类目的宽度",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "柱条最小宽度",
+
+"comment": "柱条的最小宽度,比 柱条宽度 优先级高.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "宽度值文本",
+"comment": "可以是绝对值例如\"40\"或者百分数例如\"60%\"百分数基于自动计算出的每一类目的宽度",
+"data type": "文本型",
+"@默认值": "\"1\""
+   }
+
+]
+  },
+  {
+
+"method name": "柱条最小高度",
+
+"comment": "柱条的最小高度,可用于防止某数据项的值过小而影响交互.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "高度文本值",
+"comment": "可以是绝对值例如\"40\"或者百分数例如\"60%\"百分数基于自动计算出的每一类目的高度",
+"data type": "文本型",
+"@默认值": "\"0\""
+   }
+
+]
+  },
+  {
+@默认值": "\"1\"""method name": "柱条最小角度",
+@默认值": "\"1\"""comment": "柱条最小角度,可用于防止某数据项的值过小而影响交互,尽在极坐标系中有效.",
+@默认值": "\"1\"""type": "property setter",
+@默认值": "\"1\"""parameters": [
+   {
+"parameter name": "角度值",
+"comment": "角度值 0-360",
+"data type": "整数"
+   }
+@默认值": "\"1\""]
+  },
+  {
+"method name": "柱间距",
+"comment": "不同系列的柱间距离,为百分比（如 '30%'，表示柱子宽度的 30%）。\n如果想要两个系列的柱子重叠,可以设置柱间距 为 '-100%'.这在用柱子做背景的时候有用.\n在同一坐标系上,此属性会被多个柱状图系列共享,此属性应设置于此坐标系中最后一个柱状图系列上才会生效,并且是对此坐标系中所有柱状图系列生效.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "柱间距值",
+"comment": "柱间距值文本",
+"data type": "文本型",
+"@默认值": "\"30%\""
+   }
+]
+  },
+  {
+": "\"1\"""method name": "柱条最小角度""method name": "同系列柱间距",
+": "\"1\"""method name": "柱条最小角度""comment": "同一系列的柱间距离",
+": "\"1\"""method name": "柱条最小角度""type": "property setter",
+": "\"1\"""method name": "柱条最小角度""parameters": [
+   {
+"parameter name": "柱间距值",
+"comment": "柱间距值文本",
+"data type": "文本型",
+"@默认值": "\"20%\""
+   }
+": "\"1\"""method name": "柱条最小角度"]
+  },
+  {
+: "\"1\"""method name": "柱条最小角度""parameters": [
+"method name": "大数据优化",
+: "\"1\"""method name": "柱条最小角度""parameters": [
+"comment": "是否开启大数据量优化,在数据图形特别多而出现卡顿时候可以开启.\n配合 大数据优化阈值 在数据量大于指定阈值的时候对绘制进行优化.\n缺点：优化后不能自定义设置单个数据项的样式.",
+: "\"1\"""method name": "柱条最小角度""parameters": [
+"type": "property setter",
+: "\"1\"""method name": "柱条最小角度""parameters": [
+"parameters": [
+   {
+"parameter name": "是否开启",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+: "\"1\"""method name": "柱条最小角度""parameters": [
+]
+  },
+  {
+
+"method name": "大数据优化阈值",
+
+"comment": "开启绘制优化的阈值",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "优化阈值",
+"comment": "数据超过这个数后开启大数据优化.",
+"data type": "整数",
+"@默认值": "400"
+   }
+
+]
+  },
+  {
+comment": "柱间距值文本""method name": "柱条两侧圆弧",
+comment": "柱间距值文本""comment": "是否在环形柱条两侧使用圆弧效果,仅对极坐标系柱状图有效.",
+comment": "柱间距值文本""type": "property setter",
+comment": "柱间距值文本""parameters": [
+   {
+"parameter name": "是否使用圆弧效果",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "柱间距值文本"]
+  },
+  {
+
+"method name": "动态排序",
+
+"comment": "用于制作动态排序柱状图",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否动态排序",
+"comment": "是否动态排序",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+@默认值": "假""method name": "禁止标签重叠",
+@默认值": "假""comment": "是否启用防止标签重叠策略,在标签拥挤重叠的情况下会挪动各个标签的位置,防止标签间的重叠",
+@默认值": "假""type": "property setter",
+@默认值": "假""parameters": [
+   {
+"parameter name": "是否开启",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+@默认值": "假"]
+  },
+  {
+
+"method name": "数据为零仍显示",
+
+"comment": "饼图是否在数据和为0的时候仍显示扇区.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+@默认值": "真""method name": "中心坐标",
+@默认值": "真""comment": "饼图,仪表盘,旭日图的中心(圆心)坐标,地图中指定中心点经纬度.",
+@默认值": "真""type": "property setter",
+@默认值": "真""parameters": [
+   {
+"parameter name": "圆心坐标值",
+"comment": "提供一个数组文本如:['50', '50']数组的第一项是横坐标,第二项是纵坐标,支持设置成百分比.\n设置成百分比时第一项是相对于容器宽度,第二项是相对于容器高度.",
+"data type": "文本型",
+"@默认值": "\"[\\'50%\\', \\'50%\\']\""
+   }
+@默认值": "真"]
+  },
+  {
+
+"method name": "选中模式",
+
+"comment": "选中模式的配置,表示是否支持多个选中",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "选中模式",
+"comment": "0:关闭 1:单选 2:多选",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+omment": "柱间距值文本""parameters": [
+"method name": "选中偏移",
+omment": "柱间距值文本""parameters": [
+"comment": "选中时数据图形的偏移距离",
+omment": "柱间距值文本""parameters": [
+"type": "property setter",
+omment": "柱间距值文本""parameters": [
+"parameters": [
+   {
+"parameter name": "偏移距离",
+"comment": "单位像素",
+"data type": "整数",
+"@默认值": "10"
+   }
+omment": "柱间距值文本""parameters": [
+]
+  },
+  {
+"method name": "顺时针排布",
+"comment": "饼图的扇区,仪表盘刻度等是否是顺时针排布或增长",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "是否顺时针排布",
+"comment": "顺时针排布",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+认值": "假"]"method name": "起始角度",
+认值": "假"]"comment": "饼图,仪表盘等图形的起始角度",
+认值": "假"]"type": "property setter",
+认值": "假"]"parameters": [
+   {
+"parameter name": "角度值",
+"comment": "起始角度值",
+"data type": "整数"
+   }
+认值": "假"]]
+  },
+  {
+ }"method name": "结束角度",
+ }"comment": "仪表盘结束角度",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "角度值",
+"comment": "结束角度值",
+"data type": "整数",
+"@默认值": "-45"
+   }
+ }]
+  },
+  {
+"method name": "最小扇区角度",
+"comment": "饼图最小的扇区角度,用于防止某个值过小导致扇区太小影响交互",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "角度值",
+"comment": "支持范围:0-360",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+
+"parameters": [
+"method name": "最小显示标签角度",
+
+"parameters": [
+"comment": "饼图最小显示标签角度,小于设置的角度值则不显示标签和标签线.",
+
+"parameters": [
+"type": "property setter",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "角度值",
+"comment": "支持范围:0-360",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+"parameters": [
+]
+  },
+  {
+ }"method name": "玫瑰图",
+ }"comment": "饼图是否展示成南丁格尔玫瑰图,通过半径区分数据大小.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否为玫瑰图",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+@默认值": "假""method name": "玫瑰图类型",
+@默认值": "假""comment": "饼图是否展示成南丁格尔玫瑰图,通过半径区分数据大小.",
+@默认值": "假""type": "property setter",
+@默认值": "假""parameters": [
+   {
+"parameter name": "玫瑰图类型值",
+"comment": "0:扇区圆心角展现数据的百分比,半径展现数据的大小. 1:所有扇区圆心角相同,仅通过半径展现数据大小.",
+"data type": "整数"
+   }
+@默认值": "假"]
+  },
+  {
+data type": "逻辑型""method name": "涟漪特效开启时机",
+data type": "逻辑型""comment": "涟漪散点图配置何时显示特效,利用动画特效可以将某些想要突出的数据进行视觉突出.",
+data type": "逻辑型""type": "property setter",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "开启时机",
+"comment": "0:绘制完成后显示特效 1:悬停高亮状态的时显示特效.",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "逻辑型"]
+  },
+  {
+"method name": "置涟漪特效",
+"comment": "涟漪特效相关配置",
+"parameters": [
+   {
+"parameter name": "颜色",
+"comment": "涟漪的颜色.默认为散点的颜色.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "动画周期秒数",
+"comment": "动画周期秒数",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "波纹最大缩放比例",
+"comment": "波纹最大缩放比例",
+"data type": "小数",
+"@默认值": "2.5"
+   },
+   {
+"parameter name": "波纹的绘制方式",
+"comment": "波纹的绘制方式,0:波纹线 1:波浪填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+]
+  },
+  {
+comment": "动画周期秒数""method name": "树图布局",
+comment": "动画周期秒数""comment": "树图的布局,有正交和径向两种.",
+comment": "动画周期秒数""type": "property setter",
+comment": "动画周期秒数""parameters": [
+   {
+"parameter name": "树图布局类型",
+"comment": "0:正交布局,就是我们通常所说的水平和垂直方向. 1:径向布局,是指以根节点为圆心,每一层节点为环,一层层向外发散绘制而成的布局.",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "动画周期秒数"]
+  },
+  {
+comment": "支持范围:0-360""method name": "布局方式",
+comment": "支持范围:0-360""comment": "K线图,盒须图的布局方式",
+comment": "支持范围:0-360""type": "property setter",
+comment": "支持范围:0-360""parameters": [
+   {
+"parameter name": "树图布局类型",
+"comment": "0:水平排列 1:垂直排列.",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "支持范围:0-360"]
+  },
+  {
+"method name": "树图正交布局方向",
+"comment": "树图中正交布局的方向,当树图布局为正交布局时有效.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "正交布局方向",
+"comment": "0:从左到右. 1:从右到左. 2:从上到下. 3:从下到上.",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "树图边形",
+data type": "文本型""comment": "树图在正交布局下,边的形状.分别有曲线和折线两种.",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "边形",
+"comment": "0:曲线. 1:折线.",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "折线分叉位置",
+}"comment": "树图在正交布局下当边的形状是折线时,子树中折线段分叉的位置.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "分叉位置",
+"comment": "分叉点与子树父节点的距离占整个子树高度的百分比.",
+"data type": "文本型",
+"@默认值": "\"50%\""
+   }
+}]
+  },
+  {
+"comment": "树图在正交布局下当边的形状是折线时,子树中折线段分叉的位置.""method name": "启用鼠标缩放和平移",
+"comment": "树图在正交布局下当边的形状是折线时,子树中折线段分叉的位置.""comment": "树图,地图是否开启鼠标缩放和平移漫游,默认不开启.",
+"comment": "树图在正交布局下当边的形状是折线时,子树中折线段分叉的位置.""type": "property setter",
+"comment": "树图在正交布局下当边的形状是折线时,子树中折线段分叉的位置.""parameters": [
+   {
+"parameter name": "缩放和平移方式",
+"comment": "0:不开启. 1:缩放和平移. 2:缩放. 3:平移.",
+"data type": "整数",
+"@默认值": "0"
+   }
+"comment": "树图在正交布局下当边的形状是折线时,子树中折线段分叉的位置."]
+  },
+  {
+ }"method name": "树图初始展开层级",
+ }"comment": "树图初始展开的层级(深度)",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "初始展开层级",
+"comment": "根节点是第0层,依次类推,如果设置为-1表示打开所有层级.",
+"data type": "整数",
+"@默认值": "2"
+   }
+ }]
+  },
+  {
+@默认值": "0""method name": "分割段数",
+@默认值": "0""comment": "仪表盘刻度的分割段数",
+@默认值": "0""type": "property setter",
+@默认值": "0""parameters": [
+   {
+"parameter name": "分割段数值",
+"comment": "分割段数",
+"data type": "整数",
+"@默认值": "10"
+   }
+@默认值": "0"]
+  },
+  {
+@默认值": "0""method name": "最大值",
+@默认值": "0""comment": "仪表盘,漏斗图显示最大的数据值",
+@默认值": "0""type": "property setter",
+@默认值": "0""parameters": [
+   {
+"parameter name": "最大数据值",
+"comment": "最大数据值",
+"data type": "整数",
+"@默认值": "100"
+   }
+@默认值": "0"]
+  },
+  {
+comment": "最大数据值""method name": "最小值",
+comment": "最大数据值""comment": "仪表盘,漏斗图显示最小的数据值",
+comment": "最大数据值""type": "property setter",
+comment": "最大数据值""parameters": [
+   {
+"parameter name": "最小数据值",
+"comment": "最小数据值",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "最大数据值"]
+  },
+  {
+omment": "动画周期秒数""parameters": [
+"method name": "最大值宽度",
+omment": "动画周期秒数""parameters": [
+"comment": "漏斗图数据最大值映射的宽度",
+omment": "动画周期秒数""parameters": [
+"type": "property setter",
+omment": "动画周期秒数""parameters": [
+"parameters": [
+   {
+"parameter name": "最大值宽度值",
+"comment": "可以是绝对的像素大小,也可以是相对布局宽度的百分比.",
+"data type": "文本型",
+"@默认值": "\"100%\""
+   }
+omment": "动画周期秒数""parameters": [
+]
+  },
+  {
+}"method name": "最小值宽度",
+}"comment": "漏斗图数据最小值映射的宽度,如果需要最小值的图形并不是尖端三角,可通过设置该属性实现.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "最小值宽度值",
+"comment": "可以是绝对的像素大小,也可以是相对布局宽度的百分比.",
+"data type": "文本型",
+"@默认值": "\"0%\""
+   }
+}]
+  },
+  {
+parameters": [
+"method name": "数据排序",
+parameters": [
+"comment": "漏斗图,旭日图数据排序方式",
+parameters": [
+"type": "property setter",
+parameters": [
+"parameters": [
+   {
+"parameter name": "排序模式",
+"comment": "提供数据排序方式常量",
+"data type": "数据排序方式",
+"@默认值": "数据排序方式.降序"
+   }
+parameters": [
+]
+  },
+  {
+data type": "文本型""method name": "图形间距",
+data type": "文本型""comment": "漏斗图数据体系间距",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "间距距离",
+"comment": "间距距离",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "文本型""method name": "漏斗水平对齐",
+data type": "文本型""comment": "漏斗水平方向对齐布局类型,默认居中对齐",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "对齐方式",
+"comment": "提供元素水平对齐常量",
+"data type": "元素水平对齐",
+"@默认值": "元素水平对齐.居中"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "地图名称",
+}"comment": "注册的地图名称",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "地图",
+"comment": "地图名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+comment": "地图名称""method name": "自定义地区名称映射",
+comment": "地图名称""comment": "自定义地区的名称映射",
+comment": "地图名称""type": "property setter",
+comment": "地图名称""parameters": [
+   {
+"parameter name": "区域名称映射配置",
+"comment": "提供一个对象文本,用于表示区域地图名称的映射如:\"{'China' : '中国'}\"",
+"data type": "文本型"
+   }
+comment": "地图名称"]
+  },
+  {
+ata type": "文本型""parameters": [
+"method name": "中心视角",
+ata type": "文本型""parameters": [
+"comment": "当前视角的中心点,用经纬度表示.",
+ata type": "文本型""parameters": [
+"type": "property setter",
+ata type": "文本型""parameters": [
+"parameters": [
+   {
+"parameter name": "视角中心点坐标",
+"comment": "提供一个数组文本如:[115.97, 29.71]其成员分别表示经度和纬度.",
+"data type": "文本型"
+   }
+ata type": "文本型""parameters": [
+]
+  },
+  {
+漏斗图显示最大的数据值"method name": "地图长宽比",
+漏斗图显示最大的数据值"comment": "这个参数用于设置地图的长宽比",
+漏斗图显示最大的数据值"type": "property setter",
+漏斗图显示最大的数据值"parameters": [
+   {
+"parameter name": "长宽比",
+"comment": "取值0-1",
+"data type": "小数",
+"@默认值": "0.75"
+   }
+漏斗图显示最大的数据值]
+  },
+  {
+}"method name": "缩放比例",
+}"comment": "当前视角的缩放比例",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "当前缩放比例",
+"comment": "缩放比值,1代表100%",
+"data type": "小数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+"method name": "热力点大小",
+"comment": "热力图每个点的大小,在地理坐标系上有效.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "热力点大小值",
+"comment": "热力点大小",
+"data type": "整数",
+"@默认值": "20"
+   }
+]
+  },
+  {
+}"method name": "热力点模糊大小",
+}"comment": "热力图每个点的模糊大小,在地理坐标系上有效.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "模糊大小",
+"comment": "热力点模糊大小",
+"data type": "整数",
+"@默认值": "20"
+   }
+}]
+  },
+  {
+
+"method name": "热力点最小透明度",
+
+"comment": "最小的透明度,在地理坐标系上有效.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "透明度",
+"comment": "取值0-1的小数",
+"data type": "小数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ta type": "文本型""parameters": [
+"comment": "当前视角的中心点,用经纬度表示.""method name": "热力点最大透明度",
+ta type": "文本型""parameters": [
+"comment": "当前视角的中心点,用经纬度表示.""comment": "最大的透明度,在地理坐标系上有效.",
+ta type": "文本型""parameters": [
+"comment": "当前视角的中心点,用经纬度表示.""type": "property setter",
+ta type": "文本型""parameters": [
+"comment": "当前视角的中心点,用经纬度表示.""parameters": [
+   {
+"parameter name": "透明度",
+"comment": "取值0-1的小数",
+"data type": "小数",
+"@默认值": "1"
+   }
+ta type": "文本型""parameters": [
+"comment": "当前视角的中心点,用经纬度表示."]
+  },
+  {
+ }"method name": "渐进渲染图形数量",
+ }"comment": "渐进式渲染时每一帧绘制图形数量,设为 0 时不启用渐进式渲染,支持每个系列单独配置",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "绘制图形数量",
+"comment": "设为 0 时不启用渐进式渲染",
+"data type": "整数",
+"@默认值": "400"
+   }
+ }]
+  },
+  {
+明度,在地理坐标系上有效."method name": "渐进渲染启用阈值",
+明度,在地理坐标系上有效."comment": "启用渐进式渲染的图形数量阈值,在单个系列的图形数量超过该阈值时启用渐进式渲染.",
+明度,在地理坐标系上有效."type": "property setter",
+明度,在地理坐标系上有效."parameters": [
+   {
+"parameter name": "图形数量阈值",
+"comment": "图形数量阈值",
+"data type": "整数",
+"@默认值": "3000"
+   }
+明度,在地理坐标系上有效.]
+  },
+  {
+@默认值": "3000""method name": "节点点击行为",
+@默认值": "3000""comment": "点击节点后的行为.",
+@默认值": "3000""type": "property setter",
+@默认值": "3000""parameters": [
+   {
+"parameter name": "行为类型",
+"comment": "0:节点点击无反应 1:点击节点后以该节点为根结点.",
+"data type": "整数",
+"@默认值": "0"
+   }
+@默认值": "3000"]
+  },
+  {
+明度,在地理坐标系上有效."method name": "无名称数据文字渲染",
+明度,在地理坐标系上有效."comment": "如果数据没有名称是否需要渲染文字",
+明度,在地理坐标系上有效."type": "property setter",
+明度,在地理坐标系上有效."parameters": [
+   {
+"parameter name": "是否渲染文字",
+"comment": "是否渲染文字",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+明度,在地理坐标系上有效.]
+  },
+  {
+ameter name": "区域名称映射配置""method name": "未选中条线透明度",
+ameter name": "区域名称映射配置""comment": "框选时,未被选中的条线透明度从而可以达到变暗的效果",
+ameter name": "区域名称映射配置""type": "property setter",
+ameter name": "区域名称映射配置""parameters": [
+   {
+"parameter name": "透明度",
+"comment": "透明度取值0-1的小数",
+"data type": "小数",
+"@默认值": "0.05"
+   }
+ameter name": "区域名称映射配置"]
+  },
+  {
+地理坐标系上有效."method name": "渐进渲染启用阈值""method name": "选中条线透明度",
+地理坐标系上有效."method name": "渐进渲染启用阈值""comment": "框选时,被选中的条线透明度从而可以达到高亮的效果",
+地理坐标系上有效."method name": "渐进渲染启用阈值""type": "property setter",
+地理坐标系上有效."method name": "渐进渲染启用阈值""parameters": [
+   {
+"parameter name": "透明度",
+"comment": "透明度取值0-1的小数",
+"data type": "小数",
+"@默认值": "1"
+   }
+地理坐标系上有效."method name": "渐进渲染启用阈值"]
+  },
+  {
+地理坐标系上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新",
+地理坐标系上有效."method name": "渐进渲染启用阈值""comment": "平行坐标系是否是否实时刷新",
+地理坐标系上有效."method name": "渐进渲染启用阈值""type": "property setter",
+地理坐标系上有效."method name": "渐进渲染启用阈值""parameters": [
+   {
+"parameter name": "实时刷新",
+"comment": "真为实时刷新",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+地理坐标系上有效."method name": "渐进渲染启用阈值"]
+  }
+]
+ },
+ {
+"class name": "图表系列集类",
+"comment": "  系列集,(对应option.series配置项)此配置项实际是个组数每个成员即一个系列,系列是指：一组数值以及他们映射成的图.\n不仅表示数据,也表示数据映射成为的图.所以,一个系列包含的要素至少有:一组数值,图表类型,以及其他的关于这些数据如何映射成图的参数.",
+"@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"",
+"@视窗.外部头文件": "\"include\\\\vol_echarts_ref_data.h\"",
+"methods": [
+  {
+}"comment": "渐进式渲染时每一帧绘制图形数量,设为 0 时不启用渐进式渲染,支持每个系列单独配置""method name": "创建系列",
+}"comment": "渐进式渲染时每一帧绘制图形数量,设为 0 时不启用渐进式渲染,支持每个系列单独配置""comment": "创建一个系列,一个系列包含的要素至少有:图表类型,一组数值,以及其他的关于这些数据如何映射成图的参数.",
+}"comment": "渐进式渲染时每一帧绘制图形数量,设为 0 时不启用渐进式渲染,支持每个系列单独配置""result comment": "返回创建的系列的参考,后续也可以调用\"取系列(索引)\"方法取得.",
+}"comment": "渐进式渲染时每一帧绘制图形数量,设为 0 时不启用渐进式渲染,支持每个系列单独配置""data type": "图表系列类",
+}"comment": "渐进式渲染时每一帧绘制图形数量,设为 0 时不启用渐进式渲染,支持每个系列单独配置""@视窗.返回参考": "真",
+}"comment": "渐进式渲染时每一帧绘制图形数量,设为 0 时不启用渐进式渲染,支持每个系列单独配置""@禁止流程检查": "真",
+}"comment": "渐进式渲染时每一帧绘制图形数量,设为 0 时不启用渐进式渲染,支持每个系列单独配置""parameters": [
+   {
+"parameter name": "图表类型值",
+"comment": "提供图表类型常量",
+"data type": "图表类型"
+   },
+   {
+"parameter name": "系列名称",
+"comment": "系列的名称",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文本系列数据",
+"comment": "提供一个数组文本,每个成员表示一个数据节点值.成员值的类型根据不同图表类型可以为数值或文本和对象文本.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "数组系列数据",
+"comment": "提供一个整数数组,如果同时提供了参数3(文本系列数据)那么参数3所提供的内容将被舍弃.",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+}"comment": "渐进式渲染时每一帧绘制图形数量,设为 0 时不启用渐进式渲染,支持每个系列单独配置"]
+  },
+  {
+ }"method name": "添加系列",
+ }"comment": "向系列集中添加一个新的系列,并返回该系列.",
+ }"result comment": "返回所添加系列的参考,后续也可以调用\"取系列(索引)\"方法取得.",
+ }"data type": "图表系列类",
+ }"@视窗.返回参考": "真",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "图表系列类对象",
+"comment": "图表系列类对象",
+"data type": "图表系列类"
+   }
+ }]
+  },
+  {
+meter name": "区域名称映射配置""type": "property setter""method name": "删除系列",
+meter name": "区域名称映射配置""type": "property setter""comment": "从系列集中将一个系列删除",
+meter name": "区域名称映射配置""type": "property setter""parameters": [
+   {
+"parameter name": "索引位置",
+"comment": "删除系列集中的第几个系列(索引0从零开始) 默认值:-1代表最后一个",
+"data type": "整数",
+"@默认值": "-1"
+   }
+meter name": "区域名称映射配置""type": "property setter"]
+  },
+  {
+}"@视窗.返回参考": "真""method name": "取系列数",
+}"@视窗.返回参考": "真""comment": "取系列集中的成员数",
+}"@视窗.返回参考": "真""data type": "整数",
+}"@视窗.返回参考": "真""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取系列",
+}"comment": "获得系列集中对应索引位置的系列对象",
+}"result comment": "返回对应索引位置系列对象的参考",
+}"data type": "图表系列类",
+}"@视窗.返回参考": "真",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "索引位置",
+"comment": "取系列集中的第几个系列(索引0从零开始 代表第一个) 默认值:-1代表最后一个",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+comment": "取系列集中的第几个系列(索引0从零开始 代表第一个) 默认值:-1代表最后一个""method name": "清空",
+comment": "取系列集中的第几个系列(索引0从零开始 代表第一个) 默认值:-1代表最后一个""comment": "清空系列集中的所有系列",
+comment": "取系列集中的第几个系列(索引0从零开始 代表第一个) 默认值:-1代表最后一个""@嵌入式方法": "\"\""
+  },
+  {
+@默认值": "\"\"""method name": "取文本",
+@默认值": "\"\"""comment": "将当前对象图表配置参数转换成JSON文本",
+@默认值": "\"\"""data type": "文本型"
+  }
+]
+ },
+ {
+"class name": "系列数据类",
+"comment": "以对象的形式表示单个数据成员",
+"base class": "图表参数基础类",
+"@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"",
+"variables": [
+  {
+data type": "整数""variable name": "标签样式",
+data type": "整数""comment": "单个数据的标签样式设置",
+data type": "整数""data type": "标签样式类"
+  },
+  {
+系上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""variable name": "线条样式",
+系上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置",
+系上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""data type": "线条样式类"
+  },
+  {
+comment": "提供图表类型常量""variable name": "标签引导线",
+comment": "提供图表类型常量""comment": "单个数据标签引导线样式设置",
+comment": "提供图表类型常量""data type": "标签引导线类"
+  },
+  {
+
+"variable name": "区域填充",
+
+"comment": "单个数据区域填充样式设置",
+
+"data type": "区域填充样式类"
+  },
+  {
+}"variable name": "图形样式",
+}"comment": "单个数据图形样式设置",
+}"data type": "图形样式类"
+  },
+  {
+}"variable name": "悬停状态",
+}"comment": "单个数据悬停高亮样式设置",
+}"data type": "悬停高亮类"
+  },
+  {
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""variable name": "淡出状态",
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""comment": "单个数据淡出状态样式设置",
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""data type": "淡出状态类"
+  },
+  {
+ type": "整数""variable name": "标签样式""variable name": "选中状态",
+ type": "整数""variable name": "标签样式""comment": "单个数据选中状态样式设置",
+ type": "整数""variable name": "标签样式""data type": "选中状态类"
+  }
+],
+"methods": [
+  {
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""method name": "取文本",
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""comment": "将本图表组件配置参数转换成JSON文本",
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""data type": "文本型",
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""@禁止流程检查": "真"
+  },
+  {
+"comment": "单个数据悬停高亮样式设置""method name": "名称",
+"comment": "单个数据悬停高亮样式设置""comment": "数据项名称",
+"comment": "单个数据悬停高亮样式设置""type": "property setter",
+"comment": "单个数据悬停高亮样式设置""parameters": [
+   {
+"parameter name": "数据项名",
+"comment": "数据项名",
+"data type": "文本型"
+   }
+"comment": "单个数据悬停高亮样式设置"]
+  },
+  {
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"""method name": "数据值",
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"""comment": "单个数据项的值",
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"""type": "property setter",
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"""parameters": [
+   {
+"parameter name": "数据值",
+"comment": "提供一个数值",
+"data type": "小数"
+   }
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\""]
+  },
+  {
+
+"method name": "文本数据值",
+
+"comment": "单个数据项的值",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "数据值",
+"comment": "提供一个文本值,可以是数组或对象文本.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"""method name": "数组数据值",
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"""comment": "设置单个数组型的数据项的值",
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"""type": "property setter",
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"""parameters": [
+   {
+"parameter name": "数据值",
+"comment": "提供一个整数数组类",
+"data type": "整数数组类"
+   }
+@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\""]
+  },
+  {
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""method name": "标记图形",
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""comment": "单个数据项的标记图形",
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""type": "property setter",
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置""parameters": [
+   {
+"parameter name": "标记图形形状",
+"comment": "提供标记图形形状常量",
+"data type": "标记图形形状"
+   }
+上有效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置"]
+  },
+  {
+
+"method name": "标记图形2",
+
+"comment": "标记的图形,扩展方法,用于自定义图形.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "标记图形",
+"comment": "可以通过 'image://url' 设置为图片,其中 URL 为图片的链,或者 dataURI. 也可以通过 'path://' 将图标设置为任意的矢量路径.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "标记图形尺寸",
+"comment": "图形标记大小",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "标记大小",
+"comment": "标记大小值",
+"data type": "整数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "系列数据集类",
+"comment": "单个数据的集合,内部实际是系列数据成员的数组.",
+"@文档": "\"category = \\\"图表配置参数.图表数据类\\\"\"",
+"methods": [
+  {
+效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置"]"method name": "创建数据",
+效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置"]"comment": "创建单个成员数据对象,加入数据数据集,并返回该对象",
+效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置"]"result comment": "返回系列数据对象",
+效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置"]"data type": "系列数据类",
+效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置"]"@视窗.返回参考": "真",
+效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置"]"@禁止流程检查": "真",
+效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置"]"parameters": [
+   {
+"parameter name": "名称",
+"comment": "数据的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据值",
+"comment": "数据值",
+"data type": "小数"
+   }
+效."method name": "渐进渲染启用阈值""method name": "是否实时刷新""comment": "单个数据的线条样式设置"]]
+  },
+  {
+
+"method name": "创建数组数据",
+
+"comment": "创建单个成员数据对象,加入数据数据集,并返回该对象",
+
+"result comment": "返回系列数据对象",
+
+"data type": "系列数据类",
+
+"@视窗.返回参考": "真",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "数据的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数组数据",
+"comment": "数组数据值",
+"data type": "整数数组类"
+   }
+
+]
+  },
+  {
+"@视窗.返回参考": "真""method name": "添加数据",
+"@视窗.返回参考": "真""comment": "向数据集中添加一个数据对象,并返回该对象.",
+"@视窗.返回参考": "真""result comment": "返回系列数据对象",
+"@视窗.返回参考": "真""data type": "系列数据类",
+"@视窗.返回参考": "真""@视窗.返回参考": "真",
+"@视窗.返回参考": "真""@禁止流程检查": "真",
+"@视窗.返回参考": "真""parameters": [
+   {
+"parameter name": "数据对象",
+"comment": "系列数据对象",
+"data type": "系列数据类"
+   },
+   {
+"parameter name": "值复制",
+"comment": "是否以值复制的方式添加数据,否则以引用方式添加.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+"@视窗.返回参考": "真"]
+  },
+  {
+comment": "是否以值复制的方式添加数据,否则以引用方式添加.""method name": "删除数据",
+comment": "是否以值复制的方式添加数据,否则以引用方式添加.""comment": "删除数据集中对应索引的数据对象",
+comment": "是否以值复制的方式添加数据,否则以引用方式添加.""parameters": [
+   {
+"parameter name": "索引位置",
+"comment": "索引位置从0开始",
+"data type": "整数"
+   }
+comment": "是否以值复制的方式添加数据,否则以引用方式添加."]
+  },
+  {
+data type": "整数""method name": "取数据成员数",
+data type": "整数""comment": "取数据成员数",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "取数据成员",
+"comment": "取单个数据数据成员",
+"result comment": "返回系列数据对象",
+"data type": "系列数据类",
+"@视窗.返回参考": "真",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "索引位置",
+"comment": "索引位置从0开始表示第一个,默认-1表示最后一个.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+
+"method name": "清空",
+
+"comment": "清空数据集",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+type": "property setter""method name": "取文本",
+type": "property setter""comment": "将但前对象配置参数转换成JSON文本",
+type": "property setter""data type": "文本型"
+  }
+]
+ }
+问本程序中的接口需要引用模块"MFC版ECharts图表组件".]
+}

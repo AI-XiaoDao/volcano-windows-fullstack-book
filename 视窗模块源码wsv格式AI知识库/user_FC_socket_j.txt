@@ -1,0 +1,652 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.套接字\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______套接字",
+"@全局类": "真",
+"@视窗.外部库": "\"ws2_32.lib\"",
+"@视窗.外部头文件": "\"<ws2tcpip.h>\"",
+"methods": [
+  {
+ǰꌥŝ"method name": "套接字_初始化",
+ǰꌥŝ"static": true,
+ǰꌥŝ"data type": "逻辑型",
+ǰꌥŝ"@禁止流程检查": "真"
+  },
+  {
+    "method name": "套接字_清理",
+    "static": true,
+    "@嵌入式方法": "\"\""
+  },
+  {
+假"method name": "套接字_创建",
+假"result comment": "-1表示失败",
+假"static": true,
+假"data type": "变整数",
+假"@禁止流程检查": "真",
+假"parameters": [
+   {
+"parameter name": "是否UDP",
+"comment": "如果为真，就是创建的UDP套接字 ，否则创建的是TCP套接字",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+假]
+  },
+  {
+}"method name": "套接字_销毁",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+ 文本型"method name": "套接字_置地址复用",
+ 文本型"comment": "一般是小于0失败 ,再 套接字_绑定 之前使用\nWSANOTINITIALISED A successful WSAStartup call must occur before using this function. \nWSAENETDOWN The network subsystem has failed. \nWSAEFAULT optval is not in a valid part of the process address space or optlen parameter is too small. \nWSAEINPROGRESS A blocking Windows Sockets 1.1 call is in progress, or the service provider is still processing a callback function. \nWSAEINVAL level is not valid, or the information in optval is not valid. \nWSAENETRESET Connection has timed out when SO_KEEPALIVE is set. \nWSAENOPROTOOPT The option is unknown or unsupported for the specified provider or socket \nWSAENOTCONN Connection has been reset when SO_KEEPALIVE is set. \nWSAENOTSOCK The descriptor is not a socket. \n",
+ 文本型"static": true,
+ 文本型"@禁止流程检查": "真",
+ 文本型"parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否启用",
+"comment": "0代表不启用 1代表启用",
+"data type": "整数",
+"@默认值": "1"
+   }
+ 文本型]
+  },
+  {
+䁠數ŝ"method name": "_套接字_bind",
+䁠數ŝ"static": true,
+䁠數ŝ"data type": "整数",
+䁠數ŝ"@禁止流程检查": "真",
+䁠數ŝ"parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "IP地址指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "端口",
+"data type": "短整数"
+   }
+䁠數ŝ]
+  },
+  {
+ꌥŝ"@禁止流程检查": "真""method name": "套接字_绑定",
+ꌥŝ"@禁止流程检查": "真""comment": "0表示成功，非0失败",
+ꌥŝ"@禁止流程检查": "真""static": true,
+ꌥŝ"@禁止流程检查": "真""data type": "整数",
+ꌥŝ"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "IP地址",
+"data type": "文本型",
+"@默认值": "\"0.0.0.0\""
+   },
+   {
+"parameter name": "端口",
+"data type": "短整数",
+"@默认值": "19730"
+   }
+ꌥŝ"@禁止流程检查": "真"]
+  },
+  {
+data type": "变整数""method name": "套接字_监听",
+data type": "变整数""static": true,
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "最大监听数量",
+"data type": "整数",
+"@默认值": "5"
+   }
+data type": "变整数"]
+  },
+  {
+"method name": "套接字_取IP端口1",
+"comment": "getsockname函数用于获取与某个套接字关联的本地协议地址",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+"method name": "套接字_取IP端口2",
+"comment": "getpeername函数用于获取与某个套接字关联的外地协议地址",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "套节字_接受连接",
+
+"result comment": "返回客户连接的 套接字句柄",
+
+"static": true,
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+data type": "变整数""method name": "套接字_接收数据TCP",
+data type": "变整数""result comment": "返回接收到的数据大小，大于0 则表示接收到数据 等于0表示连接断开 小于0 表示 连接错误",
+data type": "变整数""static": true,
+data type": "变整数""data type": "整数",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "接收到的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "预分配容量",
+"comment": "内部会自动分配 指定大小的缓冲区，用于接收数据，这个大小你可以自己衡量你每次接收\n到的数据大小有多少，指定一个合适的缓冲区，",
+"data type": "整数",
+"@默认值": "4096"
+   }
+data type": "变整数"]
+  },
+  {
+data type": "变整数""method name": "套接字_发送数据TCP",
+data type": "变整数""static": true,
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+data type": "变整数"]
+  },
+  {
+ }"method name": "套接字_发送数据UDP",
+ }"comment": " ",
+ }"static": true,
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "IP",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "套接字_接收数据UDP",
+
+"comment": " ",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "接收到的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "IP",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "文本型"
+   },
+   {
+"parameter name": "预分配容量",
+"comment": "内部会自动分配 指定大小的缓冲区，用于接收数据，这个大小你可以自己衡量你每次接收\n到的数据大小有多少，指定一个合适的缓冲区，",
+"data type": "整数",
+"@默认值": "4096"
+   }
+
+]
+  },
+  {
+
+"method name": "套接字_连接",
+
+"comment": "成功返回真，失败返回假",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "IP地址",
+"comment": "要连接的目标IP地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "套接字_断开",
+data type": "文本型""result comment": "成功返回0 如果等于 -1 表示套接字错误，可以使用 取最后一次错误信息WSA获得具体内容",
+data type": "文本型""static": true,
+data type": "文本型""data type": "整数",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "断开方式",
+"comment": "#define SD_RECEIVE      0x00\n#define SD_SEND         0x01\n#define SD_BOTH         0x02",
+"data type": "整数",
+"@默认值": "2"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "套接字_数据转发",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "原始套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "目标套接字句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ameter name": "原始套接字句柄""method name": "套接字_数据转发到目标IP",
+ameter name": "原始套接字句柄""comment": "将原始套接字中的数据转发 到目标IP地址\n并且 将目标IP地址的数据 转发给 原始套接字句柄",
+ameter name": "原始套接字句柄""static": true,
+ameter name": "原始套接字句柄""parameters": [
+   {
+"parameter name": "原始套接字句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要转发的目标IP",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要转发的目标端口",
+"data type": "短整数"
+   }
+ameter name": "原始套接字句柄"]
+  }
+]
+ },
+ {
+"class name": "套接字查询类",
+"comment": "读查询器的三个功能\n 1：有数据可读。此时在此套接字上调用recv，立即收到对方的数据。\n 2：连接已经关闭、重设或终止。\n 3：正在请求建立连接的套接字。此时调用accept函数会成功。\n\n第一步，必须把套接字加入到读集合\n第二步，调用查询读集合后，如果可读，句柄就会保留在读集合，如果不可读，加入的句柄就会从集合中删除\n第三步，调用是 套接字是否可读 就会判断集合中是否存在该 套接字句柄，如果存在即可调用相关函数",
+"methods": [
+  {
+ameter name": "要转发的目标端口""method name": "加入读集合",
+ameter name": "要转发的目标端口""comment": "可以加入很多个客户端句柄到读合集，最大数量64个\n在后面调用 查询读集合的时候 可以一次性就查询了",
+ameter name": "要转发的目标端口""parameters": [
+   {
+"parameter name": "要查询的套接字",
+"data type": "变整数"
+   }
+ameter name": "要转发的目标端口"]
+  },
+  {
+}"method name": "查询读集合",
+}"comment": "查询器能一次性查询64个套接字句柄",
+}"result comment": "返回是否查询成功",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "超时秒",
+"comment": "如果其中一个为-1，表示不设置超时",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "超时毫秒",
+"comment": "如果其中一个为-1，表示不设置超时",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+data type": "变整数""method name": "套接字是否可读",
+data type": "变整数""comment": "会判断 套接字句柄 是否在可读合集里面",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+eter name": "要转发的目标端口"]"method name": "加入接待合集",
+eter name": "要转发的目标端口"]"comment": "Accept 和 read 都是同一个 set",
+eter name": "要转发的目标端口"]"parameters": [
+   {
+"parameter name": "要查询的套接字",
+"data type": "变整数"
+   }
+eter name": "要转发的目标端口"]]
+  },
+  {
+ameter name": "要查询的套接字""method name": "查询接待集合",
+ameter name": "要查询的套接字""comment": "Accept 和 read 都是同一个 set 查询器能一次性查询64个套接字句柄",
+ameter name": "要查询的套接字""result comment": "返回是否查询成功",
+ameter name": "要查询的套接字""data type": "逻辑型",
+ameter name": "要查询的套接字""parameters": [
+   {
+"parameter name": "超时秒",
+"comment": "如果其中一个为-1，表示不设置超时",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "超时毫秒",
+"comment": "如果其中一个为-1，表示不设置超时",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "要查询的套接字"]
+  },
+  {
+meter name": "要查询的套接字""result comment": "返回是否查询成功""method name": "套接字是否可接待",
+meter name": "要查询的套接字""result comment": "返回是否查询成功""comment": "Accept 和 read 都是同一个 set 会判断 套接字句柄 是否在可读合集里面",
+meter name": "要查询的套接字""result comment": "返回是否查询成功""data type": "逻辑型",
+meter name": "要查询的套接字""result comment": "返回是否查询成功""parameters": [
+   {
+"parameter name": "套接字句柄",
+"data type": "变整数"
+   }
+meter name": "要查询的套接字""result comment": "返回是否查询成功"]
+  }
+]
+ },
+ {
+"class name": "______套接字辅助_全局类",
+"@全局类": "真",
+"@视窗.外部头文件": "\"Socket\\\\SocketTool.h\"",
+"@视窗.外部库.win32": "\"Socket\\\\SocketToolx86.lib\"",
+"@视窗.附属文件.win32": "\"Socket\\\\SocketToolx86.dll\"",
+"@视窗.外部库.x64": "\"Socket\\\\SocketToolx64.lib\"",
+"@视窗.附属文件.x64": "\"Socket\\\\SocketToolx64.dll\"",
+"methods": [
+  {
+}"method name": "转换为IP地址F",
+}"comment": "和 域名转IP地址F 是一样的",
+}"static": true,
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "域名",
+"comment": "例如 www.baidu.com",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "域名转IP地址F",
+
+"comment": "和 转换为IP地址F 是一样的",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "域名",
+"comment": "例如 www.baidu.com",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取本机外网IP地址",
+
+"static": true,
+
+"data type": "文本型"
+  }
+]
+ },
+ {
+"class name": "TCP客户端类F",
+"methods": [
+  {
+ameter name": "域名""method name": "创建",
+ameter name": "域名""data type": "逻辑型"
+  },
+  {
+ameter name": "域名""method name": "连接",
+ameter name": "域名""data type": "逻辑型",
+ameter name": "域名""parameters": [
+   {
+"parameter name": "IP",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "短整数"
+   }
+ameter name": "域名"]
+  },
+  {
+@视窗.外部头文件": "\"Socket\\\\SocketTool.h\"""method name": "发送",
+@视窗.外部头文件": "\"Socket\\\\SocketTool.h\"""data type": "逻辑型",
+@视窗.外部头文件": "\"Socket\\\\SocketTool.h\"""parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+@视窗.外部头文件": "\"Socket\\\\SocketTool.h\""]
+  },
+  {
+}"method name": "接收",
+}"result comment": "返回实际收到的数据大小",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "用来保存收到的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲接收数据大小",
+"data type": "整数",
+"@默认值": "4096"
+   }
+}]
+  },
+  {
+
+"method name": "销毁"
+  }
+]
+ },
+ {
+"class name": "________查询器测试例子",
+"methods": [
+  {
+}"method name": "开始测试",
+}"data type": "整数"
+  }
+]
+ },
+ {
+"class name": "数据转发类",
+"methods": [
+  {
+"method name": "启动",
+"result comment": "0表示失败",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "本机IP",
+"comment": "一般是\"0.0.0.0\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "本机端口",
+"comment": "一般大于8080 < 65535",
+"data type": "短整数"
+   },
+   {
+"parameter name": "转发到IP",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转发到端口",
+"data type": "短整数"
+   }
+]
+  },
+  {
+ameter name": "用来保存收到的数据""method name": "停止"
+  },
+  {
+
+"method name": "客户连接",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "本地IP与端口",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转发IP与端口",
+"data type": "文本型"
+   },
+   {
+"parameter name": "客户IP与端口",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "________数据转发测试例子",
+"methods": [
+  {
+ name": "要转发的目标端口"]"method name": "加入接待合集""method name": "开始测试",
+ name": "要转发的目标端口"]"method name": "加入接待合集""data type": "整数"
+  }
+]
+ },
+ {
+"class name": "______套接字高级应用",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "端口是否被占用",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "要检测的端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否UDP",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

@@ -1,0 +1,1280 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PComm串口访问".
+
+{
+问本程序中的接口需要引用模块"PComm串口访问"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"PComm串口访问"."package name": "火山.串口操作.PComm",
+问本程序中的接口需要引用模块"PComm串口访问"."comment": "本类库封装了 PCOMM 串口操作库",
+问本程序中的接口需要引用模块"PComm串口访问"."@视窗.头文件搜寻目录": "\"moxa\\\\include\"",
+问本程序中的接口需要引用模块"PComm串口访问"."@视窗.需求系统头文件": "\"PCOMM.H |\\r\\n  使用本类库需要首先安装 moxa 公司的 pcomm 串口操作库.由于版权限制,本封装类库无法直接携带 PCOMM 库,请按如下步骤进行操作:\\r\\n  1. 到 https://cdn-cms.azureedge.net/getmedia/188a99a0-fff8-4c18-ae0c-90768d10a90f/moxa-pcomm-lite-utility-v1.6.zip(此为其官网链接)下载 moxa 公司的 pcomm-lite 库;\\r\\n  2. 执行压缩包内的 setup_pcommlite_1.6_12041917.exe 进行安装;\\r\\n  3. 将其安装目录(如果未更改一般为\\\"C:\\\\Program Files\\\\Moxa\\\\PCommLite 1.6\\\")下的 Include 和 Lib 子目录拷贝到本类库文件所处目录的 moxa 子目录下即可,具体为: 火山平台安装根目录下的 \\\"plugins\\\\vprj_win\\\\classlib\\\\sys\\\\pcomm\\\\moxa\\\" 目录.\"",
+问本程序中的接口需要引用模块"PComm串口访问"."@视窗.外部头文件": "\"PCOMM.H\"",
+问本程序中的接口需要引用模块"PComm串口访问"."classes": [
+ {
+本程序中的接口需要引用模块"PComm串口访问"."classes": [
+"class name": "PCM波特率",
+本程序中的接口需要引用模块"PComm串口访问"."classes": [
+"comment": "提供常用波特率值",
+本程序中的接口需要引用模块"PComm串口访问"."classes": [
+"@常量类": "整数",
+本程序中的接口需要引用模块"PComm串口访问"."classes": [
+"@文档": "\"category = \\\"辅助类\\\"\"",
+本程序中的接口需要引用模块"PComm串口访问"."classes": [
+"constants": [
+  {
+ "假装接收到了一个 XOFF 字符,从而触发相应的传输操作.""constant name": "B50",
+ "假装接收到了一个 XOFF 字符,从而触发相应的传输操作.""initial value": "@B50"
+  },
+  {
+释 = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """constant name": "B75",
+释 = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75"
+  },
+  {
+到了一个 XON 字符,从而触发相应的传输操作."constant name": "B110",
+到了一个 XON 字符,从而触发相应的传输操作."initial value": "@B110"
+  },
+  {
+附属文件.x64 = "moxa\\lib\\x64\\PCOMM.dll""constant name": "B134",
+附属文件.x64 = "moxa\\lib\\x64\\PCOMM.dll""initial value": "@B134"
+  },
+  {
+    "constant name": "B150",
+    "initial value": "@B150"
+  },
+  {
+ "假装接收到了一个 XOFF 字符,从而触发相应的传输操作.""constant name": "B300",
+ "假装接收到了一个 XOFF 字符,从而触发相应的传输操作.""initial value": "@B300"
+  },
+  {
+到了一个 XON 字符,从而触发相应的传输操作."constant name": "B600",
+到了一个 XON 字符,从而触发相应的传输操作."initial value": "@B600"
+  },
+  {
+}"constant name": "B1200",
+}"initial value": "@B1200"
+  },
+  {
+
+"constant name": "B1800",
+
+"initial value": "@B1800"
+  },
+  {
+
+"constant name": "B2400",
+
+"initial value": "@B2400"
+  },
+  {
+
+"constant name": "B4800",
+
+"initial value": "@B4800"
+  },
+  {
+ "  1. 到 https://cdn-cms.azureedge.net/getmedia/188a99a0-fff8-4c18-ae0c-90768d10a90f/moxa-pcomm-lite-utility-v1.6.zip""constant name": "B7200",
+ "  1. 到 https://cdn-cms.azureedge.net/getmedia/188a99a0-fff8-4c18-ae0c-90768d10a90f/moxa-pcomm-lite-utility-v1.6.zip""initial value": "@B7200"
+  },
+  {
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""constant name": "B9600",
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""initial value": "@B9600"
+  },
+  {
+
+"constant name": "B19200",
+
+"initial value": "@B19200"
+  },
+  {
+
+"constant name": "B38400",
+
+"initial value": "@B38400"
+  },
+  {
+"initial value": "@B19200""constant name": "B57600",
+"initial value": "@B19200""initial value": "@B57600"
+  },
+  {
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""constant name": "B115200",
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""initial value": "@B115200"
+  },
+  {
+"initial value": "@B2400""constant name": "B230400",
+"initial value": "@B2400""initial value": "@B230400"
+  },
+  {
+回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".""constant name": "B460800",
+回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".""initial value": "@B460800"
+  },
+  {
+}"constant name": "B921600",
+}"initial value": "@B921600"
+  }
+本程序中的接口需要引用模块"PComm串口访问"."classes": [
+]
+ },
+ {
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""class name": "PCM数据位数",
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""comment": "提供数据位的数目",
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""@常量类": "整数",
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""@文档": "\"category = \\\"辅助类\\\"\"",
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""constants": [
+  {
+}"constant name": "五位",
+}"initial value": "@BIT_5"
+  },
+  {
+= "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""@常量类": "整数""constant name": "六位",
+= "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75""@常量类": "整数""initial value": "@BIT_6"
+  },
+  {
+释 = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".""constant name": "七位",
+释 = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".""initial value": "@BIT_7"
+  },
+  {
+"initial value": "@BIT_5""constant name": "八位",
+"initial value": "@BIT_5""initial value": "@BIT_8"
+  }
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\"." @嵌入式方法 = """initial value": "@B75"]
+ },
+ {
+ "本类封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""class name": "PCM停止位数",
+ "本类封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""comment": "提供停止位的数目",
+ "本类封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""@常量类": "整数",
+ "本类封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""@文档": "\"category = \\\"辅助类\\\"\"",
+ "本类封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""constants": [
+  {
+"本类封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""@文档": "\"category = \\\"辅助类\\\"\"""constant name": "一位",
+"本类封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""@文档": "\"category = \\\"辅助类\\\"\"""initial value": "@STOP_1"
+  },
+  {
+"initial value": "@B38400""constant name": "两位",
+"initial value": "@B38400""initial value": "@STOP_2"
+  }
+ "本类封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库."]
+ },
+ {
+"initial value": "@B19200""class name": "PCM奇偶校验",
+"initial value": "@B19200""comment": "提供奇偶校验方式",
+"initial value": "@B19200""@常量类": "整数",
+"initial value": "@B19200""@文档": "\"category = \\\"辅助类\\\"\"",
+"initial value": "@B19200""constants": [
+  {
+封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""class name": "PCM停止位数""constant name": "无",
+封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""class name": "PCM停止位数""initial value": "@P_NONE"
+  },
+  {
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".""initial value": "@BIT_7""constant name": "偶校验",
+ = "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".""initial value": "@BIT_7""initial value": "@P_EVEN"
+  },
+  {
+initial value": "@BIT_5""initial value": "@BIT_8""constant name": "奇校验",
+initial value": "@BIT_5""initial value": "@BIT_8""initial value": "@P_ODD"
+  },
+  {
+PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""class name": "PCM停止位数""constant name": "无""constant name": "空白校验",
+PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.""class name": "PCM停止位数""constant name": "无""initial value": "@P_SPC"
+  },
+  {
+
+"constant name": "标记校验",
+
+"initial value": "@P_MRK"
+  }
+"initial value": "@B19200"]
+ },
+ {
+}"class name": "PCM线路状态",
+}"comment": "提供调制解调器的线路状态",
+}"@文档": "\"category = \\\"辅助类\\\"\"",
+}"constants": [
+  {
+"initial value": "@BIT_5""constant name": "CTS",
+"initial value": "@BIT_5""data type": "整数",
+"initial value": "@BIT_5""initial value": "@S_CTS"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "DSR",
+tegory = \\\"辅助类\\\"\""data type": "整数",
+tegory = \\\"辅助类\\\"\""initial value": "@S_DSR"
+  },
+  {
+}"constant name": "RI",
+}"data type": "整数",
+}"initial value": "@S_RI"
+  },
+  {
+
+"constant name": "CD",
+
+"data type": "整数",
+
+"initial value": "@S_CD"
+  }
+}]
+ },
+ {
+"initial value": "@P_MRK""class name": "PCM流控制",
+"initial value": "@P_MRK""@文档": "\"category = \\\"辅助类\\\"\"",
+"initial value": "@P_MRK""constants": [
+  {
+}"constant name": "TX硬件",
+}"comment": "Tx硬件流控制模式(CTS)",
+}"data type": "整数",
+}"initial value": "1"
+  },
+  {
+"data type": "整数""constant name": "RX硬件",
+"data type": "整数""comment": "Rx硬件流控制模式(RTS)",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "2"
+  },
+  {
+}"constant name": "TX软件",
+}"comment": "Tx软件流控制模式(Xon/Xoff)",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+a type": "整数""constant name": "RX硬件""constant name": "RX软件",
+a type": "整数""constant name": "RX硬件""comment": "Rx软件流控制模式(Xon/Xoff)",
+a type": "整数""constant name": "RX硬件""data type": "整数",
+a type": "整数""constant name": "RX硬件""initial value": "8"
+  }
+"initial value": "@P_MRK"]
+ },
+ {
+
+"class name": "PCM结果码",
+
+"comment": "提供操作的结果码.\n\"PCM结果码.成功\"值等于0,其它所有结果码值均小于0.",
+
+"@文档": "\"category = \\\"辅助类\\\"\"",
+
+"constants": [
+  {
+tial value": "@B19200""class name": "PCM奇偶校验""constant name": "成功",
+tial value": "@B19200""class name": "PCM奇偶校验""comment": "本常量值等于0",
+tial value": "@B19200""class name": "PCM奇偶校验""data type": "整数",
+tial value": "@B19200""class name": "PCM奇偶校验""initial value": "@SIO_OK"
+  },
+  {
+nstant name": "TX硬件""constant name": "失败",
+nstant name": "TX硬件""data type": "整数",
+nstant name": "TX硬件""initial value": "@SIO_FAIL"
+  },
+  {
+}"constant name": "无效端口",
+}"comment": "所指定端口不存在或尚未打开",
+}"data type": "整数",
+}"initial value": "@SIO_BADPORT"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "控制失败",
+tegory = \\\"辅助类\\\"\""comment": "不能控制端口(不是 MOXA 兼容的智能端口)",
+tegory = \\\"辅助类\\\"\""data type": "整数",
+tegory = \\\"辅助类\\\"\""initial value": "@SIO_OUTCONTROL"
+  },
+  {
+ry = \\\"辅助类\\\"\""constant name": "控制失败""constant name": "无数据",
+ry = \\\"辅助类\\\"\""constant name": "控制失败""comment": "读入时无数据或写出时无缓冲区",
+ry = \\\"辅助类\\\"\""constant name": "控制失败""data type": "整数",
+ry = \\\"辅助类\\\"\""constant name": "控制失败""initial value": "@SIO_NODATA"
+  },
+  {
+stant name": "TX硬件""initial value": "@SIO_FAIL""constant name": "打开失败",
+stant name": "TX硬件""initial value": "@SIO_FAIL""comment": "所指定端口不存在或该端口已经被其它程序打开",
+stant name": "TX硬件""initial value": "@SIO_FAIL""data type": "整数",
+stant name": "TX硬件""initial value": "@SIO_FAIL""initial value": "@SIO_OPENFAIL"
+  },
+  {
+}"constant name": "无法设置RTS",
+}"comment": "由于调用\"流控制\"方法设置了H/W自动流控制而导致RTS无法被设置",
+}"data type": "整数",
+}"initial value": "@SIO_RTS_BY_HW"
+  },
+  {
+egory = \\\"辅助类\\\"\""comment": "不能控制端口(不是 MOXA 兼容的智能端口)""constant name": "无效参数",
+egory = \\\"辅助类\\\"\""comment": "不能控制端口(不是 MOXA 兼容的智能端口)""data type": "整数",
+egory = \\\"辅助类\\\"\""comment": "不能控制端口(不是 MOXA 兼容的智能端口)""initial value": "@SIO_BADPARM"
+  },
+  {
+ type": "整数""constant name": "RX硬件""initial value": "8""constant name": "视窗错误",
+ type": "整数""constant name": "RX硬件""initial value": "8""comment": "调用视窗函数时出错,调用\"取最后错误\"全局方法以获得具体错误值.",
+ type": "整数""constant name": "RX硬件""initial value": "8""data type": "整数",
+ type": "整数""constant name": "RX硬件""initial value": "8""initial value": "@SIO_WIN32FAIL"
+  },
+  {
+_OUTCONTROL"constant name": "端口不支持",
+_OUTCONTROL"comment": "当前COM端口不支持本方法调用",
+_OUTCONTROL"data type": "整数",
+_OUTCONTROL"initial value": "@SIO_BOARDNOTSUPPORT"
+  },
+  {
+}"constant name": "写中止",
+}"comment": "阻塞性写操作被用户在另一线程中的\"中止写\"方法调用强制中止",
+}"data type": "整数",
+}"initial value": "@SIO_ABORTWRITE"
+  },
+  {
+
+"constant name": "写超时",
+
+"comment": "写操作超时",
+
+"data type": "整数",
+
+"initial value": "@SIO_WRITETIMEOUT"
+  }
+
+],
+
+"methods": [
+  {
+ial value": "@BIT_5""initial value": "@BIT_8""constant name": "奇校验""method name": "是否成功",
+ial value": "@BIT_5""initial value": "@BIT_8""constant name": "奇校验""comment": "返回所指定的结果码值是否为成功操作结果码",
+ial value": "@BIT_5""initial value": "@BIT_8""constant name": "奇校验""static": true,
+ial value": "@BIT_5""initial value": "@BIT_8""constant name": "奇校验""data type": "逻辑型",
+ial value": "@BIT_5""initial value": "@BIT_8""constant name": "奇校验""parameters": [
+   {
+"parameter name": "结果码值",
+"data type": "整数"
+   }
+ial value": "@BIT_5""initial value": "@BIT_8""constant name": "奇校验"]
+  }
+
+]
+ },
+ {
+"class name": "PCM传输结果码",
+"comment": "提供基于X/Y/Zmodem等协议进行文件传输操作时的结果码.\n\"PCM传输结果码.成功\"值等于0,其它所有结果码值均小于0.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+_BOARDNOTSUPPORT"constant name": "成功",
+_BOARDNOTSUPPORT"comment": "本常量值等于0",
+_BOARDNOTSUPPORT"data type": "整数",
+_BOARDNOTSUPPORT"initial value": "@SIOFT_OK"
+  },
+  {
+}"constant name": "无效端口",
+}"comment": "所指定端口不存在或尚未打开",
+}"data type": "整数",
+}"initial value": "@SIOFT_BADPORT"
+  },
+  {
+nstant name": "写中止""constant name": "超时",
+nstant name": "写中止""data type": "整数",
+nstant name": "写中止""initial value": "@SIOFT_TIMEOUT"
+  },
+  {
+
+"constant name": "中止",
+
+"comment": "用户强行中止",
+
+"data type": "整数",
+
+"initial value": "@SIOFT_ABORT"
+  },
+  {
+}"constant name": "函数中止",
+}"comment": "进度处理函数返回中止传输",
+}"data type": "整数",
+}"initial value": "@SIOFT_FUNC"
+  },
+  {
+
+"constant name": "打开文件失败",
+
+"comment": "打开文件进行读/写失败",
+
+"data type": "整数",
+
+"initial value": "@SIOFT_FOPEN"
+  },
+  {
+"initial value": "@P_MRK""constant name": "CAN中止",
+"initial value": "@P_MRK""comment": "Ymodem协议的CAN信号中止",
+"initial value": "@P_MRK""data type": "整数",
+"initial value": "@P_MRK""initial value": "@SIOFT_CANABORT"
+  },
+  {
+
+"constant name": "协议出错",
+
+"comment": "协议检查出错导致中止",
+
+"data type": "整数",
+
+"initial value": "@SIOFT_PROTOCOL"
+  },
+  {
+}"constant name": "跳过",
+}"comment": "Zmodem协议远程跳过了本次文件发送",
+}"data type": "整数",
+}"initial value": "@SIOFT_SKIP"
+  },
+  {
+}"constant name": "缓冲区过小",
+}"comment": "Zmodem接收缓冲区尺寸小于 2K 字节",
+}"data type": "整数",
+}"initial value": "@SIOFT_LACKRBUF"
+  },
+  {
+nstant name": "缓冲区过小""constant name": "视窗错误",
+nstant name": "缓冲区过小""comment": "调用视窗函数时出错",
+nstant name": "缓冲区过小""data type": "整数",
+nstant name": "缓冲区过小""initial value": "@SIOFT_WIN32FAIL"
+  },
+  {
+}"constant name": "端口不支持",
+}"comment": "当前COM端口不支持本方法调用",
+}"data type": "整数",
+}"initial value": "@SIOFT_BOARDNOTSUPPORT"
+  },
+  {
+
+"constant name": "无效参数",
+
+"data type": "整数",
+
+"initial value": "-1000"
+  }
+],
+"methods": [
+  {
+FT_WIN32FAIL"method name": "是否成功",
+FT_WIN32FAIL"comment": "返回所指定的结果码值是否为成功操作结果码",
+FT_WIN32FAIL"static": true,
+FT_WIN32FAIL"data type": "逻辑型",
+FT_WIN32FAIL"parameters": [
+   {
+"parameter name": "结果码值",
+"data type": "整数"
+   }
+FT_WIN32FAIL]
+  }
+]
+ },
+ {
+
+"class name": "PCM文件传输协议",
+
+"comment": "提供基于文件进行串口数据传输时的相关协议类型",
+
+"@常量类": "整数",
+
+"@文档": "\"category = \\\"辅助类\\\"\"",
+
+"constants": [
+  {
+"data type": "整数""constant name": "ASCII",
+"data type": "整数""comment": "ASCII协议",
+"data type": "整数""initial value": "1"
+  },
+  {
+nstant name": "无效参数""constant name": "XmodemCheckSum",
+nstant name": "无效参数""comment": "使用\"校验和\"算法对所传输数据进行完整性校验的Xmodem协议",
+nstant name": "无效参数""initial value": "2"
+  },
+  {
+"data type": "整数""constant name": "XmodemCRC",
+"data type": "整数""comment": "使用\"16位循环冗余码(crc)\"算法对所传输数据进行完整性校验的Xmodem协议",
+"data type": "整数""initial value": "3"
+  },
+  {
+ameter name": "结果码值""constant name": "Xmodem1KCRC",
+ameter name": "结果码值""comment": "基于 1 KB 数据块尺寸,使用\"16位循环冗余码(crc)\"算法对所传输数据进行完整性校验的Xmodem协议",
+ameter name": "结果码值""initial value": "4"
+  },
+  {
+ }"constant name": "Ymodem",
+ }"comment": "Ymodem协议",
+ }"initial value": "5"
+  },
+  {
+
+"constant name": "Zmodem",
+
+"comment": "Zmodem协议",
+
+"initial value": "6"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "Kermit",
+tegory = \\\"辅助类\\\"\""comment": "Kermit协议",
+tegory = \\\"辅助类\\\"\""initial value": "7"
+  }
+
+]
+ },
+ {
+ry = \\\"辅助类\\\"\""constant name": "Kermit""class name": "PCM串口类",
+ry = \\\"辅助类\\\"\""constant name": "Kermit""comment": "本类封装了 PCOMM 串口操作库功能. PCOMM 串口操作库为 moxa 公司开发的一款工业级通用串口通讯支持库.\n注意: 由于版权限制,本封装类库无法直接携带 PCOMM 库,请按如下步骤进行操作:\n  1. 到 https://cdn-cms.azureedge.net/getmedia/188a99a0-fff8-4c18-ae0c-90768d10a90f/moxa-pcomm-lite-utility-v1.6.zip\n(此为其官网链接,可以直接在火山程序编辑窗口中使用\"Ctrl+鼠标左键\"单击打开)下载 moxa 公司的 pcomm-lite 库;\n  2. 执行压缩包内的 setup_pcommlite_1.6_12041917.exe 进行安装;\n  3. 将其安装目录(如果未更改一般为\"C:\\Program Files\\Moxa\\PCommLite 1.6\")下的 Include 和 Lib 子目录拷贝到本类库文件所\n处目录的 moxa 子目录下即可,具体为: 火山平台安装根目录下的 plugins\\vprj_win\\classlib\\sys\\pcomm\\moxa 目录.",
+ry = \\\"辅助类\\\"\""constant name": "Kermit""@视窗.外部库.x64": "\"moxa\\\\lib\\\\x64\\\\PCOMM.lib\"",
+ry = \\\"辅助类\\\"\""constant name": "Kermit""@视窗.外部库.win32": "\"moxa\\\\lib\\\\x86\\\\PCOMM.lib\"",
+ry = \\\"辅助类\\\"\""constant name": "Kermit""@视窗.附属文件.x64": "\"moxa\\\\lib\\\\x64\\\\PCOMM.dll\"",
+ry = \\\"辅助类\\\"\""constant name": "Kermit""@视窗.附属文件.win32": "\"moxa\\\\lib\\\\x86\\\\PCOMM.dll\"",
+ry = \\\"辅助类\\\"\""constant name": "Kermit""variables": [
+  {
+"variable name": "端口",
+"comment": "提供当前调用\"打开\"方法成功打开的端口号,如果当前尚未成功打开端口或已经被关闭,则为0.",
+"data type": "整数"
+  }
+ry = \\\"辅助类\\\"\""constant name": "Kermit"],
+ry = \\\"辅助类\\\"\""constant name": "Kermit""methods": [
+  {
+egory = \\\"辅助类\\\"\""initial value": "7""method name": "打开",
+egory = \\\"辅助类\\\"\""initial value": "7""comment": "打开所指定COM端口用作数据传送或接收,当端口成功打开后,端口的初始状态如下:\n  波特率: 38400;  流控制: 无;  数据位数: 8;  DTR状态: 置位;  RTS状态: 置位;  停止位数: 1;  奇偶校验: 无.\n在执行本类中的其它方法之前,必须已经成功调用本方法打开端口.",
+egory = \\\"辅助类\\\"\""initial value": "7""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+egory = \\\"辅助类\\\"\""initial value": "7""data type": "整数",
+egory = \\\"辅助类\\\"\""initial value": "7""@禁止流程检查": "真",
+egory = \\\"辅助类\\\"\""initial value": "7""parameters": [
+   {
+"parameter name": "所欲打开端口",
+"data type": "整数"
+   }
+egory = \\\"辅助类\\\"\""initial value": "7"]
+  },
+  {
+
+"method name": "端口是否已打开",
+
+"comment": "返回当前是否已经打开了端口",
+
+"data type": "逻辑型"
+  },
+  {
+y = \\\"辅助类\\\"\""constant name": "Kermit""@视窗.附属文件.win32": "\"moxa\\\\lib\\\\x86\\\\PCOMM.dll\"""method name": "关闭",
+y = \\\"辅助类\\\"\""constant name": "Kermit""@视窗.附属文件.win32": "\"moxa\\\\lib\\\\x86\\\\PCOMM.dll\"""comment": "关闭所已经打开的端口.\n注意: 当执行本方法时,所实际执行的关闭操作依据以下情况决定:\n  1. 如果当前输出缓冲区内没有剩余等待发送的数据,端口立即被实际关闭;\n  2. 如果当前输出缓冲区内还有等待发送的数据,本方法将最多等待 3 秒钟以让该数据发送完毕, 3 秒钟之后清空输出缓冲区然后将端口实际关闭.",
+y = \\\"辅助类\\\"\""constant name": "Kermit""@视窗.附属文件.win32": "\"moxa\\\\lib\\\\x86\\\\PCOMM.dll\"""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.打开失败\", \"PCM结果码.视窗错误\".",
+y = \\\"辅助类\\\"\""constant name": "Kermit""@视窗.附属文件.win32": "\"moxa\\\\lib\\\\x86\\\\PCOMM.dll\"""data type": "整数",
+y = \\\"辅助类\\\"\""constant name": "Kermit""@视窗.附属文件.win32": "\"moxa\\\\lib\\\\x86\\\\PCOMM.dll\"""@禁止流程检查": "真"
+  },
+  {
+stant name": "写中止""initial value": "@SIOFT_TIMEOUT""method name": "置传输控制模式",
+stant name": "写中止""initial value": "@SIOFT_TIMEOUT""comment": "配置通讯传输时使用的相关控制模式",
+stant name": "写中止""initial value": "@SIOFT_TIMEOUT""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+stant name": "写中止""initial value": "@SIOFT_TIMEOUT""data type": "整数",
+stant name": "写中止""initial value": "@SIOFT_TIMEOUT""@嵌入式方法": "\"\"",
+stant name": "写中止""initial value": "@SIOFT_TIMEOUT""parameters": [
+   {
+"parameter name": "波特率",
+"data type": "PCM波特率"
+   },
+   {
+"parameter name": "数据位",
+"data type": "PCM数据位数"
+   },
+   {
+"parameter name": "停止位",
+"data type": "PCM停止位数"
+   },
+   {
+"parameter name": "奇偶校验",
+"data type": "PCM奇偶校验"
+   }
+stant name": "写中止""initial value": "@SIOFT_TIMEOUT"]
+  },
+  {
+data type": "PCM停止位数""method name": "置流控制模式",
+data type": "PCM停止位数""comment": "设置流控制为硬件或软件模式",
+data type": "PCM停止位数""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+data type": "PCM停止位数""data type": "整数",
+data type": "PCM停止位数""@嵌入式方法": "\"\"",
+data type": "PCM停止位数""parameters": [
+   {
+"parameter name": "所欲设置模式",
+"comment": "为\"PCM流控制\"类中的各整数常量的组合值(使用\"或\"操作符组合)",
+"data type": "整数"
+   }
+data type": "PCM停止位数"]
+  },
+  {
+"method name": "清空",
+"comment": "清空设备输入/输出缓冲区中的所有数据",
+"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "清空输入缓冲区",
+"comment": "指定是否清空数据输入缓冲区",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "清空输出缓冲区",
+"comment": "指定是否清空数据输出缓冲区",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+"method name": "置DTR状态",
+"comment": "设置COM端口的DTR状态",
+"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "是否置位",
+"comment": "为真开启DTR状态,为假关闭DTR状态.",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+ant name": "写中止""initial value": "@SIOFT_TIMEOUT"]"method name": "置RTS状态",
+ant name": "写中止""initial value": "@SIOFT_TIMEOUT"]"comment": "设置COM端口的RTS状态",
+ant name": "写中止""initial value": "@SIOFT_TIMEOUT"]"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.无法设置RTS\", \"PCM结果码.视窗错误\".",
+ant name": "写中止""initial value": "@SIOFT_TIMEOUT"]"data type": "整数",
+ant name": "写中止""initial value": "@SIOFT_TIMEOUT"]"@嵌入式方法": "\"\"",
+ant name": "写中止""initial value": "@SIOFT_TIMEOUT"]"parameters": [
+   {
+"parameter name": "是否置位",
+"comment": "为真开启RTS状态,为假关闭RTS状态.",
+"data type": "逻辑型"
+   }
+ant name": "写中止""initial value": "@SIOFT_TIMEOUT"]]
+  },
+  {
+comment": "为真开启RTS状态,为假关闭RTS状态.""method name": "置DTR和RTS状态",
+comment": "为真开启RTS状态,为假关闭RTS状态.""comment": "同时设置COM端口的DTR和RTS状态",
+comment": "为真开启RTS状态,为假关闭RTS状态.""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.无法设置RTS\", \"PCM结果码.视窗错误\".",
+comment": "为真开启RTS状态,为假关闭RTS状态.""data type": "整数",
+comment": "为真开启RTS状态,为假关闭RTS状态.""@禁止流程检查": "真",
+comment": "为真开启RTS状态,为假关闭RTS状态.""parameters": [
+   {
+"parameter name": "置位DTR",
+"comment": "为真开启DTR状态,为假关闭DTR状态.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "置位RTS",
+"comment": "为真开启RTS状态,为假关闭RTS状态.",
+"data type": "逻辑型"
+   }
+comment": "为真开启RTS状态,为假关闭RTS状态."]
+  },
+  {
+data type": "逻辑型""method name": "置波特率",
+data type": "逻辑型""comment": "设置所实际使用的波特率",
+data type": "逻辑型""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "实际波特率",
+"comment": "提供所实际使用的波特率,譬如 200, 1200, 9600, 19200 等等.",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+ameter name": "实际波特率""method name": "读字符",
+ameter name": "实际波特率""comment": "从设备输入缓冲区中读入并返回一个字符.\n\"置读超时时间\"方法能够用来设置本方法的最大读入超时等待时间,\"中止读\"方法可以用来中止本方法的一直等待读入状态.",
+ameter name": "实际波特率""result comment": "成功返回所读入的 0 到 255 之间的一个字符值,如果当前尚无可读入数据返回\"PCM结果码.无数据\".\n失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+ameter name": "实际波特率""data type": "整数",
+ameter name": "实际波特率""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "实际波特率""@嵌入式方法": "\"\"""method name": "读数据",
+meter name": "实际波特率""@嵌入式方法": "\"\"""comment": "从设备输入缓冲区中读入并返回一段数据.\n\"置读超时时间\"方法能够用来设置本方法的最大读入超时等待时间,\"中止读\"方法可以用来中止本方法的一直等待读入状态.",
+meter name": "实际波特率""@嵌入式方法": "\"\"""result comment": "  成功返回大于等于0的实际读入数据尺寸(等于\"结果数据\"参数中所返回数据的尺寸),失败返回\n小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+meter name": "实际波特率""@嵌入式方法": "\"\"""data type": "整数",
+meter name": "实际波特率""@嵌入式方法": "\"\"""@禁止流程检查": "真",
+meter name": "实际波特率""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "欲读入数据尺寸",
+"comment": "提供所欲读入的数据尺寸,必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结果数据",
+"comment": "用作保存所读入的数据",
+"data type": "字节集类"
+   }
+meter name": "实际波特率""@嵌入式方法": "\"\""]
+  },
+  {
+er name": "实际波特率""method name": "读字符""method name": "读多字节文本",
+er name": "实际波特率""method name": "读字符""comment": "从设备输入缓冲区中读入并返回一段多字节编码的文本.\n\"置读超时时间\"方法能够用来设置本方法的最大读入超时等待时间,\"中止读\"方法可以用来中止本方法的一直等待读入状态.",
+er name": "实际波特率""method name": "读字符""result comment": "成功返回所读入的文本内容,失败返回空文本(注意正常情况下也可能返回空文本).",
+er name": "实际波特率""method name": "读字符""data type": "文本型",
+er name": "实际波特率""method name": "读字符""@禁止流程检查": "真",
+er name": "实际波特率""method name": "读字符""parameters": [
+   {
+"parameter name": "欲读入数据尺寸",
+"comment": "提供所欲读入的数据尺寸(如果欲读入文本内容均为ASCII字符,则等于欲读入文本的长度),必须大于等于0.",
+"data type": "整数"
+   }
+er name": "实际波特率""method name": "读字符"]
+  },
+  {
+ameter name": "欲读入数据尺寸""method name": "置读超时时间",
+ameter name": "欲读入数据尺寸""comment": "设置\"读字符\"/\"读数据\"/\"读多字节文本\"方法的超时等待时间.\n\"总共超时时间\"与\"区间超时时间\"参数设置值对读操作的共同影响表如下:\n--------------+--------------+--------------------------------------------------------------------\n 总共超时时间 | 区间超时时间 |  效果\n--------------+--------------+--------------------------------------------------------------------\n  -1 (默认值) |  被忽略      |  读操作立即返回\n  > 0         |  0 (默认值)  |  所有读操作最大等待\"总共超时时间\"参数所指定时间值\n  0           |  > 0         |  读下一个字符时最大等待\"区间超时时间\"参数所指定时间值\n  > 0         |  > 0         |  所有读操作最大等待\"总共超时时间\"或\"区间超时时间\"参数(取较小值)所指定时间值\n  0           |  0           |  所有读操作一直阻塞等待,直到指定尺寸的数据读入完毕.",
+ameter name": "欲读入数据尺寸""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+ameter name": "欲读入数据尺寸""data type": "整数",
+ameter name": "欲读入数据尺寸""@嵌入式方法": "\"\"",
+ameter name": "欲读入数据尺寸""parameters": [
+   {
+"parameter name": "总共超时时间",
+"comment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "区间超时时间",
+"comment": "单位毫秒. 如果未调用本方法设置,系统默认值为0.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ameter name": "欲读入数据尺寸"]
+  },
+  {
+comment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""method name": "取读超时时间",
+comment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""comment": "返回通过\"置读超时时间\"方法所设置的读操作超时等待时间",
+comment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\"",
+comment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""data type": "整数",
+comment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""@嵌入式方法": "\"\"",
+comment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""parameters": [
+   {
+"parameter name": "总共超时时间",
+"comment": "用作填写所返回的总共超时时间",
+"data type": "整数类"
+   },
+   {
+"parameter name": "区间超时时间",
+"comment": "用作填写所返回的区间超时时间",
+"data type": "整数类"
+   }
+comment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1."]
+  },
+  {
+omment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""@嵌入式方法": "\"\"""method name": "中止读",
+omment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""@嵌入式方法": "\"\"""comment": "强行中止正在阻塞等待读入数据的\"读字符\"和\"读数据\"方法调用.\n本方法应该在串口读数据线程的另外一个线程中调用.",
+omment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""@嵌入式方法": "\"\"""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+omment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""@嵌入式方法": "\"\"""data type": "整数",
+omment": "单位毫秒,为-1表示不等待. 如果未调用本方法设置,系统默认值为-1.""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "欲读入数据尺寸""method name": "读到中止符",
+ameter name": "欲读入数据尺寸""comment": "从设备输入缓冲区中读入数据.\n注意:\n  1. 本方法只能在 MOXA 多串口主板上使用,不能在标准的 PC COM1/2 串口上使用;\n  2. 本方法不受\"置读超时时间\"方法所置入的超时等待时间的影响;\n  3. 如果设备输入缓冲区中的已有数据尺寸大于等于调用本方法时所指定的欲读入数据尺寸,\n本方法将一直读入数据直到中途遇到了所指定的中止字符或所指定尺寸的数据读入完毕;\n  4. 如果设备输入缓冲区中的已有数据尺寸小于调用本方法时所指定的欲读入数据尺寸且其\n中存在所指定的中止字符,本方法将一直读入到中止字符处;\n  5. 如果设备输入缓冲区中的已有数据尺寸小于调用本方法时所指定的欲读入数据尺寸且其\n中不存在所指定的中止字符,本方法将立即返回0不读入任何数据.",
+ameter name": "欲读入数据尺寸""result comment": "  成功返回大于等于0的已读入数据尺寸(等于\"结果数据\"参数中所返回数据的尺寸),失败返回\n小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\",\n\"PCM结果码.视窗错误\", \"PCM结果码.端口不支持\".",
+ameter name": "欲读入数据尺寸""data type": "整数",
+ameter name": "欲读入数据尺寸""@禁止流程检查": "真",
+ameter name": "欲读入数据尺寸""parameters": [
+   {
+"parameter name": "欲读入数据尺寸",
+"comment": "提供所欲读入的数据尺寸,必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "中止字符",
+"comment": "提供具体的中止字符",
+"data type": "整数"
+   },
+   {
+"parameter name": "结果数据",
+"comment": "用作保存所读入的数据",
+"data type": "字节集类"
+   }
+ameter name": "欲读入数据尺寸"]
+  },
+  {
+ameter name": "总共超时时间""method name": "写字符",
+ameter name": "总共超时时间""comment": "写出一个字符到设备输出缓冲区.\n\"置写超时时间\"方法能够用来设置本方法的最大写出超时等待时间,\"中止写\"方法可以用来中止本方法的一直等待写出状态.",
+ameter name": "总共超时时间""result comment": "  成功返回大于等于0的实际写出数据尺寸,失败返回小于0的以下结果码之一:\n\"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.写中止\", \"PCM结果码.写超时\".",
+ameter name": "总共超时时间""data type": "整数",
+ameter name": "总共超时时间""@嵌入式方法": "\"\"",
+ameter name": "总共超时时间""parameters": [
+   {
+"parameter name": "所欲写出字符",
+"comment": "提供所欲写出的字符值,必须大于等于0小于等于255.",
+"data type": "整数"
+   }
+ameter name": "总共超时时间"]
+  },
+  {
+comment": "提供所欲读入的数据尺寸(如果欲读入文本内容均为ASCII字符,则等于欲读入文本的长度),必须大于等于0.""method name": "写数据",
+comment": "提供所欲读入的数据尺寸(如果欲读入文本内容均为ASCII字符,则等于欲读入文本的长度),必须大于等于0.""comment": "写出所指定的数据到设备输出缓冲区,所实际写出数据的尺寸依赖当前设备输出缓冲区的空闲空间尺寸.\n\"置写超时时间\"方法能够用来设置本方法的最大写出超时等待时间,\"中止写\"方法可以用来中止本方法的一直等待写出状态.",
+comment": "提供所欲读入的数据尺寸(如果欲读入文本内容均为ASCII字符,则等于欲读入文本的长度),必须大于等于0.""result comment": "  成功返回大于等于0的实际写出数据尺寸,失败返回小于0的以下结果码之一:\n\"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.写中止\", \"PCM结果码.写超时\".",
+comment": "提供所欲读入的数据尺寸(如果欲读入文本内容均为ASCII字符,则等于欲读入文本的长度),必须大于等于0.""data type": "整数",
+comment": "提供所欲读入的数据尺寸(如果欲读入文本内容均为ASCII字符,则等于欲读入文本的长度),必须大于等于0.""@禁止流程检查": "真",
+comment": "提供所欲读入的数据尺寸(如果欲读入文本内容均为ASCII字符,则等于欲读入文本的长度),必须大于等于0.""parameters": [
+   {
+"parameter name": "待写出数据",
+"data type": "字节集类"
+   }
+comment": "提供所欲读入的数据尺寸(如果欲读入文本内容均为ASCII字符,则等于欲读入文本的长度),必须大于等于0."]
+  },
+  {
+ameter name": "中止字符""method name": "写多字节文本",
+ameter name": "中止字符""comment": "将所指定的文本内容转换为多字节编码格式后写出到设备输出缓冲区,所实际写出数据的尺寸依赖当前设备输出缓冲区的空闲空间尺寸.\n\"置写超时时间\"方法能够用来设置本方法的最大写出超时等待时间,\"中止写\"方法可以用来中止本方法的一直等待写出状态.",
+ameter name": "中止字符""result comment": "  成功返回大于等于0的实际写出数据尺寸,失败返回小于0的以下结果码之一:\n\"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.写中止\", \"PCM结果码.写超时\".",
+ameter name": "中止字符""data type": "整数",
+ameter name": "中止字符""@禁止流程检查": "真",
+ameter name": "中止字符""parameters": [
+   {
+"parameter name": "待写出文本",
+"data type": "文本型"
+   }
+ameter name": "中止字符"]
+  },
+  {
+comment": "提供所欲写出的字符值,必须大于等于0小于等于255.""method name": "置写超时时间",
+comment": "提供所欲写出的字符值,必须大于等于0小于等于255.""comment": "设置\"写字符\"/\"写数据\"/\"写多字节文本\"方法的超时等待时间",
+comment": "提供所欲写出的字符值,必须大于等于0小于等于255.""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+comment": "提供所欲写出的字符值,必须大于等于0小于等于255.""data type": "整数",
+comment": "提供所欲写出的字符值,必须大于等于0小于等于255.""@嵌入式方法": "\"\"",
+comment": "提供所欲写出的字符值,必须大于等于0小于等于255.""parameters": [
+   {
+"parameter name": "总共超时时间",
+"comment": "单位毫秒. 参数值意义如下:\n-1: 不等待立即返回(注意Windows95/98不支持本值);\n大于0: 最多等待所指定的时间来写出数据,如果超出所指定时间\"写字符\"和\"写数据\"方法将返回\"PCM结果码.写超时\";\n0(未设置时的默认值): 一直阻塞等待,直到指定尺寸的数据写出完毕.",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "提供所欲写出的字符值,必须大于等于0小于等于255."]
+  },
+  {
+ameter name": "总共超时时间""method name": "取写超时时间",
+ameter name": "总共超时时间""comment": "返回通过\"置写超时时间\"方法所设置的写操作超时等待时间",
+ameter name": "总共超时时间""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\"",
+ameter name": "总共超时时间""data type": "整数",
+ameter name": "总共超时时间""@嵌入式方法": "\"\"",
+ameter name": "总共超时时间""parameters": [
+   {
+"parameter name": "总共超时时间",
+"comment": "用作填写所返回的总共超时时间",
+"data type": "整数类"
+   }
+ameter name": "总共超时时间"]
+  },
+  {
+
+"method name": "中止写",
+
+"comment": "  强行中止正在阻塞等待写出数据的\"写字符\"和\"写数据\"方法调用.\n  本方法应该在串口写数据线程的另外一个线程中调用,调用本方法将导致正被阻塞的\"写字符\"和\"写数据\"\n方法调用立即退出并返回\"PCM结果码.写中止\".",
+
+"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "写数据2",
+ }"comment": "写出一段数据,需要 RS-485 双线传输 RTS 控制设备的支持.\n具体操作步骤如下:\n  1. 开启 RTS 状态;\n  2. 将欲写出数据置入传输缓冲区并等待其输出完毕;\n  3. 数据输出完毕后等待所指定的时间(由\"需等待时间\"参数指定);\n  4. 返回.",
+ }"result comment": "  成功返回大于等于0的实际写出数据尺寸,失败返回小于0的以下结果码之一:\n\"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.写中止\", \"PCM结果码.视窗错误\".",
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "待写出数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "等待时间",
+"comment": "指定传输完毕后的等待时间,注意单位为\"滴答\"(1\"滴答\"等于55毫秒).",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+thod name": "中止写""method name": "写数据3",
+thod name": "中止写""comment": "写出一段数据到 Tx 缓冲区.\n本方法将首先开启 RTS 状态,然后将数据置入 Tx 缓冲区,然后关闭 RTS 状态.\n本方法与\"写数据X\"相同,不同之处在于\"等待时间\"的单位是毫秒.",
+thod name": "中止写""result comment": "  成功返回大于等于0的实际写出数据尺寸,失败返回小于0的以下结果码之一:\n\"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.写中止\", \"PCM结果码.视窗错误\".",
+thod name": "中止写""data type": "整数",
+thod name": "中止写""@禁止流程检查": "真",
+thod name": "中止写""parameters": [
+   {
+"parameter name": "待写出数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "等待时间",
+"comment": "指定传输完毕后的等待时间,单位毫秒.",
+"data type": "整数"
+   }
+thod name": "中止写"]
+  },
+  {
+"data type": "整数""method name": "取线路状态",
+"data type": "整数""comment": "返回当前线路状态.\n将所返回的状态值与\"PCM线路状态\"类中的各常量值进行\"位与\"操作即可得知对应线路状态的置位情况.",
+"data type": "整数""result comment": "成功返回大于等于0的当前线路状态值,失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+"data type": "整数""data type": "整数",
+"data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取已输入数据尺寸",
+}"comment": "返回输入缓冲区中当前已累积尚未读取的数据尺寸.\n注意:\n  1. 如果本方法返回0,也有可能有几个字节的输入数据被保存在 FIFO 接收缓冲区的 UART 通用异步收发器里面;\n  2. 本方法将在内部调用Windows API函数\"ClearCommError\",从而导致串口的数据出错状态被清除. 如果想获得此\n出错状态,推荐在调用本方法首先调用\"取数据接收错误状态\"方法获取.",
+}"result comment": "成功返回大于等于0的已有数据尺寸值(单位字节),失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "取已输入数据尺寸""method name": "取待输出数据尺寸",
+thod name": "取已输入数据尺寸""comment": "返回输出缓冲区中尚未发送的剩余数据尺寸.\n注意:\n  1. 如果本方法返回0,也有可能有几个字节的输出数据被保存在 FIFO 传输缓冲区的 UART 通用异步收发器里面;\n  2. 本方法将在内部调用Windows API函数\"ClearCommError\",从而导致串口的数据出错状态被清除. 如果想获得此\n出错状态,推荐在调用本方法前首先调用\"取数据接收错误状态\"方法获取.",
+thod name": "取已输入数据尺寸""result comment": "成功返回大于等于0的已有数据尺寸值(单位字节),失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+thod name": "取已输入数据尺寸""data type": "整数",
+thod name": "取已输入数据尺寸""@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""data type": "整数""method name": "取数据无法传输原因",
+data type": "整数""data type": "整数""comment": "  检查并获取导致数据不能传输的原因.\n  注意: 本方法将在内部调用Windows API函数\"ClearCommError\",从而导致串口的数据出错状态被清除. 如果想获得此\n出错状态,推荐在调用本方法首先调用\"取数据接收错误状态\"方法获取.",
+data type": "整数""data type": "整数""result comment": "成功返回大于等于0的具体原因位(bit)组合值:\n  位 0 / \"位与 (本方法返回值, 1)\": CTS 状态为低;\n  位 1 / \"位与 (本方法返回值, 2)\": 接收到了 XOFF 字符.\n可以使用\"位与\"操作符来判断对应位的状态.\n失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+data type": "整数""data type": "整数""data type": "整数",
+data type": "整数""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+thod name": "取已输入数据尺寸""method name": "取波特率",
+thod name": "取已输入数据尺寸""comment": "返回串口所实际使用的波特率值",
+thod name": "取已输入数据尺寸""result comment": "成功返回大于0的具体波特率值,失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\"",
+thod name": "取已输入数据尺寸""data type": "整数",
+thod name": "取已输入数据尺寸""@嵌入式方法": "\"\""
+  },
+  {
+hod name": "取已输入数据尺寸""@嵌入式方法": "\"\"""method name": "取传输控制模式",
+hod name": "取已输入数据尺寸""@嵌入式方法": "\"\"""comment": "返回串口的当前传输控制模式",
+hod name": "取已输入数据尺寸""@嵌入式方法": "\"\"""result comment": "成功返回大于等于0的模式位组合值,通过以下操作可以获得具体各类模式值:\n  1. \"位与 (本方法返回值, 3)\": \"PCM数据位数\"类中的各常量值;\n  2. \"位与 (本方法返回值, 4)\": \"PCM停止位数\"类中的各常量值;\n  3. \"位与 (本方法返回值, 56)\": \"PCM奇偶校验\"类中的各常量值.\n失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\"",
+hod name": "取已输入数据尺寸""@嵌入式方法": "\"\"""data type": "整数",
+hod name": "取已输入数据尺寸""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "取流控制模式",
+"@嵌入式方法": "\"\"""comment": "返回串口的当前硬件/软件流控制模式",
+"@嵌入式方法": "\"\"""result comment": "  成功返回大于等于0的模式位组合值,通过与\"PCM流控制\"类中的各个常量值进行\n\"位与\"操作即可获取具体的流控制状态.\n  失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\"",
+"@嵌入式方法": "\"\"""data type": "整数",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取数据接收错误状态",
+
+"comment": "检查并返回接收数据时的错误状态.",
+
+"result comment": "成功返回大于等于0的具体错误状态位(bit)组合值,等于0表示无错误.\n具体各位对应的错误信息如下:\n   位 0 / \"位与 (本方法返回值, 1)\": 奇偶校验出错;\n   位 1 / \"位与 (本方法返回值, 2)\": 帧误差;\n   位 2 / \"位与 (本方法返回值, 4)\": 超限(overrun);\n   位 3 / \"位与 (本方法返回值, 8)\": 溢出(overflow).\n可以使用\"位与\"操作符来判断对应位的状态.\n失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "中止写""data type": "整数""method name": "事件处理模板方法",
+hod name": "中止写""data type": "整数""comment": "提供所监听串口事件触发后被调用静态方法的模板",
+hod name": "中止写""data type": "整数""static": true,
+hod name": "中止写""data type": "整数""parameters": [
+   {
+"parameter name": "端口号",
+"comment": "提供触发所监听事件的具体端口号",
+"data type": "整数"
+   }
+hod name": "中止写""data type": "整数"]
+  },
+  {
+所监听事件的具体端口号"method name": "开始监听中止字符到达",
+所监听事件的具体端口号"comment": "开始对所指定中止字符到达进行监听. 当输入缓冲区中接收到该中止字符后,所指定的处理方法被自动调用.\n注意:\n  1. 在Windows系统下,事件(通常由中断引起)在每次中断发生时将设置一个事件标志,并调用事件处理程序.如果使\n用这种处理机制,系统负载将很重,因为经常会触发几个连续的中断. 当前处理方式是为这些中断设置相同的事件标志,\n从而一系列连续事件只会被处理一次;\n  2. 由于上述事件处理方案的不确定性,所指定的处理方法可能不会在中断发生的第一时间被精确调用;\n  3. 在调用处理方法的时候,不存在重入问题.",
+所监听事件的具体端口号"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+所监听事件的具体端口号"data type": "整数",
+所监听事件的具体端口号"@嵌入式方法": "\"\"",
+所监听事件的具体端口号"parameters": [
+   {
+"parameter name": "中止字符",
+"comment": "提供所欲监听其是否到达的中止字符,当接收到该中止字符后,将自动调用\"处理方法\"参数提供的静态方法.",
+"data type": "整数"
+   },
+   {
+"parameter name": "处理方法",
+"comment": "提供当接收到中止字符后被自动调用的静态方法.多个端口可以使用同一个静态方法,因为触发处理方法时提供了具体的端口号.",
+"@匹配方法": "\"事件处理模板方法\""
+   }
+所监听事件的具体端口号]
+  },
+  {
+"method name": "停止监听中止字符到达",
+"comment": "停止先前调用\"开始监听中止字符到达\"启动的中止字符到达监听",
+"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "开始监听数据到达",
+data type": "整数""comment": "开始对数据到达进行监听. 当输入缓冲区中到达一个字符后,所指定的处理方法被自动调用.\n注意:\n  1. 在Windows系统下,事件(通常由中断引起)在每次中断发生时将设置一个事件标志,并调用事件处理程序.如果使\n用这种处理机制,系统负载将很重,因为经常会触发几个连续的中断. 当前处理方式是为这些中断设置相同的事件标志,\n从而一系列连续事件只会被处理一次;\n  2. 由于上述事件处理方案的不确定性,所指定的处理方法可能不会在中断发生的第一时间被精确调用;\n  3. 在调用处理方法的时候,不存在重入问题.",
+data type": "整数""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "处理方法",
+"comment": "提供当输入缓冲区中到达一个字符后被自动调用的静态方法.多个端口可以使用同一个静态方法,因为触发处理方法时提供了具体的端口号.",
+"@匹配方法": "\"事件处理模板方法\""
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "停止监听数据到达",
+ }"comment": "停止先前调用\"开始监听数据到达\"启动的数据到达监听",
+ }"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "开始监听线路状态",
+ }"comment": "开始对线路状态进行监听. 当线路状态(见\"PCM线路状态\"类,即: CTS, DSR, CD, RI)发生改变时,所指定的处理方法被自动调用.\n注意:\n  1. 在Windows系统下,事件(通常由中断引起)在每次中断发生时将设置一个事件标志,并调用事件处理程序.如果使\n用这种处理机制,系统负载将很重,因为经常会触发几个连续的中断. 当前处理方式是为这些中断设置相同的事件标志,\n从而一系列连续事件只会被处理一次;\n  2. 由于上述事件处理方案的不确定性,所指定的处理方法可能不会在中断发生的第一时间被精确调用;\n  3. 在调用处理方法的时候,不存在重入问题.",
+ }"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "处理方法",
+"comment": "提供当线路状态发生改变后被自动调用的静态方法.多个端口可以使用同一个静态方法,因为触发处理方法时提供了具体的端口号.",
+"@匹配方法": "\"事件处理模板方法\""
+   }
+ }]
+  },
+  {
+ }"method name": "停止监听线路状态",
+ }"comment": "停止先前调用\"开始监听线路状态\"启动的线路状态监听",
+ }"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "开始监听中断信号",
+}"comment": "开始对中断信号进行监听. 当接收到中断信号(\"BREAK\")时,所指定的处理方法被自动调用.\n注意:\n  1. 在Windows系统下,事件(通常由中断引起)在每次中断发生时将设置一个事件标志,并调用事件处理程序.如果使\n用这种处理机制,系统负载将很重,因为经常会触发几个连续的中断. 当前处理方式是为这些中断设置相同的事件标志,\n从而一系列连续事件只会被处理一次;\n  2. 由于上述事件处理方案的不确定性,所指定的处理方法可能不会在中断发生的第一时间被精确调用;\n  3. 在调用处理方法的时候,不存在重入问题.",
+}"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "处理方法",
+"comment": "提供当接收到中断信号后被自动调用的静态方法.多个端口可以使用同一个静态方法,因为触发处理方法时提供了具体的端口号.",
+"@匹配方法": "\"事件处理模板方法\""
+   }
+}]
+  },
+  {
+}"comment": "停止先前调用\"开始监听线路状态\"启动的线路状态监听""method name": "停止监听中断信号",
+}"comment": "停止先前调用\"开始监听线路状态\"启动的线路状态监听""comment": "停止先前调用\"开始监听中断信号\"启动的中断信号监听",
+}"comment": "停止先前调用\"开始监听线路状态\"启动的线路状态监听""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+}"comment": "停止先前调用\"开始监听线路状态\"启动的线路状态监听""data type": "整数",
+}"comment": "停止先前调用\"开始监听线路状态\"启动的线路状态监听""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "开始监听数据发送完毕",
+ }"comment": "开始对数据发送完毕进行监听. 当输出缓冲区中的所有内容均已经被发送后(将触发Tx缓冲区已空信号),所指定的处理方法被自动调用.\n注意:\n  1. 在Windows系统下,事件(通常由中断引起)在每次中断发生时将设置一个事件标志,并调用事件处理程序.如果使\n用这种处理机制,系统负载将很重,因为经常会触发几个连续的中断. 当前处理方式是为这些中断设置相同的事件标志,\n从而一系列连续事件只会被处理一次;\n  2. 由于上述事件处理方案的不确定性,所指定的处理方法可能不会在中断发生的第一时间被精确调用;\n  3. 在调用处理方法的时候,不存在重入问题.",
+ }"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "处理方法",
+"comment": "提供当所有数据均已经发送完毕后被自动调用的静态方法.多个端口可以使用同一个静态方法,因为触发处理方法时提供了具体的端口号.",
+"@匹配方法": "\"事件处理模板方法\""
+   }
+ }]
+  },
+  {
+
+"method name": "停止监听数据发送完毕",
+
+"comment": "停止先前调用\"开始监听数据发送完毕\"启动的数据发送完毕监听",
+
+"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+@匹配方法": "\"事件处理模板方法\"""method name": "传输进度模板方法",
+@匹配方法": "\"事件处理模板方法\"""comment": "提供当文件数据接收或发送进度发生改变后被调用静态方法的模板.\n本静态方法一般用作给最终用户提供一个友好的传输进度显示界面.",
+@匹配方法": "\"事件处理模板方法\"""result comment": "返回值大于等于0继续传输,小于0立即停止传输,所有文件传输方法将返回\"PCM传输结果码.函数中止\".",
+@匹配方法": "\"事件处理模板方法\"""static": true,
+@匹配方法": "\"事件处理模板方法\"""data type": "整数",
+@匹配方法": "\"事件处理模板方法\"""parameters": [
+   {
+"parameter name": "已传输数据尺寸",
+"comment": "提供当前已经接收或发送完毕的数据尺寸,单位字节.",
+"data type": "整数"
+   },
+   {
+"parameter name": "保留参数1",
+"comment": "仅在调试时使用",
+"data type": "整数"
+   },
+   {
+"parameter name": "保留参数2",
+"comment": "仅在调试时使用",
+"data type": "变整数"
+   },
+   {
+"parameter name": "全部数据尺寸",
+"comment": "提供需要接收或发送的全部数据尺寸,单位字节.",
+"data type": "整数"
+   }
+@匹配方法": "\"事件处理模板方法\""]
+  },
+  {
+ }"method name": "发送文件",
+ }"comment": "基于所指定的协议传输一个文件数据",
+ }"result comment": "大于等于0表示发送成功,失败返回小于0的以下结果码之一:\n  1. \"PCM传输结果码.无效参数\", 所提供协议类型值无效;\n  2. \"PCM传输结果码.无效端口\", 所有协议均可能返回;\n  3. \"PCM传输结果码.函数中止\", 所有协议均可能返回;\n  4. \"PCM传输结果码.打开文件失败\", 所有协议均可能返回;\n  5. \"PCM传输结果码.视窗错误\", 所有协议均可能返回;\n  6. \"PCM传输结果码.超时\", 以下协议可能返回: ASCII Ymodem Zmodem Xmodem1KCRC XmodemCheckSum XmodemCRC;\n  7. \"PCM传输结果码.CAN中止\", 以下协议可能返回: Ymodem Zmodem Xmodem1KCRC XmodemCheckSum XmodemCRC;\n  8. \"PCM传输结果码.协议出错\", 以下协议可能返回: Zmodem;\n  9. \"PCM传输结果码.跳过\", 以下协议可能返回: Zmodem.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所使用协议",
+"comment": "指定所使用的文件传输协议类型",
+"data type": "PCM文件传输协议"
+   },
+   {
+"parameter name": "所欲传输文件名",
+"comment": "提供所欲传输文件的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "进度反馈方法",
+"comment": "当文件数据发送进度发生改变后,本静态方法被自动调用,一般用作给最终用户提供一个友好的传输进度显示界面.\n具体函数解释参见\"传输进度模板方法\".",
+"@匹配方法": "\"传输进度模板方法\""
+   }
+ }]
+  },
+  {
+}"data type": "整数""method name": "接收文件",
+}"data type": "整数""comment": "基于所指定的协议接收一个文件数据",
+}"data type": "整数""result comment": "大于等于0表示接收成功(提供所具体接收到文件的数目),失败返回小于0的以下结果码之一:\n  1. \"PCM传输结果码.无效参数\", 所提供协议类型值无效;\n  2. \"PCM传输结果码.无效端口\", 所有协议均可能返回;\n  3. \"PCM传输结果码.函数中止\", 所有协议均可能返回;\n  4. \"PCM传输结果码.打开文件失败\", 所有协议均可能返回;\n  5. \"PCM传输结果码.视窗错误\", 所有协议均可能返回;\n  6. \"PCM传输结果码.超时\", 以下协议可能返回;\n  7. \"PCM传输结果码.CAN中止\", 以下协议可能返回: Xmodem1KCRC XmodemCheckSum XmodemCRC.",
+}"data type": "整数""data type": "整数",
+}"data type": "整数""@嵌入式方法": "\"\"",
+}"data type": "整数""parameters": [
+   {
+"parameter name": "所使用协议",
+"comment": "指定所使用的文件传输协议类型",
+"data type": "PCM文件传输协议"
+   },
+   {
+"parameter name": "文件名",
+"comment": "用作提供和返回所接收到数据存放到的本地文件名.\n注意: 所接收到的文件将存放到程序现行目录(可在接收文件前使用\"改变目录\"全局方法设置)下.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "进度反馈方法",
+"comment": "当文件数据接收进度发生改变后,本静态方法被自动调用,一般用作给最终用户提供一个友好的传输进度显示界面.\n具体函数解释参见\"传输进度模板方法\".",
+"@匹配方法": "\"传输进度模板方法\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "提供一个具体的接收数据超时时间(单位秒),仅当协议类型为 ASCII 时有效.",
+"data type": "整数",
+"@默认值": "5"
+   }
+}"data type": "整数"]
+  },
+  {
+data type": "整数""method name": "接收一批文件",
+data type": "整数""comment": "基于所指定的协议接收一批文件数据",
+data type": "整数""result comment": "大于等于0表示接收成功(提供所具体接收到文件的数目),失败返回小于0的以下结果码之一:\n  1. \"PCM传输结果码.无效参数\", 所提供协议类型值无效或所提供参数值无效;\n  2. \"PCM传输结果码.无效端口\", 所有协议均可能返回;\n  3. \"PCM传输结果码.超时\", 所有协议均可能返回;\n  4. \"PCM传输结果码.函数中止\", 所有协议均可能返回;\n  5. \"PCM传输结果码.打开文件失败\", 所有协议均可能返回;\n  6. \"PCM传输结果码.视窗错误\", 所有协议均可能返回;\n  7. \"PCM传输结果码.CAN中止\", 以下协议可能返回: Ymodem Zmodem;\n  8. \"PCM传输结果码.协议出错\", 以下协议可能返回: Zmodem.",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "所使用协议",
+"comment": "指定所使用的文件传输协议类型. 注意仅支持以下几种协议: Kermit, Ymodem, Zmodem.",
+"data type": "PCM文件传输协议"
+   },
+   {
+"parameter name": "最多接收文件数目",
+"comment": "指定最多可以接收文件的数目",
+"data type": "整数"
+   },
+   {
+"parameter name": "所接收到文件名列表",
+"comment": "用作返回所有被接收到文件的本地文件名列表.\n注意: 所接收到的文件将存放到程序现行目录(可在接收文件前使用\"改变目录\"全局方法设置)下.",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "进度反馈方法",
+"comment": "当文件数据接收进度发生改变后,本静态方法被自动调用,一般用作给最终用户提供一个友好的传输进度显示界面.\n具体函数解释参见\"传输进度模板方法\".",
+"@匹配方法": "\"传输进度模板方法\""
+   }
+data type": "整数"]
+  },
+  {
+ameter name": "文件名""method name": "发送中断信号",
+ameter name": "文件名""comment": "发送中断信号并等待所指定时间",
+ameter name": "文件名""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+ameter name": "文件名""data type": "整数",
+ameter name": "文件名""@嵌入式方法": "\"\"",
+ameter name": "文件名""parameters": [
+   {
+"parameter name": "等待时间",
+"comment": "指定开始发送中断信号后一直阻塞等待的时间,单位为\"滴答\"(1\"滴答\"等于55毫秒).",
+"data type": "整数"
+   }
+ameter name": "文件名"]
+  },
+  {
+data type": "整数"]"method name": "发送中断信号2",
+data type": "整数"]"comment": "发送中断信号并等待所指定时间.\n本方法与\"发送中断信号\"方法唯一的区别是等待时间单位为毫秒.",
+data type": "整数"]"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\".",
+data type": "整数"]"data type": "整数",
+data type": "整数"]"@嵌入式方法": "\"\"",
+data type": "整数"]"parameters": [
+   {
+"parameter name": "等待时间",
+"comment": "指定开始发送中断信号后一直阻塞等待的时间,单位为毫秒.",
+"data type": "整数"
+   }
+data type": "整数"]]
+  },
+  {
+hod name": "中止写""data type": "整数""method name": "查看数据",
+hod name": "中止写""data type": "整数""comment": "  从设备输入缓冲区中查看读入并返回一段数据.\n  本方法与\"读数据\"方法的区别在于: 本方法仅仅只查看在输入缓冲区中的数据,而并不将所读入数据从\n输入缓冲区中删除,该数据将仍旧保存在输入缓冲区中以供下次读入.\n  注意: 本方法仅当设备为 MOXA 多串口主板时有效.",
+hod name": "中止写""data type": "整数""result comment": "  成功返回大于等于0的实际读入数据尺寸(等于\"结果数据\"参数中所返回数据的尺寸),失败返回\n小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.端口不支持\", \"PCM结果码.视窗错误\".",
+hod name": "中止写""data type": "整数""data type": "整数",
+hod name": "中止写""data type": "整数""@禁止流程检查": "真",
+hod name": "中止写""data type": "整数""parameters": [
+   {
+"parameter name": "欲读入数据尺寸",
+"comment": "提供所欲读入的数据尺寸,必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结果数据",
+"comment": "用作保存所读入的数据",
+"data type": "字节集类"
+   }
+hod name": "中止写""data type": "整数"]
+  },
+  {
+ta type": "整数"]]"method name": "置低水平线",
+ta type": "整数"]]"comment": "设置设备Tx缓冲区的低水平线阀值,有效值范围在0到1024字节之间.\n当缓冲区中的已有数据尺寸小于等于此低水平线阀值时,设备将发送一个\"Tx缓冲区空\"事件从而触发下一次数据写操作.\n注意: 本方法仅当设备为 MOXA 多串口主板时有效.",
+ta type": "整数"]]"result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一:\n  \"PCM结果码.无效端口\", \"PCM结果码.控制失败\", \"PCM结果码.无效参数\", \"PCM结果码.视窗错误\", \"PCM结果码.端口不支持\".",
+ta type": "整数"]]"data type": "整数",
+ta type": "整数"]]"@嵌入式方法": "\"\"",
+ta type": "整数"]]"parameters": [
+   {
+"parameter name": "低水平线值",
+"comment": "提供设备Tx缓冲区的低水平线值,有效值范围在0到1024字节之间.",
+"data type": "整数"
+   }
+ta type": "整数"]]]
+  },
+  {
+data type": "文本型""method name": "伪接收Xon字符",
+data type": "文本型""comment": "假装接收到了一个 XON 字符,从而触发相应的传输操作.",
+data type": "文本型""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+data type": "文本型""data type": "整数",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+ata type": "文本型""comment": "假装接收到了一个 XON 字符,从而触发相应的传输操作.""method name": "伪接收Xoff字符",
+ata type": "文本型""comment": "假装接收到了一个 XON 字符,从而触发相应的传输操作.""comment": "假装接收到了一个 XOFF 字符,从而触发相应的传输操作.",
+ata type": "文本型""comment": "假装接收到了一个 XON 字符,从而触发相应的传输操作.""result comment": "成功返回\"PCM结果码.成功\",失败返回小于0的以下结果码之一: \"PCM结果码.无效端口\", \"PCM结果码.视窗错误\".",
+ata type": "文本型""comment": "假装接收到了一个 XON 字符,从而触发相应的传输操作.""data type": "整数",
+ata type": "文本型""comment": "假装接收到了一个 XON 字符,从而触发相应的传输操作.""@嵌入式方法": "\"\""
+  }
+ry = \\\"辅助类\\\"\""constant name": "Kermit"]
+ }
+问本程序中的接口需要引用模块"PComm串口访问".]
+}

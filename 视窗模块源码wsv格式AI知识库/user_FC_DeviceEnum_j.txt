@@ -1,0 +1,122 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.设备管理器\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"DeviceEnum\\\\DeviceEnumTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"DeviceEnum\\\\DeviceEnumToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"DeviceEnum\\\\DeviceEnumToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"DeviceEnum\\\\DeviceEnumToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"DeviceEnum\\\\DeviceEnumToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "设备管理器类F",
+"methods": [
+  {
+"method name": "取图标列表句柄",
+"result comment": "HIMAGELIST",
+"data type": "变整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取类名",
+
+"result comment": "返回图标索引 小于0失败",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "输出_设备类名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出_设备描述",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取设备",
+
+"result comment": "如果 返回值 不等-1，那么说明还可以继续枚举\n如果返回值 等于0，则可以获得设备名称",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "设备类名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出_设备名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "启用设备",
+
+"comment": "注意，需要管理员权限",
+
+"result comment": "状态改变 返回真，否则返回假",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "设备名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "禁用设备",
+
+"comment": "注意，需要管理员权限",
+
+"result comment": "状态改变 返回真，否则返回假",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "设备名称",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

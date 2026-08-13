@@ -1,0 +1,2247 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC界面基本类".
+
+{
+ 整数"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ 整数"package name": "火山.MFC界面.基本",
+ 整数"comment": "本程序提供视窗项目的MFC界面基本支持功能.\n注意: 除非特别说明,本模块中所使用的所有显示单位均为像素.\n本模块默认采用静态链接方式,同时支持动态链接方式.",
+ 整数"@文档": "\"category = \\\"基础类\\\"\"",
+ 整数"@视窗.外部头文件.全局-300": "\"src\\\\mfc_ui_base.h\"",
+ 整数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"",
+ 整数"@视窗.外部源文件": "\"src\\\\mfc_ui_base.cpp\\r\\nsrc\\\\mfc_ui_functions.cpp\\r\\n\"",
+ 整数"@视窗.预定义宏.dynamic": "\"_AFXDLL\"",
+ 整数"@视窗.附加编译参数.debug-dynamic": "\"cpp: /MDd\"",
+ 整数"@视窗.附加编译参数.release-dynamic": "\"cpp: /MD\"",
+ 整数"classes": [
+ {
+ "class name": "组件边框类型",
+ "comment": "提供组件的各种边框类型",
+ "@文档": "\"category = \\\"辅助类\\\"\"",
+ "@常量类": "整数",
+ "constants": [
+  {
+ 整数"constant name": "无边框",
+ 整数"initial value": "0"
+  },
+  {
+欲设置的图标索引位置,为-1表示无.""constant name": "凹入式",
+欲设置的图标索引位置,为-1表示无.""initial value": "1"
+  },
+  {
+整数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"""constant name": "凸出式",
+整数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"""initial value": "2"
+  },
+  {
+祀ꡱŝ"constant name": "浅凹入式",
+祀ꡱŝ"initial value": "3"
+  },
+  {
+}"constant name": "镜框式",
+}"initial value": "4"
+  },
+  {
+ꡱŝ"initial value": "3""constant name": "单线边框式",
+ꡱŝ"initial value": "3""initial value": "5"
+  }
+ ]
+ },
+ {
+整数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"""class name": "组件层次",
+整数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"""comment": "提供窗口组件的各种显示层次",
+整数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"""@文档": "\"category = \\\"辅助类\\\"\"",
+整数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"""@常量类": "整数",
+整数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"""constants": [
+  {
+ 整数 注释 = "提供所欲设置的图标索引位置,为-1表示无.""constant name": "顶层",
+ 整数 注释 = "提供所欲设置的图标索引位置,为-1表示无.""comment": "将组件放置在具有相同父组件的其它组件的顶层,如果为窗口(无父组件),则放置在其它窗口的顶层. HWND_TOP",
+ 整数 注释 = "提供所欲设置的图标索引位置,为-1表示无.""initial value": "0"
+  },
+  {
+型 = 逻辑型 注释 = "返回所指定ID菜单项是否处于被选中状态,如果所指定菜单项不存在,将始终返回假." @禁止流程检查 = 真"constant name": "底层",
+型 = 逻辑型 注释 = "返回所指定ID菜单项是否处于被选中状态,如果所指定菜单项不存在,将始终返回假." @禁止流程检查 = 真"comment": "将组件放置在具有相同父组件的其它组件的底层,如果为窗口(无父组件),则放置在其它窗口的底层. HWND_BOTTOM",
+型 = 逻辑型 注释 = "返回所指定ID菜单项是否处于被选中状态,如果所指定菜单项不存在,将始终返回假." @禁止流程检查 = 真"initial value": "1"
+  },
+  {
+整数"initial value": "0""constant name": "最高层",
+整数"initial value": "0""comment": "将窗口放置在其它所有非最高层窗口的上方,即使窗口不再被激活依旧保持保留在此层次上. HWND_TOPMOST",
+整数"initial value": "0""initial value": "-1"
+  },
+  {
+}"constant name": "次高层",
+}"comment": "将窗口放置在其它所有非最高层窗口的上方. HWND_NOTOPMOST",
+}"initial value": "-2"
+  }
+整数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\""]
+ },
+ {
+
+"class name": "输入框输入方式",
+
+"comment": "提供输入框的各种输入方式",
+
+"@文档": "\"category = \\\"辅助类\\\"\"",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+整数"@文档": "\"category = \\\"基础类\\\"\"""constant name": "输入文本",
+整数"@文档": "\"category = \\\"基础类\\\"\"""initial value": "1"
+  },
+  {
+数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"""initial value": "2""constant name": "输入整数",
+数"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_base.rc\"""initial value": "2""initial value": "2"
+  },
+  {
+
+"constant name": "输入小数",
+
+"initial value": "3"
+  },
+  {
+nstant name": "输入小数""constant name": "输入密码",
+nstant name": "输入小数""initial value": "4"
+  }
+
+]
+ },
+ {
+"initial value": "3""class name": "所执行命令类型",
+"initial value": "3""@文档": "\"category = \\\"辅助类\\\"\"",
+"initial value": "3""@常量类": "整数",
+"initial value": "3""constants": [
+  {
+tial value": "3""class name": "所执行命令类型""constant name": "默认",
+tial value": "3""class name": "所执行命令类型""comment": "系统将首先搜寻注册表以获取对应于欲操作文件的一个合适命令类型,如果未找到将使用\"打开文件\"命令.",
+tial value": "3""class name": "所执行命令类型""initial value": "0"
+  },
+  {
+
+"constant name": "编辑文档",
+
+"comment": "启动编辑软件打开\"欲操作文件名\"参数所指定的文档文件进行编辑",
+
+"initial value": "1"
+  },
+  {
+}"constant name": "浏览文件夹",
+}"comment": "打开\"欲操作文件名\"参数所指定的文件夹进行浏览",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "寻找文件",
+
+"comment": "打开\"欲操作文件名\"参数所指定的文件夹进行文件寻找操作",
+
+"initial value": "3"
+  },
+  {
+"comment": "打开\"欲操作文件名\"参数所指定的文件夹进行浏览""constant name": "打开文件",
+"comment": "打开\"欲操作文件名\"参数所指定的文件夹进行浏览""comment": "打开\"欲操作文件名\"参数所指定的文件,该文件可以是可执行文件/文档文件或文件夹.",
+"comment": "打开\"欲操作文件名\"参数所指定的文件夹进行浏览""initial value": "4"
+  },
+  {
+
+"constant name": "打印文档",
+
+"comment": "打印\"欲操作文件名\"参数所指定的文档文件,注意该文档的编辑软件可能不支持本命令,故使用前需要先测试是否可用.",
+
+"initial value": "5"
+  }
+"initial value": "3"]
+ },
+ {
+"initial value": "3""class name": "窗口组件",
+"initial value": "3""comment": "所有窗口组件的基础类",
+"initial value": "3""base class": "参考对象类",
+"initial value": "3""@文档": "\"category = \\\"窗口组件.基础类\\\"\"",
+"initial value": "3""@视窗.外部头文件": "\"src\\\\mfc_ui_base_controls.h\"",
+"initial value": "3""@视窗.外部源文件": "\"src\\\\mfc_ui_base_controls.cpp\"",
+"initial value": "3""@输出名": "\"@CVolWinControl\"",
+"initial value": "3""variables": [
+  {
+nstant name": "浏览文件夹""variable name": "标记",
+nstant name": "浏览文件夹""comment": "用作在组件中保存一个用户自定义标记文本值",
+nstant name": "浏览文件夹""data type": "文本型",
+nstant name": "浏览文件夹""@属性变量": "真"
+  }
+"initial value": "3"],
+"initial value": "3""methods": [
+  {
+
+"method name": "鼠标左键被按下",
+
+"comment": "当鼠标左键被按下时事件被触发",
+
+"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+initial value": "3""@视窗.外部头文件": "\"src\\\\mfc_ui_base_controls.h\"""method name": "鼠标左键被放开",
+initial value": "3""@视窗.外部头文件": "\"src\\\\mfc_ui_base_controls.h\"""comment": "当鼠标左键被放开时事件被触发",
+initial value": "3""@视窗.外部头文件": "\"src\\\\mfc_ui_base_controls.h\"""result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+initial value": "3""@视窗.外部头文件": "\"src\\\\mfc_ui_base_controls.h\"""type": "event",
+initial value": "3""@视窗.外部头文件": "\"src\\\\mfc_ui_base_controls.h\"""data type": "整数",
+initial value": "3""@视窗.外部头文件": "\"src\\\\mfc_ui_base_controls.h\"""parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+initial value": "3""@视窗.外部头文件": "\"src\\\\mfc_ui_base_controls.h\""]
+  },
+  {
+comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.""method name": "被双击",
+comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.""comment": "当鼠标左键被双击时事件被触发",
+comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.""result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.""type": "event",
+comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.""data type": "整数",
+comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.""parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边."]
+  },
+  {
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""method name": "鼠标右键被按下",
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""comment": "当鼠标右键被按下时事件被触发",
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""type": "event",
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""data type": "整数",
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合."]
+  },
+  {
+"method name": "鼠标右键被放开",
+"comment": "当鼠标右键被放开时事件被触发",
+"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "鼠标中键被按下",
+"comment": "当鼠标中键被按下时事件被触发",
+"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+]
+  },
+  {
+comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.""method name": "鼠标中键被放开",
+comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.""comment": "当鼠标中键被放开时事件被触发",
+comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.""result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.""type": "event",
+comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.""data type": "整数",
+comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.""parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边."]
+  },
+  {
+mment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合."]"method name": "鼠标位置被移动",
+mment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合."]"comment": "当鼠标位置被移动时事件被触发",
+mment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合."]"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+mment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合."]"type": "event",
+mment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合."]"data type": "整数",
+mment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合."]"parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "事件触发时的鼠标横向坐标位置,相对所处用户区的左边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "事件触发时的鼠标纵向坐标位置,相对所处用户区的顶边.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+mment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合."]]
+  },
+  {
+ameter name": "纵向位置""method name": "滚轮被滚动",
+ameter name": "纵向位置""comment": "当鼠标滚轮被滚动时事件被触发",
+ameter name": "纵向位置""result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+ameter name": "纵向位置""type": "event",
+ameter name": "纵向位置""data type": "整数",
+ameter name": "纵向位置""parameters": [
+   {
+"parameter name": "滚动距离",
+"comment": "表明鼠标滚轮所滚动的距离,大于零表示向前滚动,小于零表示向后滚动.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+ameter name": "纵向位置"]
+  },
+  {
+ameter name": "辅助键状态""method name": "按下某键",
+ameter name": "辅助键状态""comment": "当用户按下某个按键时事件被触发",
+ameter name": "辅助键状态""result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+ameter name": "辅助键状态""type": "event",
+ameter name": "辅助键状态""data type": "整数",
+ameter name": "辅助键状态""parameters": [
+   {
+"parameter name": "键代码",
+"comment": "为\"按键码\"类中的常量值,注意不包括辅助键组合状态值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+ameter name": "辅助键状态"]
+  },
+  {
+eter name": "纵向位置"]"method name": "放开某键",
+eter name": "纵向位置"]"comment": "当用户按下某个按键时事件被触发",
+eter name": "纵向位置"]"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+eter name": "纵向位置"]"type": "event",
+eter name": "纵向位置"]"data type": "整数",
+eter name": "纵向位置"]"parameters": [
+   {
+"parameter name": "键代码",
+"comment": "为\"按键码\"类中的常量值,注意不包括辅助键组合状态值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.",
+"data type": "整数"
+   }
+eter name": "纵向位置"]]
+  },
+  {
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""method name": "获得焦点",
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""comment": "  当本组件获得输入焦点后发送此事件.\n  所谓\"输入焦点\",即当前用户按键操作所对应的目标组件. 譬如: 用户正在编辑框中输入文本,\n那么此编辑框就具有输入焦点,因为它将获得目前用户所进行的所有按键操作. 所谓\"获得\"或者\n\"失去\"输入焦点,即当前用户按键操作所对应的目标对象发生转移. 譬如: 用户现在正在编辑框1\n中输入文本,突然使用鼠标或其它方法切换到了编辑框2上去继续输入,那么此时编辑框1就\"失去\"\n了输入焦点,编辑框2就\"获得\"了输入焦点,因为在此以后用户所进行的所有按键操作都将被\n编辑框2所获得.",
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""type": "event",
+comment": "事件触发时的辅助键组合状态,为\"辅助键状态\"类中各常量值的组合.""data type": "整数"
+  },
+  {
+"method name": "失去焦点",
+"comment": "  当本组件失去输入焦点后发送此事件.\n  所谓\"输入焦点\",即当前用户按键操作所对应的目标组件. 譬如: 用户正在编辑框中输入文本,\n那么此编辑框就具有输入焦点,因为它将获得目前用户所进行的所有按键操作. 所谓\"获得\"或者\n\"失去\"输入焦点,即当前用户按键操作所对应的目标对象发生转移. 譬如: 用户现在正在编辑框1\n中输入文本,突然使用鼠标或其它方法切换到了编辑框2上去继续输入,那么此时编辑框1就\"失去\"\n了输入焦点,编辑框2就\"获得\"了输入焦点,因为在此以后用户所进行的所有按键操作都将被\n编辑框2所获得.",
+"result comment": "本事件的处理方法如果返回非0整数值,表明事件已经得到处理且不再需要后续处理.",
+"type": "event",
+"data type": "整数"
+  },
+  {
+ter name": "纵向位置"]"type": "event""method name": "字符输入",
+ter name": "纵向位置"]"type": "event""comment": "  当用户输入一个字符后发生此事件,字符键包括任何可打印的键盘字符及回车(Enter)\n和退格(BackSpace)键.",
+ter name": "纵向位置"]"type": "event""result comment": "  本事件的处理方法返回值如果小于0,表明事件已经得到处理且不再需要后续处理,如果\n大于0,则将该值作为新的替代字符代码继续进行后续处理.如果等于0,则使用原字符值继\n续进行后续处理.",
+ter name": "纵向位置"]"type": "event""type": "event",
+ter name": "纵向位置"]"type": "event""data type": "整数",
+ter name": "纵向位置"]"type": "event""parameters": [
+   {
+"parameter name": "字符代码",
+"comment": "提供所输入的字符",
+"data type": "字符"
+   }
+ter name": "纵向位置"]"type": "event"]
+  },
+  {
+data type": "字符""method name": "组件消息过滤",
+data type": "字符""comment": "当用户组件接收到任何Windows消息在其被实际处理前,本事件被发送.",
+data type": "字符""result comment": "  返回0表示允许该Windows消息继续向后传递并处理,返回1表示该Windows\n消息已经被处理且无需后续处理.",
+data type": "字符""type": "event",
+data type": "字符""data type": "整数",
+data type": "字符""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供消息所对应的本组件窗口句柄(HWND)",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息值",
+"comment": "提供消息的具体值",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息参数1",
+"comment": "提供消息所附带的参数1的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息参数2",
+"comment": "提供消息所附带的参数2的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息地址",
+"comment": "提供消息的具体 MSG* 地址指针,用作备用.",
+"data type": "变整数"
+   }
+data type": "字符"]
+  },
+  {
+data type": "变整数""method name": "组件创建完毕",
+data type": "变整数""comment": "当组件被创建完毕后发送此事件",
+data type": "变整数""type": "event",
+data type": "变整数""data type": "整数",
+data type": "变整数""parameters": [
+   {
+"parameter name": "父组件",
+"comment": "  提供组件所处的父组件,必定有效且已经成功创建.\n  可以使用\"属于\"操作符判断具体的父组件数据类型,如: \"如果 (父组件 属于 窗口容器组件)\",\n\"如果 (父组件 属于 图片框)\" 等. 判断清楚具体数据类型后,可以使用强制转换将其转换到具体的\n窗口组件类对象,如: \"(窗口容器组件)父组件\"",
+"data type": "窗口组件"
+   },
+   {
+"parameter name": "组件ID",
+"comment": "提供组件在所处父组件中的ID值",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+ameter name": "消息值""method name": "文件被拖放",
+ameter name": "消息值""comment": "当文件被拖放到本窗口组件上后,将发送本事件.\n注意: 仅当\"允许文件拖放\"属性被设置为真时,本事件才会被发送.",
+ameter name": "消息值""type": "event",
+ameter name": "消息值""data type": "整数",
+ameter name": "消息值""parameters": [
+   {
+"parameter name": "所拖放文件",
+"comment": "提供所有被拖放到本组件上的文件名,数组成员数必定大于0.",
+"data type": "文本数组类"
+   }
+ameter name": "消息值"]
+  },
+  {
+ata type": "变整数""type": "event""method name": "标题",
+ata type": "变整数""type": "event""comment": "返回本组件的当前标题文本",
+ata type": "变整数""type": "event""type": "property getter",
+ata type": "变整数""type": "event""data type": "文本型",
+ata type": "变整数""type": "event""@禁止流程检查": "真"
+  },
+  {
+er name": "纵向位置"]]"method name": "标题",
+er name": "纵向位置"]]"comment": "  设置本组件的当前标题文本.\n  注意: 在某些组件中(譬如标签,按钮,选择框,单选框,分组框等),'&'字符本身不会被显示,\n而会导致其后方紧接的一个字符以下划线方式显示,表示Alt加该字符为此组件的快捷访问键.\n这种情况下如果需要显示'&'字符本身,需要使用连续两个该字符,即\"&&\".",
+er name": "纵向位置"]]"type": "property setter",
+er name": "纵向位置"]]"@视窗.设置时机": "组件创建前后",
+er name": "纵向位置"]]"parameters": [
+   {
+"parameter name": "所欲设置的标题",
+"comment": "提供所欲设置的标题文本",
+"data type": "文本型"
+   }
+er name": "纵向位置"]]]
+  },
+  {
+
+"method name": "标题字符串",
+
+"comment": "以字符串资源的方式设置本组件的当前标题文本",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的标题",
+"data type": "字符串资源"
+   }
+
+]
+  },
+  {
+ta type": "变整数""type": "event""data type": "文本型""method name": "可视",
+ta type": "变整数""type": "event""data type": "文本型""comment": "返回本组件当前是否可视",
+ta type": "变整数""type": "event""data type": "文本型""type": "property getter",
+ta type": "变整数""type": "event""data type": "文本型""data type": "逻辑型",
+ta type": "变整数""type": "event""data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+a type": "变整数""type": "event""data type": "文本型""type": "property getter""method name": "是否初始可视",
+a type": "变整数""type": "event""data type": "文本型""type": "property getter""comment": "返回本组件在实际创建前被设置的初始可视状态",
+a type": "变整数""type": "event""data type": "文本型""type": "property getter""result comment": "可视返回真,不可视返回假.",
+a type": "变整数""type": "event""data type": "文本型""type": "property getter""data type": "逻辑型",
+a type": "变整数""type": "event""data type": "文本型""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "可视",
+
+"comment": "设置本组件当前是否可视",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "是否可视",
+"comment": "指定本组件是否可视",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+a type": "变整数""type": "event""data type": "文本型""data type": "逻辑型""method name": "禁止",
+a type": "变整数""type": "event""data type": "文本型""data type": "逻辑型""comment": "返回本组件当前是否被禁止操作",
+a type": "变整数""type": "event""data type": "文本型""data type": "逻辑型""type": "property getter",
+a type": "变整数""type": "event""data type": "文本型""data type": "逻辑型""data type": "逻辑型",
+a type": "变整数""type": "event""data type": "文本型""data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "禁止",
+
+"comment": "设置本组件当前是否被禁止操作",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "是否禁止",
+"comment": "指定本组件是否被禁止",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+data type": "变整数""method name": "首组件",
+data type": "变整数""comment": "  返回本组件是否为一组组件的首组件.同一组内组件之间的输入焦点可以使用光标键移动,\n其中所有单选框组件将被自动只选中一个.",
+data type": "变整数""type": "property getter",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@嵌入式方法": "\"\""
+  },
+  {
+"type": "property setter""method name": "首组件",
+"type": "property setter""comment": "设置本组件为一组组件的首组件,本组件及后续所有本属性值为假的兄弟组件均被认为在同一组中.\n同一组内组件之间的输入焦点可以使用光标键移动,其中所有单选框组件将被自动只选中一个.\n如果同一父组件中的所有子组件均位于同一组中,则不需要设置本属性.\n注意本属性对\"窗口\"类对象不起作用.",
+"type": "property setter""type": "property setter",
+"type": "property setter""@视窗.设置时机": "组件创建前后",
+"type": "property setter""parameters": [
+   {
+"parameter name": "是否为组内的首组件",
+"data type": "逻辑型"
+   }
+"type": "property setter"]
+  },
+  {
+ame": "纵向位置"]]"method name": "标题""method name": "可停留焦点",
+ame": "纵向位置"]]"method name": "标题""comment": "返回当用户使用TAB键在组件之间移动输入焦点时是否允许在本组件上停留",
+ame": "纵向位置"]]"method name": "标题""type": "property getter",
+ame": "纵向位置"]]"method name": "标题""data type": "逻辑型",
+ame": "纵向位置"]]"method name": "标题""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "所欲设置的标题""method name": "可停留焦点",
+ameter name": "所欲设置的标题""comment": "设置当用户使用TAB键在组件之间移动输入焦点时是否允许在本组件上停留.\n注意:\n    1. 对于编辑框,按钮之类可以接收按键输入的组件,本属性值默认为真;\n    2. 本属性对\"窗口\"类对象不起作用;\n    3. 如欲设置各个组件之间的焦点停留顺序,请在界面布局设计器中的\n布局内容树中拖动改变组件的创建顺序,也可在源程序中直接调整窗口类中\n组件成员变量的定义顺序;\n    4(内部): 封装本属性时必须将本属性的设置时机置为\"组件创建后\",\n以支持对本属性默认值(前面第一条决定)的覆盖修改.",
+ameter name": "所欲设置的标题""type": "property setter",
+ameter name": "所欲设置的标题""parameters": [
+   {
+"parameter name": "是否可停留焦点",
+"data type": "逻辑型"
+   }
+ameter name": "所欲设置的标题"]
+  },
+  {
+"method name": "标准鼠标指针",
+"comment": "设置当鼠标指针移动到本组件上时的标准鼠标指针形状类型.\n注意: 使用\"自定义鼠标指针\"所设置的鼠标指针形状将被覆盖.",
+"type": "property setter",
+"@视窗.设置时机": "组件创建前后",
+"parameters": [
+   {
+"parameter name": "所欲设置指针类型",
+"data type": "标准鼠标指针类型"
+   }
+]
+  },
+  {
+
+"method name": "自定义鼠标指针",
+
+"comment": "设置当鼠标指针移动到本组件上时的自定义鼠标指针形状类型.\n注意: 使用\"标准鼠标指针\"所设置的鼠标指针形状将被覆盖.",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "所欲设置指针形状",
+"comment": "提供所欲设置的鼠标指针资源,如果该资源值为\"空资源.空鼠标指针\",则将取消自定义鼠标指针.",
+"data type": "鼠标指针资源"
+   }
+
+]
+  },
+  {
+
+"comment": "设置本组件当前是否可视""method name": "字体",
+
+"comment": "设置本组件当前是否可视""comment": "设置本组件显示文本时所使用的字体",
+
+"comment": "设置本组件当前是否可视""type": "property setter",
+
+"comment": "设置本组件当前是否可视""@视窗.设置时机": "组件创建前后",
+
+"comment": "设置本组件当前是否可视""@值细节类型": "字体",
+
+"comment": "设置本组件当前是否可视""parameters": [
+   {
+"parameter name": "字体描述文本",
+"comment": "  本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例子: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型"
+   }
+
+"comment": "设置本组件当前是否可视"]
+  },
+  {
+}"method name": "字体",
+}"comment": "返回本组件显示文本时所使用的字体,如果未设置则为空文本.",
+}"type": "property getter",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""method name": "组件边框",
+data type": "文本型""comment": "设置组件的边框类型.\n注意本属性对\"窗口\"类对象不起作用,窗口类对象请使用\"窗口边框\"属性.",
+data type": "文本型""type": "property setter",
+data type": "文本型""@视窗.设置时机": "组件创建后",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所设置边框类型",
+"comment": "提供所欲设置的组件边框类型",
+"data type": "组件边框类型"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "逻辑型""method name": "组件位置",
+data type": "逻辑型""comment": "获取并返回当前组件在所处父组件用户区或屏幕(当无父组件时,譬如为顶层窗口)中的所处矩形位置",
+data type": "逻辑型""result comment": "如果当前组件存在父组件,所返回位置矩形基于其用户区左上角,否则基于屏幕左上角.",
+data type": "逻辑型""type": "property getter",
+data type": "逻辑型""data type": "矩形类"
+  },
+  {
+data type": "变整数""method name": "组件位置",
+data type": "变整数""comment": "设置当前组件在所处父组件用户区或屏幕(当无父组件时,譬如为顶层窗口)中的所处矩形位置",
+data type": "变整数""type": "property setter",
+data type": "变整数""parameters": [
+   {
+"parameter name": "所欲设置的矩形",
+"comment": "如果当前组件存在父组件,为基于其用户区左上角,否则为基于屏幕左上角.",
+"data type": "矩形类"
+   }
+data type": "变整数"]
+  },
+  {
+ameter name": "消息地址""method name": "左边",
+ameter name": "消息地址""comment": "  返回当前组件在所处父组件用户区或屏幕(当无父组件时,譬如为顶层窗口)\n中的左边位置,如果组件尚未被创建,将始终返回0.",
+ameter name": "消息地址""type": "property getter",
+ameter name": "消息地址""data type": "整数",
+ameter name": "消息地址""@设计时隐藏": "真",
+ameter name": "消息地址""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "左边",
+ }"comment": "设置当前组件在所处父组件用户区或屏幕(当无父组件时,譬如为顶层窗口)中的左边位置",
+ }"type": "property setter",
+ }"@设计时隐藏": "真",
+ }"parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "顶边",
+}"comment": "  返回当前组件在所处父组件用户区或屏幕(当无父组件时,譬如为顶层窗口)\n中的顶边位置,如果组件尚未被创建,将始终返回0.",
+}"type": "property getter",
+}"data type": "整数",
+}"@设计时隐藏": "真",
+}"@禁止流程检查": "真"
+  },
+  {
+me": "纵向位置"]]"method name": "标题""type": "property getter""method name": "顶边",
+me": "纵向位置"]]"method name": "标题""type": "property getter""comment": "设置当前组件在所处父组件用户区或屏幕(当无父组件时,譬如为顶层窗口)中的顶边位置",
+me": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter",
+me": "纵向位置"]]"method name": "标题""type": "property getter""@设计时隐藏": "真",
+me": "纵向位置"]]"method name": "标题""type": "property getter""parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+me": "纵向位置"]]"method name": "标题""type": "property getter"]
+  },
+  {
+e": "纵向位置"]]"method name": "标题""type": "property getter""parameters": [
+"method name": "宽度",
+e": "纵向位置"]]"method name": "标题""type": "property getter""parameters": [
+"comment": "返回当前组件的宽度,如果组件尚未被创建,将始终返回0.",
+e": "纵向位置"]]"method name": "标题""type": "property getter""parameters": [
+"type": "property getter",
+e": "纵向位置"]]"method name": "标题""type": "property getter""parameters": [
+"data type": "整数",
+e": "纵向位置"]]"method name": "标题""type": "property getter""parameters": [
+"@设计时隐藏": "真",
+e": "纵向位置"]]"method name": "标题""type": "property getter""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+"type": "property getter""method name": "宽度",
+"type": "property getter""comment": "设置当前组件的宽度",
+"type": "property getter""type": "property setter",
+"type": "property getter""@设计时隐藏": "真",
+"type": "property getter""parameters": [
+   {
+"parameter name": "所欲设置的宽度",
+"data type": "整数"
+   }
+"type": "property getter"]
+  },
+  {
+e": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""method name": "高度",
+e": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""comment": "返回当前组件的高度,如果组件尚未被创建,将始终返回0.",
+e": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""type": "property getter",
+e": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""data type": "整数",
+e": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""@设计时隐藏": "真",
+e": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""@禁止流程检查": "真"
+  },
+  {
+": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""@设计时隐藏": "真""method name": "高度",
+": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""@设计时隐藏": "真""comment": "设置当前组件的高度",
+": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""@设计时隐藏": "真""type": "property setter",
+": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""@设计时隐藏": "真""@设计时隐藏": "真",
+": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""@设计时隐藏": "真""parameters": [
+   {
+"parameter name": "所欲设置的高度",
+"data type": "整数"
+   }
+": "纵向位置"]]"method name": "标题""type": "property getter""type": "property setter""@设计时隐藏": "真"]
+  },
+  {
+ }"method name": "允许文件拖放",
+ }"comment": "  设置是否允许将文件拖放到本窗口组件上.\n  如果本属性被设置为真,则允许文件被拖放到本窗口组件上,\n当文件被拖放上来后,将发送\"文件被拖放\"事件.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否允许",
+"comment": "指定是否允许文件被拖放到本窗口组件上",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+comment": "提供所欲设置的组件边框类型""method name": "提示信息",
+comment": "提供所欲设置的组件边框类型""comment": "设置当鼠标移动到本组件上时所显示的提示文本信息",
+comment": "提供所欲设置的组件边框类型""type": "property setter",
+comment": "提供所欲设置的组件边框类型""parameters": [
+   {
+"parameter name": "提示文本内容",
+"comment": "提供具体的提示文本内容,为空文本清除已有提示文本.",
+"data type": "文本型"
+   }
+comment": "提供所欲设置的组件边框类型"]
+  },
+  {
+}"method name": "禁止系统主题",
+}"comment": "设置本组件是否禁止使用所处应用程序对应的Windows主题.\n禁止使用Windows主题可以保证本组件的一些外观属性(譬如颜色/字体等)显示正常.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "创建组件",
+}"comment": "创建本类的窗口组件",
+}"result comment": "返回是否成功",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "父窗口容器组件",
+"comment": "提供所创建组件所处的父窗口容器组件",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"comment": "提供所创建组件在所处父窗口容器组件中的左边横向坐标位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "顶边位置",
+"comment": "提供所创建组件在所处父窗口容器组件中的顶边纵向坐标位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所创建组件的宽度值",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所创建组件的高度值",
+"data type": "整数"
+   },
+   {
+"parameter name": "ID值",
+"comment": "指定所创建组件在其父窗口容器组件中的ID值",
+"data type": "整数",
+"@默认值": "0xFFFF"
+   },
+   {
+"parameter name": "所处分组编号",
+"comment": "指定所创建组件所处的设计时分组编号",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+ameter name": "ID值""method name": "取窗口句柄",
+ameter name": "ID值""comment": "返回当前窗口组件的句柄,如果尚未创建或创建失败,则返回0.",
+ameter name": "ID值""data type": "变整数",
+ameter name": "ID值""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "ID值""data type": "变整数""method name": "取父窗口句柄",
+meter name": "ID值""data type": "变整数""comment": "返回当前窗口组件的父窗口句柄,如果不存在则返回0.",
+meter name": "ID值""data type": "变整数""data type": "变整数",
+meter name": "ID值""data type": "变整数""@禁止流程检查": "真"
+  },
+  {
+建组件所处的设计时分组编号"method name": "取所有者窗口句柄",
+建组件所处的设计时分组编号"comment": "返回当前窗口组件的所有者窗口的句柄,如果不存在则返回0.\n如果当前窗口组件没有所有者窗口,则默认返回其父窗口句柄.",
+建组件所处的设计时分组编号"data type": "变整数",
+建组件所处的设计时分组编号"@禁止流程检查": "真"
+  },
+  {
+thod name": "禁止系统主题""method name": "是否为空",
+thod name": "禁止系统主题""comment": "返回当前组件是否尚未成功创建",
+thod name": "禁止系统主题""data type": "逻辑型",
+thod name": "禁止系统主题""@嵌入式方法": "\"\""
+  },
+  {
+comment": "指定所创建组件在其父窗口容器组件中的ID值""method name": "销毁",
+comment": "指定所创建组件在其父窗口容器组件中的ID值""comment": "销毁本窗口组件,本方法调用后如欲继续使用本对象,必须再次创建."
+  },
+  {
+组件所处的设计时分组编号"comment": "返回当前窗口组件的所有者窗口的句柄,如果不存在则返回0.\n如果当前窗口组件没有所有者窗口,则默认返回其父窗口句柄.""method name": "信息框",
+组件所处的设计时分组编号"comment": "返回当前窗口组件的所有者窗口的句柄,如果不存在则返回0.\n如果当前窗口组件没有所有者窗口,则默认返回其父窗口句柄.""comment": "显示一个信息框(本组件为其拥有窗口),等待用户单击按钮.",
+组件所处的设计时分组编号"comment": "返回当前窗口组件的所有者窗口的句柄,如果不存在则返回0.\n如果当前窗口组件没有所有者窗口,则默认返回其父窗口句柄.""result comment": "返回一个值告诉用户单击哪一个按钮.\n如果信息框有\"取消\"按钮,则按下 ESC 键与单击\"取消\"按钮的效果相同.",
+组件所处的设计时分组编号"comment": "返回当前窗口组件的所有者窗口的句柄,如果不存在则返回0.\n如果当前窗口组件没有所有者窗口,则默认返回其父窗口句柄.""data type": "返回按钮类型",
+组件所处的设计时分组编号"comment": "返回当前窗口组件的所有者窗口的句柄,如果不存在则返回0.\n如果当前窗口组件没有所有者窗口,则默认返回其父窗口句柄.""@禁止流程检查": "真",
+组件所处的设计时分组编号"comment": "返回当前窗口组件的所有者窗口的句柄,如果不存在则返回0.\n如果当前窗口组件没有所有者窗口,则默认返回其父窗口句柄.""parameters": [
+   {
+"parameter name": "提示信息",
+"comment": "提供具体的提示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "按钮",
+"comment": "由\"信息框按钮\"类中的各组常量值相加后的值,具体请见该类中的说明.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "窗口标题",
+"comment": "指定显示在信息框标题栏中的文本",
+"data type": "文本型",
+"@默认值": "\"信息:\""
+   }
+组件所处的设计时分组编号"comment": "返回当前窗口组件的所有者窗口的句柄,如果不存在则返回0.\n如果当前窗口组件没有所有者窗口,则默认返回其父窗口句柄."]
+  },
+  {
+ameter name": "所处分组编号""method name": "询问信息框",
+ameter name": "所处分组编号""comment": "用户点击\"是\"按钮将返回真,点击\"否\"按钮将返回假.",
+ameter name": "所处分组编号""data type": "逻辑型",
+ameter name": "所处分组编号""parameters": [
+   {
+"parameter name": "询问信息",
+"comment": "提供具体的询问提示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口标题",
+"comment": "指定显示在信息框标题栏中的文本",
+"data type": "文本型",
+"@默认值": "\"询问:\""
+   }
+ameter name": "所处分组编号"]
+  },
+  {
+"method name": "错误信息框",
+"parameters": [
+   {
+"parameter name": "提示信息",
+"comment": "提供具体的提示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口标题",
+"comment": "指定显示在信息框标题栏中的文本",
+"data type": "文本型",
+"@默认值": "\"错误:\""
+   }
+]
+  },
+  {
+ }"method name": "警告信息框",
+ }"parameters": [
+   {
+"parameter name": "提示信息",
+"comment": "提供具体的提示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口标题",
+"comment": "指定显示在信息框标题栏中的文本",
+"data type": "文本型",
+"@默认值": "\"警告:\""
+   }
+ }]
+  },
+  {
+
+"method name": "输入框",
+
+"comment": "在对话框中显示提示,等待用户输入正文并按下按钮.\n如果用户在确认输入后(按下\"确认输入\"按钮或回车键)退出,返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部资源文件": "\"src\\\\res\\\\input_box.rc\"",
+
+"parameters": [
+   {
+"parameter name": "存放输入内容的变量",
+"comment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "提示信息",
+"comment": "提供输入提示信息,可以中间加入回车换行\"\\r\\n\"以包括多行.\n如果提示信息太长或行数过多,超过部分将不会被显示出来.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "窗口标题",
+"comment": "指定显示在对话框标题栏中的文本.如果为空文本,默认为\"请输入：\".",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "初始文本",
+"comment": "指定初始设置到对话框输入文本框中的内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "输入方式",
+"comment": "用作指定具体的输入方式",
+"data type": "输入框输入方式",
+"@默认值": "输入框输入方式.输入文本"
+   }
+
+]
+  },
+  {
+comment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中.""method name": "置字体",
+comment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中.""comment": "设置本窗口组件所使用的字体",
+comment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中.""parameters": [
+   {
+"parameter name": "所欲设置的字体",
+"data type": "字体对象类"
+   }
+comment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中."]
+  },
+  {
+omment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中.""comment": "设置本窗口组件所使用的字体""method name": "取字体",
+omment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中.""comment": "设置本窗口组件所使用的字体""comment": "返回本窗口组件所使用的字体",
+omment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中.""comment": "设置本窗口组件所使用的字体""data type": "字体对象类"
+  },
+  {
+omment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中.""comment": "设置本窗口组件所使用的字体""method name": "获取焦点",
+omment": "如果用户在确认输入后,相关输入内容将被填入到此文本变量中.""comment": "设置本窗口组件所使用的字体""comment": "将当前输入焦点设置到本组件上"
+  },
+  {
+]"method name": "可有焦点",
+]"comment": "返回当前窗口组件是否具有输入焦点",
+]"data type": "逻辑型",
+]"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取用户区宽度",
+
+"comment": "  返回窗口或窗口组件用户区域的宽度,对窗口而言,用户区域\n为窗口区域减去标题栏+菜单栏+边框后的区域.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "取用户区高度",
+"comment": "  返回窗口或窗口组件用户区域的高度,对窗口而言,用户区域为\n窗口区域减去标题栏+菜单栏+边框后的区域.",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+data type": "整数""method name": "取用户区矩形",
+data type": "整数""comment": "  获取并返回当前组件的用户区矩形位置,对窗口而言,用户区域为\n窗口区域减去标题栏+菜单栏+边框后的区域.",
+data type": "整数""data type": "矩形类"
+  },
+  {
+ }"method name": "取屏幕位置",
+ }"comment": "获取并返回当前组件在屏幕中的所处矩形位置",
+ }"data type": "矩形类"
+  },
+  {
+}"method name": "屏幕矩形到用户区",
+}"comment": "将所指定的屏幕矩形位置转换到基于本组件用户区左上角",
+}"parameters": [
+   {
+"parameter name": "待转换矩形",
+"comment": "提供待转换的屏幕矩形位置,转换完毕后的结果将写回此对象中.",
+"data type": "矩形类"
+   }
+}]
+  },
+  {
+"method name": "用户区矩形到屏幕",
+"comment": "将所指定的用户区矩形位置(基于本组件用户区左上角)转换到基于屏幕左上角",
+"parameters": [
+   {
+"parameter name": "待转换矩形",
+"comment": "提供待转换的屏幕矩形位置,转换完毕后的结果将写回此对象中.",
+"data type": "矩形类"
+   }
+]
+  },
+  {
+
+"method name": "屏幕位置到用户区",
+
+"comment": "将所指定的屏幕位置转换到基于本组件用户区左上角",
+
+"parameters": [
+   {
+"parameter name": "待转换位置",
+"comment": "提供待转换的屏幕位置,转换完毕后的结果将写回此对象中.",
+"data type": "位置类"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "用户区位置到屏幕",
+"data type": "逻辑型""comment": "将所指定的用户区位置(基于本组件用户区左上角)转换到基于屏幕左上角",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "待转换位置",
+"comment": "提供待转换的屏幕位置,转换完毕后的结果将写回此对象中.",
+"data type": "位置类"
+   }
+"data type": "逻辑型"]
+  },
+  {
+data type": "位置类""method name": "禁止重画",
+data type": "位置类""comment": "禁止本窗口组件重画,以避免当频繁进行操作时引起闪烁.\n注意调用本命令后必须调用\"允许重画\"命令进行恢复."
+  },
+  {
+
+"method name": "允许重画",
+
+"comment": "如果本组件先前调用过\"禁止重画\"方法禁止了重画,调用本方法可以重新将其允许."
+  },
+  {
+data type": "逻辑型""parameters": [
+"method name": "重画",
+data type": "逻辑型""parameters": [
+"comment": "通知Windows系统本窗口组件上的显示内容需要被全部重画"
+  },
+  {
+}"method name": "部分重画",
+}"comment": "通知Windows系统本窗口组件上所指定用户区域内的显示内容需要被重画",
+}"parameters": [
+   {
+"parameter name": "欲重画区域的左边",
+"comment": "相对于本组件用户区域的左边",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲重画区域的顶边",
+"comment": "相对于本组件用户区域的顶边",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲重画区域的宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲重画区域的高度",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ type": "逻辑型""parameters": [
+"method name": "重画""method name": "取消重画",
+ type": "逻辑型""parameters": [
+"method name": "重画""comment": "通知Windows系统本窗口组件不再需要被重画,保留现有的全部显示内容."
+  },
+  {
+ }"method name": "刷新显示",
+ }"comment": "  一般情况下,如果本窗口组件上的显示内容需要被全部或部分重画,\nWindows系统会等到下一次系统空闲时刷新显示,但是这样无法满足一\n些需要即时更新的场合,此时执行本方法可以立即对本窗口组件进行重\n画更新."
+  },
+  {
+"method name": "移动",
+"comment": "改变窗口组件的位置或尺寸",
+"parameters": [
+   {
+"parameter name": "左边",
+"comment": "  提供新的左边位置,如果当前组件为顶层窗口,则相对屏幕左边位置,\n否则相对其所处父组件的用户区左边位置.\n  为\"数值范围.最小整数值\"常量值表示保持原有左边位置不变.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "  提供新的顶边位置,如果当前组件为顶层窗口,则相对屏幕顶边位置,\n否则相对其所处父组件的用户区顶边位置.\n  为\"数值范围.最小整数值\"常量值表示保持原有顶边位置不变.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供组件新的宽度,如果为-1则保持原有宽度不变.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供组件新的高度,如果为-1则保持原有高度不变.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+data type": "整数""method name": "移动2",
+data type": "整数""comment": "改变窗口组件的位置或尺寸",
+data type": "整数""parameters": [
+   {
+"parameter name": "新位置",
+"data type": "矩形类"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "调整层次",
+
+"comment": "改变窗口组件的当前所处显示层次",
+
+"parameters": [
+   {
+"parameter name": "欲调整到的层次",
+"data type": "组件层次"
+   }
+
+]
+  },
+  {
+"method name": "发送信息",
+"comment": "将指定信息发送到本窗口组件,并等待且取回信息反馈值.",
+"data type": "变整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "信息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"method name": "投递信息",
+"comment": "将指定信息发送到本窗口组件,不等待直接返回.",
+"result comment": "成功返回真,失败返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "信息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+@默认值": "0""method name": "置父窗口",
+@默认值": "0""comment": "设置本窗口组件的父窗口组件",
+@默认值": "0""parameters": [
+   {
+"parameter name": "所欲设置的父组件",
+"comment": "可以是窗口或窗口组件",
+"data type": "窗口组件"
+   }
+@默认值": "0"]
+  },
+  {
+"method name": "用户区截图",
+"comment": "取回本组件上用户区内所有现有显示内容的图片对象",
+"result comment": "成功返回真,失败返回假.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所取回图片",
+"comment": "组件上用户区内所有现有显示内容将被填入到此对象中",
+"data type": "位图对象类"
+   },
+   {
+"parameter name": "输出宽度",
+"comment": "  指定图片的输出宽度. 如果小于0,参数值指定的是最终图片输出宽度相对于\n所取得图片宽度的百分比(最小为10%); 如果等于0,则按图片原宽度输出; 如\n果大于0,指定输出图片的绝对宽度.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输出高度",
+"comment": "  指定图片的输出高度. 如果小于0,参数值指定的是最终图片输出高度相对于\n所取得图片高度的百分比(最小为10%); 如果等于0,则按图片原高度输出; 如\n果大于0,指定输出图片的绝对高度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+默认值": "0""parameters": [
+"method name": "组件截图",
+默认值": "0""parameters": [
+"comment": "取回本组件上整体(包括用户区与非用户区)所有现有显示内容的图片对象",
+默认值": "0""parameters": [
+"result comment": "成功返回真,失败返回假.",
+默认值": "0""parameters": [
+"data type": "逻辑型",
+默认值": "0""parameters": [
+"@嵌入式方法": "\"\"",
+默认值": "0""parameters": [
+"parameters": [
+   {
+"parameter name": "所取回图片",
+"comment": "组件上整体所有现有显示内容将被填入到此对象中",
+"data type": "位图对象类"
+   },
+   {
+"parameter name": "输出宽度",
+"comment": "  指定图片的输出宽度. 如果小于0,参数值指定的是最终图片输出宽度相对于\n所取得图片宽度的百分比(最小为10%); 如果等于0,则按图片原宽度输出; 如\n果大于0,指定输出图片的绝对宽度.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输出高度",
+"comment": "  指定图片的输出高度. 如果小于0,参数值指定的是最终图片输出高度相对于\n所取得图片高度的百分比(最小为10%); 如果等于0,则按图片原高度输出; 如\n果大于0,指定输出图片的绝对高度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+默认值": "0""parameters": [
+]
+  },
+  {
+parameters": [
+"method name": "提到前方",
+parameters": [
+"comment": "将本窗口的叠放位置提到其它窗口的前方"
+  },
+  {
+"method name": "激活",
+"comment": "将本窗口设置为当前活动窗口. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况."
+  },
+  {
+"method name": "置为前台窗口",
+"comment": "将本窗口设置为系统前台窗口. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况."
+  },
+  {
+
+"method name": "执行",
+
+"comment": "执行所指定的命令行. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.",
+
+"parameters": [
+   {
+"parameter name": "欲操作文件名",
+"comment": "提供欲操作文件或文件夹的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "命令类型",
+"comment": "本参数提供欲执行命令的类型",
+"data type": "所执行命令类型",
+"@默认值": "所执行命令类型.默认"
+   },
+   {
+"parameter name": "命令行",
+"comment": "  如果欲进行操作的类型为\"打开文件\"且被打开文件为可执行文件,本参数提供\n启动该可执行文件时欲附加的命令行文本,其它情况下本参数将被忽略.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "默认当前目录",
+"comment": "提供命令执行时的默认当前目录",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "删除到回收站",
+data type": "文本型""comment": "将一个或一批文件删除到Windows系统回收站中. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.",
+data type": "文本型""result comment": "成功返回真,失败或被用户中止删除操作返回假.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "欲删除文件",
+"comment": "提供所欲删除的文件名(注意必须是全路径),支持使用通配字符\"*\"和\"?\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "删除选项",
+"comment": "本参数提供删除操作选项,可以为以下值之一或之和: 1.不询问删除; 2.不提示错误; 4.不显示进度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "文本型"]
+  },
+  {
+@禁止流程检查": "真""method name": "进度复制文件",
+@禁止流程检查": "真""comment": "将所指定文件复制或移动到另一个目录中,并同时显示一个进度对话框.\n仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.",
+@禁止流程检查": "真""result comment": "成功返回真,失败或被用户中止删除操作返回假.",
+@禁止流程检查": "真""data type": "逻辑型",
+@禁止流程检查": "真""@禁止流程检查": "真",
+@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "目的目录",
+"comment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "源文件",
+"comment": "提供所欲复制的文件名(注意必须是全路径),支持使用通配字符\"*\"和\"?\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为移动",
+"comment": "为真则移动文件,为假则复制文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@禁止流程检查": "真"]
+  },
+  {
+comment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""method name": "批量删除到回收站",
+comment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""comment": "将一个或一批文件删除到Windows系统回收站中. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.",
+comment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""result comment": "成功返回真,失败或被用户中止删除操作返回假.",
+comment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""data type": "逻辑型",
+comment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""@禁止流程检查": "真",
+comment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""parameters": [
+   {
+"parameter name": "欲删除文件数组",
+"comment": "提供所欲删除的所有文件名(注意必须是全路径),支持使用通配字符\"*\"和\"?\".",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "删除选项",
+"comment": "本参数提供删除操作选项,可以为以下值之一或之和: 1.不询问删除; 2.不提示错误; 4.不显示进度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建."]
+  },
+  {
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""result comment": "成功返回真,失败或被用户中止删除操作返回假.""method name": "批量进度复制文件",
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""result comment": "成功返回真,失败或被用户中止删除操作返回假.""comment": "将一个或一批文件复制或移动到另一个目录中,并同时显示一个进度对话框.\n仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.",
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""result comment": "成功返回真,失败或被用户中止删除操作返回假.""result comment": "成功返回真,失败或被用户中止删除操作返回假.",
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""result comment": "成功返回真,失败或被用户中止删除操作返回假.""data type": "逻辑型",
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""result comment": "成功返回真,失败或被用户中止删除操作返回假.""@禁止流程检查": "真",
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""result comment": "成功返回真,失败或被用户中止删除操作返回假.""parameters": [
+   {
+"parameter name": "目的目录",
+"comment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "源文件数组",
+"comment": "提供所有欲复制的文件名(注意必须是全路径),支持使用通配字符\"*\"和\"?\".",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否为移动",
+"comment": "为真则移动文件,为假则复制文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""result comment": "成功返回真,失败或被用户中止删除操作返回假."]
+  },
+  {
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""comment": "将一个或一批文件删除到Windows系统回收站中. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.""method name": "浏览文件夹",
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""comment": "将一个或一批文件删除到Windows系统回收站中. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.""comment": "  打开一个对话框,浏览系统中存在的所有文件夹,返回被选定\n文件夹的路径名,如果未选中任何文件夹,则返回空文本.\n  仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.",
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""comment": "将一个或一批文件删除到Windows系统回收站中. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.""data type": "文本型",
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""comment": "将一个或一批文件删除到Windows系统回收站中. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况.""parameters": [
+   {
+"parameter name": "标题",
+"comment": "提供显示在对话框上部的标题文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否包含文件",
+"comment": "指定是否在浏览框中同时列出文件名",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+omment": "本参数提供目的目录路径,如果该目录不存在,系统将自动询问是否创建.""comment": "将一个或一批文件删除到Windows系统回收站中. 仅用作本对象的实际类型为\"窗口\"或\"MDI主窗口\"的情况."]
+  },
+  {
+}"method name": "弹出菜单",
+}"comment": "在屏幕上指定位置弹出所指定的子菜单,用户点击该子菜单中菜单项所产生的命令将由本窗口组件接收处理.",
+}"result comment": "返回是否成功",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲弹出的菜单",
+"comment": "提供所欲弹出菜单类的数据类型,应该为\"菜单类\"的继承类.所实际弹出的菜单为该菜单的第一个子菜单.",
+"data type": "菜单类",
+"@需求类型": "数据类型"
+   },
+   {
+"parameter name": "横向位置",
+"comment": "指定所弹出子菜单的左边在屏幕上的横向位置,为\"数值范围.最小整数值\"常量值则使用当前鼠标在屏幕上的横向位置.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "指定所弹出子菜单的顶边在屏幕上的纵向位置,为\"数值范围.最小整数值\"常量值则使用当前鼠标在屏幕上的纵向位置.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "子菜单位置",
+"comment": "指定所欲弹出子菜单在所提供菜单内顶层菜单项中的索引位置",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+}"method name": "弹出实例菜单",
+}"comment": "在屏幕上指定位置弹出所指定的子菜单,用户点击该子菜单中菜单项所产生的命令将由本窗口组件接收处理.",
+}"result comment": "返回是否成功",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲弹出的菜单",
+"comment": "提供所欲弹出的菜单类对象,所实际弹出的菜单为该菜单的第一个子菜单.",
+"data type": "菜单类"
+   },
+   {
+"parameter name": "横向位置",
+"comment": "指定所弹出子菜单的左边在屏幕上的横向位置,为\"数值范围.最小整数值\"常量值则使用当前鼠标在屏幕上的横向位置.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "指定所弹出子菜单的顶边在屏幕上的纵向位置,为\"数值范围.最小整数值\"常量值则使用当前鼠标在屏幕上的纵向位置.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "子菜单位置",
+"comment": "指定所欲弹出子菜单在所提供菜单内顶层菜单项中的索引位置",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+comment": "指定是否在浏览框中同时列出文件名""method name": "弹出托盘菜单",
+comment": "指定是否在浏览框中同时列出文件名""comment": "在当前鼠标位置弹出指定菜单,本方法一般用作支持托盘菜单的弹出.",
+comment": "指定是否在浏览框中同时列出文件名""result comment": "返回是否成功",
+comment": "指定是否在浏览框中同时列出文件名""data type": "逻辑型",
+comment": "指定是否在浏览框中同时列出文件名""@嵌入式方法": "\"\"",
+comment": "指定是否在浏览框中同时列出文件名""parameters": [
+   {
+"parameter name": "所欲弹出的菜单",
+"comment": "提供所欲弹出菜单类的数据类型,应该为\"菜单类\"的继承类.所实际弹出的菜单为该菜单的第一个子菜单.",
+"data type": "菜单类",
+"@需求类型": "数据类型"
+   },
+   {
+"parameter name": "子菜单位置",
+"comment": "指定所欲弹出子菜单在所提供菜单内顶层菜单项中的索引位置",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "指定是否在浏览框中同时列出文件名"]
+  },
+  {
+@默认值": "0""method name": "弹出托盘实例菜单",
+@默认值": "0""comment": "在当前鼠标位置弹出指定菜单,本方法一般用作支持托盘菜单的弹出.",
+@默认值": "0""result comment": "返回是否成功",
+@默认值": "0""data type": "逻辑型",
+@默认值": "0""@嵌入式方法": "\"\"",
+@默认值": "0""parameters": [
+   {
+"parameter name": "所欲弹出的菜单",
+"comment": "提供所欲弹出得菜单类对象,所实际弹出的菜单为该菜单的第一个子菜单.",
+"data type": "菜单类"
+   },
+   {
+"parameter name": "子菜单位置",
+"comment": "指定所欲弹出子菜单在所提供菜单内顶层菜单项中的索引位置",
+"data type": "整数",
+"@默认值": "0"
+   }
+@默认值": "0"]
+  },
+  {
+ }"method name": "置窗口属性",
+ }"comment": "设置关联到窗口句柄的一个命名属性值.\n注意: 当不再使用该属性时,需要调用\"删除窗口属性\"将其删除.",
+ }"result comment": "成功返回真,失败返回假.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "属性名称",
+"comment": "提供所欲设置的属性名称,不能为空文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"comment": "提供所欲设置的属性值",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ameter name": "属性值""method name": "取窗口属性",
+ameter name": "属性值""comment": "读取并返回关联到窗口句柄的指定命名属性值.\n该属性为使用\"置窗口属性\"方法设置.",
+ameter name": "属性值""result comment": "成功返回所对应的属性值,失败返回0(注意也有可能本身属性值就为0).",
+ameter name": "属性值""data type": "变整数",
+ameter name": "属性值""@禁止流程检查": "真",
+ameter name": "属性值""parameters": [
+   {
+"parameter name": "属性名称",
+"comment": "提供所欲读取属性的名称,不能为空文本.",
+"data type": "文本型"
+   }
+ameter name": "属性值"]
+  },
+  {
+data type": "菜单类""method name": "删除窗口属性",
+data type": "菜单类""comment": "删除通过使用\"置窗口属性\"方法所设置到窗口句柄上的关联属性",
+data type": "菜单类""result comment": "成功返回该被删除属性所对应的属性值,失败返回0(注意也有可能本身属性值就为0).",
+data type": "菜单类""data type": "变整数",
+data type": "菜单类""@禁止流程检查": "真",
+data type": "菜单类""parameters": [
+   {
+"parameter name": "属性名称",
+"comment": "提供所欲删除属性的名称,不能为空文本.",
+"data type": "文本型"
+   }
+data type": "菜单类"]
+  },
+  {
+omment": "指定是否在浏览框中同时列出文件名""data type": "逻辑型""method name": "取分组编号",
+omment": "指定是否在浏览框中同时列出文件名""data type": "逻辑型""comment": "返回本组件在设计时的分组编号,为-1表示无.",
+omment": "指定是否在浏览框中同时列出文件名""data type": "逻辑型""data type": "整数"
+  },
+  {
+
+"method name": "取组件分组编号",
+
+"comment": "返回所指定窗口句柄的组件在设计时的分组编号,为-1表示该组件设计时未分组或所提供窗口句柄不对应一个火山窗口组件.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "组件窗口句柄值",
+"comment": "提供所欲获取其设计时分组编号的组件窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置组件分组编号",
+
+"comment": "设置所指定窗口句柄的组件在设计时的分组编号",
+
+"result comment": "成功返回真,失败返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "组件窗口句柄值",
+"comment": "提供所欲设置其设计时分组编号的组件窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "新分组编号",
+"comment": "提供所欲设置的新分组编号",
+"data type": "整数"
+   }
+
+]
+  }
+"initial value": "3"]
+ },
+ {
+
+"class name": "窗口容器组件",
+
+"comment": "所有窗口容器组件的基础类",
+
+"base class": "窗口组件",
+
+"@文档": "\"category = \\\"窗口组件.基础类\\\"\"",
+
+"@输出名": "\"@CVolWinContainer\"",
+
+"methods": [
+  {
+data type": "变整数""method name": "创建容器组件",
+data type": "变整数""comment": "使用调用本方法的本类实际继承类的设计时尺寸创建对应的窗口组件.\n如果调用本方法的继承类未被设计过布局,所创建的组件尺寸将为0.",
+data type": "变整数""result comment": "返回是否成功",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "父窗口容器组件",
+"comment": "提供所创建组件所处的父窗口容器组件",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"comment": "提供所创建组件在所处父窗口容器组件中的左边横向坐标位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "顶边位置",
+"comment": "提供所创建组件在所处父窗口容器组件中的顶边纵向坐标位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "ID值",
+"comment": "指定所创建组件在其父窗口容器组件中的ID值",
+"data type": "整数",
+"@默认值": "0xFFFF"
+   },
+   {
+"parameter name": "所处分组编号",
+"comment": "指定所创建组件所处的设计时分组编号",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "变整数"]
+  },
+  {
+
+"method name": "创建时宽度",
+
+"comment": "返回本组件创建时的宽度",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "创建时高度",
+ }"comment": "返回本组件创建时的高度",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "所处分组编号""method name": "取所有子组件句柄",
+ameter name": "所处分组编号""comment": "获取本容器组件所有直接子组件的窗口句柄值",
+ameter name": "所处分组编号""result comment": "返回填入到\"结果数组\"参数数组中的窗口句柄数目",
+ameter name": "所处分组编号""data type": "整数",
+ameter name": "所处分组编号""parameters": [
+   {
+"parameter name": "结果句柄数组",
+"comment": "用作存储所获得的所有直接子组件的窗口句柄值",
+"data type": "变整数数组类"
+   }
+ameter name": "所处分组编号"]
+  },
+  {
+data type": "窗口容器组件""method name": "显示子组件组",
+data type": "窗口容器组件""comment": "显示或隐藏本容器组件中的一组设计时指定的子组件(仅限直接子组件)",
+data type": "窗口容器组件""@嵌入式方法": "\"\"",
+data type": "窗口容器组件""parameters": [
+   {
+"parameter name": "子组件分组编号",
+"comment": "提供需处理子组件位于的设计时分组编号,为-1表示没有进行分组的所有子组件.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否显示",
+"comment": "为真则显示位于该分组内的所有子组件,为假则隐藏.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "处理其它组子组件",
+"comment": "为真则处理所有位于其它分组内的子组件,处理方式为相反,即: \"是否显示\"参数为真则隐藏,否则显示.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "处理未分组子组件",
+"comment": "为真则处理所有未进行分组的子组件,处理方式为相反,即: \"是否显示\"参数为真则隐藏,否则显示.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "窗口容器组件"]
+  },
+  {
+ type": "窗口容器组件""method name": "显示子组件组""method name": "禁止子组件组",
+ type": "窗口容器组件""method name": "显示子组件组""comment": "禁止或允许对本容器组件中的一组设计时指定的子组件(仅限直接子组件)进行操作",
+ type": "窗口容器组件""method name": "显示子组件组""@嵌入式方法": "\"\"",
+ type": "窗口容器组件""method name": "显示子组件组""parameters": [
+   {
+"parameter name": "子组件分组编号",
+"comment": "提供需处理子组件位于的设计时分组编号,为-1表示没有进行分组的所有子组件.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否禁止",
+"comment": "为真则禁止位于该分组内的所有子组件,为假则允许.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "处理其它组子组件",
+"comment": "为真则处理所有位于其它分组内的子组件,处理方式为相反,即: \"是否禁止\"参数为真则允许,否则禁止.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "处理未分组子组件",
+"comment": "为真则处理所有未进行分组的子组件,处理方式为相反,即: \"是否禁止\"参数为真则允许,否则禁止.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ type": "窗口容器组件""method name": "显示子组件组"]
+  }
+
+]
+ },
+ {
+
+"class name": "消息过滤器类",
+
+"comment": "用作接收所挂接窗口组件的消息",
+
+"@视窗.后缀文本": "\"public IVolWindowProcFilter\"",
+
+"variables": [
+  {
+ type": "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄",
+ type": "窗口容器组件""method name": "显示子组件组""comment": "提供当前所已经挂接到窗口组件的句柄值,为0表示尚未被挂接.",
+ type": "窗口容器组件""method name": "显示子组件组""data type": "变整数"
+  }
+
+],
+
+"methods": [
+  {
+e": "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄""method name": "消息过滤",
+e": "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄""comment": "当接收到所挂接窗口组件的消息后,本事件被发送.",
+e": "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄""result comment": "返回0表示允许消息继续向后传递并处理,返回1表示取消掉该消息的后续处理.",
+e": "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄""type": "event",
+e": "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄""data type": "整数",
+e": "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供消息所对应的窗口句柄(HWND)",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息值",
+"comment": "提供消息的具体值",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息参数1",
+"comment": "提供消息所附带的参数1的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息参数2",
+"comment": "提供消息所附带的参数2的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "返回值",
+"comment": "当本方法返回假时用作提供具体的返回值,默认为0.",
+"data type": "变整数类"
+   }
+e": "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄"]
+  },
+  {
+"method name": "挂接",
+"comment": "  将本消息过滤器挂接到所指定的窗口组件,挂接后该窗口组件的\n所有Windows消息都会首先调用本类的\"消息过滤\"事件进行过滤.",
+"result comment": "挂接成功返回真,失败返回假.",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "欲挂接的组件",
+"comment": "提供欲将本消息过滤器挂接到的窗口组件",
+"data type": "窗口组件"
+   }
+]
+  },
+  {
+
+"method name": "挂接2",
+
+"comment": "  将本消息过滤器挂接到所指定的窗口组件,挂接后该窗口组件的\n所有Windows消息都会首先调用本类的\"消息过滤\"事件进行过滤.",
+
+"result comment": "挂接成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲挂接组件的句柄",
+"comment": "提供欲将本消息过滤器挂接到窗口组件的句柄值",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"data type": "逻辑型""method name": "取消挂接",
+
+"data type": "逻辑型""comment": "如果本消息过滤器已经挂接到窗口组件,取消其挂接.\n本方法调用不是必需的,本类对象被销毁时,将自动调用本方法."
+  }
+
+]
+ },
+ {
+comment": "为真则处理所有未进行分组的子组件,处理方式为相反,即: \"是否禁止\"参数为真则允许,否则禁止.""class name": "常用界面功能类",
+comment": "为真则处理所有未进行分组的子组件,处理方式为相反,即: \"是否禁止\"参数为真则允许,否则禁止.""@文档": "\"category = \\\"常用功能\\\"\"",
+comment": "为真则处理所有未进行分组的子组件,处理方式为相反,即: \"是否禁止\"参数为真则允许,否则禁止.""@全局类": "真",
+comment": "为真则处理所有未进行分组的子组件,处理方式为相反,即: \"是否禁止\"参数为真则允许,否则禁止.""methods": [
+  {
+"method name": "处理事件",
+"comment": "暂时转让控制权,以便让 Windows 操作系统有机会处理其它的如用户键盘或鼠标输入等事件.\n直到操作系统处理并发送完程序消息队列中的所有事件后,本方法才会返回.",
+"static": true
+  },
+  {
+: "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄"]"method name": "界面延时",
+: "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄"]"comment": "延时所指定的时间,本方法不影响界面更新.",
+: "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄"]"static": true,
+: "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄"]"parameters": [
+   {
+"parameter name": "所欲延迟的时间",
+"comment": "提供所欲延迟的时间周期,单位毫秒.",
+"data type": "整数"
+   }
+: "窗口容器组件""method name": "显示子组件组""variable name": "所挂接窗口句柄"]]
+  }
+comment": "为真则处理所有未进行分组的子组件,处理方式为相反,即: \"是否禁止\"参数为真则允许,否则禁止."]
+ },
+ {
+}"class name": "菜单类",
+}"comment": "  用作记录MFC菜单对象,提供有对应的菜单设计器,用户可以在\n所有本类的继承类上点击右键,在弹出菜单中选择打开该设计器\n进行菜单设计.",
+}"base class": "可设计类",
+}"@文档": "\"category = \\\"常用功能\\\"\"",
+}"@设计器": "\"name = \\\"菜单设计器\\\"\\r\\ndll_file_name\\r\\n{\\r\\n    x64 = \\\"designer\\\\mfc_designer_x64.dll\\\"\\r\\n    win32 = \\\"designer\\\\mfc_designer_win32.dll\\\"\\r\\n}\\r\\nauto_generate_mark = \\\"mfc\\\"\\r\\nuser_param = 1\"",
+}"@可插入程序类": "\"icon=\\\"res\\\\menu.bmp\\\"\\r\\nexplain=\\\"在所插入新菜单类上单击鼠标右键,选择\\\\\\\"打开菜单设计器\\\\\\\"菜单项即可设计该菜单的内容.\\\"\"",
+}"@视窗.外部源文件": "\"..\\\\base\\\\libs\\\\win_base\\\\cpp\\\\vol_menu.cpp\"",
+}"methods": [
+  {
+延迟的时间周期,单位毫秒."method name": "重载",
+延迟的时间周期,单位毫秒."comment": "如果本菜单的内容被修改,执行本方法可以将其重置到设计时状态."
+  },
+  {
+ameter name": "所欲延迟的时间""method name": "删除菜单项",
+ameter name": "所欲延迟的时间""comment": "删除所指定ID的菜单项,返回是否成功.",
+ameter name": "所欲延迟的时间""data type": "逻辑型",
+ameter name": "所欲延迟的时间""@嵌入式方法": "\"\"",
+ameter name": "所欲延迟的时间""parameters": [
+   {
+"parameter name": "所欲删除菜单项ID",
+"data type": "整数"
+   }
+ameter name": "所欲延迟的时间"]
+  },
+  {
+meter name": "所欲延迟的时间""@嵌入式方法": "\"\"""method name": "插入菜单项",
+meter name": "所欲延迟的时间""@嵌入式方法": "\"\"""comment": "插入一个新的菜单项目",
+meter name": "所欲延迟的时间""@嵌入式方法": "\"\"""result comment": "成功返回所插入菜单项的ID值,失败或插入分隔条返回0.",
+meter name": "所欲延迟的时间""@嵌入式方法": "\"\"""data type": "整数",
+meter name": "所欲延迟的时间""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+meter name": "所欲延迟的时间""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "新菜单项ID",
+"comment": "指定所欲插入新菜单项的ID值,必须尚不存在,否则将插入失败.如果为0,则自动计算使用一个不重复的ID值.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "新菜单项标题",
+"comment": "提供新菜单项的标题文本,如果为空文本,则插入一个分隔条.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "插入位置菜单项ID",
+"comment": "如果\"是否插入在尾部\"参数值为假,新菜单项将插入在为该ID的已有菜单项前面.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否插入在尾部",
+"comment": "如果本参数值为真,则将始终插入到\"插入位置菜单项ID\"参数所指定菜单项所处子菜单的尾部.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "新菜单项提示文本",
+"comment": "提供新菜单项的提示文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否选中",
+"comment": "是否选中所插入的新菜单项",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否禁止",
+"comment": "是否禁止所插入的新菜单项",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "图标索引位置",
+"comment": "提供菜单项的图标索引位置,为-1表示无.\n注意: 基本菜单类并不支持设置菜单项图标,此特性需要菜单继承类支持.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+meter name": "所欲延迟的时间""@嵌入式方法": "\"\""]
+  },
+  {
+comment": "提供菜单项的图标索引位置,为-1表示无.\n注意: 基本菜单类并不支持设置菜单项图标,此特性需要菜单继承类支持.""method name": "选中菜单项",
+comment": "提供菜单项的图标索引位置,为-1表示无.\n注意: 基本菜单类并不支持设置菜单项图标,此特性需要菜单继承类支持.""comment": "设置或取消所指定ID菜单项目的选中状态,返回是否成功.",
+comment": "提供菜单项的图标索引位置,为-1表示无.\n注意: 基本菜单类并不支持设置菜单项图标,此特性需要菜单继承类支持.""data type": "逻辑型",
+comment": "提供菜单项的图标索引位置,为-1表示无.\n注意: 基本菜单类并不支持设置菜单项图标,此特性需要菜单继承类支持.""@禁止流程检查": "真",
+comment": "提供菜单项的图标索引位置,为-1表示无.\n注意: 基本菜单类并不支持设置菜单项图标,此特性需要菜单继承类支持.""parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否选中",
+"data type": "逻辑型"
+   }
+comment": "提供菜单项的图标索引位置,为-1表示无.\n注意: 基本菜单类并不支持设置菜单项图标,此特性需要菜单继承类支持."]
+  },
+  {
+}"method name": "翻转菜单项选中状态",
+}"comment": "翻转所指定ID菜单项目的当前选中状态,返回是否成功.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   }
+}]
+  },
+  {
+comment": "是否选中所插入的新菜单项""method name": "允许菜单项",
+comment": "是否选中所插入的新菜单项""comment": "设置或取消所指定ID菜单项的操作允许状态,返回是否成功.",
+comment": "是否选中所插入的新菜单项""data type": "逻辑型",
+comment": "是否选中所插入的新菜单项""@禁止流程检查": "真",
+comment": "是否选中所插入的新菜单项""parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否允许操作",
+"comment": "指定是否允许用户操作菜单项",
+"data type": "逻辑型"
+   }
+comment": "是否选中所插入的新菜单项"]
+  },
+  {
+ameter name": "是否允许操作""method name": "是否被选中",
+ameter name": "是否允许操作""comment": "返回所指定ID菜单项是否处于被选中状态,如果所指定菜单项不存在,将始终返回假.",
+ameter name": "是否允许操作""data type": "逻辑型",
+ameter name": "是否允许操作""@禁止流程检查": "真",
+ameter name": "是否允许操作""parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   }
+ameter name": "是否允许操作"]
+  },
+  {
+data type": "文本型""method name": "是否被允许",
+data type": "文本型""comment": "返回所指定ID菜单项是否处于被允许操作状态,如果所指定菜单项不存在,将始终返回假.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "逻辑型""method name": "取菜单项标题",
+data type": "逻辑型""comment": "返回所指定ID菜单项目的标题文本,如果所指定菜单项不存在,将返回空文本.",
+data type": "逻辑型""data type": "文本型",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "置菜单项标题",
+
+"comment": "设置所指定ID菜单项目的标题文本,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的标题",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "所欲操作菜单项ID""method name": "取菜单项提示",
+ameter name": "所欲操作菜单项ID""comment": "返回所指定ID菜单项目的提示文本,如果所指定菜单项不存在,将返回空文本.",
+ameter name": "所欲操作菜单项ID""data type": "文本型",
+ameter name": "所欲操作菜单项ID""@嵌入式方法": "\"\"",
+ameter name": "所欲操作菜单项ID""parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   }
+ameter name": "所欲操作菜单项ID"]
+  },
+  {
+ata type": "逻辑型""@嵌入式方法": "\"\"""method name": "置菜单项提示",
+ata type": "逻辑型""@嵌入式方法": "\"\"""comment": "设置所指定ID菜单项目的提示文本,返回是否成功.",
+ata type": "逻辑型""@嵌入式方法": "\"\"""data type": "逻辑型",
+ata type": "逻辑型""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+ata type": "逻辑型""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的提示文本",
+"data type": "文本型"
+   }
+ata type": "逻辑型""@嵌入式方法": "\"\""]
+  },
+  {
+type": "逻辑型""@嵌入式方法": "\"\"""method name": "置菜单项提示""method name": "取菜单项图标索引",
+type": "逻辑型""@嵌入式方法": "\"\"""method name": "置菜单项提示""comment": "返回所指定ID菜单项目的图标索引位置,如果所指定菜单项不存在,将返回-1.",
+type": "逻辑型""@嵌入式方法": "\"\"""method name": "置菜单项提示""data type": "整数",
+type": "逻辑型""@嵌入式方法": "\"\"""method name": "置菜单项提示""@嵌入式方法": "\"\"",
+type": "逻辑型""@嵌入式方法": "\"\"""method name": "置菜单项提示""parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   }
+type": "逻辑型""@嵌入式方法": "\"\"""method name": "置菜单项提示"]
+  },
+  {
+ }"method name": "置菜单项图标索引",
+ }"comment": "设置所指定ID菜单项目的图标索引位置,返回是否成功.\n注意: 基本菜单类并不支持设置菜单项图标,此特性及所使用到的图片组需要由菜单继承类支持.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作菜单项ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的图标索引",
+"comment": "提供所欲设置的图标索引位置,为-1表示无.",
+"data type": "整数"
+   }
+ }]
+  }
+}]
+ }
+ 整数]
+}

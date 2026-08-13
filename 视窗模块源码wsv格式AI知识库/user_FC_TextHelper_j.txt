@@ -1,0 +1,1146 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.文本处理\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""class name": "______文本处理",
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""@全局类": "真",
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""@视窗.外部头文件": "\"<Shlwapi.h>\"",
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""@视窗.外部库": "\"Shlwapi.lib\"",
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""methods": [
+  {
+程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""@视窗.外部库": "\"Shlwapi.lib\"""method name": "文本_取左边_从左往右查找",
+程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""@视窗.外部库": "\"Shlwapi.lib\"""comment": "默认从左边开始查找",
+程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""@视窗.外部库": "\"Shlwapi.lib\"""static": true,
+程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""@视窗.外部库": "\"Shlwapi.lib\"""data type": "文本型",
+程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""@视窗.外部库": "\"Shlwapi.lib\"""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否取分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"comment": "默认找不到就返回空文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""@视窗.外部库": "\"Shlwapi.lib\""]
+  },
+  {
+
+"method name": "文本_取左边_从右往左查找",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始查找位置",
+"comment": "-1表示从尾部开始查找",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否区分分大小写",
+"comment": "默认不取分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+}"method name": "文本_取右边_从右往左查找",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"comment": "默认从尾部开始寻找",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+}"method name": "文本_取右边_从左往右查找",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜索位置",
+"comment": "可以被省略。位置值从 0 开始。如果本参数被省略，默认为从被搜寻文本的首部开始。",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+
+"method name": "文本_分割文本F",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "要处理的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用作分割的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来保存分割后的文本数组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否忽略空文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_分割文本_指定长度",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "要分割的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "分割后的文本数组",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_是否全为小写子母",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_是否全为大写子母",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_是否为大写小写下划线",
+
+"comment": "AAA_bbb_ccc",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "文本_是否全为数字",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "文本_寻找文本",
+
+"comment": "失败返回 -1 成功 从0开始  ",
+
+"result comment": "返回找到的位置",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜索位置",
+"comment": "可以被省略。位置值从 0 开始。如果本参数被省略，默认为从被搜寻文本的首部开始。",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+"method name": "文本_倒找文本",
+"comment": "此函数不区分大小写",
+"static": true,
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜索位置",
+"comment": "可以被省略。位置值从 0 开始。如果本参数被省略，默认为从被搜寻文本的尾部开始。",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+}"method name": "文本_取长度",
+}"static": true,
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "文本_到小写",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_到大写",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_替换",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要替换的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用作替换的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_反转",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "文本_反转自身",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "原始内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "文本_取出现次数",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "源文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的特征文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取中间_数组",
+
+"parameters": [
+   {
+"parameter name": "文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果数组",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取中间",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否包含起始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取空白文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取重复文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "用作重复的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "重复次数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "读入文件f",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "HTML转义到文本",
+}"comment": "&#22823;&#22068;类似这种",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "HTML转义文本",
+"comment": "&#22823;&#22068;类似这种",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "字符_是否为汉字",
+
+"comment": "判断某个汉字,是否在GBK编码中! 小蜗牛提供",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字符数据",
+"data type": "字符"
+   }
+
+]
+  },
+  {
+
+"method name": "字符数组类到文本f",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "aa",
+"data type": "字符数组类"
+   }
+
+]
+  },
+  {
+}"method name": "写到文件f",
+}"static": true,
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "写到文件_从指针",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "读入文件_到指针",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内存指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内存大小",
+"data type": "整数"
+   }
+
+]
+  }
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途"]
+ },
+ {
+"class name": "文本_全局类",
+"@视窗.外部头文件": "\"<Shlwapi.h>\"",
+"@视窗.外部库": "\"Shlwapi.lib\"",
+"methods": [
+  {
+@视窗.外部库": "\"Shlwapi.lib\"""method name": "取左边_从左往右查找",
+@视窗.外部库": "\"Shlwapi.lib\"""comment": "默认从左边开始查找",
+@视窗.外部库": "\"Shlwapi.lib\"""static": true,
+@视窗.外部库": "\"Shlwapi.lib\"""data type": "文本型",
+@视窗.外部库": "\"Shlwapi.lib\"""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否取分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"comment": "默认找不到就返回空文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@视窗.外部库": "\"Shlwapi.lib\""]
+  },
+  {
+
+"method name": "取左边_从右往左查找",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始查找位置",
+"comment": "-1表示从尾部开始查找",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否区分分大小写",
+"comment": "默认不取分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "取右边_从右往左查找",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"comment": "默认从尾部开始寻找",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "取右边_从左往右查找",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜索位置",
+"comment": "可以被省略。位置值从 0 开始。如果本参数被省略，默认为从被搜寻文本的首部开始。",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+"method name": "分割文本",
+"static": true,
+"parameters": [
+   {
+"parameter name": "要处理的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用作分割的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来保存分割后的文本数组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否忽略空文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+}"method name": "寻找文本",
+}"comment": "失败返回 -1 成功 从0开始  ",
+}"result comment": "返回找到的位置",
+}"static": true,
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜索位置",
+"comment": "可以被省略。位置值从 0 开始。如果本参数被省略，默认为从被搜寻文本的首部开始。",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "默认不区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "取长度",
+}"static": true,
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "到小写",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "到大写",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "替换",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要替换的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用作替换的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "反转",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取出现次数",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "源文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的特征文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取中间_数组",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果数组",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "取中间",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否包含起始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+}"method name": "取空白文本",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "大小",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取重复文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "用作重复的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "重复次数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "HTML转义到文本",
+
+"comment": "&#22823;&#22068;类似这种",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "HTML转义文本",
+"comment": "&#22823;&#22068;类似这种",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "______内存类",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "内存_申请",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "内存大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "内存_释放",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "内存指针",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+}"method name": "内存_写文本",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "内存指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "文本文件分割类",
+"comment": "由 小蜗牛提供\n如果声明为局部变量,必须 挂接事件 才会有回调!",
+"methods": [
+  {
+
+"method name": "分割",
+
+"comment": "会回调,阻塞线程,一直等待分割完成或者用户停止分割!",
+
+"result comment": "返回总行数!",
+
+"data type": "长整数",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "分割符",
+"data type": "文本型",
+"@默认值": "\"\\r\\n\""
+   },
+   {
+"parameter name": "编码",
+"comment": "\"GBK\"/\"UTF-8\"/\"UTF-16\"",
+"data type": "文本型",
+"@默认值": "\"GBK\""
+   }
+
+]
+  },
+  {
+
+"method name": "文本被读入",
+
+"comment": "如果\"文件读写类\"为局部变量,那么则需要挂接事件!",
+
+"result comment": "1=停止,0=继续",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "被读入的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前行数",
+"data type": "长整数"
+   },
+   {
+"parameter name": "处理进度",
+"data type": "小数"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

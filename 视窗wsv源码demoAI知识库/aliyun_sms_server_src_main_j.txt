@@ -1,0 +1,142 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+ 文本型"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ 文本型"package name": "火山.程序",
+ 文本型"classes": [
+ {
+ 文本数组类"class name": "启动类",
+ 文本数组类"base class": "窗口程序类",
+ 文本数组类"variables": [
+  {
+"variable name": "主窗口对象",
+"data type": "我的主窗口"
+  }
+ 文本数组类],
+ 文本数组类"methods": [
+  {
+本数组类]"method name": "启动方法",
+本数组类]"data type": "整数"
+  }
+ 文本数组类]
+ },
+ {
+令牌(SmsToken)"class name": "_日志类",
+令牌(SmsToken)"@全局类": "真",
+令牌(SmsToken)"methods": [
+  {
+ 文本型"method name": "写日志",
+ 文本型"static": true,
+ 文本型"parameters": [
+   {
+"parameter name": "日志",
+"data type": "文本型"
+   }
+ 文本型]
+  }
+令牌(SmsToken)]
+ },
+ {
+        "class name": "阿里云令牌请求类",
+        "variables": [
+  {
+"variable name": "AccessKeyId",
+"comment": "AccessKeyId",
+"data type": "文本型",
+"@属性变量": "真"
+  },
+  {
+}"variable name": "AccessKeySecret",
+}"comment": "AccessSecret",
+}"data type": "文本型",
+}"@属性变量": "真"
+  },
+  {
+
+"variable name": "程序签名",
+
+"comment": "SignName",
+
+"data type": "文本型",
+
+"@属性变量": "真"
+  },
+  {
+字节集到BASE64文本 (十六进制文本到字节集 (加解密类.取数据HMAC_字节集_SHA1 (文本到UTF8 (待签名的数据, 假), 文本到UTF8 (accessSecret, 假))), , -1))"variable name": "程序包名",
+字节集到BASE64文本 (十六进制文本到字节集 (加解密类.取数据HMAC_字节集_SHA1 (文本到UTF8 (待签名的数据, 假), 文本到UTF8 (accessSecret, 假))), , -1))"comment": "PackageName",
+字节集到BASE64文本 (十六进制文本到字节集 (加解密类.取数据HMAC_字节集_SHA1 (文本到UTF8 (待签名的数据, 假), 文本到UTF8 (accessSecret, 假))), , -1))"data type": "文本型",
+字节集到BASE64文本 (十六进制文本到字节集 (加解密类.取数据HMAC_字节集_SHA1 (文本到UTF8 (待签名的数据, 假), 文本到UTF8 (accessSecret, 假))), , -1))"@属性变量": "真"
+  },
+  {
+数组类]"data type": "整数""variable name": "方案号",
+数组类]"data type": "整数""comment": "SceneCode",
+数组类]"data type": "整数""data type": "文本型",
+数组类]"data type": "整数""@属性变量": "真"
+  },
+  {
+ 文本到文本哈希表"variable name": "短信模板代码",
+ 文本到文本哈希表"comment": "SmsTemplateCode",
+ 文本到文本哈希表"data type": "文本型",
+ 文本到文本哈希表"@属性变量": "真"
+  },
+  {
+data type": "文本型""variable name": "token有效时间",
+data type": "文本型""comment": "单位秒(Expire)",
+data type": "文本型""data type": "长整数",
+data type": "文本型""initial value": "900",
+data type": "文本型""@属性变量": "真"
+  },
+  {
+
+"variable name": "短信有效期",
+
+"comment": "单位秒(SmsCodeExpire)",
+
+"data type": "整数",
+
+"initial value": "180",
+
+"@属性变量": "真"
+  },
+  {
+ 文本型"variable name": "验证码",
+ 文本型"comment": "提供安卓客户端输出的验证码(SmsCode)",
+ 文本型"data type": "文本型"
+  },
+  {
+组类]"data type": "整数""comment": "SceneCode""variable name": "手机号",
+组类]"data type": "整数""comment": "SceneCode""comment": "提供客户端输入的手机号码(PhoneNumber)",
+组类]"data type": "整数""comment": "SceneCode""data type": "文本型"
+  },
+  {
+data type": "我的主窗口""variable name": "SmsToken",
+data type": "我的主窗口""comment": "短信校验令牌(SmsToken)",
+data type": "我的主窗口""data type": "文本型"
+  }
+        ],
+        "methods": [
+  {
+字节集到BASE64文本 (十六进制文本到字节集 (加解密类.取数据HMAC_字节集_SHA1 (文本到UTF8 (待签名的数据, 假), 文本到UTF8 (accessSecret, 假))), , -1))"method name": "发送请求",
+字节集到BASE64文本 (十六进制文本到字节集 (加解密类.取数据HMAC_字节集_SHA1 (文本到UTF8 (待签名的数据, 假), 文本到UTF8 (accessSecret, 假))), , -1))"data type": "文本型",
+字节集到BASE64文本 (十六进制文本到字节集 (加解密类.取数据HMAC_字节集_SHA1 (文本到UTF8 (待签名的数据, 假), 文本到UTF8 (accessSecret, 假))), , -1))"parameters": [
+   {
+"parameter name": "获取发送验证码token",
+"data type": "逻辑型"
+   }
+字节集到BASE64文本 (十六进制文本到字节集 (加解密类.取数据HMAC_字节集_SHA1 (文本到UTF8 (待签名的数据, 假), 文本到UTF8 (accessSecret, 假))), , -1))]
+  },
+  {
+ }"method name": "URL编码",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "待编码的文本",
+"data type": "文本型"
+   }
+ }]
+  }
+        ]
+ }
+ 文本型]
+}

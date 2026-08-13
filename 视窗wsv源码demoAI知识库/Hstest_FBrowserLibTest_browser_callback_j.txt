@@ -1,0 +1,275 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+�鳷Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+�鳷Ǹ"package name": "浏览器.回调",
+�鳷Ǹ"classes": [
+ {
+"class name": "类_FBrowser_下载图片回调测试",
+"base class": "类_FBrowser_下载图片回调",
+"methods": [
+  {
+
+"method name": "图片下载完成",
+
+"comment": "待完善",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "图片链接",
+"data type": "文本型"
+   },
+   {
+"parameter name": "状态码",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片",
+"data type": "类_FBrowser_图片"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_打开文件对话框回调测试",
+"base class": "类_FBrowser_打开文件对话框回调",
+"methods": [
+  {
+
+"method name": "即将关闭文件对话框",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_打印为PDF回调测试",
+"base class": "类_FBrowser_打印为PDF回调",
+"methods": [
+  {
+
+"method name": "即将完成打印",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否成功",
+"data type": "逻辑型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_JS回调测试",
+"base class": "类_FBrowser_JS回调",
+"methods": [
+  {
+
+"method name": "回调",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "返回结果",
+"data type": "类_FBrowser_列表值"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_字符串回调测试",
+"base class": "类_FBrowser_字符串回调",
+"variables": [
+  {
+
+"variable name": "标识",
+
+"data type": "整数"
+  }
+],
+"methods": [
+  {
+
+"method name": "回调",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_任务回调测试",
+"base class": "类_FBrowser_任务回调",
+"methods": [
+  {
+
+"method name": "执行",
+
+"@虚拟方法": "可覆盖"
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_Cookie回调测试",
+"base class": "类_FBrowser_Cookie回调",
+"methods": [
+  {
+
+"method name": "开始",
+
+"@虚拟方法": "可覆盖"
+  },
+  {
+
+"method name": "结束",
+
+"@虚拟方法": "可覆盖"
+  },
+  {
+
+"method name": "访问",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "Cookie数据",
+"data type": "FBrowser_Cookie数据"
+   },
+   {
+"parameter name": "当前项",
+"data type": "整数"
+   },
+   {
+"parameter name": "总数",
+"data type": "整数"
+   },
+   {
+"parameter name": "删除当前cookie",
+"comment": "设置为真，则删除当前项",
+"data type": "逻辑型类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_JS返回值回调",
+"base class": "类_FBrowser_JS回调",
+"variables": [
+  {
+
+"variable name": "同步类",
+
+"data type": "类_FBrowser_同步辅助类"
+  }
+],
+"methods": [
+  {
+
+"method name": "回调",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "返回结果",
+"data type": "类_FBrowser_列表值"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_字符串回调处理",
+"base class": "类_FBrowser_字符串回调",
+"variables": [
+  {
+
+"variable name": "同步类",
+
+"data type": "类_FBrowser_同步辅助类"
+  }
+],
+"methods": [
+  {
+
+"method name": "回调",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_清理缓存回调处理",
+"base class": "类_FBrowser_清理缓存回调",
+"variables": [
+  {
+
+"variable name": "标识",
+
+"data type": "整数"
+  }
+],
+"methods": [
+  {
+
+"method name": "完成",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "是否成功",
+"comment": "执行成功为真，执行失败为假",
+"data type": "逻辑型"
+   }
+
+]
+  }
+]
+ }
+�鳷Ǹ]
+}

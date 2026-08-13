@@ -1,0 +1,5510 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"package name": "火山.PIV基础类",
+"comment": "  提供密码学的加解密支持,封装自系统的 CNG API (Cryptography API: Next Generation),\n即下一代加密技术,其中有Bcrypt和Ncrypt两个家族.\n  Bcrypt主要用于临时性的加解密,而Ncrypt主要用于持久化的密钥存储(生成的密钥会存储在\nWindows的加密存储中),这里封装的是Bcrypt.\n  与OpenSSL相比,不需要附带额外的dll,但对系统版本有要求.\n  - 桌面系统需要Windows Vista及更高版本.\n  - 服务器系统需要Windows Server 2008及更高版本.\n  - 部分加密算法有更高的系统版本要求.",
+"@视窗.外部头文件": "\"bcrypt.h\"",
+"@视窗.外部库": "\"Bcrypt.lib\"",
+"classes": [
+ {
+classes": [
+"class name": "CNG加解密",
+classes": [
+"comment": "提供密码学的加解密支持",
+classes": [
+"@文档": "\"category = \\\"加解密\\\"\"",
+classes": [
+"@别名": "\"//\"",
+classes": [
+"@别名类型": "本地类",
+classes": [
+"@类用途": "访问静态成员",
+classes": [
+"methods": [
+  {
+lasses": [
+"methods": [
+"method name": "加密_AES_ECB",
+lasses": [
+"methods": [
+"comment": "将指定数据进行AES加密(ECB模式)",
+lasses": [
+"methods": [
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+lasses": [
+"methods": [
+"static": true,
+lasses": [
+"methods": [
+"data type": "字节集类",
+lasses": [
+"methods": [
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+lasses": [
+"methods": [
+]
+  },
+  {
+
+"method name": "加密_字节集_AES_ECB",
+
+"comment": "将指定数据进行AES加密(ECB模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_AES_ECB",
+
+"comment": "将指定AES加密的数据进行解密(ECB模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_AES_ECB",
+
+"comment": "将指定AES加密的数据进行解密(ECB模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_AES_CBC",
+
+"comment": "将指定数据进行AES加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_AES_CBC",
+
+"comment": "将指定数据进行AES加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256.",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+"method name": "解密_AES_CBC",
+"comment": "将指定AES加密的数据进行解密(CBC模式)",
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+]
+  },
+  {
+
+"method name": "解密_字节集_AES_CBC",
+
+"comment": "将指定AES加密的数据进行解密(CBC模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_AES_CFB8",
+
+"comment": "将指定数据进行AES加密(CFB-8位模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_AES_CFB8",
+
+"comment": "将指定数据进行AES加密(CFB-8位模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_AES_CFB8",
+
+"comment": "将指定AES加密的数据进行解密(CFB-8位模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供解密所使用的密码,最大长度不能超过32.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_AES_CFB8",
+
+"comment": "将指定AES加密的数据进行解密(CFB-8位模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+}"method name": "加密_AES_CFB128",
+}"comment": "将指定数据进行AES加密(CFB-128位模式)",
+}"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+}]
+  },
+  {
+comment": "请根据所提供的密码字节数选择,支持128,192,256""method name": "加密_字节集_AES_CFB128",
+comment": "请根据所提供的密码字节数选择,支持128,192,256""comment": "将指定数据进行AES加密(CFB-128位模式)",
+comment": "请根据所提供的密码字节数选择,支持128,192,256""result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+comment": "请根据所提供的密码字节数选择,支持128,192,256""static": true,
+comment": "请根据所提供的密码字节数选择,支持128,192,256""data type": "字节集类",
+comment": "请根据所提供的密码字节数选择,支持128,192,256""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+comment": "请根据所提供的密码字节数选择,支持128,192,256"]
+  },
+  {
+
+"method name": "解密_AES_CFB128",
+
+"comment": "将指定AES加密的数据进行解密(CFB-128位模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_AES_CFB128",
+
+"comment": "将指定AES加密的数据进行解密(CFB-128位模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_AES_GCM",
+
+"comment": "将指定数据进行AES加密(GCM模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供12字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_AES_GCM",
+
+"comment": "将指定数据进行AES加密(GCM模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供12字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_AES_GCM",
+
+"comment": "将指定AES加密的数据进行解密(GCM模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供12字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   }
+
+]
+  },
+  {
+"method name": "解密_字节集_AES_GCM",
+"comment": "将指定AES加密的数据进行解密(GCM模式)",
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供12字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "请根据所提供的密码字节数选择,支持128,192,256",
+"data type": "整数",
+"@默认值": "128"
+   }
+]
+  },
+  {
+data type": "字节集类""method name": "加密_DES_ECB",
+data type": "字节集类""comment": "将指定数据进行DES加密(ECB模式)",
+data type": "字节集类""result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+data type": "字节集类"]
+  },
+  {
+
+"method name": "加密_字节集_DES_ECB",
+
+"comment": "将指定数据进行DES加密(ECB模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_DES_ECB",
+
+"comment": "将指定DES加密的数据进行解密(ECB模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_DES_ECB",
+
+"comment": "将指定DES加密的数据进行解密(ECB模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_DES_CBC",
+
+"comment": "将指定数据进行DES加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_DES_CBC",
+
+"comment": "将指定数据进行DES加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_DES_CBC",
+
+"comment": "将指定DES加密的数据进行解密(CBC模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_DES_CBC",
+
+"comment": "将指定DES加密的数据进行解密(CBC模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_DES_CFB8",
+
+"comment": "将指定数据进行DES加密(CFB-8位模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_DES_CFB8",
+
+"comment": "将指定数据进行DES加密(CFB-8位模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+data type": "字节集类""method name": "解密_DES_CFB8",
+data type": "字节集类""comment": "将指定DES加密的数据进行解密(CFB-8位模式)",
+data type": "字节集类""result comment": "返回解密后的结果,解密失败将返回空字节集.",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+data type": "字节集类"]
+  },
+  {
+ameter name": "数据""method name": "解密_字节集_DES_CFB8",
+ameter name": "数据""comment": "将指定DES加密的数据进行解密(CFB-8位模式)",
+ameter name": "数据""result comment": "返回解密后的结果,解密失败将返回空字节集.",
+ameter name": "数据""static": true,
+ameter name": "数据""data type": "字节集类",
+ameter name": "数据""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+ameter name": "数据"]
+  },
+  {
+
+"method name": "加密_DES_CFB64",
+
+"comment": "将指定数据进行DES加密(CFB-64位模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_DES_CFB64",
+
+"comment": "将指定数据进行DES加密(CFB-64位模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_DES_CFB64",
+
+"comment": "将指定DES加密的数据进行解密(CFB-64位模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_DES_CFB64",
+
+"comment": "将指定DES加密的数据进行解密(CFB-64位模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_DESX_CBC",
+
+"comment": "将指定数据进行DESX加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_DESX_CBC",
+
+"comment": "将指定数据进行DESX加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_DESX_CBC",
+
+"comment": "将指定DESX加密的数据进行解密(CBC模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+}"method name": "解密_字节集_DESX_CBC",
+}"comment": "将指定DESX加密的数据进行解密(CBC模式)",
+}"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+}]
+  },
+  {
+}"method name": "加密_3DES_ECB",
+}"comment": "将指定数据进行3DES(ECB模式)加密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+}"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+}]
+  },
+  {
+}"method name": "加密_字节集_3DES_ECB",
+}"comment": "将指定数据进行3DES(ECB模式)加密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+}"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+}]
+  },
+  {
+data type": "逻辑型""method name": "解密_3DES_ECB",
+data type": "逻辑型""comment": "将指定3DES(ECB模式)加密的数据进行解密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+data type": "逻辑型""result comment": "返回解密后的结果,解密失败将返回空字节集.",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "字节集类",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "解密_字节集_3DES_ECB",
+
+"comment": "将指定3DES(ECB模式)加密的数据进行解密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_3DES_CBC",
+
+"comment": "将指定数据进行3DES(CBC模式)加密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_3DES_CBC",
+
+"comment": "将指定数据进行3DES(CBC模式)加密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+"method name": "解密_3DES_CBC",
+"comment": "将指定3DES(CBC模式)加密的数据进行解密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+]
+  },
+  {
+"method name": "解密_字节集_3DES_CBC",
+"comment": "将指定3DES(CBC模式)加密的数据进行解密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+]
+  },
+  {
+data type": "CNG_填充方式""method name": "加密_3DES_CFB8",
+data type": "CNG_填充方式""comment": "将指定数据进行3DES(CFB-8位模式)加密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+data type": "CNG_填充方式""result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+data type": "CNG_填充方式""static": true,
+data type": "CNG_填充方式""data type": "字节集类",
+data type": "CNG_填充方式""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+data type": "CNG_填充方式"]
+  },
+  {
+
+"method name": "加密_字节集_3DES_CFB8",
+
+"comment": "将指定数据进行3DES(CFB-8位模式)加密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.""method name": "解密_3DES_CFB8",
+comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.""comment": "将指定3DES(CFB-8位模式)加密的数据进行解密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.""result comment": "返回解密后的结果,解密失败将返回空字节集.",
+comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.""static": true,
+comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.""data type": "字节集类",
+comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥."]
+  },
+  {
+
+"method name": "解密_字节集_3DES_CFB8",
+
+"comment": "将指定3DES(CFB-8位模式)加密的数据进行解密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_3DES_CFB64",
+
+"comment": "将指定数据进行3DES(CFB-64位模式)加密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_3DES_CFB64",
+
+"comment": "将指定数据进行3DES(CFB-64位模式)加密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_3DES_CFB64",
+
+"comment": "将指定3DES(CFB-64位模式)加密的数据进行解密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_3DES_CFB64",
+
+"comment": "将指定3DES(CFB-64位模式)加密的数据进行解密,3DES即将DES算法进行三次(加密-解密-加密)计算.",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度24字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "高强度",
+"comment": "是否采用高强度方式加密,为真时加密过程中会采用三个不同密钥,为假时仅使用两个相同密钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RC2_ECB",
+
+"comment": "将指定数据进行RC2加密(ECB模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+"static": true"method name": "加密_字节集_RC2_ECB",
+"static": true"comment": "将指定数据进行RC2加密(ECB模式)",
+"static": true"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+"static": true"static": true,
+"static": true"data type": "字节集类",
+"static": true"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+"static": true]
+  },
+  {
+}"method name": "解密_RC2_ECB",
+}"comment": "将指定RC2加密的数据进行解密(ECB模式)",
+}"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+}]
+  },
+  {
+
+"method name": "解密_字节集_RC2_ECB",
+
+"comment": "将指定RC2加密的数据进行解密(ECB模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RC2_CBC",
+
+"comment": "将指定数据进行RC2加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_RC2_CBC",
+
+"comment": "将指定数据进行RC2加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_RC2_CBC",
+
+"comment": "将指定RC2加密的数据进行解密(CBC模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_RC2_CBC",
+
+"comment": "将指定RC2加密的数据进行解密(CBC模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RC2_40_CBC",
+
+"comment": "将指定数据进行RC2(40位)加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度5字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_RC2_40_CBC",
+
+"comment": "将指定数据进行RC2(40位)加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度5字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_RC2_40_CBC",
+
+"comment": "将指定RC2(40位)加密的数据进行解密(CBC模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度5字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_RC2_40_CBC",
+
+"comment": "将指定RC2(40位)加密的数据进行解密(CBC模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度5字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RC2_64_CBC",
+
+"comment": "将指定数据进行RC2(64位)加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_RC2_64_CBC",
+
+"comment": "将指定数据进行RC2(64位)加密(CBC模式)",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+"method name": "解密_RC2_64_CBC",
+"comment": "将指定RC2(64位)加密的数据进行解密(CBC模式)",
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+]
+  },
+  {
+comment": "初始向量数据,最少要提供8字节.""method name": "解密_字节集_RC2_64_CBC",
+comment": "初始向量数据,最少要提供8字节.""comment": "将指定RC2(64位)加密的数据进行解密(CBC模式)",
+comment": "初始向量数据,最少要提供8字节.""result comment": "返回解密后的结果,解密失败将返回空字节集.",
+comment": "初始向量数据,最少要提供8字节.""static": true,
+comment": "初始向量数据,最少要提供8字节.""data type": "字节集类",
+comment": "初始向量数据,最少要提供8字节.""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+comment": "初始向量数据,最少要提供8字节."]
+  },
+  {
+mment": "初始向量数据,最少要提供8字节."]"method name": "加密_RC2_CFB64",
+mment": "初始向量数据,最少要提供8字节."]"comment": "将指定数据进行RC2加密(CFB-64位模式)",
+mment": "初始向量数据,最少要提供8字节."]"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+mment": "初始向量数据,最少要提供8字节."]"static": true,
+mment": "初始向量数据,最少要提供8字节."]"data type": "字节集类",
+mment": "初始向量数据,最少要提供8字节."]"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+mment": "初始向量数据,最少要提供8字节."]]
+  },
+  {
+}"method name": "加密_字节集_RC2_CFB64",
+}"comment": "将指定数据进行RC2加密(CFB-64位模式)",
+}"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+}]
+  },
+  {
+}"method name": "解密_RC2_CFB64",
+}"comment": "将指定RC2加密的数据进行解密(CFB-64位模式)",
+}"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+}]
+  },
+  {
+
+"method name": "解密_字节集_RC2_CFB64",
+
+"comment": "将指定RC2加密的数据进行解密(CFB-64位模式)",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": "在提供的数据未对齐的情况下,所欲使用的填充方式.",
+"data type": "CNG_填充方式",
+"@默认值": "CNG_填充方式.对称_零填充"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RC4",
+
+"comment": "将指定数据进行RC4加密",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_RC4",
+
+"comment": "将指定数据进行RC4加密",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_RC4",
+
+"comment": "将指定RC4加密的数据进行解密",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_RC4",
+
+"comment": "将指定RC4加密的数据进行解密",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度16字节.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RC4_40位",
+
+"comment": "将指定数据进行RC4(40位)加密",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定5字节.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "加密_字节集_RC4_40位",
+"comment": "将指定数据进行RC4(40位)加密",
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定5字节.",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+"method name": "解密_RC4_40位",
+"comment": "将指定RC4(40位)加密的数据进行解密",
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定5字节.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "解密_字节集_RC4_40位",
+
+"comment": "将指定RC4(40位)加密的数据进行解密",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定5字节.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "取数据MD5",
+}"comment": "用作获取指定数据的MD5数据摘要",
+}"result comment": "返回摘要计算后的结果",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+"method name": "取数据MD5_字节集",
+"comment": "用作获取指定数据的MD5数据摘要",
+"result comment": "返回摘要计算后的结果",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+
+"method name": "取数据HMAC_MD5",
+
+"comment": "用作获取指定数据的HMAC-MD5数据摘要",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "取数据HMAC_字节集_MD5",
+"comment": "用作获取指定数据的HMAC-MD5数据摘要",
+"result comment": "返回摘要计算后的结果",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+"method name": "取数据HMAC_MD5_字节集",
+"comment": "用作获取指定数据的HMAC-MD5数据摘要",
+"result comment": "返回摘要计算后的结果",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+ }"method name": "取数据MD4",
+ }"comment": "用作获取指定数据的MD4数据摘要",
+ }"result comment": "返回摘要计算后的结果",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+
+"method name": "取数据MD4_字节集",
+
+"comment": "用作获取指定数据的MD4数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据HMAC_MD4",
+
+"comment": "用作获取指定数据的HMAC-MD4数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据HMAC_字节集_MD4",
+
+"comment": "用作获取指定数据的HMAC-MD4数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "取数据HMAC_MD4_字节集",
+}"comment": "用作获取指定数据的HMAC-MD4数据摘要",
+}"result comment": "返回摘要计算后的结果",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "取数据MD2",
+
+"comment": "用作获取指定数据的MD2数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+指定数据的MD2数据摘要"method name": "取数据MD2_字节集",
+指定数据的MD2数据摘要"comment": "用作获取指定数据的MD2数据摘要",
+指定数据的MD2数据摘要"result comment": "返回摘要计算后的结果",
+指定数据的MD2数据摘要"static": true,
+指定数据的MD2数据摘要"data type": "字节集类",
+指定数据的MD2数据摘要"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+指定数据的MD2数据摘要]
+  },
+  {
+指定数据的MD2数据摘要"method name": "取数据HMAC_MD2",
+指定数据的MD2数据摘要"comment": "用作获取指定数据的HMAC-MD2数据摘要",
+指定数据的MD2数据摘要"result comment": "返回摘要计算后的结果",
+指定数据的MD2数据摘要"static": true,
+指定数据的MD2数据摘要"data type": "文本型",
+指定数据的MD2数据摘要"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "文本型"
+   }
+指定数据的MD2数据摘要]
+  },
+  {
+}"method name": "取数据HMAC_字节集_MD2",
+}"comment": "用作获取指定数据的HMAC-MD2数据摘要",
+}"result comment": "返回摘要计算后的结果",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "取数据HMAC_MD2_字节集",
+
+"comment": "用作获取指定数据的HMAC-MD2数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA1",
+
+"comment": "用作获取指定数据的SHA1数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA1_字节集",
+
+"comment": "用作获取指定数据的SHA1数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据HMAC_SHA1",
+
+"comment": "用作获取指定数据的HMAC-SHA1数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据HMAC_字节集_SHA1",
+
+"comment": "用作获取指定数据的HMAC-SHA1数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据HMAC_SHA1_字节集",
+
+"comment": "用作获取指定数据的HMAC-SHA1数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA256",
+
+"comment": "用作获取指定数据的SHA256数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA256_字节集",
+
+"comment": "用作获取指定数据的SHA256数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据HMAC_SHA256",
+
+"comment": "用作获取指定数据的HMAC-SHA256数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据HMAC_字节集_SHA256",
+
+"comment": "用作获取指定数据的HMAC-SHA256数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "取数据HMAC_SHA256_字节集",
+}"comment": "用作获取指定数据的HMAC-SHA256数据摘要",
+}"result comment": "返回摘要计算后的结果",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "取数据SHA384",
+
+"comment": "用作获取指定数据的SHA384数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA384_字节集",
+
+"comment": "用作获取指定数据的SHA384数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据HMAC_SHA384",
+
+"comment": "用作获取指定数据的HMAC-SHA384数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "取数据HMAC_字节集_SHA384",
+ }"comment": "用作获取指定数据的HMAC-SHA384数据摘要",
+ }"result comment": "返回摘要计算后的结果",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+
+"method name": "取数据HMAC_SHA384_字节集",
+
+"comment": "用作获取指定数据的HMAC-SHA384数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "取数据SHA512",
+}"comment": "用作获取指定数据的SHA512数据摘要",
+}"result comment": "返回摘要计算后的结果",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "取数据SHA512_字节集",
+}"comment": "用作获取指定数据的SHA512数据摘要",
+}"result comment": "返回摘要计算后的结果",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "取数据HMAC_SHA512",
+}"comment": "用作获取指定数据的HMAC-SHA512数据摘要",
+}"result comment": "返回摘要计算后的结果",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "取数据HMAC_字节集_SHA512",
+}"comment": "用作获取指定数据的HMAC-SHA512数据摘要",
+}"result comment": "返回摘要计算后的结果",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "取数据HMAC_SHA512_字节集",
+
+"comment": "用作获取指定数据的HMAC-SHA512数据摘要",
+
+"result comment": "返回摘要计算后的结果",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供所欲使用的密码内容",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RSA_私钥",
+
+"comment": "使用私钥对指定数据进行RSA加密",
+
+"result comment": "成功返回加密后的数据,失败返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "  提供所欲加密的数据\n  注意输入的数据长度,不能超过(密钥位/8-填充尺寸),例如生成密钥为2048位,\n无填充的情况下可加密256字节的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "指定私钥",
+"comment": "提供本次加密所欲使用的BLOB格式私钥数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RSA_公钥",
+
+"comment": "使用公钥对指定数据进行RSA加密",
+
+"result comment": "成功返回加密后的数据,失败返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据\n注意输入的数据长度,不能超过(密钥位/8-填充尺寸),例如生成密钥为2048位,无填充的情况下可加密256字节的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "指定公钥",
+"comment": "提供本次加密所欲使用的BLOB格式公钥数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_RSA_私钥",
+
+"comment": "使用私钥对指定RSA公钥/私钥加密的数据进行解密",
+
+"result comment": "成功返回解密后的数据,失败返回空字节集",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供待解密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "指定私钥",
+"comment": "提供本次解密所欲使用的BLOB格式私钥数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RSA_PEM私钥",
+
+"comment": "使用私钥对指定数据进行RSA加密.\n注: 本方法支持PKCS#1 PEM格式密钥.",
+
+"result comment": "成功返回加密后的数据,失败返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "  提供所欲加密的数据.\n  注意输入的数据长度,不能超过(密钥位/8-填充尺寸),例如生成密钥为2048位,\n无填充的情况下可加密256字节的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "PEM私钥",
+"comment": "提供本次加密所欲使用的PEM格式私钥,自动识别PKCS#1和PKCS#8版本.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RSA_PEM公钥",
+
+"comment": "使用公钥对指定数据进行RSA加密.\n注: 本方法支持PKCS#1 PEM格式密钥.",
+
+"result comment": "成功返回加密后的数据,失败返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "  提供所欲加密的数据.\n  注意输入的数据长度,不能超过(密钥位/8-填充尺寸),例如生成密钥为2048位,\n无填充的情况下可加密256字节的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "PEM公钥",
+"comment": "提供本次加密所欲使用的PEM格式公钥",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_RSA_PEM私钥",
+
+"comment": "使用私钥对指定RSA公钥/私钥加密的数据进行解密.\n注: 本方法支持PKCS#1 PEM格式密钥.",
+
+"result comment": "成功返回解密后的数据,失败返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供待解密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "PEM私钥",
+"comment": "提供本次解密所欲使用的PEM格式私钥,自动识别PKCS#1和PKCS#8版本.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "PEM密钥到BLOB",
+
+"comment": "将PEM格式的RSA密钥转换为CNG加解密专用的BLOB格式,然后以字节集返回.\n注意: 非CNG生成的RSA密钥对,可能无法在CNG里进行RSA加解密.",
+
+"result comment": "失败返回空字节集",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "PEM密钥",
+"comment": "所欲转换的PEM格式密钥,自动识别PKCS#1和PKCS#8版本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为私钥",
+"comment": "指定提供的密钥是否为私钥,否则为公钥.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+ }"method name": "BLOB密钥到PEM",
+ }"comment": "将CNG加解密专用的BLOB格式RSA密钥,转换为通用的PEM格式文本.",
+ }"result comment": "失败返回空文本",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "BLOB密钥",
+"comment": "  所欲转换的BCRYPT_RSAKEY_BLOB密钥,可以自动识别出是私钥还是公钥.\n  不完整的私钥不能转换到PEM,请在\"生成密钥对_RSA\"时,将\"是否为完整私钥\"设置为真.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "添加PEM头",
+"comment": "指定是否在首尾加上PEM格式,比如\"-----BEGIN PUBLIC KEY-----\"",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "PKCS8格式",
+"comment": "指定是否以PKCS#8格式返回私钥PEM,否则为PKCS#1.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+
+"method name": "生成密钥对_RSA",
+
+"comment": "随机生成用于数据加解密的RAS密钥对,包含私钥以及公钥.",
+
+"result comment": "返回密钥对是否生成成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "密钥大小必须大于等于512位,小于等于16384位,且必须是64的倍数.",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "返回完整私钥",
+"comment": "指定返回的私钥是否为包含公钥的完整密钥对,只有完整的密钥可以转换到PEM格式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "生成密钥对_DH",
+
+"comment": "随机生成用于密钥交换的DH密钥对,包含私钥以及公钥.",
+
+"result comment": "返回密钥对是否生成成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "密钥大小必须大于等于512位,小于等于4096 位,且必须是64的倍数.",
+"data type": "整数",
+"@默认值": "1024"
+   }
+
+]
+  },
+  {
+
+"method name": "生成密钥对_ECDH_P256",
+
+"comment": "随机生成用于密钥交换的ECDH-P256密钥对,包含私钥以及公钥.",
+
+"result comment": "返回密钥对是否生成成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "生成密钥对_ECDH_P384",
+
+"comment": "随机生成用于密钥交换的ECDH-P384密钥对,包含私钥以及公钥.",
+
+"result comment": "返回密钥对是否生成成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "生成密钥对_ECDH_P521",
+}"comment": "随机生成用于密钥交换的ECDH-P521密钥对,包含私钥以及公钥.",
+}"result comment": "返回密钥对是否生成成功",
+}"static": true,
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+ }"method name": "生成密钥对_RSA_SIGN",
+ }"comment": "随机生成用于数字签名的RAS-SIGN密钥对,包含私钥以及公钥.",
+ }"result comment": "返回密钥对是否生成成功",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": "密钥大小必须大于等于512位,小于等于16384位,且必须是64的倍数.",
+"data type": "整数",
+"@默认值": "1024"
+   }
+ }]
+  },
+  {
+
+"method name": "生成密钥对_DSA",
+
+"comment": "随机生成用于数字签名的DSA密钥对,包含私钥以及公钥.",
+
+"result comment": "返回密钥对是否生成成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥位",
+"comment": " 必须大于等于512,少于等于3072,且为64的倍数.\n 密钥位需要和哈希算法相配合,否则会失败.",
+"data type": "整数",
+"@默认值": "1024"
+   }
+
+]
+  },
+  {
+
+"method name": "生成密钥对_ECDSA_P256",
+
+"comment": "随机生成用于数字签名的ECDSA-P256密钥对,包含私钥以及公钥.",
+
+"result comment": "返回密钥对是否生成成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "生成密钥对_ECDSA_P384",
+
+"comment": "随机生成用于数字签名的ECDSA-P384密钥对,包含私钥以及公钥.",
+
+"result comment": "返回密钥对是否生成成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+"method name": "生成密钥对_ECDSA_P521",
+"comment": "随机生成用于数字签名的ECDSA-P521密钥对,包含私钥以及公钥.",
+"result comment": "返回密钥对是否生成成功",
+"static": true,
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "公钥数据",
+"comment": "成功将返回公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "成功将返回私钥数据",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+
+"method name": "数字签名_DSA",
+
+"comment": "将指定数据进行DSA数字签名,可通过\"验证签名\"验证数据完整性.\n请先用\"生成密钥对_DSA\"生成私钥和公钥.",
+
+"result comment": "签名成功将会返回签名内容,签名失败返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "提供本次签名所使用的私钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "签名所使用的摘要算法",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA1"
+   }
+
+]
+  },
+  {
+
+"method name": "验证签名_DSA",
+
+"comment": "提供指定的数据以及该数据对应的签名内容,验证数据与签名是否对应,以保障数据的完整性.",
+
+"result comment": "返回该数据签名是否验证成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲验证签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "签名内容",
+"comment": "提供该数据对应的签名内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "公钥数据",
+"comment": "提供本次验证所使用的公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "提供验签所使用的摘要算法,必须与签名时保持一致,否则会导致验签失败.",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA1"
+   }
+
+]
+  },
+  {
+
+"method name": "数字签名_RSA",
+
+"comment": "将指定数据进行RSA数字签名,可通过\"验证签名\"验证数据完整性.\n请先用\"生成密钥对_RSA_SIGN\"生成私钥和公钥.",
+
+"result comment": "签名成功将会返回签名内容,签名失败返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "提供本次签名所使用的私钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "签名所使用的摘要算法",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA1"
+   }
+
+]
+  },
+  {
+
+"method name": "验证签名_RSA",
+
+"comment": "提供指定的数据以及该数据对应的签名内容,验证数据与签名是否对应,以保障数据的完整性.",
+
+"result comment": "返回该数据签名是否验证成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲验证签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "签名内容",
+"comment": "提供该数据对应的签名内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "公钥数据",
+"comment": "提供本次验证所使用的公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "提供验签所使用的摘要算法,必须与签名时保持一致,否则会导致验签失败.",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA1"
+   }
+
+]
+  },
+  {
+
+"method name": "数字签名_RSA_PEM",
+
+"comment": "将指定数据进行RSA数字签名,可通过\"验证签名\"验证数据完整性.",
+
+"result comment": "签名成功将会返回签名内容,签名失败返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "提供本次签名所使用的PEM格式私钥数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "签名所使用的摘要算法",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA1"
+   }
+
+]
+  },
+  {
+@默认值": "CNG_算法类型.哈希_SHA1""method name": "验证签名_RSA_PEM",
+@默认值": "CNG_算法类型.哈希_SHA1""comment": "提供指定的数据以及该数据对应的签名内容,验证数据与签名是否对应,以保障数据的完整性.",
+@默认值": "CNG_算法类型.哈希_SHA1""result comment": "返回该数据签名是否验证成功",
+@默认值": "CNG_算法类型.哈希_SHA1""static": true,
+@默认值": "CNG_算法类型.哈希_SHA1""data type": "逻辑型",
+@默认值": "CNG_算法类型.哈希_SHA1""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲验证签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "签名内容",
+"comment": "提供该数据对应的签名内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "公钥数据",
+"comment": "提供本次验证所使用的PEM格式公钥数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "提供验签所使用的摘要算法,必须与签名时保持一致,否则会导致验签失败.",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA1"
+   }
+@默认值": "CNG_算法类型.哈希_SHA1"]
+  },
+  {
+@默认值": "CNG_算法类型.哈希_SHA1""method name": "数字签名_ECDSA_P256",
+@默认值": "CNG_算法类型.哈希_SHA1""comment": "将指定数据进行ECDSA-P256数字签名,可通过\"验证签名\"验证数据完整性.\n请先用\"生成密钥对_ECDSA_P256\"生成私钥和公钥.",
+@默认值": "CNG_算法类型.哈希_SHA1""result comment": "签名成功将会返回签名内容,签名失败返回空字节集.",
+@默认值": "CNG_算法类型.哈希_SHA1""static": true,
+@默认值": "CNG_算法类型.哈希_SHA1""data type": "字节集类",
+@默认值": "CNG_算法类型.哈希_SHA1""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "提供本次签名所使用的私钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "签名所使用的摘要算法",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA256"
+   }
+@默认值": "CNG_算法类型.哈希_SHA1"]
+  },
+  {
+"method name": "验证签名_ECDSA_P256",
+"comment": "提供指定的数据以及该数据对应的签名内容,验证数据与签名是否对应,以保障数据的完整性.",
+"result comment": "返回该数据签名是否验证成功",
+"static": true,
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲验证签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "签名内容",
+"comment": "提供该数据对应的签名内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "公钥数据",
+"comment": "提供本次验证所使用的公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "提供验签所使用的摘要算法,必须与签名时保持一致,否则会导致验签失败.",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA256"
+   }
+]
+  },
+  {
+ameter name": "摘要算法""method name": "数字签名_ECDSA_P384",
+ameter name": "摘要算法""comment": "将指定数据进行ECDSA-P384数字签名,可通过\"验证签名\"验证数据完整性.\n请先用\"生成密钥对_ECDSA_P384\"生成私钥和公钥.",
+ameter name": "摘要算法""result comment": "签名成功将会返回签名内容,签名失败返回空字节集.",
+ameter name": "摘要算法""static": true,
+ameter name": "摘要算法""data type": "字节集类",
+ameter name": "摘要算法""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "提供本次签名所使用的私钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "签名所使用的摘要算法",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA384"
+   }
+ameter name": "摘要算法"]
+  },
+  {
+}"method name": "验证签名_ECDSA_P384",
+}"comment": "提供指定的数据以及该数据对应的签名内容,验证数据与签名是否对应,以保障数据的完整性.",
+}"result comment": "返回该数据签名是否验证成功",
+}"static": true,
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲验证签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "签名内容",
+"comment": "提供该数据对应的签名内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "公钥数据",
+"comment": "提供本次验证所使用的公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "提供验签所使用的摘要算法,必须与签名时保持一致,否则会导致验签失败.",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA384"
+   }
+}]
+  },
+  {
+}"method name": "数字签名_ECDSA_P521",
+}"comment": "将指定数据进行ECDSA-P521数字签名,可通过\"验证签名\"验证数据完整性.\n请先用\"生成密钥对_ECDSA_P521\"生成私钥和公钥.",
+}"result comment": "签名成功将会返回签名内容,签名失败返回空字节集.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "私钥数据",
+"comment": "提供本次签名所使用的私钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "签名所使用的摘要算法",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA512"
+   }
+}]
+  },
+  {
+
+"method name": "验证签名_ECDSA_P521",
+
+"comment": "提供指定的数据以及该数据对应的签名内容,验证数据与签名是否对应,以保障数据的完整性.",
+
+"result comment": "返回该数据签名是否验证成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲验证签名的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "签名内容",
+"comment": "提供该数据对应的签名内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "公钥数据",
+"comment": "提供本次验证所使用的公钥数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "摘要算法",
+"comment": "提供验签所使用的摘要算法,必须与签名时保持一致,否则会导致验签失败.",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA512"
+   }
+
+]
+  },
+  {
+ }"method name": "取随机数_RNG",
+ }"comment": "用椭圆曲线算法生成随机数",
+ }"result comment": "返回随机数",
+ }"static": true,
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+}"@禁止流程检查": "真""method name": "取随机数_DUALECRNG",
+}"@禁止流程检查": "真""comment": "用双椭圆曲线算法生成随机数",
+}"@禁止流程检查": "真""result comment": "返回随机数",
+}"@禁止流程检查": "真""static": true,
+}"@禁止流程检查": "真""data type": "整数"
+  },
+  {
+
+"method name": "取随机数_FIPS186DSARNG",
+
+"comment": "用FIPS186DSARNG算法生成随机数",
+
+"result comment": "返回随机数",
+
+"static": true,
+
+"data type": "整数"
+  },
+  {
+
+"method name": "密钥派生_SP800_108",
+
+"comment": "使用SP800-108密钥派生算法从哈希值中派生密钥.\n密钥派生函数(KDF)使用伪随机函数从主密钥派生一个或多个密钥.\n可用于将密钥扩展到更长的密钥或获得所需格式的密钥.\n最低系统要求: Windows 8",
+
+"result comment": "返回派生的密钥,失败返回空字节集类.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "密钥",
+"comment": "所欲派生密钥的主密钥",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "标签",
+"comment": "可表示派生密钥的用途",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "上下文",
+"comment": " ANSI文本,请用\"文本到多字节(PRF标签, 真)\"\n 可以是执行KDF的人,或使用派生密钥的人.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "派生密钥长度",
+"comment": "派生密钥的长度,最大长度为688",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "哈希算法",
+"comment": "请使用\"CNG_算法类型.哈希_\"",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA1"
+   }
+
+]
+  },
+  {
+"method name": "密钥派生_SP800_56A",
+"comment": "使用SP800-56A密钥派生算法从哈希值中派生密钥.\n密钥派生函数(KDF)使用伪随机函数从主密钥派生一个或多个密钥.\n可用于将密钥扩展到更长的密钥或获得所需格式的密钥.\n最低系统要求: Windows 8",
+"result comment": "返回派生的密钥,失败返回空字节集类.",
+"static": true,
+"data type": "字节集类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "密钥",
+"comment": "所欲派生密钥的主密钥",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "AlgorithmID",
+"comment": "算法ID",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "PartyUInfo",
+"comment": "UI信息",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "PartyVInfo",
+"comment": "VI信息",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "派生密钥长度",
+"comment": "派生密钥的长度,最大长度为688",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "哈希算法",
+"comment": "请使用\"CNG_算法类型.哈希_\"",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA256"
+   },
+   {
+"parameter name": "SuppPubInfo",
+"comment": "可选参数",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "SuppPrivInfo",
+"comment": "可选参数",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+"method name": "密钥派生_PBKDF2",
+"comment": "使用PBKDF2密钥派生算法从哈希值中派生密钥.\n密钥派生函数(KDF)使用伪随机函数从主密钥派生一个或多个密钥.\n可用于将密钥扩展到更长的密钥或获得所需格式的密钥.\n最低系统要求: Windows 8",
+"result comment": "返回派生的密钥,失败返回空字节集类.",
+"static": true,
+"data type": "字节集类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "密钥",
+"comment": "所欲派生密钥的主密钥",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "盐",
+"comment": "在主密钥上加盐",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "派生密钥长度",
+"comment": "派生密钥的长度. PBKDF2派生的密码长度没有限制",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "哈希算法",
+"comment": "请使用\"CNG_算法类型.哈希_\"",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA1"
+   },
+   {
+"parameter name": "迭代次数",
+"comment": "哈希算法的计算次数,次数越大,耗时越高.",
+"data type": "长整数",
+"@默认值": "10000"
+   }
+]
+  },
+  {
+
+"method name": "密钥派生_PBKDF2_2",
+
+"comment": "结果跟\"密钥派生_PBKDF2\"一样,只是使用的API和方法不一样.\n速度稍慢一些.\n最低系统要求: Windows 7",
+
+"result comment": "返回派生的密钥,失败返回空字节集类.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "密钥",
+"comment": "所欲派生密钥的主密钥",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "盐",
+"comment": "在主密钥上加盐",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "派生密钥长度",
+"comment": "派生密钥的长度. PBKDF2派生的密码长度没有限制.",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "哈希算法",
+"comment": "请使用\"CNG_算法类型.哈希_\"",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA256"
+   },
+   {
+"parameter name": "迭代次数",
+"comment": "哈希算法的计算次数,次数越大,耗时越高.",
+"data type": "长整数",
+"@默认值": "10000"
+   }
+
+]
+  },
+  {
+@默认值": "空对象""method name": "密钥派生_CAPI",
+@默认值": "空对象""comment": "使用CAPI密钥派生算法从哈希值中派生密钥. 该算法兼容旧版的加解密API.\n密钥派生函数(KDF)使用伪随机函数从主密钥派生一个或多个密钥.\n可用于将密钥扩展到更长的密钥或获得所需格式的密钥.\n最低系统要求: Windows 8",
+@默认值": "空对象""result comment": "返回派生的密钥,失败返回空字节集类.",
+@默认值": "空对象""static": true,
+@默认值": "空对象""data type": "字节集类",
+@默认值": "空对象""@禁止流程检查": "真",
+@默认值": "空对象""parameters": [
+   {
+"parameter name": "密钥",
+"comment": "所欲派生密钥的主密钥",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "派生密钥长度",
+"comment": "派生密钥的长度, 最大长度为哈希算法的位数除以4(例: SHA512最大128).",
+"data type": "整数",
+"@默认值": "40"
+   },
+   {
+"parameter name": "哈希算法",
+"comment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA1"
+   }
+@默认值": "空对象"]
+  },
+  {
+comment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""method name": "密钥派生_TLS1_1",
+comment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""comment": "使用TLS1_1密钥派生算法从哈希值中派生密钥.\n密钥派生函数(KDF)使用伪随机函数从主密钥派生一个或多个密钥.\n可用于将密钥扩展到更长的密钥或获得所需格式的密钥.\n最低系统要求: Windows 8",
+comment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""result comment": "返回派生的密钥,失败返回空字节集类.",
+comment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""static": true,
+comment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""data type": "字节集类",
+comment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""@禁止流程检查": "真",
+comment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""parameters": [
+   {
+"parameter name": "密钥",
+"comment": "所欲派生密钥的主密钥",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "PRF标签",
+"data type": "文本型"
+   },
+   {
+"parameter name": "PRF种子",
+"comment": "建议为64个字节长度",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "派生密钥长度",
+"comment": "派生密钥的长度,最大长度为688",
+"data type": "整数",
+"@默认值": "128"
+   }
+comment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法."]
+  },
+  {
+omment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""result comment": "返回派生的密钥,失败返回空字节集类.""method name": "密钥派生_TLS1_2",
+omment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""result comment": "返回派生的密钥,失败返回空字节集类.""comment": "使用TLS1_2密钥派生算法从哈希值中派生密钥.\n密钥派生函数(KDF)使用伪随机函数从主密钥派生一个或多个密钥.\n可用于将密钥扩展到更长的密钥或获得所需格式的密钥.\n最低系统要求: Windows 8",
+omment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""result comment": "返回派生的密钥,失败返回空字节集类.""result comment": "返回派生的密钥,失败返回空字节集类.",
+omment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""result comment": "返回派生的密钥,失败返回空字节集类.""static": true,
+omment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""result comment": "返回派生的密钥,失败返回空字节集类.""data type": "字节集类",
+omment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""result comment": "返回派生的密钥,失败返回空字节集类.""@禁止流程检查": "真",
+omment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""result comment": "返回派生的密钥,失败返回空字节集类.""parameters": [
+   {
+"parameter name": "密钥",
+"comment": "所欲派生密钥的主密钥",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "PRF标签",
+"data type": "文本型"
+   },
+   {
+"parameter name": "PRF种子",
+"comment": "建议为64个字节长度",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "派生密钥长度",
+"comment": "派生密钥的长度,最大长度为688",
+"data type": "整数",
+"@默认值": "128"
+   },
+   {
+"parameter name": "哈希算法",
+"comment": "请使用\"CNG_算法类型.哈希_\",必须为SHA256或以上.",
+"data type": "CNG_算法类型",
+"@默认值": "CNG_算法类型.哈希_SHA512"
+   }
+omment": "请使用\"CNG_算法类型.哈希_\",CAPI了限制不能使用大于512位的哈希算法.""result comment": "返回派生的密钥,失败返回空字节集类."]
+  }
+classes": [
+]
+ },
+ {
+classes": [
+"class name": "CNG_算法类型",
+classes": [
+"comment": "CNG的算法类型",
+classes": [
+"@文档": "\"category = \\\"加解密.辅助类\\\"\"",
+classes": [
+"@常量类": "文本型",
+classes": [
+"constants": [
+  {
+
+"constant name": "对称加密_3DES",
+
+"comment": "The triple data encryption standard symmetric encryption algorithm.\nStandard: SP800-67, SP800-38A",
+
+"initial value": "@BCRYPT_3DES_ALGORITHM"
+  },
+  {
+lasses": [
+"@常量类": "文本型""constant name": "对称加密_3DES_112",
+lasses": [
+"@常量类": "文本型""comment": "The 112-bit triple data encryption standard symmetric encryption algorithm.\nStandard: SP800-67, SP800-38A",
+lasses": [
+"@常量类": "文本型""initial value": "@BCRYPT_3DES_112_ALGORITHM"
+  },
+  {
+
+"constant name": "对称加密_AES",
+
+"comment": "The advanced encryption standard symmetric encryption algorithm.\nStandard: FIPS 197",
+
+"initial value": "@BCRYPT_AES_ALGORITHM"
+  },
+  {
+
+"constant name": "对称加密_AES_GMAC",
+
+"comment": "The advanced encryption standard (AES) Galois message authentication code (GMAC) symmetric encryption algorithm.\nStandard: SP800-38D\nWindows Vista: This algorithm is supported beginning with Windows Vista with SP1.",
+
+"initial value": "@BCRYPT_AES_GMAC_ALGORITHM"
+  },
+  {
+data type": "CNG_算法类型""constant name": "对称加密_AES_CMAC",
+data type": "CNG_算法类型""comment": "The advanced encryption standard (AES) cipher based message authentication code (CMAC) symmetric encryption algorithm.\nStandard: SP 800-38B\nWindows 8: Support for this algorithm begins.",
+data type": "CNG_算法类型""initial value": "@BCRYPT_AES_CMAC_ALGORITHM"
+  },
+  {
+}"constant name": "对称加密_DES",
+}"comment": "The data encryption standard symmetric encryption algorithm.\nStandard: FIPS 46-3, FIPS 81",
+}"initial value": "@BCRYPT_DES_ALGORITHM"
+  },
+  {
+}"constant name": "对称加密_DESX",
+}"comment": "The extended data encryption standard symmetric encryption algorithm.\nStandard: None",
+}"initial value": "@BCRYPT_DESX_ALGORITHM"
+  },
+  {
+
+"constant name": "对称加密_RC2",
+
+"comment": "The RC2 block symmetric encryption algorithm.\nStandard: RFC 2268",
+
+"initial value": "@BCRYPT_RC2_ALGORITHM"
+  },
+  {
+
+"constant name": "对称加密_RC4",
+
+"comment": "The RC4 symmetric encryption algorithm.\nStandard: Various",
+
+"initial value": "@BCRYPT_RC4_ALGORITHM"
+  },
+  {
+"initial value": "@BCRYPT_RC4_ALGORITHM""constant name": "对称加密_XTS_AES",
+"initial value": "@BCRYPT_RC4_ALGORITHM""comment": "The advanced encryption standard symmetric encryption algorithm in XTS mode.\nStandard: SP-800-38E, IEEE Std 1619-2007.\nWindows 10: Support for this algorithm begins.",
+"initial value": "@BCRYPT_RC4_ALGORITHM""initial value": "\"XTS-AES\""
+  },
+  {
+
+"constant name": "哈希_MD2",
+
+"comment": "The MD2 hash algorithm.\nStandard: RFC 1319",
+
+"initial value": "@BCRYPT_MD2_ALGORITHM"
+  },
+  {
+initial value": "@BCRYPT_RC4_ALGORITHM""initial value": "\"XTS-AES\"""constant name": "哈希_MD4",
+initial value": "@BCRYPT_RC4_ALGORITHM""initial value": "\"XTS-AES\"""comment": "The MD4 hash algorithm.\nStandard: RFC 1320",
+initial value": "@BCRYPT_RC4_ALGORITHM""initial value": "\"XTS-AES\"""initial value": "@BCRYPT_MD4_ALGORITHM"
+  },
+  {
+"initial value": "@BCRYPT_RC4_ALGORITHM""constant name": "哈希_MD5",
+"initial value": "@BCRYPT_RC4_ALGORITHM""comment": "The MD5 hash algorithm.\nStandard: RFC 1321",
+"initial value": "@BCRYPT_RC4_ALGORITHM""initial value": "@BCRYPT_MD5_ALGORITHM"
+  },
+  {
+
+"constant name": "哈希_SHA1",
+
+"comment": "The 160-bit secure hash algorithm.\nStandard: FIPS 180-2, FIPS 198.",
+
+"initial value": "@BCRYPT_SHA1_ALGORITHM"
+  },
+  {
+
+"constant name": "哈希_SHA256",
+
+"comment": "The 256-bit secure hash algorithm.\nStandard: FIPS 180-2, FIPS 198.",
+
+"initial value": "@BCRYPT_SHA256_ALGORITHM"
+  },
+  {
+}"constant name": "哈希_SHA384",
+}"comment": "The 384-bit secure hash algorithm.\nStandard: FIPS 180-2, FIPS 198.",
+}"initial value": "@BCRYPT_SHA384_ALGORITHM"
+  },
+  {
+"initial value": "@BCRYPT_SHA256_ALGORITHM""constant name": "哈希_SHA512",
+"initial value": "@BCRYPT_SHA256_ALGORITHM""comment": "The 512-bit secure hash algorithm.\nStandard: FIPS 180-2, FIPS 198.",
+"initial value": "@BCRYPT_SHA256_ALGORITHM""initial value": "@BCRYPT_SHA512_ALGORITHM"
+  },
+  {
+"initial value": "@BCRYPT_SHA256_ALGORITHM""constant name": "公钥_RSA",
+"initial value": "@BCRYPT_SHA256_ALGORITHM""comment": "The RSA public key algorithm.\nStandard: PKCS #1 v1.5 and v2.0.\nThe key size must be greater than or equal to 512 bits, less than or equal to 16384 bits, and must be a multiple of 64.",
+"initial value": "@BCRYPT_SHA256_ALGORITHM""initial value": "@BCRYPT_RSA_ALGORITHM"
+  },
+  {
+
+"constant name": "密钥交换_DH",
+
+"comment": "The Diffie-Hellman key exchange algorithm.\nStandard: PKCS #3\nThe key size must be greater than or equal to 512 bits, less than or equal to 4096 bits, and must be a multiple of 64.",
+
+"initial value": "@BCRYPT_DH_ALGORITHM"
+  },
+  {
+YPT_DH_ALGORITHM"constant name": "密钥交换_ECDH_P256",
+YPT_DH_ALGORITHM"comment": "The 256-bit prime elliptic curve Diffie-Hellman key exchange algorithm.\nStandard: SP800-56A\nThe key size must be 256 bits.",
+YPT_DH_ALGORITHM"initial value": "@BCRYPT_ECDH_P256_ALGORITHM"
+  },
+  {
+
+"constant name": "密钥交换_ECDH_P384",
+
+"comment": "The 384-bit prime elliptic curve Diffie-Hellman key exchange algorithm.\nStandard: SP800-56A\nThe key size must be 384 bits.",
+
+"initial value": "@BCRYPT_ECDH_P384_ALGORITHM"
+  },
+  {
+PT_DH_ALGORITHM"initial value": "@BCRYPT_ECDH_P256_ALGORITHM""constant name": "密钥交换_ECDH_P521",
+PT_DH_ALGORITHM"initial value": "@BCRYPT_ECDH_P256_ALGORITHM""comment": "The 521-bit prime elliptic curve Diffie-Hellman key exchange algorithm.\nStandard: SP800-56A\nThe key size must be 521 bits.",
+PT_DH_ALGORITHM"initial value": "@BCRYPT_ECDH_P256_ALGORITHM""initial value": "@BCRYPT_ECDH_P521_ALGORITHM"
+  },
+  {
+H_ALGORITHM"initial value": "@BCRYPT_ECDH_P256_ALGORITHM""constant name": "密钥交换_ECDH_P521""constant name": "密钥交换_ECDH",
+H_ALGORITHM"initial value": "@BCRYPT_ECDH_P256_ALGORITHM""constant name": "密钥交换_ECDH_P521""comment": "Generic prime elliptic curve Diffie-Hellman key exchange algorithm (see Remarks for more information).\nStandard: SP800-56A.",
+H_ALGORITHM"initial value": "@BCRYPT_ECDH_P256_ALGORITHM""constant name": "密钥交换_ECDH_P521""initial value": "\"ECDH\""
+  },
+  {
+
+"constant name": "数字签名_ECDSA_P256",
+
+"comment": "The 256-bit prime elliptic curve digital signature algorithm (FIPS 186-2).\nStandard: FIPS 186-2, X9.62\nThe key size must be 256 bits.",
+
+"initial value": "@BCRYPT_ECDSA_P256_ALGORITHM"
+  },
+  {
+
+"constant name": "数字签名_ECDSA_P384",
+
+"comment": "The 384-bit prime elliptic curve digital signature algorithm (FIPS 186-2).\nStandard: FIPS 186-2, X9.62\nThe key size must be 384 bits.",
+
+"initial value": "@BCRYPT_ECDSA_P384_ALGORITHM"
+  },
+  {
+}"constant name": "数字签名_ECDSA_P521",
+}"comment": "The 521-bit prime elliptic curve digital signature algorithm (FIPS 186-2).\nStandard: FIPS 186-2, X9.62\nThe key size must be 521 bits.",
+}"initial value": "@BCRYPT_ECDSA_P521_ALGORITHM"
+  },
+  {
+nstant name": "哈希_SHA384""constant name": "数字签名_DSA",
+nstant name": "哈希_SHA384""comment": "The digital signature algorithm.\nStandard: FIPS 186-2\nPrior to Windows 8, the key size must be greater than or equal to 512 bits, less than or equal to 1024 bits, and must be a multiple of 64.\nBeginning with Windows 8, the key size must be greater than or equal to 512 bits, less than or equal to 3072 bits, and must be a multiple of 64.\nProcessing for key sizes less than or equal to 1024 bits adheres to FIPS 186-2.\nProcessing for key sizes greater than 1024 and less than or equal to 3072 adheres to FIPS 186-3.",
+nstant name": "哈希_SHA384""initial value": "@BCRYPT_DSA_ALGORITHM"
+  },
+  {
+
+"constant name": "数字签名_ECDSA",
+
+"comment": "Generic prime elliptic curve digital signature algorithm (see Remarks for more information).\nStandard: ANSI X9.62.\n#if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)",
+
+"initial value": "\"ECDSA\""
+  },
+  {
+}"constant name": "数字签名_RSA",
+}"comment": "The RSA signature algorithm. This algorithm is not currently supported. You can use the BCRYPT_RSA_ALGORITHM algorithm to perform RSA signing operations.\nStandard: PKCS #1 v1.5 and v2.0.",
+}"initial value": "@BCRYPT_RSA_SIGN_ALGORITHM"
+  },
+  {
+
+"constant name": "随机数_RNG",
+
+"comment": "The random-number generator algorithm.\nStandard: FIPS 186-2, FIPS 140-2, NIST SP 800-90\n[!Note]\nBeginning with Windows Vista with SP1 and Windows Server 2008, the random number generator is based on the AES counter mode specified in the NIST SP 800-90 standard.\n\nWindows Vista: The random number generator is based on the hash-based random number generator specified in the FIPS 186-2 standard.\nWindows 8: Beginning with Windows 8, the RNG algorithm supports FIPS 186-3. Keys less than or equal to 1024 bits adhere to FIPS 186-2 and keys greater than 1024 to FIPS 186-3.",
+
+"initial value": "@BCRYPT_RNG_ALGORITHM"
+  },
+  {
+nt name": "哈希_SHA384""constant name": "数字签名_DSA""constant name": "随机数_DUALECRNG",
+nt name": "哈希_SHA384""constant name": "数字签名_DSA""comment": "The dual elliptic curve random-number generator algorithm.\nStandard: SP800-90.\nWindows 8: Beginning with Windows 8, the EC RNG algorithm supports FIPS 186-3. Keys less than or equal to 1024 bits adhere to FIPS 186-2 and keys greater than 1024 to FIPS 186-3.\nWindows 10: Beginning with Windows 10, the dual elliptic curve random number generator algorithm has been removed. Existing uses of this algorithm will continue to work; however, the random number generator is based on the AES counter mode specified in the NIST SP 800-90 standard. New code should use BCRYPT_RNG_ALGORITHM, and it is recommended that existing code be changed to use BCRYPT_RNG_ALGORITHM.",
+nt name": "哈希_SHA384""constant name": "数字签名_DSA""initial value": "@BCRYPT_RNG_DUAL_EC_ALGORITHM"
+  },
+  {
+}"constant name": "随机数_FIPS186DSARNG",
+}"comment": "The random-number generator algorithm suitable for DSA (Digital Signature Algorithm).\nStandard: FIPS 186-2.\nWindows 8: Support for FIPS 186-3 begins.",
+}"initial value": "@BCRYPT_RNG_FIPS186_DSA_ALGORITHM"
+  },
+  {
+
+"constant name": "密钥派生_CAPI",
+
+"comment": "Crypto API (CAPI) key derivation function algorithm.",
+
+"initial value": "\"CAPI_KDF\""
+  },
+  {
+"initial value": "\"CAPI_KDF\"""constant name": "密钥派生_PBKDF2",
+"initial value": "\"CAPI_KDF\"""comment": "Password-based key derivation function 2 (PBKDF2) algorithm.",
+"initial value": "\"CAPI_KDF\"""initial value": "\"PBKDF2\""
+  },
+  {
+"initial value": "\"CAPI_KDF\"""constant name": "密钥派生_SP800108",
+"initial value": "\"CAPI_KDF\"""comment": "Counter mode, hash-based message authentication code (HMAC) key derivation function algorithm.",
+"initial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\""
+  },
+  {
+
+"constant name": "密钥派生_SP800_56A",
+
+"comment": "SP800-56A key derivation function algorithm.",
+
+"initial value": "\"SP800_56A_CONCAT\""
+  },
+  {
+"initial value": "\"SP800_56A_CONCAT\"""constant name": "密钥派生_TLS1_1",
+"initial value": "\"SP800_56A_CONCAT\"""initial value": "\"TLS1_1_KDF\""
+  },
+  {
+
+"constant name": "密钥派生_TLS1_2",
+
+"initial value": "\"TLS1_2_KDF\""
+  },
+  {
+
+"constant name": "密钥派生_HKDF",
+
+"comment": "WIN10_RS4",
+
+"initial value": "\"HKDF\""
+  }
+classes": [
+]
+ },
+ {
+initial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""class name": "CNG_链接模式",
+initial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""comment": "CNG加密算法的加密分组链接模式",
+initial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""@文档": "\"category = \\\"加解密.辅助类\\\"\"",
+initial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""@常量类": "文本型",
+initial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""constants": [
+  {
+nitial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""@文档": "\"category = \\\"加解密.辅助类\\\"\"""constant name": "无",
+nitial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""@文档": "\"category = \\\"加解密.辅助类\\\"\"""comment": "此算法不支持链接模式",
+nitial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""@文档": "\"category = \\\"加解密.辅助类\\\"\"""initial value": "@BCRYPT_CHAIN_MODE_NA"
+  },
+  {
+nitial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""@文档": "\"category = \\\"加解密.辅助类\\\"\"""constant name": "CBC",
+nitial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""@文档": "\"category = \\\"加解密.辅助类\\\"\"""comment": "将算法的链接模式设置为加密块链接",
+nitial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\"""@文档": "\"category = \\\"加解密.辅助类\\\"\"""initial value": "@BCRYPT_CHAIN_MODE_CBC"
+  },
+  {
+
+"constant name": "ECB",
+
+"comment": "将算法的链接模式设置为电子密码本",
+
+"initial value": "@BCRYPT_CHAIN_MODE_ECB"
+  },
+  {
+
+"constant name": "CFB",
+
+"comment": "将算法的链接模式设置为密码反馈",
+
+"initial value": "@BCRYPT_CHAIN_MODE_CFB"
+  },
+  {
+
+"constant name": "CCM",
+
+"comment": "将算法的链接模式设置为带CBC-MAC的计数器模式(CCM).\n注: Windows Vista SP1之后才支持本模式.",
+
+"initial value": "@BCRYPT_CHAIN_MODE_CCM"
+  },
+  {
+
+"constant name": "GCM",
+
+"comment": "将算法的链接模式设置为伽罗瓦计数器模式(GCM).\n注: Windows Vista SP1之后才支持本模式.",
+
+"initial value": "@BCRYPT_CHAIN_MODE_GCM"
+  }
+initial value": "\"CAPI_KDF\"""initial value": "\"SP800_108_CTR_HMAC\""]
+ },
+ {
+"class name": "CNG_填充方式",
+"comment": "CNG的数据填充方式,部分加解密算法需要填充数据来对齐块大小",
+"@文档": "\"category = \\\"加解密.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+constants": [
+"constant name": "对称_无填充",
+constants": [
+"comment": "不进行任何填充,如果数据本身没有对齐,加密/解密会失败.",
+constants": [
+"initial value": "0x00000110"
+  },
+  {
+constants": [
+"constant name": "对称_零填充",
+constants": [
+"comment": "即ZeroPadding,在数据对齐时使用0补位.\n用这种填充方式加密的数据在解密后,尾部会有冗余数据.",
+constants": [
+"initial value": "-1"
+  },
+  {
+
+"constant name": "对称_PKCS7",
+
+"comment": "PKCS#7块填充,仅对称加密可用.允许加密算法将数据填充到下一个块大小.\n如果未指定此标志,则cbInput参数中指定的纯文本大小必须是算法块大小的倍数.\n可以通过调用BCryptGetProperty函数来获取密钥的BCRYPT_BLOCK_LENGTH属性来获取块大小,这将为算法提供块的大小.\n此标志不得与经过身份验证的加密模式(AES-CCM和AES-GCM)一起使用.\nBCryptEncrypt/Decrypt",
+
+"initial value": "@BCRYPT_BLOCK_PADDING"
+  },
+  {
+}"constant name": "对称_块填充",
+}"comment": "PKCS#7块填充,仅对称加密可用.允许加密算法将数据填充到下一个块大小.\n如果未指定此标志,则cbInput参数中指定的纯文本大小必须是算法块大小的倍数.\n可以通过调用BCryptGetProperty函数来获取密钥的BCRYPT_BLOCK_LENGTH属性来获取块大小,这将为算法提供块的大小.\n此标志不得与经过身份验证的加密模式(AES-CCM和AES-GCM)一起使用.\nBCryptEncrypt/Decrypt",
+}"initial value": "@BCRYPT_BLOCK_PADDING"
+  },
+  {
+
+"constant name": "非对称_无填充",
+
+"comment": "仅非对称加密可用. 不进行任何填充,不使用pPaddingInfo参数.\ncbInput参数中指定的明文大小必须是算法块大小的倍数.",
+
+"initial value": "@BCRYPT_PAD_NONE"
+  },
+  {
+
+"constant name": "非对称_PKCS1",
+
+"comment": "仅非对称加密可用. 数据将填充一个随机数,以完善块大小.不使用pPaddingInfo参数.\nBCryptEncrypt/Decrypt BCryptSignHash/VerifySignature",
+
+"initial value": "@BCRYPT_PAD_PKCS1"
+  },
+  {
+
+"constant name": "非对称_OAEP",
+
+"comment": "仅非对称加密可用. 使用最佳非对称加密填充(OAEP)方案.pPaddingInfo参数是指向BCRYPT_OAEP_PADDING_INFO结构的指针.\nBCryptEncrypt/Decrypt",
+
+"initial value": "@BCRYPT_PAD_OAEP"
+  },
+  {
+
+"constant name": "非对称_PSS",
+
+"comment": "BCryptSignHash/VerifySignature",
+
+"initial value": "@BCRYPT_PAD_PSS"
+  },
+  {
+}"constant name": "非对称_PKCS1_OPTIONAL_HASH_OID",
+}"comment": "BCRYPT_PAD_PKCS1_OPTIONAL_HASH_OID\nBCryptVerifySignature",
+}"initial value": "0x00000010"
+  }
+]
+ },
+ {
+"class name": "CNG_密钥类型",
+"comment": "CNG的密钥类型",
+"@文档": "\"category = \\\"加解密.辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+
+"constant name": "AES_WRAP_KEY",
+
+"comment": "Export an AES key wrapped key.\nThe hExportKey parameter must reference a valid BCRYPT_KEY_HANDLE pointer to the key encryption key,\nand the key represented by the hKey parameter must be a multiple of 8 bytes long.\nWindows Server 2008 and Windows Vista:  This BLOB type is not supported.",
+
+"initial value": "\"Rfc3565KeyWrapBlob\""
+  },
+  {
+"initial value": "@BCRYPT_PAD_PSS""constant name": "DH_私钥",
+"initial value": "@BCRYPT_PAD_PSS""comment": "Export a Diffie-Hellman public/private key pair.\nThe pbOutput buffer receives a BCRYPT_DH_KEY_BLOB structure immediately followed by the key data.",
+"initial value": "@BCRYPT_PAD_PSS""initial value": "@BCRYPT_DH_PRIVATE_BLOB"
+  },
+  {
+
+"constant name": "DH_公钥",
+
+"comment": "Export a Diffie-Hellman public key.\nThe pbOutput buffer receives a BCRYPT_DH_KEY_BLOB structure immediately followed by the key data.",
+
+"initial value": "@BCRYPT_DH_PUBLIC_BLOB"
+  },
+  {
+"initial value": "@BCRYPT_PAD_PSS""constant name": "DSA_私钥",
+"initial value": "@BCRYPT_PAD_PSS""comment": "Export a DSA public/private key pair.\nThe pbOutput buffer receives a BCRYPT_DSA_KEY_BLOB or BCRYPT_DSA_KEY_BLOB_V2 structure immediately followed by the key data.\nBCRYPT_DSA_KEY_BLOB is used for key lengths from 512 to 1024 bits.\nBCRYPT_DSA_KEY_BLOB_V2 is used for key lengths that exceed 1024 bits but are less than or equal to 3072 bits.\nWindows 8:  Support for BCRYPT_DSA_KEY_BLOB_V2 begins.",
+"initial value": "@BCRYPT_PAD_PSS""initial value": "@BCRYPT_DSA_PRIVATE_BLOB"
+  },
+  {
+}"constant name": "DSA_公钥",
+}"comment": "Export a DSA public key.\nThe pbOutput buffer receives a BCRYPT_DSA_KEY_BLOB or BCRYPT_DSA_KEY_BLOB_V2 structure immediately followed by the key data.\nBCRYPT_DSA_KEY_BLOB is used for key lengths from 512 to 1024 bits.\nBCRYPT_DSA_KEY_BLOB_V2 is used for key lengths that exceed 1024 bits but are less than or equal to 3072 bits.\nWindows 8:  Support for BCRYPT_DSA_KEY_BLOB_V2 begins.",
+}"initial value": "@BCRYPT_DSA_PUBLIC_BLOB"
+  },
+  {
+
+"constant name": "ECC_私钥",
+
+"comment": "Export an elliptic curve cryptography (ECC) private key.\nThe pbOutput buffer receives a BCRYPT_ECCKEY_BLOB structure immediately followed by the key data.",
+
+"initial value": "@BCRYPT_ECCPRIVATE_BLOB"
+  },
+  {
+"initial value": "@BCRYPT_ECCPRIVATE_BLOB""constant name": "ECC_公钥",
+"initial value": "@BCRYPT_ECCPRIVATE_BLOB""comment": "Export an ECC public key.\nThe pbOutput buffer receives a BCRYPT_ECCKEY_BLOB structure immediately followed by the key data.",
+"initial value": "@BCRYPT_ECCPRIVATE_BLOB""initial value": "@BCRYPT_ECCPUBLIC_BLOB"
+  },
+  {
+nstant name": "ECC_私钥""constant name": "KEY_DATA",
+nstant name": "ECC_私钥""comment": "Export a symmetric key to a data BLOB.\nThe pbOutput buffer receives a BCRYPT_KEY_DATA_BLOB_HEADER structure immediately followed by the key BLOB.",
+nstant name": "ECC_私钥""initial value": "@BCRYPT_KEY_DATA_BLOB"
+  },
+  {
+}"constant name": "OPAQUE_KEY",
+}"comment": "Export a symmetric key in a format that is specific to a single cryptographic service provider (CSP).\nOpaque BLOBs are not transferable and must be imported by using the same CSP that generated the BLOB.\nOpaque BLOBs are only intended to be used for interprocess transfer of keys and are not suitable to be persisted and read across versions of a provider.",
+}"initial value": "@BCRYPT_OPAQUE_KEY_BLOB"
+  },
+  {
+
+"constant name": "通用公钥",
+
+"comment": "Export a generic public key of any type.\nThe type of key in this BLOB is determined by the Magic member of the BCRYPT_KEY_BLOB structure.",
+
+"initial value": "@BCRYPT_PUBLIC_KEY_BLOB"
+  },
+  {
+
+"constant name": "通用私钥",
+
+"comment": "Export a generic private key of any type.\nThe private key does not necessarily contain the public key.\nThe type of key in this BLOB is determined by the Magic member of the BCRYPT_KEY_BLOB structure.",
+
+"initial value": "@BCRYPT_PRIVATE_KEY_BLOB"
+  },
+  {
+
+"constant name": "RSA_完整私钥",
+
+"comment": "Export a full RSA public/private key pair.\nThe pbOutput buffer receives a BCRYPT_RSAKEY_BLOB structure immediately followed by the key data.\nThis BLOB will include additional key material compared to the BCRYPT_RSAPRIVATE_BLOB type.",
+
+"initial value": "@BCRYPT_RSAFULLPRIVATE_BLOB"
+  },
+  {
+}"constant name": "RSA_私钥",
+}"comment": "Export an RSA public/private key pair.\nThe pbOutput buffer receives a BCRYPT_RSAKEY_BLOB structure immediately followed by the key data.",
+}"initial value": "@BCRYPT_RSAPRIVATE_BLOB"
+  },
+  {
+}"constant name": "RSA_公钥",
+}"comment": "Export an RSA public key.\nThe pbOutput buffer receives a BCRYPT_RSAKEY_BLOB structure immediately followed by the key data.",
+}"initial value": "@BCRYPT_RSAPUBLIC_BLOB"
+  },
+  {
+
+"constant name": "DH_私钥_旧版",
+
+"comment": "Export a legacy Diffie-Hellman Version 3 Private Key BLOB that contains a Diffie-Hellman public/private key pair that can be imported by using CryptoAPI.",
+
+"initial value": "@LEGACY_DH_PRIVATE_BLOB"
+  },
+  {
+
+"constant name": "DH_公钥_旧版",
+
+"comment": "Export a legacy Diffie-Hellman Version 3 Public Key BLOB that contains a Diffie-Hellman public key that can be imported by using CryptoAPI.\n",
+
+"initial value": "@LEGACY_DH_PUBLIC_BLOB"
+  },
+  {
+}"constant name": "DSA_私钥_旧版",
+}"comment": "Export a DSA public/private key pair in a form that can be imported by using CryptoAPI.",
+}"initial value": "@LEGACY_DSA_PRIVATE_BLOB"
+  },
+  {
+"initial value": "@LEGACY_DSA_PRIVATE_BLOB""constant name": "DSA_公钥_旧版",
+"initial value": "@LEGACY_DSA_PRIVATE_BLOB""comment": "Export a DSA public key in a form that can be imported by using CryptoAPI.",
+"initial value": "@LEGACY_DSA_PRIVATE_BLOB""initial value": "@LEGACY_DSA_PUBLIC_BLOB"
+  },
+  {
+
+"constant name": "DSA_V2_私钥_旧版",
+
+"comment": "Export a DSA version 2 private key in a form that can be imported by using CryptoAPI.",
+
+"initial value": "@LEGACY_DSA_V2_PRIVATE_BLOB"
+  },
+  {
+
+"constant name": "RSA_私钥_旧版",
+
+"comment": "Export an RSA public/private key pair in a form that can be imported by using CryptoAPI.",
+
+"initial value": "@LEGACY_RSAPRIVATE_BLOB"
+  },
+  {
+"initial value": "@BCRYPT_PAD_PSS""constant name": "RSA_公钥_旧版",
+"initial value": "@BCRYPT_PAD_PSS""comment": "Export an RSA public key in a form that can be imported by using CryptoAPI.",
+"initial value": "@BCRYPT_PAD_PSS""initial value": "@LEGACY_RSAPUBLIC_BLOB"
+  }
+]
+ },
+ {
+"class name": "CNG_RSA填充",
+"comment": "RSA加解密专用的填充方式",
+"@文档": "\"category = \\\"加解密.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "ROUTER",
+
+"comment": "让提供程序支持通过路由器添加填充",
+
+"initial value": "@BCRYPT_SUPPORTED_PAD_ROUTER"
+  },
+  {
+tial value": "@LEGACY_DSA_PRIVATE_BLOB""constant name": "DSA_公钥_旧版""constant name": "PKCS1",
+tial value": "@LEGACY_DSA_PRIVATE_BLOB""constant name": "DSA_公钥_旧版""comment": "让提供程序支持PKCS1加密填充方案",
+tial value": "@LEGACY_DSA_PRIVATE_BLOB""constant name": "DSA_公钥_旧版""initial value": "@BCRYPT_SUPPORTED_PAD_PKCS1_ENC"
+  },
+  {
+}"constant name": "OAEP",
+}"comment": "让提供程序支持OAEP填充方案",
+}"initial value": "@BCRYPT_SUPPORTED_PAD_OAEP"
+  },
+  {
+"initial value": "@BCRYPT_SUPPORTED_PAD_OAEP""constant name": "PSS",
+"initial value": "@BCRYPT_SUPPORTED_PAD_OAEP""comment": "让提供程序支持PSS填充方案",
+"initial value": "@BCRYPT_SUPPORTED_PAD_OAEP""initial value": "@BCRYPT_SUPPORTED_PAD_PSS"
+  }
+]
+ }
+]
+}

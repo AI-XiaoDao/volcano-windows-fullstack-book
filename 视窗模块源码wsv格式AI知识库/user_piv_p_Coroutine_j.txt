@@ -1,0 +1,1729 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+SPC\plugins\vprj_win\classlib\user\piv\p_Coroutine.wsv"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+SPC\plugins\vprj_win\classlib\user\piv\p_Coroutine.wsv"package name": "火山.PIV基础类",
+SPC\plugins\vprj_win\classlib\user\piv\p_Coroutine.wsv"comment": "https://github.com/SaierMe/piv",
+SPC\plugins\vprj_win\classlib\user\piv\p_Coroutine.wsv"classes": [
+ {
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"class name": "Go协程",
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"comment": "Golang风格的C++11协程库\nhttps://github.com/yyzybb537/libgo",
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"base class": "PIV对象类",
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@文档": "\"category = \\\"协程\\\"\"",
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@视窗.头文件搜寻目录": "\"src\\\\libgo\\\\netio\\\\windows\"",
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@视窗.外部头文件": "\"src\\\\libgo\\\\libgo.h\\r\\nsrc\\\\libgo\\\\netio\\\\windows\\\\win_vc_hook.h\"",
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@视窗.外部源文件": "\"src\\\\libgo\\\\libgo.cpp\\r\\nsrc\\\\libgo\\\\netio\\\\windows\\\\win_vc_hook.cpp\"",
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"variables": [
+  {
+操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@文档": "\"category = \\\"协程\\\"\"""variable name": "配置选项",
+操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@文档": "\"category = \\\"协程\\\"\"""comment": "协程的全局配置选项",
+操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@文档": "\"category = \\\"协程\\\"\"""static": true,
+操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@文档": "\"category = \\\"协程\\\"\"""data type": "协程配置选项"
+  },
+  {
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@文档": "\"category = \\\"协程\\\"\"""data type": "协程配置选项""variable name": "调度器",
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@文档": "\"category = \\\"协程\\\"\"""data type": "协程配置选项""comment": "默认的协程调度器",
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@文档": "\"category = \\\"协程\\\"\"""data type": "协程配置选项""static": true,
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"@文档": "\"category = \\\"协程\\\"\"""data type": "协程配置选项""data type": "协程调度器"
+  }
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))],
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))"methods": [
+  {
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"method name": "创建协程任务",
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"comment": "在当前协程处理器或默认协程调度器中创建一个绑定函数对象的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;",
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"static": true,
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"@嵌入式方法": "\"\"",
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"parameters": [
+   {
+"parameter name": "函数对象",
+"comment": "所欲协程执行的函数对象,可以调用下列方法创建:\n- 绑定静态方法   绑定无参数静态方法\n- 绑定动态方法   绑定无参数动态方法\n- 绑定函数指针   绑定无参数函数指针\n- 绑定函数指针2  绑定无参数函数指针2",
+"data type": "通用函数对象"
+   }
+作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]]
+  },
+  {
+>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"method name": "创建协程任务""method name": "创建静态协程",
+>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"method name": "创建协程任务""comment": "在当前协程处理器或默认协程调度器中创建一个绑定静态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;\n  2. 可以绑定任意参数和返回值格式的静态方法,同时应提供格式一致的参数列表;",
+>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"method name": "创建协程任务""static": true,
+>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"method name": "创建协程任务""@嵌入式方法": "\"\"",
+>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"method name": "创建协程任务""parameters": [
+   {
+"parameter name": "静态方法",
+"comment": "提供所欲协程执行的静态方法",
+"@匹配方法": "\"\""
+   },
+   {
+"parameter name": "参数列表",
+"comment": "参数表的格式务必和\"静态方法\"的参数表一致;\n默认将提交的参数按值复制.如果想引用传递,请用\"引用\"方法将参数包装.",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]"method name": "创建协程任务"]
+  },
+  {
+ }"method name": "创建动态协程",
+ }"comment": "在当前协程处理器或默认协程调度器中创建一个绑定类动态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;\n  2. 可以绑定任意参数和返回值格式的类动态方法,同时应提供格式一致的参数列表;\n  3. 动态方法可以直接调用类实例的其他动态成员变量和方法;",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "对象实例",
+"comment": "提供协程函数所属的对象实例(即类变量),也可以填\"本对象\"、\"读指针处对象()\".",
+"data type": "对象类"
+   },
+   {
+"parameter name": "方法输出名",
+"comment": "提供所欲协程执行的动态方法输出名.\n注意: 方法必须设置属性\"@输出名\",并设置\"@强制输出\"以确保被编译.",
+"data type": "文本型",
+"@需求类型": "立即数或常量"
+   },
+   {
+"parameter name": "参数列表",
+"comment": "参数列表的格式务必和所提供动态方法的参数表一致;\n默认将提交的参数按值复制.如果想引用传递,请用\"引用\"方法将参数包装.",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+ }]
+  },
+  {
+}"method name": "创建无参数静态协程",
+}"comment": "在当前协程处理器或默认协程调度器中创建一个绑定无参数静态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "静态方法",
+"comment": "提供所欲协程执行的静态方法",
+"@匹配方法": "\"\""
+   }
+}]
+  },
+  {
+"method name": "创建无参数动态协程",
+"comment": "在当前协程处理器或默认协程调度器中创建一个绑定无参数类动态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;\n  2. 动态方法可以直接调用类实例的其他动态成员变量和方法;",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "对象实例",
+"comment": "提供协程函数所属的对象实例(即类变量),也可以填\"本对象\"、\"读指针处对象()\".",
+"data type": "对象类"
+   },
+   {
+"parameter name": "方法输出名",
+"comment": "提供所欲协程执行的动态方法输出名.\n注意: 方法必须设置属性\"@输出名\",并设置\"@强制输出\"以确保被编译.",
+"data type": "文本型",
+"@需求类型": "立即数或常量"
+   }
+]
+  },
+  {
+"method name": "创建无参数无返回值动态协程",
+"comment": "在当前协程处理器或默认协程调度器中创建一个绑定无参数类动态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;\n  2. 动态方法可以直接调用类实例的其他动态成员变量和方法;",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "对象实例",
+"comment": "提供协程函数所属的对象实例(即类变量),也可以填\"本对象\"、\"读指针处对象()\".",
+"data type": "对象类"
+   },
+   {
+"parameter name": "动态方法",
+"comment": "提供所欲协程执行的类动态方法.\n注意: 方法不需要设置输出名,但必须是无参数和无返回值.",
+"@匹配方法": "\"无参数无返回值方法\""
+   }
+]
+  },
+  {
+"method name": "启动调度器",
+"comment": "在新线程中启动默认协程调度器,开始执行协程.\n  1. 本方法全局只能执行一次,第二次执行会导致程序退出;",
+"static": true,
+"parameters": [
+   {
+"parameter name": "最小线程数",
+"comment": "最小调度线程数,为0时设置为cpu核心数.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大线程数",
+"comment": "最大调度线程数,为0时与\"最小线程数\"相同;\n如果大于\"最小线程数\",则当协程产生长时间阻塞时,可以自动扩展调度线程数.",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"method name": "停止调度器",
+"comment": "停止默认协程调度器.\n  1. 停止后无法恢复,仅用于安全退出入口函数,不保证终止所有线程;\n  2. 如果某个调度线程被协程阻塞,必须等待阻塞结束才能退出;\n  3. 除非是进程退出的时候,否则你不应该使用它;",
+"static": true,
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "让出调度",
+
+"comment": "主动让出调度器的执行权限,让调度器有机会去执行其他协程.\n  1. 当前协程会被移动到可执行协程列表的尾部;\n  2. 在协程外使用不会有任何效果,也不会出错;",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "协程延时",
+
+"comment": "在协程中使用的延时功能,不会阻塞其他协程的执行.\n注: libgo默认HOOK了\"延时\"命令,让它跟本方法一样,但如果你禁止HOOK,则需要使用本方法.",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "欲等待的时间",
+"comment": "指定欲暂停程序执行的时间,单位为毫秒.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ }"method name": "启用调试器",
+ }"comment": "启用libgo内部的调试器",
+ }"static": true,
+ }"@视窗.预定义宏": "\"LIBGO_ENABLE_DEBUGGER=1\""
+  },
+  {
+
+"method name": "启用HOOK",
+
+"comment": "禁用libgo的HOOK功能.\nlibgo默认HOOK了部分系统API,使一些第三方库不用修改也可以异步并发.",
+
+"static": true,
+
+"@视窗.预定义宏": "\"LIBGO_ENABLE_HOOK=1\""
+  }
+欲操作本对象>.TimedPush(@<值>, std::chrono::milliseconds(@<超时时间>))]
+ },
+ {
+thod name": "启用HOOK""class name": "协程调度器",
+thod name": "启用HOOK""comment": "负责管理1到N个调度线程,以调度从属协程.\n请定义变量使用,默认指向同一个全局的默认调度器(也可以直接调用\"Go协程.调度器\").\n你也可以使用\"协程调度器.创建调度器()\"创建额外的调度器.",
+thod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"",
+thod name": "启用HOOK""@强制依赖": "\"Go协程\"",
+thod name": "启用HOOK""methods": [
+  {
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""method name": "创建调度器",
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""comment": "创建并返回一个新的协程调度器.\n  1. 协程只会在所属的调度器中被调度,创建额外的调度器可以实现业务间的隔离;\n  2. 如果不接收本方法的返回值,定义的协程调度器变量均指向默认的全局调度器;\n  3. 所创建的调度器将在退出程序时销毁",
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""static": true,
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""data type": "协程调度器",
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""@嵌入式方法": "\"\""
+  },
+  {
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""method name": "是否正在退出",
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""comment": "返回是否正在退出协程调度器",
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""static": true,
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""data type": "逻辑型",
+hod name": "启用HOOK""@文档": "\"category = \\\"协程\\\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "启用调试器""method name": "启动",
+ethod name": "启用调试器""comment": "在新线程中启动协程调度器,开始执行协程.\n  1. 请勿重复启动,否则会导致程序异常退出;",
+ethod name": "启用调试器""parameters": [
+   {
+"parameter name": "最小线程数",
+"comment": "最小调度线程数,为0时设置为cpu核心数.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大线程数",
+"comment": "最大调度线程数,为0时与\"最小线程数\"相同;\n如果大于\"最小线程数\",则当协程产生长时间阻塞时,可以自动扩展调度线程数.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ethod name": "启用调试器"]
+  },
+  {
+"method name": "停止",
+"comment": "停止协程调度器.\n  1. 停止后无法恢复,仅用于安全退出入口函数,不保证终止所有线程;\n  2. 如果某个调度线程被协程阻塞,必须等待阻塞结束才能退出;\n  3. 除非是进程退出的时候,否则你不应该使用它;",
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "创建协程任务",
+}"comment": "在当前调度器中创建一个绑定函数对象的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "协程栈上限",
+"comment": "指定协程栈大小的上限(单位为字节),为0表示使用默认上限(1MB);\n协程初始栈大小为4KB,按需动态增长,直到上限值.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "函数对象",
+"comment": "所欲协程执行的函数对象,可以调用下列方法创建:\n- 绑定静态方法   绑定无参数静态方法\n- 绑定动态方法   绑定无参数动态方法\n- 绑定函数指针   绑定无参数函数指针\n- 绑定函数指针2  绑定无参数函数指针2",
+"data type": "通用函数对象"
+   }
+}]
+  },
+  {
+"method name": "创建静态协程",
+"comment": "在当前调度器中创建一个绑定静态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;\n  2. 可以绑定任意参数和返回值格式的静态方法,同时应提供格式一致的参数列表;",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "协程栈上限",
+"comment": "指定协程栈大小的上限(单位为字节),为0表示使用默认上限(1MB);\n协程初始栈大小为4KB,按需动态增长,直到上限值.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "静态方法",
+"comment": "提供所欲协程执行的静态方法",
+"@匹配方法": "\"\""
+   },
+   {
+"parameter name": "参数列表",
+"comment": "参数表的格式务必和\"静态方法\"的参数表一致;\n默认将提交的参数按值复制.如果想引用传递,请用\"引用\"方法将参数包装.",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+]
+  },
+  {
+"method name": "创建动态协程",
+"comment": "在当前调度器中创建一个绑定类动态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;\n  2. 可以绑定任意参数和返回值格式的类动态方法,同时应提供格式一致的参数列表;\n  3. 动态方法可以直接调用类实例的其他动态成员变量和方法;",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "协程栈上限",
+"comment": "指定协程栈大小的上限(单位为字节),为0表示使用默认上限(1MB);\n协程初始栈大小为4KB,按需动态增长,直到上限值.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "对象实例",
+"comment": "提供协程函数所属的对象实例(即类变量),也可以填\"本对象\"、\"读指针处对象()\".",
+"data type": "对象类"
+   },
+   {
+"parameter name": "方法输出名",
+"comment": "提供所欲协程执行的动态方法输出名.\n注意: 方法必须设置属性\"@输出名\",并设置\"@强制输出\"以确保被编译.",
+"data type": "文本型",
+"@需求类型": "立即数或常量"
+   },
+   {
+"parameter name": "参数列表",
+"comment": "参数列表的格式务必和所提供动态方法的参数表一致;\n默认将提交的参数按值复制.如果想引用传递,请用\"引用\"方法将参数包装.",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+]
+  },
+  {
+@可扩展": "\"\"""method name": "创建无参数静态协程",
+@可扩展": "\"\"""comment": "在当前调度器中创建一个绑定无参数静态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;",
+@可扩展": "\"\"""@嵌入式方法": "\"\"",
+@可扩展": "\"\"""parameters": [
+   {
+"parameter name": "协程栈上限",
+"comment": "指定协程栈大小的上限(单位为字节),为0表示使用默认上限(1MB);\n协程初始栈大小为4KB,按需动态增长,直到上限值.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "静态方法",
+"comment": "提供所欲协程执行的静态方法",
+"@匹配方法": "\"\""
+   }
+@可扩展": "\"\""]
+  },
+  {
+"method name": "创建无参数动态协程",
+"comment": "在当前调度器中创建一个绑定无参数类动态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;\n  2. 动态方法可以直接调用类实例的其他动态成员变量和方法;",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "协程栈上限",
+"comment": "指定协程栈大小的上限(单位为字节),为0表示使用默认上限(1MB);\n协程初始栈大小为4KB,按需动态增长,直到上限值.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "对象实例",
+"comment": "提供协程函数所属的对象实例(即类变量),也可以填\"本对象\"、\"读指针处对象()\".",
+"data type": "对象类"
+   },
+   {
+"parameter name": "方法输出名",
+"comment": "提供所欲协程执行的动态方法输出名.\n注意: 方法必须设置属性\"@输出名\",并设置\"@强制输出\"以确保被编译.",
+"data type": "文本型",
+"@需求类型": "立即数或常量"
+   }
+]
+  },
+  {
+ameter name": "方法输出名""method name": "创建无参数无返回值动态协程",
+ameter name": "方法输出名""comment": "在当前调度器中创建一个绑定无参数类动态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;\n  2. 动态方法可以直接调用类实例的其他动态成员变量和方法;",
+ameter name": "方法输出名""@嵌入式方法": "\"\"",
+ameter name": "方法输出名""parameters": [
+   {
+"parameter name": "协程栈上限",
+"comment": "指定协程栈大小的上限(单位为字节),为0表示使用默认上限(1MB);\n协程初始栈大小为4KB,按需动态增长,直到上限值.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "对象实例",
+"comment": "提供协程函数所属的对象实例(即类变量),也可以填\"本对象\"、\"读指针处对象()\".",
+"data type": "对象类"
+   },
+   {
+"parameter name": "动态方法",
+"comment": "提供所欲协程执行的类动态方法.\n注意: 方法不需要设置输出名,但必须是无参数和无返回值.",
+"@匹配方法": "\"无参数无返回值方法\""
+   }
+ameter name": "方法输出名"]
+  },
+  {
+}"method name": "是否处于协程中",
+}"comment": "返回当前是否处于协程中",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否为空",
+}"comment": "返回真表示没有可执行的协程,否则为假.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "逻辑型""method name": "是否停止",
+"data type": "逻辑型""comment": "返回调度器是否处于停止状态",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "使用独立的定时器线程",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取协程数",
+}"comment": "返回当前调度器中的协程数量",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取当前协程ID",
+}"comment": "返回当前的协程ID",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "取当前协程切换次数",
+"@嵌入式方法": "\"\"""comment": "返回当前的协程切换的次数",
+"@嵌入式方法": "\"\"""data type": "长整数",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "置当前协程调试信息",
+}"comment": "设置当前协程调试信息,打印调试信息时将回显",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "调试信息",
+"data type": "文本型"
+   }
+}]
+  }
+thod name": "启用HOOK"]
+ },
+ {
+}"class name": "协程池类",
+}"comment": "普通的协程本身就有任务池,本协程池主要是增加了回调任务,\n可以无缝与异步代码结合,处理异步框架中的阻塞事件.\n  1. 协程池内部有一个额外的协程调度器;\n  2. 可复制多个副本指向同一个协程池类;\n  3. 本协程池无关闭功能,直到进程退出才会彻底释放;",
+}"@文档": "\"category = \\\"协程\\\"\"",
+}"@强制依赖": "\"Go协程\"",
+}"methods": [
+  {
+"methods": [
+"method name": "创建",
+"methods": [
+"comment": "创建协程池.\n本方法不是必须执行,调用本类其他方法也会自动创建,\n但首先调用本方法可以设置\"最大回调触发点\".",
+"methods": [
+"data type": "协程池类",
+"methods": [
+"@视窗.返回参考": "真",
+"methods": [
+"@嵌入式方法": "\"\"",
+"methods": [
+"parameters": [
+   {
+"parameter name": "最大回调触发点",
+"comment": "指定协程池的最大回调处理器数量",
+"data type": "变整数",
+"@默认值": "128"
+   }
+"methods": [
+]
+  },
+  {
+
+"method name": "最大协程数",
+
+"comment": "自定义协程池中的最大协程数,建议设置的多一些,不被执行的协程不会占用cpu资源.\n  1. 默认值: MAX(最小调度线程数*128, 最大调度线程数);\n  2. 64位下最大值建议为10240,32位下最大值1792;\n  3. 只能在\"启动\"之前设置,之后再设置无效果;",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "最大协程数",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+thod name": "启用HOOK""method name": "加入回调触发点",
+thod name": "启用HOOK""comment": "将指定的回调处理器绑定到协程池,返回是否加入成功.\n若已加入的处理器数量超过了\"最大回调触发点\",则返回假.\n  1. 回调触发点用于控制回调函数的执行,若任务没有回调则不受回调处理器控制;\n  2. 完成回调函数会均匀分派给回调处理器;",
+thod name": "启用HOOK""data type": "逻辑型",
+thod name": "启用HOOK""@嵌入式方法": "\"\"",
+thod name": "启用HOOK""parameters": [
+   {
+"parameter name": "回调处理器",
+"comment": "所欲加入的回调处理器;\n回调处理器只能加入,不能删除;\n需要自行维护处理器的生命周期,不能比协程池短;",
+"data type": "协程池回调处理器"
+   }
+thod name": "启用HOOK"]
+  },
+  {
+hod name": "启用HOOK""parameters": [
+"method name": "启动",
+hod name": "启用HOOK""parameters": [
+"comment": "启动协程池",
+hod name": "启用HOOK""parameters": [
+"@嵌入式方法": "\"\"",
+hod name": "启用HOOK""parameters": [
+"parameters": [
+   {
+"parameter name": "最小线程数",
+"comment": "最小调度线程数,为0时设置为cpu核心数,为1表示仅使用主线程调度协程.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大线程数",
+"comment": "最大调度线程数,为0时与\"最小线程数\"相同;\n如果大于\"最小线程数\",则当协程产生长时间阻塞时,可以自动扩展调度线程数.",
+"data type": "整数",
+"@默认值": "0"
+   }
+hod name": "启用HOOK""parameters": [
+]
+  },
+  {
+
+"method name": "投递回调任务",
+
+"comment": "投递任务函数和回调函数到协程池中;\n  1. 如果绑定了回调处理器,则需要在处理器中运行回调函数;\n  2. 未绑定回调处理器则在协程池中执行回调函数;\n  3. 回调函数可空;",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "任务函数",
+"comment": "所欲投递到协程池的任务函数,可以调用下列方法创建:\n- 绑定静态方法   绑定无参数静态方法\n- 绑定动态方法   绑定无参数动态方法\n- 绑定函数指针   绑定无参数函数指针\n- 绑定函数指针2  绑定无参数函数指针2",
+"data type": "通用函数对象"
+   },
+   {
+"parameter name": "回调函数",
+"comment": "任务执行完毕后会触发此回调函数,留空表示无回调函数;\n参数要求同上;",
+"data type": "通用函数对象",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+}"method name": "投递回调任务2",
+}"comment": "投递任务函数和回调函数到协程池中;\n  1. 如果绑定了回调处理器,则需要在处理器中运行回调函数;\n  2. 未绑定回调处理器则在协程池中执行回调函数;\n  3. 本方法的函数有返回值和参数格式的要求,具体看参数备注;",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "返回值类型",
+"comment": "提供任务函数的返回值类型",
+"@需求类型": "数据类型",
+"@匹配类型": "所有类型"
+   },
+   {
+"parameter name": "任务函数",
+"comment": "所欲投递到协程池的任务函数;\n不能提供函数对象类变量,可以调用下列方法创建:\n- 绑定静态方法   绑定无参数静态方法\n- 绑定动态方法   绑定无参数动态方法\n- 绑定函数指针   绑定无参数函数指针\n- 绑定函数指针2  绑定无参数函数指针2\n注意: 本函数必须有返回值,且返回值类型跟第一个参数一致;",
+"data type": "通用函数对象"
+   },
+   {
+"parameter name": "回调函数",
+"comment": "任务执行完毕后会触发此回调函数;\n不能提供函数对象类变量,可以调用下列方法创建:\n- 绑定静态方法   绑定动态方法\n- 绑定函数指针   绑定函数指针2\n注意: 本函数必须有一个占位参数\"占位符_1(返回值类型)\";",
+"data type": "通用函数对象"
+   }
+}]
+  },
+  {
+"method name": "投递信道任务",
+"comment": "以信道的方式投递任务到协程池中,可以通过信道等待任务完成;\n因为没有回调,所以一定不会经过回调处理器;",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "返回值信道",
+"comment": "必须提供\"信道模板类\"的模板实现类；\n用于接受任务函数的返回值,信道的\"模板类型1\"必须跟任务函数的返回值一致;",
+"@匹配类型": "通用类"
+   },
+   {
+"parameter name": "任务函数",
+"comment": "所欲投递到协程池的任务函数;\n本方法不能接收变量,请调用下列方法创建:\n- 绑定静态方法   绑定无参数静态方法\n- 绑定动态方法   绑定无参数动态方法\n- 绑定函数指针   绑定无参数函数指针\n- 绑定函数指针2  绑定无参数函数指针2\n注意: 任务函数的返回值必须跟\"返回值类型\"一致.",
+"data type": "通用函数对象"
+   }
+]
+  }
+}]
+ },
+ {
+ameter name": "任务函数""class name": "协程池回调处理器",
+ameter name": "任务函数""comment": "协程池回调处理器用于控制处理完成回调所用的线程(通常用于单线程程序),可以绑定一个或多个回调处理器.\n如果不绑定回调处理器,完成回调就直接在协程池中被调用.\n请保证回调处理器实例的生命周期比协程池长.",
+ameter name": "任务函数""@文档": "\"category = \\\"协程\\\"\"",
+ameter name": "任务函数""@强制依赖": "\"Go协程\"",
+ameter name": "任务函数""@别名": "\"co::AsyncCoroutinePool::CallbackPoint\"",
+ameter name": "任务函数""@别名类型": "本地类",
+ameter name": "任务函数""methods": [
+  {
+data type": "通用函数对象""method name": "运行",
+data type": "通用函数对象""comment": "执行已完成任务的回调函数,返回触发的回调数量,未触发任何回调则返回0.",
+data type": "通用函数对象""static": true,
+data type": "通用函数对象""data type": "整数",
+data type": "通用函数对象""@嵌入式方法": "\"\"",
+data type": "通用函数对象""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程池回调处理器"
+   },
+   {
+"parameter name": "最大触发数量",
+"comment": "所欲触发的回调函数数量,为0表示触发回调处理器内所有的回调.",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "通用函数对象"]
+  },
+  {
+
+"method name": "置通知函数",
+
+"comment": "设置额外的通知函数,回调处理器每触发一次回调都将执行一次通知函数",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程池回调处理器"
+   },
+   {
+"parameter name": "通知函数",
+"comment": "所欲设置的通知函数,可以调用下列方法创建:\n- 绑定静态方法   绑定无参数静态方法\n- 绑定动态方法   绑定无参数动态方法\n- 绑定函数指针   绑定无参数函数指针\n- 绑定函数指针2  绑定无参数函数指针2",
+"data type": "通用函数对象"
+   }
+
+]
+  }
+ameter name": "任务函数"]
+ },
+ {
+ameter name": "任务函数""class name": "协程配置选项",
+ameter name": "任务函数""comment": "协程的全局配置选项,建议通过\"Go协程.配置选项\"调用.",
+ameter name": "任务函数""@文档": "\"category = \\\"协程\\\"\"",
+ameter name": "任务函数""@强制依赖": "\"Go协程\"",
+ameter name": "任务函数""methods": [
+  {
+meter name": "任务函数""comment": "协程的全局配置选项,建议通过\"Go协程.配置选项\"调用.""method name": "调试选项",
+meter name": "任务函数""comment": "协程的全局配置选项,建议通过\"Go协程.配置选项\"调用.""comment": "返回全局的调试选项",
+meter name": "任务函数""comment": "协程的全局配置选项,建议通过\"Go协程.配置选项\"调用.""type": "property getter",
+meter name": "任务函数""comment": "协程的全局配置选项,建议通过\"Go协程.配置选项\"调用.""data type": "长整数",
+meter name": "任务函数""comment": "协程的全局配置选项,建议通过\"Go协程.配置选项\"调用.""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "任务函数""methods": [
+"method name": "调试选项",
+meter name": "任务函数""methods": [
+"comment": "设置调试选项",
+meter name": "任务函数""methods": [
+"type": "property setter",
+meter name": "任务函数""methods": [
+"parameters": [
+   {
+"parameter name": "选项",
+"data type": "长整数"
+   }
+meter name": "任务函数""methods": [
+]
+  },
+  {
+data type": "长整数""method name": "调试输出位置",
+data type": "长整数""comment": "调试信息输出位置,改写这个配置项可以重定向输出位置.",
+data type": "长整数""type": "property setter",
+data type": "长整数""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "指定输出的文件名,空文本表示输出到stdout(默认值)",
+"data type": "文本型"
+   }
+data type": "长整数"]
+  },
+  {
+data type": "长整数""method name": "协程栈大小上限",
+data type": "长整数""comment": "返回全局的协程栈大小上限",
+data type": "长整数""type": "property getter",
+data type": "长整数""data type": "整数",
+data type": "长整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "协程栈大小上限",
+}"comment": "协程栈大小上限,只会影响在此值设置之后新创建的协程任务,建议在首次运行前设置.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "栈大小上限",
+"comment": "单位为字节,建议设置不超过1MB",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "协程统计功能",
+"comment": "返回是否启用协程统计功能",
+"type": "property getter",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "协程统计功能""method name": "协程统计功能",
+hod name": "协程统计功能""comment": "是否启用协程统计功能(会有一点性能损耗,默认不开启).",
+hod name": "协程统计功能""type": "property setter",
+hod name": "协程统计功能""parameters": [
+   {
+"parameter name": "是否开启",
+"data type": "逻辑型"
+   }
+hod name": "协程统计功能"]
+  },
+  {
+
+"method name": "协程超时时间",
+
+"comment": "返回全局的单协程执行超时时长(单位为微秒).",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "协程超时时间",
+}"comment": "设置单协程执行超时时长(单位为微秒),超过时长会强制将剩余任务派发到其他线程.\n编写cpu密集型程序时,可以延长协程执行的超时判断阈值,避免频繁的重新派发协程.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "超时时间",
+"comment": "单位为微妙,默认为100*1000",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "调度线程周期时间",
+
+"comment": "返回全局的调度线程的触发频率(单位为微秒).",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "调度线程周期时间",
+}"comment": "设置调度线程的触发频率(单位为微秒)",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "周期时间",
+"comment": "单位为微妙,默认为1000",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "负载均衡比例",
+}"comment": "返回全局的负载均衡触发的比例.",
+}"type": "property getter",
+}"data type": "单精度小数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "单精度小数""method name": "负载均衡比例",
+"data type": "单精度小数""comment": "设置负载均衡触发的比例.\n当某个执行器的协程数少于平均值的负载均衡比例,就会触发负载均衡;\n若执行的协程任务比较重时,此值建议设低一点,协程任务比较轻时,建议设高一点;",
+"data type": "单精度小数""type": "property setter",
+"data type": "单精度小数""parameters": [
+   {
+"parameter name": "负载均衡",
+"comment": "取值范围0-1,默认为0.1f",
+"data type": "单精度小数"
+   }
+"data type": "单精度小数"]
+  }
+ameter name": "任务函数"]
+ },
+ {
+ }"class name": "协程定时器",
+ }"comment": "注意: 可能存在内存泄漏,请勿使用!!!!!!\n本类可以在协程内执行一次性的定时任务;\n注意: 定时器必须启动协程调度器后才会生效.",
+ }"@文档": "\"category = \\\"协程.辅助类\\\"\"",
+ }"@强制依赖": "\"Go协程\"",
+ }"methods": [
+  {
+}"method name": "初始化",
+}"comment": "自定义初始化协程定时器,如果已经初始化则返回假.\n注: 若未调用本方法,在创建任务时会自动使用默认值进行初始化.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "计时精度",
+"comment": "设置定时器的精度(单位为微秒),精度越高则计时越准确.",
+"data type": "长整数",
+"@默认值": "1000"
+   },
+   {
+"parameter name": "调度器",
+"comment": "设置定时器的协程调度器,留空为使用全局的默认调度器;\n注意: 定时器必须启动协程调度器后才会生效.",
+"data type": "协程调度器",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+}"method name": "创建任务",
+}"comment": "创建一个绑定了函数对象的定时任务,然后返回定时ID.",
+}"data type": "协程定时ID",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "延迟时间",
+"comment": "指定任务延迟多长时间执行,单位为毫秒.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "函数对象",
+"comment": "所欲定时执行的函数对象,可以调用下列方法创建:\n- 绑定静态方法   绑定无参数静态方法\n- 绑定动态方法   绑定无参数动态方法\n- 绑定函数指针   绑定无参数函数指针\n- 绑定函数指针2  绑定无参数函数指针2",
+"data type": "通用函数对象"
+   }
+}]
+  },
+  {
+data type": "通用函数对象""method name": "创建静态任务",
+data type": "通用函数对象""comment": "创建一个绑定了任意格式静态方法的定时任务,然后返回定时ID.",
+data type": "通用函数对象""data type": "协程定时ID",
+data type": "通用函数对象""@嵌入式方法": "\"\"",
+data type": "通用函数对象""parameters": [
+   {
+"parameter name": "延迟时间",
+"comment": "指定任务延迟多长时间执行,单位为毫秒.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "静态方法",
+"comment": "提供所欲协程执行的静态方法",
+"@匹配方法": "\"\""
+   },
+   {
+"parameter name": "参数列表",
+"comment": "参数表的格式务必和\"静态方法\"的参数表一致;\n默认将提交的参数按值复制.如果想引用传递,请用\"引用\"方法将参数包装.",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+data type": "通用函数对象"]
+  },
+  {
+@匹配类型": "通用型""method name": "创建无参数静态任务",
+@匹配类型": "通用型""comment": "创建一个绑定了无参数静态方法的定时任务,然后返回定时ID.",
+@匹配类型": "通用型""data type": "协程定时ID",
+@匹配类型": "通用型""@嵌入式方法": "\"\"",
+@匹配类型": "通用型""parameters": [
+   {
+"parameter name": "延迟时间",
+"comment": "指定任务延迟多长时间执行,单位为毫秒.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "静态方法",
+"comment": "提供所欲协程执行的静态方法",
+"@匹配方法": "\"\""
+   }
+@匹配类型": "通用型"]
+  },
+  {
+ameter name": "静态方法""method name": "创建动态任务",
+ameter name": "静态方法""comment": "创建一个绑定了任意格式类动态方法的定时任务,然后返回定时ID.",
+ameter name": "静态方法""data type": "协程定时ID",
+ameter name": "静态方法""@嵌入式方法": "\"\"",
+ameter name": "静态方法""parameters": [
+   {
+"parameter name": "延迟时间",
+"comment": "指定任务延迟多长时间执行,单位为毫秒.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "对象实例",
+"comment": "提供协程函数所属的对象实例(即类变量),也可以填\"本对象\"、\"读指针处对象()\".",
+"data type": "对象类"
+   },
+   {
+"parameter name": "方法输出名",
+"comment": "提供所欲协程执行的动态方法输出名.\n注意: 方法必须设置属性\"@输出名\",并设置\"@强制输出\"以确保被编译.",
+"data type": "文本型",
+"@需求类型": "立即数或常量"
+   },
+   {
+"parameter name": "参数列表",
+"comment": "参数表的格式务必和\"静态方法\"的参数表一致;\n默认将提交的参数按值复制.如果想引用传递,请用\"引用\"方法将参数包装.",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+ameter name": "静态方法"]
+  },
+  {
+
+"method name": "创建无参数动态任务",
+
+"comment": "创建一个绑定了无参数类动态方法的定时任务,然后返回定时ID.",
+
+"data type": "协程定时ID",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "延迟时间",
+"comment": "指定任务延迟多长时间执行,单位为毫秒.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "对象实例",
+"comment": "提供协程函数所属的对象实例(即类变量),也可以填\"本对象\"、\"读指针处对象()\".",
+"data type": "对象类"
+   },
+   {
+"parameter name": "方法输出名",
+"comment": "提供所欲协程执行的动态方法输出名.\n注意: 方法必须设置属性\"@输出名\",并设置\"@强制输出\"以确保被编译.",
+"data type": "文本型",
+"@需求类型": "立即数或常量"
+   }
+
+]
+  },
+  {
+"method name": "创建无参数无返回值动态任务",
+"comment": "在当前调度器中创建一个绑定无参数类动态方法的协程任务.\n  1. 协程创建以后不会立即执行,而是暂存至可执行列表中,等待调度器调度;\n  2. 动态方法可以直接调用类实例的其他动态成员变量和方法;",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "延迟时间",
+"comment": "指定任务延迟多长时间执行,单位为毫秒.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "对象实例",
+"comment": "提供协程函数所属的对象实例(即类变量),也可以填\"本对象\"、\"读指针处对象()\".",
+"data type": "对象类"
+   },
+   {
+"parameter name": "动态方法",
+"comment": "提供所欲协程执行的类动态方法.\n注意: 方法不需要设置输出名,但必须是无参数和无返回值.",
+"@匹配方法": "\"无参数无返回值方法\""
+   }
+]
+  }
+ }]
+ },
+ {
+"class name": "协程定时ID",
+"comment": "用作保存协程定时器的定时任务ID,可以撤销未执行的定时任务.\n必须被赋值后才有效",
+"@文档": "\"category = \\\"协程.辅助类\\\"\"",
+"@别名": "\"co::CoTimer::TimerId\"",
+"@别名类型": "本地类",
+"@强制依赖": "\"Go协程\"",
+"methods": [
+  {
+parameters": [
+"method name": "撤销任务",
+parameters": [
+"comment": "可以撤销还未开始执行的定时任务,如果撤销成功返回真;\n如果还没来得及撤销则返回假,此时不保证定时任务已执行完毕.",
+parameters": [
+"static": true,
+parameters": [
+"data type": "逻辑型",
+parameters": [
+"@嵌入式方法": "\"\"",
+parameters": [
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程定时ID"
+   }
+parameters": [
+]
+  }
+]
+ },
+ {
+"class name": "协程互斥锁类",
+"comment": "协程互斥锁对象的封装类.\n  1. 互斥对象不可复制赋值;\n  2. 提供方法\"协程互斥自动锁\",可自动加锁/解锁;",
+"@文档": "\"category = \\\"协程.辅助类\\\"\"",
+"@别名": "\"libgo::Mutex\"",
+"@别名类型": "本地类",
+"@强制依赖": "\"Go协程\"",
+"methods": [
+  {
+methods": [
+"method name": "协程互斥自动锁",
+methods": [
+"comment": "创建一个互斥自动锁对象(std::lock_guard),它将接收指定互斥锁的所有权.\n创建后会立即在当前协程加锁,直到离开作用域后自动销毁对象并解锁.\n注: 本方法可以避免死锁,推荐用来替代互斥锁对象的\"加锁/解锁\"操作.",
+methods": [
+"static": true,
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前协程上锁的协程互斥锁类",
+"data type": "协程互斥锁类"
+   }
+methods": [
+]
+  },
+  {
+comment": "提供要在当前协程上锁的协程互斥锁类""method name": "加锁",
+comment": "提供要在当前协程上锁的协程互斥锁类""comment": "将本互斥锁加锁,如果本锁当前已经被另一协程锁住,则进入等待状态.\n注: 建议使用\"协程互斥自动锁\"以避免死锁.",
+comment": "提供要在当前协程上锁的协程互斥锁类""static": true,
+comment": "提供要在当前协程上锁的协程互斥锁类""@嵌入式方法": "\"\"",
+comment": "提供要在当前协程上锁的协程互斥锁类""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前协程上锁的协程互斥锁类",
+"data type": "协程互斥锁类"
+   }
+comment": "提供要在当前协程上锁的协程互斥锁类"]
+  },
+  {
+comment": "提供要在当前协程上锁的协程互斥锁类""method name": "解锁",
+comment": "提供要在当前协程上锁的协程互斥锁类""comment": "如果先前加锁成功,解开此锁,以允许其它协程加锁成功.\n注: 建议使用\"协程互斥自动锁\"以避免死锁.",
+comment": "提供要在当前协程上锁的协程互斥锁类""static": true,
+comment": "提供要在当前协程上锁的协程互斥锁类""@嵌入式方法": "\"\"",
+comment": "提供要在当前协程上锁的协程互斥锁类""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前协程上锁的协程互斥锁类",
+"data type": "协程互斥锁类"
+   }
+comment": "提供要在当前协程上锁的协程互斥锁类"]
+  },
+  {
+data type": "协程互斥锁类""method name": "尝试加锁",
+data type": "协程互斥锁类""comment": "尝试将本互斥锁加锁,如果能够成功加锁,则加锁后返回真.\n如果不能(譬如已经被其它协程锁住)则立即返回假.",
+data type": "协程互斥锁类""static": true,
+data type": "协程互斥锁类""data type": "逻辑型",
+data type": "协程互斥锁类""@嵌入式方法": "\"\"",
+data type": "协程互斥锁类""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前协程上锁的协程互斥锁类",
+"data type": "协程互斥锁类"
+   }
+data type": "协程互斥锁类"]
+  },
+  {
+
+"method name": "限时尝试加锁",
+
+"comment": "尝试将本互斥锁加锁,若能在指定时间内成功加锁返回真,否则返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前协程上锁的协程互斥锁类",
+"data type": "协程互斥锁类"
+   },
+   {
+"parameter name": "延迟时间",
+"comment": "单位为毫秒",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+"method name": "是否已锁定",
+"comment": "返回当前是否已加锁",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前协程上锁的协程互斥锁类",
+"data type": "协程互斥锁类"
+   }
+]
+  }
+]
+ },
+ {
+ }"class name": "协程读写锁类",
+ }"comment": "协程读写锁的封装类.\n  1. 读写锁不可复制赋值;\n  2. 同一个协程只能单独使用读锁或写锁,不能同时使用两种锁,\n否则将导致死锁;",
+ }"@文档": "\"category = \\\"协程.辅助类\\\"\"",
+ }"@别名": "\"co::CoRWMutex\"",
+ }"@强制依赖": "\"Go协程\"",
+ }"methods": [
+  {
+ameter name": "欲操作本对象""method name": "协程读锁自动锁",
+ameter name": "欲操作本对象""comment": "创建一个互斥自动锁对象(std::unique_lock),它将接收指定互斥锁的所有权.\n创建后会立即在当前协程加锁,直到离开作用域后自动销毁对象并解锁.",
+ameter name": "欲操作本对象""static": true,
+ameter name": "欲操作本对象""@嵌入式方法": "\"\"",
+ameter name": "欲操作本对象""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前读锁协程上锁的协程读写锁类",
+"data type": "协程读写锁类"
+   }
+ameter name": "欲操作本对象"]
+  },
+  {
+ }"method name": "协程写锁自动锁",
+ }"comment": "创建一个互斥自动锁对象(std::unique_lock),它将接收指定互斥锁的所有权.\n创建后会立即在当前协程加锁,直到离开作用域后自动销毁对象并解锁.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前写锁协程上锁的协程读写锁类",
+"data type": "协程读写锁类"
+   }
+ }]
+  },
+  {
+comment": "提供要在当前写锁协程上锁的协程读写锁类""method name": "开始读",
+comment": "提供要在当前写锁协程上锁的协程读写锁类""comment": "读协程调用本方法用作加锁以开始进行读操作,如果不能加锁,将一直等待.\n注意: 本方法返回后即表示当前协程获得了读权力,读操作完毕后必须调用\"结束读\"方法释放锁.\n建议使用\"协程读锁自动锁\"以避免死锁.",
+comment": "提供要在当前写锁协程上锁的协程读写锁类""static": true,
+comment": "提供要在当前写锁协程上锁的协程读写锁类""@嵌入式方法": "\"\"",
+comment": "提供要在当前写锁协程上锁的协程读写锁类""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前写锁协程上锁的协程读写锁类",
+"data type": "协程读写锁类"
+   }
+comment": "提供要在当前写锁协程上锁的协程读写锁类"]
+  },
+  {
+ }"method name": "结束读",
+ }"comment": "  先前调用\"开始读\"方法成功加锁的读协程必须调用\n本方法结束读操作,以放行其它等待操作的协程.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前写锁协程上锁的协程读写锁类",
+"data type": "协程读写锁类"
+   }
+ }]
+  },
+  {
+"method name": "尝试开始读",
+"comment": "读协程调用本方法用作加锁以开始进行读操作,如果不能加锁将直接返回假,成功加锁返回真.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前写锁协程上锁的协程读写锁类",
+"data type": "协程读写锁类"
+   }
+]
+  },
+  {
+ameter name": "欲操作本对象""method name": "开始写",
+ameter name": "欲操作本对象""comment": "写协程调用本方法用作加锁以开始进行写操作,如果不能加锁,将一直等待.\n注意: 本方法返回后即表示当前协程获得了写权力,写操作完毕后必须调用\"结束写\"方法释放锁.\n建议使用\"协程写锁自动锁\"以避免死锁.",
+ameter name": "欲操作本对象""static": true,
+ameter name": "欲操作本对象""@嵌入式方法": "\"\"",
+ameter name": "欲操作本对象""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前写锁协程上锁的协程读写锁类",
+"data type": "协程读写锁类"
+   }
+ameter name": "欲操作本对象"]
+  },
+  {
+
+"method name": "结束写",
+
+"comment": "  先前调用\"开始写\"方法成功加锁的写协程必须调用\n本方法结束写操作,以放行其它等待操作的协程.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前写锁协程上锁的协程读写锁类",
+"data type": "协程读写锁类"
+   }
+
+]
+  },
+  {
+
+"method name": "尝试开始写",
+
+"comment": "写协程调用本方法用作加锁以开始进行写操作,如果不能加锁将直接返回假,成功加锁返回真.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前写锁协程上锁的协程读写锁类",
+"data type": "协程读写锁类"
+   }
+
+]
+  },
+  {
+data type": "协程读写锁类""method name": "是否已锁定",
+data type": "协程读写锁类""comment": "返回当前是否已加锁",
+data type": "协程读写锁类""static": true,
+data type": "协程读写锁类""@嵌入式方法": "\"\"",
+data type": "协程读写锁类""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "提供要在当前写锁协程上锁的协程读写锁类",
+"data type": "协程读写锁类"
+   }
+data type": "协程读写锁类"]
+  }
+ }]
+ },
+ {
+"class name": "协程唯一互斥锁类",
+"comment": "std::unique_lock<libgo::mutex>的封装类\n跟\"协程互斥自动锁\"一样,本类比直接使用协程互斥锁类更安全,\n关联互斥对象后立即加锁,并在析构时自动解锁;\n跟\"协程互斥自动锁\"相比,本类还可以手动加锁和解锁;",
+"@文档": "\"category = \\\"协程.辅助类\\\"\"",
+"@别名": "\"std::unique_lock<libgo::mutex>\"",
+"@别名类型": "本地类",
+"@强制依赖": "\"Go协程\"",
+"methods": [
+  {
+
+"method name": "关联互斥",
+
+"comment": "关联互斥对象,并锁定关联的互斥对象,如果关联互斥已经被另一线程锁住,则进入等待状态.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程唯一互斥锁类"
+   },
+   {
+"parameter name": "所欲关联的锁",
+"data type": "协程互斥锁类"
+   }
+
+]
+  },
+  {
+ }"method name": "加锁",
+ }"comment": "锁定关联的互斥对象,如果关联互斥已经被另一线程锁住,则进入等待状态.",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程唯一互斥锁类"
+   }
+ }]
+  },
+  {
+ameter name": "欲操作本对象""method name": "尝试加锁",
+ameter name": "欲操作本对象""comment": "尝试锁定关联的互斥对象,如果能够成功加锁,则加锁后返回真.\n如果不能(譬如已经被其它线程锁住)则立即返回假.",
+ameter name": "欲操作本对象""static": true,
+ameter name": "欲操作本对象""data type": "逻辑型",
+ameter name": "欲操作本对象""@禁止流程检查": "真",
+ameter name": "欲操作本对象""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程唯一互斥锁类"
+   }
+ameter name": "欲操作本对象"]
+  },
+  {
+
+"method name": "限时尝试加锁",
+
+"comment": "尝试锁定关联的互斥对象,若能在指定时间内成功加锁返回真,否则返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程唯一互斥锁类"
+   },
+   {
+"parameter name": "延迟时间",
+"comment": "单位为毫秒",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+}"method name": "解锁",
+}"comment": "解锁关联互斥对象并释放所有权,以允许其它线程加锁成功.",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程唯一互斥锁类"
+   }
+}]
+  },
+  {
+}"method name": "是否有效",
+}"comment": "检查本类是否占有锁定的互斥对象(即是否调用了\"关联互斥\")",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程唯一互斥锁类"
+   }
+}]
+  },
+  {
+}"method name": "释放",
+}"comment": "解除与互斥对象的关联,本操作不会将互斥对象加锁或解锁.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程唯一互斥锁类"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "协程条件变量类",
+"comment": "能用于阻塞一个或多个协程,直至另一协程修改共享变量(条件)并通知.",
+"@文档": "\"category = \\\"协程.辅助类\\\"\"",
+"@别名": "\"libgo::ConditionVariable\"",
+"@别名类型": "本地类",
+"@强制依赖": "\"Go协程\"",
+"methods": [
+  {
+@文档": "\"category = \\\"协程.辅助类\\\"\"""method name": "通知一个",
+@文档": "\"category = \\\"协程.辅助类\\\"\"""comment": "通知一个等待中的协程解除阻塞,返回唤醒的协程数量下限,\n实际唤醒数量可能大于返回值.",
+@文档": "\"category = \\\"协程.辅助类\\\"\"""static": true,
+@文档": "\"category = \\\"协程.辅助类\\\"\"""data type": "整数",
+@文档": "\"category = \\\"协程.辅助类\\\"\"""@嵌入式方法": "\"\"",
+@文档": "\"category = \\\"协程.辅助类\\\"\"""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程条件变量类"
+   }
+@文档": "\"category = \\\"协程.辅助类\\\"\""]
+  },
+  {
+
+"method name": "通知所有",
+
+"comment": "通知所有等待中的协程解除阻塞,返回唤醒的协程数量下限,\n实际唤醒数量可能大于返回值.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程条件变量类"
+   }
+
+]
+  },
+  {
+
+"method name": "快速通知所有",
+
+"comment": "通知所有等待中的协程解除阻塞,返回唤醒的协程数量下限,\n实际唤醒数量可能大于返回值.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程条件变量类"
+   }
+
+]
+  },
+  {
+}"method name": "等待",
+}"comment": "阻塞当前线程,直到条件变量通知线程解除阻塞;\n注意: 本方法必须在\"协程唯一互斥锁类\"已加锁状态下使用;",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程条件变量类"
+   },
+   {
+"parameter name": "互斥锁",
+"comment": "提供的\"协程唯一互斥锁类\"必须已\"关联互斥\"并处于加锁状态",
+"data type": "协程唯一互斥锁类"
+   }
+}]
+  },
+  {
+comment": "提供的\"协程唯一互斥锁类\"必须已\"关联互斥\"并处于加锁状态""method name": "限时等待",
+comment": "提供的\"协程唯一互斥锁类\"必须已\"关联互斥\"并处于加锁状态""comment": "阻塞当前线程,直到条件变量被唤醒,或到达指定时长后解除阻塞.\n如果在延迟时间内条件变量被唤醒将返回真,否则返回假.\n注意: 本方法必须在\"协程唯一互斥锁类\"已加锁状态下使用;",
+comment": "提供的\"协程唯一互斥锁类\"必须已\"关联互斥\"并处于加锁状态""static": true,
+comment": "提供的\"协程唯一互斥锁类\"必须已\"关联互斥\"并处于加锁状态""data type": "逻辑型",
+comment": "提供的\"协程唯一互斥锁类\"必须已\"关联互斥\"并处于加锁状态""@嵌入式方法": "\"\"",
+comment": "提供的\"协程唯一互斥锁类\"必须已\"关联互斥\"并处于加锁状态""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "协程条件变量类"
+   },
+   {
+"parameter name": "互斥锁",
+"comment": "提供的\"协程唯一互斥锁类\"必须已\"关联互斥\"并处于加锁状态",
+"data type": "协程唯一互斥锁类"
+   },
+   {
+"parameter name": "延迟时间",
+"comment": "单位为毫秒",
+"data type": "长整数"
+   }
+comment": "提供的\"协程唯一互斥锁类\"必须已\"关联互斥\"并处于加锁状态"]
+  }
+]
+ },
+ {
+"class name": "信道模板类",
+"comment": "信道是协程安全的,使用时不需要加锁",
+"@文档": "\"category = \\\"协程.辅助类\\\"\"",
+"@模板基础类": "真",
+"@别名": "\"co::Channel<模板类型1>\"",
+"@别名类型": "本地类",
+"@强制依赖": "\"Go协程\"",
+"methods": [
+  {
+
+"method name": "缓冲区容量",
+
+"comment": "设置信道的缓冲区容量;\n  1. 信道默认没有缓冲区,因此写入数据时会阻塞当前协程,直到其他协程读取数据;\n  2. 拥有缓冲区后,可以直接写入对应容量的数据而不会阻塞当前协程;\n  3. 缓冲区满了之后会阻塞当前协程,等待缓冲区出现空位;\n  4. 修改缓冲区容量会将信道初始化,因此建议在定义变量的表格中设置属性值;",
+
+"static": true,
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   },
+   {
+"parameter name": "缓冲区",
+"comment": "默认为0,大于0后可以无阻塞写入对应数量的数据.",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取成员数",
+
+"comment": "返回本信道中已写入的数据数目",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   }
+
+]
+  },
+  {
+
+"method name": "读",
+
+"comment": "从信道中读取数据;\n如果信道中没有数据,将会阻塞当前协程,直到其他协程写入数据.",
+
+"static": true,
+
+"data type": "模板类型1",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   }
+
+]
+  },
+  {
+
+"method name": "读2",
+
+"comment": "从信道中读取数据;\n如果信道中没有数据,将会阻塞当前协程,直到其他协程写入数据.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   },
+   {
+"parameter name": "值",
+"comment": "读取的值将保存到提供变量中",
+"data type": "模板类型1",
+"@需求类型": "可写入变量"
+   }
+
+]
+  },
+  {
+
+"method name": "写",
+
+"comment": "将数据写入到信道中;\n如果没有缓冲区空位,将会阻塞当前协程,直到其他协程从信道读取数据.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   },
+   {
+"parameter name": "值",
+"comment": "所欲写入的值",
+"data type": "模板类型1"
+   }
+
+]
+  },
+  {
+comment": "所欲写入的值""method name": "尝试读",
+comment": "所欲写入的值""comment": "尝试从信道中读取数据,如果信道中没有数据将直接返回假.",
+comment": "所欲写入的值""static": true,
+comment": "所欲写入的值""data type": "逻辑型",
+comment": "所欲写入的值""@嵌入式方法": "\"\"",
+comment": "所欲写入的值""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   },
+   {
+"parameter name": "值",
+"comment": "读取的值将保存到提供变量中",
+"data type": "模板类型1",
+"@需求类型": "可写入变量"
+   }
+comment": "所欲写入的值"]
+  },
+  {
+data type": "模板类型1""method name": "尝试写",
+data type": "模板类型1""comment": "尝试将数据写入到信道中,如果没有缓冲区空位将直接返回假.\n注: \"缓冲区容量\"大于0时,本方法才有可能返回真.",
+data type": "模板类型1""static": true,
+data type": "模板类型1""data type": "逻辑型",
+data type": "模板类型1""@嵌入式方法": "\"\"",
+data type": "模板类型1""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   },
+   {
+"parameter name": "值",
+"comment": "所欲写入的值",
+"data type": "模板类型1"
+   }
+data type": "模板类型1"]
+  },
+  {
+
+"method name": "限时读",
+
+"comment": "尝试从信道中读取数据,如果信道在指定的时限内没有数据,将返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   },
+   {
+"parameter name": "值",
+"comment": "读取的值将保存到提供变量中",
+"data type": "模板类型1",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "超时时间",
+"comment": "单位为毫秒",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ameter name": "超时时间""method name": "限时写",
+ameter name": "超时时间""comment": "尝试将数据写入到信道中,如果在指定的时限内没有缓冲区空位,\n且没有其他协程在读数据,将返回假.",
+ameter name": "超时时间""static": true,
+ameter name": "超时时间""data type": "逻辑型",
+ameter name": "超时时间""@嵌入式方法": "\"\"",
+ameter name": "超时时间""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   },
+   {
+"parameter name": "值",
+"comment": "所欲写入的值",
+"data type": "模板类型1"
+   },
+   {
+"parameter name": "超时时间",
+"comment": "单位为毫秒",
+"data type": "长整数"
+   }
+ameter name": "超时时间"]
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "关闭当前信道",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "信道模板类"
+   }
+
+]
+  }
+]
+ },
+ {
+data type": "信道模板类""class name": "整数信道类",
+data type": "信道模板类""comment": "信道是协程安全的,使用时不需要加锁",
+data type": "信道模板类""base class": "信道模板类",
+data type": "信道模板类""@文档": "\"category = \\\"协程.辅助类.信道对象\\\"\"",
+data type": "信道模板类""@模板实现类": "\"整数\""
+ },
+ {
+"class name": "长整数信道类",
+"comment": "信道是协程安全的,使用时不需要加锁",
+"base class": "信道模板类",
+"@文档": "\"category = \\\"协程.辅助类.信道对象\\\"\"",
+"@模板实现类": "\"长整数\""
+ },
+ {
+"class name": "小数信道类",
+"comment": "信道是协程安全的,使用时不需要加锁",
+"base class": "信道模板类",
+"@文档": "\"category = \\\"协程.辅助类.信道对象\\\"\"",
+"@模板实现类": "\"小数\""
+ },
+ {
+@模板实现类": "\"小数\"""class name": "逻辑信道类",
+@模板实现类": "\"小数\"""comment": "信道是协程安全的,使用时不需要加锁",
+@模板实现类": "\"小数\"""base class": "信道模板类",
+@模板实现类": "\"小数\"""@文档": "\"category = \\\"协程.辅助类.信道对象\\\"\"",
+@模板实现类": "\"小数\"""@模板实现类": "\"逻辑型\""
+ },
+ {
+"class name": "文本信道类",
+"comment": "信道是协程安全的,使用时不需要加锁",
+"base class": "信道模板类",
+"@文档": "\"category = \\\"协程.辅助类.信道对象\\\"\"",
+"@模板实现类": "\"文本型\""
+ },
+ {
+"class name": "字节集信道类",
+"comment": "信道是协程安全的,使用时不需要加锁",
+"base class": "信道模板类",
+"@文档": "\"category = \\\"协程.辅助类.信道对象\\\"\"",
+"@模板实现类": "\"字节集类\""
+ }
+SPC\plugins\vprj_win\classlib\user\piv\p_Coroutine.wsv]
+}

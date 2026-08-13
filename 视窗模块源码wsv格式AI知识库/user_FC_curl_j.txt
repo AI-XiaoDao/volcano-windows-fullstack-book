@@ -1,0 +1,701 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+ 线程类f"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ 线程类f"package name": "火山.原创软件",
+ 线程类f"comment": "本模块来源于网络\n切勿用作非法用途",
+ 线程类f"@文档": "\"category = \\\"开源库.curl\\\"\"",
+ 线程类f"classes": [
+ {
+"class name": "______网页表单辅助",
+"@全局类": "真",
+"@禁止创建对象": "真",
+"methods": [
+  {
+程检查 = 真"method name": "表单_到键值表",
+程检查 = 真"static": true,
+程检查 = 真"parameters": [
+   {
+"parameter name": "表单数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解析后的键值表",
+"data type": "键值表"
+   },
+   {
+"parameter name": "是否URL解码",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+程检查 = 真]
+  },
+  {
+data type": "文本型""method name": "键值表_到表单",
+data type": "文本型""static": true,
+data type": "文本型""data type": "文本型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "数据键值表",
+"data type": "键值表"
+   },
+   {
+"parameter name": "URL编码方式",
+"comment": "默认 3 只 编码键名称和键值\n0 不使用url编码\n1 只编码 键名称\n2 只编码 键值\n3 只编码 名称和键值\n4 整体url编码",
+"data type": "整数",
+"@默认值": "3"
+   }
+data type": "文本型"]
+  }
+]
+ },
+ {
+"class name": "表单对比类f",
+"methods": [
+  {
+ 文本型"method name": "清空"
+  },
+  {
+⌰ꡱŝ"method name": "添加表单",
+⌰ꡱŝ"parameters": [
+   {
+"parameter name": "表单文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否解码",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+⌰ꡱŝ]
+  },
+  {
+方法 = """method name": "对比"
+  }
+]
+ },
+ {
+"class name": "______curl辅助函数",
+"@全局类": "真",
+"methods": [
+  {
+ "线程类f [5]""method name": "网络测速",
+ "线程类f [5]""static": true,
+ "线程类f [5]""data type": "长整数",
+ "线程类f [5]""parameters": [
+   {
+"parameter name": "url",
+"data type": "文本型"
+   }
+ "线程类f [5]"]
+  }
+]
+ },
+ {
+"class name": "CURL",
+"@视窗.后缀文本": "\"public CCurTransmissionClassBase\"",
+"@视窗.外部头文件": "\"curl\\\\curlTool.h\"",
+"@视窗.外部库.win32": "\"curl\\\\curlToolx86.lib\"",
+"@视窗.附属文件.win32": "\"curl\\\\curlToolx86.dll\"",
+"@视窗.外部库.x64": "\"curl\\\\curlToolx64.lib\"",
+"@视窗.附属文件.x64": "\"curl\\\\curlToolx64.dll\"",
+"methods": [
+  {
+@视窗.外部库.win32": "\"curl\\\\curlToolx86.lib\"""method name": "收到数据",
+@视窗.外部库.win32": "\"curl\\\\curlToolx86.lib\"""comment": "如果您要自己处理接收到的数据，我建议您调用 禁用内置接收数据保存功能(真) \n这样可以防止内部再次保存数据，也就是同一份数据保存两次，占用不必须的内存",
+@视窗.外部库.win32": "\"curl\\\\curlToolx86.lib\"""type": "event",
+@视窗.外部库.win32": "\"curl\\\\curlToolx86.lib\"""data type": "整数",
+@视窗.外部库.win32": "\"curl\\\\curlToolx86.lib\"""parameters": [
+   {
+"parameter name": "收到的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "收到的数据大小",
+"data type": "长整数"
+   }
+@视窗.外部库.win32": "\"curl\\\\curlToolx86.lib\""]
+  },
+  {
+ameter name": "是否解码""method name": "传输进度",
+ameter name": "是否解码""comment": "如果这个要有数据，必须调用 启用传输进度，才会有哦",
+ameter name": "是否解码""result comment": "返回0表示继续，返回1表示停止传输 ",
+ameter name": "是否解码""type": "event",
+ameter name": "是否解码""data type": "整数",
+ameter name": "是否解码""parameters": [
+   {
+"parameter name": "总下载大小",
+"data type": "长整数"
+   },
+   {
+"parameter name": "当前下载大小",
+"data type": "长整数"
+   },
+   {
+"parameter name": "总上传大小",
+"data type": "长整数"
+   },
+   {
+"parameter name": "当前上传大小",
+"data type": "长整数"
+   }
+ameter name": "是否解码"]
+  },
+  {
+ss name": "CURL""method name": "启用传输进度",
+ss name": "CURL""@嵌入式方法": "\"\"",
+ss name": "CURL""parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ss name": "CURL"]
+  },
+  {
+⢀ꡱŝ"method name": "禁用内置接收数据保存功能",
+⢀ꡱŝ"comment": "如果你调用了这个函数，那么当你 调用 GetResponsBody的时候，\n就不会有返回数据了，此时，您要自己处理接收到的数据， 再回调函数\n收到数据 中自行处理",
+⢀ꡱŝ"@嵌入式方法": "\"\"",
+⢀ꡱŝ"parameters": [
+   {
+"parameter name": "是否禁用",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+⢀ꡱŝ]
+  },
+  {
+}"method name": "SetTcpFastOpen",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+ }"method name": "SetKeepAlive",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "保持连接时间",
+"comment": "秒",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "心跳时间",
+"comment": "秒",
+"data type": "整数",
+"@默认值": "60"
+   }
+ }]
+  },
+  {
+
+"method name": "SetUserAgent",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "代理头",
+"comment": "\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3741.400 QQBrowser/10.5.3863.400\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "SetSSLCertFile",
+data type": "文本型""comment": "设置证书文件",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "证书文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密钥文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "证书密码",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "SetSSLVerifyPeer",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "是否验证",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+ata type": "文本型""parameters": [
+"method name": "SetSSLVerifyHost",
+ata type": "文本型""parameters": [
+"@嵌入式方法": "\"\"",
+ata type": "文本型""parameters": [
+"parameters": [
+   {
+"parameter name": "是否验证",
+"data type": "逻辑型"
+   }
+ata type": "文本型""parameters": [
+]
+  },
+  {
+comment": "秒""method name": "SetAcceptEncoding",
+comment": "秒""comment": "可以直接使用 SetRequestHeaders",
+comment": "秒""@嵌入式方法": "\"\"",
+comment": "秒""parameters": [
+   {
+"parameter name": "Encoding",
+"comment": "gzip, deflate, br",
+"data type": "文本型"
+   }
+comment": "秒"]
+  },
+  {
+
+"method name": "SetReferer",
+
+"comment": "可以直接使用 SetRequestHeaders",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "ref",
+"comment": "Referer: https://www.cnbeta.com/",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "置连接超时",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "超时时间",
+"comment": "连接超时 毫秒",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "SetRequestHeader",
+
+"comment": "//设置单条协议\n// 参数格式 Shoesize: 10\n// 注意，末尾不需要您添加换行符\n注意，每个用到的地方，都必须每次添加，在send之前",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "协议头",
+"comment": "\"key: value\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"comment": "可以直接使用 SetRequestHeaders""method name": "ClearRequestHeader",
+
+"comment": "可以直接使用 SetRequestHeaders""comment": "清空协议头",
+
+"comment": "可以直接使用 SetRequestHeaders""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "SetRequestHeaders",
+ }"comment": "//设置多条协议头，用换行符(\\r\\n)分开\n注意，每个用到的地方，都必须每次添加，在send之前\n一行一个 例如\naaa: bbbb\nccc: dddd",
+ }"parameters": [
+   {
+"parameter name": "协议头内容",
+"comment": "可以多行 也可以单行 例如：\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"@嵌入式方法": "\"\"""method name": "AppendProxyHeader",
+
+"@嵌入式方法": "\"\"""comment": "注意，每个用到的地方，都必须每次添加，在send之前\n// 参数格式 Shoesize: 10\n// 注意，末尾不需要您添加换行符",
+
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "协议头",
+"data type": "文本型"
+   }
+
+"@嵌入式方法": "\"\""]
+  },
+  {
+入式方法": "\"\"""method name": "AppendProxyHeader""method name": "EnableLocation",
+入式方法": "\"\"""method name": "AppendProxyHeader""@嵌入式方法": "\"\"",
+入式方法": "\"\"""method name": "AppendProxyHeader""parameters": [
+   {
+"parameter name": "最大重定向次数",
+"comment": "大于0 启用重定向 小于等于0 关闭重定向",
+"data type": "整数",
+"@默认值": "5"
+   }
+入式方法": "\"\"""method name": "AppendProxyHeader"]
+  },
+  {
+
+"comment": "//设置单条协议\n// 参数格式 Shoesize: 10\n// 注意，末尾不需要您添加换行符\n注意，每个用到的地方，都必须每次添加，在send之前""method name": "EnableCookie",
+
+"comment": "//设置单条协议\n// 参数格式 Shoesize: 10\n// 注意，末尾不需要您添加换行符\n注意，每个用到的地方，都必须每次添加，在send之前""comment": "启用Cookies ，如果启用则会记录到文件。",
+
+"comment": "//设置单条协议\n// 参数格式 Shoesize: 10\n// 注意，末尾不需要您添加换行符\n注意，每个用到的地方，都必须每次添加，在send之前""@嵌入式方法": "\"\"",
+
+"comment": "//设置单条协议\n// 参数格式 Shoesize: 10\n// 注意，末尾不需要您添加换行符\n注意，每个用到的地方，都必须每次添加，在send之前""parameters": [
+   {
+"parameter name": "Cookes路径",
+"comment": "如果设置了 \"\"空文本 则只是启用，如果设置了文件名 则会保存cookies，启动的时候也会加载这个 cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+"comment": "//设置单条协议\n// 参数格式 Shoesize: 10\n// 注意，末尾不需要您添加换行符\n注意，每个用到的地方，都必须每次添加，在send之前"]
+  },
+  {
+ꡱŝ"parameters": [
+"method name": "SetNoBody",
+ꡱŝ"parameters": [
+"comment": "不需要页面内容",
+ꡱŝ"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "SetHttpProxy",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "代理",
+"comment": "格式 127.0.0.1:8080",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名密码",
+"comment": "格式 帐号:密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+27.0.0.1:8080"method name": "SetSock5Proxy",
+27.0.0.1:8080"@嵌入式方法": "\"\"",
+27.0.0.1:8080"parameters": [
+   {
+"parameter name": "代理",
+"comment": "格式 127.0.0.1:8080",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名密码",
+"comment": "格式 帐号:密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+27.0.0.1:8080]
+  },
+  {
+7.0.0.1:8080"@嵌入式方法": "\"\"""method name": "取重定向次数",
+7.0.0.1:8080"@嵌入式方法": "\"\"""data type": "整数",
+7.0.0.1:8080"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取重定向地址",
+
+"comment": "取重定向连接。。301 302 ，这个要能取到，函数 启用重定向(0) 必须这样用 和 GetLocation 类似",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetLocation",
+}"comment": "取重定向连接。。301 302 ，这个要能取到，函数 启用重定向(0) 必须这样用",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "SetRequestHeaders""method name": "GetContentType",
+ethod name": "SetRequestHeaders""comment": "再发送后调用",
+ethod name": "SetRequestHeaders""data type": "文本型",
+ethod name": "SetRequestHeaders""@嵌入式方法": "\"\""
+  },
+  {
+
+"comment": "可以直接使用 SetRequestHeaders""method name": "GetUrl",
+
+"comment": "可以直接使用 SetRequestHeaders""data type": "文本型",
+
+"comment": "可以直接使用 SetRequestHeaders""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetRemoteIPAddress",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "GetRemotePort",
+}"comment": "取远程地址",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "GetStatusCode",
+
+"comment": "取状态码",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "协议头内容""method name": "取状态码",
+ameter name": "协议头内容""comment": "同 GetStatusCode 一样",
+ameter name": "协议头内容""data type": "整数",
+ameter name": "协议头内容""@嵌入式方法": "\"\""
+  },
+  {
+"comment": "取重定向连接。。301 302 ，这个要能取到，函数 启用重定向(0) 必须这样用 和 GetLocation 类似""method name": "取错误信息",
+"comment": "取重定向连接。。301 302 ，这个要能取到，函数 启用重定向(0) 必须这样用 和 GetLocation 类似""data type": "文本型",
+"comment": "取重定向连接。。301 302 ，这个要能取到，函数 启用重定向(0) 必须这样用 和 GetLocation 类似""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "GetAllResponHeader",
+ }"comment": "取响应头",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"data type": "文本型""method name": "GetResponsBody",
+}"data type": "文本型""data type": "字节集类",
+}"data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+ta type": "文本型""method name": "GetResponsBody""method name": "GetResponsBodyText",
+ta type": "文本型""method name": "GetResponsBody""data type": "文本型",
+ta type": "文本型""method name": "GetResponsBody""parameters": [
+   {
+"parameter name": "是否utf8解码",
+"comment": "是否从 utf8 直接转换成 unicode 16",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ta type": "文本型""method name": "GetResponsBody"]
+  },
+  {
+}"method name": "GetOriginalCookie",
+}"comment": "获取原始cookies格式文本 ",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+llResponHeader"method name": "GetCookies",
+llResponHeader"comment": "aaa=bbb; ccc=ddd; eee=fff",
+llResponHeader"data type": "文本型",
+llResponHeader"@嵌入式方法": "\"\""
+  },
+  {
+.0.1:8080"method name": "SetSock5Proxy""method name": "SetCookies",
+.0.1:8080"method name": "SetSock5Proxy""@嵌入式方法": "\"\"",
+.0.1:8080"method name": "SetSock5Proxy""parameters": [
+   {
+"parameter name": "cookies内容",
+"comment": "格式 name1=var1; name2=var2;",
+"data type": "文本型"
+   }
+.0.1:8080"method name": "SetSock5Proxy"]
+  },
+  {
+arameters": [
+"method name": "SetNoBody""method name": "置DNS超时",
+arameters": [
+"method name": "SetNoBody""result comment": "0成功",
+arameters": [
+"method name": "SetNoBody""data type": "整数类",
+arameters": [
+"method name": "SetNoBody""@嵌入式方法": "\"\"",
+arameters": [
+"method name": "SetNoBody""parameters": [
+   {
+"parameter name": "超时时间",
+"data type": "整数",
+"@默认值": "2"
+   }
+arameters": [
+"method name": "SetNoBody"]
+  },
+  {
+@默认值": "2""method name": "置超时",
+@默认值": "2""comment": "读取超时 易模块里面叫做请求超时",
+@默认值": "2""result comment": "0成功",
+@默认值": "2""data type": "整数类",
+@默认值": "2""@嵌入式方法": "\"\"",
+@默认值": "2""parameters": [
+   {
+"parameter name": "超时时间",
+"comment": "秒",
+"data type": "整数",
+"@默认值": "15"
+   }
+@默认值": "2"]
+  },
+  {
+ type": "文本型""method name": "GetResponsBody"]"method name": "SetTimeout",
+ type": "文本型""method name": "GetResponsBody"]"comment": "读取超时 易模块里面叫做请求超时",
+ type": "文本型""method name": "GetResponsBody"]"result comment": "0成功",
+ type": "文本型""method name": "GetResponsBody"]"data type": "整数类",
+ type": "文本型""method name": "GetResponsBody"]"@嵌入式方法": "\"\"",
+ type": "文本型""method name": "GetResponsBody"]"parameters": [
+   {
+"parameter name": "超时时间",
+"comment": "秒",
+"data type": "整数",
+"@默认值": "15"
+   }
+ type": "文本型""method name": "GetResponsBody"]]
+  },
+  {
+ 易模块里面叫做请求超时"method name": "启用使用全局DNS缓存",
+ 易模块里面叫做请求超时"@嵌入式方法": "\"\"",
+ 易模块里面叫做请求超时"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ 易模块里面叫做请求超时]
+  },
+  {
+comment": "秒""method name": "取最后一次传输所消耗的时间",
+comment": "秒""comment": "取所有时间，包括 dns解析 连接 等等的时间总和",
+comment": "秒""data type": "长整数",
+comment": "秒""@嵌入式方法": "\"\""
+  },
+  {
+认值": "2"]"method name": "取域名解析时间",
+认值": "2"]"data type": "长整数",
+认值": "2"]"@嵌入式方法": "\"\""
+  },
+  {
+默认值": "2""result comment": "0成功""method name": "取建立连接所消耗的时间",
+默认值": "2""result comment": "0成功""data type": "长整数",
+默认值": "2""result comment": "0成功""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "取建立连接到准备传输所使用的时间",
+"data type": "长整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+ type": "文本型""method name": "GetResponsBody"]"method name": "取建立连接到传输开始所使用的时间",
+ type": "文本型""method name": "GetResponsBody"]"data type": "长整数",
+ type": "文本型""method name": "GetResponsBody"]"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取重定向所使用的时间",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+type": "文本型""method name": "GetResponsBody"]"@嵌入式方法": "\"\"""method name": "取下载速度",
+type": "文本型""method name": "GetResponsBody"]"@嵌入式方法": "\"\"""data type": "长整数",
+type": "文本型""method name": "GetResponsBody"]"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "Open",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "打开方式",
+"comment": "\"GET POST\"",
+"data type": "文本型",
+"@默认值": "\"GET\""
+   },
+   {
+"parameter name": "要打开的网址",
+"comment": "\"www.baidu.com\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "Send",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "______Curl测试类",
+"methods": [
+  {
+@嵌入式方法": "\"\"""method name": "开始测试"
+  },
+  {
+}"method name": "开始测试2"
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "开始测试_gzip"
+  },
+  {
+ment": "取重定向连接。。301 302 ，这个要能取到，函数 启用重定向(0) 必须这样用 和 GetLocation 类似""method name": "取错误信息""method name": "开始测试_数组"
+  }
+]
+ },
+ {
+"class name": "______Curl多线程测试类",
+"methods": [
+  {
+ }"method name": "开始测试"
+  }
+]
+ }
+ 线程类f]
+}

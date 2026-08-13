@@ -1,0 +1,1822 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+"package name": "火山.锐浪",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+"comment": "本文件放置包含各类集合对象，集合对象就是管理一组相同类型子对象的类。\n子对象有一个以字符表示的唯一名称标识，名称不区分字母的大小写。\n子对象在整个集合中的排列顺序称为子对象的顺序号，第一个子对象的顺序号为 1，依次递增每个子对象的顺序号。\n一般用子对象的名称或顺序号操作子对象。集合对象对象一般具有类似的属性与方法。",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+"@文档": "\"category = \\\"集合对象\\\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+"classes": [
+ {
+"class name": "部件框集合",
+"comment": "Controls，集合对象，部件框容器中的所有部件框的集合对象。",
+"base class": "COM对象类",
+"methods": [
+  {
+"method name": "对象值复制",
+"comment": "Assign，将同类型的参数对象赋值到本对象。",
+"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+]
+  },
+  {
+veGroup，根据组标题格的名称移除一个组标题格。"method name": "数目",
+veGroup，根据组标题格的名称移除一个组标题格。"comment": "Count，指示拥有部件框的个数。",
+veGroup，根据组标题格的名称移除一个组标题格。"type": "property getter",
+veGroup，根据组标题格的名称移除一个组标题格。"data type": "整数"
+  },
+  {
+ "指示准备移除的组标题格的名称。""method name": "获取项目",
+ "指示准备移除的组标题格的名称。""comment": "Item，根据部件框的顺序号或名称得到部件框的接口引用。\n在读取时要传入一个VARIANT类型的参数，指定序列的顺序号或名称，序列的顺序号从一开始。\n名称在匹配时不区分字母大小写。",
+ "指示准备移除的组标题格的名称。""data type": "部件框",
+ "指示准备移除的组标题格的名称。""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "序列的顺序号从一开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+ "指示准备移除的组标题格的名称。"]
+  },
+  {
+移除的组标题格的名称。"method name": "按名称获取项目",
+移除的组标题格的名称。"comment": "Item，根据部件框的名称得到部件框的接口引用。\n指定部件框的名称，名称在匹配时不区分字母大小写。",
+移除的组标题格的名称。"data type": "部件框",
+移除的组标题格的名称。"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定部件框的名称，名称在匹配时不区分字母大小写。",
+"data type": "文本型"
+   }
+移除的组标题格的名称。]
+  },
+  {
+oup，根据组标题格的名称移除一个组标题格。"method name": "数目""method name": "按序号获取项目",
+oup，根据组标题格的名称移除一个组标题格。"method name": "数目""comment": "Item，根据部件框的顺序号得到部件框的接口引用。\n指定部件框序的顺序号，序列的顺序号从一开始。",
+oup，根据组标题格的名称移除一个组标题格。"method name": "数目""data type": "部件框",
+oup，根据组标题格的名称移除一个组标题格。"method name": "数目""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定部件框序列的顺序号，序列的顺序号从一开始。",
+"data type": "整数"
+   }
+oup，根据组标题格的名称移除一个组标题格。"method name": "数目"]
+  },
+  {
+
+"method name": "增加",
+
+"comment": "Add，根据部件框的类型参数增加一个部件框并返回新增部件框的接口引用。",
+
+"result comment": "新增部件框对象的接口引用。",
+
+"data type": "部件框",
+
+"parameters": [
+   {
+"parameter name": "部件框类型枚举值",
+"comment": "指定新增部件框的类型。",
+"data type": "部件框类型枚举"
+   }
+
+]
+  },
+  {
+veGroup，根据组标题格的顺序号移除一个组标题格。"method name": "改变项目顺序",
+veGroup，根据组标题格的顺序号移除一个组标题格。"comment": "ChangeItemOrder，在集合中改变指定参数部件框的顺序。",
+veGroup，根据组标题格的顺序号移除一个组标题格。"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定部件框的序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "部件框在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+veGroup，根据组标题格的顺序号移除一个组标题格。]
+  },
+  {
+thod name": "增加""method name": "按名称改变项目顺序",
+thod name": "增加""comment": "ChangeItemOrder，在集合中改变指定参数部件框的顺序。",
+thod name": "增加""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定部件框的名称。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "部件框在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+thod name": "增加"]
+  },
+  {
+ameter name": "名称或序号""method name": "按序号改变项目顺序",
+ameter name": "名称或序号""comment": "ChangeItemOrder，在集合中改变指定参数部件框的顺序。",
+ameter name": "名称或序号""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定部件框的序号，序号从1开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "部件框在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+ameter name": "名称或序号"]
+  },
+  {
+eGroup，根据组标题格的顺序号移除一个组标题格。"comment": "ChangeItemOrder，在集合中改变指定参数部件框的顺序。""method name": "按名称取序号",
+eGroup，根据组标题格的顺序号移除一个组标题格。"comment": "ChangeItemOrder，在集合中改变指定参数部件框的顺序。""comment": "IndexByName，根据部件框的名称取得其顺序号，如果不存在与名称匹配的部件框，则返回-1。\n部件框的名称不区分字母的大小写。",
+eGroup，根据组标题格的顺序号移除一个组标题格。"comment": "ChangeItemOrder，在集合中改变指定参数部件框的顺序。""result comment": "如果有匹配的部件框，返回其顺序号，否则返回-1。",
+eGroup，根据组标题格的顺序号移除一个组标题格。"comment": "ChangeItemOrder，在集合中改变指定参数部件框的顺序。""data type": "整数",
+eGroup，根据组标题格的顺序号移除一个组标题格。"comment": "ChangeItemOrder，在集合中改变指定参数部件框的顺序。""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定部件框的名称",
+"data type": "文本型"
+   }
+eGroup，根据组标题格的顺序号移除一个组标题格。"comment": "ChangeItemOrder，在集合中改变指定参数部件框的顺序。"]
+  },
+  {
+ameter name": "名称""method name": "获取指定项目",
+ameter name": "名称""comment": "ItemAt，从集合中按序号获取对应的部件框对象，序号从1开始。",
+ameter name": "名称""result comment": "获取到的部件框对象。",
+ameter name": "名称""data type": "部件框",
+ameter name": "名称""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定部件框对象在集合中的序号，从1开始。",
+"data type": "整数"
+   }
+ameter name": "名称"]
+  },
+  {
+oveGroup，根据组标题格的顺序号移除一个组标题格。""method name": "删除项目",
+oveGroup，根据组标题格的顺序号移除一个组标题格。""comment": "Remove，根据部件框的顺序号或名称将部件框移除，在输入参数种指定要移除部件框的顺序号或名称。",
+oveGroup，根据组标题格的顺序号移除一个组标题格。""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定部件框的顺序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+oveGroup，根据组标题格的顺序号移除一个组标题格。"]
+  },
+  {
+comment": "指定部件框对象在集合中的序号，从1开始。""method name": "按名称删除项目",
+comment": "指定部件框对象在集合中的序号，从1开始。""comment": "Remove，根据部件框的名称将部件框移除，在输入参数种指定要移除部件框的顺序号或名称。",
+comment": "指定部件框对象在集合中的序号，从1开始。""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定部件框的名称。",
+"data type": "文本型"
+   }
+comment": "指定部件框对象在集合中的序号，从1开始。"]
+  },
+  {
+ameter name": "名称""method name": "按序号删除项目",
+ameter name": "名称""comment": "Remove，根据部件框的顺序号将部件框移除，在输入参数种指定要移除部件框的顺序号或名称。",
+ameter name": "名称""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定部件框的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+ameter name": "名称"]
+  },
+  {
+eter name": "名称或序号"]"method name": "全部删除",
+eter name": "名称或序号"]"comment": "RemoveAll，清除全部部件框。"
+  }
+]
+ },
+ {
+"class name": "字段集合",
+"comment": "Fields，集合对象，记录集的所有字段的集合对象。",
+"base class": "COM对象类",
+"methods": [
+  {
+集合中的新序号，从1开始。"method name": "对象值复制",
+集合中的新序号，从1开始。"comment": "Assign，将同类型的参数对象赋值到本对象。",
+集合中的新序号，从1开始。"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+集合中的新序号，从1开始。]
+  },
+  {
+"method name": "数目",
+"comment": "Count，指示拥有字段的个数。",
+"type": "property getter",
+"data type": "整数"
+  },
+  {
+veGroup，根据组标题格的顺序号移除一个组标题格。""comment": "Remove，根据部件框的顺序号或名称将部件框移除，在输入参数种指定要移除部件框的顺序号或名称。""method name": "获取项目",
+veGroup，根据组标题格的顺序号移除一个组标题格。""comment": "Remove，根据部件框的顺序号或名称将部件框移除，在输入参数种指定要移除部件框的顺序号或名称。""comment": "Item，根据字段的顺序号或名称得到字段的接口引用。\n在读取时要传入一个VARIANT类型的参数，指定序列的顺序号或名称，序列的顺序号从一开始。\n名称在匹配时不区分字母大小写。",
+veGroup，根据组标题格的顺序号移除一个组标题格。""comment": "Remove，根据部件框的顺序号或名称将部件框移除，在输入参数种指定要移除部件框的顺序号或名称。""data type": "字段",
+veGroup，根据组标题格的顺序号移除一个组标题格。""comment": "Remove，根据部件框的顺序号或名称将部件框移除，在输入参数种指定要移除部件框的顺序号或名称。""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定序列的顺序号或名称，序列的顺序号从一开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+veGroup，根据组标题格的顺序号移除一个组标题格。""comment": "Remove，根据部件框的顺序号或名称将部件框移除，在输入参数种指定要移除部件框的顺序号或名称。"]
+  },
+  {
+ameter name": "名称""method name": "按名称获取项目",
+ameter name": "名称""comment": "Item，根据字段的名称得到字段的接口引用。\n指定序列的名称，名称在匹配时不区分字母大小写。",
+ameter name": "名称""data type": "字段",
+ameter name": "名称""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定序列的名称，名称在匹配时不区分字母大小写。",
+"data type": "文本型"
+   }
+ameter name": "名称"]
+  },
+  {
+"method name": "按序号获取项目",
+"comment": "Item，根据字段的顺序号得到字段的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。",
+"data type": "字段",
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定序列的顺序号，序列的顺序号从一开始。",
+"data type": "整数"
+   }
+]
+  },
+  {
+ameter name": "名称""method name": "增加",
+ameter name": "名称""comment": "Add，根据字段类型参数增加一个字段并返回新增字段的接口引用。",
+ameter name": "名称""result comment": "新增字段的接口引用。",
+ameter name": "名称""data type": "字段"
+  },
+  {
+meter name": "名称""result comment": "新增字段的接口引用。""method name": "改变项目顺序",
+meter name": "名称""result comment": "新增字段的接口引用。""comment": "ChangeItemOrder，在集合中改变指定参数字段的顺序。",
+meter name": "名称""result comment": "新增字段的接口引用。""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定字段的序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "字段在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+meter name": "名称""result comment": "新增字段的接口引用。"]
+  },
+  {
+methods": [
+"method name": "按名称改变项目顺序",
+methods": [
+"comment": "ChangeItemOrder，在集合中改变指定参数字段的顺序。",
+methods": [
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定字段的名称。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "字段在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "按序号改变项目顺序",
+
+"comment": "ChangeItemOrder，在集合中改变指定参数字段的顺序。",
+
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定字段的序号，序号从1开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "字段在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "按名称取序号",
+}"comment": "IndexByName，根据字段的名称取得其顺序号，如果不存在与名称匹配的字段，则返回-1。\n字段的名称不区分字母的大小写。",
+}"result comment": "如果有匹配的字段，返回其顺序号，否则返回-1。",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定字段的名称。",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ኰ數ŝ"method name": "获取指定项目",
+ኰ數ŝ"comment": "ItemAt，从集合中按序号获取对应的字段对象，序号从1开始。",
+ኰ數ŝ"result comment": "获取到的字段对象。",
+ኰ數ŝ"data type": "字段",
+ኰ數ŝ"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定字段对象在集合中的序号，从1开始。",
+"data type": "整数"
+   }
+ኰ數ŝ]
+  },
+  {
+data type": "整数""method name": "删除项目",
+data type": "整数""comment": "Remove，根据字段的顺序号或名称将字段移除，在输入参数种指定要移除字段的顺序号或名称。",
+data type": "整数""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定字段的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)",
+"data type": "COM变体型"
+   }
+data type": "整数"]
+  },
+  {
+comment": "指定字段的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)""method name": "按名称删除项目",
+comment": "指定字段的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)""comment": "Remove，根据字段的名称将字段移除，在输入参数种指定要移除字段的顺序号或名称。",
+comment": "指定字段的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定字段的或名称。 ",
+"data type": "文本型"
+   }
+comment": "指定字段的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)"]
+  },
+  {
+"method name": "按序号删除项目",
+"comment": "Remove，根据字段的顺序号将字段移除，在输入参数种指定要移除字段的顺序号或名称。",
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定字段的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+]
+  },
+  {
+ameter name": "名称""method name": "全部删除",
+ameter name": "名称""comment": "RemoveAll，清除全部字段。"
+  }
+]
+ },
+ {
+"class name": "参数集合",
+"comment": "Parameters，集合对象，报表主对象的所有参数的集合对象。",
+"base class": "COM对象类",
+"methods": [
+  {
+ent": "指定字段的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)""method name": "按名称删除项目""method name": "对象值复制",
+ent": "指定字段的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)""method name": "按名称删除项目""comment": "Assign，将同类型的参数对象赋值到本对象。",
+ent": "指定字段的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)""method name": "按名称删除项目""parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+ent": "指定字段的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)""method name": "按名称删除项目"]
+  },
+  {
+}"method name": "数目",
+}"comment": "Count，指示拥有参数的个数。",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+data type": "COM变体型""method name": "获取项目",
+data type": "COM变体型""comment": "Item，根据参数的顺序号或名称得到参数的接口引用。\n在读取时要传入一个VARIANT类型的参数，指定参数的顺序号或名称，参数的顺序号从一开始。",
+data type": "COM变体型""data type": "参数",
+data type": "COM变体型""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定参数的顺序号或名称，参数的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+data type": "COM变体型"]
+  },
+  {
+
+"method name": "按名称获取项目",
+
+"comment": "Item，根据参数的名称得到参数的接口引用。\n指定参数的名称。",
+
+"data type": "参数",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定参数的名称。",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "按序号获取项目",
+
+"comment": "Item，根据参数的顺序号得到参数的接口引用。\n指定参数的顺序号，参数的顺序号从一开始。",
+
+"data type": "参数",
+
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定参数的顺序号，顺序号从1开始。",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+comment": "指定参数的顺序号或名称，参数的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。""method name": "增加",
+comment": "指定参数的顺序号或名称，参数的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。""comment": "Add，增加一个参数并返回新增参数的接口引用。",
+comment": "指定参数的顺序号或名称，参数的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。""result comment": "新增参数的接口引用。",
+comment": "指定参数的顺序号或名称，参数的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。""data type": "参数"
+  },
+  {
+comment": "Remove，根据字段的顺序号将字段移除，在输入参数种指定要移除字段的顺序号或名称。""method name": "改变项目顺序",
+comment": "Remove，根据字段的顺序号将字段移除，在输入参数种指定要移除字段的顺序号或名称。""comment": "ChangeItemOrder，在集合中改变指定参数对象的顺序。",
+comment": "Remove，根据字段的顺序号将字段移除，在输入参数种指定要移除字段的顺序号或名称。""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定参数对象的序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "参数对象在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+comment": "Remove，根据字段的顺序号将字段移除，在输入参数种指定要移除字段的顺序号或名称。"]
+  },
+  {
+meter name": "名称""comment": "RemoveAll，清除全部字段。""method name": "按名称改变项目顺序",
+meter name": "名称""comment": "RemoveAll，清除全部字段。""comment": "ChangeItemOrder，在集合中改变指定参数对象的顺序。",
+meter name": "名称""comment": "RemoveAll，清除全部字段。""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定参数对象的名称。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "参数对象在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+meter name": "名称""comment": "RemoveAll，清除全部字段。"]
+  },
+  {
+thod name": "按序号改变项目顺序""method name": "按序号改变项目顺序",
+thod name": "按序号改变项目顺序""comment": "ChangeItemOrder，在集合中改变指定参数对象的顺序。",
+thod name": "按序号改变项目顺序""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定参数对象的序号，序号从1开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "参数对象在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+thod name": "按序号改变项目顺序"]
+  },
+  {
+ameter name": "名称""method name": "按名称取序号",
+ameter name": "名称""comment": "IndexByName，根据参数的名称取得其顺序号，如果不存在与名称匹配的参数，则返回-1。\n参数的名称不区分字母的大小写。",
+ameter name": "名称""result comment": "如果有匹配的参数，返回其顺序号，否则返回-1。",
+ameter name": "名称""data type": "整数",
+ameter name": "名称""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定参数的名称。 ",
+"data type": "文本型"
+   }
+ameter name": "名称"]
+  },
+  {
+data type": "整数""method name": "获取指定项目",
+data type": "整数""comment": "ItemAt，按序号获取对应的参数对象，序号从1开始。",
+data type": "整数""result comment": "获取到的参数对象。",
+data type": "整数""data type": "参数",
+data type": "整数""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定元素对象的序号，从1开始。",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+omment": "指定参数的顺序号或名称，参数的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。""result comment": "新增参数的接口引用。""method name": "删除项目",
+omment": "指定参数的顺序号或名称，参数的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。""result comment": "新增参数的接口引用。""comment": "Remove，根据参数的顺序号或名称将参数移除，在输入参数种指定要移除参数的顺序号或名称。",
+omment": "指定参数的顺序号或名称，参数的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。""result comment": "新增参数的接口引用。""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定参数的顺序号或名称，序号从1开始。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+omment": "指定参数的顺序号或名称，参数的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。""result comment": "新增参数的接口引用。"]
+  },
+  {
+"method name": "按名称删除项目",
+"comment": "Remove，根据参数的名称将参数移除，在输入参数种指定要移除参数的顺序号或名称。",
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定参数的或名称。",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "按序号删除项目",
+"comment": "Remove，根据参数的顺序号将参数移除，在输入参数种指定要移除参数的顺序号或名称。",
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定参数的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "全部删除",
+
+"comment": "RemoveAll，清除全部参数。"
+  }
+]
+ },
+ {
+"class name": "报表头集合",
+"comment": "ReportHeaders，集合对象，报表主对象的所有报表头的集合对象。",
+"base class": "COM对象类",
+"methods": [
+  {
+"method name": "对象值复制",
+"comment": "Assign，将同类型的参数对象赋值到本对象。",
+"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+]
+  },
+  {
+ethod name": "全部删除""method name": "数目",
+ethod name": "全部删除""comment": "Count，指示拥有报表头的个数。",
+ethod name": "全部删除""type": "property getter",
+ethod name": "全部删除""data type": "整数"
+  },
+  {
+ameter name": "名称""method name": "获取项目",
+ameter name": "名称""comment": "Item，根据报表头的顺序号或名称得到报表头的接口引用。\n在读取时要传入一个VARIANT类型的参数，指定报表头的顺序号或名称，报表头的顺序号从一开始。\n名称在匹配时不区分字母大小写。",
+ameter name": "名称""data type": "报表头",
+ameter name": "名称""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定报表头的顺序号或名称，报表头的顺序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+ameter name": "名称"]
+  },
+  {
+对象的序号，从1开始。"method name": "按名称获取项目",
+对象的序号，从1开始。"comment": "Item，根据报表头的名称得到报表头的接口引用。\n指定报表头的名称，名称在匹配时不区分字母大小写。",
+对象的序号，从1开始。"data type": "报表头",
+对象的序号，从1开始。"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定报表头的名称，名称在匹配时不区分字母大小写。",
+"data type": "文本型"
+   }
+对象的序号，从1开始。]
+  },
+  {
+ss name": "报表头集合""method name": "按序号获取项目",
+ss name": "报表头集合""comment": "Item，根据报表头的顺序号得到报表头的接口引用。\n指定报表头的顺序号，报表头的顺序号从1开始。",
+ss name": "报表头集合""data type": "报表头",
+ss name": "报表头集合""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定报表头的顺序号，顺序号从1开始。",
+"data type": "整数"
+   }
+ss name": "报表头集合"]
+  },
+  {
+
+"method name": "增加",
+
+"comment": "Add，增加一个报表头并返回新增报表头的接口引用。",
+
+"result comment": "新增报表头的接口引用。",
+
+"data type": "报表头"
+  },
+  {
+base class": "COM对象类""method name": "改变项目顺序",
+base class": "COM对象类""comment": "ChangeItemOrder，在集合中改变指定参数报表头的顺序。",
+base class": "COM对象类""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定报表头的序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "报表头在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+base class": "COM对象类"]
+  },
+  {
+}"method name": "按名改变项目顺序",
+}"comment": "ChangeItemOrder，在集合中改变指定参数报表头的顺序。",
+}"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定报表头的名称。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "报表头在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "按序号改变项目顺序",
+
+"comment": "ChangeItemOrder，在集合中改变指定参数报表头的顺序。",
+
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定报表头的序号，序号从1开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "报表头在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "名称""method name": "按名称取序号",
+ameter name": "名称""comment": "IndexByName，根据报表头的名称取得其顺序号，如果不存在与名称匹配的报表头，则返回值为-1。\n报表头的名称不区分字母的大小写。",
+ameter name": "名称""result comment": "如果存在名称匹配的报表头，返回报表头的顺序号，否则返回-1。",
+ameter name": "名称""data type": "整数",
+ameter name": "名称""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定报表头的名称。",
+"data type": "文本型"
+   }
+ameter name": "名称"]
+  },
+  {
+thod name": "按序号改变项目顺序""method name": "获取指定项目",
+thod name": "按序号改变项目顺序""comment": "ItemAt，从集合中按序号获取对应的报表头对象，序号从1开始。",
+thod name": "按序号改变项目顺序""result comment": "获取到的报表头对象。",
+thod name": "按序号改变项目顺序""data type": "报表头",
+thod name": "按序号改变项目顺序""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定报表头对象在集合中的序号，从1开始。",
+"data type": "整数"
+   }
+thod name": "按序号改变项目顺序"]
+  },
+  {
+ameter name": "新顺序号""method name": "删除项目",
+ameter name": "新顺序号""comment": "Remove，根据报表头的顺序号或名称将报表头移除。",
+ameter name": "新顺序号""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定报表头的顺序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+ameter name": "新顺序号"]
+  },
+  {
+ }"method name": "按名称删除项目",
+ }"comment": "Remove，根据报表头的名称将报表头移除。",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定报表头的名称。",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "按序号删除项目",
+"comment": "Remove，根据报表头的顺序号将报表头移除。",
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定报表头的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "全部删除",
+data type": "文本型""comment": "RemoveAll，清除全部报表头。"
+  }
+]
+ },
+ {
+"class name": "报表尾集合",
+"comment": "ReportFooters，集合对象，报表主对象的所有报表尾的集合对象。",
+"base class": "COM对象类",
+"methods": [
+  {
+
+"method name": "对象值复制",
+
+"comment": "Assign，将同类型的参数对象赋值到本对象。",
+
+"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+veAll，清除全部报表头。"method name": "数目",
+veAll，清除全部报表头。"comment": "Count，指示拥有报表尾的个数。",
+veAll，清除全部报表头。"type": "property getter",
+veAll，清除全部报表头。"data type": "整数"
+  },
+  {
+eAll，清除全部报表头。"type": "property getter""method name": "获取项目",
+eAll，清除全部报表头。"type": "property getter""comment": "Item，根据报表尾的顺序号或名称得到报表尾的接口引用。\n在读取时要传入一个VARIANT类型的参数，指定报表尾的顺序号或名称，报表尾的顺序号从一开始。\n名称在匹配时不区分字母大小写。",
+eAll，清除全部报表头。"type": "property getter""data type": "报表尾",
+eAll，清除全部报表头。"type": "property getter""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定报表尾的顺序号或名称，报表尾的顺序号从一开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+eAll，清除全部报表头。"type": "property getter"]
+  },
+  {
+ata type": "文本型""comment": "RemoveAll，清除全部报表头。""method name": "按名称获取项目",
+ata type": "文本型""comment": "RemoveAll，清除全部报表头。""comment": "Item，根据报表尾的名称得到报表尾的接口引用。\n指定报表尾的名称，名称在匹配时不区分字母大小写。",
+ata type": "文本型""comment": "RemoveAll，清除全部报表头。""data type": "报表尾",
+ata type": "文本型""comment": "RemoveAll，清除全部报表头。""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定报表尾的名称，名称在匹配时不区分字母大小写。",
+"data type": "文本型"
+   }
+ata type": "文本型""comment": "RemoveAll，清除全部报表头。"]
+  },
+  {
+}"comment": "Remove，根据报表头的名称将报表头移除。""method name": "按序号获取项目",
+}"comment": "Remove，根据报表头的名称将报表头移除。""comment": "Item，根据报表尾的顺序号得到报表尾的接口引用。\n指定报表尾的顺序号，报表尾的顺序号从1开始。",
+}"comment": "Remove，根据报表头的名称将报表头移除。""data type": "报表尾",
+}"comment": "Remove，根据报表头的名称将报表头移除。""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定报表尾的顺序号，报表尾的顺序号从1开始。",
+"data type": "整数"
+   }
+}"comment": "Remove，根据报表头的名称将报表头移除。"]
+  },
+  {
+
+"method name": "增加",
+
+"comment": "Add，增加一个报表尾并返回新增报表尾的接口引用。",
+
+"result comment": "新增报表尾的接口引用。",
+
+"data type": "报表尾"
+  },
+  {
+"method name": "改变项目顺序",
+"comment": "ChangeItemOrder，在集合中改变指定参数报表尾的顺序。",
+"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定报表尾的序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "报表尾在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+]
+  },
+  {
+"comment": "Remove，根据报表头的名称将报表头移除。""comment": "Item，根据报表尾的顺序号得到报表尾的接口引用。\n指定报表尾的顺序号，报表尾的顺序号从1开始。""method name": "按名称改变项目顺序",
+"comment": "Remove，根据报表头的名称将报表头移除。""comment": "Item，根据报表尾的顺序号得到报表尾的接口引用。\n指定报表尾的顺序号，报表尾的顺序号从1开始。""comment": "ChangeItemOrder，在集合中改变指定参数报表尾的顺序。",
+"comment": "Remove，根据报表头的名称将报表头移除。""comment": "Item，根据报表尾的顺序号得到报表尾的接口引用。\n指定报表尾的顺序号，报表尾的顺序号从1开始。""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定报表尾的名称。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "报表尾在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+"comment": "Remove，根据报表头的名称将报表头移除。""comment": "Item，根据报表尾的顺序号得到报表尾的接口引用。\n指定报表尾的顺序号，报表尾的顺序号从1开始。"]
+  },
+  {
+hod name": "按序号改变项目顺序""parameters": [
+"method name": "按序号改变项目顺序",
+hod name": "按序号改变项目顺序""parameters": [
+"comment": "ChangeItemOrder，在集合中改变指定参数报表尾的顺序。",
+hod name": "按序号改变项目顺序""parameters": [
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定报表尾的序号，序号从1开始。 ",
+"data type": "整数"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "报表尾在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+hod name": "按序号改变项目顺序""parameters": [
+]
+  },
+  {
+data type": "整数""method name": "按名称取序号",
+data type": "整数""comment": "IndexByName，根据报表尾的名称取得其顺序号，如果不存在与名称匹配的报表尾，则返回值为-1。\n报表尾的名称不区分字母的大小写。",
+data type": "整数""result comment": "如果存在名称匹配的报表尾，返回报表尾的顺序号，否则返回-1。",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定报表尾的名称。",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+集合中的新序号，从1开始。"method name": "获取指定项目",
+集合中的新序号，从1开始。"comment": "ItemAt，从集合中按序号获取对应的报表尾对象，序号从1开始。",
+集合中的新序号，从1开始。"result comment": "获取到的报表尾对象",
+集合中的新序号，从1开始。"data type": "报表尾",
+集合中的新序号，从1开始。"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定报表尾对象在集合中的序号，从1开始。",
+"data type": "整数"
+   }
+集合中的新序号，从1开始。]
+  },
+  {
+"method name": "删除项目",
+"comment": "Remove，根据报表尾的顺序号或名称将报表尾移除。",
+"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定报表尾的顺序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+]
+  },
+  {
+hod name": "删除项目""method name": "按名称删除项目",
+hod name": "删除项目""comment": "Remove，根据报表尾的名称将报表尾移除。",
+hod name": "删除项目""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定报表尾的名称。",
+"data type": "文本型"
+   }
+hod name": "删除项目"]
+  },
+  {
+ment": "Remove，根据报表头的名称将报表头移除。""comment": "Item，根据报表尾的顺序号得到报表尾的接口引用。\n指定报表尾的顺序号，报表尾的顺序号从1开始。""method name": "按名称改变项目顺序""method name": "按序号删除项目",
+ment": "Remove，根据报表头的名称将报表头移除。""comment": "Item，根据报表尾的顺序号得到报表尾的接口引用。\n指定报表尾的顺序号，报表尾的顺序号从1开始。""method name": "按名称改变项目顺序""comment": "Remove，根据报表尾的顺序号将报表尾移除。",
+ment": "Remove，根据报表头的名称将报表头移除。""comment": "Item，根据报表尾的顺序号得到报表尾的接口引用。\n指定报表尾的顺序号，报表尾的顺序号从1开始。""method name": "按名称改变项目顺序""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定报表尾的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+ment": "Remove，根据报表头的名称将报表头移除。""comment": "Item，根据报表尾的顺序号得到报表尾的接口引用。\n指定报表尾的顺序号，报表尾的顺序号从1开始。""method name": "按名称改变项目顺序"]
+  },
+  {
+ameter name": "序号""method name": "全部删除",
+ameter name": "序号""comment": "RemoveAll，清除全部报表尾。"
+  }
+]
+ },
+ {
+"class name": "分组集合",
+"comment": "Groups，集合对象，明细网格的所有分组的集合对象。",
+"base class": "COM对象类",
+"methods": [
+  {
+"method name": "对象值复制",
+"comment": "Assign，将同类型的参数对象赋值到本对象。",
+"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+]
+  },
+  {
+
+"method name": "数目",
+
+"comment": "Count，指示拥有分组的个数。",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+}"method name": "获取项目",
+}"comment": "Item，根据分组的顺序号或名称得到列分组接口引用。\n在读取时要传入一个VARIANT类型的参数，指定分组的顺序号或名称，分组的顺序号从一开始。名称在匹配时不区分字母大小写。",
+}"data type": "分组",
+}"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+}]
+  },
+  {
+合中的新序号，从1开始。"data type": "报表尾""method name": "按名称获取项目",
+合中的新序号，从1开始。"data type": "报表尾""comment": "Item，根据分组的名称得到列分组接口引用。\n指定分组的名称，名称在匹配时不区分字母大小写。",
+合中的新序号，从1开始。"data type": "报表尾""data type": "分组",
+合中的新序号，从1开始。"data type": "报表尾""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定分组的名称，名称在匹配时不区分字母大小写。",
+"data type": "文本型"
+   }
+合中的新序号，从1开始。"data type": "报表尾"]
+  },
+  {
+hod name": "删除项目""method name": "按序号获取项目",
+hod name": "删除项目""comment": "Item，根据分组的顺序号得到列分组接口引用。\n指定分组的顺序号，分组的顺序号从一开始。",
+hod name": "删除项目""data type": "分组",
+hod name": "删除项目""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定分组的顺序号，分组的顺序号从一开始。",
+"data type": "整数"
+   }
+hod name": "删除项目"]
+  },
+  {
+od name": "删除项目""comment": "Remove，根据报表尾的名称将报表尾移除。""method name": "增加",
+od name": "删除项目""comment": "Remove，根据报表尾的名称将报表尾移除。""comment": "Add，增加一个分组并返回新增分组的接口引用。",
+od name": "删除项目""comment": "Remove，根据报表尾的名称将报表尾移除。""result comment": "新增分组的接口引用。",
+od name": "删除项目""comment": "Remove，根据报表尾的名称将报表尾移除。""data type": "分组"
+  },
+  {
+od name": "删除项目""comment": "Item，根据分组的顺序号得到列分组接口引用。\n指定分组的顺序号，分组的顺序号从一开始。""method name": "改变项目顺序",
+od name": "删除项目""comment": "Item，根据分组的顺序号得到列分组接口引用。\n指定分组的顺序号，分组的顺序号从一开始。""comment": "ChangeItemOrder，在集合中改变指定参数分组的顺序。",
+od name": "删除项目""comment": "Item，根据分组的顺序号得到列分组接口引用。\n指定分组的顺序号，分组的顺序号从一开始。""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定分组的序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "分组在集合中的新序号，从1开始。 ",
+"data type": "整数"
+   }
+od name": "删除项目""comment": "Item，根据分组的顺序号得到列分组接口引用。\n指定分组的顺序号，分组的顺序号从一开始。"]
+  },
+  {
+
+"method name": "按名称改变项目顺序",
+
+"comment": "ChangeItemOrder，在集合中改变指定参数分组的顺序。",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定分组的名称。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "分组在集合中的新序号，从1开始。 ",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "按序号改变项目顺序",
+
+"comment": "ChangeItemOrder，在集合中改变指定参数分组的顺序。",
+
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定分组的序号，序号从1开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "分组在集合中的新序号，从1开始。 ",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "按名称取序号",
+"comment": "IndexByName，根据分组的名称取得其顺序号，如果不存在与名称匹配的分组，则返回-1。\n分组的名称不区分字母的大小写。",
+"result comment": "如果有匹配的分组，返回其顺序号，否则返回-1。",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定分组的名称。 ",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "COM变体型""method name": "获取指定项目",
+data type": "COM变体型""comment": "ItemAt，从集合中按序号获取对应的分组对象，序号从1开始。",
+data type": "COM变体型""result comment": "获取到的分组对象。",
+data type": "COM变体型""data type": "分组",
+data type": "COM变体型""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定分组对象在集合中的序号，从1开始。",
+"data type": "整数"
+   }
+data type": "COM变体型"]
+  },
+  {
+ata type": "COM变体型""comment": "ItemAt，从集合中按序号获取对应的分组对象，序号从1开始。""method name": "删除项目",
+ata type": "COM变体型""comment": "ItemAt，从集合中按序号获取对应的分组对象，序号从1开始。""comment": "Remove，根据分组的顺序号或名称将分组移除，在输入参数种指定要移除分组的顺序号或名称。",
+ata type": "COM变体型""comment": "ItemAt，从集合中按序号获取对应的分组对象，序号从1开始。""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定分组的顺序号或名称。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+ata type": "COM变体型""comment": "ItemAt，从集合中按序号获取对应的分组对象，序号从1开始。"]
+  },
+  {
+ethod name": "按名称改变项目顺序""method name": "按名称删除项目",
+ethod name": "按名称改变项目顺序""comment": "Remove，根据分组的名称将分组移除，在输入参数种指定要移除分组的顺序号或名称。",
+ethod name": "按名称改变项目顺序""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定分组的名称。",
+"data type": "文本型"
+   }
+ethod name": "按名称改变项目顺序"]
+  },
+  {
+data type": "整数""method name": "按序号删除项目",
+data type": "整数""comment": "Remove，根据分组的顺序号将分组移除，在输入参数种指定要移除分组的顺序号或名称。",
+data type": "整数""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定分组的顺序号。",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "COM变体型""parameters": [
+"method name": "全部删除",
+ata type": "COM变体型""parameters": [
+"comment": "RemoveAll，清除全部分组。"
+  }
+]
+ },
+ {
+"class name": "图表序列集合",
+"comment": "ChartSeriesCollection，集合对象，图表的所有序列的集合对象。",
+"base class": "COM对象类",
+"methods": [
+  {
+d name": "按名称改变项目顺序""method name": "按名称删除项目""method name": "对象值复制",
+d name": "按名称改变项目顺序""method name": "按名称删除项目""comment": "Assign，将同类型的参数对象赋值到本对象。",
+d name": "按名称改变项目顺序""method name": "按名称删除项目""parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+d name": "按名称改变项目顺序""method name": "按名称删除项目"]
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "数目",
+ata type": "整数""parameters": [
+"comment": "Count，指示拥有序列的个数。",
+ata type": "整数""parameters": [
+"type": "property getter",
+ata type": "整数""parameters": [
+"data type": "整数"
+  },
+  {
+od name": "删除项目""data type": "分组""method name": "获取项目",
+od name": "删除项目""data type": "分组""comment": "Item，根据序列的顺序号或名称得到序列的接口引用。\n在读取时要传入一个VARIANT类型的参数，指定序列的顺序号或名称，序列的顺序号从一开始。\n名称在匹配时不区分字母大小写。",
+od name": "删除项目""data type": "分组""data type": "图表序列",
+od name": "删除项目""data type": "分组""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)，序号从1开始。",
+"data type": "COM变体型"
+   }
+od name": "删除项目""data type": "分组"]
+  },
+  {
+data type": "整数""method name": "按名称获取项目",
+data type": "整数""comment": "Item，根据序列的名称得到序列的接口引用。\n指定序列的名称，名称在匹配时不区分字母大小写。",
+data type": "整数""data type": "图表序列",
+data type": "整数""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定序列的名称，名称在匹配时不区分字母大小写。",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+data type": "整数""method name": "按序号获取项目",
+data type": "整数""comment": "Item，根据序列的顺序号得到序列的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。",
+data type": "整数""data type": "图表序列",
+data type": "整数""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定序列的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "COM变体型""data type": "分组""method name": "增加",
+ata type": "COM变体型""data type": "分组""comment": "Add，增加一个序列并返回新增序列的接口引用。",
+ata type": "COM变体型""data type": "分组""result comment": "新增序列的接口引用。",
+ata type": "COM变体型""data type": "分组""data type": "图表序列"
+  },
+  {
+ata type": "整数""comment": "Item，根据序列的顺序号得到序列的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。""method name": "改变项目顺序",
+ata type": "整数""comment": "Item，根据序列的顺序号得到序列的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。""comment": "ChangeItemOrder，在集合中改变指定参数图表序列的顺序。",
+ata type": "整数""comment": "Item，根据序列的顺序号得到序列的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定图表序列的序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "图表序列在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+ata type": "整数""comment": "Item，根据序列的顺序号得到序列的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。"]
+  },
+  {
+ta type": "整数""comment": "Item，根据序列的顺序号得到序列的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。""parameters": [
+"method name": "按名称改变项目顺序",
+ta type": "整数""comment": "Item，根据序列的顺序号得到序列的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。""parameters": [
+"comment": "ChangeItemOrder，在集合中改变指定参数图表序列的顺序。",
+ta type": "整数""comment": "Item，根据序列的顺序号得到序列的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。""parameters": [
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定图表序列的名称。 ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "图表序列在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+ta type": "整数""comment": "Item，根据序列的顺序号得到序列的接口引用。\n指定序列的顺序号，序列的顺序号从一开始。""parameters": [
+]
+  },
+  {
+
+"method name": "按序号改变项目顺序",
+
+"comment": "ChangeItemOrder，在集合中改变指定参数图表序列的顺序。",
+
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定图表序列的序号，序号从1开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "图表序列在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "按名称取序号",
+}"comment": "IndexByName，根据序列的名称取得其顺序号，如果不存在与名称匹配的序列，则返回值为-1。\n序列的名称不区分字母的大小写。",
+}"result comment": "如果存在名称匹配的序列，返回序列的顺序号，否则返回-1。",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定图表序列的名称。",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ }"method name": "获取指定项目",
+ }"comment": "ItemAt，从集合中按序号获取对应的图表序列对象，序号从1开始。",
+ }"result comment": "获取到的图表序列对象。",
+ }"data type": "图表序列",
+ }"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定图表序列对象在集合中的序号，从1开始。",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "删除项目",
+}"comment": "Remove，根据序列的顺序号或名称将序列移除。",
+}"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定序列的顺序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+}]
+  },
+  {
+"method name": "按名称删除项目",
+"comment": "Remove，根据序列的名称将序列移除。",
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定序列的名称。",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "按序号删除项目",
+data type": "文本型""comment": "Remove，根据序列的顺序号将序列移除。",
+data type": "文本型""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定序列的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "全部删除",
+
+"comment": "RemoveAll，清除全部序列。"
+  }
+]
+ },
+ {
+"class name": "内容格集合",
+"comment": "ColumnContentCells，集合对象，内容行的所有内容格的集合对象。\n在内容行(IGRColumnContent)对象中指定拥有的内容格，内容格伴随列的新增而新增，伴随列的删除而删除。",
+"base class": "COM对象类",
+"methods": [
+  {
+ }"method name": "对象值复制",
+ }"comment": "Assign，将同类型的参数对象赋值到本对象。",
+ }"parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+ }]
+  },
+  {
+
+"method name": "数目",
+
+"comment": "Count，指示拥有内容格的个数。",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "获取项目",
+
+"comment": "Item，根据内容格的顺序号或名称得到内容格的接口引用。\n在读取时要传入一个VARIANT类型的参数，指定内容格的顺序号或名称，内容格的顺序号从一开始。\n名称在匹配时不区分字母大小写。",
+
+"data type": "内容格",
+
+"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定内容格对象在集合中的序号，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+"data type": "整数""method name": "按名称获取项目",
+"data type": "整数""comment": "Item，根据内容格的名称得到内容格的接口引用。\n指定内容格的名称，名称在匹配时不区分字母大小写。",
+"data type": "整数""data type": "内容格",
+"data type": "整数""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定内容格对象名称，名称在匹配时不区分字母大小写。",
+"data type": "文本型"
+   }
+"data type": "整数"]
+  },
+  {
+ }"method name": "按序号获取项目",
+ }"comment": "Item，根据内容格的顺序号得到内容格的接口引用。\n指定内容格的顺序号，内容格的顺序号从一开始。",
+ }"data type": "内容格",
+ }"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定内容格对象在集合中的序号，序号从1开始。",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"comment": "Item，根据内容格的顺序号得到内容格的接口引用。\n指定内容格的顺序号，内容格的顺序号从一开始。""method name": "按名称取序号",
+}"comment": "Item，根据内容格的顺序号得到内容格的接口引用。\n指定内容格的顺序号，内容格的顺序号从一开始。""comment": "IndexByName，根据内容格的名称取得其顺序号，如果不存在与名称匹配的内容格，则返回值为-1。\n内容格的名称不区分字母的大小写。",
+}"comment": "Item，根据内容格的顺序号得到内容格的接口引用。\n指定内容格的顺序号，内容格的顺序号从一开始。""result comment": "如果存在名称匹配的内容格，返回内容格的顺序号，否则返回-1。",
+}"comment": "Item，根据内容格的顺序号得到内容格的接口引用。\n指定内容格的顺序号，内容格的顺序号从一开始。""data type": "整数",
+}"comment": "Item，根据内容格的顺序号得到内容格的接口引用。\n指定内容格的顺序号，内容格的顺序号从一开始。""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定查找内容格的名称。",
+"data type": "文本型"
+   }
+}"comment": "Item，根据内容格的顺序号得到内容格的接口引用。\n指定内容格的顺序号，内容格的顺序号从一开始。"]
+  },
+  {
+}"method name": "获取指定项目",
+}"comment": "ItemAt，从集合中按序号获取对应的内容格对象，序号从1开始。",
+}"result comment": "获取到的内容格对象。",
+}"data type": "内容格",
+}"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定内容格对象在集合中的序号，从1开始。",
+"data type": "整数"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "列集合",
+"comment": "Columns，集合对象，明细网格的所有列的集合对象。指定明细网格(IGRDetailGrid)拥有的列。\n关于获取列的显示顺序：\n应该从IGRColumnTitle.TitleCells属性中获取列的显示顺序，即IGRColumnTitle.TitleCells的各个集合对象的顺序与列的显示顺序保持一致，如果是多层表头，这里就有树形关系，需要根据IGRColumnTitleCell.SubTitles 属性进一步获取下一级的各个标题格。\nIGRDetailGrid.Columns中的集合对象的顺序与列的显示顺序不一定保持一致。",
+"base class": "COM对象类",
+"methods": [
+  {
+data type": "文本型""method name": "对象值复制",
+data type": "文本型""comment": "Assign，将同类型的参数对象赋值到本对象。",
+data type": "文本型""parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+data type": "文本型"]
+  },
+  {
+thod name": "获取项目""method name": "数目",
+thod name": "获取项目""comment": "Count，指示拥有列的个数。",
+thod name": "获取项目""type": "property getter",
+thod name": "获取项目""data type": "整数"
+  },
+  {
+data type": "COM变体型""method name": "获取项目",
+data type": "COM变体型""comment": "Item，根据列的顺序号或名称得到列的接口引用。\n在读取时要传入一个VARIANT类型的参数，指定列的顺序号或名称，列的顺序号从一开始。\n名称在匹配时不区分字母大小写。",
+data type": "COM变体型""data type": "列",
+data type": "COM变体型""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)，序号从1开始。",
+"data type": "COM变体型"
+   }
+data type": "COM变体型"]
+  },
+  {
+ameter name": "对象类""method name": "按名称获取项目",
+ameter name": "对象类""comment": "Item，根据列的名称得到列的接口引用。\n指定列的名称，名称在匹配时不区分字母大小写。",
+ameter name": "对象类""data type": "列",
+ameter name": "对象类""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定列的名称，名称在匹配时不区分字母大小写。",
+"data type": "文本型"
+   }
+ameter name": "对象类"]
+  },
+  {
+comment": "指定列的名称，名称在匹配时不区分字母大小写。""method name": "按序号获取项目",
+comment": "指定列的名称，名称在匹配时不区分字母大小写。""comment": "Item，根据列的顺序号得到列的接口引用。\n指定列的顺序号，列的顺序号从一开始。",
+comment": "指定列的名称，名称在匹配时不区分字母大小写。""data type": "列",
+comment": "指定列的名称，名称在匹配时不区分字母大小写。""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定列的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+comment": "指定列的名称，名称在匹配时不区分字母大小写。"]
+  },
+  {
+ameter name": "名称或序号""method name": "增加",
+ameter name": "名称或序号""comment": "Add，增加一个列并返回新增列的接口引用。",
+ameter name": "名称或序号""result comment": "新增列的接口引用。",
+ameter name": "名称或序号""data type": "列"
+  },
+  {
+
+"method name": "改变项目顺序",
+
+"comment": "ChangeItemOrder，在集合中改变指定参数明细列的顺序。",
+
+"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定明细列的序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "明细列在集合中的新序号，从1开始。 ",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "按名称改变项目顺序",
+
+"comment": "ChangeItemOrder，在集合中改变指定参数明细列的顺序。",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定明细列的名称。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "明细列在集合中的新序号，从1开始。 ",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "COM对象类""method name": "按序号改变项目顺序",
+data type": "COM对象类""comment": "ChangeItemOrder，在集合中改变指定参数明细列的顺序。",
+data type": "COM对象类""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定明细列的序号，序号从1开始。。",
+"data type": "整数"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "明细列在集合中的新序号，从1开始。 ",
+"data type": "整数"
+   }
+data type": "COM对象类"]
+  },
+  {
+ameter name": "名称或序号""method name": "按名称取序号",
+ameter name": "名称或序号""comment": "IndexByName，根据列的名称取得其顺序号，如果不存在与名称匹配的列，则返回值为-1。\n列的名称不区分字母的大小写。",
+ameter name": "名称或序号""result comment": "如果存在名称匹配的列，返回列的顺序号，否则返回-1。",
+ameter name": "名称或序号""data type": "整数",
+ameter name": "名称或序号""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定列的名称。",
+"data type": "文本型"
+   }
+ameter name": "名称或序号"]
+  },
+  {
+ameter name": "序号""method name": "获取指定项目",
+ameter name": "序号""comment": "ItemAt，从集合中按序号获取对应的明细列对象，序号从1开始。",
+ameter name": "序号""result comment": "获取到的明细列对象。",
+ameter name": "序号""data type": "列",
+ameter name": "序号""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定明细列对象在集合中的序号，从1开始。",
+"data type": "整数"
+   }
+ameter name": "序号"]
+  },
+  {
+ta type": "COM对象类"]"method name": "删除项目",
+ta type": "COM对象类"]"comment": "Remove，根据列的顺序号或名称将列移除。",
+ta type": "COM对象类"]"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定列的顺序号或名称。 参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)，序号从1开始。",
+"data type": "COM变体型"
+   }
+ta type": "COM对象类"]]
+  },
+  {
+meter name": "名称或序号""comment": "Add，增加一个列并返回新增列的接口引用。""method name": "按名称删除项目",
+meter name": "名称或序号""comment": "Add，增加一个列并返回新增列的接口引用。""comment": "Remove，根据列的名称将列移除。",
+meter name": "名称或序号""comment": "Add，增加一个列并返回新增列的接口引用。""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定列的名称。 ",
+"data type": "文本型"
+   }
+meter name": "名称或序号""comment": "Add，增加一个列并返回新增列的接口引用。"]
+  },
+  {
+ }"method name": "按序号删除项目",
+ }"comment": "Remove，根据列的顺序号将列移除。",
+ }"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定列的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "全部删除",
+
+"comment": "RemoveAll，清除全部列。"
+  }
+]
+ },
+ {
+"class name": "标题格集合",
+"comment": "ColumnTitleCells，集合对象，标题行的拥有的标题格集合对象的接口。\n与列对应的标题格伴随列的创建而创建，伴随列的移除而移除，但组标题格不存在唯一对应的列，其创建与移除独立于列。\n所以在此集合对象中不提供增加与移除集合元素的通常方法，但提供AddGroup与RemoveGroup方法专门用来增加与移除组标题格。",
+"base class": "COM对象类",
+"methods": [
+  {
+meter name": "名称或序号""comment": "Add，增加一个列并返回新增列的接口引用。""method name": "对象值复制",
+meter name": "名称或序号""comment": "Add，增加一个列并返回新增列的接口引用。""comment": "Assign，将同类型的参数对象赋值到本对象。",
+meter name": "名称或序号""comment": "Add，增加一个列并返回新增列的接口引用。""parameters": [
+   {
+"parameter name": "对象类",
+"data type": "COM对象类"
+   }
+meter name": "名称或序号""comment": "Add，增加一个列并返回新增列的接口引用。"]
+  },
+  {
+
+"method name": "数目",
+
+"comment": "Count，指示拥有标题格的个数。",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+ }"method name": "获取项目",
+ }"comment": "Item，根据标题格的顺序号或名称得到标题格的接口引用。\n在读取时要传入一个VARIANT类型的参数，指定标题格的顺序号或名称，标题格的顺序号从一开始。\n名称在匹配时不区分字母大小写。",
+ }"data type": "标题格",
+ }"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)，序号从1开始。",
+"data type": "COM变体型"
+   }
+ }]
+  },
+  {
+data type": "COM变体型""method name": "按名称获取项目",
+data type": "COM变体型""comment": "Item，根据标题格的名称得到标题格的接口引用。\n指定标题格的名称，名称在匹配时不区分字母大小写。",
+data type": "COM变体型""data type": "标题格",
+data type": "COM变体型""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定标题格的名称，名称在匹配时不区分字母大小写。",
+"data type": "文本型"
+   }
+data type": "COM变体型"]
+  },
+  {
+]"method name": "按序号获取项目",
+]"comment": "Item，根据标题格的顺序号得到标题格的接口引用。\n指定标题格的顺序号，标题格的顺序号从一开始。",
+]"data type": "标题格",
+]"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定标题格的顺序号，标题格的顺序号从一开始。",
+"data type": "整数"
+   }
+]]
+  },
+  {
+
+"method name": "增加组标题格",
+
+"comment": "AddGroup，",
+
+"result comment": "新增组标题格的接口引用。",
+
+"data type": "标题格",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "新增组标题格的名称。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标题",
+"comment": "新增组标题格的显示文本。",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"parameters": [
+"method name": "改变项目顺序",
+}"parameters": [
+"comment": "ChangeItemOrder，在集合中改变指定参数标题格的顺序。",
+}"parameters": [
+"parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指定标题格的序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "标题格在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+}"parameters": [
+]
+  },
+  {
+
+"method name": "按名称改变项目顺序",
+
+"comment": "ChangeItemOrder，在集合中改变指定参数标题格的顺序。",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定标题格的名称。",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "标题格在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "按序号改变项目顺序",
+"comment": "ChangeItemOrder，在集合中改变指定参数标题格的顺序。",
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定标题格的序号，序号从1开始。",
+"data type": "整数"
+   },
+   {
+"parameter name": "新顺序号",
+"comment": "标题格在集合中的新序号，从1开始。",
+"data type": "整数"
+   }
+]
+  },
+  {
+thod name": "按序号获取项目""method name": "按名称取序号",
+thod name": "按序号获取项目""comment": "IndexByName，根据标题格的名称取得其顺序号，如果不存在与名称匹配的标题格，则返回-1。标题格的名称不区分字母大小写。",
+thod name": "按序号获取项目""result comment": "如果有匹配的标题格，返回其顺序号，否则返回-1。\n",
+thod name": "按序号获取项目""data type": "整数",
+thod name": "按序号获取项目""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指定查找标题格的名称。",
+"data type": "文本型"
+   }
+thod name": "按序号获取项目"]
+  },
+  {
+ameter name": "新顺序号""method name": "获取指定项目",
+ameter name": "新顺序号""comment": "ItemAt，从集合中按序号获取对应的标题格对象，序号从1开始。",
+ameter name": "新顺序号""result comment": "获取到的标题格对象。",
+ameter name": "新顺序号""data type": "标题格",
+ameter name": "新顺序号""parameters": [
+   {
+"parameter name": "序号",
+"comment": "指定标题格对象在集合中的序号，从1开始。 ",
+"data type": "整数"
+   }
+ameter name": "新顺序号"]
+  },
+  {
+meter name": "新顺序号""data type": "标题格""method name": "删除项目",
+meter name": "新顺序号""data type": "标题格""comment": "RemoveGroup，根据组标题格的顺序号或名称移除一个组标题格。\n只有当指定名称或序号的标题格存在，并且此标题格是组标题格时，才能成功移除标题格。",
+meter name": "新顺序号""data type": "标题格""parameters": [
+   {
+"parameter name": "名称或序号",
+"comment": "指示准备移除的组标题格的顺序号或名称，序号从1开始。参数为变体型数据时，可以用 到变体型_整数型(序号) 或 到变体型_文本型(名称)。",
+"data type": "COM变体型"
+   }
+meter name": "新顺序号""data type": "标题格"]
+  },
+  {
+meter name": "新顺序号""data type": "标题格""method name": "按名称删除项目",
+meter name": "新顺序号""data type": "标题格""comment": "RemoveGroup，根据组标题格的名称移除一个组标题格。\n只有当指定名称的标题格存在，并且此标题格是组标题格时，才能成功移除标题格。",
+meter name": "新顺序号""data type": "标题格""parameters": [
+   {
+"parameter name": "名称",
+"comment": "指示准备移除的组标题格的名称。",
+"data type": "文本型"
+   }
+meter name": "新顺序号""data type": "标题格"]
+  },
+  {
+hod name": "按序号获取项目""parameters": [
+"method name": "按序号删除项目",
+hod name": "按序号获取项目""parameters": [
+"comment": "RemoveGroup，根据组标题格的顺序号移除一个组标题格。\n只有当指定序号的标题格存在，并且此标题格是组标题格时，才能成功移除标题格。",
+hod name": "按序号获取项目""parameters": [
+"parameters": [
+   {
+"parameter name": "序号",
+"comment": "指示准备移除的组标题格的顺序号，序号从1开始。",
+"data type": "整数"
+   }
+hod name": "按序号获取项目""parameters": [
+]
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"MFC版锐浪报表".
+
+]
+}

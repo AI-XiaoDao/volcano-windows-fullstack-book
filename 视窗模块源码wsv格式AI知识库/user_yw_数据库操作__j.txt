@@ -1,0 +1,11315 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"ADO数据库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"ADO数据库\\\"\"""class name": "数据库类_",
+本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"ADO数据库\\\"\"""@文档": "\"category = \\\"ADO数据库.ADO数据库1\\\"\"",
+本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"ADO数据库\\\"\"""variables": [
+  {
+"variable name": "连接对象",
+"data type": "COM对象类"
+  },
+  {
+
+"variable name": "语句错误描述信息",
+
+"data type": "文本型",
+
+"initial value": "\"还未连接数据库\""
+  },
+  {
+
+"variable name": "连接错误描述",
+
+"data type": "文本型",
+
+"initial value": "\"还未连接数据库\""
+  }
+本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"ADO数据库\\\"\""],
+本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"ADO数据库\\\"\"""methods": [
+  {
+
+"method name": "执行超时",
+
+"comment": "设置该数据库对象等待命令执行所欲等待的时间.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:秒,提供0表示无超时一直等待.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "执行超时",
+
+"comment": "获取该数据库对象等待命令执行所欲等待的时间.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "连接文本",
+
+"comment": "设置\"连接\"方法所欲使用的连接文本.",
+
+"type": "property setter",
+
+"@值细节类型": "自定义",
+
+"@附加文本": "\"..\\\\mfc_ui_base\\\\designer\\\\mfc_designer_x64.dll\\r\\n..\\\\mfc_ui_base\\\\designer\\\\mfc_designer_win32.dll\\r\\nGetODBCConnectStr\\r\\n0\"",
+
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "连接文本",
+
+"comment": "获取已设置的连接文本属性内容.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "连接文本2",
+
+"comment": "锐浪专用连接，获取已设置的连接文本属性内容.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "连接超时",
+
+"comment": "设置该数据库执行连接所欲等待的时间.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:秒,提供0表示无超时一直等待.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "连接超时",
+
+"comment": "获取该数据库执行连接所欲等待的时间.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "当前状态",
+
+"comment": "获取当前数据库对象的工作状态.",
+
+"result comment": "请参考\"数据库状态类型_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "提供者名称",
+
+"comment": "设置数据库连接所欲使用的提供者,默认使用\"MSDASQL\".",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "提供者名称",
+
+"comment": "获取数据库连接所欲使用的提供者.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "版本信息",
+
+"comment": "获取当前系统所使用的ADO版本号.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "游标服务位置",
+
+"comment": "指定游标服务位置,请参考\"数据库游标服务位置_\"所提供的常量.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "游标位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "游标服务位置",
+}"comment": "获取游标服务位置.",
+}"result comment": "请参考\"数据库游标服务位置_\"所提供的常量.",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+
+"method name": "默认数据库",
+
+"comment": "设置当前对象的默认数据库,可以使用非限定语法的SQL命令来访问该默认数据库中的对象.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "库名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "默认数据库",
+
+"comment": "获取当前对象的默认数据库.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "事务隔离级别",
+
+"comment": "设置所欲使用的事务隔离级别.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "级别",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "事务隔离级别",
+
+"comment": "获取所使用的事务隔离级别.",
+
+"result comment": "请参考\"数据库事务隔离级别_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "权限模式",
+
+"comment": "设置数据库中数据的可用权限.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "模式",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "权限模式",
+
+"comment": "获取数据库中数据的可用权限.",
+
+"result comment": "请参考\"数据库权限模式_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "取错误信息",
+
+"comment": "获取当前的错误集合.",
+
+"data type": "数据库错误集合类_",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取属性信息",
+}"comment": "获取当前的属性集合.",
+}"data type": "数据库属性集合类_",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "关闭当前已连接的数据库,并释放所关联的任何系统资源.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+}"method name": "取消执行",
+}"comment": "取消执行挂起的异步方法调用.",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型"
+  },
+  {
+}"method name": "开始事务",
+}"comment": "开始一个新的事务.",
+}"result comment": "返回事务的嵌套级别.",
+}"data type": "整数"
+  },
+  {
+
+"method name": "保存事务",
+
+"comment": "保存所有更改并结束当前事务.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "回滚事务",
+
+"comment": "取消在当前事务中所做的任何更改并结束事务.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "执行SQL语句",
+
+"comment": "Excel表名字段之类需要这样表示：[表1$]",
+
+"result comment": "如是执行查询，并不会返回真假，需要改用\"执行SQL语句2\"",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "SQL语句",
+"comment": "提供所欲执行的SQL语句,例如:SELECT * FROM VOLDP",
+"data type": "文本型"
+   },
+   {
+"parameter name": "选项",
+"comment": "提供本次执行的可选项,提供\"数据库命令类型__\"以及\"数据库命令执行选项__\"所定义常量的单个或多个组合值.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "受影响行数",
+"comment": "提供一个整数变量以获取本次命令执行后,影响到表中的记录数量，如是执行查询操作是不会返回受影响行数",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取语句错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "执行SQL语句2",
+
+"comment": "Excel表名字段之类需要这样表示：[表1$]",
+
+"data type": "记录集类_",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "SQL语句",
+"comment": "提供所欲执行的SQL语句,例如:SELECT * FROM VOLDP",
+"data type": "文本型"
+   },
+   {
+"parameter name": "选项",
+"comment": "提供本次执行的可选项,提供\"数据库命令类型__\"以及\"数据库命令执行选项__\"所定义常量的单个或多个组合值.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "受影响行数",
+"comment": "提供一个整数变量以获取本次命令执行后,影响到表中的记录数量，如是执行查询操作是不会返回受影响行数",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取语句错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "取语句错误描述",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取连接错误描述",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "连接Excel",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/BGkebUI9vodkGVxt0AocHlwVnvd",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否新版",
+"comment": "本参数指定Access版本，为假则使用2003以下连接方式，为真则使用2007版本连接方式",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否提示驱动",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Access",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/BGkebUI9vodkGVxt0AocHlwVnvd",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "提供数据库文件完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供连接该数据库所需的用户密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否新版",
+"comment": "本参数指定Access版本,为假则使用2003以下连接方式,为真则使用2007版本连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否提示驱动",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Sqlite",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/DvhWbSp1Coelqdxzi8xctysPndf",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "提供数据库文件完整路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Mysql",
+
+"comment": "8.0驱动下载：https://xf3v74qido.feishu.cn/file/Aq1Obnk9QoGEWMx8HwBc7OhbnVc\n3.5驱动下载：https://xf3v74qido.feishu.cn/file/VRY7blTQWoY24SxqgjEcepwfnPf",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供数据库连接地址.",
+"data type": "文本型",
+"@默认值": "\"localhost\""
+   },
+   {
+"parameter name": "数据库名",
+"comment": "提供所欲打开的数据库名称.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供连接该数据库所需的用户名.",
+"data type": "文本型",
+"@默认值": "\"root\""
+   },
+   {
+"parameter name": "密码",
+"comment": "提供连接该数据库所需的密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "端口号",
+"comment": "通过该数据库的连接端口.",
+"data type": "整数",
+"@默认值": "3306"
+   },
+   {
+"parameter name": "驱动版本",
+"comment": "例如：3.51、5.1、5.2、5.3、8.0　，默认：3.51",
+"data type": "文本型",
+"@默认值": "\"8.0\""
+   },
+   {
+"parameter name": "版本8类型",
+"comment": "如果驱动版本是8系列的，可以选择：1、ANSI Driver　2、Unicode Driver",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否以异步方式进行连接,提供假则会堵塞直到连接完成,提供真将会以事件方式(连接完成)通知连接结果.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否提示驱动",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Mssql",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供数据库连接地址及端口，默认：127.0.0.1,1433 ；默认1433可省略",
+"data type": "文本型",
+"@默认值": "\"127.0.0.1,1433\""
+   },
+   {
+"parameter name": "数据库名",
+"comment": "提供所欲打开的数据库名称.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供连接该数据库所需的用户名.",
+"data type": "文本型",
+"@默认值": "\"sa\""
+   },
+   {
+"parameter name": "密码",
+"comment": "提供连接该数据库所需的密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否以异步方式进行连接,提供假则会堵塞直到连接完成,提供真将会以事件方式(连接完成)通知连接结果.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Oracle",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供数据库连接地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供连接该数据库所需的用户名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供连接该数据库所需的密码.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "驱动程序",
+"comment": "提供连接Oracle所需的驱动程序名称,例如\"Oracle in OraClient11g_home1\",使用前请确保系统中已安装该驱动,否则无法进行连接.",
+"data type": "文本型",
+"@默认值": "\"Oracle in OraClient11g_home1\""
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否以异步方式进行连接,提供假则会堵塞直到连接完成,提供真将会以事件方式(连接完成)通知连接结果.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Oracle_64",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/N5tebFPeYoBV44xX5BbcQCDHnuc",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "文本型",
+"@默认值": "\"1521\""
+   },
+   {
+"parameter name": "实例名",
+"data type": "文本型",
+"@默认值": "\"ORCL\""
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Postgresql",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/FcOAbXJzOoiHWRxTntXcrXfJnWh",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供数据库连接地址.",
+"data type": "文本型",
+"@默认值": "\"localhost\""
+   },
+   {
+"parameter name": "数据库名",
+"comment": "提供所欲打开的数据库名称.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供连接该数据库所需的用户名.",
+"data type": "文本型",
+"@默认值": "\"postgres\""
+   },
+   {
+"parameter name": "密码",
+"comment": "提供连接该数据库所需的密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "端口号",
+"comment": "通过该数据库的连接端口.",
+"data type": "整数",
+"@默认值": "5432"
+   },
+   {
+"parameter name": "驱动程序",
+"comment": "指定是否使用ODBC驱动方式连接(例如:PostgreSQL UNICODE),提供空文本将会使用OLEDB方式连接,如果使用驱动方式连接,务必保证系统中已安装该驱动.",
+"data type": "文本型",
+"@默认值": "\"PostgreSQL Unicode\""
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否以异步方式进行连接,提供假则会堵塞直到连接完成,提供真将会以事件方式(连接完成)通知连接结果.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接",
+
+"comment": "开始连接到指定的数据库.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "连接文本",
+"comment": "提供包含连接信息的一个文本,具体信息可参阅文档\"https://docs.microsoft.com/zh-cn/sql/ado/reference/ado-api/connectionstring-property-ado?view=sql-server-ver15\".\n如果本参数为空,将使用\"连接文本\"属性作为该参数的值,如果本参数提供非空内容,将会优先于\"连接文本\"属性.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供连接该数据库所需的用户名(如果连接文本中包含,此参数将会覆盖连接文本中的对应用户名信息).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "密码",
+"comment": "提供连接该数据库所需的密码(如果连接文本中包含,此参数将会覆盖连接文本中的对应密码信息).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否客户端",
+"comment": "指定是否将游标服务位置指向客户端,默认为真.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否以异步方式进行连接,提供假则会堵塞直到连接完成,提供真将会以事件方式(连接完成)通知连接结果.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "创建数据库",
+
+"comment": "适用于mssql、mysql",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲创建的数据库名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Mysql字符集",
+"comment": "Mysql数据库专用，例如：utf8mb4",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "Mysql排序规则",
+"comment": "Mysql数据库专用，例如：utf8mb4_general_ci",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+}"method name": "删除数据库",
+}"comment": "适用于mssql、mysql",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "欲删除的数据库名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "创建数据库表",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "Sql语句",
+"comment": "可以用链式生成语句\n链式：sql.表名 (\"商品表\").主键 (\"ID\").文本字段2 (\"品名\", 200).货币字段 (\"单价\").日期时间字段 (\"入库时间\").取新建表SQL () ;\n相当于SQL语句：create table 商品表(ID int identity primary key,品名 varchar(200),单价 money,入库时间 datetime)",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "删除数据库表",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲删除的表名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取所有库名",
+
+"comment": "获取当前连接中所有数据库名称",
+
+"result comment": "返回库名数量",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "返回的库名数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "数据库类型",
+"comment": "1、MsSql  2、MySql  3、Postgresql",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+}"method name": "取所有表名",
+}"comment": "获取当前数据库中所有表名称.\nAccess需要先设置MsysObjects权限;\n①旧版：菜单-工具-选项-视图-勾选\"系统对象\";\n菜单-工具-安全-用户与组权限-选择\"管理员\"-选择\"MsysObjects\"-勾选\"读取数据\"，最后再取消勾选\"系统对象\"\n\n②新版：左侧表列表-右键\"导航选项\"-勾选\"显示系统对象\";\n文件-用户和权限-用户与组权限-选择\"MsysObjects\"，勾选\"读取数据\"，最后再取消勾选\"显示系统对象\"",
+}"result comment": "返回表名数量",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "数据库名",
+"comment": "提供所欲打开的数据库名称，当前为Mysql数据库时则需要提供本名称，Excel的需要提供文件来源，其它数据库则不需要填写",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的表名数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "数据库类型",
+"comment": "1、MsSql  2、MySql  3、Access  4、Sqlite  5、Postgresql  6、Excel",
+"data type": "整数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+
+"method name": "取所有字段名",
+
+"comment": "获取当前数据表中所有字段名称",
+
+"result comment": "返回表名数量",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "数据表名",
+"comment": "需要获取字段名的数据库表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的字段名数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "数据库类型",
+"comment": "1、MsSql  2、MySql  3、Postgresql",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "取字段列表",
+
+"comment": "获取该记录集当前位置所包含的所有字段(列)列表.\n在该表执行\"执行SQL语句2\"后，再取字段，才能取出字段列表",
+
+"result comment": "直接返回字段列数组",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类_"
+   }
+
+]
+  },
+  {
+
+"method name": "取结构信息",
+
+"comment": "获取当前所连接数据库的结构信息.",
+
+"result comment": "返回包含该数据库的结构信息记录集.",
+
+"data type": "记录集类_",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "查询类型",
+"comment": "提供所欲查询的类型,请参考\"数据库结构信息类型_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "即将开始连接",
+
+"comment": "即将发起数据库连接时,本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接文本",
+"comment": "本次发起连接所使用的连接文本内容.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"comment": "本次发起连接所使用的用户名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "本次发起连接所使用的密码.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "即将开始执行",
+}"comment": "即将执行SQL命令时,本事件将被调用.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "命令内容",
+"comment": "即将执行的命令内容文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "游标类型",
+"comment": "请参考\"记录集游标类型_\"所提供的常量值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "编辑锁类型",
+"comment": "请参考\"记录集编辑锁类型_\"所提供的常量值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "选项值",
+"comment": "执行命令或打开记录集所使用的选项值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "警告信息反馈",
+
+"comment": "在操作过程中如果出现警告信息,本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "开始事务完成",
+
+"comment": "当调用\"开始事务\"后,如果开始成功本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "事务等级",
+"comment": "本次事务的等级.",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "提交事务完成",
+
+"comment": "当调用\"开始事务\"后,如果开始成功本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "回滚事务完成",
+ }"comment": "当调用\"开始事务\"后,如果开始成功本事件将被调用.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "命令执行完成",
+
+"comment": "在执行SQL命令后,执行完毕本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "影响行数",
+"comment": "执行该命令后被影响的记录数量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "记录集",
+"comment": "执行该命令后所获取到的记录集对象.",
+"data type": "记录集类_"
+   },
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "连接完成",
+
+"comment": "当执行连接数据库后,连接过程结束本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "断开连接",
+
+"comment": "与数据库断开连接后,本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  }
+本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"ADO数据库\\\"\""]
+ },
+ {
+"class name": "记录集类_",
+"comment": "表示数据表中的整个记录集或执行的命令的结果,可使用本类实例获取具体数据.",
+"base class": "COM对象类",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1\\\"\"",
+"methods": [
+  {
+
+"method name": "当前页",
+
+"comment": "获取当前所处的页索引.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "当前页",
+
+"comment": "设置当前所处的页索引.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "当前位置",
+
+"comment": "获取当前记录集所处的序号位置.",
+
+"type": "property getter",
+
+"data type": "变整数"
+  },
+  {
+"type": "property getter""method name": "当前位置",
+"type": "property getter""comment": "设置当前记录集所处的序号位置.",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "位置",
+"data type": "变整数"
+   }
+"type": "property getter"]
+  },
+  {
+
+"method name": "首记录前",
+
+"comment": "判断当前记录位置是否处于首记录之前,通常用于判断该记录集是否存在数据.",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "尾记录后",
+
+"comment": "判断当前记录位置是否处于尾记录之后,通常用于判断当前位置后是否还存在更多记录.",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+}"method name": "缓存数量",
+}"comment": "获取当前记录集对象缓存到内存中的记录数量.",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+}"method name": "缓存数量",
+}"comment": "设置当前记录集对象缓存到内存中的记录数量.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "数量",
+"comment": "必须大于等于1.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "游标服务位置",
+}"comment": "指定游标服务位置,请参考\"数据库游标服务位置_\"所提供的常量.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "位置",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "游标服务位置",
+}"comment": "获取游标服务位置.",
+}"result comment": "请参考\"数据库游标服务位置_\"所提供的常量.",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+
+"method name": "游标类型",
+
+"comment": "指定所欲使用游标的类型,请参考\"记录集游标类型_\"所提供的常量.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "游标类型",
+ }"comment": "获取所使用游标的类型.",
+ }"result comment": "请参考\"记录集游标类型_\"所提供的常量.",
+ }"type": "property getter",
+ }"data type": "整数"
+  },
+  {
+
+"method name": "编辑状态",
+
+"comment": "获取当前记录集的编辑状态.",
+
+"result comment": "请参考\"记录集编辑状态_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "书签",
+
+"comment": "在记录集的当前位置设置一个书签,即一个自定义标识符,后续移动不同的位置后,可通过该书签快速返回到标记书签的位置.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "值",
+"comment": "提供一个自定义标记.",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+
+"method name": "书签",
+
+"comment": "获取当前位置所设置的书签.",
+
+"type": "property getter",
+
+"data type": "COM变体型"
+  },
+  {
+
+"method name": "过滤",
+
+"comment": "为当前记录集过滤出满足条件的新记录",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "过滤条件",
+"comment": "条件语句内容：由一个或单独子语句组成，例如由and或or运算符相连接",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "筛选器",
+
+"comment": "为当前记录集设置一个数据筛选器.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "筛选条件",
+"comment": "本参数可包含以下项之一:\n  条件语句内容:由一个或单独子语句组成,例如由AND或or运算符相连接.\n  书签数组:获取所有打上书签位置的数据.\n  筛选组:请参考\"记录集筛选组类型_\"所提供的常量.",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+录集设置一个数据筛选器."method name": "筛选器",
+录集设置一个数据筛选器."comment": "获取当前记录集的筛选器.",
+录集设置一个数据筛选器."type": "property getter",
+录集设置一个数据筛选器."data type": "COM变体型"
+  },
+  {
+
+"method name": "索引名称",
+
+"comment": "获取当前记录集对象索引名称.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "索引名称",
+
+"comment": "设置当前记录集对象索引名称.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "编辑锁类型",
+
+"comment": "获取当前记录集对象的编辑锁类型.",
+
+"result comment": "请参考\"记录集编辑锁类型_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+"comment": "获取当前记录集对象的编辑锁类型.""method name": "编辑锁类型",
+"comment": "获取当前记录集对象的编辑锁类型.""comment": "设置当前记录集对象的编辑锁类型.",
+"comment": "获取当前记录集对象的编辑锁类型.""type": "property setter",
+"comment": "获取当前记录集对象的编辑锁类型.""parameters": [
+   {
+"parameter name": "类型",
+"comment": "请参考\"记录集编辑锁类型_\"所提供的常量.",
+"data type": "整数"
+   }
+"comment": "获取当前记录集对象的编辑锁类型."]
+  },
+  {
+
+"method name": "数据封送选项",
+
+"comment": "获取当前记录集所设置的数据封送选项.",
+
+"result comment": "请参考\"记录集数据封送选项_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+}"method name": "数据封送选项",
+}"comment": "设置当前记录集所设置的数据封送(跨线程或进程边界打包和发送接口方法参数的过程)选项.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "选项",
+"comment": "请参考\"记录集数据封送选项_\"所提供的常量.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "最大记录数",
+
+"comment": "获取该记录集所设置的最大记录数量限制.",
+
+"type": "property getter",
+
+"data type": "长整数"
+  },
+  {
+
+"method name": "最大记录数",
+
+"comment": "限定一个获取数据量的最大值,从数据源获取数据时将会受该属性限制.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "最大数量",
+"comment": "默认为0,表示无限制,将会返回所有记录.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "页数",
+
+"comment": "获取当前记录集所包含的页数.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "单页记录数",
+
+"comment": "获取当前记录集一个页所包含的记录数量,即页数据尺寸.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "单页记录数",
+
+"comment": "设置当前记录集一个页所包含的记录数量.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "尺寸",
+"comment": "默认为10.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "记录数量",
+
+"comment": "获取该记录集所包含的记录数量(即数据行).",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "排序规则",
+
+"comment": "获取当前记录集对象所设置的排序规则.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "排序规则",
+
+"comment": "设置当前记录集对象的排序规则.\n注意:该属性将会优先于SQL语句的order by.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "规则",
+"comment": "例如记录集中包含有三个字段:\"firstName\",\"middle\",\"lastName\",\n该参数内容为\"lastName DESC, firstName ASC\",此时该记录集将会按照lastName降序,firstName升序来排列,中间的middle被忽略.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "数据源",
+
+"comment": "获取当前记录集的数据源,通过\"打开\"方法指定.",
+
+"type": "property getter",
+
+"data type": "COM变体型"
+  },
+  {
+
+"method name": "状态",
+
+"comment": "获取该记录集对象当前状态.",
+
+"result comment": "请参考\"数据库状态类型_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "记录状态",
+
+"comment": "获取该记录集批更新或执行了其他大容量操作记录的状态.",
+
+"result comment": "请参考\"记录操作状态类型_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "保持同步",
+
+"comment": "在多层记录集的情况下,是否与引用的其他层次保持数据更改同步.",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "保持同步",
+
+"comment": "在多层记录集的情况下,是否与引用的其他层次保持数据更改同步.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "取属性信息",
+
+"comment": "获取当前记录集的属性集合.",
+
+"data type": "数据库属性集合类_",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "添加空记录",
+
+"comment": "如果当前记录集可写,该方法将添加一个新的空记录至当前记录集.",
+
+"result comment": "添加成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "添加新记录",
+
+"comment": "如果当前记录集可写,该方法将添加新的记录至当前记录集.",
+
+"result comment": "添加成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段列表",
+"comment": "提供本次置入新记录的字段名称列表(或者可提供字段的整数索引列表),请置入字段名称的文本型数组或字段索引的整数数组.\n注意:如果该参数提供空对象,将会按所提供的值列表成员依次对应字段索引置入其记录值.",
+"data type": "COM变体型数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "值列表",
+"comment": "提供本次置入新记录的值列表,对应\"字段列表\"参数.",
+"data type": "COM变体型数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "取消执行",
+
+"comment": "取消执行挂起的异步方法调用.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+ }"method name": "取消批更新",
+ }"comment": "取消挂起的批更新操作.",
+ }"result comment": "执行成功返回真,否则返回假.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "选项",
+"comment": "指定该取消操作会影响到的记录,请参考\"数据库影响记录选项_\".",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "取消更新",
+ }"comment": "在调用\"更新\"方法之前,取消对当前记录集对象当前行或新的记录行所做的任何更改.",
+ }"result comment": "执行成功返回真,否则返回假.",
+ }"data type": "逻辑型"
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "关闭当前记录集对象,并释放所关联的任何系统资源.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "对比书签",
+
+"comment": "将两个书签对象进行对比,返回两个书签对比的相对位置.",
+
+"result comment": "返回意义请参考\"记录集书签相对位置_\".",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "书签一",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "书签二",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+
+"method name": "删除记录",
+
+"comment": "删除当前记录或一组记录.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "选项",
+"comment": "指定该删除操作会影响到的记录,请参考\"数据库影响记录选项_\".",
+"data type": "整数",
+"@默认值": "数据库影响记录选项_.当前"
+   }
+
+]
+  },
+  {
+
+"method name": "查找指定记录",
+
+"comment": "根据指定的条件以及选项查找并跳转至满足条件的记录位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "条件语句",
+"comment": "指定搜索的语句,该语句指定要在搜索中使用的列名称,比较运算符和值.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜索位置",
+"comment": "本次搜索起始的偏移,默认情况下将会从当前所处位置开始搜索.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "正向搜索",
+"comment": "指定搜索是否从记录集的开头搜索至末尾位置,提供假则反向搜索,即从末尾至开头.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "起始搜索书签",
+"comment": "作为搜索的起始位置的书签对象.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "移动位置",
+
+"comment": "移动位置到指定数据记录行.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "行数",
+"comment": "从当前位置开始所欲移动的行数.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "起始移动书签",
+"comment": "作为移动的起始位置的书签对象.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取多行记录",
+
+"comment": "从当前记录集中获取指定多行数据记录.",
+
+"result comment": "将返回一个二维数组.",
+
+"data type": "COM变体型",
+
+"parameters": [
+   {
+"parameter name": "行数",
+"comment": "指定本次所欲获取出来的行数,如果为-1则默认获取所有记录(从书签起始位置).",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "起始位置",
+"comment": "作为获取数据记录的起始位置的书签对象,提供空对象则从记录集开头开始获取.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "字段列表",
+"comment": "提供本次所欲获取数据对应的单个或多个字段,提供空对象则获取所有字段.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "到文本",
+
+"comment": "将该记录集作为文本输出.",
+
+"result comment": "返回文本形式的记录集.",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "行数",
+"comment": "提供所欲转换至文本的记录行数,默认转换所有行.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "列分隔符",
+"comment": "如果为空文本则默认使用制表符.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "行分隔符",
+"comment": "如果为空文本则默认使用回车符.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "空占位符",
+"comment": "指定数据为NULL时所欲使用的占位符.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+"method name": "到首记录",
+"comment": "将位置移动到当前记录集的第一条记录.",
+"result comment": "执行成功返回真,否则返回假.",
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "到尾记录",
+
+"comment": "将位置移动到当前记录集的最后一条记录.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "到下一行",
+
+"comment": "将位置移动到下一行数据记录.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "到上一行",
+
+"comment": "将位置移动到上一行数据记录.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "到下一记录集",
+
+"comment": "如果查询结果需要使用多记录集(例如使用了复合查询语句)表示,该命令可移动到下一个记录集.\n注意:该方法将会清除当前记录集自身,移动成功后当前对象将会变成下一个记录集对象.",
+
+"result comment": "操作成功后会返回该操作影响到的记录行数.",
+
+"data type": "长整数"
+  },
+  {
+"data type": "长整数""method name": "打开",
+"data type": "长整数""comment": "根据指定数据源以及连接串文本打开记录集.",
+"data type": "长整数""result comment": "执行成功返回真,否则返回假.",
+"data type": "长整数""data type": "逻辑型",
+"data type": "长整数""parameters": [
+   {
+"parameter name": "数据源",
+"comment": "数据来源,可以是一个SQL语句(表名,储存过程,URL,本地记录集文件,流对象名称).",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "活动连接",
+"comment": "是否提供一个已有的活动连接对象(数据库类),也可提供连接串文本,与连接数据库同理.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否客户端",
+"comment": "指定是否将游标服务位置指向客户端,默认为真.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "游标类型",
+"comment": "请参考\"记录集游标类型_\"所提供的常量.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "编辑锁",
+"comment": "请参考\"记录集编辑锁类型_\"所提供的常量.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "选项",
+"comment": "提供本次执行的性能选项,提供\"数据库命令类型_\"以及\"数据库命令执行选项_\"所定义常量的单个或多个组合值.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+"data type": "长整数"]
+  },
+  {
+}"method name": "执行",
+}"comment": "从一个已经创建并成功连接的\"数据库类_\"对象打开执行当前记录集对象.\nExcel表名字段之类需要这样表示：[表1$]",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "数据源",
+"comment": "数据来源,可以是一个SQL语句(表名,储存过程,URL,本地记录集文件,流对象名称).",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   },
+   {
+"parameter name": "是否客户端",
+"comment": "指定是否将游标服务位置指向客户端,默认为真.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "游标类型",
+"comment": "请参考\"记录集游标类型_\"所提供的常量.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "编辑锁",
+"comment": "请参考\"记录集编辑锁类型_\"所提供的常量.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "选项",
+"comment": "提供本次执行的性能选项,提供\"数据库命令类型_\"以及\"数据库命令执行选项_\"所定义常量的单个或多个组合值.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取语句错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+
+"method name": "执行SQL语句",
+
+"comment": "Excel表名字段之类需要这样表示：[表1$]",
+
+"result comment": "如是执行查询，并不会返回真假，需要改用执行SQL语句2\"",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "SQL语句",
+"comment": "提供所欲执行的SQL语句,例如:SELECT * FROM VOLDP",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   },
+   {
+"parameter name": "选项",
+"comment": "提供本次执行的可选项,提供\"数据库命令类型\"以及\"数据库命令执行选项\"所定义常量的单个或多个组合值.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "受影响行数",
+"comment": "提供一个整数类变量以获取本次命令执行后,影响到表中的记录数量，如是执行查询操作是不会返回受影响行数",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取语句错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "执行SQL语句2",
+
+"comment": "Excel表名字段之类需要这样表示：[表1$]",
+
+"data type": "记录集类_",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "SQL语句",
+"comment": "提供所欲执行的SQL语句,例如:SELECT * FROM VOLDP",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   },
+   {
+"parameter name": "选项",
+"comment": "提供本次执行的可选项,提供\"数据库命令类型\"以及\"数据库命令执行选项\"所定义常量的单个或多个组合值.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "受影响行数",
+"comment": "提供一个整数类变量以获取本次命令执行后,影响到表中的记录数量，如是执行查询操作是不会返回受影响行数",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取语句错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "取语句错误描述",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+}"method name": "备份数据库",
+}"comment": "MsSql",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "数据库表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "备份存放路径及名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   }
+}]
+  },
+  {
+}"method name": "还原数据库",
+}"comment": "MsSql",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "数据库表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据库文件来源",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   }
+}]
+  },
+  {
+
+"method name": "创建数据库",
+
+"comment": "适用于mssql、mysql",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲创建的数据库名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Mysql字符集",
+"comment": "Mysql数据库专用，例如：utf8mb4",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "Mysql排序规则",
+"comment": "Mysql数据库专用，例如：utf8mb4_general_ci",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   }
+
+]
+  },
+  {
+
+"method name": "删除数据库",
+
+"comment": "适用于mssql、mysql",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲删除的数据库名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   }
+
+]
+  },
+  {
+
+"method name": "创建数据库表",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "Sql语句",
+"comment": "可以用链式生成语句\n链式：sql.表名 (\"商品表\").主键 (\"ID\").文本字段2 (\"品名\", 200).货币字段 (\"单价\").日期时间字段 (\"入库时间\").取新建表SQL () ;\n相当于SQL语句：create table 商品表(ID int identity primary key,品名 varchar(200),单价 money,入库时间 datetime)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   }
+
+]
+  },
+  {
+}"method name": "删除数据库表",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "欲删除的表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   }
+}]
+  },
+  {
+}"method name": "取所有库名",
+}"comment": "获取当前连接中所有数据库名称",
+}"result comment": "返回库名数量",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "返回的库名数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   },
+   {
+"parameter name": "数据库类型",
+"comment": "1、MsSql  2、MySql  3、Postgresql",
+"data type": "整数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+
+"method name": "取所有表名",
+
+"comment": "获取当前数据库中所有表名称.\nAccess需要先设置MsysObjects权限;\n①旧版：菜单-工具-选项-视图-勾选\"系统对象\";\n菜单-工具-安全-用户与组权限-选择\"管理员\"-选择\"MsysObjects\"-勾选\"读取数据\"，最后再取消勾选\"系统对象\"\n\n②新版：左侧表列表-右键\"导航选项\"-勾选\"显示系统对象\";\n文件-用户和权限-用户与组权限-选择\"MsysObjects\"，勾选\"读取数据\"，最后再取消勾选\"显示系统对象\"",
+
+"result comment": "返回表名数量",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "数据库名",
+"comment": "提供所欲打开的数据库名称，当前为Mysql数据库时则需要提供本名称，Excel的需要提供文件来源，其它数据库则不需要填写",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的表名数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "数据库类型",
+"comment": "1、MsSql  2、MySql  3、Access  4、Sqlite  5、Postgresql  6、Excel",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "取所有字段名",
+
+"comment": "获取当前数据表中所有字段名称",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类_"
+   }
+
+]
+  },
+  {
+
+"method name": "取所有字段名2",
+
+"comment": "获取当前数据表中所有字段名称",
+
+"result comment": "返回表名数量",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "数据表名",
+"comment": "需要获取字段名的数据库表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的字段名数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "连接对象",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类_"
+   },
+   {
+"parameter name": "数据库类型",
+"comment": "1、MsSql  2、MySql  3、Postgresql",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "取字段列表",
+
+"comment": "获取该记录集当前位置所包含的所有字段(列)列表.",
+
+"data type": "数据库字段集合类_",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取所有字段类型",
+
+"comment": "获取当前数据表中所有字段类型名称",
+
+"result comment": "直接返回字段类型名称",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类_"
+   }
+
+]
+  },
+  {
+"method name": "取所有字段类型2",
+"comment": "获取当前数据表中所有字段类型序号",
+"result comment": "返回值请参考\"数据库字段数据类型_\"所提供的常量",
+"data type": "整数数组类",
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类_"
+   }
+]
+  },
+  {
+
+"method name": "取所有字段信息",
+
+"comment": "获取当前数据表中所有字段名称和字段类型",
+
+"result comment": "返回字段总数",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类_"
+   },
+   {
+"parameter name": "返回的字段名称组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的字段类型名",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的字段类型组",
+"comment": "返回值请参考“数据库字段数据类型_”所提供的常量",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "刷新记录",
+
+"comment": "通过重新执行对象所基于的查询来更新记录集对象中的数据.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "选项",
+"comment": "提供本次执行的性能选项,提供\"数据库命令类型_\"以及\"数据库命令执行选项_\"所定义常量的单个或多个组合值.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "重新同步",
+
+"comment": "通过重新执行对象所基于的查询来更新记录集对象中的数据.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "范围选项",
+"comment": "指定该删除操作会影响到的记录,请参考\"数据库影响记录选项_\".",
+"data type": "整数",
+"@默认值": "数据库影响记录选项_.所有"
+   },
+   {
+"parameter name": "是否覆盖",
+"comment": "是否覆盖原有数据,挂起的更新动作将被直接取消,提供假将不会覆盖数据,也不会取消挂起的更新动作.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "导出记录集",
+
+"comment": "将记录集转成字节集数据",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "导入记录集",
+
+"comment": "将字节集形式的记录集数据，转回记录集",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "记录集数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "保存到文件",
+}"comment": "将该记录集写出保存至指定文件中.",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "文件",
+"comment": "提供所欲写出文件的完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "提供保存所欲使用的文件格式类型,请参考\"记录集文件保存类型_\"所提供常量.",
+"data type": "整数",
+"@默认值": "记录集文件保存类型_.ADTG"
+   }
+}]
+  },
+  {
+
+"method name": "是否支持指定功能",
+
+"comment": "检查当前记录集对象是否支持特定的功能.",
+
+"result comment": "支持指定功能则返回真,反之假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "功能选项",
+"comment": "提供所欲检查的功能类型,请参考\"记录集支持功能类型_\"所提供的常量.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "更新",
+
+"comment": "保存对记录集对象的当前行所做的任何更改,如果需要批量更新请使用\"批更新\"方法.\n例如调用了\"添加新记录\"插入了值,可调用该方法提交至数据库中.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段",
+"comment": "指定所欲修改的一个或多个字段名称,如果有多个字段请置入字段数组,可以为名称也可以是字段索引.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "值",
+"comment": "指定字段所对应的值,如果有多个字段,必须提供对等数量的值,否则将无法正常执行更新.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "批更新",
+
+"comment": "将记录集对象中所做的所有更改传输到数据库.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "范围选项",
+"comment": "指定该更新操作会影响到的记录,请参考\"数据库影响记录选项_\".",
+"data type": "整数",
+"@默认值": "数据库影响记录选项_.所有"
+   }
+
+]
+  },
+  {
+
+"method name": "读数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的数据.",
+
+"result comment": "返回当前位置指定字段的数据.",
+
+"data type": "COM变体型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的数据.",
+
+"result comment": "返回当前位置指定字段的数据.",
+
+"data type": "COM变体型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写数据",
+
+"comment": "根据指定字段名将指定数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+}"method name": "写索引数据",
+}"comment": "根据指定字段的索引将指定数据写入该记录集当前所处位置.",
+}"result comment": "返回是否执行成功.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "COM变体型"
+   }
+}]
+  },
+  {
+
+"method name": "读文本数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的文本型数据.",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引文本数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的文本型数据.",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写文本数据",
+
+"comment": "根据指定字段名将指定文本数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "写索引文本数据",
+}"comment": "根据指定字段的索引将指定文本数据写入该记录集当前所处位置.",
+}"result comment": "返回是否执行成功.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "读整数数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的整数数据.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引整数数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的整数数据.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写整数数据",
+
+"comment": "根据指定字段名将指定整数数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引整数数据",
+
+"comment": "根据指定字段的索引将指定整数数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "读长整数数据",
+}"comment": "根据指定字段名读取该记录集当前所处位置的长整数数据.",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "读索引长整数数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的长整数数据.",
+
+"data type": "长整数",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写长整数数据",
+
+"comment": "根据指定字段名将指定长整数数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引长整数数据",
+
+"comment": "根据指定字段的索引将指定长整数数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ }"method name": "读短整数数据",
+ }"comment": "根据指定字段名读取该记录集当前所处位置的短整数数据.",
+ }"data type": "短整数",
+ }"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "读索引短整数数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的短整数数据.",
+
+"data type": "短整数",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写短整数数据",
+
+"comment": "根据指定字段名将指定短整数数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引短整数数据",
+
+"comment": "根据指定字段的索引将指定短整数数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+
+"method name": "读字节数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的字节数据.",
+
+"data type": "字节",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引字节数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的字节数据.",
+
+"data type": "字节",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写字节数据",
+
+"comment": "根据指定字段名将指定字节数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+}"method name": "写索引字节数据",
+}"comment": "根据指定字段的索引将指定字节数据写入该记录集当前所处位置.",
+}"result comment": "返回是否执行成功.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节"
+   }
+}]
+  },
+  {
+
+"method name": "读字符数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的字符数据.",
+
+"data type": "字符",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引字符数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的字符数据.",
+
+"data type": "字符",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写字符数据",
+
+"comment": "根据指定字段名将指定字符数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字符"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引字符数据",
+
+"comment": "根据指定字段的索引将指定字符数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字符"
+   }
+
+]
+  },
+  {
+
+"method name": "读逻辑型数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的逻辑型数据.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引逻辑型数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的逻辑型数据.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写逻辑型数据",
+
+"comment": "根据指定字段名将指定逻辑型数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引逻辑型数据",
+
+"comment": "根据指定字段的索引将指定逻辑型数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+}"method name": "读小数数据",
+}"comment": "根据指定字段名读取该记录集当前所处位置的小数数据.",
+}"data type": "小数",
+}"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "读索引小数数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的小数数据.",
+
+"data type": "小数",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写小数数据",
+
+"comment": "根据指定字段名将指定小数数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引小数数据",
+
+"comment": "根据指定字段的索引将指定小数数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "读字节集数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的字节集数据.",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引字节集数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的字节集数据.",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写字节集数据",
+
+"comment": "根据指定字段名将指定字节集数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引字节集数据",
+
+"comment": "根据指定字段的索引将指定字节集数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "添加字节集数据",
+}"comment": "将所指定字节集数据加入到记录集中当前位置处指定名称字段的数据尾部.\n注意:本方法适用与添加较大的二进制数据,且仅在数据库字段支持\"大二进制\"属性时可用.",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+
+"method name": "添加索引字节集数据",
+
+"comment": "将所指定字节集数据加入到记录集中当前位置处指定索引位置字段的数据尾部.\n注意:本方法适用与添加较大的二进制数据,且仅在数据库字段支持\"大二进制\"属性时可用.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "已超出数据范围",
+
+"comment": "在移到超过记录集末尾的行时,本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "更多数据",
+"comment": "是否存在更多数据.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "数据检索已完成",
+
+"comment": "当异步操作中的所有记录都已检索到记录集中后,本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "数据检索进度改变",
+
+"comment": "当异步操作中的记录检索到记录集中时,将会定期触发本事件以反馈当前的检索进度.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "当前进度",
+"comment": "当前已检索到的记录数.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "最大进度",
+"comment": "预期所需要检索的总记录数量.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "字段即将被更改",
+
+"comment": "字段即将被更改之前本事件被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "字段数量",
+"data type": "长整数"
+   },
+   {
+"parameter name": "字段对象",
+"comment": "即将被更改的字段数组.",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "字段已更改完毕",
+}"comment": "字段在更改完成后本事件将被调用.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "字段数量",
+"data type": "长整数"
+   },
+   {
+"parameter name": "字段对象",
+"comment": "即将被更改的字段数组.",
+"data type": "COM变体型"
+   },
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "记录即将被更改",
+}"comment": "记录集中的一个或多个记录即将被修改之前本事件被调用.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "原因",
+"comment": "导致记录即将被更改的原因,请参考\"记录集数据更改类型_\"所提供的常量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "记录数量",
+"comment": "即将发生更改的记录数量.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "记录已更改完毕",
+
+"comment": "记录集中的一个或多个记录已修改完毕后本事件被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "原因",
+"comment": "导致记录被更改的原因,请参考\"记录集数据更改类型_\"所提供的常量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "记录数量",
+"comment": "即将发生更改的记录数量.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "记录集即将被更改",
+
+"comment": "记录集(状态)即将发生改变之前本事件被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "原因",
+"comment": "导致记录集即将被更改的原因,请参考\"记录集数据更改类型_\"所提供的常量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "记录集已更改完毕",
+
+"comment": "记录集(状态)已发生改变后本事件被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "原因",
+"comment": "导致记录集被更改的原因,请参考\"记录集数据更改类型_\"所提供的常量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "位置即将被移动",
+
+"comment": "记录集的当前位置即将发生移动之前本事件被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "原因",
+"comment": "导致位置即将被移动的原因,请参考\"记录集数据更改类型_\"所提供的常量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "位置已移动完毕",
+
+"comment": "记录集的当前位置已移动完毕后本事件被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "原因",
+"comment": "导致位置被移动的原因,请参考\"记录集数据更改类型_\"所提供的常量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "数据库集合类_",
+"comment": "模板类型1为集合中的成员类型.\n模板类型2为实现类自身",
+"base class": "COM对象类",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.附加类\\\"\"",
+"@模板基础类": "真",
+"methods": [
+  {
+"method name": "成员数",
+"comment": "获取该集合中所包含的成员数量.",
+"type": "property getter",
+"data type": "整数"
+  },
+  {
+
+"method name": "刷新",
+
+"comment": "刷新该集合.",
+
+"result comment": "返回调用结果.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "取成员",
+
+"comment": "获取该集合中所包含的指定成员.",
+
+"data type": "模板类型1",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取成员2",
+
+"comment": "以指定的成员名称获取该成员对象.",
+
+"data type": "模板类型1",
+
+"parameters": [
+   {
+"parameter name": "成员名",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "数据库属性集合类_",
+"comment": "表示包含多个属性对象的集合.",
+"base class": "数据库集合类_",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.附加类\\\"\"",
+"@模板实现类": "\"数据库属性类_,数据库属性集合类_\""
+ },
+ {
+"class name": "数据库错误集合类_",
+"comment": "表示包含多个错误对象的集合.",
+"base class": "数据库集合类_",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.附加类\\\"\"",
+"@模板实现类": "\"数据库错误信息类_,数据库错误集合类_\"",
+"methods": [
+  {
+@模板实现类": "\"数据库错误信息类_,数据库错误集合类_\"""method name": "清空",
+@模板实现类": "\"数据库错误信息类_,数据库错误集合类_\"""comment": "清空当前错误集合."
+  }
+]
+ },
+ {
+"class name": "数据库属性类_",
+"comment": "表示对象的一个属性.",
+"base class": "COM对象类",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.附加类\\\"\"",
+"methods": [
+  {
+}"method name": "值",
+}"comment": "读取该属性的值.",
+}"type": "property getter",
+}"data type": "COM变体型"
+  },
+  {
+}"method name": "值",
+}"comment": "置入该属性新的值.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "欲设置值",
+"data type": "COM变体型"
+   }
+}]
+  },
+  {
+
+"method name": "文本值",
+
+"comment": "读取该属性的文本值.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "文本值",
+
+"comment": "置入该属性新的文本值.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲设置值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "名称",
+
+"comment": "取该属性的名称.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "类型",
+
+"comment": "取该属性的类型.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "属性值",
+
+"comment": "取该对象的属性值.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "属性值",
+
+"comment": "置入该对象新的属性值.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲设置值",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "数据库错误信息类_",
+"comment": "表示运行过程中的一个错误.",
+"base class": "COM对象类",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.附加类\\\"\"",
+"methods": [
+  {
+
+"method name": "错误描述",
+
+"comment": "获取错误的简要描述内容.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+comment": "表示运行过程中的一个错误.""method name": "错误代码",
+comment": "表示运行过程中的一个错误.""comment": "获取错误代码.",
+comment": "表示运行过程中的一个错误.""type": "property getter",
+comment": "表示运行过程中的一个错误.""data type": "整数"
+  }
+]
+ },
+ {
+"class name": "数据库字段类_",
+"comment": "表示表中的一个字段(列).",
+"base class": "COM对象类",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.附加类\\\"\"",
+"methods": [
+  {
+
+"method name": "取属性信息",
+
+"comment": "获取当前字段的属性集合.",
+
+"data type": "数据库属性集合类_",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "名称",
+
+"comment": "获取该字段的名称.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "名称",
+
+"comment": "设置该字段的名称.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "实际尺寸",
+
+"comment": "获取字段值的实际所占用的长度(字节单位).",
+
+"type": "property getter",
+
+"data type": "长整数"
+  },
+  {
+
+"method name": "定义尺寸",
+
+"comment": "获取字段值定义的尺寸(字节单位).",
+
+"type": "property getter",
+
+"data type": "长整数"
+  },
+  {
+
+"method name": "小数位数",
+
+"comment": "获取字段中数值的小数位数.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+}"method name": "小数位数",
+}"comment": "数值字段中数值的小数位数.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "原始值",
+
+"comment": "获取该字段在有任何更改之前的原始值.",
+
+"type": "property getter",
+
+"data type": "COM变体型"
+  },
+  {
+"data type": "COM变体型""method name": "最大位数",
+"data type": "COM变体型""comment": "获取字段中值的最大位数(精度).",
+"data type": "COM变体型""type": "property getter",
+"data type": "COM变体型""data type": "整数"
+  },
+  {
+}"method name": "最大位数",
+}"comment": "数值字段中值的最大位数(精度).",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "状态",
+
+"comment": "获取该字段当前状态.",
+
+"result comment": "返回值请参考\"数据库字段状态类型_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "长整数"
+  },
+  {
+
+"method name": "类型",
+
+"comment": "获取该字段定义的数据类型.",
+
+"result comment": "返回值请参考\"数据库字段数据类型_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "当前值",
+
+"comment": "获取该字段当前的值.",
+
+"type": "property getter",
+
+"data type": "COM变体型"
+  },
+  {
+
+"method name": "值",
+
+"comment": "获取该字段的值.",
+
+"type": "property getter",
+
+"data type": "COM变体型"
+  },
+  {
+
+"method name": "值",
+
+"comment": "设置该字段的值.",
+
+"result comment": "返回值请参考\"数据库字段数据类型_\"所提供的常量.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲置入值",
+"data type": "COM变体型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "数据库字段集合类_",
+"comment": "本类表示一个数据集中所有的字段数据.",
+"base class": "数据库集合类_",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.附加类\\\"\"",
+"@模板实现类": "\"数据库字段类_,数据库字段集合类_\"",
+"methods": [
+  {
+
+"method name": "加入",
+
+"comment": "将指定字段追加至该集合的尾部.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "所欲加入新字段的名称,不能与集合中的任何其他字段同名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字段对象",
+"comment": "提供所欲加入该集合的字段对象.",
+"data type": "数据库字段类_"
+   },
+   {
+"parameter name": "数据类型",
+"comment": "所欲加入新字段的数据类型,请参考\"数据库字段数据类型_\"所提供的常量.",
+"data type": "整数",
+"@默认值": "数据库字段数据类型_.空值"
+   },
+   {
+"parameter name": "定义尺寸",
+"comment": "表示所加入新字段定义的大小(字节).",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "字段属性",
+"comment": "提供该字段的属性选项,请参考\"数据库字段属性类型_\"所提供的常量,支持其单个或多个组合值.",
+"data type": "长整数",
+"@默认值": "数据库字段属性类型_.无"
+   }
+
+]
+  },
+  {
+
+"method name": "删除索引",
+
+"comment": "删除指定索引处的字段对象.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "所欲删除字段在本集合内所处的索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "删除",
+ }"comment": "以字段名称删除指定字段对象.",
+ }"result comment": "执行成功返回真,否则返回假.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"comment": "所欲删除字段的名称.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "取消更新",
+
+"comment": "在调用\"更新\"方法之前,取消对当前字段对象所做的任何更改.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "重新同步",
+
+"comment": "通过重新执行对象所基于的查询来更新字段集合对象中的字段数据.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "是否覆盖",
+"comment": "是否覆盖原有数据,挂起的更新动作将被直接取消,提供假将不会覆盖数据,也不会取消挂起的更新动作.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+}"method name": "更新",
+}"comment": "保存对字段集合对象所做的任何更改.",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字段",
+"comment": "指定所欲修改的一个或多个字段名称,如果有多个字段请置入字段数组,可以为名称也可以是字段索引.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "值",
+"comment": "指定字段所对应的值,如果有多个字段,必须提供对等数量的值,否则将无法正常执行更新.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "记录集编辑状态_",
+"comment": "指定记录的编辑状态.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "无",
+
+"comment": "指示没有正在进行的编辑操作",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "正在编辑",
+
+"comment": "指示当前记录中的数据已修改但尚未保存,可能处于编辑状态.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "已加入",
+
+"comment": "已提交保存到缓冲区,但尚未保存至数据库中.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+"data type": "整数""constant name": "已删除",
+"data type": "整数""comment": "指示当前记录已被删除",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "4"
+  }
+]
+ },
+ {
+"class name": "数据库字段数据类型_",
+"comment": "指定字段,参数或属性的数据类型.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "数组型",
+
+"comment": "指示一个数据类型的数组型,该常量需要与本类其他常量值组合使用.",
+
+"data type": "整数",
+
+"initial value": "0x2000"
+  },
+  {
+
+"constant name": "空值",
+
+"comment": "DBTYPE_EMPTY,空值.",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "小整数值",
+
+"comment": "(DBTYPE_I2)两个字节的有符号整数.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "整数值",
+
+"comment": "(DBTYPE_I4)4字节有符号整数.",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "单精度浮点值",
+
+"comment": "(DBTYPE_R4)单精度浮点值.",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "双精度浮点值",
+
+"comment": "(DBTYPE_R8)双精度浮点值.",
+
+"data type": "整数",
+
+"initial value": "5"
+  },
+  {
+
+"constant name": "货币值",
+
+"comment": "(DBTYPE_CY)小数点右侧具有四位数的固定点数字的货币值.",
+
+"data type": "整数",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "小数日期值",
+
+"comment": "(DBTYPE_DATE)日期型.",
+
+"data type": "整数",
+
+"initial value": "7"
+  },
+  {
+
+"constant name": "文本值",
+
+"comment": "(DBTYPE_BSTR)以null结尾的字符串值(Unicode).",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+
+"constant name": "错误值",
+
+"comment": "(DBTYPE_ERROR)32位的错误代码值.",
+
+"data type": "整数",
+
+"initial value": "10"
+  },
+  {
+
+"constant name": "逻辑值",
+
+"comment": "(DBTYPE_BOOL)布尔值.",
+
+"data type": "整数",
+
+"initial value": "11"
+  },
+  {
+
+"constant name": "精确数值",
+
+"comment": "(DBTYPE_DECIMAL)具有固定精度和小数位数的精确数值.",
+
+"data type": "整数",
+
+"initial value": "14"
+  },
+  {
+
+"constant name": "单字节整数值",
+
+"comment": "(DBTYPE_I1)单字节有符号整数.",
+
+"data type": "整数",
+
+"initial value": "16"
+  },
+  {
+
+"constant name": "无符单字节整数值",
+
+"comment": "(DBTYPE_UI1)单字节无符号整数.",
+
+"data type": "整数",
+
+"initial value": "17"
+  },
+  {
+
+"constant name": "无符小整数值",
+
+"comment": "(DBTYPE_UI2)两字节无符号整数.",
+
+"data type": "整数",
+
+"initial value": "18"
+  },
+  {
+
+"constant name": "无符整数值",
+
+"comment": "(DBTYPE_UI4)四字节无符号整数.",
+
+"data type": "整数",
+
+"initial value": "19"
+  },
+  {
+
+"constant name": "大整数值",
+
+"comment": "(DBTYPE_I8)的8字节有符号整数.",
+
+"data type": "整数",
+
+"initial value": "20"
+  },
+  {
+
+"constant name": "无符大整数值",
+
+"comment": "(DBTYPE_UI8)8字节无符号整数.",
+
+"data type": "整数",
+
+"initial value": "21"
+  },
+  {
+"comment": "(DBTYPE_I1)单字节有符号整数.""constant name": "文件时间值",
+"comment": "(DBTYPE_I1)单字节有符号整数.""comment": "(DBTYPE_FILETIME)64位表示文件时间的值.",
+"comment": "(DBTYPE_I1)单字节有符号整数.""data type": "整数",
+"comment": "(DBTYPE_I1)单字节有符号整数.""initial value": "64"
+  },
+  {
+
+"constant name": "唯一标识符值",
+
+"comment": "(DBTYPE_GUID)全局唯一标识符值.",
+
+"data type": "整数",
+
+"initial value": "72"
+  },
+  {
+
+"constant name": "二进制值",
+
+"comment": "(DBTYPE_BYTES)二进制值.",
+
+"data type": "整数",
+
+"initial value": "128"
+  },
+  {
+
+"constant name": "字符串值",
+
+"comment": "(DBTYPE_STR)字符串值.",
+
+"data type": "整数",
+
+"initial value": "129"
+  },
+  {
+"comment": "(DBTYPE_STR)字符串值.""constant name": "文本值_WChar",
+"comment": "(DBTYPE_STR)字符串值.""comment": "(DBTYPE_WSTR)指示一个以null结尾的字符串(Unicode).",
+"comment": "(DBTYPE_STR)字符串值.""data type": "整数",
+"comment": "(DBTYPE_STR)字符串值.""initial value": "130"
+  },
+  {
+"comment": "(DBTYPE_STR)字符串值.""constant name": "精确数值_NUMERIC",
+"comment": "(DBTYPE_STR)字符串值.""comment": "(DBTYPE_NUMERIC)具有固定精度和小数位数的精确数值.",
+"comment": "(DBTYPE_STR)字符串值.""data type": "整数",
+"comment": "(DBTYPE_STR)字符串值.""initial value": "131"
+  },
+  {
+
+"constant name": "用户变量值",
+
+"comment": "(DBTYPE_UDT)用户定义变量.",
+
+"data type": "整数",
+
+"initial value": "132"
+  },
+  {
+
+"constant name": "日期值",
+
+"comment": "(DBTYPE_DBDATE)以yyyymmdd表示的日期值.",
+
+"data type": "整数",
+
+"initial value": "133"
+  },
+  {
+
+"constant name": "时间值",
+
+"comment": "(DBTYPE_DBTIME)以hhmmss表示的时间值.",
+
+"data type": "整数",
+
+"initial value": "134"
+  },
+  {
+
+"constant name": "时间戳值",
+
+"comment": "(DBTYPE_DBTIMESTAMP)日期/时间戳值.",
+
+"data type": "整数",
+
+"initial value": "135"
+  },
+  {
+
+"constant name": "子集值",
+
+"comment": "(DBTYPE_HCHAPTER)用于标识子行集中的行的4字节的子集值.",
+
+"data type": "整数",
+
+"initial value": "136"
+  },
+  {
+
+"constant name": "可变类型值",
+
+"comment": "可自动变化类型的值.",
+
+"data type": "整数",
+
+"initial value": "138"
+  },
+  {
+
+"constant name": "数字值",
+
+"comment": "数字值",
+
+"data type": "整数",
+
+"initial value": "139"
+  },
+  {
+
+"constant name": "字符串值_VarChar",
+
+"comment": "字符串值",
+
+"data type": "整数",
+
+"initial value": "200"
+  },
+  {
+
+"constant name": "大字符串值",
+
+"comment": "长字符串值.",
+
+"data type": "整数",
+
+"initial value": "201"
+  },
+  {
+
+"constant name": "文本值_VarWChar",
+
+"comment": "指示一个以null结尾的字符串(Unicode).",
+
+"data type": "整数",
+
+"initial value": "202"
+  },
+  {
+
+"constant name": "大文本值",
+
+"comment": "以null结尾的长字符串值(Unicode).",
+
+"data type": "整数",
+
+"initial value": "203"
+  },
+  {
+
+"constant name": "二进制值_VarBinary",
+
+"comment": "二进制值",
+
+"data type": "整数",
+
+"initial value": "204"
+  },
+  {
+
+"constant name": "大二进制值",
+
+"comment": "长二进制值.",
+
+"data type": "整数",
+
+"initial value": "205"
+  }
+]
+ },
+ {
+"class name": "数据库字段状态类型_",
+"comment": "表示一个字段的状态.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "已存在",
+
+"comment": "表示指定字段已存在.",
+
+"data type": "长整数",
+
+"initial value": "26"
+  },
+  {
+
+"constant name": "状态无效",
+
+"comment": "表示从ADO发送到OLEDB提供程序的状态值无效.",
+
+"data type": "长整数",
+
+"initial value": "12"
+  },
+  {
+
+"constant name": "无法完成",
+
+"comment": "由源指定的URL服务器无法完成操作.",
+
+"data type": "长整数",
+
+"initial value": "20"
+  },
+  {
+
+"constant name": "源无法删除",
+
+"comment": "在移动操作过程中,树或子树已移动到新位置,但无法删除该源.",
+
+"data type": "长整数",
+
+"initial value": "23"
+  },
+  {
+
+"constant name": "无法检索字段",
+
+"comment": "无法检索或存储字段,不会丢失数据.",
+
+"data type": "长整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "无法创建",
+
+"comment": "未能添加字段,因为提供程序超出了允许的字段数.",
+
+"data type": "长整数",
+
+"initial value": "7"
+  },
+  {
+
+"constant name": "数据溢出",
+
+"comment": "从提供程序返回的数据溢出了字段的数据类型.",
+
+"data type": "长整数",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "默认值",
+
+"comment": "在设置数据时使用了字段的默认值.",
+
+"data type": "长整数",
+
+"initial value": "13"
+  },
+  {
+
+"constant name": "不存在",
+
+"comment": "表示指定字段不存在.",
+
+"data type": "长整数",
+
+"initial value": "16"
+  },
+  {
+}"constant name": "忽略置值",
+}"comment": "在设置数据时跳过了该字段.",
+}"data type": "长整数",
+}"initial value": "15"
+  },
+  {
+}"constant name": "派生实体",
+}"comment": "无法修改字段,因为它是计算实体或派生实体.",
+}"data type": "长整数",
+}"initial value": "10"
+  },
+  {
+}"constant name": "无效字符",
+}"comment": "数据源URL包含无效字符.",
+}"data type": "长整数",
+}"initial value": "17"
+  },
+  {
+
+"constant name": "空值",
+
+"comment": "提供程序返回VT_NULL类型的变量值.",
+
+"data type": "长整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "成功",
+
+"comment": "已成功添加或删除字段.",
+
+"data type": "长整数",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "内存不足",
+
+"comment": "提供程序无法获得足够的存储空间来完成移动或复制操作.",
+
+"data type": "长整数",
+
+"initial value": "22"
+  },
+  {
+
+"constant name": "即将修改",
+
+"comment": "字段的值或者数据类型在调用更新后会被修改.",
+
+"data type": "长整数",
+
+"initial value": "0x40000"
+  },
+  {
+
+"constant name": "即将删除",
+
+"comment": "字段在调用更新后会被删除.",
+
+"data type": "长整数",
+
+"initial value": "0x20000"
+  },
+  {
+nstant name": "即将删除""constant name": "即将插入",
+nstant name": "即将删除""comment": "在字段集合中新增的字段,调用更新后会被加入.",
+nstant name": "即将删除""data type": "长整数",
+nstant name": "即将删除""initial value": "0x10000"
+  },
+  {
+
+"constant name": "未知预操作",
+
+"comment": "无法确定字段即将会有何状态.",
+
+"data type": "长整数",
+
+"initial value": "0x80000"
+  },
+  {
+
+"constant name": "未知操作删除",
+
+"comment": "无法确定何种操作导致字段即将被删除,更新后字段会被删除.",
+
+"data type": "长整数",
+
+"initial value": "0x100000"
+  },
+  {
+
+"constant name": "权限不足",
+
+"comment": "权限不足无法修改字段,可能当前字段权限为只读.",
+
+"data type": "长整数",
+
+"initial value": "9"
+  },
+  {
+
+"constant name": "只读",
+
+"comment": "表示字段被定义为只读状态.",
+
+"data type": "长整数",
+
+"initial value": "24"
+  },
+  {
+
+"constant name": "资源已存在",
+
+"comment": "提供程序无法执行该操作,因为目标URL中已存在一个对象,且该对象不能被覆盖.",
+
+"data type": "长整数",
+
+"initial value": "19"
+  },
+  {
+
+"constant name": "资源已锁定",
+
+"comment": "提供程序无法执行该操作,因为数据源被一个或多个其他应用程序或进程锁定.",
+
+"data type": "长整数",
+
+"initial value": "18"
+  },
+  {
+
+"constant name": "超出记录范围",
+
+"comment": "指示源或目标URL超出了当前记录的范围.",
+
+"data type": "长整数",
+
+"initial value": "25"
+  },
+  {
+
+"constant name": "违反架构约束",
+
+"comment": "提供的值违反了字段的数据源架构约束.",
+
+"data type": "长整数",
+
+"initial value": "11"
+  },
+  {
+
+"constant name": "签名不匹配",
+
+"comment": "提供程序返回的数据值已签名,但ADO字段值的数据类型未签名.",
+
+"data type": "长整数",
+
+"initial value": "5"
+  },
+  {
+
+"constant name": "数据被截断",
+
+"comment": "在从数据源读取时,长度可变的数据被截断.",
+
+"data type": "长整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "值不可用",
+
+"comment": "在从数据源读取时,提供程序无法确定该值.",
+
+"data type": "长整数",
+
+"initial value": "8"
+  },
+  {
+"comment": "在从数据源读取时,提供程序无法确定该值.""constant name": "找不到储存卷",
+"comment": "在从数据源读取时,提供程序无法确定该值.""comment": "提供程序找不到URL所指示的存储卷.",
+"comment": "在从数据源读取时,提供程序无法确定该值.""data type": "长整数",
+"comment": "在从数据源读取时,提供程序无法确定该值.""initial value": "21"
+  }
+]
+ },
+ {
+"class name": "记录操作状态类型_",
+"comment": "指定有关批更新和其他批量操作的记录的状态.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "已取消",
+
+"comment": "指示未修改记录,因为该操作已取消.",
+
+"data type": "整数",
+
+"initial value": "0x100"
+  },
+  {
+
+"constant name": "无法释放",
+
+"comment": "指示未修改新记录,因为现有记录已锁定.",
+
+"data type": "整数",
+
+"initial value": "0x400"
+  },
+  {
+
+"constant name": "并发冲突",
+
+"comment": "指示由于使用乐观并发而未修改记录.",
+
+"data type": "整数",
+
+"initial value": "0x800"
+  },
+  {
+
+"constant name": "数据源已删除",
+
+"comment": "指示已从数据源中删除记录.",
+
+"data type": "整数",
+
+"initial value": "0x40000"
+  },
+  {
+
+"constant name": "已删除",
+
+"comment": "指示记录已被删除.",
+
+"data type": "整数",
+
+"initial value": "0x4"
+  },
+  {
+
+"constant name": "非完整数据",
+
+"comment": "指示由于违法了数据完整约束而未修改记录.",
+
+"data type": "整数",
+
+"initial value": "0x1000"
+  },
+  {
+
+"constant name": "书签无效",
+
+"comment": "指示未修改记录,因为其书签无效.",
+
+"data type": "整数",
+
+"initial value": "0x10"
+  },
+  {
+
+"constant name": "挂起太多",
+
+"comment": "指示未修改记录,因为挂起的更改操作太多.",
+
+"data type": "整数",
+
+"initial value": "0x2000"
+  },
+  {
+"comment": "指示未修改记录,因为挂起的更改操作太多.""constant name": "已修改",
+"comment": "指示未修改记录,因为挂起的更改操作太多.""comment": "已修改记录.",
+"comment": "指示未修改记录,因为挂起的更改操作太多.""data type": "整数",
+"comment": "指示未修改记录,因为挂起的更改操作太多.""initial value": "0x2"
+  },
+  {
+
+"constant name": "影响多个",
+
+"comment": "指示未修改记录,因为它会影响多个记录.",
+
+"data type": "整数",
+
+"initial value": "0x40"
+  },
+  {
+
+"constant name": "新记录",
+
+"comment": "指示记录是新记录.",
+
+"data type": "整数",
+
+"initial value": "0x1"
+  },
+  {
+
+"constant name": "储存对象冲突",
+
+"comment": "指示由于与打开的存储对象冲突而未修改记录.",
+
+"data type": "整数",
+
+"initial value": "0x4000"
+  },
+  {
+
+"constant name": "成功",
+
+"comment": "指示已成功更新记录.",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "内存不足",
+
+"comment": "由于计算机内存不足而未修改记录.",
+
+"data type": "整数",
+
+"initial value": "0x8000"
+  },
+  {
+
+"constant name": "引用挂起",
+
+"comment": "指示未修改记录,因为它引用了挂起的插入.",
+
+"data type": "整数",
+
+"initial value": "0x80"
+  },
+  {
+
+"constant name": "权限不足",
+
+"comment": "指示未保存记录,因为用户没有足够的权限.",
+
+"data type": "整数",
+
+"initial value": "0x10000"
+  },
+  {
+
+"constant name": "违反基础结构",
+
+"comment": "指示未保存记录,因为它违反了基础数据库的结构.",
+
+"data type": "整数",
+
+"initial value": "0x20000"
+  },
+  {
+
+"constant name": "未修改",
+
+"comment": "指示未修改记录.",
+
+"data type": "整数",
+
+"initial value": "0x8"
+  }
+]
+ },
+ {
+"class name": "数据库状态类型_",
+"comment": "表示指定对象的一个状态.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+"comment": "指示未保存记录,因为用户没有足够的权限.""constant name": "关闭",
+"comment": "指示未保存记录,因为用户没有足够的权限.""comment": "指示当前对象已关闭.",
+"comment": "指示未保存记录,因为用户没有足够的权限.""data type": "整数",
+"comment": "指示未保存记录,因为用户没有足够的权限.""initial value": "0"
+  },
+  {
+
+"constant name": "打开",
+
+"comment": "指示当前对象处于打开状态.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "正在连接",
+
+"comment": "指示当前对象正在进行连接.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "正在执行",
+
+"comment": "指示当前对象正在执行命令.",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "正在检索",
+
+"comment": "指示当前对象正在检索数据行.",
+
+"data type": "整数",
+
+"initial value": "8"
+  }
+]
+ },
+ {
+"class name": "数据库影响记录选项_",
+"comment": "指定哪些记录受操作影响.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+nstant name": "正在执行""constant name": "所有",
+nstant name": "正在执行""comment": "除开筛选器指定以外的所有记录.",
+nstant name": "正在执行""data type": "整数",
+nstant name": "正在执行""initial value": "3"
+  },
+  {
+
+"constant name": "同级所有",
+
+"comment": "影响记录集的所有同级中的所有记录.",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "当前",
+
+"comment": "仅影响当前位置的记录.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "筛选记录",
+
+"comment": "仅影响筛选器所筛选出的记录.",
+
+"data type": "整数",
+
+"initial value": "2"
+  }
+]
+ },
+ {
+"class name": "数据库游标服务位置_",
+"comment": "指定游标服务的位置.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "客户端游标",
+
+"comment": "使用由本地游标库提供的客户端游标.",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "不使用",
+
+"comment": "不使用游标服务.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "默认",
+
+"comment": "默认使用由数据提供程序或驱动程序提供的游标.",
+
+"data type": "整数",
+
+"initial value": "2"
+  }
+]
+ },
+ {
+"class name": "记录集编辑锁类型_",
+"comment": "指定在编辑过程中放置在记录集上锁的类型.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "批处理更新",
+
+"comment": "指示开放式批处理更新.",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "开放式锁定",
+
+"comment": "指示开放式锁定.",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "悲观锁定",
+
+"comment": "指示悲观锁定.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "只读锁定",
+
+"comment": "只读记录,不能更改数据.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "无",
+
+"comment": "不指定锁类型.",
+
+"data type": "整数",
+
+"initial value": "-1"
+  }
+]
+ },
+ {
+"class name": "数据库事务隔离级别_",
+"comment": "指定数据库的事务隔离级别.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "未定义",
+
+"comment": "提供程序使用的隔离级别与指定的隔离级别不同,无法确定等级.",
+
+"data type": "整数",
+
+"initial value": "-1"
+  },
+  {
+
+"constant name": "无法覆盖",
+
+"comment": "无法覆盖来自更高隔离事务的挂起的更改.",
+
+"data type": "整数",
+
+"initial value": "16"
+  },
+  {
+
+"constant name": "未提交可读",
+
+"comment": "从一个事务中可以查看其他事务中的未提交的更改.",
+
+"data type": "整数",
+
+"initial value": "256"
+  },
+  {
+}"constant name": "已提交可读",
+}"comment": "只允许读其他事务已提交的改变.",
+}"data type": "整数",
+}"initial value": "4096"
+  },
+  {
+}"constant name": "禁止读其他",
+}"comment": "禁止读其他事务的改变.",
+}"data type": "整数",
+}"initial value": "65536"
+  },
+  {
+
+"constant name": "隔离时执行",
+
+"comment": "仅在隔离其他事务时执行事务.",
+
+"data type": "整数",
+
+"initial value": "1048576"
+  }
+]
+ },
+ {
+"class name": "数据库权限模式_",
+"comment": "指定数据库的可用权限.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "只读",
+
+"comment": "只读权限.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "只写",
+
+"comment": "只写权限.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "读写",
+
+"comment": "读取/写入权限.",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+}"constant name": "允许所有",
+}"comment": "允许其他人打开具有任何权限的连接.",
+}"data type": "整数",
+}"initial value": "16"
+  },
+  {
+
+"constant name": "阻止读",
+
+"comment": "阻止其他人打开具有读取权限的连接.",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "阻止写",
+
+"comment": "阻止其他人打开具有写入权限的连接.",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+
+"constant name": "阻止所有",
+
+"comment": "阻止其他人打开连接.",
+
+"data type": "整数",
+
+"initial value": "12"
+  },
+  {
+
+"constant name": "子记录继承",
+
+"comment": "该值与\"允许所有\",\"阻止读\",\"阻止写\",\"阻止所有\"组合使用,表示子记录集继承该权限模式.",
+
+"data type": "整数",
+
+"initial value": "0x400000"
+  },
+  {
+
+"constant name": "默认",
+
+"comment": "默认,权限尚未设置或无法确定.",
+
+"data type": "整数",
+
+"initial value": "0"
+  }
+]
+ },
+ {
+"class name": "数据库命令类型_",
+"comment": "指定如何计算SQL语句参数.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "无",
+
+"comment": "不指定命令类型参数.",
+
+"data type": "整数",
+
+"initial value": "-1"
+  },
+  {
+
+"constant name": "普通命令",
+
+"comment": "指定所提供的SQL语句为普通命令或存储过程.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "表名称",
+
+"comment": "指定所提供的SQL语句为表名称,内部将会生成SQL查询该表.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+}"constant name": "储存过程",
+}"comment": "指定所提供的SQL语句为储存过程名称.",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+
+"constant name": "默认",
+
+"comment": "未知命令类型,ADO将会多次尝试解释命令类型.",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+}"constant name": "记录集文件",
+}"comment": "指定语句为持久储存的记录集文件名,适用于记录集类.",
+}"data type": "整数",
+}"initial value": "256"
+  },
+  {
+
+"constant name": "获取所有数据",
+
+"comment": "指定记录集需要获取所有数据,如果记录集需要使用\"跳转\"方法,必须使用该类型打开记录集.",
+
+"data type": "整数",
+
+"initial value": "512"
+  }
+]
+ },
+ {
+"class name": "记录集游标类型_",
+"comment": "指定记录集对象中使用的游标类型.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "动态游标",
+
+"comment": "使用动态游标,其他用户的添加,更改和删除是可用的,并且允许所有类型的移动.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "默认",
+
+"comment": "只进游标,只能向前滚动记录.",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "键集游标",
+
+"comment": "使用键集游标,与动态游标类似,但看不到其他用户添加的记录,其他用户删除的记录无法从记录集中访问,数据更改仍然可用.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+}"constant name": "静态游标",
+}"comment": "使用静态游标,该游标是一组记录的静态副本,可用于查找数据或生成报表,其他用户的添加,更改或删除不可用.",
+}"data type": "整数",
+}"initial value": "3"
+  },
+  {
+
+"constant name": "无",
+
+"comment": "不指定游标的类型",
+
+"data type": "整数",
+
+"initial value": "-1"
+  }
+]
+ },
+ {
+"class name": "数据库命令执行选项_",
+"comment": "指定提供程序执行命令的方式",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "异步执行",
+
+"comment": "指示该命令应以异步方式执行.",
+
+"data type": "整数",
+
+"initial value": "0x10"
+  },
+  {
+
+"constant name": "异步抓取",
+
+"comment": "抓取缓存数量以外的其余行数据.",
+
+"data type": "整数",
+
+"initial value": "0x20"
+  },
+  {
+"initial value": "0x20""constant name": "不堵塞主线程",
+"initial value": "0x20""comment": "在检索数据时,永远不会堵塞主线程,注意如果从包含持久存储的记录集的流打开记录集,本选项不起作用.",
+"initial value": "0x20""data type": "整数",
+"initial value": "0x20""initial value": "0x40"
+  },
+  {
+
+"constant name": "不返回记录",
+
+"comment": "指示该命令是储存过程或非查询命令,不返回任何的行数据.",
+
+"data type": "整数",
+
+"initial value": "0x80"
+  },
+  {
+
+"constant name": "返回流结果",
+
+"comment": "指示应以流的形式返回命令执行的结果.",
+
+"data type": "整数",
+
+"initial value": "0x400"
+  },
+  {
+
+"constant name": "无",
+
+"comment": "不指定命令类型.",
+
+"data type": "整数",
+
+"initial value": "-1"
+  }
+]
+ },
+ {
+"class name": "数据库结构信息类型_",
+"comment": "提供查询数据库结构信息的查询类型.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+constants": [
+"constant name": "断言集",
+constants": [
+"comment": "返回在目录中定义的由给定用户拥有的断言,约束列:CONSTRAINT_CATALOG,CONSTRAINT_SCHEMA,CONSTRAINT_NAME",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "0"
+  },
+  {
+
+"constant name": "目录集",
+
+"comment": "返回可从DBMS访问的目录关联的物理特性,约束列:CATALOG_NAME",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "字符集",
+
+"comment": "返回在目录中定义的,给定用户可以访问的字符集,约束列:CHARACTER_SET_CATALOG,CHARACTER_SET_SCHEMA,CHARACTER_SET_NAME",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "检查约束集",
+
+"comment": "返回在目录中定义的由给定用户拥有的检查约束,约束列:CONSTRAINT_CATALOG,CONSTRAINT_SCHEMA,CONSTRAINT_NAME",
+
+"data type": "整数",
+
+"initial value": "5"
+  },
+  {
+
+"constant name": "排序规则集",
+
+"comment": "返回在目录中定义的,给定用户可以访问的字符排序规则,约束列:COLLATION_CATALOG,COLLATION_SCHEMA,COLLATION_NAME",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "特权列集",
+
+"comment": "返回在目录中定义的,给定用户可使用或授予的对表的列的特权,约束列:TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME,GRANTOR,GRANTEE",
+
+"data type": "整数",
+
+"initial value": "13"
+  },
+  {
+}"constant name": "列行集",
+}"comment": "返回表的各列(包括在目录中定义的,给定用户可以访问的视图),约束列:TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+
+"constant name": "用户私有域集",
+
+"comment": "返回在目录中定义,依赖于在目录中定义的域并由给定用户拥有的列,约束列:DOMAIN_CATALOG,DOMAIN_SCHEMA,DOMAIN_NAME,COLUMN_NAME",
+
+"data type": "整数",
+
+"initial value": "11"
+  },
+  {
+
+"constant name": "约束列集",
+
+"comment": "返回由引用约束,唯一约束,检查约束和断言使用的,在目录中定义并由给定用户拥有的列.约束列:TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME",
+
+"data type": "整数",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "约束表集",
+
+"comment": "返回由引用约束,唯一约束,检查约束和断言使用的,在目录中定义并由给定用户拥有的表.约束列:TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME",
+
+"data type": "整数",
+
+"initial value": "7"
+  },
+  {
+
+"constant name": "多维数据集",
+
+"comment": "返回可用多维数据集的信息,约束列:CATALOG_NAME,SCHEMA_NAME,CUBE_NAME",
+
+"data type": "整数",
+
+"initial value": "32"
+  },
+  {
+
+"constant name": "关键字集",
+
+"comment": "返回提供程序特定的关键字的列表.",
+
+"data type": "整数",
+
+"initial value": "30"
+  },
+  {
+
+"constant name": "特定命令文本集",
+
+"comment": "返回在文本命令使用的提供程序特定的文本的列表.",
+
+"data type": "整数",
+
+"initial value": "31"
+  },
+  {
+
+"constant name": "维度行集",
+
+"comment": "返回有关给定多维数据集中的维度的信息.对于每个维度,都有一行.约束列:CATALOG_NAME,SCHEMA_NAME,CUBE_NAME,DIMENSION_NAME,DIMENSION_UNIQUE_NAME",
+
+"data type": "整数",
+
+"initial value": "33"
+  },
+  {
+
+"constant name": "外键列集",
+
+"comment": "返回由给定用户在目录中定义的外键列,约束列:PK_TABLE_CATALOG,PK_TABLE_SCHEMA,PK_TABLE_NAME,FK_TABLE_CATALOG,FK_TABLE_SCHEMA,FK_TABLE_NAME",
+
+"data type": "整数",
+
+"initial value": "27"
+  },
+  {
+
+"constant name": "层次结构集",
+
+"comment": "返回有关维度中可用层次结构的信息,约束列:CATALOG_NAME,SCHEMA_NAME,CUBE_NAME,DIMENSION_UNIQUE_NAME,HIERARCHY_NAME,HIERARCHY_UNIQUE_NAME",
+
+"data type": "整数",
+
+"initial value": "34"
+  },
+  {
+
+"constant name": "索引集",
+
+"comment": "返回在目录中定义的由给定用户拥有的索引,约束列:TABLE_CATALOG,TABLE_SCHEMA,INDEX_NAME,TYPE,TABLE_NAME",
+
+"data type": "整数",
+
+"initial value": "12"
+  },
+  {
+
+"constant name": "约束键列集",
+
+"comment": "返回在目录中定义的,由给定用户约束为键的列,约束列:CONSTRAINT_CATALOG,CONSTRAINT_SCHEMA,CONSTRAINT_NAME,TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+
+"constant name": "级别集",
+
+"comment": "返回有关维度中可用的级别的信息,约束列:CATALOG_NAME,SCHEMA_NAME,CUBE_NAME,DIMENSION_UNIQUE_NAME,HIERARCHY_UNIQUE_NAME,LEVEL_NAME,LEVEL_UNIQUE_NAME",
+
+"data type": "整数",
+
+"initial value": "35"
+  },
+  {
+
+"constant name": "度量值集",
+
+"comment": "返回有关可用度量值的信息,约束列:CATALOG_NAME,SCHEMA_NAME,CUBE_NAME,MEASURE_NAME,MEASURE_UNIQUE_NAME",
+
+"data type": "整数",
+
+"initial value": "36"
+  },
+  {
+
+"constant name": "成员集",
+
+"comment": "返回有关可用成员的信息,约束列:CATALOG_NAME,SCHEMA_NAME,CUBE_NAME,DIMENSION_UNIQUE_NAME,HIERARCHY_UNIQUE_NAME,LEVEL_UNIQUE_NAME,LEVEL_NUMBER,MEMBER_NAME,MEMBER_UNIQUE_NAME,MEMBER_CAPTION,MEMBER_TYPE",
+
+"data type": "整数",
+
+"initial value": "38"
+  },
+  {
+
+"constant name": "主键集",
+
+"comment": "返回在目录中由给定用户定义的主键列,约束列:PK_TABLE_CATALOG,PK_TABLE_SCHEMA,PK_TABLE_NAME",
+
+"data type": "整数",
+
+"initial value": "28"
+  },
+  {
+
+"constant name": "过程集合",
+
+"comment": "返回有关由过程返回的行集合的列的信息,约束列:PROCEDURE_CATALOG,PROCEDURE_SCHEMA,PROCEDURE_NAME,COLUMN_NAME",
+
+"data type": "整数",
+
+"initial value": "29"
+  },
+  {
+
+"constant name": "过程参数集",
+
+"comment": "返回有关过程的参数和返回代码的信息,约束列:PROCEDURE_CATALOG,PROCEDURE_SCHEMA,PROCEDURE_NAME,PARAMETER_NAME",
+
+"data type": "整数",
+
+"initial value": "26"
+  },
+  {
+
+"constant name": "过程集",
+
+"comment": "返回在目录中定义的由给定用户拥有的过程,约束列:PROCEDURE_CATALOG,PROCEDURE_SCHEMA,PROCEDURE_NAME,PROCEDURE_TYPE",
+
+"data type": "整数",
+
+"initial value": "16"
+  },
+  {
+}"constant name": "属性集",
+}"comment": "返回有关维度的每个级别的可用属性的信息,约束列:CATALOG_NAME,SCHEMA_NAME,CUBE_NAME,DIMENSION_UNIQUE_NAME,HIERARCHY_UNIQUE_NAME,LEVEL_UNIQUE_NAME,MEMBER_UNIQUE_NAME,PROPERTY_TYPE,PROPERTY_NAME",
+}"data type": "整数",
+}"initial value": "37"
+  },
+  {
+
+"constant name": "非标准结构",
+
+"comment": "如果提供程序定义了其自己的非标准架构查询,则使用该项.",
+
+"data type": "整数",
+
+"initial value": "-1"
+  },
+  {
+
+"constant name": "支持数据类型集",
+
+"comment": "返回数据提供程序支持的(基本)数据类型,约束列:DATA_TYPE,BEST_MATCH",
+
+"data type": "整数",
+
+"initial value": "22"
+  },
+  {
+
+"constant name": "引用约束集",
+
+"comment": "返回在目录中定义的由给定用户拥有的引用约束,约束列:CONSTRAINT_CATALOG,CONSTRAINT_SCHEMA,CONSTRAINT_NAME",
+
+"data type": "整数",
+
+"initial value": "9"
+  },
+  {
+
+"constant name": "结构行集",
+
+"comment": "返回给定用户拥有(数据库对象)的架构,约束列:CATALOG_NAME,SCHEMA_NAME,SCHEMA_OWNER",
+
+"data type": "整数",
+
+"initial value": "17"
+  },
+  {
+
+"constant name": "SQL语言集",
+
+"comment": "返回在目录中定义的SQL实现处理数据所支持的一致性级别,选项和语言.",
+
+"data type": "整数",
+
+"initial value": "18"
+  },
+  {
+
+"constant name": "统计信息集",
+
+"comment": "返回在目录中定义的由给定用户拥有的统计信息,约束列:TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME",
+
+"data type": "整数",
+
+"initial value": "19"
+  },
+  {
+
+"constant name": "表约束集",
+
+"comment": "返回在目录中定义的由给定用户拥有的表约束,约束列:CONSTRAINT_CATALOG,CONSTRAINT_SCHEMA,CONSTRAINT_NAME,TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,CONSTRAINT_TYPE",
+
+"data type": "整数",
+
+"initial value": "10"
+  },
+  {
+
+"constant name": "表特权集",
+
+"comment": "返回在目录中定义,给定用户可使用或负责授予的对表的特权,约束列:TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,GRANTOR GRANTEE",
+
+"data type": "整数",
+
+"initial value": "14"
+  },
+  {
+
+"constant name": "表集",
+
+"comment": "返回在目录中定义的(包括视图)给定用户可以访问它们,约束列:TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE",
+
+"data type": "整数",
+
+"initial value": "20"
+  },
+  {
+
+"constant name": "翻译集",
+
+"comment": "返回在目录中定义的,给定用户可以访问的字符转换,约束列:TRANSLATION_CATALOG,TRANSLATION_SCHEMA,TRANSLATION_NAME",
+
+"data type": "整数",
+
+"initial value": "21"
+  },
+  {
+
+"constant name": "用户特权集",
+
+"comment": "返回在目录中定义的,给定用户可使用或授予的对象上的使用权限,约束列:OBJECT_CATALOG,OBJECT_SCHEMA,OBJECT_NAME,OBJECT_TYPE,GRANTOR GRANTEE",
+
+"data type": "整数",
+
+"initial value": "15"
+  },
+  {
+
+"constant name": "表依赖列",
+
+"comment": "返回在目录中定义并由给定用户拥有的已查看的表所依赖的列,约束列:VIEW_CATALOG,VIEW_SCHEMA,VIEW_NAME",
+
+"data type": "整数",
+
+"initial value": "24"
+  },
+  {
+
+"constant name": "视图集",
+
+"comment": "返回在目录中定义的,给定用户可以访问的视图,约束列:TABLE_CATALOG TABLE_SCHEMA,TABLE_NAME",
+
+"data type": "整数",
+
+"initial value": "23"
+  },
+  {
+
+"constant name": "依赖表集",
+
+"comment": "返回已查看的表所依赖,在目录中定义并由给定用户拥有的表,约束列:VIEW_CATALOG,VIEW_SCHEMA,VIEW_NAME",
+
+"data type": "整数",
+
+"initial value": "25"
+  },
+  {
+
+"constant name": "未定义",
+
+"data type": "整数",
+
+"initial value": "39"
+  }
+]
+ },
+ {
+"class name": "数据库字段属性类型_",
+"comment": "指定字段对象的一个或多个属性.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "缓存读取",
+
+"comment": "程序将会缓存字段值,后续的读取是从缓存中完成的.",
+
+"data type": "长整数",
+
+"initial value": "0x1000"
+  },
+  {
+
+"constant name": "定长数据",
+
+"comment": "字段包含固定长度数据.",
+
+"data type": "长整数",
+
+"initial value": "0x10"
+  },
+  {
+
+"constant name": "包含子集",
+
+"comment": "字段包含子集值.",
+
+"data type": "长整数",
+
+"initial value": "0x2000"
+  },
+  {
+
+"constant name": "集合类型",
+
+"comment": "字段是由记录表示其他资源的集合.",
+
+"data type": "长整数",
+
+"initial value": "0x40000"
+  },
+  {
+
+"constant name": "主键列",
+
+"comment": "字段是主键列的全部或部分.",
+
+"data type": "长整数",
+
+"initial value": "0x8000"
+  },
+  {
+
+"constant name": "默认流",
+
+"comment": "字段包含由记录表示的资源的默认流.",
+
+"data type": "长整数",
+
+"initial value": "0x20000"
+  },
+  {
+"comment": "字段包含由记录表示的资源的默认流.""constant name": "可接受空",
+"comment": "字段包含由记录表示的资源的默认流.""comment": "字段接受NULL值.",
+"comment": "字段包含由记录表示的资源的默认流.""data type": "长整数",
+"comment": "字段包含由记录表示的资源的默认流.""initial value": "0x20"
+  },
+  {
+
+"constant name": "URL资源",
+
+"comment": "字段包含从记录表示的数据存储区中对资源进行命名的URL.",
+
+"data type": "长整数",
+
+"initial value": "0x10000"
+  },
+  {
+
+"constant name": "大二进制",
+
+"comment": "该字段是长二进制字段.",
+
+"data type": "长整数",
+
+"initial value": "0x80"
+  },
+  {
+}"constant name": "可能为空",
+}"comment": "可能会从该字段中读到NULL值.",
+}"data type": "长整数",
+}"initial value": "0x40"
+  },
+  {
+
+"constant name": "已延迟",
+
+"comment": "字段值不是从数据源中检索整个记录,而只是在显式访问字段值时进行检索.",
+
+"data type": "长整数",
+
+"initial value": "0x2"
+  },
+  {
+
+"constant name": "反比例",
+
+"comment": "字段值支持反比例列的数值.",
+
+"data type": "长整数",
+
+"initial value": "0x4000"
+  },
+  {
+
+"constant name": "标识行",
+
+"comment": "字段包含不能写入的持久性行标识符,并且除标识行(如记录号,唯一标识符)等之外没有有意义的值.",
+
+"data type": "长整数",
+
+"initial value": "0x100"
+  },
+  {
+
+"constant name": "版本行",
+
+"comment": "字段包含用于标识更新的时间戳或日期值.",
+
+"data type": "长整数",
+
+"initial value": "0x200"
+  },
+  {
+
+"constant name": "未知状态",
+
+"comment": "提供程序无法确定是否可以写入字段.",
+
+"data type": "长整数",
+
+"initial value": "0x8"
+  },
+  {
+
+"constant name": "可写入",
+
+"comment": "表示该字段支持写入.",
+
+"data type": "长整数",
+
+"initial value": "0x4"
+  },
+  {
+
+"constant name": "无",
+
+"comment": "未指定字段属性.",
+
+"data type": "长整数",
+
+"initial value": "-1"
+  }
+]
+ },
+ {
+"class name": "数据库事件执行状态_",
+"comment": "指定ADO相关事件的当前执行状态.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+}"constant name": "取消",
+}"comment": "请求取消导致事件发生的操作",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+
+"constant name": "无法拒绝",
+
+"comment": "指示操作无法请求取消挂起的操作",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "错误",
+
+"comment": "指示导致事件的操作由于错误而失败",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "成功",
+
+"comment": "指示成功状态.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "阻止通知",
+
+"comment": "在事件方法完成执行之前,阻止后续通知.",
+
+"data type": "整数",
+
+"initial value": "5"
+  }
+]
+ },
+ {
+"class name": "记录集文件保存类型_",
+"comment": "指定保存记录集的文件格式.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+constants": [
+"constant name": "ADTG",
+constants": [
+"comment": "Microsoft Advanced Data TableGram (ADTG)文件格式",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "0"
+  },
+  {
+
+"constant name": "XML",
+
+"comment": "可扩展标记语言(XML)格式",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "自定义",
+
+"comment": "提供程序将使用其自己的格式保存记录集",
+
+"data type": "整数",
+
+"initial value": "2"
+  }
+]
+ },
+ {
+"class name": "记录集书签相对位置_",
+"comment": "指定由书签表示的两个记录的相对位置.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "相等",
+
+"comment": "指示两个书签相等",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "位于之后",
+
+"comment": "指示第一个书签位于第二个书签之后",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+"comment": "指示第一个书签位于第二个书签之后""constant name": "位于之前",
+"comment": "指示第一个书签位于第二个书签之后""comment": "指示第一个书签位于第二个书签之前",
+"comment": "指示第一个书签位于第二个书签之后""data type": "整数",
+"comment": "指示第一个书签位于第二个书签之后""initial value": "0"
+  },
+  {
+}"constant name": "无法比较",
+}"comment": "指示无法比较两个书签",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+
+"constant name": "不等不排序",
+
+"comment": "指示两个书签不相等且不排序",
+
+"data type": "整数",
+
+"initial value": "3"
+  }
+]
+ },
+ {
+"class name": "记录集支持功能类型_",
+"comment": "记录集支持的功能类型.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+constants": [
+"constant name": "添加新记录",
+constants": [
+"comment": "支持\"添加新记录\"方法.",
+constants": [
+"data type": "长整数",
+constants": [
+"initial value": "0x1000400"
+  },
+  {
+}"constant name": "位置信息",
+}"comment": "支持\"当前位置\"以及\"当前页\"属性.",
+}"data type": "长整数",
+}"initial value": "0x4000"
+  },
+  {
+"comment": "支持\"当前位置\"以及\"当前页\"属性.""constant name": "书签标记",
+"comment": "支持\"当前位置\"以及\"当前页\"属性.""comment": "支持\"书签\"属性.",
+"comment": "支持\"当前位置\"以及\"当前页\"属性.""data type": "长整数",
+"comment": "支持\"当前位置\"以及\"当前页\"属性.""initial value": "0x2000"
+  },
+  {
+
+"constant name": "删除记录",
+
+"comment": "支持\"删除记录\"方法.",
+
+"data type": "长整数",
+
+"initial value": "0x1000800"
+  },
+  {
+"comment": "支持\"当前位置\"以及\"当前页\"属性.""constant name": "查找记录",
+"comment": "支持\"当前位置\"以及\"当前页\"属性.""comment": "支持\"查找指定记录\"方法.",
+"comment": "支持\"当前位置\"以及\"当前页\"属性.""data type": "长整数",
+"comment": "支持\"当前位置\"以及\"当前页\"属性.""initial value": "0x80000"
+  },
+  {
+
+"constant name": "检索更多数据",
+
+"comment": "检索更多记录或更改下一个位置,而不提交所有挂起的更改.",
+
+"data type": "长整数",
+
+"initial value": "0x100"
+  },
+  {
+
+"constant name": "索引命名",
+
+"comment": "支持\"索引名称\"属性.",
+
+"data type": "长整数",
+
+"initial value": "0x100000"
+  },
+  {
+
+"constant name": "向前移动",
+
+"comment": "支持\"到首记录\",\"到上一行\"方法.",
+
+"data type": "长整数",
+
+"initial value": "0x200"
+  },
+  {
+
+"constant name": "事件通知",
+
+"comment": "判断当前记录集是否支持事件.",
+
+"data type": "长整数",
+
+"initial value": "0x40000"
+  },
+  {
+"initial value": "0x40000""constant name": "重新同步",
+"initial value": "0x40000""comment": "支持\"重新同步\"方法.",
+"initial value": "0x40000""data type": "长整数",
+"initial value": "0x40000""initial value": "0x20000"
+  },
+  {
+
+"constant name": "更新",
+
+"comment": "支持\"更新\"方法.",
+
+"data type": "长整数",
+
+"initial value": "0x1008000"
+  },
+  {
+
+"constant name": "批更新",
+
+"comment": "支持\"批更新\"以及\"取消批更新\"方法.",
+
+"data type": "长整数",
+
+"initial value": "0x10000"
+  }
+]
+ },
+ {
+"class name": "记录集数据更改类型_",
+"comment": "指定记录集中记录发生改变的原因.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库1.常量类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "添加新记录",
+
+"comment": "添加新记录的操作导致的更改.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "关闭",
+
+"comment": "关闭记录集导致的更改.",
+
+"data type": "整数",
+
+"initial value": "9"
+  },
+  {
+
+"constant name": "删除",
+
+"comment": "删除记录导致的更改.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "首次更改",
+
+"comment": "对记录进行第一次更改.",
+
+"data type": "整数",
+
+"initial value": "11"
+  },
+  {
+
+"constant name": "移动",
+
+"comment": "记录集中移动位置的更改.",
+
+"data type": "整数",
+
+"initial value": "10"
+  },
+  {
+
+"constant name": "移动到首部",
+
+"comment": "移动到记录集首条记录导致的更改.",
+
+"data type": "整数",
+
+"initial value": "12"
+  },
+  {
+
+"constant name": "移动到尾部",
+
+"comment": "移动到记录集尾条记录导致的更改.",
+
+"data type": "整数",
+
+"initial value": "15"
+  },
+  {
+
+"constant name": "移动到下条",
+
+"comment": "移动到下一条记录导致的更改.",
+
+"data type": "整数",
+
+"initial value": "13"
+  },
+  {
+
+"constant name": "移动到上条",
+
+"comment": "移动到上一条记录导致的更改.",
+
+"data type": "整数",
+
+"initial value": "14"
+  },
+  {
+
+"constant name": "重新查询",
+
+"comment": "刷新记录集导致的更改.",
+
+"data type": "整数",
+
+"initial value": "7"
+  },
+  {
+
+"constant name": "重新同步",
+
+"comment": "重新同步该记录集导致的更改.",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+"initial value": "15""constant name": "取消添加新记录",
+"initial value": "15""comment": "取消添加新纪录导致的更改.",
+"initial value": "15""data type": "整数",
+"initial value": "15""initial value": "5"
+  },
+  {
+
+"constant name": "取消删除",
+
+"comment": "取消删除记录导致的更改.",
+
+"data type": "整数",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "取消更新",
+
+"comment": "取消更新记录导致的更改.",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+"initial value": "4""constant name": "更新",
+"initial value": "4""comment": "更新记录导致的更改.",
+"initial value": "4""data type": "整数",
+"initial value": "4""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "ADO记录集辅助类_",
+"comment": "将记录集转成的json数据包进行解析",
+"@文档": "\"category = \\\"ADO数据库.ADO转JSON\\\"\"",
+"methods": [
+  {
+
+"method name": "记录集转JSON",
+
+"comment": "将记录集转成可读的文本数据，转换完成将自动关闭该记录集;\n数据包可通过“ADO记录集辅助类_”来处理解析",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类_"
+   },
+   {
+"parameter name": "格式类型",
+"comment": "1、按列转　2、按行转",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "关闭记录集",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "记录集转JSON2",
+
+"comment": "将记录集转成字节集数据，转换完成将自动关闭该记录集;\n数据包可通过“ADO记录集辅助类_”来处理解析",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类_"
+   },
+   {
+"parameter name": "格式类型",
+"comment": "1、按列转　2、按行转",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "关闭记录集",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "JSON数据包_取字段名",
+
+"comment": "解析按列转的json数据包，如果是提供按行转的数据包，则会解析出行序号",
+
+"result comment": "返回字段数量",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "JSON数据包",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的字段组",
+"comment": "返回字段名称",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "JSON数据包_取字段名2",
+
+"comment": "解析按列转的json数据包，如果是提供按行转的数据包，则会解析出行序号",
+
+"result comment": "返回字段数量",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "JSON数据包",
+"comment": "需要UTF8编码",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "返回的字段组",
+"comment": "返回字段名称",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "JSON数据包_取列数据",
+
+"comment": "取记录集指定列数据;\n调用本方法前，需要先执行“JSON数据包_取字段名”或“JSON数据包_取字段名2”",
+
+"result comment": "返回该列的行数",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "列号",
+"comment": "0就代表第一列数据",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回的列数据组",
+"comment": "返回的JSON数组类，用 JSON数组.取文本值()，取得详细列数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "JSON数据包_取行数据",
+
+"comment": "解析按列转的json数据;\n取记录集指定行数据;\n调用本方法前，需要先执行“JSON数据包_取字段名”或“JSON数据包_取字段名2”",
+
+"result comment": "返回该行的列数",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "0就代表第一行数据",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回的行数据组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "JSON数据包_取行数据2",
+
+"comment": "解析按行转的json数据;\n取记录集指定行数据;\n调用本方法前，需要先执行“JSON数据包_取字段名”或“JSON数据包_取字段名2”",
+
+"result comment": "返回该行的列数",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "0就代表第一行数据",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回的行数据组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "JSON数据包_取行列数据",
+
+"comment": "取记录集指定行和列数据",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "0就代表第一行数据",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "列号",
+"comment": "0就代表第一列数据",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "解析类型",
+"comment": "1、按列转的数据包　2、按行转的数据包",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "数据库类2_",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库2\\\"\"",
+"variables": [
+  {
+
+"variable name": "内部_数据库COM",
+
+"data type": "COM对象类"
+  }
+],
+"methods": [
+  {
+
+"method name": "设置执行超时",
+
+"comment": "设置该数据库对象等待命令执行所欲等待的时间.",
+
+"parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:秒,提供0表示无超时一直等待.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "设置连接超时",
+
+"comment": "设置该数据库执行连接所欲等待的时间.",
+
+"parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:秒,提供0表示无超时一直等待.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "设置游标服务位置",
+
+"comment": "指定游标服务位置\n3使用由本地游标库提供的客户端游标.\n1不使用游标服务.\n2默认使用由数据提供程序或驱动程序提供的游标.\n",
+
+"parameters": [
+   {
+"parameter name": "游标位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "设置事务隔离级别",
+
+"comment": "设置所欲使用的ODBC数据库事务隔离级别.\n-1提供程序使用的隔离级别与指定的隔离级别不同,无法确定等级.\n16无法覆盖来自更高隔离事务的挂起的更改.\n256从一个事务中可以查看其他事务中的未提交的更改.\n4096只允许读其他事务已提交的改变.\n65536禁止读其他事务的改变.\n1048576仅在隔离其他事务时执行事务.",
+
+"parameters": [
+   {
+"parameter name": "级别",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "设置权限模式",
+
+"comment": "设置数据库中数据的可用权限.",
+
+"parameters": [
+   {
+"parameter name": "模式",
+"comment": "0默认,权限尚未设置或无法确定.\n1只读权限.\n2只写权限.\n3读取/写入权限.\n4阻止其他人打开具有读取权限的连接.\n8阻止其他人打开具有写入权限的连接.\n12阻止其他人打开连接.\n16允许其他人打开具有任何权限的连接.\n0x400000该值与\"允许所有\",\"阻止读\",\"阻止写\",\"阻止所有\"组合使用,表示子记录集继承该权限模式.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "连接完成",
+
+"comment": "当执行连接数据库后,连接过程结束本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   },
+   {
+"parameter name": "操作状态",
+"comment": "请参考\"数据库事件执行状态_\"所提供的常量值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "连接Excel",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/BGkebUI9vodkGVxt0AocHlwVnvd",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否新版",
+"comment": "本参数指定Access版本，为假则使用2003以下连接方式，为真则使用2007版本连接方式",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Access",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/BGkebUI9vodkGVxt0AocHlwVnvd",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "提供数据库文件完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供连接该数据库所需的用户密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否新版",
+"comment": "本参数指定Access版本,为假则使用2003以下连接方式,为真则使用2007版本连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Sqlite",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/DvhWbSp1Coelqdxzi8xctysPndf",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "提供数据库文件完整路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Mysql",
+
+"comment": "8.0驱动下载：https://xf3v74qido.feishu.cn/file/Aq1Obnk9QoGEWMx8HwBc7OhbnVc\n3.5驱动下载：https://xf3v74qido.feishu.cn/file/VRY7blTQWoY24SxqgjEcepwfnPf",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型",
+"@默认值": "\"localhost\""
+   },
+   {
+"parameter name": "数据库名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户名",
+"data type": "文本型",
+"@默认值": "\"root\""
+   },
+   {
+"parameter name": "密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "端口",
+"data type": "整数",
+"@默认值": "3306"
+   },
+   {
+"parameter name": "驱动版本",
+"comment": "注意：默认是3.51的驱动\n3.51比较老；如果你在使用过程中出现读取数据不全的情况；可以使用8.0驱动",
+"data type": "文本型",
+"@默认值": "\"3.51\""
+   },
+   {
+"parameter name": "连接字符集",
+"comment": "可以设置为UTF8等",
+"data type": "文本型",
+"@默认值": "\"GBK\""
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Mssql",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供数据库连接地址及端口，默认：127.0.0.1,1433 ；默认1433可省略",
+"data type": "文本型",
+"@默认值": "\"127.0.0.1,1433\""
+   },
+   {
+"parameter name": "数据库名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户名",
+"data type": "文本型",
+"@默认值": "\"sa\""
+   },
+   {
+"parameter name": "密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+ }"method name": "连接Oracle",
+ }"result comment": "执行成功返回真,否则返回假.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供数据库连接地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供连接该数据库所需的用户名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供连接该数据库所需的密码.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "驱动程序",
+"comment": "提供连接Oracle所需的驱动程序名称,例如\"Oracle in OraClient11g_home1\",使用前请确保系统中已安装该驱动,否则无法进行连接.",
+"data type": "文本型",
+"@默认值": "\"Oracle in OraClient11g_home1\""
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否以异步方式进行连接,提供假则会堵塞直到连接完成,提供真将会以事件方式(连接完成)通知连接结果.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ }]
+  },
+  {
+
+"method name": "连接Oracle_64",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/N5tebFPeYoBV44xX5BbcQCDHnuc",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"data type": "整数",
+"@默认值": "1521"
+   },
+   {
+"parameter name": "实例名",
+"data type": "文本型",
+"@默认值": "\"ORCL\""
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "连接Postgresql",
+
+"comment": "驱动下载：https://xf3v74qido.feishu.cn/file/FcOAbXJzOoiHWRxTntXcrXfJnWh",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供数据库连接地址.",
+"data type": "文本型",
+"@默认值": "\"localhost\""
+   },
+   {
+"parameter name": "数据库名",
+"comment": "提供所欲打开的数据库名称.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "用户名",
+"comment": "提供连接该数据库所需的用户名.",
+"data type": "文本型",
+"@默认值": "\"postgres\""
+   },
+   {
+"parameter name": "密码",
+"comment": "提供连接该数据库所需的密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "端口号",
+"comment": "通过该数据库的连接端口.",
+"data type": "整数",
+"@默认值": "5432"
+   },
+   {
+"parameter name": "驱动程序",
+"comment": "指定是否使用ODBC驱动方式连接(例如:PostgreSQL UNICODE),提供空文本将会使用OLEDB方式连接,如果使用驱动方式连接,务必保证系统中已安装该驱动.",
+"data type": "文本型",
+"@默认值": "\"PostgreSQL Unicode\""
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否以异步方式进行连接,提供假则会堵塞直到连接完成,提供真将会以事件方式(连接完成)通知连接结果.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取连接错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "取连接错误描述",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "关闭当前已连接的数据库,并释放所关联的任何系统资源.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+}"method name": "最后错误",
+}"comment": "数据库最后错误描述",
+}"data type": "文本型"
+  },
+  {
+}"method name": "开始事务",
+}"comment": "开始一个新的事务.",
+}"result comment": "返回事务的嵌套级别.",
+}"data type": "整数"
+  },
+  {
+
+"method name": "保存事务",
+
+"comment": "保存所有更改并结束当前事务.\n注意：开始事务请直接在执行SQL语句方法中的参数设置",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "回滚事务",
+
+"comment": "取消在当前事务中所做的任何更改并结束事务.\n注意：开始事务请直接在执行SQL语句方法中的参数设置",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  }
+]
+ },
+ {
+"class name": "记录集类2_",
+"comment": "表示数据表中的整个记录集或执行的命令的结果,可使用本类实例获取具体数据.",
+"base class": "COM对象类",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库2\\\"\"",
+"methods": [
+  {
+
+"method name": "命令执行完成",
+
+"comment": "在执行SQL命令后,执行完毕本事件将被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "受影响行数",
+"comment": "执行该命令后被影响的记录数量.",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误对象",
+"comment": "返回错误对象,其包含错误代码以及描述内容.",
+"data type": "数据库错误信息类_"
+   }
+
+]
+  },
+  {
+
+"method name": "打开",
+
+"comment": "根据指定数据源以及连接串文本打开记录集.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "数据源",
+"comment": "数据来源,可以是一个SQL语句(表名,储存过程,URL,本地记录集文件,流对象名称).",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据库",
+"comment": "是否提供一个已有的活动连接对象(数据库类),也可提供连接串文本,与连接数据库同理.",
+"data type": "数据库类2_"
+   },
+   {
+"parameter name": "是否客户端",
+"comment": "指定是否将游标服务位置指向客户端,默认为真.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "游标类型",
+"comment": "-1无　0默认　1键集游标　2动态游标　3静态游标",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "编辑锁",
+"comment": "-1无　1只读锁定　2悲观锁定　3开放式锁定　4批处理更新",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "选项",
+"comment": "提供本次执行的性能选项,提供\"数据库命令类型\"以及\"数据库命令执行选项\"所定义常量的单个或多个组合值.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "执行SQL语句",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "Sql语句",
+"comment": "数据来源,可以是一个SQL语句(表名,储存过程,URL,本地记录集文件,流对象名称).",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据库",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类2_"
+   },
+   {
+"parameter name": "受影响行数",
+"comment": "提供一个整数类变量以获取本次命令执行后,影响到表中的记录数量，如是执行查询操作是不会返回受影响行数",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "错误描述",
+"comment": "也可通过“取语句错误描述”获取",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "选项",
+"comment": "一般提供-1即可",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "编辑锁",
+"comment": "-1无　0默认　1键集游标　2动态游标　3静态游标",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "游标类型",
+"comment": "-1不指定游标的类型 0只进游标,只能向前滚动记录.\n1使用键集游标,与动态游标类似,但看不到其他用户添加的记录,其他用户删除的记录无法从记录集中访问,数据更改仍然可用.\n2使用动态游标,其他用户的添加,更改和删除是可用的,并且允许所有类型的移动.\n3使用静态游标,该游标是一组记录的静态副本,可用于查找数据或生成报表,其他用户的添加,更改或删除不可用.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "取语句错误描述",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "创建数据库",
+
+"comment": "适用于mssql、mysql",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲创建的数据库名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Mysql字符集",
+"comment": "Mysql数据库专用，例如：utf8mb4",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "Mysql排序规则",
+"comment": "Mysql数据库专用，例如：utf8mb4_general_ci",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "数据库",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类2_"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "游标类型",
+"comment": "-1不指定游标的类型\n0只进游标,只能向前滚动记录.\n1使用键集游标,与动态游标类似,但看不到其他用户添加的记录,其他用户删除的记录无法从记录集中访问,数据更改仍然可用.\n2使用动态游标,其他用户的添加,更改和删除是可用的,并且允许所有类型的移动.\n3使用静态游标,该游标是一组记录的静态副本,可用于查找数据或生成报表,其他用户的添加,更改或删除不可用.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "删除数据库",
+
+"comment": "适用于mssql、mysql",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲删除的数据库名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据库",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类2_"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "游标类型",
+"comment": "-1不指定游标的类型\n0只进游标,只能向前滚动记录.\n1使用键集游标,与动态游标类似,但看不到其他用户添加的记录,其他用户删除的记录无法从记录集中访问,数据更改仍然可用.\n2使用动态游标,其他用户的添加,更改和删除是可用的,并且允许所有类型的移动.\n3使用静态游标,该游标是一组记录的静态副本,可用于查找数据或生成报表,其他用户的添加,更改或删除不可用.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "创建数据库表",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "Sql语句",
+"comment": "可以用链式生成语句\n链式：sql.表名 (\"商品表\").主键 (\"ID\").文本字段2 (\"品名\", 200).货币字段 (\"单价\").日期时间字段 (\"入库时间\").取新建表SQL () ;\n相当于SQL语句：create table 商品表(ID int identity primary key,品名 varchar(200),单价 money,入库时间 datetime)",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据库",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类2_"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "游标类型",
+"comment": "-1不指定游标的类型\n0只进游标,只能向前滚动记录.\n1使用键集游标,与动态游标类似,但看不到其他用户添加的记录,其他用户删除的记录无法从记录集中访问,数据更改仍然可用.\n2使用动态游标,其他用户的添加,更改和删除是可用的,并且允许所有类型的移动.\n3使用静态游标,该游标是一组记录的静态副本,可用于查找数据或生成报表,其他用户的添加,更改或删除不可用.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "删除数据库表",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲删除的表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据库",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类2_"
+   },
+   {
+"parameter name": "错误描述",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "游标类型",
+"comment": "-1不指定游标的类型\n0只进游标,只能向前滚动记录.\n1使用键集游标,与动态游标类似,但看不到其他用户添加的记录,其他用户删除的记录无法从记录集中访问,数据更改仍然可用.\n2使用动态游标,其他用户的添加,更改和删除是可用的,并且允许所有类型的移动.\n3使用静态游标,该游标是一组记录的静态副本,可用于查找数据或生成报表,其他用户的添加,更改或删除不可用.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+ }"method name": "取所有库名",
+ }"comment": "获取当前连接中所有数据库名称",
+ }"result comment": "返回库名数量",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "返回的库名数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "数据库",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类2_"
+   },
+   {
+"parameter name": "数据库类型",
+"comment": "1、MsSql  2、MySql  3、Postgresql",
+"data type": "整数",
+"@默认值": "1"
+   }
+ }]
+  },
+  {
+
+"method name": "取所有表名",
+
+"comment": "获取当前数据库中所有表名称.\nAccess需要先设置MsysObjects权限;\n①旧版：菜单-工具-选项-视图-勾选\"系统对象\";\n菜单-工具-安全-用户与组权限-选择\"管理员\"-选择\"MsysObjects\"-勾选\"读取数据\"，最后再取消勾选\"系统对象\"\n\n②新版：左侧表列表-右键\"导航选项\"-勾选\"显示系统对象\";\n文件-用户和权限-用户与组权限-选择\"MsysObjects\"，勾选\"读取数据\"，最后再取消勾选\"显示系统对象\"",
+
+"result comment": "返回表名数量",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "数据库名",
+"comment": "提供所欲打开的数据库名称，当前为Mysql数据库时则需要提供本名称，Excel的需要提供文件来源，其它数据库则不需要填写",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的表名数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "数据库",
+"comment": "提供已创建以及连接成功的数据库对象,将会基于该对象打开记录集.",
+"data type": "数据库类2_"
+   },
+   {
+"parameter name": "数据库类型",
+"comment": "1、MsSql  2、MySql  3、Access  4、Sqlite  5、Postgresql  6、Excel",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "取字段列表",
+
+"comment": "获取该记录集当前位置所包含的所有字段(列)列表.",
+
+"data type": "数据库字段集合类2_",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取所有字段名",
+
+"comment": "获取当前数据表中所有字段名称",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类2_"
+   }
+
+]
+  },
+  {
+
+"method name": "取所有字段类型",
+
+"comment": "获取当前数据表中所有字段类型名称",
+
+"result comment": "直接返回字段类型名称",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类2_"
+   }
+
+]
+  },
+  {
+ }"method name": "取所有字段类型2",
+ }"comment": "获取当前数据表中所有字段类型序号",
+ }"result comment": "返回值请参考\"数据库字段数据类型2_\"所提供的常量",
+ }"data type": "整数数组类",
+ }"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类2_"
+   }
+ }]
+  },
+  {
+
+"method name": "取所有字段信息",
+
+"comment": "获取当前数据表中所有字段名称和字段类型",
+
+"result comment": "返回字段总数",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类2_"
+   },
+   {
+"parameter name": "返回的字段名称组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的字段类型名",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的字段类型组",
+"comment": "返回值请参考“数据库字段数据类型_”所提供的常量",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "导出记录集",
+
+"comment": "将记录集转成字节集数据",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "导入记录集",
+
+"comment": "将字节集形式的记录集数据，转回记录集",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "欲转换数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "记录集转JSON",
+
+"comment": "将记录集转成可读的文本数据，转换完成将自动关闭该记录集;\n数据包可通过“ADO记录集辅助类_”来处理解析",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类2_"
+   },
+   {
+"parameter name": "格式类型",
+"comment": "1、按列转　2、按行转",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "关闭记录集",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "记录集转JSON2",
+
+"comment": "将记录集转成字节集数据，转换完成将自动关闭该记录集;\n数据包可通过“ADO记录集辅助类_”来处理解析",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "记录集",
+"data type": "记录集类2_"
+   },
+   {
+"parameter name": "格式类型",
+"comment": "1、按列转　2、按行转",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "关闭记录集",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "读数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的数据.",
+
+"result comment": "返回当前位置指定字段的数据.",
+
+"data type": "COM变体型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的数据.",
+
+"result comment": "返回当前位置指定字段的数据.",
+
+"data type": "COM变体型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写数据",
+
+"comment": "根据指定字段名将指定数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "COM变体型"
+   }
+
+]
+  },
+  {
+}"method name": "写索引数据",
+}"comment": "根据指定字段的索引将指定数据写入该记录集当前所处位置.",
+}"result comment": "返回是否执行成功.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "COM变体型"
+   }
+}]
+  },
+  {
+}"method name": "读文本数据",
+}"comment": "根据指定字段名读取该记录集当前所处位置的文本型数据.",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "读索引文本数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的文本型数据.",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写文本数据",
+
+"comment": "根据指定字段名将指定文本数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引文本数据",
+
+"comment": "根据指定字段的索引将指定文本数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读整数数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的整数数据.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引整数数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的整数数据.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写整数数据",
+
+"comment": "根据指定字段名将指定整数数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "写索引整数数据",
+}"comment": "根据指定字段的索引将指定整数数据写入该记录集当前所处位置.",
+}"result comment": "返回是否执行成功.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "读长整数数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的长整数数据.",
+
+"data type": "长整数",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "读索引长整数数据",
+}"comment": "根据指定字段的索引读取该记录集当前所处位置的长整数数据.",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "写长整数数据",
+
+"comment": "根据指定字段名将指定长整数数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ }"method name": "写索引长整数数据",
+ }"comment": "根据指定字段的索引将指定长整数数据写入该记录集当前所处位置.",
+ }"result comment": "返回是否执行成功.",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+ }"method name": "读短整数数据",
+ }"comment": "根据指定字段名读取该记录集当前所处位置的短整数数据.",
+ }"data type": "短整数",
+ }"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "读索引短整数数据",
+}"comment": "根据指定字段的索引读取该记录集当前所处位置的短整数数据.",
+}"data type": "短整数",
+}"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "写短整数数据",
+
+"comment": "根据指定字段名将指定短整数数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引短整数数据",
+
+"comment": "根据指定字段的索引将指定短整数数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+
+"method name": "读字节数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的字节数据.",
+
+"data type": "字节",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引字节数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的字节数据.",
+
+"data type": "字节",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写字节数据",
+
+"comment": "根据指定字段名将指定字节数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引字节数据",
+
+"comment": "根据指定字段的索引将指定字节数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节"
+   }
+
+]
+  },
+  {
+
+"method name": "读字符数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的字符数据.",
+
+"data type": "字符",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引字符数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的字符数据.",
+
+"data type": "字符",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "写字符数据",
+}"comment": "根据指定字段名将指定字符数据写入该记录集当前所处位置.",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字符"
+   }
+}]
+  },
+  {
+
+"method name": "写索引字符数据",
+
+"comment": "根据指定字段的索引将指定字符数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字符"
+   }
+
+]
+  },
+  {
+
+"method name": "读逻辑型数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的逻辑型数据.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引逻辑型数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的逻辑型数据.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写逻辑型数据",
+
+"comment": "根据指定字段名将指定逻辑型数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引逻辑型数据",
+
+"comment": "根据指定字段的索引将指定逻辑型数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"method name": "读小数数据",
+"comment": "根据指定字段名读取该记录集当前所处位置的小数数据.",
+"data type": "小数",
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "读索引小数数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的小数数据.",
+
+"data type": "小数",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写小数数据",
+
+"comment": "根据指定字段名将指定小数数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "写索引小数数据",
+
+"comment": "根据指定字段的索引将指定小数数据写入该记录集当前所处位置.",
+
+"result comment": "返回是否执行成功.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "读字节集数据",
+
+"comment": "根据指定字段名读取该记录集当前所处位置的字节集数据.",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲获取数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "读索引字节集数据",
+
+"comment": "根据指定字段的索引读取该记录集当前所处位置的字节集数据.",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲获取数据对应的字段索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "写字节集数据",
+
+"comment": "根据指定字段名将指定字节集数据写入该记录集当前所处位置.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "提供所欲写入数据对应的字段名称,例如:field1.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"method name": "写索引字节集数据",
+}"comment": "根据指定字段的索引将指定字节集数据写入该记录集当前所处位置.",
+}"result comment": "返回是否执行成功.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "字段索引",
+"comment": "提供所欲写入数据对应的字段索引位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "提供所欲写入的值.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "查找指定记录",
+}"comment": "根据指定的条件以及选项查找并跳转至满足条件的记录位置.",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "条件语句",
+"comment": "指定搜索的语句,该语句指定要在搜索中使用的列名称,比较运算符和值.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜索位置",
+"comment": "本次搜索起始的偏移,默认情况下将会从当前所处位置开始搜索.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "正向搜索",
+"comment": "指定搜索是否从记录集的开头搜索至末尾位置,提供假则反向搜索,即从末尾至开头.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "起始搜索书签",
+"comment": "作为搜索的起始位置的书签对象.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+
+"method name": "刷新记录",
+
+"comment": "通过重新执行对象所基于的查询来更新记录集对象中的数据.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "选项",
+"comment": "提供本次执行的性能选项,提供\"数据库命令类型_\"以及\"数据库命令执行选项_\"所定义常量的单个或多个组合值.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "排序规则",
+
+"comment": "获取当前记录集对象所设置的排序规则.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "排序规则",
+
+"comment": "设置当前记录集对象的排序规则.\n注意:该属性将会优先于SQL语句的order by.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "规则",
+"comment": "例如记录集中包含有三个字段:\"firstName\",\"middle\",\"lastName\",\n该参数内容为\"lastName DESC, firstName ASC\",此时该记录集将会按照lastName降序,firstName升序来排列,中间的middle被忽略.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "移动位置",
+}"comment": "移动位置到指定数据记录行.",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "行数",
+"comment": "从当前位置开始所欲移动的行数.",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "关闭当前记录集对象,并释放所关联的任何系统资源",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "到首记录",
+
+"comment": "将位置移动到当前记录集的第一条记录.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "到尾记录",
+
+"comment": "将位置移动到当前记录集的最后一条记录.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+}"method name": "到下一行",
+}"comment": "将位置移动到下一行数据记录.",
+}"result comment": "执行成功返回真,否则返回假.",
+}"data type": "逻辑型"
+  },
+  {
+
+"method name": "到上一行",
+
+"comment": "将位置移动到上一行数据记录.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "记录数量",
+
+"comment": "直接获取记录数量，在使用查询命令后调用",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "记录集到文本",
+
+"comment": "将该记录集作为文本输出.",
+
+"result comment": "返回文本形式的记录集.",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "行数",
+"comment": "提供所欲转换至文本的记录行数,默认转换所有行.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "列分隔符",
+"comment": "如果为空文本则默认使用制表符.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "行分隔符",
+"comment": "如果为空文本则默认使用回车符.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "空占位符",
+"comment": "指定数据为NULL时所欲使用的占位符.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "更新",
+
+"comment": "保存对记录集对象的当前行所做的任何更改,如果需要批量更新请使用\"批更新\"方法.\n例如调用了\"添加新记录\"插入了值,可调用该方法提交至数据库中.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段",
+"comment": "指定所欲修改的一个或多个字段名称,如果有多个字段请置入字段数组,可以为名称也可以是字段索引.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "值",
+"comment": "指定字段所对应的值,如果有多个字段,必须提供对等数量的值,否则将无法正常执行更新.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+}"method name": "添加空记录",
+}"data type": "逻辑型"
+  },
+  {
+
+"method name": "过滤",
+
+"comment": "为当前记录集过滤出满足条件的新记录",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "过滤条件",
+"comment": "条件语句内容：由一个或单独子语句组成，例如由and或or运算符相连接",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "状态",
+
+"comment": "获取该记录集对象当前状态.",
+
+"result comment": "0 指示当前对象已关闭.\n1 指示当前对象处于打开状态.\n2 指示当前对象正在进行连接.\n4 指示当前对象正在执行命令.\n8 指示当前对象正在检索数据行.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "当前页",
+
+"comment": "获取当前所处的页索引.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+}"method name": "当前页",
+}"comment": "设置当前所处的页索引.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "当前位置",
+}"comment": "获取当前记录集所处的序号位置.",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+}"method name": "当前位置",
+}"comment": "设置当前记录集所处的序号位置.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "位置",
+"data type": "整数"
+   }
+}]
+  },
+  {
+记录集所处的序号位置."method name": "首记录前",
+记录集所处的序号位置."comment": "判断当前记录位置是否处于首记录之前,通常用于判断该记录集是否存在数据.",
+记录集所处的序号位置."type": "property getter",
+记录集所处的序号位置."data type": "逻辑型"
+  },
+  {
+}"method name": "尾记录后",
+}"comment": "判断当前记录位置是否处于尾记录之后,通常用于判断当前位置后是否还存在更多记录.",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+
+"method name": "缓存数量",
+
+"comment": "获取当前记录集对象缓存到内存中的记录数量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "缓存数量",
+
+"comment": "设置当前记录集对象缓存到内存中的记录数量.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "数量",
+"comment": "必须大于等于1.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "游标服务位置",
+
+"comment": "指定游标服务位置\n3使用由本地游标库提供的客户端游标.\n1不使用游标服务.\n2默认使用由数据提供程序或驱动程序提供的游标",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "游标服务位置",
+}"comment": "获取游标服务位置.",
+}"result comment": "3使用由本地游标库提供的客户端游标.\n1不使用游标服务.\n2默认使用由数据提供程序或驱动程序提供的游标",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+
+"method name": "游标类型",
+
+"comment": "指定所欲使用游标的类型\n-1不指定游标的类型\n0只进游标,只能向前滚动记录.\n1使用键集游标,与动态游标类似,但看不到其他用户添加的记录,其他用户删除的记录无法从记录集中访问,数据更改仍然可用.\n2使用动态游标,其他用户的添加,更改和删除是可用的,并且允许所有类型的移动.\n3使用静态游标,该游标是一组记录的静态副本,可用于查找数据或生成报表,其他用户的添加,更改或删除不可用.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "游标类型",
+
+"comment": "获取所使用游标的类型.",
+
+"result comment": "-1不指定游标的类型\n0只进游标,只能向前滚动记录.\n1使用键集游标,与动态游标类似,但看不到其他用户添加的记录,其他用户删除的记录无法从记录集中访问,数据更改仍然可用.\n2使用动态游标,其他用户的添加,更改和删除是可用的,并且允许所有类型的移动.\n3使用静态游标,该游标是一组记录的静态副本,可用于查找数据或生成报表,其他用户的添加,更改或删除不可用.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "索引名称",
+
+"comment": "获取当前记录集对象索引名称.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "索引名称",
+
+"comment": "设置当前记录集对象索引名称.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "最大记录数",
+
+"comment": "获取该记录集所设置的最大记录数量限制.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "最大记录数",
+
+"comment": "限定一个获取数据量的最大值,从数据源获取数据时将会受该属性限制.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "最大数量",
+"comment": "默认为0,表示无限制,将会返回所有记录.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "页数",
+
+"comment": "获取当前记录集所包含的页数.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "单页记录数",
+
+"comment": "获取当前记录集一个页所包含的记录数量,即页数据尺寸.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+}"method name": "单页记录数",
+}"comment": "设置当前记录集一个页所包含的记录数量.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "尺寸",
+"comment": "默认为10.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+记录集一个页所包含的记录数量."method name": "保存到文件",
+记录集一个页所包含的记录数量."comment": "将该记录集写出保存至指定文件中.",
+记录集一个页所包含的记录数量."result comment": "执行成功返回真,否则返回假.",
+记录集一个页所包含的记录数量."data type": "逻辑型",
+记录集一个页所包含的记录数量."parameters": [
+   {
+"parameter name": "文件",
+"comment": "提供所欲写出文件的完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "0、Microsoft Advanced Data TableGram (ADTG)文件格式　1、可扩展标记语言(XML)格式　2、提供程序将使用其自己的格式保存记录集",
+"data type": "整数",
+"@默认值": "0"
+   }
+记录集一个页所包含的记录数量.]
+  }
+]
+ },
+ {
+"class name": "数据库字段类2_",
+"comment": "表示表中的一个字段(列).",
+"base class": "COM对象类",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库2.附加类\\\"\"",
+"methods": [
+  {
+
+"method name": "名称",
+
+"comment": "获取该字段的名称.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "名称",
+
+"comment": "设置该字段的名称.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "实际尺寸",
+
+"comment": "获取字段值的实际所占用的长度(字节单位).",
+
+"type": "property getter",
+
+"data type": "长整数"
+  },
+  {
+
+"method name": "定义尺寸",
+
+"comment": "获取字段值定义的尺寸(字节单位).",
+
+"type": "property getter",
+
+"data type": "长整数"
+  },
+  {
+}"method name": "小数位数",
+}"comment": "获取字段中数值的小数位数.",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+
+"method name": "小数位数",
+
+"comment": "数值字段中数值的小数位数.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "原始值",
+ }"comment": "获取该字段在有任何更改之前的原始值.",
+ }"type": "property getter",
+ }"data type": "COM变体型"
+  },
+  {
+
+"method name": "最大位数",
+
+"comment": "获取字段中值的最大位数(精度).",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "最大位数",
+
+"comment": "数值字段中值的最大位数(精度).",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "状态",
+
+"comment": "获取该字段当前状态.",
+
+"result comment": "返回值请参考\"数据库字段状态类型\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "长整数"
+  },
+  {
+
+"method name": "类型",
+
+"comment": "获取该字段定义的数据类型.",
+
+"result comment": "返回值请参考\"数据库字段数据类型2_\"所提供的常量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "当前值",
+
+"comment": "获取该字段当前的值.",
+
+"type": "property getter",
+
+"data type": "COM变体型"
+  },
+  {
+
+"method name": "值",
+
+"comment": "获取该字段的值.",
+
+"type": "property getter",
+
+"data type": "COM变体型"
+  },
+  {
+
+"method name": "值",
+
+"comment": "设置该字段的值.",
+
+"result comment": "返回值请参考\"数据库字段数据类型2_\"所提供的常量.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲置入值",
+"data type": "COM变体型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "数据库字段集合类2_",
+"comment": "本类表示一个数据集中所有的字段数据.",
+"base class": "数据库集合类2_",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库2.附加类\\\"\"",
+"@模板实现类": "\"数据库字段类2_,数据库字段集合类2_\"",
+"methods": [
+  {
+
+"method name": "加入",
+
+"comment": "将指定字段追加至该集合的尾部.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "所欲加入新字段的名称,不能与集合中的任何其他字段同名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字段对象",
+"comment": "提供所欲加入该集合的字段对象.",
+"data type": "数据库字段类2_"
+   },
+   {
+"parameter name": "数据类型",
+"comment": "所欲加入新字段的数据类型,请参考\"数据库字段数据类型2_\"所提供的常量.",
+"data type": "整数",
+"@默认值": "数据库字段数据类型2_.空值"
+   },
+   {
+"parameter name": "定义尺寸",
+"comment": "表示所加入新字段定义的大小(字节).",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "字段属性",
+"comment": "-1 未指定字段属性.\n0x1000 程序将会缓存字段值,后续的读取是从缓存中完成的.\n0x10 字段包含固定长度数据.\n0x2000 字段包含子集值.\n0x40000 字段是由记录表示其他资源的集合.\n0x8000 字段是主键列的全部或部分.\n0x20000 字段包含由记录表示的资源的默认流.\n0x20 字段接受NULL值.\n0x10000 字段包含从记录表示的数据存储区中对资源进行命名的URL.\n0x80 该字段是长二进制字段.\n0x40 可能会从该字段中读到NULL值.\n0x2 字段值不是从数据源中检索整个记录,而只是在显式访问字段值时进行检索.\n0x4000 字段值支持反比例列的数值.\n0x100 字段包含不能写入的持久性行标识符,并且除标识行(如记录号,唯一标识符)等之外没有有意义的值.\n0x200 字段包含用于标识更新的时间戳或日期值.\n0x8 提供程序无法确定是否可以写入字段.\n0x4 表示该字段支持写入.",
+"data type": "长整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "删除索引",
+
+"comment": "删除指定索引处的字段对象.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "所欲删除字段在本集合内所处的索引位置.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "删除",
+
+"comment": "以字段名称删除指定字段对象.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "所欲删除字段的名称.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取消更新",
+
+"comment": "在调用\"更新\"方法之前,取消对当前字段对象所做的任何更改.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "重新同步",
+
+"comment": "通过重新执行对象所基于的查询来更新字段集合对象中的字段数据.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "是否覆盖",
+"comment": "是否覆盖原有数据,挂起的更新动作将被直接取消,提供假将不会覆盖数据,也不会取消挂起的更新动作.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "更新",
+
+"comment": "保存对字段集合对象所做的任何更改.",
+
+"result comment": "执行成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字段",
+"comment": "指定所欲修改的一个或多个字段名称,如果有多个字段请置入字段数组,可以为名称也可以是字段索引.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "值",
+"comment": "指定字段所对应的值,如果有多个字段,必须提供对等数量的值,否则将无法正常执行更新.",
+"data type": "COM变体型",
+"@默认值": "空对象"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "数据库集合类2_",
+"comment": "模板类型1为集合中的成员类型.\n模板类型2为实现类自身",
+"base class": "COM对象类",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库2.附加类\\\"\"",
+"@模板基础类": "真",
+"methods": [
+  {
+
+"method name": "成员数",
+
+"comment": "获取该集合中所包含的成员数量.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "刷新",
+
+"comment": "刷新该集合.",
+
+"result comment": "返回调用结果.",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "取成员",
+
+"comment": "获取该集合中所包含的指定成员.",
+
+"data type": "模板类型1",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取成员2",
+
+"comment": "以指定的成员名称获取该成员对象.",
+
+"data type": "模板类型1",
+
+"parameters": [
+   {
+"parameter name": "成员名",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+ }"class name": "数据库状态类型2_",
+ }"comment": "表示指定对象的一个状态.",
+ }"@文档": "\"category = \\\"ADO数据库.ADO数据库2.附加类\\\"\"",
+ }"@禁止创建对象": "真",
+ }"constants": [
+  {
+
+"constant name": "关闭",
+
+"comment": "指示当前对象已关闭.",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "打开",
+
+"comment": "指示当前对象处于打开状态.",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "正在连接",
+
+"comment": "指示当前对象正在进行连接.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "正在执行",
+
+"comment": "指示当前对象正在执行命令.",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+}"constant name": "正在检索",
+}"comment": "指示当前对象正在检索数据行.",
+}"data type": "整数",
+}"initial value": "8"
+  }
+ }]
+ },
+ {
+"class name": "数据库字段数据类型2_",
+"comment": "指定字段,参数或属性的数据类型.",
+"@文档": "\"category = \\\"ADO数据库.ADO数据库2.附加类\\\"\"",
+"@禁止创建对象": "真",
+"constants": [
+  {
+
+"constant name": "数组型",
+
+"comment": "指示一个数据类型的数组型,该常量需要与本类其他常量值组合使用.",
+
+"data type": "整数",
+
+"initial value": "0x2000"
+  },
+  {
+
+"constant name": "空值",
+
+"comment": "DBTYPE_EMPTY,空值.",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "小整数值",
+
+"comment": "(DBTYPE_I2)两个字节的有符号整数.",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "整数值",
+
+"comment": "(DBTYPE_I4)4字节有符号整数.",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "单精度浮点值",
+
+"comment": "(DBTYPE_R4)单精度浮点值.",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "双精度浮点值",
+
+"comment": "(DBTYPE_R8)双精度浮点值.",
+
+"data type": "整数",
+
+"initial value": "5"
+  },
+  {
+
+"constant name": "货币值",
+
+"comment": "(DBTYPE_CY)小数点右侧具有四位数的固定点数字的货币值.",
+
+"data type": "整数",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "小数日期值",
+
+"comment": "(DBTYPE_DATE)日期型.",
+
+"data type": "整数",
+
+"initial value": "7"
+  },
+  {
+"comment": "(DBTYPE_DATE)日期型.""constant name": "文本值",
+"comment": "(DBTYPE_DATE)日期型.""comment": "(DBTYPE_BSTR)以null结尾的字符串值(Unicode).",
+"comment": "(DBTYPE_DATE)日期型.""data type": "整数",
+"comment": "(DBTYPE_DATE)日期型.""initial value": "8"
+  },
+  {
+
+"constant name": "错误值",
+
+"comment": "(DBTYPE_ERROR)32位的错误代码值.",
+
+"data type": "整数",
+
+"initial value": "10"
+  },
+  {
+
+"constant name": "逻辑值",
+
+"comment": "(DBTYPE_BOOL)布尔值.",
+
+"data type": "整数",
+
+"initial value": "11"
+  },
+  {
+}"constant name": "精确数值",
+}"comment": "(DBTYPE_DECIMAL)具有固定精度和小数位数的精确数值.",
+}"data type": "整数",
+}"initial value": "14"
+  },
+  {
+
+"constant name": "单字节整数值",
+
+"comment": "(DBTYPE_I1)单字节有符号整数.",
+
+"data type": "整数",
+
+"initial value": "16"
+  },
+  {
+
+"constant name": "无符单字节整数值",
+
+"comment": "(DBTYPE_UI1)单字节无符号整数.",
+
+"data type": "整数",
+
+"initial value": "17"
+  },
+  {
+"comment": "(DBTYPE_I1)单字节有符号整数.""constant name": "无符小整数值",
+"comment": "(DBTYPE_I1)单字节有符号整数.""comment": "(DBTYPE_UI2)两字节无符号整数.",
+"comment": "(DBTYPE_I1)单字节有符号整数.""data type": "整数",
+"comment": "(DBTYPE_I1)单字节有符号整数.""initial value": "18"
+  },
+  {
+
+"constant name": "无符整数值",
+
+"comment": "(DBTYPE_UI4)四字节无符号整数.",
+
+"data type": "整数",
+
+"initial value": "19"
+  },
+  {
+
+"constant name": "大整数值",
+
+"comment": "(DBTYPE_I8)的8字节有符号整数.",
+
+"data type": "整数",
+
+"initial value": "20"
+  },
+  {
+"comment": "(DBTYPE_I1)单字节有符号整数.""constant name": "无符大整数值",
+"comment": "(DBTYPE_I1)单字节有符号整数.""comment": "(DBTYPE_UI8)8字节无符号整数.",
+"comment": "(DBTYPE_I1)单字节有符号整数.""data type": "整数",
+"comment": "(DBTYPE_I1)单字节有符号整数.""initial value": "21"
+  },
+  {
+
+"constant name": "文件时间值",
+
+"comment": "(DBTYPE_FILETIME)64位表示文件时间的值.",
+
+"data type": "整数",
+
+"initial value": "64"
+  },
+  {
+
+"constant name": "唯一标识符值",
+
+"comment": "(DBTYPE_GUID)全局唯一标识符值.",
+
+"data type": "整数",
+
+"initial value": "72"
+  },
+  {
+
+"constant name": "二进制值",
+
+"comment": "(DBTYPE_BYTES)二进制值.",
+
+"data type": "整数",
+
+"initial value": "128"
+  },
+  {
+
+"constant name": "字符串值",
+
+"comment": "(DBTYPE_STR)字符串值.",
+
+"data type": "整数",
+
+"initial value": "129"
+  },
+  {
+
+"constant name": "文本值_WChar",
+
+"comment": "(DBTYPE_WSTR)指示一个以null结尾的字符串(Unicode).",
+
+"data type": "整数",
+
+"initial value": "130"
+  },
+  {
+
+"constant name": "精确数值_NUMERIC",
+
+"comment": "(DBTYPE_NUMERIC)具有固定精度和小数位数的精确数值.",
+
+"data type": "整数",
+
+"initial value": "131"
+  },
+  {
+
+"constant name": "用户变量值",
+
+"comment": "(DBTYPE_UDT)用户定义变量.",
+
+"data type": "整数",
+
+"initial value": "132"
+  },
+  {
+
+"constant name": "日期值",
+
+"comment": "(DBTYPE_DBDATE)以yyyymmdd表示的日期值.",
+
+"data type": "整数",
+
+"initial value": "133"
+  },
+  {
+
+"constant name": "时间值",
+
+"comment": "(DBTYPE_DBTIME)以hhmmss表示的时间值.",
+
+"data type": "整数",
+
+"initial value": "134"
+  },
+  {
+}"constant name": "时间戳值",
+}"comment": "(DBTYPE_DBTIMESTAMP)日期/时间戳值.",
+}"data type": "整数",
+}"initial value": "135"
+  },
+  {
+
+"constant name": "子集值",
+
+"comment": "(DBTYPE_HCHAPTER)用于标识子行集中的行的4字节的子集值.",
+
+"data type": "整数",
+
+"initial value": "136"
+  },
+  {
+
+"constant name": "可变类型值",
+
+"comment": "可自动变化类型的值.",
+
+"data type": "整数",
+
+"initial value": "138"
+  },
+  {
+
+"constant name": "数字值",
+
+"comment": "数字值",
+
+"data type": "整数",
+
+"initial value": "139"
+  },
+  {
+
+"constant name": "字符串值_VarChar",
+
+"comment": "字符串值",
+
+"data type": "整数",
+
+"initial value": "200"
+  },
+  {
+
+"constant name": "大字符串值",
+
+"comment": "长字符串值.",
+
+"data type": "整数",
+
+"initial value": "201"
+  },
+  {
+
+"constant name": "文本值_VarWChar",
+
+"comment": "指示一个以null结尾的字符串(Unicode).",
+
+"data type": "整数",
+
+"initial value": "202"
+  },
+  {
+
+"constant name": "大文本值",
+
+"comment": "以null结尾的长字符串值(Unicode).",
+
+"data type": "整数",
+
+"initial value": "203"
+  },
+  {
+
+"constant name": "二进制值_VarBinary",
+
+"comment": "二进制值",
+
+"data type": "整数",
+
+"initial value": "204"
+  },
+  {
+
+"constant name": "大二进制值",
+
+"comment": "长二进制值.",
+
+"data type": "整数",
+
+"initial value": "205"
+  }
+]
+ },
+ {
+"data type": "整数""class name": "是否成功",
+"data type": "整数""@文档": "\"category = \\\"ADO数据库.ADO数据库2.附加类\\\"\"",
+"data type": "整数""variables": [
+  {
+
+"variable name": "返回逻辑值",
+
+"data type": "逻辑型"
+  }
+"data type": "整数"]
+ },
+ {
+}"class name": "链式SQL类_",
+}"comment": "查询：\n链式：sql.表名 (\"商品表\").字段 (\"*\").条件 (\"品名='新品'\").且 (\"规格='12g'\").取查询SQL () ;\n相当于SQL语句：select  from 商品表 where 品名='新品' and 规格='12g' ;\n链式：sql.表名 (\"商品表\").条件2 (\"品名\", \"新品\").或2 (\"品名\", \"新货\").取查询SQL ()\n相当于SQL语句：select  from 商品表 where 品名 like '%新品%' or 品名 like '%新货%'\n\n新增：\n链式：sql.表名 (\"商品表\").插入数据 (\"品名,规格,单位,金额\", \"'新品','12g','盒',100\").取新增SQL () ;\n相当于SQL语句：insert into 商品表(品名 , 规格 , 单位 , 金额) values ('新品' , '12g' , '盒' , 100)  ;\n\n修改：\n链式：sql.表名 (\"商品表\").赋值 (\"品名\", \"'新品名'\").赋值 (\"规格\", \"'18g'\").条件 (\"id=2\").取修改SQL () ;\n相当于SQL语句：update 商品表 set 品名='新品名' , 规格='18g' where id=2 ;\n\n删除：\n链式：sql.表名 (\"商品表\").条件 (\"品名='新品'\").且 (\"规格='12g'\").取删除SQL () ;\n相当于SQL语句：delete from 商品表 where 品名='新品' and 规格='12g'\n\n创建库：\n链式：sql.表名 (\"cs\").取新建库SQL () ;\n相当于SQL语句：create database cs\n\n删除库：\n链式：sql.表名 (\"商品表\").取删除库SQL ()\n相当于SQL语句：drop database 商品表\n\n创建表：\n链式：sql.表名 (\"商品表\").主键 (\"ID\").文本字段2 (\"品名\", 200).货币字段 (\"单价\").日期时间字段 (\"入库时间\").取新建表SQL () ;\n相当于SQL语句：create table 商品表(ID int identity primary key,品名 varchar(200),单价 money,入库时间 datetime)\n\n删除表：\n链式：sql.表名 (\"商品表\").取删除表SQL ()\n相当于SQL语句：drop table 商品表",
+}"@文档": "\"category = \\\"ADO数据库.链式SQL\\\"\"",
+}"methods": [
+  {
+"data type": "整数""method name": "字段",
+"data type": "整数""comment": "field",
+"data type": "整数""data type": "链式SQL类_",
+"data type": "整数""@视窗.返回参考": "真",
+"data type": "整数""parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "唯一性",
+"comment": "DISTINCT",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+"data type": "整数"]
+  },
+  {
+
+"method name": "表名",
+
+"comment": "field;\n表名后对接，例如：;\n查询：条件 (\"品名='新品'\").且 (\"规格='12g'\").取查询SQL () ;\n查询：条件2 (\"品名\", \"新品\").且2 (\"品名\", \"新货\").取查询SQL ()\n相当于SQL语句：select  from 商品表 where 品名 like '%新品%' or 品名 like '%新货%'\n新增：插入数据 (\"品名,规格\", \"'新品','12g').取新增SQL () ;\n修改：赋值 (\"品名\", \"'新品名'\").赋值 (\"规格\", \"'18g'\").取修改SQL () ;\n删除：条件 (\"品名='新品'\").且 (\"规格='12g'\").取删除SQL ()",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "表名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "别名",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "条件",
+
+"comment": "where",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "命令语句",
+"comment": "例如：\"品名='新品'\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "条件2",
+
+"comment": "where",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "条件前语句",
+"comment": "例如：\"品名\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "条件后语句",
+"comment": "例如：模糊条件：\"新品\"　；精确条件：'新品'",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "真：模糊(like)　假：精确",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "排序",
+
+"comment": "order",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "命令语句",
+"data type": "文本型"
+   },
+   {
+"parameter name": "排序类型",
+"comment": "0 升序 1 降序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "分组",
+ }"comment": "group",
+ }"data type": "链式SQL类_",
+ }"@视窗.返回参考": "真",
+ }"parameters": [
+   {
+"parameter name": "命令语句",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "关联",
+ }"comment": "join",
+ }"data type": "链式SQL类_",
+ }"@视窗.返回参考": "真",
+ }"parameters": [
+   {
+"parameter name": "命令语句",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "且",
+
+"comment": "and　精确条件不带like",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "命令语句",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "且2",
+
+"comment": "and　精确条件带有like\n例如",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "条件前语句",
+"comment": "例如：1.模糊：\"品名\"　； 2.精确：\"品名=\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "条件后语句",
+"comment": "例如：1.模糊：\"新品\"　； 2.精确：\"'新品'\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "真：模糊(like)　假：精确",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "或",
+
+"comment": "or",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "命令语句",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "或2",
+
+"comment": "or",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "条件前语句",
+"comment": "例如：\"品名\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "条件后语句",
+"comment": "例如：模糊条件：\"新品\"　；精确条件：'新品'",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "真：模糊(like)　假：精确",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "关联条件",
+
+"comment": "on",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "命令语句",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "数量",
+
+"comment": "limit",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "命令语句",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "合计函数",
+}"comment": "having",
+}"data type": "链式SQL类_",
+}"@视窗.返回参考": "真",
+}"parameters": [
+   {
+"parameter name": "命令语句",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "包含",
+
+"comment": "in",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "命令语句",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "为空",
+}"comment": "null",
+}"data type": "链式SQL类_",
+}"@视窗.返回参考": "真"
+  },
+  {
+
+"method name": "非空",
+
+"comment": "notnull",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真"
+  },
+  {
+
+"method name": "插入数据",
+
+"comment": "设定插入的列和值",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "列",
+"comment": "例如：\"品名,规格,单位,金额\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "例如：\"'新品','12g','盒',100\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "赋值",
+
+"comment": "更新",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "例如：\"名称\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"comment": "例如“'新名称'”",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "介于",
+"comment": "between",
+"data type": "链式SQL类_",
+"@视窗.返回参考": "真",
+"parameters": [
+   {
+"parameter name": "列",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "左括号",
+
+"comment": "(",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真"
+  },
+  {
+
+"method name": "右括号",
+
+"comment": ")",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真"
+  },
+  {
+
+"method name": "主键",
+
+"comment": "int identity primary key\nMsSql、Access、Sqlite",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "需设置主键的字段名，如“ID”",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "主键2",
+
+"comment": "int auto_increment primary key\nMySql",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "需设置主键的字段名，如“ID”",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "主键3",
+
+"comment": "integer primary key autoincrement\nSqlite",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"comment": "需设置主键的字段名，如“ID”",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本字段1",
+
+"comment": "char\nMsSql、MySql、Aaccess",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "文本字段2",
+
+"comment": "varchar\nMsSql、MySql、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "文本字段3",
+
+"comment": "text\nMsSql、MySql、Sqlite、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "文本字段4",
+
+"comment": "ntext\nMsSql、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "整数字段1",
+"comment": "int\nMsSql、MySql、Access",
+"data type": "链式SQL类_",
+"@视窗.返回参考": "真",
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "整数字段2",
+
+"comment": "smallint\nMsSql、MySql、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "整数字段3",
+
+"comment": "integer\nSqlite、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "单精度字段",
+
+"comment": "real\nMsSql、MySql、Sqlite、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "双精度字段",
+
+"comment": "float\nMsSql、MySql、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "货币字段",
+
+"comment": "money\nMsSql、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "日期字段",
+
+"comment": "date\nMsSql、MySql、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "日期时间字段",
+
+"comment": "datetime\nMsSql、MySql、Access",
+
+"data type": "链式SQL类_",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "逻辑字段",
+}"comment": "bit\nMsSql、MySql、Access",
+}"data type": "链式SQL类_",
+}"@视窗.返回参考": "真",
+}"parameters": [
+   {
+"parameter name": "字段名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "合并",
+}"comment": "union",
+}"data type": "链式SQL类_"
+  },
+  {
+
+"method name": "取合并SQL",
+
+"comment": "union",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取查询SQL",
+
+"comment": "select\n例如：\n链式：sql.表名 (\"商品表\").条件 (\"品名='新品'\").且 (\"规格='12g'\").取查询SQL () ;\n相当于SQL语句：select  from 商品表 where 品名='新品' and 规格='12g'\n链式：sql.表名 (\"商品表\").条件2 (\"品名\", \"新品\").或2 (\"品名\", \"新货\").取查询SQL ()\n相当于SQL语句：select  from 商品表 where 品名 like '%新品%' or 品名 like '%新货%'",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "用完就释放",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "取修改SQL",
+
+"comment": "update\n例如：\n链式：sql.表名 (\"商品表\").赋值 (\"品名\", \"'新品名'\").赋值 (\"规格\", \"'18g'\").条件 (\"id=2\").取修改SQL () ;\n相当于SQL语句：update 商品表 set 品名='新品名' , 规格='18g' where id=2",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取删除SQL",
+
+"comment": "delete\n例如：\n链式：sql.表名 (\"商品表\").条件 (\"品名='新品'\").且 (\"规格='12g'\").取删除SQL () ;\n相当于SQL语句：delete from 商品表 where 品名='新品' and 规格='12g'",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取新增SQL",
+
+"comment": "insert\n例如：\n链式：sql.表名 (\"商品表\").插入数据 (\"品名,规格,单位,金额\", \"'新品','12g','盒',100\").取新增SQL () ;\n相当于SQL语句：insert into 商品表(品名 , 规格 , 单位 , 金额) values ('新品' , '12g' , '盒' , 100)",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取新建库SQL",
+
+"comment": "create database\n例如：\n链式：sql.表名 (\"cs\").取新建库SQL () ;\n相当于SQL语句：create database cs",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取删除库SQL",
+
+"comment": "drop database\n例如：\n链式：sql.表名 (\"商品表\").取删除库SQL ()\n相当于SQL语句：drop database 商品表",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取新建表SQL",
+
+"comment": "create table\n例如：\n链式：sql.表名 (\"商品表\").主键 (\"ID\").文本字段2 (\"品名\", 200).货币字段 (\"单价\").日期时间字段 (\"入库时间\").取新建表SQL () ;\n相当于SQL语句：create table 商品表(ID int identity primary key,品名 varchar(200),单价 money,入库时间 datetime)",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取删除表SQL",
+
+"comment": "drop table\n例如：\n链式：sql.表名 (\"商品表\").取删除表SQL ()\n相当于SQL语句：drop table 商品表",
+
+"data type": "文本型"
+  }
+}]
+ },
+ {
+"class name": "SQL类型",
+"@文档": "\"category = \\\"ADO数据库.链式SQL.附加类\\\"\"",
+"variables": [
+  {
+
+"variable name": "字段",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"field\""
+  },
+  {
+
+"variable name": "条件",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"where\""
+  },
+  {
+
+"variable name": "包含",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"in\""
+  },
+  {
+
+"variable name": "分组",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"group\""
+  },
+  {
+
+"variable name": "排序",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"order\""
+  },
+  {
+
+"variable name": "表名",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"table\""
+  },
+  {
+
+"variable name": "是否存在",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"exist\""
+  },
+  {
+"static": true"variable name": "限制返回数量",
+"static": true"static": true,
+"static": true"data type": "文本型",
+"static": true"initial value": "\"limit\""
+  },
+  {
+
+"variable name": "合计函数",
+
+"comment": "HAVING",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"having\""
+  },
+  {
+"static": true"variable name": "合并",
+"static": true"comment": "UNION ",
+"static": true"static": true,
+"static": true"data type": "文本型",
+"static": true"initial value": "\"union\""
+  },
+  {
+
+"variable name": "数据",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"data\""
+  },
+  {
+}"variable name": "值",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"values\""
+  },
+  {
+
+"variable name": "关联",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"join\""
+  },
+  {
+
+"variable name": "关联条件",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"on\""
+  },
+  {
+"static": true"variable name": "且",
+"static": true"static": true,
+"static": true"data type": "文本型",
+"static": true"initial value": "\"and\""
+  },
+  {
+
+"variable name": "或",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"or\""
+  },
+  {
+
+"variable name": "介于",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"between\""
+  },
+  {
+
+"variable name": "为空",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"null\""
+  },
+  {
+
+"variable name": "非空",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"notnull\""
+  },
+  {
+
+"variable name": "分割符",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"|\""
+  },
+  {
+
+"variable name": "主键",
+
+"comment": "MsSql、Access、Sqlite",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"int identity primary key\""
+  },
+  {
+
+"variable name": "主键2",
+
+"comment": "MySql",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"int auto_increment primary key\""
+  },
+  {
+
+"variable name": "主键3",
+
+"comment": "Sqlite",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"integer primary key autoincrement\""
+  },
+  {
+
+"variable name": "文本字段1",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"char\""
+  },
+  {
+
+"variable name": "文本字段2",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"varchar\""
+  },
+  {
+
+"variable name": "文本字段3",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"text\""
+  },
+  {
+
+"variable name": "文本字段4",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"ntext\""
+  },
+  {
+}"variable name": "整数字段1",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"int\""
+  },
+  {
+}"variable name": "整数字段2",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"smallint\""
+  },
+  {
+}"variable name": "整数字段3",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"integer\""
+  },
+  {
+
+"variable name": "单精度字段",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"real\""
+  },
+  {
+}"variable name": "双精度字段",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"float\""
+  },
+  {
+
+"variable name": "货币字段",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"money\""
+  },
+  {
+}"variable name": "日期字段",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"date\""
+  },
+  {
+
+"variable name": "日期时间字段",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"datetime\""
+  },
+  {
+
+"variable name": "逻辑字段",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"bit\""
+  }
+]
+ },
+ {
+"class name": "SQL命令集",
+"@文档": "\"category = \\\"ADO数据库.链式SQL.附加类\\\"\"",
+"methods": [
+  {
+
+"method name": "取值",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "键",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "插入",
+
+"parameters": [
+   {
+"parameter name": "键",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "清空"
+  },
+  {
+
+"method name": "取成员数",
+
+"data type": "变整数"
+  }
+]
+ },
+ {
+"class name": "SQL命令数组",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"ADO数据库.链式SQL.附加类\\\"\"",
+"@模板实现类": "\"SQL命令\""
+ },
+ {
+"class name": "SQL命令",
+"@文档": "\"category = \\\"ADO数据库.链式SQL.附加类\\\"\"",
+"variables": [
+  {
+@文档": "\"category = \\\"ADO数据库.链式SQL.附加类\\\"\"""variable name": "键",
+@文档": "\"category = \\\"ADO数据库.链式SQL.附加类\\\"\"""data type": "文本型"
+  },
+  {
+
+"variable name": "值",
+
+"data type": "文本型"
+  }
+]
+ },
+ {
+variables": [
+"class name": "驱动信息类_",
+variables": [
+"comment": "判断ODBC及Access Database Engine驱动是否安装",
+variables": [
+"@文档": "\"category = \\\"ADO数据库.驱动信息\\\"\"",
+variables": [
+"@全局类": "真",
+variables": [
+"methods": [
+  {
+
+"method name": "取驱动信息ODBC_",
+
+"comment": "获取MySql ODBC驱动安装情况",
+
+"result comment": "未安装任何驱动将返回假，否则返回真",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "返回的驱动信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "取驱动信息Access_",
+
+"comment": "获取Access Database Engine驱动安装情况",
+
+"result comment": "未安装任何驱动将返回假，否则返回真",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "返回的驱动信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "取Access已安装驱动位数_",
+
+"result comment": "0、未安装  32、安装了32位  64、安装了64位",
+
+"static": true,
+
+"data type": "整数"
+  },
+  {
+
+"method name": "取Mysql已安装驱动位数_",
+
+"result comment": "0、未安装   1、全安装   32、安装了32位   64、安装了64位",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "版本号",
+"comment": "例如：3.51、5.1、5.2、5.3、8.0　",
+"data type": "文本型",
+"@默认值": "\"3.51\""
+   }
+
+]
+  },
+  {
+
+"method name": "取Postgresq已安装驱动位数_",
+
+"result comment": "0、未安装   1、全安装   32、安装了32位   64、安装了64位",
+
+"static": true,
+
+"data type": "整数"
+  },
+  {
+
+"method name": "取Sqlite已安装驱动位数_",
+
+"result comment": "0、未安装   1、全安装   32、安装了32位   64、安装了64位",
+
+"static": true,
+
+"data type": "整数"
+  },
+  {
+
+"method name": "取ODBC数据源_",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "返回64位信息",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回32位信息",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取指定驱动名_",
+
+"comment": "获取MySql ODBC驱动名",
+
+"result comment": "未找到将返回空",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "版本号",
+"comment": "例如：3.51、5.1、5.2、5.3、8.0　",
+"data type": "文本型",
+"@默认值": "\"3.51\""
+   },
+   {
+"parameter name": "版本8类型",
+"comment": "1、ANSI Driver　2、Unicode Driver",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  }
+variables": [
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

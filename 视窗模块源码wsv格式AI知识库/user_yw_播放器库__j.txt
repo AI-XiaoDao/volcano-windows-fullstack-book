@@ -1,0 +1,620 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"播放器库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+"class name": "WMP播放器类",
+"comment": "Windows Media Player",
+"@文档": "\"category = \\\"播放器库.WMP播放器\\\"\"",
+"methods": [
+  {
+뮰敹ŝ"method name": "初始化_",
+뮰敹ŝ"data type": "逻辑型"
+  },
+  {
+뮰敹ŝ"method name": "创建_",
+뮰敹ŝ"data type": "逻辑型",
+뮰敹ŝ"parameters": [
+   {
+"parameter name": "父窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "左边",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "顶边",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   }
+뮰敹ŝ]
+  },
+  {
+
+"method name": "移动_",
+
+"parameters": [
+   {
+"parameter name": "左边",
+"data type": "整数"
+   },
+   {
+"parameter name": "顶边",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "可视_",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "可视",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+}"method name": "加载视频_",
+}"comment": "可以为本地视频地址，或网络视频",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "取播放状态_",
+
+"result comment": "0. 未知状态；1. 播放完了；2. 播放暂停；3. 正在播放；4. 向前搜索；5. 向后搜索；6. 正在缓冲；\n7. 等待加载；8. 播放结束；9. 准备新媒体；10. 播放准备就绪；11. 尝试重新连接；12. 上一次状态",
+
+"data type": "整数"
+  },
+  {
+data type": "文本型""method name": "取打开状态_",
+data type": "文本型""comment": "1. 播放列表被改变；2. 正在定位播放列表；3. 正在连接播放列表；4. 正在加载播放列表；\n5. 正在打开播放列表；6. 播放列表打开；7. 播放列表被改变；8. 媒体被改变；9. 定位媒体10. 连接媒体；11. 加载媒体；\n12. 正在打开媒体文件；13. 媒体被打开；14. 开始获取编码器；15. 结束编码器获取；16. 开始许可证获取；17. 结束许可证获取；\n18. 开始个性化设置；19. 结束个性化设置；20. 正在等待；21. 打开未知类型的URL",
+data type": "文本型""data type": "整数"
+  },
+  {
+
+"method name": "取状态_",
+
+"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "取版本信息_",
+"data type": "文本型""data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "取是否在线_",
+"data type": "文本型""data type": "逻辑型"
+  },
+  {
+
+"method name": "可用_",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "可用",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+ }"method name": "全屏模式_",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "全屏模式",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+
+"method name": "是否全屏_",
+
+"data type": "逻辑型"
+  },
+  {
+}"method name": "右键菜单_",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "菜单可用",
+"comment": "真：有菜单　假：无菜单",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+
+"method name": "界面模式_",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "界面模式",
+"comment": "1、只显示视频或者音频　2、迷你模式　3、完整模式　4、自定义模式　5、隐藏所有",
+"data type": "整数",
+"@默认值": "3"
+   }
+
+]
+  },
+  {
+"method name": "自适应尺寸_",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "自适应尺寸",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "无窗口模式_",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "无窗口模式",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "远程模式_",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "远程模式",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+"data type": "逻辑型""method name": "自动播放_",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "自动播放",
+"data type": "逻辑型"
+   }
+"data type": "逻辑型"]
+  },
+  {
+
+"method name": "播放_"
+  },
+  {
+}"method name": "暂停_"
+  },
+  {
+
+"method name": "停止_"
+  },
+  {
+thod name": "播放_""method name": "取当前时间位置_",
+thod name": "播放_""data type": "文本型"
+  },
+  {
+
+"method name": "取当前播放位置_",
+
+"comment": "秒",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "置当前播放位置_",
+
+"parameters": [
+   {
+"parameter name": "当前位置",
+"comment": "秒",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "取视频总长度_",
+
+"data type": "整数"
+  },
+  {
+"method name": "音量_",
+"comment": "音量的范围为0-100",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "音量",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "静音_",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "是否静音",
+"data type": "逻辑型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "wmpapi",
+"@全局类": "真",
+"methods": [
+  {
+"method name": "AtlAxWinInit",
+"comment": "\n初始化控件承载代码。非零，如果承载代码的控件的初始化成功;否则 FALSE。",
+"static": true,
+"data type": "变整数",
+"@输出名": "\"AtlAxWinInit\"",
+"@视窗.输入": "\"atl.dll\""
+  },
+  {
+}"method name": "AtlAxGetControl",
+}"comment": "\n返回在窗口中承载的控件的 IUnknown 接口指针。",
+}"static": true,
+}"data type": "变整数",
+}"@输出名": "\"AtlAxGetControl\"",
+}"@视窗.输入": "\"atl.dll\"",
+}"parameters": [
+   {
+"parameter name": "h",
+"comment": "一个处理到承载控件的窗口",
+"data type": "变整数"
+   },
+   {
+"parameter name": "pp",
+"comment": "承载的控件的 IUnknown。",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+ameter name": "pp""method name": "GetWindowLongW",
+ameter name": "pp""comment": "\n返回在窗口中承载的控件的 IUnknown 接口指针。",
+ameter name": "pp""static": true,
+ameter name": "pp""data type": "变整数",
+ameter name": "pp""@输出名": "\"GetWindowLongA\"",
+ameter name": "pp""@视窗.输入": "\"user32.dll\"",
+ameter name": "pp""parameters": [
+   {
+"parameter name": "hwnd",
+"data type": "变整数"
+   },
+   {
+"parameter name": "属性",
+"data type": "变整数"
+   }
+ameter name": "pp"]
+  },
+  {
+ }"method name": "MoveWindow_",
+ }"comment": "\n改变指定窗口的位置和大小。顶级窗口可能受最大或最小尺寸的限制，那些尺寸优先于这里设置的参数",
+ }"static": true,
+ }"data type": "变整数",
+ }"@输出名": "\"MoveWindow\"",
+ }"@视窗.输入": "\"user32.dll\"",
+ }"parameters": [
+   {
+"parameter name": "hWnd",
+"comment": "欲移动窗口的句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "x",
+"comment": "窗口新的左侧位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "y",
+"comment": "窗口新的顶部位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "nWidth",
+"comment": "窗口的新宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "nHeight",
+"comment": "窗口的新高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "bRepaint",
+"comment": "如窗口此时应重画，则设为TRUE（非零）。FALSE（零）则表明应用程序会自己决定是否重画窗口",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+"method name": "CreateWindowExW",
+"comment": "\n创建一个具有扩展风格的层叠式窗口、弹出式窗口或子窗口，其他与CreateWindow函数相同。\n关于创建窗口和其他参数的内容，请参看CreateWindow",
+"static": true,
+"data type": "变整数",
+"@输出名": "\"CreateWindowExW\"",
+"@视窗.输入": "\"user32.dll\"",
+"parameters": [
+   {
+"parameter name": "扩展风格",
+"data type": "整数"
+   },
+   {
+"parameter name": "类名",
+"comment": "文本型",
+"data type": "变整数"
+   },
+   {
+"parameter name": "窗口标题",
+"comment": "文本型",
+"data type": "变整数"
+   },
+   {
+"parameter name": "风格",
+"data type": "变整数"
+   },
+   {
+"parameter name": "屏幕横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "屏幕纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "父窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "模块句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ }"method name": "ShowWindow",
+ }"comment": "控制窗口的可见性（在vb里使用：针对vb窗体及控件，请使用对应的vb属性） \n 如窗口之前是可见的，则返回TRUE（非零），否则返回FALSE（零）",
+ }"static": true,
+ }"data type": "变整数",
+ }"@输出名": "\"ShowWindow\"",
+ }"@视窗.输入": "\"user32.dll\"",
+ }"parameters": [
+   {
+"parameter name": "hwnd",
+"comment": "要向这个窗口应用由nCmdShow指定的命令",
+"data type": "变整数"
+   },
+   {
+"parameter name": "nCmdShow",
+"comment": "为窗口指定可视性方面的一个命令。请用下述任何一个常数",
+"data type": "变整数"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "音频播放类_",
+"comment": "基于系统winmm.dll",
+"@文档": "\"category = \\\"播放器库.音频播放器\\\"\"",
+"methods": [
+  {
+}"method name": "打开文件_",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "名称",
+"comment": "mp3、wav、网络链接地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "标识",
+"comment": "用于标识播放文件，不可含有空格",
+"data type": "文本型",
+"@默认值": "\"music\""
+   }
+}]
+  },
+  {
+"method name": "播放_",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "标识",
+"comment": "用于标识播放文件，不可含有空格",
+"data type": "文本型",
+"@默认值": "\"music\""
+   },
+   {
+"parameter name": "等待播放完毕",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+"method name": "暂停_",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "标识",
+"comment": "用于标识播放文件，不可含有空格",
+"data type": "文本型",
+"@默认值": "\"music\""
+   }
+]
+  },
+  {
+
+"method name": "继续_",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"comment": "用于标识播放文件，不可含有空格",
+"data type": "文本型",
+"@默认值": "\"music\""
+   }
+
+]
+  },
+  {
+
+"method name": "取时长_",
+
+"comment": "获取音乐文件时长，获取总毫秒数",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"comment": "用于标识播放文件，不可含有空格",
+"data type": "文本型",
+"@默认值": "\"music\""
+   }
+
+]
+  },
+  {
+ }"method name": "取进度_",
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "标识",
+"comment": "用于标识播放文件，不可含有空格",
+"data type": "文本型",
+"@默认值": "\"music\""
+   }
+ }]
+  },
+  {
+}"method name": "停止_",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "标识",
+"comment": "用于标识播放文件，不可含有空格",
+"data type": "文本型",
+"@默认值": "\"music\""
+   }
+}]
+  },
+  {
+data type": "文本型""method name": "关闭_",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "标识",
+"comment": "用于标识播放文件，不可含有空格",
+"data type": "文本型",
+"@默认值": "\"music\""
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "播放进度事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"data type": "文本型"
+   },
+   {
+"parameter name": "总时长",
+"data type": "整数"
+   },
+   {
+"parameter name": "当前进度",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

@@ -1,0 +1,1908 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC多文档界面".
+
+{
+问本程序中的接口需要引用模块"MFC多文档界面"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"MFC多文档界面"."package name": "火山.MFC界面.MDI",
+问本程序中的接口需要引用模块"MFC多文档界面"."comment": "本程序提供视窗项目MFC界面的多文档窗口支持功能",
+问本程序中的接口需要引用模块"MFC多文档界面"."@视窗.外部头文件": "\"src\\\\mfc_ui_mdi.h\"",
+问本程序中的接口需要引用模块"MFC多文档界面"."@视窗.外部源文件": "\"src\\\\mfc_ui_mdi.cpp\"",
+问本程序中的接口需要引用模块"MFC多文档界面"."@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_mdi.rc\"",
+问本程序中的接口需要引用模块"MFC多文档界面"."classes": [
+ {
+"class name": "命令状态类",
+"comment": "用作设置所对应命令的状态",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@别名": "\"CVolCmdState\"",
+"constants": [
+  {
+碠敷ŝ"constant name": "禁止",
+碠敷ŝ"comment": "命令被禁止",
+碠敷ŝ"data type": "整数",
+碠敷ŝ"initial value": "@VOLCMD_FLG_DISABLED"
+  },
+  {
+ss name": "命令状态类""constant name": "选中",
+ss name": "命令状态类""comment": "命令处于被选中状态",
+ss name": "命令状态类""data type": "整数",
+ss name": "命令状态类""initial value": "@VOLCMD_FLG_CHECKED"
+  },
+  {
+}"constant name": "未选中",
+}"comment": "命令处于未被选中状态",
+}"data type": "整数",
+}"initial value": "@VOLCMD_FLG_UNCHECKED"
+  }
+],
+"methods": [
+  {
+
+"method name": "状态",
+
+"comment": "返回所已经设置的命令当前状态",
+
+"result comment": "为本类中\"禁止\"/\"选中\"/\"未选中\"常量值之一或组合值",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲处理本对象",
+"data type": "命令状态类"
+   }
+
+]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "状态",
+"@嵌入式方法": "\"\"""comment": "设置命令的当前状态",
+"@嵌入式方法": "\"\"""static": true,
+"@嵌入式方法": "\"\"""type": "property setter",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲处理本对象",
+"data type": "命令状态类"
+   },
+   {
+"parameter name": "欲设置状态",
+"comment": "为本类中\"禁止\"/\"选中\"/\"未选中\"常量值之一或组合值",
+"data type": "整数"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+ }"method name": "标题",
+ }"comment": "返回所已经设置的命令当前新标题,为空文本表示保持原标题不改变.",
+ }"static": true,
+ }"type": "property getter",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲处理本对象",
+"data type": "命令状态类"
+   }
+ }]
+  },
+  {
+ }"method name": "标题",
+ }"comment": "设置命令的当前标题,为空文本表示保持原标题不改变.",
+ }"static": true,
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "所欲处理本对象",
+"data type": "命令状态类"
+   },
+   {
+"parameter name": "欲设置新标题",
+"comment": "  提供所欲设置的新标题,对于菜单项命令,其中可以使用引导符'&'引导\n一个快捷访问字符,如: \"打开文件(&O)\",及使用制表符'\\t'分隔菜单项文\n本和对应快捷键说明,如: \"打开文件(&O)\\tCtrl+O\".\n  为空文本表示保持原标题不改变.",
+"data type": "文本型"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "组件停靠位置",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+CMD_FLG_CHECKED"constant name": "无",
+CMD_FLG_CHECKED"initial value": "@CBRS_NOALIGN"
+  },
+  {
+
+"constant name": "左边",
+
+"initial value": "@CBRS_LEFT"
+  },
+  {
+}"constant name": "顶边",
+}"initial value": "@CBRS_TOP"
+  },
+  {
+}"constant name": "右边",
+}"initial value": "@CBRS_RIGHT"
+  },
+  {
+nstant name": "右边""constant name": "底边",
+nstant name": "右边""initial value": "@CBRS_BOTTOM"
+  }
+]
+ },
+ {
+"class name": "组件允许停靠位置",
+"comment": "提供所允许组件停靠到所处父窗口的边框位置",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+    "constant name": "左边",
+    "data type": "整数",
+    "initial value": "@CBRS_ALIGN_LEFT"
+  },
+  {
+   "initial value": "@CBRS_ALIGN_LEFT""constant name": "顶边",
+   "initial value": "@CBRS_ALIGN_LEFT""data type": "整数",
+   "initial value": "@CBRS_ALIGN_LEFT""initial value": "@CBRS_ALIGN_TOP"
+  },
+  {
+
+"constant name": "右边",
+
+"data type": "整数",
+
+"initial value": "@CBRS_ALIGN_RIGHT"
+  },
+  {
+onstant name": "右边""constant name": "底边",
+onstant name": "右边""data type": "整数",
+onstant name": "右边""initial value": "@CBRS_ALIGN_BOTTOM"
+  },
+  {
+
+"constant name": "任意边",
+
+"data type": "整数",
+
+"initial value": "@CBRS_ALIGN_ANY"
+  }
+]
+ },
+ {
+"class name": "MDI子窗口",
+"comment": "为所有可以停靠在MDI主窗口上的子窗口组件的基础类",
+"base class": "组件布局器",
+"@视窗.后缀文本": "\"public IVolDockableWnd\"",
+"methods": [
+  {
+comment": "为所有可以停靠在MDI主窗口上的子窗口组件的基础类""method name": "是否可视",
+comment": "为所有可以停靠在MDI主窗口上的子窗口组件的基础类""comment": "返回本子窗口当前是否可视.\n注意: 判断本子窗口是否可视不能使用基础类中的\"可视\"属性,必须使用本属性.",
+comment": "为所有可以停靠在MDI主窗口上的子窗口组件的基础类""type": "property getter",
+comment": "为所有可以停靠在MDI主窗口上的子窗口组件的基础类""data type": "逻辑型",
+comment": "为所有可以停靠在MDI主窗口上的子窗口组件的基础类""@禁止流程检查": "真"
+  },
+  {
+"method name": "是否可视",
+"comment": "设置本子窗口当前是否可视.\n注意: 设置本子窗口是否可视不能使用基础类中的\"可视\"属性,必须使用本属性.",
+"type": "property setter",
+"@视窗.设置时机": "组件创建前后",
+"parameters": [
+   {
+"parameter name": "是否可视",
+"comment": "指定本组件是否可视",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+ }"method name": "激活子窗口",
+ }"comment": "激活并显示本子窗口,然后将输入焦点移动到其上面."
+  },
+  {
+
+"method name": "创建",
+
+"comment": "创建本子窗口,返回是否成功.\n注意: 只能使用本方法而不能使用基础类中的\"创建组件\"方法来创建本窗口.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "标题",
+"comment": "提供子窗口标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "父窗口",
+"comment": "提供所处的父窗口",
+"data type": "MDI主窗口"
+   },
+   {
+"parameter name": "ID值",
+"comment": "提供所创建子窗口在父窗口中的ID值",
+"data type": "整数"
+   },
+   {
+"parameter name": "停靠位置",
+"comment": "提供本子窗口初始停靠在父窗口中的哪一侧",
+"data type": "组件停靠位置"
+   },
+   {
+"parameter name": "允许停靠位置",
+"comment": "提供本子窗口被允许停靠在父窗口中的哪一侧,被禁止停靠的一侧将不能被用户拖拉过去.\n为\"组件允许停靠位置\"类中各个常量值或其之和.",
+"data type": "整数",
+"@默认值": "组件允许停靠位置.任意边"
+   },
+   {
+"parameter name": "图标",
+"comment": "  提供本子窗口所使用的图标,用作在子窗口被拖拽成一个独立的窗口或在选择夹中时显示,\n为\"空资源.空图标\"表示无.",
+"data type": "图标资源",
+"@默认值": "空资源.空图标"
+   },
+   {
+"parameter name": "是否有调节器",
+"comment": "提供是否在本子窗口上添加用作用户拖拽子窗口位置时使用的调节器",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "左边位置",
+"comment": "提供所创建子窗口左边的坐标位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "顶边位置",
+"comment": "提供所创建子窗口顶边的坐标位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所创建子窗口的宽度,为\"数值范围.最小整数值\"表示使用设计时宽度.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所创建子窗口的高度,为\"数值范围.最小整数值\"表示使用设计时高度.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   }
+
+]
+  },
+  {
+
+"method name": "组合到选择夹",
+
+"comment": "将所有本类子窗口从左到右组合到一个选择夹中.\n子窗口必须已经被成功创建.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所组合子窗口",
+"comment": "提供所有欲组合在一起的MDI子窗口",
+"data type": "MDI子窗口",
+"@可扩展": "\"d_text = \\\".pdata (), \\\"\""
+   }
+
+]
+  },
+  {
+stant name": "右边""initial value": "@CBRS_BOTTOM""method name": "取活动视图",
+stant name": "右边""initial value": "@CBRS_BOTTOM""comment": "获取当前活动视图对象",
+stant name": "右边""initial value": "@CBRS_BOTTOM""data type": "逻辑型",
+stant name": "右边""initial value": "@CBRS_BOTTOM""@禁止流程检查": "真",
+stant name": "右边""initial value": "@CBRS_BOTTOM""parameters": [
+   {
+"parameter name": "结果视图",
+"comment": "  如果本方法成功返回真,则其中将填入为调用\"MDI主窗口.创建MDI主窗口\"\n方法时\"视图窗口类\"参数所提供数据类型的对象实例,此时可以通过调用\n\"本参数.对象 (具体MDI视图类)\"来获得对应的MDI视图类对象.",
+"data type": "对象包装类"
+   }
+stant name": "右边""initial value": "@CBRS_BOTTOM"]
+  },
+  {
+@可扩展": "\"d_text = \\\".pdata (), \\\"\"""method name": "取活动文档",
+@可扩展": "\"d_text = \\\".pdata (), \\\"\"""comment": "获取当前活动文档对象",
+@可扩展": "\"d_text = \\\".pdata (), \\\"\"""data type": "逻辑型",
+@可扩展": "\"d_text = \\\".pdata (), \\\"\"""@禁止流程检查": "真",
+@可扩展": "\"d_text = \\\".pdata (), \\\"\"""parameters": [
+   {
+"parameter name": "结果文档",
+"comment": "  如果本方法成功返回真,则其中将填入为调用\"MDI主窗口.创建MDI主窗口\"\n方法时\"文档类\"参数所提供数据类型的对象实例,此时可以通过调用\n\"本参数.对象 (具体MDI文档类)\"来获得对应的MDI文档类对象.",
+"data type": "对象包装类"
+   }
+@可扩展": "\"d_text = \\\".pdata (), \\\"\""]
+  }
+]
+ },
+ {
+"class name": "MDI工具按钮类",
+"variables": [
+  {
+"variable name": "按钮ID",
+"comment": "提供按钮所对应的命令ID值,为0表示为分隔线. 必须大于等于0.\n注意: 本命令ID值最好等同于主窗口菜单的菜单项ID值,这样做有以下好处:\n  1. 两者共用同一段处理及状态更新程序;\n  2. 两者共用同一个位图及提示文本.",
+"data type": "整数"
+  },
+  {
+
+"variable name": "图片索引",
+
+"comment": "图片索引用于指定图片组属性中的某张图片,该图片将被显示在按钮表面. 索引值从0开始.",
+
+"data type": "整数"
+  },
+  {
+扩展": "\"d_text = \\\".pdata (), \\\"\""]"variable name": "按钮标题",
+扩展": "\"d_text = \\\".pdata (), \\\"\""]"comment": "提供按钮的标题文本",
+扩展": "\"d_text = \\\".pdata (), \\\"\""]"data type": "文本型"
+  }
+]
+ },
+ {
+"class name": "MDI工具按钮数组类",
+"comment": "用作记录一系列的工具条按钮信息",
+"base class": "对象数组模板类",
+"@模板实现类": "\"MDI工具按钮类\"",
+"methods": [
+  {
+"method name": "加入按钮",
+"comment": "加入一个按钮信息到本数组内",
+"static": true,
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"data type": "MDI工具按钮数组类"
+   },
+   {
+"parameter name": "按钮ID",
+"comment": "提供按钮所对应的命令ID值,为0表示为分隔线. 必须大于等于0.\n注意: 本命令ID值最好等同于主窗口菜单的菜单项ID值,这样做有以下好处:\n  1. 两者共用同一段处理及状态更新程序;\n  2. 两者共用同一个位图及提示文本.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片索引",
+"comment": "图片索引用于指定图片组属性中的某张图片,该图片将被显示在按钮表面. 索引值从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "按钮标题",
+"comment": "提供按钮的标题文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "加入分隔条",
+data type": "文本型""comment": "加入一个分隔条信息到本数组内",
+data type": "文本型""static": true,
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"data type": "MDI工具按钮数组类"
+   }
+data type": "文本型"]
+  }
+]
+ },
+ {
+"class name": "MDI工具条",
+"base class": "窗口组件",
+"@视窗.后缀文本": "\"public IBaseEventListener\"",
+"methods": [
+  {
+ }"method name": "图片组",
+ }"comment": "本属性为工具条各按钮提供标志图片",
+ }"type": "property setter",
+ }"@视窗.设置时机": "组件创建前",
+ }"parameters": [
+   {
+"parameter name": "所欲设置的图片组",
+"comment": "  对图片组图片格式的要求请参见\"图片组资源\"类中的说明.\n  注意: 所有MDI工具条中所使用图片组图片的高度必须一致,\n否则将导致后创建的工具条失败.",
+"data type": "BMP位图资源"
+   }
+ }]
+  },
+  {
+data type": "BMP位图资源""method name": "是否可视",
+data type": "BMP位图资源""comment": "返回本工具条当前是否可视.\n注意: 判断本工具条是否可视不能使用基础类中的\"可视\"属性,必须使用本属性.",
+data type": "BMP位图资源""type": "property getter",
+data type": "BMP位图资源""data type": "逻辑型",
+data type": "BMP位图资源""@禁止流程检查": "真"
+  },
+  {
+工具条各按钮提供标志图片"method name": "是否可视",
+工具条各按钮提供标志图片"comment": "设置本工具条当前是否可视.\n注意: 设置本工具条是否可视不能使用基础类中的\"可视\"属性,必须使用本属性.",
+工具条各按钮提供标志图片"type": "property setter",
+工具条各按钮提供标志图片"@视窗.设置时机": "组件创建前后",
+工具条各按钮提供标志图片"parameters": [
+   {
+"parameter name": "是否可视",
+"comment": "指定本组件是否可视",
+"data type": "逻辑型"
+   }
+工具条各按钮提供标志图片]
+  },
+  {
+
+"method name": "创建",
+
+"comment": "根据所设计的内容创建工具条,返回是否创建成功.\n注意: 只能使用本方法而不能使用基础类中的\"创建组件\"方法来创建本工具条.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "标题",
+"comment": "提供工具条标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "父窗口",
+"comment": "提供所处的父窗口",
+"data type": "MDI主窗口"
+   },
+   {
+"parameter name": "工具按钮",
+"comment": "提供所欲同时加入的所有工具条按钮,为空对象表示无.",
+"data type": "MDI工具按钮数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "右侧工具条",
+"comment": "提供所欲停靠到其左侧的工具条,必须已经创建. 如果为空对象表示无.",
+"data type": "MDI工具条",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "停靠位置",
+"comment": "提供本工具条初始停靠在父窗口中的哪一侧",
+"data type": "组件停靠位置",
+"@默认值": "组件停靠位置.顶边"
+   },
+   {
+"parameter name": "允许停靠位置",
+"comment": "提供本工具条被允许停靠在父窗口中的哪一侧,被禁止停靠的一侧将不能被用户拖拉过去.\n为\"组件允许停靠位置\"类中各个常量值或其之和.",
+"data type": "整数",
+"@默认值": "组件允许停靠位置.任意边"
+   },
+   {
+"parameter name": "是否有调节器",
+"comment": "提供是否在本工具条上添加用作用户拖拽工具条位置时使用的调节器",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+@默认值": "组件停靠位置.顶边""method name": "插入按钮",
+@默认值": "组件停靠位置.顶边""comment": "插入一批按钮到工具条中",
+@默认值": "组件停靠位置.顶边""parameters": [
+   {
+"parameter name": "按钮数组",
+"data type": "MDI工具按钮数组类"
+   },
+   {
+"parameter name": "插入位置",
+"comment": "指定新按钮插入的位置索引(从0开始). 如果提供-1,则插入到工具条的尾部.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "组件停靠位置.顶边"]
+  },
+  {
+@默认值": "-1""method name": "插入单个按钮",
+@默认值": "-1""comment": "将指定按钮插入到工具条中,成功返回插入后该按钮所处的索引位置,失败返回-1.\n",
+@默认值": "-1""data type": "整数",
+@默认值": "-1""@嵌入式方法": "\"\"",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "按钮ID",
+"comment": "提供按钮所对应的命令ID值,为0表示为分隔线. 必须大于等于0.\n注意: 本命令ID值最好等同于主窗口菜单的菜单项ID值,这样做有以下好处:\n  1. 两者共用同一段处理及状态更新程序;\n  2. 两者共用同一个位图及提示文本.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片索引",
+"comment": "图片索引用于指定图片组属性中的某张图片,该图片将被显示在按钮表面. 索引值从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "按钮标题",
+"comment": "提供按钮的标题文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "插入位置",
+"comment": "指定新按钮插入的位置索引(从0开始). 如果提供-1,则插入到工具条的尾部.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "-1"]
+  },
+  {
+ }"method name": "插入分隔条",
+ }"comment": "将一个分隔条插入到工具条中,成功返回插入后该分隔条所处的索引位置,失败返回-1.\n",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "插入位置",
+"comment": "指定分隔条插入的位置索引(从0开始). 如果提供-1,则插入到工具条的尾部.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+
+"method name": "删除按钮",
+
+"comment": "删除所指定ID的按钮,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "按钮ID",
+"comment": "提供按钮所对应的命令ID值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"data type": "整数""method name": "删除所有按钮"
+  },
+  {
+
+"parameters": [
+"method name": "取按钮数",
+
+"parameters": [
+"comment": "返回工具条中按钮的总共数目",
+
+"parameters": [
+"data type": "整数",
+
+"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取按钮ID",
+
+"comment": "返回工具条中所指定索引位置处按钮的ID值",
+
+"result comment": "成功返回大于等于0的值(等于0表示为分隔线),失败返回-1.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "按钮索引位置",
+"comment": "必须大于等于0且小于当前按钮总数",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "MDI文档类",
+"comment": "  本类用作与数据类型为\"MDI视图类\"的对象挂接后为其提供显示/处理内容.\n  请注意: 本类对象不支持直接赋值后使用,类库中MDI框架凡是涉及到返回\n本类对象实例的接口,均使用\"对象包装类\"进行了包装,可以通过赋值该包装\n类实例对象来达到传递本类对象的目的.",
+"@视窗.后缀文本": "\"public IVolUserDocument\"",
+"methods": [
+  {
+@视窗.后缀文本": "\"public IVolUserDocument\"""method name": "接收到命令",
+@视窗.后缀文本": "\"public IVolUserDocument\"""comment": "  当MDI主窗口上的菜单项(包括弹出子菜单)/工具条按钮被单击或者对应快捷键被按下时,如果在主窗口\n及当前视图窗口中没有被处理(其\"接收到命令\"事件处理程序返回0),则将发送到当前活动文档对象处理.",
+@视窗.后缀文本": "\"public IVolUserDocument\"""result comment": "所通知的对应命令被处理返回1,否则返回0.",
+@视窗.后缀文本": "\"public IVolUserDocument\"""type": "event",
+@视窗.后缀文本": "\"public IVolUserDocument\"""data type": "整数",
+@视窗.后缀文本": "\"public IVolUserDocument\"""parameters": [
+   {
+"parameter name": "命令代码",
+"comment": "  提供所对应命令的ID值,对于菜单项或其快捷键来说,就是对应菜单项设计时提供的引用常量ID值,\n对于工具条来说,就是对应按钮设计时提供的引用常量ID值.",
+"data type": "整数"
+   }
+@视窗.后缀文本": "\"public IVolUserDocument\""]
+  },
+  {
+
+"method name": "更新命令状态",
+
+"comment": "  当MDI主窗口上的菜单项(包括弹出子菜单)/工具条按钮需要更新状态时,如果在主窗口及当前视图\n窗口中没有被处理(其\"更新命令状态\"事件处理程序返回0),则将发送到当前活动文档对象处理.",
+
+"result comment": "所通知的对应命令被处理返回1,否则返回0.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "命令代码",
+"comment": "  提供所对应命令的ID值,对于菜单项或其快捷键来说,就是对应菜单项设计时提供的引用常量ID值,\n对于工具条来说,就是对应按钮设计时提供的引用常量ID值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "命令状态",
+"comment": "通过设置本参数中的相应属性来改变当前命令的状态",
+"data type": "命令状态类"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "是否保存文档",
+"parameters": [
+"comment": "当本文档内容被修改后(\"被修改\"属性返回真),在关闭本文档前会发送此事件.",
+"parameters": [
+"result comment": "返回值意义:\n  0: 通知未处理本事件,后续将进行默认处理(询问用户是否保存文档并根据回答进行保存处理);\n  1: 通知已处理本事件,后续将保存文档,如果保存成功,则允许文档被关闭;\n  2: 通知已处理本事件,后续不保存文档,允许文档被关闭;\n  3: 通知已处理本事件,后续不保存文档,不允许文档被关闭.",
+"parameters": [
+"type": "event",
+"parameters": [
+"data type": "整数"
+  },
+  {
+parameters": [
+"comment": "当本文档内容被修改后(\"被修改\"属性返回真),在关闭本文档前会发送此事件.""method name": "将新建文档",
+parameters": [
+"comment": "当本文档内容被修改后(\"被修改\"属性返回真),在关闭本文档前会发送此事件.""comment": "当新建本文档的内容时,本事件被发送.",
+parameters": [
+"comment": "当本文档内容被修改后(\"被修改\"属性返回真),在关闭本文档前会发送此事件.""result comment": "返回1表示新建成功,返回0表示新建失败.",
+parameters": [
+"comment": "当本文档内容被修改后(\"被修改\"属性返回真),在关闭本文档前会发送此事件.""type": "event",
+parameters": [
+"comment": "当本文档内容被修改后(\"被修改\"属性返回真),在关闭本文档前会发送此事件.""data type": "整数"
+  },
+  {
+
+"method name": "将打开文档",
+
+"comment": "当打开指定文件来填写本文档的内容时,本事件被发送.",
+
+"result comment": "返回1表示打开成功,返回0表示打开失败.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "文档文件名",
+"comment": "提供所欲打开文档文件的名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "将保存文档",
+
+"comment": "当需要将本文档的内容保存到所指定文件时,本事件被发送.",
+
+"result comment": "返回1表示保存成功,返回0表示保存失败.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "文档文件名",
+"comment": "提供所欲保存到文档文件的名称,必定不为空文本.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "将关闭文档",
+
+"comment": "在本文档被关闭前,本事件被发送.\n用户可以在接收到本事件后进行相关清理操作.",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+"data type": "整数""method name": "空闲处理",
+"data type": "整数""comment": "如果本文档为当前活动文档且程序进入了空闲状态,则本事件会发送.\n用户可以在接收到此事件后进行一些耗时不长的处理操作.",
+"data type": "整数""type": "event",
+"data type": "整数""data type": "整数"
+  },
+  {
+"parameters": [
+"method name": "自定义值",
+"parameters": [
+"comment": "  返回在调用\"MDI主窗口.创建新文档\"方法新建或调用\"MDI主窗口.打开文档\"\n方法打开本文档时所提供的自定义值.",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "变整数",
+"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+"type": "event""method name": "被修改",
+"type": "event""comment": "返回本文档是否已经设置为被修改状态",
+"type": "event""type": "property getter",
+"type": "event""data type": "逻辑型",
+"type": "event""@禁止流程检查": "真"
+  },
+  {
+type": "event""data type": "逻辑型""method name": "被修改",
+type": "event""data type": "逻辑型""comment": "设置本文档是否处于被修改状态",
+type": "event""data type": "逻辑型""type": "property setter",
+type": "event""data type": "逻辑型""parameters": [
+   {
+"parameter name": "是否已被修改",
+"data type": "逻辑型"
+   }
+type": "event""data type": "逻辑型"]
+  },
+  {
+data type": "文本型""method name": "文件名",
+data type": "文本型""comment": "返回本文档所对应的文档文件名,为空表示无(譬如为新建文档).",
+data type": "文本型""type": "property getter",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "文件名",
+
+"comment": "设置本文档所对应的文档文件名,为空表示无.\n设置文档文件名后,\"标题\"属性会被自动据此进行修改.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置文件名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+": "event""data type": "逻辑型""method name": "被修改""method name": "标题",
+": "event""data type": "逻辑型""method name": "被修改""comment": "返回所设置的文档标题",
+": "event""data type": "逻辑型""method name": "被修改""type": "property getter",
+": "event""data type": "逻辑型""method name": "被修改""data type": "文本型",
+": "event""data type": "逻辑型""method name": "被修改""@禁止流程检查": "真"
+  },
+  {
+: "event""data type": "逻辑型""method name": "被修改""@禁止流程检查": "真""method name": "标题",
+: "event""data type": "逻辑型""method name": "被修改""@禁止流程检查": "真""comment": "设置本文档所对应的标题",
+: "event""data type": "逻辑型""method name": "被修改""@禁止流程检查": "真""type": "property setter",
+: "event""data type": "逻辑型""method name": "被修改""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "所欲设置的标题",
+"data type": "文本型"
+   }
+: "event""data type": "逻辑型""method name": "被修改""@禁止流程检查": "真"]
+  },
+  {
+ "event""data type": "逻辑型""method name": "被修改""@禁止流程检查": "真""comment": "设置本文档所对应的标题""method name": "更新视图",
+ "event""data type": "逻辑型""method name": "被修改""@禁止流程检查": "真""comment": "设置本文档所对应的标题""comment": "  当本文档的内容被修改后,需要调用本方法以更新本文档对应的视图.\n  本方法被调用后,所对应的视图对象将接收到\"被更新\"事件,用户程序需要\n在接收到该事件时更新视图的内部/呈现状态,以同步到此被修改的内容."
+  },
+  {
+ }"method name": "取视图",
+ }"comment": "获取本文档所对应的视图对象",
+ }"result comment": "返回真表示获取成功,返回假表示本文档尚未挂接到视图.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "结果视图",
+"comment": "  如果本方法成功返回真,则其中将填入为调用\"MDI主窗口.创建MDI主窗口\"\n方法时\"视图窗口类\"参数所提供数据类型的对象实例,此时可以通过调用\n\"本参数.对象 (具体MDI视图类)\"来获得对应的MDI视图类对象.",
+"data type": "对象包装类"
+   }
+ }]
+  },
+  {
+comment": "通过设置本参数中的相应属性来改变当前命令的状态""method name": "清空文件名",
+comment": "通过设置本参数中的相应属性来改变当前命令的状态""comment": "  当希望在下一次保存文档文件时强制用户重新输入欲保存到的文件名(即改变\n保存操作为另存为操作),可以调用本方法清空文档文件名以实现此目的."
+  },
+  {
+ameter name": "结果视图""method name": "关闭",
+ameter name": "结果视图""comment": "  关闭本文档. 本方法被调用后如果用户确认进行关闭操作,\n会发送\"将关闭文档\"事件.",
+ameter name": "结果视图""parameters": [
+   {
+"parameter name": "是否询问保存",
+"comment": "  如果本参数值为真且本文档当前处于被修改状态(\"被修改\"\n属性为真),则将询问用户是否保存.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "结果视图"]
+  },
+  {
+
+"method name": "保存",
+
+"comment": "保存本文档到\"文件名\"属性所指定的文件名.\n本方法被调用后如果用户确认进行保存操作,会发送\"将保存文档\"事件.",
+
+"result comment": "保存成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+"result comment": "保存成功返回真,否则返回假.""method name": "保存到",
+"result comment": "保存成功返回真,否则返回假.""comment": "保存本文档到所指定文件名.\n本方法被调用后如果用户确认进行保存操作,会发送\"将保存文档\"事件.",
+"result comment": "保存成功返回真,否则返回假.""result comment": "保存成功返回真,否则返回假.",
+"result comment": "保存成功返回真,否则返回假.""data type": "逻辑型",
+"result comment": "保存成功返回真,否则返回假.""@禁止流程检查": "真",
+"result comment": "保存成功返回真,否则返回假.""parameters": [
+   {
+"parameter name": "所欲保存到的文件名",
+"comment": "  提供所欲保存到的文件名,如果为空文本,将显示\"另存为\"对话框来获取用户动\n态输入的文件名.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否替换当前文件名",
+"comment": "  如果本参数值为真,则保存完毕后,将使用所保存到的文件名替换当前文件名\n(用作实现\"另存为\"功能),为假则不进行替换(用作实现\"复制到\"功能).",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"result comment": "保存成功返回真,否则返回假."]
+  },
+  {
+ameter name": "所欲保存到的文件名""method name": "另存为",
+ameter name": "所欲保存到的文件名""comment": "显示对话框询问用户输入一个文件名,然后将当前文档另存为该文件.\n本方法被调用后如果用户确认进行保存操作,会发送\"将保存文档\"事件.",
+ameter name": "所欲保存到的文件名""result comment": "保存成功返回真,否则返回假.",
+ameter name": "所欲保存到的文件名""data type": "逻辑型"
+  },
+  {
+"method name": "激活",
+"comment": "将当前视图切换到本文档所对应的视图",
+"parameters": [
+   {
+"parameter name": "切换输入焦点",
+"comment": "是否同时将键盘输入焦点切换到本文档所对应的视图山",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "MDI视图类",
+"comment": "  本类用作与数据类型为\"MDI文档类\"的文档对象挂接后显示其中的内容.\n  请注意: 本类对象不支持直接赋值后使用,类库中MDI框架凡是涉及到返回\n本类对象实例的接口,均使用\"对象包装类\"进行了包装,可以通过赋值该包装\n类实例对象来达到传递本类对象的目的.",
+"base class": "组件布局器",
+"@视窗.后缀文本": "\"public IVolUserDocView\"",
+"methods": [
+  {
+}"method name": "接收到命令",
+}"comment": "  当MDI主窗口上的菜单项(包括弹出子菜单)/工具条按钮被单击或者对应快捷键被按下时,如果在主窗口\n中没有被处理(其\"接收到命令\"事件处理程序返回0),则将发送到当前活动视图对象处理.",
+}"result comment": "所通知的对应命令被处理返回1,否则返回0.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "命令代码",
+"comment": "  提供所对应命令的ID值,对于菜单项或其快捷键来说,就是对应菜单项设计时提供的引用常量ID值,\n对于工具条来说,就是对应按钮设计时提供的引用常量ID值.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "更新命令状态",
+data type": "整数""comment": "  当MDI主窗口上的菜单项(包括弹出子菜单)/工具条按钮需要更新状态时,如果在主窗口中没有\n被处理(其\"更新命令状态\"事件处理程序返回0),则将发送到当前活动视图对象处理.",
+data type": "整数""result comment": "所通知的对应命令被处理返回1,否则返回0.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "命令代码",
+"comment": "  提供所对应命令的ID值,对于菜单项或其快捷键来说,就是对应菜单项设计时提供的引用常量ID值,\n对于工具条来说,就是对应按钮设计时提供的引用常量ID值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "命令状态",
+"comment": "通过设置本参数中的相应属性来改变当前命令的状态",
+"data type": "命令状态类"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "初始化",
+}"comment": "  当本视图对象首次挂接到对应MDI文档对象上时,发送本事件,\n在本事件后会紧接着发送\"被更新\"事件.\n  用户可以在接收到本事件后进行一些初始化操作.",
+}"type": "event",
+}"data type": "整数"
+  },
+  {
+
+"method name": "被更新",
+
+"comment": "  当本视图对象首次挂接到对应MDI文档对象上及用户程序调用所\n挂接到的MDI文档类的\"更新视图\"方法时,本事件被发送.\n  用户程序在接收到本事件后,需要更新本对象的内部/呈现状态\n以同步到所挂接文档的当前内容.",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "被激活",
+
+"comment": "当本视图的激活状态被改变后,本事件被发送.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "是否激活",
+"comment": "为真表示被激活,为假表示失去激活.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "取文档",
+
+"comment": "获取本视图所挂接到的文档对象",
+
+"result comment": "返回真表示获取成功,返回假表示本视图尚未挂接到文档.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "结果文档",
+"comment": "  如果本方法成功返回真,则其中将填入为调用\"MDI主窗口.创建MDI主窗口\"\n方法时\"文档类\"参数所提供数据类型的对象实例,此时可以通过调用\n\"本参数.对象 (具体MDI文档类)\"来获得对应的MDI文档类对象.",
+"data type": "对象包装类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "窗口皮肤类型",
+"comment": "提供MDI主窗口的各种皮肤类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+"constant name": "黑色",
+"initial value": "@CVWnd_WinMdiForm::MFST_BLACK"
+  },
+  {
+
+"constant name": "灰色",
+
+"initial value": "@CVWnd_WinMdiForm::MFST_GRAY"
+  },
+  {
+constants": [
+"constant name": "浅灰",
+constants": [
+"initial value": "@CVWnd_WinMdiForm::MFST_LIGHT_GRAY"
+  },
+  {
+onstants": [
+"initial value": "@CVWnd_WinMdiForm::MFST_LIGHT_GRAY""constant name": "深灰",
+onstants": [
+"initial value": "@CVWnd_WinMdiForm::MFST_LIGHT_GRAY""initial value": "@CVWnd_WinMdiForm::MFST_DRAK_GRAY"
+  },
+  {
+onstants": [
+"initial value": "@CVWnd_WinMdiForm::MFST_LIGHT_GRAY""constant name": "蓝灰",
+onstants": [
+"initial value": "@CVWnd_WinMdiForm::MFST_LIGHT_GRAY""initial value": "@CVWnd_WinMdiForm::MFST_BLUE_GRAY"
+  },
+  {
+onstants": [
+"initial value": "@CVWnd_WinMdiForm::MFST_LIGHT_GRAY""constant name": "淡蓝",
+onstants": [
+"initial value": "@CVWnd_WinMdiForm::MFST_LIGHT_GRAY""initial value": "@CVWnd_WinMdiForm::MFST_POOL_BLUE"
+  },
+  {
+}"constant name": "浅蓝",
+}"initial value": "@CVWnd_WinMdiForm::MFST_LIGHT_BLUE"
+  },
+  {
+}"constant name": "银色",
+}"initial value": "@CVWnd_WinMdiForm::MFST_SILVER"
+  },
+  {
+"constant name": "水绿",
+"initial value": "@CVWnd_WinMdiForm::MFST_WATER_GREEN"
+  },
+  {
+"constant name": "经典XP",
+"initial value": "@CVWnd_WinMdiForm::MFST_WIN_XP"
+  },
+  {
+
+"constant name": "经典Win7",
+
+"initial value": "@CVWnd_WinMdiForm::MFST_WIN7"
+  },
+  {
+
+"constant name": "无",
+
+"initial value": "@CVWnd_WinMdiForm::MFST_NONE"
+  }
+]
+ },
+ {
+"class name": "文档选择夹类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+"parameters": [
+"constant name": "默认",
+"parameters": [
+"initial value": "@CVWnd_WinMdiForm::DTS_DEFAULT"
+  },
+  {
+thod name": "取文档""constant name": "三维",
+thod name": "取文档""initial value": "@CVWnd_WinMdiForm::DTS_3D"
+  },
+  {
+}"constant name": "平面",
+}"initial value": "@CVWnd_WinMdiForm::DTS_FLAT"
+  },
+  {
+
+"constant name": "平面水平滚动",
+
+"initial value": "@CVWnd_WinMdiForm::DTS_FLAT_SHARED_HORZ_SCROLL"
+  },
+  {
+}"constant name": "三维滚动",
+}"initial value": "@CVWnd_WinMdiForm::DTS_3D_SCROLLED"
+  },
+  {
+ameters": [
+"constant name": "默认""constant name": "三维ONENOTE",
+ameters": [
+"constant name": "默认""initial value": "@CVWnd_WinMdiForm::DTS_3D_ONENOTE"
+  },
+  {
+"constant name": "三维VS2005",
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_VS2005"
+  },
+  {
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_SCROLLED""constant name": "三维圆角",
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_SCROLLED""initial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED"
+  },
+  {
+stant name": "三维VS2005""constant name": "三维圆角滚动",
+stant name": "三维VS2005""initial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL"
+  },
+  {
+nstant name": "平面水平滚动""constant name": "三维及自动颜色",
+nstant name": "平面水平滚动""initial value": "@CVWnd_WinMdiForm::DTS_3D_WITH_AUTO_COLOR"
+  },
+  {
+
+"constant name": "平面自动配色",
+
+"initial value": "@CVWnd_WinMdiForm::DTS_FLAT_WITH_AUTO_COLOR"
+  },
+  {
+}"constant name": "平面水平滚动自动配色",
+}"initial value": "@CVWnd_WinMdiForm::DTS_FLAT_SHARED_HORZ_SCROLL_WITH_AUTO_COLOR"
+  },
+  {
+
+"constant name": "三维滚动自动配色",
+
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_SCROLLED_WITH_AUTO_COLOR"
+  },
+  {
+
+"constant name": "三维ONENOTE自动配色",
+
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_ONENOTE_WITH_AUTO_COLOR"
+  },
+  {
+
+"constant name": "三维VS2005自动配色",
+
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_VS2005_WITH_AUTO_COLOR"
+  },
+  {
+}"constant name": "三维圆角自动配色",
+}"initial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_WITH_AUTO_COLOR"
+  },
+  {
+
+"constant name": "三维圆角滚动自动配色",
+
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL_WITH_AUTO_COLOR"
+  }
+]
+ },
+ {
+"class name": "MDI主窗口",
+"comment": "多文档应用程序窗口的基础类",
+"base class": "窗口组件",
+"@视窗.后缀文本": "\"public IWinMdiFormEventListener\"",
+"methods": [
+  {
+nstant name": "三维VS2005自动配色""method name": "创建完毕",
+nstant name": "三维VS2005自动配色""comment": "当本窗口创建完毕且对MDI信息初始化完毕后发送此事件",
+nstant name": "三维VS2005自动配色""type": "event",
+nstant name": "三维VS2005自动配色""data type": "整数"
+  },
+  {
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL_WITH_AUTO_COLOR""method name": "将被销毁",
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL_WITH_AUTO_COLOR""comment": "当本窗口被销毁前发送此事件",
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL_WITH_AUTO_COLOR""type": "event",
+"initial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL_WITH_AUTO_COLOR""data type": "整数"
+  },
+  {
+
+"method name": "位置被改变",
+
+"comment": "当本窗口的位置被改变后发送此事件",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "尺寸被改变",
+
+"comment": "当本窗口的尺寸被改变后发送此事件",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+stant name": "三维VS2005自动配色""comment": "当本窗口创建完毕且对MDI信息初始化完毕后发送此事件""method name": "被显示",
+stant name": "三维VS2005自动配色""comment": "当本窗口创建完毕且对MDI信息初始化完毕后发送此事件""comment": "当本窗口被显示后发送此事件",
+stant name": "三维VS2005自动配色""comment": "当本窗口创建完毕且对MDI信息初始化完毕后发送此事件""type": "event",
+stant name": "三维VS2005自动配色""comment": "当本窗口创建完毕且对MDI信息初始化完毕后发送此事件""data type": "整数"
+  },
+  {
+
+"method name": "被隐藏",
+
+"comment": "当本窗口被隐藏后发送此事件",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+thod name": "被隐藏""method name": "接收到命令",
+thod name": "被隐藏""comment": "当本窗口上的菜单项(包括弹出子菜单)/工具条按钮被单击或者对应快捷键被按下时,发送此事件.",
+thod name": "被隐藏""result comment": "所通知的对应命令被处理返回1,否则返回0.",
+thod name": "被隐藏""type": "event",
+thod name": "被隐藏""data type": "整数",
+thod name": "被隐藏""parameters": [
+   {
+"parameter name": "命令代码",
+"comment": "  提供所对应命令的ID值,对于菜单项或其快捷键来说,就是对应菜单项设计时提供的引用常量ID值,\n对于工具条来说,就是对应按钮设计时提供的引用常量ID值.",
+"data type": "整数"
+   }
+thod name": "被隐藏"]
+  },
+  {
+ameter name": "命令代码""method name": "更新命令状态",
+ameter name": "命令代码""comment": "当本窗口上的菜单项(包括弹出子菜单)/工具条按钮需要更新状态时,发送此事件.",
+ameter name": "命令代码""result comment": "所通知的对应命令被处理返回1,否则返回0.",
+ameter name": "命令代码""type": "event",
+ameter name": "命令代码""data type": "整数",
+ameter name": "命令代码""parameters": [
+   {
+"parameter name": "命令代码",
+"comment": "  提供所对应命令的ID值,对于菜单项或其快捷键来说,就是对应菜单项设计时提供的引用常量ID值,\n对于工具条来说,就是对应按钮设计时提供的引用常量ID值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "命令状态",
+"comment": "通过设置本参数中的相应属性来改变当前命令的状态",
+"data type": "命令状态类"
+   }
+ameter name": "命令代码"]
+  },
+  {
+stant name": "三维VS2005自动配色""data type": "整数""method name": "可否被关闭",
+stant name": "三维VS2005自动配色""data type": "整数""comment": "在本窗口及计算机被关闭之前发送此事件,用于询问该关闭操作是否允许被继续.\n本事件包括了\"窗口可否被关闭\"通知,但是相对其多了在计算机被关闭之前的通知.",
+stant name": "三维VS2005自动配色""data type": "整数""result comment": "返回1不允许关闭,返回0允许关闭.",
+stant name": "三维VS2005自动配色""data type": "整数""type": "event",
+stant name": "三维VS2005自动配色""data type": "整数""data type": "整数"
+  },
+  {
+stant name": "三维VS2005自动配色""data type": "整数""method name": "窗口可否被关闭",
+stant name": "三维VS2005自动配色""data type": "整数""comment": "在本窗口被关闭之前发送此事件,用于询问该关闭操作是否允许被继续.\n本事件不包括在计算机被关闭之前的通知.",
+stant name": "三维VS2005自动配色""data type": "整数""result comment": "返回1不允许关闭,返回0允许关闭.",
+stant name": "三维VS2005自动配色""data type": "整数""type": "event",
+stant name": "三维VS2005自动配色""data type": "整数""data type": "整数"
+  },
+  {
+
+"method name": "首次激活",
+
+"comment": "当窗口创建完毕后被首次激活显示时发送此事件",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+tial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL_WITH_AUTO_COLOR""method name": "将被销毁""method name": "被激活",
+tial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL_WITH_AUTO_COLOR""method name": "将被销毁""comment": "当窗口转换为激活状态时发送此事件",
+tial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL_WITH_AUTO_COLOR""method name": "将被销毁""type": "event",
+tial value": "@CVWnd_WinMdiForm::DTS_3D_ROUNDED_SCROLL_WITH_AUTO_COLOR""method name": "将被销毁""data type": "整数"
+  },
+  {
+}"method name": "被取消激活",
+}"comment": "当窗口转换为非激活状态时发送此事件",
+}"type": "event",
+}"data type": "整数"
+  },
+  {
+
+"method name": "托盘事件",
+
+"comment": "当用户用鼠标单击或双击本窗口对象的\"置托盘图标\"方法所设置的图标后即发送此事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "操作类型",
+"comment": "提供用户的具体操作类型,可能为的值为: 1.单击左键; 2.双击左键; 3.单击右键",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "位置限制",
+}"comment": "用户可以在处理本事件时修改所提供的参数信息,以限定本窗口的对应尺寸或位置.",
+}"result comment": "返回1表示已经处理,返回0表示未处理.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "位置限制信息",
+"comment": "用户可以在处理本事件时修改本参数的内容,以指定其中的某些位置限制参数.",
+"data type": "窗口位置限制信息"
+   }
+}]
+  },
+  {
+
+"method name": "右键单击活动文档夹",
+
+"comment": "当用户使用鼠标右键单击活动文档夹的夹头时发送本事件",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+}"method name": "获取窗口标题",
+}"comment": "当MDI主窗口需要检查更新其标题文本时,本事件被发送.",
+}"result comment": "获取成功返回1,未处理或未获取到返回0,此时将使用默认标题.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "标题文本",
+"comment": "用户在处理本事件时需要将所构造的标题文本置入本参数中",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "空闲处理",
+data type": "整数""comment": "  当用户程序处于空闲状态时,本事件被发送,可以在接收到本事件后\n进行一些譬如检查更新程序界面状态的短暂耗时工作.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数"
+  },
+  {
+ata type": "整数""type": "event""method name": "活动文档被改变",
+ata type": "整数""type": "event""comment": "在当前活动文档被改变后,本事件被发送.",
+ata type": "整数""type": "event""type": "event",
+ata type": "整数""type": "event""data type": "整数"
+  },
+  {
+ameter name": "操作类型""method name": "取状态栏文本",
+ameter name": "操作类型""comment": "  当使用\"创建状态条\"为本窗口创建了状态条后,用户程序在空闲时将接收到本\n事件,用作为除开固定的首信息输出栏外的其它所有栏提供内容文本.",
+ameter name": "操作类型""result comment": "返回1表示在\"状态栏内容\"参数中提供了有效状态内容文本,返回0表示没有提供.",
+ameter name": "操作类型""type": "event",
+ameter name": "操作类型""data type": "整数",
+ameter name": "操作类型""parameters": [
+   {
+"parameter name": "状态栏索引位置",
+"comment": "  提供所欲获取状态栏在状态条中的索引位置(不包括固定的首信息输出栏),从0\n到调用本类\"创建状态条\"方法所提供的\"栏目宽度\"参数数目-1.",
+"data type": "整数"
+   },
+   {
+"parameter name": "状态栏内容",
+"comment": "提供所欲设置的状态栏文本,初始为空文本.",
+"data type": "文本型"
+   }
+ameter name": "操作类型"]
+  },
+  {
+
+"method name": "消息过滤",
+
+"comment": "用户的窗口类可以覆盖此方法以过滤处理本窗口及其所有子组件中的消息",
+
+"result comment": "返回真表示允许消息继续向后传递并处理,返回假表示取消掉该消息的后续处理.",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供消息所对应的窗口句柄(HWND),必定为本窗口或其直接/间接下属子窗口.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息值",
+"comment": "提供消息的具体值",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息参数1",
+"comment": "提供消息所附带的参数1的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息参数2",
+"comment": "提供消息所附带的参数2的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息地址",
+"comment": "提供消息的具体 MSG* 地址指针,用作备用.",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ameter name": "消息值""method name": "皮肤类型",
+ameter name": "消息值""comment": "返回窗口当前所设置的皮肤类型",
+ameter name": "消息值""type": "property getter",
+ameter name": "消息值""data type": "窗口皮肤类型",
+ameter name": "消息值""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "消息值""type": "property getter""method name": "皮肤类型",
+meter name": "消息值""type": "property getter""comment": "设置窗口的皮肤类型",
+meter name": "消息值""type": "property getter""type": "property setter",
+meter name": "消息值""type": "property getter""@视窗.设置时机": "组件创建前后",
+meter name": "消息值""type": "property getter""parameters": [
+   {
+"parameter name": "所欲设置的皮肤类型",
+"data type": "窗口皮肤类型"
+   }
+meter name": "消息值""type": "property getter"]
+  },
+  {
+}"method name": "选择夹类型",
+}"comment": "返回当前所设置的文档选择夹类型",
+}"type": "property getter",
+}"data type": "文档选择夹类型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+meter name": "消息值""type": "property getter""method name": "选择夹类型",
+meter name": "消息值""type": "property getter""comment": "设置文档选择夹类型",
+meter name": "消息值""type": "property getter""type": "property setter",
+meter name": "消息值""type": "property getter""@视窗.设置时机": "组件创建前后",
+meter name": "消息值""type": "property getter""parameters": [
+   {
+"parameter name": "所欲设置的类型",
+"data type": "文档选择夹类型"
+   }
+meter name": "消息值""type": "property getter"]
+  },
+  {
+}"method name": "位置",
+}"comment": "返回窗口当前在屏幕上的位置类型(实时判断)",
+}"type": "property getter",
+}"data type": "窗口位置类型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "位置",
+"@嵌入式方法": "\"\"""comment": "设置窗口在屏幕上的位置类型.\n本属性默认值为\"居中\".",
+"@嵌入式方法": "\"\"""type": "property setter",
+"@嵌入式方法": "\"\"""@视窗.设置时机": "组件创建前后",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲设置的位置类型",
+"data type": "窗口位置类型"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "图标",
+
+"comment": "设置显示在本窗口左上角的图标",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的图标",
+"comment": "  本参数提供具体所欲设置的图标,如果该资源值为\"空资源.空图标\"\n或载入失败,则将使用默认图标.",
+"data type": "图标资源"
+   }
+
+]
+  },
+  {
+
+"method name": "总在最前",
+
+"comment": "返回先前所设置的本窗口是否永远位于其它窗口的前面\n",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"type": "property setter""method name": "总在最前",
+"type": "property setter""comment": "设置本窗口是否永远位于其它窗口的前面.\n本属性默认值为假.",
+"type": "property setter""type": "property setter",
+"type": "property setter""@视窗.设置时机": "组件创建前后",
+"type": "property setter""parameters": [
+   {
+"parameter name": "是否总在最前",
+"data type": "逻辑型"
+   }
+"type": "property setter"]
+  },
+  {
+type": "property setter""type": "property setter""method name": "保持标题条激活",
+type": "property setter""type": "property setter""comment": "返回本窗口在非激活状态下其标题条是否仍然与激活状态时相同\n",
+type": "property setter""type": "property setter""type": "property getter",
+type": "property setter""type": "property setter""data type": "逻辑型",
+type": "property setter""type": "property setter""@嵌入式方法": "\"\""
+  },
+  {
+": "property setter""type": "property setter""method name": "保持标题条激活""method name": "保持标题条激活",
+": "property setter""type": "property setter""method name": "保持标题条激活""comment": "设置本窗口在非激活状态下其标题条是否仍然与激活状态时相同.\n本属性默认值为假.",
+": "property setter""type": "property setter""method name": "保持标题条激活""type": "property setter",
+": "property setter""type": "property setter""method name": "保持标题条激活""@视窗.设置时机": "组件创建前后",
+": "property setter""type": "property setter""method name": "保持标题条激活""parameters": [
+   {
+"parameter name": "是否保持激活",
+"data type": "逻辑型"
+   }
+": "property setter""type": "property setter""method name": "保持标题条激活"]
+  },
+  {
+}"method name": "窗口类名",
+}"comment": "返回先前所设置的本窗口Windows系统类名\n",
+}"type": "property getter",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+: "property setter""type": "property setter""method name": "保持标题条激活""comment": "设置本窗口在非激活状态下其标题条是否仍然与激活状态时相同.\n本属性默认值为假.""method name": "窗口类名",
+: "property setter""type": "property setter""method name": "保持标题条激活""comment": "设置本窗口在非激活状态下其标题条是否仍然与激活状态时相同.\n本属性默认值为假.""comment": "设置本窗口的Windows系统类名,该类将在创建本窗口时自动登记.",
+: "property setter""type": "property setter""method name": "保持标题条激活""comment": "设置本窗口在非激活状态下其标题条是否仍然与激活状态时相同.\n本属性默认值为假.""type": "property setter",
+: "property setter""type": "property setter""method name": "保持标题条激活""comment": "设置本窗口在非激活状态下其标题条是否仍然与激活状态时相同.\n本属性默认值为假.""@视窗.设置时机": "组件创建前",
+: "property setter""type": "property setter""method name": "保持标题条激活""comment": "设置本窗口在非激活状态下其标题条是否仍然与激活状态时相同.\n本属性默认值为假.""parameters": [
+   {
+"parameter name": "所欲设置的类名",
+"comment": "  提供本窗口所使用的Windows系统窗口类名,该名称的类将会在\n窗口创建时自动登记到Windows系统中.\n  为空文本表示使用默认窗口类名.",
+"data type": "文本型"
+   }
+: "property setter""type": "property setter""method name": "保持标题条激活""comment": "设置本窗口在非激活状态下其标题条是否仍然与激活状态时相同.\n本属性默认值为假."]
+  },
+  {
+"method name": "关闭窗口",
+"comment": "尝试关闭本窗口.\n注意:\n  1. 本方法被调用后窗口不会被立即关闭,而会延迟等待到下一次消息循环时才会关闭.\n  3. 如果用户程序处理了本窗口对象的\"可否被关闭\"/\"窗口可否被关闭\"事件并返回非零值,则此方法将关闭失败."
+  },
+  {
+}"method name": "置托盘图标",
+}"comment": "设置本窗口在系统托盘中的图标",
+}"parameters": [
+   {
+"parameter name": "所欲设置的图标",
+"comment": "  本参数提供具体所欲设置的图标,如果该资源值为\"空资源.空图标\",\n则将清除本窗口在系统托盘中已经设置的图标.",
+"data type": "图标资源"
+   },
+   {
+"parameter name": "提示信息",
+"comment": "本参数指定当鼠标移动到图标上后所显示的提示信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+data type": "图标资源""method name": "创建MDI主窗口",
+data type": "图标资源""comment": "创建本窗口类的对象并将其作为程序的主窗口.\n注意:\n  1. 程序中必须存在且只能存在一个主窗口,调用本方法后,主窗口将被设置为本窗口;\n  2. 主窗口必须在程序的\"启动类\"中存在成员变量定义,避免其在程序退出前被释放,\n否则将可能导致程序运行时崩溃.",
+data type": "图标资源""result comment": "返回是否成功",
+data type": "图标资源""data type": "逻辑型",
+data type": "图标资源""@嵌入式方法": "\"\"",
+data type": "图标资源""parameters": [
+   {
+"parameter name": "标题",
+"comment": "  提供MDI主窗口的标题文本. 注意: 本窗口的标题会被类库自动管理,所以通过对象的\"标题\"属性设置无\n效,欲设置窗口标题只能通过本参数初始设置或者本类中的\"置标题\"方法/\"获取窗口标题\"事件动态设置.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文档类",
+"comment": "提供每个MDI子窗口所对应文档的数据内容存储类",
+"data type": "MDI文档类",
+"@需求类型": "数据类型"
+   },
+   {
+"parameter name": "视图窗口类",
+"comment": "提供每个MDI子窗口所对应文档的查看类",
+"data type": "MDI视图类",
+"@需求类型": "数据类型"
+   },
+   {
+"parameter name": "主窗口菜单类",
+"comment": "提供主窗口菜单. 注意:\n  1. 如果想让类库在某个子菜单(譬如\"窗口\")下自动加入当前所有已打开文档窗口的列表菜单项,该子菜\n单中必须已经存在一个ID值为 57663 的菜单项,用来为动态修改操作进行定位;\n  2. 如果想让类库在某个子菜单(譬如\"文件->最近的文件\")下自动加入先前所有曾经被打开过的历史文档\n文件,该子菜单中必须已经存在一个ID值为 57616 的菜单项,用来为动态修改操作进行定位.",
+"data type": "菜单类",
+"@需求类型": "数据类型"
+   },
+   {
+"parameter name": "文档信息描述",
+"comment": "为使用换行符'\\n'分隔的一系列文本字段,分别描述以下信息:\n  1. 文档类型名称(如:\"表格\"),本名称用作为所新建文档提供默认标题用(比如\"表格\",将会导致所新建一\n系列文档的标题为\"表格1\",\"表格2\"等);\n  2. 新建文档的短名称(如:\"工作表\"),如果程序支持多于一种类型的文档,本名称将显示在新建文件对话\n框中;\n  3. 文档过滤器名称(如:\"工作表(*.xls)\"),本名称将显示在文件打开对话框的下拉列表中;\n  4. 文档后缀名称(如:\".xls\");\n  5. 文档类型ID(如:\"ExcelWorksheet\"),本ID仅在内部使用,将在注册表中注册到Windows文件管理器中;\n  6. 文档类型长名称(如:\"微软Excel工作表格\"),为对文档类型ID的说明.本名称仅在内部使用,将在注册\n表中注册到Windows文件管理器中.\n  以下为一个有效描述文本范例: \"文档\\n文本文档\\n文本文档(*.txt)\\n.txt\\nTextDocument\\n文本文档\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文档图标",
+"comment": "为所操作的文档提供的图标,如果为\"空资源.空图标\"则表示与窗口图标一致.",
+"data type": "图标资源",
+"@默认值": "空资源.空图标"
+   },
+   {
+"parameter name": "配置存储节名",
+"comment": "  提供在系统注册表内用来保存程序最近一次运行时MDI窗口中各工具条/状态条/停靠子窗口的状态以及最\n近所打开文件等历史信息的节名,用作在程序下一次运行时自动恢复相关状态时使用,为一个名称文本(如:\n\"我的火山应用程序\").",
+"data type": "文本型",
+"@默认值": "\"火山用户应用程序\""
+   },
+   {
+"parameter name": "是否删除历史数据",
+"comment": "  是否删除类库以前自动保存在注册表中的历史数据(具体见\"配置存储节名\"参数中的说明).\n  本参数在为调试版时最好为真,以免上次操作所记录的历史数据影响到下次调试运行,如果不为调试版,则\n应该提供为假,以正常载入最终用户的历史操作数据.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "最近打开文件记录数目",
+"comment": "提供最近打开文件名的最大记录数目,有效值从0到16.",
+"data type": "整数",
+"@默认值": "4"
+   }
+data type": "图标资源"]
+  },
+  {
+ta type": "图标资源"]"method name": "置标题",
+ta type": "图标资源"]"comment": "如果本窗口已经创建,则设置其当前标题.\n注意:\n  1. 本窗口的标题不能通过\"标题\"属性设置,只能通过本方法;\n  2. 本处所设置的标题将被\"获取窗口标题\"事件动态返回的标题覆盖.",
+ta type": "图标资源"]"@嵌入式方法": "\"\"",
+ta type": "图标资源"]"parameters": [
+   {
+"parameter name": "所欲设置的标题",
+"data type": "文本型"
+   }
+ta type": "图标资源"]]
+  },
+  {
+
+"method name": "显示窗口列表对话框",
+
+"comment": "如果本窗口已经创建,则显示当前所有已经被打开的视图窗口列表对话框."
+  },
+  {
+"method name": "取活动视图",
+"comment": "获取当前活动视图对象",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "结果视图",
+"comment": "  如果本方法成功返回真,则其中将填入为调用\"MDI主窗口.创建MDI主窗口\"\n方法时\"视图窗口类\"参数所提供数据类型的对象实例,此时可以通过调用\n\"本参数.对象 (具体MDI视图类)\"来获得对应的MDI视图类对象.",
+"data type": "对象包装类"
+   }
+]
+  },
+  {
+
+"method name": "是否有活动文档",
+
+"comment": "返回当前是否存在活动文档",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取活动文档",
+
+"comment": "获取当前活动文档对象",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "结果文档",
+"comment": "  如果本方法成功返回真,则其中将填入为调用\"MDI主窗口.创建MDI主窗口\"\n方法时\"文档类\"参数所提供数据类型的对象实例,此时可以通过调用\n\"本参数.对象 (具体MDI文档类)\"来获得对应的MDI文档类对象.",
+"data type": "对象包装类"
+   }
+
+]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "新建文档",
+"@嵌入式方法": "\"\"""comment": "创建并打开一个新文档",
+"@嵌入式方法": "\"\"""result comment": "返回是否成功",
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "自定义值",
+"comment": "为所新建文档对象的\"MDI文档类.自定义值\"属性提供的自定义值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+式方法": "\"\"""method name": "新建文档""method name": "打开文档",
+式方法": "\"\"""method name": "新建文档""comment": "打开一个已有文档",
+式方法": "\"\"""method name": "新建文档""result comment": "返回是否成功",
+式方法": "\"\"""method name": "新建文档""data type": "逻辑型",
+式方法": "\"\"""method name": "新建文档""@嵌入式方法": "\"\"",
+式方法": "\"\"""method name": "新建文档""parameters": [
+   {
+"parameter name": "文档文件名",
+"comment": "提供所欲打开的文档文件名,如果为空文本,则显示文件打开对话框来输入文件名.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否加入最近文件表",
+"comment": "是否将所成功打开的文件加入\"最近文件表\"菜单项",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "自定义值",
+"comment": "为所打开文档对象的\"MDI文档类.自定义值\"属性提供的自定义值",
+"data type": "变整数",
+"@默认值": "0"
+   }
+式方法": "\"\"""method name": "新建文档"]
+  },
+  {
+ameter name": "是否加入最近文件表""method name": "查找文档",
+ameter name": "是否加入最近文件表""comment": "查找一个已经打开的文档",
+ameter name": "是否加入最近文件表""result comment": "返回是否找到",
+ameter name": "是否加入最近文件表""data type": "逻辑型",
+ameter name": "是否加入最近文件表""@嵌入式方法": "\"\"",
+ameter name": "是否加入最近文件表""parameters": [
+   {
+"parameter name": "文档文件名",
+"comment": "提供所欲查找的文档文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果文档",
+"comment": "  如果本方法成功返回真,则其中将填入为调用\"MDI主窗口.创建MDI主窗口\"\n方法时\"文档类\"参数所提供数据类型的对象实例,此时可以通过调用\n\"本参数.对象 (具体MDI文档类)\"来获得对应的MDI文档类对象.",
+"data type": "对象包装类"
+   }
+ameter name": "是否加入最近文件表"]
+  },
+  {
+
+"method name": "取所有文档",
+
+"comment": "获取所有已存在文档对象",
+
+"result comment": "返回所获取文档对象的数目,也就是\"结果数组\"参数中所填入的成员数目.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "结果数组",
+"comment": "  该数组中将加入为调用\"MDI主窗口.创建MDI主窗口\"方法时\"文档类\"参数所提供数据\n类型的对象包装实例,可以通过调用\"本参数.取成员 (索引位置).对象 (具体MDI文档类)\"\n来获得对应的MDI文档类对象.\n  该数组中的原有内容将被覆盖.",
+"data type": "对象包装数组类"
+   }
+
+]
+  },
+  {
+"comment": "返回先前所设置的本窗口是否永远位于其它窗口的前面\n""method name": "取所有文档数目",
+"comment": "返回先前所设置的本窗口是否永远位于其它窗口的前面\n""comment": "返回所有已存在文档的数目",
+"comment": "返回先前所设置的本窗口是否永远位于其它窗口的前面\n""data type": "整数",
+"comment": "返回先前所设置的本窗口是否永远位于其它窗口的前面\n""@嵌入式方法": "\"\""
+  },
+  {
+data type": "文本型""method name": "关闭所有文档",
+data type": "文本型""comment": "关闭所有已经存在的文档",
+data type": "文本型""result comment": "  返回是否成功关闭.\n  当\"是否询问保存\"参数值为真且某些被修改的文档在询问是否保\n存时用户选择了中止操作,本方法将中止关闭后返回假.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "是否跳过活动文档",
+"comment": "指定是否不关闭当前活动文档",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否询问保存",
+"comment": "  如果本参数值为真且存在文档当前处于被修改状态(\"被修改\"\n属性为真),则将询问用户是否保存.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "保存所有文档",
+"comment": "保存所有已经被修改的文档",
+"result comment": "返回所有文档是否均已经成功保存",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+result comment": "返回所有文档是否均已经成功保存""method name": "创建状态条",
+result comment": "返回所有文档是否均已经成功保存""comment": "在所指定MDI主窗口中创建并加入状态条,注意只能加入一个.",
+result comment": "返回所有文档是否均已经成功保存""result comment": "返回是否成功",
+result comment": "返回所有文档是否均已经成功保存""data type": "逻辑型",
+result comment": "返回所有文档是否均已经成功保存""@嵌入式方法": "\"\"",
+result comment": "返回所有文档是否均已经成功保存""parameters": [
+   {
+"parameter name": "栏目宽度",
+"comment": "提供除开固定的首信息输出栏外的其它所有栏的宽度,单位像素.\n所提供的栏目最多数目为16个.",
+"data type": "整数",
+"@可扩展": "\"\""
+   }
+result comment": "返回所有文档是否均已经成功保存"]
+  },
+  {
+"method name": "置状态文本",
+"comment": "  设置本窗口状态条的固定首信息输出栏的文本内容(其余栏目的\n文本内容基于\"取状态栏文本\"事件设置).\n  调用本方法时,需要已经调用\"创建状态条\"创建并加入了状态条.",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "状态文本",
+"comment": "  提供所欲设置的状态文本,文本首部可以为一个响铃字符('\\a'),\n用作在显示信息的同时响铃.\n  为空文本表示清除状态文本.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "取状态文本",
+ }"comment": "返回本窗口状态条的固定首信息输出栏的文本内容.\n调用本方法时,需要已经调用\"创建状态条\"创建并加入了状态条.",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "进入进度状态模式",
+
+"comment": "通知本窗口状态条进入进度状态模式.进度状态模式在提示文本后会同时显示一个进度条.\n注意:\n  1. 调用本方法时,需要已经调用\"创建状态条\"创建并加入了状态条;\n  2. 进入成功在不再使用进度状态模式后必须调用\"退出进度状态模式\"退出该模式.",
+
+"result comment": "成功返回真,失败(当前已经处于进度状态模式)返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "提示文本",
+"comment": "  提供显示在进度条前方的文本,文本首部可以为一个响铃字符('\\a'),用作在显示信息的\n同时响铃.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "等待时间",
+"comment": "  指定等待本参数所指定的时间后才真实进入进度状态模式,用作在执行一些不能确定其\n具体所耗费时间长短的工作前避免状态条提前产生无所谓的变动. 单位毫秒.",
+"data type": "整数",
+"@默认值": "2000"
+   },
+   {
+"parameter name": "显示等待光标",
+"comment": "指定是否同时显示等待光标",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+@默认值": "真""method name": "置状态进度",
+@默认值": "真""comment": "本窗口状态条进入进度状态模式后,可以调用本方法更新当前所显示的进度.",
+@默认值": "真""@嵌入式方法": "\"\"",
+@默认值": "真""parameters": [
+   {
+"parameter name": "当前进度",
+"comment": "提供当前进度值,有效值在0到100之间.",
+"data type": "整数"
+   }
+@默认值": "真"]
+  },
+  {
+
+"method name": "退出进度状态模式",
+
+"comment": "  通知本窗口状态条退出进度状态模式,进入进度状态模式成功\n在不再使用后必须调用本方法退出该模式.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "状态条是否可视",
+"comment": "返回本窗口的状态条是否存在且可视",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+comment": "  提供显示在进度条前方的文本,文本首部可以为一个响铃字符('\\a'),用作在显示信息的\n同时响铃.""method name": "显示状态条",
+comment": "  提供显示在进度条前方的文本,文本首部可以为一个响铃字符('\\a'),用作在显示信息的\n同时响铃.""comment": "显示或隐藏本窗口的状态条.\n调用本方法时,需要已经调用\"创建状态条\"创建并加入了状态条.",
+comment": "  提供显示在进度条前方的文本,文本首部可以为一个响铃字符('\\a'),用作在显示信息的\n同时响铃.""@嵌入式方法": "\"\"",
+comment": "  提供显示在进度条前方的文本,文本首部可以为一个响铃字符('\\a'),用作在显示信息的\n同时响铃.""parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "指定是否显示本窗口的状态条.",
+"data type": "逻辑型"
+   }
+comment": "  提供显示在进度条前方的文本,文本首部可以为一个响铃字符('\\a'),用作在显示信息的\n同时响铃."]
+  }
+]
+ }
+问本程序中的接口需要引用模块"MFC多文档界面".]
+}

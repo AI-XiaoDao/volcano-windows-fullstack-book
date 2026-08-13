@@ -1,0 +1,2981 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+息指针: 可用\"WinHTTP异步结果类.置数据()\"获取,其中的\"返回值\"成员请参考\"异步请求结果_WinHTTP\";""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+息指针: 可用\"WinHTTP异步结果类.置数据()\"获取,其中的\"返回值\"成员请参考\"异步请求结果_WinHTTP\";""package name": "火山.仰望",
+息指针: 可用\"WinHTTP异步结果类.置数据()\"获取,其中的\"返回值\"成员请参考\"异步请求结果_WinHTTP\";""@文档": "\"category = \\\"网络访问库\\\"\"",
+息指针: 可用\"WinHTTP异步结果类.置数据()\"获取,其中的\"返回值\"成员请参考\"异步请求结果_WinHTTP\";""classes": [
+ {
+4304]成功发送请求."class name": "SSL缓存类_",
+4304]成功发送请求."@文档": "\"category = \\\"SSL缓存\\\"\"",
+4304]成功发送请求."@全局类": "真",
+4304]成功发送请求."methods": [
+  {
+0x20000000"method name": "开启使用SSL及TLS_",
+0x20000000"comment": "开启Internet中所有的SSL及TLS",
+0x20000000"static": true,
+0x20000000"parameters": [
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+0x20000000]
+  },
+  {
+0x20000000"method name": "网络_开启使用SSL及TLS",
+0x20000000"comment": "开启Internet中所有的SSL及TLS",
+0x20000000"static": true,
+0x20000000"parameters": [
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+0x20000000]
+  },
+  {
+data type": "逻辑型""method name": "开启SSL缓存_",
+data type": "逻辑型""static": true,
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "逻辑型"]
+  },
+  {
+ = 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""method name": "网络_开启SSL缓存",
+ = 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""static": true,
+ = 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ = 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功."]
+  }
+4304]成功发送请求.]
+ },
+ {
+x20000000"comment": "开启Internet中所有的SSL及TLS""class name": "代理IP类_",
+x20000000"comment": "开启Internet中所有的SSL及TLS""@文档": "\"category = \\\"网络访问库.代理设置\\\"\"",
+x20000000"comment": "开启Internet中所有的SSL及TLS""@全局类": "真",
+x20000000"comment": "开启Internet中所有的SSL及TLS""methods": [
+  {
+000000"method name": "置代理IP_",
+000000"static": true,
+000000"data type": "逻辑型",
+000000"@视窗.外部头文件": "\"<wininet.h>\"",
+000000"@视窗.外部库": "\"Wininet.lib\"",
+000000"@禁止流程检查": "真",
+000000"parameters": [
+   {
+"parameter name": "代理IP",
+"comment": "例如：“121.235.194.23:31015”，如需取消代理则将本参数留空即可",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+000000]
+  }
+x20000000"comment": "开启Internet中所有的SSL及TLS"]
+ },
+ {
+ }"class name": "网络判断类_",
+ }"@文档": "\"category = \\\"网络访问库.网络判断\\\"\"",
+ }"@全局类": "真",
+ }"methods": [
+  {
+= 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+"method name": "判断网络状态_",
+= 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+"result comment": "返回“真”表示有网络，可上网",
+= 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+"static": true,
+= 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+"data type": "逻辑型",
+= 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+"@视窗.外部头文件": "\"IP\\\\Internal.h\"",
+= 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+"@视窗.外部源文件": "\"IP\\\\internal.cpp\"",
+= 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+"@禁止流程检查": "真",
+= 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+"parameters": [
+   {
+"parameter name": "返回信息",
+"comment": "1、局域网　2、拨号上网　3、代理上网　4、RAS　5、被非Internal连接占用　6、可以联网但不可用　7、无网",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+= 0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+]
+  }
+ }]
+ },
+ {
+x20000000"comment": "开启Internet中所有的SSL及TLS""class name": "网络判断类2_",
+x20000000"comment": "开启Internet中所有的SSL及TLS""@文档": "\"category = \\\"网络访问库.网络判断\\\"\"",
+x20000000"comment": "开启Internet中所有的SSL及TLS""@全局类": "真",
+x20000000"comment": "开启Internet中所有的SSL及TLS""methods": [
+  {
+}"method name": "判断网络状态2_",
+}"comment": "返回“真”表示有网络，可上网",
+}"static": true,
+}"data type": "逻辑型"
+  }
+x20000000"comment": "开启Internet中所有的SSL及TLS"]
+ },
+ {
+
+"class name": "网址IP处理类_",
+
+"@文档": "\"category = \\\"网络访问库.IP域名操作\\\"\"",
+
+"@全局类": "真",
+
+"methods": [
+  {
+0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+]"method name": "域名转IP地址_",
+0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+]"static": true,
+0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+]"data type": "文本型",
+0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+]"@禁止流程检查": "真",
+0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+]"parameters": [
+   {
+"parameter name": "域名",
+"data type": "文本型"
+   }
+0x02000000 注释 = "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""parameters": [
+]]
+  },
+  {
+
+"@文档": "\"category = \\\"网络访问库.IP域名操作\\\"\"""method name": "取网址域名_",
+
+"@文档": "\"category = \\\"网络访问库.IP域名操作\\\"\"""comment": "网站地址取域名，支持http:// 或 https://",
+
+"@文档": "\"category = \\\"网络访问库.IP域名操作\\\"\"""static": true,
+
+"@文档": "\"category = \\\"网络访问库.IP域名操作\\\"\"""data type": "文本型",
+
+"@文档": "\"category = \\\"网络访问库.IP域名操作\\\"\"""parameters": [
+   {
+"parameter name": "网络地址",
+"data type": "文本型"
+   }
+
+"@文档": "\"category = \\\"网络访问库.IP域名操作\\\"\""]
+  },
+  {
+ameter name": "网络地址""method name": "取网址端口_",
+ameter name": "网络地址""comment": "网站地址取端口号，支持80或443",
+ameter name": "网络地址""static": true,
+ameter name": "网络地址""data type": "整数",
+ameter name": "网络地址""parameters": [
+   {
+"parameter name": "网络地址",
+"data type": "文本型"
+   }
+ameter name": "网络地址"]
+  },
+  {
+
+"method name": "取网址地址_",
+
+"comment": "网站地址取不包含域名的网页地址 如 /a/abc.php",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "网络地址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "网络地址""method name": "修改IP网关_",
+ameter name": "网络地址""static": true,
+ameter name": "网络地址""parameters": [
+   {
+"parameter name": "IP地址",
+"comment": "例如：192.168.1.8",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "子网掩码",
+"comment": "例如：255.255.255.0",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "默认网关",
+"comment": "例如：192.168.1.1",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "首选DNS",
+"comment": "例如：114.114.114.114",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "备用DNS",
+"comment": "例如：8.8.8.8",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "本地连接名称",
+"comment": "本地网络名称，留空则为：本地连接",
+"data type": "文本型",
+"@默认值": "\"本地连接\""
+   }
+ameter name": "网络地址"]
+  },
+  {
+ }"method name": "修改IP网关_自动",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "本地连接名称",
+"comment": "本地网络名称，留空则为：本地连接",
+"data type": "文本型",
+"@默认值": "\"本地连接\""
+   }
+ }]
+  },
+  {
+
+"method name": "取外网IP_",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+eter name": "网络地址"]"method name": "取内网IP_",
+eter name": "网络地址"]"comment": "单网卡",
+eter name": "网络地址"]"static": true,
+eter name": "网络地址"]"data type": "文本型",
+eter name": "网络地址"]"@禁止流程检查": "真"
+  },
+  {
+"method name": "取内网IP2_",
+"comment": "多网卡",
+"static": true,
+"data type": "文本数组类",
+"@禁止流程检查": "真"
+  }
+
+]
+ },
+ {
+ameter name": "网络地址""class name": "URL参数解析类_",
+ameter name": "网络地址""@文档": "\"category = \\\"网络访问库.URL解析\\\"\"",
+ameter name": "网络地址""@全局类": "真",
+ameter name": "网络地址""methods": [
+  {
+@禁止流程检查": "真""method name": "URL_取URL参数",
+@禁止流程检查": "真""result comment": "返回得到的数量，参数二中指定了名称将不会返回数量",
+@禁止流程检查": "真""static": true,
+@禁止流程检查": "真""data type": "整数",
+@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "URL",
+"comment": "带请求参数的URL，如：“http://www.baidu.com/lky?id=123&name=nhy”;\n也可直接是参数体内容，如：“id=123&name=nhy”",
+"data type": "文本型"
+   },
+   {
+"parameter name": "指定参数名",
+"comment": "指定了参数名，将从参数三中返回参数值。如果留空则从参数四和五中返回所有数据",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的参数值",
+"comment": "参数二不留将从本参数中返回参数值",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的参数名组",
+"comment": "参数二留空将从本参数中返回所有数据",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的参数值组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+@禁止流程检查": "真"]
+  },
+  {
+ameter name": "返回的参数值""method name": "URL_取URL请求头值",
+ameter name": "返回的参数值""static": true,
+ameter name": "返回的参数值""data type": "文本型",
+ameter name": "返回的参数值""parameters": [
+   {
+"parameter name": "请求头内容组",
+"data type": "文本型"
+   },
+   {
+"parameter name": "头名称",
+"comment": "例如：“Referer:”或“Referer”，可不区分大小写和不添加:",
+"data type": "文本型"
+   }
+ameter name": "返回的参数值"]
+  }
+ameter name": "网络地址"]
+ },
+ {
+名称，留空则为：本地连接"class name": "网络文件大小类_",
+名称，留空则为：本地连接"@全局类": "真",
+名称，留空则为：本地连接"methods": [
+  {
+ameter name": "网络地址""method name": "网络_取网络文件大小",
+ameter name": "网络地址""comment": "winhttp方式",
+ameter name": "网络地址""static": true,
+ameter name": "网络地址""data type": "文本型",
+ameter name": "网络地址""@禁止流程检查": "真",
+ameter name": "网络地址""@视窗.外部头文件": "\"windows.h\\r\\nwinhttp.h\\r\\niostream\\r\\nstring\"",
+ameter name": "网络地址""@视窗.外部库": "\"winhttp.lib\"",
+ameter name": "网络地址""parameters": [
+   {
+"parameter name": "URL",
+"data type": "文本型"
+   }
+ameter name": "网络地址"]
+  },
+  {
+"method name": "网络_取网络文件大小2",
+"comment": "winInet方式",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"@视窗.外部头文件": "\"windows.h\\r\\nwininet.h\\r\\niostream\\r\\nstring\"",
+"@视窗.外部库": "\"wininet.lib\"",
+"parameters": [
+   {
+"parameter name": "URL",
+"data type": "文本型"
+   }
+]
+  }
+名称，留空则为：本地连接]
+ },
+ {
+meter name": "网络地址""data type": "文本型""class name": "网络下载类_",
+meter name": "网络地址""data type": "文本型""@文档": "\"category = \\\"网络访问库.网络文件下载\\\"\"",
+meter name": "网络地址""data type": "文本型""methods": [
+  {
+
+"method name": "下载网络文件_",
+
+"comment": "如果有些电脑上下载失败，可以尝试执行“开启使用SSL及TLS_”、“开启SSL缓存_”.\n不支带Cookie的下载",
+
+"result comment": "成功返回0",
+
+"data type": "变整数",
+
+"parameters": [
+   {
+"parameter name": "下载地址",
+"comment": "例如：https://dldir1.qq.com/qqfile/qq/PCQQ9.7.6/QQ9.7.6.28989.exe",
+"data type": "文本型"
+   },
+   {
+"parameter name": "详细保存路径",
+"comment": "默认保存到桌面，名称为test.rar ；路径+文件名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加标记",
+"comment": "此标记将在下载事件中回显，用于判断文件",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "清理缓存文件_",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "szURL",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"result comment": "成功返回0""method name": "回调事件",
+"result comment": "成功返回0""type": "event",
+"result comment": "成功返回0""data type": "整数",
+"result comment": "成功返回0""parameters": [
+   {
+"parameter name": "已下大小",
+"data type": "长整数"
+   },
+   {
+"parameter name": "文件总大小",
+"data type": "长整数"
+   },
+   {
+"parameter name": "当前进度",
+"comment": "百分比进度",
+"data type": "小数"
+   },
+   {
+"parameter name": "文件链接",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "下载状态",
+"comment": "-1、下载失败　1、下载中　2、下载成功",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "附加标记",
+"data type": "整数"
+   }
+"result comment": "成功返回0"]
+  }
+meter name": "网络地址""data type": "文本型"]
+ },
+ {
+data type": "文本型""class name": "HTTP读文件类_",
+data type": "文本型""@文档": "\"category = \\\"网络访问库.HTTP读取\\\"\"",
+data type": "文本型""@全局类": "真",
+data type": "文本型""methods": [
+  {
+ameter name": "保存路径""method name": "HTTP读文件_B",
+ameter name": "保存路径""static": true,
+ameter name": "保存路径""data type": "字节集类",
+ameter name": "保存路径""parameters": [
+   {
+"parameter name": "请求网址",
+"comment": "提供所欲访问的网址内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT　8、PATCH",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "本方法会根据提交信息的类型自动添加\"Content-Type\"协议头,无需你手动添加",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"comment": "本方法会根据提交信息的类型自动添加\"Content-Type\"协议头,无需你手动添加",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"comment": "提供本次请求所欲使用的附加协议头,每个协议之间请用\"\\r\\n\"换行",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookie",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "重定向次数",
+"comment": "欲遵循网站重定向的最大次数，0为禁止重定向",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "返回的Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理地址",
+"comment": "设置当前一次网页访问使用的代理地址列表,非空时将代理模式临时改为\"命名代理\";\n无论代理是什么协议,都一律填http/https，例如Socoks5的代理也是填： \"http://127.0.0.1:7890\";\n可以用分号支持多个代理服务器，也可以对不同的协议使用不同的代理，例如：\"http=http://127.0.0.1:7890;https=http://192.168.1.1:8080\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理账号",
+"comment": "提供代理服务器所需的用户名(可空)，仅在代理模式为\"命名代理\"时可用",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"comment": "提供代理服务器所需的用户密码(可空)，仅在代理模式为\"命名代理\"时可用",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "单位：毫秒；1000毫秒=1秒；默认为15秒，-1为不限制",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "忽略SSL错误",
+"comment": "是否忽略任何SSL验证相关错误，即不验证证书也不验证服务器(如使用了代理将会被一同忽略)",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "内容编码",
+"comment": "指定所欲请求服务器使用的内容编码(压缩)方式，即\"Accept-Encoding\"协议内容;\n本参数只对Windows 8及更高版本的系统有效，旧系统不支持WinHTTP的自动解压缩;\n提供空文本时自动设置为\"Accept-Encoding: gzip, deflate\"，提供空对象则禁用压缩;\nWinHTTP自动解压缩后，会将响应头的Content-Length、Content-Encoding删除掉",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的结果",
+"data type": "网页访问响应类_",
+"@默认值": "空对象"
+   }
+ameter name": "保存路径"]
+  },
+  {
+data type": "文本型""method name": "HTTP读文件_T",
+data type": "文本型""static": true,
+data type": "文本型""data type": "文本型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "请求网址",
+"comment": "提供所欲访问的网址内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT　8、PATCH",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "本方法会根据提交信息的类型自动添加\"Content-Type\"协议头,无需你手动添加",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"comment": "提供本次请求所欲使用的附加协议头,每个协议之间请用\"\\r\\n\"换行",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookie",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "重定向次数",
+"comment": "欲遵循网站重定向的最大次数，0为禁止重定向",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "返回的Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理地址",
+"comment": "设置当前一次网页访问使用的代理地址列表,非空时将代理模式临时改为\"命名代理\";\n无论代理是什么协议,都一律填http/https,例如Socoks5的代理也是填: \"http://127.0.0.1:7890\";\n可以用分号支持多个代理服务器,也可以对不同的协议使用不同的代理,例如:\n\"http=http://127.0.0.1:7890;https=http://192.168.1.1:8080\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理账号",
+"comment": "提供代理服务器所需的用户名(可空)，仅在代理模式为\"命名代理\"时可用",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"comment": "提供代理服务器所需的用户密码(可空)，仅在代理模式为\"命名代理\"时可用",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "单位：毫秒；1000毫秒=1秒；默认为15秒，-1为不限制",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "忽略SSL错误",
+"comment": "是否忽略任何SSL验证相关错误，即不验证证书也不验证服务器(如使用了代理将会被一同忽略)",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "内容编码",
+"comment": "指定所欲请求服务器使用的内容编码(压缩)方式,即\"Accept-Encoding\"协议内容;\n本参数只对Windows 8及更高版本的系统有效，旧系统不支持WinHTTP的自动解压缩;\n提供空文本时自动设置为\"Accept-Encoding: gzip, deflate\"，提供空对象则禁用压缩;\nWinHTTP自动解压缩后，会将响应头的Content-Length、Content-Encoding删除掉",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的结果",
+"data type": "网页访问响应类_",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回内容转码方式",
+"comment": "1、UTF8到文本　2、多字节到文本　3、多字节到文本 (Utf8到多字节()))",
+"data type": "整数",
+"@默认值": "1"
+   }
+data type": "文本型"]
+  }
+data type": "文本型"]
+ },
+ {
+ta type": "文本型"]"class name": "网页解析辅助类_",
+ta type": "文本型"]"@文档": "\"category = \\\"网络访问库.网盘解析\\\"\"",
+ta type": "文本型"]"@全局类": "真",
+ta type": "文本型"]"methods": [
+  {
+"method name": "解析Onedrive直链_",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "解析网址",
+"comment": "例如：https://1drv.ms/w/s!AlXpbRNC7_RjbfOCcRMIaW_fojM?e=eXbPSD",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "解析飞书直链_",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "解析网址",
+"comment": "例如：https://xf3v74qido.feishu.cn/file/boxcnDgMwJZf5IUChr3zUW6s1Id",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "网页访问响应类_""method name": "解析蓝奏云直链_",
+data type": "网页访问响应类_""static": true,
+data type": "网页访问响应类_""data type": "文本型",
+data type": "网页访问响应类_""parameters": [
+   {
+"parameter name": "解析网址",
+"comment": "例如：https://ywxk.lanzoui.com/in2fddbbfbg",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "网页访问响应类_"]
+  },
+  {
+ type": "网页访问响应类_""method name": "解析蓝奏云直链_""method name": "解析有道云笔记_",
+ type": "网页访问响应类_""method name": "解析蓝奏云直链_""comment": "直接返回笔记内容",
+ type": "网页访问响应类_""method name": "解析蓝奏云直链_""static": true,
+ type": "网页访问响应类_""method name": "解析蓝奏云直链_""data type": "文本型",
+ type": "网页访问响应类_""method name": "解析蓝奏云直链_""parameters": [
+   {
+"parameter name": "解析网址",
+"comment": "例如：https://note.youdao.com/s/5TCWtv0J",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否换行",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ type": "网页访问响应类_""method name": "解析蓝奏云直链_"]
+  },
+  {
+ }"method name": "解析有道云直链_",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "解析网址",
+"comment": "例如：https://note.youdao.com/s/90r6Ndxk",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为视频",
+"comment": "真：解析视频直播",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+}"parameters": [
+"method name": "解析微云笔记_",
+}"parameters": [
+"comment": "主要用于服务器变更后解决程序无法更新问题。笔记内容可以为IP地址或下载链接",
+}"parameters": [
+"static": true,
+}"parameters": [
+"data type": "文本型",
+}"parameters": [
+"parameters": [
+   {
+"parameter name": "解析网址",
+"comment": "例如：https://share.weiyun.com/s8plMmDT",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据地址标记",
+"comment": "即微云笔记中需取的数据段前后所标记的标记数据.\n例如：###a192.168.1.88b###，前后的###即是地址标记",
+"data type": "文本型",
+"@默认值": "\"###\""
+   },
+   {
+"parameter name": "前标记",
+"comment": "例如###a192.168.1.88b###的前标记是a",
+"data type": "文本型"
+   },
+   {
+"parameter name": "后标记",
+"comment": "例如###a192.168.1.88b###的后标记是b",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否包含前后标记",
+"comment": "即所取笔记内容是否包含“前标记”、“后标记”参数数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}"parameters": [
+]
+  }
+ta type": "文本型"]]
+ },
+ {
+parameters": [
+]"class name": "网址重定向类_",
+parameters": [
+]"@文档": "\"category = \\\"网络访问库.重定向\\\"\"",
+parameters": [
+]"@全局类": "真",
+parameters": [
+]"methods": [
+  {
+arameters": [
+]"@文档": "\"category = \\\"网络访问库.重定向\\\"\"""method name": "取网页重定向地址_",
+arameters": [
+]"@文档": "\"category = \\\"网络访问库.重定向\\\"\"""comment": "获取现有URL重向跳转后的地址",
+arameters": [
+]"@文档": "\"category = \\\"网络访问库.重定向\\\"\"""static": true,
+arameters": [
+]"@文档": "\"category = \\\"网络访问库.重定向\\\"\"""data type": "文本型",
+arameters": [
+]"@文档": "\"category = \\\"网络访问库.重定向\\\"\"""parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "补充协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+arameters": [
+]"@文档": "\"category = \\\"网络访问库.重定向\\\"\""]
+  }
+parameters": [
+]]
+ },
+ {
+"parameters": [
+"static": true"class name": "网络访问类_COM版",
+"parameters": [
+"static": true"comment": "基于WinHttp com版",
+"parameters": [
+"static": true"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp\\\"\"",
+"parameters": [
+"static": true"@全局类": "真",
+"parameters": [
+"static": true"methods": [
+  {
+"method name": "网页访问_B",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "自动UTF8编码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"comment": "提交字节集数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"comment": "多个请用换行符隔开",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交Cookies",
+"comment": "设置提交时的cookie",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回Cookies",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回协议头",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回状态代码",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "禁止重定向",
+"comment": "默认不禁止网页重定向",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "代理标识",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "代理地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理用户名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "单位：毫秒；1000毫秒=1秒；默认为15秒",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "是否补全协议头",
+"comment": "当附件协议头为空时自动添加必要的UA协议头 默认为真，假将不再添加非传入协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+hod name": "网页访问_B""method name": "网页访问_T",
+hod name": "网页访问_B""data type": "文本型",
+hod name": "网页访问_B""parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "自动UTF8编码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"comment": "提交字节集数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"comment": "多个请用换行符隔开",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交Cookies",
+"comment": "设置提交时的cookie",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回Cookies",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回协议头",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回状态代码",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "禁止重定向",
+"comment": "默认不禁止网页重定向",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "代理标识",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "代理地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理用户名",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "单位：毫秒；1000毫秒=1秒；默认为15秒",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "是否补全协议头",
+"comment": "当附件协议头为空时自动添加必要的UA协议头 默认为真，假将不再添加非传入协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "返回内容转码方式",
+"comment": "1、UTF8到文本　2、多字节到文本　3、多字节到文本 (Utf8到多字节()))",
+"data type": "整数",
+"@默认值": "1"
+   }
+hod name": "网页访问_B"]
+  },
+  {
+
+"method name": "网页_处理协议头",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "参_原始协议头",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "内部_协议头取名",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "协议头",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "内部_协议头取值",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "协议头",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ }"method name": "首字母改大写",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "英文文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"parameters": [
+"method name": "取重定向地址_",
+"parameters": [
+"comment": "获取现有URL重向跳转后的地址",
+"parameters": [
+"data type": "文本型",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "补充协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"parameters": [
+]
+  }
+"parameters": [
+"static": true]
+ },
+ {
+ }"class name": "网络访问类_WinInet版",
+ }"comment": "基于WinInet版",
+ }"@文档": "\"category = \\\"网络访问库.网络访问库.WinInet\\\"\"",
+ }"methods": [
+  {
+"method name": "网页访问_B",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"comment": "提交字节集数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "禁止重定向",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "代理地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否补全协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "网页访问_B2",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"comment": "提交字节集数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "禁止重定向",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "代理地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否补全协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+ameter name": "提交信息""method name": "网页访问_T",
+ameter name": "提交信息""data type": "文本型",
+ameter name": "提交信息""parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"comment": "提交字节集数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "禁止重定向",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "代理地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否补全协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "返回内容转码方式",
+"comment": "1、UTF8到文本　2、多字节到文本　3、多字节到文本 (Utf8到多字节()))",
+"data type": "整数",
+"@默认值": "1"
+   }
+ameter name": "提交信息"]
+  },
+  {
+"method name": "网页访问_T2",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"comment": "提交字节集数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "禁止重定向",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "代理地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否补全协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "返回内容转码方式",
+"comment": "1、UTF8到文本　2、多字节到文本　3、多字节到文本 (Utf8到多字节()))",
+"data type": "整数",
+"@默认值": "1"
+   }
+]
+  }
+ }]
+ },
+ {
+}"class name": "网络访问api",
+}"@文档": "\"category = \\\"网络访问库.网络访问库.WinInet.附加类\\\"\"",
+}"methods": [
+  {
+"method name": "InternetOpenUrlW",
+"static": true,
+"data type": "变整数",
+"@输出名": "\"InternetOpenUrlW\"",
+"@视窗.输入": "\"wininet.dll\"",
+"parameters": [
+   {
+"parameter name": "会话句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "Url地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求头",
+"data type": "文本型"
+   },
+   {
+"parameter name": "头大小",
+"data type": "变整数"
+   },
+   {
+"parameter name": "标志",
+"data type": "变整数"
+   },
+   {
+"parameter name": "定义值",
+"data type": "变整数"
+   }
+]
+  },
+  {
+data type": "变整数""method name": "InternetConnect",
+data type": "变整数""static": true,
+data type": "变整数""data type": "变整数",
+data type": "变整数""@输出名": "\"InternetConnectW\"",
+data type": "变整数""@视窗.输入": "\"wininet.dll\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "Internet句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "域名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "服务器端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户口令",
+"data type": "文本型"
+   },
+   {
+"parameter name": "服务类型",
+"comment": "1FTP;3HTTP",
+"data type": "整数"
+   },
+   {
+"parameter name": "dwFlags",
+"comment": "0http;134217728被动FTP模式",
+"data type": "整数"
+   },
+   {
+"parameter name": "dwContext",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+"method name": "InternetOpen",
+"static": true,
+"data type": "变整数",
+"@输出名": "\"InternetOpenW\"",
+"@视窗.输入": "\"wininet.dll\"",
+"parameters": [
+   {
+"parameter name": "句柄名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接类型",
+"comment": "1直接连接;3代理连接",
+"data type": "整数"
+   },
+   {
+"parameter name": "代理地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代理掩码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "dwFlags",
+"data type": "整数"
+   }
+]
+  },
+  {
+ta type": "变整数"]"method name": "HttpQueryInfo",
+ta type": "变整数"]"static": true,
+ta type": "变整数"]"data type": "变整数",
+ta type": "变整数"]"@输出名": "\"HttpQueryInfoW\"",
+ta type": "变整数"]"@视窗.输入": "\"wininet.dll\"",
+ta type": "变整数"]"parameters": [
+   {
+"parameter name": "Internet请求句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "待查信息",
+"data type": "变整数"
+   },
+   {
+"parameter name": "返回容器",
+"data type": "变整数"
+   },
+   {
+"parameter name": "返回容器长度",
+"data type": "变整数"
+   },
+   {
+"parameter name": "lpdwIndex",
+"data type": "变整数"
+   }
+ta type": "变整数"]]
+  },
+  {
+ameter name": "Internet请求句柄""method name": "InternetReadFile",
+ameter name": "Internet请求句柄""static": true,
+ameter name": "Internet请求句柄""data type": "逻辑型",
+ameter name": "Internet请求句柄""@输出名": "\"InternetReadFile\"",
+ameter name": "Internet请求句柄""@视窗.输入": "\"wininet.dll\"",
+ameter name": "Internet请求句柄""parameters": [
+   {
+"parameter name": "HTTP请求句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "lpBuffer",
+"data type": "变整数"
+   },
+   {
+"parameter name": "dwNumberOfBytesToRead",
+"data type": "整数"
+   },
+   {
+"parameter name": "lpdwNumberOfBytesRead",
+"data type": "变整数"
+   }
+ameter name": "Internet请求句柄"]
+  },
+  {
+"method name": "HttpSendRequest",
+"static": true,
+"data type": "变整数",
+"@输出名": "\"HttpSendRequestA\"",
+"@视窗.输入": "\"wininet.dll\"",
+"parameters": [
+   {
+"parameter name": "HTTP请求句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "附加协议头",
+"data type": "变整数"
+   },
+   {
+"parameter name": "附加协议头长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "提交信息",
+"data type": "变整数"
+   },
+   {
+"parameter name": "提交信息长度",
+"data type": "整数"
+   }
+]
+  },
+  {
+ }"method name": "HttpOpenRequest",
+ }"static": true,
+ }"data type": "变整数",
+ }"@输出名": "\"HttpOpenRequestW\"",
+ }"@视窗.输入": "\"wininet.dll\"",
+ }"parameters": [
+   {
+"parameter name": "Internet连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "访问方式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "页面路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "协议版本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "引用页",
+"data type": "文本型"
+   },
+   {
+"parameter name": "识别类型",
+"data type": "变整数"
+   },
+   {
+"parameter name": "dwFlags",
+"data type": "变整数"
+   },
+   {
+"parameter name": "dwContext",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ameter name": "访问方式""method name": "GetVersion",
+ameter name": "访问方式""static": true,
+ameter name": "访问方式""data type": "变整数",
+ameter name": "访问方式""@输出名": "\"GetVersion\"",
+ameter name": "访问方式""@视窗.输入": "\"kernel32.dll\""
+  },
+  {
+meter name": "访问方式""data type": "变整数""method name": "InternetCloseHandle",
+meter name": "访问方式""data type": "变整数""static": true,
+meter name": "访问方式""data type": "变整数""data type": "变整数",
+meter name": "访问方式""data type": "变整数""@输出名": "\"InternetCloseHandle\"",
+meter name": "访问方式""data type": "变整数""@视窗.输入": "\"wininet.dll\"",
+meter name": "访问方式""data type": "变整数""parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   }
+meter name": "访问方式""data type": "变整数"]
+  }
+}]
+ },
+ {
+rnetCloseHandle"class name": "网络访问类_",
+rnetCloseHandle"comment": "基于WinHttp api版",
+rnetCloseHandle"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp\\\"\"",
+rnetCloseHandle"variables": [
+  {
+
+"variable name": "集用户代理",
+
+"comment": "设置User-Agent,只能本实例首次网页访问之前设置;\n空文本为默认UA,空对象为不使用UA(默认不添加这个协议头).",
+
+"data type": "文本型",
+
+"@属性变量": "真"
+  },
+  {
+"variable name": "集代理类型",
+"comment": "设置代理的类型,只能本实例首次网页访问之前设置.",
+"data type": "网络代理类型_",
+"initial value": "网络代理类型_.不使用代理",
+"@属性变量": "真"
+  },
+  {
+data type": "文本型""variable name": "集代理服务器",
+data type": "文本型""comment": "设置代理服务器,仅在\"代理类型\"为\"命名代理\"时可用,只能本实例首次网页访问之前设置;\n无论代理是什么协议,都一律填http/https,例如Socoks5的代理也是填: \"http://127.0.0.1:7890\";\n可以用分号支持多个代理服务器,也可以对不同的协议使用不同的代理,例如:\n\"http=http://127.0.0.1:7890;https=http://192.168.1.1:8080\"",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@属性变量": "真"
+  },
+  {
+
+"@属性变量": "真""variable name": "集代理跳过列表",
+
+"@属性变量": "真""comment": "仅在\"代理类型\"为\"命名代理\"时可用,列表内的域名和IP不会通过代理访问;\n请提供用分号分隔的主机域名或IP地址,可以使用通配符;\n请勿提供空文本,默认的\"<local>\"为忽略所有不含句点的主机名.",
+
+"@属性变量": "真""data type": "文本型",
+
+"@属性变量": "真""initial value": "\"<local>\"",
+
+"@属性变量": "真""@属性变量": "真"
+  },
+  {
+ }"variable name": "集是否编码网址",
+ }"comment": "是否自动对网址进行URL编码,默认为假. 请注意不要重复编码.",
+ }"data type": "逻辑型",
+ }"initial value": "假",
+ }"@属性变量": "真"
+  }
+rnetCloseHandle],
+rnetCloseHandle"methods": [
+  {
+}"data type": "逻辑型""method name": "网页访问_B",
+}"data type": "逻辑型""result comment": "返回访问网页的结果,如果响应码为0则表示无法连接到目标网址或内部代码错误.",
+}"data type": "逻辑型""data type": "字节集类",
+}"data type": "逻辑型""@虚拟方法": "可覆盖",
+}"data type": "逻辑型""parameters": [
+   {
+"parameter name": "请求网址",
+"comment": "提供所欲访问的网址内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT　8、PATCH",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "本方法会根据提交信息的类型自动添加\"Content-Type\"协议头,无需你手动添加",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"comment": "本方法会根据提交信息的类型自动添加\"Content-Type\"协议头,无需你手动添加",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"comment": "提供本次请求所欲使用的附加协议头,每个协议之间请用\"\\r\\n\"换行",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookie",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "重定向次数",
+"comment": "欲遵循网站重定向的最大次数，-1为禁止重定向",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "返回的Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理地址",
+"comment": "设置当前一次网页访问使用的代理地址列表,非空时将代理模式临时改为\"命名代理\";\n无论代理是什么协议,都一律填http/https，例如Socoks5的代理也是填： \"http://127.0.0.1:7890\";\n可以用分号支持多个代理服务器，也可以对不同的协议使用不同的代理，例如：\"http=http://127.0.0.1:7890;https=http://192.168.1.1:8080\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理账号",
+"comment": "提供代理服务器所需的用户名(可空)，仅在代理模式为\"命名代理\"时可用",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"comment": "提供代理服务器所需的用户密码(可空)，仅在代理模式为\"命名代理\"时可用",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "单位：毫秒；1000毫秒=1秒；默认为15秒，-1为不限制",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "忽略SSL错误",
+"comment": "是否忽略任何SSL验证相关错误，即不验证证书也不验证服务器(如使用了代理将会被一同忽略)",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "内容编码",
+"comment": "指定所欲请求服务器使用的内容编码(压缩)方式，即\"Accept-Encoding\"协议内容;\n本参数只对Windows 8及更高版本的系统有效，旧系统不支持WinHTTP的自动解压缩;\n提供空文本时自动设置为\"Accept-Encoding: gzip, deflate\"，提供空对象则禁用压缩;\nWinHTTP自动解压缩后，会将响应头的Content-Length、Content-Encoding删除掉",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的结果",
+"data type": "网页访问响应类_",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否补全必要协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否自动管理Cookie",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}"data type": "逻辑型"]
+  },
+  {
+ }"method name": "网页访问_T",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "请求网址",
+"comment": "提供所欲访问的网址内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "0、GET　1、POST　2、HEAD　3、PUT　4、DELETE　5、OPTIONS　6、TRACE　7、CONNECT　8、PATCH",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "提交信息",
+"comment": "本方法会根据提交信息的类型自动添加\"Content-Type\"协议头,无需你手动添加",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提交字节集",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加协议头",
+"comment": "提供本次请求所欲使用的附加协议头,每个协议之间请用\"\\r\\n\"换行",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookie",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "重定向次数",
+"comment": "欲遵循网站重定向的最大次数，-1为禁止重定向",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "返回的Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的协议头",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理地址",
+"comment": "设置当前一次网页访问使用的代理地址列表,非空时将代理模式临时改为\"命名代理\";\n无论代理是什么协议,都一律填http/https,例如Socoks5的代理也是填: \"http://127.0.0.1:7890\";\n可以用分号支持多个代理服务器,也可以对不同的协议使用不同的代理,例如:\n\"http=http://127.0.0.1:7890;https=http://192.168.1.1:8080\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理账号",
+"comment": "提供代理服务器所需的用户名(可空)，仅在代理模式为\"命名代理\"时可用",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"comment": "提供代理服务器所需的用户密码(可空)，仅在代理模式为\"命名代理\"时可用",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时时间",
+"comment": "单位：毫秒；1000毫秒=1秒；默认为15秒，-1为不限制",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "忽略SSL错误",
+"comment": "是否忽略任何SSL验证相关错误，即不验证证书也不验证服务器(如使用了代理将会被一同忽略)",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "内容编码",
+"comment": "指定所欲请求服务器使用的内容编码(压缩)方式,即\"Accept-Encoding\"协议内容;\n本参数只对Windows 8及更高版本的系统有效，旧系统不支持WinHTTP的自动解压缩;\n提供空文本时自动设置为\"Accept-Encoding: gzip, deflate\"，提供空对象则禁用压缩;\nWinHTTP自动解压缩后，会将响应头的Content-Length、Content-Encoding删除掉",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的结果",
+"data type": "网页访问响应类_",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回内容转码方式",
+"comment": "1、UTF8到文本　2、多字节到文本　3、多字节到文本 (Utf8到多字节()))",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "是否补全必要协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否自动管理Cookie",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  }
+rnetCloseHandle]
+ },
+ {
+
+"class name": "网页访问响应类_",
+
+"comment": "用于\"WinHttp基类_\"",
+
+"base class": "扩展对象类",
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+
+"variables": [
+  {
+
+"variable name": "请求结果",
+
+"comment": "本次请求所返回的结果数据",
+
+"data type": "字节集类",
+
+"@属性变量": "真"
+  },
+  {
+]"variable name": "Cookies",
+]"comment": "本次请求所返回的Cookie内容",
+]"data type": "文本型",
+]"@属性变量": "真"
+  },
+  {
+ }"variable name": "响应头",
+ }"comment": "本次请求所接收到服务器的响应头内容",
+ }"data type": "文本型",
+ }"@属性变量": "真"
+  },
+  {
+ameter name": "返回的协议头""variable name": "重定向地址",
+ameter name": "返回的协议头""comment": "本次请求所有的重定向地址",
+ameter name": "返回的协议头""data type": "文本数组类",
+ameter name": "返回的协议头""@属性变量": "真"
+  },
+  {
+"variable name": "重定向次数",
+"comment": "本次请求所遵循重定向的次数",
+"data type": "整数",
+"@属性变量": "真"
+  },
+  {
+"data type": "文本型""variable name": "响应码",
+"data type": "文本型""comment": "本次请求的HTTP状态码",
+"data type": "文本型""data type": "整数",
+"data type": "文本型""@属性变量": "真"
+  },
+  {
+data type": "文本型""@属性变量": "真""variable name": "错误信息",
+data type": "文本型""@属性变量": "真""comment": "本次请求遇到的错误",
+data type": "文本型""@属性变量": "真""data type": "文本型",
+data type": "文本型""@属性变量": "真""@属性变量": "真"
+  }
+
+]
+ },
+ {
+ }"class name": "网络代理类型_",
+ }"comment": "用于\"WinHttp基类_.初始化\"",
+ }"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+ }"@常量类": "整数",
+ }"constants": [
+  {
+lass name": "网络代理类型_""constant name": "不使用代理",
+lass name": "网络代理类型_""comment": "不使用代理直接解析所有主机域名.",
+lass name": "网络代理类型_""initial value": "@WINHTTP_ACCESS_TYPE_NO_PROXY"
+  },
+  {
+
+"constant name": "默认代理",
+
+"comment": "从注册表中获取静态的代理设置.此类型不会继承浏览器的代理设置.\nWindows 8.1及更高版本推荐使用\"自动代理\".\n这里的代理配置由下列方式之一设置:\n - proxycfg.exe\n - netsh.exe\n - WinHttpSetDefaultProxyConfiguration",
+
+"initial value": "@WINHTTP_ACCESS_TYPE_DEFAULT_PROXY"
+  },
+  {
+"comment": "本次请求所返回的Cookie内容""constant name": "命名代理",
+"comment": "本次请求所返回的Cookie内容""comment": "将请求传递给代理,除非要解析的名称在代理跳过列表中.\n本类型需要设置\"代理服务器\"和\"代理跳过列表\"参数.",
+"comment": "本次请求所返回的Cookie内容""initial value": "@WINHTTP_ACCESS_TYPE_NAMED_PROXY"
+  },
+  {
+
+"constant name": "自动代理",
+
+"comment": "使用系统和各用户的代理设置来确定要使用的代理.\n注意: 仅在Windows 8.1及更高版本中受支持.",
+
+"initial value": "4"
+  }
+ }]
+ },
+ {
+"class name": "网络URL操作类_",
+"comment": "用于\"WinHttp基类_.拆分URL/创建URL\"",
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+"constants": [
+  {
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""constant name": "URL解码",
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""comment": "对URL的路径以后的部分进行URL解码,所有转义序列(%xx)将转换成字符.\n不能和选项\"URL编码\"一起使用,且不能用于方法\"WinHttp基类_.创建URL\".",
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""data type": "整数",
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""initial value": "@ICU_DECODE"
+  },
+  {
+
+"constant name": "URL编码",
+
+"comment": "对URL的路径以后部分进行URL编码,所有不安全的字符将转换成转义序列(%xx).",
+
+"data type": "整数",
+
+"initial value": "@ICU_ESCAPE"
+  },
+  {
+nstant name": "默认代理""constant name": "拒绝用户密码",
+nstant name": "默认代理""comment": "如果URL中含有用户名和密码等凭据信息,则拒绝进行拆分和创建,返回失败.",
+nstant name": "默认代理""data type": "整数",
+nstant name": "默认代理""initial value": "@ICU_REJECT_USERPWD"
+  }
+]
+ },
+ {
+
+"class name": "网络请求头标志类_",
+
+"comment": "用于\"WinHttp基类_.打开请求\"",
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+
+"constants": [
+  {
+}"constant name": "安全连接",
+}"comment": "尝试使用SSL安全连接,HTTPS必须使用此标志.",
+}"data type": "整数",
+}"initial value": "@WINHTTP_FLAG_SECURE"
+  },
+  {
+
+"constant name": "URL编码",
+
+"comment": "将URL路径进行URL编码,所有不安全的字符都将转换为以%字符开头的转义序列.\n默认情况下,除了百分百符号之外的所有不安全字符都将转换为转义序列.",
+
+"data type": "整数",
+
+"initial value": "@WINHTTP_FLAG_ESCAPE_PERCENT"
+  },
+  {
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""constant name": "不使用编码",
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""comment": "假设URL路径中的宽字符都可以转换为有效的ANSI字符,不进行任何编码,\n此选项不会检查不安全的字符.",
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""data type": "整数",
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""initial value": "@WINHTTP_FLAG_NULL_CODEPAGE"
+  },
+  {
+"comment": "将URL路径进行URL编码,所有不安全的字符都将转换为以%字符开头的转义序列.\n默认情况下,除了百分百符号之外的所有不安全字符都将转换为转义序列.""constant name": "忽略代理缓存",
+"comment": "将URL路径进行URL编码,所有不安全的字符都将转换为以%字符开头的转义序列.\n默认情况下,除了百分百符号之外的所有不安全字符都将转换为转义序列.""comment": "此选项等同\"强制刷新\".",
+"comment": "将URL路径进行URL编码,所有不安全的字符都将转换为以%字符开头的转义序列.\n默认情况下,除了百分百符号之外的所有不安全字符都将转换为转义序列.""data type": "整数",
+"comment": "将URL路径进行URL编码,所有不安全的字符都将转换为以%字符开头的转义序列.\n默认情况下,除了百分百符号之外的所有不安全字符都将转换为转义序列.""initial value": "@WINHTTP_FLAG_BYPASS_PROXY_CACHE"
+  },
+  {
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""comment": "假设URL路径中的宽字符都可以转换为有效的ANSI字符,不进行任何编码,\n此选项不会检查不安全的字符.""constant name": "强制刷新",
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""comment": "假设URL路径中的宽字符都可以转换为有效的ANSI字符,不进行任何编码,\n此选项不会检查不安全的字符.""comment": "将请求转发给原始服务器,而不是从代理服务器发送资源的缓存版本.\n使用此选项时会将\"Pragma: no-cache\"添加到请求头.\n如果使用HTTP/1.1,还会添加\"Cache-Control: no-cache\".",
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""comment": "假设URL路径中的宽字符都可以转换为有效的ANSI字符,不进行任何编码,\n此选项不会检查不安全的字符.""data type": "整数",
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"""comment": "假设URL路径中的宽字符都可以转换为有效的ANSI字符,不进行任何编码,\n此选项不会检查不安全的字符.""initial value": "@WINHTTP_FLAG_REFRESH"
+  },
+  {
+"comment": "尝试使用SSL安全连接,HTTPS必须使用此标志.""constant name": "禁止转义",
+"comment": "尝试使用SSL安全连接,HTTPS必须使用此标志.""comment": "不将URL路径的不安全字符转换为转义序列.",
+"comment": "尝试使用SSL安全连接,HTTPS必须使用此标志.""data type": "整数",
+"comment": "尝试使用SSL安全连接,HTTPS必须使用此标志.""initial value": "@WINHTTP_FLAG_ESCAPE_DISABLE"
+  },
+  {
+}"constant name": "不转义参数",
+}"comment": "对URL的路径部分进行转义,但不转义URL的请求参数部分.",
+}"data type": "整数",
+}"initial value": "@WINHTTP_FLAG_ESCAPE_DISABLE_QUERY"
+  }
+
+]
+ },
+ {
+
+"class name": "网络请求头修改标志类_",
+
+"comment": "用于添加请求头的各种方法",
+
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+
+"constants": [
+  {
+nstant name": "URL编码""constant name": "添加请求头",
+nstant name": "URL编码""comment": "请求头不存在时添加,可与\"替换和删除\"一起使用.",
+nstant name": "URL编码""data type": "整数",
+nstant name": "URL编码""initial value": "@WINHTTP_ADDREQ_FLAG_ADD"
+  },
+  {
+nt name": "URL编码""constant name": "添加请求头""constant name": "仅新建添加",
+nt name": "URL编码""constant name": "添加请求头""comment": "仅在添加的请求头不存在时才添加,否则将返回错误.",
+nt name": "URL编码""constant name": "添加请求头""data type": "整数",
+nt name": "URL编码""constant name": "添加请求头""initial value": "@WINHTTP_ADDREQ_FLAG_ADD_IF_NEW"
+  },
+  {
+"comment": "尝试使用SSL安全连接,HTTPS必须使用此标志.""constant name": "合并请求头",
+"comment": "尝试使用SSL安全连接,HTTPS必须使用此标志.""comment": "合并同名的请求头,等同于\"以逗号合并\".",
+"comment": "尝试使用SSL安全连接,HTTPS必须使用此标志.""data type": "整数",
+"comment": "尝试使用SSL安全连接,HTTPS必须使用此标志.""initial value": "@WINHTTP_ADDREQ_FLAG_COALESCE"
+  },
+  {
+的请求头,等同于\"以逗号合并\"."constant name": "以逗号合并",
+的请求头,等同于\"以逗号合并\"."comment": "使用逗号合并同名的协议头,必须确保该协议头是以逗号分隔多个值.\n例如: 将\"Accept: text/*\"跟\"Accept: audio/*\"一起添加,会产生协议头\"Accept: text/*, audio/*\".",
+的请求头,等同于\"以逗号合并\"."data type": "整数",
+的请求头,等同于\"以逗号合并\"."initial value": "@WINHTTP_ADDREQ_FLAG_COALESCE_WITH_COMMA"
+  },
+  {
+
+"constant name": "以分号合并",
+
+"comment": "使用分号合并同名的协议头,必须确保该协议头是以分号分隔多个值.",
+
+"data type": "整数",
+
+"initial value": "@WINHTTP_ADDREQ_FLAG_COALESCE_WITH_SEMICOLON"
+  },
+  {
+
+"constant name": "替换和删除",
+
+"comment": "替换或删除请求头.如果提供请求头的值不为空则将其替换.\n如果提供的请求头为空且缓存中存在同名请求头,则将其删除.",
+
+"data type": "整数",
+
+"initial value": "@WINHTTP_ADDREQ_FLAG_REPLACE"
+  }
+
+]
+ },
+ {
+}"class name": "网络禁止标志类_",
+}"comment": "用于\"WinHttp基类_.置选项_禁止功能\"",
+}"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+}"constants": [
+  {
+
+"constant name": "禁止Cookies",
+
+"comment": "禁止将Cookie协议头添加到请求中,返回的Cookie也不会自动添加到Cookie数据库中.",
+
+"data type": "整数",
+
+"initial value": "@WINHTTP_DISABLE_COOKIES"
+  },
+  {
+"data type": "整数""constant name": "禁止重定向",
+"data type": "整数""comment": "禁止在发送请求时自动重定向.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@WINHTTP_DISABLE_REDIRECTS"
+  },
+  {
+
+"constant name": "禁止自动身份验证",
+
+"comment": "禁止自动身份验证.",
+
+"data type": "整数",
+
+"initial value": "@WINHTTP_DISABLE_AUTHENTICATION"
+  },
+  {
+
+"constant name": "禁止保持活动",
+
+"comment": "禁止使用保持活动.",
+
+"data type": "整数",
+
+"initial value": "@WINHTTP_DISABLE_KEEP_ALIVE"
+  }
+}]
+ },
+ {
+}"class name": "网络协议头标志类_",
+}"comment": "在WinHttp基类_取协议头时使用.",
+}"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+}"@常量类": "整数",
+}"constants": [
+  {
+"comment": "禁止使用保持活动.""constant name": "MIME版本",
+"comment": "禁止使用保持活动.""comment": "MIME-Version: 表示使用的MIME的版本号,一般是1.0;",
+"comment": "禁止使用保持活动.""initial value": "@WINHTTP_QUERY_MIME_VERSION"
+  },
+  {
+"constants": [
+"constant name": "内容类型",
+"constants": [
+"comment": "Content_Type(响应): 表示主体内容的媒体类型.",
+"constants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE"
+  },
+  {
+"comment": "在WinHttp基类_取协议头时使用.""constant name": "内容传输编码",
+"comment": "在WinHttp基类_取协议头时使用.""comment": "Content-Transfer-Encoding: 传输过程中的内容编码格式.",
+"comment": "在WinHttp基类_取协议头时使用.""initial value": "@WINHTTP_QUERY_CONTENT_TRANSFER_ENCODING"
+  },
+  {
+ass name": "网络禁止标志类_""constant name": "内容识别符",
+ass name": "网络禁止标志类_""comment": "Content-Id(响应): 内容的唯一标识符.",
+ass name": "网络禁止标志类_""initial value": "@WINHTTP_QUERY_CONTENT_ID"
+  },
+  {
+ss name": "网络禁止标志类_""initial value": "@WINHTTP_QUERY_CONTENT_ID""constant name": "内容描述",
+ss name": "网络禁止标志类_""initial value": "@WINHTTP_QUERY_CONTENT_ID""comment": "Content-Description(响应): 内容的可选描述文本(已淘汰).",
+ss name": "网络禁止标志类_""initial value": "@WINHTTP_QUERY_CONTENT_ID""initial value": "@WINHTTP_QUERY_CONTENT_DESCRIPTION"
+  },
+  {
+comment": "禁止使用保持活动.""initial value": "@WINHTTP_QUERY_MIME_VERSION""constant name": "内容长度",
+comment": "禁止使用保持活动.""initial value": "@WINHTTP_QUERY_MIME_VERSION""comment": "Content-Length(响应): 实体主体部分的大小长度(字节).",
+comment": "禁止使用保持活动.""initial value": "@WINHTTP_QUERY_MIME_VERSION""initial value": "@WINHTTP_QUERY_CONTENT_LENGTH"
+  },
+  {
+constants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""constant name": "内容语言",
+constants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""comment": "Content-Language(响应): 告知客户端,实体主体使用的自然语言(指中文或英文等).",
+constants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""initial value": "@WINHTTP_QUERY_CONTENT_LANGUAGE"
+  },
+  {
+Http基类_取协议头时使用."constant name": "允许方法",
+Http基类_取协议头时使用."comment": "Allow(响应): 服务器支持哪些请求方式(如GET、POST等).",
+Http基类_取协议头时使用."initial value": "@WINHTTP_QUERY_ALLOW"
+  },
+  {
+constants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""constant name": "公开",
+constants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""comment": "Public: 接收此服务器上可用的HTTP谓词.",
+constants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""initial value": "@WINHTTP_QUERY_PUBLIC"
+  },
+  {
+comment": "禁止使用保持活动.""comment": "MIME-Version: 表示使用的MIME的版本号,一般是1.0;""constant name": "日期",
+comment": "禁止使用保持活动.""comment": "MIME-Version: 表示使用的MIME的版本号,一般是1.0;""comment": "Date(通用): 当前的GMT时间.",
+comment": "禁止使用保持活动.""comment": "MIME-Version: 表示使用的MIME的版本号,一般是1.0;""initial value": "@WINHTTP_QUERY_DATE"
+  },
+  {
+tants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""constant name": "内容语言""constant name": "过期时间",
+tants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""constant name": "内容语言""comment": "Expires(响应): 文档的过期时间,过期后不再缓存它.",
+tants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""constant name": "内容语言""initial value": "@WINHTTP_QUERY_EXPIRES"
+  },
+  {
+}"constant name": "最后修改时间",
+}"comment": "Last-Modified(响应): 文档的最后改动时间.",
+}"initial value": "@WINHTTP_QUERY_LAST_MODIFIED"
+  },
+  {
+
+"constant name": "信息识别符",
+
+"comment": "Message-Id: 信息的唯一标识符.",
+
+"initial value": "@WINHTTP_QUERY_MESSAGE_ID"
+  },
+  {
+"initial value": "@WINHTTP_QUERY_MESSAGE_ID""constant name": "URI",
+"initial value": "@WINHTTP_QUERY_MESSAGE_ID""comment": "Uri: 接收部分或全部URI,通过这些URI可以识别请求URI资源.",
+"initial value": "@WINHTTP_QUERY_MESSAGE_ID""initial value": "@WINHTTP_QUERY_URI"
+  },
+  {
+"initial value": "@WINHTTP_QUERY_MESSAGE_ID""constant name": "链接",
+"initial value": "@WINHTTP_QUERY_MESSAGE_ID""comment": "Link: 链接(已淘汰)",
+"initial value": "@WINHTTP_QUERY_MESSAGE_ID""initial value": "@WINHTTP_QUERY_LINK"
+  },
+  {
+comment": "禁止使用保持活动.""initial value": "@WINHTTP_QUERY_MIME_VERSION""constant name": "指令",
+comment": "禁止使用保持活动.""initial value": "@WINHTTP_QUERY_MIME_VERSION""comment": "Pragma(通用): 包含实现特定的指令,最常用的是Pragma:no-cache,它的含义和Cache-Control:no-cache相同.",
+comment": "禁止使用保持活动.""initial value": "@WINHTTP_QUERY_MIME_VERSION""initial value": "@WINHTTP_QUERY_PRAGMA"
+  },
+  {
+
+"constant name": "HTTP版本",
+
+"comment": "返回状态行的HTTP版本 [取响应头EX不可用]",
+
+"initial value": "@WINHTTP_QUERY_VERSION"
+  },
+  {
+ants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""constant name": "内容语言""initial value": "@WINHTTP_QUERY_EXPIRES""constant name": "状态码",
+ants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""constant name": "内容语言""initial value": "@WINHTTP_QUERY_EXPIRES""comment": "返回HTTP的状态码 [取响应头EX不可用]",
+ants": [
+"initial value": "@WINHTTP_QUERY_CONTENT_TYPE""constant name": "内容语言""initial value": "@WINHTTP_QUERY_EXPIRES""initial value": "@WINHTTP_QUERY_STATUS_CODE"
+  },
+  {
+
+"constant name": "状态文本",
+
+"comment": "返回HTTP状态码的附加描述文本,比如200状态码是\"OK\". [取响应头EX不可用]",
+
+"initial value": "@WINHTTP_QUERY_STATUS_TEXT"
+  },
+  {
+"comment": "Message-Id: 信息的唯一标识符.""constant name": "所有标头",
+"comment": "Message-Id: 信息的唯一标识符.""comment": "返回所有标头,标头之间以\\0分隔.",
+"comment": "Message-Id: 信息的唯一标识符.""initial value": "@WINHTTP_QUERY_RAW_HEADERS"
+  },
+  {
+}"constant name": "所有标头_换行",
+}"comment": "返回所有标头,标头之间以换行符分隔. [取响应头EX不可用]",
+}"initial value": "@WINHTTP_QUERY_RAW_HEADERS_CRLF"
+  },
+  {
+}"constant name": "连接",
+}"comment": "Connection(通用): 指定是否需要持久连接.",
+}"initial value": "@WINHTTP_QUERY_CONNECTION"
+  },
+  {
+"comment": "Last-Modified(响应): 文档的最后改动时间.""constant name": "接受媒体",
+"comment": "Last-Modified(响应): 文档的最后改动时间.""comment": "Accept(请求): 告诉服务器自己接受什么媒体类型.",
+"comment": "Last-Modified(响应): 文档的最后改动时间.""initial value": "@WINHTTP_QUERY_ACCEPT"
+  },
+  {
+"comment": "Connection(通用): 指定是否需要持久连接.""constant name": "接受字符集",
+"comment": "Connection(通用): 指定是否需要持久连接.""comment": "Accept-Charset(请求): 告诉服务器自己能接收的字符集.",
+"comment": "Connection(通用): 指定是否需要持久连接.""initial value": "@WINHTTP_QUERY_ACCEPT_CHARSET"
+  },
+  {
+
+"constant name": "接受编码",
+
+"comment": "Accept-Encoding(请求): 告诉服务器自己能接收的编码方法,通常指定压缩方法.",
+
+"initial value": "@WINHTTP_QUERY_ACCEPT_ENCODING"
+  },
+  {
+}"constant name": "接受语言",
+}"comment": "Accept-Language(请求): 申明客户端能接收的语言. 中文是语言,中文有多种字符集,比如big5、gb2312、gbk.",
+}"initial value": "@WINHTTP_QUERY_ACCEPT_LANGUAGE"
+  },
+  {
+}"constant name": "授权",
+}"comment": "Authorization(请求): 客户端接收到来自服务器的WWW-Authenticate响应时,用该头部来回应自己的身份验证信息给WEB服务器.",
+}"initial value": "@WINHTTP_QUERY_AUTHORIZATION"
+  },
+  {
+}"constant name": "内容编码",
+}"comment": "Content_Encoding(响应): 告知客户端服务器对主体部分选用的内容编码方式.",
+}"initial value": "@WINHTTP_QUERY_CONTENT_ENCODING"
+  },
+  {
+}"constant name": "转发",
+}"comment": "Forwarder: 转发(已淘汰)",
+}"initial value": "@WINHTTP_QUERY_FORWARDED"
+  },
+  {
+}"constant name": "寄件人",
+}"comment": "From(请求): 告知服务器使用用户代理的用户的电子邮件地址.",
+}"initial value": "@WINHTTP_QUERY_FROM"
+  },
+  {
+}"constant name": "自日期以来已修改",
+}"comment": "If-Modified-Since(请求): 请求对象在该字段指定的时间之后修改了,才会继续执行请求.",
+}"initial value": "@WINHTTP_QUERY_IF_MODIFIED_SINCE"
+  },
+  {
+nstant name": "内容编码""constant name": "重定向",
+nstant name": "内容编码""comment": "Location(响应): 重定向的地址,会引导客户端尝试访问新的地址.",
+nstant name": "内容编码""initial value": "@WINHTTP_QUERY_LOCATION"
+  },
+  {
+"comment": "Forwarder: 转发(已淘汰)""constant name": "来源地址",
+"comment": "Forwarder: 转发(已淘汰)""comment": "Orig-Uri: (已淘汰)",
+"comment": "Forwarder: 转发(已淘汰)""initial value": "@WINHTTP_QUERY_ORIG_URI"
+  },
+  {
+}"constant name": "来源",
+}"comment": "Referer(请求): 表示请求的URL是从哪个Web页面发起的.",
+}"initial value": "@WINHTTP_QUERY_REFERER"
+  },
+  {
+HTTP_QUERY_FROM"constant name": "重试时间",
+HTTP_QUERY_FROM"comment": "Retry-After(响应): 告知客户端应该在多久之后再次发送请求,可用GMT时间格式或秒数.",
+HTTP_QUERY_FROM"initial value": "@WINHTTP_QUERY_RETRY_AFTER"
+  },
+  {
+
+"constant name": "服务器名",
+
+"comment": "Server: 服务器名称,一般为HTTP服务器端应用程序的信息.",
+
+"initial value": "@WINHTTP_QUERY_SERVER"
+  },
+  {
+
+"constant name": "标题",
+
+"comment": "Title(响应): 标题(已淘汰)",
+
+"initial value": "@WINHTTP_QUERY_TITLE"
+  },
+  {
+_QUERY_FROM"constant name": "重试时间""constant name": "用户代理",
+_QUERY_FROM"constant name": "重试时间""comment": "User-Agent(请求): 将创建请求的游览器和用户代理名称等信息传达给服务器.",
+_QUERY_FROM"constant name": "重试时间""initial value": "@WINHTTP_QUERY_USER_AGENT"
+  },
+  {
+
+"constant name": "WWW身份验证",
+
+"comment": "WWW-Authenticate(响应): 将服务器所要求的认证信息发送给客户端.",
+
+"initial value": "@WINHTTP_QUERY_WWW_AUTHENTICATE"
+  },
+  {
+HTTP_QUERY_FROM"constant name": "代理身份验证",
+HTTP_QUERY_FROM"comment": "Proxy-Authenticate(响应): 将代理服务器所要求的认证信息发送给客户端.",
+HTTP_QUERY_FROM"initial value": "@WINHTTP_QUERY_PROXY_AUTHENTICATE"
+  },
+  {
+
+"constant name": "接受范围请求",
+
+"comment": "Accept-Ranges(响应): 客户端发起范围请求时,服务器用来告知自己是否支持范围请求.",
+
+"initial value": "@WINHTTP_QUERY_ACCEPT_RANGES"
+  },
+  {
+
+"constant name": "设置Cookie",
+
+"comment": "Set-Cookie(响应): 由服务器返回,用于设置和页面关联的Cookie.",
+
+"initial value": "@WINHTTP_QUERY_SET_COOKIE"
+  },
+  {
+TTP_QUERY_FROM"comment": "Proxy-Authenticate(响应): 将代理服务器所要求的认证信息发送给客户端.""constant name": "Cookie",
+TTP_QUERY_FROM"comment": "Proxy-Authenticate(响应): 将代理服务器所要求的认证信息发送给客户端.""comment": "Cookie(请求): 客户端发送到服务器的Cookies.",
+TTP_QUERY_FROM"comment": "Proxy-Authenticate(响应): 将代理服务器所要求的认证信息发送给客户端.""initial value": "@WINHTTP_QUERY_COOKIE"
+  },
+  {
+}"constant name": "请求方式",
+}"comment": "返回请求方式,如GET、POST.",
+}"initial value": "@WINHTTP_QUERY_REQUEST_METHOD"
+  },
+  {
+comment": "Forwarder: 转发(已淘汰)""initial value": "@WINHTTP_QUERY_ORIG_URI""constant name": "刷新时间",
+comment": "Forwarder: 转发(已淘汰)""initial value": "@WINHTTP_QUERY_ORIG_URI""comment": "Refresh(响应): 表示浏览器应该在多少时间之后刷新文档,以秒计(已淘汰).",
+comment": "Forwarder: 转发(已淘汰)""initial value": "@WINHTTP_QUERY_ORIG_URI""initial value": "@WINHTTP_QUERY_REFRESH"
+  },
+  {
+
+"constant name": "内容处置",
+
+"comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).",
+
+"initial value": "@WINHTTP_QUERY_CONTENT_DISPOSITION"
+  },
+  {
+}"constant name": "经过时间",
+}"comment": "Age(响应): 用来告知客户端,源服务器在多久前创建了响应,单位为秒.",
+}"initial value": "@WINHTTP_QUERY_AGE"
+  },
+  {
+"initial value": "@WINHTTP_QUERY_TITLE""constant name": "缓存机制",
+"initial value": "@WINHTTP_QUERY_TITLE""comment": "Cache-Control(通用): 指定请求和响应遵循的缓存机制.",
+"initial value": "@WINHTTP_QUERY_TITLE""initial value": "@WINHTTP_QUERY_CACHE_CONTROL"
+  },
+  {
+HTTP_QUERY_AGE"constant name": "内容基点",
+HTTP_QUERY_AGE"comment": "Content-Base: URI的基础地址,用来解析实体的相对URL.",
+HTTP_QUERY_AGE"initial value": "@WINHTTP_QUERY_CONTENT_BASE"
+  },
+  {
+
+"constant name": "内容重定向",
+
+"comment": "Content-Location(响应): 当返回的页面内容与实际请求的对象不同时,本字段返回重定向的页面地址.",
+
+"initial value": "@WINHTTP_QUERY_CONTENT_LOCATION"
+  },
+  {
+
+"constant name": "内容MD5",
+
+"comment": "Content-MD5(响应): 用于检查主体在传输过程中是否保持完整,以及确认传输到达.",
+
+"initial value": "@WINHTTP_QUERY_CONTENT_MD5"
+  },
+  {
+TTP_QUERY_FROM"comment": "Proxy-Authenticate(响应): 将代理服务器所要求的认证信息发送给客户端.""constant name": "内容范围",
+TTP_QUERY_FROM"comment": "Proxy-Authenticate(响应): 将代理服务器所要求的认证信息发送给客户端.""comment": "Content-Range(响应): 范围请求时,告知客户端返回的是实体哪个部分.",
+TTP_QUERY_FROM"comment": "Proxy-Authenticate(响应): 将代理服务器所要求的认证信息发送给客户端.""initial value": "@WINHTTP_QUERY_CONTENT_RANGE"
+  },
+  {
+
+"constant name": "ETag",
+
+"comment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.",
+
+"initial value": "@WINHTTP_QUERY_ETAG"
+  },
+  {
+omment": "Forwarder: 转发(已淘汰)""initial value": "@WINHTTP_QUERY_ORIG_URI""initial value": "@WINHTTP_QUERY_REFRESH""constant name": "主机名",
+omment": "Forwarder: 转发(已淘汰)""initial value": "@WINHTTP_QUERY_ORIG_URI""initial value": "@WINHTTP_QUERY_REFRESH""comment": "Host(请求): 告知服务器,请求的资源所处的互联网主机名和端口号.",
+omment": "Forwarder: 转发(已淘汰)""initial value": "@WINHTTP_QUERY_ORIG_URI""initial value": "@WINHTTP_QUERY_REFRESH""initial value": "@WINHTTP_QUERY_HOST"
+  },
+  {
+"comment": "返回请求方式,如GET、POST.""constant name": "匹配ETag",
+"comment": "返回请求方式,如GET、POST.""comment": "If-Match(请求): 参数值的ETag跟服务器一致时,才会继续执行请求.",
+"comment": "返回请求方式,如GET、POST.""initial value": "@WINHTTP_QUERY_IF_MATCH"
+  },
+  {
+
+"constant name": "不匹配ETag",
+
+"comment": "If-None-Match(请求): 参数值的ETag跟服务器不一致时,才会继续执行请求.",
+
+"initial value": "@WINHTTP_QUERY_IF_NONE_MATCH"
+  },
+  {
+"comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).""constant name": "范围请求",
+"comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).""comment": "If-Range(请求): 若字段值跟ETge值或更新日期时间一致,那么就作为范围请求处理.",
+"comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).""initial value": "@WINHTTP_QUERY_IF_RANGE"
+  },
+  {
+"initial value": "@WINHTTP_QUERY_CONTENT_LOCATION""constant name": "自日期以来未修改",
+"initial value": "@WINHTTP_QUERY_CONTENT_LOCATION""comment": "If-Unmodified-Since(请求): 请求对象在该字段指定的时间之后没有修改,才会继续执行请求.",
+"initial value": "@WINHTTP_QUERY_CONTENT_LOCATION""initial value": "@WINHTTP_QUERY_IF_UNMODIFIED_SINCE"
+  },
+  {
+
+"constant name": "最大转发",
+
+"comment": "Max-Forwards(请求): 服务器转发的最大次数.",
+
+"initial value": "@WINHTTP_QUERY_MAX_FORWARDS"
+  },
+  {
+
+"constant name": "代理授权",
+
+"comment": "Proxy-Authorization(请求): 接受到从代理服务器发来的认证质询时,客户端会发送该请求以告知服务器认证所需要的信息.",
+
+"initial value": "@WINHTTP_QUERY_PROXY_AUTHORIZATION"
+  },
+  {
+}"constant name": "范围",
+}"comment": "Range(请求): 范围请求时,告知服务器请求指定范围的资源.",
+}"initial value": "@WINHTTP_QUERY_RANGE"
+  },
+  {
+comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).""comment": "If-Range(请求): 若字段值跟ETge值或更新日期时间一致,那么就作为范围请求处理.""constant name": "传输编码",
+comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).""comment": "If-Range(请求): 若字段值跟ETge值或更新日期时间一致,那么就作为范围请求处理.""comment": "Transfer-Encoding(通用): 传输过程中的编码格式.",
+comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).""comment": "If-Range(请求): 若字段值跟ETge值或更新日期时间一致,那么就作为范围请求处理.""initial value": "@WINHTTP_QUERY_TRANSFER_ENCODING"
+  },
+  {
+tial value": "@WINHTTP_QUERY_CONTENT_LOCATION""constant name": "自日期以来未修改""constant name": "升级",
+tial value": "@WINHTTP_QUERY_CONTENT_LOCATION""constant name": "自日期以来未修改""comment": "Upgrade(通用): 指定另一种可能完全不同的协议,比如从HTTP升级到WebSocket.",
+tial value": "@WINHTTP_QUERY_CONTENT_LOCATION""constant name": "自日期以来未修改""initial value": "@WINHTTP_QUERY_UPGRADE"
+  },
+  {
+
+"constant name": "VARY",
+
+"comment": "Vary(响应): 可对缓存进行控制.源服务器会向代理服务器传达关于本地缓存使用方法的指令.",
+
+"initial value": "@WINHTTP_QUERY_VARY"
+  },
+  {
+HTTP_QUERY_HOST"constant name": "经过",
+HTTP_QUERY_HOST"comment": "Via(通用): 列出从客户端到OCS或者相反方向的响应经过了哪些代理服务器,他们用什么协议和版本发送的请求.",
+HTTP_QUERY_HOST"initial value": "@WINHTTP_QUERY_VIA"
+  },
+  {
+}"constant name": "警告",
+}"comment": "Warning(通用): 告知用户一些与缓存相关的的问题的警告.",
+}"initial value": "@WINHTTP_QUERY_WARNING"
+  },
+  {
+comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).""comment": "If-Range(请求): 若字段值跟ETge值或更新日期时间一致,那么就作为范围请求处理.""constant name": "期望",
+comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).""comment": "If-Range(请求): 若字段值跟ETge值或更新日期时间一致,那么就作为范围请求处理.""comment": "Expect(请求): 客户端用来告知服务器,期望出现的某种特定行为.",
+comment": "Content-Disposition(响应): 可用来设置文件下载对话框(已淘汰).""comment": "If-Range(请求): 若字段值跟ETge值或更新日期时间一致,那么就作为范围请求处理.""initial value": "@WINHTTP_QUERY_EXPECT"
+  },
+  {
+
+"constant name": "代理连接",
+
+"comment": "Proxy-Connection: 代理持久连接.",
+
+"initial value": "@WINHTTP_QUERY_PROXY_CONNECTION"
+  },
+  {
+}"constant name": "除非自日期以来已被修改",
+}"comment": "Unless-Modified-Since: 用来判断文件是否已被修改,用于断点续传.",
+}"initial value": "@WINHTTP_QUERY_UNLESS_MODIFIED_SINCE"
+  },
+  {
+
+"constant name": "代理支持",
+
+"comment": "Proxy-Support:",
+
+"initial value": "@WINHTTP_QUERY_PROXY_SUPPORT"
+  },
+  {
+HTTP_QUERY_VARY"constant name": "身份验证信息",
+HTTP_QUERY_VARY"comment": "Authentication-Info:",
+HTTP_QUERY_VARY"initial value": "@WINHTTP_QUERY_AUTHENTICATION_INFO"
+  },
+  {
+"initial value": "@WINHTTP_QUERY_UNLESS_MODIFIED_SINCE""constant name": "PassportURLs",
+"initial value": "@WINHTTP_QUERY_UNLESS_MODIFIED_SINCE""comment": "PassportURLs:",
+"initial value": "@WINHTTP_QUERY_UNLESS_MODIFIED_SINCE""initial value": "@WINHTTP_QUERY_PASSPORT_URLS"
+  },
+  {
+}"constant name": "Passport配置",
+}"comment": "Passport-Config:",
+}"initial value": "@WINHTTP_QUERY_PASSPORT_CONFIG"
+  },
+  {
+}"constant name": "自定义",
+}"comment": "获取指定名称的标头,需要提供参数\"标头名称\",本标志可以获取常量中没包含的标头.",
+}"initial value": "@WINHTTP_QUERY_CUSTOM"
+  }
+}]
+ },
+ {
+initial value": "@WINHTTP_QUERY_TITLE""comment": "Cache-Control(通用): 指定请求和响应遵循的缓存机制.""class name": "网络安全标志类_",
+initial value": "@WINHTTP_QUERY_TITLE""comment": "Cache-Control(通用): 指定请求和响应遵循的缓存机制.""comment": "用于\"WinHttp基类_.置选项_安全标志\"",
+initial value": "@WINHTTP_QUERY_TITLE""comment": "Cache-Control(通用): 指定请求和响应遵循的缓存机制.""@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+initial value": "@WINHTTP_QUERY_TITLE""comment": "Cache-Control(通用): 指定请求和响应遵循的缓存机制.""constants": [
+  {
+}"constant name": "忽略未知证书机构",
+}"comment": "允许无效的证书颁发机构.如果设置了此标志,则不会收到WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA回调.",
+}"data type": "整数",
+}"initial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA"
+  },
+  {
+}"constant name": "忽略无效证书日期",
+}"comment": "允许无效的证书日期,即过期或尚未生效的证书.如果设置了此标志,则不会收到WINHTTP_CALLBACK_STATUS_FLAG_CERT_DATE_INVALID回调.",
+}"data type": "整数",
+}"initial value": "@SECURITY_FLAG_IGNORE_CERT_DATE_INVALID"
+  },
+  {
+HTTP_QUERY_ETAG"constant name": "忽略无效证书公用名",
+HTTP_QUERY_ETAG"comment": "允许在证书中使用无效的公用名;也就是说,指定的服务器名称与证书中的公用名不匹配.如果设置了此标志,则应用程序不会收到WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID回调.",
+HTTP_QUERY_ETAG"data type": "整数",
+HTTP_QUERY_ETAG"initial value": "@SECURITY_FLAG_IGNORE_CERT_CN_INVALID"
+  },
+  {
+}"constant name": "忽略错误使用证书",
+}"comment": "允许使用非服务器证书(例如客户端证书)建立服务器的身份.",
+}"data type": "整数",
+}"initial value": "@SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE"
+  },
+  {
+}"constant name": "忽略所有证书错误",
+}"comment": "忽略以上所有的证书错误.",
+}"data type": "整数",
+}"initial value": "0x00003300"
+  },
+  {
+"initial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""constant name": "安全传输",
+"initial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""comment": "使用安全传输,只能在\"取选项\"中返回.",
+"initial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数",
+"initial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""initial value": "@SECURITY_FLAG_SECURE"
+  },
+  {
+initial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""constant name": "弱加密",
+initial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""comment": "使用弱加密(40位),只能在\"取选项\"中返回.",
+initial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""data type": "整数",
+initial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""initial value": "@SECURITY_FLAG_STRENGTH_WEAK"
+  },
+  {
+"initial value": "0x00003300""constant name": "中加密",
+"initial value": "0x00003300""comment": "使用中等加密(56位),只能在\"取选项\"中返回.",
+"initial value": "0x00003300""data type": "整数",
+"initial value": "0x00003300""initial value": "@SECURITY_FLAG_STRENGTH_MEDIUM"
+  },
+  {
+"comment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""constant name": "强加密",
+"comment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""comment": "使用强加密(128位),只能在\"取选项\"中返回.",
+"comment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""data type": "整数",
+"comment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""initial value": "@SECURITY_FLAG_STRENGTH_STRONG"
+  }
+initial value": "@WINHTTP_QUERY_TITLE""comment": "Cache-Control(通用): 指定请求和响应遵循的缓存机制."]
+ },
+ {
+"class name": "网络回调标志类_",
+"comment": "用于\"WinHttp基类_.置状态回调\"",
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+}"constant name": "全部状态完成",
+}"comment": "在任何完成通知时激活.此标志指定使用读取或写入操作所需的所有通知.\n有关完成操作的列表,请参阅\"网络回调状态标志类_\".",
+}"initial value": "@WINHTTP_CALLBACK_FLAG_ALL_COMPLETIONS"
+  },
+  {
+nstant name": "寄件人""constant name": "全部状态通知",
+nstant name": "寄件人""comment": "在任何状态更改通知(包括完成通知)时激活.\n有关通知列表,请参阅\"网络回调状态标志类_\".",
+nstant name": "寄件人""initial value": "@WINHTTP_CALLBACK_FLAG_ALL_NOTIFICATIONS"
+  },
+  {
+}"constant name": "域名解析",
+}"comment": "在开始和完成域名解析时激活.",
+}"initial value": "@WINHTTP_CALLBACK_FLAG_RESOLVE_NAME"
+  },
+  {
+"initial value": "@SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE""constant name": "连接服务器",
+"initial value": "@SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE""comment": "在开始并完成与服务器的连接时激活.",
+"initial value": "@SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE""initial value": "@WINHTTP_CALLBACK_FLAG_CONNECT_TO_SERVER"
+  },
+  {
+nitial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""comment": "使用弱加密(40位),只能在\"取选项\"中返回.""constant name": "检测代理",
+nitial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""comment": "使用弱加密(40位),只能在\"取选项\"中返回.""comment": "在检测到代理服务器时激活.",
+nitial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""comment": "使用弱加密(40位),只能在\"取选项\"中返回.""initial value": "@WINHTTP_CALLBACK_FLAG_DETECTING_PROXY"
+  },
+  {
+}"constant name": "数据可用",
+}"comment": "在完成数据查询时激活.",
+}"initial value": "@WINHTTP_CALLBACK_FLAG_DATA_AVAILABLE"
+  },
+  {
+itial value": "@WINHTTP_QUERY_TITLE""comment": "Cache-Control(通用): 指定请求和响应遵循的缓存机制."]"constant name": "响应头可用",
+itial value": "@WINHTTP_QUERY_TITLE""comment": "Cache-Control(通用): 指定请求和响应遵循的缓存机制."]"comment": "当响应头可获取时激活.",
+itial value": "@WINHTTP_QUERY_TITLE""comment": "Cache-Control(通用): 指定请求和响应遵循的缓存机制."]"initial value": "@WINHTTP_CALLBACK_FLAG_HEADERS_AVAILABLE"
+  },
+  {
+tial value": "@SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE""constant name": "连接服务器""constant name": "接收数据完成",
+tial value": "@SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE""constant name": "连接服务器""comment": "在完成数据接收操作时激活.",
+tial value": "@SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE""constant name": "连接服务器""initial value": "@WINHTTP_CALLBACK_FLAG_READ_COMPLETE"
+  },
+  {
+nitial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""comment": "使用弱加密(40位),只能在\"取选项\"中返回.""constant name": "请求错误",
+nitial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""comment": "使用弱加密(40位),只能在\"取选项\"中返回.""comment": "在发生异步错误时激活.",
+nitial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""comment": "使用弱加密(40位),只能在\"取选项\"中返回.""initial value": "@WINHTTP_CALLBACK_FLAG_REQUEST_ERROR"
+  },
+  {
+nitial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""data type": "整数""constant name": "发送请求",
+nitial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""data type": "整数""comment": "在开始和完成调用\"发送请求/WinHttpSendRequest\"发送请求头时激活.",
+nitial value": "@SECURITY_FLAG_IGNORE_UNKNOWN_CA""data type": "整数""data type": "整数""initial value": "@WINHTTP_CALLBACK_FLAG_SEND_REQUEST"
+  },
+  {
+initial value": "0x00003300""comment": "使用中等加密(56位),只能在\"取选项\"中返回.""constant name": "发送请求完成",
+initial value": "0x00003300""comment": "使用中等加密(56位),只能在\"取选项\"中返回.""comment": "当请求头已被\"发送请求/WinHttpSendRequest\"发送完成时激活.",
+initial value": "0x00003300""comment": "使用中等加密(56位),只能在\"取选项\"中返回.""initial value": "@WINHTTP_CALLBACK_FLAG_SENDREQUEST_COMPLETE"
+  },
+  {
+ment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""constant name": "强加密""constant name": "发送数据完成",
+ment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""constant name": "强加密""comment": "在数据POST操作完成后激活.",
+ment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""constant name": "强加密""initial value": "@WINHTTP_CALLBACK_FLAG_WRITE_COMPLETE"
+  },
+  {
+}"constant name": "接收响应",
+}"comment": "在开始和完成从HTTP服务器接收资源时激活.",
+}"initial value": "@WINHTTP_CALLBACK_FLAG_RECEIVE_RESPONSE"
+  },
+  {
+initial value": "0x00003300""comment": "使用中等加密(56位),只能在\"取选项\"中返回.""constant name": "关闭连接",
+initial value": "0x00003300""comment": "使用中等加密(56位),只能在\"取选项\"中返回.""comment": "在开始和完成关闭HTTP连接时激活.",
+initial value": "0x00003300""comment": "使用中等加密(56位),只能在\"取选项\"中返回.""initial value": "@WINHTTP_CALLBACK_FLAG_CLOSE_CONNECTION"
+  },
+  {
+
+"constant name": "句柄操作",
+
+"comment": "在创建或关闭HINTERNET句柄时激活.",
+
+"initial value": "@WINHTTP_CALLBACK_FLAG_HANDLES"
+  },
+  {
+}"constant name": "重定向",
+}"comment": "在重定向请求时激活.",
+}"initial value": "@WINHTTP_CALLBACK_FLAG_REDIRECT"
+  },
+  {
+完成与服务器的连接时激活."constant name": "中间响应",
+完成与服务器的连接时激活."comment": "在从服务器接收到中间(100级)状态代码消息时激活.",
+完成与服务器的连接时激活."initial value": "@WINHTTP_CALLBACK_FLAG_INTERMEDIATE_RESPONSE"
+  },
+  {
+nstant name": "重定向""constant name": "安全连接失败",
+nstant name": "重定向""comment": "在安全连接(SSL)失败时激活.",
+nstant name": "重定向""initial value": "@WINHTTP_CALLBACK_FLAG_SECURE_FAILURE"
+  }
+]
+ },
+ {
+"class name": "网络回调状态标志类_",
+"comment": "在\"状态回调方法\"中返回",
+"@文档": "\"category = \\\"网络访问库.网络访问库.WinHttp.附加类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+}"constant name": "正在解析域名",
+}"comment": "[1]正在查找服务器域名的IP地址.\n状态信息指针: 所欲解析的域名(文本型指针)",
+}"initial value": "@WINHTTP_CALLBACK_STATUS_RESOLVING_NAME"
+  },
+  {
+nstant name": "接收响应""constant name": "解析域名成功",
+nstant name": "接收响应""comment": "[2]成功找到服务器的IP地址.\n状态信息指针: 服务器IP地址(文本型指针)",
+nstant name": "接收响应""initial value": "@WINHTTP_CALLBACK_STATUS_NAME_RESOLVED"
+  },
+  {
+ss name": "网络回调状态标志类_""constant name": "正在连接服务器",
+ss name": "网络回调状态标志类_""comment": "[4]正在连接到服务器.\n状态信息指针: 服务器的IP地址(文本型指针)",
+ss name": "网络回调状态标志类_""initial value": "@WINHTTP_CALLBACK_STATUS_CONNECTING_TO_SERVER"
+  },
+  {
+nstant name": "忽略所有证书错误""constant name": "连接服务器成功",
+nstant name": "忽略所有证书错误""comment": "[8]成功连接到服务器.\n状态信息指针: 服务器的IP地址(文本型指针)",
+nstant name": "忽略所有证书错误""initial value": "@WINHTTP_CALLBACK_STATUS_CONNECTED_TO_SERVER"
+  },
+  {
+ment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""constant name": "强加密""constant name": "正在发送请求",
+ment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""constant name": "强加密""comment": "[16]正在发送请求信息到服务器.\n状态信息: 空",
+ment": "ETag(响应): 服务器资源的实体标签,当资源发生改变时,ETag值也会更新.""constant name": "强加密""initial value": "@WINHTTP_CALLBACK_STATUS_SENDING_REQUEST"
+  },
+  {
+}"constant name": "发送请求成功",
+}"comment": "[32]成功发送请求信息到服务器.\n状态信息指针: 已发送数据的字节长度(整数指针)",
+}"initial value": "@WINHTTP_CALLBACK_STATUS_REQUEST_SENT"
+  },
+  {
+comment": "在\"状态回调方法\"中返回""constant name": "正在接收响应",
+comment": "在\"状态回调方法\"中返回""comment": "[64]正在等待服务器对请求的响应.\n状态信息: 空",
+comment": "在\"状态回调方法\"中返回""initial value": "@WINHTTP_CALLBACK_STATUS_RECEIVING_RESPONSE"
+  },
+  {
+
+"constant name": "接收响应成功",
+
+"comment": "[128]成功接收服务器的响应.\n状态信息指针: 已接收数据的字节长度(整数指针)",
+
+"initial value": "@WINHTTP_CALLBACK_STATUS_RESPONSE_RECEIVED"
+  },
+  {
+omment": "在\"状态回调方法\"中返回""comment": "[64]正在等待服务器对请求的响应.\n状态信息: 空""constant name": "正在关闭连接",
+omment": "在\"状态回调方法\"中返回""comment": "[64]正在等待服务器对请求的响应.\n状态信息: 空""comment": "[256]正在关闭与服务器的连接.\n状态信息: 空",
+omment": "在\"状态回调方法\"中返回""comment": "[64]正在等待服务器对请求的响应.\n状态信息: 空""initial value": "@WINHTTP_CALLBACK_STATUS_CLOSING_CONNECTION"
+  },
+  {
+}"constant name": "关闭连接成功",
+}"comment": "[512]成功关闭与服务器的连接.\n状态信息: 空",
+}"initial value": "@WINHTTP_CALLBACK_STATUS_CONNECTION_CLOSED"
+  },
+  {
+
+"constant name": "创建句柄成功",
+
+"comment": "[1024]创建了一个网络句柄.\n状态信息指针: 网络句柄(变整数指针)",
+
+"initial value": "@WINHTTP_CALLBACK_STATUS_HANDLE_CREATED"
+  },
+  {
+ent": "在\"状态回调方法\"中返回""constant name": "正在接收响应""constant name": "正在关闭句柄",
+ent": "在\"状态回调方法\"中返回""constant name": "正在接收响应""comment": "[2048]即将关闭一个网络句柄.\n状态信息指针: 网络句柄(变整数指针)",
+ent": "在\"状态回调方法\"中返回""constant name": "正在接收响应""initial value": "@WINHTTP_CALLBACK_STATUS_HANDLE_CLOSING"
+  },
+  {
+
+"constant name": "正在检测代理",
+
+"comment": "[4096]",
+
+"initial value": "@WINHTTP_CALLBACK_STATUS_DETECTING_PROXY"
+  },
+  {
+
+"constant name": "重定向",
+
+"comment": "[16384]HTTP请求即将被自动重定向.你可以在此时接收重定向的响应头,或通过关闭句柄来取消重定向.\n状态信息指针: 重定向的新URL(文本型指针)",
+
+"initial value": "@WINHTTP_CALLBACK_STATUS_REDIRECT"
+  },
+  {
+"initial value": "@WINHTTP_CALLBACK_STATUS_REDIRECT""constant name": "中间响应",
+"initial value": "@WINHTTP_CALLBACK_STATUS_REDIRECT""comment": "[32768]接收到服务器的中间(100级)状态代码信息.\n状态信息指针: 状态代码(整数指针)",
+"initial value": "@WINHTTP_CALLBACK_STATUS_REDIRECT""initial value": "@WINHTTP_CALLBACK_STATUS_INTERMEDIATE_RESPONSE"
+  },
+  {
+"constant name": "安全连接失败",
+"comment": "[65536]接收服务器的SSL证书时遇到错误.\n状态信息指针: 标志(整数指针)",
+"initial value": "@WINHTTP_CALLBACK_STATUS_SECURE_FAILURE"
+  },
+  {
+
+"constant name": "响应头可用",
+
+"comment": "[131072]有可用\"取响应头\"获取的响应头.\n状态信息: 空",
+
+"initial value": "@WINHTTP_CALLBACK_STATUS_HEADERS_AVAILABLE"
+  },
+  {
+}"constant name": "数据可用",
+}"comment": "[262144]有可用\"接收数据\"方法获取的数据.\n状态信息指针: 数据的字节长度(整数指针)",
+}"initial value": "@WINHTTP_CALLBACK_STATUS_DATA_AVAILABLE"
+  },
+  {
+nstant name": "创建句柄成功""constant name": "接收数据完成",
+nstant name": "创建句柄成功""comment": "[524288]成功接收服务器的数据.\n状态信息指针: 缓冲区(变整数指针); 状态信息长度: 接收的数据长度;\n*当使用WebSocket时.\n状态信息指针: 结构体指针,可用\"WebSocket状态类.置数据()\"获取; 状态信息长度: 结构体长度;",
+nstant name": "创建句柄成功""initial value": "@WINHTTP_CALLBACK_STATUS_READ_COMPLETE"
+  },
+  {
+
+"constant name": "发送数据完成",
+
+"comment": "[1048576]成功发送数据到服务器.\n状态信息指针: 已发送数据的字节长度(整数指针);\n*当使用WebSocket时.\n状态信息指针: 结构体指针,可用\"WebSocket状态类.置数据()\"获取; 状态信息长度: 结构体长度",
+
+"initial value": "@WINHTTP_CALLBACK_STATUS_WRITE_COMPLETE"
+  },
+  {
+
+"constant name": "请求错误",
+
+"comment": "[2097152]发送HTTP请求时发生错误.\n状态信息指针: 可用\"WinHTTP异步结果类.置数据()\"获取,其中的\"返回值\"成员请参考\"异步请求结果_WinHTTP\";",
+
+"initial value": "@WINHTTP_CALLBACK_STATUS_REQUEST_ERROR"
+  },
+  {
+nt name": "接收响应""constant name": "解析域名成功""constant name": "发送请求完成",
+nt name": "接收响应""constant name": "解析域名成功""comment": "[4194304]成功发送请求.\n状态信息: 空",
+nt name": "接收响应""constant name": "解析域名成功""initial value": "@WINHTTP_CALLBACK_STATUS_SENDREQUEST_COMPLETE"
+  },
+  {
+
+"constant name": "从URL取代理完成",
+
+"comment": "[16777216]在异步调用\"从URL获取代理EX\"完成时触发,然后可以调用\"接收数据\".",
+
+"initial value": "0x01000000"
+  },
+  {
+}"constant name": "WS关闭完成",
+}"comment": "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.",
+}"initial value": "0x02000000"
+  },
+  {
+}"constant name": "WS停止完成",
+}"comment": "[67108864]通过调用\"停止WebSocket\"停止连接成功.",
+}"initial value": "0x04000000"
+  },
+  {
+"comment": "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""constant name": "设置发送数据完成",
+"comment": "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""comment": "[268435456]",
+"comment": "[33554432]通过调用\"关闭WebSocket\"关闭连接成功.""initial value": "0x10000000"
+  },
+  {
+}"constant name": "设置接收数据完成",
+}"comment": "[536870912]",
+}"initial value": "0x20000000"
+  }
+]
+ }
+息指针: 可用\"WinHTTP异步结果类.置数据()\"获取,其中的\"返回值\"成员请参考\"异步请求结果_WinHTTP\";"]
+}

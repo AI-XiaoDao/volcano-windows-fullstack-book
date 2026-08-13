@@ -1,0 +1,2669 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC表格组件".
+
+{
+问本程序中的接口需要引用模块"MFC表格组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"MFC表格组件"."package name": "火山.MFC界面.表格",
+问本程序中的接口需要引用模块"MFC表格组件"."classes": [
+ {
+"class name": "表格线显示类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+释 = "成功返回真,失败返回假.""constant name": "不显示",
+释 = "成功返回真,失败返回假.""initial value": "0"
+  },
+  {
+@常量类": "整数""constant name": "横线",
+@常量类": "整数""initial value": "1"
+  },
+  {
+}"constant name": "纵线",
+}"initial value": "2"
+  },
+  {
+扠數ŝ"constant name": "横纵线",
+扠數ŝ"initial value": "3"
+  }
+]
+ },
+ {
+"class name": "表格附件打印位置",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "不打印",
+
+"initial value": "0"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "左边",
+tegory = \\\"辅助类\\\"\""initial value": "1"
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "中间",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "2"
+  },
+  {
+扠數ŝ"constant name": "右边",
+扠數ŝ"initial value": "3"
+  }
+]
+ },
+ {
+"class name": "表格回车键用途",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "编辑切换",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "跳到下一列",
+
+"initial value": "1"
+  },
+  {
+數ŝ"initial value": "3""constant name": "跳到下一行",
+數ŝ"initial value": "3""initial value": "2"
+  },
+  {
+ry = \\\"辅助类\\\"\""constant name": "左边""constant name": "无",
+ry = \\\"辅助类\\\"\""constant name": "左边""initial value": "3"
+  }
+]
+ },
+ {
+"class name": "表格常量",
+"comment": "提供对表格组件进行操作时所使用的相关常量值",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+tegory = \\\"辅助类\\\"\""constant name": "行斑马线",
+tegory = \\\"辅助类\\\"\""data type": "整数",
+tegory = \\\"辅助类\\\"\""initial value": "1"
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "列斑马线",
+@文档": "\"category = \\\"辅助类\\\"\"""data type": "整数",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "2"
+  },
+  {
+
+"constant name": "左对齐",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+"initial value": "1""constant name": "居中对齐",
+"initial value": "1""data type": "整数",
+"initial value": "1""initial value": "2"
+  },
+  {
+"data type": "整数""constant name": "右对齐",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "3"
+  },
+  {
+ "提供编辑时所使用的背景颜色,为\"颜色类.透明色\"表示不进行修改.""constant name": "文本值型",
+ "提供编辑时所使用的背景颜色,为\"颜色类.透明色\"表示不进行修改.""data type": "整数",
+ "提供编辑时所使用的背景颜色,为\"颜色类.透明色\"表示不进行修改.""initial value": "1"
+  },
+  {
+}"constant name": "数值型",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "日期型",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "列表型",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "选择型",
+
+"data type": "整数",
+
+"initial value": "5"
+  },
+  {
+脰數ŝ"constant name": "图片型",
+脰數ŝ"data type": "整数",
+脰數ŝ"initial value": "6"
+  },
+  {
+"initial value": "1""constant name": "货币型",
+"initial value": "1""data type": "整数",
+"initial value": "1""initial value": "7"
+  },
+  {
+}"constant name": "不可编辑列表型",
+}"data type": "整数",
+}"initial value": "8"
+  },
+  {
+}"constant name": "长日期格式",
+}"data type": "整数",
+}"initial value": "1"
+  },
+  {
+initial value": "1""initial value": "2""constant name": "短日期格式1",
+initial value": "1""initial value": "2""data type": "整数",
+initial value": "1""initial value": "2""initial value": "2"
+  },
+  {
+nstant name": "长日期格式""constant name": "短日期格式2",
+nstant name": "长日期格式""data type": "整数",
+nstant name": "长日期格式""initial value": "3"
+  },
+  {
+
+"constant name": "短日期格式3",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+}"constant name": "美式格式1",
+}"data type": "整数",
+}"initial value": "5"
+  },
+  {
+nstant name": "跳到下一列""constant name": "美式格式2",
+nstant name": "跳到下一列""data type": "整数",
+nstant name": "跳到下一列""initial value": "6"
+  },
+  {
+}"constant name": "美式格式3",
+}"data type": "整数",
+}"initial value": "7"
+  },
+  {
+}"constant name": "美式格式4",
+}"data type": "整数",
+}"initial value": "8"
+  },
+  {
+
+"constant name": "人民币",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+"initial value": "1""constant name": "美元",
+"initial value": "1""data type": "整数",
+"initial value": "1""initial value": "2"
+  },
+  {
+stant name": "跳到下一列""initial value": "6""constant name": "欧元",
+stant name": "跳到下一列""initial value": "6""data type": "整数",
+stant name": "跳到下一列""initial value": "6""initial value": "3"
+  },
+  {
+
+"constant name": "英镑",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "自定义货币",
+
+"data type": "整数",
+
+"initial value": "5"
+  },
+  {
+"initial value": "8""constant name": "平铺",
+"initial value": "8""data type": "整数",
+"initial value": "8""initial value": "1"
+  },
+  {
+}"constant name": "拉伸",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+"initial value": "8""constant name": "居中",
+"initial value": "8""data type": "整数",
+"initial value": "8""initial value": "3"
+  },
+  {
+
+"constant name": "左上角",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "适合大小",
+
+"data type": "整数",
+
+"initial value": "5"
+  },
+  {
+}"constant name": "加",
+}"data type": "整数",
+}"initial value": "1"
+  },
+  {
+}"constant name": "减",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "乘",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+}"constant name": "除",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+
+"constant name": "无线条",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+"data type": "整数""constant name": "单斜线",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "1"
+  },
+  {
+
+"constant name": "双斜线",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "交叉线",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+stant name": "跳到下一列""initial value": "6""constant name": "左边距",
+stant name": "跳到下一列""initial value": "6""data type": "整数",
+stant name": "跳到下一列""initial value": "6""initial value": "1"
+  },
+  {
+nstant name": "加""constant name": "右边距",
+nstant name": "加""data type": "整数",
+nstant name": "加""initial value": "2"
+  },
+  {
+"data type": "整数""constant name": "上边距",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "3"
+  },
+  {
+}"constant name": "下边距",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+}"constant name": "页眉",
+}"data type": "整数",
+}"initial value": "5"
+  },
+  {
+"initial value": "5""constant name": "页脚",
+"initial value": "5""data type": "整数",
+"initial value": "5""initial value": "6"
+  },
+  {
+nstant name": "除""constant name": "表头与表格间隔",
+nstant name": "除""data type": "整数",
+nstant name": "除""initial value": "7"
+  },
+  {
+
+"constant name": "粗体",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "斜体",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+nstant name": "斜体""constant name": "下划线",
+nstant name": "斜体""data type": "整数",
+nstant name": "斜体""initial value": "4"
+  },
+  {
+
+"constant name": "删除线",
+
+"data type": "整数",
+
+"initial value": "8"
+  }
+]
+ },
+ {
+"class name": "表格",
+"base class": "窗口组件",
+"@视窗.外部头文件": "\"src\\\\mfc_ui_grid.h\"",
+"@视窗.外部源文件": "\"src\\\\grid\\\\ComboGridCtrl.cpp\\r\\nsrc\\\\grid\\\\GridCell.cpp\\r\\nsrc\\\\grid\\\\GridCellBase.cpp\\r\\nsrc\\\\grid\\\\GridCtrl.cpp\\r\\nsrc\\\\grid\\\\GridDropTarget.cpp\\r\\nsrc\\\\grid\\\\InPlaceButton.cpp\\r\\nsrc\\\\grid\\\\inplacedatepick.cpp\\r\\nsrc\\\\grid\\\\InPlaceEdit.cpp\\r\\nsrc\\\\grid\\\\inplacelist.cpp\\r\\nsrc\\\\grid\\\\TitleTip.cpp\\r\\nsrc\\\\mfc_ui_grid.cpp\\r\\nsrc\\\\mfc_ui_grid_preview.cpp\"",
+"@视窗.后缀文本": "\"public IGridEventListener\"",
+"@视窗.外部资源文件": "\"src\\\\res\\\\mfc_ui_grid.rc\"",
+"@视窗.窗口组件": "\"icon=\\\"@66\\\"\\r\\ndefault_size = \\\"160, 160\\\"\"",
+"methods": [
+  {
+nt name": "斜体""constant name": "下划线""method name": "光标位置改变",
+nt name": "斜体""constant name": "下划线""comment": "当用户更改了当前被选择单元时会产生本事件",
+nt name": "斜体""constant name": "下划线""type": "event",
+nt name": "斜体""constant name": "下划线""data type": "整数"
+  },
+  {
+nt name": "斜体""constant name": "下划线""method name": "将被编辑",
+nt name": "斜体""constant name": "下划线""comment": "当单元格将被编辑前产生本事件,调用\"取光标行号\"和\"取光标列号\"方法可获取将被编辑的单元格位置.",
+nt name": "斜体""constant name": "下划线""type": "event",
+nt name": "斜体""constant name": "下划线""data type": "整数"
+  },
+  {
+nstant name": "下边距""method name": "结束编辑",
+nstant name": "下边距""comment": "当单元格编辑结束之后产生此事件",
+nstant name": "下边距""type": "event",
+nstant name": "下边距""data type": "整数"
+  },
+  {
+}"method name": "行高被改变",
+}"comment": "当用户调整了表格行行高时即产生此事件",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "行号",
+"comment": "提供行高被改变的表格行号,行号从0开始.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+stant name": "斜体""data type": "整数""method name": "列宽被改变",
+stant name": "斜体""data type": "整数""comment": "当用户调整了表格列列宽时即产生此事件",
+stant name": "斜体""data type": "整数""type": "event",
+stant name": "斜体""data type": "整数""data type": "整数",
+stant name": "斜体""data type": "整数""parameters": [
+   {
+"parameter name": "列号",
+"comment": "提供列宽被改变的表格列号,列号从0开始.",
+"data type": "整数"
+   }
+stant name": "斜体""data type": "整数"]
+  },
+  {
+整了表格行行高时即产生此事件"method name": "被单击",
+整了表格行行高时即产生此事件"comment": "当用户单击表格时即产生此事件,关于表格的鼠标点击事件都应在此事件中处理.",
+整了表格行行高时即产生此事件"type": "event",
+整了表格行行高时即产生此事件"data type": "整数",
+整了表格行行高时即产生此事件"parameters": [
+   {
+"parameter name": "横向位置",
+"comment": "提供单击位置在当前所处窗口组件中的横向位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "提供单击位置在当前所处窗口组件中的纵向位置",
+"data type": "整数"
+   }
+整了表格行行高时即产生此事件]
+  },
+  {
+ }"method name": "列表项被选择",
+ }"comment": "当用户选择列表型单元格中的列表项时产生此事件",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "行号",
+"comment": "提供当前单元格所处表格行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "提供当前单元格所处表格列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "被选择项目文本",
+"comment": "提供被选择项目的文本内容",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+comment": "提供被选择项目的文本内容""method name": "可否被编辑",
+comment": "提供被选择项目的文本内容""comment": "  在某单元格\"将被编辑\"事件之前产生本事件,如果本事件返回1,表示不允许\n该单元格进入编辑状态,这种情况下不会有后续的\"将被编辑\"事件.本事件并\n不能阻止\"不进入编辑状态而修改单元格内容\"的行为,如按下DEL或Ctrl+V键.",
+comment": "提供被选择项目的文本内容""type": "event",
+comment": "提供被选择项目的文本内容""data type": "整数"
+  },
+  {
+
+"method name": "表头被单击",
+
+"comment": "当表头被单击后发送本事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "提供当前单元格所处表格行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "提供当前单元格所处表格列的列号,列号从0开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "表头被双击",
+"comment": "当表头被双击后发送本事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "提供当前单元格所处表格行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "提供当前单元格所处表格列的列号,列号从0开始.",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "表格线颜色",
+}"comment": "返回当前表格线颜色",
+}"type": "property getter",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "表格线颜色",
+ }"comment": "设置当前表格线颜色",
+ }"type": "property setter",
+ }"@值细节类型": "颜色",
+ }"@视窗.设置时机": "组件创建前后",
+ }"parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ent": "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色",
+ent": "提供被选择项目的文本内容""method name": "可否被编辑""comment": "返回当前文本背景颜色",
+ent": "提供被选择项目的文本内容""method name": "可否被编辑""type": "property getter",
+ent": "提供被选择项目的文本内容""method name": "可否被编辑""data type": "整数",
+ent": "提供被选择项目的文本内容""method name": "可否被编辑""@禁止流程检查": "真"
+  },
+  {
+ameter name": "列号""method name": "背景颜色",
+ameter name": "列号""comment": "设置当前文本背景颜色",
+ameter name": "列号""type": "property setter",
+ameter name": "列号""@值细节类型": "颜色支持默认",
+ameter name": "列号""@视窗.设置时机": "组件创建前后",
+ameter name": "列号""parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "  可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.",
+"data type": "整数"
+   }
+ameter name": "列号"]
+  },
+  {
+ameter name": "列号""method name": "文字颜色",
+ameter name": "列号""comment": "返回当前文本颜色",
+ameter name": "列号""type": "property getter",
+ameter name": "列号""data type": "整数",
+ameter name": "列号""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "文字颜色",
+
+"comment": "设置当前文本颜色",
+
+"type": "property setter",
+
+"@值细节类型": "颜色",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+thod name": "文字颜色""method name": "点燃色",
+thod name": "文字颜色""comment": "返回当前焦点所在单元格文本颜色",
+thod name": "文字颜色""type": "property getter",
+thod name": "文字颜色""data type": "整数",
+thod name": "文字颜色""@禁止流程检查": "真"
+  },
+  {
+焦点所在单元格文本颜色"method name": "点燃色",
+焦点所在单元格文本颜色"comment": "设置当前焦点所在单元格文本颜色",
+焦点所在单元格文本颜色"type": "property setter",
+焦点所在单元格文本颜色"@值细节类型": "颜色",
+焦点所在单元格文本颜色"@视窗.设置时机": "组件创建前后",
+焦点所在单元格文本颜色"parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+焦点所在单元格文本颜色]
+  },
+  {
+data type": "整数""method name": "显示表格线",
+data type": "整数""comment": "返回当前表格线显示类型",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "表格线显示类型",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+焦点所在单元格文本颜色"method name": "显示表格线",
+焦点所在单元格文本颜色"comment": "设置当前表格线显示类型",
+焦点所在单元格文本颜色"type": "property setter",
+焦点所在单元格文本颜色"@视窗.设置时机": "组件创建前后",
+焦点所在单元格文本颜色"parameters": [
+   {
+"parameter name": "所欲设置的显示类型",
+"data type": "表格线显示类型"
+   }
+焦点所在单元格文本颜色]
+  },
+  {
+: "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""method name": "允许调整行高",
+: "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""comment": "返回是否允许用户调整表格行高",
+: "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""type": "property getter",
+: "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""data type": "逻辑型",
+: "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真"
+  },
+  {
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""method name": "允许调整行高",
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""comment": "设置是否允许用户调整表格行高",
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""type": "property setter",
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""@视窗.设置时机": "组件创建前后",
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "是否允许调整行高",
+"data type": "逻辑型"
+   }
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真"]
+  },
+  {
+供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""method name": "允许调整行高""method name": "允许调整列宽",
+供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""method name": "允许调整行高""comment": "返回是否允许用户调整表格列宽",
+供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""method name": "允许调整行高""type": "property getter",
+供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""method name": "允许调整行高""data type": "逻辑型",
+供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""method name": "允许调整行高""@禁止流程检查": "真"
+  },
+  {
+meter name": "列号""@视窗.设置时机": "组件创建前后""method name": "允许调整列宽",
+meter name": "列号""@视窗.设置时机": "组件创建前后""comment": "设置是否允许用户调整表格列宽",
+meter name": "列号""@视窗.设置时机": "组件创建前后""type": "property setter",
+meter name": "列号""@视窗.设置时机": "组件创建前后""@视窗.设置时机": "组件创建前后",
+meter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+   {
+"parameter name": "是否允许调整列宽",
+"data type": "逻辑型"
+   }
+meter name": "列号""@视窗.设置时机": "组件创建前后"]
+  },
+  {
+data type": "逻辑型""method name": "行高",
+data type": "逻辑型""comment": "返回当前所设置的表格默认行高",
+data type": "逻辑型""type": "property getter",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+meter name": "列号""@视窗.设置时机": "组件创建前后""method name": "行高",
+meter name": "列号""@视窗.设置时机": "组件创建前后""comment": "设置表格默认行高,并且同时设置当前所有表格行的高度.",
+meter name": "列号""@视窗.设置时机": "组件创建前后""type": "property setter",
+meter name": "列号""@视窗.设置时机": "组件创建前后""@视窗.设置时机": "组件创建前后",
+meter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+   {
+"parameter name": "所欲设置的行高",
+"data type": "整数"
+   }
+meter name": "列号""@视窗.设置时机": "组件创建前后"]
+  },
+  {
+eter name": "列号""@视窗.设置时机": "组件创建前后""comment": "设置是否允许用户调整表格列宽""method name": "列宽",
+eter name": "列号""@视窗.设置时机": "组件创建前后""comment": "设置是否允许用户调整表格列宽""comment": "返回当前所设置的表格默认列宽",
+eter name": "列号""@视窗.设置时机": "组件创建前后""comment": "设置是否允许用户调整表格列宽""type": "property getter",
+eter name": "列号""@视窗.设置时机": "组件创建前后""comment": "设置是否允许用户调整表格列宽""data type": "整数",
+eter name": "列号""@视窗.设置时机": "组件创建前后""comment": "设置是否允许用户调整表格列宽""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "列宽",
+
+"comment": "设置表格默认列宽,并且同时设置当前所有表格列的宽度.",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的列宽",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "行数",
+}"comment": "返回当前表格行数",
+}"type": "property getter",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""method name": "行数",
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""comment": "设置当前表格行数",
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""type": "property setter",
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""@视窗.设置时机": "组件创建前后",
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "所欲设置的行数",
+"data type": "整数"
+   }
+ "提供被选择项目的文本内容""method name": "可否被编辑""method name": "背景颜色""@禁止流程检查": "真"]
+  },
+  {
+data type": "整数""method name": "列数",
+data type": "整数""comment": "返回当前表格列数",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "整数",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+ameter name": "所欲设置的行数""method name": "列数",
+ameter name": "所欲设置的行数""comment": "设置当前表格列数",
+ameter name": "所欲设置的行数""type": "property setter",
+ameter name": "所欲设置的行数""@视窗.设置时机": "组件创建前后",
+ameter name": "所欲设置的行数""parameters": [
+   {
+"parameter name": "所欲设置的列数",
+"data type": "整数"
+   }
+ameter name": "所欲设置的行数"]
+  },
+  {
+
+"@视窗.设置时机": "组件创建前后""method name": "表头行数",
+
+"@视窗.设置时机": "组件创建前后""comment": "返回当前表格表头行数",
+
+"@视窗.设置时机": "组件创建前后""type": "property getter",
+
+"@视窗.设置时机": "组件创建前后""data type": "整数",
+
+"@视窗.设置时机": "组件创建前后""@禁止流程检查": "真"
+  },
+  {
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"method name": "表头行数",
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"comment": "设置当前表格表头行数",
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"type": "property setter",
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"@视窗.设置时机": "组件创建前后",
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"parameters": [
+   {
+"parameter name": "所欲设置的行数",
+"data type": "整数"
+   }
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+]
+  },
+  {
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"method name": "表头列数",
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"comment": "返回当前表格表头列数",
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"type": "property getter",
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"data type": "整数",
+eter name": "列号""@视窗.设置时机": "组件创建前后""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "表头列数",
+}"comment": "设置当前表格表头列数",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "所欲设置的列数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "所欲设置的行高""method name": "是否可编辑",
+ameter name": "所欲设置的行高""comment": "返回用户是否可编辑表格内容",
+ameter name": "所欲设置的行高""type": "property getter",
+ameter name": "所欲设置的行高""data type": "逻辑型",
+ameter name": "所欲设置的行高""@禁止流程检查": "真"
+  },
+  {
+meter name": "所欲设置的行高""type": "property getter""method name": "是否可编辑",
+meter name": "所欲设置的行高""type": "property getter""comment": "设置用户是否可编辑表格内容",
+meter name": "所欲设置的行高""type": "property getter""type": "property setter",
+meter name": "所欲设置的行高""type": "property getter""@视窗.设置时机": "组件创建前后",
+meter name": "所欲设置的行高""type": "property getter""parameters": [
+   {
+"parameter name": "是否允许用户编辑",
+"data type": "逻辑型"
+   }
+meter name": "所欲设置的行高""type": "property getter"]
+  },
+  {
+meter name": "所欲设置的行数""parameters": [
+"method name": "显示打印对话框",
+meter name": "所欲设置的行数""parameters": [
+"comment": "返回打印前是否显示打印对话框",
+meter name": "所欲设置的行数""parameters": [
+"type": "property getter",
+meter name": "所欲设置的行数""parameters": [
+"data type": "逻辑型",
+meter name": "所欲设置的行数""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+eter name": "所欲设置的行数""parameters": [
+"comment": "返回打印前是否显示打印对话框""method name": "显示打印对话框",
+eter name": "所欲设置的行数""parameters": [
+"comment": "返回打印前是否显示打印对话框""comment": "设置打印前是否显示打印对话框",
+eter name": "所欲设置的行数""parameters": [
+"comment": "返回打印前是否显示打印对话框""type": "property setter",
+eter name": "所欲设置的行数""parameters": [
+"comment": "返回打印前是否显示打印对话框""@视窗.设置时机": "组件创建前后",
+eter name": "所欲设置的行数""parameters": [
+"comment": "返回打印前是否显示打印对话框""parameters": [
+   {
+"parameter name": "是否显示打印对话框",
+"data type": "逻辑型"
+   }
+eter name": "所欲设置的行数""parameters": [
+"comment": "返回打印前是否显示打印对话框"]
+  },
+  {
+eter name": "所欲设置的行数""parameters": [
+"type": "property getter""method name": "允许选择块",
+eter name": "所欲设置的行数""parameters": [
+"type": "property getter""comment": "返回是否可以选择多个单元格",
+eter name": "所欲设置的行数""parameters": [
+"type": "property getter""type": "property getter",
+eter name": "所欲设置的行数""parameters": [
+"type": "property getter""data type": "逻辑型",
+eter name": "所欲设置的行数""parameters": [
+"type": "property getter""@禁止流程检查": "真"
+  },
+  {
+}"method name": "允许选择块",
+}"comment": "设置是否可以选择多个单元格",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "是否允许选择块",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "显示打印按钮",
+}"comment": "返回打印预览时是否显示打印按钮",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+thod name": "显示打印按钮""method name": "显示打印按钮",
+thod name": "显示打印按钮""comment": "设置打印预览时是否显示打印按钮",
+thod name": "显示打印按钮""type": "property setter",
+thod name": "显示打印按钮""@视窗.设置时机": "组件创建前后",
+thod name": "显示打印按钮""parameters": [
+   {
+"parameter name": "是否显示打印按钮",
+"data type": "逻辑型"
+   }
+thod name": "显示打印按钮"]
+  },
+  {
+hod name": "显示打印按钮""type": "property setter""method name": "表头背景颜色",
+hod name": "显示打印按钮""type": "property setter""comment": "返回当前表头背景颜色",
+hod name": "显示打印按钮""type": "property setter""type": "property getter",
+hod name": "显示打印按钮""type": "property setter""data type": "整数",
+hod name": "显示打印按钮""type": "property setter""@禁止流程检查": "真"
+  },
+  {
+hod name": "显示打印按钮""@视窗.设置时机": "组件创建前后""method name": "表头背景颜色",
+hod name": "显示打印按钮""@视窗.设置时机": "组件创建前后""comment": "设置当前表头背景颜色",
+hod name": "显示打印按钮""@视窗.设置时机": "组件创建前后""type": "property setter",
+hod name": "显示打印按钮""@视窗.设置时机": "组件创建前后""@值细节类型": "颜色支持默认",
+hod name": "显示打印按钮""@视窗.设置时机": "组件创建前后""@视窗.设置时机": "组件创建前后",
+hod name": "显示打印按钮""@视窗.设置时机": "组件创建前后""parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "  可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.",
+"data type": "整数"
+   }
+hod name": "显示打印按钮""@视窗.设置时机": "组件创建前后"]
+  },
+  {
+"type": "property setter""method name": "打印页码",
+"type": "property setter""comment": "返回是否打印页码及页码打印位置",
+"type": "property setter""type": "property getter",
+"type": "property setter""data type": "表格附件打印位置",
+"type": "property setter""@禁止流程检查": "真"
+  },
+  {
+}"method name": "打印页码",
+}"comment": "设置是否打印页码及页码打印位置",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "页码打印位置",
+"data type": "表格附件打印位置"
+   }
+}]
+  },
+  {
+"@禁止流程检查": "真""method name": "打印日期",
+"@禁止流程检查": "真""comment": "返回是否打印日期及日期打印位置",
+"@禁止流程检查": "真""type": "property getter",
+"@禁止流程检查": "真""data type": "表格附件打印位置",
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+od name": "显示打印按钮"]"method name": "打印日期",
+od name": "显示打印按钮"]"comment": "设置是否打印日期及日期打印位置",
+od name": "显示打印按钮"]"type": "property setter",
+od name": "显示打印按钮"]"@视窗.设置时机": "组件创建前后",
+od name": "显示打印按钮"]"parameters": [
+   {
+"parameter name": "日期打印位置",
+"data type": "表格附件打印位置"
+   }
+od name": "显示打印按钮"]]
+  },
+  {
+}"method name": "回车键功能",
+}"comment": "返回在表格中回车键的用途",
+}"type": "property getter",
+}"data type": "表格回车键用途",
+}"@禁止流程检查": "真"
+  },
+  {
+ameter name": "所欲设置颜色值""method name": "回车键功能",
+ameter name": "所欲设置颜色值""comment": "设置在表格中回车键的用途",
+ameter name": "所欲设置颜色值""type": "property setter",
+ameter name": "所欲设置颜色值""@视窗.设置时机": "组件创建前后",
+ameter name": "所欲设置颜色值""parameters": [
+   {
+"parameter name": "所欲设置的用途",
+"data type": "表格回车键用途"
+   }
+ameter name": "所欲设置颜色值"]
+  },
+  {
+eter name": "所欲设置颜色值"]"method name": "响应表头被单击",
+eter name": "所欲设置颜色值"]"comment": "返回是否自动响应并处理表头被单击事件",
+eter name": "所欲设置颜色值"]"type": "property getter",
+eter name": "所欲设置颜色值"]"data type": "逻辑型",
+eter name": "所欲设置颜色值"]"@禁止流程检查": "真"
+  },
+  {
+ter name": "所欲设置颜色值"]"data type": "逻辑型""method name": "响应表头被单击",
+ter name": "所欲设置颜色值"]"data type": "逻辑型""comment": "  如果本属性设置为真,单击表头时,将自动进行一些处理,例如: 把\n被单击行或列处首单元格置为光标所在单元格,选中被单击行或列等.",
+ter name": "所欲设置颜色值"]"data type": "逻辑型""type": "property setter",
+ter name": "所欲设置颜色值"]"data type": "逻辑型""@视窗.设置时机": "组件创建前后",
+ter name": "所欲设置颜色值"]"data type": "逻辑型""parameters": [
+   {
+"parameter name": "是否响应表头被单击",
+"data type": "逻辑型"
+   }
+ter name": "所欲设置颜色值"]"data type": "逻辑型"]
+  },
+  {
+er name": "所欲设置颜色值"]"data type": "逻辑型""parameters": [
+"method name": "选择整行",
+er name": "所欲设置颜色值"]"data type": "逻辑型""parameters": [
+"comment": "返回单击单元格时是否选择所处整行",
+er name": "所欲设置颜色值"]"data type": "逻辑型""parameters": [
+"type": "property getter",
+er name": "所欲设置颜色值"]"data type": "逻辑型""parameters": [
+"data type": "逻辑型",
+er name": "所欲设置颜色值"]"data type": "逻辑型""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "选择整行",
+
+"comment": "设置单击单元格时是否选择所处整行",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "是否选择整行",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "选择区背景颜色",
+
+"comment": "返回表格中当前被选择区域的背景颜色",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "选择区背景颜色",
+
+"comment": "设置表格中当前被选择区域的背景颜色",
+
+"type": "property setter",
+
+"@值细节类型": "颜色支持默认",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "  可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "选择区文字颜色",
+
+"comment": "返回表格中当前被选择区域中的文本颜色",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "选择区文字颜色",
+"comment": "设置表格中当前被选择区域中的文本颜色",
+"type": "property setter",
+"@值细节类型": "颜色",
+"@视窗.设置时机": "组件创建前后",
+"parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+]
+  },
+  {
+"@禁止流程检查": "真""method name": "打印缩放至页宽",
+"@禁止流程检查": "真""comment": "返回打印表格时是否压缩列到页宽",
+"@禁止流程检查": "真""type": "property getter",
+"@禁止流程检查": "真""data type": "逻辑型",
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+}"method name": "打印缩放至页宽",
+}"comment": "设置打印表格时是否压缩列到页宽",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "打印是否缩放至页宽",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "表格线宽度",
+}"comment": "返回表格线的宽度",
+}"type": "property getter",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "表格线宽度",
+}"comment": "设置表格线的宽度",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "所欲设置的线宽",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "单元格显示零",
+"comment": "返回在数值型的单元格中是否显示零",
+"type": "property getter",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "单元格显示零",
+
+"comment": "设置在数值型的单元格中是否显示零",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "单元格是否显示零",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+data type": "逻辑型""method name": "客户区背景颜色",
+data type": "逻辑型""comment": "返回表格组件边框以内所有单元格以外的区域背景颜色",
+data type": "逻辑型""type": "property getter",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+data type": "逻辑型""method name": "客户区背景颜色",
+data type": "逻辑型""comment": "设置表格组件边框以内所有单元格以外的区域背景颜色",
+data type": "逻辑型""type": "property setter",
+data type": "逻辑型""@值细节类型": "颜色支持默认",
+data type": "逻辑型""@视窗.设置时机": "组件创建前后",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "  可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "点燃边框色",
+
+"comment": "返回表格中焦点组件的边框颜色,为\"颜色类.透明色\"表示无.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "点燃边框色",
+
+"comment": "设置表格中焦点组件的边框颜色,为\"颜色类.透明色\"表示无.",
+
+"type": "property setter",
+
+"@值细节类型": "颜色支持透明",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "所欲设置颜色值",
+"comment": "  可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.透明色\"\n来指定无点燃边框色.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"@视窗.设置时机": "组件创建前后""method name": "置光标",
+"@视窗.设置时机": "组件创建前后""comment": "将光标移动到指定的单元格上,如果参数指定的行号或列号无效,则隐藏光标并把当前光标行号和列号置为-1.",
+"@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\"",
+"@视窗.设置时机": "组件创建前后""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+"@视窗.设置时机": "组件创建前后"]
+  },
+  {
+@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\"""method name": "选择区域",
+@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\"""comment": "选择指定区域的单元格",
+@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供选择区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供选择区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供选择区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供选择区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "全部选择",
+
+"comment": "选择所有单元格",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "全部选择""method name": "取光标行号",
+thod name": "全部选择""comment": "返回当前光标所在单元格的行号,失败返回-1.",
+thod name": "全部选择""data type": "整数",
+thod name": "全部选择""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取光标列号",
+
+"comment": "返回当前光标所在单元格的列号,失败返回-1.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取选择起始行",
+
+"comment": "返回选择区域起始行的行号,行号从0开始.\n如果当前选择区域无效,则返回-1.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+@默认值": "-1""method name": "取选择起始列",
+@默认值": "-1""comment": "返回选择区域起始列的列号,列号从0开始.\n如果当前选择区域无效,则返回-1.",
+@默认值": "-1""data type": "整数",
+@默认值": "-1""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取选择终止行",
+
+"comment": "返回选择区域结束行的行号(该行本身亦在选择区域内),行号从0开始.\n如果当前选择区域无效,则返回-1.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取选择终止列",
+
+"comment": "返回选择区域结束列的列号(该列本身亦在选择区域内),列号从0开始.\n如果当前选择区域无效,则返回-1.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "取选择区域",
+"@嵌入式方法": "\"\"""comment": "返回当前选择区域矩形,如果当前选择区域无效,则所返回矩形所有成员均为-1.",
+"@嵌入式方法": "\"\"""data type": "矩形类",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""]"method name": "置数据",
+窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""]"comment": "设置指定单元格的值,返回是否成功.",
+窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""]"data type": "逻辑型",
+窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""]"@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""]"parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲置入类型",
+"comment": "指定要置入数据的列类型,为以下常量值之一: 1:表格常量.文本值型; 5:表格常量.选择型; 6:表格常量.图片型.",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲置入数据",
+"comment": "提供准备置入单元格的数据.\n如\"欲置入类型\"为文本值型,则必须为任意基本数据类型,类库将自动将其转换为文本内容;\n如\"欲置入类型\"为图片型,则必须为字节集类/图片文件名文本/位图资源;\n如\"欲置入类型\"为选择型,则必须为逻辑型,为真表示选中,假表示不选中.",
+"@匹配类型": "通用型"
+   }
+窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""]]
+  },
+  {
+"method name": "取文本数据",
+"comment": "  返回所指定单元格对应的文本内容,如果所指定行列位置无效或\n类型不匹配则返回空文本(注意正常情况下也可能返回空文本).",
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取选择型数据",
+"comment": "  返回所指定选择型单元格对应的逻辑值,如果所指定行列位置无效或\n类型不匹配则返回假(注意正常情况下也可能返回假).",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+]
+  },
+  {
+comment": "列号从0开始""method name": "取图片数据",
+comment": "列号从0开始""comment": "  返回所指定图片型单元格对应的图片数据(BMP格式),如果所指定行列位置无效或\n类型不匹配则返回空字节集(注意正常情况下也可能返回空字节集).",
+comment": "列号从0开始""data type": "字节集类",
+comment": "列号从0开始""@嵌入式方法": "\"\"",
+comment": "列号从0开始""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+comment": "列号从0开始"]
+  },
+  {
+"method name": "剪切选定文本",
+"comment": "将当前选中(单选或块选)单元格的文本内容剪切到剪切板"
+  },
+  {
+omment": "列号从0开始""@嵌入式方法": "\"\"""method name": "复制选定文本",
+omment": "列号从0开始""@嵌入式方法": "\"\"""comment": "将当前选中(单选或块选)单元格的文本内容复制到剪切板"
+  },
+  {
+comment": "列号从0开始""method name": "粘贴",
+comment": "列号从0开始""comment": "将剪切板的内容粘贴到当前单元格位置"
+  },
+  {
+omment": "列号从0开始""@嵌入式方法": "\"\"""method name": "显示斑马线",
+omment": "列号从0开始""@嵌入式方法": "\"\"""comment": "用不同的颜色显示奇偶行或列",
+omment": "列号从0开始""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "斑马线类型",
+"comment": "指定斑马线的类型,为以下常量值之一: 1:表格常量.行斑马线; 2:表格常量.列斑马线.",
+"data type": "整数"
+   },
+   {
+"parameter name": "奇数行列颜色",
+"comment": "提供奇数行或列的背景颜色,可以使用\"颜色类\"所提供的颜色值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "偶数行列颜色",
+"comment": "提供偶数行或列的背景颜色,可以使用\"颜色类\"所提供的颜色值.",
+"data type": "整数"
+   }
+omment": "列号从0开始""@嵌入式方法": "\"\""]
+  },
+  {
+omment": "列号从0开始""data type": "字节集类""method name": "取字体名",
+omment": "列号从0开始""data type": "字节集类""comment": "返回表格中指定单元格在显示时所使用字体的名称,失败返回空文本.",
+omment": "列号从0开始""data type": "字节集类""data type": "文本型",
+omment": "列号从0开始""data type": "字节集类""@嵌入式方法": "\"\"",
+omment": "列号从0开始""data type": "字节集类""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+omment": "列号从0开始""data type": "字节集类"]
+  },
+  {
+data type": "整数""method name": "置字体名",
+data type": "整数""comment": "设置表格中指定区域在显示时所使用字体的名称,返回是否成功.",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "字体名",
+"comment": "提供所欲设置的表格文字显示字体名称,不能为空文本.",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "取字体尺寸",
+
+"comment": "返回表格中指定单元格在显示时所使用字体的尺寸,失败返回-1.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "列号""method name": "置字体尺寸",
+ameter name": "列号""comment": "设置表格中指定区域在显示时所使用字体的尺寸,返回是否成功.",
+ameter name": "列号""data type": "逻辑型",
+ameter name": "列号""@嵌入式方法": "\"\"",
+ameter name": "列号""parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "字体尺寸",
+"comment": "提供所欲设置的表格文字显示字体尺寸,不能为0.",
+"data type": "整数"
+   }
+ameter name": "列号"]
+  },
+  {
+}"method name": "取字体属性",
+}"comment": "返回表格中指定单元格在显示时所使用字体的属性.\n失败返回-1,否则返回以下常量值之一或之和:\n  1:表格常量.粗体; 2:表格常量.斜体; 4:表格常量.下划线; 8:表格常量.删除线.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "置字体属性",
+}"comment": "设置表格中指定区域在显示时所使用字体的尺寸,返回是否成功.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "字体属性",
+"comment": "提供所欲设置的表格文字显示字体属性,为以下常量值之一或之和:\n  1:表格常量.粗体; 2:表格常量.斜体; 4:表格常量.下划线; 8:表格常量.删除线.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "行号""method name": "置单元格字体",
+ameter name": "行号""comment": "设置表格中指定区域在显示时所使用的字体,返回是否成功.",
+ameter name": "行号""data type": "逻辑型",
+ameter name": "行号""@嵌入式方法": "\"\"",
+ameter name": "行号""parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "字体名",
+"comment": "提供所欲设置的表格文字显示字体名称,为空文本表示不修改原值.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "字体尺寸",
+"comment": "提供所欲设置的表格文字显示字体尺寸,为0表示不修改原值.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "字体属性",
+"comment": "提供所欲设置的表格文字显示字体属性,为以下常量值之一或之和:\n  1:表格常量.粗体; 2:表格常量.斜体; 4:表格常量.下划线; 8:表格常量.删除线.\n为-1表示不修改原值.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "行号"]
+  },
+  {
+data type": "整数""method name": "取单元格文字颜色",
+data type": "整数""comment": "返回表格中指定单元格在显示文字时所使用的颜色值,失败返回-1.",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "置单元格文字颜色",
+
+"comment": "设置表格中指定区域在显示文字时所使的颜色,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "提供所欲设置的颜色值,可以使用\"颜色类\"所提供的颜色值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.""method name": "取单元格背景颜色",
+comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.""comment": "返回表格中指定单元格在显示时所使用的背景颜色值,失败返回-1.",
+comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.""data type": "整数",
+comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.""@嵌入式方法": "\"\"",
+comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号."]
+  },
+  {
+ameter name": "列号""method name": "置单元格背景颜色",
+ameter name": "列号""comment": "设置表格中指定区域在显示时所使的背景颜色,返回是否成功.",
+ameter name": "列号""data type": "逻辑型",
+ameter name": "列号""@嵌入式方法": "\"\"",
+ameter name": "列号""parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "  提供所欲设置的颜色值,可以使用\"颜色类\"所提供的颜色值,可以使用\"颜色类.默认色\"\n来指定使用默认组件背景颜色.",
+"data type": "整数"
+   }
+ameter name": "列号"]
+  },
+  {
+
+"method name": "置对齐方式",
+
+"comment": "设置表格中指定区域在显示文字时所使用的文本对齐方式,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所欲设置的对齐方式",
+"comment": "提供所欲设置的文本对齐方式,可以为以下常量值之一:\n  1:表格常量.左对齐; 2:表格常量.居中对齐; 3:表格常量.右对齐.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "取对齐方式",
+data type": "整数""comment": "返回表格中指定区域在显示文字时所使用的文本对齐方式,为以下值之一:\n  1:表格常量.左对齐; 2:表格常量.居中对齐; 3:表格常量.右对齐;  -1:失败",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "打印",
+"comment": "打印当前表格内容",
+"parameters": [
+   {
+"parameter name": "左边距",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "顶边距",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"method name": "打印预览",
+"comment": "打印预览当前表格内容"
+  },
+  {
+}"method name": "清空下拉列表",
+}"comment": "删除所有的下拉列表项"
+  },
+  {
+"method name": "添加下拉列表内容",
+"comment": "应该在设置列类型为列表型之前首先调用本方法添加所有下拉列表项",
+"parameters": [
+   {
+"parameter name": "列表项内容",
+"comment": "提供表格中下拉列表框的单个列表项目内容",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "置列类型",
+
+"comment": "设置单元列所包含数据的输入方式,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的列类型",
+"comment": "单元格的数据输入类型,为以下常量值之一:\n  1:表格常量.文本型; 2:表格常量.数值型; 3:表格常量.日期型; 4:表格常量.列表型;\n  5:表格常量.选择型; 6:表格常量.图片型; 7:表格常量.货币型; 8:表格常量.不可编辑列表型.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置行高",
+
+"comment": "设置指定行的高度,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的高度",
+"comment": "提供所欲设置的表格行高度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "置列宽",
+data type": "整数""comment": "设置指定列的宽度,返回是否成功.",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的宽度",
+"comment": "提供所欲设置的表格列宽度",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "置日期格式",
+
+"comment": "设置日期显示格式,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "列号",
+"comment": "提供需要置日期格式的列号,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的日期格式",
+"comment": "提供所欲设置的日期格式类型,为以下常量值之一:\n  1:表格常量.长日期格式; 2:表格常量.短日期格式1; 3:表格常量.短日期格式2; 4:表格常量.短日期格式3;\n  5:表格常量.美式格式1; 6:表格常量.美式格式2; 7:表格常量.美式格式3;  8:表格常量.美式格式4.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置货币前缀",
+
+"comment": "设置货币型单元格的显示前缀,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "列号",
+"comment": "提供需要置货币前缀的列的列号,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "货币类型",
+"comment": "货币型单元格的货币类型,为以下常量值之一:\n  1:表格常量.人民币; 2:表格常量.美元; 3:表格常量.欧元; 4:表格常量.英镑; 5:表格常量.自定义货币.",
+"data type": "整数"
+   },
+   {
+"parameter name": "自定义前缀",
+"comment": "提供货币型单元格的自定义显示前缀,仅当\"货币类型\"参数值为\"表格常量.自定义货币\"时有效.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+"method name": "置图片显示方式",
+"comment": "设置图片型单元格的显示方式,返回是否成功.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "列号",
+"comment": "提供需要置图片显示方式的列号,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "显示方式",
+"comment": "图片型单元格的显示方式,值为以下常量值之一:\n  1:表格常量.平铺; 2:表格常量.拉伸; 3:表格常量.居中; 4:表格常量.左上角; 5:表格常量.适合大小.",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "删除行",
+
+"comment": "删除指定的表格行,返回是否成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "删除列",
+ }"comment": "删除指定的表格列,返回是否成功.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+]"method name": "插入行",
+]"comment": "在指定的位置插入空行,返回是否成功.",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "行标题",
+"comment": "指定所插入空行的标题文本",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "行号",
+"comment": "指定空行的插入行号位置,从0开始,如果为-1,表示插入到表格尾部.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]]
+  },
+  {
+]"method name": "插入列",
+]"comment": "在指定的位置插入空列,返回是否成功.",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "列标题",
+"comment": "指定所插入空列的标题文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "列号",
+"comment": "指定空列的插入列号位置,从0开始,如果为-1,表示插入到表格最右侧.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]]
+  },
+  {
+}"method name": "置计算公式",
+}"comment": "  指定在表格中任意两个数字列之间进行简单的数学计算后自动将结\n果赋予表格中的另一列.",
+}"result comment": "成功返回真,失败返回假.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "列号1",
+"comment": "指定参与自动计算的第1列的列号,从0开始,该列必须为数值或货币型.",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号2",
+"comment": "指定参与自动计算的第2列的列号,从0开始,该列必须为数值或货币型.",
+"data type": "整数"
+   },
+   {
+"parameter name": "计算操作符",
+"comment": "指定自动计算的操作符,值为以下常量值之一:\n  1:表格常量.加; 2:表格常量.减; 3:表格常量.乘; 4:表格常量.除.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结果列号",
+"comment": "指定自动计算结果存放到的列,从0开始,该列必须为数值或货币型.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"result comment": "成功返回真,失败返回假.""method name": "置单元格小数位数",
+"result comment": "成功返回真,失败返回假.""comment": "指定单元格数字的小数位数,只对数值和货币型单元格有效.",
+"result comment": "成功返回真,失败返回假.""result comment": "成功返回真,失败返回假.",
+"result comment": "成功返回真,失败返回假.""data type": "逻辑型",
+"result comment": "成功返回真,失败返回假.""@禁止流程检查": "真",
+"result comment": "成功返回真,失败返回假.""parameters": [
+   {
+"parameter name": "列号",
+"comment": "指定需要置小数位数的列号,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "小数位数",
+"comment": "指定数值或货币类型数据的小数位数,为从0到9之间的整数.",
+"data type": "整数"
+   }
+"result comment": "成功返回真,失败返回假."]
+  },
+  {
+result comment": "成功返回真,失败返回假.""data type": "逻辑型""method name": "置自动换行",
+result comment": "成功返回真,失败返回假.""data type": "逻辑型""comment": "指定单元格内容是否自动换行",
+result comment": "成功返回真,失败返回假.""data type": "逻辑型""result comment": "成功返回真,失败返回假.",
+result comment": "成功返回真,失败返回假.""data type": "逻辑型""data type": "逻辑型",
+result comment": "成功返回真,失败返回假.""data type": "逻辑型""@嵌入式方法": "\"\"",
+result comment": "成功返回真,失败返回假.""data type": "逻辑型""parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否自动换行",
+"comment": "指定单元格内容是否自动换行,为真则自动换行,为假则单行显示.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+result comment": "成功返回真,失败返回假.""data type": "逻辑型"]
+  },
+  {
+data type": "整数""method name": "取行高",
+data type": "整数""comment": "返回所指定行的高度,成功返回行高,失败返回-1.",
+data type": "整数""data type": "整数",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+data type": "逻辑型""method name": "取列宽",
+data type": "逻辑型""comment": "返回所指定列的宽度,成功返回列宽,失败返回-1.",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""@禁止流程检查": "真",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+ }"method name": "插入下拉列表项",
+ }"comment": "插入指定列的下拉列表项,该列必须为列表型.",
+ }"result comment": "成功返回真,失败返回假.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "列号",
+"comment": "提供需要插入下拉列表项的列号,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "列表项",
+"comment": "提供需要插入的下拉列表项文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "置打印表头",
+}"comment": "指定表格打印时的表头名称及字体",
+}"result comment": "成功返回真,失败返回假.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "表头名称",
+"comment": "提供表格打印时的表头名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体名称",
+"comment": "提供表格打印时的表头字体名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体尺寸",
+"comment": "提供表格打印时的表头字体尺寸,字体尺寸为0-100之间的整数.",
+"data type": "整数",
+"@默认值": "20"
+   },
+   {
+"parameter name": "是否为粗体",
+"comment": "提供表格打印时的表头是否使用粗体",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "对齐方式",
+"comment": "表格打印时表头的对齐方式,可以为以下常量值之一:\n  1:表格常量.左对齐; 2:表格常量.居中对齐; 3:表格常量.右对齐.",
+"data type": "整数",
+"@默认值": "2"
+   }
+}]
+  },
+  {
+
+"method name": "加线条",
+
+"comment": "为指定的单元格添加线条",
+
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "斜线种类",
+"comment": "提供需要添加的斜线类型,可以为以下常量值之一:\n  0:表格常量.无线条; 1:表格常量.单斜线; 2:表格常量.双斜线; 3:表格常量.交叉线.",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+@默认值": "1""method name": "删线条",
+@默认值": "1""comment": "去除指定单元格中的线条",
+@默认值": "1""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+@默认值": "1"]
+  },
+  {
+comment": "提供表格打印时的表头字体名称""method name": "置边距",
+comment": "提供表格打印时的表头字体名称""comment": "设置指定单元格在显示其中数据时到其单元格边框之间的空白距离,单位为0.1毫米.",
+comment": "提供表格打印时的表头字体名称""result comment": "成功返回真,失败返回假.",
+comment": "提供表格打印时的表头字体名称""data type": "逻辑型",
+comment": "提供表格打印时的表头字体名称""@嵌入式方法": "\"\"",
+comment": "提供表格打印时的表头字体名称""parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所欲设置的边距",
+"comment": "提供所欲设置的边距尺寸,单位为0.1毫米.",
+"data type": "整数",
+"@默认值": "9"
+   }
+comment": "提供表格打印时的表头字体名称"]
+  },
+  {
+"method name": "取边距",
+"comment": "返回指定单元格在显示其中数据时到其单元格边框之间的空白距离,单位为0.1毫米.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "置密码方式",
+}"comment": "设置指定单元格在显示其中数据时是否以密码字符方式呈现",
+}"result comment": "成功返回真,失败返回假.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否以密码方式显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+ameter name": "结束列号""method name": "取密码方式",
+ameter name": "结束列号""comment": "返回指定单元格在显示其中数据时是否以密码字符方式呈现",
+ameter name": "结束列号""data type": "逻辑型",
+ameter name": "结束列号""@禁止流程检查": "真",
+ameter name": "结束列号""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+ameter name": "结束列号"]
+  },
+  {
+"method name": "置只读方式",
+"comment": "设置指定单元格是否只读",
+"result comment": "成功返回真,失败返回假.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否只读",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+comment": "提供所指定区域起始列的列号,列号从0开始.""method name": "取只读方式",
+comment": "提供所指定区域起始列的列号,列号从0开始.""comment": "返回指定单元格是否只读",
+comment": "提供所指定区域起始列的列号,列号从0开始.""data type": "逻辑型",
+comment": "提供所指定区域起始列的列号,列号从0开始.""@禁止流程检查": "真",
+comment": "提供所指定区域起始列的列号,列号从0开始.""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+comment": "提供所指定区域起始列的列号,列号从0开始."]
+  },
+  {
+ameter name": "结束行号""method name": "清空数据",
+ameter name": "结束行号""comment": "将所有单元格的内容清空",
+ameter name": "结束行号""@嵌入式方法": "\"\""
+  },
+  {
+comment": "提供所指定区域起始列的列号,列号从0开始.""method name": "合并",
+comment": "提供所指定区域起始列的列号,列号从0开始.""comment": "组合表格中指定范围内的单元格,使之以一个单元格的形式表现.",
+comment": "提供所指定区域起始列的列号,列号从0开始.""@嵌入式方法": "\"\"",
+comment": "提供所指定区域起始列的列号,列号从0开始.""parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+comment": "提供所指定区域起始列的列号,列号从0开始."]
+  },
+  {
+ameter name": "结束列号""method name": "分解",
+ameter name": "结束列号""comment": "分解表格中指定的已经组合的单元格,行列参数指向被组合单元格内的任何一个单元格即可.",
+ameter name": "结束列号""result comment": "成功返回真,失败返回假.",
+ameter name": "结束列号""data type": "逻辑型",
+ameter name": "结束列号""@禁止流程检查": "真",
+ameter name": "结束列号""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+ameter name": "结束列号"]
+  },
+  {
+ }"method name": "取列类型",
+ }"comment": "返回指定单元列的数据类型。返回值为以下常量值之一:\n  0:失败; 1:表格常量.文本型; 2:表格常量.数值型; 3:表格常量.日期型; 4:表格常量.列表型;\n  5:表格常量.选择型; 6:表格常量.图片型; 7:表格常量.货币型; 8:表格常量.不可编辑列表型.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "列号",
+"comment": "列号从0开始",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "清空单元格数据",
+data type": "整数""comment": "清除指定区域的单元格的内容",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "起始行号",
+"comment": "提供所指定区域起始行的行号,行号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始列号",
+"comment": "提供所指定区域起始列的列号,列号从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供所指定区域结束行的行号,行号从0开始.如果为-1,表示等于起始行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "结束列号",
+"comment": "提供所指定区域结束列的列号,列号从0开始.如果为-1,表示等于起始列号.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "整数"]
+  },
+  {
+@默认值": "-1""method name": "取单元格行高",
+@默认值": "-1""comment": "取得指定单元格的高度.成功返回该单元格高度,失败返回-1.\n注意: 如果所指定单元格位置位于被合并的单元格中,将返回被合并单元格的高度.",
+@默认值": "-1""data type": "整数",
+@默认值": "-1""@嵌入式方法": "\"\"",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始,如为-1,则为当前焦点所在单元格行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始,如为-1,则为当前焦点所在单元格列号.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "-1"]
+  },
+  {
+@默认值": "-1""method name": "取单元格列宽",
+@默认值": "-1""comment": "取得指定单元格的宽度.成功返回该单元格宽度,失败返回-1.\n注意: 如果所指定单元格位置位于被合并的单元格中,将返回被合并单元格的宽度.",
+@默认值": "-1""data type": "整数",
+@默认值": "-1""@嵌入式方法": "\"\"",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "行号",
+"comment": "行号从0开始,如为-1,则为当前焦点所在单元格行号.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "列号",
+"comment": "列号从0开始,如为-1,则为当前焦点所在单元格列号.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "-1"]
+  },
+  {
+ameter name": "起始列号""method name": "置打印页边距",
+ameter name": "起始列号""comment": "设置打印页中的各种边距",
+ameter name": "起始列号""@嵌入式方法": "\"\"",
+ameter name": "起始列号""parameters": [
+   {
+"parameter name": "所欲设置的页边距",
+"comment": "提供所欲设置页边距的类型,可以为以下常量值之一:\n  1:表格常量.左边距; 2:表格常量.右边距; 3:表格常量.上边距; 4:表格常量.下边距;\n  5:表格常量.页眉; 6:表格常量.页脚; 7:表格常量.表头与表格间隔.",
+"data type": "整数"
+   },
+   {
+"parameter name": "页边距值",
+"comment": "提供所欲设置的页边距值,单位为0.1毫米.",
+"data type": "整数"
+   }
+ameter name": "起始列号"]
+  },
+  {
+data type": "整数""method name": "置累加公式",
+data type": "整数""comment": "设置纵向单元格累加公式",
+data type": "整数""result comment": "成功返回真,失败返回假.",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "列号",
+"comment": "提供要设置累加公式的列号,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "起始行号",
+"comment": "提供进行累加的起始行号,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束行号",
+"comment": "提供进行累加的结束行号,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结果存放行号",
+"comment": "提供累加结果存放到行的行号,从0开始,如果为-1,表示为\"结束行号\"的下一行.\n本行号不能位于\"起始行号\"和\"结束行号\"之间.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "整数"]
+  },
+  {
+累加的结束行号,从0开始."method name": "删除累加公式",
+累加的结束行号,从0开始."comment": "删除指定列的单元格累加公式",
+累加的结束行号,从0开始."result comment": "成功返回真,失败返回假.",
+累加的结束行号,从0开始."data type": "逻辑型",
+累加的结束行号,从0开始."@禁止流程检查": "真",
+累加的结束行号,从0开始."parameters": [
+   {
+"parameter name": "列号",
+"comment": "提供要删除累加公式的列号,从0开始.",
+"data type": "整数"
+   }
+累加的结束行号,从0开始.]
+  },
+  {
+ }"method name": "刷新单元格",
+ }"comment": "重新绘制表格所有单元格,主要用于计算公式结果单元格的刷新."
+  },
+  {
+置累加公式的列号,从0开始."method name": "置编辑状态字体和颜色",
+置累加公式的列号,从0开始."comment": "  设置单元格编辑状态下使用的文本字体和颜色.\n  默认情况下,编辑状态下的文本字体和颜色与当前正在编辑的单元格的文本\n字体和颜色一致,用户可以在处理\"将被编辑\"事件时调用本方法进行修改.",
+置累加公式的列号,从0开始."result comment": "成功返回真,失败返回假.",
+置累加公式的列号,从0开始."data type": "逻辑型",
+置累加公式的列号,从0开始."@禁止流程检查": "真",
+置累加公式的列号,从0开始."parameters": [
+   {
+"parameter name": "所欲设置的字体",
+"comment": "提供编辑时所使用的字体,为空对象表示不进行修改.",
+"data type": "字体对象类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "文本颜色",
+"comment": "提供编辑时所使用的文本颜色,为\"颜色类.透明色\"表示不进行修改.",
+"data type": "整数",
+"@默认值": "颜色类.透明色"
+   },
+   {
+"parameter name": "背景颜色",
+"comment": "提供编辑时所使用的背景颜色,为\"颜色类.透明色\"表示不进行修改.",
+"data type": "整数",
+"@默认值": "颜色类.透明色"
+   }
+置累加公式的列号,从0开始.]
+  }
+]
+ }
+问本程序中的接口需要引用模块"MFC表格组件".]
+}

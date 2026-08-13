@@ -1,0 +1,2134 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+问本程序中的接口需要引用模块"PIV基础类"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"PIV基础类"."package name": "火山.PIV基础类",
+问本程序中的接口需要引用模块"PIV基础类"."comment": "PE文件解析与操作\nhttps://github.com/SaierMe/piv",
+问本程序中的接口需要引用模块"PIV基础类"."@视窗.外部头文件": "\"src\\\\PEfile.hpp\"",
+问本程序中的接口需要引用模块"PIV基础类"."classes": [
+ {
+"class name": "PE文件操作类",
+"comment": "解析可执行文件的各种数据",
+"@文档": "\"category = \\\"PE文件操作\\\"\"",
+"methods": [
+  {
+
+"method name": "打开文件",
+
+"comment": "打开并解析指定文件路径的可执行文件",
+
+"result comment": "返回是否解析成功",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "请提供包含完整路径的文件名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "打开数据",
+
+"comment": "打开并解析内存中的可执行数据",
+
+"result comment": "返回是否解析成功",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "可执行数据的首地址(基址)",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "数据大小",
+"comment": "可执行文件的字节大小",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "是否已对齐",
+"comment": "请确定可执行数据是否已经内存对齐;\n如果是原始的PE文件,请设置为假;\n如果节区已经被对齐,请设置为真.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否已加载",
+"comment": "请确定可执行数据是否已经被加载运行;\n如果是原始的PE文件,请设置为假;\n如果是系统已经加载运行的模块,请设置为真.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "打开模块",
+
+"comment": "打开并解析系统中已加载的模块",
+
+"result comment": "返回是否解析成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"comment": "0为当前进程",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "模块名称",
+"comment": "请提供模块的文件名称(区分大小写);\n如省略扩展名则默认为\".dll\". 结尾为\".\"则表示模块名称没有扩展名;\n该名称可以不包含路径,如果指定路径,必须用反斜杠\"\\\\\";\n留空为打开进程的exe文件.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "关闭数据",
+
+"comment": "关闭文件并释放数据,类析构时会自动执行.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "保存数据",
+
+"comment": "将当前打开的可执行数据保存到新文件中",
+
+"result comment": "返回是否保存成功",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供所欲写到文件的路径名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否修复PE结构",
+"comment": "是否将已加载到内存中运行的PE数据还原成PE文件结构.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+}"method name": "是否可写",
+}"comment": "返回当前的PE数据是否处于可写的内存区域中",
+}"result comment": "返回真表示数据可写",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "复制到新内存",
+}"comment": "将可执行数据复制到新的内存地址.\n本类默认以只读方式打开PE数据,如果要进行改写操作,必须执行本方法.\n新的内存尺寸跟\"取映像尺寸\"一样.\n成功后将关闭之前打开的文件句柄和内存映射文件.",
+}"result comment": "成功返回新的内存地址,失败返回0;",
+}"data type": "变整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "加载内存PE",
+
+"comment": "将PE数据复制到可执行可读写的新内存,并进行内存对齐、地址重定位和绑定导入表函数地址.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取最后错误",
+
+"comment": "  返回本类最后一次的操作结果,0表示操作成功,其他值表示有错误,\n可以调用\"取错误信息\"得知具体的中文错误信息.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取最后错误信息",
+
+"comment": "返回本类最后一次的操作结果",
+
+"result comment": "返回的是含错误代码和中文错误描述的文本型",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取数据指针",
+
+"comment": "  获取可执行文件在内存中的基址,请勿对不可写的内存区域进行写操作,\n可能会导致程序崩溃,进行写操作前请先用\"是否可写\"方法判断.",
+
+"result comment": "必须先\"解析文件\"成功才能返回有效数据.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取数据尺寸",
+
+"comment": "获取可执行文件当前占用的内存大小",
+
+"result comment": "成功返回内存大小,失败返回0.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取映像尺寸",
+
+"comment": "计算出可执行文件被系统加载到内存之后的映像尺寸",
+
+"result comment": "成功返回映像文件大小,失败返回0.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取文件尺寸",
+}"comment": "计算出可执行文件的原始文件尺寸",
+}"result comment": "成功返回文件尺寸,失败返回0.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为64位",
+
+"comment": "返回可执行文件是否为64位",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为DLL",
+
+"comment": "返回可执行文件是否为DLL文件.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为EXE",
+
+"comment": "返回可执行文件是否为EXE文件.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取映像基址",
+
+"comment": "获取可执行文件的映像基址(ImageBase),32位PE可强制转换到整数.",
+
+"result comment": "失败返回0.",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取入口点",
+
+"comment": "获取可执行文件的代码入口点(EntryPoint).",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取DOS头",
+
+"comment": "获取可执行文件的DOS头数据.",
+
+"data type": "IMAGE_DOS_HEADER",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取NT头32",
+
+"comment": "获取32位可执行文件的NT头数据.",
+
+"data type": "IMAGE_NT_HEADERS32",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取NT头64",
+
+"comment": "获取64位可执行文件的NT头数据.",
+
+"data type": "IMAGE_NT_HEADERS64",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取节区表",
+}"comment": "获取可执行文件的节区表.",
+}"result comment": "成功返回节区数量,失败返回0.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "节区表数组",
+"comment": "成功在此返回节区表数组",
+"data type": "节区表数组类"
+   }
+}]
+  },
+  {
+
+"method name": "取导出表头",
+
+"comment": "获取DLL文件的函数导出表头数据,EXE文件没有导出表.",
+
+"result comment": "返回是否成功.",
+
+"data type": "IMAGE_EXPORT_DIRECTORY",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取导入表描述符",
+
+"comment": "获取可执行文件的导入表头数据.",
+
+"result comment": "成功返回导入表描述符数量,失败返回0.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "导入表描述符数组",
+"comment": "成功在此返回导入表描述符数组",
+"data type": "导入表描述符数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "取导入表",
+
+"comment": "获取可执行文件的模块导入表信息.",
+
+"result comment": "成功返回导入的模块数量,失败返回0.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "导入表",
+"comment": "成功在此返回导入表信息",
+"data type": "导入表数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "取导出表",
+
+"comment": "获取DLL文件的函数导出表信息,EXE文件没有导出表.",
+
+"result comment": "成功返回导出的函数数量,失败返回0.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "导出表",
+"comment": "成功在此返回导出表信息",
+"data type": "导出表类"
+   }
+
+]
+  },
+  {
+
+"method name": "相对虚拟地址到文件偏移",
+
+"comment": "将相对虚拟地址(RVA)转换到文件偏移量(FOA).",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "相对虚拟地址",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+}"method name": "文件偏移到相对虚拟地址",
+}"comment": "将文件偏移量(FOA)转换到相对虚拟地址(RVA).",
+}"result comment": "失败返回0",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "文件偏移",
+"@匹配类型": "通用整数型"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "内存DLL加载类",
+"comment": "注意: 这个类库是我自己写的,是否\"PE文件操作类\"的副产物,可能不够完善,\n一般建议用\"内存模块PP\".\n  1. 本类不使用系统的加载器载正常加载DLL模块,而是手动修改DLL的PE数据\n并运行,因此成功加载的DLL不会被系统API枚举出来;\n  2. 在类析构或卸载模块之前,可以获取DLL导出表里的函数并调用;\n  3. 只能在当前进程中加载,不支持注入到其他进程;\n  4. 兼容32位和64位的程序,DLL模块和进程的位数不符会返回失败;",
+"@文档": "\"category = \\\"内存注入\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "保存数据",
+methods": [
+"comment": "!!!功能未完成,未修复内存中的PE数据!!!\n将当前打开的可执行数据保存到新文件中.",
+methods": [
+"result comment": "返回是否保存成功.",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供所欲写到文件的路径名称",
+"data type": "文本型"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "加载模块",
+
+"comment": "  在内存中加载DLL数据,并运行DLL的入口点函数.提供的DLL数据\n必须是未经修改的(内容跟磁盘的DLL文件一致),否则会崩溃.\n  除非DLL已经被卸载,再次调用此方法不会重复加载DLL.\n  本方法不支持EXE.",
+
+"result comment": "  返回是否加载成功.本类只支持加载DLL文件,如果程序和DLL的程序\n位数不同亦返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "DLL数据地址",
+"comment": "DLL数据在内存中的地址,请提供原始的DLL数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "DLL数据大小",
+"comment": "DLL数据的字节大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "卸载模块",
+
+"comment": "  卸载内存DLL,卸载后请勿再调用DLL中的函数,否则会造成崩溃.\n  类析构时会自动卸载,一般不需要手动调用.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "函数名取地址",
+
+"comment": "获取DLL模块中指定名称的函数地址(VA).",
+
+"result comment": "成功返回函数地址,失败返回0.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "函数名称",
+"comment": "所欲取地址的函数名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "函数序号取地址",
+
+"comment": "获取DLL模块中指定序号的函数地址(VA).",
+
+"result comment": "成功返回函数地址,失败返回0.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "函数序号",
+"comment": "所欲取地址的函数序号,起始序号应大于等于1.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "取模块基址",
+}"comment": "获取内存DLL在虚拟内存中的模块基址(VA).",
+}"result comment": "未加载时返回0.",
+}"data type": "变整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取模块尺寸",
+
+"comment": "  获取DLL数据在内存对齐之后的映像尺寸,该尺寸不等于DLL\n的文件尺寸.",
+
+"result comment": "成功返回模块的尺寸,失败返回0.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否已加载",
+
+"comment": "返回是否已经成功加载了内存DLL.",
+
+"result comment": "已加载返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取最后错误",
+}"comment": "  返回本类最后一次的操作结果,0表示操作成功,其他值表示有错误,\n可以调用\"取错误信息\"得知具体的中文错误信息.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取最后错误信息",
+
+"comment": "返回本类最后一次的操作结果.",
+
+"result comment": "返回的是含错误代码和中文错误描述的文本型.",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+}"class name": "IMAGE_DOS_HEADER",
+}"comment": "PE文件DOS头,64字节",
+}"base class": "PIV结构模板",
+}"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+}"@别名": "\"IMAGE_DOS_HEADER\"",
+}"@模板实现类": "\"IMAGE_DOS_HEADER\"",
+}"variables": [
+  {
+
+"variable name": "e_magic",
+
+"comment": "DOS可执行文件头标记,必定为\"MZ\"(0x5A4D 4Dh 5Ah/23117)IMAGE_DOS_SIGNATURE",
+
+"data type": "短整数",
+
+"@输出名": "\"e_magic\""
+  },
+  {
+
+"variable name": "e_cblp",
+
+"comment": "文件最后页的字节数",
+
+"data type": "短整数",
+
+"@输出名": "\"e_cblp\""
+  },
+  {
+
+"variable name": "e_cp",
+
+"comment": "文件中的全部和部分页数",
+
+"data type": "短整数",
+
+"@输出名": "\"e_cp\""
+  },
+  {
+
+"variable name": "e_crlc",
+
+"comment": "重定位表中的指针数",
+
+"data type": "短整数",
+
+"@输出名": "\"e_crlc\""
+  },
+  {
+
+"variable name": "e_cparhdr",
+
+"comment": "头部尺寸,以段落为单位",
+
+"data type": "短整数",
+
+"@输出名": "\"e_cparhdr\""
+  },
+  {
+
+"variable name": "e_minalloc",
+
+"comment": "所需的最小附加段",
+
+"data type": "短整数",
+
+"@输出名": "\"e_minalloc\""
+  },
+  {
+
+"variable name": "e_maxalloc",
+
+"comment": "所需的最大附加段",
+
+"data type": "短整数",
+
+"@输出名": "\"e_maxalloc\""
+  },
+  {
+
+"variable name": "e_ss",
+
+"comment": "初始的堆栈段(SS)相对偏移量值",
+
+"data type": "短整数",
+
+"@输出名": "\"e_ss\""
+  },
+  {
+
+"variable name": "e_sp",
+
+"comment": "初始的堆栈指针(SP)值",
+
+"data type": "短整数",
+
+"@输出名": "\"e_sp\""
+  },
+  {
+
+"variable name": "e_csum",
+
+"comment": "校验和",
+
+"data type": "短整数",
+
+"@输出名": "\"e_csum\""
+  },
+  {
+}"variable name": "e_ip",
+}"comment": "初始的指令指针(IP)值",
+}"data type": "短整数",
+}"@输出名": "\"e_ip\""
+  },
+  {
+
+"variable name": "e_cs",
+
+"comment": "初始的代码段(CS)相对偏移量值",
+
+"data type": "短整数",
+
+"@输出名": "\"e_cs\""
+  },
+  {
+
+"variable name": "e_lfarlc",
+
+"comment": "重定位表在文件中的偏移地址",
+
+"data type": "短整数",
+
+"@输出名": "\"e_lfarlc\""
+  },
+  {
+
+"variable name": "e_ovno",
+
+"comment": "覆盖号",
+
+"data type": "短整数",
+
+"@输出名": "\"e_ovno\""
+  },
+  {
+
+"variable name": "e_res",
+
+"comment": "保留字(一般是为确保对齐而预留)",
+
+"data type": "短整数 [4]",
+
+"@输出名": "\"e_res\""
+  },
+  {
+
+"variable name": "e_oemid",
+
+"comment": "OEM标识符(相对于e_oeminfo)",
+
+"data type": "短整数",
+
+"@输出名": "\"e_oemid\""
+  },
+  {
+
+"variable name": "e_oeminfo",
+
+"comment": "OEM信息,即e_oemid的细节",
+
+"data type": "短整数",
+
+"@输出名": "\"e_oeminfo\""
+  },
+  {
+
+"variable name": "e_res2",
+
+"comment": "保留字(一般是为确保对齐而预留)",
+
+"data type": "短整数 [10]",
+
+"@输出名": "\"e_res2\""
+  },
+  {
+
+"variable name": "e_lfanew",
+
+"comment": "NT头(IMAGE_NT_HEADERS)在文件中的偏移地址",
+
+"data type": "整数",
+
+"@输出名": "\"e_lfanew\""
+  }
+}],
+}"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_DOS_HEADER"
+   }
+
+]
+  }
+}]
+ },
+ {
+"class name": "IMAGE_FILE_HEADER",
+"comment": "PE文件逻辑分布信息,20字节.\nhttps://docs.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-image_file_header",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"@别名": "\"IMAGE_FILE_HEADER\"",
+"@模板实现类": "\"IMAGE_FILE_HEADER\"",
+"variables": [
+  {
+
+"variable name": "Machine",
+
+"comment": "  可执行文件的目标CPU类型\n  IMAGE_FILE_MACHINE_I386   0x014c  x86\n  IMAGE_FILE_MACHINE_IA64   0x0200  Intel Itanium\n  IMAGE_FILE_MACHINE_AMD64  0x8664  x64",
+
+"data type": "短整数",
+
+"@输出名": "\"Machine\""
+  },
+  {
+}"variable name": "NumberOfSections",
+}"comment": "节区的数目,如果我们要在文件中增加或删除一个节区,就需要修改这个值.",
+}"data type": "短整数",
+}"@输出名": "\"NumberOfSections\""
+  },
+  {
+
+"variable name": "TimeDateStamp",
+
+"comment": "文件创建的时间戳",
+
+"data type": "整数",
+
+"@输出名": "\"TimeDateStamp\""
+  },
+  {
+
+"variable name": "PointerToSymbolTable",
+
+"comment": "COFF符号表格的文件偏移位置\n仅用于带有COFF类型调试信息的COFF类型的object files和PE files.",
+
+"data type": "整数",
+
+"@输出名": "\"PointerToSymbolTable\""
+  },
+  {
+
+"variable name": "NumberOfSymbols",
+
+"comment": "如果有COFF符号表格,它代表其中的符号数目\nCOFF符号是一个大小固定的结构,如果想找到COFF符号表的结束位置,则需要这个变量",
+
+"data type": "整数",
+
+"@输出名": "\"NumberOfSymbols\""
+  },
+  {
+}"variable name": "SizeOfOptionalHeader",
+}"comment": "IMAGE_OPTIONAL_HEADER结构体的大小,32位和64位有差别",
+}"data type": "短整数",
+}"@输出名": "\"SizeOfOptionalHeader\""
+  },
+  {
+
+"variable name": "Characteristics",
+
+"comment": "  文件属性标志,比如文件是exe还是dll.标志的值定义在 WINNT.H 中,是为组合值.\n  IMAGE_FILE_RELOCS_STRIPPED     0x0001  文件中不存在重定位信息\n  IMAGE_FILE_EXECUTABLE_IMAGE    0x0002  文件可执行\n  IMAGE_FILE_LINE_NUMS_STRIPPED  0x0004  行号信息已从文件中移除\n  IMAGE_FILE_LOCAL_SYMS_STRIPPED 0x0008  符号信息已从文件中移除\n  IMAGE_FILE_DLL                 0x2000  DLL文件\n  IMAGE_FILE_SYSTEM              0x1000  系统文件\n  IMAGE_FILE_32BIT_MACHINE       0x0100  目标平台为32位平台",
+
+"data type": "短整数",
+
+"@输出名": "\"Characteristics\""
+  }
+],
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_FILE_HEADER"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "IMAGE_DATA_DIRECTORY",
+"comment": "PE文件数据目录",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"@别名": "\"IMAGE_DATA_DIRECTORY\"",
+"@模板实现类": "\"IMAGE_DATA_DIRECTORY\"",
+"variables": [
+  {
+variables": [
+"variable name": "VirtualAddress",
+variables": [
+"comment": "指向的数据结构的虚拟地址(RAV)",
+variables": [
+"data type": "整数",
+variables": [
+"@输出名": "\"VirtualAddress\""
+  },
+  {
+
+"variable name": "Size",
+
+"comment": "数据结构的大小",
+
+"data type": "整数",
+
+"@输出名": "\"Size\""
+  }
+],
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_DATA_DIRECTORY"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "IMAGE_OPTIONAL_HEADER32",
+"comment": "32位PE文件可选头",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"@别名": "\"IMAGE_OPTIONAL_HEADER32\"",
+"@模板实现类": "\"IMAGE_OPTIONAL_HEADER32\"",
+"variables": [
+  {
+
+"variable name": "Magic",
+
+"comment": "  映像文件类型\n  IMAGE_NT_OPTIONAL_HDR32_MAGIC  0x10b  32位程序\n  IMAGE_NT_OPTIONAL_HDR64_MAGIC  0x20b  64位程序\n  IMAGE_ROM_OPTIONAL_HDR_MAGIC   0x107  ROM文件",
+
+"data type": "短整数",
+
+"@输出名": "\"Magic\""
+  },
+  {
+
+"variable name": "MajorLinkerVersion",
+
+"comment": "链接器的主版本号",
+
+"data type": "字节",
+
+"@输出名": "\"MajorLinkerVersion\""
+  },
+  {
+}"variable name": "MinorLinkerVersion",
+}"comment": "链接器的副版本号",
+}"data type": "字节",
+}"@输出名": "\"MinorLinkerVersion\""
+  },
+  {
+
+"variable name": "SizeOfCode",
+
+"comment": "可执行代码的大小,这些值(包括下面2个也是不可靠的,你可以通过查看可选头后面的各个\"节\"来获得更准确的大小.",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfCode\""
+  },
+  {
+}"variable name": "SizeOfInitializedData",
+}"comment": "已初始化数据的大小",
+}"data type": "整数",
+}"@输出名": "\"SizeOfInitializedData\""
+  },
+  {
+}"variable name": "SizeOfUninitializedData",
+}"comment": "未初始化数据的大小,所谓的\"bss段\"",
+}"data type": "整数",
+}"@输出名": "\"SizeOfUninitializedData\""
+  },
+  {
+}"variable name": "AddressOfEntryPoint",
+}"comment": "代码入口点的偏移量,RVA",
+}"data type": "整数",
+}"@输出名": "\"AddressOfEntryPoint\""
+  },
+  {
+
+"variable name": "BaseOfCode",
+
+"comment": "代码基址,可执行代码的偏移量,RVA",
+
+"data type": "整数",
+
+"@输出名": "\"BaseOfCode\""
+  },
+  {
+
+"variable name": "BaseOfData",
+
+"comment": "数据基址,已初始化数据的偏移量,RVA",
+
+"data type": "整数",
+
+"@输出名": "\"BaseOfData\""
+  },
+  {
+
+"variable name": "ImageBase",
+
+"comment": "PE文件的优先装载地址,提供整个二进制文件包括所有头的优先(线性)载入地址,RVA",
+
+"data type": "整数",
+
+"@输出名": "\"ImageBase\""
+  },
+  {
+
+"variable name": "SectionAlignment",
+
+"comment": "内存中节对齐的粒度",
+
+"data type": "整数",
+
+"@输出名": "\"SectionAlignment\""
+  },
+  {
+}"variable name": "FileAlignment",
+}"comment": "文件中节对齐的粒度",
+}"data type": "整数",
+}"@输出名": "\"FileAlignment\""
+  },
+  {
+}"variable name": "MajorOperatingSystemVersion",
+}"comment": "主操作系统最低主版本号",
+}"data type": "短整数",
+}"@输出名": "\"MajorOperatingSystemVersion\""
+  },
+  {
+
+"variable name": "MinorOperatingSystemVersion",
+
+"comment": "主操作系统最低副版本号",
+
+"data type": "短整数",
+
+"@输出名": "\"MinorOperatingSystemVersion\""
+  },
+  {
+
+"variable name": "MajorImageVersion",
+
+"comment": "主映像文件版本",
+
+"data type": "短整数",
+
+"@输出名": "\"MajorImageVersion\""
+  },
+  {
+
+"variable name": "MinorImageVersion",
+
+"comment": "副映像文件版本",
+
+"data type": "短整数",
+
+"@输出名": "\"MinorImageVersion\""
+  },
+  {
+
+"variable name": "MajorSubsystemVersion",
+
+"comment": "子系统主版本号",
+
+"data type": "短整数",
+
+"@输出名": "\"MajorSubsystemVersion\""
+  },
+  {
+}"variable name": "MinorSubsystemVersion",
+}"comment": "子系统副版本号",
+}"data type": "短整数",
+}"@输出名": "\"MinorSubsystemVersion\""
+  },
+  {
+
+"variable name": "Win32VersionValue",
+
+"comment": "Win32版本值,可能为0",
+
+"data type": "整数",
+
+"@输出名": "\"Win32VersionValue\""
+  },
+  {
+
+"variable name": "SizeOfImage",
+
+"comment": "内存中整个PE映像体的尺寸.它是所有头和节经过节对齐处理后的大小.",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfImage\""
+  },
+  {
+
+"variable name": "SizeOfHeaders",
+
+"comment": "所有头+节表的大小,也就等于文件尺寸减去文件中所有节的尺寸.可以以此值作为PE文件第一节的文件偏移量.",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfHeaders\""
+  },
+  {
+
+"variable name": "CheckSum",
+
+"comment": "校验和",
+
+"data type": "整数",
+
+"@输出名": "\"CheckSum\""
+  },
+  {
+}"variable name": "Subsystem",
+}"comment": "  子系统,NT用来识别PE文件属于哪个子系统.\n  IMAGE_SUBSYSTEM_WINDOWS_GUI  2  Windows graphical user interface (GUI) subsystem.\n  IMAGE_SUBSYSTEM_WINDOWS_CUI  3  Windows character-mode user interface (CUI) subsystem.",
+}"data type": "短整数",
+}"@输出名": "\"Subsystem\""
+  },
+  {
+}"variable name": "DllCharacteristics",
+}"comment": "  DLL特性,指明,如果是DLL文件,何时调用DLL文件的入口点,一般不用\n  IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA       0x0020  Image can handle a high entropy 64-bit virtual address space.\n  IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE          0x0040  DLL can move.\n  IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY       0x0080  Code Integrity Image\n  IMAGE_DLLCHARACTERISTICS_NX_COMPAT             0x0100  Image is NX compatible\n  IMAGE_DLLCHARACTERISTICS_NO_ISOLATION          0x0200  Image understands isolation and doesn't want it\n  IMAGE_DLLCHARACTERISTICS_NO_SEH                0x0400  Image does not use SEH.  No SE handler may reside in this image\n  IMAGE_DLLCHARACTERISTICS_NO_BIND               0x0800  Do not bind this image.\n  IMAGE_DLLCHARACTERISTICS_APPCONTAINER          0x1000  Image should execute in an AppContainer\n  IMAGE_DLLCHARACTERISTICS_WDM_DRIVER            0x2000  Driver uses WDM model\n  IMAGE_DLLCHARACTERISTICS_GUARD_CF              0x4000  Image supports Control Flow Guard.\n  IMAGE_DLLCHARACTERISTICS_TERMINAL_SERVER_AWARE 0x8000",
+}"data type": "短整数",
+}"@输出名": "\"DllCharacteristics\""
+  },
+  {
+}"variable name": "SizeOfStackReserve",
+}"comment": "保留栈的大小",
+}"data type": "整数",
+}"@输出名": "\"SizeOfStackReserve\""
+  },
+  {
+
+"variable name": "SizeOfStackCommit",
+
+"comment": "初始时指定栈大小",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfStackCommit\""
+  },
+  {
+
+"variable name": "SizeOfHeapReserve",
+
+"comment": "保留堆的大小",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfHeapReserve\""
+  },
+  {
+
+"variable name": "SizeOfHeapCommit",
+
+"comment": "指定堆大小",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfHeapCommit\""
+  },
+  {
+
+"variable name": "LoaderFlags",
+
+"comment": "加载器标志(已废弃)",
+
+"data type": "整数",
+
+"@输出名": "\"LoaderFlags\""
+  },
+  {
+
+"variable name": "NumberOfRvaAndSizes",
+
+"comment": "Rva数和大小",
+
+"data type": "整数",
+
+"@输出名": "\"NumberOfRvaAndSizes\""
+  },
+  {
+}"variable name": "DataDirectory",
+}"comment": "  映像文件数据目录,索引可选:\n  IMAGE_DIRECTORY_ENTRY_EXPORT          0   // Export Directory\n  IMAGE_DIRECTORY_ENTRY_IMPORT          1   // Import Directory\n  IMAGE_DIRECTORY_ENTRY_RESOURCE        2   // Resource Directory\n  IMAGE_DIRECTORY_ENTRY_EXCEPTION       3   // Exception Directory\n  IMAGE_DIRECTORY_ENTRY_SECURITY        4   // Security Directory\n  IMAGE_DIRECTORY_ENTRY_BASERELOC       5   // Base Relocation Table\n  IMAGE_DIRECTORY_ENTRY_DEBUG           6   // Debug Directory\n /IMAGE_DIRECTORY_ENTRY_COPYRIGHT       7   // (X86 usage)\n  IMAGE_DIRECTORY_ENTRY_ARCHITECTURE    7   // Architecture Specific Data\n  IMAGE_DIRECTORY_ENTRY_GLOBALPTR       8   // RVA of GP\n  IMAGE_DIRECTORY_ENTRY_TLS             9   // TLS Directory\n  IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG    10   // Load Configuration Directory\n  IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT   11   // Bound Import Directory in headers\n  IMAGE_DIRECTORY_ENTRY_IAT            12   // Import Address Table\n  IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT   13   // Delay Load Import Descriptors\n  IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR 14   // COM Runtime descriptor",
+}"data type": "IMAGE_DATA_DIRECTORY [16]",
+}"@输出名": "\"DataDirectory\""
+  }
+],
+"methods": [
+  {
+}"method name": "取展示内容",
+}"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_OPTIONAL_HEADER32"
+   }
+}]
+  }
+]
+ },
+ {
+}"class name": "IMAGE_OPTIONAL_HEADER64",
+}"comment": "64位PE文件可选头",
+}"base class": "PIV结构模板",
+}"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+}"@别名": "\"IMAGE_OPTIONAL_HEADER64\"",
+}"@模板实现类": "\"IMAGE_OPTIONAL_HEADER64\"",
+}"variables": [
+  {
+
+"variable name": "Magic",
+
+"comment": "  映像文件类型\n  IMAGE_NT_OPTIONAL_HDR32_MAGIC  0x10b  32位程序\n  IMAGE_NT_OPTIONAL_HDR64_MAGIC  0x20b  64位程序\n  IMAGE_ROM_OPTIONAL_HDR_MAGIC   0x107  ROM文件",
+
+"data type": "短整数",
+
+"@输出名": "\"Magic\""
+  },
+  {
+
+"variable name": "MajorLinkerVersion",
+
+"comment": "链接器的主版本号",
+
+"data type": "字节",
+
+"@输出名": "\"MajorLinkerVersion\""
+  },
+  {
+
+"variable name": "MinorLinkerVersion",
+
+"comment": "链接器的副版本号",
+
+"data type": "字节",
+
+"@输出名": "\"MinorLinkerVersion\""
+  },
+  {
+
+"variable name": "SizeOfCode",
+
+"comment": "可执行代码的大小,这些值(包括下面2个也是不可靠的,你可以通过查看可选头后面的各个\"节\"来获得更准确的大小.",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfCode\""
+  },
+  {
+}"variable name": "SizeOfInitializedData",
+}"comment": "已初始化数据的大小",
+}"data type": "整数",
+}"@输出名": "\"SizeOfInitializedData\""
+  },
+  {
+
+"variable name": "SizeOfUninitializedData",
+
+"comment": "未初始化数据的大小,所谓的\"bss段\"",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfUninitializedData\""
+  },
+  {
+
+"variable name": "AddressOfEntryPoint",
+
+"comment": "代码入口点的偏移量,RVA",
+
+"data type": "整数",
+
+"@输出名": "\"AddressOfEntryPoint\""
+  },
+  {
+}"variable name": "BaseOfCode",
+}"comment": "代码基址,可执行代码的偏移值,RVA",
+}"data type": "整数",
+}"@输出名": "\"BaseOfCode\""
+  },
+  {
+
+"variable name": "ImageBase",
+
+"comment": "PE文件的优先装载地址,提供整个二进制文件包括所有头的优先(线性)载入地址,RVA",
+
+"data type": "长整数",
+
+"@输出名": "\"ImageBase\""
+  },
+  {
+
+"variable name": "SectionAlignment",
+
+"comment": "内存中节对齐的粒度",
+
+"data type": "整数",
+
+"@输出名": "\"SectionAlignment\""
+  },
+  {
+
+"variable name": "FileAlignment",
+
+"comment": "文件中节对齐的粒度",
+
+"data type": "整数",
+
+"@输出名": "\"FileAlignment\""
+  },
+  {
+
+"variable name": "MajorOperatingSystemVersion",
+
+"comment": "主操作系统最低主版本号",
+
+"data type": "短整数",
+
+"@输出名": "\"MajorOperatingSystemVersion\""
+  },
+  {
+
+"variable name": "MinorOperatingSystemVersion",
+
+"comment": "主操作系统最低副版本号",
+
+"data type": "短整数",
+
+"@输出名": "\"MinorOperatingSystemVersion\""
+  },
+  {
+
+"variable name": "MajorImageVersion",
+
+"comment": "主映像文件版本",
+
+"data type": "短整数",
+
+"@输出名": "\"MajorImageVersion\""
+  },
+  {
+}"variable name": "MinorImageVersion",
+}"comment": "副映像文件版本",
+}"data type": "短整数",
+}"@输出名": "\"MinorImageVersion\""
+  },
+  {
+
+"variable name": "MajorSubsystemVersion",
+
+"comment": "主子系统版本",
+
+"data type": "短整数",
+
+"@输出名": "\"MajorSubsystemVersion\""
+  },
+  {
+}"variable name": "MinorSubsystemVersion",
+}"comment": "副子系统版本",
+}"data type": "短整数",
+}"@输出名": "\"MinorSubsystemVersion\""
+  },
+  {
+
+"variable name": "Win32VersionValue",
+
+"comment": "Win32版本值,可能为0",
+
+"data type": "整数",
+
+"@输出名": "\"Win32VersionValue\""
+  },
+  {
+
+"variable name": "SizeOfImage",
+
+"comment": "内存中整个PE映像体的尺寸.它是所有头和节经过节对齐处理后的大小.",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfImage\""
+  },
+  {
+
+"variable name": "SizeOfHeaders",
+
+"comment": "所有头+节表的大小,也就等于文件尺寸减去文件中所有节的尺寸.可以以此值作为PE文件第一节的文件偏移量.",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfHeaders\""
+  },
+  {
+
+"variable name": "CheckSum",
+
+"comment": "校验和",
+
+"data type": "整数",
+
+"@输出名": "\"CheckSum\""
+  },
+  {
+
+"variable name": "Subsystem",
+
+"comment": "  子系统,NT用来识别PE文件属于哪个子系统.\n  IMAGE_SUBSYSTEM_WINDOWS_GUI  2  Windows graphical user interface (GUI) subsystem.\n  IMAGE_SUBSYSTEM_WINDOWS_CUI  3  Windows character-mode user interface (CUI) subsystem.",
+
+"data type": "短整数",
+
+"@输出名": "\"Subsystem\""
+  },
+  {
+
+"variable name": "DllCharacteristics",
+
+"comment": "  DLL特性,指明,如果是DLL文件,何时调用DLL文件的入口点,一般不用\n  IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA       0x0020  Image can handle a high entropy 64-bit virtual address space.\n  IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE          0x0040  DLL can move.\n  IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY       0x0080  Code Integrity Image\n  IMAGE_DLLCHARACTERISTICS_NX_COMPAT             0x0100  Image is NX compatible\n  IMAGE_DLLCHARACTERISTICS_NO_ISOLATION          0x0200  Image understands isolation and doesn't want it\n  IMAGE_DLLCHARACTERISTICS_NO_SEH                0x0400  Image does not use SEH.No SE handler may reside in this image\n  IMAGE_DLLCHARACTERISTICS_NO_BIND               0x0800  Do not bind this image.\n  IMAGE_DLLCHARACTERISTICS_APPCONTAINER          0x1000  Image should execute in an AppContainer\n  IMAGE_DLLCHARACTERISTICS_WDM_DRIVER            0x2000  Driver uses WDM model\n  IMAGE_DLLCHARACTERISTICS_GUARD_CF              0x4000  Image supports Control Flow Guard.\n  IMAGE_DLLCHARACTERISTICS_TERMINAL_SERVER_AWARE 0x8000",
+
+"data type": "短整数",
+
+"@输出名": "\"DllCharacteristics\""
+  },
+  {
+
+"variable name": "SizeOfStackReserve",
+
+"comment": "保留栈的大小",
+
+"data type": "长整数",
+
+"@输出名": "\"SizeOfStackReserve\""
+  },
+  {
+
+"variable name": "SizeOfStackCommit",
+
+"comment": "初始时指定栈大小",
+
+"data type": "长整数",
+
+"@输出名": "\"SizeOfStackCommit\""
+  },
+  {
+
+"variable name": "SizeOfHeapReserve",
+
+"comment": "保留堆的大小",
+
+"data type": "长整数",
+
+"@输出名": "\"SizeOfHeapReserve\""
+  },
+  {
+
+"variable name": "SizeOfHeapCommit",
+
+"comment": "指定堆大小",
+
+"data type": "长整数",
+
+"@输出名": "\"SizeOfHeapCommit\""
+  },
+  {
+
+"variable name": "LoaderFlags",
+
+"comment": "加载器标志",
+
+"data type": "整数",
+
+"@输出名": "\"LoaderFlags\""
+  },
+  {
+
+"variable name": "NumberOfRvaAndSizes",
+
+"comment": "Rva数和大小",
+
+"data type": "整数",
+
+"@输出名": "\"NumberOfRvaAndSizes\""
+  },
+  {
+
+"variable name": "DataDirectory",
+
+"comment": "  IMAGE_DATA_DIRECTORY DataDirectory[IMAGE_NUMBEROF_DIRECTORY_ENTRIES];\n  映像文件数据目录,索引可选:\n  IMAGE_DIRECTORY_ENTRY_EXPORT          0   // Export Directory\n  IMAGE_DIRECTORY_ENTRY_IMPORT          1   // Import Directory\n  IMAGE_DIRECTORY_ENTRY_RESOURCE        2   // Resource Directory\n  IMAGE_DIRECTORY_ENTRY_EXCEPTION       3   // Exception Directory\n  IMAGE_DIRECTORY_ENTRY_SECURITY        4   // Security Directory\n  IMAGE_DIRECTORY_ENTRY_BASERELOC       5   // Base Relocation Table\n  IMAGE_DIRECTORY_ENTRY_DEBUG           6   // Debug Directory\n /IMAGE_DIRECTORY_ENTRY_COPYRIGHT       7   // (X86 usage)\n  IMAGE_DIRECTORY_ENTRY_ARCHITECTURE    7   // Architecture Specific Data\n  IMAGE_DIRECTORY_ENTRY_GLOBALPTR       8   // RVA of GP\n  IMAGE_DIRECTORY_ENTRY_TLS             9   // TLS Directory\n  IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG    10   // Load Configuration Directory\n  IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT   11   // Bound Import Directory in headers\n  IMAGE_DIRECTORY_ENTRY_IAT            12   // Import Address Table\n  IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT   13   // Delay Load Import Descriptors\n  IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR 14   // COM Runtime descriptor",
+
+"data type": "IMAGE_DATA_DIRECTORY [16]",
+
+"@输出名": "\"DataDirectory\""
+  }
+}],
+}"methods": [
+  {
+"methods": [
+"method name": "取展示内容",
+"methods": [
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+"methods": [
+"static": true,
+"methods": [
+"data type": "文本型",
+"methods": [
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_OPTIONAL_HEADER64"
+   }
+"methods": [
+]
+  }
+}]
+ },
+ {
+"class name": "IMAGE_NT_HEADERS32",
+"comment": "32位PE文件NT头\n",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"@别名": "\"IMAGE_NT_HEADERS32\"",
+"@模板实现类": "\"IMAGE_NT_HEADERS32\"",
+"variables": [
+  {
+
+"variable name": "Signature",
+
+"comment": "PE文件的标识,固定为\"PE\\0\\0\"{50,45,00,00},整数为 0x4550/17744\n  IMAGE_DOS_SIGNATURE    0x5A4D      MZ\n  IMAGE_OS2_SIGNATURE    0x454E      NE\n  IMAGE_OS2_SIGNATURE_LE 0x454C      LE\n  IMAGE_VXD_SIGNATURE    0x454C      LE\n  IMAGE_NT_SIGNATURE     0x00004550  PE00",
+
+"data type": "整数",
+
+"@输出名": "\"Signature\""
+  },
+  {
+}"variable name": "FileHeader",
+}"comment": "映像文件头结构体(20个字节)",
+}"data type": "IMAGE_FILE_HEADER",
+}"@输出名": "\"FileHeader\""
+  },
+  {
+
+"variable name": "OptionalHeader",
+
+"comment": "映像可选头结构体32位",
+
+"data type": "IMAGE_OPTIONAL_HEADER32",
+
+"@输出名": "\"OptionalHeader\""
+  }
+],
+"methods": [
+  {
+}"method name": "取展示内容",
+}"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_NT_HEADERS32"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "IMAGE_NT_HEADERS64",
+"comment": "64位PE文件NT头",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"@别名": "\"IMAGE_NT_HEADERS64\"",
+"@模板实现类": "\"IMAGE_NT_HEADERS64\"",
+"variables": [
+  {
+
+"variable name": "Signature",
+
+"comment": "  PE文件的标识,固定为\"PE\\0\\0\"{50,45,00,00},整数为 0x4550/17744\n  IMAGE_DOS_SIGNATURE    0x5A4D      MZ\n  IMAGE_OS2_SIGNATURE    0x454E      NE\n  IMAGE_OS2_SIGNATURE_LE 0x454C      LE\n  IMAGE_VXD_SIGNATURE    0x454C      LE\n  IMAGE_NT_SIGNATURE     0x00004550  PE00",
+
+"data type": "整数",
+
+"@输出名": "\"Signature\""
+  },
+  {
+
+"variable name": "FileHeader",
+
+"comment": "映像文件头部结构体(20个字节)",
+
+"data type": "IMAGE_FILE_HEADER",
+
+"@输出名": "\"FileHeader\""
+  },
+  {
+
+"variable name": "OptionalHeader",
+
+"comment": "映像可选头部结构体64位",
+
+"data type": "IMAGE_OPTIONAL_HEADER64",
+
+"@输出名": "\"OptionalHeader\""
+  }
+],
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_NT_HEADERS64"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "IMAGE_SECTION_HEADER",
+"comment": "PE文件的节区表",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"@别名": "\"IMAGE_SECTION_HEADER\"",
+"@模板实现类": "\"IMAGE_SECTION_HEADER\"",
+"variables": [
+  {
+@别名": "\"IMAGE_SECTION_HEADER\"""variable name": "Name",
+@别名": "\"IMAGE_SECTION_HEADER\"""comment": "节名称",
+@别名": "\"IMAGE_SECTION_HEADER\"""data type": "字节 [8]",
+@别名": "\"IMAGE_SECTION_HEADER\"""@输出名": "\"Name\""
+  },
+  {
+@别名": "\"IMAGE_SECTION_HEADER\"""variable name": "PhysicalAddress",
+@别名": "\"IMAGE_SECTION_HEADER\"""comment": "也可以是VirtualSize,在可执行文件中,它是内容的大小.在目标文件中,它是内容重定位到的地址.",
+@别名": "\"IMAGE_SECTION_HEADER\"""data type": "整数",
+@别名": "\"IMAGE_SECTION_HEADER\"""@输出名": "\"Misc.PhysicalAddress\""
+  },
+  {
+
+"variable name": "VirtualSize",
+
+"comment": "也可以是PhysicalAddress,在可执行文件中,它是内容的大小.在目标文件中,它是内容重定位到的地址.",
+
+"data type": "整数",
+
+"@输出名": "\"Misc.VirtualSize\""
+  },
+  {
+
+"variable name": "VirtualAddress",
+
+"comment": "节的RVA(相对虚拟地址)节中数据的RVA.",
+
+"data type": "整数",
+
+"@输出名": "\"VirtualAddress\""
+  },
+  {
+
+"variable name": "SizeOfRawData",
+
+"comment": "原始数据大小,经过文件对齐处理后节尺寸,PE装载器提取本值了解需映射入内存的节字节数.",
+
+"data type": "整数",
+
+"@输出名": "\"SizeOfRawData\""
+  },
+  {
+
+"variable name": "PointerToRawData",
+
+"comment": "文件偏移,这是节基于文件的偏移量,PE装载器通过本值找到节数据在文件中的位置.",
+
+"data type": "整数",
+
+"@输出名": "\"PointerToRawData\""
+  },
+  {
+}"variable name": "PointerToRelocations",
+}"comment": "重定位指针",
+}"data type": "整数",
+}"@输出名": "\"PointerToRelocations\""
+  },
+  {
+}"variable name": "PointerToLinenumbers",
+}"comment": "行数指针",
+}"data type": "整数",
+}"@输出名": "\"PointerToLinenumbers\""
+  },
+  {
+}"variable name": "NumberOfRelocations",
+}"comment": "重定位数",
+}"data type": "短整数",
+}"@输出名": "\"NumberOfRelocations\""
+  },
+  {
+
+"variable name": "NumberOfLinenumbers",
+
+"comment": "行数数",
+
+"data type": "短整数",
+
+"@输出名": "\"NumberOfLinenumbers\""
+  },
+  {
+
+"variable name": "Characteristics",
+
+"comment": "特性,包含标记以指示节属性,比如节是否含有可执行代码、初始化数据、未初始数据、是否可写、可读等.",
+
+"data type": "整数",
+
+"@输出名": "\"Characteristics\""
+  }
+],
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_SECTION_HEADER"
+   }
+
+]
+  }
+]
+ },
+ {
+}"class name": "节区表数组类",
+}"comment": "节区表数组",
+}"base class": "PIV数组模板",
+}"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+}"@模板实现类": "\"IMAGE_SECTION_HEADER\""
+ },
+ {
+"class name": "IMAGE_IMPORT_DESCRIPTOR",
+"comment": "PE文件的导入表描述符结构体",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"@别名": "\"IMAGE_IMPORT_DESCRIPTOR\"",
+"@模板实现类": "\"IMAGE_IMPORT_DESCRIPTOR\"",
+"variables": [
+  {
+
+"variable name": "Characteristics",
+
+"comment": "如果是数组的最后一项,则为0",
+
+"data type": "整数",
+
+"@输出名": "\"Characteristics\""
+  },
+  {
+
+"variable name": "OriginalFirstThunk",
+
+"comment": "原始未绑定IAT(PIMAGE_THUNK_DATA)的相对虚拟地址\n由于存在单桥结构的DLL,最好别用该成员进程分析",
+
+"data type": "整数",
+
+"@输出名": "\"OriginalFirstThunk\""
+  },
+  {
+
+"variable name": "TimeDateStamp",
+
+"comment": "文件创建时间戳\n  0    未绑定导入表\n  -1   如果已绑定,真实的时间戳在IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT表中\n  其他 导入表已绑定,该时间戳与IMAGE_FILE_HEADER.TimeDateStamp一致",
+
+"data type": "整数",
+
+"@输出名": "\"TimeDateStamp\""
+  },
+  {
+}"variable name": "ForwarderChain",
+}"comment": "链表的前一结构",
+}"data type": "短整数",
+}"@输出名": "\"ForwarderChain\""
+  },
+  {
+}"variable name": "Name",
+}"comment": "模块的名称地址(ASCII字符串的RVA)",
+}"data type": "整数",
+}"@输出名": "\"Name\""
+  },
+  {
+
+"variable name": "FirstThunk",
+
+"comment": "  导入表的IAT结构的相对虚拟地址\n  绑定导入表后,该地址数组指向真实的函数地址(VA)",
+
+"data type": "整数",
+
+"@输出名": "\"FirstThunk\""
+  }
+],
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_IMPORT_DESCRIPTOR"
+   }
+
+]
+  }
+]
+ },
+ {
+}"class name": "导入表描述符数组类",
+}"base class": "PIV数组模板",
+}"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+}"@模板实现类": "\"IMAGE_IMPORT_DESCRIPTOR\""
+ },
+ {
+"class name": "IMAGE_EXPORT_DIRECTORY",
+"comment": "PE文件的导出表结构体",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"@别名": "\"IMAGE_EXPORT_DIRECTORY\"",
+"@模板实现类": "\"IMAGE_EXPORT_DIRECTORY\"",
+"variables": [
+  {
+
+"variable name": "Characteristics",
+
+"comment": "未使用,总为0",
+
+"data type": "整数",
+
+"@输出名": "\"Characteristics\""
+  },
+  {
+
+"variable name": "TimeDateStamp",
+
+"comment": "文件创建时间戳",
+
+"data type": "整数",
+
+"@输出名": "\"TimeDateStamp\""
+  },
+  {
+
+"variable name": "MajorVersion",
+
+"comment": "未使用,总为0",
+
+"data type": "短整数",
+
+"@输出名": "\"MajorVersion\""
+  },
+  {
+
+"variable name": "MinorVersion",
+
+"comment": "未使用,总为0",
+
+"data type": "短整数",
+
+"@输出名": "\"MinorVersion\""
+  },
+  {
+
+"variable name": "Name",
+
+"comment": "模块的内部名称地址(UTF8编码字符串的RVA)\n即使DLL文件的名称被修改,仍可以从这个字符串得知编译时的名称",
+
+"data type": "整数",
+
+"@输出名": "\"Name\""
+  },
+  {
+
+"variable name": "Base",
+
+"comment": "函数的起始序号.\n比如一个函数的序号是4,Base是2,就表示该函数位于导出地址列表第三个成员.\n导出地址列表中的首成员(索引0)对应序号1,而不是序号0.\n序号的起始数字可以在.DEF文件中定义.",
+
+"data type": "整数",
+
+"@输出名": "\"Base\""
+  },
+  {
+
+"variable name": "NumberOfFunctions",
+
+"comment": "导出函数的个数",
+
+"data type": "整数",
+
+"@输出名": "\"NumberOfFunctions\""
+  },
+  {
+
+"variable name": "NumberOfNames",
+
+"comment": "以名称导出的函数的个数",
+
+"data type": "整数",
+
+"@输出名": "\"NumberOfNames\""
+  },
+  {
+
+"variable name": "AddressOfFunctions",
+
+"comment": "导出地址列表(Export Address Table, EAT 其实就是一个地址数组)的首地址(RVA)",
+
+"data type": "整数",
+
+"@输出名": "\"AddressOfFunctions\""
+  },
+  {
+
+"variable name": "AddressOfNames",
+
+"comment": "导出名称列表(Export Name Table, ENT)的首地址(RVA)",
+
+"data type": "整数",
+
+"@输出名": "\"AddressOfNames\""
+  },
+  {
+
+"variable name": "AddressOfNameOrdinals",
+
+"comment": "导出序号列表(Export Ordinal Table, EOT)的首地址(RVA)\n该数组的元素都是16-bit(一个字)长度的整数.",
+
+"data type": "整数",
+
+"@输出名": "\"AddressOfNameOrdinals\""
+  }
+],
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "IMAGE_EXPORT_DIRECTORY"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "PE函数类",
+"comment": "PE文件导出表中的函数信息",
+"base class": "扩展对象类",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"variables": [
+  {
+
+"variable name": "函数名称",
+
+"data type": "文本型",
+
+"@输出名": "\"FunctionName\""
+  },
+  {
+
+"variable name": "函数地址",
+
+"data type": "长整数",
+
+"@输出名": "\"FunctionAddress\""
+  },
+  {
+}"variable name": "函数序号",
+}"data type": "整数",
+}"@输出名": "\"FunctionOrdinal\""
+  }
+],
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+}"class name": "PE函数数组类",
+}"comment": "PE文件导出表中的函数信息数组",
+}"base class": "对象动态数组模板",
+}"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+}"@模板实现类": "\"PE函数类\""
+ },
+ {
+"class name": "导出表类",
+"comment": "导出表",
+"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+"variables": [
+  {
+comment": "导出表""variable name": "模块名称",
+comment": "导出表""data type": "文本型",
+comment": "导出表""@输出名": "\"ModuleName\""
+  },
+  {
+
+"variable name": "函数列表",
+
+"data type": "PE函数数组类",
+
+"@输出名": "\"aFunctions\""
+  }
+],
+"methods": [
+  {
+methods": [
+"method name": "取展示内容",
+methods": [
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.",
+methods": [
+"@虚拟方法": "可覆盖",
+methods": [
+"@输出名": "\"GetDumpString\"",
+methods": [
+"@视窗.后缀文本": "\"override\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+methods": [
+]
+  }
+]
+ },
+ {
+}"class name": "导入表数组类",
+}"comment": "导入表数组",
+}"base class": "对象动态数组模板",
+}"@文档": "\"category = \\\"PE文件操作.辅助类\\\"\"",
+}"@模板实现类": "\"导出表类\""
+ }
+问本程序中的接口需要引用模块"PIV基础类".]
+}

@@ -1,0 +1,1711 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+ "本文件提供视窗项目的相关字节集操作支持功能""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ "本文件提供视窗项目的相关字节集操作支持功能""package name": "火山.基本",
+ "本文件提供视窗项目的相关字节集操作支持功能""comment": "本文件提供视窗项目的相关字节集操作支持功能",
+ "本文件提供视窗项目的相关字节集操作支持功能""classes": [
+ {
+"class name": "BASE64编码方式",
+"@文档": "\"category = \\\"字节集操作.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "标准",
+
+"comment": "标准Base64编码格式",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "URL专用",
+
+"comment": "URL专用的Base64编码格式",
+
+"initial value": "1"
+  },
+  {
+}"constant name": "正则专用",
+}"comment": "正则表达式专用的Base64编码格式",
+}"initial value": "2"
+  }
+]
+ },
+ {
+"class name": "字节集类",
+"comment": "用作保存一段字节数据的字节集类",
+"@文档": "\"category = \\\"字节集操作\\\"\"",
+"@别名": "\"@an<CVolMem>\"",
+"@全局类": "真",
+"methods": [
+  {
+}"method name": "取字节集预分配尺寸",
+}"comment": "  返回本字节集为了快速进行数据的添加/删除处理使用的空间分配尺寸,\n每次字节集需要调整其空间大小时,都使用本属性值作为空间调整基准尺\n寸.值越大,批量加入/删除数据时所实际需要重分配空间的次数就越少,操\n作速度越快,但是多余内存占用就越大.\n  一般情况下无需更改本属性值.",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+"method name": "置字节集预分配尺寸",
+"comment": "  设置本字节集为了快速进行数据的添加/删除处理使用的空间分配尺寸,\n每次字节集需要调整其空间大小时,都使用本属性值作为空间调整基准尺\n寸.值越大,批量加入/删除数据时所实际需要重分配空间的次数就越少,操\n作速度越快,但是多余内存占用就越大.\n  一般情况下无需更改本属性值.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲设置的预分配尺寸",
+"comment": "提供所欲设置的预分配尺寸,必须大于等于0.",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "到字节集",
+
+"comment": "根据所指定基本数据类型数据生成并返回对应的字节集.\n注意: 如果是文本型数据,其尾部的结束零字符不会被加入.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲转换的数据",
+"@匹配类型": "通用基本型"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "创建字节集",
+"parameters": [
+"comment": "根据所提供的一系列整数字节值建立并返回一个字节集对象",
+"parameters": [
+"static": true,
+"parameters": [
+"data type": "字节集类",
+"parameters": [
+"@嵌入式方法": "\"\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "字节数值",
+"comment": "提供所欲加入的所有字节值,注意所提供值必须在0到255之间.",
+"data type": "整数",
+"@可扩展": "\"\""
+   }
+"parameters": [
+]
+  },
+  {
+ameter name": "所欲操作本对象""method name": "组合字节集",
+ameter name": "所欲操作本对象""comment": "将所提供的一系列数据组合起来建立并返回一个字节集对象",
+ameter name": "所欲操作本对象""static": true,
+ameter name": "所欲操作本对象""data type": "字节集类",
+ameter name": "所欲操作本对象""@嵌入式方法": "\"req_obj_param_pointer = true\\r\\nreq_str_param_text_pointer = true\"",
+ameter name": "所欲操作本对象""parameters": [
+   {
+"parameter name": "欲组合的所有数据",
+"comment": "提供所欲组合的所有数据,可以为基本数据类型或字节集类数据.",
+"@匹配类型": "通用型",
+"@可扩展": "\"\""
+   }
+ameter name": "所欲操作本对象"]
+  },
+  {
+"method name": "添加字节集内容",
+"comment": "将所提供的一系列整数字节值添加到本字节集对象现有内容的尾部",
+"static": true,
+"data type": "字节集类",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "字节数值",
+"comment": "提供所欲添加的所有字节值,注意所提供值必须在0到255之间.",
+"data type": "整数",
+"@可扩展": "\"\""
+   }
+]
+  },
+  {
+data type": "字节集类""method name": "数组到字节集",
+data type": "字节集类""comment": "根据所指定非文本基本数据类型数组数据生成并返回对应的字节集",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""@嵌入式方法": "\"\"",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "所欲转换的数据",
+"@匹配类型": "通用非文本基本型数组"
+   }
+data type": "字节集类"]
+  },
+  {
+}"method name": "指针到字节集",
+}"comment": "根据所指定指针处的数据建立并返回一个对应的字节集对象.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+}"static": true,
+}"data type": "字节集类",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "指向欲加入数据的指针值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据尺寸",
+"comment": "  提供所欲加入数据的尺寸(单位字节),必须确保指针所指向地址处尺寸 \n为本参数值的地址空间有效.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "所欲操作本对象""method name": "字节集内容是否相同",
+ameter name": "所欲操作本对象""comment": "判断两个字节集的内容是否相同.\n注: 调用\"对象内容是否相同\"方法是同样的效果.",
+ameter name": "所欲操作本对象""static": true,
+ameter name": "所欲操作本对象""data type": "逻辑型",
+ameter name": "所欲操作本对象""@嵌入式方法": "\"\"",
+ameter name": "所欲操作本对象""parameters": [
+   {
+"parameter name": "字节集1",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "字节集2",
+"data type": "字节集类"
+   }
+ameter name": "所欲操作本对象"]
+  },
+  {
+}"method name": "文件资源到字节集",
+}"comment": "载入所指定的字节集数据资源,返回是否载入成功.",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲载入的数据资源",
+"comment": "用作提供所欲载入的RCDATA类型资源,如果为\"空资源.空文件\",将返回空字节集.",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "所欲写出到的字节集",
+"comment": "用作接收所载入的资源数据,其中的原有内容将被覆盖.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "取字节集左边",
+}"comment": "返回一个字节集,其中包含指定字节集中从左边算起指定数量的字节.",
+}"static": true,
+}"data type": "字节集类",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲取出字节的数目",
+"comment": "提供欲取出字节的数目,必须大于等于0.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "取字节集右边",
+}"comment": "返回一个字节集,其中包含指定字节集中从右边算起指定数量的字节.",
+}"static": true,
+}"data type": "字节集类",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲取出字节的数目",
+"comment": "提供欲取出字节的数目,必须大于等于0.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "取字节集中间",
+}"comment": "返回一个字节集,其中包含指定字节集中从指定位置算起指定数量的字节.",
+}"static": true,
+}"data type": "字节集类",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始取出索引位置",
+"comment": "提供所欲取出的首字节在字节集中的偏移位置,必须大于等于0且小于等于字节集长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲取出字节的数目",
+"comment": "提供欲取出字节的数目,必须大于等于0.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "分配字节集",
+"comment": "为本字节集分配所指定尺寸的数据内容空间,其中的原有内容将被覆盖.",
+"result comment": "返回所分配字节集内容空间的指针值.除非必要且对指针概念有透彻的了解,不要使用该返回值.",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲分配空间尺寸",
+"comment": "提供所欲分配的数据内容空间尺寸,必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否清零",
+"comment": "是否将所分配的内容空间清除为字节值零.\n如果本参数值为假,所分配的字节集内容空间将为随机值.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+comment": "是否将所分配的内容空间清除为字节值零.\n如果本参数值为假,所分配的字节集内容空间将为随机值.""method name": "重分配字节集",
+comment": "是否将所分配的内容空间清除为字节值零.\n如果本参数值为假,所分配的字节集内容空间将为随机值.""comment": "  为本字节集重新分配所指定尺寸的数据内容空间.\n  与\"分配字节集\"不同的是: 位于重分配空间中的字节集原有数据内容将被保留不受\n影响.如果相比先前尺寸存在多余部分,该部分将为随机值.如果相比先前尺寸更小,则\n原有尾部数据内容将会被剪切掉.",
+comment": "是否将所分配的内容空间清除为字节值零.\n如果本参数值为假,所分配的字节集内容空间将为随机值.""result comment": "  返回重分配字节集数据内容空间后的指针值.除非必要且对指针概念有透彻的了解,\n不要使用该返回值.",
+comment": "是否将所分配的内容空间清除为字节值零.\n如果本参数值为假,所分配的字节集内容空间将为随机值.""static": true,
+comment": "是否将所分配的内容空间清除为字节值零.\n如果本参数值为假,所分配的字节集内容空间将为随机值.""data type": "变整数",
+comment": "是否将所分配的内容空间清除为字节值零.\n如果本参数值为假,所分配的字节集内容空间将为随机值.""@嵌入式方法": "\"\"",
+comment": "是否将所分配的内容空间清除为字节值零.\n如果本参数值为假,所分配的字节集内容空间将为随机值.""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲重分配空间尺寸",
+"comment": "提供所欲重新分配的数据内容空间尺寸,必须大于等于0.",
+"data type": "整数"
+   }
+comment": "是否将所分配的内容空间清除为字节值零.\n如果本参数值为假,所分配的字节集内容空间将为随机值."]
+  },
+  {
+ }"method name": "释放字节集",
+ }"comment": "删除本字节集中的所有当前内容,并释放所占用的对应内存空间.\n本方法调用后,本字节集的长度将为0.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+}"method name": "清空字节集",
+}"comment": "  删除本字节集中的所有当前内容,与\"释放字节集\"不同的是本方法\n并不立即释放所占用的对应内存空间.\n  如果后面会继续使用本字节集,使用本方法清空字节集内容可以避\n免频繁分配/释放所占用的内存空间,加快处理速度.\n  本方法调用后,本字节集的长度将为0.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+"method name": "取字节集指针",
+"comment": "返回当前字节集数据内容的指针值,如果当前字节集内容为空,将返回0.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+data type": "字节集类""method name": "取字节集尾指针",
+data type": "字节集类""comment": "  返回当前字节集数据内容的尾部指针值(最后一个字节后面),\n如果当前字节集内容为空,将返回0.\n 除非必要且对指针概念有透彻的了解,不要使用本方法.",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "变整数",
+data type": "字节集类""@嵌入式方法": "\"\"",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+data type": "字节集类"]
+  },
+  {
+
+"method name": "为字节集尾字符",
+
+"comment": "返回位于当前字节集尾部的字符是否为所指定的字符.\n如果当前字节集的尺寸比一个字符的尺寸小,将直接返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲检测的字符",
+"comment": "提供所欲检测的字符值",
+"data type": "字符"
+   }
+
+]
+  },
+  {
+
+"method name": "指针数据位于字节集",
+
+"comment": "返回指针所指向的指定尺寸数据是否全部位于本字节集内",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "指向欲检测的指针值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据尺寸",
+"comment": "提供所欲检测的数据尺寸(单位字节)",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "偏移数据位于字节集",
+"comment": "返回所指定偏移位置处的指定尺寸数据是否全部位于本字节集内",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据偏移",
+"comment": "指向欲检测的数据偏移位置值",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据尺寸",
+"comment": "提供所欲检测的数据尺寸(单位字节)",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取字节集长度",
+"comment": "返回本字节集中已有数据内容的尺寸(单位字节)",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+"method name": "取字节集值数目",
+"comment": "返回字节集中包含所指定基本数据类型数据值的数目",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲检查的数据类型",
+"comment": "提供所欲获取其存在数目的数据类型.\n注意: 如果为文本型,则固定返回0.",
+"@需求类型": "数据类型",
+"@匹配类型": "通用基本型"
+   }
+]
+  },
+  {
+
+"method name": "取字节集单精度小数数目",
+
+"comment": "返回字节集中包含单精度小数值的数目",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+ameter name": "所欲操作本对象""method name": "字节集是否为空",
+ameter name": "所欲操作本对象""comment": "返回当前字节集的数据内容是否为空",
+ameter name": "所欲操作本对象""static": true,
+ameter name": "所欲操作本对象""data type": "逻辑型",
+ameter name": "所欲操作本对象""@嵌入式方法": "\"\"",
+ameter name": "所欲操作本对象""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+ameter name": "所欲操作本对象"]
+  },
+  {
+"method name": "寻找字节集",
+"comment": "返回所指定字节集在本字节集中最先出现的偏移位置,如果未找到则返回-1.",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲查找的字节集",
+"comment": "提供所欲查找的字节集内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始查找位置",
+"comment": "提供起始查找偏移位置,必须大于等于0.",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+ameter name": "起始查找位置""method name": "倒找字节集",
+ameter name": "起始查找位置""comment": "返回所指定字节集在本字节集中最后出现的偏移位置,如果未找到则返回-1.",
+ameter name": "起始查找位置""static": true,
+ameter name": "起始查找位置""data type": "整数",
+ameter name": "起始查找位置""@嵌入式方法": "\"\"",
+ameter name": "起始查找位置""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲查找的字节集",
+"comment": "提供所欲查找的字节集内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始查找位置",
+"comment": "  提供起始查找偏移位置,如果超出当前字节集的尺寸,则从当前字节集的尾\n部开始. 必须大于等于0.",
+"data type": "整数",
+"@默认值": "数值范围.最大整数值"
+   }
+ameter name": "起始查找位置"]
+  },
+  {
+@默认值": "数值范围.最大整数值""method name": "分割字节集",
+@默认值": "数值范围.最大整数值""comment": "  将本字节集进行分割,将分割后的所有子字节集存放入\"结果存放字节集数组\"\n参数所指定的数组对象中,返回所存放进去的子字节集对象数目.",
+@默认值": "数值范围.最大整数值""static": true,
+@默认值": "数值范围.最大整数值""data type": "整数",
+@默认值": "数值范围.最大整数值""@嵌入式方法": "\"\"",
+@默认值": "数值范围.最大整数值""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "用作分割的字节集",
+"comment": "本方法将基于此字节集内容对本字节集进行分割",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "结果存放字节集数组",
+"comment": "用作存放所获得的子字节集对象,其中原有内容将被清空.",
+"data type": "字节集数组类"
+   },
+   {
+"parameter name": "欲返回子字节集数目",
+"comment": "提供所欲返回子字节集的最大数目,为0表示返回全部被分割后的子字节集.",
+"data type": "整数",
+"@默认值": "0"
+   }
+@默认值": "数值范围.最大整数值"]
+  },
+  {
+ }"method name": "从文件读字节集",
+ }"comment": "从所指定路径文件中读入指定尺寸的数据,成功返回所实际读入数据尺寸,失败返回-1.",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲读取文件名",
+"comment": "提供所欲读取文件的路径名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲读取数据尺寸",
+"comment": "提供所欲读取数据的尺寸,为-1表示全部读取.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+}"static": true"method name": "写字节集到文件",
+}"static": true"comment": "将本字节集的内容写入到所指定路径的文件中,返回是否写出成功.",
+}"static": true"static": true,
+}"static": true"data type": "逻辑型",
+}"static": true"@嵌入式方法": "\"\"",
+}"static": true"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲写到文件名",
+"comment": "提供所欲写到文件的路径名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲写出数据尺寸",
+"comment": "提供所欲写出数据的尺寸,为-1表示全部写出.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}"static": true]
+  },
+  {
+data type": "字节集类""method name": "取空白字节集",
+data type": "字节集类""comment": "返回具有所指定次数的零字节值重复数据的字节集",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "零字节数目",
+"comment": "指定所欲重置为的零字节数目,必须大于等于0.",
+"data type": "整数"
+   }
+data type": "字节集类"]
+  },
+  {
+ta type": "字节集类"]"method name": "取重复字节集",
+ta type": "字节集类"]"comment": "返回具有所指定次数的指定字节集重复数据的字节集",
+ta type": "字节集类"]"static": true,
+ta type": "字节集类"]"data type": "字节集类",
+ta type": "字节集类"]"parameters": [
+   {
+"parameter name": "待重复的字节集",
+"comment": "提供所欲重复添加的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "重复次数",
+"comment": "提供重复添加的次数",
+"data type": "整数"
+   }
+ta type": "字节集类"]]
+  },
+  {
+
+"method name": "清零字节集",
+
+"comment": "将本字节集的当前数据内容全部清除为字节值零",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+}"static": true"method name": "字节集替换",
+}"static": true"comment": "将本字节集的某一部分用其它的字节集替换",
+}"static": true"static": true,
+}"static": true"@嵌入式方法": "\"\"",
+}"static": true"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始替换位置",
+"comment": "提供被替换内容的起始偏移位置,必须大于等于0且小于等于字节集长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "替换尺寸",
+"comment": "提供具体的替换尺寸,单位字节,必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "用作替换的字节集",
+"comment": "提供用来替换本字节集所指定部分内容的字节集",
+"data type": "字节集类"
+   }
+}"static": true]
+  },
+  {
+ }"method name": "指针字节集替换",
+ }"comment": "将本字节集的某一部分用指针所指向的数据替换.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始替换位置",
+"comment": "提供被替换内容的起始偏移位置,必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "替换尺寸",
+"comment": "提供具体的替换尺寸,单位字节,必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "用作替换数据的指针",
+"comment": "指向用来替换本字节集所指定部分内容的数据地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用作替换数据的尺寸",
+"comment": "提供替换数据的尺寸,调用方必须确保所指定指针指向地址处尺寸为本参数值的内容空间可读.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+comment": "提供具体的替换尺寸,单位字节,必须大于等于0.""method name": "子字节集替换",
+comment": "提供具体的替换尺寸,单位字节,必须大于等于0.""comment": "将本字节集中为指定子字节集的内容替换成另一子字节集所指定的内容",
+comment": "提供具体的替换尺寸,单位字节,必须大于等于0.""static": true,
+comment": "提供具体的替换尺寸,单位字节,必须大于等于0.""@嵌入式方法": "\"\"",
+comment": "提供具体的替换尺寸,单位字节,必须大于等于0.""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲被替换的子字节集",
+"comment": "提供所欲被替换的字节集内容,本字节集中的所有此内容将被替换.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "用作替换的子字节集",
+"comment": "提供用作替换的字节集内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "进行替换的起始位置",
+"comment": "提供被替换子字节集的起始搜索位置,必须大于等于0.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "替换进行的次数",
+"comment": "提供欲进行替换的次数,为0表示进行所有可能的替换.",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "提供具体的替换尺寸,单位字节,必须大于等于0."]
+  },
+  {
+}"method name": "取字节集数据",
+}"comment": "取出字节集中指定位置指定数据类型的数据",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据偏移位置",
+"comment": "提供所欲获取数据在本字节集中的偏移位置,必须大于等于0.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲获取数据的类型",
+"comment": "提供所欲获取数据的数据类型",
+"@需求类型": "数据类型",
+"@匹配类型": "通用基本型",
+"@返回值类型": "0"
+   }
+}]
+  },
+  {
+"method name": "置字节集值",
+"comment": "设置字节集中指定位置处的指定数据类型值",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据偏移位置",
+"comment": "提供所欲设置数据在本字节集中的偏移位置,必须大于等于0.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲设置的值",
+"comment": "提供具体所欲设置的值,如欲明确指定其数据类型,可以使用强制类型转换操作符.",
+"@匹配类型": "通用非文本基本型"
+   }
+]
+  },
+  {
+"method name": "取字节集小数",
+"comment": "取出字节集中指定位置的小数值",
+"static": true,
+"data type": "小数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据偏移位置",
+"comment": "提供所欲获取数据在本字节集中的偏移位置,必须大于等于0.",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+"method name": "置字节集小数",
+"comment": "设置字节集中指定位置处的小数值",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据偏移位置",
+"comment": "提供所欲设置数据在本字节集中的偏移位置,必须大于等于0.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲设置的值",
+"comment": "提供具体所欲设置的小数值",
+"data type": "小数"
+   }
+]
+  },
+  {
+ }"method name": "取字节集单精度小数",
+ }"comment": "取出字节集中指定位置的单精度小数值",
+ }"static": true,
+ }"data type": "单精度小数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据偏移位置",
+"comment": "提供所欲获取数据在本字节集中的偏移位置,必须大于等于0.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+data type": "字节集类""method name": "置字节集单精度小数",
+data type": "字节集类""comment": "设置字节集中指定位置处的单精度小数值",
+data type": "字节集类""static": true,
+data type": "字节集类""@嵌入式方法": "\"\"",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据偏移位置",
+"comment": "提供所欲设置数据在本字节集中的偏移位置,必须大于等于0.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "所欲设置的值",
+"comment": "提供具体所欲设置的单精度小数值",
+"data type": "单精度小数"
+   }
+data type": "字节集类"]
+  },
+  {
+"method name": "置为空白字节集",
+"comment": "将本字节集的内容设置为指定次数的零字节重复结果,原有内容将被覆盖.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "零字节数目",
+"comment": "指定所欲重置为的零字节数目,必须大于等于0.",
+"data type": "整数"
+   }
+]
+  },
+  {
+data type": "整数""method name": "置为重复字节集",
+data type": "整数""comment": "将本字节集的内容设置为指定次数的字节集重复结果,原有内容将被覆盖.",
+data type": "整数""static": true,
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "待添加的字节集",
+"comment": "提供所欲重复添加的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "重复次数",
+"comment": "提供重复添加的次数",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "指针复制字节集",
+
+"comment": "将所指定指针处的数据复制到本字节集,字节集中的原有内容将被覆盖.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "指向所欲复制数据的指针值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲复制数据尺寸",
+"comment": "  提供所欲复制数据的尺寸(单位字节),必须确保指针所指向地址处尺寸\n为本参数值的地址空间有效.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "待添加的字节集""method name": "添加字节集",
+ameter name": "待添加的字节集""comment": "将所指定字节集内容添加到本字节集内容的尾部",
+ameter name": "待添加的字节集""static": true,
+ameter name": "待添加的字节集""@嵌入式方法": "\"\"",
+ameter name": "待添加的字节集""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲添加的字节集",
+"comment": "提供所欲添加到本字节集尾部的字节集内容",
+"data type": "字节集类"
+   }
+ameter name": "待添加的字节集"]
+  },
+  {
+data type": "小数""method name": "指针添加字节集",
+data type": "小数""comment": "将所指定指针处的数据添加到本字节集的尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+data type": "小数""static": true,
+data type": "小数""@嵌入式方法": "\"\"",
+data type": "小数""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "指向所欲添加数据的指针值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲添加数据尺寸",
+"comment": "  提供所欲添加数据的尺寸(单位字节),必须确保指针所指向地址处尺寸\n为本参数值的地址空间可读.",
+"data type": "整数"
+   }
+data type": "小数"]
+  },
+  {
+ata type": "小数""comment": "将所指定指针处的数据添加到本字节集的尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法.""method name": "添加数组到字节集",
+ata type": "小数""comment": "将所指定指针处的数据添加到本字节集的尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法.""comment": "将所指定非文本基本数据类型数组数据添加到本字节集的尾部",
+ata type": "小数""comment": "将所指定指针处的数据添加到本字节集的尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法.""static": true,
+ata type": "小数""comment": "将所指定指针处的数据添加到本字节集的尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法.""@嵌入式方法": "\"\"",
+ata type": "小数""comment": "将所指定指针处的数据添加到本字节集的尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法.""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲添加的数据",
+"@匹配类型": "通用非文本基本型数组"
+   }
+ata type": "小数""comment": "将所指定指针处的数据添加到本字节集的尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法."]
+  },
+  {
+thod name": "指针复制字节集""method name": "添加值到字节集",
+thod name": "指针复制字节集""comment": "将所指定数据类型的值添加到本字节集尾部",
+thod name": "指针复制字节集""static": true,
+thod name": "指针复制字节集""@嵌入式方法": "\"\"",
+thod name": "指针复制字节集""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲添加的值",
+"comment": "提供所欲添加到本字节集尾部的值,如欲明确指定其数据类型,可以使用强制类型转换操作符.",
+"@匹配类型": "通用非文本基本型"
+   }
+thod name": "指针复制字节集"]
+  },
+  {
+od name": "指针复制字节集"]"method name": "添加单精度小数到字节集",
+od name": "指针复制字节集"]"comment": "将所指定的单精度小数值添加到本字节集尾部",
+od name": "指针复制字节集"]"static": true,
+od name": "指针复制字节集"]"@嵌入式方法": "\"\"",
+od name": "指针复制字节集"]"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲添加的值",
+"comment": "提供所欲添加到本字节集尾部的值,该值将被强制转换为单精度小数后添加进去.",
+"data type": "小数"
+   }
+od name": "指针复制字节集"]]
+  },
+  {
+comment": "提供所欲添加到本字节集尾部的值,该值将被强制转换为单精度小数后添加进去.""method name": "添加文本到字节集",
+comment": "提供所欲添加到本字节集尾部的值,该值将被强制转换为单精度小数后添加进去.""comment": "将所指定文本内容添加到本字节集尾部",
+comment": "提供所欲添加到本字节集尾部的值,该值将被强制转换为单精度小数后添加进去.""static": true,
+comment": "提供所欲添加到本字节集尾部的值,该值将被强制转换为单精度小数后添加进去.""@嵌入式方法": "\"\"",
+comment": "提供所欲添加到本字节集尾部的值,该值将被强制转换为单精度小数后添加进去.""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲添加的文本",
+"comment": "提供所欲添加到本字节集尾部的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否添加结束零字符",
+"comment": "是否将文本尾部的结束零字符添加到字节集尾部",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "提供所欲添加到本字节集尾部的值,该值将被强制转换为单精度小数后添加进去."]
+  },
+  {
+
+"method name": "添加字节集空间",
+
+"comment": "将所指定尺寸的数据内容空间添加到字节集尾部",
+
+"result comment": "  返回所添加内容空间部分的首地址指针值,除非必要且对指针概念有\n透彻的了解,不要使用本返回值.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "内容空间尺寸",
+"comment": "提供所欲添加内容空间的尺寸,必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否清零",
+"comment": "是否将所添加的内容空间部分清除为字节值零",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"method name": "添加重复字符到字节集",
+"comment": "添加指定数目的字符到本字节集尾部",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲添加的字符",
+"comment": "提供所欲添加的具体字符",
+"data type": "字符"
+   },
+   {
+"parameter name": "所欲添加的次数",
+"comment": "提供所欲添加的次数,必须大于等于0.",
+"data type": "整数"
+   }
+]
+  },
+  {
+ameter name": "所欲操作本对象""method name": "添加部分文本到字节集",
+ameter name": "所欲操作本对象""comment": "将所指定文本的部分内容添加到本字节集尾部",
+ameter name": "所欲操作本对象""static": true,
+ameter name": "所欲操作本对象""@嵌入式方法": "\"\"",
+ameter name": "所欲操作本对象""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲添加的文本",
+"comment": "提供所欲添加到本字节集尾部的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加文本的长度",
+"comment": "提供所欲添加文本的长度(单位字符),必须大于等于0且小于等于所指定文本的长度.",
+"data type": "整数"
+   }
+ameter name": "所欲操作本对象"]
+  },
+  {
+
+"method name": "指针添加文本到字节集",
+
+"comment": "将所指定长度的文本内容添加到本字节集尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲添加的文本指针",
+"comment": "提供所欲添加到本字节集尾部的文本数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲添加文本的长度",
+"comment": "  提供所欲添加文本的长度(单位字符),必须确保指针所指向地址处尺寸\n为\"本参数值*单个字符数据尺寸\"的地址空间可读.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "添加重复字节集",
+"comment": "将指定字节集重复添加所指定次数到本字节集的尾部",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "待添加的字节集",
+"comment": "提供所欲重复添加的字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "重复次数",
+"comment": "提供重复添加的次数",
+"data type": "整数"
+   }
+]
+  },
+  {
+comment": "提供重复添加的次数""method name": "插入字节集",
+comment": "提供重复添加的次数""comment": "将所指定字节集内容插入到本字节集内容的指定偏移位置处",
+comment": "提供重复添加的次数""static": true,
+comment": "提供重复添加的次数""@嵌入式方法": "\"\"",
+comment": "提供重复添加的次数""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "插入偏移位置",
+"comment": "提供在本字节集中的具体插入偏移位置,必须大于等于0且小于等于本字节集的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的字节集",
+"comment": "提供所欲插入到本字节集中的字节集内容",
+"data type": "字节集类"
+   }
+comment": "提供重复添加的次数"]
+  },
+  {
+static": true"method name": "指针插入字节集",
+static": true"comment": "将所指定指针处的数据插入到本字节集所指定偏移位置处.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+static": true"static": true,
+static": true"@嵌入式方法": "\"\"",
+static": true"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "插入偏移位置",
+"comment": "提供在本字节集中的具体插入偏移位置,必须大于等于0且小于等于本字节集的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据指针",
+"comment": "指向所欲插入数据的指针值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲插入数据尺寸",
+"comment": "  提供所欲插入数据的尺寸(单位字节),必须确保指针所指向地址处尺寸为本参数值\n的地址空间可读.",
+"data type": "整数"
+   }
+static": true]
+  },
+  {
+ameter name": "所欲操作本对象""method name": "插入值到字节集",
+ameter name": "所欲操作本对象""comment": "将所指定数据类型的值插入到本字节集所指定偏移位置处",
+ameter name": "所欲操作本对象""static": true,
+ameter name": "所欲操作本对象""@嵌入式方法": "\"\"",
+ameter name": "所欲操作本对象""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "插入偏移位置",
+"comment": "提供在本字节集中的具体插入偏移位置,必须大于等于0且小于等于本字节集的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的值",
+"comment": "提供具体所欲插入的值,如欲明确指定其数据类型,可以使用强制类型转换操作符.",
+"@匹配类型": "通用非文本基本型"
+   }
+ameter name": "所欲操作本对象"]
+  },
+  {
+ }"method name": "插入单精度小数到字节集",
+ }"comment": "将所指定的单精度小数值插入到本字节集所指定偏移位置处",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "插入偏移位置",
+"comment": "提供在本字节集中的具体插入偏移位置,必须大于等于0且小于等于本字节集的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的值",
+"comment": "提供具体所欲插入的值,该值将被强制转换为单精度小数后插入字节集中.",
+"data type": "小数"
+   }
+ }]
+  },
+  {
+"method name": "插入文本到字节集",
+"comment": "将所指定文本内容插入到本字节集所指定偏移位置处.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "插入偏移位置",
+"comment": "提供在本字节集中的具体插入偏移位置,必须大于等于0且小于等于本字节集的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的文本内容",
+"comment": "提供具体所欲插入的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否插入结束零字符",
+"comment": "是否将文本尾部的结束零字符插入进字节集",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+@默认值": "假""method name": "插入字节集空间",
+@默认值": "假""comment": "将所指定尺寸的数据内容空间插入到字节集所指定位置处",
+@默认值": "假""result comment": "  返回所插入内容空间部分的首地址指针值,除非必要且对指针概念有透彻的了解,\n不要使用本返回值.",
+@默认值": "假""static": true,
+@默认值": "假""data type": "变整数",
+@默认值": "假""@嵌入式方法": "\"\"",
+@默认值": "假""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "插入偏移位置",
+"comment": "提供在本字节集中的具体插入偏移位置,必须大于等于0且小于等于本字节集长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "内容空间尺寸",
+"comment": "提供所欲插入内容空间的尺寸,必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否清零",
+"comment": "是否将所插入的内容空间部分清除为字节值零",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+@默认值": "假"]
+  },
+  {
+
+"method name": "插入部分文本到字节集",
+
+"comment": "将所指定文本的一部分插入到字节集所指定位置处",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "插入偏移位置",
+"comment": "提供在本字节集中的具体插入偏移位置,必须大于等于0且小于等于本字节集长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的文本",
+"comment": "提供所欲插入到本字节集中的文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲插入文本的长度",
+"comment": "提供所欲插入文本的长度(单位字符),必须大于等于0且小于等于所指定文本长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "指针插入文本到字节集",
+"comment": "将所指定长度的文本内容插入到字节集所指定位置处.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "插入偏移位置",
+"comment": "提供在本字节集中的具体插入偏移位置,必须大于等于0且小于等于本字节集长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的文本指针",
+"comment": "提供所欲插入到本字节集中的文本数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲插入文本的长度",
+"comment": "  提供所欲插入文本的长度(单位字符),必须确保指针所指向地址处尺寸为\n\"本参数值*单个字符数据尺寸\"的地址空间可读.",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "字节集删除",
+
+"comment": "删除本字节集的某一部分内容",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "起始删除位置",
+"comment": "提供被删除内容的起始偏移位置,必须大于等于-1.\n如果为-1,则从尾部开始向前逆向删除所指定尺寸.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲删除数据的尺寸",
+"comment": "提供具体的删除尺寸,单位字节,必须大于等于0.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "删除字节集尾部数据",
+
+"comment": "保留当前字节集首部的指定尺寸数据,将后面的数据全部删除.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "所欲保留数据的尺寸",
+"comment": "  提供所欲保留的位于当前字节集首部的数据尺寸,\n必须大于等于0且小于等于本字节集的长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "删除字节集尾字符零",
+data type": "整数""comment": "如果当前字节集尾部为零字符,则将其删除,否则不进行任何操作.",
+data type": "整数""static": true,
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+data type": "整数"]
+  },
+  {
+data type": "整数""method name": "取字节集哈希值",
+data type": "整数""comment": "  计算并返回所指定字节集的哈希值.\n  字节集哈希值可以在需要快速比较两个字节集是否相同时使用(即如果\n两个字节集的哈希值不同,则两个字节集必定不相同).",
+data type": "整数""static": true,
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+data type": "整数"]
+  },
+  {
+data type": "字节集类""method name": "字节集到十六进制文本",
+data type": "字节集类""comment": "将本字节集的内容转换为十六进制格式的连续文本",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "文本型",
+data type": "字节集类""@嵌入式方法": "\"\"",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   }
+data type": "字节集类"]
+  },
+  {
+"method name": "十六进制文本到字节集",
+"comment": "根据\"字节集到十六进制文本\"方法返回的文本内容创建并返回一个字节集",
+"static": true,
+"data type": "字节集类",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "十六进制文本",
+"comment": "必须为\"字节集到十六进制文本\"所返回的格式文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+@嵌入式方法": "\"\"""method name": "添加十六进制文本到字节集",
+@嵌入式方法": "\"\"""comment": "根据\"字节集到十六进制文本\"方法返回的文本内容创建一个字节集并将其添加到本字节集的尾部",
+@嵌入式方法": "\"\"""result comment": "返回添加后的本字节集对象",
+@嵌入式方法": "\"\"""static": true,
+@嵌入式方法": "\"\"""data type": "字节集类",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "十六进制文本",
+"comment": "必须为\"字节集到十六进制文本\"所返回的格式文本",
+"data type": "文本型"
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+comment": "提供所欲操作的字节集对象""method name": "字节集到BASE64文本",
+comment": "提供所欲操作的字节集对象""comment": "返回本字节集数据所对应的BASE64编码格式文本内容",
+comment": "提供所欲操作的字节集对象""static": true,
+comment": "提供所欲操作的字节集对象""data type": "文本型",
+comment": "提供所欲操作的字节集对象""@嵌入式方法": "\"\"",
+comment": "提供所欲操作的字节集对象""parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "编码格式",
+"comment": "提供具体的编码格式",
+"data type": "BASE64编码方式",
+"@默认值": "BASE64编码方式.标准"
+   },
+   {
+"parameter name": "每行最大字符数",
+"comment": "指定每行编码文本的最大字符数,小于0表示无限制,等于0表示使用默认每行字符数(76).",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "提供所欲操作的字节集对象"]
+  },
+  {
+
+"method name": "BASE64文本到字节集",
+
+"comment": "将所指定的BASE64编码格式文本解码为对应的字节集后返回",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "BASE64编码文本",
+"comment": "提供所欲解码的BASE64编码文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "编码格式",
+"comment": "提供具体的编码格式,必须与编码时指定的格式相同.",
+"data type": "BASE64编码方式",
+"@默认值": "BASE64编码方式.标准"
+   }
+
+]
+  },
+  {
+
+"method name": "字节集到Quoted文本",
+
+"comment": "返回本字节集数据所对应的Quoted-Printable编码格式文本内容",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作本对象",
+"comment": "提供所欲操作的字节集对象",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "每行最大字符数",
+"comment": "指定每行编码文本的最大字符数,小于0表示无限制,等于0表示使用默认每行字符数(76).",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+comment": "指定每行编码文本的最大字符数,小于0表示无限制,等于0表示使用默认每行字符数(76).""method name": "Quoted文本到字节集",
+comment": "指定每行编码文本的最大字符数,小于0表示无限制,等于0表示使用默认每行字符数(76).""comment": "将所指定的Quoted-Printable编码格式文本解码为对应的字节集后返回",
+comment": "指定每行编码文本的最大字符数,小于0表示无限制,等于0表示使用默认每行字符数(76).""static": true,
+comment": "指定每行编码文本的最大字符数,小于0表示无限制,等于0表示使用默认每行字符数(76).""data type": "字节集类",
+comment": "指定每行编码文本的最大字符数,小于0表示无限制,等于0表示使用默认每行字符数(76).""@嵌入式方法": "\"\"",
+comment": "指定每行编码文本的最大字符数,小于0表示无限制,等于0表示使用默认每行字符数(76).""parameters": [
+   {
+"parameter name": "Quoted编码文本",
+"comment": "提供所欲解码的Quoted-Printable编码文本",
+"data type": "文本型"
+   }
+comment": "指定每行编码文本的最大字符数,小于0表示无限制,等于0表示使用默认每行字符数(76)."]
+  }
+]
+ }
+ "本文件提供视窗项目的相关字节集操作支持功能"]
+}

@@ -1,0 +1,3282 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"HPSocket网络通讯支持".
+
+{
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."package name": "火山.视窗.网络",
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."comment": "提供各种客户端组件.",
+问本程序中的接口需要引用模块"HPSocket网络通讯支持"."classes": [
+ {
+"class name": "HP客户端基础类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\nHP客户端组件基础类,提供公共方法,请使用其子类创建各个客户端.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@强制依赖": "\"HPSocket基础类\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+ "可靠自动重传UDP通信客户端.""method name": "是否为安全连接",
+ "可靠自动重传UDP通信客户端.""comment": "检测当前是否为安全连接(SSL/HTTPS).",
+ "可靠自动重传UDP通信客户端.""result comment": "为安全连接返回真,反之假.",
+ "可靠自动重传UDP通信客户端.""type": "property getter",
+ "可靠自动重传UDP通信客户端.""data type": "逻辑型",
+ "可靠自动重传UDP通信客户端.""@嵌入式方法": "\"\""
+  },
+  {
+释 = "  2 = 本次操作错误, 终止启动通信客户端组件.""method name": "是否已启动",
+释 = "  2 = 本次操作错误, 终止启动通信客户端组件.""comment": "检测当前通信组件已经启动.",
+释 = "  2 = 本次操作错误, 终止启动通信客户端组件.""result comment": "已成功启动返回真,反之假.",
+释 = "  2 = 本次操作错误, 终止启动通信客户端组件.""type": "property getter",
+释 = "  2 = 本次操作错误, 终止启动通信客户端组件.""data type": "逻辑型",
+释 = "  2 = 本次操作错误, 终止启动通信客户端组件.""@嵌入式方法": "\"\""
+  },
+  {
+端成功建立连接时本事件将被触发.""method name": "当前状态",
+端成功建立连接时本事件将被触发.""comment": "获取当前通信组件的状态.",
+端成功建立连接时本事件将被触发.""type": "property getter",
+端成功建立连接时本事件将被触发.""data type": "HP状态",
+端成功建立连接时本事件将被触发.""@嵌入式方法": "\"\""
+  },
+  {
+鳐數ŝ"method name": "当前错误码",
+鳐數ŝ"comment": "获取最近一次失败操作的错误代码.",
+鳐數ŝ"type": "property getter",
+鳐數ŝ"data type": "HP错误码",
+鳐數ŝ"@嵌入式方法": "\"\""
+  },
+  {
+成功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""method name": "当前错误描述",
+成功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""comment": "获取最近一次失败操作的错误描述.",
+成功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""type": "property getter",
+成功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""data type": "文本型",
+成功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+數ŝ"data type": "HP错误码""method name": "连接ID",
+數ŝ"data type": "HP错误码""comment": "获取当前通信组件的连接ID.",
+數ŝ"data type": "HP错误码""type": "property getter",
+數ŝ"data type": "HP错误码""data type": "变整数",
+數ŝ"data type": "HP错误码""@嵌入式方法": "\"\""
+  },
+  {
+功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""type": "property getter""method name": "地址重用策略",
+功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""type": "property getter""comment": "获取地址重用选项.",
+功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""type": "property getter""type": "property getter",
+功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""type": "property getter""data type": "HP地址重用选项",
+功建立连接时本事件将被触发.""@嵌入式方法": "\"\"""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+ "当客户端主动或被动与服务器断开后将触发本事件.""method name": "地址重用策略",
+ "当客户端主动或被动与服务器断开后将触发本事件.""comment": "设置地址重用选项.",
+ "当客户端主动或被动与服务器断开后将触发本事件.""type": "property setter",
+ "当客户端主动或被动与服务器断开后将触发本事件.""parameters": [
+   {
+"parameter name": "欲使用选项",
+"data type": "HP地址重用选项"
+   }
+ "当客户端主动或被动与服务器断开后将触发本事件."]
+  },
+  {
+"method name": "内存缓存池尺寸",
+"comment": "取得当前客户端内存缓存池尺寸.",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+释 = "  0 = 本次操作成功, 继续执行.""method name": "内存缓存池尺寸",
+释 = "  0 = 本次操作成功, 继续执行.""comment": "设置当前客户端通信组件内存缓存池尺寸.\n请注意,本属性值不宜过大,请参考以下通信模型缓存池尺寸:\n  普通 5  - 10.\n  PULL 10 - 20.",
+释 = "  0 = 本次操作成功, 继续执行.""type": "property setter",
+释 = "  0 = 本次操作成功, 继续执行.""parameters": [
+   {
+"parameter name": "尺寸",
+"data type": "整数"
+   }
+释 = "  0 = 本次操作成功, 继续执行."]
+  },
+  {
+
+"method name": "内存池回收阈值",
+
+"comment": "取得当前客户端内存缓存池尺寸.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ = "  2 = 本次操作错误, 终止启动通信客户端组件.""type": "property getter""method name": "内存池回收阈值",
+ = "  2 = 本次操作错误, 终止启动通信客户端组件.""type": "property getter""comment": "设置当前客户端通信组件内存池回收阈值,当内存数据尺寸达到阈值之后,将会被回收.\n请注意,本值不宜过大,否则将会造成过大的内存占用,一般可设置为\"内存缓存池尺寸\"的3倍",
+ = "  2 = 本次操作错误, 终止启动通信客户端组件.""type": "property getter""type": "property setter",
+ = "  2 = 本次操作错误, 终止启动通信客户端组件.""type": "property getter""parameters": [
+   {
+"parameter name": "阀值",
+"data type": "整数"
+   }
+ = "  2 = 本次操作错误, 终止启动通信客户端组件.""type": "property getter"]
+  },
+  {
+ = 忽略本次操作, 继续执行.""method name": "停止",
+ = 忽略本次操作, 继续执行.""comment": "关闭通信组件,关闭完成后断开与服务器的连接并释放所有资源.",
+ = 忽略本次操作, 继续执行.""result comment": "关闭成功返回真,否则返回假.",
+ = 忽略本次操作, 继续执行.""data type": "逻辑型",
+ = 忽略本次操作, 继续执行.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "发送数据",
+}"comment": "向已连接的服务端发送数据.",
+}"result comment": "发送成功返回真,失败返回假.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "所欲发送数据,本参数不可为空,否则将会发送失败.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲发送数据的数据长度,默认-1则使用所提供的数据长度.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "起始偏移量",
+"comment": "发送数据缓冲区指针偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+ }"method name": "发送数据组",
+ }"comment": "向已连接的服务端发送多组数据.",
+ }"result comment": "发送成功返回真,失败返回假.",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "数据",
+"comment": "所欲发送的多组数据,一个成员表示一组数据.",
+"data type": "字节集数组类"
+   }
+ }]
+  },
+  {
+ameter name": "起始偏移量""method name": "置暂停接收",
+ameter name": "起始偏移量""comment": "设置当前组件是否暂停数据接收.",
+ameter name": "起始偏移量""result comment": "返回是否操作成功.",
+ameter name": "起始偏移量""data type": "逻辑型",
+ameter name": "起始偏移量""@嵌入式方法": "\"\"",
+ameter name": "起始偏移量""parameters": [
+   {
+"parameter name": "是否暂停",
+"comment": "提供真则暂停数据接收,提供假则恢复该连接的数据接收.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "起始偏移量"]
+  },
+  {
+ }"method name": "等待",
+ }"comment": "等待通信组件停止运行.",
+ }"result comment": "返回是否操作成功.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "超时",
+"comment": "默认-1表示永不超时.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+@默认值": "-1""method name": "取本地地址",
+@默认值": "-1""comment": "获取当前客户端组件的本地地址信息.",
+@默认值": "-1""result comment": "返回是否操作成功.",
+@默认值": "-1""data type": "逻辑型",
+@默认值": "-1""@禁止流程检查": "真",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "地址信息",
+"comment": "提供一个储存地址内容的文本.",
+"data type": "文本型"
+   }
+@默认值": "-1"]
+  },
+  {
+meter name": "起始偏移量""parameters": [
+"method name": "取本地端口",
+meter name": "起始偏移量""parameters": [
+"comment": "获取当前客户端组件的本地端口信息.",
+meter name": "起始偏移量""parameters": [
+"data type": "整数",
+meter name": "起始偏移量""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""method name": "取远程地址",
+data type": "文本型""comment": "获取当前连接的远程主机地址.",
+data type": "文本型""result comment": "返回是否操作成功.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "地址信息",
+"comment": "提供一个储存地址内容的文本.",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "取远程端口",
+
+"comment": "获取当前客户端组件的本地端口信息.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取未发出数据长度",
+
+"comment": "获取当前连接中未发出数据的长度.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+略本次操作, 继续执行.""method name": "停止""method name": "取接收状态",
+略本次操作, 继续执行.""method name": "停止""comment": "获取当前连接的数据接收状态.",
+略本次操作, 继续执行.""method name": "停止""result comment": "返回真则表示正在接收,反之假.",
+略本次操作, 继续执行.""method name": "停止""data type": "逻辑型",
+略本次操作, 继续执行.""method name": "停止""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取连接状态",
+}"comment": "获取与服务端的连接是否有效.",
+}"result comment": "有效返回真,反之假.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "HPTCP客户端基础类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\nTCP客户端基类,请使用其子类.",
+"base class": "HP客户端基础类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+comment": "★ 本类由\"飞翔的企鹅\"封装.\nTCP客户端基类,请使用其子类.""method name": "通信数据缓冲区尺寸",
+comment": "★ 本类由\"飞翔的企鹅\"封装.\nTCP客户端基类,请使用其子类.""comment": "设置通信数据缓冲区大小(根据平均通信数据包大小调整设置,通常设置为1024的倍数).",
+comment": "★ 本类由\"飞翔的企鹅\"封装.\nTCP客户端基类,请使用其子类.""type": "property setter",
+comment": "★ 本类由\"飞翔的企鹅\"封装.\nTCP客户端基类,请使用其子类.""parameters": [
+   {
+"parameter name": "尺寸",
+"data type": "整数"
+   }
+comment": "★ 本类由\"飞翔的企鹅\"封装.\nTCP客户端基类,请使用其子类."]
+  },
+  {
+"@禁止流程检查": "真""method name": "通信数据缓冲区尺寸",
+"@禁止流程检查": "真""comment": "获取通信数据缓冲区大小.",
+"@禁止流程检查": "真""type": "property getter",
+"@禁止流程检查": "真""data type": "整数",
+"@禁止流程检查": "真""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "正常心跳包间隔",
+}"comment": "设置正常心跳包间隔,默认60000毫秒.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "间隔",
+"comment": "单位:毫秒,0则不发送心跳包.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "间隔""method name": "正常心跳包间隔",
+ameter name": "间隔""comment": "获取正常心跳包间隔.",
+ameter name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.",
+ameter name": "间隔""type": "property getter",
+ameter name": "间隔""data type": "整数",
+ameter name": "间隔""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔",
+meter name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""comment": "设置异常心跳包间隔,默认20000毫秒.\n注意:如果超过若干次检测不到心跳确认即会触发断线处理(WinXP 5次, Win7 10次).",
+meter name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""type": "property setter",
+meter name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""parameters": [
+   {
+"parameter name": "间隔",
+"comment": "单位:毫秒,0则不发送心跳包.",
+"data type": "整数"
+   }
+meter name": "间隔""result comment": "单位:毫秒,0则不发送心跳包."]
+  },
+  {
+r name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""method name": "异常心跳包间隔",
+r name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""comment": "获取异常心跳包间隔.",
+r name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""result comment": "单位:毫秒,0则不发送心跳包.",
+r name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""type": "property getter",
+r name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""data type": "整数",
+r name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "无延迟模式",
+}"comment": "设置是否开启无延迟(nodelay)模式.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+ name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""comment": "获取异常心跳包间隔.""method name": "无延迟模式",
+ name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""comment": "获取异常心跳包间隔.""comment": "获取当前是否已开启无延迟(nodelay)模式.",
+ name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""comment": "获取异常心跳包间隔.""type": "property getter",
+ name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""comment": "获取异常心跳包间隔.""data type": "逻辑型",
+ name": "间隔""result comment": "单位:毫秒,0则不发送心跳包.""method name": "异常心跳包间隔""comment": "获取异常心跳包间隔.""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "同步连接超时",
+ }"comment": "获取以同步方式连接时所欲等待连接的超时时间.",
+ }"result comment": "单位:毫秒,0则永不超时.",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+]"method name": "同步连接超时",
+]"comment": "设置以同步方式连接时所欲等待连接的超时时间.",
+]"type": "property setter",
+]"parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:毫秒,0则永不超时.",
+"data type": "整数"
+   }
+]]
+  },
+  {
+}"method name": "发送小文件",
+}"comment": "向当前连接的服务端发送小文件(小于4096kb).",
+}"result comment": "返回是否操作成功.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "提供所欲发送文件的完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "附加头数据",
+"comment": "头部附加数据,空对象则不附加数据.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "附加尾数据",
+"comment": "尾部附加数据,空对象则不附加数据.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "HP_TCP客户端",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\nTCP客户端组件.",
+"base class": "HPTCP客户端基础类",
+"@视窗.后缀文本": "\"public ITcpClientListener\"",
+"@文档": "\"category = \\\"HP客户端\\\"\"",
+"methods": [
+  {
+]"method name": "启动",
+]"comment": "启动客户端通信组件并连接至目标服务端.",
+]"result comment": "返回是否操作成功.",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]]
+  },
+  {
+
+"method name": "输出指针"
+  },
+  {
+}"method name": "开始握手",
+}"comment": "当前客户端将与服务端握手时将触发本事件.",
+}"result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "发送完毕",
+data type": "整数""comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ameter name": "连接ID""method name": "数据进入",
+ameter name": "连接ID""comment": "当客户端成功接收数据后将触发本事件.",
+ameter name": "连接ID""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+ameter name": "连接ID""type": "event",
+ameter name": "连接ID""data type": "整数",
+ameter name": "连接ID""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+ameter name": "连接ID"]
+  },
+  {
+ }"method name": "通信发生错误",
+ }"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+ }]
+  },
+  {
+成功接收数据后将触发本事件."method name": "准备连接",
+成功接收数据后将触发本事件."comment": "当客户端启动之后将触发本事件.",
+成功接收数据后将触发本事件."result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+成功接收数据后将触发本事件."type": "event",
+成功接收数据后将触发本事件."data type": "整数",
+成功接收数据后将触发本事件."parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+成功接收数据后将触发本事件.]
+  },
+  {
+"method name": "连接完成",
+"comment": "与服务端成功建立连接时本事件将被触发.",
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "HP_TCP安全客户端",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n请注意:本类客户端在启动之前,需要先初始化SSL环境.",
+"base class": "HPTCP客户端基础类",
+"@视窗.后缀文本": "\"public ITcpClientListener\"",
+"@文档": "\"category = \\\"HP客户端\\\"\"",
+"methods": [
+  {
+ }"method name": "启动",
+ }"comment": "启动客户端通信组件并连接至目标服务端.\n注意:调用前请确保已初始化SSL环境成功,否则无法正确启动.",
+ }"result comment": "返回是否操作成功.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+
+"method name": "握手模式",
+
+"comment": "设置通信组件SSL握手方式(默认为真,自动握手)",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "自动",
+"comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""method name": "握手模式",
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""comment": "获取通信组件SSL握手方式.",
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""type": "property getter",
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""data type": "逻辑型",
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "加密算法列表",
+}"comment": "设置SSL加密算法列表.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "算法",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ameter name": "异步连接""method name": "加密算法列表",
+ameter name": "异步连接""comment": "获取SSL加密算法列表.",
+ameter name": "异步连接""type": "property getter",
+ameter name": "异步连接""data type": "文本型",
+ameter name": "异步连接""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "初始化SSL环境",
+
+"comment": "初始化通信组件 SSL 环境参数.\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证或客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "初始化SSL环境_内存",
+data type": "文本型""comment": "初始化通信组件SSL环境参数(从内存载入证书内容).\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+data type": "文本型""result comment": "返回是否操作成功.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+data type": "文本型"]
+  },
+  {
+data type": "HP操作类型""method name": "清理SSL环境",
+data type": "HP操作类型""comment": "清理通信组件SSL运行环境,回收SSL相关内存.\n注意:当通信组件需要重设SSL信息时,请先调用该方法清空原有环境参数.",
+data type": "HP操作类型""@嵌入式方法": "\"\""
+  },
+  {
+comment": "CA证书文件或目录(单向验证或客户端可选).""method name": "开始SSL握手",
+comment": "CA证书文件或目录(单向验证或客户端可选).""comment": "启动SSL握手.\n注意:如果当前通信组件的\"握手模式\"为假时,需调用该方法握手,否则将导致连接失败.",
+comment": "CA证书文件或目录(单向验证或客户端可选).""result comment": "返回是否操作成功.",
+comment": "CA证书文件或目录(单向验证或客户端可选).""data type": "逻辑型",
+comment": "CA证书文件或目录(单向验证或客户端可选).""@嵌入式方法": "\"\""
+  },
+  {
+comment": "提供所欲使用的私钥文件内容.""method name": "开始握手",
+comment": "提供所欲使用的私钥文件内容.""comment": "当前客户端将与服务端握手时将触发本事件.",
+comment": "提供所欲使用的私钥文件内容.""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+comment": "提供所欲使用的私钥文件内容.""type": "event",
+comment": "提供所欲使用的私钥文件内容.""data type": "整数",
+comment": "提供所欲使用的私钥文件内容.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "提供所欲使用的私钥文件内容."]
+  },
+  {
+
+"method name": "发送完毕",
+
+"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ent": "提供所欲使用的私钥文件内容.""method name": "开始握手""method name": "数据进入",
+ent": "提供所欲使用的私钥文件内容.""method name": "开始握手""comment": "当客户端成功接收数据后将触发本事件.",
+ent": "提供所欲使用的私钥文件内容.""method name": "开始握手""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+ent": "提供所欲使用的私钥文件内容.""method name": "开始握手""type": "event",
+ent": "提供所欲使用的私钥文件内容.""method name": "开始握手""data type": "整数",
+ent": "提供所欲使用的私钥文件内容.""method name": "开始握手""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+ent": "提供所欲使用的私钥文件内容.""method name": "开始握手"]
+  },
+  {
+"method name": "通信发生错误",
+"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+]
+  },
+  {
+
+"method name": "准备连接",
+
+"comment": "当客户端启动之后将触发本事件.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+comment": "当客户端主动或被动与服务器断开后将触发本事件.""method name": "连接完成",
+comment": "当客户端主动或被动与服务器断开后将触发本事件.""comment": "与服务端成功建立连接时本事件将被触发.",
+comment": "当客户端主动或被动与服务器断开后将触发本事件.""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+comment": "当客户端主动或被动与服务器断开后将触发本事件.""type": "event",
+comment": "当客户端主动或被动与服务器断开后将触发本事件.""data type": "整数",
+comment": "当客户端主动或被动与服务器断开后将触发本事件.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "当客户端主动或被动与服务器断开后将触发本事件."]
+  }
+]
+ },
+ {
+"class name": "HP_UDP客户端",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n用于C/S模式的点对点单播通信客户端.",
+"base class": "HP客户端基础类",
+"@视窗.后缀文本": "\"public IUdpClientListener\"",
+"@文档": "\"category = \\\"UDP客户端\\\"\"",
+"methods": [
+  {
+ }"method name": "报文最大尺寸",
+ }"comment": "设置数据报文最大长度(建议在局域网环境下不超过1432字节,在广域网环境下不超过548字节)",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "最大尺寸",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+base class": "HP客户端基础类""method name": "报文最大尺寸",
+base class": "HP客户端基础类""comment": "获取数据报文最大长度.",
+base class": "HP客户端基础类""type": "property getter",
+base class": "HP客户端基础类""data type": "整数",
+base class": "HP客户端基础类""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "心跳发送间隔",
+ }"comment": "设置心跳包发送间隔.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "间隔",
+"comment": "单位:毫秒,0则不发送心跳包.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+"method name": "心跳发送间隔",
+"comment": "获取心跳包发送间隔.",
+"result comment": "单位:毫秒,0则不发送心跳包.",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "心跳包尝试次数",
+
+"comment": "设置心跳包最大尝试的次数,超过最大次数将以断线处理.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "尝试次数",
+"comment": "如果超出该次数则会以断线处理,0则不发送心跳包.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "心跳包尝试次数",
+data type": "整数""comment": "获取心跳包最大尝试的次数.",
+data type": "整数""result comment": "单位:毫秒,0则不发送心跳包.",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""method name": "启动",
+@嵌入式方法": "\"\"""comment": "启动客户端通信组件并连接至目标服务端.",
+@嵌入式方法": "\"\"""result comment": "返回是否操作成功.",
+@嵌入式方法": "\"\"""data type": "逻辑型",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+data type": "整数""method name": "开始握手",
+data type": "整数""comment": "当前客户端将与服务端握手时将触发本事件.",
+data type": "整数""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "发送完毕",
+}"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "数据进入",
+"comment": "当客户端成功接收数据后将触发本事件.",
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "通信发生错误",
+}"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+}]
+  },
+  {
+"method name": "准备连接",
+"comment": "当客户端启动之后将触发本事件.",
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+]
+  },
+  {
+data type": "整数""method name": "连接完成",
+data type": "整数""comment": "与服务端成功建立连接时本事件将被触发.",
+data type": "整数""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "整数"]
+  }
+]
+ },
+ {
+"class name": "HPPULL客户端基础类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\nTCP-PULL客户端基类,请使用其子类.",
+"base class": "HPTCP客户端基础类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+type": "event""method name": "抓取数据",
+type": "event""comment": "抓取当前连接所发送的数据.",
+type": "event""result comment": "返回本次数据抓取结果.",
+type": "event""data type": "HP数据抓取结果",
+type": "event""@禁止流程检查": "真",
+type": "event""parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "提供所欲装载该数据的缓冲区.\n注意:如所提供缓冲区未分配空间程序将自动按数据长度参数分配指定空间.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲抓取数据的长度.",
+"data type": "整数"
+   }
+type": "event"]
+  },
+  {
+ }"method name": "窥探数据",
+ }"comment": "窥探当前连接所发送的数据(不会移除缓冲区数据).",
+ }"result comment": "返回本次数据窥探结果.",
+ }"data type": "HP数据抓取结果",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "提供所欲窥探该数据的缓冲区.\n注意:如所提供缓冲区未分配空间程序将自动按数据长度参数分配指定空间.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲窥探数据的长度.",
+"data type": "整数"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "HP_PULL客户端",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n  PULL客户端和HP客户端的区别为,HP客户端接收到客户数据之后,将会通过事件\"数据进入\"同时\n为用户提供当前所收到数据和数据长度,而PULL客户端将只会提供当前数据长度,而将数据写入到\n内存中,您可以在进行数据长度累计,当累计长度为一个完整的包长度时,使用方法\"抓取数据\"或\"\n窥探数据\"从内存中将指定长度的数据提取出来,直接组成完整的包,省去了您自行拆包和组包的步\n骤.",
+"base class": "HPPULL客户端基础类",
+"@视窗.后缀文本": "\"public ITcpClientListener\"",
+"@文档": "\"category = \\\"HP客户端\\\"\"",
+"methods": [
+  {
+hod name": "准备连接""method name": "启动",
+hod name": "准备连接""comment": "启动客户端通信组件并连接至目标服务端.",
+hod name": "准备连接""result comment": "返回是否操作成功.",
+hod name": "准备连接""data type": "逻辑型",
+hod name": "准备连接""@嵌入式方法": "\"\"",
+hod name": "准备连接""parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+hod name": "准备连接"]
+  },
+  {
+@视窗.后缀文本": "\"public ITcpClientListener\"""method name": "开始握手",
+@视窗.后缀文本": "\"public ITcpClientListener\"""comment": "当前客户端将与服务端握手时将触发本事件.",
+@视窗.后缀文本": "\"public ITcpClientListener\"""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+@视窗.后缀文本": "\"public ITcpClientListener\"""type": "event",
+@视窗.后缀文本": "\"public ITcpClientListener\"""data type": "整数",
+@视窗.后缀文本": "\"public ITcpClientListener\"""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+@视窗.后缀文本": "\"public ITcpClientListener\""]
+  },
+  {
+}"method name": "发送完毕",
+}"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ }"method name": "数据进入",
+ }"comment": "当客户端成功接收数据后将触发本事件.",
+ }"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "接收的数据长度.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "通信发生错误",
+
+"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+
+]
+  },
+  {
+}"method name": "准备连接",
+}"comment": "当客户端启动之后将触发本事件.",
+}"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+comment": "如果客户端为非正常退出,此参数为错误代码.""method name": "连接完成",
+comment": "如果客户端为非正常退出,此参数为错误代码.""comment": "与服务端成功建立连接时本事件将被触发.",
+comment": "如果客户端为非正常退出,此参数为错误代码.""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+comment": "如果客户端为非正常退出,此参数为错误代码.""type": "event",
+comment": "如果客户端为非正常退出,此参数为错误代码.""data type": "整数",
+comment": "如果客户端为非正常退出,此参数为错误代码.""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+comment": "如果客户端为非正常退出,此参数为错误代码."]
+  }
+]
+ },
+ {
+"class name": "HP_PULL安全客户端",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n  本类为PULL安全客户端\n  PULL客户端和HP客户端的区别为,HP客户端接收到客户数据之后,将会通过事件\"数据进入\"同时\n为用户提供当前所收到数据和数据长度,而PULL客户端将只会提供当前数据长度,而将数据写入到\n内存中,您可以在进行数据长度累计,当累计长度为一个完整的包长度时,使用方法\"抓取数据\"或\"\n窥探数据\"从内存中将指定长度的数据提取出来,直接组成完整的包,省去了您自行拆包和组包的步\n骤.\n  请注意:本类客户端在启动之前,需要先初始化SSL环境.",
+"base class": "HPPULL客户端基础类",
+"@视窗.后缀文本": "\"public ITcpClientListener\"",
+"@文档": "\"category = \\\"HP客户端\\\"\"",
+"methods": [
+  {
+data type": "字节集类""method name": "启动",
+data type": "字节集类""comment": "启动客户端通信组件并连接至目标服务端.\n注意:调用前请确保已初始化SSL环境成功,否则无法正确启动.",
+data type": "字节集类""result comment": "返回是否操作成功.",
+data type": "字节集类""data type": "逻辑型",
+data type": "字节集类""@嵌入式方法": "\"\"",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "字节集类"]
+  },
+  {
+ }"method name": "握手模式",
+ }"comment": "设置通信组件SSL握手方式(默认为真,自动握手)",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "自动",
+"comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""method name": "握手模式",
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""comment": "获取通信组件SSL握手方式.",
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""type": "property getter",
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""data type": "逻辑型",
+comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""@嵌入式方法": "\"\""
+  },
+  {
+methods": [
+"method name": "加密算法列表",
+methods": [
+"comment": "设置SSL加密算法列表.",
+methods": [
+"type": "property setter",
+methods": [
+"parameters": [
+   {
+"parameter name": "算法",
+"data type": "文本型"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "加密算法列表",
+
+"comment": "获取SSL加密算法列表.",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+omment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""comment": "获取通信组件SSL握手方式.""method name": "初始化SSL环境",
+omment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""comment": "获取通信组件SSL握手方式.""comment": "初始化通信组件 SSL 环境参数.\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+omment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""comment": "获取通信组件SSL握手方式.""result comment": "返回是否操作成功.",
+omment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""comment": "获取通信组件SSL握手方式.""data type": "逻辑型",
+omment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""comment": "获取通信组件SSL握手方式.""@禁止流程检查": "真",
+omment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""comment": "获取通信组件SSL握手方式.""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证或客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+omment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.""comment": "获取通信组件SSL握手方式."]
+  },
+  {
+comment": "提供所欲使用的私钥密码,如无密码可为空.""method name": "初始化SSL环境_内存",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""comment": "初始化通信组件SSL环境参数(从内存载入证书内容).\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""result comment": "返回是否操作成功.",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""data type": "逻辑型",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""@禁止流程检查": "真",
+comment": "提供所欲使用的私钥密码,如无密码可为空.""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+comment": "提供所欲使用的私钥密码,如无密码可为空."]
+  },
+  {
+data type": "文本型""method name": "清理SSL环境",
+data type": "文本型""comment": "清理通信组件SSL运行环境,回收SSL相关内存.\n注意:当通信组件需要重设SSL信息时,请先调用该方法清空原有环境参数.",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+comment": "CA证书内容.""method name": "开始SSL握手",
+comment": "CA证书内容.""comment": "启动SSL握手.\n注意:如果当前通信组件的\"握手模式\"为假时,需调用该方法握手,否则将导致连接失败.",
+comment": "CA证书内容.""result comment": "返回是否操作成功.",
+comment": "CA证书内容.""data type": "逻辑型",
+comment": "CA证书内容.""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "私钥文件""method name": "开始握手",
+ameter name": "私钥文件""comment": "当前客户端将与服务端握手时将触发本事件.",
+ameter name": "私钥文件""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+ameter name": "私钥文件""type": "event",
+ameter name": "私钥文件""data type": "整数",
+ameter name": "私钥文件""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "私钥文件"]
+  },
+  {
+ }"method name": "发送完毕",
+ }"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "数据进入",
+data type": "整数""comment": "当客户端成功接收数据后将触发本事件.",
+data type": "整数""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "接收的数据长度.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "通信发生错误",
+"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+]
+  },
+  {
+
+"method name": "准备连接",
+
+"comment": "当客户端启动之后将触发本事件.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+data type": "HP操作类型""method name": "连接完成",
+data type": "HP操作类型""comment": "与服务端成功建立连接时本事件将被触发.",
+data type": "HP操作类型""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+data type": "HP操作类型""type": "event",
+data type": "HP操作类型""data type": "整数",
+data type": "HP操作类型""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+data type": "HP操作类型"]
+  }
+]
+ },
+ {
+"class name": "HPPACK客户端基础类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\nTCP-PACK客户端基类,请使用其子类.",
+"base class": "HPTCP客户端基础类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@禁止创建对象": "真",
+"methods": [
+  {
+启动之后将触发本事件."method name": "最大包尺寸",
+启动之后将触发本事件."comment": "获取数据包最大长度.",
+启动之后将触发本事件."type": "property getter",
+启动之后将触发本事件."data type": "整数",
+启动之后将触发本事件."@嵌入式方法": "\"\""
+  },
+  {
+启动之后将触发本事件."method name": "最大包尺寸",
+启动之后将触发本事件."comment": "设置数据包最大长度.\n注意:有效数据包最大长度不能超过4194303/0x3FFFFF字节,默认为262144/0x40000字节.",
+启动之后将触发本事件."type": "property setter",
+启动之后将触发本事件."parameters": [
+   {
+"parameter name": "长度",
+"data type": "整数"
+   }
+启动之后将触发本事件.]
+  },
+  {
+"method name": "自定义包头标识",
+"comment": "获取数据包头的标识.",
+"type": "property getter",
+"data type": "短整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "整数""method name": "自定义包头标识",
+"data type": "整数""comment": "设置数据包头标识.\n注意:有效包头标识取值范围0~1023/0x3FF.",
+"data type": "整数""type": "property setter",
+"data type": "整数""parameters": [
+   {
+"parameter name": "标识",
+"comment": "默认:0,为0时不校验包头.",
+"data type": "短整数"
+   }
+"data type": "整数"]
+  }
+]
+ },
+ {
+"class name": "HP_PACK客户端",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n 本类为PACK客户端\n  PACK客户端与\"HP_TCP客户端\"的区别为,\"HP_TCP客户端\"接收到客户数据之后,会立即触发事件\"数据进入\",\n并且设置该事件参数\"已接收长度\"和\"已接收数据\"而PACK客户端,则会在内部将所接收数据\n组成一个完整的包之后,才会触发该事件,直接提供给用户一个完整的数据包.",
+"base class": "HPPACK客户端基础类",
+"@视窗.后缀文本": "\"public ITcpClientListener\"",
+"@文档": "\"category = \\\"HP客户端\\\"\"",
+"methods": [
+  {
+
+"method name": "启动",
+
+"comment": "启动客户端通信组件并连接至目标服务端.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "开始握手",
+
+"comment": "当前客户端将与服务端握手时将触发本事件.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "发送完毕",
+"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+]
+  },
+  {
+data type": "整数""method name": "数据进入",
+data type": "整数""comment": "当通信组件成功接收数据后将触发本事件.\n注意:仅在当前组件接收完整个数据包本事件才会触发(PACK模型).",
+data type": "整数""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所接收到的完整数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所接收完整数据的长度.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "通信发生错误",
+"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+]
+  },
+  {
+ }"method name": "准备连接",
+ }"comment": "当客户端启动之后将触发本事件.",
+ }"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"method name": "连接完成",
+}"comment": "与服务端成功建立连接时本事件将被触发.",
+}"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "HP_PACK安全客户端",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n   本类为PACK安全客户端\n  PACK客户端与\"HP_TCP客户端\"的区别为,\"HP_TCP客户端\"接收到客户数据之后,会立即触发事件\"数据进入\",\n并且设置该事件参数\"已接收长度\"和\"已接收数据\"而PACK客户端,则会在内部将所接收数据\n组成一个完整的包之后,才会触发该事件,直接提供给用户一个完整的数据包.\n  请注意:本类客户端在启动之前,需要先初始化SSL环境.",
+"base class": "HPPACK客户端基础类",
+"@视窗.后缀文本": "\"public ITcpClientListener\"",
+"@文档": "\"category = \\\"HP客户端\\\"\"",
+"methods": [
+  {
+
+"method name": "启动",
+
+"comment": "启动客户端通信组件并连接至目标服务端.\n注意:调用前请确保已初始化SSL环境成功,否则无法正确启动.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "握手模式",
+
+"comment": "设置通信组件SSL握手方式(默认为真,自动握手)",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "自动",
+"comment": "提供真则表示自动握手,否则需手动调用\"开始SSL握手\"方法.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "握手模式",
+
+"comment": "获取通信组件SSL握手方式.",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"parameters": [
+"method name": "加密算法列表",
+
+"parameters": [
+"comment": "设置SSL加密算法列表.",
+
+"parameters": [
+"type": "property setter",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "算法",
+"data type": "文本型"
+   }
+
+"parameters": [
+]
+  },
+  {
+"method name": "加密算法列表",
+"comment": "获取SSL加密算法列表.",
+"type": "property getter",
+"data type": "文本型",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "初始化SSL环境",
+
+"comment": "初始化通信组件 SSL 环境参数.\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+
+"result comment": "返回是否操作成功.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件路径(客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书文件或目录(单向验证或客户端可选).",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+ameter name": "CA证书""method name": "初始化SSL环境_内存",
+ameter name": "CA证书""comment": "初始化通信组件SSL环境参数(从内存载入证书内容).\n注意:如果通信组件欲启用SSL,必须在调用该方法成功之后开始启动,否则将启动失败.",
+ameter name": "CA证书""result comment": "返回是否操作成功.",
+ameter name": "CA证书""data type": "逻辑型",
+ameter name": "CA证书""@禁止流程检查": "真",
+ameter name": "CA证书""parameters": [
+   {
+"parameter name": "验证模式",
+"comment": "指定当前SSL验证模式.",
+"data type": "HPSSL验证模式",
+"@默认值": "HPSSL验证模式.无验证"
+   },
+   {
+"parameter name": "证书文件",
+"comment": "提供所欲使用的证书文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥文件",
+"comment": "提供所欲使用的私钥文件内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "私钥密码",
+"comment": "提供所欲使用的私钥密码,如无密码可为空.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "CA证书",
+"comment": "CA证书内容.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ameter name": "CA证书"]
+  },
+  {
+}"method name": "清理SSL环境",
+}"comment": "清理通信组件SSL运行环境,回收SSL相关内存.\n注意:当通信组件需要重设SSL信息时,请先调用该方法清空原有环境参数.",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "开始SSL握手",
+"comment": "启动SSL握手.\n注意:如果当前通信组件的\"握手模式\"为假时,需调用该方法握手,否则将导致连接失败.",
+"result comment": "返回是否操作成功.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "开始握手",
+
+"comment": "当前客户端将与服务端握手时将触发本事件.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "发送完毕",
+
+"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "数据进入",
+"comment": "当通信组件成功接收数据后将触发本事件.\n注意:仅在当前组件接收完整个数据包本事件才会触发(PACK模型).",
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所接收到的完整数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所接收完整数据的长度.",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "通信发生错误",
+"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+]
+  },
+  {
+ }"method name": "准备连接",
+ }"comment": "当客户端启动之后将触发本事件.",
+ }"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+
+"method name": "连接完成",
+
+"comment": "与服务端成功建立连接时本事件将被触发.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "HP_UDP广播器",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\nUDP广播/组播通信组件.",
+"base class": "HP客户端基础类",
+"@视窗.后缀文本": "\"public IUdpCastListener\"",
+"@文档": "\"category = \\\"UDP客户端\\\"\"",
+"methods": [
+  {
+}"type": "event""method name": "报文最大尺寸",
+}"type": "event""comment": "设置数据报文最大长度(建议在局域网环境下不超过1432字节,在广域网环境下不超过548字节)",
+}"type": "event""type": "property setter",
+}"type": "event""parameters": [
+   {
+"parameter name": "最大尺寸",
+"data type": "整数"
+   }
+}"type": "event"]
+  },
+  {
+ }"method name": "报文最大尺寸",
+ }"comment": "获取数据报文最大长度.",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"comment": "获取数据报文最大长度.""method name": "传播模式",
+}"comment": "获取数据报文最大长度.""comment": "设置当前组件传播数据报文的模式.",
+}"comment": "获取数据报文最大长度.""type": "property setter",
+}"comment": "获取数据报文最大长度.""parameters": [
+   {
+"parameter name": "模式",
+"data type": "HP数据报传播模式"
+   }
+}"comment": "获取数据报文最大长度."]
+  },
+  {
+base class": "HP客户端基础类""method name": "传播模式",
+base class": "HP客户端基础类""comment": "获取当前组件传播数据报文的模式.",
+base class": "HP客户端基础类""type": "property getter",
+base class": "HP客户端基础类""data type": "HP数据报传播模式",
+base class": "HP客户端基础类""@嵌入式方法": "\"\""
+  },
+  {
+"comment": "获取数据报文最大长度.""type": "property setter""method name": "组播报文TTL",
+"comment": "获取数据报文最大长度.""type": "property setter""comment": "设置组播报文的TTL(0-255).",
+"comment": "获取数据报文最大长度.""type": "property setter""type": "property setter",
+"comment": "获取数据报文最大长度.""type": "property setter""parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+"comment": "获取数据报文最大长度.""type": "property setter"]
+  },
+  {
+ }"method name": "组播报文TTL",
+ }"comment": "获取组播报文的TTL.",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "组播环路",
+data type": "整数""comment": "设置当前通信组件是否启用组播环路.",
+data type": "整数""type": "property setter",
+data type": "整数""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "整数""type": "property setter""method name": "组播环路",
+ata type": "整数""type": "property setter""comment": "获取当前通信组件是否已启用组播环路.",
+ata type": "整数""type": "property setter""type": "property getter",
+ata type": "整数""type": "property setter""data type": "逻辑型",
+ata type": "整数""type": "property setter""@嵌入式方法": "\"\""
+  },
+  {
+data type": "HP操作类型""method name": "取数据报远程地址",
+data type": "HP操作类型""comment": "获取当前数据报的远程地址信息(通常在数据进入事件下使用).",
+data type": "HP操作类型""result comment": "返回是否操作成功.",
+data type": "HP操作类型""data type": "逻辑型",
+data type": "HP操作类型""@禁止流程检查": "真",
+data type": "HP操作类型""parameters": [
+   {
+"parameter name": "地址信息",
+"comment": "提供一个储存地址内容的文本.",
+"data type": "文本型"
+   }
+data type": "HP操作类型"]
+  },
+  {
+ }"method name": "取数据报远程端口",
+ }"comment": "获取当前数据报的远程端口信息(通常在数据进入事件下使用).",
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+ta type": "HP操作类型"]"method name": "启动",
+ta type": "HP操作类型"]"comment": "启动当前通信组件并连接至目标服务端.",
+ta type": "HP操作类型"]"result comment": "返回是否操作成功.",
+ta type": "HP操作类型"]"data type": "逻辑型",
+ta type": "HP操作类型"]"@禁止流程检查": "真",
+ta type": "HP操作类型"]"parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "服务端口",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "绑定地址",
+"comment": "提供所欲绑定的地址,默认空绑定任意地址.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "本地端口",
+"comment": "提供本地端口,默认为0. 有效端口号范围为从0到65535.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ta type": "HP操作类型"]]
+  },
+  {
+ase class": "HP客户端基础类""type": "property getter""method name": "开始握手",
+ase class": "HP客户端基础类""type": "property getter""comment": "当前广播器将与服务端握手时将触发本事件.",
+ase class": "HP客户端基础类""type": "property getter""result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+ase class": "HP客户端基础类""type": "property getter""type": "event",
+ase class": "HP客户端基础类""type": "property getter""data type": "整数",
+ase class": "HP客户端基础类""type": "property getter""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ase class": "HP客户端基础类""type": "property getter"]
+  },
+  {
+ type": "整数""method name": "组播环路""method name": "发送完毕",
+ type": "整数""method name": "组播环路""comment": "当广播器向当前连接发送数据成功后,将触发本事件.",
+ type": "整数""method name": "组播环路""type": "event",
+ type": "整数""method name": "组播环路""data type": "整数",
+ type": "整数""method name": "组播环路""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"data type": "整数"
+   }
+ type": "整数""method name": "组播环路"]
+  },
+  {
+}"method name": "数据进入",
+}"comment": "当广播器成功接收数据后将触发本事件.",
+}"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+comment": "所接收到的数据.""method name": "通信发生错误",
+comment": "所接收到的数据.""comment": "当广播器主动或被动与服务器断开后将触发本事件.",
+comment": "所接收到的数据.""type": "event",
+comment": "所接收到的数据.""data type": "整数",
+comment": "所接收到的数据.""parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+comment": "所接收到的数据."]
+  },
+  {
+ameter name": "错误码""method name": "准备连接",
+ameter name": "错误码""comment": "当广播器启动之后将触发本事件.",
+ameter name": "错误码""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+ameter name": "错误码""type": "event",
+ameter name": "错误码""data type": "整数",
+ameter name": "错误码""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "错误码"]
+  },
+  {
+omment": "所接收到的数据.""type": "event""method name": "连接完成",
+omment": "所接收到的数据.""type": "event""comment": "与服务端成功建立连接时本事件将被触发.",
+omment": "所接收到的数据.""type": "event""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+omment": "所接收到的数据.""type": "event""type": "event",
+omment": "所接收到的数据.""type": "event""data type": "整数",
+omment": "所接收到的数据.""type": "event""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+omment": "所接收到的数据.""type": "event"]
+  }
+]
+ },
+ {
+"class name": "HP_UDP节点",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n  UDP节点与HP的其它通信组件不同,它没有\"连接\"的概念(因此也没有连接ID),行为模式类似于普通UDP,\n可以同时与任何UDP应用程序通信.该组件可以以单播,组播和广播三种模式运行.",
+"@视窗.后缀文本": "\"public IUdpNodeListener\"",
+"@强制依赖": "\"HPSocket基础类\"",
+"@文档": "\"category = \\\"UDP客户端\\\"\"",
+"methods": [
+  {
+"method name": "是否已启动",
+"comment": "检测当前通信组件已经启动.",
+"result comment": "已成功启动返回真,反之假.",
+"type": "property getter",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+result comment": "已成功启动返回真,反之假.""method name": "状态",
+result comment": "已成功启动返回真,反之假.""comment": "获取当前通信组件的状态.",
+result comment": "已成功启动返回真,反之假.""type": "property getter",
+result comment": "已成功启动返回真,反之假.""data type": "HP状态",
+result comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\""
+  },
+  {
+comment": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码",
+comment": "如果客户端为非正常退出,此参数为错误代码.""comment": "获取最近一次失败操作的错误代码.",
+comment": "如果客户端为非正常退出,此参数为错误代码.""type": "property getter",
+comment": "如果客户端为非正常退出,此参数为错误代码.""data type": "HP错误码",
+comment": "如果客户端为非正常退出,此参数为错误代码.""@嵌入式方法": "\"\""
+  },
+  {
+esult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""method name": "当前错误描述",
+esult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""comment": "获取最近一次失败操作的错误描述.",
+esult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""type": "property getter",
+esult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""data type": "文本型",
+esult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+报文的TTL(0-255)."method name": "传播模式",
+报文的TTL(0-255)."comment": "获取本节点的传播模式.",
+报文的TTL(0-255)."type": "property getter",
+报文的TTL(0-255)."data type": "HP数据报传播模式",
+报文的TTL(0-255)."@嵌入式方法": "\"\""
+  },
+  {
+meter name": "错误码""comment": "当广播器启动之后将触发本事件.""method name": "报文最大尺寸",
+meter name": "错误码""comment": "当广播器启动之后将触发本事件.""comment": "设置数据报文最大长度(建议在局域网环境下不超过1432字节,在广域网环境下不超过548字节)",
+meter name": "错误码""comment": "当广播器启动之后将触发本事件.""type": "property setter",
+meter name": "错误码""comment": "当广播器启动之后将触发本事件.""parameters": [
+   {
+"parameter name": "最大尺寸",
+"data type": "整数"
+   }
+meter name": "错误码""comment": "当广播器启动之后将触发本事件."]
+  },
+  {
+
+"method name": "报文最大尺寸",
+
+"comment": "获取数据报文最大长度.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "组播报文TTL",
+ }"comment": "设置组播报文的TTL(0-255).",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+报文的TTL(0-255)."method name": "组播报文TTL",
+报文的TTL(0-255)."comment": "获取组播报文的TTL.",
+报文的TTL(0-255)."type": "property getter",
+报文的TTL(0-255)."data type": "整数",
+报文的TTL(0-255)."@嵌入式方法": "\"\""
+  },
+  {
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""data type": "文本型""method name": "组播环路",
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""data type": "文本型""comment": "设置当前通信组件是否启用组播环路.",
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""data type": "文本型""type": "property setter",
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""data type": "文本型""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""data type": "文本型"]
+  },
+  {
+ }"method name": "组播环路",
+ }"comment": "获取当前通信组件是否已启用组播环路.",
+ }"type": "property getter",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""type": "property getter""method name": "地址重用策略",
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""type": "property getter""comment": "获取地址重用选项.",
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""type": "property getter""type": "property getter",
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""type": "property getter""data type": "HP地址重用选项",
+sult comment": "已成功启动返回真,反之假.""@嵌入式方法": "\"\"""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "地址重用策略",
+
+"comment": "设置地址重用选项.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲使用选项",
+"data type": "HP地址重用选项"
+   }
+
+]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "工作线程数",
+}"@嵌入式方法": "\"\"""comment": "获取工作线程数量.",
+}"@嵌入式方法": "\"\"""type": "property getter",
+}"@嵌入式方法": "\"\"""data type": "整数",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ent": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码""method name": "工作线程数",
+ent": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码""comment": "设置工作线程数量(通常设置为 2 * CPU + 2).",
+ent": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码""type": "property setter",
+ent": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码""parameters": [
+   {
+"parameter name": "线程数量",
+"data type": "整数"
+   }
+ent": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码"]
+  },
+  {
+
+"method name": "预投递数量",
+
+"comment": "设置Receive预投递数量(根据负载调整设置,Receive预投递数量越大则丢包概率越小).",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "数量",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "预投递数量",
+
+"comment": "获取Receive预投递数量.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "缓存池尺寸_内存块",
+data type": "整数""comment": "获取内存块缓存池大小.",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+t": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码"]"method name": "缓存池尺寸_内存块",
+t": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码"]"comment": "设置内存块缓存池大小.",
+t": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码"]"type": "property setter",
+t": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码"]"parameters": [
+   {
+"parameter name": "尺寸",
+"data type": "整数"
+   }
+t": "如果客户端为非正常退出,此参数为错误代码.""method name": "错误码"]]
+  },
+  {
+ }"method name": "缓存池回收阀值_内存块",
+ }"comment": "获取内存块缓存池回收阀值.",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "缓存池回收阀值_内存块",
+
+"comment": "设置内存块缓存池回收阀值.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "阀值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+thod name": "预投递数量""method name": "启动",
+thod name": "预投递数量""comment": "启动UDP节点组件,启动成功后可以收发数据.",
+thod name": "预投递数量""result comment": "返回是否启动成功.",
+thod name": "预投递数量""data type": "逻辑型",
+thod name": "预投递数量""@禁止流程检查": "真",
+thod name": "预投递数量""parameters": [
+   {
+"parameter name": "绑定地址",
+"comment": "提供所欲绑定的地址,默认空绑定任意地址.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "本地端口",
+"comment": "提供本地端口,默认为0. 有效端口号范围为从0到65535.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "传播模式",
+"comment": "定义数据报传播模式.",
+"data type": "HP数据报传播模式",
+"@默认值": "HP数据报传播模式.单播"
+   },
+   {
+"parameter name": "传播地址",
+"comment": "定义传播地址,仅当传播模式为非\"单播模式\"时有效.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+thod name": "预投递数量"]
+  },
+  {
+
+"method name": "停止",
+
+"comment": "关闭通信组件并释放所有资源.",
+
+"result comment": "关闭成功返回真,否则返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "文本型""method name": "发送数据",
+data type": "文本型""comment": "向指定地址发送数据.",
+data type": "文本型""result comment": "发送成功返回真,失败返回假.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "远程地址",
+"comment": "所欲接收数据的远程地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "远程端口",
+"comment": "所欲接收数据的远程端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所欲发送数据,本参数不可为空,否则将会发送失败.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲发送数据的数据长度,默认-1则使用所提供的数据长度.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "起始偏移量",
+"comment": "发送数据缓冲区指针偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "文本型"]
+  },
+  {
+ata type": "文本型""comment": "向指定地址发送数据.""method name": "发送数据组",
+ata type": "文本型""comment": "向指定地址发送数据.""comment": "将所有数据包组合成一个数据包发送(数据包的总长度不能大于定义的UDP数据报最大尺寸).",
+ata type": "文本型""comment": "向指定地址发送数据.""result comment": "发送成功返回真,失败返回假.",
+ata type": "文本型""comment": "向指定地址发送数据.""data type": "逻辑型",
+ata type": "文本型""comment": "向指定地址发送数据.""@禁止流程检查": "真",
+ata type": "文本型""comment": "向指定地址发送数据.""parameters": [
+   {
+"parameter name": "远程地址",
+"comment": "所欲接收数据的远程地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "远程端口",
+"comment": "所欲接收数据的远程端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "提供所欲发送的多组数据,一个成员表示一组数据.",
+"data type": "字节集数组类"
+   }
+ata type": "文本型""comment": "向指定地址发送数据."]
+  },
+  {
+"comment": "设置内存块缓存池回收阀值.""method name": "发送数据到传播地址",
+"comment": "设置内存块缓存池回收阀值.""comment": "向传播地址发送数据.",
+"comment": "设置内存块缓存池回收阀值.""result comment": "发送成功返回真,失败返回假.",
+"comment": "设置内存块缓存池回收阀值.""data type": "逻辑型",
+"comment": "设置内存块缓存池回收阀值.""@禁止流程检查": "真",
+"comment": "设置内存块缓存池回收阀值.""parameters": [
+   {
+"parameter name": "数据",
+"comment": "所欲发送数据,本参数不可为空,否则将会发送失败.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲发送数据的数据长度,默认-1则使用所提供的数据长度.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "起始偏移量",
+"comment": "发送数据缓冲区指针偏移量.",
+"data type": "整数",
+"@默认值": "0"
+   }
+"comment": "设置内存块缓存池回收阀值."]
+  },
+  {
+ameter name": "数据""method name": "发送数据组到传播地址",
+ameter name": "数据""comment": "将所有数据包组合成一个数据包发送(数据包的总长度不能大于定义的UDP数据报最大尺寸).",
+ameter name": "数据""result comment": "发送成功返回真,失败返回假.",
+ameter name": "数据""data type": "逻辑型",
+ameter name": "数据""@禁止流程检查": "真",
+ameter name": "数据""parameters": [
+   {
+"parameter name": "数据",
+"comment": "所欲发送多组数据,一个成员表示一组数据.",
+"data type": "字节集数组类"
+   }
+ameter name": "数据"]
+  },
+  {
+meter name": "数据""parameters": [
+"method name": "超时等待",
+meter name": "数据""parameters": [
+"comment": "等待通信组件停止运行.",
+meter name": "数据""parameters": [
+"result comment": "返回是否操作成功.",
+meter name": "数据""parameters": [
+"data type": "逻辑型",
+meter name": "数据""parameters": [
+"@嵌入式方法": "\"\"",
+meter name": "数据""parameters": [
+"parameters": [
+   {
+"parameter name": "时长",
+"comment": "提供一个超时时长,单位毫秒.",
+"data type": "整数"
+   }
+meter name": "数据""parameters": [
+]
+  },
+  {
+ameter name": "绑定地址""method name": "取本地地址",
+ameter name": "绑定地址""comment": "获取本节点地址信息.",
+ameter name": "绑定地址""result comment": "返回是否操作成功.",
+ameter name": "绑定地址""data type": "逻辑型",
+ameter name": "绑定地址""@禁止流程检查": "真",
+ameter name": "绑定地址""parameters": [
+   {
+"parameter name": "地址信息",
+"comment": "提供一个储存地址内容的文本.",
+"data type": "文本型"
+   }
+ameter name": "绑定地址"]
+  },
+  {
+meter name": "绑定地址""data type": "逻辑型""method name": "取本地端口",
+meter name": "绑定地址""data type": "逻辑型""comment": "获取本节点端口信息.",
+meter name": "绑定地址""data type": "逻辑型""data type": "整数",
+meter name": "绑定地址""data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+ameter name": "数据""method name": "取传播地址",
+ameter name": "数据""comment": "获取本节点传播地址信息.",
+ameter name": "数据""result comment": "返回是否操作成功.",
+ameter name": "数据""data type": "逻辑型",
+ameter name": "数据""@禁止流程检查": "真",
+ameter name": "数据""parameters": [
+   {
+"parameter name": "地址信息",
+"comment": "提供一个储存地址内容的文本.",
+"data type": "文本型"
+   }
+ameter name": "数据"]
+  },
+  {
+ameter name": "绑定地址""method name": "取传播端口",
+ameter name": "绑定地址""comment": "获取本节点传播端口信息.",
+ameter name": "绑定地址""data type": "整数",
+ameter name": "绑定地址""@禁止流程检查": "真"
+  },
+  {
+meter name": "绑定地址""parameters": [
+"method name": "取未发出数据长度",
+meter name": "绑定地址""parameters": [
+"comment": "获取当前连接中未发出数据的长度.",
+meter name": "绑定地址""parameters": [
+"data type": "整数",
+meter name": "绑定地址""parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""method name": "节点被关闭",
+data type": "文本型""comment": "当该节点被关闭时本事件被触发.",
+data type": "文本型""type": "event",
+data type": "文本型""data type": "整数"
+  },
+  {
+eter name": "绑定地址""data type": "逻辑型""data type": "整数""method name": "通信发生错误",
+eter name": "绑定地址""data type": "逻辑型""data type": "整数""comment": "当该节点发生通信错误时本事件被触发.",
+eter name": "绑定地址""data type": "逻辑型""data type": "整数""type": "event",
+eter name": "绑定地址""data type": "逻辑型""data type": "整数""data type": "整数",
+eter name": "绑定地址""data type": "逻辑型""data type": "整数""parameters": [
+   {
+"parameter name": "远程地址",
+"comment": "发生本次错误关联的远程地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "远程端口",
+"comment": "发生本次错误关联的远程端口.",
+"data type": "整数"
+   },
+   {
+"parameter name": "关联数据",
+"comment": "与本次事件关联的数据缓冲区.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "关联数据长度",
+"comment": "与本次事件关联的数据长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+eter name": "绑定地址""data type": "逻辑型""data type": "整数"]
+  },
+  {
+ }"method name": "准备监听",
+ }"comment": "当节点启动后将触发本事件.",
+ }"type": "event",
+ }"data type": "整数"
+  },
+  {
+}"type": "event""method name": "发送完毕",
+}"type": "event""comment": "当通信组件发送数据成功后,将触发本事件.",
+}"type": "event""type": "event",
+}"type": "event""data type": "整数",
+}"type": "event""parameters": [
+   {
+"parameter name": "远程地址",
+"comment": "当前关联的远程地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "远程端口",
+"comment": "当前关联的远程端口.",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+}"type": "event"]
+  },
+  {
+"method name": "数据进入",
+"comment": "当通信组件成功接收数据后将触发本事件.",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "远程地址",
+"comment": "当前关联的远程地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "远程端口",
+"comment": "当前关联的远程端口.",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "所接收到的完整数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所接收完整数据的长度.",
+"data type": "整数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "HP_UDP_ARQ客户端",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n可靠自动重传UDP通信客户端.",
+"base class": "HP客户端基础类",
+"@视窗.后缀文本": "\"public IUdpClientListener\"",
+"@文档": "\"category = \\\"UDP客户端\\\"\"",
+"methods": [
+  {
+base class": "HP客户端基础类""method name": "无延迟模式",
+base class": "HP客户端基础类""comment": "设置是否开启无延迟(nodelay)模式.",
+base class": "HP客户端基础类""type": "property setter",
+base class": "HP客户端基础类""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+base class": "HP客户端基础类"]
+  },
+  {
+ class": "HP客户端基础类""method name": "无延迟模式""method name": "无延迟模式",
+ class": "HP客户端基础类""method name": "无延迟模式""comment": "获取当前是否已开启无延迟(nodelay)模式.",
+ class": "HP客户端基础类""method name": "无延迟模式""type": "property getter",
+ class": "HP客户端基础类""method name": "无延迟模式""data type": "逻辑型",
+ class": "HP客户端基础类""method name": "无延迟模式""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "拥塞控制",
+ }"comment": "设置是否关闭无拥塞控制.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否关闭",
+"comment": "提供真则关闭拥塞控制,反之开启.",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "拥塞控制",
+data type": "整数""comment": "获取当前是否已关闭拥塞.",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "关联数据""method name": "数据刷新间隔",
+ameter name": "关联数据""comment": "设置数据刷新间隔.",
+ameter name": "关联数据""type": "property setter",
+ameter name": "关联数据""parameters": [
+   {
+"parameter name": "间隔",
+"comment": "单位:毫秒(默认60).",
+"data type": "整数"
+   }
+ameter name": "关联数据"]
+  },
+  {
+}"method name": "数据刷新间隔",
+}"comment": "获取数据刷新间隔.",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "间隔""method name": "快速重传",
+ameter name": "间隔""comment": "设置快速重传ACK跨越次数.",
+ameter name": "间隔""type": "property setter",
+ameter name": "间隔""parameters": [
+   {
+"parameter name": "跨越次数",
+"comment": "默认0,关闭快速重传.",
+"data type": "整数"
+   }
+ameter name": "间隔"]
+  },
+  {
+"method name": "快速重传",
+"comment": "获取快速重传ACK跨越次数.",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+ss name": "HP_UDP_ARQ客户端""method name": "发送窗口尺寸",
+ss name": "HP_UDP_ARQ客户端""comment": "设置发送窗口大小(数据包数量,默认128).",
+ss name": "HP_UDP_ARQ客户端""type": "property setter",
+ss name": "HP_UDP_ARQ客户端""parameters": [
+   {
+"parameter name": "数量",
+"data type": "整数"
+   }
+ss name": "HP_UDP_ARQ客户端"]
+  },
+  {
+"type": "event""parameters": [
+"method name": "发送窗口尺寸",
+"type": "event""parameters": [
+"comment": "获取发送窗口大小(数据包数量).",
+"type": "event""parameters": [
+"type": "property getter",
+"type": "event""parameters": [
+"data type": "整数",
+"type": "event""parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+class": "HP客户端基础类""method name": "无延迟模式""@嵌入式方法": "\"\"""method name": "接收窗口尺寸",
+class": "HP客户端基础类""method name": "无延迟模式""@嵌入式方法": "\"\"""comment": "设置接收窗口大小(数据包数量,默认512).",
+class": "HP客户端基础类""method name": "无延迟模式""@嵌入式方法": "\"\"""type": "property setter",
+class": "HP客户端基础类""method name": "无延迟模式""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "数量",
+"data type": "整数"
+   }
+class": "HP客户端基础类""method name": "无延迟模式""@嵌入式方法": "\"\""]
+  },
+  {
+ameter name": "数量""method name": "接收窗口尺寸",
+ameter name": "数量""comment": "获取接收窗口大小(数据包数量).",
+ameter name": "数量""type": "property getter",
+ameter name": "数量""data type": "整数",
+ameter name": "数量""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "最小重传超时",
+
+"comment": "设置最小重传超时时间.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:毫秒(默认30)",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "最小重传超时",
+ }"comment": "获取最小重传超时时间.",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+ss name": "HP_UDP_ARQ客户端""method name": "快速握手次数",
+ss name": "HP_UDP_ARQ客户端""comment": "设置快速握手次数限制(默认为5).",
+ss name": "HP_UDP_ARQ客户端""type": "property setter",
+ss name": "HP_UDP_ARQ客户端""parameters": [
+   {
+"parameter name": "次数",
+"comment": "0表示不限制,默认为5.",
+"data type": "整数"
+   }
+ss name": "HP_UDP_ARQ客户端"]
+  },
+  {
+meter name": "数量""@嵌入式方法": "\"\"""method name": "快速握手次数",
+meter name": "数量""@嵌入式方法": "\"\"""comment": "获取快速握手次数限制.",
+meter name": "数量""@嵌入式方法": "\"\"""type": "property getter",
+meter name": "数量""@嵌入式方法": "\"\"""data type": "整数",
+meter name": "数量""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "绑定地址""data type": "整数""method name": "最大传输单元",
+meter name": "绑定地址""data type": "整数""comment": "设置最大传输单元,默认0不限制.(与\"报文最大尺寸\"属性一致).",
+meter name": "绑定地址""data type": "整数""type": "property setter",
+meter name": "绑定地址""data type": "整数""parameters": [
+   {
+"parameter name": "最大尺寸",
+"data type": "整数"
+   }
+meter name": "绑定地址""data type": "整数"]
+  },
+  {
+"type": "event""parameters": [
+"method name": "最大传输单元",
+"type": "event""parameters": [
+"comment": "获取最大传输单元.",
+"type": "event""parameters": [
+"type": "property getter",
+"type": "event""parameters": [
+"data type": "整数",
+"type": "event""parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "最大数据包尺寸",
+
+"comment": "设置最大数据包尺寸(默认4096).",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "最大尺寸",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "最大数据包尺寸",
+}"comment": "获取最大数据包尺寸.",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"data type": "整数""method name": "握手超时",
+}"data type": "整数""comment": "设置握手超时时间.",
+}"data type": "整数""type": "property setter",
+}"data type": "整数""parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:毫秒(默认5000)",
+"data type": "整数"
+   }
+}"data type": "整数"]
+  },
+  {
+
+"method name": "握手超时",
+
+"comment": "获取握手超时时间.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "获取握手超时时间.""method name": "报文最大尺寸",
+"comment": "获取握手超时时间.""comment": "设置数据报文最大长度(建议在局域网环境下不超过1432字节,在广域网环境下不超过548字节)",
+"comment": "获取握手超时时间.""type": "property setter",
+"comment": "获取握手超时时间.""parameters": [
+   {
+"parameter name": "最大尺寸",
+"data type": "整数"
+   }
+"comment": "获取握手超时时间."]
+  },
+  {
+eter name": "数量""@嵌入式方法": "\"\"""comment": "获取快速握手次数限制.""method name": "报文最大尺寸",
+eter name": "数量""@嵌入式方法": "\"\"""comment": "获取快速握手次数限制.""comment": "获取数据报文最大长度.",
+eter name": "数量""@嵌入式方法": "\"\"""comment": "获取快速握手次数限制.""type": "property getter",
+eter name": "数量""@嵌入式方法": "\"\"""comment": "获取快速握手次数限制.""data type": "整数",
+eter name": "数量""@嵌入式方法": "\"\"""comment": "获取快速握手次数限制.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "心跳发送间隔",
+}"comment": "设置心跳包发送间隔.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "间隔",
+"comment": "单位:毫秒,0则不发送心跳包.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "心跳发送间隔",
+"comment": "获取心跳包发送间隔.",
+"result comment": "单位:毫秒,0则不发送心跳包.",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "心跳发送间隔""method name": "心跳包尝试次数",
+hod name": "心跳发送间隔""comment": "设置心跳包最大尝试的次数,超过最大次数将以断线处理.",
+hod name": "心跳发送间隔""type": "property setter",
+hod name": "心跳发送间隔""parameters": [
+   {
+"parameter name": "尝试次数",
+"comment": "如果超出该次数则会以断线处理,0则不发送心跳包.",
+"data type": "整数"
+   }
+hod name": "心跳发送间隔"]
+  },
+  {
+"type": "property setter""method name": "心跳包尝试次数",
+"type": "property setter""comment": "获取心跳包最大尝试的次数.",
+"type": "property setter""result comment": "单位:毫秒,0则不发送心跳包.",
+"type": "property setter""type": "property getter",
+"type": "property setter""data type": "整数",
+"type": "property setter""@嵌入式方法": "\"\""
+  },
+  {
+name": "心跳发送间隔""method name": "心跳包尝试次数""method name": "启动",
+name": "心跳发送间隔""method name": "心跳包尝试次数""comment": "启动客户端通信组件并连接至目标服务端.",
+name": "心跳发送间隔""method name": "心跳包尝试次数""result comment": "返回是否操作成功.",
+name": "心跳发送间隔""method name": "心跳包尝试次数""data type": "逻辑型",
+name": "心跳发送间隔""method name": "心跳包尝试次数""@嵌入式方法": "\"\"",
+name": "心跳发送间隔""method name": "心跳包尝试次数""parameters": [
+   {
+"parameter name": "服务端地址",
+"comment": "提供远程服务端地址.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口号",
+"comment": "提供服务端端口. 有效端口号范围为从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "异步连接",
+"comment": "是否采用异步连接方式.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+name": "心跳发送间隔""method name": "心跳包尝试次数"]
+  },
+  {
+"method name": "取等待发送数量",
+"comment": "获取连接中等待发送数据包数量.",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "开始握手",
+
+"comment": "当前客户端将与服务端握手时将触发本事件.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 客户端将与服务器进行握手.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 握手动作失败, 主动断开与客户的连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+}"method name": "发送完毕",
+}"comment": "当客户端向当前连接发送数据成功后,将触发本事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收本次发送所对应的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "本次所发送的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所发送数据的长度.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "数据进入",
+
+"comment": "当客户端成功接收数据后将触发本事件.",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "接收到的数据由该连接ID发过来.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "已接收数据",
+"comment": "所接收到的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "已接收长度",
+"comment": "已接收数据长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "通信发生错误",
+}"comment": "当客户端主动或被动与服务器断开后将触发本事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "触发该事件的连接ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作.",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码.",
+"data type": "HP错误码"
+   }
+}]
+  },
+  {
+ameter name": "已接收数据""method name": "准备连接",
+ameter name": "已接收数据""comment": "当客户端启动之后将触发本事件.",
+ameter name": "已接收数据""result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行连接.\n  1 = 忽略本次操作, 继续执行连接.\n  2 = 本次操作错误, 终止启动通信客户端组件.",
+ameter name": "已接收数据""type": "event",
+ameter name": "已接收数据""data type": "整数",
+ameter name": "已接收数据""parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+ameter name": "已接收数据"]
+  },
+  {
+me": "心跳发送间隔""method name": "心跳包尝试次数"]"method name": "连接完成",
+me": "心跳发送间隔""method name": "心跳包尝试次数"]"comment": "与服务端成功建立连接时本事件将被触发.",
+me": "心跳发送间隔""method name": "心跳包尝试次数"]"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+me": "心跳发送间隔""method name": "心跳包尝试次数"]"type": "event",
+me": "心跳发送间隔""method name": "心跳包尝试次数"]"data type": "整数",
+me": "心跳发送间隔""method name": "心跳包尝试次数"]"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+me": "心跳发送间隔""method name": "心跳包尝试次数"]]
+  }
+]
+ }
+问本程序中的接口需要引用模块"HPSocket网络通讯支持".]
+}

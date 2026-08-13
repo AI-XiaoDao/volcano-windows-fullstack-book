@@ -1,0 +1,731 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"视窗通知支持".
+
+{
+问本程序中的接口需要引用模块"视窗通知支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"视窗通知支持"."package name": "火山.视窗",
+问本程序中的接口需要引用模块"视窗通知支持"."classes": [
+ {
+"class name": "视窗系统通知类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n提供在Windows8/Windows10系统上通知支持.\n最低编译要求NTDDI_VISTA版本\n",
+"@视窗.外部库": "\"psapi.lib\"",
+"@视窗.预定义宏": "\"NTDDI_VERSION=NTDDI_VISTA, _WIN32_WINNT=_WIN32_WINNT_VISTA\"",
+"@视窗.外部头文件": "\"lib\\\\wintoastlib.h\"",
+"@视窗.外部源文件": "\"lib\\\\wintoastlib.cpp\"",
+"methods": [
+  {
+methods": [
+"method name": "初始化",
+methods": [
+"comment": "在发送任何通知之前务必调用本方法进行全局初始化,否则无法发送通知.",
+methods": [
+"result comment": "返回初始化的结果.",
+methods": [
+"static": true,
+methods": [
+"data type": "视窗通知错误类型",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "程序名称",
+"comment": "提供所欲显示在通知栏的程序标题内容.",
+"data type": "文本型",
+"@默认值": "\"火山程序\""
+   },
+   {
+"parameter name": "程序ID",
+"comment": "提供所欲使用的用户程序ID,即程序唯一性标记.",
+"data type": "文本型",
+"@默认值": "\"Recursion.Voldp.Pc.1\""
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "是否已初始化",
+
+"comment": "检查当前通知库是否已初始化成功.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "隐藏通知",
+
+"comment": "将当前显示的指定通知隐藏.",
+
+"result comment": "返回操作结果.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通知ID",
+"comment": "提供所欲隐藏的通知ID.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "发送通知",
+
+"comment": "发送一条新通知到当前系统的通知栏.",
+
+"result comment": "如果发送成功,返回本条通知的ID.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "通知对象",
+"comment": "提供所欲发送的通知.",
+"data type": "视窗通知类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "视窗通知类",
+"comment": "表示视窗系统中的一个系统通知.",
+"@强制依赖": "\"视窗系统通知类\"",
+"@视窗.后缀文本": "\"public WinToastLib::IWinToastHandler\"",
+"methods": [
+  {
+
+"method name": "类型",
+
+"comment": "指定当前通知的类型.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "内容类型",
+"data type": "视窗通知内容类型",
+"@默认值": "视窗通知内容类型.图文二"
+   }
+
+]
+  },
+  {
+
+"method name": "类型",
+
+"comment": "获取当前通知的类型.",
+
+"type": "property getter",
+
+"data type": "视窗通知内容类型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "第一行文本",
+
+"comment": "指定当前通知的第一行文本内容,通常用作标题.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "第二行文本",
+
+"comment": "指定当前通知的第二行文本内容",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "第三行文本",
+
+"comment": "指定当前通知的第三行文本内容",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "图片路径",
+
+"comment": "指定当前通知所欲显示的图片内容,仅在图文类型下有效.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "提示音路径",
+
+"comment": "指定当前通知所欲使用的提示提示铃声文件.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "提示音类型",
+
+"comment": "指定当前通知所欲使用的提示铃声类型.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"data type": "视窗通知提示音类型"
+   }
+
+]
+  },
+  {
+
+"method name": "提示音循环",
+
+"comment": "指定提示音是否循环播放.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "通知时间",
+
+"comment": "指定当前通知发送的时间.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "时间戳",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+"method name": "归属内容",
+"comment": "设置当前通知的归属文本内容.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "持续类型",
+
+"comment": "设置当前通知的持续显示时长类型.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "类型",
+"data type": "视窗通知持续类型"
+   }
+
+]
+  },
+  {
+
+"method name": "添加按钮",
+
+"comment": "往当前通知上添加一个操作按钮.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "标题",
+"comment": "指定所欲添加按钮的标题内容.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "通知已展示",
+
+"comment": "当通知已展示出来时本事件被调用.",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "通知已消失",
+
+"comment": "当通知已取消展示时本事件被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "原因",
+"data type": "视窗通知关闭原因"
+   }
+
+]
+  },
+  {
+
+"method name": "通知被激活",
+
+"comment": "当通知被用户点击激活时本事件被调用.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "按钮索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "通知展示失败",
+
+"comment": "当通知发送并展示失败时本事件被调用.",
+
+"type": "event",
+
+"data type": "整数"
+  }
+]
+ },
+ {
+"class name": "视窗通知错误类型",
+"comment": "定义视窗通知的各种错误原因.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ }"constant name": "成功",
+ }"comment": "表示无错误,成功.",
+ }"initial value": "@WinToastLib::WinToast::WinToastError::NoError"
+  },
+  {
+
+"constant name": "未初始化",
+
+"comment": "表示暂未调用初始化方法.",
+
+"initial value": "@WinToastLib::WinToast::WinToastError::NotInitialized"
+  },
+  {
+
+"constant name": "系统不支持",
+
+"comment": "表示系统不支持通知.",
+
+"initial value": "@WinToastLib::WinToast::WinToastError::SystemNotSupported"
+  },
+  {
+
+"constant name": "未创建ShellLink",
+
+"comment": "ShellLink未创建.",
+
+"initial value": "@WinToastLib::WinToast::WinToastError::ShellLinkNotCreated"
+  },
+  {
+
+"constant name": "无效程序ID",
+
+"comment": "表示所提供的程序ID无效.",
+
+"initial value": "@WinToastLib::WinToast::WinToastError::InvalidAppUserModelID"
+  },
+  {
+
+"constant name": "无效参数",
+
+"initial value": "@WinToastLib::WinToast::WinToastError::InvalidParameters"
+  },
+  {
+
+"constant name": "无效回调",
+
+"initial value": "@WinToastLib::WinToast::WinToastError::InvalidHandler"
+  },
+  {
+
+"constant name": "已未展示",
+
+"initial value": "@WinToastLib::WinToast::WinToastError::NotDisplayed"
+  },
+  {
+
+"constant name": "未知错误",
+
+"initial value": "@WinToastLib::WinToast::WinToastError::UnknownError"
+  }
+]
+ },
+ {
+"class name": "视窗通知内容类型",
+"comment": "指定视窗通知的内容类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "图文一",
+
+"comment": "显示一个图标+三行连续的常规文本.",
+
+"initial value": "@WinToastLib::WinToastTemplate::WinToastTemplateType::ImageAndText01"
+  },
+  {
+
+"constant name": "图文二",
+
+"comment": "显示一个图标+三行文本(首行文本加粗,后两行常规(连续)).",
+
+"initial value": "@WinToastLib::WinToastTemplate::WinToastTemplateType::ImageAndText02"
+  },
+  {
+
+"constant name": "图文三",
+
+"comment": "显示一个图标+三行文本(前两行文本加粗(连续),最后一行常规).",
+
+"initial value": "@WinToastLib::WinToastTemplate::WinToastTemplateType::ImageAndText03"
+  },
+  {
+
+"constant name": "图文四",
+
+"comment": "显示一个图标+三行文本(首行加粗),三行文本都不连续.",
+
+"initial value": "@WinToastLib::WinToastTemplate::WinToastTemplateType::ImageAndText04"
+  },
+  {
+
+"constant name": "文字一",
+
+"comment": "显示三行连续的常规文本.",
+
+"initial value": "@WinToastLib::WinToastTemplate::WinToastTemplateType::Text01"
+  },
+  {
+
+"constant name": "文字二",
+
+"comment": "首行文本加粗,后两行为常规的连续文本.",
+
+"initial value": "@WinToastLib::WinToastTemplate::WinToastTemplateType::Text02"
+  },
+  {
+
+"constant name": "文字三",
+
+"comment": "前两行为连续的加粗文本,最后一行常规.",
+
+"initial value": "@WinToastLib::WinToastTemplate::WinToastTemplateType::Text03"
+  },
+  {
+
+"constant name": "文字四",
+
+"comment": "首行文本加粗,三行非连续的文本.",
+
+"initial value": "@WinToastLib::WinToastTemplate::WinToastTemplateType::Text04"
+  }
+]
+ },
+ {
+"class name": "视窗通知提示音类型",
+"comment": "指定视窗通知弹出时的提示音类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "默认",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::DefaultSound"
+  },
+  {
+
+"constant name": "消息",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::IM"
+  },
+  {
+
+"constant name": "邮件",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Mail"
+  },
+  {
+
+"constant name": "提醒",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Reminder"
+  },
+  {
+
+"constant name": "短信",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::SMS"
+  },
+  {
+
+"constant name": "警告",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm"
+  },
+  {
+
+"constant name": "警告二",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm2"
+  },
+  {
+}"constant name": "警告三",
+}"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm3"
+  },
+  {
+
+"constant name": "警告四",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm4"
+  },
+  {
+
+"constant name": "警告五",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm5"
+  },
+  {
+
+"constant name": "警告六",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm6"
+  },
+  {
+
+"constant name": "警告七",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm7"
+  },
+  {
+
+"constant name": "警告八",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm8"
+  },
+  {
+
+"constant name": "警告九",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm9"
+  },
+  {
+
+"constant name": "警告十",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Alarm10"
+  },
+  {
+
+"constant name": "呼叫",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call"
+  },
+  {
+
+"constant name": "呼叫一",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call1"
+  },
+  {
+
+"constant name": "呼叫二",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call2"
+  },
+  {
+
+"constant name": "呼叫三",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call3"
+  },
+  {
+
+"constant name": "呼叫四",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call4"
+  },
+  {
+
+"constant name": "呼叫五",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call5"
+  },
+  {
+
+"constant name": "呼叫六",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call6"
+  },
+  {
+
+"constant name": "呼叫七",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call7"
+  },
+  {
+
+"constant name": "呼叫八",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call8"
+  },
+  {
+
+"constant name": "呼叫九",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call9"
+  },
+  {
+
+"constant name": "呼叫十",
+
+"initial value": "@WinToastLib::WinToastTemplate::AudioSystemFile::Call10"
+  }
+]
+ },
+ {
+"class name": "视窗通知持续类型",
+"comment": "指定了通知的持续时间类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+@常量类": "整数""constant name": "系统",
+@常量类": "整数""initial value": "@WinToastLib::WinToastTemplate::Duration::System"
+  },
+  {
+
+"constant name": "短时间",
+
+"initial value": "@WinToastLib::WinToastTemplate::Duration::Short"
+  },
+  {
+
+"constant name": "长时间",
+
+"initial value": "@WinToastLib::WinToastTemplate::Duration::Long"
+  }
+]
+ },
+ {
+"class name": "视窗通知关闭原因",
+"comment": "指定了通知取消展示的原因类型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "用户取消",
+
+"comment": "表示被用户取消展示",
+
+"initial value": "@WinToastLib::IWinToastHandler::WinToastDismissalReason::UserCanceled"
+  },
+  {
+
+"constant name": "主动隐藏",
+
+"comment": "表示应用程序自己主动隐藏",
+
+"initial value": "@WinToastLib::IWinToastHandler::WinToastDismissalReason::ApplicationHidden"
+  },
+  {
+
+"constant name": "超时关闭",
+
+"comment": "表示该通知已达到最大显示时间",
+
+"initial value": "@WinToastLib::IWinToastHandler::WinToastDismissalReason::TimedOut"
+  }
+]
+ }
+问本程序中的接口需要引用模块"视窗通知支持".]
+}

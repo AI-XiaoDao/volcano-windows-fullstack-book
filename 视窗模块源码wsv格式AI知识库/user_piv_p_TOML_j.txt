@@ -1,0 +1,2857 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+当前对象>.is_integer()"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+当前对象>.is_integer()"package name": "火山.PIV基础类",
+当前对象>.is_integer()"comment": "源码: https://github.com/marzer/tomlplusplus\nTOML v1.0.0 https://toml.io/cn/v1.0.0\n全称：Tom的(语义)明显、(配置)最小化的语言(Tom's Obvious, Minimal Language).\nTOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式.\nTOML 被设计成可以无歧义地映射为哈希表.\nTOML 应当能轻易地解析成各种语言中的数据结构.",
+当前对象>.is_integer()"@视窗.外部头文件": "\"src\\\\piv_toml.hpp\"",
+当前对象>.is_integer()"@视窗.附加编译参数": "\"cpp: /std:c++17\"",
+当前对象>.is_integer()"@视窗.需求VS版本": "\"15-\"",
+当前对象>.is_integer()"classes": [
+ {
+"class name": "TOML节点类",
+"base class": "TOML节点基类",
+"@文档": "\"category = \\\"配置文件.TOML\\\"\"",
+"@别名": "\"toml::node\"",
+"@别名类型": "本地类",
+"methods": [
+  {
+p: /std:c++17\""method name": "取源文档位置",
+p: /std:c++17\""static": true,
+p: /std:c++17\""data type": "文本型",
+p: /std:c++17\""@禁止流程检查": "真",
+p: /std:c++17\""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点类"
+   }
+p: /std:c++17\"]
+  },
+  {
+
+"method name": "到可读文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点类"
+   }
+
+]
+  },
+  {
+
+"method name": "到JSON文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点类"
+   }
+
+]
+  },
+  {
+
+"method name": "到YAML文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点类"
+   }
+
+]
+  },
+  {
+
+"method name": "到可读数据",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点类"
+   }
+
+]
+  },
+  {
+
+"method name": "到JSON数据",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点类"
+   }
+
+]
+  },
+  {
+
+"method name": "到YAML数据",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点类"
+   }
+
+]
+  }
+]
+ },
+ {
+
+"class name": "TOML键值表",
+
+"base class": "TOML节点类",
+
+"@文档": "\"category = \\\"配置文件.TOML\\\"\"",
+
+"@别名": "\"toml::table\"",
+
+"@别名类型": "本地类",
+
+"methods": [
+  {
+
+"method name": "创建空对象",
+
+"static": true,
+
+"data type": "TOML键值表",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "TOML键值表""method name": "解析文件",
+"data type": "TOML键值表""comment": "解析toml文件",
+"data type": "TOML键值表""static": true,
+"data type": "TOML键值表""data type": "逻辑型",
+"data type": "TOML键值表""@嵌入式方法": "\"\"",
+"data type": "TOML键值表""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "文件路径",
+"@匹配类型": "通用型"
+   }
+"data type": "TOML键值表"]
+  },
+  {
+"data type": "TOML键值表""method name": "解析文本",
+"data type": "TOML键值表""static": true,
+"data type": "TOML键值表""data type": "逻辑型",
+"data type": "TOML键值表""@嵌入式方法": "\"\"",
+"data type": "TOML键值表""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "配置内容",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "来源路径",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+"data type": "TOML键值表"]
+  },
+  {
+"data type": "TOML键值表""method name": "解析字节集",
+"data type": "TOML键值表""static": true,
+"data type": "TOML键值表""data type": "逻辑型",
+"data type": "TOML键值表""@嵌入式方法": "\"\"",
+"data type": "TOML键值表""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "配置内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "来源路径",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+"data type": "TOML键值表"]
+  },
+  {
+@默认值": "\"\"""method name": "保存文件",
+@默认值": "\"\"""static": true,
+@默认值": "\"\"""data type": "逻辑型",
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "保存路径",
+"data type": "文本型"
+   }
+@默认值": "\"\""]
+  },
+  {
+认值": "\"\""]"method name": "是否为空",
+认值": "\"\""]"static": true,
+认值": "\"\""]"data type": "逻辑型",
+认值": "\"\""]"@嵌入式方法": "\"\"",
+认值": "\"\""]"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   }
+认值": "\"\""]]
+  },
+  {
+ }"method name": "取成员数",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   }
+ }]
+  },
+  {
+"method name": "是否存在",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+]
+  },
+  {
+
+"method name": "清空",
+
+"comment": "Removes all key-value pairs from the table.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   }
+
+]
+  },
+  {
+}"method name": "删除",
+}"result comment": "返回删除的键值对数量,0或1.",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+}]
+  },
+  {
+}"method name": "删除空成员",
+}"comment": "Removes empty child arrays and tables.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "递归删除",
+"comment": "是否删除子数组和子键值表的自身",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+
+"method name": "是否为内联表",
+
+"comment": "Returns true if this table is an inline table.\nRuntime-constructed tables (i.e. those not created\n during parsing) are not inline by default.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   }
+
+]
+  },
+  {
+
+"method name": "插入键值表",
+
+"comment": "插入一个指定键名的TOML键值表对象,如果所指定的键名已经存在,将覆盖先前值.\n返回真表示插入了一个新值,返回假则表示覆盖了原有的键值对.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "键值表",
+"data type": "TOML键值表"
+   }
+
+]
+  },
+  {
+
+"method name": "插入数组值",
+
+"comment": "插入一个指定键名的TOML表数组对象,如果所指定的键名已经存在,将覆盖先前值.\n返回真表示插入了一个新值,返回假则表示覆盖了原有的键值对.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数组值",
+"data type": "TOML数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "插入文本值",
+
+"comment": "插入一个指定键名的文本型值,如果所指定的键名已经存在,将覆盖先前值.\n返回真表示插入了一个新值,返回假则表示覆盖了原有的键值对.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "文本值",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+}"method name": "插入整数值",
+}"comment": "插入一个指定键名的整数型值,如果所指定的键名已经存在,将覆盖先前值.\n返回真表示插入了一个新值,返回假则表示覆盖了原有的键值对.",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "整数值",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+
+"method name": "插入小数值",
+
+"comment": "插入一个指定键名的小数型值,如果所指定的键名已经存在,将覆盖先前值.\n返回真表示插入了一个新值,返回假则表示覆盖了原有的键值对.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "小数值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+}"method name": "插入逻辑值",
+}"comment": "插入一个指定键名的逻辑型值,如果所指定的键名已经存在,将覆盖先前值.\n返回真表示插入了一个新值,返回假则表示覆盖了原有的键值对.",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "插入日期值",
+}"comment": "插入一个指定键名的TOML日期值,如果所指定的键名已经存在,将覆盖先前值.\n返回真表示插入了一个新值,返回假则表示覆盖了原有的键值对.",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "日期值",
+"data type": "TOML日期"
+   }
+}]
+  },
+  {
+
+"method name": "插入时间值",
+
+"comment": "插入一个指定键名的TOML时间值,如果所指定的键名已经存在,将覆盖先前值.\n返回真表示插入了一个新值,返回假则表示覆盖了原有的键值对.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "时间值",
+"data type": "TOML时间"
+   }
+
+]
+  },
+  {
+
+"method name": "插入日期时间值",
+
+"comment": "插入一个指定键名的TOML日期时间值,如果所指定的键名已经存在,将覆盖先前值.\n返回真表示插入了一个新值,返回假则表示覆盖了原有的键值对.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "日期时间值",
+"data type": "TOML日期时间"
+   }
+
+]
+  },
+  {
+"method name": "置入键值表",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "键值表",
+"data type": "TOML键值表"
+   }
+]
+  },
+  {
+"method name": "置入数组值",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数组值",
+"data type": "TOML数组类"
+   }
+]
+  },
+  {
+"method name": "置入文本值",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "文本值",
+"@匹配类型": "通用型"
+   }
+]
+  },
+  {
+ameter name": "键名""method name": "置入整数值",
+ameter name": "键名""static": true,
+ameter name": "键名""data type": "逻辑型",
+ameter name": "键名""@嵌入式方法": "\"\"",
+ameter name": "键名""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "整数值",
+"data type": "长整数"
+   }
+ameter name": "键名"]
+  },
+  {
+}"method name": "置入小数值",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "小数值",
+"data type": "小数"
+   }
+}]
+  },
+  {
+
+"method name": "置入逻辑值",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "逻辑值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "置入日期值",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "日期值",
+"data type": "TOML日期"
+   }
+
+]
+  },
+  {
+}"method name": "置入时间值",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "时间值",
+"data type": "TOML时间"
+   }
+}]
+  },
+  {
+}"method name": "置入日期时间值",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "日期时间值",
+"data type": "TOML日期时间"
+   }
+}]
+  },
+  {
+
+"method name": "取节点",
+
+"static": true,
+
+"data type": "TOML节点指针",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+
+"method name": "取数组",
+
+"static": true,
+
+"data type": "TOML数组类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+
+"method name": "取键值表",
+
+"static": true,
+
+"data type": "TOML键值表",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+thod name": "取键值表""method name": "取文本值",
+thod name": "取键值表""static": true,
+thod name": "取键值表""data type": "文本型",
+thod name": "取键值表""@嵌入式方法": "\"\"",
+thod name": "取键值表""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+thod name": "取键值表"]
+  },
+  {
+}"method name": "取文本值U",
+}"static": true,
+}"data type": "标准文本类U",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+}]
+  },
+  {
+
+"method name": "取整数值",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+
+"method name": "取长整数值",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+"method name": "取小数值",
+"static": true,
+"data type": "小数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+]
+  },
+  {
+
+"method name": "取逻辑值",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+}"method name": "取日期值",
+}"static": true,
+}"data type": "TOML日期",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+}]
+  },
+  {
+}"method name": "取时间值",
+}"static": true,
+}"data type": "TOML时间",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+}]
+  },
+  {
+"method name": "取日期时间值",
+"static": true,
+"data type": "TOML日期时间",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML键值表"
+   },
+   {
+"parameter name": "键名",
+"@匹配类型": "通用型"
+   }
+]
+  }
+
+]
+ },
+ {
+"class name": "TOML数组类",
+"base class": "TOML节点类",
+"@文档": "\"category = \\\"配置文件.TOML\\\"\"",
+"@别名": "\"toml::array\"",
+"@别名类型": "本地类",
+"methods": [
+  {
+
+"method name": "创建空数组",
+
+"static": true,
+
+"data type": "TOML数组类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "创建数组",
+
+"static": true,
+
+"data type": "TOML数组类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "成员值",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "TOML日期",
+"comment": "日期时间中的日期部分,表示一整天,不涉及时区偏移",
+"base class": "TOML类型比较",
+"@文档": "\"category = \\\"配置文件.TOML.辅助类\\\"\"",
+"@别名": "\"toml::date\"",
+"@别名类型": "本地类",
+"variables": [
+  {
+base class": "TOML类型比较""variable name": "年",
+base class": "TOML类型比较""data type": "无符号短整数",
+base class": "TOML类型比较""@输出名": "\"year\""
+  },
+  {
+base class": "TOML类型比较""variable name": "月",
+base class": "TOML类型比较""comment": "1 - 12",
+base class": "TOML类型比较""data type": "无符号字节",
+base class": "TOML类型比较""@输出名": "\"month\""
+  },
+  {
+base class": "TOML类型比较""variable name": "日",
+base class": "TOML类型比较""comment": "1 - 31",
+base class": "TOML类型比较""data type": "无符号字节",
+base class": "TOML类型比较""@输出名": "\"day\""
+  }
+],
+"methods": [
+  {
+base class": "TOML类型比较""method name": "创建",
+base class": "TOML类型比较""static": true,
+base class": "TOML类型比较""data type": "TOML日期",
+base class": "TOML类型比较""@嵌入式方法": "\"\"",
+base class": "TOML类型比较""parameters": [
+   {
+"parameter name": "年份",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "月份",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "天数",
+"@匹配类型": "通用整数型"
+   }
+base class": "TOML类型比较"]
+  },
+  {
+ }"method name": "置日期",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期"
+   },
+   {
+"parameter name": "年份",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "月份",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "天数",
+"@匹配类型": "通用整数型"
+   }
+ }]
+  },
+  {
+ }"method name": "置火山时间",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期"
+   },
+   {
+"parameter name": "日期时间值",
+"data type": "小数"
+   }
+ }]
+  },
+  {
+
+"method name": "置时间戳",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期"
+   },
+   {
+"parameter name": "秒时间戳",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "到火山时间",
+
+"static": true,
+
+"data type": "小数",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  },
+  {
+}"method name": "到时间戳",
+}"static": true,
+}"data type": "长整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期",
+"@视窗.前缀文本": "\"const \""
+   }
+}]
+  },
+  {
+"method name": "到可读文本",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期",
+"@视窗.前缀文本": "\"const \""
+   }
+]
+  },
+  {
+"method name": "到可读文本U",
+"static": true,
+"data type": "标准文本类U",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期",
+"@视窗.前缀文本": "\"const \""
+   }
+]
+  }
+]
+ },
+ {
+"class name": "TOML时间",
+"comment": "只能表示某一天之中的时间点,与任何特定的日期无关、亦不涉及时区偏移.",
+"base class": "TOML类型比较",
+"@文档": "\"category = \\\"配置文件.TOML.辅助类\\\"\"",
+"@别名": "\"toml::time\"",
+"@别名类型": "本地类",
+"variables": [
+  {
+variables": [
+"variable name": "时",
+variables": [
+"comment": "0-23",
+variables": [
+"data type": "无符号字节",
+variables": [
+"@输出名": "\"hour\""
+  },
+  {
+variables": [
+"variable name": "分",
+variables": [
+"comment": "0-59",
+variables": [
+"data type": "无符号字节",
+variables": [
+"@输出名": "\"minute\""
+  },
+  {
+
+"variable name": "秒",
+
+"comment": "0-59",
+
+"data type": "无符号字节",
+
+"@输出名": "\"second\""
+  },
+  {
+"comment": "0-59""variable name": "纳秒",
+"comment": "0-59""data type": "无符号整数",
+"comment": "0-59""@输出名": "\"nanosecond\""
+  }
+],
+"methods": [
+  {
+comment": "0-59""data type": "无符号整数""method name": "创建",
+comment": "0-59""data type": "无符号整数""static": true,
+comment": "0-59""data type": "无符号整数""data type": "TOML时间",
+comment": "0-59""data type": "无符号整数""@嵌入式方法": "\"\"",
+comment": "0-59""data type": "无符号整数""parameters": [
+   {
+"parameter name": "小时",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "分钟",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "秒数",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "纳秒数",
+"@匹配类型": "通用整数型",
+"@默认值": "0"
+   }
+comment": "0-59""data type": "无符号整数"]
+  },
+  {
+mment": "0-59""data type": "无符号整数"]"method name": "置时间",
+mment": "0-59""data type": "无符号整数"]"static": true,
+mment": "0-59""data type": "无符号整数"]"@嵌入式方法": "\"\"",
+mment": "0-59""data type": "无符号整数"]"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML时间"
+   },
+   {
+"parameter name": "小时",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "分钟",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "秒数",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "纳秒数",
+"@匹配类型": "通用整数型",
+"@默认值": "0"
+   }
+mment": "0-59""data type": "无符号整数"]]
+  },
+  {
+}"method name": "置火山时间",
+}"static": true,
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML时间"
+   },
+   {
+"parameter name": "日期时间值",
+"data type": "小数"
+   }
+}]
+  },
+  {
+
+"method name": "置时间戳",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML时间"
+   },
+   {
+"parameter name": "秒时间戳",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+ }"method name": "置毫秒时间戳",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML时间"
+   },
+   {
+"parameter name": "毫秒时间戳",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+
+"method name": "到可读文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML时间",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  },
+  {
+}"method name": "到可读文本U",
+}"static": true,
+}"data type": "标准文本类U",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML时间",
+"@视窗.前缀文本": "\"const \""
+   }
+}]
+  }
+]
+ },
+ {
+"@禁止流程检查": "真""class name": "TOML时间偏移",
+"@禁止流程检查": "真""comment": "时区偏移",
+"@禁止流程检查": "真""base class": "TOML类型比较",
+"@禁止流程检查": "真""@文档": "\"category = \\\"配置文件.TOML.辅助类\\\"\"",
+"@禁止流程检查": "真""@别名": "\"toml::time_offset\"",
+"@禁止流程检查": "真""@别名类型": "本地类",
+"@禁止流程检查": "真""variables": [
+  {
+"variable name": "偏移",
+"comment": "与UTC+0的偏移量,单位为分钟.",
+"data type": "短整数",
+"@输出名": "\"minutes\""
+  }
+"@禁止流程检查": "真"],
+"@禁止流程检查": "真""methods": [
+  {
+
+"method name": "创建",
+
+"static": true,
+
+"data type": "TOML时间偏移",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "小时",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "分钟",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+
+"method name": "置偏移",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML时间偏移"
+   },
+   {
+"parameter name": "小时",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "分钟",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+@匹配类型": "通用整数型""method name": "到可读文本",
+@匹配类型": "通用整数型""static": true,
+@匹配类型": "通用整数型""data type": "文本型",
+@匹配类型": "通用整数型""@禁止流程检查": "真",
+@匹配类型": "通用整数型""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML时间偏移",
+"@视窗.前缀文本": "\"const \""
+   }
+@匹配类型": "通用整数型"]
+  },
+  {
+
+"method name": "到可读文本U",
+
+"static": true,
+
+"data type": "标准文本类U",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML时间偏移",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  }
+"@禁止流程检查": "真"]
+ },
+ {
+"class name": "TOML日期时间",
+"comment": "完整的日期时间,可以指定或省略时区偏移量",
+"base class": "TOML类型比较",
+"@文档": "\"category = \\\"配置文件.TOML.辅助类\\\"\"",
+"@别名": "\"toml::date_time\"",
+"@别名类型": "本地类",
+"variables": [
+  {
+禁止流程检查": "真"]"variable name": "日期",
+禁止流程检查": "真"]"data type": "TOML日期",
+禁止流程检查": "真"]"@输出名": "\"date\""
+  },
+  {
+
+"variable name": "时间",
+
+"data type": "TOML时间",
+
+"@输出名": "\"time\""
+  },
+  {
+
+"variable name": "偏移",
+
+"data type": "TOML时间偏移可空值",
+
+"@输出名": "\"offset\""
+  }
+],
+"methods": [
+  {
+methods": [
+"method name": "创建",
+methods": [
+"static": true,
+methods": [
+"data type": "TOML日期时间",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "欲设置日期",
+"data type": "TOML日期",
+"@视窗.前缀文本": "\"const \""
+   },
+   {
+"parameter name": "欲设置时间",
+"data type": "TOML时间",
+"@视窗.前缀文本": "\"const \""
+   },
+   {
+"parameter name": "欲设置时区偏移",
+"comment": "单位为分钟",
+"data type": "整数",
+"@默认值": "0"
+   }
+methods": [
+]
+  },
+  {
+}"method name": "置日期时间",
+}"static": true,
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间"
+   },
+   {
+"parameter name": "欲设置日期",
+"data type": "TOML日期"
+   },
+   {
+"parameter name": "欲设置时间",
+"data type": "TOML时间"
+   },
+   {
+"parameter name": "欲设置时区偏移",
+"comment": "单位为分钟",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+ }"method name": "是否为本地",
+ }"comment": "返回当前日期时间是否含有时区偏移信息",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间",
+"@视窗.前缀文本": "\"const \""
+   }
+ }]
+  },
+  {
+]"method name": "置火山时间",
+]"static": true,
+]"data type": "逻辑型",
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间"
+   },
+   {
+"parameter name": "日期时间值",
+"data type": "小数"
+   }
+]]
+  },
+  {
+
+"method name": "置时间戳",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间"
+   },
+   {
+"parameter name": "秒时间戳",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置毫秒时间戳",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间"
+   },
+   {
+"parameter name": "毫秒时间戳",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "到火山时间",
+
+"static": true,
+
+"data type": "小数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  },
+  {
+
+"method name": "到时间戳",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  },
+  {
+
+"method name": "到毫秒时间戳",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  },
+  {
+
+"method name": "到可读文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  },
+  {
+
+"method name": "到可读文本U",
+
+"static": true,
+
+"data type": "标准文本类U",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML日期时间",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "TOML值基类",
+"@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"",
+"@别名": "\"//\"",
+"@别名类型": "本地参考类型",
+"@类用途": "禁止创建对象",
+"methods": [
+  {
+@视窗.前缀文本": "\"const \"""method name": "为空指针",
+@视窗.前缀文本": "\"const \"""comment": "返回当前值指针是否为空.\n如果返回真,则请勿执行本类的其他方法!",
+@视窗.前缀文本": "\"const \"""static": true,
+@视窗.前缀文本": "\"const \"""data type": "逻辑型",
+@视窗.前缀文本": "\"const \"""@嵌入式方法": "\"\"",
+@视窗.前缀文本": "\"const \"""parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML值基类"
+   }
+@视窗.前缀文本": "\"const \""]
+  },
+  {
+data type": "TOML值基类""method name": "标志",
+data type": "TOML值基类""static": true,
+data type": "TOML值基类""type": "property getter",
+data type": "TOML值基类""data type": "TOML值标志",
+data type": "TOML值基类""@禁止流程检查": "真",
+data type": "TOML值基类""parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML值基类"
+   }
+data type": "TOML值基类"]
+  },
+  {
+"method name": "标志",
+"static": true,
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML值基类"
+   },
+   {
+"parameter name": "新标志",
+"data type": "TOML值标志"
+   }
+]
+  },
+  {
+ameter name": "当前值""method name": "到可读文本",
+ameter name": "当前值""static": true,
+ameter name": "当前值""data type": "文本型",
+ameter name": "当前值""@禁止流程检查": "真",
+ameter name": "当前值""parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML值基类"
+   }
+ameter name": "当前值"]
+  }
+]
+ },
+ {
+}"class name": "TOML文本值",
+}"base class": "TOML值基类",
+}"@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"",
+}"@别名": "\"toml::value<std::string>*\"",
+}"@别名类型": "本地参考类型",
+}"methods": [
+  {
+"methods": [
+"method name": "值",
+"methods": [
+"static": true,
+"methods": [
+"type": "property getter",
+"methods": [
+"data type": "文本型",
+"methods": [
+"@嵌入式方法": "\"\"",
+"methods": [
+"parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML文本值"
+   }
+"methods": [
+]
+  }
+}]
+ },
+ {
+}"class name": "TOML整数值",
+}"base class": "TOML值基类",
+}"@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"",
+}"@别名": "\"toml::value<int64_t>*\"",
+}"@别名类型": "本地参考类型",
+}"methods": [
+  {
+"methods": [
+"method name": "值",
+"methods": [
+"static": true,
+"methods": [
+"type": "property getter",
+"methods": [
+"data type": "长整数",
+"methods": [
+"@嵌入式方法": "\"\"",
+"methods": [
+"parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML整数值"
+   }
+"methods": [
+]
+  }
+}]
+ },
+ {
+"class name": "TOML小数值",
+"base class": "TOML值基类",
+"@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"",
+"@别名": "\"toml::value<double>*\"",
+"@别名类型": "本地参考类型",
+"methods": [
+  {
+
+"method name": "值",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML小数值"
+   }
+
+]
+  }
+]
+ },
+ {
+data type": "TOML小数值""class name": "TOML逻辑值",
+data type": "TOML小数值""base class": "TOML值基类",
+data type": "TOML小数值""@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"",
+data type": "TOML小数值""@别名": "\"toml::value<bool>*\"",
+data type": "TOML小数值""@别名类型": "本地参考类型",
+data type": "TOML小数值""methods": [
+  {
+ml::value<bool>*\""method name": "值",
+ml::value<bool>*\""static": true,
+ml::value<bool>*\""type": "property getter",
+ml::value<bool>*\""data type": "逻辑型",
+ml::value<bool>*\""@嵌入式方法": "\"\"",
+ml::value<bool>*\""parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML逻辑值"
+   }
+ml::value<bool>*\"]
+  }
+data type": "TOML小数值"]
+ },
+ {
+ml::value<bool>*\""class name": "TOML日期值",
+ml::value<bool>*\""base class": "TOML值基类",
+ml::value<bool>*\""@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"",
+ml::value<bool>*\""@别名": "\"toml::value<toml::date>*\"",
+ml::value<bool>*\""@别名类型": "本地参考类型",
+ml::value<bool>*\""methods": [
+  {
+l::value<bool>*\""@别名类型": "本地参考类型""method name": "值",
+l::value<bool>*\""@别名类型": "本地参考类型""static": true,
+l::value<bool>*\""@别名类型": "本地参考类型""type": "property getter",
+l::value<bool>*\""@别名类型": "本地参考类型""data type": "TOML日期",
+l::value<bool>*\""@别名类型": "本地参考类型""@禁止流程检查": "真",
+l::value<bool>*\""@别名类型": "本地参考类型""@视窗.返回参考": "真",
+l::value<bool>*\""@别名类型": "本地参考类型""parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML日期值"
+   }
+l::value<bool>*\""@别名类型": "本地参考类型"]
+  }
+ml::value<bool>*\"]
+ },
+ {
+"class name": "TOML时间值",
+"base class": "TOML值基类",
+"@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"",
+"@别名": "\"toml::value<toml::time>*\"",
+"@别名类型": "本地参考类型",
+"methods": [
+  {
+
+"method name": "值",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "TOML时间",
+
+"@禁止流程检查": "真",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML时间值"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "TOML日期时间值",
+"base class": "TOML值基类",
+"@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"",
+"@别名": "\"toml::value<toml::date_time>*\"",
+"@别名类型": "本地参考类型",
+"methods": [
+  {
+@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"""method name": "值",
+@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"""static": true,
+@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"""type": "property getter",
+@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"""data type": "TOML日期时间",
+@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"""@禁止流程检查": "真",
+@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"""@视窗.返回参考": "真",
+@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\"""parameters": [
+   {
+"parameter name": "当前值",
+"data type": "TOML日期时间值"
+   }
+@文档": "\"category = \\\"配置文件.TOML.值类型\\\"\""]
+  }
+]
+ },
+ {
+@别名类型": "本地参考类型""class name": "TOML节点基类",
+@别名类型": "本地参考类型""@文档": "\"category = \\\"配置文件.TOML\\\"\"",
+@别名类型": "本地参考类型""@别名": "\"//\"",
+@别名类型": "本地参考类型""@别名类型": "本地类",
+@别名类型": "本地参考类型""@类用途": "定义嵌入参数类型",
+@别名类型": "本地参考类型""methods": [
+  {
+data type": "TOML日期时间值""method name": "取路径",
+data type": "TOML日期时间值""static": true,
+data type": "TOML日期时间值""data type": "TOML节点视图",
+data type": "TOML日期时间值""@嵌入式方法": "\"\"",
+data type": "TOML日期时间值""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   }
+data type": "TOML日期时间值"]
+  },
+  {
+data type": "TOML日期时间值""method name": "取路径文本值",
+data type": "TOML日期时间值""static": true,
+data type": "TOML日期时间值""data type": "文本型",
+data type": "TOML日期时间值""@嵌入式方法": "\"\"",
+data type": "TOML日期时间值""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   }
+data type": "TOML日期时间值"]
+  },
+  {
+
+"method name": "取路径文本值U",
+
+"static": true,
+
+"data type": "标准文本类U",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+"method name": "取路径整数值",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+
+"method name": "取路径长整数值",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"data type": "长整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "取路径小数值",
+
+"static": true,
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"data type": "小数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+data type": "TOML日期时间值""method name": "取路径逻辑值",
+data type": "TOML日期时间值""static": true,
+data type": "TOML日期时间值""data type": "逻辑型",
+data type": "TOML日期时间值""@嵌入式方法": "\"\"",
+data type": "TOML日期时间值""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "默认值",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "TOML日期时间值"]
+  },
+  {
+static": true"method name": "取路径日期值",
+static": true"static": true,
+static": true"data type": "TOML日期",
+static": true"@嵌入式方法": "\"\"",
+static": true"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   }
+static": true]
+  },
+  {
+
+"method name": "取路径时间值",
+
+"static": true,
+
+"data type": "TOML时间",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+ameter name": "路径""method name": "取路径日期时间值",
+ameter name": "路径""static": true,
+ameter name": "路径""data type": "TOML日期时间",
+ameter name": "路径""@嵌入式方法": "\"\"",
+ameter name": "路径""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "路径",
+"@匹配类型": "通用型"
+   }
+ameter name": "路径"]
+  },
+  {
+"method name": "到键值表值",
+"static": true,
+"data type": "TOML键值表",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+]
+  },
+  {
+ }"method name": "到数组值",
+ }"static": true,
+ }"data type": "TOML数组类",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+ }]
+  },
+  {
+
+"method name": "到文本值",
+
+"static": true,
+
+"data type": "TOML文本值",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+
+]
+  },
+  {
+
+"method name": "到整数值",
+
+"static": true,
+
+"data type": "TOML整数值",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+
+]
+  },
+  {
+ }"method name": "到小数值",
+ }"static": true,
+ }"data type": "TOML小数值",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+ }]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "到逻辑值",
+}"@嵌入式方法": "\"\"""static": true,
+}"@嵌入式方法": "\"\"""data type": "TOML逻辑值",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+}"method name": "到日期值",
+}"static": true,
+}"data type": "TOML日期值",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+}]
+  },
+  {
+
+"method name": "到时间值",
+
+"static": true,
+
+"data type": "TOML时间值",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+
+]
+  },
+  {
+
+"method name": "到日期时间值",
+
+"static": true,
+
+"data type": "TOML日期时间值",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+
+]
+  },
+  {
+data type": "TOML节点基类""method name": "是否为同类元素",
+data type": "TOML节点基类""comment": "检查节点是否仅包含一种类型的值或元素.",
+data type": "TOML节点基类""static": true,
+data type": "TOML节点基类""data type": "逻辑型",
+data type": "TOML节点基类""@嵌入式方法": "\"\"",
+data type": "TOML节点基类""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "节点类型",
+"data type": "TOML节点类型"
+   }
+data type": "TOML节点基类"]
+  },
+  {
+
+"method name": "是否为同类元素2",
+
+"comment": "检查节点是否仅包含一种类型的值或元素.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   },
+   {
+"parameter name": "节点类型",
+"data type": "TOML节点类型"
+   },
+   {
+"parameter name": "不匹配的首元素",
+"data type": "TOML节点指针"
+   }
+
+]
+  },
+  {
+data type": "TOML节点指针""method name": "类型",
+data type": "TOML节点指针""static": true,
+data type": "TOML节点指针""data type": "TOML节点类型",
+data type": "TOML节点指针""@嵌入式方法": "\"\"",
+data type": "TOML节点指针""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+data type": "TOML节点指针"]
+  },
+  {
+data type": "TOML节点指针""method name": "是否为键值表",
+data type": "TOML节点指针""static": true,
+data type": "TOML节点指针""data type": "逻辑型",
+data type": "TOML节点指针""@嵌入式方法": "\"\"",
+data type": "TOML节点指针""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+data type": "TOML节点指针"]
+  },
+  {
+
+"method name": "是否为数组",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+
+]
+  },
+  {
+
+"method name": "是否为文本",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+
+]
+  },
+  {
+"method name": "是否为整数",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+]
+  },
+  {
+
+"method name": "是否为小数",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+
+]
+  },
+  {
+ }"method name": "是否为数值",
+ }"comment": "是否为数值(整数型或小数型)",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+ }]
+  },
+  {
+}"method name": "是否为逻辑型",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+}]
+  },
+  {
+
+"method name": "是否为日期",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+
+]
+  },
+  {
+}"method name": "是否为时间",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+}]
+  },
+  {
+"method name": "是否为日期时间",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML节点基类"
+   }
+]
+  }
+@别名类型": "本地参考类型"]
+ },
+ {
+名类型": "本地参考类型"]"class name": "TOML节点指针",
+名类型": "本地参考类型"]"base class": "PIV参考指针模板",
+名类型": "本地参考类型"]"@文档": "\"category = \\\"配置文件.TOML\\\"\"",
+名类型": "本地参考类型"]"@模板实现类": "\"TOML节点类\""
+ },
+ {
+"parameters": [
+"class name": "TOML节点视图",
+"parameters": [
+"base class": "TOML节点基类",
+"parameters": [
+"@文档": "\"category = \\\"配置文件.TOML\\\"\"",
+"parameters": [
+"@别名": "\"toml::node_view<toml::node>\"",
+"parameters": [
+"@别名类型": "本地类",
+"parameters": [
+"methods": [
+  {
+
+"method name": "节点",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "TOML节点指针",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "本视图",
+"data type": "TOML节点视图"
+   }
+
+]
+  }
+"parameters": [
+]
+ },
+ {
+
+"class name": "TOML时间偏移可空值",
+
+"comment": "时区偏移的可空值",
+
+"base class": "标准可空值模板",
+
+"@文档": "\"category = \\\"配置文件.TOML.辅助类\\\"\"",
+
+"@模板实现类": "\"TOML时间偏移\""
+ },
+ {
+
+"class name": "TOML类型比较",
+
+"comment": "TOML类型比较的基类",
+
+"@文档": "\"category = \\\"配置文件.TOML.辅助类\\\"\"",
+
+"@别名": "\"//\"",
+
+"@别名类型": "本地类",
+
+"@类用途": "定义嵌入参数类型",
+
+"methods": [
+  {
+
+"method name": "是否相等",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   },
+   {
+"parameter name": "所欲比较对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  },
+  {
+ }"method name": "是否大于",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   },
+   {
+"parameter name": "所欲比较对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   }
+ }]
+  },
+  {
+}"method name": "是否大于等于",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   },
+   {
+"parameter name": "所欲比较对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   }
+}]
+  },
+  {
+
+"method name": "是否小于",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   },
+   {
+"parameter name": "所欲比较对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  },
+  {
+
+"method name": "是否小于等于",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   },
+   {
+"parameter name": "所欲比较对象",
+"data type": "TOML类型比较",
+"@视窗.前缀文本": "\"const \""
+   }
+
+]
+  }
+
+]
+ },
+ {
+
+"class name": "TOML节点类型",
+
+"@文档": "\"category = \\\"配置文件.TOML.辅助类\\\"\"",
+
+"@别名": "\"toml::node_type::none\"",
+
+"@别名类型": "本地值类型",
+
+"constants": [
+  {
+"constants": [
+"constant name": "未知",
+"constants": [
+"comment": "不是一个TOML节点",
+"constants": [
+"data type": "TOML节点类型",
+"constants": [
+"initial value": "@toml::node_type::none"
+  },
+  {
+"constants": [
+"constant name": "键值表",
+"constants": [
+"comment": "键值表(也被称为哈希表或字典)是键值对的集合",
+"constants": [
+"data type": "TOML节点类型",
+"constants": [
+"initial value": "@toml::node_type::table"
+  },
+  {
+"constants": [
+"constant name": "数组",
+"constants": [
+"comment": "toml::array",
+"constants": [
+"data type": "TOML节点类型",
+"constants": [
+"initial value": "@toml::node_type::array"
+  },
+  {
+@视窗.前缀文本": "\"const \"""constant name": "字符串",
+@视窗.前缀文本": "\"const \"""comment": "共有四种方式来表示字符串：基本字符串、多行基本字符串、字面量和多行字面量.\n所有字符串都只能包含有效的UTF-8字符.",
+@视窗.前缀文本": "\"const \"""data type": "TOML节点类型",
+@视窗.前缀文本": "\"const \"""initial value": "@toml::node_type::string"
+  },
+  {
+arameters": [
+]"constant name": "整型",
+arameters": [
+]"comment": "有符号整型数,最大8字节,负数的前缀是减号.",
+arameters": [
+]"data type": "TOML节点类型",
+arameters": [
+]"initial value": "@toml::node_type::integer"
+  },
+  {
+}"constant name": "浮点数",
+}"comment": "双精度浮点数(8字节)",
+}"data type": "TOML节点类型",
+}"initial value": "@toml::node_type::floating_point"
+  },
+  {
+arameters": [
+]"constant name": "布尔值",
+arameters": [
+]"comment": "逻辑布尔值(1字节),必须是小写的true或false",
+arameters": [
+]"data type": "TOML节点类型",
+arameters": [
+]"initial value": "@toml::node_type::boolean"
+  },
+  {
+
+"constant name": "日期",
+
+"comment": "日期时间中的日期部分,表示一整天,不涉及时区偏移",
+
+"data type": "TOML节点类型",
+
+"initial value": "@toml::node_type::date"
+  },
+  {
+}"constant name": "时间",
+}"comment": "日期时间中的时间部分,只表示一天之中的那个时间,与任何特定的日期无关、亦不涉及时区偏移.",
+}"data type": "TOML节点类型",
+}"initial value": "@toml::node_type::time"
+  },
+  {
+"initial value": "@toml::node_type::time""constant name": "日期时间",
+"initial value": "@toml::node_type::time""comment": "完整的日期时间,可以指定或省略时区偏移量",
+"initial value": "@toml::node_type::time""data type": "TOML节点类型",
+"initial value": "@toml::node_type::time""initial value": "@toml::node_type::date_time"
+  }
+
+]
+ },
+ {
+"class name": "TOML值标志",
+"comment": "决定整数值的格式化方式",
+"@文档": "\"category = \\\"配置文件.TOML.辅助类\\\"\"",
+"@别名": "\"toml::value_flags\"",
+"@别名类型": "本地值类型",
+"constants": [
+  {
+"constant name": "无",
+"data type": "TOML值标志",
+"initial value": "@toml::value_flags::none"
+  },
+  {
+"constant name": "二进制格式",
+"data type": "TOML值标志",
+"initial value": "@toml::value_flags::format_as_binary"
+  },
+  {
+
+"constant name": "八进制格式",
+
+"data type": "TOML值标志",
+
+"initial value": "@toml::value_flags::format_as_octal"
+  },
+  {
+
+"constant name": "十六进制格式",
+
+"data type": "TOML值标志",
+
+"initial value": "@toml::value_flags::format_as_hexadecimal"
+  }
+]
+ }
+当前对象>.is_integer()]
+}

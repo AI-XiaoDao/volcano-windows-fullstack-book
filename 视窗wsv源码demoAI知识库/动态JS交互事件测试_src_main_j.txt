@@ -1,0 +1,63 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+暀鳿Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+暀鳿Ǹ"package name": "火山.程序",
+暀鳿Ǹ"classes": [
+ {
+"class name": "浏览器容器",
+"@全局类": "真",
+"constants": [
+  {
+
+"constant name": "JS交互页面文本",
+
+"data type": "文本型",
+
+"initial value": "\"<html>\\r\\n<head>\\r\\n\\t你好\\r\\n    <script type=\\\"text/javascript\\\">\\r\\n\\t var request_id;\\r\\n\\t\\r\\n      function doQuery() {\\r\\n\\trequest_id=window.cefQuery({\\r\\n          request: document.getElementById(\\\"query\\\").value,\\r\\n          persistent: true,\\r\\n          onSuccess: function(response) { alert(response); },\\r\\n          onFailure: function(code, msg) { alert(code + \\\" - \\\" + msg); }\\r\\n        }\\r\\n        );\\r\\n      }\\r\\n\\t \\r\\n\\t  function doQuery1() {\\r\\n        request_id=window.cefQuerytest({\\r\\n          request: document.getElementById(\\\"query1\\\").value,\\r\\n          persistent: true,\\r\\n          onSuccess: function(response) { alert(response); },\\r\\n          onFailure: function(code, msg) { alert(code + \\\" - \\\" + msg); }\\r\\n        }\\r\\n        );\\r\\n      }\\r\\n\\t  \\r\\n\\t function doQueryCancel() {\\r\\n        window.cefQueryCancel(request_id);\\r\\n      }\\r\\n    </script>\\r\\n<meta charset=\\\"UTF-8\\\">\\r\\n  <title>Test Cef Query</title>\\r\\n</head>\\r\\n\\r\\n<body>\\r\\n<form>\\r\\nQuery String1: <input type=\\\"text\\\" id=\\\"query\\\" value=\\\"你好CefQuery\\\"/>&nbsp;&nbsp;<input  type=\\\"button\\\" value=\\\"SendQuery\\\" onclick=\\\"doQuery()\\\"/>&nbsp;&nbsp;<input  type=\\\"button\\\" value=\\\"Cancel\\\" onclick=\\\"doQueryCancel()\\\"/>\\r\\nQuery String2: <input type=\\\"text\\\" id=\\\"query1\\\" value=\\\"GiveMeMoney\\\"/>&nbsp;&nbsp;\\r\\n<input  type=\\\"button\\\" value=\\\"SendQuery1\\\" onclick=\\\"doQuery1()\\\"/>\\r\\n</form>\\r\\n</form>\\r\\n</body>\\r\\n</html>\""
+  }
+],
+"variables": [
+  {
+
+"variable name": "浏览器",
+
+"static": true,
+
+"data type": "类_FBrowser_浏览器"
+  },
+  {
+
+"variable name": "浏览器数组",
+
+"static": true,
+
+"data type": "对象数组类"
+  }
+]
+ },
+ {
+"class name": "启动类",
+"base class": "窗口程序类",
+"variables": [
+  {
+
+"variable name": "主窗口对象",
+
+"data type": "我的主窗口",
+
+"标题": "\"我的主窗口\""
+  }
+],
+"methods": [
+  {
+
+"method name": "启动方法",
+
+"data type": "整数"
+  }
+]
+ }
+暀鳿Ǹ]
+}

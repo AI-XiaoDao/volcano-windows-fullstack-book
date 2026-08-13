@@ -1,0 +1,1962 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"WinHTTP5_1".
+
+{
+真时,表示已收到响应.返回值为假时,表示超过指定的超时期限."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+真时,表示已收到响应.返回值为假时,表示超过指定的超时期限."package name": "火山.WinHTTP5_1",
+真时,表示已收到响应.返回值为假时,表示超过指定的超时期限."comment": "WinHTTP 5.1仅适用于Windows Server 2003, Windows 2000 Professional with Service Pack 3 (SP3), Windows XP with Service Pack 1(SP1)及更高版本的操作系统.",
+真时,表示已收到响应.返回值为假时,表示超过指定的超时期限."@视窗.外部头文件": "\"lib\\\\WinHttpRequestEvents.h\"",
+真时,表示已收到响应.返回值为假时,表示超过指定的超时期限."@视窗.外部源文件": "\"lib\\\\WinHttpRequestEvents.cpp\"",
+真时,表示已收到响应.返回值为假时,表示超过指定的超时期限."@视窗.外部头文件": "\"lib\\\\winhttp_constant.h\"",
+真时,表示已收到响应.返回值为假时,表示超过指定的超时期限."classes": [
+ {
+ "代表整个WinHttp程序""class name": "WinHttp选项",
+ "代表整个WinHttp程序""comment": "设置选项",
+ "代表整个WinHttp程序""@常量类": "整数",
+ "代表整个WinHttp程序""@文档": "\"category = \\\"辅助类\\\"\"",
+ "代表整个WinHttp程序""constants": [
+  {
+    "constant name": "用户代理",
+    "comment": "用户代理",
+    "initial value": "@WinHttpRequestOption_UserAgentString"
+  },
+  {
+    "constant name": "重定向网址",
+    "comment": "检索包含资源的链接.此值为只读,在调用\"打开\"方法之前,无法使用.此选项可用于检查\"发送\"方法完成后的网址,以验证是否发生了任何重定向.",
+    "initial value": "@WinHttpRequestOption_URL"
+  },
+  {
+   "comment": "用户代理""constant name": "编码",
+   "comment": "用户代理""comment": "设置或检索标识字符串的编码方式.默认值为UTF-8编码方式.代码页用于将\"打开\"方法中所传递的字符串转换为单字节字符串表示形式.",
+   "comment": "用户代理""initial value": "@WinHttpRequestOption_URLCodePage"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "网址转义符",
+tegory = \\\"辅助类\\\"\""comment": "指示网址字符串中的百分比字符是否转换为转义序列.默认值为真,它指定所有ANSI字符,但百分比符号转换为转义序列除外.",
+tegory = \\\"辅助类\\\"\""initial value": "@WinHttpRequestOption_EscapePercentInURL"
+  },
+  {
+}"constant name": "忽略证书",
+}"comment": "指示应忽略哪个服务器证书错误",
+}"initial value": "@WinHttpRequestOption_SslErrorIgnoreFlags"
+  },
+  {
+
+"constant name": "SSL证书",
+
+"comment": "指定发送到服务器进行身份验证的客户端证书.此选项指示用反斜杠分隔的客户端证书的位置、 证书存储和使用者.有关选择客户端证书的详细信息.",
+
+"initial value": "@WinHttpRequestOption_SelectCertificate"
+  },
+  {
+"initial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向",
+"initial value": "@WinHttpRequestOption_SelectCertificate""comment": "指示服务器指定资源的新位置时是否自动重定向请求",
+"initial value": "@WinHttpRequestOption_SelectCertificate""initial value": "@WinHttpRequestOption_EnableRedirects"
+  },
+  {
+tial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向""constant name": "转义符",
+tial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向""comment": "指示是否将网址路径和查询组件中的不安全字符转换为转义序列",
+tial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向""initial value": "@WinHttpRequestOption_UrlEscapeDisable"
+  },
+  {
+}"constant name": "参数转义符",
+}"comment": "指示是否将网址中查询组件中的不安全字符转换为转义序列",
+}"initial value": "@WinHttpRequestOption_UrlEscapeDisableQuery"
+  },
+  {
+tial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向""constant name": "SSL版本",
+tial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向""comment": "指示可以使用哪些安全协议.此选项选择客户端可接受的协议.协议在安全套接字层(SSL)握手期间协商.",
+tial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向""initial value": "@WinHttpRequestOption_SecureProtocols"
+  },
+  {
+tial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向""constant name": "启用跟踪",
+tial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向""comment": "指示是否当前启用了跟踪设施",
+tial value": "@WinHttpRequestOption_SelectCertificate""constant name": "重定向""initial value": "@WinHttpRequestOption_EnableTracing"
+  },
+  {
+ 文本型"constant name": "临时证书",
+ 文本型"comment": "控制是否在SSL证书身份验证操作期间临时恢复对SSL证书的认证",
+ 文本型"initial value": "@WinHttpRequestOption_RevertImpersonationOverSsl"
+  },
+  {
+}"constant name": "安全链接",
+}"comment": "控制是否允许安全链接到非安全链接重定向",
+}"initial value": "@WinHttpRequestOption_EnableHttpsToHttpRedirects"
+  },
+  {
+文本型"initial value": "@WinHttpRequestOption_RevertImpersonationOverSsl""constant name": "验证证书",
+文本型"initial value": "@WinHttpRequestOption_RevertImpersonationOverSsl""comment": "启用或禁用对证书身份验证的支持",
+文本型"initial value": "@WinHttpRequestOption_RevertImpersonationOverSsl""initial value": "@WinHttpRequestOption_EnablePassportAuthentication"
+  },
+  {
+用对证书身份验证的支持"constant name": "重定向数",
+用对证书身份验证的支持"comment": "最大重定向数量",
+用对证书身份验证的支持"initial value": "@WinHttpRequestOption_MaxAutomaticRedirects"
+  },
+  {
+对证书身份验证的支持"comment": "最大重定向数量""constant name": "头数据限制量",
+对证书身份验证的支持"comment": "最大重定向数量""comment": "访问网址所返回标头部分的数据最大尺寸限制量",
+对证书身份验证的支持"comment": "最大重定向数量""initial value": "@WinHttpRequestOption_MaxResponseHeaderSize"
+  },
+  {
+证书身份验证的支持"comment": "最大重定向数量""comment": "访问网址所返回标头部分的数据最大尺寸限制量""constant name": "数据限制量",
+证书身份验证的支持"comment": "最大重定向数量""comment": "访问网址所返回标头部分的数据最大尺寸限制量""comment": "访问网址所返回数据最大尺寸限制量",
+证书身份验证的支持"comment": "最大重定向数量""comment": "访问网址所返回标头部分的数据最大尺寸限制量""initial value": "@WinHttpRequestOption_MaxResponseDrainSize"
+  },
+  {
+
+"constant name": "使用HTTP1_1",
+
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0",
+
+"initial value": "@WinHttpRequestOption_EnableHttp1_1"
+  },
+  {
+
+"constant name": "证书检查",
+
+"comment": "在SSL协商期间启用服务器证书吊销检查.当服务器提供证书时,将执行检查以确定证书是否已由其颁发者吊销.如果证书确实被吊销,或者吊销检查失败,因为无法下载证书吊销列表,请求将失败.无法取消此类吊销错误.",
+
+"initial value": "@WinHttpRequestOption_EnableCertificateRevocationCheck"
+  }
+ "代表整个WinHttp程序"]
+ },
+ {
+}"class name": "WinHttp访问方式",
+}"comment": "访问方式",
+}"@常量类": "文本型",
+}"@文档": "\"category = \\\"辅助类\\\"\"",
+}"constants": [
+  {
+"@常量类": "文本型""constant name": "GET",
+"@常量类": "文本型""comment": "连接方式访问",
+"@常量类": "文本型""initial value": "\"GET\""
+  },
+  {
+"@常量类": "文本型""constant name": "POST",
+"@常量类": "文本型""comment": "带数据源访问",
+"@常量类": "文本型""initial value": "\"POST\""
+  },
+  {
+
+"constant name": "PUT",
+
+"comment": "更新现有资源",
+
+"initial value": "\"PUT\""
+  },
+  {
+}"constant name": "DELETE",
+}"comment": "删除现有资源",
+}"initial value": "\"DELETE\""
+  },
+  {
+"initial value": "\"DELETE\"""constant name": "HEAD",
+"initial value": "\"DELETE\"""comment": "通常通过时间戳检查资源是否已更改,该方法获得访问头,没有响应数据内容.",
+"initial value": "\"DELETE\"""initial value": "\"HEAD\""
+  },
+  {
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""constant name": "TRACE",
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""comment": "用于诊断",
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""initial value": "\"TRACE\""
+  },
+  {
+ment": "是否应使用 HTTP/1.1 或 HTTP/1.0""constant name": "TRACE""constant name": "OPTIONS",
+ment": "是否应使用 HTTP/1.1 或 HTTP/1.0""constant name": "TRACE""comment": "用于检索服务器功能",
+ment": "是否应使用 HTTP/1.1 或 HTTP/1.0""constant name": "TRACE""initial value": "\"OPTIONS\""
+  },
+  {
+
+"constant name": "CONNECT",
+
+"comment": "HTTP/1.1的方法,在HTTP协议中,该方法可以开启一个客户端与所请求资源之间的双向沟通的通道.它可以用来创建隧道(tunnel).",
+
+"initial value": "\"CONNECT\""
+  }
+}]
+ },
+ {
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""class name": "WinHttp代理策略",
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""comment": "代理策略",
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""@常量类": "整数",
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""@文档": "\"category = \\\"辅助类\\\"\"",
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""constants": [
+  {
+}"constant name": "所有请求",
+}"comment": "对所有请求执行经过身份验证的登录(使用默认凭据)",
+}"initial value": "@AutoLogonPolicy_Always"
+  },
+  {
+}"constant name": "仅本地",
+}"comment": "仅对本地 Intranet 上的请求执行经过身份验证的登录(使用默认凭据).本地 Intranet 被视为当前代理配置中代理旁路列表中的任何服务器.",
+}"initial value": "@AutoLogonPolicy_OnlyIfBypassProxy"
+  },
+  {
+comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""constants": [
+"constant name": "不使用",
+comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""constants": [
+"comment": "不会自动使用身份验证",
+comment": "是否应使用 HTTP/1.1 或 HTTP/1.0""constants": [
+"initial value": "@AutoLogonPolicy_Never"
+  }
+"comment": "是否应使用 HTTP/1.1 或 HTTP/1.0"]
+ },
+ {
+nstant name": "仅本地""class name": "WinHttp代理标识",
+nstant name": "仅本地""comment": "代理标识",
+nstant name": "仅本地""@常量类": "整数",
+nstant name": "仅本地""@文档": "\"category = \\\"辅助类\\\"\"",
+nstant name": "仅本地""constants": [
+  {
+nt name": "仅本地""class name": "WinHttp代理标识""constant name": "服务器",
+nt name": "仅本地""class name": "WinHttp代理标识""comment": "凭据将传递到服务器",
+nt name": "仅本地""class name": "WinHttp代理标识""initial value": "@HTTPREQUEST_SETCREDENTIALS_FOR_SERVER"
+  },
+  {
+nt name": "仅本地""class name": "WinHttp代理标识""constant name": "代理",
+nt name": "仅本地""class name": "WinHttp代理标识""comment": "凭据将传递给代理",
+nt name": "仅本地""class name": "WinHttp代理标识""initial value": "@HTTPREQUEST_SETCREDENTIALS_FOR_PROXY"
+  }
+nstant name": "仅本地"]
+ },
+ {
+tant name": "仅本地"]"class name": "WinHttp代理标志",
+tant name": "仅本地"]"comment": "代理标志",
+tant name": "仅本地"]"@常量类": "整数",
+tant name": "仅本地"]"@文档": "\"category = \\\"辅助类\\\"\"",
+tant name": "仅本地"]"constants": [
+  {
+ant name": "仅本地"]"@文档": "\"category = \\\"辅助类\\\"\"""constant name": "默认",
+ant name": "仅本地"]"@文档": "\"category = \\\"辅助类\\\"\"""comment": "默认(从注册表中获取)",
+ant name": "仅本地"]"@文档": "\"category = \\\"辅助类\\\"\"""initial value": "@HTTPREQUEST_PROXYSETTING_DEFAULT"
+  },
+  {
+ant name": "仅本地"]"constants": [
+"constant name": "系统",
+ant name": "仅本地"]"constants": [
+"comment": "系统(从注册表中获取)",
+ant name": "仅本地"]"constants": [
+"initial value": "@HTTPREQUEST_PROXYSETTING_PRECONFIG"
+  },
+  {
+"constant name": "直连",
+"comment": "直连(不使用代理)",
+"initial value": "@HTTPREQUEST_PROXYSETTING_DIRECT"
+  },
+  {
+}"constant name": "代理",
+}"comment": "代理(使用HTTP代理)",
+}"initial value": "@HTTPREQUEST_PROXYSETTING_PROXY"
+  }
+tant name": "仅本地"]]
+ },
+ {
+}"class name": "WinHttp忽略证书",
+}"comment": "该值指示应忽略哪个服务器证书错误",
+}"@常量类": "整数",
+}"@文档": "\"category = \\\"辅助类\\\"\"",
+}"constants": [
+  {
+}"constant name": "未知机构",
+}"comment": "未知的证书颁发机构(CA)或不受信任的根",
+}"initial value": "@SslErrorFlag_UnknownCA"
+  },
+  {
+}"constant name": "错误",
+}"comment": "错误的用法",
+}"initial value": "@SslErrorFlag_CertWrongUsage"
+  },
+  {
+}"constant name": "无效名称",
+}"comment": "无效的通用名称(CN)",
+}"initial value": "@SslErrorFlag_CertCNInvalid"
+  },
+  {
+}"constant name": "过期",
+}"comment": "无效的日期或证书已过期",
+}"initial value": "@SslErrorFlag_CertDateInvalid"
+  }
+}]
+ },
+ {
+"comment": "无效的日期或证书已过期""class name": "WinHttpSSL版本",
+"comment": "无效的日期或证书已过期""comment": "SSL版本",
+"comment": "无效的日期或证书已过期""@常量类": "整数",
+"comment": "无效的日期或证书已过期""@文档": "\"category = \\\"辅助类\\\"\"",
+"comment": "无效的日期或证书已过期""constants": [
+  {
+"constant name": "SSL2",
+"comment": "SSL 2.0",
+"initial value": "@SecureProtocol_SSL2"
+  },
+  {
+"constant name": "SSL3",
+"comment": "SSL 3.0",
+"initial value": "@SecureProtocol_SSL3"
+  },
+  {
+
+"constant name": "TLS1",
+
+"comment": "传输层安全性(TLS)1.0",
+
+"initial value": "@SecureProtocol_TLS1"
+  }
+"comment": "无效的日期或证书已过期"]
+ },
+ {
+comment": "SSL 3.0""class name": "WinHttp编码",
+comment": "SSL 3.0""comment": "只罗列常用编码,如所需编码不在其中,请参考https://docs.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers.",
+comment": "SSL 3.0""@常量类": "整数",
+comment": "SSL 3.0""@文档": "\"category = \\\"辅助类\\\"\"",
+comment": "SSL 3.0""constants": [
+  {
+tegory = \\\"辅助类\\\"\""constant name": "IBM037",
+tegory = \\\"辅助类\\\"\""comment": "IBM437加拿大",
+tegory = \\\"辅助类\\\"\""initial value": "37"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "IBM437",
+tegory = \\\"辅助类\\\"\""comment": "美国",
+tegory = \\\"辅助类\\\"\""initial value": "437"
+  },
+  {
+egory = \\\"辅助类\\\"\""comment": "美国""constant name": "IBM500",
+egory = \\\"辅助类\\\"\""comment": "美国""comment": "国际",
+egory = \\\"辅助类\\\"\""comment": "美国""initial value": "500"
+  },
+  {
+}"constant name": "ASMO708",
+}"comment": "阿拉伯语(ASMO 708)",
+}"initial value": "708"
+  },
+  {
+}"constant name": "Windows874",
+}"comment": "泰语(Windows)",
+}"initial value": "874"
+  },
+  {
+"comment": "阿拉伯语(ASMO 708)""constant name": "ANSI_GB2312",
+"comment": "阿拉伯语(ASMO 708)""comment": "ANSI/OEM 简体中文 (中国、新加坡) ;简体中文 (GB2312).",
+"comment": "阿拉伯语(ASMO 708)""initial value": "936"
+  },
+  {
+"initial value": "874""constant name": "Ks_c_5601",
+"initial value": "874""comment": "ANSI/OEM 韩国 (统一朝鲜语代码).",
+"initial value": "874""initial value": "949"
+  },
+  {
+"initial value": "874""constant name": "Big5",
+"initial value": "874""comment": "ANSI/OEM 繁体中文 (中国台湾省;中国香港特别行政区/中国) ;中国传统 (Big5).",
+"initial value": "874""initial value": "950"
+  },
+  {
+"comment": "阿拉伯语(ASMO 708)""constant name": "IBM01141",
+"comment": "阿拉伯语(ASMO 708)""comment": "BM EBCDIC 德国 (20273 + 欧元符号) ;IBM EBCDIC (德国-欧元).",
+"comment": "阿拉伯语(ASMO 708)""initial value": "1141"
+  },
+  {
+comment": "阿拉伯语(ASMO 708)""initial value": "936""constant name": "UTF_16",
+comment": "阿拉伯语(ASMO 708)""initial value": "936""comment": "Unicode UTF-16",
+comment": "阿拉伯语(ASMO 708)""initial value": "936""initial value": "1201"
+  },
+  {
+omment": "阿拉伯语(ASMO 708)""initial value": "936""comment": "Unicode UTF-16""constant name": "MAC_GB2312",
+omment": "阿拉伯语(ASMO 708)""initial value": "936""comment": "Unicode UTF-16""comment": "MAC 简体中文 (GB 2312) ;简体中文 (Mac).",
+omment": "阿拉伯语(ASMO 708)""initial value": "936""comment": "Unicode UTF-16""initial value": "10008"
+  },
+  {
+
+"constant name": "UTF_32",
+
+"comment": "UTF-32",
+
+"initial value": "12000"
+  },
+  {
+
+"constant name": "ChineseCNS",
+
+"comment": "中国台湾省",
+
+"initial value": "20000"
+  },
+  {
+"comment": "中国台湾省""constant name": "ASCII",
+"comment": "中国台湾省""comment": "ASCII",
+"comment": "中国台湾省""initial value": "20127"
+  },
+  {
+
+"constant name": "IBM285",
+
+"comment": "IBM EBCDIC 英国",
+
+"initial value": "20285"
+  },
+  {
+"comment": "阿拉伯语(ASMO 708)""constant name": "IBM297",
+"comment": "阿拉伯语(ASMO 708)""comment": "IBM EBCDIC 法国",
+"comment": "阿拉伯语(ASMO 708)""initial value": "20297"
+  },
+  {
+
+"constant name": "GB2312",
+
+"comment": "简体中文 (GB2312) ;简体中文 (GB2312-80).",
+
+"initial value": "20936"
+  },
+  {
+
+"constant name": "ISO2022",
+
+"comment": "ISO 2022 繁体中文",
+
+"initial value": "50229"
+  },
+  {
+
+"constant name": "GB18030",
+
+"comment": "Windows XP 及更高版本:GB18030 简体中文 (4 字节);简体中文 (GB18030)",
+
+"initial value": "54936"
+  },
+  {
+"comment": "简体中文 (GB2312) ;简体中文 (GB2312-80).""constant name": "HZ_GB2312",
+"comment": "简体中文 (GB2312) ;简体中文 (GB2312-80).""comment": "HZ-GB2312 简体中文;简体中文 (HZ)",
+"comment": "简体中文 (GB2312) ;简体中文 (GB2312-80).""initial value": "52936"
+  },
+  {
+}"constant name": "UTF_7",
+}"comment": "Unicode(UTF-7)",
+}"initial value": "65000"
+  },
+  {
+}"constant name": "UTF_8",
+}"comment": "Unicode(UTF-8)",
+}"initial value": "65001"
+  }
+comment": "SSL 3.0"]
+ },
+ {
+"initial value": "65001""class name": "WinHttp状态码",
+"initial value": "65001""comment": "网页响应状态码",
+"initial value": "65001""@常量类": "整数",
+"initial value": "65001""@文档": "\"category = \\\"辅助类\\\"\"",
+"initial value": "65001""constants": [
+  {
+
+"constant name": "请求继续",
+
+"comment": "客户端应当继续发送请求.这个临时响应是用来通知客户端它的部分请求已经被服务器接收,且仍未被拒绝.客户端应当继续发送请求的剩余部分,或者如果请求已经完成,忽略这个响应.",
+
+"initial value": "@HTTP_STATUS_CONTINUE"
+  },
+  {
+
+"constant name": "切换协议",
+
+"comment": "服务器采用不同的协议来完成这个请求.",
+
+"initial value": "@HTTP_STATUS_SWITCH_PROTOCOLS"
+  },
+  {
+initial value": "65001""constants": [
+"constant name": "完成",
+initial value": "65001""constants": [
+"comment": "请求已成功,请求所希望的响应头或数据体将随此响应返回.",
+initial value": "65001""constants": [
+"initial value": "@HTTP_STATUS_OK"
+  },
+  {
+P_STATUS_OK"constant name": "完成并创建",
+P_STATUS_OK"comment": "请求已完成,而且有一个新的资源已经依据请求的需要而建立.",
+P_STATUS_OK"initial value": "@HTTP_STATUS_CREATED"
+  },
+  {
+ATUS_OK"constant name": "完成并创建""constant name": "接收中",
+ATUS_OK"constant name": "完成并创建""comment": "请求已被接受进行处理,但尚未完成处理.",
+ATUS_OK"constant name": "完成并创建""initial value": "@HTTP_STATUS_ACCEPTED"
+  },
+  {
+P_STATUS_CREATED"constant name": "完成带三方头",
+P_STATUS_CREATED"comment": "服务器已成功处理了请求,但返回的响应头不是从原始服务器上获得,而是来自本地或者第三方.",
+P_STATUS_CREATED"initial value": "@HTTP_STATUS_PARTIAL"
+  },
+  {
+
+"constant name": "完成无内容",
+
+"comment": "服务器已满足请求,但没有要发送回的新信息.",
+
+"initial value": "@HTTP_STATUS_NO_CONTENT"
+  },
+  {
+接受进行处理,但尚未完成处理."constant name": "完成重请求",
+接受进行处理,但尚未完成处理."comment": "服务器成功处理了请求,且没有返回任何内容.但是与\"完成无内容\"响应不同,返回此状态码的响应要求请求者刷新文档.该响应主要是被用于接受用户输入后,立即重置表单,以便用户开始另一次输入.",
+接受进行处理,但尚未完成处理."initial value": "@HTTP_STATUS_RESET_CONTENT"
+  },
+  {
+nstant name": "完成无内容""constant name": "完成分块",
+nstant name": "完成无内容""comment": "服务器已经成功处理了部分GET请求.类似于 FlashGet 或者迅雷这类的 HTTP 下载工具都是使用此类响应实现断点续传或者将一个大文档分解为多个下载段同时下载.",
+nstant name": "完成无内容""initial value": "@HTTP_STATUS_PARTIAL_CONTENT"
+  },
+  {
+initial value": "65001""constants": [
+"constant name": "内容为XML",
+initial value": "65001""constants": [
+"comment": "响应正文包含描述状态代码的可扩展标记语言(XML).",
+initial value": "65001""constants": [
+"initial value": "@HTTP_STATUS_WEBDAV_MULTI_STATUS"
+  },
+  {
+}"constant name": "可选重定向",
+}"comment": "被请求的资源有一系列可供选择的回馈信息,每个都有自己特定的地址和浏览器驱动的商议信息.用户或浏览器能够自行选择一个首选的地址进行重定向.",
+}"initial value": "@HTTP_STATUS_AMBIGUOUS"
+  },
+  {
+}"constant name": "链接已改变",
+}"comment": "请求的资源已分配给新的资源标识符,并且应使用返回的链接之一完成对此资源的任何引用.如果这不是一个GET或者HEAD请求,浏览器禁止自动进行重定向,除非得到用户的确认,因为请求的条件可能因此发生变化.",
+}"initial value": "@HTTP_STATUS_MOVED"
+  },
+  {
+
+"constant name": "重定向",
+
+"comment": "请求的资源位于不同的链接响应请求.",
+
+"initial value": "@HTTP_STATUS_REDIRECT"
+  },
+  {
+源位于不同的链接响应请求."constant name": "重定向请求",
+源位于不同的链接响应请求."comment": "对应当前请求的响应可以在另一个链接上被找到,而且客户端应当采用 GET 的方式访问那个资源.这个方法的存在主要是为了允许由脚本激活的POST请求输出重定向到一个新的资源.同时,禁止被缓存.当然,第二个请求(重定向)可被缓存. ",
+源位于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD"
+  },
+  {
+"initial value": "@HTTP_STATUS_MOVED""constant name": "内容无变化",
+"initial value": "@HTTP_STATUS_MOVED""comment": "如果客户端发送了一个带条件的 GET 请求且该请求已被允许,而文档的内容(自上次访问以来或者根据请求的条件)并没有改变,则服务器应当返回这个状态码.",
+"initial value": "@HTTP_STATUS_MOVED""initial value": "@HTTP_STATUS_NOT_MODIFIED"
+  },
+  {
+位于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD""constant name": "需要代理",
+位于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD""comment": "被请求的资源必须通过指定的代理才能被访问.",
+位于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD""initial value": "@HTTP_STATUS_USE_PROXY"
+  },
+  {
+于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD""initial value": "@HTTP_STATUS_USE_PROXY""constant name": "临时重定向",
+于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD""initial value": "@HTTP_STATUS_USE_PROXY""comment": "请求的资源现在临时从不同的链接响应请求.由于这样的重定向是临时的,客户端应当继续向原有地址发送请求.",
+于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD""initial value": "@HTTP_STATUS_USE_PROXY""initial value": "@HTTP_STATUS_REDIRECT_KEEP_VERB"
+  },
+  {
+位于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD""constant name": "语法错误",
+位于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD""comment": "由于语法无效,服务器无法处理请求.",
+位于不同的链接响应请求."initial value": "@HTTP_STATUS_REDIRECT_METHOD""initial value": "@HTTP_STATUS_BAD_REQUEST"
+  },
+  {
+}"constant name": "需要证书",
+}"comment": "请求的资源需要用户身份验证",
+}"initial value": "@HTTP_STATUS_DENIED"
+  },
+  {
+}"constant name": "预留",
+}"comment": "该状态码是为了将来可能的需求而预留的.",
+}"initial value": "@HTTP_STATUS_PAYMENT_REQ"
+  },
+  {
+}"constant name": "禁用访问",
+}"comment": "服务器理解请求,但拒绝请求.",
+}"initial value": "@HTTP_STATUS_FORBIDDEN"
+  },
+  {
+
+"constant name": "请求失败",
+
+"comment": "请求失败,请求所希望得到的资源未被在服务器上发现.",
+
+"initial value": "@HTTP_STATUS_NOT_FOUND"
+  },
+  {
+"comment": "请求失败,请求所希望得到的资源未被在服务器上发现.""constant name": "错误请求方法",
+"comment": "请求失败,请求所希望得到的资源未被在服务器上发现.""comment": "请求行中指定的请求方法不能被用于请求相应的资源.该响应必须返回一个Allow头信息用以表示出当前资源能够接受的请求方法的列表. ",
+"comment": "请求失败,请求所希望得到的资源未被在服务器上发现.""initial value": "@HTTP_STATUS_BAD_METHOD"
+  },
+  {
+
+"constant name": "协议头缺失",
+
+"comment": "请求的资源的内容特性无法满足请求头中的条件,因而无法生成响应实体.",
+
+"initial value": "@HTTP_STATUS_NONE_ACCEPTABLE"
+  },
+  {
+
+"constant name": "代理需凭证",
+
+"comment": "客户端必须在代理服务器上进行身份验证",
+
+"initial value": "@HTTP_STATUS_PROXY_AUTH_REQ"
+  },
+  {
+}"constant name": "请求超时",
+}"comment": "请求超时.客户端没有在服务器预备等待的时间内完成一个请求的发送.客户端可以随时再次提交这一请求而无需进行任何更改.",
+}"initial value": "@HTTP_STATUS_REQUEST_TIMEOUT"
+  },
+  {
+}"constant name": "请求冲突",
+}"comment": "由于和被请求的资源的当前状态之间存在冲突,请求无法完成.",
+}"initial value": "@HTTP_STATUS_CONFLICT"
+  },
+  {
+"initial value": "@HTTP_STATUS_REQUEST_TIMEOUT""constant name": "无效链接",
+"initial value": "@HTTP_STATUS_REQUEST_TIMEOUT""comment": "被请求的资源在服务器上已经不再可用,而且没有任何已知的转发地址.",
+"initial value": "@HTTP_STATUS_REQUEST_TIMEOUT""initial value": "@HTTP_STATUS_GONE"
+  },
+  {
+P_STATUS_GONE"constant name": "需要定义长度",
+P_STATUS_GONE"comment": "服务器拒绝在没有定义 Content-Length 头的情况下接受请求.在添加了表明请求消息体长度的有效 Content-Length 头之后,客户端可以再次提交该请求.",
+P_STATUS_GONE"initial value": "@HTTP_STATUS_LENGTH_REQUIRED"
+  },
+  {
+P_STATUS_GONE"constant name": "协议头错误",
+P_STATUS_GONE"comment": "服务器在验证在请求的头字段中给出先决条件时,没能满足其中的一个或多个.这个状态码允许客户端在获取资源时在请求的协议头中设置先决条件,以此避免该请求方法被应用到其他内容以外的资源上.",
+P_STATUS_GONE"initial value": "@HTTP_STATUS_PRECOND_FAILED"
+  },
+  {
+_STATUS_GONE"comment": "服务器拒绝在没有定义 Content-Length 头的情况下接受请求.在添加了表明请求消息体长度的有效 Content-Length 头之后,客户端可以再次提交该请求.""constant name": "数据超大",
+_STATUS_GONE"comment": "服务器拒绝在没有定义 Content-Length 头的情况下接受请求.在添加了表明请求消息体长度的有效 Content-Length 头之后,客户端可以再次提交该请求.""comment": "服务器拒绝处理当前请求,因为该请求提交的实体数据大小超过了服务器愿意或者能够处理的范围.",
+_STATUS_GONE"comment": "服务器拒绝在没有定义 Content-Length 头的情况下接受请求.在添加了表明请求消息体长度的有效 Content-Length 头之后,客户端可以再次提交该请求.""initial value": "@HTTP_STATUS_REQUEST_TOO_LARGE"
+  },
+  {
+}"constant name": "链接超长",
+}"comment": "请求的链接长度超过了服务器能够解释的长度,因此服务器拒绝对该请求提供服务.",
+}"initial value": "@HTTP_STATUS_URL_TOO_LONG"
+  },
+  {
+"initial value": "@HTTP_STATUS_REQUEST_TIMEOUT""constant name": "格式不支持",
+"initial value": "@HTTP_STATUS_REQUEST_TIMEOUT""comment": "对于当前请求的方法和所请求的资源,请求中提交的实体并不是服务器中所支持的格式,因此请求被拒绝.",
+"initial value": "@HTTP_STATUS_REQUEST_TIMEOUT""initial value": "@HTTP_STATUS_UNSUPPORTED_MEDIA"
+  },
+  {
+tial value": "@HTTP_STATUS_REQUEST_TIMEOUT""constant name": "格式不支持""constant name": "重试请求",
+tial value": "@HTTP_STATUS_REQUEST_TIMEOUT""constant name": "格式不支持""comment": "执行相应操作后,应重试请求.",
+tial value": "@HTTP_STATUS_REQUEST_TIMEOUT""constant name": "格式不支持""initial value": "@HTTP_STATUS_RETRY_WITH"
+  },
+  {
+
+"constant name": "服务器错误",
+
+"comment": "服务器不支持当前请求所需要的某个功能.当服务器无法识别请求的方法,并且无法支持其对任何资源的请求.",
+
+"initial value": "@HTTP_STATUS_SERVER_ERROR"
+  },
+  {
+"comment": "服务器不支持当前请求所需要的某个功能.当服务器无法识别请求的方法,并且无法支持其对任何资源的请求.""constant name": "功能不支持",
+"comment": "服务器不支持当前请求所需要的某个功能.当服务器无法识别请求的方法,并且无法支持其对任何资源的请求.""comment": "服务器不支持满足请求所需的功能",
+"comment": "服务器不支持当前请求所需要的某个功能.当服务器无法识别请求的方法,并且无法支持其对任何资源的请求.""initial value": "@HTTP_STATUS_NOT_SUPPORTED"
+  },
+  {
+支持满足请求所需的功能"constant name": "代理无响应",
+支持满足请求所需的功能"comment": "服务器在充当网关或代理时,从它访问的上游服务器收到无效的响应,试图满足请求.",
+支持满足请求所需的功能"initial value": "@HTTP_STATUS_BAD_GATEWAY"
+  },
+  {
+}"constant name": "服务器维护",
+}"comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.",
+}"initial value": "@HTTP_STATUS_SERVICE_UNAVAIL"
+  },
+  {
+"comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.""constant name": "网关超时",
+"comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.""comment": "请求等待网关超时",
+"comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.""initial value": "@HTTP_STATUS_GATEWAY_TIMEOUT"
+  },
+  {
+"comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.""constant name": "协议头不支持",
+"comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.""comment": "服务器不支持请求消息中使用的HTTP协议版本",
+"comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.""initial value": "@HTTP_STATUS_VERSION_NOT_SUP"
+  }
+"initial value": "65001"]
+ },
+ {
+"class name": "WinHttp错误码",
+"comment": "响应\"运行错误\"事件产生的错误码",
+"@常量类": "整数",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.""initial value": "@HTTP_STATUS_GATEWAY_TIMEOUT""constant name": "无效代理",
+comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.""initial value": "@HTTP_STATUS_GATEWAY_TIMEOUT""comment": "当无法找到指定URL的代理时",
+comment": "由于临时的服务器维护或者过载,服务器当前无法处理请求.""initial value": "@HTTP_STATUS_GATEWAY_TIMEOUT""initial value": "@ERROR_WINHTTP_AUTO_PROXY_SERVICE_ERROR"
+  },
+  {
+
+"constant name": "代理配置失败",
+
+"comment": "如果WinHTTP无法发现代理自动配置(PAC)文件的URL",
+
+"initial value": "@ERROR_WINHTTP_AUTODETECTION_FAILED"
+  },
+  {
+
+"constant name": "代理脚本出错",
+
+"comment": "在代理自动配置(PAC)文件中执行脚本代码时出错",
+
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT"
+  },
+  {
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""constant name": "选项错误",
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""comment": "如果在调用Open方法后无法请求指定选项",
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""initial value": "@ERROR_WINHTTP_CANNOT_CALL_AFTER_OPEN"
+  },
+  {
+}"constant name": "发送失败",
+}"comment": "如果在调用Send方法后无法执行请求的操作",
+}"initial value": "@ERROR_WINHTTP_CANNOT_CALL_AFTER_SEND"
+  },
+  {
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""constant name": "打开前错误操作",
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""comment": "如果在调用Open方法之前无法执行请求的操作",
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""initial value": "@ERROR_WINHTTP_CANNOT_CALL_BEFORE_OPEN"
+  },
+  {
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""constant name": "发送前错误操作",
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""comment": "如果在调用Send方法之前无法执行请求的操作",
+"initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""initial value": "@ERROR_WINHTTP_CANNOT_CALL_BEFORE_SEND"
+  },
+  {
+initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""initial value": "@ERROR_WINHTTP_CANNOT_CALL_BEFORE_OPEN""constant name": "连接失败",
+initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""initial value": "@ERROR_WINHTTP_CANNOT_CALL_BEFORE_OPEN""comment": "如果与服务器的连接失败,则返回.",
+initial value": "@ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT""initial value": "@ERROR_WINHTTP_CANNOT_CALL_BEFORE_OPEN""initial value": "@ERROR_WINHTTP_CANNOT_CONNECT"
+  },
+  {
+务器的连接失败,则返回."constant name": "编码溢出",
+务器的连接失败,则返回."comment": "在分析分块编码过程中遇到溢出条件时",
+务器的连接失败,则返回."initial value": "@ERROR_WINHTTP_CHUNKED_ENCODING_HEADER_SIZE_OVERFLOW"
+  },
+  {
+
+"constant name": "验证证书",
+
+"comment": "服务器请求客户端身份验证时",
+
+"initial value": "@ERROR_WINHTTP_CLIENT_AUTH_CERT_NEEDED"
+  },
+  {
+}"constant name": "SSL协议不兼容",
+}"comment": "与服务器的连接已重置或终止,或者遇到不兼容的SSL协议.例如,除非客户端专门启用SSL2,否则WinHTTP版本5.1不支持SSL2.",
+}"initial value": "@ERROR_WINHTTP_CONNECTION_ERROR"
+  },
+  {
+nstant name": "SSL协议不兼容""constant name": "标头数超量",
+nstant name": "SSL协议不兼容""comment": "返回的标头数大于WinHTTP可以接收的响应中",
+nstant name": "SSL协议不兼容""initial value": "@ERROR_WINHTTP_HEADER_COUNT_EXCEEDED"
+  },
+  {
+stant name": "SSL协议不兼容""initial value": "@ERROR_WINHTTP_HEADER_COUNT_EXCEEDED""constant name": "无效协议",
+stant name": "SSL协议不兼容""initial value": "@ERROR_WINHTTP_HEADER_COUNT_EXCEEDED""comment": "请求的标头无法找到",
+stant name": "SSL协议不兼容""initial value": "@ERROR_WINHTTP_HEADER_COUNT_EXCEEDED""initial value": "@ERROR_WINHTTP_HEADER_NOT_FOUND"
+  },
+  {
+stant name": "SSL协议不兼容""initial value": "@ERROR_WINHTTP_HEADER_COUNT_EXCEEDED""constant name": "标头数据超量",
+stant name": "SSL协议不兼容""initial value": "@ERROR_WINHTTP_HEADER_COUNT_EXCEEDED""comment": "收到的标头大小超过请求的限制",
+stant name": "SSL协议不兼容""initial value": "@ERROR_WINHTTP_HEADER_COUNT_EXCEEDED""initial value": "@ERROR_WINHTTP_HEADER_SIZE_OVERFLOW"
+  },
+  {
+"comment": "在代理自动配置(PAC)文件中执行脚本代码时出错""constant name": "无效句柄",
+"comment": "在代理自动配置(PAC)文件中执行脚本代码时出错""comment": "无法执行请求的操作,因为提供的句柄未处于正确的状态.",
+"comment": "在代理自动配置(PAC)文件中执行脚本代码时出错""initial value": "@ERROR_WINHTTP_INCORRECT_HANDLE_STATE"
+  },
+  {
+comment": "在代理自动配置(PAC)文件中执行脚本代码时出错""initial value": "@ERROR_WINHTTP_INCORRECT_HANDLE_STATE""constant name": "无效句柄类型",
+comment": "在代理自动配置(PAC)文件中执行脚本代码时出错""initial value": "@ERROR_WINHTTP_INCORRECT_HANDLE_STATE""comment": "此操作提供的句柄类型不正确",
+comment": "在代理自动配置(PAC)文件中执行脚本代码时出错""initial value": "@ERROR_WINHTTP_INCORRECT_HANDLE_STATE""initial value": "@ERROR_WINHTTP_INCORRECT_HANDLE_TYPE"
+  },
+  {
+}"constant name": "内部错误",
+}"comment": "发生了内部错误",
+}"initial value": "@ERROR_WINHTTP_INTERNAL_ERROR"
+  },
+  {
+
+"constant name": "无效选项值",
+
+"comment": "对请求指定了无效的选项值",
+
+"initial value": "@ERROR_WINHTTP_INVALID_OPTION"
+  },
+  {
+
+"constant name": "无响应",
+
+"comment": "无法分析服务器响应",
+
+"initial value": "@ERROR_WINHTTP_INVALID_SERVER_RESPONSE"
+  },
+  {
+
+"constant name": "链接失效",
+
+"comment": "此URL无效",
+
+"initial value": "@ERROR_WINHTTP_INVALID_URL"
+  },
+  {
+}"constant name": "登录失败",
+}"comment": "登录尝试失败",
+}"initial value": "@ERROR_WINHTTP_LOGIN_FAILURE"
+  },
+  {
+
+"constant name": "无法解析",
+
+"comment": "无法解析服务器名称",
+
+"initial value": "@ERROR_WINHTTP_NAME_NOT_RESOLVED"
+  },
+  {
+}"constant name": "操作取消",
+}"comment": "该操作已取消",
+}"initial value": "@ERROR_WINHTTP_OPERATION_CANCELLED"
+  },
+  {
+
+"constant name": "选项设置失败",
+
+"comment": "无法设置请求的选项,仅查询.",
+
+"initial value": "@ERROR_WINHTTP_OPTION_NOT_SETTABLE"
+  },
+  {
+}"constant name": "重定向失败",
+}"comment": "重定向失败,因为方案已更改或尝试重定向失败,(默认值为5次尝试).",
+}"initial value": "@ERROR_WINHTTP_REDIRECT_FAILED"
+  },
+  {
+
+"constant name": "请求重试",
+
+"comment": "函数失败可在同一请求句柄上重试所需的函数",
+
+"initial value": "@ERROR_WINHTTP_RESEND_REQUEST"
+  },
+  {
+
+"constant name": "数据超大",
+
+"comment": "当传入响应超过内部WinHTTP大小限制时返回",
+
+"initial value": "@ERROR_WINHTTP_RESPONSE_DRAIN_OVERFLOW"
+  },
+  {
+
+"constant name": "执行脚本错误",
+
+"comment": "执行脚本时遇到错误",
+
+"initial value": "@ERROR_WINHTTP_SCRIPT_EXECUTION_ERROR"
+  },
+  {
+
+"constant name": "证书名不匹配",
+
+"comment": "当证书CN名称与传递的值不匹配时返回.",
+
+"initial value": "@ERROR_WINHTTP_SECURE_CERT_CN_INVALID"
+  },
+  {
+}"constant name": "证书已过期",
+}"comment": "指示在针对当前系统时钟或签名文件中的时间戳进行验证时,所需的证书不在有效期内,或者认证链的有效期不正确.",
+}"initial value": "@ERROR_WINHTTP_SECURE_CERT_DATE_INVALID"
+  },
+  {
+
+"constant name": "脱机状态",
+
+"comment": "指示无法检查吊销,因为吊销服务器处于脱机状态.",
+
+"initial value": "@ERROR_WINHTTP_SECURE_CERT_REV_FAILED"
+  },
+  {
+
+"constant name": "证书已吊销",
+
+"comment": "指示证书已吊销",
+
+"initial value": "@ERROR_WINHTTP_SECURE_CERT_REVOKED"
+  },
+  {
+}"constant name": "证书无效",
+}"comment": "指示证书对请求的使用情况无效",
+}"initial value": "@ERROR_WINHTTP_SECURE_CERT_WRONG_USAGE"
+  },
+  {
+nstant name": "证书无效""constant name": "错误安全频道",
+nstant name": "证书无效""comment": "安全频道支持出错",
+nstant name": "证书无效""initial value": "@ERROR_WINHTTP_SECURE_CHANNEL_ERROR"
+  },
+  {
+N名称与传递的值不匹配时返回."constant name": "SSL证书错误",
+N名称与传递的值不匹配时返回."comment": "在服务器发送的安全套接字层(SSL)证书中找到一个或多个错误",
+N名称与传递的值不匹配时返回."initial value": "@ERROR_WINHTTP_SECURE_FAILURE"
+  },
+  {
+
+"constant name": "不信任根证书",
+
+"comment": "指示已处理证书链,但在信任提供程序不信任的根证书中终止.",
+
+"initial value": "@ERROR_WINHTTP_SECURE_INVALID_CA"
+  },
+  {
+"comment": "当证书CN名称与传递的值不匹配时返回.""constant name": "指示证书无效",
+"comment": "当证书CN名称与传递的值不匹配时返回.""comment": "指示证书无效",
+"comment": "当证书CN名称与传递的值不匹配时返回.""initial value": "@ERROR_WINHTTP_SECURE_INVALID_CERT"
+  },
+  {
+}"constant name": "正在关闭",
+}"comment": "正在关闭或卸载",
+}"initial value": "@ERROR_WINHTTP_SHUTDOWN"
+  },
+  {
+
+"constant name": "请求超时",
+
+"comment": "请求已超时.无论服务中设置的超时值如何,都可以由于TCP/IP超时行为而返回此错误.",
+
+"initial value": "@ERROR_WINHTTP_TIMEOUT"
+  },
+  {
+
+"constant name": "无法下载",
+
+"comment": "无法下载PAC文件.服务器可能无法访问或者返回了\"请求失败\"响应.",
+
+"initial value": "@ERROR_WINHTTP_UNABLE_TO_DOWNLOAD_SCRIPT"
+  },
+  {
+}"constant name": "脚本类型不支持",
+}"comment": "不支持脚本类型",
+}"initial value": "@ERROR_WINHTTP_UNHANDLED_SCRIPT_TYPE"
+  },
+  {
+"initial value": "@ERROR_WINHTTP_UNABLE_TO_DOWNLOAD_SCRIPT""constant name": "网址错误",
+"initial value": "@ERROR_WINHTTP_UNABLE_TO_DOWNLOAD_SCRIPT""comment": "URL指定了除\"http：\"或\"https：\"以外的方案",
+"initial value": "@ERROR_WINHTTP_UNABLE_TO_DOWNLOAD_SCRIPT""initial value": "@ERROR_WINHTTP_UNRECOGNIZED_SCHEME"
+  },
+  {
+
+"constant name": "内存溢出",
+
+"comment": "没有足够的内存可用于完成请求的操作",
+
+"initial value": "@ERROR_NOT_ENOUGH_MEMORY"
+  },
+  {
+
+"constant name": "缓冲区超大",
+
+"comment": "提供给函数的缓冲区的大小(以字节为单位)不足以包含返回的数据",
+
+"initial value": "@ERROR_INSUFFICIENT_BUFFER"
+  },
+  {
+
+"constant name": "句柄失效",
+
+"comment": "传递给应用程序编程接口的句柄(API)已失效或关闭",
+
+"initial value": "@ERROR_INVALID_HANDLE"
+  },
+  {
+}"constant name": "无更多文件",
+}"comment": "未找到更多文件",
+}"initial value": "@ERROR_NO_MORE_FILES"
+  },
+  {
+"initial value": "@ERROR_WINHTTP_LOGIN_FAILURE""constant name": "无更多项目",
+"initial value": "@ERROR_WINHTTP_LOGIN_FAILURE""comment": "未找到更多项目",
+"initial value": "@ERROR_WINHTTP_LOGIN_FAILURE""initial value": "@ERROR_NO_MORE_ITEMS"
+  },
+  {
+
+"constant name": "未加载协议",
+
+"comment": "未使用可识别的协议.没有指定如\"http\"、\"https\"协议方式.",
+
+"initial value": "@ERROR_NOT_SUPPORTED"
+  }
+]
+ },
+ {
+"class name": "WinHttp程序",
+"comment": "代表整个WinHttp程序",
+"methods": [
+  {
+"comment": "未使用可识别的协议.没有指定如\"http\"、\"https\"协议方式.""method name": "网址",
+"comment": "未使用可识别的协议.没有指定如\"http\"、\"https\"协议方式.""comment": "取最后一次使用\"打开\"方法所提交的网址",
+"comment": "未使用可识别的协议.没有指定如\"http\"、\"https\"协议方式.""type": "property getter",
+"comment": "未使用可识别的协议.没有指定如\"http\"、\"https\"协议方式.""data type": "文本型"
+  },
+  {
+}"method name": "注册事件",
+}"comment": "响应事件前需使用一次该方法",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+"comment": "响应事件前需使用一次该方法""method name": "取对象",
+"comment": "响应事件前需使用一次该方法""data type": "COM对象类"
+  },
+  {
+"@禁止流程检查": "真""method name": "开始接收数据",
+"@禁止流程检查": "真""comment": "当响应数据开始接收时发生该事件",
+"@禁止流程检查": "真""type": "event",
+"@禁止流程检查": "真""data type": "整数",
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "状态码",
+"comment": "接收使用响应数据返回的标准状态代码.",
+"data type": "整数"
+   },
+   {
+"parameter name": "内容类型",
+"comment": "指定收到的内容类型,例如\"text/html\"、\"image/gif\"、\"application/octet-stream\".",
+"data type": "文本型"
+   }
+"@禁止流程检查": "真"]
+  },
+  {
+comment": "指定收到的内容类型,例如\"text/html\"、\"image/gif\"、\"application/octet-stream\".""method name": "接收到数据",
+comment": "指定收到的内容类型,例如\"text/html\"、\"image/gif\"、\"application/octet-stream\".""comment": "当响应中提供数据时发生该事件",
+comment": "指定收到的内容类型,例如\"text/html\"、\"image/gif\"、\"application/octet-stream\".""type": "event",
+comment": "指定收到的内容类型,例如\"text/html\"、\"image/gif\"、\"application/octet-stream\".""data type": "整数",
+comment": "指定收到的内容类型,例如\"text/html\"、\"image/gif\"、\"application/octet-stream\".""parameters": [
+   {
+"parameter name": "接收数据",
+"comment": "提供所接收到的数据",
+"data type": "字节集类"
+   }
+comment": "指定收到的内容类型,例如\"text/html\"、\"image/gif\"、\"application/octet-stream\"."]
+  },
+  {
+ment": "当证书CN名称与传递的值不匹配时返回.""constant name": "指示证书无效""method name": "接收数据完成",
+ment": "当证书CN名称与传递的值不匹配时返回.""constant name": "指示证书无效""comment": "完成响应数据时发生该事件",
+ment": "当证书CN名称与传递的值不匹配时返回.""constant name": "指示证书无效""type": "event",
+ment": "当证书CN名称与传递的值不匹配时返回.""constant name": "指示证书无效""data type": "整数"
+  },
+  {
+
+"method name": "运行错误",
+
+"comment": "当应用程序中运行错误时发生该事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "错误码",
+"comment": "接收错误的数值",
+"data type": "WinHttp错误码"
+   },
+   {
+"parameter name": "错误摘要",
+"comment": "指定发生的错误的简短说明",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "创建",
+ }"comment": "创建WinHttpRequest5.1对象",
+ }"result comment": "成功返回真,失败返回假.",
+ }"data type": "逻辑型"
+  },
+  {
+
+"method name": "清除",
+
+"comment": "  清除所已经创建的WinHttpRequest5.1对象,如果本对象在线程中被创建,\n则在线程退出之前必须调用本方法进行清除.也就是说: 创建和清除必须在\n同一个线程中调用.\n  本方法调用后,如仍需使用本对象,需要再次调用\"创建\"方法."
+  },
+  {
+}"method name": "是否创建",
+}"comment": "返回是否已创建对象",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+"comment": "返回是否已创建对象""method name": "状态码",
+"comment": "返回是否已创建对象""comment": "取状态码",
+"comment": "返回是否已创建对象""result comment": "WinHttp状态码.*",
+"comment": "返回是否已创建对象""type": "property getter",
+"comment": "返回是否已创建对象""data type": "WinHttp状态码"
+  },
+  {
+"comment": "返回是否已创建对象""method name": "状态文本",
+"comment": "返回是否已创建对象""comment": "取状态文本",
+"comment": "返回是否已创建对象""type": "property getter",
+"comment": "返回是否已创建对象""data type": "文本型"
+  },
+  {
+
+"method name": "取响应头",
+
+"comment": "执行\"发送\"相关的方法成功响应后,所返回协议头.",
+
+"result comment": "如要取出标头不存在,则返回空文本.",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "标头名称",
+"comment": "指定不区分大小写的标头名称,默认为空文本,表示取出所有响应头.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "打开",
+
+"comment": "打开与资源连接,如果WinHttpRequest对象尚未创建,将自动创建.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "网址",
+"comment": "完整的网页地址,必须包含\"http://\"或者\"https://\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "打开HTTP连接的访问方式",
+"data type": "WinHttp访问方式",
+"@默认值": "WinHttp访问方式.GET"
+   },
+   {
+"parameter name": "异步模式",
+"comment": "如果值为真,则表示以异步模式打开HTTP连接.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "网页访问",
+
+"comment": "访问网页资源,成功返回真,失败返回假.\n如果WinHttpRequest对象尚未创建,将自动创建.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "网址",
+"comment": "完整的网页地址,必须包含\"http://\"或者\"https://\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式",
+"comment": "WinHttp访问方式.*",
+"data type": "WinHttp访问方式",
+"@默认值": "WinHttp访问方式.GET"
+   },
+   {
+"parameter name": "文本提交",
+"comment": "二选一 \"POST\"专用,提交文本型数据,为空文本时忽略该参数.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "字节集提交",
+"comment": "二选一 \"POST\"专用,提交字节集数据,默认为忽略该参数.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookie",
+"comment": "设置提交时的cookie,为空文本表示无.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "合并Cookie",
+"comment": "当设置需要返回Cookie时(\"返回协议头\"参数不为默认值),指定是否将\"提交Cookie\"和访问后获得的Cookie合并到一起返回.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "附加协议头",
+"comment": "多协议头请用换行符隔开,以换行符\"\\r\\n\"分隔,以\"头名称\"+\": \"+\"值\"为内容的形式.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否补全必要协议头",
+"comment": "设置是否自动添加必要的协议头,如果值为假,则不添加非传入协议头.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "允许重定向",
+"comment": "指定访问网页时是否允许自动重定向",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "代理地址",
+"comment": "代理地址,格式为 8.8.8.8:88,如果值不为空文本,则根据\"代理地址\"、\"代理标识\"、\"代理账号\"、\"代理密码\"指定相关参数进行设置代理服务器.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理标识",
+"comment": "设置代理方式或登录服务器方式,如果\"代理地址\"的值为空文本,则忽略该参数.",
+"data type": "WinHttp代理标识",
+"@默认值": "WinHttp代理标识.代理"
+   },
+   {
+"parameter name": "代理账号",
+"comment": "代理账号,如果\"代理地址\"的值为空文本,则忽略该参数.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"comment": "代理密码,如果\"代理地址\"的值为空文本,则忽略该参数.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "超时",
+"comment": "以毫秒为单位,设置用于超时时间.默认为15000毫秒即15秒,-1为无限等待.",
+"data type": "整数",
+"@默认值": "15000"
+   },
+   {
+"parameter name": "返回Cookie",
+"comment": "用于取回访问结果所带Cookies,如\"合并Cookie\"为真时,则将传入Cookie和返回Cookie合并一起并返回,请传递用于接收返回Cookie的文本变量. 仅当方法返回真时有效.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回协议头",
+"comment": "用于取回访问结果所带协议头,请传递用于接收协议头的文本变量. 仅当方法返回真时有效.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回状态码",
+"comment": "用于取回响应返回的状态码. 仅当方法返回真时有效.",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回字节集",
+"comment": "用于取回访问后所得到的字节集数据. 仅当方法返回真时有效.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "JSON类型提交",
+"comment": "指定post提交数据时如果指定了需要补全协议头(\"是否补全必要协议头\"参数值为真)且未指定\"Content-Type\"头字段,是否使用json内容类型提交.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "取资源尺寸",
+
+"comment": "获取网络下载资源的大小",
+
+"result comment": "成功返回所获取的尺寸值,失败返回-1.",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "网址",
+"comment": "完整的网页地址,必须包含\"http://\"或者\"https://\".",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "合并Cookie",
+
+"comment": "将两个Cookie文本进行替换合并",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "旧Cookie",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新Cookie",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "响应字节集",
+
+"comment": "得到响应字节集",
+
+"type": "property getter",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "响应文本",
+
+"comment": "响应实体正文检索为文本",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+"result comment": "成功返回所获取的尺寸值,失败返回-1.""method name": "中止",
+"result comment": "成功返回所获取的尺寸值,失败返回-1.""comment": "中止发送请求",
+"result comment": "成功返回所获取的尺寸值,失败返回-1.""data type": "逻辑型"
+  },
+  {
+}"method name": "取错误码",
+}"comment": "返回当前操作错误码值,为\"COM方法调用结果.成功\"表示无错误.",
+}"data type": "COM方法调用结果"
+  },
+  {
+
+"method name": "重定向网址",
+
+"comment": "在调用\"打开\"方法之前无法使用.此选项可用于检查\"发送\"方法完成后的网址,以验证是否发生了任何重定向.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "请求编码",
+"data type": "文本型""comment": "用于\"打开\"方法中所传递字符串的代码页.",
+"data type": "文本型""type": "property getter",
+"data type": "文本型""data type": "WinHttp编码"
+  },
+  {
+
+"method name": "请求编码",
+
+"comment": "默认值为\"UTF-8\"编码方式.设置\"打开\"方法中所传递字符串的代码页.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "WinHttp编码"
+   }
+
+]
+  },
+  {
+ }"method name": "取转义符",
+ }"comment": "返回是否将网址路径或查询组件中的不安全字符转换为转义序列",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "转义位置",
+"comment": "0表示网址+参数; 1表示网址; 2表示参数.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "置转义符",
+}"comment": "指示是否将网址路径或查询组件中的不安全字符转换为转义序列",
+}"parameters": [
+   {
+"parameter name": "转义位置",
+"comment": "0表示链接+参数;1表示网址;2表示参数.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的值",
+"comment": "是否启用转义符",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "启用跟踪",
+}"comment": "返回当前是否启用了跟踪设施",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+}"method name": "启用跟踪",
+}"comment": "指定当前是否启用跟踪设施,默认为假.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+"parameters": [
+"method name": "安全链接",
+"parameters": [
+"comment": "返回是否允许安全链接到非安全链接重定向",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "逻辑型"
+  },
+  {
+ }"method name": "安全链接",
+ }"comment": "  指定是否允许安全链接到非安全链接重定向,默认情况下,所有重定向都会自动遵循,\n但从安全(https)网址传输到非安全(http)网址的重定向除外.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+
+"method name": "使用HTTP1_1",
+
+"comment": "返回是否应使用HTTP/1.1,如果值为假时,则表示使用使用HTTP/1.0. SP1/SP3的Windows 2000或XP不支持此属性.",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+"method name": "使用HTTP1_1",
+"comment": "设置是否使用HTTP/1.1,默认值为真,使用HTTP/1.1.如果值为假时,则表示使用使用HTTP/1.0. SP1/SP3的Windows 2000或XP不支持此属性.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"comment": "如果真为假时,则表示使用使用HTTP/1.0.",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+"method name": "验证证书",
+"comment": "返回是否对证书身份进行验证",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+}"method name": "验证证书",
+}"comment": "启用或禁用对证书身份验证的支持,默认情况下,禁用对证书身份的验证.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+
+"method name": "证书检查",
+
+"comment": "返回在SSL协商期间是否启用服务器证书吊销检查. SP1/SP3的Windows 2000或XP不支持此属性.",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+ameters": [
+"method name": "安全链接""method name": "证书检查",
+ameters": [
+"method name": "安全链接""comment": "设置在SSL协商期间是否启用服务器证书吊销检查.\n当服务器提供证书时,将执行检查以确定证书是否已由其颁发者吊销.\n如果证书确实被吊销,或者吊销检查失败,因为无法下载证书吊销列表,请求将失败.\nSP1/SP3的Windows 2000或XP不支持此属性.",
+ameters": [
+"method name": "安全链接""type": "property setter",
+ameters": [
+"method name": "安全链接""parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "逻辑型"
+   }
+ameters": [
+"method name": "安全链接"]
+  },
+  {
+thod name": "验证证书""method name": "取SSL版本",
+thod name": "验证证书""comment": "返回使用哪些安全协议.此选项选择客户端可接受的协议.协议在安全套接字层 (SSL) 握手期间协商.这可以是一个或多个标志的组合.",
+thod name": "验证证书""result comment": "WinHttpSSL版本.*,可能是一个或多个标志的组合.",
+thod name": "验证证书""data type": "整数"
+  },
+  {
+thod name": "验证证书""method name": "置SSL版本",
+thod name": "验证证书""comment": "设置使用哪些安全协议.此选项选择客户端可接受的协议.协议在安全套接字层 (SSL) 握手期间协商.这可以是一个或多个标志的组合.",
+thod name": "验证证书""parameters": [
+   {
+"parameter name": "SSL2",
+"comment": "如果值为真,则代表使用SSL2.0安全协议.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "SSL3",
+"comment": "如果值为真,则代表使用SSL3.0安全协议.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "TLS1",
+"comment": "如果值为真,则代表使用TLS1.0安全协议.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+thod name": "验证证书"]
+  },
+  {
+
+"method name": "取忽略证书",
+
+"comment": "返回忽略哪个服务器证书错误.这可能是一个或多个标志的组合.",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "置忽略证书",
+
+"comment": "设置忽略哪个服务器证书错误.可以是一个或多个标志的组合.",
+
+"parameters": [
+   {
+"parameter name": "未知机构",
+"comment": "为真时,表示忽略未知机构证书.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "错误",
+"comment": "为真时,表示忽略错误证书.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "无效名称",
+"comment": "为真时,表示忽略无效名称证书.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "过期",
+"comment": "为真时,表示忽略过期证书.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "重定向",
+
+"comment": "返回服务器指定资源的新位置时是否自动重定向请求",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "重定向",
+
+"comment": "设置服务器指定资源的新位置时是否自动重定向请求",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "重定向数量",
+
+"comment": "返回最大重定向数量",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+}"method name": "重定向数量",
+}"comment": "设置最大重定向数量,默认数量为10,此限制可防止未经授权的站点在大量重定向后停止响应. SP1/SP3的Windows 2000或XP不支持此属性.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "头数据限制量",
+
+"comment": "返回访问网址所返回标头部分的数据最大尺寸限制量",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+"comment": "返回访问网址所返回标头部分的数据最大尺寸限制量""method name": "头数据限制量",
+"comment": "返回访问网址所返回标头部分的数据最大尺寸限制量""comment": "设置访问网址所返回标头部分的数据最大尺寸限制量.默认值为 64 KB.此设置用于防止恶意服务器发送具有无限数量的标头数据,保护客户端免受尝试停止客户端的恶意服务器的影响.",
+"comment": "返回访问网址所返回标头部分的数据最大尺寸限制量""type": "property setter",
+"comment": "返回访问网址所返回标头部分的数据最大尺寸限制量""parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "整数"
+   }
+"comment": "返回访问网址所返回标头部分的数据最大尺寸限制量"]
+  },
+  {
+
+"method name": "数据限制量",
+
+"comment": "返回访问网址所返回数据最大尺寸限制量,默认值为1MB.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "数据限制量",
+
+"comment": "设置访问网址所返回数据最大尺寸限制量,SP1/SP3的Windows 2000或XP不支持此属性.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "临时证书",
+
+"comment": "返回是否在SSL证书身份验证操作期间临时恢复对SSL证书的认证",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "临时证书",
+
+"comment": "设置是否在SSL证书身份验证操作期间临时恢复对SSL证书的认证,默认为真.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"comment": "将此选项设置为假,则表示在执行证书身份验证操作时保持模拟证书方式.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "SSL证书",
+"parameters": [
+"comment": "返回发送到服务器进行身份验证的客户端证书",
+"parameters": [
+"result comment": "SSL证书路径",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "文本型"
+  },
+  {
+parameters": [
+"type": "property getter""method name": "SSL证书",
+parameters": [
+"type": "property getter""comment": "指定发送到服务器进行身份验证的客户端证书",
+parameters": [
+"type": "property getter""type": "property setter",
+parameters": [
+"type": "property getter""parameters": [
+   {
+"parameter name": "所欲设置的值",
+"comment": "SSL证书路径",
+"data type": "文本型"
+   }
+parameters": [
+"type": "property getter"]
+  },
+  {
+
+"method name": "用户代理",
+
+"comment": "英文名:UserAgent,简称UA.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "用户代理",
+
+"comment": "英文名:UserAgent,简称UA.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "所欲设置的值""method name": "取Cookie",
+ameter name": "所欲设置的值""comment": "执行\"发送\"相关的方法成功响应后,所返回协议头中的Cookie标头.",
+ameter name": "所欲设置的值""data type": "文本型",
+ameter name": "所欲设置的值""parameters": [
+   {
+"parameter name": "子名称",
+"comment": "根据子名称取出其中一条Cookie的值.如果为空文本,则表示取出所有包含名称的Cookie文本.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ameter name": "所欲设置的值"]
+  },
+  {
+}"method name": "置Cookie",
+}"comment": "设置网页访问时协议头中的Cookie标头.",
+}"parameters": [
+   {
+"parameter name": "所欲设置的值",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "发送字节集",
+"comment": "发送字节集,执行开始访问.",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "要发送的内容",
+"comment": "要发送的内容",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+data type": "字节集类""method name": "发送文本",
+data type": "字节集类""comment": "发送文本,执行开始访问.",
+data type": "字节集类""data type": "逻辑型",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "要发送的内容",
+"comment": "要发送的内容",
+"data type": "文本型"
+   }
+data type": "字节集类"]
+  },
+  {
+"method name": "发送",
+"comment": "执行开始访问",
+"data type": "逻辑型"
+  },
+  {
+data type": "逻辑型""method name": "置代理策略",
+data type": "逻辑型""comment": "自动代理登录策略",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "代理策略",
+"comment": "WinHttp代理策略.*,指定当前的自动代理登录策略.",
+"data type": "WinHttp代理策略"
+   }
+data type": "逻辑型"]
+  },
+  {
+ }"method name": "置代理",
+ }"comment": "设置代理服务器信息",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "代理标志",
+"comment": "WinHttp代理标志.*,指定怎样设置代理.",
+"data type": "WinHttp代理标志"
+   },
+   {
+"parameter name": "代理服务器",
+"comment": "带端口号代理服务器,如:\"127.0.0.1:8888\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "域绕过列表",
+"comment": "设置为域绕过列表,支持*通配符,如:\"*.microsoft.com\".",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ }]
+  },
+  {
+]"method name": "置协议头",
+]"comment": "添加或更改 HTTP 请求标头.",
+]"data type": "逻辑型",
+]"parameters": [
+   {
+"parameter name": "头名称",
+"comment": "指定要设置的标头的名称,例如\"depth\".此参数不应包含冒号,并且必须是\"HTTP\"标头的实际文本.如果为空文本,则表示用于多标头.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "所欲设置的值",
+"comment": "指定要把\"头名称\"设置为标头所赋的值.如果\"头名称\"为空文本,则表示多行协议头,以换行符\"\\r\\n\"分隔,以\"头名称\"+\": \"+\"值\"为内容的形式.",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+}"method name": "删除协议头",
+}"comment": "删除 HTTP 请求标头.",
+}"parameters": [
+   {
+"parameter name": "头名称",
+"comment": "指定要删除的标头的名称,例如\"depth\".此参数不应包含冒号,并且必须是\"HTTP\"标头的实际文本.\n如果欲同时删除多个标头,请使用换行符\"\\r\\n\"分隔.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "置超时时间",
+}"comment": "指定发送/接收操作的各个超时组件(以毫秒为单位),如果值为0或-1时,则表示无限等待.大于0的值则表示超时值.",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "解析主机名",
+"comment": "指定解析主机名时,DNS超时时间.默认为无限等待.以毫秒为单位.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "建立套接字",
+"comment": "使用目标服务器建立通信套接字时应用的超时值,默认值为60秒.以毫秒为单位.",
+"data type": "整数",
+"@默认值": "60000"
+   },
+   {
+"parameter name": "发送",
+"comment": "在将通信套接字上的单个请求数据包发送到目标服务器应用时的超时值.如果使用分包发送:则适用于单独发送每个数据包超时时间.默认值为30秒.以毫秒为单位.",
+"data type": "整数",
+"@默认值": "30000"
+   },
+   {
+"parameter name": "响应",
+"comment": "从目标服务器接收响应数据包时应用的超时值.如果使用分包响应时,则适用于从套接字提取每个数据包的数据超时时间.默认值为30秒.以毫秒为单位.",
+"data type": "整数",
+"@默认值": "30000"
+   }
+}]
+  },
+  {
+
+"method name": "等待异步响应",
+
+"comment": "等待异步发送方法完成(以秒为单位可选超时值)",
+
+"result comment": "返回值为真时,表示已收到响应.返回值为假时,表示超过指定的超时期限.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "超时值",
+"comment": "超时值,以秒为单位.默认超时是无限的.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+"method name": "置证书",
+"comment": "用于HTTPS服务器选择要发送到安全超文本传输协议的客户端证书.",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "证书位置",
+"comment": "指定客户端证书的位置、 证书存储和使用者.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "置代理凭证",
+"comment": "将凭据设置为与 HTTP 服务器一起使用,无论是代理服务器还是原始服务器.若要对服务器和代理进行身份验证,则必须分别调用两次.",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "凭据对象",
+"comment": "指定使用凭据传递给服务器或代理",
+"data type": "WinHttp代理标识"
+   },
+   {
+"parameter name": "用户名",
+"comment": "指定身份验证的用户名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "指定身份验证的密码",
+"data type": "文本型"
+   }
+]
+  }
+]
+ }
+真时,表示已收到响应.返回值为假时,表示超过指定的超时期限.]
+}

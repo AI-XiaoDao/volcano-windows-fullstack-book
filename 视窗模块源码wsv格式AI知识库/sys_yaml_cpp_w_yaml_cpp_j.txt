@@ -1,0 +1,1278 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"YAML数据访问支持".
+
+{
+问本程序中的接口需要引用模块"YAML数据访问支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"YAML数据访问支持"."package name": "火山.基本",
+问本程序中的接口需要引用模块"YAML数据访问支持"."comment": "开源项目:https://github.com/jbeder/yaml-cpp\n开源许可:https://github.com/jbeder/yaml-cpp/blob/master/LICENSE\n火山模块链接方式：\n  1.默认: 本库默认使用\"3.静态\"为链接方式;\n  2.动态: 使用动态链接方式(注意:此时必须将\"使用静态C++运行时库\"属性设置为假);\n  3.静态: 使用静态链接方式(注意:此时必须将\"使用静态C++运行时库\"属性设置为真);",
+问本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.头文件搜寻目录": "\"include\"",
+问本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.外部头文件": "\"<yaml-cpp/yaml.h>\"",
+问本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.附属文件.dynamic": "\"dll\\\\$(p)\\\\$(d)\\\\yaml-cpp.dll\"",
+问本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.外部库.dynamic": "\"dll\\\\$(p)\\\\$(d)\\\\yaml-cpp.lib\"",
+问本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.外部库.non_dynamic": "\"lib\\\\$(p)\\\\$(d)\\\\yaml-cpp.lib\"",
+问本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.预定义宏.non_dynamic": "\"YAML_CPP_STATIC_DEFINE\"",
+问本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.需求VS版本": "\"16-\"",
+问本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.使用静态运行时库.dynamic": "假",
+问本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.使用静态运行时库.non_dynamic": "真",
+问本程序中的接口需要引用模块"YAML数据访问支持"."classes": [
+ {
+"class name": "YAML输出样式",
+"@常量类": "整数",
+"constants": [
+  {
+ss name": "YAML输出样式""constant name": "默认",
+ss name": "YAML输出样式""comment": "(0)以默认样式展示",
+ss name": "YAML输出样式""initial value": "@ YAML::EmitterStyle::value::Default"
+  },
+  {
+节点变整数值""constant name": "块",
+节点变整数值""comment": "(1)以块样式展示",
+节点变整数值""initial value": "@ YAML::EmitterStyle::value::Block"
+  },
+  {
+s name": "YAML输出样式""initial value": "@ YAML::EmitterStyle::value::Default""constant name": "流",
+s name": "YAML输出样式""initial value": "@ YAML::EmitterStyle::value::Default""comment": "(2)以流样式展示",
+s name": "YAML输出样式""initial value": "@ YAML::EmitterStyle::value::Default""initial value": "@ YAML::EmitterStyle::value::Flow"
+  }
+]
+ },
+ {
+"class name": "YAML节点类型",
+"@常量类": "整数",
+"constants": [
+  {
+ame": "YAML输出样式""constant name": "默认""constant name": "未定义",
+ame": "YAML输出样式""constant name": "默认""comment": "(0)未定义",
+ame": "YAML输出样式""constant name": "默认""initial value": "@ YAML::NodeType::value::Undefined"
+  },
+  {
+点变整数值""comment": "(1)以块样式展示""constant name": "空",
+点变整数值""comment": "(1)以块样式展示""comment": "(1)空类型",
+点变整数值""comment": "(1)以块样式展示""initial value": "@ YAML::NodeType::value::Null"
+  },
+  {
+节点变整数值""constant name": "标量",
+节点变整数值""comment": "(2)单个的,不可再分的值.",
+节点变整数值""initial value": "@ YAML::NodeType::value::Scalar"
+  },
+  {
+}"constant name": "数组",
+}"comment": "(3)一组按次序排列的值,又称为序列(sequence)/列表(list).",
+}"initial value": "@ YAML::NodeType::value::Sequence"
+  },
+  {
+= 对象类"constant name": "对象",
+= 对象类"comment": "(4)键值对的集合,又称为映射(mapping)/哈希(hashes)/字典(dictionary).",
+= 对象类"initial value": "@ YAML::NodeType::value::Map"
+  }
+]
+ },
+ {
+"class name": "YAML设计标志",
+"@常量类": "整数",
+"constants": [
+  {
+"constant name": "自动",
+"comment": "自动",
+"initial value": "@ YAML::EMITTER_MANIP::Auto"
+  },
+  {
+}"constant name": "标签种类",
+}"comment": "[通常]",
+}"initial value": "@ YAML::EMITTER_MANIP::TagByKind"
+  },
+  {
+本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.预定义宏.non_dynamic": "\"YAML_CPP_STATIC_DEFINE\"""constant name": "换行符",
+本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.预定义宏.non_dynamic": "\"YAML_CPP_STATIC_DEFINE\"""comment": "将下一个内容输出到新的一行",
+本程序中的接口需要引用模块"YAML数据访问支持"."@视窗.预定义宏.non_dynamic": "\"YAML_CPP_STATIC_DEFINE\"""initial value": "@ YAML::EMITTER_MANIP::Newline"
+  },
+  {
+点变整数值""initial value": "@ YAML::EmitterStyle::value::Block""constant name": "编码_非Ascii",
+点变整数值""initial value": "@ YAML::EmitterStyle::value::Block""comment": "输出始终为UTF-8.默认情况下将输出尽可能多的内容,而不会转义任何字符.",
+点变整数值""initial value": "@ YAML::EmitterStyle::value::Block""initial value": "@ YAML::EMITTER_MANIP::EmitNonAscii"
+  },
+  {
+constants": [
+"constant name": "编码_Ascii",
+constants": [
+"comment": "将输出限制为ASCII,对非Ascii的字符进行转义处理.",
+constants": [
+"initial value": "@ YAML::EMITTER_MANIP::EscapeNonAscii"
+  },
+  {
+}"constant name": "编码_Json",
+}"comment": "[输出字符集]",
+}"initial value": "@ YAML::EMITTER_MANIP::EscapeAsJson"
+  },
+  {
+constants": [
+"constant name": "文本样式_单引号",
+constants": [
+"comment": "在字符串前后加上\"'\"单引号,将字符串包裹起来.",
+constants": [
+"initial value": "@ YAML::EMITTER_MANIP::SingleQuoted"
+  },
+  {
+"initial value": "@ YAML::EMITTER_MANIP::EscapeAsJson""constant name": "文本样式_双引号",
+"initial value": "@ YAML::EMITTER_MANIP::EscapeAsJson""comment": "在字符串前后加上\"\"\"双引号,将字符串包裹起来.",
+"initial value": "@ YAML::EMITTER_MANIP::EscapeAsJson""initial value": "@ YAML::EMITTER_MANIP::DoubleQuoted"
+  },
+  {
+constants": [
+"constant name": "文本样式_字面量",
+constants": [
+"comment": "以字面量的方式展示字符串.",
+constants": [
+"initial value": "@ YAML::EMITTER_MANIP::Literal"
+  },
+  {
+}"constant name": "空样式_小写",
+}"comment": "空白名称或值将以[NULL]展示",
+}"initial value": "@ YAML::EMITTER_MANIP::LowerNull"
+  },
+  {
+}"constant name": "空样式_大写",
+}"comment": "空白名称或值将以[null]展示",
+}"initial value": "@ YAML::EMITTER_MANIP::UpperNull"
+  },
+  {
+
+"constant name": "空样式_驼峰",
+
+"comment": "空白名称或值将以[Null]展示",
+
+"initial value": "@ YAML::EMITTER_MANIP::CamelNull"
+  },
+  {
+}"constant name": "空样式_波浪",
+}"comment": "空白名称或值将以[~]展示",
+}"initial value": "@ YAML::EMITTER_MANIP::TildeNull"
+  },
+  {
+}"constant name": "逻辑样式_是否",
+}"comment": "逻辑型将以[yes, no]展示",
+}"initial value": "@ YAML::EMITTER_MANIP::YesNoBool"
+  },
+  {
+"initial value": "@ YAML::EMITTER_MANIP::TildeNull""constant name": "逻辑样式_真假",
+"initial value": "@ YAML::EMITTER_MANIP::TildeNull""comment": "逻辑型将以[true, false]展示",
+"initial value": "@ YAML::EMITTER_MANIP::TildeNull""initial value": "@ YAML::EMITTER_MANIP::TrueFalseBool"
+  },
+  {
+"comment": "逻辑型将以[yes, no]展示""constant name": "逻辑样式_开关",
+"comment": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示",
+"comment": "逻辑型将以[yes, no]展示""initial value": "@ YAML::EMITTER_MANIP::OnOffBool"
+  },
+  {
+nstant name": "逻辑样式_是否""constant name": "逻辑样式_大写",
+nstant name": "逻辑样式_是否""comment": "逻辑型中的值将转换为大写,如:true将转换为TRUE,on将转换为ON..",
+nstant name": "逻辑样式_是否""initial value": "@ YAML::EMITTER_MANIP::UpperCase"
+  },
+  {
+
+"constant name": "逻辑样式_小写",
+
+"comment": "逻辑型中的值将转换为大写,如:TRUE将转换为true,ON将转换为on..",
+
+"initial value": "@ YAML::EMITTER_MANIP::LowerCase"
+  },
+  {
+"comment": "逻辑型中的值将转换为大写,如:TRUE将转换为true,ON将转换为on..""constant name": "逻辑样式_驼峰",
+"comment": "逻辑型中的值将转换为大写,如:TRUE将转换为true,ON将转换为on..""comment": "逻辑型中的值将以驼峰命名法展示(每个单词的首字母大写).",
+"comment": "逻辑型中的值将转换为大写,如:TRUE将转换为true,ON将转换为on..""initial value": "@ YAML::EMITTER_MANIP::CamelCase"
+  },
+  {
+comment": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细",
+comment": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""comment": "逻辑型中的值将详细展示.",
+comment": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""initial value": "@ YAML::EMITTER_MANIP::LongBool"
+  },
+  {
+ent": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细""constant name": "逻辑样式_简单",
+ent": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细""comment": "逻辑型中的值将简单展示(只展示单词首字母).",
+ent": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细""initial value": "@ YAML::EMITTER_MANIP::ShortBool"
+  },
+  {
+nt": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细""comment": "逻辑型中的值将简单展示(只展示单词首字母).""constant name": "整数样式_十进制",
+nt": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细""comment": "逻辑型中的值将简单展示(只展示单词首字母).""comment": "整数型中的值将以十进制方式展示.",
+nt": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细""comment": "逻辑型中的值将简单展示(只展示单词首字母).""initial value": "@ YAML::EMITTER_MANIP::Dec"
+  },
+  {
+nt": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细""comment": "逻辑型中的值将简单展示(只展示单词首字母).""constant name": "整数样式_十六进制",
+nt": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细""comment": "逻辑型中的值将简单展示(只展示单词首字母).""comment": "整数型中的值将以十六进制方式展示.",
+nt": "逻辑型将以[yes, no]展示""comment": "逻辑型将以[on, off]展示""constant name": "逻辑样式_详细""comment": "逻辑型中的值将简单展示(只展示单词首字母).""initial value": "@ YAML::EMITTER_MANIP::Hex"
+  },
+  {
+ment": "逻辑型中的值将转换为大写,如:TRUE将转换为true,ON将转换为on..""constant name": "逻辑样式_驼峰""constant name": "整数样式_八进制",
+ment": "逻辑型中的值将转换为大写,如:TRUE将转换为true,ON将转换为on..""constant name": "逻辑样式_驼峰""comment": "整数型中的值将以八进制方式展示.",
+ment": "逻辑型中的值将转换为大写,如:TRUE将转换为true,ON将转换为on..""constant name": "逻辑样式_驼峰""initial value": "@ YAML::EMITTER_MANIP::Oct"
+  },
+  {
+nt name": "逻辑样式_是否""constant name": "逻辑样式_大写""constant name": "开始设计文档",
+nt name": "逻辑样式_是否""constant name": "逻辑样式_大写""comment": "开始设计文档,主要用于设计多文档结构,设计结束后必须置入配套的\"结束设计文档\".",
+nt name": "逻辑样式_是否""constant name": "逻辑样式_大写""initial value": "@ YAML::EMITTER_MANIP::BeginDoc"
+  },
+  {
+}"constant name": "结束设计文档",
+}"comment": "结束设计文档,当\"开始设计文档\"设计结束后使用.",
+}"initial value": "@ YAML::EMITTER_MANIP::EndDoc"
+  },
+  {
+
+"constant name": "开始设计数组",
+
+"comment": "开始设计数组结构,设计结束后必须置入配套的\"结束设计数组\".",
+
+"initial value": "@ YAML::EMITTER_MANIP::BeginSeq"
+  },
+  {
+
+"constant name": "结束设计数组",
+
+"comment": "结束设计数组,当\"开始设计数组\"设计结束后使用.",
+
+"initial value": "@ YAML::EMITTER_MANIP::EndSeq"
+  },
+  {
+
+"constant name": "样式_流",
+
+"comment": "设置当前结构输出风格为流样式",
+
+"initial value": "@ YAML::EMITTER_MANIP::Flow"
+  },
+  {
+
+"constant name": "样式_块",
+
+"comment": "设置当前结构输出风格为块样式",
+
+"initial value": "@ YAML::EMITTER_MANIP::Block"
+  },
+  {
+
+"constant name": "开始设计对象",
+
+"comment": "开始设计对象结构,设计结束后必须置入配套的\"结束设计对象\".",
+
+"initial value": "@ YAML::EMITTER_MANIP::BeginMap"
+  },
+  {
+}"constant name": "结束设计对象",
+}"comment": "结束设计对象,当\"开始设计对象\"设计结束后使用.",
+}"initial value": "@ YAML::EMITTER_MANIP::EndMap"
+  },
+  {
+nstant name": "空样式_波浪""constant name": "置对象名",
+nstant name": "空样式_波浪""comment": "表示下一个置入的内容为对象名称",
+nstant name": "空样式_波浪""initial value": "@ YAML::EMITTER_MANIP::Key"
+  },
+  {
+}"constant name": "置对象值",
+}"comment": "表示下一个置入的内容为对象值",
+}"initial value": "@ YAML::EMITTER_MANIP::Value"
+  },
+  {
+
+"constant name": "对象长键名",
+
+"comment": "表示设计的键名为长键名",
+
+"initial value": "@ YAML::EMITTER_MANIP::LongKey"
+  }
+]
+ },
+ {
+"class name": "YAML解析类",
+"base class": "对象类",
+"methods": [
+  {
+methods": [
+"method name": "创建",
+methods": [
+"comment": "创建节点对象",
+methods": [
+"result comment": "注意:值内容为\"YAML节点\"类时为浅拷贝(仅拷贝节点指针,当原节点内容发生变化时,当前节点也会改变).",
+methods": [
+"static": true,
+methods": [
+"data type": "YAML节点类",
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "数据内容",
+"comment": "@匹配类型: 通用基本型、YAML节点、YAML类型.",
+"@匹配类型": "通用型"
+   }
+methods": [
+]
+  },
+  {
+ethods": [
+"comment": "创建节点对象""method name": "克隆",
+ethods": [
+"comment": "创建节点对象""comment": "克隆节点对象",
+ethods": [
+"comment": "创建节点对象""result comment": "返回的是克隆后的对象,不受原节点影响.",
+ethods": [
+"comment": "创建节点对象""static": true,
+ethods": [
+"comment": "创建节点对象""data type": "YAML节点类",
+ethods": [
+"comment": "创建节点对象""@嵌入式方法": "\"\"",
+ethods": [
+"comment": "创建节点对象""parameters": [
+   {
+"parameter name": "欲克隆的对象",
+"comment": "与\"创建\"命令相似,但是当前命令为深拷贝(将拷贝所有内容,当原节点内容发生改变时,当前节点不发生改变).",
+"data type": "YAML节点类"
+   }
+ethods": [
+"comment": "创建节点对象"]
+  },
+  {
+克隆后的对象,不受原节点影响."method name": "载入",
+克隆后的对象,不受原节点影响."comment": "加载数据到节点对象",
+克隆后的对象,不受原节点影响."static": true,
+克隆后的对象,不受原节点影响."data type": "YAML节点类",
+克隆后的对象,不受原节点影响."@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"",
+克隆后的对象,不受原节点影响."parameters": [
+   {
+"parameter name": "数据文本",
+"comment": "欲载入的YAML语法格式文本",
+"data type": "文本型"
+   }
+克隆后的对象,不受原节点影响.]
+  },
+  {
+ameter name": "数据文本""method name": "枚举载入",
+ameter name": "数据文本""comment": "加载多段数据到节点对象",
+ameter name": "数据文本""static": true,
+ameter name": "数据文本""@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\\r\\nhas_loop_body = true\"",
+ameter name": "数据文本""parameters": [
+   {
+"parameter name": "数据文本",
+"comment": "欲载入的YAML语法格式文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "接收对象",
+"comment": "用于接收当前枚举对象的变量",
+"data type": "YAML节点类",
+"@需求类型": "可写入变量"
+   }
+ameter name": "数据文本"]
+  },
+  {
+data type": "YAML节点类""method name": "载入文件",
+data type": "YAML节点类""comment": "从文件加载数据到节点对象",
+data type": "YAML节点类""static": true,
+data type": "YAML节点类""data type": "YAML节点类",
+data type": "YAML节点类""@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"",
+data type": "YAML节点类""parameters": [
+   {
+"parameter name": "文件名称",
+"comment": "欲载入的文件名称",
+"data type": "文本型"
+   }
+data type": "YAML节点类"]
+  },
+  {
+}"method name": "枚举载入文件",
+}"comment": "从文件加载多段数据到节点对象",
+}"static": true,
+}"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\\r\\nhas_loop_body = true\"",
+}"parameters": [
+   {
+"parameter name": "文件名称",
+"comment": "欲载入的文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "接收对象",
+"comment": "用于接收当前枚举对象的变量",
+"data type": "YAML节点类",
+"@需求类型": "可写入变量"
+   }
+}]
+  },
+  {
+meter name": "数据文本""parameters": [
+"method name": "是否为空",
+meter name": "数据文本""parameters": [
+"comment": "判断指定对象是否为空",
+meter name": "数据文本""parameters": [
+"static": true,
+meter name": "数据文本""parameters": [
+"data type": "逻辑型",
+meter name": "数据文本""parameters": [
+"@嵌入式方法": "\"\"",
+meter name": "数据文本""parameters": [
+"parameters": [
+   {
+"parameter name": "节点对象",
+"comment": "欲判断的节点",
+"data type": "YAML节点类"
+   }
+meter name": "数据文本""parameters": [
+]
+  },
+  {
+
+"method name": "是否为空文本",
+
+"comment": "判断指定文本是否为空",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"",
+
+"parameters": [
+   {
+"parameter name": "文本内容",
+"comment": "欲判断的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+comment": "欲判断的文本""method name": "生成空",
+comment": "欲判断的文本""comment": "生成一个为空内容的对象",
+comment": "欲判断的文本""static": true,
+comment": "欲判断的文本""data type": "变整数",
+comment": "欲判断的文本""@嵌入式方法": "\"\""
+  },
+  {
+
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""method name": "生成注释",
+
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""comment": "生成一段含注释内容的对象",
+
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""static": true,
+
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""data type": "变整数",
+
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"",
+
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""parameters": [
+   {
+"parameter name": "备注内容",
+"comment": "欲生成的注释内容",
+"data type": "文本型"
+   }
+
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\""]
+  },
+  {
+"method name": "生成锚点",
+"comment": "生成描点对象",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"",
+"parameters": [
+   {
+"parameter name": "锚点名称",
+"comment": "欲生成的锚点对象名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+parameters": [
+"method name": "生成别名",
+parameters": [
+"comment": "生成别名对象",
+parameters": [
+"static": true,
+parameters": [
+"data type": "变整数",
+parameters": [
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"",
+parameters": [
+"parameters": [
+   {
+"parameter name": "别名",
+"comment": "欲生成的别名对象名称",
+"data type": "文本型"
+   }
+parameters": [
+]
+  }
+]
+ },
+ {
+"class name": "YAML标记类",
+"base class": "对象类",
+"methods": [
+  {
+"method name": "是否为空",
+"comment": "判断当前标记对象是否为空",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "位置",
+
+"comment": "获取当前标记对象位置",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"data type": "整数""method name": "行",
+
+"data type": "整数""comment": "获取当前标记对象行索引",
+
+"data type": "整数""type": "property getter",
+
+"data type": "整数""data type": "整数",
+
+"data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""static": true"method name": "列",
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""static": true"comment": "获取当前标记对象列索引",
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""static": true"type": "property getter",
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""static": true"data type": "整数",
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"""static": true"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "YAML异常类",
+"base class": "对象类",
+"methods": [
+  {
+data type": "逻辑型""method name": "俘获异常",
+data type": "逻辑型""comment": "开始俘获异常",
+data type": "逻辑型""static": true,
+data type": "逻辑型""@嵌入式方法": "\"name = try\\r\\nhas_body = true\\r\\nnext = \\\"catch, catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+methods": [
+"method name": "取异常描述",
+methods": [
+"comment": "获取当前已俘获的异常描述信息.",
+methods": [
+"static": true,
+methods": [
+"data type": "文本型",
+methods": [
+"@嵌入式方法": "\"parent=\\\"catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+}"method name": "取异常消息",
+}"comment": "获取当前已俘获的异常消息文本.",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"parent=\\\"catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+ods": [
+"method name": "取异常描述""method name": "取异常标记",
+ods": [
+"method name": "取异常描述""comment": "获取当前已俘获的异常标记对象.",
+ods": [
+"method name": "取异常描述""static": true,
+ods": [
+"method name": "取异常描述""data type": "YAML标记类",
+ods": [
+"method name": "取异常描述""@嵌入式方法": "\"parent=\\\"catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+}"method name": "接收所有异常",
+}"comment": "匹配所有异常",
+}"static": true,
+}"@嵌入式方法": "\"name = catch\\r\\nhas_body = true\\r\\nprev = \\\"try, catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+ods": [
+"method name": "取异常描述""method name": "接收异常",
+ods": [
+"method name": "取异常描述""comment": "匹配YAML基本异常",
+ods": [
+"method name": "取异常描述""static": true,
+ods": [
+"method name": "取异常描述""@嵌入式方法": "\"name = catch_Exception\\r\\nhas_body = true\\r\\nprev = \\\"try, catch, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+thod name": "接收所有异常""method name": "接收异常_解析异常",
+thod name": "接收所有异常""comment": "当解析发生异常时将被俘获接收此异常.",
+thod name": "接收所有异常""static": true,
+thod name": "接收所有异常""@嵌入式方法": "\"name = catch_ParserException\\r\\nhas_body = true\\r\\nprev = \\\"try, catch, catch_Exception, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+}"method name": "接收异常_表现异常",
+}"comment": "当表现异常时将被俘获接收此异常",
+}"static": true,
+}"@嵌入式方法": "\"name = catch_RepresentationException\\r\\nhas_body = true\\r\\nprev = \\\"try, catch, catch_Exception, catch_ParserException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+methods": [
+"method name": "接收异常_无效标量",
+methods": [
+"comment": "当标量无效时将被俘获接收此异常",
+methods": [
+"static": true,
+methods": [
+"@嵌入式方法": "\"name = catch_InvalidScalar\\r\\nhas_body = true\\r\\nprev = \\\"try, catch, catch_Exception, catch_ParserException, catch_RepresentationException, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+"method name": "接收异常_键名不存在",
+"comment": "当操作的对象名称不存在时将被俘获接收此异常",
+"static": true,
+"@嵌入式方法": "\"name = catch_KeyNotFound\\r\\nhas_body = true\\r\\nprev = \\\"try, catch, catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+ta type": "整数""method name": "行""method name": "接收异常_键类型不存在",
+ta type": "整数""method name": "行""comment": "当操作的对象类型不存在时将被俘获接收此异常",
+ta type": "整数""method name": "行""static": true,
+ta type": "整数""method name": "行""@嵌入式方法": "\"name = catch_TypedKeyNotFound\\r\\nhas_body = true\\r\\nprev = \\\"try, catch, catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_InvalidNode, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+效时将被俘获接收此异常"method name": "接收异常_无效节点",
+效时将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常",
+效时将被俘获接收此异常"static": true,
+效时将被俘获接收此异常"@嵌入式方法": "\"name = catch_InvalidNode\\r\\nhas_body = true\\r\\nprev = \\\"try, catch, catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_BadConversion, catch_TypedBadConversion\\\"\""
+  },
+  {
+
+"method name": "接收异常_无法转换",
+
+"comment": "当数据无法转换时将被俘获接收此异常",
+
+"static": true,
+
+"@嵌入式方法": "\"name = catch_BadConversion\\r\\nhas_body = true\\r\\nprev = \\\"try, catch, catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_TypedBadConversion\\\"\""
+  },
+  {
+法转换时将被俘获接收此异常"method name": "接收异常_类型无法转换",
+法转换时将被俘获接收此异常"comment": "当类型无法转换时将被俘获接收此异常.",
+法转换时将被俘获接收此异常"static": true,
+法转换时将被俘获接收此异常"@嵌入式方法": "\"name = catch_TypedBadConversion\\r\\nhas_body = true\\r\\nprev = \\\"try, catch, catch_Exception, catch_ParserException, catch_RepresentationException, catch_InvalidScalar, catch_KeyNotFound, catch_TypedKeyNotFound, catch_InvalidNode, catch_BadConversion\\\"\""
+  }
+]
+ },
+ {
+"class name": "YAML设计类",
+"base class": "对象类",
+"@视窗.后缀文本": "\"public YAML::Emitter\"",
+"methods": [
+  {
+ta type": "整数""method name": "行""method name": "置入",
+ta type": "整数""method name": "行""comment": "将内容置入到设计器当中",
+ta type": "整数""method name": "行""@嵌入式方法": "\"req_cpp_bool = true\"",
+ta type": "整数""method name": "行""parameters": [
+   {
+"parameter name": "数据内容",
+"comment": "欲写入的数据内容,可以为以下类型:\n@匹配类型: 通用基本型、YAML节点、YAML类型、YAML设计标志.",
+"@可扩展": "\"d_text = \\\" << \\\"\"",
+"@匹配类型": "通用型"
+   }
+ta type": "整数""method name": "行"]
+  },
+  {
+"static": true"method name": "取文本",
+"static": true"comment": "取最终输出文本",
+"static": true"data type": "文本型",
+"static": true"@嵌入式方法": "\"\""
+  },
+  {
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中""method name": "取大小",
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中""comment": "取本对象数据的数据长度",
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中""data type": "整数",
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中""@嵌入式方法": "\"\""
+  },
+  {
+"static": true"method name": "是否成功",
+"static": true"comment": "判断当前放置位置是否成功",
+"static": true"data type": "逻辑型",
+"static": true"@嵌入式方法": "\"\""
+  },
+  {
+时将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""method name": "取错误文本",
+时将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""comment": "当\"是否成功\"命令返回假时,此命令获取错误文本.",
+时将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型",
+时将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""@嵌入式方法": "\"\""
+  },
+  {
+将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""method name": "置全局输出编码",
+将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""comment": "设置当前对象中的输出字符集",
+将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""data type": "逻辑型",
+将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""@嵌入式方法": "\"\"",
+将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""parameters": [
+   {
+"parameter name": "输出编码",
+"comment": "欲设置的输出字符集编码",
+"data type": "YAML设计标志"
+   }
+将被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型"]
+  },
+  {
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中""method name": "置全局文本值格式",
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中""comment": "设置当前对象文本型的展示格式",
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中""data type": "逻辑型",
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中""@嵌入式方法": "\"\"",
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中""parameters": [
+   {
+"parameter name": "文本值格式",
+"comment": "欲设置的字符串展示格式",
+"data type": "YAML设计标志"
+   }
+a type": "整数""method name": "行""comment": "将内容置入到设计器当中"]
+  },
+  {
+被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""@嵌入式方法": "\"\"""method name": "置全局逻辑值格式",
+被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""@嵌入式方法": "\"\"""comment": "设置当前对象逻辑型的展示格式",
+被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""@嵌入式方法": "\"\"""data type": "逻辑型",
+被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "逻辑值格式",
+"comment": "欲设置的逻辑型展示格式",
+"data type": "YAML设计标志"
+   }
+被俘获接收此异常"comment": "当操作的节点对象无效时将被俘获接收此异常""data type": "文本型""@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "置全局空值格式",
+
+"comment": "设置当前对象空型的展示格式",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "空值格式",
+"comment": "欲设置的空展示格式",
+"data type": "YAML设计标志"
+   }
+
+]
+  },
+  {
+
+"method name": "置全局整数值格式",
+
+"comment": "设置当前对象整数的展示格式",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "整数值格式",
+"comment": "欲设置的整数展示格式",
+"data type": "YAML设计标志"
+   }
+
+]
+  },
+  {
+}"method name": "置全局数组样式",
+}"comment": "设置当前对象数组的展示格式",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "数组值格式",
+"comment": "欲设置的数组展示格式",
+"data type": "YAML设计标志"
+   }
+}]
+  },
+  {
+
+"@嵌入式方法": "\"\"""method name": "置全局对象样式",
+
+"@嵌入式方法": "\"\"""comment": "设置当前对象数组的展示格式",
+
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "对象值格式",
+"comment": "欲设置的数组展示格式",
+"data type": "YAML设计标志"
+   }
+
+"@嵌入式方法": "\"\""]
+  },
+  {
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""method name": "置全局缩进深度",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "设置当前对象缩进深度",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "缩进深度",
+"comment": "欲设置的缩进深度",
+"data type": "整数",
+"@默认值": "2"
+   }
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""]
+  },
+  {
+comment": "欲设置的数组展示格式""method name": "置全局注释符前缩进深度",
+comment": "欲设置的数组展示格式""comment": "设置注释文本\"#\"字符前的缩进深度",
+comment": "欲设置的数组展示格式""data type": "逻辑型",
+comment": "欲设置的数组展示格式""@嵌入式方法": "\"\"",
+comment": "欲设置的数组展示格式""parameters": [
+   {
+"parameter name": "缩进深度",
+"comment": "欲设置的缩进深度",
+"data type": "整数",
+"@默认值": "2"
+   }
+comment": "欲设置的数组展示格式"]
+  },
+  {
+
+"method name": "置全局注释符后缩进深度",
+
+"comment": "设置注释文本\"#\"字符后的缩进深度",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "缩进深度",
+"comment": "欲设置的缩进深度",
+"data type": "整数",
+"@默认值": "2"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "置全局数值精度",
+"data type": "逻辑型""comment": "设置数值精度(小数位数)",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""@嵌入式方法": "\"\"",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "数值精度",
+"comment": "欲设置数值精度",
+"data type": "整数",
+"@默认值": "17"
+   }
+"data type": "逻辑型"]
+  },
+  {
+文本\"#\"字符前的缩进深度"method name": "重置全局已修改设置",
+文本\"#\"字符前的缩进深度"comment": "重置当前对象中所有已修改的设置",
+文本\"#\"字符前的缩进深度"@嵌入式方法": "\"\""
+  },
+  {
+#\"字符前的缩进深度"method name": "重置全局已修改设置""method name": "置局部标志",
+#\"字符前的缩进深度"method name": "重置全局已修改设置""comment": "设置当前对象内容值",
+#\"字符前的缩进深度"method name": "重置全局已修改设置""@嵌入式方法": "\"\"",
+#\"字符前的缩进深度"method name": "重置全局已修改设置""parameters": [
+   {
+"parameter name": "标志值",
+"comment": "欲设置的标志值",
+"data type": "YAML设计标志"
+   }
+#\"字符前的缩进深度"method name": "重置全局已修改设置"]
+  },
+  {
+ameter name": "标志值""method name": "置局部缩进",
+ameter name": "标志值""comment": "设置当前对象内容的缩进深度",
+ameter name": "标志值""@嵌入式方法": "\"\"",
+ameter name": "标志值""parameters": [
+   {
+"parameter name": "缩进深度",
+"comment": "欲缩进的字符数",
+"data type": "整数",
+"@默认值": "2"
+   }
+ameter name": "标志值"]
+  },
+  {
+@默认值": "2""method name": "置局部精度",
+@默认值": "2""comment": "设置当前对象内容的数值精度(小数位数)",
+@默认值": "2""@嵌入式方法": "\"\"",
+@默认值": "2""parameters": [
+   {
+"parameter name": "单精度数值精度",
+"comment": "单精度小数欲显示的位数",
+"data type": "整数",
+"@默认值": "9"
+   },
+   {
+"parameter name": "双精度数值精度",
+"comment": "双精度小数欲显示的位数",
+"data type": "整数",
+"@默认值": "17"
+   }
+@默认值": "2"]
+  }
+]
+ },
+ {
+"class name": "YAML节点类",
+"base class": "对象类",
+"methods": [
+  {
+
+"method name": "取标记",
+
+"comment": "获取当前对象所处位置信息",
+
+"data type": "YAML标记类",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "YAML标记类""method name": "取类型",
+"data type": "YAML标记类""comment": "获取当前对象的值类型",
+"data type": "YAML标记类""data type": "YAML节点类型",
+"data type": "YAML标记类""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否为空",
+}"comment": "获取当前对象的值类型是否为空",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否为标量",
+}"comment": "获取当前对象的值类型是否为标量",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "YAML标记类""method name": "是否为数组",
+"data type": "YAML标记类""comment": "获取当前对象的值类型是否为数组",
+"data type": "YAML标记类""data type": "逻辑型",
+"data type": "YAML标记类""@嵌入式方法": "\"\""
+  },
+  {
+thod name": "是否为空""method name": "是否为对象",
+thod name": "是否为空""comment": "获取当前对象的值类型是否为对象",
+thod name": "是否为空""data type": "逻辑型",
+thod name": "是否为空""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为未定义",
+
+"comment": "获取当前对象的值类型是否为未定义",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "是否为空""data type": "逻辑型""method name": "取值",
+hod name": "是否为空""data type": "逻辑型""comment": "获取当前对象的值",
+hod name": "是否为空""data type": "逻辑型""@嵌入式方法": "\"\"",
+hod name": "是否为空""data type": "逻辑型""parameters": [
+   {
+"parameter name": "返回值类型",
+"comment": "欲返回的值类型,必须对应数据中的值类型.",
+"@需求类型": "数据类型",
+"@匹配类型": "通用型",
+"@返回值类型": "0"
+   }
+hod name": "是否为空""data type": "逻辑型"]
+  },
+  {
+ameter name": "返回值类型""method name": "置值",
+ameter name": "返回值类型""comment": "设置当前对象的值",
+ameter name": "返回值类型""@嵌入式方法": "\"req_cpp_bool = true\"",
+ameter name": "返回值类型""parameters": [
+   {
+"parameter name": "内容",
+"comment": "@匹配类型:通用基本型、YAML节点类、YAML节点类型",
+"@匹配类型": "通用型"
+   }
+ameter name": "返回值类型"]
+  },
+  {
+
+"method name": "置空值",
+
+"comment": "设置当前对象为空值",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+comment": "@匹配类型:通用基本型、YAML节点类、YAML节点类型""method name": "取标量值",
+comment": "@匹配类型:通用基本型、YAML节点类、YAML节点类型""comment": "获取当前节点的标量值",
+comment": "@匹配类型:通用基本型、YAML节点类、YAML节点类型""data type": "文本型",
+comment": "@匹配类型:通用基本型、YAML节点类、YAML节点类型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取标签",
+
+"comment": "取当前节点标签",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置标签",
+
+"comment": "设置当前节点标签",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲设置的标签",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+hod name": "是否为空""data type": "逻辑型""method name": "取节点样式",
+hod name": "是否为空""data type": "逻辑型""comment": "获取当前节点样式",
+hod name": "是否为空""data type": "逻辑型""data type": "YAML输出样式",
+hod name": "是否为空""data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+"data type": "文本型""method name": "置节点样式",
+"data type": "文本型""comment": "设置当前节点样式",
+"data type": "文本型""@嵌入式方法": "\"\"",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "欲设置的风格",
+"data type": "YAML输出样式"
+   }
+"data type": "文本型"]
+  },
+  {
+data type": "文本型""@嵌入式方法": "\"\"""method name": "是否相等",
+data type": "文本型""@嵌入式方法": "\"\"""comment": "比较两个节点是否等",
+data type": "文本型""@嵌入式方法": "\"\"""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+data type": "文本型""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "欲比较的对象",
+"data type": "YAML输出样式"
+   }
+data type": "文本型""@嵌入式方法": "\"\""]
+  },
+  {
+ta type": "文本型""@嵌入式方法": "\"\""]"method name": "重置",
+ta type": "文本型""@嵌入式方法": "\"\""]"comment": "重置当前对象",
+ta type": "文本型""@嵌入式方法": "\"\""]"@嵌入式方法": "\"\"",
+ta type": "文本型""@嵌入式方法": "\"\""]"parameters": [
+   {
+"parameter name": "节点对象",
+"comment": "重置后欲克隆的节点对象",
+"data type": "YAML节点类",
+"@默认值": "空对象"
+   }
+ta type": "文本型""@嵌入式方法": "\"\""]]
+  },
+  {
+ta type": "文本型""@嵌入式方法": "\"\""]"method name": "取数量",
+ta type": "文本型""@嵌入式方法": "\"\""]"comment": "取当前成员数,如果当前节点为对象则返回对象数量,如果为数组则返回数组成员数",
+ta type": "文本型""@嵌入式方法": "\"\""]"data type": "变整数",
+ta type": "文本型""@嵌入式方法": "\"\""]"@嵌入式方法": "\"\""
+  },
+  {
+ type": "文本型""@嵌入式方法": "\"\""]]"method name": "枚举循环",
+ type": "文本型""@嵌入式方法": "\"\""]]"comment": "枚举循环当前对象或数组",
+ type": "文本型""@嵌入式方法": "\"\""]]"@嵌入式方法": "\"name = iterator\\r\\nhas_loop_body = true\""
+  },
+  {
+a type": "文本型""@嵌入式方法": "\"\""]"comment": "取当前成员数,如果当前节点为对象则返回对象数量,如果为数组则返回数组成员数""method name": "取枚举对象名",
+a type": "文本型""@嵌入式方法": "\"\""]"comment": "取当前成员数,如果当前节点为对象则返回对象数量,如果为数组则返回数组成员数""comment": "如果枚举的节点是对象则用此方法获取枚举键名",
+a type": "文本型""@嵌入式方法": "\"\""]"comment": "取当前成员数,如果当前节点为对象则返回对象数量,如果为数组则返回数组成员数""data type": "YAML节点类",
+a type": "文本型""@嵌入式方法": "\"\""]"comment": "取当前成员数,如果当前节点为对象则返回对象数量,如果为数组则返回数组成员数""@嵌入式方法": "\"parent = \\\"iterator\\\"\""
+  },
+  {
+
+"method name": "取枚举对象值",
+
+"comment": "如果枚举的节点是对象则用此方法获取枚举键值",
+
+"data type": "YAML节点类",
+
+"@嵌入式方法": "\"parent = \\\"iterator\\\"\""
+  },
+  {
+a type": "文本型""@嵌入式方法": "\"\""]"comment": "取当前成员数,如果当前节点为对象则返回对象数量,如果为数组则返回数组成员数""method name": "取枚举数组值",
+a type": "文本型""@嵌入式方法": "\"\""]"comment": "取当前成员数,如果当前节点为对象则返回对象数量,如果为数组则返回数组成员数""comment": "如果枚举的节点是数组则用此方法获取枚举成员值",
+a type": "文本型""@嵌入式方法": "\"\""]"comment": "取当前成员数,如果当前节点为对象则返回对象数量,如果为数组则返回数组成员数""data type": "YAML节点类",
+a type": "文本型""@嵌入式方法": "\"\""]"comment": "取当前成员数,如果当前节点为对象则返回对象数量,如果为数组则返回数组成员数""@嵌入式方法": "\"parent = \\\"iterator\\\"\""
+  },
+  {
+}"method name": "添加成员",
+}"comment": "添加数组成员",
+}"@嵌入式方法": "\"req_cpp_bool = true\"",
+}"parameters": [
+   {
+"parameter name": "成员",
+"comment": "欲添加的成员.@匹配类型:通用基本型、YAML节点类、YAML节点类型",
+"@匹配类型": "通用型"
+   }
+}]
+  },
+  {
+}"method name": "添加多成员",
+}"comment": "连续添加数组成员",
+}"@嵌入式方法": "\"req_cpp_bool = true\"",
+}"parameters": [
+   {
+"parameter name": "成员",
+"comment": "\n欲添加的成员.@匹配类型:通用基本型、YAML节点类、YAML节点类型",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+}]
+  },
+  {
+"method name": "选择",
+"comment": "选择当前节点",
+"data type": "YAML节点类",
+"@嵌入式方法": "\"req_cpp_bool = true\"",
+"parameters": [
+   {
+"parameter name": "节点名称",
+"comment": "选择当前节点.\n如果为对象则输出对象名称,如果为数组则输入成员序号",
+"@可扩展": "\"d_text = \\\"][\\\"\"",
+"@匹配类型": "通用型"
+   }
+]
+  },
+  {
+"method name": "移除",
+"comment": "移除当前节点",
+"data type": "逻辑型",
+"@嵌入式方法": "\"req_cpp_bool = true\"",
+"parameters": [
+   {
+"parameter name": "节点名称",
+"comment": "如果为对象则输出对象名称,如果为数组则输入成员序号",
+"@匹配类型": "通用型"
+   }
+]
+  },
+  {
+text = \\\"][\\\"\""method name": "添加对象",
+text = \\\"][\\\"\""comment": "添加对象内容",
+text = \\\"][\\\"\""@嵌入式方法": "\"req_cpp_bool = true\"",
+text = \\\"][\\\"\""parameters": [
+   {
+"parameter name": "对象名",
+"comment": "对象名称",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "对象值",
+"comment": "对象值",
+"@匹配类型": "通用型"
+   }
+text = \\\"][\\\"\"]
+  },
+  {
+comment": "对象名称""method name": "添加多对象",
+comment": "对象名称""comment": "连续添加对象内容",
+comment": "对象名称""@嵌入式方法": "\"req_cpp_bool = true\"",
+comment": "对象名称""parameters": [
+   {
+"parameter name": "键值对",
+"comment": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+comment": "对象名称"]
+  },
+  {
+@嵌入式方法": "\"req_cpp_bool = true\"""method name": "取文本值",
+@嵌入式方法": "\"req_cpp_bool = true\"""comment": "取当前节点文本值",
+@嵌入式方法": "\"req_cpp_bool = true\"""data type": "文本型",
+@嵌入式方法": "\"req_cpp_bool = true\"""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "对象名""method name": "取逻辑值",
+ameter name": "对象名""comment": "取当前节点逻辑值",
+ameter name": "对象名""data type": "逻辑型",
+ameter name": "对象名""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取小数值",
+
+"comment": "取当前节点小数值",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+comment": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值",
+comment": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""comment": "取当前节点整数值",
+comment": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""data type": "整数",
+comment": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""@嵌入式方法": "\"\""
+  },
+  {
+ent": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""method name": "取短整数值",
+ent": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""comment": "取当前节点短整数值",
+ent": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数",
+ent": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""@嵌入式方法": "\"\""
+  },
+  {
+@可扩展": "\"\"""method name": "取长整数值",
+@可扩展": "\"\"""comment": "取当前节点长整数值",
+@可扩展": "\"\"""data type": "长整数",
+@可扩展": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+nt": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""method name": "取变整数值",
+nt": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""comment": "取当前节点变整数值",
+nt": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""data type": "变整数",
+nt": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到文本",
+
+"comment": "将当前对象输出到文本",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+t": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""comment": "取当前节点变整数值""method name": "保存到文件",
+t": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""comment": "取当前节点变整数值""comment": "将当前对象保存到文件",
+t": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""comment": "取当前节点变整数值""@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"",
+t": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""comment": "取当前节点变整数值""@视窗.外部头文件": "\"<fstream>\"",
+t": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""comment": "取当前节点变整数值""parameters": [
+   {
+"parameter name": "文件名称",
+"comment": "欲保存的文件名称",
+"data type": "文本型"
+   }
+t": "欲添加的对象名称及值.\n注意:键值对必须成对出现(键名,键值...)""method name": "取整数值""data type": "短整数""comment": "取当前节点变整数值"]
+  }
+]
+ }
+问本程序中的接口需要引用模块"YAML数据访问支持".]
+}

@@ -1,0 +1,409 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+⒀鴊Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+⒀鴊Ǹ"package name": "浏览器.事件",
+⒀鴊Ǹ"classes": [
+ {
+"class name": "类_FBrowser_自定义初始化事件",
+"base class": "类_FBrowser_应用事件",
+"methods": [
+  {
+
+"method name": "即将处理命令行",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "进程类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "命令行",
+"data type": "类_FBrowser_命令行"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_初始化完毕",
+
+"@虚拟方法": "可覆盖"
+  },
+  {
+
+"method name": "渲染_载入开始",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "过渡类型",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_载入结束",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "状态码",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_载入错误",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "错误代码",
+"data type": "整数"
+   },
+   {
+"parameter name": "错误文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "失败地址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "渲染_即将创建V8环境",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "V8环境",
+"data type": "类_FBrowser_V8环境"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "类_FBrowser_自定义浏览器事件",
+"base class": "类_FBrowser_浏览器事件",
+"methods": [
+  {
+
+"method name": "浏览器_创建完毕",
+
+"@禁止流程检查": "真",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将打开新窗口",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "弹窗ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标框架名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户手势",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "弹出功能",
+"data type": "FBrowser_弹出功能"
+   },
+   {
+"parameter name": "窗口信息",
+"comment": "可设置",
+"data type": "FBrowser_窗口信息"
+   },
+   {
+"parameter name": "浏览器设置",
+"comment": "可设置",
+"data type": "FBrowser_浏览器配置"
+   },
+   {
+"parameter name": "无JS访问",
+"comment": "可设置,关闭JS容易出问题，不建议设置",
+"data type": "逻辑型类"
+   },
+   {
+"parameter name": "用户额外配置",
+"comment": "可设置,设置的浏览器事件类不能使用局部变量",
+"data type": "类_FBrowser_用户额外配置"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_控制台消息",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "日志级别",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "行",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将导航",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "用户动作",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否重定向",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将打开菜单",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "菜单环境",
+"data type": "类_FBrowser_菜单环境"
+   },
+   {
+"parameter name": "菜单模式",
+"data type": "类_FBrowser_菜单模式"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_菜单被调用",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "菜单环境",
+"data type": "类_FBrowser_菜单环境"
+   },
+   {
+"parameter name": "菜单模式",
+"data type": "类_FBrowser_菜单模式"
+   },
+   {
+"parameter name": "运行命令菜单回调",
+"data type": "类_FBrowser_运行命令菜单回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_菜单被点击",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "菜单环境",
+"data type": "类_FBrowser_菜单环境"
+   },
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "事件标识",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_执行关闭",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将关闭",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  }
+]
+ }
+⒀鴊Ǹ]
+}

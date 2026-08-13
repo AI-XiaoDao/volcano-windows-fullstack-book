@@ -1,0 +1,878 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+外部库 = "strmiids.lib""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+外部库 = "strmiids.lib""package name": "火山.基本",
+外部库 = "strmiids.lib""comment": "★ 本库由\"350246356\"封装.\n微软文档：https://learn.microsoft.com/zh-cn/windows/win32/directshow\n",
+外部库 = "strmiids.lib""@视窗.外部库": "\"strmiids.lib\"",
+外部库 = "strmiids.lib""@视窗.外部头文件": "\"include\\\\w_directshow.h\"",
+外部库 = "strmiids.lib""@视窗.外部源文件": "\"include\\\\w_directshow.cpp\"",
+外部库 = "strmiids.lib""classes": [
+ {
+"class name": "播放器状态",
+"@常量类": "整数",
+"constants": [
+  {
+ss name": "播放器状态""constant name": "未开启",
+ss name": "播放器状态""comment": "视频播放器出现了错误",
+ss name": "播放器状态""initial value": "-1"
+  },
+  {
+
+"constant name": "已停止",
+
+"comment": "视频播放器出于停止状态",
+
+"initial value": "@ FILTER_STATE::State_Stopped"
+  },
+  {
+
+"constant name": "已暂停",
+
+"comment": "视频播放器出于暂停状态",
+
+"initial value": "@ FILTER_STATE::State_Paused"
+  },
+  {
+
+"constant name": "正在播放",
+
+"comment": "视频播放器出于播放状态",
+
+"initial value": "@ FILTER_STATE::State_Running"
+  }
+]
+ },
+ {
+"class name": "视频播放器",
+"comment": "视频播放窗口操作类",
+"base class": "对象类",
+"@禁止创建对象": "真",
+"methods": [
+  {
+
+"method name": "宽度",
+
+"comment": "检索当前窗口宽度",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "宽度",
+}"comment": "设置当前窗口宽度",
+}"type": "property setter",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "宽度",
+"comment": "欲设置的窗口宽度",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "高度",
+}"comment": "检索当前窗口高度",
+}"type": "property getter",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "高度",
+
+"comment": "设置当前窗口高度",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "高度",
+"comment": "欲设置的窗口高度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "高度""method name": "左边",
+ameter name": "高度""comment": "检索当前窗口左边坐标",
+ameter name": "高度""type": "property getter",
+ameter name": "高度""data type": "整数",
+ameter name": "高度""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "左边",
+
+"comment": "设置当前窗口左边坐标",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "左边",
+"comment": "欲设置的窗口左边位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "顶边",
+
+"comment": "检索当前窗口顶边坐标",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "顶边",
+
+"comment": "设置当前窗口顶边坐标",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "顶边",
+"comment": "欲设置的窗口顶边位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "可视",
+
+"comment": "检索当前窗口可见性",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "可视",
+
+"comment": "设置当前窗口可见性",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "可视",
+"comment": "欲设置的窗口可见性(真=隐藏,假=可视)",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "标题",
+
+"comment": "检索当前窗口标题",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "标题",
+ }"comment": "设置当前窗口标题",
+ }"type": "property setter",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "标题",
+"comment": "当前窗口标题",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+]"method name": "自动显示",
+]"comment": "检索当前的自动显示状态标志",
+]"type": "property getter",
+]"data type": "逻辑型",
+]"@禁止流程检查": "真"
+  },
+  {
+"parameters": [
+"method name": "自动显示",
+"parameters": [
+"comment": "设置当前的自动显示状态标志",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"@禁止流程检查": "真",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "自动显示",
+"comment": "如果此参数设置为真,则筛选器暂停或运行时,通常会在筛选器连接后隐藏的窗口将自动显示.但是筛选器停止时,不应隐藏窗口.\n如果此参数设置为假,则仅当应用程序使用相应参数调用\"可视\"或\"窗口状态\"时,窗口才会可见.",
+"data type": "逻辑型"
+   }
+"parameters": [
+]
+  },
+  {
+
+"method name": "全屏模式",
+
+"comment": "检索呈现器的全屏模式",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "全屏模式",
+
+"comment": "设置呈现器的全屏模式",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "是否全屏",
+"comment": "要应用的全屏模式.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "窗口状态",
+
+"comment": "检索窗口状态",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "窗口状态",
+
+"comment": "设置窗口状态",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口状态",
+"comment": "新建窗口状态\n此成员函数采用与\"ShowWindow\"函数相同的参数(例如:WS_SHOWNORMAL,WS_SHOWMINNOACTIVATE和WS_SHOWMAXIMIZED)",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "窗口风格",
+
+"comment": "检索标准窗口样式",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "窗口风格",
+
+"comment": "设置标准窗口样式",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口风格",
+"comment": "欲设置的窗口风格样式",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "窗口扩展风格",
+
+"comment": "检索扩展窗口样式",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "窗口扩展风格",
+
+"comment": "设置扩展窗口样式",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口扩展风格",
+"comment": "欲设置的扩展窗口风格样式",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "背景调色板",
+
+"comment": "检索一个标志,用于在后台实现调色板",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "背景调色板",
+
+"comment": "设置一个标志,用于在后台实现调色板",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "背景调色板",
+"comment": "如果视频将在另一个应用程序或文档中播放,则应用程序可能想要使用自己的调色板.它可以通过将此标志设置为\"真\"来要求视频使用当前的前台调色板,而不是使用自己的面板.\n如果设置为 0,窗口将安装并实现自己的首选调色板.请注意,要求窗口使用不同的调色板将导致严重的性能损失.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "边框颜色",
+
+"comment": "检索当前边框颜色",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "边框颜色",
+
+"comment": "设置当前边框颜色",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "边框颜色",
+"comment": "指向当前边框的颜色",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "隐藏光标",
+
+"comment": "检索当鼠标放置在视频窗口上时显示或隐藏光标",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "隐藏光标",
+
+"comment": "设置当鼠标放置在视频窗口上时显示或隐藏光标",
+
+"type": "property setter",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "是否隐藏",
+"comment": "指定视频窗口是否是否隐藏隐藏光标",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "所有者窗口句柄",
+
+"comment": "检索当前窗口所有者",
+
+"type": "property getter",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "所有者窗口句柄",
+"comment": "设置当前窗口所有者",
+"type": "property setter",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "指向窗口所有者的句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+}"method name": "获取焦点",
+}"comment": "将视频窗口移动到前台,并选择性地为其提供焦点",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "是否获得焦点",
+"comment": "指定视频窗口是否获得焦点的值.值为真表示窗口焦点,假表示不提供",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+"method name": "置父窗口",
+"comment": "将预览视频窗口置入到某个窗口组件当中",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "父窗口句柄",
+"comment": "提供所创建窗口的父窗口组件,如果该窗口组件尚未被创建,则认为无父窗口组件.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "左边",
+"comment": "提供所创建窗口左边在屏幕上的横向坐标位置,为\"数值范围.最小整数值\"表示使用父组件的左边.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "提供所创建窗口左边在屏幕上的纵向坐标位置,为\"数值范围.最小整数值\"表示使用父组件的顶边.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所创建窗口的宽度,为\"数值范围.最小整数值\"表示使用父组件的宽度.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所创建窗口的高度,为\"数值范围.最小整数值\"表示使用父组件的高度.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   }
+]
+  },
+  {
+
+"method name": "取窗口矩形",
+
+"comment": "获取视频预览窗口的矩形",
+
+"data type": "矩形类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置窗口尺寸",
+
+"comment": "设置视频预览窗口的尺寸;注意:\"打开预览\"命令执行后调用",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "左边位置",
+"comment": "提供所创建窗口左边在屏幕上的横向坐标位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "顶边位置",
+"comment": "提供所创建窗口左边在屏幕上的纵向坐标位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所创建窗口的宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所创建窗口的高度",
+"data type": "整数",
+"@默认值": "500"
+   }
+
+]
+  },
+  {
+
+"method name": "取最小分辨率",
+
+"comment": "获取视频图像最小尺寸",
+
+"data type": "尺寸类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取最大分辨率",
+
+"comment": "获取视频图形最大尺寸",
+
+"data type": "尺寸类",
+
+"@禁止流程检查": "真"
+  }
+]
+ },
+ {
+"class name": "音视频操作类",
+"comment": "摄像头及麦克风相关操作",
+"base class": "对象类",
+"@禁止创建对象": "真",
+"methods": [
+  {
+@禁止创建对象": "真""method name": "枚举摄像头",
+@禁止创建对象": "真""comment": "枚举本地已存在的摄像头设备",
+@禁止创建对象": "真""static": true,
+@禁止创建对象": "真""@嵌入式方法": "\"name = enum_videos\\r\\nhas_loop_body = true\\r\\nbody_header = \\\"@none\\\"\\r\\nbody_tail = \\\"DSHOW_ENUM_DEVICES_END()\\\"\""
+  },
+  {
+@默认值": "0""method name": "枚举麦克风",
+@默认值": "0""comment": "枚举本地已存在的麦克风设备",
+@默认值": "0""static": true,
+@默认值": "0""@嵌入式方法": "\"name = enum_audios\\r\\nhas_loop_body = true\\r\\nbody_header = \\\"@none\\\"\\r\\nbody_tail = \\\"DSHOW_ENUM_DEVICES_END()\\\"\""
+  },
+  {
+}"method name": "取设备名称",
+}"comment": "取已枚举到的设备名称",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"parent = \\\"enum_videos, enum_audios\\\"\""
+  },
+  {
+
+"method name": "取设备路径",
+
+"comment": "取已枚举到的设备路径",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"parent = \\\"enum_videos, enum_audios\\\"\""
+  },
+  {
+
+"method name": "取波形标识",
+
+"comment": "取已枚举到的麦克风波形ID",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"parent = \\\"enum_audios\\\"\""
+  }
+]
+ },
+ {
+"class name": "视频采样器",
+"comment": "用于采集视频图像帧",
+"base class": "对象类",
+"@视窗.后缀文本": "\"public ISampleGrabberCB\"",
+"methods": [
+  {
+}"method name": "得到数据",
+}"comment": "采取到视频图像时响应当前事件",
+}"result comment": "保留",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "图像帧数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "图像帧数据长度",
+"data type": "整数"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "摄像头类",
+"comment": "摄像头相关操作",
+"base class": "对象类",
+"methods": [
+  {
+
+"method name": "播放器",
+
+"comment": "取播放器对象实例",
+
+"type": "property getter",
+
+"data type": "视频播放器",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "打开设备",
+
+"comment": "选择指定摄像头",
+
+"result comment": "成功返回真,失败或已存在打开的设备则返回假.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备索引",
+"comment": "当前视频设备索引,可使用\"音视频操作.枚举摄像头\"命令定位确认设备索引.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+thod name": "打开设备""method name": "关闭设备",
+thod name": "打开设备""comment": "关闭已打开的摄像头",
+thod name": "打开设备""@禁止流程检查": "真"
+  },
+  {
+base class": "对象类""method name": "启用采样",
+base class": "对象类""comment": "启用视频采样;注意:必须在\"打开设备\"命令执行后,\"启用预览\"命令执行前调用",
+base class": "对象类""data type": "逻辑型",
+base class": "对象类""@禁止流程检查": "真",
+base class": "对象类""parameters": [
+   {
+"parameter name": "采样器对象",
+"comment": "用于接收采样数据的对实例化对象",
+"data type": "视频采样器"
+   },
+   {
+"parameter name": "快照模式",
+"comment": "如果启用则获取到第一张图像时将自动停止",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+base class": "对象类"]
+  },
+  {
+
+"method name": "启用预览",
+
+"comment": "启用预览视频;注意:必须在\"打开设备\"命令执行后,\"运行\"命令执行前调用",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "父窗口句柄",
+"comment": "提供所创建窗口的父窗口组件,如果该窗口组件尚未被创建,则认为无父窗口组件.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "左边",
+"comment": "提供所创建窗口左边在屏幕上的横向坐标位置,为\"数值范围.最小整数值\"表示使用父组件的左边.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "顶边",
+"comment": "提供所创建窗口左边在屏幕上的纵向坐标位置,为\"数值范围.最小整数值\"表示使用父组件的顶边.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所创建窗口的宽度,为\"数值范围.最小整数值\"表示使用父组件的宽度.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所创建窗口的高度,为\"数值范围.最小整数值\"表示使用父组件的高度.",
+"data type": "整数",
+"@默认值": "数值范围.最小整数值"
+   }
+
+]
+  },
+  {
+}"method name": "启用录制",
+}"comment": "启用录制视频;注意:必须在\"打开设备\"命令执行后,\"运行\"命令执行前调用",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件名称",
+"comment": "录制后视频储存的文件名称;如\"c:\\video.avi\"",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "采样拍照",
+
+"comment": "获取当前采集器中的图像;注意:必须在\"启用采样\"和\"运行\"命令执行后调用",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"@禁止流程检查": "真""method name": "运行",
+
+"@禁止流程检查": "真""comment": "开始视频预览或录制;注意:\"启用预览\"或\"启用录制\"或\"启用采样\"命令执行后调用",
+
+"@禁止流程检查": "真""data type": "逻辑型",
+
+"@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "暂停",
+
+"comment": "暂停视频预览或录制;注意:\"启用预览\"或\"启用录制\"或\"启用采样\"命令执行后调用",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "停止",
+}"comment": "停止视频预览或录制;注意:\"启用预览\"或\"启用录制\"或\"启用采样\"命令执行后调用",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取状态",
+
+"comment": "取当前视频预览或录制状态;注意:\"启用预览\"或\"启用录制\"或\"启用采样\"命令执行后调用",
+
+"data type": "播放器状态",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "超时持续时间",
+"comment": "超时持续时间(以毫秒为单位)或-1表示指定无限超时.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "异步停止",
+
+"comment": "停止视频预览或录制;注意:\"启用预览\"或\"启用录制\"或\"启用采样\"命令执行后调用;如果要在停止图形时查找筛选器图,此方法非常有用.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "显示属性窗口",
+
+"comment": "显示摄像头属性设置窗口;注意:只有摄像头支持的时候才会显示",
+
+"@禁止流程检查": "真"
+  }
+]
+ }
+外部库 = "strmiids.lib"]
+}

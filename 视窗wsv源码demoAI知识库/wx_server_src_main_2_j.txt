@@ -1,0 +1,186 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"package name": "火山.程序",
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"classes": [
+ {
+"class name": "启动类",
+"base class": "窗口程序类",
+"constants": [
+  {
+
+"constant name": "APPID",
+
+"comment": "★微信开放平台获取的APPID( https://open.weixin.qq.com/ ),查看应用 即可获取应用APPID.",
+
+"data type": "文本型",
+
+"initial value": "\"\""
+  },
+  {
+ = 真"constant name": "直连商户号",
+ = 真"comment": "★(mchid)在微信商户平台(https://pay.weixin.qq.com)的\"账户概览-->基本信息\"里查看.\n申请mchid：https://pay.weixin.qq.com/wiki/doc/apiv3/open/pay/chapter2_5_1.shtml\n申请mchid后需要将此id和appid绑定.",
+ = 真"data type": "文本型",
+ = 真"initial value": "\"\""
+  }
+],
+"variables": [
+  {
+
+"variable name": "主窗口对象",
+
+"data type": "我的主窗口"
+  }
+],
+"methods": [
+  {
+methods": [
+"method name": "启动方法",
+methods": [
+"data type": "整数"
+  }
+]
+ },
+ {
+"class name": "微信支付下单处理类",
+"variables": [
+  {
+variables": [
+"variable name": "平台订单ID",
+variables": [
+"comment": "商户系统内部订单号，只能是数字、大小写字母_-*且在同一个商户号下唯一.\n示例值：1217752501201407033233368018",
+variables": [
+"data type": "文本型"
+  },
+  {
+
+"variable name": "通知地址",
+
+"comment": "通知URL必须为直接可访问的URL，不允许携带查询串，要求必须为https地址.\n示例值：https://www.weixin.qq.com/wxpay/pay.php",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "订单金额",
+
+"comment": "单位: 分.\n示例值：100,表示100分.",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "商品名称",
+
+"comment": "示例值：Image形象店-深圳腾大-QQ公仔.",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "时间戳",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "随机字符串",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "证书",
+
+"data type": "字节集类"
+  }
+],
+"methods": [
+  {
+
+"method name": "下单",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "返回JSON",
+"data type": "JSON对象类"
+   }
+
+]
+  },
+  {
+}"method name": "构造签名串",
+}"comment": "构造签名文档：https://pay.weixin.qq.com/wiki/doc/apiv3/wechatpay/wechatpay4_0.shtml",
+}"result comment": "返回signature内容",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "请求方式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "URL",
+"data type": "文本型"
+   },
+   {
+"parameter name": "请求内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "构造协议头",
+
+"result comment": "返回网络请求所需要的协议头数据",
+
+"data type": "文本数组类",
+
+"parameters": [
+   {
+"parameter name": "商户号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "signature",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "_日志类",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "写日志",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "日志内容",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+]
+}

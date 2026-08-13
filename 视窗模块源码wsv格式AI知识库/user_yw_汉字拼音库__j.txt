@@ -1,0 +1,469 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+型 = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+型 = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠"package name": "火山.仰望",
+型 = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠"@文档": "\"category = \\\"汉字拼音库\\\"\"",
+型 = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠"classes": [
+ {
+ 整数"class name": "拼音检索库_简体",
+ 整数"comment": "1、简体版27KB (gzip ≈ 19KB)，繁体版86KB (gzip ≈ 60KB)\n2、支持多音字、繁体字、拼音首字母匹配,具备分词功能\n3、返回位置信息，可用于高亮匹配字符\n4、在长多音字串下依然有高性能",
+ 整数"@文档": "\"category = \\\"汉字拼音库.拼音检索\\\"\"",
+ 整数"methods": [
+  {
+ = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠"classes": [
+"method name": "检索数据_",
+ = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠"classes": [
+"data type": "逻辑型",
+ = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠"classes": [
+"@禁止流程检查": "真",
+ = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠"classes": [
+"parameters": [
+   {
+"parameter name": "匹配的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜寻的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的起始索引",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的结束索引",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+ = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠"classes": [
+]
+  }
+ 整数]
+ },
+ {
+数]"class name": "拼音检索库_繁体",
+数]"comment": "1、简体版27KB (gzip ≈ 19KB)，繁体版86KB (gzip ≈ 60KB)\n2、支持多音字、繁体字、拼音首字母匹配,具备分词功能\n3、返回位置信息，可用于高亮匹配字符\n4、在长多音字串下依然有高性能",
+数]"@文档": "\"category = \\\"汉字拼音库.拼音检索\\\"\"",
+数]"methods": [
+  {
+ 文本型"method name": "检索数据_",
+ 文本型"data type": "逻辑型",
+ 文本型"@禁止流程检查": "真",
+ 文本型"parameters": [
+   {
+"parameter name": "匹配的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜寻的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的起始索引",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的结束索引",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+ 文本型]
+  }
+数]]
+ },
+ {
+"class name": "拼音类_",
+"@文档": "\"category = \\\"汉字拼音库.拼音首\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+"method name": "拼音_取拼音首",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否大写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "发音索引",
+"comment": "多音字时选择发音",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回的发音数量",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+ }"method name": "拼音_取拼音首2",
+ }"static": true,
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"@视窗.外部头文件": "\"<string>\"",
+ }"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否大写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "汉字拼音类_",
+"@文档": "\"category = \\\"汉字拼音库.拼音库\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "取拼音_",
+
+"comment": "批量取拼音",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "待取内容",
+"comment": "内容中可以有汉字、数字、字母、符号等任何字符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "首字母是否大写",
+"comment": "拼音的第一个字母转为大写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否带音调",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "转换方式",
+"comment": "0、将汉字转成拼音，其它保持原样　1、剔除非汉字　2、汉字[拼音]",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "拼音间隔符",
+"comment": "两个拼音之间的间隔符",
+"data type": "文本型",
+"@默认值": "\" \""
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "取拼音2_",
+data type": "文本型""comment": "取单个汉字的拼音",
+data type": "文本型""data type": "文本型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "待取内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "首字母是否大写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否带音调",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "无拼音是否回返空",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "文本型"]
+  },
+  {
+@默认值": "假""method name": "是否有拼音_",
+@默认值": "假""comment": "判断给定的单个文字是否有拼音。",
+@默认值": "假""data type": "逻辑型",
+@默认值": "假""parameters": [
+   {
+"parameter name": "单字",
+"comment": "例如：'望'",
+"data type": "字符"
+   }
+@默认值": "假"]
+  }
+]
+ },
+ {
+ameter name": "单字""class name": "汉字拼音类2_",
+ameter name": "单字""@文档": "\"category = \\\"汉字拼音库.拼音库\\\"\"",
+ameter name": "单字""@全局类": "真",
+ameter name": "单字""@视窗.外部头文件": "\"..\\\\..\\\\sys\\\\py\\\\src\\\\vol_py_processor.h\"",
+ameter name": "单字""@视窗.外部源文件": "\"..\\\\..\\\\sys\\\\py\\\\src\\\\vol_py_processor.cpp\"",
+ameter name": "单字""@视窗.外部资源文件": "\"..\\\\..\\\\sys\\\\py\\\\src\\\\res\\\\vol_py_res.rc\"",
+ameter name": "单字""methods": [
+  {
+ss name": "汉字拼音类_""method name": "取拼音_",
+ss name": "汉字拼音类_""data type": "文本型",
+ss name": "汉字拼音类_""@嵌入式方法": "\"\"",
+ss name": "汉字拼音类_""parameters": [
+   {
+"parameter name": "待取汉字",
+"data type": "文本型"
+   },
+   {
+"parameter name": "发音索引",
+"comment": "多音字时选择发音",
+"data type": "整数",
+"@默认值": "0"
+   }
+ss name": "汉字拼音类_"]
+  },
+  {
+ta type": "文本型"]"method name": "取所有拼音_",
+ta type": "文本型"]"result comment": "返回总数",
+ta type": "文本型"]"data type": "整数",
+ta type": "文本型"]"@嵌入式方法": "\"\"",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "待取汉字",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的结果",
+"data type": "文本数组类"
+   }
+ta type": "文本型"]]
+  },
+  {
+ss name": "汉字拼音类_""method name": "取发音数量_",
+ss name": "汉字拼音类_""data type": "整数",
+ss name": "汉字拼音类_""@嵌入式方法": "\"\"",
+ss name": "汉字拼音类_""parameters": [
+   {
+"parameter name": "待取汉字",
+"data type": "文本型"
+   }
+ss name": "汉字拼音类_"]
+  },
+  {
+data type": "文本型""method name": "取声母_",
+data type": "文本型""data type": "文本型",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "待取汉字",
+"data type": "文本型"
+   },
+   {
+"parameter name": "发音索引",
+"comment": "多音字时选择发音",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "取韵母_",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "待取汉字",
+"data type": "文本型"
+   },
+   {
+"parameter name": "发音索引",
+"comment": "多音字时选择发音",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+ameter name": "单字"]
+ },
+ {
+data type": "文本型""class name": "拼音信息类_",
+data type": "文本型""comment": "本库共有6724左右的字量，包含简体没有繁体.\n支持取拼音，可带声调和不带声调，可取笔画顺序和笔画数",
+data type": "文本型""@文档": "\"category = \\\"汉字拼音库.拼音笔画声调\\\"\"",
+data type": "文本型""methods": [
+  {
+}"method name": "初始化_",
+}"data type": "逻辑型"
+  },
+  {
+ameter name": "返回的结果""method name": "取拼音信息_",
+ameter name": "返回的结果""result comment": "未找到返回假",
+ameter name": "返回的结果""data type": "逻辑型",
+ameter name": "返回的结果""parameters": [
+   {
+"parameter name": "待取的汉字",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的拼音",
+"comment": "不带声的原拼音",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的数字拼音",
+"comment": "带数字声调的拼音",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的声调拼音",
+"comment": "原声调拼音",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的笔画",
+"comment": "笔画顺序",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的笔画数",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的发音数",
+"comment": "该字的读音数量",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+ameter name": "返回的结果"]
+  }
+data type": "文本型"]
+ },
+ {
+ameter name": "发音索引""class name": "拼音信息类2_",
+ameter name": "发音索引""comment": "本库共有20697左右的字量，包含简体和繁体.\n支持取拼音，可带声调和不带声调，可取笔画顺序和笔画数",
+ameter name": "发音索引""@文档": "\"category = \\\"汉字拼音库.拼音笔画声调\\\"\"",
+ameter name": "发音索引""methods": [
+  {
+data type": "整数类""method name": "初始化_",
+data type": "整数类""data type": "逻辑型"
+  },
+  {
+data type": "整数""method name": "取拼音信息_",
+data type": "整数""result comment": "未找到返回假",
+data type": "整数""data type": "逻辑型",
+data type": "整数""parameters": [
+   {
+"parameter name": "待取的汉字",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的拼音",
+"comment": "不带声的原拼音",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的数字拼音",
+"comment": "带数字声调的拼音",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的声调拼音",
+"comment": "原声调拼音",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的笔画",
+"comment": "笔画顺序",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的笔画数",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的发音数",
+"comment": "该字的读音数量",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+data type": "整数"]
+  }
+ameter name": "发音索引"]
+ },
+ {
+ta type": "整数"]"class name": "五笔编码查询类_",
+ta type": "整数"]"comment": "本库共有6629左右的字量，包含86版及98版编码",
+ta type": "整数"]"@文档": "\"category = \\\"汉字拼音库.五笔查询\\\"\"",
+ta type": "整数"]"methods": [
+  {
+ameter name": "返回的笔画数""method name": "初始化_",
+ameter name": "返回的笔画数""data type": "逻辑型"
+  },
+  {
+"method name": "取五笔编码_",
+"result comment": "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "待取的汉字",
+"data type": "文本型"
+   }
+]
+  }
+ta type": "整数"]]
+ },
+ {
+"class name": "简繁体类_",
+"@文档": "\"category = \\\"汉字拼音库.简繁体转换\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+ameter name": "返回的笔画数""method name": "编码_简繁体互转",
+ameter name": "返回的笔画数""static": true,
+ameter name": "返回的笔画数""data type": "文本型",
+ameter name": "返回的笔画数""parameters": [
+   {
+"parameter name": "待转内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "类型",
+"comment": "1、简体转繁体　2、繁体转简体",
+"data type": "整数",
+"@默认值": "1"
+   }
+ameter name": "返回的笔画数"]
+  }
+]
+ }
+型 = 文本型 返回值注释 = "返回86版+98版组合，如果两版一样，则返回一个，未找到返回空" 折叠]
+}

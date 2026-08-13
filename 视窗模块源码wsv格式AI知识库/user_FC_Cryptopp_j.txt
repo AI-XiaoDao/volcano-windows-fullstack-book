@@ -1,0 +1,530 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.加密解密Cryptopp\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"Cryptopp\\\\CryptoppTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"Cryptopp\\\\CryptoppToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"Cryptopp\\\\CryptoppToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"Cryptopp\\\\CryptoppToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"Cryptopp\\\\CryptoppToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "jsencrypt",
+"comment": "RSA_PKCS1v15_GenerateRSAKey  jsencrypt.min",
+"@全局类": "真",
+"methods": [
+  {
+ 整数"method name": "密码学_RSA_PKCS1v15_公钥加密",
+ 整数"static": true,
+ 整数"data type": "逻辑型",
+ 整数"parameters": [
+   {
+"parameter name": "公钥",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要加密的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "加密后的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密钥长度",
+"comment": "密码学_RSA_PKCS1v15_生成公钥私钥",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "是否BASE64编码",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ 整数]
+  },
+  {
+ameter name": "是否BASE64编码""method name": "密码学_RSA_PKCS1v15_私钥解密",
+ameter name": "是否BASE64编码""static": true,
+ameter name": "是否BASE64编码""parameters": [
+   {
+"parameter name": "私钥",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要解密的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解密后的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "私钥是否PEM格式",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否BASE64编码",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "是否BASE64编码"]
+  }
+]
+ },
+ {
+"class name": "AES加密常量",
+"@常量类": "整数",
+"constants": [
+  {
+"constant name": "CBC",
+"initial value": "@AES_CRYPT_MODE_CBC"
+  },
+  {
+
+"constant name": "CFB",
+
+"initial value": "@AES_CRYPT_MODE_CFB"
+  },
+  {
+_CRYPT_MODE_CFB"constant name": "CFB_FIPS",
+_CRYPT_MODE_CFB"initial value": "@AES_CRYPT_MODE_CFB_FIPS"
+  },
+  {
+整数"data type": "逻辑型""constant name": "OFB",
+整数"data type": "逻辑型""initial value": "@AES_CRYPT_MODE_OFB"
+  },
+  {
+
+"constant name": "CTR",
+
+"initial value": "@AES_CRYPT_MODE_CTR"
+  },
+  {
+
+"constant name": "ECB",
+
+"initial value": "@AES_CRYPT_MODE_ECB"
+  },
+  {
+
+"constant name": "CBC_CTS",
+
+"initial value": "@AES_CRYPT_MODE_CBC_CTS"
+  }
+]
+ },
+ {
+"class name": "AES填充常量",
+"@常量类": "整数",
+"constants": [
+  {
+comment": "密码学_RSA_PKCS1v15_生成公钥私钥""constant name": "无",
+comment": "密码学_RSA_PKCS1v15_生成公钥私钥""initial value": "@CRYPTOPP_PADDING_NO"
+  },
+  {
+"constant name": "零",
+"initial value": "@CRYPTOPP_PADDING_ZEROS"
+  },
+  {
+"constant name": "PKCS",
+"initial value": "@CRYPTOPP_PADDING_PKCS"
+  },
+  {
+stant name": "PKCS""constant name": "零和一",
+stant name": "PKCS""initial value": "@CRYPTOPP_PADDING_ONE_AND_ZEROS"
+  },
+  {
+nstant name": "CFB""constant name": "W3C",
+nstant name": "CFB""initial value": "@CRYPTOPP_PADDING_W3C"
+  },
+  {
+}"constant name": "默认",
+}"initial value": "@CRYPTOPP_PADDING_DEFAULT"
+  }
+]
+ },
+ {
+"class name": "DES加密常量",
+"@常量类": "整数",
+"constants": [
+  {
+tant name": "PKCS""initial value": "@CRYPTOPP_PADDING_ONE_AND_ZEROS""constant name": "CBC",
+tant name": "PKCS""initial value": "@CRYPTOPP_PADDING_ONE_AND_ZEROS""initial value": "@DES_CRYPT_MODE_CBC"
+  },
+  {
+_CRYPT_MODE_CBC"constant name": "CFB",
+_CRYPT_MODE_CBC"initial value": "@DES_CRYPT_MODE_CFB"
+  },
+  {
+}"constant name": "CFB_FIPS",
+}"initial value": "@DES_CRYPT_MODE_CFB_FIPS"
+  },
+  {
+ name": "PKCS""initial value": "@CRYPTOPP_PADDING_ONE_AND_ZEROS""constant name": "CBC""constant name": "OFB",
+ name": "PKCS""initial value": "@CRYPTOPP_PADDING_ONE_AND_ZEROS""constant name": "CBC""initial value": "@DES_CRYPT_MODE_OFB"
+  },
+  {
+constants": [
+"constant name": "CTR",
+constants": [
+"initial value": "@DES_CRYPT_MODE_CTR"
+  },
+  {
+}"constant name": "ECB",
+}"initial value": "@DES_CRYPT_MODE_ECB"
+  },
+  {
+
+"constant name": "CBC_CTS",
+
+"initial value": "@DES_CRYPT_MODE_CBC_CTS"
+  }
+]
+ },
+ {
+"class name": "DES填充常量",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "无",
+
+"initial value": "@CRYPTOPP_PADDING_NO"
+  },
+  {
+}"constant name": "零",
+}"initial value": "@CRYPTOPP_PADDING_ZEROS"
+  },
+  {
+
+"constant name": "PKCS",
+
+"initial value": "@CRYPTOPP_PADDING_PKCS"
+  },
+  {
+
+"constant name": "零和一",
+
+"initial value": "@CRYPTOPP_PADDING_ONE_AND_ZEROS"
+  },
+  {
+}"constant name": "W3C",
+}"initial value": "@CRYPTOPP_PADDING_W3C"
+  },
+  {
+nstant name": "零和一""constant name": "默认",
+nstant name": "零和一""initial value": "@CRYPTOPP_PADDING_DEFAULT"
+  }
+]
+ },
+ {
+"class name": "DES类型常量",
+"@常量类": "整数",
+"constants": [
+  {
+
+"initial value": "@DES_CRYPT_MODE_CBC_CTS""constant name": "DES",
+
+"initial value": "@DES_CRYPT_MODE_CBC_CTS""initial value": "@DES_CRYPT_TYPE_DES"
+  },
+  {
+_CRYPT_MODE_ECB"constant name": "EDE2",
+_CRYPT_MODE_ECB"initial value": "@DES_CRYPT_TYPE_EDE2"
+  },
+  {
+PT_MODE_ECB"constant name": "EDE2""constant name": "EDE3",
+PT_MODE_ECB"constant name": "EDE2""initial value": "@DES_CRYPT_TYPE_EDE3"
+  },
+  {
+_CRYPT_MODE_CTR"constant name": "XEX3",
+_CRYPT_MODE_CTR"initial value": "@DES_CRYPT_TYPE_XEX3"
+  }
+]
+ },
+ {
+"class name": "DES类",
+"methods": [
+  {
+
+"method name": "加密",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "要加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "加密后的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥",
+"comment": "密钥长度 可以是 16 24 32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "IV",
+"comment": "固定长度 16",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "加密方式",
+"data type": "DES加密常量",
+"@默认值": "DES加密常量.ECB"
+   },
+   {
+"parameter name": "填充方式",
+"data type": "DES填充常量",
+"@默认值": "DES填充常量.零"
+   },
+   {
+"parameter name": "DES类型",
+"data type": "DES类型常量",
+"@默认值": "DES类型常量.DES"
+   }
+
+]
+  },
+  {
+ameter name": "DES类型""method name": "解密",
+ameter name": "DES类型""data type": "逻辑型",
+ameter name": "DES类型""@禁止流程检查": "真",
+ameter name": "DES类型""parameters": [
+   {
+"parameter name": "要解密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "解密后的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥",
+"comment": "密钥长度 可以是 16 24 32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "IV",
+"comment": "固定长度 16",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "加密方式",
+"data type": "DES加密常量",
+"@默认值": "DES加密常量.ECB"
+   },
+   {
+"parameter name": "填充方式",
+"data type": "DES填充常量",
+"@默认值": "DES填充常量.零"
+   },
+   {
+"parameter name": "DES类型",
+"data type": "DES类型常量",
+"@默认值": "DES类型常量.DES"
+   }
+ameter name": "DES类型"]
+  }
+]
+ },
+ {
+"class name": "AES类",
+"methods": [
+  {
+ }"method name": "加密",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "要加密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "加密后的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥",
+"comment": "密钥长度 可以是 16 24 32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "IV",
+"comment": "固定长度 16",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "加密方式",
+"data type": "AES加密常量",
+"@默认值": "AES加密常量.CFB"
+   },
+   {
+"parameter name": "填充方式",
+"data type": "AES填充常量",
+"@默认值": "AES填充常量.零"
+   }
+ }]
+  },
+  {
+"method name": "解密",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "要解密的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "解密后的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥",
+"comment": "密钥长度 可以是 16 24 32",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "IV",
+"comment": "固定长度 16",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "加密方式",
+"data type": "AES加密常量",
+"@默认值": "AES加密常量.CFB"
+   },
+   {
+"parameter name": "填充方式",
+"data type": "AES填充常量",
+"@默认值": "AES填充常量.零"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "______MD5系列函数",
+"@全局类": "真",
+"methods": [
+  {
+ }"method name": "校验_取文件MD",
+ }"comment": "注意，犹豫开源库内部有问题，再x64下面是无错误的，再x86 下面会异常",
+ }"static": true,
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否大写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "md类型",
+"comment": "可选值 5 4 2 分别代表 MD5 MD4 MD2",
+"data type": "整数",
+"@默认值": "5"
+   }
+ }]
+  },
+  {
+data type": "字节集类""method name": "校验_取字节集MD",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "文本型",
+data type": "字节集类""@禁止流程检查": "真",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "要取校验数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否大写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "md类型",
+"comment": "可选值 5 4 2 分别代表 MD5 MD4 MD2",
+"data type": "整数",
+"@默认值": "5"
+   }
+data type": "字节集类"]
+  }
+]
+ },
+ {
+"class name": "______SHA系列函数",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "校验_取文件SHA",
+
+"comment": "注意，犹豫开源库内部有问题，再x64下面是无错误的，再x86 下面会异常",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否大写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "类型",
+"comment": "//1  SHA1\n//224  SHA224\n//256  SHA256\n//384  SHA384\n//512  SHA512\n//3224  SHA3_224\n//3256  SHA3_256\n//3384  SHA3_384\n//3512  SHA3_512",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+}"method name": "校验_取字节集SHA",
+}"static": true,
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "要取校验数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否大写",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "类型",
+"comment": "//1  SHA1\n//224  SHA224\n//256  SHA256\n//384  SHA384\n//512  SHA512\n//3224  SHA3_224\n//3256  SHA3_256\n//3384  SHA3_384\n//3512  SHA3_512",
+"data type": "整数",
+"@默认值": "1"
+   }
+}]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

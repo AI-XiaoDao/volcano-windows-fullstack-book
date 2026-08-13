@@ -1,0 +1,141 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+= 窗口"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+= 窗口"package name": "火山.测试",
+= 窗口"comment": "本例程以调用飞天诚信公司的ARM加密狗枚举API来举例说明.\n注意: 由于相关API本例程中只准备了32位版本的,因此本项目也必须编译为32位版本才能正常执行.\n由于飞天提供的库不是异常安全的,因此需要将相关链接开关关闭后才能正常编译.",
+= 窗口"@视窗.附加编译参数": "\"link: /SAFESEH:NO\"",
+= 窗口"classes": [
+ {
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"class name": "启动类",
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"base class": "窗口程序类",
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"methods": [
+  {
+ 整数"method name": "启动方法",
+ 整数"data type": "整数"
+  }
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+]
+ },
+ {
+输出参数 = 真"class name": "加密狗信息",
+输出参数 = 真"comment": "这是飞天加密狗的存储信息结构,基于其所提供的API对应翻译.",
+输出参数 = 真"@视窗.结构类": "0",
+输出参数 = 真"variables": [
+  {
+}"variable name": "COS版本",
+}"comment": "比如:0x0201,表示2.01版",
+}"data type": "短整数"
+  },
+  {
+ "variable name": "产品类型",
+ "comment": "0xFF表示标准版, 0x00为标准时钟锁,0x02为标准U盘锁",
+ "data type": "短整数"
+  },
+  {
+
+"variable name": "出厂日期",
+
+"data type": "字节 [8]"
+  },
+  {
+}"variable name": "代理商编号",
+}"comment": "比如:默认的0xFFFFFFFF",
+}"data type": "整数"
+  },
+  {
+出参数 = 真"comment": "这是飞天加密狗的存储信息结构,基于其所提供的API对应翻译.""variable name": "产品ID",
+出参数 = 真"comment": "这是飞天加密狗的存储信息结构,基于其所提供的API对应翻译.""data type": "整数"
+  },
+  {
+}"variable name": "用户ID",
+}"data type": "整数"
+  },
+  {
+riable name": "用户ID""variable name": "硬件ID",
+riable name": "用户ID""comment": "8字节的硬件ID",
+riable name": "用户ID""data type": "字节 [8]"
+  },
+  {
+        "variable name": "母锁标志",
+        "comment": "0x01表示是母锁, 0x00表示不是母锁",
+        "data type": "整数"
+  },
+  {
+
+"variable name": "设备类型",
+
+"comment": "PROTOCOL_HID或者PROTOCOL_CCID",
+
+"data type": "整数"
+  }
+输出参数 = 真]
+ },
+ {
+
+"class name": "封套数据",
+
+"@视窗.结构类": "0",
+
+"variables": [
+  {
+       "comment": "0x01表示是母锁, 0x00表示不是母锁""variable name": "数据",
+       "comment": "0x01表示是母锁, 0x00表示不是母锁""data type": "加密狗信息 [64]"
+  }
+
+]
+ },
+ {
+"data type": "字节 [8]""class name": "加密狗操作类",
+"data type": "字节 [8]""methods": [
+  {
+"method name": "调用加密狗DLL",
+"comment": "第1种方式: 通过调用相关DLL中的API接口来实现相关功能.\n本方法直接输入了\"Dongle_d.dll\"文件中的\"Dongle_Enum\"API.\n  \"@视窗.输入\"属性指定了所欲访问的DLL文件名.\n  \"@输出名\"属性指定了所欲调用的API函数在DLL中的输出名.\n  \"@视窗.附属文件\"属性用作支持编译后将相关DLL拷贝到编译输出目录,\n以支持直接调试运行或一起打包.",
+"static": true,
+"data type": "整数",
+"@视窗.输入": "\"api\\\\Dongle_d.dll\"",
+"@输出名": "\"Dongle_Enum\"",
+"@视窗.附属文件": "\"api\\\\Dongle_d.dll\"",
+"parameters": [
+   {
+"parameter name": "封套",
+"comment": "  将\"输出参数\"属性设置为真以获取API所返回数据.\n  由于需要传递一个成员数目为64个的\"加密狗信息\"数组,而火山所支持的\nDLL命令不支持数组参数,所以必须使用封套数据结构转接一下.",
+"data type": "封套数据",
+"@视窗.输出参数": "真"
+   },
+   {
+"parameter name": "加密狗数目",
+"comment": "使用\"变整数\"以传递过去用作接收加密狗数目的整数变量地址",
+"data type": "变整数"
+   }
+]
+  },
+  {
+}"method name": "调用加密狗API",
+}"comment": "注意!!! 一般(非封装)用户不需要掌握本方式,跳过即可.本方式仅是为有能力封装类库的用户演示.\n第2种方式: 直接使用嵌入式语句调用其API,本方式需要用户掌握相关C++调用语法.\n本方法直接链接使用该API的静态库.",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"@视窗.外部库": "\"api\\\\Dongle_s.lib\"",
+}"@视窗.外部头文件": "\"api\\\\Dongle_API.h\"",
+}"parameters": [
+   {
+"parameter name": "加密狗信息数组",
+"comment": "用作将对应数组的指针传递过来",
+"data type": "变整数"
+   },
+   {
+"parameter name": "加密狗数目",
+"comment": "  使用\"整数类\"传递回去加密狗的数目,本方式与\"调用加密狗DLL\"中演示了两种不同的\n向外传递基本数据类型数据的方法.",
+"data type": "整数类"
+   }
+}]
+  }
+"data type": "字节 [8]"]
+ }
+= 窗口]
+}

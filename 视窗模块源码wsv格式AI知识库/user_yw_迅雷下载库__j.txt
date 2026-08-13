@@ -1,0 +1,621 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."comment": "本库改自于“大色”的模块",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"迅雷下载库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+"class name": "迅雷下载类_",
+"comment": "注意，sdk目录，发布版本 SDK是放在\n生成的EXE目录下面",
+"@视窗.外部头文件": "\"Thunder\\\\DownWrapper.h\"",
+"@视窗.外部源文件": "\"Thunder\\\\DownWrapper.cpp\"",
+"@视窗.附属文件.win32": "\"Thunder\\\\SDK\"",
+"@视窗.需求目标平台": "32位平台",
+"@视窗.后缀文本": "\"public DownEngine::CDownWrapper\"",
+"methods": [
+  {
+ 整数"method name": "置Cookies_",
+ 整数"comment": "再创建任务之前设置",
+ 整数"parameters": [
+   {
+"parameter name": "浏览器cookies",
+"data type": "文本型"
+   }
+ 整数]
+  },
+  {
+ss name": "迅雷下载类_""method name": "置保存目录_",
+ss name": "迅雷下载类_""comment": "如果没有设置，默认保在桌面",
+ss name": "迅雷下载类_""parameters": [
+   {
+"parameter name": "保存目录",
+"comment": "默认为桌面",
+"data type": "文本型"
+   }
+ss name": "迅雷下载类_"]
+  },
+  {
+K_ERROR_ID_INVALID"method name": "置是否只从原始地址下载_",
+K_ERROR_ID_INVALID"parameters": [
+   {
+"parameter name": "是否只从原始地址下载",
+"data type": "逻辑型"
+   }
+K_ERROR_ID_INVALID]
+  },
+  {
+㊠敹ŝ"method name": "置禁止自动重命名_",
+㊠敹ŝ"parameters": [
+   {
+"parameter name": "禁止自动重命名",
+"data type": "逻辑型"
+   }
+㊠敹ŝ]
+  },
+  {
+s name": "迅雷下载类_""parameters": [
+"method name": "创建任务_",
+s name": "迅雷下载类_""parameters": [
+"comment": "返回创建任务的句柄，创建任务前，可以调用 置 开头的函数\n置保存目录 之类的来设置一下，后面就不用设置了",
+s name": "迅雷下载类_""parameters": [
+"data type": "变整数",
+s name": "迅雷下载类_""parameters": [
+"parameters": [
+   {
+"parameter name": "任务连接",
+"comment": "例如  http://www.qq.com/qq.exe",
+"data type": "文本型"
+   },
+   {
+"parameter name": "任务保存名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "连接来源ref",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+s name": "迅雷下载类_""parameters": [
+]
+  },
+  {
+ }"method name": "创建BT任务_",
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "种子文件",
+"comment": "种子文件路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "种子文件""method name": "开始任务_",
+ameter name": "种子文件""@嵌入式方法": "\"\"",
+ameter name": "种子文件""parameters": [
+   {
+"parameter name": "任务句柄",
+"data type": "变整数"
+   }
+ameter name": "种子文件"]
+  },
+  {
+"method name": "停止任务_",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "任务句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ameter name": "任务句柄""method name": "停止任务2_",
+ameter name": "任务句柄""comment": "强制停止",
+ameter name": "任务句柄""data type": "逻辑型",
+ameter name": "任务句柄""@嵌入式方法": "\"\"",
+ameter name": "任务句柄""parameters": [
+   {
+"parameter name": "任务句柄",
+"data type": "变整数"
+   }
+ameter name": "任务句柄"]
+  },
+  {
+"method name": "删除任务_",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "任务句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+hod name": "停止任务_""method name": "置文件ID与大小_",
+hod name": "停止任务_""parameters": [
+   {
+"parameter name": "任务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文件ID",
+"comment": "长度必须为40字符",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件大小",
+"data type": "长整数"
+   }
+hod name": "停止任务_"]
+  },
+  {
+parameters": [
+"method name": "置下载速度限制_",
+parameters": [
+"@嵌入式方法": "\"\"",
+parameters": [
+"parameters": [
+   {
+"parameter name": "下载速度",
+"comment": "Bps",
+"data type": "整数"
+   }
+parameters": [
+]
+  },
+  {
+ameter name": "下载速度""method name": "置上传速度限制_",
+ameter name": "下载速度""data type": "整数",
+ameter name": "下载速度""@嵌入式方法": "\"\"",
+ameter name": "下载速度""parameters": [
+   {
+"parameter name": "TCP限速",
+"comment": "INT32 nTcpBps",
+"data type": "整数"
+   },
+   {
+"parameter name": "其他限速",
+"comment": " INT32 nOtherBps",
+"data type": "整数"
+   }
+ameter name": "下载速度"]
+  },
+  {
+comment": "INT32 nTcpBps""method name": "取网址文件大小_",
+comment": "INT32 nTcpBps""comment": "返回文件大小，有问题还未修复",
+comment": "INT32 nTcpBps""data type": "长整数",
+comment": "INT32 nTcpBps""@禁止流程检查": "真",
+comment": "INT32 nTcpBps""parameters": [
+   {
+"parameter name": "网址",
+"comment": "例如 http://www.qq.com/qq.exe ",
+"data type": "文本型"
+   }
+comment": "INT32 nTcpBps"]
+  },
+  {
+"method name": "解析迅雷连接_",
+"comment": "如果为空 表示解析失败",
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "迅雷连接",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "迅雷连接""method name": "置UserAgent_",
+ameter name": "迅雷连接""@嵌入式方法": "\"\"",
+ameter name": "迅雷连接""parameters": [
+   {
+"parameter name": "UserAgent",
+"data type": "文本型"
+   }
+ameter name": "迅雷连接"]
+  },
+  {
+"method name": "取任务信息_",
+"data type": "迅雷任务信息",
+"parameters": [
+   {
+"parameter name": "任务句柄",
+"data type": "变整数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "迅雷下载类_封装",
+"methods": [
+  {
+
+"method name": "置任务线程数_",
+
+"comment": "设置下载任务数量，不建议很大，默认是7",
+
+"parameters": [
+   {
+"parameter name": "数量",
+"comment": "最高10",
+"data type": "整数",
+"@默认值": "7"
+   }
+
+]
+  },
+  {
+]"method name": "停止任务_",
+]"parameters": [
+   {
+"parameter name": "任务句柄",
+"comment": "默认-1停止所有任务，指定则停止指定的单任务",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否强制停止",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]]
+  },
+  {
+ }"method name": "删除任务_",
+ }"parameters": [
+   {
+"parameter name": "任务句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"method name": "迅雷下载_",
+}"result comment": "返回任务句柄",
+}"data type": "变整数",
+}"parameters": [
+   {
+"parameter name": "下载地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "下载保存名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存目录",
+"comment": "如果没有设置，默认保在桌面",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "UserAgent",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "Cookies",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+}]
+  },
+  {
+"method name": "取任务信息_",
+"parameters": [
+   {
+"parameter name": "返回文件名组",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回任务句柄组",
+"data type": "变整数数组类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+
+"method name": "取任务句柄_",
+
+"comment": "可按名称取，也可按地址取;\n如果文件名称取，如有多个同名文件，只会返回首个;\n还可按下载地址取",
+
+"data type": "变整数",
+
+"parameters": [
+   {
+"parameter name": "文件名称",
+"comment": "例如：QQ.exe",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "下载地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+ }"method name": "下载回调",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件大小",
+"comment": "字节",
+"data type": "长整数"
+   },
+   {
+"parameter name": "已下大小",
+"comment": "字节",
+"data type": "长整数"
+   },
+   {
+"parameter name": "下载速度",
+"comment": "字节/秒",
+"data type": "整数"
+   },
+   {
+"parameter name": "下载进度",
+"data type": "整数"
+   },
+   {
+"parameter name": "任务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "下载状态",
+"data type": "文本型"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "迅雷任务信息",
+"@文档": "\"category = \\\"迅雷下载库.附加类\\\"\"",
+"variables": [
+  {
+"variable name": "状态",
+"comment": "具体查看   迅雷任务状态常量",
+"data type": "整数"
+  },
+  {
+
+"variable name": "错误",
+
+"comment": "具体查看   迅雷任务错误常量 ",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "文件名",
+
+"data type": "文本型"
+  },
+  {
+ameter name": "任务句柄""variable name": "任务总字节数",
+ameter name": "任务句柄""comment": "该任务总大小(字节)",
+ameter name": "任务句柄""data type": "长整数"
+  },
+  {
+comment": "具体查看   迅雷任务状态常量""variable name": "已下载字节数",
+comment": "具体查看   迅雷任务状态常量""comment": "下载有效字节数(可能存在回退的情况)",
+comment": "具体查看   迅雷任务状态常量""data type": "长整数"
+  },
+  {
+"variable name": "下载进度",
+"data type": "小数"
+  },
+  {
+data type": "小数""variable name": "下载速度",
+data type": "小数""comment": "nSpeed; 即时速度(字节/秒)",
+data type": "小数""data type": "整数"
+  },
+  {
+ariable name": "错误""variable name": "总资源数",
+ariable name": "错误""data type": "整数"
+  },
+  {
+
+"variable name": "可用资源数",
+
+"data type": "整数"
+  },
+  {
+
+"variable name": "P2P贡献字节数",
+
+"comment": "p2p贡献字节数",
+
+"data type": "长整数"
+  },
+  {
+"variable name": "原始资源共享字节数",
+"data type": "长整数"
+  },
+  {
+data type": "小数""variable name": "镜像资源共享字节数",
+data type": "小数""data type": "长整数"
+  },
+  {
+ type": "小数""variable name": "镜像资源共享字节数""variable name": "原始资源贡献速度",
+ type": "小数""variable name": "镜像资源共享字节数""comment": "nSpeedP2S; 即时速度(字节/秒)",
+ type": "小数""variable name": "镜像资源共享字节数""data type": "整数"
+  },
+  {
+}"variable name": "P2P贡献速度",
+}"comment": "nSpeedP2P; 即时速度(字节/秒)",
+}"data type": "整数"
+  },
+  {
+
+"variable name": "原始资源是否有效",
+
+"data type": "逻辑型"
+  },
+  {
+e": "小数""variable name": "镜像资源共享字节数""variable name": "原始资源贡献速度""variable name": "是否正在创建文件",
+e": "小数""variable name": "镜像资源共享字节数""variable name": "原始资源贡献速度""data type": "整数"
+  }
+]
+ },
+ {
+"class name": "迅雷任务状态常量",
+"@文档": "\"category = \\\"迅雷下载库.附加类\\\"\"",
+"constants": [
+  {
+e": "小数""variable name": "镜像资源共享字节数""variable name": "原始资源贡献速度""constant name": "无任务",
+e": "小数""variable name": "镜像资源共享字节数""variable name": "原始资源贡献速度""data type": "整数",
+e": "小数""variable name": "镜像资源共享字节数""variable name": "原始资源贡献速度""initial value": "@NOITEM"
+  },
+  {
+}"constant name": "错误",
+}"data type": "整数",
+}"initial value": "@TSC_ERROR"
+  },
+  {
+ent": "具体查看   迅雷任务状态常量""variable name": "已下载字节数""constant name": "暂停",
+ent": "具体查看   迅雷任务状态常量""variable name": "已下载字节数""data type": "整数",
+ent": "具体查看   迅雷任务状态常量""variable name": "已下载字节数""initial value": "@TSC_PAUSE"
+  },
+  {
+ type": "小数""variable name": "镜像资源共享字节数""constant name": "下载中",
+ type": "小数""variable name": "镜像资源共享字节数""data type": "整数",
+ type": "小数""variable name": "镜像资源共享字节数""initial value": "@TSC_DOWNLOAD"
+  },
+  {
+ type": "小数""variable name": "镜像资源共享字节数""constant name": "完成",
+ type": "小数""variable name": "镜像资源共享字节数""data type": "整数",
+ type": "小数""variable name": "镜像资源共享字节数""initial value": "@TSC_COMPLETE"
+  },
+  {
+ent": "具体查看   迅雷任务状态常量""variable name": "已下载字节数""constant name": "开始添加任务",
+ent": "具体查看   迅雷任务状态常量""variable name": "已下载字节数""data type": "整数",
+ent": "具体查看   迅雷任务状态常量""variable name": "已下载字节数""initial value": "@TSC_STARTPENDING"
+  },
+  {
+}"constant name": "停止添加任务",
+}"data type": "整数",
+}"initial value": "@TSC_STOPPENDING"
+  }
+]
+ },
+ {
+"class name": "迅雷任务错误常量",
+"@文档": "\"category = \\\"迅雷下载库.附加类\\\"\"",
+"constants": [
+  {
+}"constant name": "未知错误",
+}"comment": " TASK_ERROR_UNKNOWN",
+}"data type": "整数",
+}"initial value": "0x00"
+  },
+  {
+"initial value": "0x00""constant name": "创建文件失败",
+"initial value": "0x00""comment": " TASK_ERROR_DISK_CREATE",
+"initial value": "0x00""data type": "整数",
+"initial value": "0x00""initial value": "0x01"
+  },
+  {
+
+"constant name": "写文件失败",
+
+"comment": " TASK_ERROR_DISK_WRITE",
+
+"data type": "整数",
+
+"initial value": "0x02"
+  },
+  {
+}"constant name": "读文件失败",
+}"comment": " TASK_ERROR_DISK_READ",
+}"data type": "整数",
+}"initial value": "0x03"
+  },
+  {
+e": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""constant name": "重命名失败",
+e": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""comment": " TASK_ERROR_DISK_RENAME",
+e": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""data type": "整数",
+e": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""initial value": "0x04"
+  },
+  {
+": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""initial value": "0x04""constant name": "文件片校验失败",
+": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""initial value": "0x04""comment": " TASK_ERROR_DISK_PIECEHASH",
+": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""initial value": "0x04""data type": "整数",
+": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""initial value": "0x04""initial value": "0x05"
+  },
+  {
+": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""comment": " TASK_ERROR_DISK_RENAME""constant name": "文件全文校验失败",
+": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""comment": " TASK_ERROR_DISK_RENAME""comment": " TASK_ERROR_DISK_FILEHASH",
+": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""comment": " TASK_ERROR_DISK_RENAME""data type": "整数",
+": "小数""variable name": "镜像资源共享字节数""constant name": "下载中""comment": " TASK_ERROR_DISK_RENAME""initial value": "0x06"
+  },
+  {
+"data type": "整数""constant name": "删除文件失败失败",
+"data type": "整数""comment": " TASK_ERROR_DISK_DELETE",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "0x07"
+  },
+  {
+: "小数""variable name": "镜像资源共享字节数""constant name": "下载中""initial value": "0x04""comment": " TASK_ERROR_DISK_PIECEHASH""constant name": "无效的DOWN地址",
+: "小数""variable name": "镜像资源共享字节数""constant name": "下载中""initial value": "0x04""comment": " TASK_ERROR_DISK_PIECEHASH""comment": " TASK_ERROR_DOWN_INVALID",
+: "小数""variable name": "镜像资源共享字节数""constant name": "下载中""initial value": "0x04""comment": " TASK_ERROR_DISK_PIECEHASH""data type": "整数",
+: "小数""variable name": "镜像资源共享字节数""constant name": "下载中""initial value": "0x04""comment": " TASK_ERROR_DISK_PIECEHASH""initial value": "0x10"
+  },
+  {
+}"constant name": "代理类型未知",
+}"comment": " TASK_ERROR_PROXY_AUTH_TYPE_UNKOWN",
+}"data type": "整数",
+}"initial value": "0x20"
+  },
+  {
+小数""variable name": "镜像资源共享字节数""constant name": "下载中""comment": " TASK_ERROR_DISK_RENAME""constant name": "文件全文校验失败""constant name": "代理认证失败",
+小数""variable name": "镜像资源共享字节数""constant name": "下载中""comment": " TASK_ERROR_DISK_RENAME""constant name": "文件全文校验失败""comment": " TASK_ERROR_PROXY_AUTH_TYPE_FAILED",
+小数""variable name": "镜像资源共享字节数""constant name": "下载中""comment": " TASK_ERROR_DISK_RENAME""constant name": "文件全文校验失败""data type": "整数",
+小数""variable name": "镜像资源共享字节数""constant name": "下载中""comment": " TASK_ERROR_DISK_RENAME""constant name": "文件全文校验失败""initial value": "0x21"
+  },
+  {
+"comment": " TASK_ERROR_DISK_READ""constant name": "无IP可用",
+"comment": " TASK_ERROR_DISK_READ""comment": " http下载中无ip可用 TASK_ERROR_HTTPMGR_NOT_IP",
+"comment": " TASK_ERROR_DISK_READ""data type": "整数",
+"comment": " TASK_ERROR_DISK_READ""initial value": "0x30"
+  },
+  {
+comment": " TASK_ERROR_DISK_READ""initial value": "0x30""constant name": "任务超时",
+comment": " TASK_ERROR_DISK_READ""initial value": "0x30""comment": " TASK_ERROR_TIMEOUT任务超时",
+comment": " TASK_ERROR_DISK_READ""initial value": "0x30""data type": "整数",
+comment": " TASK_ERROR_DISK_READ""initial value": "0x30""initial value": "0x40"
+  },
+  {
+initial value": "0x00""data type": "整数""constant name": "任务取消",
+initial value": "0x00""data type": "整数""comment": " TASK_ERROR_CANCEL",
+initial value": "0x00""data type": "整数""data type": "整数",
+initial value": "0x00""data type": "整数""initial value": "0x41"
+  },
+  {
+}"constant name": "TaskId非法",
+}"comment": " TASK_ERROR_ID_INVALID",
+}"data type": "整数",
+}"initial value": "0x43"
+  }
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

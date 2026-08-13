@@ -1,0 +1,2425 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+㤠隻ŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+㤠隻ŝ"package name": "火山.仰望",
+㤠隻ŝ"@文档": "\"category = \\\"数据操作库\\\"\"",
+㤠隻ŝ"classes": [
+ {
+"class name": "拼接符",
+"@文档": "\"category = \\\"数据操作库.拼接符\\\"\"",
+"@禁止创建对象": "真",
+"variables": [
+  {
+
+"variable name": "回车符",
+
+"comment": "\\r",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"\\r\""
+  },
+  {
+
+"variable name": "换行符",
+
+"comment": "回车+换行 \\r\\n",
+
+"static": true,
+
+"data type": "文本型",
+
+"initial value": "\"\\r\\n\""
+  },
+  {
+"data type": "文本型""variable name": "换行符2",
+"data type": "文本型""comment": "\\n",
+"data type": "文本型""static": true,
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""initial value": "\"\\n\""
+  },
+  {
+data type": "文本型""data type": "文本型""variable name": "制表符",
+data type": "文本型""data type": "文本型""comment": "\\t",
+data type": "文本型""data type": "文本型""static": true,
+data type": "文本型""data type": "文本型""data type": "文本型",
+data type": "文本型""data type": "文本型""initial value": "\"\\t\""
+  },
+  {
+ata type": "文本型""data type": "文本型""comment": "\\t""variable name": "单引号",
+ata type": "文本型""data type": "文本型""comment": "\\t""comment": "英文 '",
+ata type": "文本型""data type": "文本型""comment": "\\t""static": true,
+ata type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型",
+ata type": "文本型""data type": "文本型""comment": "\\t""initial value": "\"\\'\""
+  },
+  {
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""variable name": "双引号",
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""comment": "英文 \"",
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""static": true,
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""data type": "文本型",
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""initial value": "\"\\\"\""
+  },
+  {
+ata type": "文本型""data type": "文本型""comment": "\\t""variable name": "左引号",
+ata type": "文本型""data type": "文本型""comment": "\\t""comment": "中文“",
+ata type": "文本型""data type": "文本型""comment": "\\t""static": true,
+ata type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型",
+ata type": "文本型""data type": "文本型""comment": "\\t""initial value": "\"“\""
+  },
+  {
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""variable name": "右引号",
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""comment": "中文 ”",
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""static": true,
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""data type": "文本型",
+ta type": "文本型""data type": "文本型""comment": "\\t""data type": "文本型""initial value": "\"”\""
+  },
+  {
+}"variable name": "反斜杠",
+}"comment": "\\",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"\\\\\""
+  }
+]
+ },
+ {
+
+"class name": "剪辑板类_",
+
+"@文档": "\"category = \\\"数据操作库.剪辑板操作\\\"\"",
+
+"@全局类": "真",
+
+"methods": [
+  {
+"methods": [
+"method name": "剪辑板_置剪辑板图片",
+"methods": [
+"comment": "图片路径;\n将文件复制到剪辑板",
+"methods": [
+"static": true,
+"methods": [
+"parameters": [
+   {
+"parameter name": "图片来源",
+"data type": "文本型"
+   }
+"methods": [
+]
+  },
+  {
+
+"method name": "剪辑板_置剪辑板图片2",
+
+"comment": "字节集类;\n将文件复制到剪辑板",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "剪辑板_保存剪辑板文件",
+
+"comment": "将剪辑板中的文件粘贴到指定的位置",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "保存位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否覆盖",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"method name": "剪辑板_置剪辑板文件",
+"comment": "将文件复制或剪切到剪辑板里",
+"static": true,
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "文件列表",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否复制",
+"comment": "默认复制文件，假为剪切文件",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "剪辑板_取剪辑板文件",
+"comment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件",
+"static": true,
+"data type": "文本数组类",
+"parameters": [
+   {
+"parameter name": "返回的类型",
+"comment": "0、获取失败　1、复制文件　3剪切文件",
+"data type": "文本型",
+"@默认值": "\"0\""
+   }
+]
+  },
+  {
+
+"method name": "剪辑板_取剪辑板图片_字节集",
+
+"comment": "获取剪贴板中的图片数据",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "返回的字节集数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "剪辑板_取剪辑板图片_位图",
+
+"comment": "获取剪贴板中的图片数据",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "返回的位图数据",
+"data type": "位图对象类"
+   }
+
+]
+  }
+
+]
+ },
+ {
+"class name": "剪辑板监听类_",
+"@文档": "\"category = \\\"数据操作库.剪辑板监听\\\"\"",
+"methods": [
+  {
+
+"method name": "监听_",
+
+"comment": "开始监听剪辑板变动",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "停止_",
+
+"comment": "停止监听剪辑板变动",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+ }"method name": "剪辑板监听事件",
+ }"comment": "复制数据时将触发本事件",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "文字信息",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图片信息",
+"comment": "如果是图片则以字节集形式返回",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "文件信息",
+"comment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件",
+"data type": "文本数组类"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "文本替换类_",
+"@文档": "\"category = \\\"数据操作库.文本替换\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+comment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""method name": "子文本替换_",
+comment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""comment": "正则方式替换数据",
+comment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""static": true,
+comment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""data type": "文本型",
+comment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "寻找的数据",
+"comment": "可加入多个",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "替换为",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件"]
+  }
+]
+ },
+ {
+"class name": "文本处理类_",
+"@文档": "\"category = \\\"数据操作库.文本处理\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+omment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""comment": "正则方式替换数据""method name": "子文本替换_连续",
+omment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""comment": "正则方式替换数据""comment": "源文本 = \"你好，火山\" .\n连续子文本替换_ (源文本, \"你好\", \"Hello\", \"火山\", \"火山中文编程\") .\n得到结果：Hello，火山中文编程",
+omment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""comment": "正则方式替换数据""static": true,
+omment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""comment": "正则方式替换数据""@嵌入式方法": "\"req_obj_param_pointer = true\"",
+omment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""comment": "正则方式替换数据""parameters": [
+   {
+"parameter name": "源文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换参数",
+"comment": "必须提供偶数个,前者为欲替换值,后者为替换值,两两一组",
+"data type": "文本型",
+"@可扩展": "\"\""
+   }
+omment": "获取剪辑板中保存的文件，同时可判断是复制文件还是剪切文件.\n0、获取失败　1、复制文件　3剪切文件""comment": "正则方式替换数据"]
+  },
+  {
+"method name": "加入文本_",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲添加的文本",
+"data type": "文本型",
+"@可扩展": "\"\""
+   }
+]
+  },
+  {
+parameters": [
+"method name": "加入文本_连续",
+parameters": [
+"static": true,
+parameters": [
+"@嵌入式方法": "\"\"",
+parameters": [
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的文本",
+"data type": "文本型",
+"@可扩展": "\"d_text = \\\".GetText ());(*str).AddText (\\\"\""
+   }
+parameters": [
+]
+  },
+  {
+"method name": "加入文本_连续2",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "间隔符号",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "所欲添加的文本",
+"data type": "文本型",
+"@可扩展": "\"d_text=\\\"); str.AddText (link);str.AddText (\\\"\""
+   }
+]
+  },
+  {
+"method name": "加入文本_连续3",
+"static": true,
+"@嵌入式方法": "\"req_obj_param_pointer = true\"",
+"parameters": [
+   {
+"parameter name": "返回的结果文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "间隔符号",
+"comment": "拼接文本间的间隔符号",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "所欲添加的文本",
+"data type": "文本型",
+"@可扩展": "\"\""
+   }
+]
+  },
+  {
+ }"method name": "文本_反转文本",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "文本_取文本像素尺寸",
+ }"comment": "精确计算文本内容在组件中显示所占的尺寸",
+ }"static": true,
+ }"data type": "尺寸类",
+ }"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体名称",
+"data type": "文本型",
+"@默认值": "\"宋体\""
+   },
+   {
+"parameter name": "字体尺寸",
+"data type": "整数",
+"@默认值": "9"
+   },
+   {
+"parameter name": "是否粗体",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否斜体",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+
+"method name": "文本_取文本像素尺寸2",
+
+"comment": "精确计算文本内容在组件中显示所占的尺寸",
+
+"result comment": "返回宽度",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体名称",
+"data type": "文本型",
+"@默认值": "\"宋体\""
+   },
+   {
+"parameter name": "字体尺寸",
+"data type": "整数",
+"@默认值": "9"
+   },
+   {
+"parameter name": "是否粗体",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否斜体",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+]"method name": "文本_取文本像素宽度",
+]"comment": "计算汉字、字母、数字在组件中所占的宽度，不支持标点符号",
+]"result comment": "返回宽度值",
+]"static": true,
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体大小",
+"data type": "小数",
+"@默认值": "11"
+   },
+   {
+"parameter name": "选择模式",
+"comment": "1、纯中文　2、非纯中文(包含有字母数字)",
+"data type": "整数",
+"@默认值": "1"
+   }
+]]
+  },
+  {
+]"method name": "文本_取文本占位宽度",
+]"comment": "计算文字在组件中所占的宽度;\n宽度充足",
+]"static": true,
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "父窗口",
+"comment": "本对象",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体大小",
+"data type": "文本型",
+"@默认值": "\"宋体, 11, 0, 0, 0, 0, 0\""
+   }
+]]
+  },
+  {
+
+"method name": "文本_取文本占位宽度2",
+
+"comment": "计算文字在组件中所占的宽度;\n宽度紧凑",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"comment": "本对象",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字体大小",
+"data type": "文本型",
+"@默认值": "\"宋体, 11, 0, 0, 0, 0, 0\""
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取组件文本占位数量",
+
+"comment": "计算该组件中每行最多能容纳的文字数量",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"comment": "本对象",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "文本内容",
+"comment": "如果为空，则按中文字填充计算。不为空，则按提供的文字来计算。",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "组件宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "字体大小",
+"data type": "文本型",
+"@默认值": "\"宋体, 11, 0, 0, 0, 0, 0\""
+   }
+
+]
+  },
+  {
+}"method name": "文本_是否为空文本",
+}"static": true,
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否去除空格",
+"comment": "真：空格换行不算为内容  假：空格换行算为内容",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+}"method name": "删全部空_",
+}"static": true,
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "待处理的数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "清除回车符",
+"comment": "\\r",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "清除换行符",
+"comment": "\\n",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "清除制表符",
+"comment": "\\t",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+ameter name": "清除制表符""method name": "取文本中间_",
+ameter name": "清除制表符""comment": "从左往右找",
+ameter name": "清除制表符""static": true,
+ameter name": "清除制表符""data type": "文本型",
+ameter name": "清除制表符""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否包含起始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"comment": "默认找不到就返回空文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "清除制表符"]
+  },
+  {
+data type": "逻辑型""method name": "文本_取文本中间",
+data type": "逻辑型""comment": "从左往右找",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "文本型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否包含起始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"comment": "默认找不到就返回空文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "取文本中间2_",
+
+"comment": "从右往左找",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"comment": "从右往左，右侧文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"comment": "从右往左，左侧文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"comment": "-1表示从文本尾部开始查找，非负数，表示从文本总长度-本参数值处开始查找",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否包含起始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"comment": "默认找不到就返回空文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取文本中间2",
+
+"comment": "从右往左找",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"comment": "从右往左，右侧文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"comment": "从右往左，左侧文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始搜索位置",
+"comment": "-1表示从文本尾部开始查找，非负数，表示从文本总长度-本参数值处开始查找",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否包含起始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"comment": "默认找不到就返回空文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+data type": "逻辑型""method name": "取文本中间_批量",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "文本数组类",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "如果找不到返回空",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "逻辑型"]
+  },
+  {
+}"method name": "文本_批量取文本中间",
+}"static": true,
+}"data type": "文本数组类",
+}"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "如果找不到返回空",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+}"method name": "取文本中间_批量2",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否换行",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "如果找不到返回空",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+
+"method name": "文本_批量取文本中间2",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "开始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否换行",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "如果找不到返回空",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+ameter name": "不区分大小写""method name": "取文本左边_",
+ameter name": "不区分大小写""comment": "从左往右找",
+ameter name": "不区分大小写""static": true,
+ameter name": "不区分大小写""data type": "文本型",
+ameter name": "不区分大小写""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "不区分大小写"]
+  },
+  {
+ }"method name": "文本_取文本左边",
+ }"comment": "从左往右找",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+}"method name": "取文本左边2_",
+}"comment": "从右往左找",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+data type": "逻辑型""method name": "文本_取文本左边2",
+data type": "逻辑型""comment": "从右往左找",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "文本型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "逻辑型"]
+  },
+  {
+data type": "逻辑型""method name": "取文本右边_",
+data type": "逻辑型""comment": "从左往右找",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "文本型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "文本_取文本右边",
+
+"comment": "从左往右找",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "取文本右边2_",
+
+"comment": "从右往左找",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "文本_取文本右边2",
+
+"comment": "从右往左找",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "如果找不到返回原始文本",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "取文本长度_",
+
+"comment": "同易语言",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "文本_取文本长度",
+ }"comment": "同易语言",
+ }"static": true,
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "文本_取文本出现次数",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "原始文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要查找的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+}"method name": "文本_数据补位",
+}"comment": "补充某数据位数，例如原数据是“5”，想以0填充，补满成3位数，那么结果数据就是500",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "原数据",
+"comment": "例如：5",
+"data type": "文本型"
+   },
+   {
+"parameter name": "整体位数",
+"comment": "例如：3",
+"data type": "整数"
+   },
+   {
+"parameter name": "填充数据",
+"comment": "默认填充0",
+"data type": "文本型",
+"@默认值": "\"0\""
+   },
+   {
+"parameter name": "补充位置",
+"comment": "真：补充尾部　假：补充头部",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+"method name": "文本_字母转整数",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "待转字母",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "取代码_",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "位置",
+"comment": "从0开始",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "取代码2_",
+}"comment": "同易语言",
+}"static": true,
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "位置",
+"comment": "从0开始",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "字节数据类_",
+"@文档": "\"category = \\\"数据操作库.字节集处理\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+ }"method name": "取字节集左边_",
+ }"comment": "从左往右找",
+ }"static": true,
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要查找的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+}"method name": "字节集_取字节集左边",
+}"comment": "从左往右找",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要查找的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+"method name": "取字节集左边2_",
+"comment": "从右往左找",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要查找的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+"method name": "字节集_取字节集左边2",
+"comment": "从右往左找",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要查找的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+
+"method name": "取字节集右边_",
+
+"comment": "从左往右找",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要查找的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "字节集_取字节集右边",
+
+"comment": "从左往右找",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要查找的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "搜索起始位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "不区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "取字节集右边2_",
+
+"comment": "从右往左找",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要查找的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "字节集_取字节集右边2",
+
+"comment": "从右往左找",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要查找的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "取字节集中间_",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "开始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "结束数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "开始搜索位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否包含起始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ }"method name": "字节集_取字节集中间",
+ }"static": true,
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "开始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "结束数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "开始搜索位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否包含起始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "如果找不到返回原始数据",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+ }"method name": "取字节集中间_批量",
+ }"static": true,
+ }"data type": "字节集数组类",
+ }"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "开始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "结束数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "如果找不到返回空",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+ }"method name": "字节集_批量取字节集中间",
+ }"static": true,
+ }"data type": "字节集数组类",
+ }"parameters": [
+   {
+"parameter name": "原始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "开始数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "结束数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "如果找不到返回空",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+]"method name": "字节集_是否为空字节集",
+]"static": true,
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+]]
+  },
+  {
+"method name": "反转字节集_",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "字节集",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+
+"method name": "字节集_反转字节集",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "字节集",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+thod name": "字节集_反转字节集""method name": "取字节集数据_",
+thod name": "字节集_反转字节集""comment": "返回十六进制",
+thod name": "字节集_反转字节集""static": true,
+thod name": "字节集_反转字节集""data type": "整数",
+thod name": "字节集_反转字节集""parameters": [
+   {
+"parameter name": "字节数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "成员序",
+"comment": "所要取的位序",
+"data type": "整数",
+"@默认值": "0"
+   }
+thod name": "字节集_反转字节集"]
+  },
+  {
+
+"method name": "字节集_取字节集数据",
+
+"comment": "返回十六进制",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "字节数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "成员序",
+"comment": "所要取的位序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "取字节集数据2_",
+
+"comment": "返回十进制",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "字节数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "成员序",
+"comment": "所要取的位序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "字节集_取字节集数据2",
+
+"comment": "返回十进制",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "字节数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "成员序",
+"comment": "所要取的位序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "调试输出字节集_",
+
+"comment": "以数字串形式显示字节集",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "字节集内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否有符号",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ameter name": "字节集内容""method name": "调试输出字节集2_",
+ameter name": "字节集内容""comment": "以数字串形式显示字节集",
+ameter name": "字节集内容""static": true,
+ameter name": "字节集内容""parameters": [
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否有符号",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否包含结束字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "字节集内容"]
+  },
+  {
+"method name": "字节集转字符串_",
+"comment": "返回的数据以数字串形式显示字节集",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "字节集内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否有符号",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+data type": "逻辑型""method name": "字节集_字节集转字符串",
+data type": "逻辑型""comment": "返回的数据以数字串形式显示字节集",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "文本型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "字节集内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否有符号",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "逻辑型"]
+  },
+  {
+}"method name": "文本转字节集字符串_",
+}"comment": "返回的数据以字节集数字串形式显示",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否有符号",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否包含结束字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+ameter name": "文本内容""method name": "文本_文本转字节集字符串",
+ameter name": "文本内容""comment": "返回的数据以字节集数字串形式显示",
+ameter name": "文本内容""static": true,
+ameter name": "文本内容""data type": "文本型",
+ameter name": "文本内容""parameters": [
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否有符号",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否包含结束字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "文本内容"]
+  },
+  {
+@默认值": "真""method name": "字节集字符串转文本_",
+@默认值": "真""comment": "将文本型字节集字符串转回文本型",
+@默认值": "真""static": true,
+@默认值": "真""data type": "文本型",
+@默认值": "真""parameters": [
+   {
+"parameter name": "待转内容",
+"comment": "例如：{230,181,139,232,175,149,0} 或 230,181,139,232,175,149,0",
+"data type": "文本型"
+   }
+@默认值": "真"]
+  },
+  {
+}"method name": "字节集_字节集字符串转文本",
+}"comment": "将文本型字节集字符串转回文本型",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "待转内容",
+"comment": "例如：{230,181,139,232,175,149,0} 或 230,181,139,232,175,149,0",
+"data type": "文本型"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "变量类型转换类_",
+"@文档": "\"category = \\\"数据操作库.变量转换\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+ }"method name": "文本到变整数_",
+ }"comment": "将所指定文本转换到变整数并返回",
+ }"static": true,
+ }"data type": "变整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲转换的文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ethod name": "文本到变整数_""method name": "逻辑型到文本_",
+ethod name": "文本到变整数_""result comment": "返回中文的“真”或“假”",
+ethod name": "文本到变整数_""static": true,
+ethod name": "文本到变整数_""data type": "文本型",
+ethod name": "文本到变整数_""@禁止流程检查": "真",
+ethod name": "文本到变整数_""parameters": [
+   {
+"parameter name": "值",
+"data type": "逻辑型"
+   }
+ethod name": "文本到变整数_"]
+  },
+  {
+ethod name": "文本到变整数_""method name": "逻辑型到文本2_",
+ethod name": "文本到变整数_""result comment": "返回文本型数字的“1”或“0”",
+ethod name": "文本到变整数_""static": true,
+ethod name": "文本到变整数_""data type": "文本型",
+ethod name": "文本到变整数_""@禁止流程检查": "真",
+ethod name": "文本到变整数_""parameters": [
+   {
+"parameter name": "值",
+"data type": "逻辑型"
+   }
+ethod name": "文本到变整数_"]
+  },
+  {
+thod name": "文本到变整数_""static": true"method name": "逻辑型到整数_",
+thod name": "文本到变整数_""static": true"static": true,
+thod name": "文本到变整数_""static": true"data type": "整数",
+thod name": "文本到变整数_""static": true"@禁止流程检查": "真",
+thod name": "文本到变整数_""static": true"parameters": [
+   {
+"parameter name": "值",
+"data type": "逻辑型"
+   }
+thod name": "文本到变整数_""static": true]
+  },
+  {
+data type": "逻辑型""method name": "整数到逻辑型_",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@禁止流程检查": "真",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  }
+]
+ },
+ {
+"class name": "参数回传类_",
+"@文档": "\"category = \\\"数据操作库.参数回传\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+ }"method name": "回传参数_通用非文本型",
+ }"comment": "设置一个非文本变量，取变量地址(变量)，给第一个参数即可.\n例如: 字节、字符、短整数、整数、长整数、变整数、小数、逻辑型",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数。例如: 字节、字符、短整数、整数、长整数、变整数、小数、逻辑型",
+"@匹配类型": "通用非文本基本型"
+   }
+ }]
+  },
+  {
+]"method name": "回传参数_整数数组类",
+]"comment": "设置一个整数数组类变量，取变量地址(变量)，给第一个参数即可",
+]"static": true,
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "整数数组类"
+   }
+]]
+  },
+  {
+ }"method name": "回传参数_整数数组类2",
+ }"static": true,
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "整数数组类"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "整数数组类"
+   }
+ }]
+  },
+  {
+]"method name": "回传参数_长整数数组类",
+]"comment": "设置一个长整数数组类变量，取变量地址(变量)，给第一个参数即可",
+]"static": true,
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "长整数数组类"
+   }
+]]
+  },
+  {
+data type": "长整数数组类""method name": "回传参数_长整数数组类2",
+data type": "长整数数组类""static": true,
+data type": "长整数数组类""@禁止流程检查": "真",
+data type": "长整数数组类""parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "长整数数组类"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "长整数数组类"
+   }
+data type": "长整数数组类"]
+  },
+  {
+ta type": "长整数数组类"]"method name": "回传参数_变整数数组类",
+ta type": "长整数数组类"]"comment": "设置一个变整数数组类变量，取变量地址(变量)，给第一个参数即可",
+ta type": "长整数数组类"]"static": true,
+ta type": "长整数数组类"]"@禁止流程检查": "真",
+ta type": "长整数数组类"]"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "变整数数组类"
+   }
+ta type": "长整数数组类"]]
+  },
+  {
+ameter name": "欲回传的数据""method name": "回传参数_变整数数组类2",
+ameter name": "欲回传的数据""static": true,
+ameter name": "欲回传的数据""@禁止流程检查": "真",
+ameter name": "欲回传的数据""parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数数组类"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "变整数数组类"
+   }
+ameter name": "欲回传的数据"]
+  },
+  {
+data type": "变整数数组类""method name": "回传参数_小数数组类",
+data type": "变整数数组类""comment": "设置一个小数数组类，取变量地址(变量)，给第一个参数即可",
+data type": "变整数数组类""static": true,
+data type": "变整数数组类""@禁止流程检查": "真",
+data type": "变整数数组类""parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "小数数组类"
+   }
+data type": "变整数数组类"]
+  },
+  {
+
+"method name": "回传参数_小数数组类2",
+
+"static": true,
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "小数数组类"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "小数数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "回传参数_文本型",
+
+"comment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可",
+
+"static": true,
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"comment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可""method name": "回传参数_文本型2",
+"comment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可""static": true,
+"comment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可""@禁止流程检查": "真",
+"comment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可""parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "文本型"
+   }
+"comment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可"]
+  },
+  {
+omment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可"]"method name": "回传参数_文本数组类",
+omment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可"]"comment": "设置一个文本数组类变量，取变量地址(变量)，给第一个参数即可",
+omment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可"]"static": true,
+omment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可"]"@禁止流程检查": "真",
+omment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可"]"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "文本数组类"
+   }
+omment": "设置一个文本型变量，取变量地址(变量)，给第一个参数即可"]]
+  },
+  {
+
+"method name": "回传参数_文本数组类2",
+
+"static": true,
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "文本数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "回传参数_字节集类",
+
+"comment": "设置一个字节集类变量，取变量地址(变量)，给第一个参数即可",
+
+"static": true,
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "回传参数_字节集类2",
+
+"static": true,
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+ameter name": "欲回传的数据""method name": "回传参数_字节集数组类",
+ameter name": "欲回传的数据""comment": "设置一个字节集数组类变量，取变量地址(变量)，给第一个参数即可",
+ameter name": "欲回传的数据""static": true,
+ameter name": "欲回传的数据""@禁止流程检查": "真",
+ameter name": "欲回传的数据""parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"data type": "字节集数组类"
+   }
+ameter name": "欲回传的数据"]
+  },
+  {
+data type": "变整数""method name": "回传参数_字节集数组类2",
+data type": "变整数""static": true,
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "字节集数组类"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "字节集数组类"
+   }
+data type": "变整数"]
+  },
+  {
+data type": "字节集数组类""method name": "回传参数_对象数组类",
+data type": "字节集数组类""comment": "设置一个对象数组类变量，取变量地址(变量)，给第一个参数即可",
+data type": "字节集数组类""static": true,
+data type": "字节集数组类""@禁止流程检查": "真",
+data type": "字节集数组类""parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "对象数组类"
+   }
+data type": "字节集数组类"]
+  },
+  {
+data type": "字节集数组类""method name": "回传参数_对象数组类2",
+data type": "字节集数组类""static": true,
+data type": "字节集数组类""@禁止流程检查": "真",
+data type": "字节集数组类""parameters": [
+   {
+"parameter name": "接收参数",
+"comment": "欲接收回传数据的参数",
+"data type": "对象数组类"
+   },
+   {
+"parameter name": "欲回传的数据",
+"comment": "提供返回数据的参数",
+"data type": "对象数组类"
+   }
+data type": "字节集数组类"]
+  }
+]
+ }
+㤠隻ŝ]
+}

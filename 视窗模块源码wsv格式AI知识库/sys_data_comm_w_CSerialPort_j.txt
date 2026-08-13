@@ -1,0 +1,559 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"数据通讯处理支持".
+
+{
+问本程序中的接口需要引用模块"数据通讯处理支持"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"数据通讯处理支持"."package name": "火山.视窗.串口",
+问本程序中的接口需要引用模块"数据通讯处理支持"."comment": "封装自开源库：https://github.com/itas109/CSerialPort",
+问本程序中的接口需要引用模块"数据通讯处理支持"."@视窗.头文件搜寻目录": "\".\"",
+问本程序中的接口需要引用模块"数据通讯处理支持"."@视窗.外部头文件": "\"CSerialPort\\\\SerialPort.h\\r\\nCSerialPort\\\\SerialPortInfo.h\"",
+问本程序中的接口需要引用模块"数据通讯处理支持"."@视窗.外部源文件": "\"CSerialPort\\\\SerialPort.cpp\\r\\nCSerialPort\\\\SerialPortBase.cpp\\r\\nCSerialPort\\\\SerialPortInfo.cpp\\r\\nCSerialPort\\\\SerialPortInfoBase.cpp\\r\\nCSerialPort\\\\SerialPortInfoWinBase.cpp\\r\\nCSerialPort\\\\SerialPortWinBase.cpp\"",
+问本程序中的接口需要引用模块"数据通讯处理支持"."@视窗.外部库": "\"setupapi.lib\"",
+问本程序中的接口需要引用模块"数据通讯处理支持"."@视窗.外部头文件": "\"<vector>\"",
+问本程序中的接口需要引用模块"数据通讯处理支持"."classes": [
+ {
+"class name": "串口通信类",
+"comment": "本类用于提供对串口数据收发支持.",
+"base class": "参考对象类",
+"@视窗.后缀文本": "\"public has_slots<>\"",
+"methods": [
+  {
+methods": [
+"method name": "打开",
+methods": [
+"comment": "调用本方法可同时初始化并打开所指定串口设备,成功返回真,失败返回假.\n注意: 调用本方法前不需要调用\"初始化2\"方法.",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "串口名称",
+"comment": "提供串口名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "波特率",
+"comment": "指定通信端口所使用的波特率,比较常用的波特率有：110,300,600,1200,2400,4800,9600,14400,19200,38400,56000,57600,115200,128000,256000.",
+"data type": "整数",
+"@默认值": "9600"
+   },
+   {
+"parameter name": "数据位数",
+"comment": "提供串口数据位,默认为\"串口数据位.八\".",
+"data type": "串口数据位",
+"@默认值": "串口数据位.八"
+   },
+   {
+"parameter name": "校验方式",
+"comment": "提供校验方式,默认为\"串口校验方式.无校验\".  ",
+"data type": "串口校验方式",
+"@默认值": "串口校验方式.无校验"
+   },
+   {
+"parameter name": "停止位",
+"comment": "提供串口停止位,默认为\"串口停止位.一位\".",
+"data type": "串口停止位",
+"@默认值": "串口停止位.一位"
+   },
+   {
+"parameter name": "流控制",
+"comment": "提供串口流控制,默认为\"串口流控制.无\".",
+"data type": "串口流控制",
+"@默认值": "串口流控制.无"
+   },
+   {
+"parameter name": "读缓冲区大小",
+"comment": "提供缓冲器大小,默认为512",
+"data type": "整数",
+"@默认值": "512"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "是否已打开",
+
+"comment": "返回本对象是否已经打开了串口",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"comment": "返回本对象是否已经打开了串口""method name": "置操作方式",
+
+"comment": "返回本对象是否已经打开了串口""@嵌入式方法": "\"\"",
+
+"comment": "返回本对象是否已经打开了串口""parameters": [
+   {
+"parameter name": "操作方式",
+"data type": "串口操作方式"
+   }
+
+"comment": "返回本对象是否已经打开了串口"]
+  },
+  {
+}"method name": "置事件触发最小尺寸",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "最小尺寸",
+"comment": "指定\"收到数据\"事件触发时所需要的最小接收到的数据尺寸,单位字节.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取错误代码",
+
+"comment": "可以使用  串口错误代码 中的常量值来判断",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"comment": "可以使用  串口错误代码 中的常量值来判断""method name": "清除错误代码",
+
+"comment": "可以使用  串口错误代码 中的常量值来判断""comment": "清除所有的错误代码",
+
+"comment": "可以使用  串口错误代码 中的常量值来判断""@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "取错误代码""method name": "置串口名称",
+ethod name": "取错误代码""parameters": [
+   {
+"parameter name": "串口名称",
+"data type": "文本型"
+   }
+ethod name": "取错误代码"]
+  },
+  {
+ameter name": "操作方式""method name": "取串口名称",
+ameter name": "操作方式""data type": "文本型",
+ameter name": "操作方式""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "操作方式""@嵌入式方法": "\"\"""method name": "置波特率",
+meter name": "操作方式""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+meter name": "操作方式""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "波特率",
+"data type": "整数"
+   }
+meter name": "操作方式""@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "取波特率",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "整数""method name": "置校验位",
+"data type": "整数""@嵌入式方法": "\"\"",
+"data type": "整数""parameters": [
+   {
+"parameter name": "校验位",
+"data type": "串口校验方式"
+   }
+"data type": "整数"]
+  },
+  {
+ter name": "操作方式""@嵌入式方法": "\"\""]"method name": "取校验位",
+ter name": "操作方式""@嵌入式方法": "\"\""]"data type": "整数",
+ter name": "操作方式""@嵌入式方法": "\"\""]"@嵌入式方法": "\"\""
+  },
+  {
+ter name": "操作方式""@嵌入式方法": "\"\""]"method name": "置数据位",
+ter name": "操作方式""@嵌入式方法": "\"\""]"@嵌入式方法": "\"\"",
+ter name": "操作方式""@嵌入式方法": "\"\""]"parameters": [
+   {
+"parameter name": "数据位",
+"data type": "串口数据位"
+   }
+ter name": "操作方式""@嵌入式方法": "\"\""]]
+  },
+  {
+
+"method name": "取数据位",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+name": "操作方式""@嵌入式方法": "\"\""]"method name": "置数据位""method name": "置停止位",
+name": "操作方式""@嵌入式方法": "\"\""]"method name": "置数据位""@嵌入式方法": "\"\"",
+name": "操作方式""@嵌入式方法": "\"\""]"method name": "置数据位""parameters": [
+   {
+"parameter name": "数据位",
+"data type": "串口停止位"
+   }
+name": "操作方式""@嵌入式方法": "\"\""]"method name": "置数据位"]
+  },
+  {
+ter name": "操作方式""@嵌入式方法": "\"\""]"method name": "取停止位",
+ter name": "操作方式""@嵌入式方法": "\"\""]"data type": "整数",
+ter name": "操作方式""@嵌入式方法": "\"\""]"@嵌入式方法": "\"\""
+  },
+  {
+name": "操作方式""@嵌入式方法": "\"\""]"method name": "置数据位""method name": "置流控制",
+name": "操作方式""@嵌入式方法": "\"\""]"method name": "置数据位""@嵌入式方法": "\"\"",
+name": "操作方式""@嵌入式方法": "\"\""]"method name": "置数据位""parameters": [
+   {
+"parameter name": "流控制",
+"data type": "串口流控制"
+   }
+name": "操作方式""@嵌入式方法": "\"\""]"method name": "置数据位"]
+  },
+  {
+
+"method name": "取流控制",
+
+"data type": "串口流控制",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "置DTR",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "是否设置",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+
+"method name": "置RTS",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "是否设置",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+ter name": "操作方式""@嵌入式方法": "\"\""]"method name": "置读缓冲区大小",
+ter name": "操作方式""@嵌入式方法": "\"\""]"@嵌入式方法": "\"\"",
+ter name": "操作方式""@嵌入式方法": "\"\""]"parameters": [
+   {
+"parameter name": "大小",
+"data type": "长整数"
+   }
+ter name": "操作方式""@嵌入式方法": "\"\""]]
+  },
+  {
+}"method name": "取读缓冲区大小",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "长整数""method name": "连接",
+"data type": "长整数""comment": " 本方法已经被废弃,保留仅用作兼容以前代码."
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "关闭",
+"@嵌入式方法": "\"\"""comment": "关闭指定串口连接",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""comment": "关闭指定串口连接""method name": "发送指针数据",
+@嵌入式方法": "\"\"""comment": "关闭指定串口连接""comment": "发送指针数据到串口",
+@嵌入式方法": "\"\"""comment": "关闭指定串口连接""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""comment": "关闭指定串口连接""parameters": [
+   {
+"parameter name": "数据指针",
+"comment": "提供要发送的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"comment": "提供要发送的数据大小",
+"data type": "整数"
+   }
+@嵌入式方法": "\"\"""comment": "关闭指定串口连接"]
+  },
+  {
+ }"method name": "发送数据",
+ }"comment": "发送字节集数据到串口",
+ }"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供要发送的字节集数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+}"method name": "取版本",
+}"comment": "取本地串口库版本号",
+}"data type": "文本型",
+}"@禁止流程检查": "真"
+  },
+  {
+ethod name": "发送数据""method name": "读取数据",
+ethod name": "发送数据""comment": "读取指定尺寸的数据,\"收到数据\"事件触发后才可使用本方法.",
+ethod name": "发送数据""data type": "字节集类",
+ethod name": "发送数据""@禁止流程检查": "真",
+ethod name": "发送数据""parameters": [
+   {
+"parameter name": "欲读取尺寸",
+"data type": "整数"
+   }
+ethod name": "发送数据"]
+  },
+  {
+
+"method name": "取可用串口",
+
+"comment": "从注册表中获取系统中当前所有可用串口列表",
+
+"result comment": "返回所获得串口名称的数目",
+
+"static": true,
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "结果存储参数",
+"comment": "本参数用作存储所有获得的串口名称",
+"data type": "文本排序数组类"
+   }
+
+]
+  },
+  {
+ameter name": "结果存储参数""method name": "枚举串口",
+ameter name": "结果存储参数""comment": "枚举并获取当前所有串口名称",
+ameter name": "结果存储参数""parameters": [
+   {
+"parameter name": "结果存储参数",
+"comment": "本参数用作存储所有获得的串口名称",
+"data type": "文本排序数组类"
+   }
+ameter name": "结果存储参数"]
+  },
+  {
+"method name": "收到数据",
+"comment": " 当接收到串口发送的数据后,会触发本事件.\n 通过\"取所有数据\"方法可以读取收到的数据.",
+"type": "event",
+"data type": "整数"
+  }
+]
+ },
+ {
+"class name": "串口操作方式",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ameter name": "结果存储参数""constant name": "异步",
+ameter name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate"
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "同步",
+tegory = \\\"辅助类\\\"\""initial value": "@itas109::OperateMode::SynchronousOperate"
+  }
+]
+ },
+ {
+"class name": "串口数据位",
+"comment": "提供串口数据位",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "五",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "5"
+  },
+  {
+
+"constant name": "六",
+
+"initial value": "6"
+  },
+  {
+meter name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""constant name": "七",
+meter name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""initial value": "7"
+  },
+  {
+comment": "提供要发送的数据指针""constant name": "八",
+comment": "提供要发送的数据指针""initial value": "8"
+  }
+]
+ },
+ {
+"class name": "串口流控制",
+"comment": "提供串口流控制",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+comment": "提供要发送的数据指针""constant name": "无",
+comment": "提供要发送的数据指针""initial value": "0"
+  },
+  {
+r name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""constant name": "七""constant name": "硬件",
+r name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""constant name": "七""initial value": "1"
+  },
+  {
+}"constant name": "软件",
+}"initial value": "2"
+  }
+]
+ },
+ {
+"class name": "串口停止位",
+"comment": "提供串口停止位",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+@常量类": "整数""constant name": "一位",
+@常量类": "整数""comment": "1位停止位",
+@常量类": "整数""initial value": "0"
+  },
+  {
+ name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""constant name": "七""initial value": "1""constant name": "一点五位",
+ name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""constant name": "七""initial value": "1""comment": "1.5位停止位",
+ name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""constant name": "七""initial value": "1""initial value": "1"
+  },
+  {
+omment": "提供要发送的数据指针""initial value": "0""constant name": "二位",
+omment": "提供要发送的数据指针""initial value": "0""comment": "2位停止位",
+omment": "提供要发送的数据指针""initial value": "0""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "串口校验方式",
+"comment": "提供串口校验方式",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ss name": "串口流控制""constant name": "无校验",
+ss name": "串口流控制""initial value": "0"
+  },
+  {
+ss name": "串口流控制""constant name": "奇校验",
+ss name": "串口流控制""initial value": "1"
+  },
+  {
+s name": "串口流控制""initial value": "0""constant name": "偶校验",
+s name": "串口流控制""initial value": "0""initial value": "2"
+  },
+  {
+
+"constant name": "一校验",
+
+"initial value": "3"
+  },
+  {
+"initial value": "3""constant name": "零校验",
+"initial value": "3""initial value": "4"
+  }
+]
+ },
+ {
+"class name": "串口错误代码",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+ name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""constant name": "七""initial value": "1""constant name": "系统错误",
+ name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""constant name": "七""initial value": "1""comment": " 系统错误(如空指针、内存访问异常等)",
+ name": "结果存储参数""initial value": "@itas109::OperateMode::AsynchronousOperate""constant name": "七""initial value": "1""initial value": "@itas109::SerialPortError::SystemError"
+  },
+  {
+mment": "提供要发送的数据指针""initial value": "0""initial value": "2""constant name": "无错误",
+mment": "提供要发送的数据指针""initial value": "0""initial value": "2""initial value": "@itas109::SerialPortError::NoError"
+  },
+  {
+mment": "提供要发送的数据指针""initial value": "0""initial value": "2""constant name": "未找到设备",
+mment": "提供要发送的数据指针""initial value": "0""initial value": "2""initial value": "@itas109::SerialPortError::DeviceNotFoundError"
+  },
+  {
+}"constant name": "权限错误",
+}"initial value": "@itas109::SerialPortError::PermissionError"
+  },
+  {
+
+"constant name": "打开串口错误",
+
+"initial value": "@itas109::SerialPortError::OpenError"
+  },
+  {
+"constant name": "校验位错误",
+"initial value": "@itas109::SerialPortError::ParityError"
+  },
+  {
+
+"constant name": "数据帧错误",
+
+"initial value": "@itas109::SerialPortError::FramingError"
+  },
+  {
+}"constant name": "条件断点错误",
+}"initial value": "@itas109::SerialPortError::BreakConditionError"
+  },
+  {
+
+"constant name": "写数据错误",
+
+"initial value": "@itas109::SerialPortError::WriteError"
+  },
+  {
+
+"constant name": "读数据错误",
+
+"initial value": "@itas109::SerialPortError::ReadError"
+  },
+  {
+}"constant name": "资源错误",
+}"initial value": "@itas109::SerialPortError::ResourceError"
+  },
+  {
+nstant name": "读数据错误""constant name": "不支持操作",
+nstant name": "读数据错误""initial value": "@itas109::SerialPortError::UnsupportedOperationError"
+  },
+  {
+
+"constant name": "未知错误",
+
+"initial value": "@itas109::SerialPortError::UnknownError"
+  },
+  {
+
+"constant name": "超时",
+
+"initial value": "@itas109::SerialPortError::TimeoutError"
+  },
+  {
+}"constant name": "串口未打开",
+}"initial value": "@itas109::SerialPortError::NotOpenError"
+  },
+  {
+nstant name": "串口未打开""constant name": "无效参数",
+nstant name": "串口未打开""initial value": "@itas109::SerialPortError::InvalidParameterError"
+  }
+]
+ }
+问本程序中的接口需要引用模块"数据通讯处理支持".]
+}

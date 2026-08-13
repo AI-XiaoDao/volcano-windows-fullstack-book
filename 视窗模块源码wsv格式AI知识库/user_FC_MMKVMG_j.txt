@@ -1,0 +1,531 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "采用 腾讯开源的  MMKV  组件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.MMKV\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"MMKVMG\\\\MMKVToolMG.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"MMKVMG\\\\MMKVToolMGx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"MMKVMG\\\\MMKVToolMGx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"MMKVMG\\\\MMKVToolMGx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"MMKVMG\\\\MMKVToolMGx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "腾讯键值表事件",
+"comment": "全局只能定义一个",
+"@视窗.后缀文本": "\"CMMKVMGEventBase\"",
+"methods": [
+  {
+        "method name": "内容变化",
+        "type": "event",
+        "data type": "整数",
+        "parameters": [
+   {
+"parameter name": "表名称",
+"data type": "文本型"
+   }
+        ]
+  },
+  {
+        "method name": "遇到错误",
+        "comment": "返回值 0 或者1 0表示终止 1表示恢复",
+        "type": "event",
+        "data type": "整数",
+        "parameters": [
+   {
+"parameter name": "表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "错误类型",
+"data type": "整数"
+   }
+        ]
+  },
+  {
+    "method name": "内容变化""method name": "日志内容",
+    "method name": "内容变化""type": "event",
+    "method name": "内容变化""data type": "整数",
+    "method name": "内容变化""parameters": [
+   {
+"parameter name": "日志等级",
+"comment": "    MMKVLogDebug = 0, // not available for release/product build\n    MMKVLogInfo = 1,  // default level\n    MMKVLogWarning,\n    MMKVLogError,\n    MMKVLogNone, // special level used to disable all log messages",
+"data type": "整数"
+   },
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "行号",
+"data type": "整数"
+   },
+   {
+"parameter name": "函数名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "消息内容",
+"data type": "文本型"
+   }
+    "method name": "内容变化"]
+  }
+]
+ },
+ {
+"class name": "腾讯键值表",
+"methods": [
+  {
+data type": "文本型""method name": "启用事件",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "事件类型",
+"comment": "可选值 1 2 4\n1 表示 启用日志函数\n2 表示 启用遇到错误\n4 表示 启用内容变化\n\n如果要同时启用三个事件 可以  1+2+4",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "文本型"]
+  },
+  {
+ata type": "文本型""@嵌入式方法": "\"\"""method name": "打开",
+ata type": "文本型""@嵌入式方法": "\"\"""comment": "const char* lpszID, int mode, const char* lpszCryptKey",
+ata type": "文本型""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目录",
+"comment": "如果目录为空表示打开的是内存数据库",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "模式",
+"comment": "可选值 1 或 2\n1表示 单进程模式\n2表示 多进程模式",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "加密密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ata type": "文本型""@嵌入式方法": "\"\""]
+  },
+  {
+本程序中的接口需要引用模块"原创软件模块"."comment": "采用 腾讯开源的  MMKV  组件""method name": "关闭",
+本程序中的接口需要引用模块"原创软件模块"."comment": "采用 腾讯开源的  MMKV  组件""comment": "注意，不能再两个不同的线程中，同时来关闭 同一个 腾讯键值表，否则会蹦，，，如果你要两个线程都用关闭\n那么你必须加锁",
+本程序中的接口需要引用模块"原创软件模块"."comment": "采用 腾讯开源的  MMKV  组件""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "强制保存",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取键数量",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "取总大小",
+"data type": "长整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+ 变整数"method name": "取实际大小",
+ 变整数"data type": "长整数",
+ 变整数"@嵌入式方法": "\"\""
+  },
+  {
+@默认值": "\"\"""method name": "文件是否有效",
+@默认值": "\"\"""comment": "检测一下表对应的数据文件是否有效",
+@默认值": "\"\"""data type": "逻辑型",
+@默认值": "\"\"""@禁止流程检查": "真",
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "相对路径",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+@默认值": "\"\""]
+  },
+  {
+data type": "文本型""method name": "是否存在键",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ameter name": "相对路径""method name": "删除键值",
+ameter name": "相对路径""parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+ameter name": "相对路径"]
+  },
+  {
+
+"method name": "清空",
+
+"comment": "功能待确认",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "重建",
+"comment": "因为多次使用删除之后，数据库文件会不断增大，此时，调用这个函数\n会重新整理一遍，清理垃圾数据，释放空间",
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "取键数组",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "数组",
+"data type": "腾讯文本数组"
+   }
+ }]
+  },
+  {
+"method name": "锁定",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "解锁",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "置逻辑值",
+}"result comment": "返回是否成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+
+"method name": "取逻辑值",
+
+"result comment": "返回是否成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "置整数",
+"result comment": "返回是否成功",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取整数",
+"result comment": "返回是否成功",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "置长整数",
+}"result comment": "返回是否成功",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+ "method name": "取长整数",
+ "result comment": "返回是否成功",
+ "data type": "长整数",
+ "@禁止流程检查": "真",
+ "parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+ ]
+  },
+  {
+"method name": "置小数",
+"result comment": "返回是否成功",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "小数"
+   }
+]
+  },
+  {
+
+"method name": "取小数",
+
+"result comment": "返回是否成功",
+
+"data type": "小数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "置文本",
+"result comment": "返回是否成功",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "取句柄",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "取文本",
+ }"result comment": "返回是否成功",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "置字节集",
+
+"result comment": "返回是否成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取字节集",
+
+"result comment": "返回是否成功",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "置文本数组",
+data type": "文本型""result comment": "返回是否成功",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "腾讯文本数组"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "取文本数组",
+"result comment": "返回是否成功",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来保存文本数组",
+"data type": "腾讯文本数组"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "腾讯文本数组",
+"comment": "这个是 高性能键值表 配套组件，暂时也不建议用到其他地方，当然也可以用的",
+"methods": [
+  {
+"method name": "类_初始化"
+  },
+  {
+ata type": "文本型""parameters": [
+"method name": "类_清理"
+  },
+  {
+
+"method name": "取成员数",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+result comment": "返回是否成功""method name": "取成员",
+result comment": "返回是否成功""data type": "文本型",
+result comment": "返回是否成功""@嵌入式方法": "\"\"",
+result comment": "返回是否成功""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+result comment": "返回是否成功"]
+  },
+  {
+"method name": "加入成员",
+"parameters": [
+   {
+"parameter name": "要加入的内容",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "删除成员",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "清空",
+data type": "文本型""@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "__腾讯键值表测试",
+"methods": [
+  {
+
+"method name": "开始测试"
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "多目录测试"
+  },
+  {
+
+"method name": "同目录多个键值表测试"
+  },
+  {
+
+"method name": "赋值测试"
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

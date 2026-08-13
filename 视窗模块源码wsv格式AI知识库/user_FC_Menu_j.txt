@@ -1,0 +1,260 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.菜单\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______弹出菜单",
+"@全局类": "真",
+"methods": [
+  {
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"method name": "菜单_创建",
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"static": true,
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"data type": "变整数",
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"@嵌入式方法": "\"\""
+  },
+  {
+ꌤŝ"method name": "菜单_创建弹出菜单",
+ꌤŝ"static": true,
+ꌤŝ"data type": "变整数",
+ꌤŝ"@嵌入式方法": "\"\""
+  },
+  {
+ackPopupMenu ((HMENU)@<菜单句柄>,TPM_LEFTALIGN|TPM_TOPALIGN,@<横向位置>,@<纵向位置>,0,(HWND)@<窗口句柄>,NULL);"method name": "菜单_销毁",
+ackPopupMenu ((HMENU)@<菜单句柄>,TPM_LEFTALIGN|TPM_TOPALIGN,@<横向位置>,@<纵向位置>,0,(HWND)@<窗口句柄>,NULL);"static": true,
+ackPopupMenu ((HMENU)@<菜单句柄>,TPM_LEFTALIGN|TPM_TOPALIGN,@<横向位置>,@<纵向位置>,0,(HWND)@<窗口句柄>,NULL);"data type": "逻辑型",
+ackPopupMenu ((HMENU)@<菜单句柄>,TPM_LEFTALIGN|TPM_TOPALIGN,@<横向位置>,@<纵向位置>,0,(HWND)@<窗口句柄>,NULL);"@嵌入式方法": "\"\"",
+ackPopupMenu ((HMENU)@<菜单句柄>,TPM_LEFTALIGN|TPM_TOPALIGN,@<横向位置>,@<纵向位置>,0,(HWND)@<窗口句柄>,NULL);"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   }
+ackPopupMenu ((HMENU)@<菜单句柄>,TPM_LEFTALIGN|TPM_TOPALIGN,@<横向位置>,@<纵向位置>,0,(HWND)@<窗口句柄>,NULL);]
+  },
+  {
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"method name": "菜单_添加文本项",
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"comment": "添加成功返回真，失败返回假 添加一个文本菜单项",
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"static": true,
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"data type": "逻辑型",
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"@嵌入式方法": "\"\"",
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单文本",
+"data type": "文本型"
+   }
+ 逻辑型 注释 = "如果默认传递是窗口坐标，那么此时设置为真" 注释 = "则函数会自动将窗口坐标转换为屏幕坐标" @默认值 = 假]
+  },
+  {
+ "method name": "菜单_添加分割线",
+ "comment": "添加成功返回真，失败返回假 添加一个文本菜单项",
+ "static": true,
+ "data type": "逻辑型",
+ "@嵌入式方法": "\"\"",
+ "parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   }
+ ]
+  },
+  {
+"method name": "菜单_选中",
+"result comment": "返回设置前的菜单标记 例如 MF_CHECKED ，如果没有状态返回-1",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否选中",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+
+"method name": "菜单_添加弹出菜单_通过句柄",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "弹出菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单标题",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "菜单ID""method name": "菜单_添加弹出菜单",
+ameter name": "菜单ID""comment": "内部会直接创建一个弹出菜单，然后绑定\n返回弹出菜单句柄",
+ameter name": "菜单ID""static": true,
+ameter name": "菜单ID""data type": "变整数",
+ameter name": "菜单ID""@禁止流程检查": "真",
+ameter name": "菜单ID""parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单标题",
+"data type": "文本型"
+   }
+ameter name": "菜单ID"]
+  },
+  {
+
+"method name": "菜单_禁止_通过ID",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "菜单_取子菜单",
+
+"comment": "返回子菜单句柄",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "索引",
+"comment": "从0开始",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "菜单_取数量",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "菜单_取项ID",
+
+"comment": "返回菜单项目ID,如果菜单没有子项目，则返回0\n如果指定菜单项包含弹出菜单，则返回-1",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "菜单_显示弹出菜单",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "横向位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否将坐标转换为屏幕坐标",
+"comment": "如果默认传递是窗口坐标，那么此时设置为真\n则函数会自动将窗口坐标转换为屏幕坐标",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

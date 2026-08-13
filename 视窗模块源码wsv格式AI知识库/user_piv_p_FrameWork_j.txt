@@ -1,0 +1,1974 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+问本程序中的接口需要引用模块"PIV基础类"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"PIV基础类"."package name": "火山.ImGui",
+问本程序中的接口需要引用模块"PIV基础类"."comment": "例程下载: https://saier.lanzoul.com/b016cwvle",
+问本程序中的接口需要引用模块"PIV基础类"."classes": [
+ {
+_时间 > 0)"class name": "IM数组模板",
+_时间 > 0)"comment": "ImGui内部的数组类,接口与std::vector相似.\n注意: ImVector加入和删除成员,不会调用C++的析构和构造函数,\n因此请勿将本类替代std::vector和火山数组类.",
+_时间 > 0)"@文档": "\"category = \\\"模板\\\"\"",
+_时间 > 0)"@模板基础类": "真",
+_时间 > 0)"@别名": "\"ImVector<模板类型1>\"",
+_时间 > 0)"@别名类型": "本地类",
+_时间 > 0)"methods": [
+  {
+本程序中的接口需要引用模块"PIV基础类"."comment": "例程下载: https://saier.lanzoul.com/b016cwvle""method name": "预分配尺寸",
+本程序中的接口需要引用模块"PIV基础类"."comment": "例程下载: https://saier.lanzoul.com/b016cwvle""comment": "  返回当前已经分配了空间的成员数量,此容量值会大于或等于数组成员数.\n  当容器数组成员数超过此容量,将会重新分配内存.因此合理设置该容量值,\n可以有效减少重新分配的次数.值越大,批量加入/删除数组成员时所实际需要\n重分配空间的次数就越少,操作速度越快,但是多余内存占用就越大.",
+本程序中的接口需要引用模块"PIV基础类"."comment": "例程下载: https://saier.lanzoul.com/b016cwvle""static": true,
+本程序中的接口需要引用模块"PIV基础类"."comment": "例程下载: https://saier.lanzoul.com/b016cwvle""type": "property getter",
+本程序中的接口需要引用模块"PIV基础类"."comment": "例程下载: https://saier.lanzoul.com/b016cwvle""data type": "变整数",
+本程序中的接口需要引用模块"PIV基础类"."comment": "例程下载: https://saier.lanzoul.com/b016cwvle""@嵌入式方法": "\"\"",
+本程序中的接口需要引用模块"PIV基础类"."comment": "例程下载: https://saier.lanzoul.com/b016cwvle""parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+本程序中的接口需要引用模块"PIV基础类"."comment": "例程下载: https://saier.lanzoul.com/b016cwvle"]
+  },
+  {
+ }"method name": "预分配尺寸",
+ }"comment": "  将数组的容量增加到大于或等于新设置的值,这会触发重新分配内存,如果\n提供的值小于当前容量,将不执行任何操作.\n  当数组成员数超过此容量,将会重新分配内存.因此合理设置该容量值,\n可以有效减少重新分配的次数.值越大,批量加入/删除数组成员时所实际需要\n重分配空间的次数就越少,操作速度越快,但是多余内存占用就越大.",
+ }"static": true,
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "所欲设置的容量",
+"comment": "单位为容器的成员数量",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"method name": "取变整数指针",
+}"comment": "获取数组类自身的指针(ImVector<类型> *).",
+}"static": true,
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+}]
+  },
+  {
+}"method name": "取数组指针",
+}"comment": "返回当前数组内容的数据指针值.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+}"static": true,
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+}]
+  },
+  {
+"comment": "获取数组类自身的指针(ImVector<类型> *).""method name": "索引是否有效",
+"comment": "获取数组类自身的指针(ImVector<类型> *).""comment": "返回所指定的索引值是否大于等于0且小于本数组的成员数.",
+"comment": "获取数组类自身的指针(ImVector<类型> *).""static": true,
+"comment": "获取数组类自身的指针(ImVector<类型> *).""data type": "逻辑型",
+"comment": "获取数组类自身的指针(ImVector<类型> *).""@禁止流程检查": "真",
+"comment": "获取数组类自身的指针(ImVector<类型> *).""parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "所欲检查的索引值",
+"data type": "整数"
+   }
+"comment": "获取数组类自身的指针(ImVector<类型> *)."]
+  },
+  {
+
+"method name": "取成员数",
+
+"comment": "返回数组中的当前已有成员数目",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+
+]
+  },
+  {
+
+"method name": "取最大索引",
+
+"comment": "返回数组中尾成员的索引位置",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+
+]
+  },
+  {
+"static": true"method name": "是否为空",
+"static": true"comment": "返回本数组是否为空",
+"static": true"static": true,
+"static": true"data type": "逻辑型",
+"static": true"@嵌入式方法": "\"\"",
+"static": true"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+"static": true]
+  },
+  {
+}"method name": "删除所有成员",
+}"comment": "删除容器数组中的当前所有成员(不会调用成员的析构函数)",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+}]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "删除成员",
+"@嵌入式方法": "\"\"""comment": "删除容器数组中所指定索引范围的单个或多个成员",
+"@嵌入式方法": "\"\"""static": true,
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "删除索引位置",
+"comment": "提供所欲删除的索引位置,必须大于等于0且小于等于容器数组成员数目.",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束索引位置",
+"comment": "默认为-1,即只删除单个成员.\n提供所欲删除的尾成员的索引位置,必须大于\"所欲删除首位置\"且小于等于容器数组成员数目.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+"method name": "删除尾成员",
+"comment": "删除容器数组尾部的单个成员",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+]
+  },
+  {
+
+"method name": "交换数组",
+
+"comment": "交换两个容器数组的数据内存.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "欲交换的数组",
+"data type": "IM数组模板"
+   }
+
+]
+  },
+  {
+
+"method name": "是否相等",
+
+"comment": "返回所指定数组的内容是否与本数组相同",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "所欲比较的容器",
+"data type": "IM数组模板"
+   }
+
+]
+  },
+  {
+ameter name": "所欲比较的容器""method name": "取成员指针",
+ameter name": "所欲比较的容器""comment": "返回所指定索引位置处的成员值指针.\n高效率,不检查边界,不抛出异常,索引无效直接崩溃.",
+ameter name": "所欲比较的容器""static": true,
+ameter name": "所欲比较的容器""data type": "变整数",
+ameter name": "所欲比较的容器""@嵌入式方法": "\"\"",
+ameter name": "所欲比较的容器""@视窗.返回参考": "真",
+ameter name": "所欲比较的容器""parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "索引",
+"comment": "提供所欲操作成员的索引位置,必须大于等于0且小于容器数组成员数目.",
+"data type": "整数"
+   }
+ameter name": "所欲比较的容器"]
+  },
+  {
+
+"method name": "枚举循环",
+
+"comment": "  启动一个循环来枚举容器数组的每一个成员,在循环中可以调用\n\"取枚举值\"方法来获取当前所枚举到的成员值,调用\"取枚举索引\"\n方法来获取当前所枚举到成员的索引位置.",
+
+"static": true,
+
+"@嵌入式方法": "\"name = counter\\r\\nhas_loop_body = true\"",
+
+"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+
+]
+  },
+  {
+"method name": "逆向枚举循环",
+"comment": "  启动一个逆向循环来枚举容器数组的每一个成员,在循环中可以调\n用\"取枚举值\"方法来获取当前所枚举到的成员值,调用\"取枚举索引\"\n方法来获取当前所枚举到成员的索引位置.",
+"static": true,
+"@嵌入式方法": "\"name = rcounter\\r\\nhas_loop_body = true\"",
+"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+]
+  },
+  {
+"method name": "取枚举值",
+"comment": "  只能在本类的\"枚举循环\"语句的子语句体中使用,用作取回当前枚举到的成员值.\n跟官方库的不一样,即使有多层本类或本类继承类的\"枚举循环\"嵌套,本方法仍能正确\n返回枚举成员值.",
+"static": true,
+"data type": "模板类型1",
+"@嵌入式方法": "\"parent = \\\"counter, rcounter\\\"\"",
+"@视窗.返回参考": "真",
+"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+]
+  },
+  {
+data type": "IM数组模板""method name": "取枚举索引",
+data type": "IM数组模板""comment": "  只能在本类的\"枚举循环\"语句的子语句体中使用,用作取回当前枚举到成员的索引位置.\n跟官方库的不一样,即使有多层本类或本类继承类的\"枚举循环\"嵌套,本方法仍能正确返回\n枚举到成员的索引位置.",
+data type": "IM数组模板""static": true,
+data type": "IM数组模板""data type": "整数",
+data type": "IM数组模板""@嵌入式方法": "\"parent = \\\"counter, rcounter\\\"\"",
+data type": "IM数组模板""parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+data type": "IM数组模板"]
+  },
+  {
+}"method name": "取成员",
+}"comment": "返回所指定索引位置处的成员值.\n高效率,不检查边界,不抛出异常,索引无效直接崩溃.",
+}"static": true,
+}"data type": "模板类型1",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "索引位置",
+"comment": "提供所欲操作成员的索引位置,必须大于等于0且小于容器数组成员数目.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "置成员值",
+}"comment": "设置容器数组中所指定索引位置处的成员值,本方法不执行索引检查,索引无效直接崩溃.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "索引位置",
+"comment": "提供所欲操作成员的索引位置,必须大于等于0且小于容器数组成员数目.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "所欲设置的值",
+"comment": "提供所欲设置的成员值,先前的值将被覆盖.",
+"data type": "模板类型1"
+   }
+}]
+  },
+  {
+}"method name": "加入成员",
+}"comment": "将一个或多个成员值加入到容器数组尾部",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "所欲添加成员值",
+"data type": "模板类型1"
+   }
+}]
+  },
+  {
+}"method name": "加入并返回成员",
+}"comment": "将所指定的对象复制一份后加入到本数组中,返回所加入复制对象的参考.\n注意: 如果所返回对象成员需要动态挂接事件,请按类似以下格式挂接:\n  挂接事件 ((对象实际数据类型)数组1.加入并返回成员 (...))\n  因为火山视窗的赋值操作采用的是值复制方式,所以如果将返回对象赋值到另一\n个变量后再挂接这个变量的话,将导致事件挂接在一个复制出来的对象上而不是所\n期望的数组中保存的对象.",
+}"static": true,
+}"data type": "模板类型1",
+}"@禁止流程检查": "真",
+}"@视窗.返回参考": "真",
+}"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "所欲添加成员值",
+"comment": "提供所欲加入的对象值,该对象将被复制一份后加入到本数组中.",
+"data type": "模板类型1"
+   }
+}]
+  },
+  {
+ }"method name": "加入新成员",
+ }"comment": "建立所指定类的一个实例对象并将其加入到本数组中.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+ }]
+  },
+  {
+"method name": "批量加入新成员",
+"comment": "建立所指定类的一个或多个实例对象并将其加入到本数组中.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "所欲加入成员的数目",
+"comment": "提供所欲加入的新建对象的数目",
+"@匹配类型": "通用整数型",
+"@默认值": "1"
+   }
+]
+  },
+  {
+}"method name": "加入并返回新成员",
+}"comment": "建立所指定类的一个实例对象并将其加入到本数组中,返回所加入对象的参考.\n注意: 如果所创建对象需要动态挂接事件,请按类似以下格式挂接:\n  挂接事件 ((对象数据类型)数组1.加入并返回新成员 (对象数据类型))\n  因为火山视窗的赋值操作采用的是值复制方式,所以如果将返回对象赋值到另一\n个变量后再挂接这个变量的话,将导致事件挂接在一个复制出来的对象上而不是所\n期望的数组中保存的对象.",
+}"static": true,
+}"data type": "模板类型1",
+}"@禁止流程检查": "真",
+}"@视窗.返回参考": "真",
+}"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+}]
+  },
+  {
+ }"method name": "插入成员",
+ }"comment": "将所指定的成员值插入到所指定的索引位置",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "提供所欲插入的成员索引位置,必须大于等于0且小于等于容器数组成员数目.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的成员值",
+"data type": "模板类型1"
+   }
+ }]
+  },
+  {
+ }"method name": "插入新成员",
+ }"comment": "建立所指定类的一个实例对象并将其插入到本数组中的指定索引位置,返回所插入对象的参考.\n注意: 如果所创建对象需要动态挂接事件,请按类似以下格式挂接:\n  挂接事件 ((对象数据类型)数组1.插入新成员 (索引位置, 对象数据类型))\n  因为火山视窗的赋值操作采用的是值复制方式,所以如果将返回对象赋值到另一\n个变量后再挂接这个变量的话,将导致事件挂接在一个复制出来的对象上而不是所\n期望的数组中保存的对象.",
+ }"static": true,
+ }"data type": "模板类型1",
+ }"@禁止流程检查": "真",
+ }"@视窗.返回参考": "真",
+ }"parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "提供所欲插入的成员索引位置,必须大于等于0且小于等于数组成员数目.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "取首成员",
+data type": "整数""comment": "返回容器数组首部的单个成员值.\n注意: 执行本方法前必须确保容器不为空",
+data type": "整数""static": true,
+data type": "整数""data type": "模板类型1",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""@视窗.返回参考": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+data type": "整数"]
+  },
+  {
+data type": "IM数组模板""method name": "取尾成员",
+data type": "IM数组模板""comment": "返回容器数组尾部的单个成员值.\n注意: 执行本方法前必须确保容器不为空",
+data type": "IM数组模板""static": true,
+data type": "IM数组模板""data type": "模板类型1",
+data type": "IM数组模板""@嵌入式方法": "\"\"",
+data type": "IM数组模板""@视窗.返回参考": "真",
+data type": "IM数组模板""parameters": [
+   {
+"parameter name": "本数组",
+"data type": "IM数组模板"
+   }
+data type": "IM数组模板"]
+  }
+_时间 > 0)]
+ },
+ {
+}"class name": "IM_Win32窗口",
+}"comment": "  基于Windows API的ImGui窗口,本模板类已经处理好ImGui创建和销毁的\n各种复杂流程,你只需要在\"即将绘制\"事件中完成界面的布局,就能完成\n一个简单的ImGui窗口.\n  \"模板类型1\"为所使用的渲染器类型,支持以下的渲染器:\n   IM_DX9渲染器   IM_DX10渲染器    IM_DX11渲染器\n   IM_DX12渲染器  IM_OpenGL渲染器  IM_Vulkan渲染器",
+}"base class": "IM_窗口模板类",
+}"@模板基础类": "真",
+}"@文档": "\"category = \\\"窗口框架\\\"\"",
+}"methods": [
+  {
+ameter name": "本数组""method name": "创建主窗口",
+ameter name": "本数组""comment": "创建本窗口类的对象并将其作为程序的主窗口.\n注意:\n  1. 程序中必须存在且只能存在一个主窗口,调用本方法后,主窗口将被设置为本窗口;\n  2. 主窗口必须在程序的\"启动类\"中存在成员变量定义,避免其在程序退出前被释放,\n否则将可能导致程序运行时崩溃.\n  3. 本方法内实现了消息循环,直到窗口关闭或创建失败才会返回.",
+ameter name": "本数组""result comment": "返回是否成功",
+ameter name": "本数组""data type": "逻辑型",
+ameter name": "本数组""@禁止流程检查": "真",
+ameter name": "本数组""parameters": [
+   {
+"parameter name": "标题",
+"comment": "提供所创建窗口的标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所创建窗口的宽度;\n默认值0x80000000表示使用默认的宽高度,并忽略\"高度\"参数.",
+"data type": "整数",
+"@默认值": "0x80000000"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所创建窗口的高度",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "窗口类名",
+"comment": "提供所创建窗口的窗口类名,该名称的类将会在窗口创建时自动登记到Windows系统中.",
+"data type": "文本型",
+"@默认值": "\"ImGuiWinClass\""
+   },
+   {
+"parameter name": "透明帧缓冲区",
+"comment": "是否启用透明帧缓冲区,通过Alpha通道将窗口内容(不包括标题栏和边框)与背景合成,\n实现透明背景.\n注意: DX12、Vulkan暂时不支持本参数",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "本数组"]
+  },
+  {
+ata type": "整数""@嵌入式方法": "\"\"""method name": "关闭窗口",
+ata type": "整数""@嵌入式方法": "\"\"""comment": "尝试关闭本窗口.\n注意: 本方法被调用后窗口不会被立即关闭,而会延迟等待到下一次消息循环时才会关闭."
+  },
+  {
+}"method name": "处理事件"
+  },
+  {
+data type": "文本型""method name": "取窗口尺寸",
+data type": "文本型""comment": "获取本窗口的当前宽度和高度",
+data type": "文本型""parameters": [
+   {
+"parameter name": "返回宽度",
+"comment": "必须提供变量",
+"data type": "整数",
+"@视窗.后缀文本": "\"&\""
+   },
+   {
+"parameter name": "返回高度",
+"comment": "必须提供变量",
+"data type": "整数",
+"@视窗.后缀文本": "\"&\""
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "置窗口尺寸",
+}"comment": "设置本窗口的宽度和高度",
+}"parameters": [
+   {
+"parameter name": "宽度值",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ }"method name": "取窗口位置",
+ }"comment": "获取本窗口的当前位置",
+ }"parameters": [
+   {
+"parameter name": "顶边位置",
+"comment": "必须提供变量",
+"data type": "整数",
+"@视窗.后缀文本": "\"&\""
+   },
+   {
+"parameter name": "左边位置",
+"comment": "必须提供变量",
+"data type": "整数",
+"@视窗.后缀文本": "\"&\""
+   }
+ }]
+  },
+  {
+}"parameters": [
+"method name": "置窗口位置",
+}"parameters": [
+"comment": "设置本窗口的位置",
+}"parameters": [
+"parameters": [
+   {
+"parameter name": "顶边位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数"
+   }
+}"parameters": [
+]
+  },
+  {
+
+"method name": "获取焦点",
+
+"comment": "将当前输入焦点设置到窗口上",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "左边",
+}"comment": "返回本窗口的左边位置(有些问题,待修正)",
+}"type": "property getter",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "左边",
+
+"comment": "设置本窗口的左边位置",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "顶边",
+
+"comment": "返回本窗口的顶边位置(有些问题,待修正)",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"parameters": [
+"method name": "顶边",
+
+"parameters": [
+"comment": "设置本窗口的顶边位置",
+
+"parameters": [
+"type": "property setter",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+
+"parameters": [
+]
+  },
+  {
+
+"parameters": [
+"method name": "宽度",
+
+"parameters": [
+"comment": "返回本窗口的宽度",
+
+"parameters": [
+"type": "property getter",
+
+"parameters": [
+"data type": "整数",
+
+"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "宽度",
+
+"comment": "设置本窗口的宽度",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的宽度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "高度",
+data type": "整数""comment": "返回本窗口的高度",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "整数",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "高度",
+
+"comment": "设置本窗口的高度",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的高度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "所欲设置的高度""method name": "标题",
+ameter name": "所欲设置的高度""comment": "返回本窗口的当前标题文本",
+ameter name": "所欲设置的高度""type": "property getter",
+ameter name": "所欲设置的高度""data type": "文本型",
+ameter name": "所欲设置的高度""@禁止流程检查": "真"
+  },
+  {
+ameter name": "所欲设置的高度""method name": "标题",
+ameter name": "所欲设置的高度""comment": "设置本窗口的当前标题文本",
+ameter name": "所欲设置的高度""type": "property setter",
+ameter name": "所欲设置的高度""parameters": [
+   {
+"parameter name": "所欲设置的标题",
+"comment": "提供所欲设置的标题文本",
+"data type": "文本型"
+   }
+ameter name": "所欲设置的高度"]
+  },
+  {
+data type": "文本型""method name": "显示边框",
+data type": "文本型""comment": "返回窗口是否显示标题栏和边框",
+data type": "文本型""type": "property getter",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "显示边框",
+ }"comment": "设置是否显示窗口的标题栏和边框",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+]"method name": "可视",
+]"comment": "返回本窗口当前是否可视",
+]"type": "property getter",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "可视",
+ }"comment": "设置本窗口当前是否可视,注意会连任务栏图标一起隐藏.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否可视",
+"comment": "指定本组件是否可视",
+"data type": "逻辑型"
+   }
+ }]
+  }
+}]
+ },
+ {
+data type": "文本型""class name": "IM_GLFW窗口",
+data type": "文本型""comment": "  基于GLFW的ImGui窗口,本模板类已经处理好ImGui创建和销毁的各种复杂\n流程,你只需要在\"即将绘制\"事件中完成界面的布局,就能完成一个简单的\nImGui窗口.\n  \"模板类型1\"为所使用的渲染器类型,支持以下的渲染器:\n  IM_OpenGL渲染器  IM_Vulkan渲染器",
+data type": "文本型""base class": "IM_窗口模板类",
+data type": "文本型""@模板基础类": "真",
+data type": "文本型""@文档": "\"category = \\\"窗口框架\\\"\"",
+data type": "文本型""methods": [
+  {
+ata type": "文本型""@模板基础类": "真""method name": "创建主窗口",
+ata type": "文本型""@模板基础类": "真""comment": "创建本窗口类的对象并将其作为程序的主窗口.\n注意:\n  1. 程序中必须存在且只能存在一个主窗口,调用本方法后,主窗口将被设置为本窗口;\n  2. 主窗口必须在程序的\"启动类\"中存在成员变量定义,避免其在程序退出前被释放,\n否则将可能导致程序运行时崩溃.\n  3. 本方法内实现了消息循环,直到窗口关闭或创建失败,本方法才会返回.",
+ata type": "文本型""@模板基础类": "真""result comment": "返回是否成功",
+ata type": "文本型""@模板基础类": "真""data type": "逻辑型",
+ata type": "文本型""@模板基础类": "真""@禁止流程检查": "真",
+ata type": "文本型""@模板基础类": "真""parameters": [
+   {
+"parameter name": "标题",
+"comment": "提供所创建窗口的标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所创建窗口的宽度",
+"data type": "整数",
+"@默认值": "1280"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所创建窗口的高度",
+"data type": "整数",
+"@默认值": "720"
+   },
+   {
+"parameter name": "全屏模式",
+"comment": "默认为窗口模式,如果设置为真,将在主显示器中进入全屏模式,\n如果想在其他显示器中全屏显示,请在创建主窗口前执行\"置当前显示器\".",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "透明帧缓冲区",
+"comment": "是否启用透明帧缓冲区.\n通过Alpha通道将窗口内容(不包括标题栏和边框)与背景合成,实现透明背景.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ata type": "文本型""@模板基础类": "真"]
+  },
+  {
+ }"method name": "关闭窗口",
+ }"comment": "尝试关闭本窗口.\n注意: 本方法被调用后窗口不会被立即关闭,而会延迟等待到下一次消息循环时才会关闭.",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+a type": "文本型""@模板基础类": "真"]"method name": "取窗口对象",
+a type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.",
+a type": "文本型""@模板基础类": "真"]"data type": "变整数",
+a type": "文本型""@模板基础类": "真"]"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "最小化",
+ }"comment": "将本窗口最小化到任务栏图标",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "最小化""method name": "最大化",
+ethod name": "最小化""comment": "将本窗口设置为最大化",
+ethod name": "最小化""@嵌入式方法": "\"\""
+  },
+  {
+ type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""method name": "还原窗口",
+ type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口还原到原来的尺寸",
+ type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""@嵌入式方法": "\"\""
+  },
+  {
+type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口还原到原来的尺寸""method name": "获取焦点",
+type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口还原到原来的尺寸""comment": "将当前输入焦点设置到本窗口上",
+type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口还原到原来的尺寸""@嵌入式方法": "\"\""
+  },
+  {
+type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口还原到原来的尺寸""method name": "取窗口尺寸",
+type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口还原到原来的尺寸""comment": "获取本窗口的当前宽度和高度",
+type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口还原到原来的尺寸""@嵌入式方法": "\"\"",
+type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口还原到原来的尺寸""parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   }
+type": "文本型""@模板基础类": "真"]"comment": "返回当前GLFW窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口还原到原来的尺寸"]
+  },
+  {
+ }"method name": "置窗口尺寸",
+ }"comment": "设置本窗口的宽度和高度",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "限制窗口尺寸",
+data type": "整数""comment": "限制本窗口的宽度和高度,只能在限制的范围内调整大小",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "最小宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最小高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大高度",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "取窗口位置",
+ata type": "整数""parameters": [
+"comment": "获取本窗口的当前位置",
+ata type": "整数""parameters": [
+"@嵌入式方法": "\"\"",
+ata type": "整数""parameters": [
+"parameters": [
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   }
+ata type": "整数""parameters": [
+]
+  },
+  {
+ }"method name": "置窗口位置",
+ }"comment": "设置本窗口的位置",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "顶边位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ameter name": "左边位置""method name": "左边",
+ameter name": "左边位置""comment": "返回本窗口的左边位置",
+ameter name": "左边位置""type": "property getter",
+ameter name": "左边位置""data type": "整数",
+ameter name": "左边位置""@禁止流程检查": "真"
+  },
+  {
+ameter name": "顶边位置""method name": "左边",
+ameter name": "顶边位置""comment": "设置本窗口的左边位置",
+ameter name": "顶边位置""type": "property setter",
+ameter name": "顶边位置""parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+ameter name": "顶边位置"]
+  },
+  {
+meter name": "顶边位置""comment": "设置本窗口的左边位置""method name": "顶边",
+meter name": "顶边位置""comment": "设置本窗口的左边位置""comment": "返回本窗口的顶边位置",
+meter name": "顶边位置""comment": "设置本窗口的左边位置""type": "property getter",
+meter name": "顶边位置""comment": "设置本窗口的左边位置""data type": "整数",
+meter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真"
+  },
+  {
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""method name": "顶边",
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""comment": "设置本窗口的顶边位置",
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""type": "property setter",
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真"]
+  },
+  {
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""method name": "宽度",
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""comment": "返回本窗口的宽度",
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""type": "property getter",
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数",
+eter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""@禁止流程检查": "真"
+  },
+  {
+ter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数""method name": "宽度",
+ter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数""comment": "设置本窗口的宽度",
+ter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数""type": "property setter",
+ter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置的宽度",
+"data type": "整数"
+   }
+ter name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]
+  },
+  {
+er name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数""type": "property setter""method name": "高度",
+er name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数""type": "property setter""comment": "返回本窗口的高度",
+er name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数""type": "property setter""type": "property getter",
+er name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数""type": "property setter""data type": "整数",
+er name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数""type": "property setter""@禁止流程检查": "真"
+  },
+  {
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]"method name": "高度",
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]"comment": "设置本窗口的高度",
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]"type": "property setter",
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]"parameters": [
+   {
+"parameter name": "所欲设置的高度",
+"data type": "整数"
+   }
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]]
+  },
+  {
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]"method name": "标题",
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]"comment": "设置本窗口的当前标题文本",
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]"type": "property setter",
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]"parameters": [
+   {
+"parameter name": "所欲设置标题",
+"comment": "提供所欲设置的标题文本",
+"data type": "文本型"
+   }
+r name": "顶边位置""comment": "设置本窗口的左边位置""@禁止流程检查": "真""data type": "整数"]]
+  },
+  {
+comment": "提供所欲设置的标题文本""method name": "显示边框",
+comment": "提供所欲设置的标题文本""comment": "返回窗口是否显示标题栏和边框",
+comment": "提供所欲设置的标题文本""type": "property getter",
+comment": "提供所欲设置的标题文本""data type": "逻辑型",
+comment": "提供所欲设置的标题文本""@禁止流程检查": "真"
+  },
+  {
+omment": "提供所欲设置的标题文本""comment": "返回窗口是否显示标题栏和边框""method name": "显示边框",
+omment": "提供所欲设置的标题文本""comment": "返回窗口是否显示标题栏和边框""comment": "设置是否显示窗口的标题栏和边框",
+omment": "提供所欲设置的标题文本""comment": "返回窗口是否显示标题栏和边框""type": "property setter",
+omment": "提供所欲设置的标题文本""comment": "返回窗口是否显示标题栏和边框""parameters": [
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型"
+   }
+omment": "提供所欲设置的标题文本""comment": "返回窗口是否显示标题栏和边框"]
+  },
+  {
+显示窗口的标题栏和边框"method name": "可视",
+显示窗口的标题栏和边框"comment": "返回本窗口当前是否可视",
+显示窗口的标题栏和边框"type": "property getter",
+显示窗口的标题栏和边框"data type": "逻辑型",
+显示窗口的标题栏和边框"@禁止流程检查": "真"
+  },
+  {
+显示窗口的标题栏和边框"method name": "可视",
+显示窗口的标题栏和边框"comment": "设置本窗口当前是否可视,注意会连任务栏图标一起隐藏.",
+显示窗口的标题栏和边框"type": "property setter",
+显示窗口的标题栏和边框"parameters": [
+   {
+"parameter name": "是否可视",
+"comment": "指定本组件是否可视",
+"data type": "逻辑型"
+   }
+显示窗口的标题栏和边框]
+  },
+  {
+
+"method name": "窗口透明度",
+
+"comment": "返回本窗口(包括标题栏和边框)的整体透明度,如果系统不支持窗口透明度将始终返回1",
+
+"type": "property getter",
+
+"data type": "单精度小数",
+
+"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "窗口透明度",
+ }"comment": "设置本窗口(包括标题栏和边框)的整体透明度",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "透明度",
+"comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明.",
+"data type": "单精度小数"
+   }
+ }]
+  },
+  {
+"method name": "置于顶层",
+"comment": "返回本窗口当前是否已置于顶层",
+"type": "property getter",
+"data type": "逻辑型",
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "置于顶层",
+}"comment": "设置本窗口是否置于顶层",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否置于顶层",
+"comment": "指定本窗口是否置于顶层",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+omment": "提供所欲设置的标题文本""type": "property getter""method name": "透明帧缓冲区",
+omment": "提供所欲设置的标题文本""type": "property getter""comment": "返回本窗口是否已启用透明帧缓冲区,如果系统不支持将始终返回假.",
+omment": "提供所欲设置的标题文本""type": "property getter""type": "property getter",
+omment": "提供所欲设置的标题文本""type": "property getter""data type": "逻辑型",
+omment": "提供所欲设置的标题文本""type": "property getter""@禁止流程检查": "真"
+  }
+data type": "文本型"]
+ },
+ {
+mment": "提供所欲设置的标题文本""type": "property getter""type": "property getter""class name": "IM_SDL2窗口",
+mment": "提供所欲设置的标题文本""type": "property getter""type": "property getter""comment": "  基于SDL2的ImGui窗口,本模板类已经处理好ImGui创建和销毁的各种复杂\n流程,你只需要在\"即将绘制\"事件中完成界面的布局,就能完成一个简单的\nImGui窗口.\n  \"模板类型1\"为所使用的渲染器类型,支持以下的渲染器:\n  IM_DX9渲染器   IM_DX10渲染器    IM_DX11渲染器\n  IM_DX12渲染器  IM_OpenGL渲染器  IM_Vulkan渲染器",
+mment": "提供所欲设置的标题文本""type": "property getter""type": "property getter""base class": "IM_窗口模板类",
+mment": "提供所欲设置的标题文本""type": "property getter""type": "property getter""@模板基础类": "真",
+mment": "提供所欲设置的标题文本""type": "property getter""type": "property getter""@文档": "\"category = \\\"窗口框架\\\"\"",
+mment": "提供所欲设置的标题文本""type": "property getter""type": "property getter""methods": [
+  {
+"method name": "创建主窗口",
+"comment": "创建本窗口类的对象并将其作为程序的主窗口.\n注意:\n  1. 程序中必须存在且只能存在一个主窗口,调用本方法后,主窗口将被设置为本窗口;\n  2. 主窗口必须在程序的\"启动类\"中存在成员变量定义,避免其在程序退出前被释放,\n否则将可能导致程序运行时崩溃.\n  3. 本方法内实现了消息循环,直到窗口关闭或创建失败,本方法才会返回.",
+"result comment": "返回是否成功",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "标题",
+"comment": "提供所创建窗口的标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所创建窗口的宽度",
+"data type": "整数",
+"@默认值": "1280"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所创建窗口的高度",
+"data type": "整数",
+"@默认值": "720"
+   },
+   {
+"parameter name": "全屏模式",
+"comment": "默认为窗口模式,如果设置为真,将以设置的宽度和高度进入全屏模式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+@默认值": "720""method name": "关闭窗口",
+@默认值": "720""comment": "尝试关闭本窗口.\n注意: 本方法被调用后窗口不会被立即关闭,而会延迟等待到下一次消息循环时才会关闭."
+  },
+  {
+
+"method name": "取窗口对象",
+
+"comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.""method name": "最小化",
+"comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.""comment": "将本窗口最小化到任务栏图标",
+"comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "最大化",
+}"comment": "将本窗口设置为最大化",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "还原窗口",
+
+"comment": "将本窗口还原到原来的尺寸",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "获取焦点",
+"@嵌入式方法": "\"\"""comment": "将当前输入焦点设置到本窗口上",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.""@嵌入式方法": "\"\"""method name": "取窗口尺寸",
+comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.""@嵌入式方法": "\"\"""comment": "获取本窗口的当前宽度和高度",
+comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   }
+comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.""@嵌入式方法": "\"\""]
+  },
+  {
+"method name": "置窗口尺寸",
+"comment": "设置本窗口的宽度和高度",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   }
+]
+  },
+  {
+ameter name": "高度""method name": "取窗口位置",
+ameter name": "高度""comment": "获取本窗口的当前位置",
+ameter name": "高度""@嵌入式方法": "\"\"",
+ameter name": "高度""parameters": [
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   }
+ameter name": "高度"]
+  },
+  {
+data type": "整数""method name": "置窗口位置",
+data type": "整数""comment": "设置本窗口的位置",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "顶边位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "限制窗口尺寸",
+}"comment": "限制本窗口的宽度和高度,只能在限制的范围内调整大小",
+}"parameters": [
+   {
+"parameter name": "最小宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最小高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大高度",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "左边",
+data type": "整数""comment": "返回本窗口的左边位置",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "整数",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+ }"method name": "左边",
+ }"comment": "设置本窗口的左边位置",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "顶边",
+
+"comment": "返回本窗口的顶边位置",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "顶边",
+}"comment": "设置本窗口的顶边位置",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "所欲设置的位置""method name": "宽度",
+ameter name": "所欲设置的位置""comment": "返回本窗口的宽度",
+ameter name": "所欲设置的位置""type": "property getter",
+ameter name": "所欲设置的位置""data type": "整数",
+ameter name": "所欲设置的位置""@禁止流程检查": "真"
+  },
+  {
+ameter name": "所欲设置的位置""method name": "宽度",
+ameter name": "所欲设置的位置""comment": "设置本窗口的宽度",
+ameter name": "所欲设置的位置""type": "property setter",
+ameter name": "所欲设置的位置""parameters": [
+   {
+"parameter name": "所欲设置的宽度",
+"data type": "整数"
+   }
+ameter name": "所欲设置的位置"]
+  },
+  {
+
+"method name": "高度",
+
+"comment": "返回本窗口的高度",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "高度",
+
+"comment": "设置本窗口的高度",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的高度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "标题",
+
+"comment": "返回本窗口的当前标题文本",
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "标题",
+
+"comment": "设置本窗口的当前标题文本",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的标题",
+"comment": "提供所欲设置的标题文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "显示边框",
+}"comment": "返回窗口是否显示标题栏和边框",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+"method name": "显示边框",
+"comment": "设置是否显示窗口的标题栏和边框",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+parameters": [
+"method name": "可视",
+parameters": [
+"comment": "返回本窗口当前是否可视",
+parameters": [
+"type": "property getter",
+parameters": [
+"data type": "逻辑型",
+parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""method name": "可视",
+data type": "文本型""comment": "设置本窗口当前是否可视,注意会连任务栏图标一起隐藏.",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "是否可视",
+"comment": "指定本组件是否可视",
+"data type": "逻辑型"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "置于顶层",
+}"comment": "返回本窗口当前是否已置于顶层",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+comment": "指定本组件是否可视""method name": "置于顶层",
+comment": "指定本组件是否可视""comment": "设置本窗口是否置于顶层",
+comment": "指定本组件是否可视""type": "property setter",
+comment": "指定本组件是否可视""parameters": [
+   {
+"parameter name": "是否置于顶层",
+"comment": "指定本窗口是否置于顶层",
+"data type": "逻辑型"
+   }
+comment": "指定本组件是否可视"]
+  },
+  {
+}"method name": "窗口透明度",
+}"comment": "返回本窗口(包括标题栏和边框)的整体透明度,如果系统不支持窗口透明度将始终返回1",
+}"type": "property getter",
+}"data type": "单精度小数",
+}"@禁止流程检查": "真"
+  },
+  {
+"type": "property getter""method name": "窗口透明度",
+"type": "property getter""comment": "设置本窗口(包括标题栏和边框)的整体透明度",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "透明度",
+"comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明.",
+"data type": "单精度小数"
+   }
+"type": "property getter"]
+  }
+mment": "提供所欲设置的标题文本""type": "property getter""type": "property getter"]
+ },
+ {
+e": "property getter""method name": "窗口透明度""class name": "IM_SDL3窗口",
+e": "property getter""method name": "窗口透明度""comment": "  基于SDL3的ImGui窗口,本模板类已经处理好ImGui创建和销毁的各种复杂\n流程,你只需要在\"即将绘制\"事件中完成界面的布局,就能完成一个简单的\nImGui窗口.\n  \"模板类型1\"为所使用的渲染器类型,支持以下的渲染器:\n  IM_DX9渲染器   IM_DX10渲染器    IM_DX11渲染器\n  IM_DX12渲染器  IM_OpenGL渲染器  IM_Vulkan渲染器",
+e": "property getter""method name": "窗口透明度""base class": "IM_窗口模板类",
+e": "property getter""method name": "窗口透明度""@模板基础类": "真",
+e": "property getter""method name": "窗口透明度""@文档": "\"category = \\\"窗口框架\\\"\"",
+e": "property getter""method name": "窗口透明度""methods": [
+  {
+comment": "指定本窗口是否置于顶层""method name": "创建主窗口",
+comment": "指定本窗口是否置于顶层""comment": "创建本窗口类的对象并将其作为程序的主窗口.\n注意:\n  1. 程序中必须存在且只能存在一个主窗口,调用本方法后,主窗口将被设置为本窗口;\n  2. 主窗口必须在程序的\"启动类\"中存在成员变量定义,避免其在程序退出前被释放,\n否则将可能导致程序运行时崩溃.\n  3. 本方法内实现了消息循环,直到窗口关闭或创建失败,本方法才会返回.",
+comment": "指定本窗口是否置于顶层""result comment": "返回是否成功",
+comment": "指定本窗口是否置于顶层""data type": "逻辑型",
+comment": "指定本窗口是否置于顶层""@禁止流程检查": "真",
+comment": "指定本窗口是否置于顶层""parameters": [
+   {
+"parameter name": "标题",
+"comment": "提供所创建窗口的标题",
+"data type": "文本型"
+   },
+   {
+"parameter name": "宽度",
+"comment": "提供所创建窗口的宽度",
+"data type": "整数",
+"@默认值": "1280"
+   },
+   {
+"parameter name": "高度",
+"comment": "提供所创建窗口的高度",
+"data type": "整数",
+"@默认值": "720"
+   },
+   {
+"parameter name": "全屏模式",
+"comment": "默认为窗口模式,如果设置为真,将以设置的宽度和高度进入全屏模式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "指定本窗口是否置于顶层"]
+  },
+  {
+comment": "默认为窗口模式,如果设置为真,将以设置的宽度和高度进入全屏模式""method name": "关闭窗口",
+comment": "默认为窗口模式,如果设置为真,将以设置的宽度和高度进入全屏模式""comment": "尝试关闭本窗口.\n注意: 本方法被调用后窗口不会被立即关闭,而会延迟等待到下一次消息循环时才会关闭."
+  },
+  {
+omment": "指定本窗口是否置于顶层""data type": "逻辑型""method name": "取窗口对象",
+omment": "指定本窗口是否置于顶层""data type": "逻辑型""comment": "返回本SDL窗口的对象指针,如果尚未创建或创建失败,则返回0.",
+omment": "指定本窗口是否置于顶层""data type": "逻辑型""data type": "变整数",
+omment": "指定本窗口是否置于顶层""data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+mment": "指定本窗口是否置于顶层""data type": "逻辑型""@嵌入式方法": "\"\"""method name": "最小化",
+mment": "指定本窗口是否置于顶层""data type": "逻辑型""@嵌入式方法": "\"\"""comment": "将本窗口最小化到任务栏图标",
+mment": "指定本窗口是否置于顶层""data type": "逻辑型""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "最大化",
+
+"comment": "将本窗口设置为最大化",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "还原窗口",
+
+"comment": "将本窗口还原到原来的尺寸",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "获取焦点",
+}"comment": "将当前输入焦点设置到本窗口上",
+}"@嵌入式方法": "\"\""
+  },
+  {
+thod name": "获取焦点""method name": "取窗口尺寸",
+thod name": "获取焦点""comment": "获取本窗口的当前宽度和高度",
+thod name": "获取焦点""@嵌入式方法": "\"\"",
+thod name": "获取焦点""parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   }
+thod name": "获取焦点"]
+  },
+  {
+ }"method name": "置窗口尺寸",
+ }"comment": "设置本窗口的宽度和高度",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "取窗口位置",
+}"@嵌入式方法": "\"\"""comment": "获取本窗口的当前位置",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@需求类型": "可写入变量"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "置窗口位置",
+}"@嵌入式方法": "\"\"""comment": "设置本窗口的位置",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "顶边位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+data type": "整数""method name": "限制窗口尺寸",
+data type": "整数""comment": "限制本窗口的宽度和高度,只能在限制的范围内调整大小",
+data type": "整数""parameters": [
+   {
+"parameter name": "最小宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最小高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大高度",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+"method name": "左边",
+"comment": "返回本窗口的左边位置",
+"type": "property getter",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "左边",
+"comment": "设置本窗口的左边位置",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "顶边",
+}"comment": "返回本窗口的顶边位置",
+}"type": "property getter",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "顶边",
+}"comment": "设置本窗口的顶边位置",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "所欲设置的位置",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "宽度",
+
+"comment": "返回本窗口的宽度",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "宽度",
+"comment": "设置本窗口的宽度",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "所欲设置的宽度",
+"data type": "整数"
+   }
+]
+  },
+  {
+"type": "property getter""method name": "高度",
+"type": "property getter""comment": "返回本窗口的高度",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "整数",
+"type": "property getter""@禁止流程检查": "真"
+  },
+  {
+type": "property getter""@禁止流程检查": "真""method name": "高度",
+type": "property getter""@禁止流程检查": "真""comment": "设置本窗口的高度",
+type": "property getter""@禁止流程检查": "真""type": "property setter",
+type": "property getter""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "所欲设置的高度",
+"data type": "整数"
+   }
+type": "property getter""@禁止流程检查": "真"]
+  },
+  {
+data type": "整数""method name": "标题",
+data type": "整数""comment": "返回本窗口的当前标题文本",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "文本型",
+data type": "整数""@禁止流程检查": "真"
+  },
+  {
+"method name": "标题",
+"comment": "设置本窗口的当前标题文本",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "所欲设置的标题",
+"comment": "提供所欲设置的标题文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "显示边框",
+
+"comment": "返回窗口是否显示标题栏和边框",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+ameter name": "所欲设置的标题""method name": "显示边框",
+ameter name": "所欲设置的标题""comment": "设置是否显示窗口的标题栏和边框",
+ameter name": "所欲设置的标题""type": "property setter",
+ameter name": "所欲设置的标题""parameters": [
+   {
+"parameter name": "是否显示",
+"data type": "逻辑型"
+   }
+ameter name": "所欲设置的标题"]
+  },
+  {
+ameter name": "所欲设置的标题""method name": "可视",
+ameter name": "所欲设置的标题""comment": "返回本窗口当前是否可视",
+ameter name": "所欲设置的标题""type": "property getter",
+ameter name": "所欲设置的标题""data type": "逻辑型",
+ameter name": "所欲设置的标题""@禁止流程检查": "真"
+  },
+  {
+eter name": "所欲设置的标题"]"method name": "可视",
+eter name": "所欲设置的标题"]"comment": "设置本窗口当前是否可视,注意会连任务栏图标一起隐藏.",
+eter name": "所欲设置的标题"]"type": "property setter",
+eter name": "所欲设置的标题"]"parameters": [
+   {
+"parameter name": "是否可视",
+"comment": "指定本组件是否可视",
+"data type": "逻辑型"
+   }
+eter name": "所欲设置的标题"]]
+  },
+  {
+ter name": "所欲设置的标题"]"parameters": [
+"method name": "置于顶层",
+ter name": "所欲设置的标题"]"parameters": [
+"comment": "返回本窗口当前是否已置于顶层",
+ter name": "所欲设置的标题"]"parameters": [
+"type": "property getter",
+ter name": "所欲设置的标题"]"parameters": [
+"data type": "逻辑型",
+ter name": "所欲设置的标题"]"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置于顶层",
+
+"comment": "设置本窗口是否置于顶层",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否置于顶层",
+"comment": "指定本窗口是否置于顶层",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "窗口透明度",
+"parameters": [
+"comment": "返回本窗口(包括标题栏和边框)的整体透明度,如果系统不支持窗口透明度将始终返回1",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "单精度小数",
+"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+ameter name": "是否置于顶层""method name": "窗口透明度",
+ameter name": "是否置于顶层""comment": "设置本窗口(包括标题栏和边框)的整体透明度",
+ameter name": "是否置于顶层""type": "property setter",
+ameter name": "是否置于顶层""parameters": [
+   {
+"parameter name": "透明度",
+"comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明.",
+"data type": "单精度小数"
+   }
+ameter name": "是否置于顶层"]
+  }
+e": "property getter""method name": "窗口透明度"]
+ },
+ {
+comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明.""class name": "IM_后端模板类",
+comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明.""comment": "专门给火山的 MFC/WTL 窗口使用,使用时必须调用\"初始化()\".\n\"模板类型1\"为所使用的渲染器类型,支持以下的渲染器:\n  IM_DX9渲染器   IM_DX10渲染器    IM_DX11渲染器\n  IM_DX12渲染器  IM_OpenGL渲染器  IM_Vulkan渲染器\n注意: 使用本模板的实现类,必须配置\"MFC界面基本类\"或\"WTL界面基本类\".",
+comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明.""@模板基础类": "真",
+comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明.""variables": [
+  {
+
+"variable name": "渲染器",
+
+"comment": "需要更改渲染器时改动此处的变量类型",
+
+"data type": "模板类型1"
+  },
+  {
+meter name": "是否置于顶层""comment": "设置本窗口(包括标题栏和边框)的整体透明度""variable name": "背景颜色",
+meter name": "是否置于顶层""comment": "设置本窗口(包括标题栏和边框)的整体透明度""comment": "x=红色; y=绿色; z=蓝色; w=Alpha",
+meter name": "是否置于顶层""comment": "设置本窗口(包括标题栏和边框)的整体透明度""data type": "ImVec4",
+meter name": "是否置于顶层""comment": "设置本窗口(包括标题栏和边框)的整体透明度""x": "0.45",
+meter name": "是否置于顶层""comment": "设置本窗口(包括标题栏和边框)的整体透明度""y": "0.55",
+meter name": "是否置于顶层""comment": "设置本窗口(包括标题栏和边框)的整体透明度""z": "0.60",
+meter name": "是否置于顶层""comment": "设置本窗口(包括标题栏和边框)的整体透明度""w": "1.00"
+  }
+comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明."],
+comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明.""methods": [
+  {
+e": "property getter""method name": "窗口透明度""method name": "帧速率",
+e": "property getter""method name": "窗口透明度""comment": "设置ImGui的最大帧速率,即每秒绘制多少次帧,返回是否设置成功.\n注意:\n 1. DX9和Vulkan必须在属性名中设置\"帧速率\"的属性值,其他地方设置无效.\n 2. 最大帧速率以\"延时\"实现,由于Windows没有高精度和低CPU占用的延时,\n在60fps以下勉强能用,再高就不建议使用了,误差太大.",
+e": "property getter""method name": "窗口透明度""type": "property setter",
+e": "property getter""method name": "窗口透明度""parameters": [
+   {
+"parameter name": "FPS",
+"comment": "默认为0,表示开启垂直同步,帧速率与屏幕刷新率一致;\n小于0表示关闭垂直同步,不限制帧速率,有多快只看电脑性能;\n大于0表示关闭垂直同步且自定义最大帧速率;",
+"data type": "整数"
+   }
+e": "property getter""method name": "窗口透明度"]
+  },
+  {
+ }"method name": "取窗口句柄",
+ }"comment": "返回当前所绑定的Win32窗口句柄,如果尚未初始化或初始化失败,则返回0.",
+ }"data type": "变整数"
+  },
+  {
+}"comment": "返回当前所绑定的Win32窗口句柄,如果尚未初始化或初始化失败,则返回0.""method name": "初始化",
+}"comment": "返回当前所绑定的Win32窗口句柄,如果尚未初始化或初始化失败,则返回0.""comment": "将指定的窗口句柄绑定到ImGui并完成初始化",
+}"comment": "返回当前所绑定的Win32窗口句柄,如果尚未初始化或初始化失败,则返回0.""data type": "逻辑型",
+}"comment": "返回当前所绑定的Win32窗口句柄,如果尚未初始化或初始化失败,则返回0.""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+}"comment": "返回当前所绑定的Win32窗口句柄,如果尚未初始化或初始化失败,则返回0."]
+  },
+  {
+"data type": "模板类型1""method name": "释放",
+"data type": "模板类型1""comment": "释放ImGui和设备,窗口销毁时会自动释放,你也可以手动释放以重新初始化ImGui."
+  },
+  {
+ }"method name": "初始化配置",
+ }"comment": "在ImGui创建完毕后发送一次此事件,用于设置ImGui的IO和字体等参数.",
+ }"result comment": "返回1表示使用浅色样式,2为经典样式,其他任意值为默认的深色样式.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "IO",
+"comment": "ImGui的输入输出结构",
+"data type": "ImGuiIO类"
+   },
+   {
+"parameter name": "字体图集",
+"comment": "请在此添加字体(默认未添加任何字体,未添加中文字体将无法显示汉字).",
+"data type": "IM字体图集类"
+   }
+ }]
+  },
+  {
+"method name": "准备渲染",
+"comment": "在ImGui开始渲染前发送一次此事件,可用于加载图片(渲染器不能在此事件之前加载图片).",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "样式配置",
+"comment": "ImGui的样式配置",
+"data type": "IM样式类"
+   }
+]
+  },
+  {
+comment": "在ImGui开始渲染前发送一次此事件,可用于加载图片(渲染器不能在此事件之前加载图片).""method name": "帧被创建",
+comment": "在ImGui开始渲染前发送一次此事件,可用于加载图片(渲染器不能在此事件之前加载图片).""comment": "当ImGui帧被创建前发送此事件.\n注意:\n  1. 本事件后会在内部进行新建帧操作,接着将触发\"即将渲染\"事件;\n  2. 本事件的触发频率与\"即将渲染\"基本一致,可以执行新建帧前的一些操作;",
+comment": "在ImGui开始渲染前发送一次此事件,可用于加载图片(渲染器不能在此事件之前加载图片).""type": "event",
+comment": "在ImGui开始渲染前发送一次此事件,可用于加载图片(渲染器不能在此事件之前加载图片).""data type": "整数",
+comment": "在ImGui开始渲染前发送一次此事件,可用于加载图片(渲染器不能在此事件之前加载图片).""parameters": [
+   {
+"parameter name": "IO",
+"comment": "ImGui的输入输出结构",
+"data type": "ImGuiIO类"
+   },
+   {
+"parameter name": "样式配置",
+"comment": "ImGui的样式配置",
+"data type": "IM样式类"
+   }
+comment": "在ImGui开始渲染前发送一次此事件,可用于加载图片(渲染器不能在此事件之前加载图片)."]
+  },
+  {
+"method name": "即将渲染",
+"comment": "当ImGui帧数据被渲染前发送此事件,请在本事件内设计ImGui的界面布局.\n注意:\n  1. 本事件前后已经内部处理好新建帧和渲染等操作,你只需设计布局即可;\n  2. ImGUI默认开启垂直同步,帧速率跟显示器的刷新率一致.比如刷新率为为60Hz,\n将每秒触发本事件60次,因此在此进行耗时操作将导致帧速率降低和界面卡顿,如有必要,\n请另开线程执行耗时操作;\n  3. 因为本事件的执行频率足够高,所以键鼠输入等事件也可以在此一起处理;",
+"type": "event",
+"data type": "整数"
+  },
+  {
+}"method name": "渲染结束",
+}"comment": "在ImGui停止渲染后发送一次此事件,可用于释放资源.",
+}"type": "event",
+}"data type": "整数"
+  }
+comment": "请提供0.0f-1.0f之间的值,即完全透明到完全不透明."]
+ }
+问本程序中的接口需要引用模块"PIV基础类".]
+}

@@ -1,0 +1,304 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.截图\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"CaptureScreen\\\\D3DCaptureTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"CaptureScreen\\\\D3DCaptureToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"CaptureScreen\\\\D3DCaptureToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"CaptureScreen\\\\D3DCaptureToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"CaptureScreen\\\\D3DCaptureToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______屏幕截图_全局类",
+"comment": "建议使用  快照_全局类",
+"@全局类": "真",
+"methods": [
+  {
+ꌤŝ"method name": "快照_像素数据",
+ꌤŝ"comment": "快照出来的是 32 位的 像素数据，，，， 不是图片，",
+ꌤŝ"static": true,
+ꌤŝ"data type": "字节集类",
+ꌤŝ"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "如果为0表示快照整个窗口",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "横向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "表示 窗口句柄 宽度",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "高度",
+"comment": "表示 窗口句柄 宽度",
+"data type": "整数",
+"@默认值": "0"
+   }
+ꌤŝ]
+  },
+  {
+ŝ]"method name": "快照_位图数据",
+ŝ]"static": true,
+ŝ]"data type": "字节集类",
+ŝ]"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "如果为0表示快照整个窗口",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "横向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "表示 窗口句柄 宽度",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "高度",
+"comment": "表示 窗口句柄 宽度",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否反向",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ŝ]]
+  },
+  {
+data type": "逻辑型""method name": "像素指针转位图句柄F",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "变整数",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "HDC句柄",
+"comment": "如果为0 表示使用的是 桌面的HDC句柄",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "像素数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "宽度",
+"comment": "图片的的宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "高度",
+"comment": "图片的高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "像素位数",
+"comment": "要装甲的位图是 24位，还是32位的 位图",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  }
+]
+ },
+ {
+"class name": "TGA图片类F",
+"comment": "只支持 32位的 没有压缩过的 TGA",
+"methods": [
+  {
+ss name": "TGA图片类F""method name": "读取",
+ss name": "TGA图片类F""data type": "字节集类",
+ss name": "TGA图片类F""@禁止流程检查": "真",
+ss name": "TGA图片类F""parameters": [
+   {
+"parameter name": "图片文件路径",
+"data type": "文本型"
+   }
+ss name": "TGA图片类F"]
+  },
+  {
+ame": "TGA图片类F""method name": "读取""method name": "取图片宽度",
+ame": "TGA图片类F""method name": "读取""data type": "整数"
+  },
+  {
+ }"method name": "取图片高度",
+ }"data type": "整数"
+  },
+  {
+
+"method name": "保存",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "像素数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "图片宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片高度",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "高速截图类",
+"comment": "注意，只支持Win8系统以上版本，然后好像只能再线程中用。。。再ui线程中好像截图得不到指针",
+"methods": [
+  {
+]"method name": "创建",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "图片宽度""method name": "销毁",
+ameter name": "图片宽度""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "快照",
+ }"comment": "快照整个屏幕 得到的只是像素数据 ARGB 四个通道的像素数据",
+ }"data type": "字节集类",
+ }"@禁止流程检查": "真"
+  },
+  {
+meter name": "图片宽度""@嵌入式方法": "\"\"""method name": "快照返回指针",
+meter name": "图片宽度""@嵌入式方法": "\"\"""comment": "快照整个屏幕 得到的只是像素数据 ARGB 四个通道的像素数据",
+meter name": "图片宽度""@嵌入式方法": "\"\"""data type": "变整数",
+meter name": "图片宽度""@嵌入式方法": "\"\"""@禁止流程检查": "真"
+  },
+  {
+}"method name": "取快照指针大小",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "快照D3D类",
+"methods": [
+  {
+methods": [
+"method name": "创建",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+methods": [
+]
+  },
+  {
+}"method name": "销毁",
+}"@嵌入式方法": "\"\""
+  },
+  {
+data type": "变整数""method name": "取位图数据",
+data type": "变整数""comment": "得到的是一个32位位图 文件的数据",
+data type": "变整数""data type": "字节集类",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "横向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "表示 窗口句柄 宽度",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "高度",
+"comment": "表示 窗口句柄 宽度",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否反向",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "变整数"]
+  },
+  {
+ }"method name": "取像素数据",
+ }"comment": "得到的是像素数据",
+ }"data type": "字节集类",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "横向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "纵向位置",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度",
+"comment": "表示 窗口句柄 宽度",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "高度",
+"comment": "表示 窗口句柄 宽度",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

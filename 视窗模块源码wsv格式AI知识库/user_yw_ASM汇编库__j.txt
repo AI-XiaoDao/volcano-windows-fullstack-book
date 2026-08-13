@@ -1,0 +1,6097 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."comment": "本库来自于“恒通小助手”",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"ASM汇编库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+"class name": "ASM汇编类_",
+"comment": "支持32位、64位",
+"methods": [
+  {
+
+"method name": "调用函数",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "变整数",
+"@输出名": "\"ProcessID\""
+   },
+   {
+"parameter name": "汇编代码",
+"data type": "字节集类",
+"@输出名": "\"code\""
+   }
+
+]
+  },
+  {
+
+"method name": "调用函数2",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数",
+"@输出名": "\"handle\""
+   },
+   {
+"parameter name": "汇编代码",
+"data type": "字节集类",
+"@输出名": "\"code\""
+   }
+
+]
+  },
+  {
+
+"method name": "调用函数3",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数",
+"@输出名": "\"handle\""
+   },
+   {
+"parameter name": "汇编代码",
+"data type": "字节集类",
+"@输出名": "\"code\""
+   },
+   {
+"parameter name": "内存地址",
+"data type": "变整数",
+"@输出名": "\"address\""
+   }
+
+]
+  },
+  {
+
+"method name": "调用函数4",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数",
+"@输出名": "\"handle\""
+   },
+   {
+"parameter name": "调用地址",
+"data type": "变整数",
+"@输出名": "\"address\""
+   }
+
+]
+  },
+  {
+
+"method name": "调用函数5",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数",
+"@输出名": "\"handle\""
+   },
+   {
+"parameter name": "汇编代码",
+"data type": "字节集类",
+"@输出名": "\"code\""
+   }
+
+]
+  },
+  {
+
+"method name": "置代码",
+
+"comment": "放在最前面，清空上一次的字节集"
+  },
+  {
+
+"method name": "Int2Hex",
+
+"comment": "公用转换",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "Value",
+"data type": "整数"
+   },
+   {
+"parameter name": "n",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "字节集还原",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "十六进制字节码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否替换",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "多元取十进制",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "传入的字节",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字节位置",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+
+"method name": "取指定字节集",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "指令参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取代码",
+
+"comment": "取出返回的字节集",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_eax",
+
+"comment": "对应OD汇编指令 ADD EAX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_常数",
+
+"comment": "对应OD汇编指令 MOV EAX,1 或 MOV EAX,00401000",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_ecx",
+
+"comment": "对应OD汇编指令 ADD ECX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_edx",
+
+"comment": "对应OD汇编指令 ADD EDX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_ebx",
+
+"comment": "对应OD汇编指令 ADD EBX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_esp",
+
+"comment": "对应OD汇编指令 ADD ESP,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_ebp",
+
+"comment": "对应OD汇编指令 ADD EBP,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_esi",
+
+"comment": "对应OD汇编指令 ADD ESI,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_edi",
+
+"comment": "对应OD汇编指令 ADD EDI,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "call_eax",
+
+"comment": "对应OD汇编指令 CALL EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_edx",
+
+"comment": "对应OD汇编指令 CALL EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_ebp",
+
+"comment": "对应OD汇编指令 CALL EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_ecx",
+
+"comment": "对应OD汇编指令 CALL ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_edi",
+
+"comment": "对应OD汇编指令 CALL EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_esi",
+
+"comment": "对应OD汇编指令 CALL ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_esp",
+
+"comment": "对应OD汇编指令 CALL EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_常数",
+
+"comment": "对应OD汇编指令 CALL 00401000",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "call_ptr",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[00401000]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "ret",
+
+"comment": "对应OD汇编指令 RETN",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "je",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参_修改地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参_目标地址",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "push",
+
+"comment": "对应OD汇编指令 PUSH 1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "push_dword_ptr",
+
+"comment": "对应OD汇编指令 PUSH DWORD PTR DS:[00401000]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "call_ebx",
+
+"comment": "对应OD汇编指令 CALL EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_常数",
+
+"comment": "对应OD汇编指令 MOV EAX,1 或 MOV EBX,00401000",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "pushad",
+
+"comment": "对应OD汇编指令 PUSHAD",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "popad",
+
+"comment": "对应OD汇编指令 POPAD",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "push_eax",
+
+"comment": "对应OD汇编指令 PUSH EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "push_ebx",
+
+"comment": "对应OD汇编指令 PUSH EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "push_ecx",
+
+"comment": "对应OD汇编指令 PUSH ECX",
+
+"data type": "字节集类"
+  },
+  {
+汇编指令 PUSH ECX"method name": "push_edx",
+汇编指令 PUSH ECX"comment": "对应OD汇编指令 PUSH EDX",
+汇编指令 PUSH ECX"data type": "字节集类"
+  },
+  {
+汇编指令 PUSH ECX"method name": "push_esi",
+汇编指令 PUSH ECX"comment": "对应OD汇编指令 PUSH ESI",
+汇编指令 PUSH ECX"data type": "字节集类"
+  },
+  {
+
+"method name": "push_edi",
+
+"comment": "对应OD汇编指令 PUSH EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "push_ebp",
+
+"comment": "对应OD汇编指令 PUSH EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "push_esp",
+
+"comment": "对应OD汇编指令 PUSH ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_常数",
+
+"comment": "对应OD汇编指令 MOV ECX,1 或 MOV ECX,00401000",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[00401000]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "mov_edx_常数",
+}"comment": "对应OD汇编指令 MOV EDX,1 或 MOV EDX,00401000",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "mov_esi_常数",
+}"comment": "对应OD汇编指令 MOV EDX,1 或 MOV ESI,00401000",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "mov_edi_常数",
+}"comment": "对应OD汇编指令 MOV EDX,1 或 MOV EDI,00401000",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_ebp_常数",
+
+"comment": "对应OD汇编指令 MOV EDX,1 或 MOV EBP,00401000",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "mov_esp_常数",
+}"comment": "对应OD汇编指令 MOV EDX,1 或 MOV ESP,00401000",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_ebx_ptr",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[00401000]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esp_ptr",
+
+"comment": "对应OD汇编指令 MOV ESP,DWORD PTR DS:[00401000]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_edi_ptr",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[00401000]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebp_ptr",
+
+"comment": "对应OD汇编指令 MOV EBP,DWORD PTR DS:[00401000]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ecx_ptr",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[00401000]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "mov_edx_ptr",
+}"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[00401000]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_esi_ptr",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[00401000]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "常数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "常数""method name": "xor_edi_edi",
+ameter name": "常数""comment": "对应OD汇编指令 XOR EDI,EDI",
+ameter name": "常数""data type": "字节集类"
+  },
+  {
+
+"method name": "xor_eax_ebx",
+
+"comment": "对应OD汇编指令 XOR EAX,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "xor_ecx_ecx",
+
+"comment": "对应OD汇编指令 XOR ECX,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "xor_esi_esi",
+
+"comment": "对应OD汇编指令 XOR ESI,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "xor_edx_edx",
+
+"comment": "对应OD汇编指令 XOR EDX,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "xor_ebx_ebx",
+
+"comment": "对应OD汇编指令 XOR EBX,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "sub_ebx_eax",
+
+"comment": "对应OD汇编指令 SUB EBX,EAX",
+
+"data type": "字节集类"
+  },
+  {
+ameter name": "常数""method name": "sub_eax_edx",
+ameter name": "常数""comment": "对应OD汇编指令 SUB EAX,EDX",
+ameter name": "常数""data type": "字节集类"
+  },
+  {
+}"method name": "leave",
+}"comment": "对应OD汇编指令 LEAVE",
+}"data type": "字节集类"
+  },
+  {
+}"method name": "test_eax_eax",
+}"comment": "对应OD汇编指令 TEST EAX,EAX",
+}"data type": "字节集类"
+  },
+  {
+
+"method name": "test_ebx_ebx",
+
+"comment": "对应OD汇编指令 TEST EBX,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "lea_ecx_ptr_ss_esp_add",
+
+"comment": "对应OD汇编指令 LEA ECX,DWORD PTR SS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"comment": "对应OD汇编指令 TEST EBX,EBX""method name": "lea_eax_ptr_ss_eax_add",
+"comment": "对应OD汇编指令 TEST EBX,EBX""comment": "对应OD汇编指令 LEA EAX,DWORD PTR SS:[EAX+1]",
+"comment": "对应OD汇编指令 TEST EBX,EBX""data type": "字节集类",
+"comment": "对应OD汇编指令 TEST EBX,EBX""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+"comment": "对应OD汇编指令 TEST EBX,EBX"]
+  },
+  {
+}"method name": "lea_edx_ptr_ss_esp_add",
+}"comment": "对应OD汇编指令 LEA EDX,DWORD PTR SS:[ESP+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "lea_eax_ptr_ss_esp_add",
+
+"comment": "对应OD汇编指令 LEA EAX,DWORD PTR SS:[ESP+参数]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr_eax_add",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr_edx_add",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr_esp_add",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr_esi_add",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr_edi_add",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "参数""method name": "mov_ecx_eax",
+ameter name": "参数""comment": "对应OD汇编指令 MOV ECX,EAX",
+ameter name": "参数""data type": "字节集类"
+  },
+  {
+ameter name": "参数""method name": "mov_ecx_ecx",
+ameter name": "参数""comment": "对应OD汇编指令 MOV ECX,ECX",
+ameter name": "参数""data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_edx",
+
+"comment": "对应OD汇编指令 MOV ECX,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_ebx",
+
+"comment": "对应OD汇编指令 MOV ECX,EBX",
+
+"data type": "字节集类"
+  },
+  {
+}"method name": "mov_ecx_esp",
+}"comment": "对应OD汇编指令 MOV ECX,ESP",
+}"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_ebp",
+
+"comment": "对应OD汇编指令 MOV ECX,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_esi",
+
+"comment": "对应OD汇编指令 MOV ECX,ESI",
+
+"data type": "字节集类"
+  },
+  {
+}"method name": "mov_ecx_edi",
+}"comment": "对应OD汇编指令 MOV ECX,EDI",
+}"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_ptr_ebx",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[EBX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_ptr_ecx",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[ECX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_ptr_edx",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[EDX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_ptr_esi",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[ESI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_ptr_edi",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[EDI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_ptr_edi",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[EDI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_ptr_ecx",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[ECX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_ptr_ebx",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[EBX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_ptr_eax",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[EAX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_ptr_eax",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR DS:[EAX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_ptr_esi",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[ESI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_ptr_eax",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[EAX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_ptr_ecx",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[ECX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_ptr_ebx",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[EBX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_ptr_edi",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[EDI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_ptr_ecx",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[ECX]",
+
+"data type": "字节集类"
+  },
+  {
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[ECX]""method name": "mov_ecx_ptr_eax",
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[ECX]""comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[EAX]",
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[ECX]""data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_ptr_edx",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[EDX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_ptr_ebx",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[EBX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_ptr_edx",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[EDX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_ptr_edi",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[EDI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_ptr_esi",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[ESI]",
+
+"data type": "字节集类"
+  },
+  {
+"data type": "字节集类""method name": "mov_edx_ptr_edx",
+"data type": "字节集类""comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[EDX]",
+"data type": "字节集类""data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_ptr_esi",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[ESI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_ptr_edx_add",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "call_ptr_eax_add",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "call_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "call_ptr_esi_add",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "call_ptr_edi_add",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "call_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "mov_ptr_eax",
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[401000],EAX",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "mov_ptr_ebx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[401000],EBX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ecx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[401000],ECX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[401000],EDX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[401000],ESI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[401000],EDI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ebp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[401000],EBP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[401000],ESP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "pop_eax",
+"comment": "对应OD汇编指令 POP EAX",
+"data type": "字节集类"
+  },
+  {
+
+"method name": "pop_ebp",
+
+"comment": "对应OD汇编指令 POP EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "pop_ecx",
+
+"comment": "对应OD汇编指令 POP ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "pop_ebx",
+
+"comment": "对应OD汇编指令 POP EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "pop_edx",
+
+"comment": "对应OD汇编指令 POP EBX",
+
+"data type": "字节集类"
+  },
+  {
+thod name": "pop_edx""method name": "pop_esi",
+thod name": "pop_edx""comment": "对应OD汇编指令 POP ESI",
+thod name": "pop_edx""data type": "字节集类"
+  },
+  {
+
+"method name": "pop_edi",
+
+"comment": "对应OD汇编指令 POP EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "pop_esp",
+
+"comment": "对应OD汇编指令 POP ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_eax",
+
+"comment": "对应OD汇编指令 MOV EAX,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_ecx",
+
+"comment": "对应OD汇编指令 MOV EAX,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_edx",
+
+"comment": "对应OD汇编指令 MOV EAX,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_ebx",
+
+"comment": "对应OD汇编指令 MOV EAX,EBX",
+
+"data type": "字节集类"
+  },
+  {
+}"method name": "mov_eax_esp",
+}"comment": "对应OD汇编指令 MOV EAX,ESP",
+}"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_ebp",
+
+"comment": "对应OD汇编指令 MOV EAX,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_esi",
+
+"comment": "对应OD汇编指令 MOV EAX,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_eax_edi",
+
+"comment": "对应OD汇编指令 MOV EAX,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_eax",
+
+"comment": "对应OD汇编指令 MOV EDX,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_ecx",
+
+"comment": "对应OD汇编指令 MOV EDX,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_edx",
+
+"comment": "对应OD汇编指令 MOV EDX,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_ebx",
+
+"comment": "对应OD汇编指令 MOV EDX,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_esp",
+
+"comment": "对应OD汇编指令 MOV EDX,ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_ebp",
+
+"comment": "对应OD汇编指令 MOV EDX,EBP",
+
+"data type": "字节集类"
+  },
+  {
+"comment": "对应OD汇编指令 MOV EDX,EBP""method name": "mov_edx_esi",
+"comment": "对应OD汇编指令 MOV EDX,EBP""comment": "对应OD汇编指令 MOV EDX,ESI",
+"comment": "对应OD汇编指令 MOV EDX,EBP""data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edx_edi",
+
+"comment": "对应OD汇编指令 MOV EDX,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_eax",
+
+"comment": "对应OD汇编指令 MOV EBX,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_ecx",
+
+"comment": "对应OD汇编指令 MOV EBX,ECX",
+
+"data type": "字节集类"
+  },
+  {
+"comment": "对应OD汇编指令 MOV EBX,EAX""method name": "mov_ebx_edx",
+"comment": "对应OD汇编指令 MOV EBX,EAX""comment": "对应OD汇编指令 MOV EBX,EDX",
+"comment": "对应OD汇编指令 MOV EBX,EAX""data type": "字节集类"
+  },
+  {
+"comment": "对应OD汇编指令 MOV EBX,EAX""method name": "mov_ebx_ebx",
+"comment": "对应OD汇编指令 MOV EBX,EAX""comment": "对应OD汇编指令 MOV EBX,EBX",
+"comment": "对应OD汇编指令 MOV EBX,EAX""data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_esp",
+
+"comment": "对应OD汇编指令 MOV EBX,ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_ebp",
+
+"comment": "对应OD汇编指令 MOV EBX,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_esi",
+
+"comment": "对应OD汇编指令 MOV EBX,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_edi",
+
+"comment": "对应OD汇编指令 MOV EBX,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_eax",
+
+"comment": "对应OD汇编指令 MOV ESI,EAX",
+
+"data type": "字节集类"
+  },
+  {
+"comment": "对应OD汇编指令 MOV EBX,EDI""method name": "mov_esi_ecx",
+"comment": "对应OD汇编指令 MOV EBX,EDI""comment": "对应OD汇编指令 MOV ESI,ECX",
+"comment": "对应OD汇编指令 MOV EBX,EDI""data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_edx",
+
+"comment": "对应OD汇编指令 MOV ESI,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_ebx",
+
+"comment": "对应OD汇编指令 MOV ESI,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_esp",
+
+"comment": "对应OD汇编指令 MOV ESI,ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_ebp",
+
+"comment": "对应OD汇编指令 MOV ESI,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_esi",
+
+"comment": "对应OD汇编指令 MOV ESI,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esi_edi",
+
+"comment": "对应OD汇编指令 MOV ESI,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_eax",
+
+"comment": "对应OD汇编指令 MOV EDI,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_ecx",
+
+"comment": "对应OD汇编指令 MOV EDI,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_edx",
+
+"comment": "对应OD汇编指令 MOV EDI,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_ebx",
+
+"comment": "对应OD汇编指令 MOV EDI,EBX",
+
+"data type": "字节集类"
+  },
+  {
+"comment": "对应OD汇编指令 MOV EDI,EDX""method name": "mov_edi_esp",
+"comment": "对应OD汇编指令 MOV EDI,EDX""comment": "对应OD汇编指令 MOV EDI,ESP",
+"comment": "对应OD汇编指令 MOV EDI,EDX""data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_ebp",
+
+"comment": "对应OD汇编指令 MOV EDI,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_esi",
+
+"comment": "对应OD汇编指令 MOV EDI,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_edi",
+
+"comment": "对应OD汇编指令 MOV EDI,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esp_eax",
+
+"comment": "对应OD汇编指令 MOV ESP,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esp_ecx",
+
+"comment": "对应OD汇编指令 MOV ESP,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esp_edx",
+
+"comment": "对应OD汇编指令 MOV ESP,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esp_ebx",
+
+"comment": "对应OD汇编指令 MOV ESP,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esp_esp",
+
+"comment": "对应OD汇编指令 MOV ESP,ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esp_ebp",
+
+"comment": "对应OD汇编指令 MOV ESP,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esp_esi",
+
+"comment": "对应OD汇编指令 MOV ESP,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_esp_edi",
+
+"comment": "对应OD汇编指令 MOV ESP,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebp_eax",
+
+"comment": "对应OD汇编指令 MOV EBP,EAX",
+
+"data type": "字节集类"
+  },
+  {
+汇编指令 MOV EDX,ESP"method name": "mov_ebp_ecx",
+汇编指令 MOV EDX,ESP"comment": "对应OD汇编指令 MOV EBP,ECX",
+汇编指令 MOV EDX,ESP"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebp_edx",
+
+"comment": "对应OD汇编指令 MOV EBP,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebp_ebx",
+
+"comment": "对应OD汇编指令 MOV EBP,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebp_esp",
+
+"comment": "对应OD汇编指令 MOV EBP,ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebp_ebp",
+
+"comment": "对应OD汇编指令 MOV EBP,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebp_esi",
+
+"comment": "对应OD汇编指令 MOV EBP,ESI",
+
+"data type": "字节集类"
+  },
+  {
+"data type": "字节集类""method name": "mov_ebp_edi",
+"data type": "字节集类""comment": "对应OD汇编指令 MOV EBP,EDI",
+"data type": "字节集类""data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ecx_ptr_eax_add",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ecx_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "mov_ecx_ptr_edx_add",
+}"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[EDX+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_ecx_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ecx_ptr_esp_add",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ecx_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "mov_ecx_ptr_esi_add",
+ }"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[ESI+1]",
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "mov_ecx_ptr_edi_add",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_edx_ptr_eax_add",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_edx_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_edx_ptr_edx_add",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_edx_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "mov_edx_ptr_esp_add",
+"parameters": [
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[ESP+1]",
+"parameters": [
+"data type": "字节集类",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+"parameters": [
+"method name": "mov_edx_ptr_ebp_add",
+"parameters": [
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[EBP+1]",
+"parameters": [
+"data type": "字节集类",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+
+"method name": "mov_edx_ptr_esi_add",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_edx_ptr_edi_add",
+
+"comment": "对应OD汇编指令 MOV EDX,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "lea_eax_ptr_eax_add",
+}"comment": "对应OD汇编指令 LEA EAX,DWORD PTR DS:[EAX+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "lea_eax_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 LEA EAX,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_eax_ptr_edx_add",
+
+"comment": "对应OD汇编指令 LEA EAX,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_eax_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 LEA EAX,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_eax_ptr_esp_add",
+
+"comment": "对应OD汇编指令 LEA EAX,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_eax_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 LEA EAX,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_eax_ptr_esi_add",
+
+"comment": "对应OD汇编指令 LEA EAX,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_eax_ptr_edi_add",
+
+"comment": "对应OD汇编指令 LEA EAX,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ecx_ptr_eax_add",
+
+"comment": "对应OD汇编指令 LEA ECX,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "lea_ecx_ptr_ecx_add",
+}"comment": "对应OD汇编指令 LEA ECX,DWORD PTR DS:[ECX+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "lea_ecx_ptr_edx_add",
+
+"comment": "对应OD汇编指令 LEA ECX,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ecx_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 LEA ECX,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ecx_ptr_esp_add",
+
+"comment": "对应OD汇编指令 LEA ECX,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "lea_ecx_ptr_ebp_add",
+}"comment": "对应OD汇编指令 LEA ECX,DWORD PTR DS:[EBP+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "参数""method name": "lea_ecx_ptr_esi_add",
+ameter name": "参数""comment": "对应OD汇编指令 LEA ECX,DWORD PTR DS:[ESI+1]",
+ameter name": "参数""data type": "字节集类",
+ameter name": "参数""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+ameter name": "参数"]
+  },
+  {
+data type": "整数""method name": "lea_ecx_ptr_edi_add",
+data type": "整数""comment": "对应OD汇编指令 LEA ECX,DWORD PTR DS:[EDI+1]",
+data type": "整数""data type": "字节集类",
+data type": "整数""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "lea_edx_ptr_eax_add",
+
+"comment": "对应OD汇编指令 LEA EDX,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "lea_edx_ptr_ecx_add",
+}"comment": "对应OD汇编指令 LEA EDX,DWORD PTR DS:[ECX+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "lea_edx_ptr_edx_add",
+
+"comment": "对应OD汇编指令 LEA EDX,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edx_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 LEA EDX,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edx_ptr_esp_add",
+
+"comment": "对应OD汇编指令 LEA EDX,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edx_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 LEA EDX,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edx_ptr_esi_add",
+
+"comment": "对应OD汇编指令 LEA EDX,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edx_ptr_edi_add",
+
+"comment": "对应OD汇编指令 LEA EDX,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ebx_ptr_eax_add",
+
+"comment": "对应OD汇编指令 LEA EBX,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ebx_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 LEA EBX,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ebx_ptr_edx_add",
+
+"comment": "对应OD汇编指令 LEA EBX,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ebx_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 LEA EBX,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ebx_ptr_esp_add",
+
+"comment": "对应OD汇编指令 LEA EBX,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "lea_ebx_ptr_ebp_add",
+"parameters": [
+"comment": "对应OD汇编指令 LEA EBX,DWORD PTR DS:[EBP+1]",
+"parameters": [
+"data type": "字节集类",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+"parameters": [
+"method name": "lea_ebx_ptr_esi_add",
+"parameters": [
+"comment": "对应OD汇编指令 LEA EBX,DWORD PTR DS:[ESI+1]",
+"parameters": [
+"data type": "字节集类",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+
+"method name": "lea_ebx_ptr_edi_add",
+
+"comment": "对应OD汇编指令 LEA EBX,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esp_ptr_eax_add",
+
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esp_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esp_ptr_edx_add",
+
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esp_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esp_ptr_esp_add",
+
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esp_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esp_ptr_esi_add",
+
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EBP+1]""method name": "lea_esp_ptr_edi_add",
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EBP+1]""comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EDI+1]",
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EBP+1]""data type": "字节集类",
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EBP+1]""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+"comment": "对应OD汇编指令 LEA ESP,DWORD PTR DS:[EBP+1]"]
+  },
+  {
+
+"method name": "lea_ebp_ptr_eax_add",
+
+"comment": "对应OD汇编指令 LEA EBP,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "参数""method name": "lea_ebp_ptr_ecx_add",
+ameter name": "参数""comment": "对应OD汇编指令 LEA EBP,DWORD PTR DS:[ECX+1]",
+ameter name": "参数""data type": "字节集类",
+ameter name": "参数""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+ameter name": "参数"]
+  },
+  {
+
+"method name": "lea_ebp_ptr_edx_add",
+
+"comment": "对应OD汇编指令 LEA EBP,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ebp_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 LEA EBP,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ebp_ptr_esp_add",
+
+"comment": "对应OD汇编指令 LEA EBP,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ebp_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 LEA EBP,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_ebp_ptr_esi_add",
+
+"comment": "对应OD汇编指令 LEA EBP,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "lea_ebp_ptr_edi_add",
+}"comment": "对应OD汇编指令 LEA EBP,DWORD PTR DS:[EDI+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "lea_esi_ptr_eax_add",
+
+"comment": "对应OD汇编指令 LEA ESI,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esi_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 LEA ESI,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esi_ptr_edx_add",
+
+"comment": "对应OD汇编指令 LEA ESI,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esi_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 LEA ESI,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esi_ptr_esp_add",
+
+"comment": "对应OD汇编指令 LEA ESI,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esi_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 LEA ESI,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esi_ptr_esi_add",
+
+"comment": "对应OD汇编指令 LEA ESI,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_esi_ptr_edi_add",
+
+"comment": "对应OD汇编指令 LEA ESI,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edi_ptr_eax_add",
+
+"comment": "对应OD汇编指令 LEA EDI,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edi_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 LEA EDI,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edi_ptr_edx_add",
+
+"comment": "对应OD汇编指令 LEA EDI,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edi_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 LEA EDI,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edi_ptr_esp_add",
+
+"comment": "对应OD汇编指令 LEA EDI,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edi_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 LEA EDI,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edi_ptr_esi_add",
+
+"comment": "对应OD汇编指令 LEA EDI,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "lea_edi_ptr_edi_add",
+
+"comment": "对应OD汇编指令 LEA EDI,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebx_ptr_eax",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[EAX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_ptr_ecx",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[ECX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_ptr_edx",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[EDX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_ptr_ebx",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[EBX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_ptr_esi",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[ESI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_ptr_edi",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[EDI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_ptr_eax",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[EAX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_ptr_ecx",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[ECX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_ptr_edx",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[EDX]",
+
+"data type": "字节集类"
+  },
+  {
+"data type": "字节集类""method name": "mov_edi_ptr_ebx",
+"data type": "字节集类""comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[EBX]",
+"data type": "字节集类""data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_ptr_esi",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[ESI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_edi_ptr_edi",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[EDI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "mov_ebx_ptr_eax_add",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebx_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebx_ptr_edx_add",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebx_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebx_ptr_esp_add",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebx_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebx_ptr_esi_add",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebx_ptr_edi_add",
+
+"comment": "对应OD汇编指令 MOV EBX,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esi_ptr_eax_add",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esi_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+esi_ptr_eax_add"method name": "mov_esi_ptr_edx_add",
+esi_ptr_eax_add"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[EDX+1]",
+esi_ptr_eax_add"data type": "字节集类",
+esi_ptr_eax_add"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+esi_ptr_eax_add]
+  },
+  {
+data type": "整数""method name": "mov_esi_ptr_ebx_add",
+data type": "整数""comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[EBX+1]",
+data type": "整数""data type": "字节集类",
+data type": "整数""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "mov_esi_ptr_esp_add",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "mov_esi_ptr_ebp_add",
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[EBP+1]",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "mov_esi_ptr_esi_add",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esi_ptr_edi_add",
+
+"comment": "对应OD汇编指令 MOV ESI,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esp_ptr_eax_add",
+
+"comment": "对应OD汇编指令 MOV ESP,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esp_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 MOV ESP,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esp_ptr_edx_add",
+
+"comment": "对应OD汇编指令 MOV ESP,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esp_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 MOV ESP,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esp_ptr_esp_add",
+
+"comment": "对应OD汇编指令 MOV ESP,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esp_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 MOV ESP,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esp_ptr_esi_add",
+
+"comment": "对应OD汇编指令 MOV ESP,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_esp_ptr_edi_add",
+
+"comment": "对应OD汇编指令 MOV ESP,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebp_ptr_eax_add",
+
+"comment": "对应OD汇编指令 MOV EBP,DWORD PTR DS:[EAX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebp_ptr_ecx_add",
+
+"comment": "对应OD汇编指令 MOV EBP,DWORD PTR DS:[ECX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebp_ptr_edx_add",
+
+"comment": "对应OD汇编指令 MOV EBP,DWORD PTR DS:[EDX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "mov_ebp_ptr_ebx_add",
+"parameters": [
+"comment": "对应OD汇编指令 MOV EBP,DWORD PTR DS:[EBX+1]",
+"parameters": [
+"data type": "字节集类",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+
+"method name": "mov_ebp_ptr_esp_add",
+
+"comment": "对应OD汇编指令 MOV EBP,DWORD PTR DS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebp_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 MOV EBP,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebp_ptr_esi_add",
+
+"comment": "对应OD汇编指令 MOV EBP,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ebp_ptr_edi_add",
+
+"comment": "对应OD汇编指令 MOV EBP,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_eax_add_eax",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EAX+2],EAX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_eax_add_ecx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EAX+2],ECX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_eax_add_edx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EAX+2],EDX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_eax_add_ebx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EAX+2],EBX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_eax_add_esp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EAX+2],ESP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_eax_add_ebp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EAX+2],EBP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_eax_add_esi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EAX+2],ESI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_eax_add_edi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EAX+2],EDI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ecx_add_eax",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ECX+2],EAX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ecx_add_ecx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ECX+2],ECX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "mov_ptr_ecx_add_edx",
+}"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ECX+2],EDX",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_ptr_ecx_add_ebx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ECX+2],EBX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ecx_add_esp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ECX+2],ESP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ecx_add_ebp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ECX+2],EBP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ecx_add_esi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ECX+2],ESI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ecx_add_edi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ECX+2],EDI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edx_add_eax",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDX+2],EAX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "参数""method name": "mov_ptr_edx_add_ecx",
+ameter name": "参数""comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDX+2],ECX",
+ameter name": "参数""data type": "字节集类",
+ameter name": "参数""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+ameter name": "参数"]
+  },
+  {
+}"method name": "mov_ptr_edx_add_edx",
+}"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDX+2],EDX",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_ptr_edx_add_ebx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDX+2],EBX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edx_add_esp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDX+2],ESP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"data type": "字节集类""method name": "mov_ptr_edx_add_ebp",
+"data type": "字节集类""comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDX+2],EBP",
+"data type": "字节集类""data type": "字节集类",
+"data type": "字节集类""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+"data type": "字节集类"]
+  },
+  {
+
+"method name": "mov_ptr_edx_add_esi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDX+2],ESI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edx_add_edi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDX+2],EDI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ebx_add_eax",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EBX+2],EAX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ebx_add_ecx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EBX+2],ECX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ebx_add_edx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EBX+2],EDX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ebx_add_ebx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EBX+2],EBX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ebx_add_esp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EBX+2],ESP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ebx_add_ebp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EBX+2],EBP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ebx_add_esi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EBX+2],ESI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_ebx_add_edi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EBX+2],EDI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esi_add_eax",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],EAX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esi_add_ecx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],ECX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esi_add_edx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],EDX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esi_add_ebx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],EBX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esi_add_esp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],ESP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esi_add_ebp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],EBP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],ESP""method name": "mov_ptr_esi_add_esi",
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],ESP""comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],ESI",
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],ESP""data type": "字节集类",
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],ESP""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],ESP"]
+  },
+  {
+
+"method name": "mov_ptr_esi_add_edi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESI+2],EDI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edi_add_eax",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDI+2],EAX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edi_add_ecx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDI+2],ECX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "mov_ptr_edi_add_edx",
+}"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDI+2],EDX",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_ptr_edi_add_ebx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDI+2],EBX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edi_add_esp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDI+2],ESP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edi_add_ebp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDI+2],EBP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edi_add_esi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDI+2],ESI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_edi_add_edi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[EDI+2],EDI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "参数""method name": "mov_edi_ptr_eax_add",
+ameter name": "参数""comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[EAX+1]",
+ameter name": "参数""data type": "字节集类",
+ameter name": "参数""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+ameter name": "参数"]
+  },
+  {
+}"method name": "mov_edi_ptr_ecx_add",
+}"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[ECX+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "mov_edi_ptr_edx_add",
+}"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[EDX+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_edi_ptr_ebx_add",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[EBX+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "mov_edi_ptr_esp_add",
+}"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[ESP+1]",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_edi_ptr_ebp_add",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[EBP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_edi_ptr_esi_add",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[ESI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_edi_ptr_edi_add",
+
+"comment": "对应OD汇编指令 MOV EDI,DWORD PTR DS:[EDI+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_eax_eax",
+
+"comment": "对应OD汇编指令 ADD EAX,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_eax_ecx",
+
+"comment": "对应OD汇编指令 ADD EAX,ECX",
+
+"data type": "字节集类"
+  },
+  {
+"data type": "字节集类""method name": "add_eax_edx",
+"data type": "字节集类""comment": "对应OD汇编指令 ADD EAX,EDX",
+"data type": "字节集类""data type": "字节集类"
+  },
+  {
+
+"method name": "add_eax_ebx",
+
+"comment": "对应OD汇编指令 ADD EAX,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_eax_esp",
+
+"comment": "对应OD汇编指令 ADD EAX,ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_eax_ebp",
+
+"comment": "对应OD汇编指令 ADD EAX,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_eax_esi",
+
+"comment": "对应OD汇编指令 ADD EAX,ESI",
+
+"data type": "字节集类"
+  },
+  {
+}"method name": "add_eax_edi",
+}"comment": "对应OD汇编指令 ADD EAX,EDI",
+}"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ecx_eax",
+
+"comment": "对应OD汇编指令 ADD ECX,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ecx_ecx",
+
+"comment": "对应OD汇编指令 ADD ECX,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ecx_edx",
+
+"comment": "对应OD汇编指令 ADD ECX,EDX",
+
+"data type": "字节集类"
+  },
+  {
+"data type": "字节集类""method name": "add_ecx_ebx",
+"data type": "字节集类""comment": "对应OD汇编指令 ADD ECX,EBX",
+"data type": "字节集类""data type": "字节集类"
+  },
+  {
+data type": "字节集类""data type": "字节集类""method name": "add_ecx_esp",
+data type": "字节集类""data type": "字节集类""comment": "对应OD汇编指令 ADD ECX,ESP",
+data type": "字节集类""data type": "字节集类""data type": "字节集类"
+  },
+  {
+
+"method name": "add_ecx_ebp",
+
+"comment": "对应OD汇编指令 ADD ECX,EBP",
+
+"data type": "字节集类"
+  },
+  {
+"data type": "字节集类""method name": "add_ecx_esi",
+"data type": "字节集类""comment": "对应OD汇编指令 ADD ECX,ESI",
+"data type": "字节集类""data type": "字节集类"
+  },
+  {
+
+"method name": "add_ecx_edi",
+
+"comment": "对应OD汇编指令 ADD ECX,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edx_eax",
+
+"comment": "对应OD汇编指令 ADD EDX,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edx_ecx",
+
+"comment": "对应OD汇编指令 ADD EDX,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edx_edx",
+
+"comment": "对应OD汇编指令 ADD EDX,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edx_ebx",
+
+"comment": "对应OD汇编指令 ADD EDX,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edx_esp",
+
+"comment": "对应OD汇编指令 ADD EDX,ESP",
+
+"data type": "字节集类"
+  },
+  {
+thod name": "add_edx_ebx""method name": "add_edx_ebp",
+thod name": "add_edx_ebx""comment": "对应OD汇编指令 ADD EDX,EBP",
+thod name": "add_edx_ebx""data type": "字节集类"
+  },
+  {
+
+"method name": "add_edx_esi",
+
+"comment": "对应OD汇编指令 ADD EDX,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edx_edi",
+
+"comment": "对应OD汇编指令 ADD EDX,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebx_eax",
+
+"comment": "对应OD汇编指令 ADD EBX,EAX",
+
+"data type": "字节集类"
+  },
+  {
+"comment": "对应OD汇编指令 ADD EDX,ESI""method name": "add_ebx_ecx",
+"comment": "对应OD汇编指令 ADD EDX,ESI""comment": "对应OD汇编指令 ADD EBX,ECX",
+"comment": "对应OD汇编指令 ADD EDX,ESI""data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebx_edx",
+
+"comment": "对应OD汇编指令 ADD EBX,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebx_ebx",
+
+"comment": "对应OD汇编指令 ADD EBX,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebx_esp",
+
+"comment": "对应OD汇编指令 ADD EBX,ESP",
+
+"data type": "字节集类"
+  },
+  {
+汇编指令 ADD EBX,ESP"method name": "add_ebx_ebp",
+汇编指令 ADD EBX,ESP"comment": "对应OD汇编指令 ADD EBX,EBP",
+汇编指令 ADD EBX,ESP"data type": "字节集类"
+  },
+  {
+汇编指令 ADD EBX,ESP"method name": "add_ebx_esi",
+汇编指令 ADD EBX,ESP"comment": "对应OD汇编指令 ADD EBX,ESI",
+汇编指令 ADD EBX,ESP"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebx_edi",
+
+"comment": "对应OD汇编指令 ADD EBX,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esp_eax",
+
+"comment": "对应OD汇编指令 ADD ESP,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esp_ecx",
+
+"comment": "对应OD汇编指令 ADD ESP,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esp_edx",
+
+"comment": "对应OD汇编指令 ADD ESP,EDX",
+
+"data type": "字节集类"
+  },
+  {
+汇编指令 ADD ESP,EDX"method name": "add_esp_ebx",
+汇编指令 ADD ESP,EDX"comment": "对应OD汇编指令 ADD ESP,EBX",
+汇编指令 ADD ESP,EDX"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esp_esp",
+
+"comment": "对应OD汇编指令 ADD ESP,ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esp_ebp",
+
+"comment": "对应OD汇编指令 ADD ESP,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esp_esi",
+
+"comment": "对应OD汇编指令 ADD ESP,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esp_edi",
+
+"comment": "对应OD汇编指令 ADD ESP,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebp_eax",
+
+"comment": "对应OD汇编指令 ADD EBP,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebp_ecx",
+
+"comment": "对应OD汇编指令 ADD EBP,ECX",
+
+"data type": "字节集类"
+  },
+  {
+汇编指令 ADD EBP,ECX"method name": "add_ebp_edx",
+汇编指令 ADD EBP,ECX"comment": "对应OD汇编指令 ADD EBP,EDX",
+汇编指令 ADD EBP,ECX"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebp_ebx",
+
+"comment": "对应OD汇编指令 ADD EBP,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebp_esp",
+
+"comment": "对应OD汇编指令 ADD EBP,ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebp_ebp",
+
+"comment": "对应OD汇编指令 ADD EBP,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebp_esi",
+
+"comment": "对应OD汇编指令 ADD EBP,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_ebp_edi",
+
+"comment": "对应OD汇编指令 ADD EBP,EDI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esi_eax",
+
+"comment": "对应OD汇编指令 ADD ESI,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esi_ecx",
+
+"comment": "对应OD汇编指令 ADD ESI,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esi_edx",
+
+"comment": "对应OD汇编指令 ADD ESI,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esi_ebx",
+
+"comment": "对应OD汇编指令 ADD ESI,EBX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esi_esp",
+
+"comment": "对应OD汇编指令 ADD ESI,ESP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esi_ebp",
+
+"comment": "对应OD汇编指令 ADD ESI,EBP",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_esi_esi",
+
+"comment": "对应OD汇编指令 ADD ESI,ESI",
+
+"data type": "字节集类"
+  },
+  {
+"data type": "字节集类""method name": "add_esi_edi",
+"data type": "字节集类""comment": "对应OD汇编指令 ADD ESI,EDI",
+"data type": "字节集类""data type": "字节集类"
+  },
+  {
+
+"method name": "add_edi_eax",
+
+"comment": "对应OD汇编指令 ADD EDI,EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edi_ecx",
+
+"comment": "对应OD汇编指令 ADD EDI,ECX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edi_edx",
+
+"comment": "对应OD汇编指令 ADD EDI,EDX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edi_ebx",
+
+"comment": "对应OD汇编指令 ADD EDI,EBX",
+
+"data type": "字节集类"
+  },
+  {
+汇编指令 ADD EDI,EBX"method name": "add_edi_esp",
+汇编指令 ADD EDI,EBX"comment": "对应OD汇编指令 ADD EDI,ESP",
+汇编指令 ADD EDI,EBX"data type": "字节集类"
+  },
+  {
+汇编指令 ADD EDI,EBX"method name": "add_edi_ebp",
+汇编指令 ADD EDI,EBX"comment": "对应OD汇编指令 ADD EDI,EBP",
+汇编指令 ADD EDI,EBX"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edi_esi",
+
+"comment": "对应OD汇编指令 ADD EDI,ESI",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "add_edi_edi",
+
+"comment": "对应OD汇编指令 ADD EDI,EDI",
+
+"data type": "字节集类"
+  },
+  {
+}"method name": "call_ptr_eax",
+}"comment": "对应OD汇编指令 CALL DWORD PTR DS:[EAX]",
+}"data type": "字节集类"
+  },
+  {
+
+"method name": "call_ptr_ecx",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[ECX]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_ptr_edx",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[EDX]",
+
+"data type": "字节集类"
+  },
+  {
+}"method name": "call_ptr_ebx",
+}"comment": "对应OD汇编指令 CALL DWORD PTR DS:[EBX]",
+}"data type": "字节集类"
+  },
+  {
+
+"method name": "call_ptr_esp",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[ESP]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_ptr_ebp",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[EBP]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_ptr_esi",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[ESI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "call_ptr_edi",
+
+"comment": "对应OD汇编指令 CALL DWORD PTR DS:[EDI]",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "jmp_eax",
+
+"comment": "对应OD汇编指令 JMP EAX",
+
+"data type": "字节集类"
+  },
+  {
+
+"method name": "取call返回值",
+
+"comment": "先取出call的返回值，再用读call返回值把数值读出来",
+
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "寄存器",
+"comment": "默认为ECX,可填写：EBX,ECX,EDX,ESI,EDI",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "读call返回值",
+
+"comment": "配合取call返回值一起使用",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取寄存器值",
+
+"comment": "返回当前方法内指定寄存器的数值，在dll里面使用",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "寄存器",
+"comment": "EAX=1,ECX=2,EDX=3,EBX=4,esp=5,ebp=6,esi=7,edi=8",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "sub_eax_常数",
+
+"comment": "对应OD汇编指令 SUB EAX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "sub_ecx_常数",
+
+"comment": "对应OD汇编指令 SUB ECX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "sub_edx_常数",
+
+"comment": "对应OD汇编指令 SUB EDX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "sub_ebx_常数",
+}"comment": "对应OD汇编指令 SUB EBX,1",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "sub_esp_常数",
+}"comment": "对应OD汇编指令 SUB ESP,1",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "sub_ebp_常数",
+
+"comment": "对应OD汇编指令 SUB EBP,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "sub_esi_常数",
+
+"comment": "对应OD汇编指令 SUB ESI,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "sub_edi_常数",
+
+"comment": "对应OD汇编指令 SUB EDI,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_eax_常数",
+
+"comment": "对应OD汇编指令 ADD EAX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_ecx_常数",
+
+"comment": "对应OD汇编指令 ADD ECX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_edx_常数",
+
+"comment": "对应OD汇编指令 ADD EDX,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "add_ebx_常数",
+"comment": "对应OD汇编指令 ADD EBX,1",
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "add_esp_常数",
+
+"comment": "对应OD汇编指令 ADD ESP,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "add_ebp_常数",
+
+"comment": "对应OD汇编指令 ADD EBP,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "add_esi_常数",
+data type": "整数""comment": "对应OD汇编指令 ADD ESI,1",
+data type": "整数""data type": "字节集类",
+data type": "整数""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "add_edi_常数",
+
+"comment": "对应OD汇编指令 ADD EDI,1",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ss_esp_add_eax",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR SS:[ESP+4],EAX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ss_esp_add_ecx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR SS:[ESP+4],ECX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ss_esp_add_edx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR SS:[ESP+4],EDX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ss_esp_add_ebx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR SS:[ESP+4],EBX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ss_esp_add_esp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR SS:[ESP+4],ESP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ss_esp_add_ebp",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR SS:[ESP+4],EBP",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ss_esp_add_esi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR SS:[ESP+4],ESI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ss_esp_add_edi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR SS:[ESP+4],EDI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ecx_ptr_ecx_add_edx",
+
+"comment": "对应OD汇编指令 MOV ECX,DWORD PTR DS:[ECX+EDX]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_eax_ptr_ss_esp_add",
+
+"comment": "对应OD汇编指令 MOV EAX,DWORD PTR SS:[ESP+1]",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esp_add_eax",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESP+2],EAX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esp_add_ebx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESP+2],EBX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "mov_ptr_esp_add_ecx",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESP+2],ECX",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "mov_ptr_esp_add_edx",
+}"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESP+2],EDX",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "mov_ptr_esp_add_esi",
+
+"comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESP+2],ESI",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "mov_ptr_esp_add_edi",
+data type": "整数""comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESP+2],EDI",
+data type": "整数""data type": "字节集类",
+data type": "整数""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+data type": "整数""method name": "mov_ptr_esp_add_常数",
+data type": "整数""comment": "对应OD汇编指令 MOV DWORD PTR DS:[ESP+2],1",
+data type": "整数""data type": "字节集类",
+data type": "整数""parameters": [
+   {
+"parameter name": "参数",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "插入代码",
+
+"comment": "向asm相关命令中插入指定字节集",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "插入asm代码",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+data type": "字节集类""method name": "call",
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "参_修改地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参_目标地址",
+"data type": "变整数"
+   }
+data type": "字节集类"]
+  }
+]
+ },
+ {
+}"class name": "Aam汇编类2_",
+}"@全局类": "真",
+}"@输出名": "\"L_Asm\"",
+}"methods": [
+  {
+ }"method name": "AsmBegin",
+ }"static": true
+  },
+  {
+ethod name": "AsmBegin""method name": "Asm",
+ethod name": "AsmBegin""static": true,
+ethod name": "AsmBegin""parameters": [
+   {
+"parameter name": "汇编代码",
+"data type": "文本型"
+   }
+ethod name": "AsmBegin"]
+  },
+  {
+ethod name": "AsmBegin""method name": "AsmCode",
+ethod name": "AsmBegin""static": true,
+ethod name": "AsmBegin""data type": "字节集类",
+ethod name": "AsmBegin""parameters": [
+   {
+"parameter name": "目标平台",
+"comment": "假：32位，真：64位，默认64",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ethod name": "AsmBegin"]
+  },
+  {
+hod name": "AsmBegin"]"method name": "AsmCall",
+hod name": "AsmBegin"]"comment": "call",
+hod name": "AsmBegin"]"static": true,
+hod name": "AsmBegin"]"data type": "变整数",
+hod name": "AsmBegin"]"@输出名": "\"AsmCall\"",
+hod name": "AsmBegin"]"@禁止流程检查": "真",
+hod name": "AsmBegin"]"parameters": [
+   {
+"parameter name": "进程句柄",
+"comment": "自身句柄写-1",
+"data type": "变整数",
+"@输出名": "\"handle\"",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "汇编代码",
+"data type": "字节集类",
+"@输出名": "\"code\""
+   }
+hod name": "AsmBegin"]]
+  },
+  {
+
+"method name": "转换_字节集到汇编",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "字节集",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "目标平台",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  }
+}]
+ },
+ {
+"class name": "ASM调试编译_",
+"comment": "编译器函数\n普通用户可以忽略",
+"@全局类": "真",
+"@视窗.外部头文件": "\"intrin.h\"",
+"methods": [
+  {
+"method name": "跳转",
+"comment": " 本语句的前后面必须跟随一个\"标签\"语句",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "标识符",
+"comment": "必须和\"标签\"语句的参数一致",
+"data type": "文本型",
+"@需求类型": "立即数或常量"
+   }
+]
+  },
+  {
+"method name": "标签",
+"comment": "本语句的前后面必须跟随一个\"跳转\"语句,否则是无效的",
+"static": true,
+"@嵌入式方法": "\"has_loop_body = true\"",
+"parameters": [
+   {
+"parameter name": "标识符",
+"comment": "设置跳转标识符",
+"data type": "文本型",
+"@需求类型": "立即数或常量"
+   }
+]
+  },
+  {
+
+"method name": "暂停",
+
+"comment": "易语言的暂停命令，相当于在程序代码中设置断点",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.需求目标平台": "64位平台"
+  },
+  {
+
+"method name": "__readfsbyte",
+
+"comment": " x86 FS段开头的偏移量指定位置读取内存",
+
+"static": true,
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "offset",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "__readfsword",
+
+"comment": "x86  FS段开头的偏移指定位置读取内存",
+
+"static": true,
+
+"data type": "短整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "offset",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "__readfsdword",
+
+"comment": "x86  FS段开头的偏移指定位置读取内存",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "offset",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "__readfsqword",
+
+"comment": "x86  FS段开头的偏移指定位置读取内存",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "offset",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "__readgsbyte",
+
+"comment": "x64  GS段开头的偏移指定位置读取内存",
+
+"static": true,
+
+"data type": "字节",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "offset",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "__readgsword",
+
+"comment": "x64  GS段开头的偏移指定位置读取内存",
+
+"static": true,
+
+"data type": "短整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "offset",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "__readgsdword",
+
+"comment": "x64  GS段开头的偏移指定位置读取内存",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "offset",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "__readgsqword",
+
+"comment": "x64  GS段开头的偏移指定位置读取内存",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "offset",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "__nop",
+
+"comment": "在当前语句填入nop代码",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "调试器输出",
+
+"comment": "配合dbgview可俘获信息，必须编译出来才可以，调试版和发布版都支持",
+
+"static": true,
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "标识",
+"comment": "字符串：%s  字符串\n字  符：%c  字符形式输出\n整  型：%d  十进制\n        %o  八进制 输出无0\n        %x  十六进制 输出无0x\n指  针：%p  输出指针的值\n浮点型：%f  默认六位小数\n双精度(double型)为%lf，单精度(float型)为%f",
+"data type": "文本型",
+"@输出名": "\"strOutputString\"",
+"@默认值": "\"%d\""
+   },
+   {
+"parameter name": "欲输出的变量",
+"@需求类型": "可写入变量",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

@@ -1,0 +1,245 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.电话音频编码\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"G729A\\\\G729ATool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"G729A\\\\G729AToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"G729A\\\\G729AToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"G729A\\\\G729AToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"G729A\\\\G729AToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______电话音频编码_全局类",
+"comment": "音频编码简介 https://blog.csdn.net/qq_25333681/article/details/90682989",
+"@全局类": "真",
+"methods": [
+  {
+型 = 字节集类"method name": "电话音频_编码_初始化",
+型 = 字节集类"static": true,
+型 = 字节集类"data type": "变整数",
+型 = 字节集类"@嵌入式方法": "\"\""
+  },
+  {
+ "采样率规定为8000""method name": "电话音频_编码",
+ "采样率规定为8000""comment": "采样率必须是8000的音频",
+ "采样率规定为8000""result comment": "0 成功  -1 失败",
+ "采样率规定为8000""static": true,
+ "采样率规定为8000""data type": "整数",
+ "采样率规定为8000""@嵌入式方法": "\"\"",
+ "采样率规定为8000""parameters": [
+   {
+"parameter name": "编码句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要编码的数据指针",
+"comment": "这个数据的大小必须是160字节",
+"data type": "变整数"
+   },
+   {
+"parameter name": "编码后的缓冲区指针",
+"comment": "这个缓冲区要求必须是10个字节",
+"data type": "变整数"
+   }
+ "采样率规定为8000"]
+  },
+  {
+data type": "变整数""method name": "电话音频_编码Ex",
+data type": "变整数""comment": "采样率必须是8000的音频",
+data type": "变整数""result comment": "0 成功  -1 失败",
+data type": "变整数""static": true,
+data type": "变整数""data type": "整数",
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "编码句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要编码的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要编码的数据长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "缓冲区指针",
+"comment": "用来存放编码后的数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区大小",
+"comment": "缓冲区大小必须是 要编码的数据长度 / 16",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+
+"method name": "电话音频_解码_初始化",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "缓冲区大小""method name": "电话音频_解码",
+ameter name": "缓冲区大小""result comment": "0 成功  -1 失败",
+ameter name": "缓冲区大小""static": true,
+ameter name": "缓冲区大小""data type": "整数",
+ameter name": "缓冲区大小""@嵌入式方法": "\"\"",
+ameter name": "缓冲区大小""parameters": [
+   {
+"parameter name": "编码句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要解码的数据",
+"comment": "这个缓冲区要求必须是10个字节",
+"data type": "变整数"
+   },
+   {
+"parameter name": "解码后的数据",
+"comment": "这个数据的大小必须是160字节",
+"data type": "变整数"
+   }
+ameter name": "缓冲区大小"]
+  },
+  {
+"method name": "电话音频_解码Ex",
+"comment": "采样率必须是8000的音频",
+"result comment": "0 成功  -1 失败",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "编码句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要解码的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要解码的数据长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "缓冲区指针",
+"comment": "用来存放解码后的数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区大小",
+"comment": "缓冲区大小必须是 要解码的数据长度*16",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "电话音频_销毁",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "编码或解码句柄",
+"data type": "变整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "电话音频编码",
+"comment": "采样率规定为8000\n声道数规定为1\n采样位数 可以是8位，或者16位的",
+"methods": [
+  {
+data type": "变整数""method name": "编码指针",
+data type": "变整数""comment": "规定必须采样率为8000",
+data type": "变整数""data type": "逻辑型",
+data type": "变整数""parameters": [
+   {
+"parameter name": "要编码的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要编码的数据长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "缓冲区指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区大小",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+
+"method name": "编码",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "音频数据",
+"data type": "字节集类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "电话音频解码",
+"methods": [
+  {
+ }"method name": "解码指针",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "要编码的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "要编码的数据长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "缓冲区指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区大小",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "解码",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "编码的数据",
+"data type": "字节集类"
+   }
+}]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

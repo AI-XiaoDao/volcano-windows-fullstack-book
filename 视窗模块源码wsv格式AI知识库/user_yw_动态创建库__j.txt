@@ -1,0 +1,5341 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+"package name": "火山.仰望",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+"@文档": "\"category = \\\"动态创建库\\\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+"classes": [
+ {
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+"classes": [
+"class name": "动态创建类",
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+"classes": [
+"@文档": "\"category = \\\"动态创建库.综合组件创建\\\"\"",
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+"classes": [
+"@全局类": "真",
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+"classes": [
+"methods": [
+  {
+
+"method name": "创建主窗口",
+
+"comment": "变量 窗口模版\n窗口1 = 窗口模版.创建主窗口 ()\n如需触发窗口可否被关闭，则需要 挂接事件 (窗口1)",
+
+"data type": "窗口",
+
+"parameters": [
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"主窗口\""
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "300"
+   }
+
+]
+  },
+  {
+
+"method name": "创建子窗口",
+
+"comment": "变量 窗口模版\n窗口1 = 窗口模版.创建子窗口 ()\n如需触发窗口可否被关闭，则需要 挂接事件 (窗口1)",
+
+"data type": "窗口",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"子窗口\""
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "300"
+   }
+
+]
+  },
+  {
+}"method name": "创建对话框窗口",
+}"comment": "变量 窗口模版\n窗口1 = 窗口模版.创建对话框窗口 ()\n如需触发窗口可否被关闭，则需要 挂接事件 (窗口1)",
+}"data type": "窗口",
+}"parameters": [
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"对话框窗口\""
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "300"
+   }
+}]
+  },
+  {
+}"method name": "创建按钮",
+}"comment": "调用示例：\n按钮1 = 动态类.创建按钮 (本对象)\n按钮组.标题 = \"按钮1\"\n动态类.销毁对象_按钮 (组序)",
+}"data type": "按钮",
+}"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "32"
+   }
+}]
+  },
+  {
+
+"method name": "销毁对象_按钮",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建编辑框",
+
+"data type": "编辑框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "允许多行",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "滚动条",
+"comment": "0、无　1、横向　2、纵向　3、横向纵向",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "调节器方式",
+"comment": "0、无　1、手动　2、自动",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "对齐方式",
+"comment": "0、左对齐　1、居中　3、右对齐",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输入方式",
+"comment": "例如：编辑框输入方式.通常方式",
+"data type": "编辑框输入方式",
+"@默认值": "编辑框输入方式.通常方式"
+   },
+   {
+"parameter name": "显示默认标题",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_编辑框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建标签",
+
+"data type": "标签",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_标签",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建图片框",
+
+"data type": "图片框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_图片框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建画板",
+
+"data type": "画板",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_画板",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建单选框",
+
+"data type": "单选框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_单选框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建选择框",
+
+"data type": "选择框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "按钮形式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_选择框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建组合框",
+
+"data type": "组合框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "类型",
+"comment": "1、可编辑下拉　2、可编辑列表　3、不可编辑下拉",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "列表项目",
+"comment": "如： \"选项1,选项2,选项3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "显示默认标题",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_组合框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建日期框",
+
+"data type": "日期框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_日期框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建横向滚动条",
+
+"data type": "横向滚动条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_横向滚动条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建纵向滚动条",
+
+"data type": "纵向滚动条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_纵向滚动条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建滑块条",
+
+"data type": "滑块条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "40"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_滑块条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建进度条",
+
+"data type": "进度条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_进度条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建列表框",
+
+"data type": "列表框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "列表项目",
+"comment": "如： \"列表框1,列表框2,列表框3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_列表框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建带按钮列表框",
+
+"data type": "带按钮列表框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "列表项目",
+"comment": "如： \"列表框1,列表框2,列表框3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_带按钮列表框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建目录框",
+
+"data type": "目录框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "160"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   }
+
+]
+  },
+  {
+}"method name": "销毁对象_目录框",
+}"comment": "删除动态组件占位",
+}"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "创建驱动器框",
+
+"data type": "驱动器框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_驱动器框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建三态选择框",
+
+"data type": "三态选择框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "87"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "按钮形式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_三态选择框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建时钟",
+
+"data type": "时钟",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "26"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "26"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_时钟",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建调节器",
+
+"data type": "调节器",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_调节器",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建图形按钮",
+
+"data type": "图形按钮",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "32"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_图形按钮",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "创建外形框",
+}"data type": "外形框",
+}"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+}]
+  },
+  {
+}"method name": "销毁对象_外形框",
+}"comment": "删除动态组件占位",
+}"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "创建文件框",
+
+"data type": "文件框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "160"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_文件框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建选择列表框",
+
+"data type": "选择列表框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_选择列表框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建颜色选择器",
+
+"data type": "颜色选择器",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "显示默认标题",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_颜色选择器",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建影像框",
+
+"data type": "影像框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "240"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_影像框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建月历",
+
+"data type": "月历",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "280"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_月历",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建选择夹",
+
+"data type": "选择夹",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "240"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   },
+   {
+"parameter name": "子夹项目",
+"comment": "如： \"子夹1\\n0\\n子夹2\\n0\\n子夹3\\n0\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_选择夹",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "创建分组框",
+}"data type": "分组框",
+}"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+}]
+  },
+  {
+
+"method name": "销毁对象_分组框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建高级分组框",
+
+"data type": "高级分组框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+}"method name": "销毁对象_高级分组框",
+}"comment": "删除动态组件占位",
+}"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "创建组件布局器",
+
+"data type": "组件布局器",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_组件布局器",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建OCX组件",
+
+"data type": "OCX组件",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_OCX组件",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建超级列表框",
+
+"data type": "超级列表框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "240"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   },
+   {
+"parameter name": "类型",
+"comment": "1、报表列表　2、普通列表　3、小图标列表　4、大图标列表",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "无表头",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "表头内容",
+"comment": "如： \"列1,列2,列3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "表头列宽",
+"comment": "如： \"50,70,80\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "允许编辑",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "显示表格线",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "整行选择",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "始终显示选择项",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否有检查框",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_超级列表框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建GIF动画框",
+
+"data type": "GIF动画框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_GIF动画框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建树形框",
+
+"data type": "树形框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "项目",
+"comment": "如：\"树项1\\n0\\n-1\\n0\\n0\\n1\\n0\\n1\\n子项A\\n0\\n-1\\n0\\n0\\n0\\n0\\n2\\n树项2\\n0\\n-1\\n0\\n0\\n1\\n0\\n1\\n子项B\\n0\\n-1\\n0\\n0\\n0\\n0\\n2\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_树形框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建增强树形框",
+
+"data type": "增强树形框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "项目",
+"comment": "如：\"树项1\\n0\\n-1\\n0\\n0\\n1\\n0\\n1\\n子项A\\n0\\n-1\\n0\\n0\\n0\\n0\\n2\\n树项2\\n0\\n-1\\n0\\n0\\n1\\n0\\n1\\n子项B\\n0\\n-1\\n0\\n0\\n0\\n0\\n2\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_增强树形框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建工具条",
+
+"data type": "工具条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "35"
+   },
+   {
+"parameter name": "按钮标题",
+"comment": "如： \"新建：,打开,保存\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "图标序",
+"comment": "如： \"0,1,2\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提示文本",
+"comment": "如： \"提示1,提示2,提示3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "插入分隔符",
+"comment": "如： \"1,3,4\"　；数字表示分隔符将要插入到的标题序位置；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "图片组",
+"data type": "图片组资源"
+   },
+   {
+"parameter name": "位置",
+"comment": "1、顶边　2、自由　3、底边",
+"data type": "整数",
+"@默认值": "2"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_工具条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "创建IP编辑框",
+}"data type": "IP编辑框",
+}"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "显示默认标题",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+
+"method name": "销毁对象_IP编辑框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建分隔条",
+
+"data type": "分隔条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "130"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "10"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_分隔条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "创建超级链接框",
+
+"data type": "超级链接框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "类型",
+"comment": "0、无　1、电子信箱地址　2、Internet地址",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "显示默认标题",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+}"method name": "销毁对象_超级链接框",
+}"comment": "删除动态组件占位",
+}"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "创建超级编辑框",
+
+"data type": "超级编辑框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "30"
+   },
+   {
+"parameter name": "允许多行",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "自动换行",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "显示默认标题",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+}"method name": "销毁对象_超级编辑框",
+}"comment": "删除动态组件占位",
+}"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "创建状态条",
+
+"data type": "状态条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "30"
+   },
+   {
+"parameter name": "项目标题",
+"comment": "如： \"状态：,正常\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "项目宽度",
+"comment": "如： \"50,70\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提示文本",
+"comment": "如： \"当前状态,正常运行\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "位置",
+"comment": "1、底边　2、顶边　3、自由",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_状态条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "创建超级按钮",
+}"data type": "超级按钮",
+}"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "32"
+   },
+   {
+"parameter name": "选择框方式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "销毁对象_超级按钮",
+}"comment": "删除动态组件占位",
+}"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "创建表格",
+
+"data type": "火山.MFC界面.表格.表格",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "352"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_表格",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "窗口创建完毕",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口首次激活",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口被激活",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口将被销毁",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口托盘事件",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口位置被改变",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口尺寸被改变",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口鼠标右键被按下",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口鼠标右键被放开",
+
+"type": "event",
+
+"data type": "整数"
+  }
+### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+"classes": [
+]
+ },
+ {
+}"class name": "动态窗口类_",
+}"@文档": "\"category = \\\"动态创建库.窗口创建\\\"\"",
+}"methods": [
+  {
+
+"method name": "创建主窗口",
+
+"comment": "变量 窗口模版\n窗口1 = 窗口模版.创建主窗口 ()\n如需触发窗口可否被关闭，则需要 挂接事件 (窗口1)",
+
+"data type": "窗口",
+
+"parameters": [
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"主窗口\""
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "300"
+   }
+
+]
+  },
+  {
+
+"method name": "创建子窗口",
+
+"comment": "变量 窗口模版\n窗口1 = 窗口模版.创建子窗口 ()\n如需触发窗口可否被关闭，则需要 挂接事件 (窗口1)",
+
+"data type": "窗口",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"子窗口\""
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "300"
+   }
+
+]
+  },
+  {
+
+"method name": "创建对话框窗口",
+
+"comment": "变量 窗口模版\n窗口1 = 窗口模版.创建对话框窗口 ()\n如需触发窗口可否被关闭，则需要 挂接事件 (窗口1)",
+
+"data type": "窗口",
+
+"parameters": [
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"对话框窗口\""
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "500"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "300"
+   }
+
+]
+  },
+  {
+
+"method name": "窗口创建完毕",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口首次激活",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口被激活",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口将被销毁",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口托盘事件",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口位置被改变",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口尺寸被改变",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口鼠标右键被按下",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "窗口鼠标右键被放开",
+
+"type": "event",
+
+"data type": "整数"
+  }
+}]
+ },
+ {
+"class name": "动态按钮类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+}"method name": "创建按钮",
+}"comment": "调用示例：\n按钮1 = 动态类.创建按钮 (本对象)\n按钮组.标题 = \"按钮1\"\n动态类.销毁对象_按钮 (组序)",
+}"data type": "按钮",
+}"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "32"
+   }
+}]
+  },
+  {
+
+"method name": "销毁对象_按钮",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+
+"class name": "动态编辑框类_",
+
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+
+"methods": [
+  {
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"""method name": "创建编辑框",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"""data type": "编辑框",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"""parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "允许多行",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "滚动条",
+"comment": "0、无　1、横向　2、纵向　3、横向纵向",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "调节器方式",
+"comment": "0、无　1、手动　2、自动",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "对齐方式",
+"comment": "0、左对齐　1、居中　3、右对齐",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输入方式",
+"comment": "例如：编辑框输入方式.通常方式",
+"data type": "编辑框输入方式",
+"@默认值": "编辑框输入方式.通常方式"
+   }
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\""]
+  },
+  {
+}"method name": "销毁对象_编辑框",
+}"comment": "删除动态组件占位",
+}"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  }
+
+]
+ },
+ {
+"class name": "动态标签类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建标签",
+
+"data type": "标签",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_标签",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态图片框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建图片框",
+
+"data type": "图片框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_图片框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态画板类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建画板",
+methods": [
+"data type": "画板",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "销毁对象_画板",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态单选框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建单选框",
+
+"data type": "单选框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_单选框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态选择框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建选择框",
+
+"data type": "选择框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "按钮形式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_选择框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态组合框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建组合框",
+
+"data type": "组合框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "类型",
+"comment": "1、可编辑下拉　2、可编辑列表　3、不可编辑下拉",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "列表项目",
+"comment": "如： \"选项1,选项2,选项3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_组合框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态日期框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建日期框",
+
+"data type": "日期框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+}"method name": "销毁对象_日期框",
+}"comment": "删除动态组件占位",
+}"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "动态横向滚动条类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建横向滚动条",
+methods": [
+"data type": "横向滚动条",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "销毁对象_横向滚动条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态纵向滚动条类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建纵向滚动条",
+
+"data type": "纵向滚动条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_纵向滚动条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态进度条类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建进度条",
+
+"data type": "进度条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_进度条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态列表框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建列表框",
+methods": [
+"data type": "列表框",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "列表项目",
+"comment": "如： \"列表框1,列表框2,列表框3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "销毁对象_列表框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态带按钮列表框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建列表框",
+methods": [
+"data type": "带按钮列表框",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "列表项目",
+"comment": "如： \"列表框1,列表框2,列表框3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+methods": [
+]
+  },
+  {
+methods": [
+"method name": "销毁对象_列表框",
+methods": [
+"comment": "删除动态组件占位",
+methods": [
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+methods": [
+]
+  }
+]
+ },
+ {
+"class name": "动态目录框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建目录框",
+
+"data type": "目录框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "160"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   }
+
+]
+  },
+  {
+}"method name": "销毁对象_目录框",
+}"comment": "删除动态组件占位",
+}"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "动态驱动器框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+}"method name": "创建驱动器框",
+}"data type": "驱动器框",
+}"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+}]
+  },
+  {
+
+"method name": "销毁对象_驱动器框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态三态选择框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建三态选择框",
+
+"data type": "三态选择框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "87"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "按钮形式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_三态选择框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+}"class name": "动态时钟类_",
+}"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+}"methods": [
+  {
+
+"method name": "创建时钟",
+
+"data type": "时钟",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "26"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "26"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_时钟",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+}]
+ },
+ {
+"class name": "动态调节器类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建调节器",
+
+"data type": "调节器",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_调节器",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态图形按钮类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建图形按钮",
+
+"data type": "图形按钮",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "32"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_图形按钮",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态外形框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建外形框",
+
+"data type": "外形框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_外形框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态文件框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建文件框",
+
+"data type": "文件框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "160"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_文件框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态选择列表框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建选择列表框",
+
+"data type": "选择列表框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "120"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_选择列表框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态颜色选择器类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建颜色选择器",
+
+"data type": "颜色选择器",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_颜色选择器",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态影像框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建影像框",
+
+"data type": "影像框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "240"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_影像框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态月历类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建月历",
+methods": [
+"data type": "月历",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "280"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "销毁对象_月历",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态选择夹类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建选择夹",
+
+"data type": "选择夹",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "240"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   },
+   {
+"parameter name": "子夹项目",
+"comment": "如： \"子夹1\\n0\\n子夹2\\n0\\n子夹3\\n0\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_选择夹",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态分组框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建分组框",
+methods": [
+"data type": "分组框",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+methods": [
+]
+  },
+  {
+methods": [
+"method name": "销毁对象_分组框",
+methods": [
+"comment": "删除动态组件占位",
+methods": [
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+methods": [
+]
+  }
+]
+ },
+ {
+methods": [
+"class name": "动态高级分组框类_",
+methods": [
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+methods": [
+"methods": [
+  {
+"method name": "创建高级分组框",
+"data type": "高级分组框",
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+]
+  },
+  {
+
+"method name": "销毁对象_高级分组框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+methods": [
+]
+ },
+ {
+"class name": "动态组件布局器类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建组件布局器",
+
+"data type": "组件布局器",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_组件布局器",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态超级列表框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建超级列表框",
+
+"data type": "超级列表框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "240"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   },
+   {
+"parameter name": "类型",
+"comment": "1、报表列表　2、普通列表　3、小图标列表　4、大图标列表",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "无表头",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "表头内容",
+"comment": "如： \"列1,列2,列3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "表头列宽",
+"comment": "如： \"50,70,80\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "允许编辑",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "显示表格线",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "整行选择",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "始终显示选择项",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否有检查框",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_超级列表框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态GIF动画框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建GIF动画框",
+
+"data type": "GIF动画框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_GIF动画框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态树形框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建树形框",
+
+"data type": "树形框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "项目",
+"comment": "如：\"树项1\\n0\\n-1\\n0\\n0\\n1\\n0\\n1\\n子项A\\n0\\n-1\\n0\\n0\\n0\\n0\\n2\\n树项2\\n0\\n-1\\n0\\n0\\n1\\n0\\n1\\n子项B\\n0\\n-1\\n0\\n0\\n0\\n0\\n2\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_树形框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态增强树形框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建增强树形框",
+methods": [
+"data type": "增强树形框",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "项目",
+"comment": "如：\"树项1\\n0\\n-1\\n0\\n0\\n1\\n0\\n1\\n子项A\\n0\\n-1\\n0\\n0\\n0\\n0\\n2\\n树项2\\n0\\n-1\\n0\\n0\\n1\\n0\\n1\\n子项B\\n0\\n-1\\n0\\n0\\n0\\n0\\n2\"",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "销毁对象_增强树形框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+}"class name": "动态工具条类_",
+}"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+}"methods": [
+  {
+
+"method name": "创建工具条",
+
+"data type": "工具条",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "35"
+   },
+   {
+"parameter name": "按钮标题",
+"comment": "如： \"新建：,打开,保存\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "图标序",
+"comment": "如： \"0,1,2\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提示文本",
+"comment": "如： \"提示1,提示2,提示3\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "插入分隔符",
+"comment": "如： \"1,3,4\"　；数字表示分隔符将要插入到的标题序位置；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "图片组",
+"data type": "图片组资源"
+   },
+   {
+"parameter name": "位置",
+"comment": "1、顶边　2、自由　3、底边",
+"data type": "整数",
+"@默认值": "2"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_工具条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+}]
+ },
+ {
+"class name": "动态IP编辑框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建IP编辑框",
+
+"data type": "IP编辑框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_IP编辑框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态分隔条类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建分隔条",
+methods": [
+"data type": "分隔条",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "130"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "10"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "销毁对象_分隔条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态超级链接框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建超级链接框",
+methods": [
+"data type": "超级链接框",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "24"
+   },
+   {
+"parameter name": "类型",
+"comment": "0、无　1、电子信箱地址　2、Internet地址",
+"data type": "整数",
+"@默认值": "0"
+   }
+methods": [
+]
+  },
+  {
+methods": [
+"method name": "销毁对象_超级链接框",
+methods": [
+"comment": "删除动态组件占位",
+methods": [
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+methods": [
+]
+  }
+]
+ },
+ {
+"class name": "动态超级编辑框类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建超级编辑框",
+
+"data type": "超级编辑框",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "30"
+   },
+   {
+"parameter name": "允许多行",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "自动换行",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_超级编辑框",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "动态状态条类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "创建状态条",
+methods": [
+"data type": "状态条",
+methods": [
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "120"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "30"
+   },
+   {
+"parameter name": "项目标题",
+"comment": "如： \"状态：,正常\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "项目宽度",
+"comment": "如： \"50,70\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "提示文本",
+"comment": "如： \"当前状态,正常运行\"　；多个以逗号间开，支持中文标点",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "位置",
+"comment": "1、底边　2、顶边　3、自由",
+"data type": "整数",
+"@默认值": "1"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "销毁对象_状态条",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+
+"class name": "动态超级按钮类_",
+
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+
+"methods": [
+  {
+
+"method name": "创建超级按钮",
+
+"data type": "超级按钮",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "80"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "32"
+   },
+   {
+"parameter name": "选择框方式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_超级按钮",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+
+]
+ },
+ {
+"class name": "动态表格类_",
+"@文档": "\"category = \\\"动态创建库.独立组件创建\\\"\"",
+"methods": [
+  {
+
+"method name": "创建表格",
+
+"data type": "火山.MFC界面.表格.表格",
+
+"parameters": [
+   {
+"parameter name": "父窗口",
+"data type": "窗口容器组件"
+   },
+   {
+"parameter name": "左边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "顶边位置",
+"data type": "整数",
+"@默认值": "10"
+   },
+   {
+"parameter name": "宽度",
+"data type": "整数",
+"@默认值": "352"
+   },
+   {
+"parameter name": "高度",
+"data type": "整数",
+"@默认值": "200"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁对象_表格",
+
+"comment": "删除动态组件占位",
+
+"parameters": [
+   {
+"parameter name": "对象序",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"仰望模块".
+
+]
+}

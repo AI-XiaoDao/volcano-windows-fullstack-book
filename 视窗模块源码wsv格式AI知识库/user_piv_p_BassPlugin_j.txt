@@ -1,0 +1,2707 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+问本程序中的接口需要引用模块"PIV基础类"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"PIV基础类"."package name": "火山.BASS音频支持库",
+问本程序中的接口需要引用模块"PIV基础类"."comment": "https://github.com/SaierMe/piv",
+问本程序中的接口需要引用模块"PIV基础类"."@视窗.外部头文件": "\"BASS\\\\include\\\\piv_bass.hpp\"",
+问本程序中的接口需要引用模块"PIV基础类"."classes": [
+ {
+"class name": "BASS_WASAPI类",
+"comment": "BASSWASAPI 2.4.3.1\n支持在Windows Vista及更高版本上使用WASAPI输入和输出的扩展,支持独占和共享模式.\n\"BASS音频类\"在Vista及更高版本的系统默认就是使用WASAPI,但只支持共享模式,真玩Hifi的,还是得开独占模式.\n独占模式可以绕过系统的混合器直接输出,打开后其他应用就不能发声,理论上独占模式的音质更好.\n本扩展不能在Windows XP之类的旧系统使用,旧系统默认的是DirectSound.",
+"@视窗.附属文件": "\"BASS\\\\$(p)\\\\basswasapi.dll\"",
+"@文档": "\"category = \\\"WASAPI支持\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "加载动态库",
+methods": [
+"comment": "程序默认在执行本类的函数时加载与程序文件同位置的DLL文件.\n如果你想将DLL放在其他位置,请在执行其他方法前调用本方法手动加载.\n注意: 请尽量在启动方法中加载,且不应将本对象的实例定义在启动类内.",
+methods": [
+"static": true,
+methods": [
+"data type": "逻辑型",
+methods": [
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "动态库路径",
+"comment": "basswasapi.dll的路径",
+"data type": "文本型"
+   }
+methods": [
+]
+  },
+  {
+wasapi.dll的路径"method name": "卸载动态库",
+wasapi.dll的路径"comment": "手动卸载动态库,一般不需要执行本方法.",
+wasapi.dll的路径"static": true,
+wasapi.dll的路径"@嵌入式方法": "\"\""
+  },
+  {
+asapi.dll的路径"@嵌入式方法": "\"\"""method name": "取版本",
+asapi.dll的路径"@嵌入式方法": "\"\"""comment": "获取已加载的BASSWASAPI的版本号",
+asapi.dll的路径"@嵌入式方法": "\"\"""result comment": "  返回BASSWASAPI版本; 例如, 0x02040103(十六进制)将是版本2.4.1.3\n  其中高16位为主版本号,低16位为修订版本号.",
+asapi.dll的路径"@嵌入式方法": "\"\"""data type": "整数",
+asapi.dll的路径"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置通知",
+
+"comment": "设置是否开启设备更改通知的回调事件,开启后\"通知\"事件才会生效.",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "是否启用通知回调事件",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+}"method name": "通知",
+}"comment": "通知回调事件",
+}"result comment": "此返回值无意义",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "通知事件",
+"comment": "通知中包含以下内容之一:\n 0=BASS_WASAPI_NOTIFY_ENABLED   此设备已启用.\n 1=BASS_WASAPI_NOTIFY_DISABLED  此设备已禁用/断开连接.\n 2=BASS_WASAPI_NOTIFY_DEFINPUT  此设备现在是默认输入设备.\n 3=BASS_WASAPI_NOTIFY_DEFOUTPUT 此设备现在是默认输出设备.\n 256=BASS_WASAPI_NOTIFY_FAIL    此设备出现故障并已停止.如果设备仍处于启用状态且处于共享模式,\n 则可能是设备的采样格式已更改.在此情况下,可以使用\"释放\"和\"初始化\"来恢复设备.",
+"data type": "整数"
+   },
+   {
+"parameter name": "设备号",
+"comment": "发出通知的设备",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取所有设备信息",
+
+"comment": "获取所有可用的设备",
+
+"result comment": "成功返回设备数量,失败返回0,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设备信息",
+"comment": "返回的设备信息",
+"data type": "BASS_WASAPI_设备信息数组"
+   }
+
+]
+  },
+  {
+
+"method name": "取设备信息",
+
+"comment": "获取一个设备的信息",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "设备号",
+"comment": "0 为第一个设备",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "设备信息",
+"comment": "返回的设备信息",
+"data type": "BASS_WASAPI_设备信息"
+   }
+
+]
+  },
+  {
+
+"method name": "是否可用设备",
+
+"comment": "判断设备是否可用,也可以判断设备类型",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "设备标志",
+"data type": "整数"
+   },
+   {
+"parameter name": "设备类型",
+"comment": "0=所有设备,1=只有输出设备返回真,2=只有输入设备返回真",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "过滤未连接设备",
+"comment": "是否过滤未插入或未连接的设备,默认不过滤",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "取设备电平",
+
+"comment": "获取设备的电平(峰值振幅).",
+
+"result comment": "成功返回电平级别,失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息",
+
+"data type": "单精度小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "设备号",
+"comment": "要获取电平的设备,从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "通道",
+"comment": "获取电平的声道,0=第一个通道,-1=所有通道.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "置设备",
+
+"comment": "设置当前线程后续使用的设备",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "设备号",
+"comment": "0 为第一个设备",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取设备",
+
+"comment": "获取当前线程使用的设备",
+
+"result comment": "成功返回设备号,失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"data type": "整数""method name": "取设备类型名",
+
+"data type": "整数""comment": "返回输出设备的类型名称(中文名称)",
+
+"data type": "整数""result comment": "成功返回输出设备的类型名称",
+
+"data type": "整数""data type": "文本型",
+
+"data type": "整数""parameters": [
+   {
+"parameter name": "设备类型",
+"comment": "\"BASS_WASAPI_设备信息\"类中的\"设备类型\"成员",
+"data type": "整数"
+   }
+
+"data type": "整数"]
+  },
+  {
+ }"method name": "检查格式",
+ }"comment": "检查设备是否支持指定的采样格式.",
+ }"result comment": "如果是支持的采样格式,则返回支持的最大解析度(BASS_WASAPI_FORMAT),否则返回-1.\n可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "设备号",
+"comment": "所欲使用的设备;\n-1=默认输出设备, -2=默认输入设备, -3=默认环回输入设备;\n可使用\"取所有设备信息\"枚举可用设备.",
+"data type": "整数"
+   },
+   {
+"parameter name": "采样率",
+"comment": "所欲使用的采样率",
+"data type": "整数"
+   },
+   {
+"parameter name": "声道",
+"comment": "声道数量,1=单声道,2=立体声,以此类推.",
+"data type": "整数"
+   },
+   {
+"parameter name": "独占模式",
+"comment": "真为在独占模式下检查设备,假为在共享模式下检查；\n共享和独占模式可能支持不同的采样格式.共享模式通常只支持\"混合格式\"(可从\"取设备信息\"获取).",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+
+"method name": "输出输入",
+
+"comment": "用户在本事件中处理输出/输入的回调函数.\n输出/输入处理的方法应尽可能快,以避免缓冲区不足(输出)或溢出(输入).\n\"取数据\"使用BASS_DATA_AVAILABLE标志时,可用于检查缓冲了多少数据(用于返回值).\n如果输出设备初始化为独占模式,且返回的数据少于请求的数据,则缓冲区的其余部分将以静音填充.",
+
+"result comment": "对于输出设备,返回写入缓冲区的字节数.如果该值为负值(高位设置),则该值将被视为0.\n对于输入设备,0=停止设备,否则继续.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "缓冲区的指针,用于存放输出设备的样本数据,或从输入设备获取数据;\n样本数据始终为32位浮点数.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "缓冲区的数据长度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "初始化",
+
+"comment": "初始化设备,之后在接收事件\"输出输入\"中处理输出/输出数据.",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "设备号",
+"comment": "所欲使用的设备. -1=默认输出设备, -2=默认输入设备, -3=默认环回输入设备;\n可使用\"取所有设备信息\"枚举可用设备.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "采样率",
+"comment": "采样率,0=\"混合格式\"采样率.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "声道",
+"comment": "声道数量,1=单声道,2=立体声,以此类推.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "标志",
+"comment": "使用\"BASS_WASAPI_标志\"的组合值",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "缓冲长度",
+"comment": "设备缓冲区长度(以秒或样本为单位,取决于\"BASS_WASAPI_SAMPLES\"标志);\n这里设置的是最小值,驱动程序可以选择使用更大的缓冲区. 可用\"取信息\"确认缓冲区的大小;\n对于输出设备,缓冲区大小决定了延迟.在事件驱动独占模式下,将有两个此长度的缓冲区,因此总缓冲区长度也是原来的两倍.",
+"data type": "单精度小数",
+"@默认值": "0.1"
+   },
+   {
+"parameter name": "周期",
+"comment": "调用回调函数的间隔(以秒或样本为单位,取决于\"BASS_WASAPI_SAMPLES\"标志).0=使用默认值;\n如果指定的周期低于最小更新周期,将自动升高;\n当指定BASS_WASAPI_EVENT标志时,此选项将被忽略,但在Windows 10且\"缓冲长度\"=0的共享模式下除外.",
+"data type": "单精度小数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "初始化_通道",
+}"comment": "初始化设备,本方法不启用接收事件\"输出输入\",而是从BASS通道交换数据.",
+}"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "设备号",
+"comment": "要使用的设备. -1=默认输出设备, -2=默认输入设备, -3=默认环回输入设备.\n可使用\"取所有设备信息\"枚举可用设备.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "BASS通道",
+"comment": "必须是输出设备的解码通道(使用BASS_STREAM_DECODE),或输入设备的\"push\"或\"dummy\"流(使用STREAMPROC_PUSH或STREAMPROC_DUMMY);\n通道的采样格式必须是浮点(BASS_SAMPLE_FLOAT).",
+"data type": "整数"
+   },
+   {
+"parameter name": "标志",
+"comment": "使用\"BASS_WASAPI_标志\"的组合值",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "缓冲长度",
+"comment": "设备缓冲区长度(以秒或样本为单位,取决于\"BASS_WASAPI_SAMPLES\"标志);\n这里设置的是最小值,驱动程序可以选择使用更大的缓冲区. 可用\"取信息\"确认缓冲区的大小;\n对于输出设备,缓冲区大小决定了延迟.在事件驱动独占模式下,将有两个此长度的缓冲区,因此总缓冲区长度也是原来的两倍.",
+"data type": "单精度小数",
+"@默认值": "0.1"
+   },
+   {
+"parameter name": "周期",
+"comment": "调用回调函数的间隔(以秒或样本为单位,取决于\"BASS_WASAPI_SAMPLES\"标志).0=使用默认值;\n如果指定的周期低于最小更新周期,将自动升高;\n当指定BASS_WASAPI_EVENT标志时,此选项将被忽略,但在Windows 10且\"缓冲长度\"=0的共享模式下除外.",
+"data type": "单精度小数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "初始化_推送",
+
+"comment": "初始化设备,本方法不从回调函数和接收事件\"输出输入\"里获取数据,而是通过BASS音频类的\"推送流数据(BASS_StreamPutData)\"获取.\n不能用于输入设备或BASS_WASAPI_EVENT标志.",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "设备号",
+"comment": "要使用的设备. -1=默认输出设备, -2=默认输入设备, -3=默认环回输入设备;\n可使用\"取所有设备信息\"枚举可用设备.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "采样率",
+"comment": "采样率,0=\"混合格式\"采样率.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "声道",
+"comment": "声道数量,1=单声道,2=立体声,以此类推.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "标志",
+"comment": "使用\"BASS_WASAPI_标志\"的组合值",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "缓冲长度",
+"comment": "设备缓冲区长度(以秒或样本为单位,取决于\"BASS_WASAPI_SAMPLES\"标志);\n这里设置的是最小值,驱动程序可以选择使用更大的缓冲区. 可用\"取信息\"确认缓冲区的大小;\n对于输出设备,缓冲区大小决定了延迟.在事件驱动独占模式下,将有两个此长度的缓冲区,因此总缓冲区长度也是原来的两倍.",
+"data type": "单精度小数",
+"@默认值": "0.1"
+   },
+   {
+"parameter name": "周期",
+"comment": "调用回调函数的间隔(以秒或样本为单位,取决于\"BASS_WASAPI_SAMPLES\"标志).0=使用默认值;\n如果指定的周期低于最小更新周期,将自动升高;\n当指定BASS_WASAPI_EVENT标志时,此选项将被忽略,但在Windows 10且\"缓冲长度\"=0的共享模式下除外.",
+"data type": "单精度小数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ameter name": "周期""method name": "释放",
+ameter name": "周期""comment": "释放输出输入设备. 退出程序前应该释放设备,但不需要用户手段调用,类析构的时候会自动调用.\n独占模式下,只要初始化后就会一直独占设备,如果想在停止播放的时候转让给其他应用,就应该调用释放.",
+ameter name": "周期""result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+ameter name": "周期""data type": "逻辑型",
+ameter name": "周期""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取信息",
+
+"comment": "获取当前所用设备的信息",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "信息",
+"comment": "返回的信息",
+"data type": "BASS_WASAPI_信息"
+   }
+
+]
+  },
+  {
+"method name": "取CPU使用率",
+"comment": "获取BASSWASAPI当前的CPU使用率",
+"result comment": "返回CPU使用率",
+"data type": "单精度小数",
+"@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""method name": "锁定设备",
+@嵌入式方法": "\"\"""comment": "将设备锁定到当前线程. 锁定设备会阻止其他线程访问设备缓冲区,包括WASAPIPROC回调函数.\n其他想要访问锁定设备的线程将一直阻塞,直到设备解锁,因此设备应该只被短暂锁定. 设备必须在其锁定的同一线程中解锁.",
+@嵌入式方法": "\"\"""result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+@嵌入式方法": "\"\"""data type": "逻辑型",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "是否锁定",
+"comment": "真为锁定,假为解锁",
+"data type": "逻辑型"
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "开启设备",
+
+"comment": "开启或恢复设备.",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "停止设备",
+"@嵌入式方法": "\"\"""comment": "停止设备.\n如果设备缓冲区未刷新(是否重置=假),之后调用的\"开启设备/BASS_WASAPI_Start\"将恢复之前的缓冲数据,否则将使用新数据恢复.\n独占模式输出应在停止时刷新缓冲区,以避免恢复时出现故障.",
+"@嵌入式方法": "\"\"""result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "是否重置",
+"comment": "是否刷新设备缓冲区",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+嵌入式方法": "\"\""]"method name": "是否已启动",
+嵌入式方法": "\"\""]"comment": "检查是否已经开始处理",
+嵌入式方法": "\"\""]"result comment": "设备已启动返回真,其他返回假.",
+嵌入式方法": "\"\""]"data type": "逻辑型",
+嵌入式方法": "\"\""]"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置音量",
+
+"comment": "设置输出设备的主音量",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "模式",
+"comment": "获取的音量类型和使用的曲线;\n 0=BASS_WASAPI_CURVE_DB 使用对数曲线,如果未指定曲线,此项则为默认值;\n 1=BASS_WASAPI_CURVE_LINEAR 使用线性曲线;\n 2=BASS_WASAPI_CURVE_WINDOWS 使用WINDOWS的Hybrid曲线,跟WINDOWS的音量控制一样;\n 8=BASS_WASAPI_VOL_SESSION 获取会话的音量,其他为设备音量;",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "音量",
+"comment": "使用线性或Windows曲线时音量范围为0(静音)到1(最大值). 其他为dB级别;\n设备的有效dB级别范围请用\"取输出信息/BASS_WASAPI_GetInfo\"获取.",
+"data type": "单精度小数"
+   }
+
+]
+  },
+  {
+}"method name": "取音量",
+}"comment": "获取当前的主音量级别",
+}"result comment": "成功返回音量值,失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "单精度小数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "模式",
+"comment": "获取的音量类型和使用的曲线;\n 0=BASS_WASAPI_CURVE_DB 使用对数曲线,如果未指定曲线,此项则为默认值;\n 1=BASS_WASAPI_CURVE_LINEAR 使用线性曲线;\n 2=BASS_WASAPI_CURVE_WINDOWS 使用WINDOWS的Hybrid曲线,跟WINDOWS的音量控制一样;\n 8=BASS_WASAPI_VOL_SESSION 获取会话的音量,其他为设备音量;",
+"data type": "整数",
+"@默认值": "2"
+   }
+}]
+  },
+  {
+"method name": "置静音",
+"comment": "使设备静音或取消静音",
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "模式",
+"comment": "设置的音量类型;\n 0=BASS_WASAPI_CURVE_DB 使用对数曲线,如果未指定曲线,此项则为默认值;\n 1=BASS_WASAPI_CURVE_LINEAR 使用线性曲线;\n 2=BASS_WASAPI_CURVE_WINDOWS 使用WINDOWS的Hybrid曲线,跟WINDOWS的音量控制一样;\n 8=BASS_WASAPI_VOL_SESSION 获取会话的音量,其他为设备音量;",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否静音",
+"comment": "是否将设备静音,真为静音,假为取消静音.",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+}"method name": "取静音",
+}"comment": "获取设备的静音状态",
+}"result comment": "成功返回静音的状态(真为静音).",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "模式",
+"comment": "设置的音量类型.\n 0=BASS_WASAPI_CURVE_DB 使用对数曲线,如果未指定曲线,此项则为默认值;\n 1=BASS_WASAPI_CURVE_LINEAR 使用线性曲线;\n 2=BASS_WASAPI_CURVE_WINDOWS 使用WINDOWS的Hybrid曲线,跟WINDOWS的音量控制一样;\n 8=BASS_WASAPI_VOL_SESSION 获取会话的音量,其他为设备音量;",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+"method name": "置数据",
+"comment": "将样本数据添加到输出设备缓冲区.",
+"result comment": "成功返回使用的数据量,否则返回-1.可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "样本数据的指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "长度",
+"comment": "数据的字节大小",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "取数据",
+
+"comment": "获取即时的样本数据或其FFT信号.",
+
+"result comment": "失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息..\n请求FFT数据时,返回从通道读取的字节数(用于执行FFT).\n请求样本数据时,将返回写入缓冲区的字节数.\n使用BASS_DATA_AVAILABLE标志时,将返回通道缓冲区中的字节数.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "用来接收数据的缓冲区指针.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "长度",
+"comment": "你想要获取的数据字节数,也可以使用\"BASS_通道数据类型\"中常量的组合值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "置数据2",
+}"comment": "将样本数据添加到输出设备缓冲区.\n\"置数据\"的二次封装版本,缓冲区改成字节集类,而原始版本更适合在回调事件中使用.",
+}"result comment": "成功返回使用的数据量,否则返回-1.可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "样本数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+}"method name": "取数据2",
+}"comment": "获取即时的样本数据或其FFT信号.\n\"取数据\"的二次封装版本,缓冲区改成字节集类,而原始版本更适合在回调事件中使用.",
+}"result comment": "失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息..\n请求FFT数据时,返回从通道读取的字节数(用于执行FFT).\n请求样本数据时,将返回写入缓冲区的字节数.\n使用BASS_DATA_AVAILABLE标志时,将返回通道缓冲区中的字节数.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "缓冲区",
+"comment": "用来接收数据的缓冲区字节集;\n当句柄是录制句柄(HRECORD)时,可以为\"空对象\",以丢弃从录制缓冲区请求的数据.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "长度",
+"comment": "你想要获取的数据字节数,也可以使用\"BASS_通道数据类型\"中常量的组合值.",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+}"method name": "取电平",
+}"comment": "获取电平(峰值振幅)",
+}"result comment": "失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.\n如果成功,左声道的电平在低位(低16位),右声道在高位(高16位)返回,若通道为单声道,则低位与高位重复.\n该级别的线性范围为0(无声)到32768(最大).通道暂停时将返回0.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取电平EX",
+
+"comment": "获取电平(峰值振幅)",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "电平数据",
+"comment": "用于接收电平级别的数组",
+"data type": "单精度小数数组类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "计算电平的观察数据量,单位为秒,除解码通道外,最大值为1秒.",
+"data type": "单精度小数"
+   },
+   {
+"parameter name": "声道",
+"comment": "0=全部声道, 1=单声道, 2=立体声",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "是否RMS级别",
+"comment": "假为获取电平级别,真为获取RMS(均方根值)级别.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "应用属性",
+"comment": "为真时将当前的BASS_ATTRIB_VOL和BASS_ATTRIB_PAN值应用于电平级别中.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "BASS混合器类",
+"comment": "BASSmix 2.4.11.2\n提供合并或分离BASS通道、重采样和矩阵混音功能.\n注: 本类新增了几个配置选项,需要使用BASS音频类的\"置配置选项\"进行设置.\n本类新增了两个属性,需要使用BASS音频类的\"置通道属性\"使用.",
+"@视窗.附属文件": "\"BASS\\\\$(p)\\\\bassmix.dll\"",
+"@文档": "\"category = \\\"BASS混合器\\\"\"",
+"methods": [
+  {
+ss name": "BASS混合器类""method name": "加载动态库",
+ss name": "BASS混合器类""comment": "程序默认在执行本类的函数时加载与程序文件同位置的DLL文件.\n如果你想将DLL放在其他位置,请在执行其他方法前调用本方法手动加载.\n注意: 请尽量在启动方法中加载,且不应将本对象的实例定义在启动类内.",
+ss name": "BASS混合器类""static": true,
+ss name": "BASS混合器类""data type": "逻辑型",
+ss name": "BASS混合器类""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ss name": "BASS混合器类""parameters": [
+   {
+"parameter name": "动态库路径",
+"comment": "bassBassMix::Fn().dll的路径",
+"data type": "文本型"
+   }
+ss name": "BASS混合器类"]
+  },
+  {
+ name": "BASS混合器类"]"method name": "卸载动态库",
+ name": "BASS混合器类"]"comment": "手动卸载动态库,一般不需要执行本方法.",
+ name": "BASS混合器类"]"static": true,
+ name": "BASS混合器类"]"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取版本",
+
+"comment": "获取已加载的BASSmix的版本号",
+
+"result comment": "返回BASSmix版本,其中高16位为主版本号,低16位为修订版本号;\n例: 0x02040103(十六进制) = 2.4.1.3",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "创建混合流",
+
+"comment": "创建一条混合器流.\n此源通道可以随时插入或移除其他流,因此没有预定长度,不能\"取通道长度\",除了位置0之外,不能移动到其他位置.",
+
+"result comment": "成功返回流句柄,失败返回0,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "采样率",
+"comment": "混合器输出的采样率",
+"data type": "整数"
+   },
+   {
+"parameter name": "声道",
+"comment": "声道数量: 1=单声道, 2=立体声, 4=四声道, 6=5.1, 8=7.1",
+"data type": "整数"
+   },
+   {
+"parameter name": "标志",
+"comment": "使用\"BASS_音频标志\"类和\"BASS_混合器标志\"类中的以下部分常量的组合值:\n BASS_音频标志: BASS_SAMPLE_8BITS、BASS_SAMPLE_FLOAT、BASS_SAMPLE_SOFTWARE、BASS_SAMPLE_3D\n BASS_SAMPLE_FX、BASS_STREAM_AUTOFREE、BASS_STREAM_DECODE、BASS_SPEAKER_xxx\n BASS_混合器标志: BASS_MIXER_END、BASS_MIXER_NONSTOP、BASS_MIXER_POSEX、BASS_MIXER_RESUME",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "加入通道",
+
+"comment": "将一条通道插入到混合器",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "混合器句柄",
+"comment": "混合器的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "通道句柄",
+"comment": "想插入到混合器的通道,可以是HMUSIC、HSTREAM或HRECORD句柄.",
+"data type": "整数"
+   },
+   {
+"parameter name": "标志",
+"comment": "使用\"BASS_音频标志\"类和\"BASS_混合器标志\"类中的以下部分常量的组合值:\n BASS_音频标志: BASS_STREAM_AUTOFREE、BASS_SPEAKER_xxx\n BASS_混合器标志: BASS_MIXER_CHAN_BUFFER、BASS_MIXER_CHAN_DOWNMIX、BASS_MIXER_CHAN_LIMIT、\n BASS_MIXER_CHAN_MATRIX、BASS_MIXER_CHAN_NORAMPIN、BASS_MIXER_CHAN_PAUSE",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "加入通道EX",
+
+"comment": "将一条通道插入到混合器,可以选择延迟开始和限制长度.",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "混合器句柄",
+"comment": "混合器的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "通道句柄",
+"comment": "想插入到混合器的通道,可以是HMUSIC、HSTREAM或HRECORD句柄.",
+"data type": "整数"
+   },
+   {
+"parameter name": "标志",
+"comment": "使用\"BASS_音频标志\"类和\"BASS_混合器标志\"类中的以下部分常量的组合值:\n BASS_音频标志: BASS_STREAM_AUTOFREE、BASS_SPEAKER_xxx\n BASS_混合器标志: BASS_MIXER_CHAN_ABSOLUTE、BASS_MIXER_CHAN_BUFFER、BASS_MIXER_CHAN_DOWNMIX\n BASS_MIXER_CHAN_LIMIT、BASS_MIXER_CHAN_MATRIX、BASS_MIXER_CHAN_NORAMPIN、BASS_MIXER_CHAN_PAUSE",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "延迟开始",
+"comment": "进入混合器之前的延迟(单位为字节)",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "长度",
+"comment": "混合的最大数据量(单位为字节),0=无限制;\n一旦到达该值,通道将从混合器中移除.",
+"data type": "长整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "取混合器源通道",
+}"comment": "获取混合器的源通道",
+}"result comment": "成功返回通道数组中的源通道数量,失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "混合器句柄",
+"comment": "混合器的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "通道数组",
+"comment": "接收混合器源通道句柄的数组",
+"data type": "整数数组类"
+   }
+}]
+  },
+  {
+
+"method name": "取混合器",
+
+"comment": "获取通道所插入的混合器",
+
+"result comment": "成功返回混合器流的句柄,失败返回0,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道的句柄",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取混合器通道状态",
+
+"comment": "获取混合器源通道的状态,返回值请参考\"BASS_通道状态\"中的常量.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道的句柄",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置取通道标志",
+
+"comment": "修改和获取通道的标志",
+
+"result comment": "成功返回通道的新标志,失败返回-1,可以用\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道句柄,可以是HCHANNEL、HMUSIC或HSTREAM句柄.",
+"data type": "整数"
+   },
+   {
+"parameter name": "标志",
+"comment": "使用\"BASS_音频标志\"类和\"BASS_混合器标志\"类中的以下部分常量的组合值:\n BASS_音频标志: BASS_STREAM_AUTOFREE、BASS_SPEAKER_xxx\n BASS_混合器标志: BASS_MIXER_CHAN_BUFFER、BASS_MIXER_CHAN_LIMIT、BASS_MIXER_CHAN_NORAMPIN\n BASS_MIXER_CHAN_PAUSE",
+"data type": "整数"
+   },
+   {
+"parameter name": "掩码",
+"comment": "要修改的标志(如上一参数所述),未包含在此参数的标志会保持原样;\n如果将本参数设置为0,则可以用来获取通道的当前标志;\n如果要添加标志,则需要在\"标志\"和\"掩码\"参数里都有一样的标志;\n如果要移除标志,则在此参数填写要移除的标志,且确保这个标志不在\"标志参数\"中;\n要修改扬声器标志,可以在本参数中使用任意的\"BASS_SPEAKER_xxx\"标志(无需包括其所有标志).",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "删除通道",
+
+"comment": "从混合器中移除一条通道",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "要从混合器中移除的通道",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "置播放位置",
+}"comment": "设置混合器源通道的播放位置.",
+}"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "源通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "播放位置",
+"comment": "播放位置,单位由参数\"长度模式\"确定.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "位置模式",
+"comment": "位置模式,默认为字节长度,可使用\"BASS_位置类型\"中的选项之一;\n可选位或\"BASS_位置类型\"的所有标志,再额外加上\"BASS_音频标志\"的BASS_MUSIC_POSRESET、BASS_MUSIC_POSRESETEX标志,\n以及混合器的以下两个标志:\n BASS_MIXER_CHAN_NORAMPIN (0x800000) 开始播放时不淡入\n BASS_POS_MIXER_RESET (0x10000) 清空播放缓冲区",
+"data type": "整数",
+"@默认值": "BASS_位置类型.BASS_POS_BYTE"
+   }
+}]
+  },
+  {
+}"method name": "取播放位置",
+}"comment": "获取混合器源通道的播放位置",
+}"result comment": "成功返回播放位置,失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "源通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "位置模式",
+"comment": "仅支持以下两种模式:\n 0 = BASS_POS_BYTE,获取字节长度\n 1 = BASS_POS_MUSIC_ORDER,获取顺序长度(仅限MOD音乐)\n 可选位或标志 BASS_POS_DECODE",
+"data type": "整数",
+"@默认值": "BASS_位置类型.BASS_POS_BYTE"
+   }
+}]
+  },
+  {
+}"method name": "取播放位置EX",
+}"comment": "获取混合器源通道的播放位置,可选加上延迟的影响.",
+}"result comment": "成功返回播放位置,失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "源通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "位置模式",
+"comment": "仅支持以下两种模式\n 0 = BASS_POS_BYTE,获取字节长度\n 1 = BASS_POS_MUSIC_ORDER,获取顺序长度(仅限MOD音乐)\n 可选位或标志 BASS_POS_DECODE",
+"data type": "整数",
+"@默认值": "BASS_位置类型.BASS_POS_BYTE"
+   },
+   {
+"parameter name": "延迟",
+"comment": "从混合器输出到取得源通道位置的距离(单位为字节)",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+}"method name": "取通道电平",
+}"comment": "获取混合器源通道的电平级别(峰值振幅).",
+}"result comment": "失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.\n如果成功,左声道的电平在低位(低16位),右声道在高位(高16位)返回,若通道为单声道,则低位与高位重复.\n该级别的线性范围为0(无声)到32768(最大).通道暂停时将返回0.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "源通道的句柄",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取立体声电平",
+
+"comment": "获取混合器源通道的通道级别(峰值振幅),本方法用于返回立体声的左右声道电平.",
+
+"result comment": "返回是否成功",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "源通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "左声道",
+"comment": "返回左声道的电平",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "右声道",
+"comment": "返回右声道的电平",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取通道电平EX",
+
+"comment": "获取混合器源通道的电平级别(峰值振幅).",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道句柄,可以是HCHANNEL、HMUSIC、HSTREAM或HRECORD句柄.",
+"data type": "整数"
+   },
+   {
+"parameter name": "电平数据",
+"comment": "用于接收电平级别的数组",
+"data type": "单精度小数数组类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "计算电平的观察数据量,单位为秒,除解码通道外,最大值为1秒.",
+"data type": "单精度小数"
+   },
+   {
+"parameter name": "声道",
+"comment": "0=全部声道, 1=单声道, 2=立体声",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "是否RMS级别",
+"comment": "假为获取电平级别,真为获取RMS(均方根值)级别.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "应用属性",
+"comment": "为真时将当前的BASS_ATTRIB_VOL和BASS_ATTRIB_PAN值应用于电平级别中.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ }"method name": "取通道数据",
+ }"comment": "获取混合器源通道的即时样本数据(或其FFT信号)",
+ }"result comment": "失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.\n请求FFT数据时,返回从通道读取的字节数(用于执行FFT).\n请求样本数据时,将返回写入缓冲区的字节数(不一定与使用BASS_DATA_FLOAT或BBASS_DATA_FIXED标志时读取的字节数相同).\n使用BASS_DATA_AVAILABLE标志时,将返回通道缓冲区中的字节数.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "源通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "缓冲区",
+"comment": "用来接收数据的缓冲区指针;\n当句柄是录制句柄(HRECORD)时,可以为0,以丢弃从录制缓冲区请求的数据.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "长度",
+"comment": "填写要获取的数据字节数(最多268435455或0xFFFFFFF),也可以使用\"BASS_通道数据类型\"中常量的组合值.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "同步回调",
+ }"comment": "执行\"置通道同步器\",可以在本事件中处理同步回调.",
+ }"result comment": "返回值无意义",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "同步句柄",
+"comment": "同步器的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "通道句柄",
+"comment": "进行同步的通道",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "与同步类型关联的其他数据",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "置通道同步器",
+}"comment": "在混合器源通道上设置同步器,可以在接收事件\"同步回调\"中处理同步操作.",
+}"result comment": "成功返回同步句柄,失败返回0,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "源通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "同步类型",
+"comment": "同步的类型,为\"BASS_同步类型\"中常量的组合值.",
+"data type": "整数"
+   },
+   {
+"parameter name": "同步参数",
+"comment": "设置同步参数. 参数值取决于同步类型,详细请看\"BASS_同步类型\"的常量备注.",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+}"method name": "移除通道同步器",
+}"comment": "从混合器源通道上移除同步器",
+}"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "源通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "同步句柄",
+"comment": "欲移除的同步句柄",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "置通道矩阵",
+
+"comment": "设置通道的混合矩阵",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "矩阵",
+"comment": "矩阵,为二维单精度小数数组.",
+"data type": "单精度小数 [][]"
+   }
+
+]
+  },
+  {
+}"method name": "置通道矩阵EX",
+}"comment": "设置通道的混合矩阵,从当前矩阵转换.",
+}"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "矩阵",
+"comment": "矩阵,为二维单精度小数数组.",
+"data type": "单精度小数 [][]"
+   },
+   {
+"parameter name": "时间",
+"comment": "从当前矩阵转换到指定矩阵所需的时间(秒)",
+"data type": "单精度小数"
+   }
+}]
+  },
+  {
+}"method name": "取通道矩阵",
+}"comment": "获取存在的通道的混合矩阵",
+}"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "矩阵",
+"comment": "返回的矩阵,为二维单精度小数数组.",
+"data type": "单精度小数 [][]"
+   }
+}]
+  },
+  {
+comment": "同步的类型,为\"BASS_同步类型\"中常量的组合值.""method name": "置通道包络线",
+comment": "同步的类型,为\"BASS_同步类型\"中常量的组合值.""comment": "设置包络线以在一个周期时间内修改通道的采样率、音量或声像.",
+comment": "同步的类型,为\"BASS_同步类型\"中常量的组合值.""result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+comment": "同步的类型,为\"BASS_同步类型\"中常量的组合值.""data type": "逻辑型",
+comment": "同步的类型,为\"BASS_同步类型\"中常量的组合值.""@嵌入式方法": "\"\"",
+comment": "同步的类型,为\"BASS_同步类型\"中常量的组合值.""parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "类型",
+"comment": "要使用包络线修改的属性(请直接填左边的数值),为下列选项之一:\n 1 BASS_MIXER_ENV_FREQ  采样率\n 2 BASS_MIXER_ENV_VOL   音量\n 3 BASS_MIXER_ENV_PAN   声像\n 可选标志(请与选项位或):\n 0x10000 BASS_MIXER_ENV_LOOP   循环包络线\n 0x20000 BASS_MIXER_ENV_REMOVE 到达包络线的结尾时从混合器移除源通道",
+"data type": "整数"
+   },
+   {
+"parameter name": "节点数组",
+"comment": "包络线节点的数组,应具有序列位置.",
+"data type": "BASS_MIXER_节点数组"
+   }
+comment": "同步的类型,为\"BASS_同步类型\"中常量的组合值."]
+  },
+  {
+"method name": "置通道包络线位置",
+"comment": "设置通道包络线的当前位置",
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "类型",
+"comment": "要设置位置的包络线属性(请直接填左边的数值),为下列选项之一:\n 1 BASS_MIXER_ENV_FREQ  采样率\n 2 BASS_MIXER_ENV_VOL   音量\n 3 BASS_MIXER_ENV_PAN   声像",
+"data type": "整数"
+   },
+   {
+"parameter name": "位置",
+"comment": "新包络线位置,单位为字节;\n如果超出包络线末端,则包络线将被封顶或循环,具体取决于包络线是否启用了循环.",
+"data type": "长整数"
+   }
+]
+  },
+  {
+
+"method name": "取通道包络线位置",
+
+"comment": "获取通道包络线的当前位置和值",
+
+"result comment": "成功返回包络线的位置,失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "类型",
+"comment": "要设置位置的包络线属性(请直接填左边的数值),为下列选项之一:\n 1 BASS_MIXER_ENV_FREQ  采样率\n 2 BASS_MIXER_ENV_VOL   音量\n 3 BASS_MIXER_ENV_PAN   声像",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "返回包络线当前位置的值",
+"data type": "单精度小数类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+"method name": "创建分离流",
+"comment": "创建一条分离流.\n此源通道可以随时插入或移除其他流,因此没有预定长度,不能\"取通道长度\",除了位置0之外,不能移动到其他位置.",
+"result comment": "成功返回流句柄,失败返回0,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "要分离的通道句柄,可以是HMUSIC、HSTREAM或HRECORD句柄.",
+"data type": "整数"
+   },
+   {
+"parameter name": "标志",
+"comment": "使用\"BASS_音频标志\"类中的以下部分常量和\"BASS_分离标志\"类的所有标志的组合值;\n BASS_音频标志: BASS_SAMPLE_SOFTWARE、BASS_SAMPLE_3D、BASS_SAMPLE_FX、BASS_STREAM_AUTOFREE\n BASS_STREAM_DECODE、BASS_SPEAKER_xxx",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "通道映射",
+"comment": "通道映射,指向通道索引数组(0=第一个,-1=数组末尾)的指针,空对象=一比一映射整个源",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+"method name": "取分离流源通道",
+"comment": "获取分离流的源通道",
+"result comment": "成功返回源通道的句柄,失败返回0,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "分离流句柄",
+"comment": "分离流的句柄",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取分离流",
+"comment": "获取通道所有的分离流",
+"result comment": "成功返回分离流数组的成员数,失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "通道句柄,可以是HMUSIC、HSTREAM或HRECORD句柄.",
+"data type": "整数"
+   },
+   {
+"parameter name": "分离流数组",
+"comment": "返回分离流的句柄数组",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+
+"method name": "重置分离流",
+
+"comment": "重置源通道的一个分离流或所有分离流",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "流句柄",
+"comment": "分离流或源通道的句柄",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "重置分离流EX",
+
+"comment": "重置分离流,并设置它在源缓冲区的位置.",
+
+"result comment": "返回是否成功. 如果失败,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "分离流句柄",
+"comment": "分离流的句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "偏移",
+"comment": "在源缓冲区中放置分离器的距离(单位为字节).",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取分离流可用缓冲区",
+
+"comment": "获取分流器可用的缓冲大小,或分流器源缓冲区中的数据量.",
+
+"result comment": "返回数据量(单位为字节),失败返回-1,可以用BASS音频库的\"取错误代码\"或\"取错误描述\"获取具体的错误信息.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "流句柄",
+"comment": "分离流或源通道的句柄",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "音频标签类",
+"comment": "TAGS Version 19\n发布日期: 2023-09-15\nBASS音频库对读取流标签的支持有限.本库扩展了该功能,允许开发人员/用户从BASS的流句柄中提取指定的歌曲信息，\n并根据的格式文本(包括条件处理),将提取的标签值输出为格式化为文本. 本类非线程安全.\n支持的标签格式:\n  MP3 ID3v1 and ID3v2.2/3/4\n  OGG/FLAC comments\n  WMA\n  APE, OFR, MPC, AAC - all use APE tags\n  MP4\n  WAV/etc RIFF INFO\n  MOD/etc titles",
+"@视窗.附属文件": "\"BASS\\\\$(p)\\\\tags.dll\"",
+"@文档": "\"category = \\\"BASS扩展\\\"\"",
+"@强制依赖": "\"BASS音频类\"",
+"methods": [
+  {
+
+"method name": "加载动态库",
+
+"comment": "程序默认在执行本类的函数时加载与程序文件同位置的DLL文件.\n如果你想将DLL放在其他位置,请在执行其他方法前调用本方法手动加载.\n注意: 请尽量在启动方法中加载.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "动态库路径",
+"comment": "tags.dll的路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "卸载动态库",
+
+"comment": "手动卸载动态库,一般不需要执行本方法.",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "取版本",
+ }"comment": "获取TAGS的版本值",
+ }"result comment": "返回值的高8位是当前版本,低8位是编译版本",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "取标签",
+}"@嵌入式方法": "\"\"""comment": "获取BASS通道句柄中的标签值",
+}"@嵌入式方法": "\"\"""result comment": "成功返回格式化的标签文本.\n无法正确读取标签或遇到不支持的标签时,返回空文本.",
+}"@嵌入式方法": "\"\"""static": true,
+}"@嵌入式方法": "\"\"""data type": "文本型",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "BASS的通道句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "格式文本",
+"comment": "格式文本(支持条件判断):\n - 纯文本,如\"一些歌曲\". 此类文本仅复制到输出.\n - 特殊标识符,以\"%\"开头以替换标签值:\n   \"%TITL\" - 标题;\n   \"%ARTI\" - 艺术家;\n   \"%ALBM\" - 专辑;\n   \"%GNRE\" - 流派;\n   \"%YEAR\" - 日期;\n   \"%CMNT\" - 注释;\n   \"%TRCK\" - 音轨号(可能包含合计音轨,如\"track/total\");\n   \"%COMP\" - 作曲家;\n   \"%COPY\" - 版权;\n   \"%SUBT\" - 副标题;\n   \"%AART\" - 专辑歌手;\n   \"%DISC\" - 碟片编号(可能包含合计碟片,\"disc/total\");\n   \"%PUBL\" - 出版商;\n\n - 表达式:\n   \"%IFV1(x,a)\" - 如果x不为空,则等于a,否则为空文本;\n   \"%IFV2(x,a,b)\" - 如果x不为空,则等于a,否则为b;\n   \"%IUPC(x)\" - 使x大写,例如\"%IUPC(foO)\"为\"FOO\";\n   \"%ILWC(x)\" - 使x小写,例如\"%ILWC(fOO)\"为\"foo\";\n   \"%ICAP(x)\" - 将x每个单词的首字母大写,例如\"%ICAP(FoO bAR)\"为\"Foo Bar\";\n   \"%ITRM(x)\" - 删除x的首尾空格;\n\n - 转义符号:\n   \"%%\" - \"%\"\n   \"%(\" - \"(\"\n   \"%,\" - \",\"\n   \"%)\" - \")\"",
+"data type": "文本型",
+"@默认值": "\"%IFV1(%TRCK,%TRCK. )%IFV2(%ARTI,%ARTI,无艺术家) - %IFV2(%TITL,%TITL -,无标题 -) %IFV1(%ALBM,%ALBM)\""
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "取标签信息",
+
+"comment": "获取BASS通道句柄中的标签值,为\"取标签\"的二次封装",
+
+"result comment": "返回是否成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "BASS的通道句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "标签信息",
+"comment": "返回标签信息",
+"data type": "音频标签信息类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取标签EX",
+
+"comment": "获取BASS通道句柄中的标签值",
+
+"result comment": "成功返回格式化的标签文本.\n无法正确读取标签或遇到不支持的标签时,返回空文本.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer_u8 = true\"",
+
+"parameters": [
+   {
+"parameter name": "通道句柄",
+"comment": "BASS的通道句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "格式文本",
+"comment": "格式文本(支持条件判断):\n - 纯文本,如\"一些歌曲\". 此类文本仅复制到输出.\n - 特殊标识符,以\"%\"开头以替换标签值:\n   \"%TITL\" - 标题;\n   \"%ARTI\" - 艺术家;\n   \"%ALBM\" - 专辑;\n   \"%GNRE\" - 流派;\n   \"%YEAR\" - 日期;\n   \"%CMNT\" - 注释;\n   \"%TRCK\" - 音轨号(可能包含合计音轨,如\"track/total\");\n   \"%COMP\" - 作曲家;\n   \"%COPY\" - 版权;\n   \"%SUBT\" - 副标题;\n   \"%AART\" - 专辑歌手;\n   \"%DISC\" - 碟片编号(可能包含合计碟片,\"disc/total\");\n   \"%PUBL\" - 出版商;\n\n - 表达式:\n   \"%IFV1(x,a)\" - 如果x不为空,则等于a,否则为空文本;\n   \"%IFV2(x,a,b)\" - 如果x不为空,则等于a,否则为b;\n   \"%IUPC(x)\" - 使x大写,例如\"%IUPC(foO)\"为\"FOO\";\n   \"%ILWC(x)\" - 使x小写,例如\"%ILWC(fOO)\"为\"foo\";\n   \"%ICAP(x)\" - 将x每个单词的首字母大写,例如\"%ICAP(FoO bAR)\"为\"Foo Bar\";\n   \"%ITRM(x)\" - 删除x的首尾空格;\n\n - 转义符号:\n   \"%%\" - \"%\"\n   \"%(\" - \"(\"\n   \"%,\" - \",\"\n   \"%)\" - \")\"",
+"data type": "文本型",
+"@默认值": "\"%IFV1(%TRCK,%TRCK. )%IFV2(%ARTI,%ARTI,无艺术家) - %IFV2(%TITL,%TITL -,无标题 -) %IFV1(%ALBM,%ALBM)\""
+   },
+   {
+"parameter name": "标签类型",
+"comment": "获取指定的标签类型,为\"BASS_标签类型\"类的选项之一,-1=所有标签类型.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "代码页",
+"comment": "0为使用系统默认代码页,如果提供的代码页无效,将自动设置为 1252 (Latin 1).\nANSI代码页标识符请参阅:\nhttps://docs.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers?redirectedfrom=MSDN",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "取错误描述",
+
+"comment": "获取最近一次错误的描述",
+
+"result comment": "返回错误的描述文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  }
+]
+ },
+ {
+"class name": "音频标签信息类",
+"comment": "\"音频标签类.取标签信息\"返回的数据类型",
+"base class": "扩展对象类",
+"@文档": "\"category = \\\"BASS扩展.辅助类\\\"\"",
+"variables": [
+  {
+标签类.取标签信息\"返回的数据类型"variable name": "标题",
+标签类.取标签信息\"返回的数据类型"data type": "文本型"
+  },
+  {
+
+"variable name": "艺术家",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "专辑",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "流派",
+
+"data type": "文本型"
+  },
+  {
+}"variable name": "日期",
+}"data type": "文本型"
+  },
+  {
+riable name": "日期""variable name": "注释",
+riable name": "日期""data type": "文本型"
+  },
+  {
+iable name": "日期""data type": "文本型""variable name": "音轨号",
+iable name": "日期""data type": "文本型""data type": "文本型"
+  },
+  {
+}"variable name": "作曲家",
+}"data type": "文本型"
+  },
+  {
+}"variable name": "版权",
+}"data type": "文本型"
+  },
+  {
+}"variable name": "副标题",
+}"data type": "文本型"
+  },
+  {
+
+"variable name": "专辑歌手",
+
+"data type": "文本型"
+  },
+  {
+}"variable name": "碟片编号",
+}"data type": "文本型"
+  },
+  {
+
+"variable name": "出版商",
+
+"data type": "文本型"
+  }
+],
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "BASS_WASAPI_信息",
+"comment": "\"BASS_WASAPI类::取信息/BASS_WASAPI_GetInfo\"返回的信息",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"WASAPI支持.辅助类\\\"\"",
+"@别名": "\"BASS_WASAPI_INFO\"",
+"@模板实现类": "\"BASS_WASAPI_信息\"",
+"variables": [
+  {
+"variable name": "初始化标志",
+"comment": "设备初始化时设置的标志",
+"data type": "整数",
+"@输出名": "\"initflags\""
+  },
+  {
+"variable name": "采样率",
+"comment": "采样率",
+"data type": "整数",
+"@输出名": "\"freq\""
+  },
+  {
+
+"variable name": "声道数",
+
+"comment": "声道数量,1=单声道,2=立体声,以此类推.",
+
+"data type": "整数",
+
+"@输出名": "\"chans\""
+  },
+  {
+
+"variable name": "格式",
+
+"comment": "设备的采样格式,为以下的选项之一:\n1 BASS_WASAPI_FORMAT_8BIT  8位整数.\n2 BASS_WASAPI_FORMAT_16BIT 16位整数.\n3 BASS_WASAPI_FORMAT_24BIT 24位整数.\n4 BASS_WASAPI_FORMAT_32BIT 32位整数.\n5 BASS_WASAPI_FORMAT_FLOAT 32位浮点数.",
+
+"data type": "整数",
+
+"@输出名": "\"format\""
+  },
+  {
+
+"variable name": "缓存长度",
+
+"comment": "缓冲区的字节大小",
+
+"data type": "整数",
+
+"@输出名": "\"buflen\""
+  },
+  {
+
+"variable name": "最大音量",
+
+"comment": "音量的最大值(单位为dB)",
+
+"data type": "单精度小数",
+
+"@输出名": "\"volmax\""
+  },
+  {
+
+"variable name": "最小音量",
+
+"comment": "音量的最小值(单位为dB)",
+
+"data type": "单精度小数",
+
+"@输出名": "\"volmin\""
+  },
+  {
+
+"variable name": "音量步进",
+
+"comment": "音量的步进值(单位为dB)",
+
+"data type": "单精度小数",
+
+"@输出名": "\"volstep\""
+  }
+],
+"methods": [
+  {
+}"method name": "取展示内容",
+}"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "BASS_WASAPI_信息"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "BASS_WASAPI_设备信息",
+"comment": "\"BASS_WASAPI类::取设备信息/BASS_WASAPI_GetDeviceInfo\"返回的信息",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"WASAPI支持.辅助类\\\"\"",
+"@别名": "\"BASS_WASAPI_DEVICEINFO\"",
+"@模板实现类": "\"BASS_WASAPI_设备信息\"",
+"variables": [
+  {
+
+"variable name": "设备类型",
+
+"comment": "为\"BASS_WASAPI_设备类型\"的选项之一",
+
+"data type": "整数",
+
+"@输出名": "\"type\""
+  },
+  {
+
+"variable name": "标志",
+
+"comment": "设备的当前和输入/输出状态,为以下标志的组合值:\n 1 BASS_DEVICE_ENABLED   此设备已启用并准备好,若不存在此标志,则无法初始化设备.\n 2 BASS_DEVICE_DEFAULT   此设备为系统默认设备\n 4 BASS_DEVICE_INIT      此设备已经被初始化,即已调用\"初始化\"方法.\n 8 BASS_DEVICE_LOOPBACK  此设备为环回输入设备;它从输出设备捕获声音.\n16 BASS_DEVICE_INPUT     此设备为录制设备,否则为输出设备.\n32 BASS_DEVICE_UNPLUGGED 此设备未插入音频线. 仅适用于具有插孔存在检测的设备.\n64 BASS_DEVICE_DISABLED  此设备已经在声音控制面板中被禁用.",
+
+"data type": "整数",
+
+"@输出名": "\"flags\""
+  },
+  {
+
+"variable name": "最小周期",
+
+"comment": "最短更新周期(单位为秒)",
+
+"data type": "小数",
+
+"@输出名": "\"minperiod\""
+  },
+  {
+"@输出名": "\"minperiod\"""variable name": "默认周期",
+"@输出名": "\"minperiod\"""comment": "默认更新周期(单位为秒)",
+"@输出名": "\"minperiod\"""data type": "小数",
+"@输出名": "\"minperiod\"""@输出名": "\"defperiod\""
+  },
+  {
+
+"variable name": "最低采样率",
+
+"comment": "共享模式下的采样率",
+
+"data type": "整数",
+
+"@输出名": "\"mixfreq\""
+  },
+  {
+
+"variable name": "最低声道",
+
+"comment": "共享模式下的声道数",
+
+"data type": "整数",
+
+"@输出名": "\"mixchans\""
+  }
+],
+"methods": [
+  {
+methods": [
+"method name": "名称",
+methods": [
+"comment": "设备描述",
+methods": [
+"static": true,
+methods": [
+"type": "property getter",
+methods": [
+"data type": "文本型",
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "BASS_WASAPI_设备信息"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "驱动ID",
+
+"comment": "驱动程序的识别ID",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "BASS_WASAPI_设备信息"
+   }
+
+]
+  },
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "BASS_WASAPI_设备信息"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "BASS_WASAPI_设备信息数组",
+"comment": "\"BASS_WASAPI类::取所有设备信息\"返回的信息数组",
+"base class": "PIV数组模板",
+"@文档": "\"category = \\\"BASS扩展.辅助类\\\"\"",
+"@模板实现类": "\"BASS_WASAPI_设备信息\""
+ },
+ {
+"class name": "BASS_WASAPI_标志",
+"comment": "BASS_WASAPI类",
+"@文档": "\"category = \\\"WASAPI支持.常量\\\"\"",
+"constants": [
+  {
+SS_WASAPI_设备信息\""constant name": "BASS_WASAPI_EXCLUSIVE",
+SS_WASAPI_设备信息\""comment": "在独占模式下初始化设备,否则在共享模式下初始化.\n其高16位值——使用MAKELONG(标志,格式),可用于限制在独占模式下使用的采样格式.\n默认情况下,将按顺序尝试32位浮点、32位整数、24位整数、16位整数、8位整数.\nBASS_WASAPI_FORMAT(请参阅\"BASS_WASAPI_信息\")可用于绕过该顺序中其前面的格式. 独占模式在环回设备上不可用.",
+SS_WASAPI_设备信息\""data type": "整数",
+SS_WASAPI_设备信息\""initial value": "@BASS_WASAPI_EXCLUSIVE"
+  },
+  {
+S_WASAPI_设备信息\""initial value": "@BASS_WASAPI_EXCLUSIVE""constant name": "BASS_WASAPI_AUTOFORMAT",
+S_WASAPI_设备信息\""initial value": "@BASS_WASAPI_EXCLUSIVE""comment": "如果不支持指定的格式,则自动选择其他采样格式.\n如果可能,将使用比\"采样率\"参数更高的采样率,而不是更低的.",
+S_WASAPI_设备信息\""initial value": "@BASS_WASAPI_EXCLUSIVE""data type": "整数",
+S_WASAPI_设备信息\""initial value": "@BASS_WASAPI_EXCLUSIVE""initial value": "@BASS_WASAPI_AUTOFORMAT"
+  },
+  {
+
+"constant name": "BASS_WASAPI_BUFFER",
+
+"comment": "启用双缓冲,供BASS_WASAPI_GetData和BASS_WASAPI_GetLevel和BASS_WASAPI_GetLevelEx使用.\n这需要初始化\"BASS音频库\".",
+
+"data type": "整数",
+
+"initial value": "@BASS_WASAPI_BUFFER"
+  },
+  {
+_WASAPI_BUFFER"constant name": "BASS_WASAPI_EVENT",
+_WASAPI_BUFFER"comment": "启用事件驱动缓冲.\nBASSWASAPI通常会根据\"周期\"参数定期在设备的缓冲区写入或读取数据,但在事件驱动系统中,当缓冲区有更多应该写入或读取的数据时,WASAPI会向BASSWASAPI发出信号.\n因此周期参数被忽略,缓冲区也处于共享模式,因为系统将选择适当的缓冲区长度.\n在独占模式下,有两个缓冲区长度的缓冲区交替处理. 事件驱动缓冲在环回设备上不可用.",
+_WASAPI_BUFFER"data type": "整数",
+_WASAPI_BUFFER"initial value": "@BASS_WASAPI_EVENT"
+  },
+  {
+}"constant name": "BASS_WASAPI_SAMPLES",
+}"comment": "缓冲区和周期以样本而不是秒为单位.",
+}"data type": "整数",
+}"initial value": "@BASS_WASAPI_SAMPLES"
+  },
+  {
+"data type": "整数""constant name": "BASS_WASAPI_DITHER",
+"data type": "整数""comment": "将浮点采样数据转换为设备格式时应用抖动(TPDF).此标志仅用于独占模式输出.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@BASS_WASAPI_DITHER"
+  },
+  {
+S_WASAPI_DITHER"constant name": "BASS_WASAPI_RAW",
+S_WASAPI_DITHER"comment": "请求原生模式,绕过设备上启用的任何声音增强功能. 仅在Windows 8.1及更高版本上可用.",
+S_WASAPI_DITHER"data type": "整数",
+S_WASAPI_DITHER"initial value": "@BASS_WASAPI_RAW"
+  },
+  {
+S_WASAPI_RAW"constant name": "BASS_WASAPI_ASYNC",
+S_WASAPI_RAW"comment": "异步调用回调函数. 仅适用于事件驱动的独占模式输出,否则将被忽略.\n启用时,将提前异步填充缓冲区,以降低了欠载的几率,但也会将延迟增加一个缓冲区长度.\n如果确实发生欠载,仍会向设备发送静默缓冲区(而不是无缓冲区),这可以防止某些设备在欠载后出现声音故障.",
+S_WASAPI_RAW"data type": "整数",
+S_WASAPI_RAW"initial value": "@BASS_WASAPI_ASYNC"
+  },
+  {
+S_WASAPI_RAW"constant name": "BASS_WASAPI_CATEGORY_MASK",
+S_WASAPI_RAW"comment": "掩码. 用来检查WASAPI的类别,将标志的组合值与\"BASS_WASAPI_CATEGORY_MASK\"位与,即可得到WASAPI的类别的标志.",
+S_WASAPI_RAW"data type": "整数",
+S_WASAPI_RAW"initial value": "@BASS_WASAPI_CATEGORY_MASK"
+  },
+  {
+_WASAPI_RAW"data type": "整数""constant name": "BASS_WASAPI_CATEGORY_OTHER",
+_WASAPI_RAW"data type": "整数""comment": "其他的音频流.",
+_WASAPI_RAW"data type": "整数""data type": "整数",
+_WASAPI_RAW"data type": "整数""initial value": "@BASS_WASAPI_CATEGORY_OTHER"
+  },
+  {
+}"constant name": "BASS_WASAPI_CATEGORY_FOREGROUNDONLYMEDIA",
+}"comment": "仅前景音频",
+}"data type": "整数",
+}"initial value": "@BASS_WASAPI_CATEGORY_FOREGROUNDONLYMEDIA"
+  },
+  {
+
+"constant name": "BASS_WASAPI_CATEGORY_BACKGROUNDCAPABLEMEDIA",
+
+"comment": "仅背景音频",
+
+"data type": "整数",
+
+"initial value": "@BASS_WASAPI_CATEGORY_BACKGROUNDCAPABLEMEDIA"
+  },
+  {
+
+"constant name": "BASS_WASAPI_CATEGORY_COMMUNICATIONS",
+
+"comment": "实时通信,如VOIP或语音聊天.",
+
+"data type": "整数",
+
+"initial value": "@BASS_WASAPI_CATEGORY_COMMUNICATIONS"
+  },
+  {
+
+"constant name": "BASS_WASAPI_CATEGORY_ALERTS",
+
+"comment": "报警声. 仅用于输出设备.",
+
+"data type": "整数",
+
+"initial value": "@BASS_WASAPI_CATEGORY_ALERTS"
+  },
+  {
+"initial value": "@BASS_WASAPI_CATEGORY_ALERTS""constant name": "BASS_WASAPI_CATEGORY_SOUNDEFFECTS",
+"initial value": "@BASS_WASAPI_CATEGORY_ALERTS""comment": "声音效果. 仅用于输出设备.",
+"initial value": "@BASS_WASAPI_CATEGORY_ALERTS""data type": "整数",
+"initial value": "@BASS_WASAPI_CATEGORY_ALERTS""initial value": "@BASS_WASAPI_CATEGORY_SOUNDEFFECTS"
+  },
+  {
+
+"constant name": "BASS_WASAPI_CATEGORY_GAMEEFFECTS",
+
+"comment": "游戏音效. 仅用于输出设备.",
+
+"data type": "整数",
+
+"initial value": "@BASS_WASAPI_CATEGORY_GAMEEFFECTS"
+  },
+  {
+initial value": "@BASS_WASAPI_CATEGORY_ALERTS""initial value": "@BASS_WASAPI_CATEGORY_SOUNDEFFECTS""constant name": "BASS_WASAPI_CATEGORY_GAMEMEDIA",
+initial value": "@BASS_WASAPI_CATEGORY_ALERTS""initial value": "@BASS_WASAPI_CATEGORY_SOUNDEFFECTS""comment": "游戏背景音频. 仅用于输出设备.",
+initial value": "@BASS_WASAPI_CATEGORY_ALERTS""initial value": "@BASS_WASAPI_CATEGORY_SOUNDEFFECTS""data type": "整数",
+initial value": "@BASS_WASAPI_CATEGORY_ALERTS""initial value": "@BASS_WASAPI_CATEGORY_SOUNDEFFECTS""initial value": "@BASS_WASAPI_CATEGORY_GAMEMEDIA"
+  },
+  {
+音频. 仅用于输出设备."constant name": "BASS_WASAPI_CATEGORY_GAMECHAT",
+音频. 仅用于输出设备."comment": "游戏语音聊天. 与实时通信类似,但这个不会减弱其他流的音量. 仅用于输出设备.",
+音频. 仅用于输出设备."data type": "整数",
+音频. 仅用于输出设备."initial value": "@BASS_WASAPI_CATEGORY_GAMECHAT"
+  },
+  {
+}"constant name": "BASS_WASAPI_CATEGORY_SPEECH",
+}"comment": "说话.",
+}"data type": "整数",
+}"initial value": "@BASS_WASAPI_CATEGORY_SPEECH"
+  },
+  {
+"initial value": "@BASS_WASAPI_CATEGORY_SPEECH""constant name": "BASS_WASAPI_CATEGORY_MOVIE",
+"initial value": "@BASS_WASAPI_CATEGORY_SPEECH""comment": "包含音频和对话的流. 仅用于输出设备.",
+"initial value": "@BASS_WASAPI_CATEGORY_SPEECH""data type": "整数",
+"initial value": "@BASS_WASAPI_CATEGORY_SPEECH""initial value": "@BASS_WASAPI_CATEGORY_MOVIE"
+  },
+  {
+initial value": "@BASS_WASAPI_CATEGORY_SPEECH""data type": "整数""constant name": "BASS_WASAPI_CATEGORY_MEDIA",
+initial value": "@BASS_WASAPI_CATEGORY_SPEECH""data type": "整数""comment": "包含音频而不包含对话的流. 仅用于输出设备.",
+initial value": "@BASS_WASAPI_CATEGORY_SPEECH""data type": "整数""data type": "整数",
+initial value": "@BASS_WASAPI_CATEGORY_SPEECH""data type": "整数""initial value": "@BASS_WASAPI_CATEGORY_MEDIA"
+  }
+]
+ },
+ {
+"class name": "BASS_WASAPI_设备类型",
+"comment": "BASS_WASAPI类",
+"@文档": "\"category = \\\"WASAPI支持.常量\\\"\"",
+"constants": [
+  {
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""constant name": "BASS_WASAPI_TYPE_NETWORKDEVICE",
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""comment": "通过网络远程访问的音频终端设备",
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""data type": "整数",
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""initial value": "@BASS_WASAPI_TYPE_NETWORKDEVICE"
+  },
+  {
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""constant name": "BASS_WASAPI_TYPE_SPEAKERS",
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""comment": "扬声器",
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""data type": "整数",
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""initial value": "@BASS_WASAPI_TYPE_SPEAKERS"
+  },
+  {
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""constant name": "BASS_WASAPI_TYPE_LINELEVEL",
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""comment": "线路输出. 向音频解码器上的线路输入插孔发送线路电平模拟信号,或从解码器上的线路输出插孔接收线路电平模拟信号",
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""data type": "整数",
+@文档": "\"category = \\\"WASAPI支持.常量\\\"\"""initial value": "@BASS_WASAPI_TYPE_LINELEVEL"
+  },
+  {
+}"constant name": "BASS_WASAPI_TYPE_HEADPHONES",
+}"comment": "耳机",
+}"data type": "整数",
+}"initial value": "@BASS_WASAPI_TYPE_HEADPHONES"
+  },
+  {
+
+"constant name": "BASS_WASAPI_TYPE_MICROPHONE",
+
+"comment": "麦克风",
+
+"data type": "整数",
+
+"initial value": "@BASS_WASAPI_TYPE_MICROPHONE"
+  },
+  {
+"data type": "整数""constant name": "BASS_WASAPI_TYPE_HEADSET",
+"data type": "整数""comment": "一个头戴式耳机或一对耳机，带有用于双向通信的话筒",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@BASS_WASAPI_TYPE_HEADSET"
+  },
+  {
+"data type": "整数""constant name": "BASS_WASAPI_TYPE_HANDSET",
+"data type": "整数""comment": "电话听筒,手机的一部分,包括一个扬声器和一个用于双向通信的麦克风",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@BASS_WASAPI_TYPE_HANDSET"
+  },
+  {
+"data type": "整数""constant name": "BASS_WASAPI_TYPE_DIGITAL",
+"data type": "整数""comment": "数字接口. 通过未知类型的数字线缆连接到其他音频解码器",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@BASS_WASAPI_TYPE_DIGITAL"
+  },
+  {
+}"constant name": "BASS_WASAPI_TYPE_SPDIF",
+}"comment": "通过Sony/Philips数字接口(S/PDIF)线缆连接到音频解码器的音频终端设备",
+}"data type": "整数",
+}"initial value": "@BASS_WASAPI_TYPE_SPDIF"
+  },
+  {
+
+"constant name": "BASS_WASAPI_TYPE_HDMI",
+
+"comment": "HDMI接口. 通过HDMI线缆连接到其他音频解码器的音频终端设备",
+
+"data type": "整数",
+
+"initial value": "@BASS_WASAPI_TYPE_HDMI"
+  },
+  {
+data type": "整数""initial value": "@BASS_WASAPI_TYPE_HEADSET""constant name": "BASS_WASAPI_TYPE_UNKNOWN",
+data type": "整数""initial value": "@BASS_WASAPI_TYPE_HEADSET""comment": "未知类型",
+data type": "整数""initial value": "@BASS_WASAPI_TYPE_HEADSET""data type": "整数",
+data type": "整数""initial value": "@BASS_WASAPI_TYPE_HEADSET""initial value": "@BASS_WASAPI_TYPE_UNKNOWN"
+  }
+]
+ },
+ {
+"class name": "BASS_ASIO_信息",
+"comment": "\"BASS_ASIO类::取信息/BASS_ASIO_GetInfo\"返回的信息",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"WASAPI支持.辅助类\\\"\"",
+"@别名": "\"BASS_ASIO_INFO\"",
+"@别名类型": "本地结构",
+"@模板实现类": "\"BASS_ASIO_信息\"",
+"variables": [
+  {
+variables": [
+"variable name": "版本",
+variables": [
+"comment": "设备的版本",
+variables": [
+"data type": "整数",
+variables": [
+"@输出名": "\"version\""
+  },
+  {
+
+"variable name": "输入通道数",
+
+"comment": "可用的输入通道数",
+
+"data type": "整数",
+
+"@输出名": "\"inputs\""
+  },
+  {
+
+"variable name": "输出通道数",
+
+"comment": "可用的输出通道数",
+
+"data type": "整数",
+
+"@输出名": "\"outputs\""
+  },
+  {
+"@输出名": "\"outputs\"""variable name": "最小缓存",
+"@输出名": "\"outputs\"""comment": "最小缓冲区长度,以采样为单位.",
+"@输出名": "\"outputs\"""data type": "整数",
+"@输出名": "\"outputs\"""@输出名": "\"bufmin\""
+  },
+  {
+"@输出名": "\"outputs\"""variable name": "最大缓存",
+"@输出名": "\"outputs\"""comment": "最大缓冲区长度,以采样为单位.",
+"@输出名": "\"outputs\"""data type": "整数",
+"@输出名": "\"outputs\"""@输出名": "\"bufmax\""
+  },
+  {
+"@输出名": "\"outputs\"""variable name": "默认缓存",
+"@输出名": "\"outputs\"""comment": "首选/默认缓冲区长度,以采样为单位.",
+"@输出名": "\"outputs\"""data type": "整数",
+"@输出名": "\"outputs\"""@输出名": "\"bufpref\""
+  },
+  {
+}"variable name": "缓存粒度",
+}"comment": "缓冲区长度的例子,-1等于以两倍的粒度增加缓冲区长度.",
+}"data type": "整数",
+}"@输出名": "\"bufgran\""
+  },
+  {
+}"variable name": "初始标志",
+}"comment": "调用\"初始化\"时提供的标志",
+}"data type": "整数",
+}"@输出名": "\"initflags\""
+  }
+],
+"methods": [
+  {
+
+"method name": "名称",
+
+"comment": "设备或驱动程序的名称",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "BASS_ASIO_信息"
+   }
+
+]
+  },
+  {
+ }"method name": "取展示内容",
+ }"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "BASS_ASIO_信息"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "BASS_ASIO_设备信息",
+"comment": "\"BASS_ASIO类::取设备信息/BASS_ASIO_GetDeviceInfo\"返回的信息",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"ASIO支持.辅助类\\\"\"",
+"@别名": "\"BASS_ASIO_DEVICEINFO\"",
+"@模板实现类": "\"BASS_ASIO_设备信息\"",
+"methods": [
+  {
+@模板实现类": "\"BASS_ASIO_设备信息\"""method name": "名称",
+@模板实现类": "\"BASS_ASIO_设备信息\"""comment": "设备描述",
+@模板实现类": "\"BASS_ASIO_设备信息\"""static": true,
+@模板实现类": "\"BASS_ASIO_设备信息\"""type": "property getter",
+@模板实现类": "\"BASS_ASIO_设备信息\"""data type": "文本型",
+@模板实现类": "\"BASS_ASIO_设备信息\"""@嵌入式方法": "\"\"",
+@模板实现类": "\"BASS_ASIO_设备信息\"""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "BASS_ASIO_设备信息"
+   }
+@模板实现类": "\"BASS_ASIO_设备信息\""]
+  },
+  {
+
+"method name": "驱动文件名",
+
+"comment": "驱动程序的文件名",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "BASS_ASIO_设备信息"
+   }
+
+]
+  },
+  {
+}"method name": "取展示内容",
+}"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "BASS_ASIO_设备信息"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "BASS_ASIO_设备信息数组",
+"comment": "\"BASS_ASIO类::取所有设备信息\"返回的信息数组",
+"base class": "PIV数组模板",
+"@文档": "\"category = \\\"ASIO支持.辅助类\\\"\"",
+"@模板实现类": "\"BASS_ASIO_设备信息\""
+ },
+ {
+"class name": "BASS_ASIO_通道信息",
+"comment": "\"BASS_ASIO类::取通道信息/BASS_ASIO_ChannelGetInfo\"返回的信息",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"ASIO支持.辅助类\\\"\"",
+"@别名": "\"BASS_ASIO_CHANNELINFO\"",
+"@模板实现类": "\"BASS_ASIO_通道信息\"",
+"variables": [
+  {
+
+"variable name": "群组",
+
+"comment": "通道的群组",
+
+"data type": "整数",
+
+"@输出名": "\"group\""
+  },
+  {
+"@输出名": "\"group\"""variable name": "采样格式",
+"@输出名": "\"group\"""comment": "通道的采样格式,为下列常量之一:\n16 BASS_ASIO_FORMAT_16BIT 16位整数.\n17 BASS_ASIO_FORMAT_24BIT 24位整数.\n18 BASS_ASIO_FORMAT_32BIT 32位整数.\n19 BASS_ASIO_FORMAT_32BIT16 16位对齐的32位整数.\n24 BASS_ASIO_FORMAT_32BIT18 18位对齐的32位整数.\n25 BASS_ASIO_FORMAT_32BIT20 20位对齐的32位整数.\n26 BASS_ASIO_FORMAT_32BIT24 24位对齐的32位整数.\n27BASS_ASIO_FORMAT_FLOAT 32位单精度浮点数.\n32 BASS_ASIO_FORMAT_DSD_LSB DSD with LSB first.\n33 BASS_ASIO_FORMAT_DSD_MSB DSD with MSB first.",
+"@输出名": "\"group\"""data type": "整数",
+"@输出名": "\"group\"""@输出名": "\"format\""
+  }
+],
+"methods": [
+  {
+methods": [
+"method name": "名称",
+methods": [
+"comment": "通道的名称",
+methods": [
+"static": true,
+methods": [
+"type": "property getter",
+methods": [
+"data type": "文本型",
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "BASS_ASIO_通道信息"
+   }
+methods": [
+]
+  },
+  {
+}"method name": "取展示内容",
+}"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "BASS_ASIO_通道信息"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "BASS_ASIO_标志",
+"@文档": "\"category = \\\"ASIO支持.常量\\\"\""
+ },
+ {
+"class name": "BASS_分离标志",
+"comment": "BASS混合器类::创建分离流",
+"@文档": "\"category = \\\"BASS混合器.常量\\\"\"",
+"constants": [
+  {
+
+"constant name": "BASS_SPLIT_SLAVE",
+
+"comment": "分离器的长度和位置基于分离器,而不是源的通道计数.",
+
+"data type": "整数",
+
+"initial value": "@BASS_SPLIT_SLAVE"
+  },
+  {
+
+"constant name": "BASS_SPLIT_POS",
+
+"comment": "仅从分离器缓冲区获取数据,而不直接从源获取数据.",
+
+"data type": "整数",
+
+"initial value": "@BASS_SPLIT_POS"
+  }
+]
+ },
+ {
+"class name": "BASS_混合器标志",
+"comment": "BASS混合器类::创建混合流",
+"@文档": "\"category = \\\"BASS混合器.常量\\\"\"",
+"constants": [
+  {
+constants": [
+"constant name": "BASS_MIXER_RESUME",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "@BASS_MIXER_RESUME"
+  },
+  {
+
+"constant name": "BASS_MIXER_POSEX",
+
+"data type": "整数",
+
+"initial value": "@BASS_MIXER_POSEX"
+  },
+  {
+}"constant name": "BASS_MIXER_NOSPEAKER",
+}"data type": "整数",
+}"initial value": "@BASS_MIXER_NOSPEAKER"
+  },
+  {
+}"constant name": "BASS_MIXER_QUEUE",
+}"data type": "整数",
+}"initial value": "@BASS_MIXER_QUEUE"
+  },
+  {
+
+"constant name": "BASS_MIXER_END",
+
+"data type": "整数",
+
+"initial value": "@BASS_MIXER_END"
+  },
+  {
+
+"constant name": "BASS_MIXER_NONSTOP",
+
+"data type": "整数",
+
+"initial value": "@BASS_MIXER_NONSTOP"
+  },
+  {
+
+"constant name": "BASS_MIXER_CHAN_ABSOLUTE",
+
+"comment": "开始点是混合器输出中的绝对位置,而不是混合器当前位置的相对位置.\n如果位置已过,将立即启动源.",
+
+"data type": "整数",
+
+"initial value": "@BASS_MIXER_CHAN_ABSOLUTE"
+  },
+  {
+}"constant name": "BASS_MIXER_CHAN_BUFFER",
+}"comment": "缓冲样本数据，供\"取通道数据\"和\"取通道电平\"和\"取通道电平EX\"使用.\n这会增加内存需求,因此不应非必要地启用. 缓冲区的大小可以通过BASS_CONFIG_MIXER_BUFFER配置选项进行控制.",
+}"data type": "整数",
+}"initial value": "@BASS_MIXER_CHAN_BUFFER"
+  },
+  {
+}"constant name": "BASS_MIXER_CHAN_LIMIT",
+}"comment": "在源处于活动状态(未结束)时,将混合器处理限制在此源中可用的数据量.\n如果源暂停,那么混合器也将停止,而不是像通常那样继续混合其他源.\n只能在每个混合器的其中一个源中应用此标志,因此它将自动从同一混合器的任何其他源中删除.",
+}"data type": "整数",
+}"initial value": "@BASS_MIXER_CHAN_LIMIT"
+  },
+  {
+"data type": "整数""constant name": "BASS_MIXER_CHAN_MATRIX",
+"data type": "整数""comment": "创建通道矩阵,允许将源通道发送到任何级别的任何混合器输出通道.\n可通过\"取通道矩阵\"和\"置通道矩阵\"方法获取和修改矩阵.\n矩阵最初将包含一对一的映射,例如left out=left in, right out=right in,等等.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@BASS_MIXER_CHAN_MATRIX"
+  },
+  {
+
+"constant name": "BASS_MIXER_CHAN_PAUSE",
+
+"comment": "暂停源的处理. 可使用\"置取通道标志\"恢复处理.",
+
+"data type": "整数",
+
+"initial value": "@BASS_MIXER_CHAN_PAUSE"
+  },
+  {
+
+"constant name": "BASS_MIXER_CHAN_DOWNMIX",
+
+"comment": "如果源具有比混合器更多的输出通道(混合器为立体声或单声道),则会创建通道矩阵,并使用适当的向下混音矩阵进行初始化(最多8个通道).\n注意,假设源数据遵循标准通道顺序,如STREAMPROC文档中所述.",
+
+"data type": "整数",
+
+"initial value": "@BASS_MIXER_CHAN_DOWNMIX"
+  },
+  {
+
+"constant name": "BASS_MIXER_CHAN_NORAMPIN",
+
+"comment": "不要在开始时淡入,包括在移动位置后(\"置播放位置\").\n这对于无间隙播放非常有用,使其中的源通道无缝地跟随另一个通道.\n这不会影响音量和声像变化,因为音量和声像变化总是平滑的.",
+
+"data type": "整数",
+
+"initial value": "@BASS_MIXER_CHAN_NORAMPIN"
+  },
+  {
+
+"constant name": "BASS_MIXER_BUFFER",
+
+"data type": "整数",
+
+"initial value": "@BASS_MIXER_BUFFER"
+  },
+  {
+nstant name": "BASS_MIXER_BUFFER""constant name": "BASS_MIXER_LIMIT",
+nstant name": "BASS_MIXER_BUFFER""data type": "整数",
+nstant name": "BASS_MIXER_BUFFER""initial value": "@BASS_MIXER_LIMIT"
+  },
+  {
+stant name": "BASS_MIXER_BUFFER""data type": "整数""constant name": "BASS_MIXER_MATRIX",
+stant name": "BASS_MIXER_BUFFER""data type": "整数""data type": "整数",
+stant name": "BASS_MIXER_BUFFER""data type": "整数""initial value": "@BASS_MIXER_MATRIX"
+  },
+  {
+
+"constant name": "BASS_MIXER_PAUSE",
+
+"data type": "整数",
+
+"initial value": "@BASS_MIXER_PAUSE"
+  },
+  {
+S_MIXER_MATRIX"constant name": "BASS_MIXER_DOWNMIX",
+S_MIXER_MATRIX"data type": "整数",
+S_MIXER_MATRIX"initial value": "@BASS_MIXER_DOWNMIX"
+  },
+  {
+_MIXER_MATRIX"initial value": "@BASS_MIXER_DOWNMIX""constant name": "BASS_MIXER_NORAMPIN",
+_MIXER_MATRIX"initial value": "@BASS_MIXER_DOWNMIX""data type": "整数",
+_MIXER_MATRIX"initial value": "@BASS_MIXER_DOWNMIX""initial value": "@BASS_MIXER_NORAMPIN"
+  }
+]
+ },
+ {
+"class name": "BASS_MIXER_节点",
+"comment": "BASS混合器类::置通道包络线",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"BASS混合器.辅助类\\\"\"",
+"@别名": "\"BASS_MIXER_NODE\"",
+"@模板实现类": "\"BASS_MIXER_节点\"",
+"variables": [
+  {
+@模板实现类": "\"BASS_MIXER_节点\"""variable name": "位置",
+@模板实现类": "\"BASS_MIXER_节点\"""data type": "长整数",
+@模板实现类": "\"BASS_MIXER_节点\"""@输出名": "\"pos\""
+  },
+  {
+
+"variable name": "值",
+
+"data type": "单精度小数",
+
+"@输出名": "\"value\""
+  }
+],
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "BASS_MIXER_节点"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "BASS_MIXER_节点数组",
+"comment": "BASS混合器类::置通道包络线",
+"base class": "PIV数组模板",
+"@文档": "\"category = \\\"BASS混合器.辅助类\\\"\"",
+"@模板实现类": "\"BASS_MIXER_节点\""
+ }
+问本程序中的接口需要引用模块"PIV基础类".]
+}

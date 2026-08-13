@@ -1,0 +1,218 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"package name": "火山.原创软件",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@文档": "\"category = \\\"开源库.暴雪MPQ编辑\\\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.外部头文件": "\"StormLib\\\\StormLibTool.h\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.外部库.win32": "\"StormLib\\\\StormLibToolx86.lib\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.附属文件.win32": "\"StormLib\\\\StormLibToolx86.dll\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.外部库.x64": "\"StormLib\\\\StormLibToolx64.lib\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@视窗.附属文件.x64": "\"StormLib\\\\StormLibToolx64.dll\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"classes": [
+ {
+"class name": "暴雪MPQ常量类",
+"comment": "// nCreateFlag 可选值 \n// 例如 MPQ_CREATE_LISTFILE | MPQ_CREATE_ATTRIBUTES | MPQ_CREATE_SIGNATURE | MPQ_CREATE_ARCHIVE_V1;\n//#define MPQ_CREATE_LISTFILE         0x00100000  // Also add the (listfile) file\n//#define MPQ_CREATE_ATTRIBUTES       0x00200000  // Also add the (attributes) file\n//#define MPQ_CREATE_SIGNATURE        0x00400000  // Also add the (signature) file\n// \n//#define MPQ_CREATE_ARCHIVE_V1       0x00000000  // Creates archive of version 1 (size up to 4GB)\n//#define MPQ_CREATE_ARCHIVE_V2       0x01000000  // Creates archive of version 2 (larger than 4 GB)\n//#define MPQ_CREATE_ARCHIVE_V3       0x02000000  // Creates archive of version 3\n//#define MPQ_CREATE_ARCHIVE_V4       0x03000000  // Creates archive of version 4",
+"@全局类": "真",
+"constants": [
+  {
+"constant name": "MPQ_CREATE_LISTFILE",
+"data type": "整数",
+"initial value": "0x00100000"
+  },
+  {
+stant name": "MPQ_CREATE_LISTFILE""constant name": "MPQ_CREATE_ATTRIBUTES",
+stant name": "MPQ_CREATE_LISTFILE""data type": "整数",
+stant name": "MPQ_CREATE_LISTFILE""initial value": "0x00200000"
+  },
+  {
+ 文本型"constant name": "MPQ_CREATE_SIGNATURE",
+ 文本型"data type": "整数",
+ 文本型"initial value": "0x00400000"
+  },
+  {
+}"constant name": "MPQ_CREATE_ARCHIVE_V1",
+}"data type": "整数",
+}"initial value": "0x00000000"
+  },
+  {
+
+"constant name": "MPQ_CREATE_ARCHIVE_V2",
+
+"data type": "整数",
+
+"initial value": "0x01000000"
+  },
+  {
+}"constant name": "MPQ_CREATE_ARCHIVE_V3",
+}"data type": "整数",
+}"initial value": "0x02000000"
+  },
+  {
+}"constant name": "MPQ_CREATE_ARCHIVE_V4",
+}"data type": "整数",
+}"initial value": "0x03000000"
+  }
+]
+ },
+ {
+"class name": "暴雪MPQ类",
+"comment": "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取",
+"methods": [
+  {
+comment": "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取""method name": "打开",
+comment": "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取""data type": "逻辑型",
+comment": "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取""@嵌入式方法": "\"\"",
+comment": "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取""parameters": [
+   {
+"parameter name": "资源包文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "创建标志",
+"comment": "// nCreateFlag 可选值 \n// 例如 MPQ_CREATE_LISTFILE | MPQ_CREATE_ATTRIBUTES | MPQ_CREATE_SIGNATURE | MPQ_CREATE_ARCHIVE_V1;\n//#define MPQ_CREATE_LISTFILE         0x00100000  // Also add the (listfile) file\n//#define MPQ_CREATE_ATTRIBUTES       0x00200000  // Also add the (attributes) file\n//#define MPQ_CREATE_SIGNATURE        0x00400000  // Also add the (signature) file\n// \n//#define MPQ_CREATE_ARCHIVE_V1       0x00000000  // Creates archive of version 1 (size up to 4GB)\n//#define MPQ_CREATE_ARCHIVE_V2       0x01000000  // Creates archive of version 2 (larger than 4 GB)\n//#define MPQ_CREATE_ARCHIVE_V3       0x02000000  // Creates archive of version 3\n//#define MPQ_CREATE_ARCHIVE_V4       0x03000000  // Creates archive of version 4\n// ",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "最大存储文件数量",
+"data type": "整数",
+"@默认值": "1000000"
+   }
+comment": "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取"]
+  },
+  {
+comment": "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取""method name": "关闭",
+comment": "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取""@嵌入式方法": "\"\""
+  },
+  {
+ "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取""method name": "强制保存",
+ "作用，可以自己添加很多文件到资源包里面，用到的时候直接读取""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否存在",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "资源文件名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "重命名",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "原名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新名称",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "文本型""method name": "删除文件",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "资源文件名称",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ta type": "文本型"]"method name": "添加内存文件",
+ta type": "文本型"]"data type": "逻辑型",
+ta type": "文本型"]"@禁止流程检查": "真",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "要添加的资源名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "要添加的资源数据",
+"data type": "字节集类"
+   }
+ta type": "文本型"]]
+  },
+  {
+ta type": "文本型"]"method name": "添加本地文件",
+ta type": "文本型"]"data type": "逻辑型",
+ta type": "文本型"]"@禁止流程检查": "真",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "本地文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "资源文件名称",
+"data type": "文本型"
+   }
+ta type": "文本型"]]
+  },
+  {
+"method name": "释放文件到本地",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "要释放的资源文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "本地文件路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "读文件到内存",
+}"data type": "字节集类",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "资源文件名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "取文件列表",
+"data type": "文本型"
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+]
+}

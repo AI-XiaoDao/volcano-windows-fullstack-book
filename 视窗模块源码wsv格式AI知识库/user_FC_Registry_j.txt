@@ -1,0 +1,451 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"package name": "火山.原创软件",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@文档": "\"category = \\\"windows.注册表\\\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"classes": [
+ {
+"class name": "注册表根类型_常量类",
+"@常量类": "变整数",
+"constants": [
+  {
+艠敺ŝ"constant name": "HKEY_CLASSES_ROOT",
+艠敺ŝ"initial value": "@(INT_P)HKEY_CLASSES_ROOT"
+  },
+  {
+ "本模块由  绿茶(858058286)   提供""constant name": "HKEY_CURRENT_CONFIG",
+ "本模块由  绿茶(858058286)   提供""initial value": "@(INT_P)HKEY_CURRENT_CONFIG"
+  },
+  {
+
+"constant name": "HKEY_CURRENT_USER",
+
+"initial value": "@(INT_P)HKEY_CURRENT_USER"
+  },
+  {
+"initial value": "@(INT_P)HKEY_CURRENT_USER""constant name": "HKEY_LOCAL_MACHINE",
+"initial value": "@(INT_P)HKEY_CURRENT_USER""initial value": "@(INT_P)HKEY_LOCAL_MACHINE"
+  },
+  {
+
+"constant name": "HKEY_USERS",
+
+"initial value": "@(INT_P)HKEY_USERS"
+  }
+]
+ },
+ {
+"class name": "注册表打开方式_常量类",
+"constants": [
+  {
+constants": [
+"constant name": "KEY_CREATE_LINK",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "@KEY_CREATE_LINK"
+  },
+  {
+
+"constant name": "创建子键",
+
+"data type": "整数",
+
+"initial value": "@KEY_CREATE_SUB_KEY"
+  },
+  {
+"initial value": "@(INT_P)HKEY_USERS""constant name": "枚举子键",
+"initial value": "@(INT_P)HKEY_USERS""data type": "整数",
+"initial value": "@(INT_P)HKEY_USERS""initial value": "@KEY_ENUMERATE_SUB_KEYS"
+  },
+  {
+_CREATE_SUB_KEY"constant name": "KEY_EXECUTE",
+_CREATE_SUB_KEY"data type": "整数",
+_CREATE_SUB_KEY"initial value": "@KEY_EXECUTE"
+  },
+  {
+initial value": "@(INT_P)HKEY_USERS""data type": "整数""constant name": "KEY_NOTIFY",
+initial value": "@(INT_P)HKEY_USERS""data type": "整数""data type": "整数",
+initial value": "@(INT_P)HKEY_USERS""data type": "整数""initial value": "@KEY_NOTIFY"
+  },
+  {
+initial value": "@(INT_P)HKEY_USERS""data type": "整数""constant name": "查询值",
+initial value": "@(INT_P)HKEY_USERS""data type": "整数""data type": "整数",
+initial value": "@(INT_P)HKEY_USERS""data type": "整数""initial value": "@KEY_QUERY_VALUE"
+  },
+  {
+nitial value": "@(INT_P)HKEY_USERS""data type": "整数""data type": "整数""constant name": "设置值",
+nitial value": "@(INT_P)HKEY_USERS""data type": "整数""data type": "整数""data type": "整数",
+nitial value": "@(INT_P)HKEY_USERS""data type": "整数""data type": "整数""initial value": "@KEY_SET_VALUE"
+  },
+  {
+}"constant name": "所有方式",
+}"data type": "整数",
+}"initial value": "@KEY_ALL_ACCESS"
+  },
+  {
+"initial value": "@KEY_ALL_ACCESS""constant name": "读",
+"initial value": "@KEY_ALL_ACCESS""data type": "整数",
+"initial value": "@KEY_ALL_ACCESS""initial value": "@KEY_READ"
+  },
+  {
+"initial value": "@KEY_ALL_ACCESS""constant name": "KEY_WOW64_64KEY",
+"initial value": "@KEY_ALL_ACCESS""data type": "整数",
+"initial value": "@KEY_ALL_ACCESS""initial value": "@KEY_WOW64_64KEY"
+  },
+  {
+"initial value": "@KEY_ALL_ACCESS""constant name": "KEY_WOW64_32KEY",
+"initial value": "@KEY_ALL_ACCESS""data type": "整数",
+"initial value": "@KEY_ALL_ACCESS""initial value": "@KEY_WOW64_32KEY"
+  },
+  {
+_WOW64_32KEY"constant name": "写",
+_WOW64_32KEY"data type": "整数",
+_WOW64_32KEY"initial value": "@KEY_WRITE"
+  }
+]
+ },
+ {
+"class name": "______注册表操作_全局类",
+"@全局类": "真",
+"methods": [
+  {
+"method name": "注册表_取文本",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+}"method name": "注册表_取整数",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+"method name": "注册表_取长整数",
+"static": true,
+"data type": "长整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+ = 0"method name": "注册表_置文本",
+ = 0"static": true,
+ = 0"data type": "逻辑型",
+ = 0"@禁止流程检查": "真",
+ = 0"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ = 0]
+  },
+  {
+}"method name": "注册表_置整数",
+}"static": true,
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+comment": "具体请看 注册表根类型_常量类""method name": "注册表_置长整数",
+comment": "具体请看 注册表根类型_常量类""static": true,
+comment": "具体请看 注册表根类型_常量类""data type": "文本型",
+comment": "具体请看 注册表根类型_常量类""@禁止流程检查": "真",
+comment": "具体请看 注册表根类型_常量类""parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"data type": "长整数"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "具体请看 注册表根类型_常量类"]
+  },
+  {
+data type": "逻辑型""method name": "注册表_创建",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@禁止流程检查": "真",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "逻辑型"]
+  },
+  {
+ata type": "逻辑型""static": true"method name": "注册表_枚举健",
+ata type": "逻辑型""static": true"static": true,
+ata type": "逻辑型""static": true"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出_用来保存键数组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ata type": "逻辑型""static": true]
+  },
+  {
+ata type": "逻辑型""static": true"method name": "注册表_枚举值",
+ata type": "逻辑型""static": true"static": true,
+ata type": "逻辑型""static": true"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出_用来保存键数组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "输出_用来保存值类型数组",
+"comment": "如果传递空对象，则忽略此参数",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ata type": "逻辑型""static": true]
+  },
+  {
+ata type": "逻辑型""static": true"method name": "注册表_删除值",
+ata type": "逻辑型""static": true"static": true,
+ata type": "逻辑型""static": true"data type": "逻辑型",
+ata type": "逻辑型""static": true"@禁止流程检查": "真",
+ata type": "逻辑型""static": true"parameters": [
+   {
+"parameter name": "根节点",
+"comment": "具体请看 注册表根类型_常量类",
+"data type": "注册表根类型_常量类"
+   },
+   {
+"parameter name": "键路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否64位",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ata type": "逻辑型""static": true]
+  },
+  {
+"method name": "注册表_定位",
+"comment": "注意，需要管理员权限",
+"static": true,
+"@视窗.附属文件": "\"Registry\\\\regjump.exe\"",
+"parameters": [
+   {
+"parameter name": "定位位置",
+"data type": "文本型"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "_____辅助注册表",
+"comment": "本模块由  绿茶(858058286)   提供",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "注册表_删除",
+
+"comment": "成功返回真",
+
+"result comment": "不存在也返回真",
+
+"static": true,
+
+"data type": "逻辑型  ",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "参__根节点",
+"comment": "1= CLASSES_ROOT、2= CURRENT_USER、3=LOCAL_MACHINE、4=USERS、5=CURRENT_CONFIG",
+"data type": "整数"
+   },
+   {
+"parameter name": "参__键路径",
+"comment": "例如： SOFTWARE\\XXXXX     后缀有无反斜杠都可以 ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参__是否64位",
+"comment": "真=64,  假=32",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+]
+}

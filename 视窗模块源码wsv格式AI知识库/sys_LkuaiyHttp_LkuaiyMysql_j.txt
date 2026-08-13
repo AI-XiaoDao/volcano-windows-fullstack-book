@@ -1,0 +1,794 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".
+
+{
+ 文本数组类"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ 文本数组类"package name": "利快云.libmysql",
+ 文本数组类"classes": [
+ {
+        "class name": "MYSQL连接选项",
+        "constants": [
+  {
+型 = 逻辑型 折叠"constant name": "MYSQL选项_连接超时",
+型 = 逻辑型 折叠"comment": "MYSQL_OPT_CONNECT_TIMEOUT 值为：整数型",
+型 = 逻辑型 折叠"data type": "整数",
+型 = 逻辑型 折叠"initial value": "0"
+  },
+  {
+组类"package name": "利快云.libmysql""constant name": "MYSQL选项_使用压缩协议",
+组类"package name": "利快云.libmysql""comment": "MYSQL_OPT_COMPRESS 值为：0或1",
+组类"package name": "利快云.libmysql""data type": "整数",
+组类"package name": "利快云.libmysql""initial value": "1"
+  },
+  {
+ 字节集类"constant name": "MYSQL选项_使用命名管道",
+ 字节集类"comment": "MYSQL_OPT_NAMED_PIPE 值为：0或1",
+ 字节集类"data type": "整数",
+ 字节集类"initial value": "2"
+  },
+  {
+字节集类"initial value": "2""constant name": "MYSQL选项_初始命令",
+字节集类"initial value": "2""comment": "MYSQL_INIT_COMMAND 值为：文本型，连接到服务器自动执行的SQL命令，如果重新连接，则自动重新执行",
+字节集类"initial value": "2""data type": "整数",
+字节集类"initial value": "2""initial value": "3"
+  },
+  {
+
+"constant name": "MYSQL选项_读取默认文件",
+
+"comment": "MYSQL_READ_DEFAULT_FILE，值为：文本型，从指定文件中读取配置，而不是my.cnf",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+型 = 逻辑型 折叠"constant name": "MYSQL选项_读取默认分组",
+型 = 逻辑型 折叠"comment": "MYSQL_READ_DEFAULT_GROUP，值为：文本型，从my.cnf指定的组中读取配置",
+型 = 逻辑型 折叠"data type": "整数",
+型 = 逻辑型 折叠"initial value": "5"
+  },
+  {
+
+"constant name": "MYSQL选项_字符集定义文件目录",
+
+"comment": "MYSQL_SET_CHARSET_DIR 值为：文本型",
+
+"data type": "整数",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "MYSQL选项_默认字符集名",
+
+"comment": "MYSQL_SET_CHARSET_NAME 值为：文本型，\"auto\" 表示系统默认",
+
+"data type": "整数",
+
+"initial value": "7"
+  },
+  {
+    "class name": "MYSQL连接选项""constant name": "MYSQL选项_LOCAL_INFILE",
+    "class name": "MYSQL连接选项""comment": "MYSQL_OPT_LOCAL_INFILE，值为：0或1，启用或禁用 LOAD DATA",
+    "class name": "MYSQL连接选项""data type": "整数",
+    "class name": "MYSQL连接选项""initial value": "8"
+  },
+  {
+以将所有的数据保存到键值列表中，注意：使用本命令可以直接使用，使用完成后不用释放记录集"constant name": "MYSQL选项_连接协议",
+以将所有的数据保存到键值列表中，注意：使用本命令可以直接使用，使用完成后不用释放记录集"comment": "MYSQL_OPT_PROTOCOL 值为：整数型， “MYSQL协议_”开头常量",
+以将所有的数据保存到键值列表中，注意：使用本命令可以直接使用，使用完成后不用释放记录集"data type": "整数",
+以将所有的数据保存到键值列表中，注意：使用本命令可以直接使用，使用完成后不用释放记录集"initial value": "9"
+  },
+  {
+nstant name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名",
+nstant name": "MYSQL选项_字符集定义文件目录""comment": "MYSQL_SHARED_MEMORY_BASE_NAME，文本型，与 --shared-memory-base-name 配置一样",
+nstant name": "MYSQL选项_字符集定义文件目录""data type": "整数",
+nstant name": "MYSQL选项_字符集定义文件目录""initial value": "10"
+  },
+  {
+"class name": "MYSQL连接选项""constant name": "MYSQL选项_LOCAL_INFILE""constant name": "MYSQL选项_读取超时",
+"class name": "MYSQL连接选项""constant name": "MYSQL选项_LOCAL_INFILE""comment": "MYSQL_OPT_READ_TIMEOUT 值为：整数型",
+"class name": "MYSQL连接选项""constant name": "MYSQL选项_LOCAL_INFILE""data type": "整数",
+"class name": "MYSQL连接选项""constant name": "MYSQL选项_LOCAL_INFILE""initial value": "11"
+  },
+  {
+程检查 = 真"constant name": "MYSQL选项_写入超时",
+程检查 = 真"comment": "MYSQL_OPT_WRITE_TIMEOUT 值为：整数型",
+程检查 = 真"data type": "整数",
+程检查 = 真"initial value": "12"
+  },
+  {
+"comment": "MYSQL_SET_CHARSET_DIR 值为：文本型""constant name": "MYSQL_OPT_USE_RESULT",
+"comment": "MYSQL_SET_CHARSET_DIR 值为：文本型""comment": "MYSQL_OPT_USE_RESULT，没有使用",
+"comment": "MYSQL_SET_CHARSET_DIR 值为：文本型""data type": "整数",
+"comment": "MYSQL_SET_CHARSET_DIR 值为：文本型""initial value": "13"
+  },
+  {
+
+"constant name": "MYSQL选项_使用远程连接",
+
+"comment": "MYSQL_OPT_USE_REMOTE_CONNECTION，无参数，对于嵌入式库这将强制远程连接，对于客户端库没有任何效果",
+
+"data type": "整数",
+
+"initial value": "14"
+  },
+  {
+"initial value": "14""constant name": "MYSQL选项_使用嵌入式连接",
+"initial value": "14""comment": "MYSQL_OPT_USE_EMBEDDED_CONNECTION，无参数，对于嵌入式库这将强制嵌入式连接，对于客户端库没有任何效果",
+"initial value": "14""data type": "整数",
+"initial value": "14""initial value": "15"
+  },
+  {
+tial value": "14""constant name": "MYSQL选项_使用嵌入式连接""constant name": "MYSQL选项_使用智能连接",
+tial value": "14""constant name": "MYSQL选项_使用嵌入式连接""comment": "MYSQL_OPT_GUESS_CONNECTION，无参数，对于嵌入式库，如果是本地IP就使用嵌入式连接，远程IP地址就使用远程连接，对于客户端库没有任何效果",
+tial value": "14""constant name": "MYSQL选项_使用嵌入式连接""data type": "整数",
+tial value": "14""constant name": "MYSQL选项_使用嵌入式连接""initial value": "16"
+  },
+  {
+}"constant name": "MYSQL选项_置客户端IP",
+}"comment": "MYSQL_SET_CLIENT_IP，值为：文本型，对于嵌入式库有效",
+}"data type": "整数",
+}"initial value": "17"
+  },
+  {
+"comment": "MYSQL_SET_CLIENT_IP，值为：文本型，对于嵌入式库有效""constant name": "MYSQL选项_安全验证",
+"comment": "MYSQL_SET_CLIENT_IP，值为：文本型，对于嵌入式库有效""comment": "MYSQL_SECURE_AUTH，值为：0或1",
+"comment": "MYSQL_SET_CLIENT_IP，值为：文本型，对于嵌入式库有效""data type": "整数",
+"comment": "MYSQL_SET_CLIENT_IP，值为：文本型，对于嵌入式库有效""initial value": "18"
+  },
+  {
+
+"constant name": "MYSQL选项_报告数据交换",
+
+"comment": "MYSQL_REPORT_DATA_TRUNCATION，值为：0或1，MYSQL_BIND结构的error成员",
+
+"data type": "整数",
+
+"initial value": "19"
+  },
+  {
+"data type": "整数""constant name": "MYSQL选项_自动重新连接",
+"data type": "整数""comment": "MYSQL_OPT_RECONNECT 值为：0或1\n所设置的重连并不是连接断开就自动重连，而是在执行 mysql_ping() 的时候\n如果连接断开了且自动重连设置为了true，则 mysql_ping() 会进行自动重连\n若没有设置为自动重连，则 mysql_ping() 仅返回当前连接状态是否正常",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "20"
+  },
+  {
+data type": "整数""initial value": "20""constant name": "MYSQL选项_SSL验证服务器证书",
+data type": "整数""initial value": "20""comment": "MYSQL_OPT_SSL_VERIFY_SERVER_CERT，值为：0或1",
+data type": "整数""initial value": "20""data type": "整数",
+data type": "整数""initial value": "20""initial value": "21"
+  },
+  {
+"data type": "整数""constant name": "MYSQL选项_插件目录",
+"data type": "整数""comment": "MYSQL_PLUGIN_DIR，值为：文本型",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "22"
+  },
+  {
+
+"constant name": "MYSQL选项_默认验证插件名",
+
+"comment": "MYSQL_DEFAULT_AUTH，值为：文本型",
+
+"data type": "整数",
+
+"initial value": "23"
+  },
+  {
+"data type": "整数""constant name": "MYSQL选项_客户端网络接口",
+"data type": "整数""comment": "MYSQL_OPT_BIND，值为：文本型",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "24"
+  },
+  {
+data type": "整数""comment": "MYSQL_PLUGIN_DIR，值为：文本型""constant name": "MYSQL选项_SSL_秘钥文件",
+data type": "整数""comment": "MYSQL_PLUGIN_DIR，值为：文本型""comment": "MYSQL_OPT_SSL_KEY，值为：文本型，pem格式",
+data type": "整数""comment": "MYSQL_PLUGIN_DIR，值为：文本型""data type": "整数",
+data type": "整数""comment": "MYSQL_PLUGIN_DIR，值为：文本型""initial value": "25"
+  },
+  {
+
+"constant name": "MYSQL选项_SSL_证书文件",
+
+"comment": "MYSQL_OPT_SSL_CERT，值为：文本型，pem格式",
+
+"data type": "整数",
+
+"initial value": "26"
+  },
+  {
+L选项_使用嵌入式连接"constant name": "MYSQL选项_SSL_CA文件",
+L选项_使用嵌入式连接"comment": "MYSQL_OPT_SSL_CA，值为：文本型，pem格式",
+L选项_使用嵌入式连接"data type": "整数",
+L选项_使用嵌入式连接"initial value": "27"
+  },
+  {
+"data type": "整数""constant name": "MYSQL选项_SSL_CA文件目录",
+"data type": "整数""comment": "MYSQL_OPT_SSL_CAPATH，值为：文本型",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "28"
+  },
+  {
+   "class name": "MYSQL连接选项""data type": "整数""constant name": "MYSQL选项_SSL_加密列表",
+   "class name": "MYSQL连接选项""data type": "整数""comment": "MYSQL_OPT_SSL_CIPHER，值为：文本型",
+   "class name": "MYSQL连接选项""data type": "整数""data type": "整数",
+   "class name": "MYSQL连接选项""data type": "整数""initial value": "29"
+  },
+  {
+data type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件",
+data type": "整数""initial value": "22""comment": "MYSQL_OPT_SSL_CRL，值为：文本型",
+data type": "整数""initial value": "22""data type": "整数",
+data type": "整数""initial value": "22""initial value": "30"
+  },
+  {
+
+"constant name": "MYSQL选项_SSL_吊销列表文件目录",
+
+"comment": "MYSQL_OPT_SSL_CRLPATH，值为：文本型",
+
+"data type": "整数",
+
+"initial value": "31"
+  },
+  {
+}"constant name": "MYSQL选项_连接属性清除",
+}"comment": "MYSQL_OPT_CONNECT_ATTR_RESET，无参数",
+}"data type": "整数",
+}"initial value": "32"
+  },
+  {
+ type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""constant name": "MYSQL选项_连接属性添加",
+ type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""comment": "MYSQL_OPT_CONNECT_ATTR_ADD，值为：文本型，参数1 和 参数2 分别代表 key/value，需要调用 mysql.置连接选项2（）",
+ type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""data type": "整数",
+ type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""initial value": "33"
+  },
+  {
+}"constant name": "MYSQL选项_连接属性删除",
+}"comment": "YSQL_OPT_CONNECT_ATTR_DELETE，值为：文本型，key",
+}"data type": "整数",
+}"initial value": "34"
+  },
+  {
+ type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""constant name": "MYSQL选项_服务器公钥文件",
+ type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""comment": "MYSQL_SERVER_PUBLIC_KEY，值为：文本型，pem格式",
+ type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""data type": "整数",
+ type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""initial value": "35"
+  },
+  {
+type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""data type": "整数""constant name": "MYSQL选项_使用明文认证插件",
+type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""data type": "整数""comment": "MYSQL_ENABLE_CLEARTEXT_PLUGIN 值为：0或1",
+type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""data type": "整数""data type": "整数",
+type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""data type": "整数""initial value": "36"
+  },
+  {
+"data type": "整数""constant name": "MYSQL选项_可处理过期密码",
+"data type": "整数""comment": "MYSQL_OPT_CAN_HANDLE_EXPIRED_PASSWORDS 值为：0或1",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "37"
+  },
+  {
+type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""data type": "整数""constant name": "MYSQL_OPT_SSL_ENFORCE",
+type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""data type": "整数""data type": "整数",
+type": "整数""initial value": "22""constant name": "MYSQL选项_SSL_吊销列表文件""data type": "整数""initial value": "28"
+  },
+  {
+data type": "整数""data type": "整数""constant name": "MYSQL选项_最大允许包",
+data type": "整数""data type": "整数""comment": "MYSQL_OPT_MAX_ALLOWED_PACKET 值为：整数型，同my.ini里面的 max_allowed_packet",
+data type": "整数""data type": "整数""data type": "整数",
+data type": "整数""data type": "整数""initial value": "39"
+  },
+  {
+
+"constant name": "MYSQL选项_缓冲区大小",
+
+"comment": "MYSQL_OPT_NET_BUFFER_LENGTH 值为：整数型，同my.ini里面的 net_buffer_length",
+
+"data type": "整数",
+
+"initial value": "40"
+  },
+  {
+nt name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名""constant name": "MYSQL选项_TLS版本",
+nt name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名""comment": "MYSQL_OPT_TLS_VERSION，文本型",
+nt name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名""data type": "整数",
+nt name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名""initial value": "41"
+  },
+  {
+}"constant name": "MYSQL选项_SSL_模式",
+}"comment": "MYSQL_OPT_SSL_MODE，值为：整数型，“SSL_MODE_”开头常量",
+}"data type": "整数",
+}"initial value": "42"
+  }
+        ]
+ },
+ {
+
+"class name": "数据库_LibMySQL数据库",
+
+"comment": "使用方法参考本案例：https://www.lkuaiy.com/rsdetails?id=16064486821870&page=1\n本数据库效率测试案例地址：https://www.lkuaiy.com/rsdetails?id=37461615352297",
+
+"base class": "MySqlDLL",
+
+"methods": [
+  {
+"initial value": "40""method name": "连接",
+"initial value": "40""comment": "返回最终连接成功的数量",
+"initial value": "40""data type": "整数",
+"initial value": "40""parameters": [
+   {
+"parameter name": "参连接地址",
+"comment": "注意：如果是远程连接，请参考这个案例：https://www.lkuaiy.com/rsdetails?id=23241606530849&page=1",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数据库名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参用户名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参密码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参端口",
+"data type": "整数",
+"@默认值": "3306"
+   },
+   {
+"parameter name": "参最大连接数",
+"comment": "需要时FOF连接池数量的两倍，也就是FOF连接池是10，那么这里要填写20",
+"data type": "整数",
+"@默认值": "20"
+   },
+   {
+"parameter name": "连接选项",
+"comment": "默认空对象，这个可以忽略掉，设置方法参考MYSQL连接选项\n使用方法参考这篇案例：https://www.lkuaiy.com/rsdetails?id=16064490721459&page=1",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "连接内容",
+"comment": "默认空，这个可以忽略掉，如果上方的连接选项设置使用了MYSQL连接选项，就一定要设置本处\n使用方法参考这篇案例：https://www.lkuaiy.com/rsdetails?id=16064490721459&page=1",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否支持SSL",
+"comment": "注意:如果是远程SSL连接，本处务设置为真",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+"initial value": "40"]
+  },
+  {
+@默认值": "空对象""method name": "销毁数据库",
+@默认值": "空对象""comment": "注意：销毁数据库建议在关闭程序时使用"
+  },
+  {
+默认值": "空对象""comment": "注意：销毁数据库建议在关闭程序时使用""method name": "获取句柄",
+默认值": "空对象""comment": "注意：销毁数据库建议在关闭程序时使用""result comment": "返回0代表获取失败",
+默认值": "空对象""comment": "注意：销毁数据库建议在关闭程序时使用""data type": "变整数"
+  },
+  {
+ameter name": "是否支持SSL""method name": "取可用连接数",
+ameter name": "是否支持SSL""data type": "整数 "
+  },
+  {
+毁数据库建议在关闭程序时使用"method name": "释放句柄",
+毁数据库建议在关闭程序时使用"parameters": [
+   {
+"parameter name": "参句柄",
+"data type": "变整数"
+   }
+毁数据库建议在关闭程序时使用]
+  },
+  {
+data type": "变整数""method name": "设置访问字符集",
+data type": "变整数""data type": "整数",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "cs_name",
+"comment": "utf8/gbk/等 字符集编码文本",
+"data type": "文本型"
+   }
+data type": "变整数"]
+  },
+  {
+data type": "变整数""method name": "是否连接成功",
+data type": "变整数""comment": "如果与服务器的连接有效返回0。如果出现错误，返回非0值。返回的非0值不表示MySQL服务器本身是否已关闭，连接可能因其他原因终端，如网络问题等。",
+data type": "变整数""data type": "整数",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+data type": "变整数"]
+  },
+  {
+ata type": "变整数""data type": "整数""method name": "取最后错误",
+ata type": "变整数""data type": "整数""data type": "文本型",
+ata type": "变整数""data type": "整数""@禁止流程检查": "真",
+ata type": "变整数""data type": "整数""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+ata type": "变整数""data type": "整数"]
+  },
+  {
+nt name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名""method name": "事务提交模式",
+nt name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名""data type": "逻辑型",
+nt name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名""@禁止流程检查": "真",
+nt name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "自动启用",
+"comment": "如果需要自己手动执行事务操作，请将本处设置为假",
+"data type": "逻辑型"
+   }
+nt name": "MYSQL选项_字符集定义文件目录""constant name": "MYSQL选项_共享内存名"]
+  },
+  {
+ameter name": "MYSQL池子句柄""method name": "开始提交事务",
+ameter name": "MYSQL池子句柄""data type": "逻辑型",
+ameter name": "MYSQL池子句柄""@禁止流程检查": "真",
+ameter name": "MYSQL池子句柄""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+ameter name": "MYSQL池子句柄"]
+  },
+  {
+ameter name": "MYSQL池子句柄""method name": "回滚当前事务",
+ameter name": "MYSQL池子句柄""data type": "逻辑型",
+ameter name": "MYSQL池子句柄""@禁止流程检查": "真",
+ameter name": "MYSQL池子句柄""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+ameter name": "MYSQL池子句柄"]
+  },
+  {
+
+"method name": "执行SQL语句",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "SQL语句",
+"comment": "SQL语句命令，不需要进行转码处理，可以直接输入中文使用",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "执行查询语句并分页",
+
+"comment": "本方法参考案例地址：https://www.lkuaiy.com/rsdetails?id=16084465804144&page=1\n本方法效率测试案例地址：https://www.lkuaiy.com/rsdetails?id=37461615352297",
+
+"result comment": "成功返回总页数,失败或者没有数据返回0",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "表名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "条件",
+"comment": "需要带上where 例如:where XXX=XXX",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "当前页数",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "每页数量",
+"data type": "整数",
+"@默认值": "10"
+   }
+
+]
+  },
+  {
+}"method name": "获取连接字符集",
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+"parameters": [
+"method name": "取影响行数",
+"parameters": [
+"comment": "获取在执行了指定SQL语句后所影响到的记录数.",
+"parameters": [
+"data type": "长整数",
+"parameters": [
+"@禁止流程检查": "真",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+"parameters": [
+]
+  },
+  {
+ }"method name": "取查询列数",
+ }"comment": "获取最近一次查询语句所取得的列数.",
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+parameters": [
+"@禁止流程检查": "真""method name": "检索字符串",
+parameters": [
+"@禁止流程检查": "真""comment": "检索字符串，该字符串提供了关于最近执行查询的信息，但仅对这里列出的语句有效。对于其他语句，mysql_info()返回NULL。字符串的格式取决于查询的类型，如本节所述。数值仅是说明性的，字符串包含与查询相适应的值。\n例如：\n·         INSERT INTO ... SELECT ...\n\n字符串格式：记录，100；副本，0；警告，0\n\n·         INSERT INTO ... VALUES (...),(...),(...)...\n\n字符串格式：记录，3；副本，0；警告，0\n\n·         LOAD DATA INFILE ...\n\n字符串格式：记录，1；删除，0；跳过，0；警告，0\n\n·         ALTER TABLE\n\n字符串格式：记录，3；副本，0；警告，0\n\n·         UPDATE\n\n字符串格式：匹配行，40；更改，40；警告，0",
+parameters": [
+"@禁止流程检查": "真""data type": "文本型",
+parameters": [
+"@禁止流程检查": "真""@禁止流程检查": "真",
+parameters": [
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+parameters": [
+"@禁止流程检查": "真"]
+  },
+  {
+ethod name": "取查询列数""method name": "获取最后一次ID",
+ethod name": "取查询列数""comment": "回由以前的INSERT或UPDATE语句为AUTO_INCREMENT列生成的值。在包含AUTO_INCREMENT字段的表中执行了INSERT语句后，应使用该函数",
+ethod name": "取查询列数""data type": "长整数",
+ethod name": "取查询列数""@禁止流程检查": "真",
+ethod name": "取查询列数""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+ethod name": "取查询列数"]
+  }
+
+]
+ },
+ {
+thod name": "取查询列数""comment": "回由以前的INSERT或UPDATE语句为AUTO_INCREMENT列生成的值。在包含AUTO_INCREMENT字段的表中执行了INSERT语句后，应使用该函数""class name": "数据库_LibMySQL记录集",
+thod name": "取查询列数""comment": "回由以前的INSERT或UPDATE语句为AUTO_INCREMENT列生成的值。在包含AUTO_INCREMENT字段的表中执行了INSERT语句后，应使用该函数""base class": "MySqlDLL",
+thod name": "取查询列数""comment": "回由以前的INSERT或UPDATE语句为AUTO_INCREMENT列生成的值。在包含AUTO_INCREMENT字段的表中执行了INSERT语句后，应使用该函数""methods": [
+  {
+"method name": "获取键值表",
+"comment": "本方法可以将所有的数据保存到键值列表中，注意：使用本命令可以直接使用，使用完成后不用释放记录集\n因为没有使用获取记录集，就不用释放记录集\n本方法的使用案例请观看本方法内屏蔽的示例代码\n使用方法参考本案例：https://www.lkuaiy.com/rsdetails?id=16064486821870&page=1",
+"result comment": "返回键值列表",
+"data type": "类_键值数组",
+"parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+}"method name": "获取JSON文本",
+}"comment": "直接返回JSON的文本数组\n使用方法参考本案例：https://www.lkuaiy.com/rsdetails?id=34821606472173&page=1",
+}"result comment": "直接返回JSON的文本数组",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "JSON字段名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+hod name": "获取键值表""method name": "获取记录集2",
+hod name": "获取键值表""comment": "查询,如果结果有多个记录集，则使用本函数",
+hod name": "获取键值表""data type": "逻辑型",
+hod name": "获取键值表""@禁止流程检查": "真",
+hod name": "获取键值表""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+hod name": "获取键值表"]
+  },
+  {
+hod name": "获取键值表""method name": "获取记录集",
+hod name": "获取键值表""data type": "逻辑型",
+hod name": "获取键值表""@禁止流程检查": "真",
+hod name": "获取键值表""parameters": [
+   {
+"parameter name": "MYSQL池子句柄",
+"data type": "变整数"
+   }
+hod name": "获取键值表"]
+  },
+  {
+data type": "变整数""method name": "释放记录集"
+  },
+  {
+data type": "变整数""method name": "取记录数",
+data type": "变整数""data type": "整数",
+data type": "变整数""@禁止流程检查": "真"
+  },
+  {
+"data type": "文本型""method name": "读文本",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@禁止流程检查": "真",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "name",
+"data type": "文本型"
+   }
+"data type": "文本型"]
+  },
+  {
+ata type": "文本型"]"method name": "读整数",
+ata type": "文本型"]"data type": "整数",
+ata type": "文本型"]"@禁止流程检查": "真",
+ata type": "文本型"]"parameters": [
+   {
+"parameter name": "name",
+"data type": "文本型"
+   }
+ata type": "文本型"]]
+  },
+  {
+}"method name": "读短整数",
+}"data type": "短整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "name",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ }"method name": "读长整数",
+ }"data type": "长整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "name",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"parameters": [
+"method name": "读变整数",
+"parameters": [
+"data type": "变整数",
+"parameters": [
+"@禁止流程检查": "真",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "name",
+"data type": "文本型"
+   }
+"parameters": [
+]
+  },
+  {
+arameters": [
+]"method name": "读小数",
+arameters": [
+]"data type": "小数",
+arameters": [
+]"@禁止流程检查": "真",
+arameters": [
+]"parameters": [
+   {
+"parameter name": "name",
+"data type": "文本型"
+   }
+arameters": [
+]]
+  },
+  {
+parameters": [
+"data type": "变整数""method name": "读UTF8",
+parameters": [
+"data type": "变整数""data type": "字节集类",
+parameters": [
+"data type": "变整数""@禁止流程检查": "真",
+parameters": [
+"data type": "变整数""parameters": [
+   {
+"parameter name": "name",
+"data type": "文本型"
+   }
+parameters": [
+"data type": "变整数"]
+  },
+  {
+rameters": [
+"data type": "变整数"]"method name": "读字段集合",
+rameters": [
+"data type": "变整数"]"result comment": "返回字段的集合",
+rameters": [
+"data type": "变整数"]"data type": "文本数组类"
+  },
+  {
+ters": [
+"data type": "变整数"]"method name": "读字段集合""method name": "读内容集合",
+ters": [
+"data type": "变整数"]"method name": "读字段集合""result comment": "返回内容的集合",
+ters": [
+"data type": "变整数"]"method name": "读字段集合""data type": "文本数组类"
+  },
+  {
+ameters": [
+"data type": "变整数"]"data type": "文本数组类""method name": "到下一条",
+ameters": [
+"data type": "变整数"]"data type": "文本数组类""data type": "逻辑型"
+  },
+  {
+arameters": [
+"data type": "变整数""@禁止流程检查": "真""method name": "到指定行",
+arameters": [
+"data type": "变整数""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "指定行",
+"data type": "整数"
+   }
+arameters": [
+"data type": "变整数""@禁止流程检查": "真"]
+  }
+thod name": "取查询列数""comment": "回由以前的INSERT或UPDATE语句为AUTO_INCREMENT列生成的值。在包含AUTO_INCREMENT字段的表中执行了INSERT语句后，应使用该函数"]
+ }
+ 文本数组类]
+}

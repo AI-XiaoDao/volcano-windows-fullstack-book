@@ -1,0 +1,510 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"内存模块库".
+
+{
+问本程序中的接口需要引用模块"内存模块库"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"内存模块库"."package name": "火山.基本",
+问本程序中的接口需要引用模块"内存模块库"."comment": "开源项目：https://github.com/fancycode/MemoryModule",
+问本程序中的接口需要引用模块"内存模块库"."@视窗.外部头文件": "\"include\\\\MemoryModule.h\"",
+问本程序中的接口需要引用模块"内存模块库"."@视窗.外部源文件": "\"include\\\\MemoryModule.c\"",
+问本程序中的接口需要引用模块"内存模块库"."classes": [
+ {
+"class name": "内存函数",
+"base class": "对象类",
+"methods": [
+  {
+集清单"method name": "置函数地址",
+集清单"comment": "设置被对象中所指定的函数调用地址.",
+集清单"static": true,
+集清单"data type": "内存函数",
+集清单"@嵌入式方法": "\"\"",
+集清单"parameters": [
+   {
+"parameter name": "函数地址",
+"comment": "欲调用的函数地址,函数地址必须自行保证安全及正确性.",
+"data type": "变整数"
+   }
+集清单]
+  },
+  {
+清单"parameters": [
+"method name": "取函数地址",
+清单"parameters": [
+"comment": "获取本对象中所指定的函数调用地址.",
+清单"parameters": [
+"static": true,
+清单"parameters": [
+"data type": "变整数",
+清单"parameters": [
+"@嵌入式方法": "\"\"",
+清单"parameters": [
+"parameters": [
+   {
+"parameter name": "欲操作的对象",
+"data type": "内存函数"
+   }
+清单"parameters": [
+]
+  },
+  {
+ }"method name": "调用函数",
+ }"comment": "执行本对象中所指定的函数.本方法用作执行有参数且有返回值的函数.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "欲操作的对象",
+"data type": "内存函数"
+   },
+   {
+"parameter name": "返回值类型",
+"comment": "调用函数地址时的返回值类型,返回值类型必须对应本对象中的函数声明.",
+"@需求类型": "数据类型",
+"@匹配类型": "通用型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "附加参数",
+"comment": "调用函数地址时的附加参数,参数数量及参数数据类型必须对应本对象中的函数声明.",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+ }]
+  },
+  {
+data type": "内存函数""method name": "调用无参数函数",
+data type": "内存函数""comment": "执行本对象中所指定的函数.本方法用作执行无参数但有返回值的函数.",
+data type": "内存函数""static": true,
+data type": "内存函数""@嵌入式方法": "\"\"",
+data type": "内存函数""parameters": [
+   {
+"parameter name": "欲操作的对象",
+"data type": "内存函数"
+   },
+   {
+"parameter name": "返回值类型",
+"comment": "调用函数地址时的返回值类型,返回值类型必须对应本对象中的函数声明.",
+"@需求类型": "数据类型",
+"@匹配类型": "通用型",
+"@返回值类型": "0"
+   }
+data type": "内存函数"]
+  },
+  {
+
+"method name": "调用无返回值函数",
+
+"comment": "执行本对象中所指定的函数.本方法用作执行无返回值但有参数的函数.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作的对象",
+"data type": "内存函数"
+   },
+   {
+"parameter name": "附加参数",
+"comment": "调用函数地址时的附加参数,参数数量及参数数据类型必须对应本对象中的函数声明.",
+"@可扩展": "\"\"",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+"method name": "调用无参数及返回值函数",
+"comment": "执行本对象中所指定的函数.本方法用作执行无参数且无返回值的函数.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "欲操作的对象",
+"data type": "内存函数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "内存模块",
+"base class": "对象类",
+"methods": [
+  {
+@匹配类型": "通用型""method name": "从内存加载",
+@匹配类型": "通用型""comment": "从内存加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.",
+@匹配类型": "通用型""result comment": "成功返回模块句柄,失败返回0.",
+@匹配类型": "通用型""static": true,
+@匹配类型": "通用型""data type": "变整数",
+@匹配类型": "通用型""@嵌入式方法": "\"\"",
+@匹配类型": "通用型""parameters": [
+   {
+"parameter name": "内存指针",
+"comment": "欲加载的模块数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "指针长度",
+"comment": "欲加载的模块数据指针大小",
+"data type": "整数"
+   }
+@匹配类型": "通用型"]
+  },
+  {
+"method name": "从文件加载",
+"comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.",
+"result comment": "成功返回模块句柄,失败返回0.",
+"static": true,
+"data type": "变整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "文件名称",
+"comment": "欲加载的模块文件名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""method name": "从字节集加载",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""comment": "从字节集加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""result comment": "成功返回模块句柄,失败返回0.",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""static": true,
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""data type": "变整数",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""@禁止流程检查": "真",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""parameters": [
+   {
+"parameter name": "模块数据",
+"comment": "欲加载的模块数据",
+"data type": "字节集类"
+   }
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止."]
+  },
+  {
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""method name": "取函数",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""comment": "从模块句柄中获取函数调用对象",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""result comment": "成功与否可调用当前返回值对象中的\"取函数地址()\"命令获取,如果失败此函数必定返回0.",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""static": true,
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""data type": "内存函数",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""@嵌入式方法": "\"\"",
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止.""parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "模块句柄在\"从内存加载()\"、\"从文件加载()\"..等加载相关命令中返回了此句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "函数名称",
+"comment": "函数导出时的名称",
+"data type": "文本型"
+   }
+comment": "从文件加载具有指定大小的EXE/DLL文件.\n注意: 如果加载的EXE完成运行,本进程也将终止."]
+  },
+  {
+}"method name": "取函数2",
+}"comment": "从模块句柄中获取函数调用对象",
+}"result comment": "成功与否可调用当前返回值对象中的\"取函数地址()\"命令获取,如果失败此函数必定返回0.",
+}"static": true,
+}"data type": "内存函数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "模块句柄在\"从内存加载()\"、\"从文件加载()\"..等加载相关命令中返回了此句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "函数名称或序索引",
+"comment": "函数导出时的序数值或多字节文本指针,如果为序索引,索引值从1开始.",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+}"method name": "运行程序",
+}"comment": "执行入口点(仅限EXE).只有当EXE已加载到正确的基址或可以重新定位时(即链接器未剥离重新定位信息),才能执行入口点.\n重要提示:调用此函数不会返回,即一旦加载的EXE完成运行,进程将终止.",
+}"result comment": "如果无法执行入口点,则返回负值.",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "模块句柄在\"从内存加载()\"、\"从文件加载()\"..等加载相关命令中返回了此句柄.",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+}"method name": "释放模块",
+}"comment": "释放已加载的模块句柄",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "模块句柄在\"从内存加载()\"、\"从文件加载()\"..等加载相关命令中返回了此句柄.",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+
+"method name": "寻找资源",
+
+"comment": "查找指定类型和名称的资源的位置",
+
+"result comment": "成功返回资源索引,如果失败此函数必定返回0.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "模块句柄在\"从内存加载()\"、\"从文件加载()\"..等加载相关命令中返回了此句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "资源名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "资源类型",
+"data type": "模块资源类型"
+   }
+
+]
+  },
+  {
+ameter name": "资源类型""method name": "寻找资源2",
+ameter name": "资源类型""comment": "查找指定类型和名称的资源的位置",
+ameter name": "资源类型""result comment": "成功返回资源句柄,如果失败此函数必定返回0.",
+ameter name": "资源类型""static": true,
+ameter name": "资源类型""data type": "变整数",
+ameter name": "资源类型""@嵌入式方法": "\"\"",
+ameter name": "资源类型""parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "模块句柄在\"从内存加载()\"、\"从文件加载()\"..等加载相关命令中返回了此句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "资源标识",
+"comment": "欲获取的资源标识ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "资源类型",
+"comment": "欲获取的资源类型",
+"data type": "模块资源类型"
+   }
+ameter name": "资源类型"]
+  },
+  {
+eter name": "资源类型"]"method name": "取资源数据尺寸",
+eter name": "资源类型"]"comment": "获取资源的大小(以字节为单位)",
+eter name": "资源类型"]"result comment": "成功返回数据尺寸,失败返回0",
+eter name": "资源类型"]"static": true,
+eter name": "资源类型"]"data type": "整数",
+eter name": "资源类型"]"@嵌入式方法": "\"\"",
+eter name": "资源类型"]"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "模块句柄在\"从内存加载()\"、\"从文件加载()\"..等加载相关命令中返回了此句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "资源句柄",
+"comment": "模块句柄在\"寻找资源()\"\"..等资源相关命令中返回了此句柄.",
+"data type": "变整数"
+   }
+eter name": "资源类型"]]
+  },
+  {
+eter name": "资源类型"]"method name": "加载资源",
+eter name": "资源类型"]"comment": "加载寻找到的资源",
+eter name": "资源类型"]"result comment": "成功返回数据指针,失败返回0",
+eter name": "资源类型"]"static": true,
+eter name": "资源类型"]"data type": "变整数",
+eter name": "资源类型"]"@嵌入式方法": "\"\"",
+eter name": "资源类型"]"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "模块句柄在\"从内存加载()\"、\"从文件加载()\"..等加载相关命令中返回了此句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "资源句柄",
+"comment": "模块句柄在\"寻找资源()\"\"..等资源相关命令中返回了此句柄.",
+"data type": "变整数"
+   }
+eter name": "资源类型"]]
+  },
+  {
+}"method name": "加载文本资源",
+}"comment": "获取模块中的文本资源",
+}"result comment": "如加载失败则返回0",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "模块句柄在\"从内存加载()\"、\"从文件加载()\"..等加载相关命令中返回了此句柄.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "资源标识",
+"comment": "文本资源索引标识,如:1,10,20...",
+"data type": "整数"
+   },
+   {
+"parameter name": "返回值",
+"comment": "结果存放的变量,此变量必须确保要有足够的缓冲区存放可能返回的文本资源.",
+"data type": "文本型",
+"@需求类型": "可写入变量"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "模块资源类型",
+"@常量类": "变整数",
+"constants": [
+  {
+@常量类": "变整数""constant name": "光标",
+@常量类": "变整数""comment": "依赖于硬件的光标资源",
+@常量类": "变整数""initial value": "@ (INT_P)RT_CURSOR"
+  },
+  {
+常量类": "变整数""initial value": "@ (INT_P)RT_CURSOR""constant name": "位图",
+常量类": "变整数""initial value": "@ (INT_P)RT_CURSOR""comment": "位图资源",
+常量类": "变整数""initial value": "@ (INT_P)RT_CURSOR""initial value": "@ (INT_P)RT_BITMAP"
+  },
+  {
+
+"constant name": "图标",
+
+"comment": "依赖于硬件的图标资源",
+
+"initial value": "@ (INT_P)RT_ICON"
+  },
+  {
+onstant name": "图标""constant name": "菜单",
+onstant name": "图标""comment": "菜单资源",
+onstant name": "图标""initial value": "@ (INT_P)RT_MENU"
+  },
+  {
+
+"constant name": "对话框",
+
+"comment": "对话框资源",
+
+"initial value": "@ (INT_P)RT_DIALOG"
+  },
+  {
+
+"constant name": "文本",
+
+"comment": "字符串表条目",
+
+"initial value": "@ (INT_P)RT_STRING"
+  },
+  {
+
+"constant name": "字体目录",
+
+"comment": "字体资源目录",
+
+"initial value": "@ (INT_P)RT_FONTDIR"
+  },
+  {
+
+"constant name": "字体",
+
+"comment": "字体资源",
+
+"initial value": "@ (INT_P)RT_FONT"
+  },
+  {
+nstant name": "字体""constant name": "加速器",
+nstant name": "字体""comment": "加速器表",
+nstant name": "字体""initial value": "@ (INT_P)RT_ACCELERATOR"
+  },
+  {
+
+"constant name": "原始数据",
+
+"comment": "应用程序定义的原始数据资源",
+
+"initial value": "@ (INT_P)RT_RCDATA"
+  },
+  {
+"initial value": "@ (INT_P)RT_FONT""constant name": "消息表",
+"initial value": "@ (INT_P)RT_FONT""comment": "消息表条目",
+"initial value": "@ (INT_P)RT_FONT""initial value": "@ (INT_P)RT_MESSAGETABLE"
+  },
+  {
+NT_P)RT_RCDATA"constant name": "光标组",
+NT_P)RT_RCDATA"comment": "与硬件无关的光标资源",
+NT_P)RT_RCDATA"initial value": "@ (INT_P)RT_GROUP_CURSOR"
+  },
+  {
+initial value": "@ (INT_P)RT_FONT""comment": "消息表条目""constant name": "图标组",
+initial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源",
+initial value": "@ (INT_P)RT_FONT""comment": "消息表条目""initial value": "@ (INT_P)RT_GROUP_ICON"
+  },
+  {
+nitial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源""constant name": "版本",
+nitial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源""comment": "版本资源",
+nitial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源""initial value": "@ (INT_P)RT_VERSION"
+  },
+  {
+T_P)RT_RCDATA"initial value": "@ (INT_P)RT_GROUP_CURSOR""constant name": "关联文件",
+T_P)RT_RCDATA"initial value": "@ (INT_P)RT_GROUP_CURSOR""comment": "允许资源编辑工具将字符串与\".rc\"文件相关联.通常,字符串是提供符号名称的头文件的名称.资源编译器分析字符串,但否则将忽略该值.",
+T_P)RT_RCDATA"initial value": "@ (INT_P)RT_GROUP_CURSOR""initial value": "@ (INT_P)RT_DLGINCLUDE"
+  },
+  {
+
+"constant name": "即插即用",
+
+"comment": "即插即用资源",
+
+"initial value": "@ (INT_P)RT_PLUGPLAY"
+  },
+  {
+nitial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源""constant name": "VXD",
+nitial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源""comment": "VXD资源",
+nitial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源""initial value": "@ (INT_P)RT_VXD"
+  },
+  {
+itial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源""comment": "VXD资源""constant name": "动画光标",
+itial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源""comment": "VXD资源""comment": "动画光标资源",
+itial value": "@ (INT_P)RT_FONT""comment": "消息表条目""comment": "与硬件无关的图标资源""comment": "VXD资源""initial value": "@ (INT_P)RT_ANICURSOR"
+  },
+  {
+}"constant name": "动画图标",
+}"comment": "动画图标资源",
+}"initial value": "@ (INT_P)RT_ANIICON"
+  },
+  {
+}"constant name": "HTML",
+}"comment": "HTML资源",
+}"initial value": "@ (INT_P)RT_HTML"
+  },
+  {
+}"constant name": "清单",
+}"comment": "并行程序集清单",
+}"initial value": "@ (INT_P)RT_MANIFEST"
+  }
+]
+ }
+问本程序中的接口需要引用模块"内存模块库".]
+}

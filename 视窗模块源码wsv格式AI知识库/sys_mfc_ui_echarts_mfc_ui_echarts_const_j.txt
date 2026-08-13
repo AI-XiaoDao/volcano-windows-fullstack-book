@@ -1,0 +1,1281 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC版ECharts图表组件".
+
+{
+问本程序中的接口需要引用模块"MFC版ECharts图表组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"MFC版ECharts图表组件"."package name": "火山.ECharts",
+问本程序中的接口需要引用模块"MFC版ECharts图表组件"."comment": "火山MFC·Echarts图表控件,常量及辅助类定义.",
+问本程序中的接口需要引用模块"MFC版ECharts图表组件"."classes": [
+ {
+"class name": "坐标系类型",
+"comment": "图表坐标系类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+ᵐ數ŝ"constant name": "无",
+ᵐ數ŝ"comment": "不使用坐标系,一般在桑基图,自定义系列中可选.",
+ᵐ數ŝ"initial value": "\"none\""
+  },
+  {
+
+"constant name": "直角坐标系",
+
+"comment": "使用二维的直角坐标系(也称笛卡尔坐标系),通过 横轴索引,纵轴索引指定相应的坐标轴组件.",
+
+"initial value": "\"cartesian2d\""
+  },
+  {
+ walden 瓦尔登湖"constant name": "极坐标系",
+ walden 瓦尔登湖"comment": "使用极坐标系,通过 极坐标索引 指定相应的极坐标组件.",
+ walden 瓦尔登湖"initial value": "\"polar\""
+  },
+  {
+數ŝ"initial value": "\"none\"""constant name": "地理坐标系",
+數ŝ"initial value": "\"none\"""comment": "使用地理坐标系,通过 地理坐标索引 指定相应的地理坐标系组件.",
+數ŝ"initial value": "\"none\"""initial value": "\"geo\""
+  },
+  {
+walden 瓦尔登湖"initial value": "\"polar\"""constant name": "日历坐标系",
+walden 瓦尔登湖"initial value": "\"polar\"""comment": "使用日历坐标系.通过 日历坐标系索引 指定相应的日历坐标系组件.",
+walden 瓦尔登湖"initial value": "\"polar\"""initial value": "\"calendar\""
+  },
+  {
+alden 瓦尔登湖"initial value": "\"polar\"""initial value": "\"calendar\"""constant name": "单轴",
+alden 瓦尔登湖"initial value": "\"polar\"""initial value": "\"calendar\"""comment": "单轴,主题河流用的是单个的时间轴.",
+alden 瓦尔登湖"initial value": "\"polar\"""initial value": "\"calendar\"""initial value": "\"single\""
+  }
+]
+ },
+ {
+"class name": "坐标轴类型",
+"comment": "图表各坐标系中的坐标轴类型",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+格 chalk 黑底粉笔板书""constant name": "数值轴",
+格 chalk 黑底粉笔板书""comment": "适用于连续数据",
+格 chalk 黑底粉笔板书""initial value": "\"value\""
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "类目轴",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "适用于离散的类目数据,为该类型时类目数据可自动从\"系列\"中的数据项或从\"数据集组件\"原始数据中取,\n或者可通过\"横向坐标轴\"的\"类目数据\"中设置类目数据。",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"category\""
+  },
+  {
+
+"constant name": "时间轴",
+
+"comment": "时间轴,适用于连续的时序数据,与数值轴相比时间轴带有时间的格式化,在刻度计算上也有所不同,\n例如会根据跨度的范围来决定使用月,星期,日还是小时范围的刻度.",
+
+"initial value": "\"time\""
+  },
+  {
+
+"constant name": "对数轴",
+
+"comment": "对数轴,适用于对数数据.",
+
+"initial value": "\"log\""
+  }
+]
+ },
+ {
+"class name": "坐标轴刻度值计算方式",
+"comment": "坐标轴刻度值计算方式常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+
+"constant name": "自动计算",
+
+"comment": "自动计算最大值或最小值",
+
+"initial value": "\"null\""
+  },
+  {
+"comment": "自动计算最大值或最小值""constant name": "数据最大值",
+"comment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度",
+"comment": "自动计算最大值或最小值""initial value": "\"'dataMax'\""
+  },
+  {
+"initial value": "\"log\"""constant name": "数据最小值",
+"initial value": "\"log\"""comment": "取数据在该轴上的最小值作为最大或最小刻度",
+"initial value": "\"log\"""initial value": "\"'dataMin'\""
+  }
+]
+ },
+ {
+"class name": "标记图形形状",
+"comment": "图形形状常量,表示标注的图形,轴线两边的箭头,图例图形,数据项的贴花的图案等",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+nitial value": "\"none\"""constant name": "地理坐标系""constant name": "无",
+nitial value": "\"none\"""constant name": "地理坐标系""comment": "不显示标记",
+nitial value": "\"none\"""constant name": "地理坐标系""initial value": "\"none\""
+  },
+  {
+ment": "自动计算最大值或最小值""constant name": "数据最大值""constant name": "圆形",
+ment": "自动计算最大值或最小值""constant name": "数据最大值""comment": "圆形",
+ment": "自动计算最大值或最小值""constant name": "数据最大值""initial value": "\"circle\""
+  },
+  {
+tial value": "\"log\"""constant name": "数据最小值""constant name": "空心圆型",
+tial value": "\"log\"""constant name": "数据最小值""comment": "空心圆",
+tial value": "\"log\"""constant name": "数据最小值""initial value": "\"emptyCircle\""
+  },
+  {
+}"constant name": "方形",
+}"comment": "矩形",
+}"initial value": "\"rect\""
+  },
+  {
+comment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度""constant name": "空心方形",
+comment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度""comment": "空心矩形",
+comment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度""initial value": "\"emptyRect\""
+  },
+  {
+"initial value": "\"rect\"""constant name": "圆角矩形",
+"initial value": "\"rect\"""comment": "圆角矩形",
+"initial value": "\"rect\"""initial value": "\"roundRect\""
+  },
+  {
+
+"constant name": "空心圆角矩形",
+
+"comment": "空心圆角矩形",
+
+"initial value": "\"emptyRoundRect\""
+  },
+  {
+}"constant name": "三角形",
+}"comment": "三角形",
+}"initial value": "\"triangle\""
+  },
+  {
+omment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度""initial value": "\"emptyRect\"""constant name": "空心三角形",
+omment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度""initial value": "\"emptyRect\"""comment": "空心三角形",
+omment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度""initial value": "\"emptyRect\"""initial value": "\"emptyTriangle\""
+  },
+  {
+nstant name": "自动计算""constant name": "菱形",
+nstant name": "自动计算""comment": "菱形",
+nstant name": "自动计算""initial value": "\"diamond\""
+  },
+  {
+}"constant name": "空心菱形",
+}"comment": "空心菱形",
+}"initial value": "\"emptyDiamond\""
+  },
+  {
+
+"constant name": "水滴",
+
+"comment": "水滴型",
+
+"initial value": "\"pin\""
+  },
+  {
+omment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度""initial value": "\"emptyRect\"""constant name": "空心水滴",
+omment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度""initial value": "\"emptyRect\"""comment": "空心水滴",
+omment": "自动计算最大值或最小值""comment": "取数据在该轴上的最大值作为最大或最小刻度""initial value": "\"emptyRect\"""initial value": "\"emptyPin\""
+  },
+  {
+stant name": "自动计算""comment": "菱形""constant name": "箭头",
+stant name": "自动计算""comment": "菱形""comment": "箭头",
+stant name": "自动计算""comment": "菱形""initial value": "\"arrow\""
+  },
+  {
+initial value": "\"log\"""initial value": "\"'dataMin'\"""constant name": "空心箭头",
+initial value": "\"log\"""initial value": "\"'dataMin'\"""comment": "空心箭头",
+initial value": "\"log\"""initial value": "\"'dataMin'\"""initial value": "\"emptyArrow\""
+  }
+]
+ },
+ {
+"class name": "元素水平对齐",
+"comment": "图表元素水平对齐类型常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+t name": "自动计算""comment": "菱形""constant name": "箭头""constant name": "自动",
+t name": "自动计算""comment": "菱形""constant name": "箭头""comment": "自动",
+t name": "自动计算""comment": "菱形""constant name": "箭头""initial value": "\"auto\""
+  },
+  {
+
+"constant name": "左对齐",
+
+"comment": "左对齐",
+
+"initial value": "\"left\""
+  },
+  {
+}"constant name": "右对齐",
+}"comment": "右对齐",
+}"initial value": "\"right\""
+  },
+  {
+
+"constant name": "居中",
+
+"comment": "居中",
+
+"initial value": "\"center\""
+  }
+]
+ },
+ {
+"class name": "元素垂直对齐",
+"comment": "图表元素垂直对齐类型常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+}"constant name": "自动",
+}"comment": "自动",
+}"initial value": "\"auto\""
+  },
+  {
+"comment": "左对齐""constant name": "顶部",
+"comment": "左对齐""comment": "顶部对齐",
+"comment": "左对齐""initial value": "\"top\""
+  },
+  {
+"comment": "左对齐""constant name": "底部",
+"comment": "左对齐""comment": "底部对齐",
+"comment": "左对齐""initial value": "\"bottom\""
+  },
+  {
+comment": "左对齐""comment": "顶部对齐""constant name": "居中",
+comment": "左对齐""comment": "顶部对齐""comment": "居中",
+comment": "左对齐""comment": "顶部对齐""initial value": "\"middle\""
+  }
+]
+ },
+ {
+"class name": "元素字体粗细",
+"comment": "图表元素字体粗细常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+ment": "左对齐""constant name": "底部""constant name": "通常",
+ment": "左对齐""constant name": "底部""comment": "默认值,定义标准的字符",
+ment": "左对齐""constant name": "底部""initial value": "\"normal\""
+  },
+  {
+": "左对齐""constant name": "底部""constant name": "通常""constant name": "粗体",
+": "左对齐""constant name": "底部""constant name": "通常""comment": "定义粗体字符",
+": "左对齐""constant name": "底部""constant name": "通常""initial value": "\"bold\""
+  },
+  {
+}"constant name": "加粗",
+}"comment": "定义更粗的字符",
+}"initial value": "\"bolder\""
+  },
+  {
+}"constant name": "细体",
+}"comment": "定义更细的字符",
+}"initial value": "\"lighter\""
+  }
+]
+ },
+ {
+"class name": "元素线条类型",
+"comment": "图表元素边框线类型常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+"comment": "定义更粗的字符""constant name": "无",
+"comment": "定义更粗的字符""comment": "无",
+"comment": "定义更粗的字符""initial value": "\"none\""
+  },
+  {
+tant name": "自动计算""comment": "菱形""initial value": "\"arrow\"""constant name": "点状",
+tant name": "自动计算""comment": "菱形""initial value": "\"arrow\"""comment": "定义点状线",
+tant name": "自动计算""comment": "菱形""initial value": "\"arrow\"""initial value": "\"dotted\""
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "虚线",
+tegory = \\\"辅助类\\\"\""comment": "定义虚线",
+tegory = \\\"辅助类\\\"\""initial value": "\"dashed\""
+  },
+  {
+
+"constant name": "实线",
+
+"comment": "定义实线",
+
+"initial value": "\"solid\""
+  }
+]
+ },
+ {
+"class name": "元素溢出截断类型",
+"comment": "文字超出宽度是否截断或者换行",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+egory = \\\"辅助类\\\"\""initial value": "\"dashed\"""constant name": "无",
+egory = \\\"辅助类\\\"\""initial value": "\"dashed\"""comment": "无",
+egory = \\\"辅助类\\\"\""initial value": "\"dashed\"""initial value": "\"none\""
+  },
+  {
+ant name": "自动计算""comment": "菱形""initial value": "\"arrow\"""initial value": "\"dotted\"""constant name": "截断",
+ant name": "自动计算""comment": "菱形""initial value": "\"arrow\"""initial value": "\"dotted\"""comment": "截断,并在末尾显示省略文本默认为...",
+ant name": "自动计算""comment": "菱形""initial value": "\"arrow\"""initial value": "\"dotted\"""initial value": "\"truncate\""
+  },
+  {
+name": "自动计算""comment": "菱形""initial value": "\"arrow\"""initial value": "\"dotted\"""constant name": "截断""constant name": "换行",
+name": "自动计算""comment": "菱形""initial value": "\"arrow\"""initial value": "\"dotted\"""constant name": "截断""comment": "换行",
+name": "自动计算""comment": "菱形""initial value": "\"arrow\"""initial value": "\"dotted\"""constant name": "截断""initial value": "\"break\""
+  },
+  {
+"constant name": "单词换行",
+"comment": "在英语等拉丁文中强制单词内换行",
+"initial value": "\"breakAll\""
+  }
+]
+ },
+ {
+"class name": "坐标轴指示器类型",
+"comment": "坐标轴指示器类型常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+}"constant name": "无指示器",
+}"comment": "无指示器",
+}"initial value": "\"none\""
+  },
+  {
+ss name": "元素溢出截断类型""constant name": "直线指示器",
+ss name": "元素溢出截断类型""comment": "直线指示器",
+ss name": "元素溢出截断类型""initial value": "\"line\""
+  },
+  {
+s name": "元素溢出截断类型""comment": "直线指示器""constant name": "阴影指示器",
+s name": "元素溢出截断类型""comment": "直线指示器""comment": "阴影指示器",
+s name": "元素溢出截断类型""comment": "直线指示器""initial value": "\"shadow\""
+  },
+  {
+constants": [
+"constant name": "十字准星指示器",
+constants": [
+"comment": "十字准星指示器,其实是种简写,表示启用两个正交的轴的坐标轴指示器",
+constants": [
+"initial value": "\"cross\""
+  }
+]
+ },
+ {
+"class name": "提示框触发类型",
+"comment": "提示框触发类型常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+"constant name": "不触发",
+"comment": "不触发",
+"initial value": "\"none\""
+  },
+  {
+ss name": "元素溢出截断类型""constant name": "数据项图形触发",
+ss name": "元素溢出截断类型""comment": "数据项图形触发,主要在散点图,饼图等无类目轴的图表中使用.",
+ss name": "元素溢出截断类型""initial value": "\"item\""
+  },
+  {
+s name": "元素溢出截断类型""comment": "数据项图形触发,主要在散点图,饼图等无类目轴的图表中使用.""constant name": "坐标轴触发",
+s name": "元素溢出截断类型""comment": "数据项图形触发,主要在散点图,饼图等无类目轴的图表中使用.""comment": "坐标轴触发,主要在柱状图,折线图等会使用类目轴的图表中使用.",
+s name": "元素溢出截断类型""comment": "数据项图形触发,主要在散点图,饼图等无类目轴的图表中使用.""initial value": "\"axis\""
+  }
+]
+ },
+ {
+"class name": "提示框触发条件",
+"comment": "提示框触发条件常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+nstant name": "无指示器""constant name": "鼠标移动",
+nstant name": "无指示器""comment": "鼠标移动时触发",
+nstant name": "无指示器""initial value": "\"mousemove\""
+  },
+  {
+comment": "不触发""constant name": "鼠标点击",
+comment": "不触发""comment": "鼠标点击时触发",
+comment": "不触发""initial value": "\"click\""
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "移动或点击",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "同时鼠标移动和点击时触发",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"mousemove|click\""
+  },
+  {
+tants": [
+"constant name": "十字准星指示器""constant name": "不触发",
+tants": [
+"constant name": "十字准星指示器""comment": "不在鼠标移动和点击时触发.",
+tants": [
+"constant name": "十字准星指示器""initial value": "\"none\""
+  }
+]
+ },
+ {
+"class name": "提示框排序方式",
+"comment": "提示框排序方式常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+@常量类": "文本型""constant name": "系列升序",
+@常量类": "文本型""comment": "根据系列声明,升序排列.",
+@常量类": "文本型""initial value": "\"seriesAsc\""
+  },
+  {
+constants": [
+"constant name": "系列降序",
+constants": [
+"comment": "根据系列声明,降序排列.",
+constants": [
+"initial value": "\"seriesDesc\""
+  },
+  {
+常量类": "文本型""initial value": "\"seriesAsc\"""constant name": "值升序",
+常量类": "文本型""initial value": "\"seriesAsc\"""comment": "根据数据值,升序排列.",
+常量类": "文本型""initial value": "\"seriesAsc\"""initial value": "\"valueAsc\""
+  },
+  {
+comment": "提示框排序方式常量""constant name": "值降序",
+comment": "提示框排序方式常量""comment": "根据数据值,降序排列.",
+comment": "提示框排序方式常量""initial value": "\"valueDesc\""
+  }
+]
+ },
+ {
+"class name": "数据排序方式",
+"comment": "数据排序方式常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+onstants": [
+"initial value": "\"seriesDesc\"""constant name": "升序",
+onstants": [
+"initial value": "\"seriesDesc\"""comment": "升序",
+onstants": [
+"initial value": "\"seriesDesc\"""initial value": "\"ascending\""
+  },
+  {
+comment": "数据排序方式常量""constant name": "降序",
+comment": "数据排序方式常量""comment": "降序",
+comment": "数据排序方式常量""initial value": "\"descending\""
+  },
+  {
+
+"constant name": "数据顺序",
+
+"comment": "按根据顺序",
+
+"initial value": "\"none\""
+  }
+]
+ },
+ {
+"class name": "雷达图绘制类型",
+"comment": "雷达图绘制类型常量",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+"constant name": "默认",
+"initial value": "\"\""
+  },
+  {
+comment": "雷达图绘制类型常量""constant name": "多边形",
+comment": "雷达图绘制类型常量""initial value": "\"polygon\""
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "环形",
+tegory = \\\"辅助类\\\"\""initial value": "\"circle\""
+  }
+]
+ },
+ {
+"class name": "图表类型",
+"comment": "图表类型对应ECharts的\"series.type\"设置项",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+ry = \\\"辅助类\\\"\""constant name": "环形""constant name": "柱状图",
+ry = \\\"辅助类\\\"\""constant name": "环形""comment": "柱状图(或称条形图)是一种通过柱形的高度(横向的情况下则是宽度)来表现数据大小的一种常用图表类型。",
+ry = \\\"辅助类\\\"\""constant name": "环形""initial value": "\"bar\""
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "折线图",
+tegory = \\\"辅助类\\\"\""comment": "折线/面积图是用折线将各个数据点标志连接起来的图表,用于展现数据的变化趋势.可用于直角坐标系和极坐标系上.",
+tegory = \\\"辅助类\\\"\""initial value": "\"line\""
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "饼图",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "饼图主要用于表现不同类目的数据在总和中的占比,每个的弧度表示数据数量的比例.",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"pie\""
+  },
+  {
+nt name": "无指示器""constant name": "鼠标移动""constant name": "散点图",
+nt name": "无指示器""constant name": "鼠标移动""comment": "散点(气泡)图,直角坐标系上的散点图可以用来展现数据的横坐标,纵坐标之间的关系,如果数据项有多个维度,其它维度的值可以通过不同大小的\"标记图形\"展现成气泡图,\n也可以用颜色来表现,这些可以配合视觉映射组件完成.可以应用在直角坐标系,极坐标系,地理坐标系上.",
+nt name": "无指示器""constant name": "鼠标移动""initial value": "\"scatter\""
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "涟漪散点图",
+tegory = \\\"辅助类\\\"\""comment": "带有涟漪特效动画的散点(气泡)图,利用动画特效可以将某些想要突出的数据进行视觉突出.",
+tegory = \\\"辅助类\\\"\""initial value": "\"effectScatter\""
+  },
+  {
+
+"constant name": "雷达图",
+
+"comment": "雷达图主要用于表现多变量的数据,例如球员的各个属性分析,需要单独依赖雷达图组件.",
+
+"initial value": "\"radar\""
+  },
+  {
+s": [
+"constant name": "十字准星指示器""constant name": "不触发""constant name": "树图",
+s": [
+"constant name": "十字准星指示器""constant name": "不触发""comment": "树图主要用来可视化树形数据结构,是一种特殊的层次类型,具有唯一的根节点,左子树,和右子树.\n注意:目前不支持在单个系列中直接绘制森林,可以通过在配置项中配置多个系列实现森林.",
+s": [
+"constant name": "十字准星指示器""constant name": "不触发""initial value": "\"tree\""
+  },
+  {
+t name": "无指示器""constant name": "鼠标移动""initial value": "\"scatter\"""constant name": "树状数据",
+t name": "无指示器""constant name": "鼠标移动""initial value": "\"scatter\"""comment": "树状数据是一种常见的表达『层级数据』『树状数据』的可视化形式,它主要用面积的方式,便于突出展现出『树』的各层级中重要的节点.",
+t name": "无指示器""constant name": "鼠标移动""initial value": "\"scatter\"""initial value": "\"treemap\""
+  },
+  {
+egory = \\\"辅助类\\\"\""comment": "带有涟漪特效动画的散点(气泡)图,利用动画特效可以将某些想要突出的数据进行视觉突出.""constant name": "旭日图",
+egory = \\\"辅助类\\\"\""comment": "带有涟漪特效动画的散点(气泡)图,利用动画特效可以将某些想要突出的数据进行视觉突出.""comment": "旭日图由多层的环形图组成,在数据结构上,内圈是外圈的父节点.因此,它既能像饼图一样表现局部和整体的占比,又能像矩形树图一样表现层级关系.",
+egory = \\\"辅助类\\\"\""comment": "带有涟漪特效动画的散点(气泡)图,利用动画特效可以将某些想要突出的数据进行视觉突出.""initial value": "\"sunburst\""
+  },
+  {
+
+"constant name": "盒须图",
+
+"comment": "可以称为『箱形图』『盒须图』『盒式图』『盒状图』『箱线图』是一种用作显示一组数据分散情况资料的统计图,它能显示出一组数据的最大值、最小值、中位数、下四分位数及上四分位数.",
+
+"initial value": "\"boxplot\""
+  },
+  {
+
+"constant name": "K线图",
+
+"comment": "K线图",
+
+"initial value": "\"candlestick\""
+  },
+  {
+s": [
+"constant name": "十字准星指示器""constant name": "不触发""constant name": "热力图",
+s": [
+"constant name": "十字准星指示器""constant name": "不触发""comment": "热力图主要通过颜色去表现数值的大小,必须要配合视觉映射组件使用.",
+s": [
+"constant name": "十字准星指示器""constant name": "不触发""initial value": "\"heatmap\""
+  },
+  {
+": [
+"constant name": "十字准星指示器""constant name": "不触发""initial value": "\"heatmap\"""constant name": "地图",
+": [
+"constant name": "十字准星指示器""constant name": "不触发""initial value": "\"heatmap\"""comment": "地图主要用于地理区域数据的可视化,配合 视觉映射组件用于展示不同区域的人口分布密度等数据.",
+": [
+"constant name": "十字准星指示器""constant name": "不触发""initial value": "\"heatmap\"""initial value": "\"map\""
+  },
+  {
+y = \\\"辅助类\\\"\""constant name": "环形""comment": "柱状图(或称条形图)是一种通过柱形的高度(横向的情况下则是宽度)来表现数据大小的一种常用图表类型。""constant name": "平行坐标系",
+y = \\\"辅助类\\\"\""constant name": "环形""comment": "柱状图(或称条形图)是一种通过柱形的高度(横向的情况下则是宽度)来表现数据大小的一种常用图表类型。""comment": "平行坐标系是一种常用的可视化高维数据的图表.",
+y = \\\"辅助类\\\"\""constant name": "环形""comment": "柱状图(或称条形图)是一种通过柱形的高度(横向的情况下则是宽度)来表现数据大小的一种常用图表类型。""initial value": "\"parallel\""
+  },
+  {
+}"constant name": "路径图",
+}"comment": "路径图用于带有起点和终点信息的线数据的绘制,主要用于地图上的航线,路线的可视化.",
+}"initial value": "\"lines\""
+  },
+  {
+y = \\\"辅助类\\\"\""constant name": "环形""comment": "柱状图(或称条形图)是一种通过柱形的高度(横向的情况下则是宽度)来表现数据大小的一种常用图表类型。""constant name": "关系图",
+y = \\\"辅助类\\\"\""constant name": "环形""comment": "柱状图(或称条形图)是一种通过柱形的高度(横向的情况下则是宽度)来表现数据大小的一种常用图表类型。""comment": "关系图用于展现节点以及节点之间的关系数据",
+y = \\\"辅助类\\\"\""constant name": "环形""comment": "柱状图(或称条形图)是一种通过柱形的高度(横向的情况下则是宽度)来表现数据大小的一种常用图表类型。""initial value": "\"graph\""
+  },
+  {
+
+"constant name": "桑基图",
+
+"comment": "桑基图是一种特殊的流图（可以看作是有向无环图）它主要用来表示原材料,能量等如何从最初形式经过中间过程的加工或转化达到最终状态.",
+
+"initial value": "\"sankey\""
+  },
+  {
+于展现节点以及节点之间的关系数据"constant name": "漏斗图",
+于展现节点以及节点之间的关系数据"comment": "漏斗图",
+于展现节点以及节点之间的关系数据"initial value": "\"funnel\""
+  },
+  {
+点以及节点之间的关系数据"constant name": "漏斗图""constant name": "仪表盘",
+点以及节点之间的关系数据"constant name": "漏斗图""comment": "仪表盘",
+点以及节点之间的关系数据"constant name": "漏斗图""initial value": "\"gauge\""
+  },
+  {
+nstant name": "盒须图""constant name": "象形柱图",
+nstant name": "盒须图""comment": "象形柱图是可以设置各种具象图形元素（如图片、SVG PathData 等）的柱状图,往往用在信息图中.用于有至少一个类目轴或时间轴的直角坐标系上.",
+nstant name": "盒须图""initial value": "\"pictorialBar\""
+  },
+  {
+}"constant name": "主题河流",
+}"comment": "主题河流是一种特殊的流图,它主要用来表示事件或主题等在一段时间内的变化.",
+}"initial value": "\"themeRiver\""
+  },
+  {
+
+"constant name": "自定义系列",
+
+"comment": "自定义系列可以自定义系列中的图形元素渲染,从而能扩展出不同的图表.\n同时,echarts 会统一管理图形的创建删除,动画,与其他组件（如 数据缩放,视觉映射）的联动,使开发者不必纠结这些细节.",
+
+"initial value": "\"custom\""
+  }
+]
+ },
+ {
+"class name": "图表标注类型",
+"comment": "图表标注类型常量,用于标注最大值最小值等",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+}"constant name": "最小值",
+}"comment": "最小值",
+}"initial value": "\"min\""
+  },
+  {
+"initial value": "\"min\"""constant name": "最大值",
+"initial value": "\"min\"""comment": "最大值",
+"initial value": "\"min\"""initial value": "\"max\""
+  },
+  {
+以及节点之间的关系数据"constant name": "漏斗图""comment": "仪表盘""constant name": "平均值",
+以及节点之间的关系数据"constant name": "漏斗图""comment": "仪表盘""comment": "平均值",
+以及节点之间的关系数据"constant name": "漏斗图""comment": "仪表盘""initial value": "\"average\""
+  },
+  {
+nstant name": "自定义系列""constant name": "中位数",
+nstant name": "自定义系列""comment": "中位数",
+nstant name": "自定义系列""initial value": "\"median\""
+  }
+]
+ },
+ {
+"class name": "图表背景重复模式",
+"comment": "图表背景重复模式,用于图表元素的纹理填充.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "重复",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "背景图像将在垂直方向和水平方向重复",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"repeat\""
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "水平",
+tegory = \\\"辅助类\\\"\""comment": "背景图像将在水平方向重复",
+tegory = \\\"辅助类\\\"\""initial value": "\"repeat-x\""
+  },
+  {
+stant name": "自定义系列""comment": "中位数""constant name": "垂直",
+stant name": "自定义系列""comment": "中位数""comment": "背景图像将在垂直方向重复",
+stant name": "自定义系列""comment": "中位数""initial value": "\"repeat-y\""
+  },
+  {
+
+"constant name": "不重复",
+
+"comment": "背景图像将仅显示一次",
+
+"initial value": "\"inherit\""
+  }
+]
+ },
+ {
+"class name": "聚焦淡出方式",
+"comment": "在高亮图形时,是否淡出其它数据的图形已达到聚焦的效果",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+ss name": "图表标注类型""constant name": "不淡出其他图形",
+ss name": "图表标注类型""comment": "不淡出其它图形，默认使用该配置",
+ss name": "图表标注类型""initial value": "\"none\""
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "聚焦自身",
+tegory = \\\"辅助类\\\"\""comment": "只聚焦（不淡出）当前高亮的数据的图形",
+tegory = \\\"辅助类\\\"\""initial value": "\"self\""
+  },
+  {
+}"constant name": "聚焦系列",
+}"comment": "聚焦当前高亮的数据所在的系列的所有图形",
+}"initial value": "\"series\""
+  }
+]
+ },
+ {
+"class name": "聚焦淡出范围",
+"comment": "在开启聚焦淡出的时候,可以配置淡出的范围.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+}"constant name": "坐标系",
+}"comment": "淡出范围为坐标系",
+}"initial value": "\"coordinateSystem\""
+  },
+  {
+tegory = \\\"辅助类\\\"\""constant name": "系列",
+tegory = \\\"辅助类\\\"\""comment": "淡出范围为系列",
+tegory = \\\"辅助类\\\"\""initial value": "\"series\""
+  },
+  {
+ordinateSystem\""constant name": "全局",
+ordinateSystem\""comment": "淡出范围为全局",
+ordinateSystem\""initial value": "\"global\""
+  }
+]
+ },
+ {
+"class name": "视觉映射类型",
+"comment": "视觉映射组件类型,可以定义为 分段型 或 连续型.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+constants": [
+"constant name": "坐标系",
+constants": [
+"comment": "连续型视觉映射组件",
+constants": [
+"initial value": "\"continuous\""
+  },
+  {
+ry = \\\"辅助类\\\"\""constant name": "系列""constant name": "系列",
+ry = \\\"辅助类\\\"\""constant name": "系列""comment": "分段型视觉映射组件",
+ry = \\\"辅助类\\\"\""constant name": "系列""initial value": "\"piecewise\""
+  }
+]
+ },
+ {
+"class name": "区域缩放类型",
+"comment": "区域缩放组件类型,用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+tegory = \\\"辅助类\\\"\""constant name": "内置型",
+tegory = \\\"辅助类\\\"\""comment": "内置型数据区域缩放组件,所谓\"内置\"即内置在坐标系中,平移：在坐标系中滑动拖拽进行数据区域平移.缩放：鼠标在坐标系范围内滚轮滚动.",
+tegory = \\\"辅助类\\\"\""initial value": "\"inside\""
+  },
+  {
+"constant name": "滑动条型",
+"comment": "滑动条型数据区域缩放组件,提供了数据缩略图显示,缩放,刷选,拖拽,点击快速定位等数据筛选的功能.",
+"initial value": "\"slider\""
+  }
+]
+ },
+ {
+"class name": "数据过滤模式",
+"comment": "区域缩放的运行原理是通过数据过滤以及在内部设置轴的显示窗口来达到数据窗口缩放的效果,数据过滤模式的设置不同,效果也不同.",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+}"constant name": "标准过滤",
+}"comment": "当前数据窗口外的数据被过滤掉.即会影响其他轴的数据范围.每个数据项,只要有一个维度在数据窗口外,整个数据项就会被过滤掉.",
+}"initial value": "\"filter'\""
+  },
+  {
+}"constant name": "弱过滤",
+}"comment": "当前数据窗口外的数据被过滤掉,即会影响其他轴的数据范围.每个数据项,只有当全部维度都在数据窗口同侧外部,整个数据项才会被过滤掉.",
+}"initial value": "\"weakFilter\""
+  },
+  {
+
+"constant name": "外部为空",
+
+"comment": "当前数据窗口外的数据被设置为空,即不会影响其他轴的数据范围.",
+
+"initial value": "\"empty\""
+  },
+  {
+"comment": "当前数据窗口外的数据被设置为空,即不会影响其他轴的数据范围.""constant name": "不过滤",
+"comment": "当前数据窗口外的数据被设置为空,即不会影响其他轴的数据范围.""comment": "不过滤数据,只改变数轴范围.",
+"comment": "当前数据窗口外的数据被设置为空,即不会影响其他轴的数据范围.""initial value": "\"none\""
+  }
+]
+ },
+ {
+"class name": "图表动画效果",
+"comment": "图表动画效果",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+
+"constant name": "展开",
+
+"comment": "数据(图形)依次展开",
+
+"initial value": "\"expansion''\""
+  },
+  {
+
+"constant name": "缩放",
+
+"comment": "缩放效果,配合设置缓动效果可以做成弹出的效果",
+
+"initial value": "\"scale\""
+  },
+  {
+"comment": "数据(图形)依次展开""constant name": "过渡",
+"comment": "数据(图形)依次展开""comment": "通过改变起始和终止角度,从之前的数据过渡到新的数据.",
+"comment": "数据(图形)依次展开""initial value": "\"transition\""
+  }
+]
+ },
+ {
+"class name": "图表动画缓动效果",
+"comment": "图表动画缓动效果",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+comment": "图表动画缓动效果""constant name": "线性",
+comment": "图表动画缓动效果""comment": "线性",
+comment": "图表动画缓动效果""initial value": "\"linear''\""
+  },
+  {
+}"constant name": "平方进",
+}"comment": "平方进",
+}"initial value": "\"quadraticIn\""
+  },
+  {
+}"constant name": "平方出",
+}"comment": "平方出",
+}"initial value": "\"quadraticOut\""
+  },
+  {
+nstant name": "平方出""constant name": "平方进出",
+nstant name": "平方出""comment": "平方",
+nstant name": "平方出""initial value": "\"quadraticInOut\""
+  },
+  {
+"comment": "平方出""constant name": "立方进",
+"comment": "平方出""comment": "立方进",
+"comment": "平方出""initial value": "\"cubicIn\""
+  },
+  {
+ss name": "图表动画缓动效果""constant name": "立方出",
+ss name": "图表动画缓动效果""comment": "立方出",
+ss name": "图表动画缓动效果""initial value": "\"cubicOut\""
+  },
+  {
+"comment": "平方进""constant name": "立方进出",
+"comment": "平方进""comment": "立方",
+"comment": "平方进""initial value": "\"cubicInOut\""
+  },
+  {
+comment": "平方进""comment": "立方""constant name": "四次方进",
+comment": "平方进""comment": "立方""comment": "四次方进",
+comment": "平方进""comment": "立方""initial value": "\"quarticIn\""
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "四次方出",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "四次方出",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\""
+  },
+  {
+文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\"""constant name": "四次方进出",
+文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\"""comment": "四次方",
+文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\"""initial value": "\"quarticInOut\""
+  },
+  {
+
+"constant name": "五次方进",
+
+"comment": "五次方进",
+
+"initial value": "\"quinticIn\""
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "五次方出",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "五次方出",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"quinticOut\""
+  },
+  {
+档": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\"""comment": "四次方""constant name": "五次方进出",
+档": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\"""comment": "四次方""comment": "五次方",
+档": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\"""comment": "四次方""initial value": "\"quinticInOut\""
+  },
+  {
+}"constant name": "正弦进",
+}"comment": "正弦进",
+}"initial value": "\"sinusoidalIn\""
+  },
+  {
+
+"constant name": "正弦出",
+
+"comment": "正弦出",
+
+"initial value": "\"sinusoidalOut\""
+  },
+  {
+nusoidalOut\""constant name": "正弦进出",
+nusoidalOut\""comment": "正弦",
+nusoidalOut\""initial value": "\"sinusoidalInOut\""
+  },
+  {
+": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\"""comment": "四次方""initial value": "\"quinticInOut\"""constant name": "指数进",
+": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\"""comment": "四次方""initial value": "\"quinticInOut\"""comment": "指数进",
+": "\"category = \\\"辅助类\\\"\"""initial value": "\"quarticOut\"""comment": "四次方""initial value": "\"quinticInOut\"""initial value": "\"exponentialIn\""
+  },
+  {
+
+"constant name": "指数出",
+
+"comment": "指数出",
+
+"initial value": "\"exponentialOut\""
+  },
+  {
+
+"constant name": "指数进出",
+
+"comment": "指数",
+
+"initial value": "\"exponentialInOut\""
+  },
+  {
+comment": "平方出""initial value": "\"cubicIn\"""constant name": "曲线进",
+comment": "平方出""initial value": "\"cubicIn\"""comment": "曲线进",
+comment": "平方出""initial value": "\"cubicIn\"""initial value": "\"circularIn\""
+  },
+  {
+"initial value": "\"exponentialOut\"""constant name": "曲线出",
+"initial value": "\"exponentialOut\"""comment": "曲线出",
+"initial value": "\"exponentialOut\"""initial value": "\"circularOut\""
+  },
+  {
+
+"constant name": "曲线进出",
+
+"comment": "曲线",
+
+"initial value": "\"circularInOut\""
+  },
+  {
+"initial value": "\"circularInOut\"""constant name": "弹性进",
+"initial value": "\"circularInOut\"""comment": "弹性进",
+"initial value": "\"circularInOut\"""initial value": "\"elasticIn\""
+  },
+  {
+tial value": "\"circularInOut\"""constant name": "弹性进""constant name": "弹性出",
+tial value": "\"circularInOut\"""constant name": "弹性进""comment": "弹性出",
+tial value": "\"circularInOut\"""constant name": "弹性进""initial value": "\"elasticOut\""
+  },
+  {
+initial value": "\"circularInOut\"""comment": "弹性进""constant name": "弹性进出",
+initial value": "\"circularInOut\"""comment": "弹性进""comment": "弹性",
+initial value": "\"circularInOut\"""comment": "弹性进""initial value": "\"elasticInOut\""
+  },
+  {
+
+"constant name": "回收进",
+
+"comment": "回收进",
+
+"initial value": "\"backIn\""
+  },
+  {
+nitial value": "\"circularInOut\"""comment": "弹性进""initial value": "\"elasticInOut\"""constant name": "回收出",
+nitial value": "\"circularInOut\"""comment": "弹性进""initial value": "\"elasticInOut\"""comment": "回收出",
+nitial value": "\"circularInOut\"""comment": "弹性进""initial value": "\"elasticInOut\"""initial value": "\"backOut\""
+  },
+  {
+initial value": "\"circularInOut\"""comment": "弹性进""constant name": "回收进出",
+initial value": "\"circularInOut\"""comment": "弹性进""comment": "回收",
+initial value": "\"circularInOut\"""comment": "弹性进""initial value": "\"backInOut\""
+  },
+  {
+}"constant name": "弹跳进",
+}"comment": "弹跳进",
+}"initial value": "\"bounceIn\""
+  },
+  {
+nstant name": "弹跳进""constant name": "弹跳出",
+nstant name": "弹跳进""comment": "弹跳出",
+nstant name": "弹跳进""initial value": "\"bounceOut\""
+  },
+  {
+}"constant name": "弹跳进出",
+}"comment": "弹跳",
+}"initial value": "\"bounceInOut\""
+  }
+]
+ },
+ {
+"class name": "图表元素定位",
+"comment": "图表元素,如:标签的布局定位方式",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+@常量类": "文本型""constant name": "自动",
+@常量类": "文本型""comment": "自动决定",
+@常量类": "文本型""initial value": "\"auto\""
+  },
+  {
+"comment": "弹跳进""constant name": "顶部",
+"comment": "弹跳进""comment": "顶部",
+"comment": "弹跳进""initial value": "\"top\""
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "居左",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "居左",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"left\""
+  },
+  {
+
+"constant name": "居右",
+
+"comment": "居右",
+
+"initial value": "\"right\""
+  },
+  {
+"comment": "弹跳进""constant name": "底部",
+"comment": "弹跳进""comment": "底部",
+"comment": "弹跳进""initial value": "\"bottom\""
+  },
+  {
+comment": "弹跳进""initial value": "\"top\"""constant name": "居中",
+comment": "弹跳进""initial value": "\"top\"""comment": "居中",
+comment": "弹跳进""initial value": "\"top\"""initial value": "\"center\""
+  },
+  {
+comment": "图表元素,如:标签的布局定位方式""constant name": "内部居中",
+comment": "图表元素,如:标签的布局定位方式""comment": "内部居中",
+comment": "图表元素,如:标签的布局定位方式""initial value": "\"inside\""
+  },
+  {
+
+"constant name": "内部居左",
+
+"comment": "内部居左",
+
+"initial value": "\"insideLeft\""
+  },
+  {
+
+"constant name": "内部居右",
+
+"comment": "内部居右",
+
+"initial value": "\"insideRight\""
+  },
+  {
+
+"constant name": "内部置顶",
+
+"comment": "内部置顶",
+
+"initial value": "\"insideTop\""
+  },
+  {
+"comment": "弹跳进""constant name": "内部置底",
+"comment": "弹跳进""comment": "内部置底",
+"comment": "弹跳进""initial value": "\"insideBottom\""
+  },
+  {
+comment": "图表元素,如:标签的布局定位方式""constant name": "内部左上",
+comment": "图表元素,如:标签的布局定位方式""comment": "内部左上",
+comment": "图表元素,如:标签的布局定位方式""initial value": "\"insideTopLeft\""
+  },
+  {
+comment": "弹跳进""comment": "顶部""constant name": "内部左下",
+comment": "弹跳进""comment": "顶部""comment": "内部左下",
+comment": "弹跳进""comment": "顶部""initial value": "\"insideBottomLeft\""
+  },
+  {
+
+"constant name": "内部右上",
+
+"comment": "内部右上",
+
+"initial value": "\"insideTopRight\""
+  },
+  {
+sideTopRight\""constant name": "内部右下",
+sideTopRight\""comment": "内部右下",
+sideTopRight\""initial value": "\"insideBottomRight\""
+  },
+  {
+ideTopRight\""initial value": "\"insideBottomRight\"""constant name": "起始点",
+ideTopRight\""initial value": "\"insideBottomRight\"""comment": "线的起始点",
+ideTopRight\""initial value": "\"insideBottomRight\"""initial value": "\"start\""
+  },
+  {
+}"constant name": "中点",
+}"comment": "线的中点",
+}"initial value": "\"middle\""
+  },
+  {
+
+"constant name": "结束点",
+
+"comment": "线的结束点",
+
+"initial value": "\"end\""
+  }
+]
+ },
+ {
+"class name": "系列数据采样策略",
+"comment": "在数据量远大于像素点时候的降采样策略,开启后可以有效的优化图表的绘制效率",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+omment": "弹跳进""comment": "顶部""comment": "内部左下""constant name": "LTTB算法",
+omment": "弹跳进""comment": "顶部""comment": "内部左下""comment": "采用 Largest-Triangle-Three-Bucket 算法,可以最大程度保证采样后线条的趋势,形状和极值.",
+omment": "弹跳进""comment": "顶部""comment": "内部左下""initial value": "\"lttb\""
+  },
+  {
+@文档": "\"category = \\\"辅助类\\\"\"""constant name": "过滤点平均值",
+@文档": "\"category = \\\"辅助类\\\"\"""comment": "过滤点平均值",
+@文档": "\"category = \\\"辅助类\\\"\"""initial value": "\"average\""
+  },
+  {
+}"constant name": "过滤点最大值",
+}"comment": "过滤点最大值",
+}"initial value": "\"max\""
+  },
+  {
+mment": "弹跳进""comment": "顶部""comment": "内部左下""initial value": "\"lttb\"""constant name": "过滤点最小值",
+mment": "弹跳进""comment": "顶部""comment": "内部左下""initial value": "\"lttb\"""comment": "过滤点最小值",
+mment": "弹跳进""comment": "顶部""comment": "内部左下""initial value": "\"lttb\"""initial value": "\"min\""
+  },
+  {
+
+"constant name": "过滤点之和",
+
+"comment": "过滤点之和",
+
+"initial value": "\"sum\""
+  }
+]
+ },
+ {
+"class name": "图表风格主题",
+"comment": "图表颜色风格主题",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+
+"constant name": "默认",
+
+"comment": "默认风格 一般不用设置",
+
+"initial value": "\"default\""
+  },
+  {
+
+"constant name": "复古怀旧",
+
+"comment": "主题风格 vintage 复古 怀旧",
+
+"initial value": "\"vintage\""
+  },
+  {
+
+"constant name": "暗黑",
+
+"comment": "主题风格 dark 暗色",
+
+"initial value": "\"dark\""
+  },
+  {
+"initial value": "\"sum\"""constant name": "马卡龙",
+"initial value": "\"sum\"""comment": "主题风格 macarons 马卡龙",
+"initial value": "\"sum\"""initial value": "\"macarons\""
+  },
+  {
+文档": "\"category = \\\"辅助类\\\"\"""comment": "过滤点平均值""constant name": "信息图形学",
+文档": "\"category = \\\"辅助类\\\"\"""comment": "过滤点平均值""comment": "主题风格 infographic 信息图形",
+文档": "\"category = \\\"辅助类\\\"\"""comment": "过滤点平均值""initial value": "\"infographic\""
+  },
+  {
+tial value": "\"sum\"""constant name": "马卡龙""constant name": "闪亮非主流",
+tial value": "\"sum\"""constant name": "马卡龙""comment": "主题风格 shine 闪亮",
+tial value": "\"sum\"""constant name": "马卡龙""initial value": "\"shine\""
+  },
+  {
+ial value": "\"sum\"""constant name": "马卡龙""initial value": "\"shine\"""constant name": "罗马吉普赛",
+ial value": "\"sum\"""constant name": "马卡龙""initial value": "\"shine\"""comment": "主题风格 roma 罗马",
+ial value": "\"sum\"""constant name": "马卡龙""initial value": "\"shine\"""initial value": "\"roma\""
+  },
+  {
+nstant name": "默认""constant name": "凛冬将至",
+nstant name": "默认""comment": "主题风格 westeros 维斯特洛 ",
+nstant name": "默认""initial value": "\"westeros\""
+  },
+  {
+constants": [
+"constant name": "燃烧厄索斯",
+constants": [
+"comment": "主题风格 essos  厄索斯 ",
+constants": [
+"initial value": "\"essos\""
+  },
+  {
+}"constant name": "瓦尔登湖",
+}"comment": "主题风格 walden 瓦尔登湖",
+}"initial value": "\"walden\""
+  },
+  {
+"initial value": "\"vintage\"""constant name": "绿色奇境",
+"initial value": "\"vintage\"""comment": "主题风格 wonderland 绿色奇境",
+"initial value": "\"vintage\"""initial value": "\"wonderland\""
+  },
+  {
+constants": [
+"constant name": "粉笔板书",
+constants": [
+"comment": "主题风格 chalk 黑底粉笔板书",
+constants": [
+"initial value": "\"chalk\""
+  },
+  {
+"initial value": "\"sum\"""constant name": "紫色激情",
+"initial value": "\"sum\"""comment": "主题风格 purple-passion 紫色激情",
+"initial value": "\"sum\"""initial value": "\"purple-passion\""
+  }
+]
+ }
+问本程序中的接口需要引用模块"MFC版ECharts图表组件".]
+}

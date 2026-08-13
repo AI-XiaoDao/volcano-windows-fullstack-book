@@ -1,0 +1,198 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"星火zlib".
+
+{
+问本程序中的接口需要引用模块"星火zlib"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"星火zlib"."package name": "星火.zlib",
+问本程序中的接口需要引用模块"星火zlib"."classes": [
+ {
+"class name": "zlib",
+"@视窗.预定义宏": "\"ZLIB_WINAPI\"",
+"@视窗.头文件搜寻目录": "\"zlib\\\\include\"",
+"@视窗.外部头文件": "\"zlib.h\"",
+"@视窗.附属文件.non_static": "\"zlib\\\\$(p)\\\\$(d)\\\\dynamic\\\\bin\\\\zlibwapi.dll\"",
+"@视窗.外部库": "\"zlib\\\\$(p)\\\\$(d)\\\\$(lm)\\\\lib\\\\zlib.lib\"",
+"@视窗.需求VS版本.static": "\"17-\"",
+"methods": [
+  {
+@视窗.需求VS版本.static": "\"17-\"""method name": "取版本信息",
+@视窗.需求VS版本.static": "\"17-\"""comment": "获取zlib库版本信息.",
+@视窗.需求VS版本.static": "\"17-\"""static": true,
+@视窗.需求VS版本.static": "\"17-\"""data type": "文本型",
+@视窗.需求VS版本.static": "\"17-\"""@嵌入式方法": "\"\""
+  },
+  {
+附属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""method name": "gzip压缩",
+附属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""result comment": "压缩失败返回空字节集",
+附属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""static": true,
+附属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""data type": "字节集类",
+附属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""@禁止流程检查": "真",
+附属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""parameters": [
+   {
+"parameter name": "欲压缩数据",
+"data type": "字节集类"
+   }
+附属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll"]
+  },
+  {
+    "method name": "gzip解压",
+    "result comment": "解压失败返回空字节集",
+    "static": true,
+    "data type": "字节集类",
+    "@禁止流程检查": "真",
+    "parameters": [
+   {
+"parameter name": "欲解压数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "缓存大小",
+"comment": "-1为欲解压数据的三倍,如果返回缓存不足增加一倍",
+"data type": "整数",
+"@默认值": "-1"
+   }
+    ]
+  },
+  {
+ }"method name": "deflate压缩",
+ }"result comment": "压缩失败返回空字节集",
+ }"static": true,
+ }"data type": "字节集类",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "欲压缩数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""result comment": "压缩失败返回空字节集""method name": "deflate解压",
+属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""result comment": "压缩失败返回空字节集""result comment": "解压失败返回空字节集",
+属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""result comment": "压缩失败返回空字节集""static": true,
+属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""result comment": "压缩失败返回空字节集""data type": "字节集类",
+属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""result comment": "压缩失败返回空字节集""@禁止流程检查": "真",
+属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""result comment": "压缩失败返回空字节集""parameters": [
+   {
+"parameter name": "欲解压数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "缓存大小",
+"comment": "-1为欲解压数据的三倍,如果返回缓存不足增加一倍",
+"data type": "整数",
+"@默认值": "-1"
+   }
+属文件.non_static = "zlib\\$(p)\\$(d)\\dynamic\\bin\\zlibwapi.dll""result comment": "压缩失败返回空字节集"]
+  },
+  {
+"method name": "zlib压缩",
+"result comment": "压缩失败返回空字节集",
+"static": true,
+"data type": "字节集类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "欲压缩数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "压缩等级",
+"comment": "0-9之间,0表示不进行任何压缩,值越大压缩率越高,所耗时间变长,提供-1表示使用默认.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+@默认值": "-1""method name": "zlib解压",
+@默认值": "-1""result comment": "解压失败返回空字节集",
+@默认值": "-1""static": true,
+@默认值": "-1""data type": "字节集类",
+@默认值": "-1""@禁止流程检查": "真",
+@默认值": "-1""parameters": [
+   {
+"parameter name": "欲解压数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "缓存大小",
+"comment": "-1为欲解压数据的三倍,如果返回缓存不足增加一倍",
+"data type": "整数",
+"@默认值": "-1"
+   }
+@默认值": "-1"]
+  },
+  {
+ }"method name": "压缩",
+ }"result comment": "压缩失败返回空字节集",
+ }"static": true,
+ }"data type": "字节集类",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "欲压缩数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "压缩级别",
+"comment": "0-9之间,级别越高压缩率越大,相应的压缩时间会变长.默认为-1",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "压缩位数",
+"comment": "8-15,表示处理raw deflate的方法，默认为15",
+"data type": "整数",
+"@默认值": "15"
+   },
+   {
+"parameter name": "压缩状态",
+"comment": "指定分配内存的等级,1-9之间,1会使用最低的内存,压缩时间最长，默认为8",
+"data type": "整数",
+"@默认值": "8"
+   },
+   {
+"parameter name": "压缩策略",
+"comment": "指定所欲使用的压缩策略，0为自动，具体查询zlib文档可选值为0-4",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+
+"method name": "解压",
+
+"result comment": "解压失败返回空字节集",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲解压数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "压缩位数",
+"comment": "8-15,表示处理raw deflate的方法，默认为15",
+"data type": "整数",
+"@默认值": "15"
+   },
+   {
+"parameter name": "缓存大小",
+"comment": "-1为欲解压数据的三倍,如果返回缓存不足增加一倍",
+"data type": "整数",
+"@默认值": "-1"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"星火zlib".]
+}

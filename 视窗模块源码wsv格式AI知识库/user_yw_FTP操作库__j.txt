@@ -1,0 +1,541 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."comment": "本库修改自“到底为什么”的模块",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"FTP操作库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+"class name": "FTP类_",
+"comment": "LPWIN32_FIND_DATAW",
+"@视窗.外部头文件": "\"<Shlwapi.h>\"",
+"@视窗.外部库": "\"Shlwapi.lib\"",
+"@视窗.外部头文件": "\"<Shlobj.h>\"",
+"@视窗.外部头文件": "\"ftp\\\\DirPathFile.h\"",
+"@视窗.外部头文件": "\"wininet.h\"",
+"@视窗.外部库": "\"wininet.lib\"",
+"methods": [
+  {
+methods": [
+"method name": "是否已连接_",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真"
+  },
+  {
+ 整数"method name": "连接FTP服务器_",
+ 整数"data type": "逻辑型",
+ 整数"@禁止流程检查": "真",
+ 整数"parameters": [
+   {
+"parameter name": "FTP服务器地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户名",
+"data type": "文本型",
+"@默认值": "\"anonymous\""
+   },
+   {
+"parameter name": "密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "端口号",
+"data type": "整数",
+"@默认值": "21"
+   },
+   {
+"parameter name": "是否被动模式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ 整数]
+  },
+  {
+data type": "逻辑型""method name": "断开FTP服务器_",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "创建目录_",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲创建的目录名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "删除目录_",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "欲删除的目录名",
+"data type": "文本型"
+   }
+]
+  },
+  {
+@默认值": "假""method name": "枚举目录列表_",
+@默认值": "假""comment": "枚举FTP指定目录里的所有文件,返回找到的文件总个数(包含文件和子文件夹) 不会设置参数条件而减少返回数",
+@默认值": "假""data type": "整数",
+@默认值": "假""@禁止流程检查": "真",
+@默认值": "假""parameters": [
+   {
+"parameter name": "欲列出的文件类型",
+"comment": "留空取所有文件;或是指定文件类型,如：\"*.txt\"",
+"data type": "文本型",
+"@默认值": "\"*.*\""
+   },
+   {
+"parameter name": "欲列出的文件属性",
+"comment": "默认1+2+4+16+32+128  FTP文件属性_  16是子目录",
+"data type": "整数",
+"@默认值": "183"
+   },
+   {
+"parameter name": "存放文件名的数组",
+"comment": "返回文件名数组    包含 文件和文件夹 可以用 文件属性来区分",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "存放文件属性数组",
+"comment": "返回文件属性数组  FTP文件属性_.***",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "存放文件大小数组",
+"comment": "返回文件大小数组  单位 字节",
+"data type": "长整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "存放文件最后修改时间数组",
+"comment": "返回最后修改时间数组 单位长整数 时间戳  实测有点差距 日期大概是对的 点不准确",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   }
+@默认值": "假"]
+  },
+  {
+"method name": "下载目录_",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "欲下载的FTP目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "本地目录",
+"comment": "本地目录必须存在,没有需创建",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件传输方式",
+"comment": "FTP传输方式_ (与 FTP缓存方式_ 组合)",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "错误信息",
+"data type": "文本数组类"
+   }
+]
+  },
+  {
+hod name": "下载目录_""method name": "上传目录_",
+hod name": "下载目录_""data type": "逻辑型",
+hod name": "下载目录_""@禁止流程检查": "真",
+hod name": "下载目录_""parameters": [
+   {
+"parameter name": "欲上传的本地目录",
+"data type": "文本型"
+   },
+   {
+"parameter name": "FTP目录路径",
+"comment": "目录要存在",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件传输方式",
+"comment": "FTP传输方式_ (与 FTP缓存方式_ 组合)",
+"data type": "变整数",
+"@默认值": "0"
+   }
+hod name": "下载目录_"]
+  },
+  {
+ }"method name": "置现行目录_",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "FTP目录路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+": "假""method name": "枚举目录列表_""method name": "取现行目录_",
+": "假""method name": "枚举目录列表_""data type": "文本型",
+": "假""method name": "枚举目录列表_""@禁止流程检查": "真"
+  },
+  {
+data type": "文本数组类""method name": "删除文件_",
+data type": "文本数组类""data type": "逻辑型",
+data type": "文本数组类""@禁止流程检查": "真",
+data type": "文本数组类""parameters": [
+   {
+"parameter name": "欲删除的FTP文件名",
+"data type": "文本型"
+   }
+data type": "文本数组类"]
+  },
+  {
+ }"method name": "文件更名_",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "欲改名的FTP文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新文件名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "下载文件_",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "欲下载的FTP文件",
+"data type": "文本型"
+   },
+   {
+"parameter name": "本地文件名_绝对路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件传输方式",
+"comment": "FTP传输方式_ (与 FTP缓存方式_ 组合)",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+ }"method name": "上传文件_",
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "欲上传的本地文件",
+"comment": "如 C:\\012.txt",
+"data type": "文本型"
+   },
+   {
+"parameter name": "FTP文件路径",
+"comment": "FTP目录+文件名,包括后缀 如 /www/012.txt   请注意/ 别用成\\了  ",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件传输方式",
+"comment": "FTP传输方式_ (与 FTP缓存方式_ 组合)",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+ameter name": "欲删除的FTP文件名""method name": "取文件大小_",
+ameter name": "欲删除的FTP文件名""comment": "返回文件属性:大小 单位字节",
+ameter name": "欲删除的FTP文件名""data type": "长整数",
+ameter name": "欲删除的FTP文件名""@禁止流程检查": "真",
+ameter name": "欲删除的FTP文件名""parameters": [
+   {
+"parameter name": "FTP文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件传输方式",
+"comment": "FTP传输方式_ (与 FTP缓存方式_ 组合)",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ameter name": "欲删除的FTP文件名"]
+  },
+  {
+eter name": "欲删除的FTP文件名"]"method name": "取目录大小_",
+eter name": "欲删除的FTP文件名"]"data type": "长整数",
+eter name": "欲删除的FTP文件名"]"@禁止流程检查": "真",
+eter name": "欲删除的FTP文件名"]"parameters": [
+   {
+"parameter name": "FTP目录路径",
+"data type": "文本型"
+   }
+eter name": "欲删除的FTP文件名"]]
+  },
+  {
+ }"method name": "取文件属性_",
+ }"data type": "整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "FTP文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+
+"method name": "取目录属性_",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "FTP目录路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "区分大小写",
+"comment": "默认假   小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "取文件时间_",
+data type": "文本型""comment": "返回最后修改时间的 时间戳",
+data type": "文本型""data type": "整数",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "FTP文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "文本型"]
+  },
+  {
+comment": "默认假   小写""method name": "取目录时间_",
+comment": "默认假   小写""comment": "返回最后修改时间的 时间戳",
+comment": "默认假   小写""data type": "整数",
+comment": "默认假   小写""@禁止流程检查": "真",
+comment": "默认假   小写""parameters": [
+   {
+"parameter name": "FTP目录路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "默认假   小写"]
+  },
+  {
+comment": "默认假   小写""method name": "文件是否存在_",
+comment": "默认假   小写""data type": "逻辑型",
+comment": "默认假   小写""@禁止流程检查": "真",
+comment": "默认假   小写""parameters": [
+   {
+"parameter name": "FTP文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "默认假   小写"]
+  },
+  {
+
+"method name": "目录是否存在_",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "FTP目录路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "区分大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "FTP传输方式_",
+"@文档": "\"category = \\\"FTP操作库.附加类\\\"\"",
+"constants": [
+  {
+ }"constant name": "FTP_TRANSFER_TYPE_ASCII",
+ }"comment": "使用FTP的ASCII（A型）传输方法传输文件。控制和格式设置信息将转换为本地等效项",
+ }"data type": "变整数",
+ }"initial value": "1"
+  },
+  {
+
+"constant name": "FTP_TRANSFER_TYPE_BINARY",
+
+"comment": "使用FTP的图像（类型I）传输方法传输文件。该文件将完全按照其存在的状态进行传输，而不会进行任何更改。这是默认的传输方法",
+
+"data type": "变整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "FTP_TRANSFER_TYPE_UNKNOWN",
+
+"comment": "默认为FTP_TRANSFER_TYPE_BINARY。",
+
+"data type": "变整数",
+
+"initial value": "0"
+  },
+  {
+}"constant name": "INTERNET_FLAG_TRANSFER_ASCII",
+}"comment": "以ASCII格式传输文件",
+}"data type": "变整数",
+}"initial value": "1"
+  },
+  {
+onstant name": "FTP_TRANSFER_TYPE_UNKNOWN""constant name": "INTERNET_FLAG_TRANSFER_BINARY",
+onstant name": "FTP_TRANSFER_TYPE_UNKNOWN""comment": "以二进制格式传输文件",
+onstant name": "FTP_TRANSFER_TYPE_UNKNOWN""data type": "变整数",
+onstant name": "FTP_TRANSFER_TYPE_UNKNOWN""initial value": "2"
+  }
+]
+ },
+ {
+"class name": "FTP缓存方式_",
+"@文档": "\"category = \\\"FTP操作库.附加类\\\"\"",
+"constants": [
+  {
+}"data type": "变整数""constant name": "INTERNET_FLAG_HYPERLINK",
+}"data type": "变整数""comment": "在确定是否从网络重新加载项目时，如果没有过期时间并且没有从服务器返回LastModified时间，则强制重新加载",
+}"data type": "变整数""data type": "变整数",
+}"data type": "变整数""initial value": "1024"
+  },
+  {
+constants": [
+"constant name": "INTERNET_FLAG_NEED_FILE",
+constants": [
+"comment": "如果无法缓存该文件，则导致创建一个临时文件",
+constants": [
+"data type": "变整数",
+constants": [
+"initial value": "16"
+  },
+  {
+ }"constant name": "INTERNET_FLAG_RELOAD",
+ }"comment": "强制从源服务器（而不是从缓存）下载请求的文件，对象或枚举目录列表_",
+ }"data type": "长整数",
+ }"initial value": "2147483648"
+  },
+  {
+}"initial value": "2147483648""constant name": "INTERNET_FLAG_RESYNCHRONIZE",
+}"initial value": "2147483648""comment": "如果自上次下载以来已对资源进行了修改，则重新加载HTTP资源。重新加载所有FTP资源",
+}"initial value": "2147483648""data type": "变整数",
+}"initial value": "2147483648""initial value": "2048"
+  }
+]
+ },
+ {
+"class name": "FTP文件属性_",
+"comment": "没有全部公开 一般只用到一部分",
+"@文档": "\"category = \\\"FTP操作库.附加类\\\"\"",
+"constants": [
+  {
+"comment": "以ASCII格式传输文件""constant name": "FILE_ATTRIBUTE_READONLY",
+"comment": "以ASCII格式传输文件""comment": "只读文件. 应用程序可以读取文件，但不能对其进行写入或删除",
+"comment": "以ASCII格式传输文件""data type": "整数",
+"comment": "以ASCII格式传输文件""initial value": "1"
+  },
+  {
+ss name": "FTP缓存方式_""constant name": "FILE_ATTRIBUTE_HIDDEN",
+ss name": "FTP缓存方式_""comment": "隐藏文件. 文件或目录被隐藏,它不包含在普通枚举目录列表_中",
+ss name": "FTP缓存方式_""data type": "整数",
+ss name": "FTP缓存方式_""initial value": "2"
+  },
+  {
+
+"constant name": "FILE_ATTRIBUTE_SYSTEM",
+
+"comment": "系统文件. 操作系统使用一部分或专门使用的文件或目录",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+}"constant name": "FILE_ATTRIBUTE_DIRECTORY",
+}"comment": "子目录.   标识目录的句柄",
+}"data type": "整数",
+}"initial value": "16"
+  },
+  {
+"constant name": "FILE_ATTRIBUTE_ARCHIVE",
+"comment": "存档文件或目录的文件或目录. 应用程序通常使用此属性来标记文件以进行备份或删除",
+"data type": "整数",
+"initial value": "32"
+  },
+  {
+@文档": "\"category = \\\"FTP操作库.附加类\\\"\"""constant name": "FILE_ATTRIBUTE_NORMAL",
+@文档": "\"category = \\\"FTP操作库.附加类\\\"\"""comment": "没有设置其他属性的文件。该属性仅在单独使用时才有效",
+@文档": "\"category = \\\"FTP操作库.附加类\\\"\"""data type": "整数",
+@文档": "\"category = \\\"FTP操作库.附加类\\\"\"""initial value": "128"
+  },
+  {
+"initial value": "2147483648""comment": "如果自上次下载以来已对资源进行了修改，则重新加载HTTP资源。重新加载所有FTP资源""constant name": "FILE_ATTRIBUTE_TEMPORARY",
+"initial value": "2147483648""comment": "如果自上次下载以来已对资源进行了修改，则重新加载HTTP资源。重新加载所有FTP资源""comment": "用于临时存储的文件。如果有足够的高速缓存可用，文件系统避免将数据写回大容量存储，因为通常，应用程序在句柄关闭后会删除临时文件。在这种情况下，系统可以完全避免写入数据。否则，将在关闭句柄之后写入数据",
+"initial value": "2147483648""comment": "如果自上次下载以来已对资源进行了修改，则重新加载HTTP资源。重新加载所有FTP资源""data type": "整数",
+"initial value": "2147483648""comment": "如果自上次下载以来已对资源进行了修改，则重新加载HTTP资源。重新加载所有FTP资源""initial value": "256"
+  }
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

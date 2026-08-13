@@ -1,0 +1,633 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+ઠꌥŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ઠꌥŝ"package name": "火山.程序",
+ઠꌥŝ"classes": [
+ {
+ 字节集类"class name": "启动类",
+ 字节集类"base class": "窗口程序类",
+ 字节集类"variables": [
+  {
+ 文本型"variable name": "主窗口",
+ 文本型"data type": "主程序窗口"
+  },
+  {
+ 字节集类"variable name": "登录窗口对象",
+ 字节集类"data type": "登录窗口"
+  }
+ 字节集类],
+ 字节集类"methods": [
+  {
+文本型"data type": "主程序窗口""method name": "启动方法",
+文本型"data type": "主程序窗口""data type": "整数"
+  }
+ 字节集类]
+ },
+ {
+}"class name": "类_FBrowser_自定义初始化事件",
+}"base class": "类_FBrowser_应用事件",
+}"methods": [
+  {
+"method name": "即将处理命令行",
+"@虚拟方法": "可覆盖",
+"parameters": [
+   {
+"parameter name": "进程类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "命令行",
+"data type": "类_FBrowser_命令行"
+   }
+]
+  },
+  {
+ameter name": "命令行""method name": "浏览器_初始化完毕",
+ameter name": "命令行""@虚拟方法": "可覆盖"
+  }
+}]
+ },
+ {
+"class name": "类_FBrowser_自定义浏览器事件",
+"base class": "类_FBrowser_浏览器事件",
+"methods": [
+  {
+
+"method name": "浏览器_创建完毕",
+
+"@禁止流程检查": "真",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "额外信息",
+"data type": "类_FBrowser_字典值"
+   }
+
+]
+  },
+  {
+"method name": "浏览器_即将打开新窗口",
+"data type": "逻辑型",
+"@虚拟方法": "可覆盖",
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "弹窗ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标框架名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户手势",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "弹出功能",
+"data type": "FBrowser_弹出功能"
+   },
+   {
+"parameter name": "窗口信息",
+"comment": "可设置",
+"data type": "FBrowser_窗口信息"
+   },
+   {
+"parameter name": "浏览器设置",
+"comment": "可设置",
+"data type": "FBrowser_浏览器配置"
+   },
+   {
+"parameter name": "无JS访问",
+"comment": "可设置,关闭JS容易出问题，不建议设置",
+"data type": "逻辑型类"
+   },
+   {
+"parameter name": "用户额外配置",
+"comment": "可设置,设置的浏览器事件类不能使用局部变量",
+"data type": "类_FBrowser_用户额外配置"
+   }
+]
+  },
+  {
+data type": "FBrowser_浏览器配置""method name": "浏览器_控制台消息",
+data type": "FBrowser_浏览器配置""data type": "逻辑型",
+data type": "FBrowser_浏览器配置""@虚拟方法": "可覆盖",
+data type": "FBrowser_浏览器配置""parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "日志级别",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "行",
+"data type": "整数"
+   }
+data type": "FBrowser_浏览器配置"]
+  },
+  {
+
+"method name": "浏览器_即将加载资源",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "请求回调",
+"data type": "类_FBrowser_回调"
+   }
+
+]
+  },
+  {
+
+"method name": "浏览器_即将导航",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "用户动作",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否重定向",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+ameter name": "请求回调""method name": "浏览器_即将打开菜单",
+ameter name": "请求回调""@虚拟方法": "可覆盖",
+ameter name": "请求回调""parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "菜单环境",
+"data type": "类_FBrowser_菜单环境"
+   },
+   {
+"parameter name": "菜单模式",
+"data type": "类_FBrowser_菜单模式"
+   }
+ameter name": "请求回调"]
+  },
+  {
+rowser_菜单模式"method name": "浏览器_菜单被调用",
+rowser_菜单模式"data type": "逻辑型",
+rowser_菜单模式"@虚拟方法": "可覆盖",
+rowser_菜单模式"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "菜单环境",
+"data type": "类_FBrowser_菜单环境"
+   },
+   {
+"parameter name": "菜单模式",
+"data type": "类_FBrowser_菜单模式"
+   },
+   {
+"parameter name": "运行命令菜单回调",
+"data type": "类_FBrowser_运行命令菜单回调"
+   }
+rowser_菜单模式]
+  },
+  {
+rowser_菜单模式"method name": "浏览器_菜单被点击",
+rowser_菜单模式"data type": "逻辑型",
+rowser_菜单模式"@虚拟方法": "可覆盖",
+rowser_菜单模式"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "框架",
+"data type": "类_FBrowser_框架"
+   },
+   {
+"parameter name": "菜单环境",
+"data type": "类_FBrowser_菜单环境"
+   },
+   {
+"parameter name": "命令ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "事件标识",
+"data type": "整数"
+   }
+rowser_菜单模式]
+  },
+  {
+owser_菜单模式"parameters": [
+"method name": "浏览器_执行关闭",
+owser_菜单模式"parameters": [
+"data type": "逻辑型",
+owser_菜单模式"parameters": [
+"@虚拟方法": "可覆盖",
+owser_菜单模式"parameters": [
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+owser_菜单模式"parameters": [
+]
+  },
+  {
+
+"method name": "浏览器_即将关闭",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   }
+
+]
+  }
+]
+ },
+ {
+ameter name": "事件标识""class name": "指纹浏览器工具类_",
+ameter name": "事件标识""@全局类": "真",
+ameter name": "事件标识""methods": [
+  {
+"method name": "取PluginsJson文本",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "u",
+"data type": "整数"
+   },
+   {
+"parameter name": "v",
+"data type": "整数"
+   },
+   {
+"parameter name": "w",
+"data type": "整数"
+   },
+   {
+"parameter name": "浏览器类型",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "TLS密码套件词_按下标",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "下标",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取TLS加密套件文本",
+"static": true,
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "种尾",
+"data type": "整数"
+   },
+   {
+"parameter name": "u",
+"data type": "整数"
+   },
+   {
+"parameter name": "v",
+"data type": "整数"
+   },
+   {
+"parameter name": "w",
+"data type": "整数"
+   },
+   {
+"parameter name": "ua副",
+"data type": "整数"
+   },
+   {
+"parameter name": "chromeBuildMid",
+"data type": "整数"
+   },
+   {
+"parameter name": "chromeBuildPatch",
+"data type": "整数"
+   },
+   {
+"parameter name": "gpuIdx",
+"data type": "整数"
+   },
+   {
+"parameter name": "pciRoll",
+"data type": "整数"
+   }
+]
+  },
+  {
+data type": "整数""method name": "应用TLS加密套件VIP",
+data type": "整数""static": true,
+data type": "整数""parameters": [
+   {
+"parameter name": "控制器",
+"data type": "类_FBrowserVIP_控制器"
+   },
+   {
+"parameter name": "加密支持文本",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+ta type": "整数"]"method name": "取Chrome主版本_自UserAgent",
+ta type": "整数"]"static": true,
+ta type": "整数"]"data type": "整数",
+ta type": "整数"]"parameters": [
+   {
+"parameter name": "ua文本",
+"data type": "文本型"
+   }
+ta type": "整数"]]
+  },
+  {
+data type": "文本型""method name": "取Chrome版本段_与主版本一致",
+data type": "文本型""static": true,
+data type": "文本型""data type": "文本型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "主版本",
+"data type": "整数"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "替换文本中Chrome版本段",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "原文",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新完整版本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ome版本段_与主版本一致"method name": "取公网IP_国内快",
+ome版本段_与主版本一致"static": true,
+ome版本段_与主版本一致"data type": "文本型"
+  },
+  {
+me版本段_与主版本一致"data type": "文本型""method name": "生成指纹参数字典",
+me版本段_与主版本一致"data type": "文本型""static": true,
+me版本段_与主版本一致"data type": "文本型""data type": "类_FBrowser_字典值",
+me版本段_与主版本一致"data type": "文本型""parameters": [
+   {
+"parameter name": "指定公网IP",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "指定UA主版本",
+"data type": "整数",
+"@默认值": "0"
+   }
+me版本段_与主版本一致"data type": "文本型"]
+  }
+ameter name": "事件标识"]
+ },
+ {
+eter name": "事件标识"]"class name": "启动浏览器",
+eter name": "事件标识"]"@全局类": "真",
+eter name": "事件标识"]"methods": [
+  {
+me版本段_与主版本一致"data type": "文本型""method name": "指纹字典转JSON文本",
+me版本段_与主版本一致"data type": "文本型""static": true,
+me版本段_与主版本一致"data type": "文本型""data type": "文本型",
+me版本段_与主版本一致"data type": "文本型""parameters": [
+   {
+"parameter name": "指纹字典",
+"data type": "类_FBrowser_字典值"
+   }
+me版本段_与主版本一致"data type": "文本型"]
+  },
+  {
+
+"method name": "应用FB指纹字典",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "浏览器",
+"data type": "类_FBrowser_浏览器"
+   },
+   {
+"parameter name": "指纹字典",
+"data type": "类_FBrowser_字典值"
+   },
+   {
+"parameter name": "应用后刷新",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"method name": "创建指纹浏览器",
+"static": true,
+"data type": "类_FBrowser_浏览器",
+"parameters": [
+   {
+"parameter name": "链接地址",
+"data type": "文本型",
+"@默认值": "\"https://www.baidu.com\""
+   },
+   {
+"parameter name": "指纹字典",
+"data type": "类_FBrowser_字典值"
+   },
+   {
+"parameter name": "代理地址",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理账号",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "左",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "上",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽",
+"data type": "整数",
+"@默认值": "1280"
+   },
+   {
+"parameter name": "高",
+"data type": "整数",
+"@默认值": "900"
+   },
+   {
+"parameter name": "浏览器标识",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  }
+eter name": "事件标识"]]
+ },
+ {
+ameter name": "事件标识""class name": "任务平台接口加密类_",
+ameter name": "事件标识""@全局类": "真",
+ameter name": "事件标识""constants": [
+  {
+
+"constant name": "加密密钥",
+
+"data type": "文本型",
+
+"initial value": "\"X2N0RrdVRHc3IwNWFMOGtBMlNabXJGRl\""
+  },
+  {
+ameter name": "代理密码""constant name": "iv",
+ameter name": "代理密码""data type": "文本型",
+ameter name": "代理密码""initial value": "\"X2N0RrdVRHc3IwNW\""
+  }
+ameter name": "事件标识"],
+ameter name": "事件标识""methods": [
+  {
+}"method name": "算法加密",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "明文",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "算法解密",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "密文Base64",
+"data type": "文本型"
+   }
+
+]
+  }
+ameter name": "事件标识"]
+ }
+ઠꌥŝ]
+}

@@ -1,0 +1,204 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"STL.map\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "map",
+"@模板基础类": "真",
+"@视窗.外部头文件": "\"<map>\\n<algorithm>\"",
+"methods": [
+  {
+现类 = "文本型,文本型""method name": "取数量",
+现类 = "文本型,文本型""comment": "取数组成员数量",
+现类 = "文本型,文本型""data type": "整数",
+现类 = "文本型,文本型""@禁止流程检查": "真"
+  },
+  {
+"method name": "清空",
+"comment": "清空容器里面的所有成员，清空后 调用取数量得到的结果是0"
+  },
+  {
+础类 = 真"method name": "是否为空",
+础类 = 真"comment": "测试容器里面是否有成员 ",
+础类 = 真"data type": "逻辑型",
+础类 = 真"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "删除成员",
+
+"comment": "删除 找到的 键    如果找到不到就不删除",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "key",
+"data type": "模板类型1"
+   }
+
+]
+  },
+  {
+ 字典_整数型_整数型"method name": "删除成员_从指定位置到结尾",
+ 字典_整数型_整数型"comment": "如果找到 键对应的数据，则从此数据删除到末尾",
+ 字典_整数型_整数型"data type": "逻辑型",
+ 字典_整数型_整数型"parameters": [
+   {
+"parameter name": "键",
+"data type": "模板类型1"
+   }
+ 字典_整数型_整数型]
+  },
+  {
+͠ꌥŝ"method name": "是否存在",
+͠ꌥŝ"comment": "查找 键 是否存在",
+͠ꌥŝ"data type": "逻辑型",
+͠ꌥŝ"parameters": [
+   {
+"parameter name": "键",
+"data type": "模板类型1"
+   }
+͠ꌥŝ]
+  },
+  {
+现类 = "文本型,文本型""method name": "插入成员到尾部",
+现类 = "文本型,文本型""comment": "//在a的第1个元素（从第0个算起）的位置插入数值5，如a为1,2,3,4，插入元素后为1,5,2,3,4",
+现类 = "文本型,文本型""parameters": [
+   {
+"parameter name": "要加入的键",
+"data type": "模板类型1"
+   },
+   {
+"parameter name": "要加入的值",
+"data type": "模板类型2"
+   }
+现类 = "文本型,文本型"]
+  },
+  {
+ }"method name": "加入成员",
+ }"parameters": [
+   {
+"parameter name": "mp",
+"data type": "map"
+   },
+   {
+"parameter name": "加入到指定位置",
+"comment": "-1表示加入到末尾，否则加入到指定位置 从0开始",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ }]
+  },
+  {
+"method name": "取值",
+"comment": "根据键 取值",
+"data type": "模板类型2",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "模板类型1"
+   }
+]
+  },
+  {
+"method name": "置值",
+"parameters": [
+   {
+"parameter name": "键",
+"data type": "模板类型1"
+   },
+   {
+"parameter name": "值",
+"data type": "模板类型2"
+   }
+]
+  },
+  {
+ameter name": "键""method name": "迭代正向",
+ameter name": "键""@嵌入式方法": "\"name = FMap_Forward_Iterator\\r\\nhas_body = true\""
+  },
+  {
+er name": "键""method name": "迭代正向""method name": "迭代反向",
+er name": "键""method name": "迭代正向""@嵌入式方法": "\"name = FMap_Reverse_Iterator\\r\\nhas_body = true\""
+  },
+  {
+data type": "整数""method name": "迭代键",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "模板类型1",
+data type": "整数""@嵌入式方法": "\"parent = \\\"FMap_Forward_Iterator,FMap_Reverse_Iterator\\\"\""
+  },
+  {
+}"method name": "迭代值",
+}"type": "property getter",
+}"data type": "模板类型2",
+}"@嵌入式方法": "\"parent = \\\"FMap_Forward_Iterator,FMap_Reverse_Iterator\\\"\""
+  },
+  {
+类 = "文本型,文本型""comment": "取数组成员数量""method name": "替换",
+类 = "文本型,文本型""comment": "取数组成员数量""result comment": "返回替换次数",
+类 = "文本型,文本型""comment": "取数组成员数量""data type": "整数",
+类 = "文本型,文本型""comment": "取数组成员数量""@禁止流程检查": "真",
+类 = "文本型,文本型""comment": "取数组成员数量""parameters": [
+   {
+"parameter name": "欲查找的内容",
+"data type": "模板类型1"
+   },
+   {
+"parameter name": "用作替换的内容",
+"data type": "模板类型1"
+   },
+   {
+"parameter name": "查找开始位置",
+"comment": "表示从首元素开始查找",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否全部替换",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+类 = "文本型,文本型""comment": "取数组成员数量"]
+  },
+  {
+
+"method name": "交换",
+
+"parameters": [
+   {
+"parameter name": "vt",
+"data type": "map"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "字典_文本型_文本型",
+"base class": "map",
+"@模板实现类": "\"文本型,文本型\""
+ },
+ {
+"class name": "字典_整数型_整数型",
+"base class": "map",
+"@模板实现类": "\"整数,整数\""
+ },
+ {
+"class name": "字典测试",
+"methods": [
+  {
+
+"method name": "开始测试"
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

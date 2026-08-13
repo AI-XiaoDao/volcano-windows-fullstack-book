@@ -1,0 +1,790 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.日期时间\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"<time.h>\\n<sys/timeb.h>\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+ﰠꌤŝ"class name": "时间间隔常量",
+ﰠꌤŝ"@常量类": "整数",
+ﰠꌤŝ"constants": [
+  {
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""constant name": "秒",
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""initial value": "1"
+  },
+  {
+须 隔一段时间调用一次，比如隔一秒，一分钟或者更长时间 调用一次""constant name": "分",
+须 隔一段时间调用一次，比如隔一秒，一分钟或者更长时间 调用一次""initial value": "2"
+  },
+  {
+ꌤŝ"@常量类": "整数""constant name": "时",
+ꌤŝ"@常量类": "整数""initial value": "3"
+  },
+  {
+}"constant name": "日",
+}"initial value": "4"
+  }
+ﰠꌤŝ]
+ },
+ {
+"class name": "______时间辅助函数",
+"comment": "这个准备慢慢淘汰 //留着是为了兼容原来的代码 如有需求，请用 时间_全局类.  例如 时间_全局类.取现行时间戳13位_文本",
+"@全局类": "真",
+"methods": [
+  {
+是以秒为单位的"method name": "时间_取现行时间戳13位_文本",
+是以秒为单位的"comment": "13位 到毫秒",
+是以秒为单位的"static": true,
+是以秒为单位的"data type": "文本型",
+是以秒为单位的"@禁止流程检查": "真"
+  },
+  {
+"method name": "时间_取现行时间戳13位_长整数",
+"comment": "13位 到毫秒",
+"static": true,
+"data type": "长整数",
+"@禁止流程检查": "真"
+  },
+  {
+现行时间戳13位_长整数"method name": "时间_取现行时间戳10位_长整数",
+现行时间戳13位_长整数"comment": "10位",
+现行时间戳13位_长整数"static": true,
+现行时间戳13位_长整数"data type": "长整数",
+现行时间戳13位_长整数"@禁止流程检查": "真"
+  },
+  {
+戳13位_长整数"method name": "时间_取现行时间戳10位_长整数""method name": "时间_取现行时间戳10位_文本",
+戳13位_长整数"method name": "时间_取现行时间戳10位_长整数""comment": "10位",
+戳13位_长整数"method name": "时间_取现行时间戳10位_长整数""static": true,
+戳13位_长整数"method name": "时间_取现行时间戳10位_长整数""data type": "文本型",
+戳13位_长整数"method name": "时间_取现行时间戳10位_长整数""@禁止流程检查": "真"
+  },
+  {
+现行时间戳10位_长整数"method name": "时间_时间戳转时间",
+现行时间戳10位_长整数"comment": "只支持10位时间戳",
+现行时间戳10位_长整数"static": true,
+现行时间戳10位_长整数"data type": "文本型",
+现行时间戳10位_长整数"@禁止流程检查": "真",
+现行时间戳10位_长整数"parameters": [
+   {
+"parameter name": "时间戳",
+"data type": "长整数"
+   },
+   {
+"parameter name": "时间格式",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S\""
+   }
+现行时间戳10位_长整数]
+  },
+  {
+ameter name": "时间戳""method name": "时间_取格林时间f",
+ameter name": "时间戳""static": true,
+ameter name": "时间戳""data type": "文本型",
+ameter name": "时间戳""@禁止流程检查": "真"
+  },
+  {
+现行时间戳10位_长整数"method name": "时间_取格林时间时间戳",
+现行时间戳10位_长整数"comment": "10位",
+现行时间戳10位_长整数"static": true,
+现行时间戳10位_长整数"data type": "长整数",
+现行时间戳10位_长整数"@禁止流程检查": "真"
+  },
+  {
+段时间调用一次，比如隔一秒，一分钟或者更长时间 调用一次""constant name": "分""method name": "时间_格林时间转时间戳",
+段时间调用一次，比如隔一秒，一分钟或者更长时间 调用一次""constant name": "分""static": true,
+段时间调用一次，比如隔一秒，一分钟或者更长时间 调用一次""constant name": "分""data type": "长整数",
+段时间调用一次，比如隔一秒，一分钟或者更长时间 调用一次""constant name": "分""parameters": [
+   {
+"parameter name": "格林时间文本",
+"comment": "必须时这种格式 Thu, 23 Jul 2020 06:04:11 GMT 其他格式解析不了",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否转换成北京时间",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+段时间调用一次，比如隔一秒，一分钟或者更长时间 调用一次""constant name": "分"]
+  },
+  {
+}"method name": "时间_格林时间转北京时间",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "格林时间文本",
+"comment": "必须时这种格式 Thu, 23 Jul 2020 06:04:11 GMT",
+"data type": "文本型"
+   },
+   {
+"parameter name": "北京时间格式",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S\""
+   }
+}]
+  },
+  {
+型 = 整数 值 = -1"method name": "时间_取年月日",
+型 = 整数 值 = -1"static": true,
+型 = 整数 值 = -1"data type": "文本型",
+型 = 整数 值 = -1"@禁止流程检查": "真",
+型 = 整数 值 = -1"parameters": [
+   {
+"parameter name": "格式",
+"data type": "文本型",
+"@默认值": "\"%u-%u-%u\""
+   }
+型 = 整数 值 = -1]
+  },
+  {
+行时间戳10位_长整数"@禁止流程检查": "真""method name": "时间_取年",
+行时间戳10位_长整数"@禁止流程检查": "真""static": true,
+行时间戳10位_长整数"@禁止流程检查": "真""data type": "整数",
+行时间戳10位_长整数"@禁止流程检查": "真""@禁止流程检查": "真",
+行时间戳10位_长整数"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "格式",
+"data type": "文本型",
+"@默认值": "\"%u-%u-%u\""
+   }
+行时间戳10位_长整数"@禁止流程检查": "真"]
+  },
+  {
+"method name": "时间_取秒",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+"method name": "时间_取时分秒",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "格式",
+"data type": "文本型",
+"@默认值": "\"%u:%u:%u\""
+   }
+]
+  },
+  {
+}"method name": "时间_取时分秒毫秒",
+}"static": true,
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "格式",
+"data type": "文本型",
+"@默认值": "\"%u:%u:%u:%u\""
+   }
+}]
+  },
+  {
+}"method name": "时间_取小时",
+}"comment": "取当前时间的小时",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "时间_取分钟",
+}"comment": "取当前时间的分钟",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "时间_取日期时间",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "格式文本",
+"data type": "文本型",
+"@默认值": "\"%u-%u-%u %u:%u:%u\""
+   }
+
+]
+  },
+  {
+"method name": "时间_取星期几",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "时间_生成时间戳",
+}"static": true,
+}"data type": "长整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "年",
+"data type": "整数"
+   },
+   {
+"parameter name": "月",
+"data type": "整数"
+   },
+   {
+"parameter name": "日",
+"data type": "整数"
+   },
+   {
+"parameter name": "时",
+"data type": "整数"
+   },
+   {
+"parameter name": "分",
+"data type": "整数"
+   },
+   {
+"parameter name": "秒",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "时间_日期时间转时间戳",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "年月日时分秒",
+"comment": "2020-07-19 13:14:00",
+"data type": "文本型"
+   },
+   {
+"parameter name": "格式",
+"comment": "%d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+
+]
+  },
+  {
+ }"method name": "时间_取时间间隔f",
+ }"static": true,
+ }"data type": "长整数",
+ }"parameters": [
+   {
+"parameter name": "参数时间1",
+"comment": "\"2020-7-22 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数时间2",
+"comment": "\"2020-7-23 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "间隔常量",
+"data type": "时间间隔常量"
+   },
+   {
+"parameter name": "时间格式1",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%u-%u-%u %u:%u:%u\""
+   },
+   {
+"parameter name": "时间格式2",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%u-%u-%u %u:%u:%u\""
+   }
+ }]
+  },
+  {
+ameter name": "时间格式2""method name": "时间_取时间间隔_格式文本",
+ameter name": "时间格式2""comment": "格式化后的文本位  1天10时10分10秒",
+ameter name": "时间格式2""static": true,
+ameter name": "时间格式2""data type": "文本型",
+ameter name": "时间格式2""parameters": [
+   {
+"parameter name": "参数时间1",
+"comment": "\"2020-7-22 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数时间2",
+"comment": "\"2020-7-23 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间格式1",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   },
+   {
+"parameter name": "时间格式2",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+ameter name": "时间格式2"]
+  },
+  {
+ameter name": "时间格式2""method name": "时间_取时间戳间隔f",
+ameter name": "时间格式2""comment": "会用 时间戳2  -  时间戳1",
+ameter name": "时间格式2""static": true,
+ameter name": "时间格式2""data type": "长整数",
+ameter name": "时间格式2""parameters": [
+   {
+"parameter name": "时间戳1",
+"data type": "长整数"
+   },
+   {
+"parameter name": "时间戳2",
+"data type": "长整数"
+   },
+   {
+"parameter name": "间隔常量",
+"data type": "时间间隔常量"
+   }
+ameter name": "时间格式2"]
+  },
+  {
+ameter name": "时间戳2""method name": "时间_是否已经过了24点",
+ameter name": "时间戳2""comment": "函数必须 隔一段时间调用一次，比如隔一秒，一分钟或者更长时间 调用一次",
+ameter name": "时间戳2""static": true,
+ameter name": "时间戳2""data type": "逻辑型"
+  }
+]
+ },
+ {
+ameter name": "时间戳1""class name": "时间_全局类",
+ameter name": "时间戳1""methods": [
+  {
+@默认值": "\"%d-%d-%d %d:%d:%d\"""method name": "取现行时间戳13位_文本",
+@默认值": "\"%d-%d-%d %d:%d:%d\"""comment": "13位 到毫秒",
+@默认值": "\"%d-%d-%d %d:%d:%d\"""static": true,
+@默认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型",
+@默认值": "\"%d-%d-%d %d:%d:%d\"""@禁止流程检查": "真"
+  },
+  {
+默认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""method name": "取现行时间戳13位_长整数",
+默认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒",
+默认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true,
+默认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""data type": "长整数",
+默认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""method name": "取现行时间戳10位_长整数",
+认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""comment": "10位",
+认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""static": true,
+认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数",
+认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""@禁止流程检查": "真"
+  },
+  {
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""method name": "时间戳转时间",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""comment": "只支持10位时间戳",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""static": true,
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""data type": "文本型",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""@禁止流程检查": "真",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""parameters": [
+   {
+"parameter name": "时间戳",
+"data type": "长整数"
+   },
+   {
+"parameter name": "时间格式",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S\""
+   }
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数"]
+  },
+  {
+认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"method name": "取格林时间",
+认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"static": true,
+认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"data type": "文本型",
+认值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"@禁止流程检查": "真"
+  },
+  {
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""method name": "取格林时间时间戳",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""comment": "10位",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""static": true,
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""data type": "长整数",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""comment": "13位 到毫秒""data type": "长整数""@禁止流程检查": "真"
+  },
+  {
+@默认值": "\"%Y-%m-%d %H:%M:%S\"""method name": "格林时间转时间戳",
+@默认值": "\"%Y-%m-%d %H:%M:%S\"""static": true,
+@默认值": "\"%Y-%m-%d %H:%M:%S\"""data type": "长整数",
+@默认值": "\"%Y-%m-%d %H:%M:%S\"""parameters": [
+   {
+"parameter name": "格林时间文本",
+"comment": "必须时这种格式 Thu, 23 Jul 2020 06:04:11 GMT 其他格式解析不了",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否转换成北京时间",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+@默认值": "\"%Y-%m-%d %H:%M:%S\""]
+  },
+  {
+@默认值": "\"%Y-%m-%d %H:%M:%S\"""method name": "格林时间转北京时间",
+@默认值": "\"%Y-%m-%d %H:%M:%S\"""static": true,
+@默认值": "\"%Y-%m-%d %H:%M:%S\"""data type": "文本型",
+@默认值": "\"%Y-%m-%d %H:%M:%S\"""parameters": [
+   {
+"parameter name": "格林时间文本",
+"comment": "必须时这种格式 Thu, 23 Jul 2020 06:04:11 GMT",
+"data type": "文本型"
+   },
+   {
+"parameter name": "北京时间格式",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S\""
+   }
+@默认值": "\"%Y-%m-%d %H:%M:%S\""]
+  },
+  {
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"@禁止流程检查": "真""method name": "取当前时间年月日",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"@禁止流程检查": "真""static": true,
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"@禁止流程检查": "真""data type": "文本型",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"@禁止流程检查": "真""@禁止流程检查": "真",
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "格式",
+"data type": "文本型",
+"@默认值": "\"%u-%u-%u\""
+   }
+值": "\"%d-%d-%d %d:%d:%d\"""data type": "文本型""static": true"@禁止流程检查": "真"]
+  },
+  {
+}"method name": "取当前时间年",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "格式",
+"data type": "文本型",
+"@默认值": "\"%u-%u-%u\""
+   }
+}]
+  },
+  {
+}"method name": "取当前时间秒",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+"@禁止流程检查": "真""method name": "取当前时间时分秒",
+"@禁止流程检查": "真""static": true,
+"@禁止流程检查": "真""data type": "文本型",
+"@禁止流程检查": "真""@禁止流程检查": "真",
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "格式",
+"data type": "文本型",
+"@默认值": "\"%u:%u:%u\""
+   }
+"@禁止流程检查": "真"]
+  },
+  {
+ }"method name": "取当前时间时分秒毫秒",
+ }"static": true,
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "格式",
+"data type": "文本型",
+"@默认值": "\"%u:%u:%u:%u\""
+   }
+ }]
+  },
+  {
+
+"method name": "取当前时间小时",
+
+"comment": "取当前时间的小时",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取当前时间分钟",
+}"comment": "取当前时间的分钟",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取当前时间日期时间",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "格式文本",
+"data type": "文本型",
+"@默认值": "\"%u-%u-%u %u:%u:%u\""
+   }
+
+]
+  },
+  {
+"static": true"method name": "取当前时间星期几",
+"static": true"static": true,
+"static": true"data type": "整数",
+"static": true"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "生成时间戳",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "年",
+"data type": "整数"
+   },
+   {
+"parameter name": "月",
+"data type": "整数"
+   },
+   {
+"parameter name": "日",
+"data type": "整数"
+   },
+   {
+"parameter name": "时",
+"data type": "整数"
+   },
+   {
+"parameter name": "分",
+"data type": "整数"
+   },
+   {
+"parameter name": "秒",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "日期时间转时间戳",
+data type": "整数""static": true,
+data type": "整数""data type": "长整数",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "年月日时分秒",
+"comment": "2020-07-19 13:14:00",
+"data type": "文本型"
+   },
+   {
+"parameter name": "格式",
+"comment": "%d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+data type": "整数"]
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "取时间间隔",
+ata type": "整数""parameters": [
+"static": true,
+ata type": "整数""parameters": [
+"data type": "长整数",
+ata type": "整数""parameters": [
+"parameters": [
+   {
+"parameter name": "参数时间1",
+"comment": "\"2020-7-22 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数时间2",
+"comment": "\"2020-7-23 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "间隔常量",
+"data type": "时间间隔常量"
+   },
+   {
+"parameter name": "时间格式1",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   },
+   {
+"parameter name": "时间格式2",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+ata type": "整数""parameters": [
+]
+  },
+  {
+ameter name": "分""method name": "取时间间隔_格式文本",
+ameter name": "分""comment": "格式化后的文本位  1天10时10分10秒",
+ameter name": "分""static": true,
+ameter name": "分""data type": "文本型",
+ameter name": "分""parameters": [
+   {
+"parameter name": "参数时间1",
+"comment": "\"2020-7-22 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数时间2",
+"comment": "\"2020-7-23 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间格式1",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   },
+   {
+"parameter name": "时间格式2",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+ameter name": "分"]
+  },
+  {
+
+"method name": "取时间戳间隔",
+
+"comment": "会用 时间戳2  -  时间戳1",
+
+"static": true,
+
+"data type": "长整数",
+
+"parameters": [
+   {
+"parameter name": "时间戳1",
+"data type": "长整数"
+   },
+   {
+"parameter name": "时间戳2",
+"data type": "长整数"
+   },
+   {
+"parameter name": "间隔常量",
+"data type": "时间间隔常量"
+   }
+
+]
+  },
+  {
+ }"method name": "取时间戳间隔_格式化文本",
+ }"comment": "只支持10位的时间戳   时间戳2  -  时间戳1",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "时间戳1",
+"data type": "长整数"
+   },
+   {
+"parameter name": "时间戳2",
+"data type": "长整数"
+   }
+ }]
+  },
+  {
+}"method name": "秒格式化",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "秒",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+data type": "长整数""method name": "秒转天",
+data type": "长整数""static": true,
+data type": "长整数""data type": "长整数",
+data type": "长整数""parameters": [
+   {
+"parameter name": "时间间隔",
+"comment": "时间间隔是以秒为单位的",
+"data type": "长整数"
+   }
+data type": "长整数"]
+  },
+  {
+comment": "时间间隔是以秒为单位的""method name": "秒转小时",
+comment": "时间间隔是以秒为单位的""static": true,
+comment": "时间间隔是以秒为单位的""data type": "长整数",
+comment": "时间间隔是以秒为单位的""parameters": [
+   {
+"parameter name": "时间间隔",
+"comment": "时间间隔是以秒为单位的",
+"data type": "长整数"
+   }
+comment": "时间间隔是以秒为单位的"]
+  },
+  {
+"method name": "秒转分钟",
+"static": true,
+"data type": "长整数",
+"parameters": [
+   {
+"parameter name": "时间间隔",
+"comment": "时间间隔是以秒为单位的",
+"data type": "长整数"
+   }
+]
+  },
+  {
+data type": "长整数""method name": "是否已经过了24点",
+data type": "长整数""comment": "函数必须 隔一段时间调用一次，比如隔一秒，一分钟或者更长时间 调用一次",
+data type": "长整数""static": true,
+data type": "长整数""data type": "逻辑型"
+  }
+ameter name": "时间戳1"]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

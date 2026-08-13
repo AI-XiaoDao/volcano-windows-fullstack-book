@@ -1,0 +1,1250 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"SQLite数据库".
+
+{
+问本程序中的接口需要引用模块"SQLite数据库"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"SQLite数据库"."package name": "火山.视窗.SQLite数据库",
+问本程序中的接口需要引用模块"SQLite数据库"."classes": [
+ {
+程检查 = 真"class name": "SQLite数据库类",
+程检查 = 真"comment": "★ 本类由\"飞翔的企鹅\"封装.\nSQLite3数据库支持.\n\n如果用户程序中调用了本类中的\"使用新版本\"静态方法,将使用 sqlite 3.49 版,且启用以下特性:\njson1: 启用 SQLite 的 JSON 扩展模块（JSON1），支持对 JSON 数据的操作。\nfts5: 启用 SQLite 的全文搜索模块（Full Text Search 5），用于高效的文本搜索功能。\n\n如果没有调用\"使用新版本\"静态方法,将使用 sqlite 3.35.4 版.",
+程检查 = 真"@视窗.需求VS版本.static": "\"16-\"",
+程检查 = 真"@视窗.使用静态运行时库.static": "真",
+程检查 = 真"@视窗.头文件搜寻目录.d:!_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\2\\\\include\\\\$(lm)\"",
+程检查 = 真"@视窗.外部头文件.d:!_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\2\\\\include\\\\vol_sqlite3.h\"",
+程检查 = 真"@视窗.附属文件.non_static - d:!_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\2\\\\$(p)\\\\sqlite3dllmt.dll\"",
+程检查 = 真"@视窗.外部库.non_static - d:!_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\2\\\\$(p)\\\\sqlite3dllmt.lib\"",
+程检查 = 真"@视窗.外部库.static - d:!_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\2\\\\$(p)\\\\sqlite3libmt-$(d).lib\"",
+程检查 = 真"@视窗.头文件搜寻目录.d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\include\"",
+程检查 = 真"@视窗.外部头文件.d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\include\\\\vol_sqlite3.h\"",
+程检查 = 真"@视窗.附属文件.non_static - d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\$(p)\\\\sqlite3.dll\"",
+程检查 = 真"@视窗.外部库.non_static - d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\$(p)\\\\sqlite3.lib\"",
+程检查 = 真"@视窗.外部库.static - d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\$(p)\\\\sqlite3-$(d).lib\"",
+程检查 = 真"methods": [
+  {
+集对象复位,以便下一轮的参数赋值."method name": "使用新版本",
+集对象复位,以便下一轮的参数赋值."comment": "调用本方法指示编译器使用 sqlite 3.49 版,且启用以下特性:\njson1: 启用 SQLite 的 JSON 扩展模块（JSON1），支持对 JSON 数据的操作。\nfts5: 启用 SQLite 的全文搜索模块（Full Text Search 5），用于高效的文本搜索功能。\n如果不调用本方法,将使用 sqlite 3.35.4 版进行编译.\n注意: 本方法为编译时处理方法,系统在编译时只要检测到用户程序实际执行流程中任意位置调用了此方法,就启用对应的编译特性,和方法本身是否被执行到没有任何关系.",
+集对象复位,以便下一轮的参数赋值."static": true,
+集对象复位,以便下一轮的参数赋值."@视窗.预定义宏": "\"_VOL_SQLITE_VER2\"",
+集对象复位,以便下一轮的参数赋值."@视窗.编译信息": "\"基于 SQLite3[json1,fts5] 3.49 版本编译\""
+  },
+  {
+鼐敺ŝ"method name": "取库版本号",
+鼐敺ŝ"comment": "获取Sqlite库版本代号.",
+鼐敺ŝ"static": true,
+鼐敺ŝ"data type": "整数",
+鼐敺ŝ"@嵌入式方法": "\"\""
+  },
+  {
+检查 = 真"@视窗.头文件搜寻目录.d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\include\"""method name": "取库版本名称",
+检查 = 真"@视窗.头文件搜寻目录.d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\include\"""comment": "获取Sqlite库版本名称.",
+检查 = 真"@视窗.头文件搜寻目录.d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\include\"""static": true,
+检查 = 真"@视窗.头文件搜寻目录.d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\include\"""data type": "文本型",
+检查 = 真"@视窗.头文件搜寻目录.d:_VOL_SQLITE_VER2": "\"..\\\\..\\\\shared\\\\extern_lib\\\\common\\\\sqlite3\\\\3\\\\include\"""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取库来源信息",
+
+"comment": "获取Sqlite库来源信息.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+释 = "释放该记录集所占用资源.""method name": "是否线程安全",
+释 = "释放该记录集所占用资源.""comment": "获取当前SQLite所使用的线程模式.\n注意:该方法返回的值与\"置线程模式\"不是对应的,本方法仅判断数据库是否线程安全.",
+释 = "释放该记录集所占用资源.""result comment": "返回0:表示未启用互斥锁,为单线程.\n返回1:这种模式下,只要一个数据库连接不被多个线程同时使用就是线程安全的.\n返回2:启用了所有锁,在多线程模式下保持线程安全.",
+释 = "释放该记录集所占用资源.""static": true,
+释 = "释放该记录集所占用资源.""data type": "整数",
+释 = "释放该记录集所占用资源.""@嵌入式方法": "\"\""
+  },
+  {
+ = "释放该记录集所占用资源.""result comment": "返回0:表示未启用互斥锁,为单线程.\n返回1:这种模式下,只要一个数据库连接不被多个线程同时使用就是线程安全的.\n返回2:启用了所有锁,在多线程模式下保持线程安全.""method name": "置线程模式",
+ = "释放该记录集所占用资源.""result comment": "返回0:表示未启用互斥锁,为单线程.\n返回1:这种模式下,只要一个数据库连接不被多个线程同时使用就是线程安全的.\n返回2:启用了所有锁,在多线程模式下保持线程安全.""comment": "设置SQLite所欲使用的线程模式.\n注意:本方法为全局配置方法,即一次调用在程序中所有的SQLite数据对象都将遵循该设置,务必在\"初始化\"或\"打开\"数据库之前调用.",
+ = "释放该记录集所占用资源.""result comment": "返回0:表示未启用互斥锁,为单线程.\n返回1:这种模式下,只要一个数据库连接不被多个线程同时使用就是线程安全的.\n返回2:启用了所有锁,在多线程模式下保持线程安全.""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+ = "释放该记录集所占用资源.""result comment": "返回0:表示未启用互斥锁,为单线程.\n返回1:这种模式下,只要一个数据库连接不被多个线程同时使用就是线程安全的.\n返回2:启用了所有锁,在多线程模式下保持线程安全.""static": true,
+ = "释放该记录集所占用资源.""result comment": "返回0:表示未启用互斥锁,为单线程.\n返回1:这种模式下,只要一个数据库连接不被多个线程同时使用就是线程安全的.\n返回2:启用了所有锁,在多线程模式下保持线程安全.""data type": "整数",
+ = "释放该记录集所占用资源.""result comment": "返回0:表示未启用互斥锁,为单线程.\n返回1:这种模式下,只要一个数据库连接不被多个线程同时使用就是线程安全的.\n返回2:启用了所有锁,在多线程模式下保持线程安全.""@嵌入式方法": "\"\"",
+ = "释放该记录集所占用资源.""result comment": "返回0:表示未启用互斥锁,为单线程.\n返回1:这种模式下,只要一个数据库连接不被多个线程同时使用就是线程安全的.\n返回2:启用了所有锁,在多线程模式下保持线程安全.""parameters": [
+   {
+"parameter name": "模式",
+"comment": "1:单线程模式\n2:多线程模式\n3:串行模式",
+"data type": "整数"
+   }
+ = "释放该记录集所占用资源.""result comment": "返回0:表示未启用互斥锁,为单线程.\n返回1:这种模式下,只要一个数据库连接不被多个线程同时使用就是线程安全的.\n返回2:启用了所有锁,在多线程模式下保持线程安全."]
+  },
+  {
+"method name": "初始化",
+"comment": "初始化SQLite,分配一些必要的资源,数据结构等.\n注意:本命令全局仅需执行一次,且在执行\"打开\"时会自动初始化.",
+"result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "释放资源",
+}"comment": "释放由\"初始化\"命令所分配的资源占用.",
+}"result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "检查语句是否完整",
+}"comment": "检查一个文本内容是否为一个完整的SQL语句.",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "内容",
+"comment": "提供所欲检查的SQL语句内容.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+data type": "文本型""method name": "取已使用内存",
+data type": "文本型""comment": "获取SQLite当前所使用的内存量.\n注意:仅统计SQLite库所分配的内存.",
+data type": "文本型""result comment": "以字节为单位.",
+data type": "文本型""static": true,
+data type": "文本型""data type": "长整数",
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+"初始化\"命令所分配的资源占用."method name": "取指定错误描述",
+"初始化\"命令所分配的资源占用."comment": "根据所提供的错误码返回对应的错误描述文本.",
+"初始化\"命令所分配的资源占用."static": true,
+"初始化\"命令所分配的资源占用."data type": "文本型",
+"初始化\"命令所分配的资源占用."@嵌入式方法": "\"\"",
+"初始化\"命令所分配的资源占用."parameters": [
+   {
+"parameter name": "错误码",
+"data type": "整数"
+   }
+"初始化\"命令所分配的资源占用.]
+  },
+  {
+"@禁止流程检查": "真""method name": "置主库名称",
+"@禁止流程检查": "真""comment": "更改\"main\"数据库模式的名称.",
+"@禁止流程检查": "真""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+"@禁止流程检查": "真""data type": "整数",
+"@禁止流程检查": "真""@禁止流程检查": "真",
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+"@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "启用外键约束",
+
+"comment": "设置是否启用外键约束.",
+
+"result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "启用",
+"comment": "是否启用外键约束.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+ameter name": "启用""method name": "启用触发器",
+ameter name": "启用""comment": "设置是否启用触发器.",
+ameter name": "启用""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+ameter name": "启用""data type": "整数",
+ameter name": "启用""@禁止流程检查": "真",
+ameter name": "启用""parameters": [
+   {
+"parameter name": "启用",
+"comment": "是否启用触发器.",
+"data type": "逻辑型"
+   }
+ameter name": "启用"]
+  },
+  {
+"comment": "设置是否启用外键约束.""method name": "启用分词器",
+"comment": "设置是否启用外键约束.""comment": "设置是否启用分词器.",
+"comment": "设置是否启用外键约束.""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+"comment": "设置是否启用外键约束.""data type": "整数",
+"comment": "设置是否启用外键约束.""@禁止流程检查": "真",
+"comment": "设置是否启用外键约束.""parameters": [
+   {
+"parameter name": "启用",
+"comment": "是否启用分词器.",
+"data type": "逻辑型"
+   }
+"comment": "设置是否启用外键约束."]
+  },
+  {
+初始化\"命令所分配的资源占用."@嵌入式方法": "\"\"""method name": "启用扩展库",
+初始化\"命令所分配的资源占用."@嵌入式方法": "\"\"""comment": "设置是否启用SQLite扩展库.",
+初始化\"命令所分配的资源占用."@嵌入式方法": "\"\"""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+初始化\"命令所分配的资源占用."@嵌入式方法": "\"\"""data type": "整数",
+初始化\"命令所分配的资源占用."@嵌入式方法": "\"\"""@禁止流程检查": "真",
+初始化\"命令所分配的资源占用."@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "启用类型",
+"comment": "提供0则禁用全部,1表示仅启用C-API的load_extension().",
+"data type": "整数"
+   }
+初始化\"命令所分配的资源占用."@嵌入式方法": "\"\""]
+  },
+  {
+}"method name": "启用关闭检查点",
+}"comment": "设置是否启用关闭检查点.",
+}"result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+"method name": "启用触发器输出",
+"comment": "设置是否启用触发器程序的输出.",
+"result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+"method name": "启用防御功能",
+"comment": "设置是否激活或禁用数据库连接的\"防御\"功能.",
+"result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+]
+  },
+  {
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""method name": "启用可写方案",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""comment": "设置是否激活或停用数据库连接的\"writable_schema\"功能.",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""data type": "整数",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""@禁止流程检查": "真",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能."]
+  },
+  {
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""method name": "启用视图功能",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""comment": "设置是否激活或停用视图功能.",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""data type": "整数",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""@禁止流程检查": "真",
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能.""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+comment": "设置是否激活或禁用数据库连接的\"防御\"功能."]
+  },
+  {
+omment": "设置是否激活或禁用数据库连接的\"防御\"功能.""@禁止流程检查": "真""method name": "启用旧文件兼容",
+omment": "设置是否激活或禁用数据库连接的\"防御\"功能.""@禁止流程检查": "真""comment": "设置是否激活或停用兼容旧数据库文件格式(3.0以下)的功能.",
+omment": "设置是否激活或禁用数据库连接的\"防御\"功能.""@禁止流程检查": "真""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+omment": "设置是否激活或禁用数据库连接的\"防御\"功能.""@禁止流程检查": "真""data type": "整数",
+omment": "设置是否激活或禁用数据库连接的\"防御\"功能.""@禁止流程检查": "真""@禁止流程检查": "真",
+omment": "设置是否激活或禁用数据库连接的\"防御\"功能.""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+omment": "设置是否激活或禁用数据库连接的\"防御\"功能.""@禁止流程检查": "真"]
+  },
+  {
+}"method name": "打开",
+}"comment": "打开或新建数据库.",
+}"result comment": "返回打开(创建)数据库的结果.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "指定所欲打开的数据库文件完整路径,文件路径如果以\":memory:\"开头表示为内存数据库.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "选项位",
+"comment": "支持使用\"SQLite打开方式\"中的选项(多个组合).",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "VFS对象",
+"comment": "指定所欲使用的VFS对象,提供空文本则使用默认VFS.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+data type": "逻辑型""method name": "执行SQL语句",
+data type": "逻辑型""comment": "执行指定的一条或多条SQL语句,多个SQL语句之间请以半角分号\";\"隔开.",
+data type": "逻辑型""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""@禁止流程检查": "真",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "语句内容",
+"comment": "提供所欲执行的SQL语句.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "错误内容",
+"comment": "如果本次执行出现错误,错误的具体内容将会写入至该变量.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+data type": "逻辑型"]
+  },
+  {
+"method name": "取记录集",
+"comment": "以指定查询语句编译并创建一个记录集对象,通过该记录集获取所查询出来的数据.",
+"data type": "SQLite记录集类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "语句内容",
+"comment": "提供所欲编译的SQL语句,其中可包含参数所对应的变量名称.\n例如带参数插入数据:INSERT INTO 表名称 VALUES (?,?,...).",
+"data type": "文本型"
+   },
+   {
+"parameter name": "内容偏移",
+"comment": "指定所欲编译SQL语句内容的偏移位置,-1表示编译所有内容,>N表示编译从0至第N个字符,N必须大于0.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+ameter name": "语句内容""method name": "取最后插入行",
+ameter name": "语句内容""comment": "获取最后一次\"INSERT\"操作的行号.",
+ameter name": "语句内容""data type": "长整数",
+ameter name": "语句内容""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置最后插入行",
+
+"comment": "如果没有执行过\"INSERT\"操作,本方法可控制\"取最后插入行\"的返回值.",
+
+"parameters": [
+   {
+"parameter name": "行号",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "计算修改行数",
+
+"comment": "计算查询操作所被修改的行数.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"data type": "整数""method name": "取影响行数",
+
+"data type": "整数""comment": "获取最后一次查询操作所影响到的行数.",
+
+"data type": "整数""data type": "整数",
+
+"data type": "整数""@禁止流程检查": "真"
+  },
+  {
+ameter name": "语句内容""method name": "中止当前操作",
+ameter name": "语句内容""comment": "如果执行的SQL命令耗时较长,该命令可中断此过程尽快返回.",
+ameter name": "语句内容""@禁止流程检查": "真"
+  },
+  {
+"method name": "启用繁忙等待监听",
+"comment": "程序运行过程中,如果有其他进程或者线程在读写数据库,\"等待数据库释放锁\"事件将会被触发,直到其他进程或者线程释放锁或返回失败.",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+
+"comment": "计算查询操作所被修改的行数.""method name": "置繁忙等待超时",
+
+"comment": "计算查询操作所被修改的行数.""comment": "程序运行过程中,如果有其他进程或者线程在读写数据库,\"等待数据库释放锁\"事件将会被触发,直到其他进程或者线程释放锁或返回失败.",
+
+"comment": "计算查询操作所被修改的行数.""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+
+"comment": "计算查询操作所被修改的行数.""data type": "整数",
+
+"comment": "计算查询操作所被修改的行数.""@禁止流程检查": "真",
+
+"comment": "计算查询操作所被修改的行数.""parameters": [
+   {
+"parameter name": "超时",
+"comment": "单位:ms",
+"data type": "整数"
+   }
+
+"comment": "计算查询操作所被修改的行数."]
+  },
+  {
+data type": "文本型""method name": "取表内容",
+data type": "文本型""comment": "同步获取指定表中所有的内容,该方法不会通过\"语句执行结果\"返回所查询的数据.",
+data type": "文本型""result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+data type": "文本型""data type": "整数",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "语句内容",
+"comment": "提供查询语句内容,例如:\"select * from VOL_TABLE\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字段名称",
+"comment": "提供所欲储存本次查询列数据结果的数组变量,每个成员表示一个列(字段).",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "字段内容",
+"comment": "提供所欲储存本次查询行数据结果的数组变量,每个成员当前行列对应的字段值,注意如果字段内容非文本型数据可能会丢失部分数据.",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "错误内容",
+"comment": "如果本次执行出现错误,错误的具体内容将会写入至该变量.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "关闭",
+"comment": "关闭已经打开的数据库,释放资源.",
+"result comment": "返回0表示执行成功,其他值请参考\"SQLite执行结果\"所提供的常量.",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "取最近错误码",
+ }"comment": "获取最近一次调用失败的错误码.",
+ }"result comment": "0表示无错误.",
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+meter name": "启用""comment": "设置是否启用触发器.""method name": "取最近错误码_扩展",
+meter name": "启用""comment": "设置是否启用触发器.""comment": "获取最近一次调用失败的错误码.",
+meter name": "启用""comment": "设置是否启用触发器.""result comment": "0表示无错误.",
+meter name": "启用""comment": "设置是否启用触发器.""data type": "整数",
+meter name": "启用""comment": "设置是否启用触发器.""@禁止流程检查": "真"
+  },
+  {
+eter name": "启用""comment": "设置是否启用触发器.""comment": "获取最近一次调用失败的错误码.""method name": "取最近错误描述",
+eter name": "启用""comment": "设置是否启用触发器.""comment": "获取最近一次调用失败的错误码.""comment": "获取最近一次调用失败的错误描述内容.",
+eter name": "启用""comment": "设置是否启用触发器.""comment": "获取最近一次调用失败的错误码.""result comment": "如无错误则返回空文本.",
+eter name": "启用""comment": "设置是否启用触发器.""comment": "获取最近一次调用失败的错误码.""data type": "文本型",
+eter name": "启用""comment": "设置是否启用触发器.""comment": "获取最近一次调用失败的错误码.""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "置运行时限制",
+
+"comment": "为当前数据库设置运行时限制,多次调用本方法限制多个内容.",
+
+"result comment": "返回目标设置项被设置之前的值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "设置项",
+"comment": "提供所欲限制的功能项目.",
+"data type": "SQLite运行时限制项"
+   },
+   {
+"parameter name": "新值",
+"comment": "提供所欲设置的新限制值.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "等待数据库释放锁",
+
+"comment": "如果SQLite数据库处于线程安全模式下且在操作数据库的过程中在等待锁(有其他进程或者线程在读写数据库),本事件将会被不断触发.\n注意:仅在执行\"启用繁忙等待监听\"后本事件才有效.",
+
+"result comment": "返回0将会放弃等待,此时的数据库操作将会返回\"库被锁定\"或I/0异常.\n返回非0时将会继续尝试当前的数据库操作.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "等待次数",
+"comment": "记录当前等待锁的次数.",
+"data type": "整数"
+   }
+
+]
+  }
+程检查 = 真]
+ },
+ {
+ameter name": "设置项""class name": "SQLite打开方式",
+ameter name": "设置项""comment": "在打开SQLite数据库时所支持的选项位.",
+ameter name": "设置项""@文档": "\"category = \\\"辅助类\\\"\"",
+ameter name": "设置项""constants": [
+  {
+tegory = \\\"辅助类\\\"\""constant name": "默认",
+tegory = \\\"辅助类\\\"\""comment": "默认以读写方式打开,不存在文件则新建.",
+tegory = \\\"辅助类\\\"\""data type": "整数",
+tegory = \\\"辅助类\\\"\""initial value": "-1"
+  },
+  {
+egory = \\\"辅助类\\\"\""initial value": "-1""constant name": "只读打开",
+egory = \\\"辅助类\\\"\""initial value": "-1""comment": "以只读方式打开数据库文件,如果所提供文件不存在,打开命令将会执行失败.",
+egory = \\\"辅助类\\\"\""initial value": "-1""data type": "整数",
+egory = \\\"辅助类\\\"\""initial value": "-1""initial value": "@SQLITE_OPEN_READONLY"
+  },
+  {
+
+"constant name": "读写打开",
+
+"comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.",
+
+"data type": "整数",
+
+"initial value": "@SQLITE_OPEN_READWRITE"
+  },
+  {
+data type": "SQLite运行时限制项""constant name": "新建打开",
+data type": "SQLite运行时限制项""comment": "如果所提供的数据库文件不存在,将会新建一个同名数据库文件.",
+data type": "SQLite运行时限制项""data type": "整数",
+data type": "SQLite运行时限制项""initial value": "@SQLITE_OPEN_CREATE"
+  },
+  {
+"comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""constant name": "资源标识符路径",
+"comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""comment": "如果所提供的数据库文件为资源标识符路径,必须启用该标志位,否则会以普通文件路径方式打开数据库文件.",
+"comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""data type": "整数",
+"comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""initial value": "@SQLITE_OPEN_URI"
+  },
+  {
+}"constant name": "驻留内存",
+}"comment": "是否使数据库文件始终驻留在内存中,例如所提供的文件路径为空,将会在内存中生成一个临时数据库.",
+}"data type": "整数",
+}"initial value": "@SQLITE_OPEN_MEMORY"
+  },
+  {
+comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""data type": "整数""constant name": "多线程模式",
+comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""data type": "整数""comment": "以多线程模式创建本次数据库连接.",
+comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""data type": "整数""data type": "整数",
+comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""data type": "整数""initial value": "@SQLITE_OPEN_NOMUTEX"
+  },
+  {
+"comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""constant name": "串行模式",
+"comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""comment": "以串行模式创建本次数据库连接.",
+"comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""data type": "整数",
+"comment": "以可读可写方式打开数据库文件,如果该数据库文件本身被操作系统设置为写保护状态,则以只读的方式打开,如果所提供文件不存在,打开命令将会执行失败.""initial value": "@SQLITE_OPEN_FULLMUTEX"
+  },
+  {
+}"constant name": "共享缓存模式",
+}"comment": "以共享缓存模式创建本次数据库连接,注意采用该模式可能导致并发性能下降.",
+}"data type": "整数",
+}"initial value": "@SQLITE_OPEN_SHAREDCACHE"
+  },
+  {
+
+"constant name": "私有缓存模式",
+
+"comment": "以私有缓存模式创建本次数据库连接.",
+
+"data type": "整数",
+
+"initial value": "@SQLITE_OPEN_PRIVATECACHE"
+  },
+  {
+"initial value": "@SQLITE_OPEN_PRIVATECACHE""constant name": "不允许符号连接",
+"initial value": "@SQLITE_OPEN_PRIVATECACHE""comment": "声明数据库文件名不是符号链接.",
+"initial value": "@SQLITE_OPEN_PRIVATECACHE""data type": "整数",
+"initial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW"
+  }
+ameter name": "设置项"]
+ },
+ {
+initial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""class name": "SQLite执行结果",
+initial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""comment": "SQLite方法的执行结果.",
+initial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""@文档": "\"category = \\\"辅助类\\\"\"",
+initial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""constants": [
+  {
+nitial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""constants": [
+"constant name": "成功",
+nitial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""constants": [
+"comment": "表示执行成功,无错误.",
+nitial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""constants": [
+"data type": "整数",
+nitial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""constants": [
+"initial value": "@SQLITE_OK"
+  },
+  {
+
+"constant name": "错误",
+
+"comment": "执行失败,有错误,请使用取最近错误描述获取.",
+
+"data type": "整数",
+
+"initial value": "@SQLITE_ERROR"
+  },
+  {
+ameter name": "设置项""constant name": "内部错误",
+ameter name": "设置项""comment": "SQLite内部逻辑出现错误.",
+ameter name": "设置项""data type": "整数",
+ameter name": "设置项""initial value": "@SQLITE_INTERNAL"
+  },
+  {
+itial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""constants": [
+"comment": "表示执行成功,无错误.""constant name": "拒绝访问",
+itial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""constants": [
+"comment": "表示执行成功,无错误.""comment": "拒绝访问权限.",
+itial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""constants": [
+"comment": "表示执行成功,无错误.""data type": "整数",
+itial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW""constants": [
+"comment": "表示执行成功,无错误.""initial value": "@SQLITE_PERM"
+  },
+  {
+
+"constant name": "回调中止",
+
+"comment": "回调方法请求中止.",
+
+"data type": "整数",
+
+"initial value": "@SQLITE_ABORT"
+  },
+  {
+}"constant name": "库被锁定",
+}"comment": "数据库文件已被锁定.",
+}"data type": "整数",
+}"initial value": "@SQLITE_BUSY"
+  },
+  {
+ameter name": "设置项""constant name": "表被锁定",
+ameter name": "设置项""comment": "数据库中的表被锁定.",
+ameter name": "设置项""data type": "整数",
+ameter name": "设置项""initial value": "@SQLITE_LOCKED"
+  },
+  {
+}"constant name": "无内存",
+}"comment": "申请内存失败.",
+}"data type": "整数",
+}"initial value": "@SQLITE_NOMEM"
+  },
+  {
+
+"constant name": "只读错误",
+
+"comment": "尝试在只读权限下写入出现错误.",
+
+"data type": "整数",
+
+"initial value": "@SQLITE_READONLY"
+  },
+  {
+"data type": "整数""constant name": "中止操作",
+"data type": "整数""comment": "被\"中止查询\"方法中止.",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@SQLITE_INTERRUPT"
+  },
+  {
+"initial value": "@SQLITE_BUSY""constant name": "IO错误",
+"initial value": "@SQLITE_BUSY""comment": "发生某种磁盘I/O错误.",
+"initial value": "@SQLITE_BUSY""data type": "整数",
+"initial value": "@SQLITE_BUSY""initial value": "@SQLITE_IOERR"
+  },
+  {
+data type": "整数""initial value": "@SQLITE_INTERRUPT""constant name": "映像不正确",
+data type": "整数""initial value": "@SQLITE_INTERRUPT""comment": "数据库磁盘映像格式不正确.",
+data type": "整数""initial value": "@SQLITE_INTERRUPT""data type": "整数",
+data type": "整数""initial value": "@SQLITE_INTERRUPT""initial value": "@SQLITE_CORRUPT"
+  },
+  {
+ITE_OPEN_MEMORY"constant name": "未知操作码",
+ITE_OPEN_MEMORY"comment": "数据库文件操作中出现未知操作码.",
+ITE_OPEN_MEMORY"data type": "整数",
+ITE_OPEN_MEMORY"initial value": "@SQLITE_NOTFOUND"
+  },
+  {
+
+"constant name": "数据库已满",
+
+"comment": "数据库已满导致写入失败.",
+
+"data type": "整数",
+
+"initial value": "@SQLITE_FULL"
+  },
+  {
+initial value": "@SQLITE_BUSY""data type": "整数""constant name": "无法打开",
+initial value": "@SQLITE_BUSY""data type": "整数""comment": "无法打开数据库文件.",
+initial value": "@SQLITE_BUSY""data type": "整数""data type": "整数",
+initial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN"
+  },
+  {
+ITE_NOTFOUND"constant name": "锁定协议错误",
+ITE_NOTFOUND"comment": "数据库锁定协议错误.",
+ITE_NOTFOUND"data type": "整数",
+ITE_NOTFOUND"initial value": "@SQLITE_PROTOCOL"
+  },
+  {
+ITE_READONLY"constant name": "结构已更改",
+ITE_READONLY"comment": "数据库架构已被更改.",
+ITE_READONLY"data type": "整数",
+ITE_READONLY"initial value": "@SQLITE_SCHEMA"
+  },
+  {
+nitial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""constant name": "数据量超限",
+nitial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""comment": "字符串或其他数据超出限制.",
+nitial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数",
+nitial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""initial value": "@SQLITE_TOOBIG"
+  },
+  {
+ITE_READONLY"constant name": "违法约束",
+ITE_READONLY"comment": "由于违反约束而中止.",
+ITE_READONLY"data type": "整数",
+ITE_READONLY"initial value": "@SQLITE_CONSTRAINT"
+  },
+  {
+TE_READONLY"initial value": "@SQLITE_CONSTRAINT""constant name": "类型不匹配",
+TE_READONLY"initial value": "@SQLITE_CONSTRAINT""comment": "数据类型不匹配.",
+TE_READONLY"initial value": "@SQLITE_CONSTRAINT""data type": "整数",
+TE_READONLY"initial value": "@SQLITE_CONSTRAINT""initial value": "@SQLITE_MISMATCH"
+  },
+  {
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""initial value": "@SQLITE_TOOBIG""constant name": "使用错误",
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""initial value": "@SQLITE_TOOBIG""comment": "未正确使用依赖库.",
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""initial value": "@SQLITE_TOOBIG""data type": "整数",
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""initial value": "@SQLITE_TOOBIG""initial value": "@SQLITE_MISUSE"
+  },
+  {
+}"constant name": "主机不支持",
+}"comment": "使用主机不支持的操作系统功能.",
+}"data type": "整数",
+}"initial value": "@SQLITE_NOLFS"
+  },
+  {
+不支持的操作系统功能."constant name": "授权错误",
+不支持的操作系统功能."comment": "授权出现错误.",
+不支持的操作系统功能."data type": "整数",
+不支持的操作系统功能."initial value": "@SQLITE_AUTH"
+  },
+  {
+TE_READONLY"comment": "由于违反约束而中止.""constant name": "超出范围",
+TE_READONLY"comment": "由于违反约束而中止.""comment": "绑定的数据超出范围.",
+TE_READONLY"comment": "由于违反约束而中止.""data type": "整数",
+TE_READONLY"comment": "由于违反约束而中止.""initial value": "@SQLITE_RANGE"
+  },
+  {
+nitial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""constant name": "非数据库文件",
+nitial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""comment": "所欲打开的不是数据库文件.",
+nitial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数",
+nitial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""initial value": "@SQLITE_NOTADB"
+  },
+  {
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""comment": "所欲打开的不是数据库文件.""constant name": "日志通知",
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""comment": "所欲打开的不是数据库文件.""comment": "来自写出日志的通知.",
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""comment": "所欲打开的不是数据库文件.""data type": "整数",
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""comment": "所欲打开的不是数据库文件.""initial value": "@SQLITE_NOTICE"
+  },
+  {
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数""constant name": "日志警告",
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数""comment": "来自写出日志的警告.",
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数""data type": "整数",
+itial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数""initial value": "@SQLITE_WARNING"
+  },
+  {
+支持的操作系统功能."comment": "授权出现错误.""constant name": "下一行就绪",
+支持的操作系统功能."comment": "授权出现错误.""comment": "下一行数据已准备就绪.",
+支持的操作系统功能."comment": "授权出现错误.""data type": "整数",
+支持的操作系统功能."comment": "授权出现错误.""initial value": "@SQLITE_ROW"
+  },
+  {
+
+"constant name": "已提交完毕",
+
+"comment": "将指定参数绑定并提交执行成功.",
+
+"data type": "整数",
+
+"initial value": "@SQLITE_DONE"
+  },
+  {
+tial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数""comment": "来自写出日志的警告.""constant name": "未打开数据库",
+tial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数""comment": "来自写出日志的警告.""comment": "表示当前未打开任何数据库,无法执行目标方法.",
+tial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数""comment": "来自写出日志的警告.""data type": "整数",
+tial value": "@SQLITE_BUSY""data type": "整数""initial value": "@SQLITE_CANTOPEN""data type": "整数""comment": "来自写出日志的警告.""initial value": "-100"
+  }
+initial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW"]
+ },
+ {
+"comment": "将指定参数绑定并提交执行成功.""class name": "SQLite运行时限制项",
+"comment": "将指定参数绑定并提交执行成功.""comment": "提供\"置运行时限制\"方法可选的功能项.",
+"comment": "将指定参数绑定并提交执行成功.""@文档": "\"category = \\\"辅助类\\\"\"",
+"comment": "将指定参数绑定并提交执行成功.""@常量类": "整数",
+"comment": "将指定参数绑定并提交执行成功.""constants": [
+  {
+itial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW"]"constant name": "数据长度",
+itial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW"]"comment": "任何字符串,BLOB或表行的最大尺寸,以字节为单位.",
+itial value": "@SQLITE_OPEN_PRIVATECACHE""initial value": "@SQLITE_OPEN_NOFOLLOW"]"initial value": "@SQLITE_LIMIT_LENGTH"
+  },
+  {
+comment": "将指定参数绑定并提交执行成功.""constants": [
+"constant name": "SQL语句长度",
+comment": "将指定参数绑定并提交执行成功.""constants": [
+"comment": "SQL语句的最大长度,以字节为单位.",
+comment": "将指定参数绑定并提交执行成功.""constants": [
+"initial value": "@SQLITE_LIMIT_SQL_LENGTH"
+  },
+  {
+}"constant name": "最大列数",
+}"comment": "表定义或查询结果集或索引中的最大列数.",
+}"initial value": "@SQLITE_LIMIT_COLUMN"
+  },
+  {
+}"constant name": "表达式解析深度",
+}"comment": "任何表达式解析树的最大深度.",
+}"initial value": "@SQLITE_LIMIT_EXPR_DEPTH"
+  },
+  {
+ITE_LIMIT_LENGTH"constant name": "复合语句项数",
+ITE_LIMIT_LENGTH"comment": "复合选择语句中的最大项数.",
+ITE_LIMIT_LENGTH"initial value": "@SQLITE_LIMIT_COMPOUND_SELECT"
+  },
+  {
+E_READONLY"comment": "由于违反约束而中止.""comment": "绑定的数据超出范围.""constant name": "最大指令数",
+E_READONLY"comment": "由于违反约束而中止.""comment": "绑定的数据超出范围.""comment": "虚拟机程序中的最大指令数.",
+E_READONLY"comment": "由于违反约束而中止.""comment": "绑定的数据超出范围.""initial value": "@SQLITE_LIMIT_VDBE_OP"
+  },
+  {
+"initial value": "@SQLITE_LIMIT_EXPR_DEPTH""constant name": "函数参数数",
+"initial value": "@SQLITE_LIMIT_EXPR_DEPTH""comment": "函数的最大参数数.",
+"initial value": "@SQLITE_LIMIT_EXPR_DEPTH""initial value": "@SQLITE_LIMIT_FUNCTION_ARG"
+  },
+  {
+
+"constant name": "关联数据库数",
+
+"comment": "关联数据库的最大数量.",
+
+"initial value": "@SQLITE_LIMIT_ATTACHED"
+  },
+  {
+initial value": "@SQLITE_LIMIT_EXPR_DEPTH""comment": "函数的最大参数数.""constant name": "LIKE模式长度",
+initial value": "@SQLITE_LIMIT_EXPR_DEPTH""comment": "函数的最大参数数.""comment": "LIKE或GLOB模式的表达式的字符长度.",
+initial value": "@SQLITE_LIMIT_EXPR_DEPTH""comment": "函数的最大参数数.""initial value": "@SQLITE_LIMIT_LIKE_PATTERN_LENGTH"
+  },
+  {
+}"constant name": "占位符个数",
+}"comment": "单个SQL语句中的最大占位符个数.",
+}"initial value": "@SQLITE_LIMIT_VARIABLE_NUMBER"
+  },
+  {
+}"constant name": "触发递归深度",
+}"comment": "回调函数递归的深度.",
+}"initial value": "@SQLITE_LIMIT_TRIGGER_DEPTH"
+  },
+  {
+}"constant name": "工作线程数",
+}"comment": "一个准备好的语句可以启动的辅助工作线程的最大数量.",
+}"initial value": "@SQLITE_LIMIT_WORKER_THREADS"
+  }
+"comment": "将指定参数绑定并提交执行成功."]
+ },
+ {
+"comment": "单个SQL语句中的最大占位符个数.""class name": "SQLite记录集类",
+"comment": "单个SQL语句中的最大占位符个数.""comment": "用于获取SQLite中所储存指定的值,且其中包含一个预编译语句,可对其进行执行.",
+"comment": "单个SQL语句中的最大占位符个数.""@强制依赖": "\"SQLite数据库类\"",
+"comment": "单个SQL语句中的最大占位符个数.""methods": [
+  {
+comment": "单个SQL语句中的最大占位符个数.""methods": [
+"method name": "是否有效",
+comment": "单个SQL语句中的最大占位符个数.""methods": [
+"comment": "判断该结果集是否为有效结果集.",
+comment": "单个SQL语句中的最大占位符个数.""methods": [
+"result comment": "返回假则该结果集将无法取出任何内容.",
+comment": "单个SQL语句中的最大占位符个数.""methods": [
+"type": "property getter",
+comment": "单个SQL语句中的最大占位符个数.""methods": [
+"data type": "逻辑型",
+comment": "单个SQL语句中的最大占位符个数.""methods": [
+"@禁止流程检查": "真"
+  },
+  {
+omment": "将指定参数绑定并提交执行成功.""constants": [
+"comment": "SQL语句的最大长度,以字节为单位.""method name": "列数",
+omment": "将指定参数绑定并提交执行成功.""constants": [
+"comment": "SQL语句的最大长度,以字节为单位.""comment": "返回该记录集所包含的列(字段)总数.",
+omment": "将指定参数绑定并提交执行成功.""constants": [
+"comment": "SQL语句的最大长度,以字节为单位.""type": "property getter",
+omment": "将指定参数绑定并提交执行成功.""constants": [
+"comment": "SQL语句的最大长度,以字节为单位.""data type": "整数",
+omment": "将指定参数绑定并提交执行成功.""constants": [
+"comment": "SQL语句的最大长度,以字节为单位.""@禁止流程检查": "真"
+  },
+  {
+"initial value": "@SQLITE_DONE""method name": "当前记录列数",
+"initial value": "@SQLITE_DONE""comment": "返回当前正在执行的语句的值列数,没有结果返回0,必须在\"执行语句\"方法后调用.",
+"initial value": "@SQLITE_DONE""type": "property getter",
+"initial value": "@SQLITE_DONE""data type": "整数",
+"initial value": "@SQLITE_DONE""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "参数数量",
+
+"comment": "返回预编译语句中所包含的可绑定参数数量.",
+
+"type": "property getter",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "执行语句",
+
+"comment": "将编译的SQL语句提交执行,例如在绑定完参数后,调用本方法以执行预编译的语句.",
+
+"result comment": "返回值请参考常量类\"SQLite执行结果\",如果返回\"下一行就绪\"表示当前执行的SQL有数据返回,即等同于到下一行的效果,可通过读数据系列方法获取.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+"data type": "整数""method name": "取指定参数名",
+"data type": "整数""comment": "通过指定参数的索引位置获取预编译语句中参数名称.",
+"data type": "整数""data type": "文本型",
+"data type": "整数""@禁止流程检查": "真",
+"data type": "整数""parameters": [
+   {
+"parameter name": "参数索引",
+"comment": "请注意参数索引从1开始.",
+"data type": "整数"
+   }
+"data type": "整数"]
+  },
+  {
+tial value": "@SQLITE_DONE""method name": "当前记录列数""method name": "置小数参数数据",
+tial value": "@SQLITE_DONE""method name": "当前记录列数""comment": "设置指定绑定参数的小数值.",
+tial value": "@SQLITE_DONE""method name": "当前记录列数""data type": "整数",
+tial value": "@SQLITE_DONE""method name": "当前记录列数""@禁止流程检查": "真",
+tial value": "@SQLITE_DONE""method name": "当前记录列数""parameters": [
+   {
+"parameter name": "参数索引",
+"comment": "欲设置参数所处的索引位置,请注意参数索引从1开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "欲置入的值.",
+"data type": "小数"
+   }
+tial value": "@SQLITE_DONE""method name": "当前记录列数"]
+  },
+  {
+data type": "小数""method name": "置整数参数数据",
+data type": "小数""comment": "设置指定绑定参数的整数值.",
+data type": "小数""data type": "整数",
+data type": "小数""@禁止流程检查": "真",
+data type": "小数""parameters": [
+   {
+"parameter name": "参数索引",
+"comment": "欲设置参数所处的索引位置,请注意参数索引从1开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "欲置入的值.",
+"data type": "整数"
+   }
+data type": "小数"]
+  },
+  {
+"type": "property getter""method name": "置长整数参数数据",
+"type": "property getter""comment": "设置指定绑定参数的长整数值.",
+"type": "property getter""data type": "整数",
+"type": "property getter""@禁止流程检查": "真",
+"type": "property getter""parameters": [
+   {
+"parameter name": "参数索引",
+"comment": "欲设置参数所处的索引位置,请注意参数索引从1开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "欲置入的值.",
+"data type": "长整数"
+   }
+"type": "property getter"]
+  },
+  {
+comment": "欲置入的值.""method name": "置文本参数数据",
+comment": "欲置入的值.""comment": "设置指定绑定参数的文本值.",
+comment": "欲置入的值.""data type": "整数",
+comment": "欲置入的值.""@禁止流程检查": "真",
+comment": "欲置入的值.""parameters": [
+   {
+"parameter name": "参数索引",
+"comment": "欲设置参数所处的索引位置,请注意参数索引从1开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "欲置入的值.",
+"data type": "文本型"
+   }
+comment": "欲置入的值."]
+  },
+  {
+"method name": "置字节集参数数据",
+"comment": "设置指定绑定参数的字节集.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "参数索引",
+"comment": "欲设置参数所处的索引位置,请注意参数索引从1开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "值",
+"comment": "欲置入的值.",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+}"method name": "置空参数数据",
+}"comment": "将指定绑定参数的值置为NULL.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "参数索引",
+"comment": "欲设置参数所处的索引位置,请注意参数索引从1开始.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"data type": "整数""method name": "取指定参数索引",
+"data type": "整数""comment": "通过指定参数的名称获取预编译语句中参数索引位置.",
+"data type": "整数""result comment": "注意参数索引从1开始.",
+"data type": "整数""data type": "整数",
+"data type": "整数""@禁止流程检查": "真",
+"data type": "整数""parameters": [
+   {
+"parameter name": "参数名称",
+"data type": "文本型"
+   }
+"data type": "整数"]
+  },
+  {
+
+"method name": "置所有参数为空",
+
+"comment": "将所有绑定参数对应的值置为NULL.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取指定列名",
+}"comment": "获取指定列索引的名称,即字段名称.",
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "列索引",
+"comment": "提供所欲获取列名的索引位置.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "取指定列原始名",
+}"comment": "获取指定列索引的原始名称.",
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "列索引",
+"comment": "提供该列所处的索引位置.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "列索引""method name": "取指定列所处库名",
+ameter name": "列索引""comment": "获取指定列索引所处的数据库名称.",
+ameter name": "列索引""data type": "文本型",
+ameter name": "列索引""@禁止流程检查": "真",
+ameter name": "列索引""parameters": [
+   {
+"parameter name": "列索引",
+"comment": "提供该列所处的索引位置.",
+"data type": "整数"
+   }
+ameter name": "列索引"]
+  },
+  {
+eter name": "列索引"]"method name": "取指定列所处表名",
+eter name": "列索引"]"comment": "获取指定列索引所处的表名称.",
+eter name": "列索引"]"data type": "文本型",
+eter name": "列索引"]"@禁止流程检查": "真",
+eter name": "列索引"]"parameters": [
+   {
+"parameter name": "列索引",
+"comment": "提供该列所处的索引位置.",
+"data type": "整数"
+   }
+eter name": "列索引"]]
+  },
+  {
+meter name": "列索引""comment": "获取指定列索引所处的数据库名称.""method name": "取指定列类型名称",
+meter name": "列索引""comment": "获取指定列索引所处的数据库名称.""comment": "以文本形式返回指定列(字段)的类型.",
+meter name": "列索引""comment": "获取指定列索引所处的数据库名称.""result comment": "例如列定义类型为整数,将返回\"integer\".",
+meter name": "列索引""comment": "获取指定列索引所处的数据库名称.""data type": "文本型",
+meter name": "列索引""comment": "获取指定列索引所处的数据库名称.""@禁止流程检查": "真",
+meter name": "列索引""comment": "获取指定列索引所处的数据库名称.""parameters": [
+   {
+"parameter name": "列索引",
+"comment": "提供该列所处的索引位置.",
+"data type": "整数"
+   }
+meter name": "列索引""comment": "获取指定列索引所处的数据库名称."]
+  },
+  {
+ }"method name": "读小数数据",
+ }"comment": "读取当前行指定列索引的小数数据.",
+ }"data type": "小数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "列索引",
+"comment": "所欲读取值所处的列位置.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "读整数数据",
+}"comment": "读取当前行指定列索引的整数数据.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "列索引",
+"comment": "所欲读取值所处的列位置.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "读长整数数据",
+data type": "整数""comment": "读取当前行指定列索引的长整数数据.",
+data type": "整数""data type": "长整数",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "列索引",
+"comment": "所欲读取值所处的列位置.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+]"method name": "读文本数据",
+]"comment": "读取当前行指定列索引的文本数据.",
+]"data type": "文本型",
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "列索引",
+"comment": "所欲读取值所处的列位置.",
+"data type": "整数"
+   }
+]]
+  },
+  {
+"data type": "文本型""method name": "读字节集数据",
+"data type": "文本型""comment": "读取当前行指定列索引的字节集数据.",
+"data type": "文本型""data type": "字节集类",
+"data type": "文本型""@禁止流程检查": "真",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "列索引",
+"comment": "所欲读取值所处的列位置.",
+"data type": "整数"
+   }
+"data type": "文本型"]
+  },
+  {
+
+"method name": "重置",
+
+"comment": "将该记录集对象复位,以便下一轮的参数赋值.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "释放",
+
+"comment": "释放该记录集所占用资源."
+  }
+"comment": "单个SQL语句中的最大占位符个数."]
+ }
+问本程序中的接口需要引用模块"SQLite数据库".]
+}

@@ -1,0 +1,459 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.网络库.kcp\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"kcp\\\\ikcp.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部源文件": "\"kcp\\\\ikcp.c\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______KCP全局类",
+"comment": "一个udp 可靠通讯的库",
+"@全局类": "真",
+"methods": [
+  {
+ꑐ敹ŝ"method name": "ikcp_create",
+ꑐ敹ŝ"static": true,
+ꑐ敹ŝ"data type": "变整数",
+ꑐ敹ŝ"@嵌入式方法": "\"\"",
+ꑐ敹ŝ"parameters": [
+   {
+"parameter name": "会话编号",
+"comment": "同一个连接，必须编号相同",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "变整数"
+   }
+ꑐ敹ŝ]
+  },
+  {
+ꑐ敹ŝ"method name": "ikcp_release",
+ꑐ敹ŝ"static": true,
+ꑐ敹ŝ"@嵌入式方法": "\"\"",
+ꑐ敹ŝ"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+ꑐ敹ŝ]
+  },
+  {
+敹ŝ"parameters": [
+"method name": "ikcp_setoutput",
+敹ŝ"parameters": [
+"static": true,
+敹ŝ"parameters": [
+"@嵌入式方法": "\"\"",
+敹ŝ"parameters": [
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "回调函数",
+"@匹配方法": "\"输出回调\""
+   }
+敹ŝ"parameters": [
+]
+  },
+  {
+ck the size of next message in the recv queue""method name": "输出回调",
+ck the size of next message in the recv queue""static": true,
+ck the size of next message in the recv queue""data type": "整数",
+ck the size of next message in the recv queue""parameters": [
+   {
+"parameter name": "缓冲区指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "变整数"
+   }
+ck the size of next message in the recv queue"]
+  },
+  {
+：是否关闭流控，默认是0代表不关闭，1代表关闭。""method name": "ikcp_recv",
+：是否关闭流控，默认是0代表不关闭，1代表关闭。""static": true,
+：是否关闭流控，默认是0代表不关闭，1代表关闭。""data type": "整数",
+：是否关闭流控，默认是0代表不关闭，1代表关闭。""@禁止流程检查": "真",
+：是否关闭流控，默认是0代表不关闭，1代表关闭。""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "比如首先调用 取空白字节集()",
+"data type": "字节集类"
+   }
+：是否关闭流控，默认是0代表不关闭，1代表关闭。"]
+  },
+  {
+data type": "变整数""method name": "ikcp_send",
+data type": "变整数""static": true,
+data type": "变整数""data type": "整数",
+data type": "变整数""@禁止流程检查": "真",
+data type": "变整数""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+data type": "变整数"]
+  },
+  {
+ }"method name": "ikcp_update",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前时间戳",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+]"method name": "ikcp_check",
+]"static": true,
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "当前时间戳",
+"data type": "整数"
+   }
+]]
+  },
+  {
+"method name": "ikcp_input",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "比如首先调用 取空白字节集()",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+data type": "字节集类""method name": "ikcp_flush",
+data type": "字节集类""static": true,
+data type": "字节集类""@嵌入式方法": "\"\"",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "比如首先调用 取空白字节集()",
+"data type": "字节集类"
+   }
+data type": "字节集类"]
+  },
+  {
+ameter name": "数据""method name": "ikcp_peeksize",
+ameter name": "数据""static": true,
+ameter name": "数据""data type": "整数",
+ameter name": "数据""@嵌入式方法": "\"\"",
+ameter name": "数据""parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+ameter name": "数据"]
+  },
+  {
+
+"method name": "ikcp_setmtu",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "mtu",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "ikcp_wndsize",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "sndwnd",
+"data type": "整数"
+   },
+   {
+"parameter name": "rcvwnd",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "ikcp_waitsnd",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+]"method name": "ikcp_nodelay",
+]"comment": "普通模式： ikcp_nodelay(kcp, 0, 40, 0, 0);\n极速模式： ikcp_nodelay(kcp, 1, 10, 2, 1);",
+]"static": true,
+]"data type": "整数",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "nodelay",
+"comment": "nodelay ：是否启用 nodelay模式，0不启用；1启用。",
+"data type": "整数"
+   },
+   {
+"parameter name": "interval",
+"comment": "interval ：协议内部工作的 interval，单位毫秒，比如 10ms或者 20ms",
+"data type": "整数"
+   },
+   {
+"parameter name": "resend",
+"comment": "resend ：快速重传模式，默认0关闭，可以设置2（2次ACK跨越将会直接重传）",
+"data type": "整数"
+   },
+   {
+"parameter name": "nc",
+"comment": "nc ：是否关闭流控，默认是0代表不关闭，1代表关闭。",
+"data type": "整数"
+   }
+]]
+  },
+  {
+ }"method name": "iclock64",
+ }"static": true,
+ }"data type": "长整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+"method name": "iclock",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "isleep",
+}"static": true,
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "延时时长",
+"data type": "整数"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "CKcp",
+"base class": "参考对象模板类",
+"@模板实现类": "\"CKcpHandle\"",
+"methods": [
+  {
+@模板实现类": "\"CKcpHandle\"""method name": "组包完成",
+@模板实现类": "\"CKcpHandle\"""comment": "这个函数的触发 是由 CKcp.组包() 触发的\n再这个回调函数中 调用 自己的udp发送函数",
+@模板实现类": "\"CKcpHandle\"""type": "event",
+@模板实现类": "\"CKcpHandle\"""data type": "整数",
+@模板实现类": "\"CKcpHandle\"""parameters": [
+   {
+"parameter name": "缓冲区指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "连接句柄",
+"data type": "变整数"
+   }
+@模板实现类": "\"CKcpHandle\""]
+  },
+  {
+}"method name": "创建",
+}"comment": "使用kcp的时候，第一步必须创建",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "会话编号",
+"comment": "同一个连接，必须编号相同",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "变整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+data type": "变整数""method name": "更新",
+data type": "变整数""comment": "update state (call it repeatedly, every 10ms-100ms), or you can ask \nikcp_check when to call it again (without ikcp_input/_send calling).\n'current' - current timestamp in millisec. ",
+data type": "变整数""parameters": [
+   {
+"parameter name": "当前时间戳",
+"comment": "可以调用 iclock () 函数",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+ta type": "变整数"]"method name": "抓取分包数据",
+ta type": "变整数"]"comment": "首先再 分包线程被启动 事件函数中，用循环的方式 首先调用更新，然后调用抓取数据\n来达到抓取分包数据",
+ta type": "变整数"]"result comment": "大于等于0 表示抓取成功",
+ta type": "变整数"]"data type": "整数",
+ta type": "变整数"]"parameters": [
+   {
+"parameter name": "抓取到的数据",
+"data type": "字节集类"
+   }
+ta type": "变整数"]]
+  },
+  {
+}"method name": "组包",
+}"comment": "调用此api时，并没有真正的发送，只是调用kcp算法来组合成一个特定的包，然后您\n需要再 发送回调 中，调用自己的udp api 来真正的发送数据",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+"comment": "调用此api时，并没有真正的发送，只是调用kcp算法来组合成一个特定的包，然后您\n需要再 发送回调 中，调用自己的udp api 来真正的发送数据""method name": "分包",
+"comment": "调用此api时，并没有真正的发送，只是调用kcp算法来组合成一个特定的包，然后您\n需要再 发送回调 中，调用自己的udp api 来真正的发送数据""comment": "您自行用自己的udp收到一段数据后，调用 分包 后，ckp内部会解包，校验包等等操作\n然后会调用 分包完成，传递一个真实的数据包给用户\nkcp的原理就是一个算法，实际用什么udp api您需要自己选择一个udp模块",
+"comment": "调用此api时，并没有真正的发送，只是调用kcp算法来组合成一个特定的包，然后您\n需要再 发送回调 中，调用自己的udp api 来真正的发送数据""data type": "整数",
+"comment": "调用此api时，并没有真正的发送，只是调用kcp算法来组合成一个特定的包，然后您\n需要再 发送回调 中，调用自己的udp api 来真正的发送数据""parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+"comment": "调用此api时，并没有真正的发送，只是调用kcp算法来组合成一个特定的包，然后您\n需要再 发送回调 中，调用自己的udp api 来真正的发送数据"]
+  },
+  {
+ }"method name": "置窗口数量",
+ }"comment": "而考虑到丢包重发,设置最大收发窗口为128",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "发送窗口数量",
+"data type": "整数"
+   },
+   {
+"parameter name": "接收窗口数量",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "置规则",
+
+"comment": "普通模式： ikcp_nodelay(kcp, 0, 40, 0, 0);\n极速模式： ikcp_nodelay(kcp, 1, 10, 2, 1);",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "nodelay",
+"comment": "nodelay ：是否启用 nodelay模式，0不启用；1启用。",
+"data type": "整数"
+   },
+   {
+"parameter name": "interval",
+"comment": "interval ：协议内部工作的 interval，单位毫秒，比如 10ms或者 20ms",
+"data type": "整数"
+   },
+   {
+"parameter name": "resend",
+"comment": "resend ：快速重传模式，默认0关闭，可以设置2（2次ACK跨越将会直接重传）",
+"data type": "整数"
+   },
+   {
+"parameter name": "nc",
+"comment": "nc ：是否关闭流控，默认是0代表不关闭，1代表关闭。",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "取待发送包数量",
+"data type": "整数"
+  },
+  {
+"method name": "取下一个待接收数据包大小",
+"comment": "check the size of next message in the recv queue",
+"data type": "整数"
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

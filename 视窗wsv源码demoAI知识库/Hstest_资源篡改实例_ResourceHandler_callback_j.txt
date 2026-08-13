@@ -1,0 +1,196 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+움鳵Ǹ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+움鳵Ǹ"package name": "浏览器.回调",
+움鳵Ǹ"classes": [
+ {
+"class name": "类_FBrowser_资源处理器测试",
+"base class": "类_FBrowser_资源处理器",
+"variables": [
+  {
+
+"variable name": "地址",
+
+"data type": "文本型"
+  }
+],
+"methods": [
+  {
+
+"method name": "打开",
+
+"comment": "英文名：Open  说明：获取资源处理器或制定自定义方案后才会生效，返回真且继续设置为真才会启用资源处理\nOpen the response stream. To handle the request immediately set\n|handle_request| to true and return true. To decide at a later time set\n|handle_request| to false, return true, and execute |callback| to continue\nor cancel the request. To cancel the request immediately set\n|handle_request| to true and return false. This method will be called in\nsequence but not from a dedicated thread. For backwards compatibility set\n|handle_request| to false and return false and the ProcessRequest method will be called.",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "请求",
+"comment": "request",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "处理请求",
+"comment": "handle_request 可设置，设置为假且返回假，将会触发“资源处理器_处理请求”",
+"data type": "逻辑型类"
+   },
+   {
+"parameter name": "回调",
+"comment": "callback 函数返回值和此处都设置为真才会启用资源处理",
+"data type": "类_FBrowser_回调"
+   }
+
+]
+  },
+  {
+
+"method name": "处理请求",
+
+"comment": "英文名：ProcessRequest 说明：获取资源处理器或制定自定义方案后才会生效",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "请求",
+"data type": "类_FBrowser_请求"
+   },
+   {
+"parameter name": "回调",
+"data type": "类_FBrowser_回调"
+   }
+
+]
+  },
+  {
+
+"method name": "取响应头",
+
+"comment": "英文名：GetResponseHeaders  说明：获取资源处理器或制定自定义方案后才会生效，设置了“重定向地址”设置“响应长度”无效，两者互斥",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "响应",
+"data type": "类_FBrowser_响应"
+   },
+   {
+"parameter name": "响应长度",
+"comment": "需修改的数据大小，大于0修改才会有效，后调用“资源处理器_读取”",
+"data type": "长整数类"
+   },
+   {
+"parameter name": "重定向地址",
+"comment": "设置要重定向地址的地址，设置后会跳转新地址",
+"data type": "FBrowser_文本"
+   }
+
+]
+  },
+  {
+
+"method name": "忽略",
+
+"comment": "英文名：ResourceHandler_Skip  说明：获取资源处理器或制定自定义方案后才会生效，设置需要忽略的大小，待验证，未知触发条件",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "可忽略大小",
+"data type": "长整数"
+   },
+   {
+"parameter name": "被忽略大小",
+"comment": "设置需要被忽略的大小",
+"data type": "长整数类"
+   },
+   {
+"parameter name": "资源忽略回调",
+"data type": "类_FBrowser_资源忽略回调"
+   }
+
+]
+  },
+  {
+
+"method name": "读取",
+
+"comment": "英文名：ResourceHandler_Read 说明：获取资源处理器或制定自定义方案后才会生效，该事件返回真继续读取，修改了数据必须返回真否则修改无效,返回假才会停止读取数据，可通过写入数据到输出数据指针，达到修改资源数据的目的",
+
+"data type": "逻辑型",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   },
+   {
+"parameter name": "输出数据指针",
+"comment": "data_out",
+"data type": "变整数"
+   },
+   {
+"parameter name": "读取大小",
+"comment": "bytes_to_read 可读取大小，由系统提供最大可写入的数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "读入大小",
+"comment": "bytes_read 写入数据大小，写入数据不能超过这个大小，超过要做分包处理",
+"data type": "整数类"
+   },
+   {
+"parameter name": "资源读取回调",
+"data type": "类_FBrowser_资源读取回调"
+   }
+
+]
+  },
+  {
+
+"method name": "退出",
+
+"comment": "英文名：ResourceHandler_Cancel 说明：获取资源处理器或制定自定义方案后才会生效，结束退出",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "标识ID",
+"data type": "长整数"
+   }
+
+]
+  }
+]
+ }
+움鳵Ǹ]
+}

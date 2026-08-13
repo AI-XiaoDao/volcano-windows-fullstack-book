@@ -1,0 +1,3833 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"MFC版媒体播放器组件".
+
+{
+问本程序中的接口需要引用模块"MFC版媒体播放器组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"MFC版媒体播放器组件"."package name": "火山.多媒体.播放器",
+问本程序中的接口需要引用模块"MFC版媒体播放器组件"."classes": [
+ {
+中的接口需要引用模块"MFC版媒体播放器组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"class name": "媒体播放器",
+中的接口需要引用模块"MFC版媒体播放器组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"base class": "OCX组件",
+中的接口需要引用模块"MFC版媒体播放器组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"组件类型": "\"{6BF52A52-394A-11D3-B153-00C04F79FAA6}\"",
+中的接口需要引用模块"MFC版媒体播放器组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"@视窗.窗口组件": "\"icon = \\\"@23\\\"\\r\\ndefault_size = \\\"400, 300\\\"\\r\\npreview_unsupported\"",
+中的接口需要引用模块"MFC版媒体播放器组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"methods": [
+  {
+目前无效,仅用作保留在将来使用.""method name": "打开状态被改变",
+目前无效,仅用作保留在将来使用.""comment": "当组件打开状态被改变后本事件被发送",
+目前无效,仅用作保留在将来使用.""type": "event",
+目前无效,仅用作保留在将来使用.""data type": "整数",
+目前无效,仅用作保留在将来使用.""parameters": [
+   {
+"parameter name": "新状态",
+"data type": "媒体打开状态"
+   }
+目前无效,仅用作保留在将来使用."]
+  },
+  {
+性读 类型 = 文本型 注释 = "返回本错误对应的自定义信息地址(如果存在)""method name": "播放状态被改变",
+性读 类型 = 文本型 注释 = "返回本错误对应的自定义信息地址(如果存在)""comment": "当组件播放状态被改变后本事件被发送",
+性读 类型 = 文本型 注释 = "返回本错误对应的自定义信息地址(如果存在)""type": "event",
+性读 类型 = 文本型 注释 = "返回本错误对应的自定义信息地址(如果存在)""data type": "整数",
+性读 类型 = 文本型 注释 = "返回本错误对应的自定义信息地址(如果存在)""parameters": [
+   {
+"parameter name": "新状态",
+"data type": "媒体播放状态"
+   }
+性读 类型 = 文本型 注释 = "返回本错误对应的自定义信息地址(如果存在)"]
+  },
+  {
+
+"method name": "音频语言被改变",
+
+"comment": "当前音频语言被改变后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "语言ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "状态被改变",
+
+"comment": "状态文本被改变后本事件被发送",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+}"method name": "接收到脚本命令",
+}"comment": "接收到同步命令或链接地址后本事件被发送",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "新流被启动",
+"comment": "当一个新的流媒体在某频道中被启动后本事件被发送",
+"type": "event",
+"data type": "整数"
+  },
+  {
+"method name": "连接被断开",
+"comment": "当从服务器断开连接后本事件被发送",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "结果码",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "正在缓冲",
+}"comment": "当开始或结束媒体缓冲后本事件被发送",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "是否开始缓冲",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+type": "event""method name": "错误发生",
+type": "event""comment": "发现错误后本事件被发送",
+type": "event""type": "event",
+type": "event""data type": "整数"
+  },
+  {
+type": "event""method name": "警告发生",
+type": "event""comment": "发现警告后本事件被发送",
+type": "event""type": "event",
+type": "event""data type": "整数",
+type": "event""parameters": [
+   {
+"parameter name": "警告类型",
+"data type": "整数"
+   },
+   {
+"parameter name": "警告参数",
+"data type": "整数"
+   },
+   {
+"parameter name": "描述文本",
+"data type": "文本型"
+   }
+type": "event"]
+  },
+  {
+": "event""method name": "错误发生""method name": "媒体流已结束",
+": "event""method name": "错误发生""comment": "当前媒体流播放完毕后本事件被发送",
+": "event""method name": "错误发生""type": "event",
+": "event""method name": "错误发生""data type": "整数",
+": "event""method name": "错误发生""parameters": [
+   {
+"parameter name": "结果码",
+"data type": "整数"
+   }
+": "event""method name": "错误发生"]
+  },
+  {
+ype": "event""type": "event""method name": "位置被改变",
+ype": "event""type": "event""comment": "当前媒体的播放位置被改变后本事件被发送",
+ype": "event""type": "event""type": "event",
+ype": "event""type": "event""data type": "整数",
+ype": "event""type": "event""parameters": [
+   {
+"parameter name": "先前位置",
+"data type": "小数"
+   },
+   {
+"parameter name": "最新位置",
+"data type": "小数"
+   }
+ype": "event""type": "event"]
+  },
+  {
+ }"method name": "遇到标记",
+ }"comment": "遇到媒体标记后本事件被发送",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "标记号",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+]"method name": "时长单位被改变",
+]"comment": "当用作记录时长和位置的单位被改变后本事件被发送",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "新单位",
+"data type": "整数"
+   }
+]]
+  },
+  {
+
+"method name": "光驱媒体更改",
+
+"comment": "光驱内的媒体被改变后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "光驱号",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "播放列表被改变",
+"comment": "所指定播放列表内容被改变后本事件被发送",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "播放列表对象",
+"comment": "提供内容被改变的播放列表对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "改变类型",
+"data type": "播放列表改变类型"
+   }
+]
+  },
+  {
+}"method name": "当前播放列表被改变",
+}"comment": "当前播放列表内容被改变后本事件被发送",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "改变类型",
+"data type": "播放列表改变类型"
+   }
+}]
+  },
+  {
+}"method name": "当前播放列表项被激活",
+}"comment": "当前播放列表中的指定项目被激活后本事件被发送",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "被激活项目名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+comment": "提供内容被改变的播放列表对象""method name": "媒体被改变",
+comment": "提供内容被改变的播放列表对象""comment": "媒体对象被改变后本事件被发送",
+comment": "提供内容被改变的播放列表对象""type": "event",
+comment": "提供内容被改变的播放列表对象""data type": "整数",
+comment": "提供内容被改变的播放列表对象""parameters": [
+   {
+"parameter name": "项目",
+"data type": "COM对象类"
+   }
+comment": "提供内容被改变的播放列表对象"]
+  },
+  {
+mment": "提供内容被改变的播放列表对象"]"method name": "现行媒体项被激活",
+mment": "提供内容被改变的播放列表对象"]"comment": "当现行媒体项目被激活后本事件被发送",
+mment": "提供内容被改变的播放列表对象"]"type": "event",
+mment": "提供内容被改变的播放列表对象"]"data type": "整数",
+mment": "提供内容被改变的播放列表对象"]"parameters": [
+   {
+"parameter name": "项目名称",
+"data type": "文本型"
+   }
+mment": "提供内容被改变的播放列表对象"]]
+  },
+  {
+
+"method name": "当前项目被改变",
+
+"comment": "当前播放列表中的现行选中项目被改变后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "媒体对象",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+"method name": "媒体集被改变",
+"comment": "在媒体集需要被重新查询时本事件被发送",
+"type": "event",
+"data type": "整数"
+  },
+  {
+ }"method name": "媒体集属性文本加入",
+ }"comment": "当有属性文本加入到媒体集中后本事件被发送",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "媒体集属性文本被删除",
+"comment": "当从媒体集中删除某属性文本后本事件被发送",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "媒体集属性文本被改变",
+
+"comment": "当媒体集中的某属性文本被改变后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "先前属性值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最新属性值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+type": "event""method name": "播放列表集被改变",
+type": "event""comment": "当播放列表集需要被重新查询时本事件被发送",
+type": "event""type": "event",
+type": "event""data type": "整数"
+  },
+  {
+"method name": "播放列表加入",
+"comment": "当加入播放列表到播放列表集中后本事件被发送",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "播放列表名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "播放列表被删除",
+ }"comment": "当从播放列表集中删除播放列表后,本事件被发送.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "播放列表名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "播放列表被标记删除",
+ }"comment": "当将某播放列表设置或重置为被删除状态时,本事件被发送.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "播放列表名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否被删除",
+"comment": "指定是否被设置或重置为被删除状态",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+
+"method name": "模式被改变",
+
+"comment": "当播放列表的回放模式被改变后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "模式名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新模式值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "媒体发生错误",
+
+"comment": "当遇到媒体错误时本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "媒体对象",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+
+"method name": "播放列表开关被打开",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "项目",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+"data type": "整数""method name": "域名被改变",
+"data type": "整数""comment": "当前域名被改变后本事件被发送",
+"data type": "整数""type": "event",
+"data type": "整数""data type": "整数",
+"data type": "整数""parameters": [
+   {
+"parameter name": "域名",
+"data type": "文本型"
+   }
+"data type": "整数"]
+  },
+  {
+
+"method name": "切换到播放器程序",
+
+"comment": "当显示切换到播放器程序后本事件被发送",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+ }"method name": "切换到组件",
+ }"comment": "当显示切换到播放器组件上时本事件被发送",
+ }"type": "event",
+ }"data type": "整数"
+  },
+  {
+
+"data type": "整数""method name": "停泊状态被改变",
+
+"data type": "整数""comment": "当播放器停泊或取消停泊状态后本事件被发送",
+
+"data type": "整数""type": "event",
+
+"data type": "整数""data type": "整数"
+  },
+  {
+}"method name": "播放器重新连接",
+}"comment": "当组件重新连接到播放器时本事件被发送",
+}"type": "event",
+}"data type": "整数"
+  },
+  {
+ }"method name": "播放器被单击",
+ }"comment": "当用户用鼠标单击播放器后本事件被发送",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "鼠标按钮类型",
+"data type": "短整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "通过将本值与整数1/2/4进行位与可以获得当前Shift/Ctrl/Alt键的按下状态",
+"data type": "短整数"
+   },
+   {
+"parameter name": "横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向坐标",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "播放器被双击",
+ }"comment": "当用户用鼠标双击播放器后本事件被发送",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "鼠标按钮类型",
+"data type": "短整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "通过将本值与整数1/2/4进行位与可以获得当前Shift/Ctrl/Alt键的按下状态",
+"data type": "短整数"
+   },
+   {
+"parameter name": "横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向坐标",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+"method name": "播放器按下某键",
+"comment": "当用户按下某键后本事件被发送",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "按键代码",
+"data type": "短整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "通过将本值与整数1/2/4进行位与可以获得当前Shift/Ctrl/Alt键的按下状态",
+"data type": "短整数"
+   }
+]
+  },
+  {
+
+"method name": "播放器键输入",
+
+"comment": "当用户按下并放开某键后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "键字符代码",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+
+"method name": "播放器放开某键",
+
+"comment": "当用户放开某键后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "按键代码",
+"data type": "短整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "通过将本值与整数1/2/4进行位与可以获得当前Shift/Ctrl/Alt键的按下状态",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+]"method name": "播放器鼠标键被按下",
+]"comment": "当用户按下鼠标键后本事件被发送",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "鼠标按钮类型",
+"data type": "短整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "通过将本值与整数1/2/4进行位与可以获得当前Shift/Ctrl/Alt键的按下状态",
+"data type": "短整数"
+   },
+   {
+"parameter name": "横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向坐标",
+"data type": "整数"
+   }
+]]
+  },
+  {
+data type": "整数""method name": "播放器鼠标被移动",
+data type": "整数""comment": "当用户移动鼠标后本事件被发送",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "鼠标按钮类型",
+"data type": "短整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "通过将本值与整数1/2/4进行位与可以获得当前Shift/Ctrl/Alt键的按下状态",
+"data type": "短整数"
+   },
+   {
+"parameter name": "横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向坐标",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+data type": "整数""method name": "播放器鼠标键被放开",
+data type": "整数""comment": "当用户放开鼠标键后本事件被发送",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "鼠标按钮类型",
+"data type": "短整数"
+   },
+   {
+"parameter name": "辅助键状态",
+"comment": "通过将本值与整数1/2/4进行位与可以获得当前Shift/Ctrl/Alt键的按下状态",
+"data type": "短整数"
+   },
+   {
+"parameter name": "横向坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向坐标",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "设备被连接",
+ata type": "整数""parameters": [
+"comment": "当媒体设备被连接时本事件被发送",
+ata type": "整数""parameters": [
+"type": "event",
+ata type": "整数""parameters": [
+"data type": "整数",
+ata type": "整数""parameters": [
+"parameters": [
+   {
+"parameter name": "设备对象",
+"data type": "媒体设备类"
+   }
+ata type": "整数""parameters": [
+]
+  },
+  {
+ta type": "整数""parameters": [
+"data type": "整数""method name": "设备被断开",
+ta type": "整数""parameters": [
+"data type": "整数""comment": "当媒体设备被断开后本事件被发送",
+ta type": "整数""parameters": [
+"data type": "整数""type": "event",
+ta type": "整数""parameters": [
+"data type": "整数""data type": "整数",
+ta type": "整数""parameters": [
+"data type": "整数""parameters": [
+   {
+"parameter name": "设备对象",
+"data type": "媒体设备类"
+   }
+ta type": "整数""parameters": [
+"data type": "整数"]
+  },
+  {
+ameter name": "设备对象""method name": "设备状态被改变",
+ameter name": "设备对象""comment": "当媒体设备状态被改变后本事件被发送",
+ameter name": "设备对象""type": "event",
+ameter name": "设备对象""data type": "整数",
+ameter name": "设备对象""parameters": [
+   {
+"parameter name": "设备对象",
+"data type": "媒体设备类"
+   },
+   {
+"parameter name": "新状态",
+"data type": "媒体设备状态"
+   }
+ameter name": "设备对象"]
+  },
+  {
+
+"method name": "设备同步状态被改变",
+
+"comment": "当媒体设备的同步状态被改变后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "设备对象",
+"data type": "媒体设备类"
+   },
+   {
+"parameter name": "新状态",
+"data type": "设备同步状态"
+   }
+
+]
+  },
+  {
+"method name": "设备同步出错",
+"comment": "当设备中的媒体同步出错时本事件被发送",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "设备对象",
+"data type": "媒体设备类"
+   },
+   {
+"parameter name": "媒体对象",
+"data type": "COM对象类"
+   }
+]
+  },
+  {
+
+"method name": "创建协作关系完毕",
+
+"comment": "当\"创建协作关系\"方法执行完毕后本事件被发送",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "设备对象",
+"data type": "媒体设备类"
+   },
+   {
+"parameter name": "COM结果码",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+parameters": [
+"method name": "设备估量完毕",
+parameters": [
+"comment": "当与设备的同步估量工作完毕后本事件被发送",
+parameters": [
+"type": "event",
+parameters": [
+"data type": "整数",
+parameters": [
+"parameters": [
+   {
+"parameter name": "设备对象",
+"data type": "媒体设备类"
+   },
+   {
+"parameter name": "COM结果码",
+"data type": "整数"
+   },
+   {
+"parameter name": "估计被使用空间尺寸",
+"data type": "长整数"
+   },
+   {
+"parameter name": "估计空间尺寸",
+"data type": "长整数"
+   }
+parameters": [
+]
+  },
+  {
+arameters": [
+"parameters": [
+"method name": "光驱复制状态改变",
+arameters": [
+"parameters": [
+"comment": "当光驱的复制状态改变后本事件被发送",
+arameters": [
+"parameters": [
+"type": "event",
+arameters": [
+"parameters": [
+"data type": "整数",
+arameters": [
+"parameters": [
+"parameters": [
+   {
+"parameter name": "光驱复制对象",
+"data type": "光驱复制类"
+   },
+   {
+"parameter name": "状态值",
+"data type": "光驱复制状态"
+   }
+arameters": [
+"parameters": [
+]
+  },
+  {
+"method name": "光驱复制媒体出错",
+"comment": "当光驱复制媒体出错后本事件被发送",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "光驱复制对象",
+"data type": "光驱复制类"
+   },
+   {
+"parameter name": "媒体对象",
+"data type": "COM对象类"
+   }
+]
+  },
+  {
+ameters": [
+"parameters": [
+]"method name": "光驱刻录状态改变",
+ameters": [
+"parameters": [
+]"comment": "当光驱的刻录状态改变后本事件被发送",
+ameters": [
+"parameters": [
+]"type": "event",
+ameters": [
+"parameters": [
+]"data type": "整数",
+ameters": [
+"parameters": [
+]"parameters": [
+   {
+"parameter name": "光驱刻录对象",
+"data type": "光驱刻录类"
+   },
+   {
+"parameter name": "状态值",
+"data type": "光驱刻录状态"
+   }
+ameters": [
+"parameters": [
+]]
+  },
+  {
+eters": [
+"parameters": [
+]]"method name": "光驱刻录媒体出错",
+eters": [
+"parameters": [
+]]"comment": "当光驱刻录某个媒体内容出错后,本事件被发送.",
+eters": [
+"parameters": [
+]]"type": "event",
+eters": [
+"parameters": [
+]]"data type": "整数",
+eters": [
+"parameters": [
+]]"parameters": [
+   {
+"parameter name": "光驱刻录对象",
+"data type": "光驱刻录类"
+   },
+   {
+"parameter name": "媒体对象",
+"data type": "COM对象类"
+   }
+eters": [
+"parameters": [
+]]]
+  },
+  {
+
+"method name": "光驱刻录出错",
+
+"comment": "当光驱进行刻录操作时发现某个通常错误后,本事件被发送.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "光驱刻录对象",
+"data type": "光驱刻录类"
+   },
+   {
+"parameter name": "COM结果码",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "媒体库被连接",
+
+"comment": "当连接到某个媒体库后,本事件被发送.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "媒体库对象",
+"data type": "媒体库类"
+   }
+
+]
+  },
+  {
+}"method name": "媒体库被断开",
+}"comment": "当断开与媒体库的连接后,本事件被发送.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "媒体库对象",
+"data type": "媒体库类"
+   }
+}]
+  },
+  {
+ }"method name": "文件夹扫描状态改变",
+ }"comment": "当文件夹的扫描状态被改变后,本事件被发送.",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "状态值",
+"data type": "文件夹扫描状态"
+   }
+ }]
+  },
+  {
+]"method name": "文本集被改变",
+]"comment": "当文本集被改变后,本事件被发送.",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "文本集对象",
+"data type": "COM对象类"
+   },
+   {
+"parameter name": "改变类型",
+"data type": "文本集改变类型"
+   },
+   {
+"parameter name": "文本集索引位置",
+"data type": "整数"
+   }
+]]
+  },
+  {
+"comment": "当文本集被改变后,本事件被发送.""method name": "媒体被加入",
+"comment": "当文本集被改变后,本事件被发送.""comment": "当有媒体加入了本地媒体库中后,本事件被发送.",
+"comment": "当文本集被改变后,本事件被发送.""type": "event",
+"comment": "当文本集被改变后,本事件被发送.""data type": "整数",
+"comment": "当文本集被改变后,本事件被发送.""parameters": [
+   {
+"parameter name": "媒体对象",
+"data type": "COM对象类"
+   }
+"comment": "当文本集被改变后,本事件被发送."]
+  },
+  {
+
+"method name": "媒体被删除",
+
+"comment": "当有媒体被从本地媒体库中删除后,本事件被发送.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "媒体对象",
+"data type": "COM对象类"
+   }
+
+]
+  },
+  {
+ }"method name": "地址",
+ }"comment": "返回当前媒体地址",
+ }"type": "property getter",
+ }"data type": "文本型"
+  },
+  {
+
+"method name": "地址",
+
+"comment": "设置当前媒体地址",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "打开状态",
+"comment": "返回播放器的当前打开状态",
+"type": "property getter",
+"data type": "媒体打开状态"
+  },
+  {
+data type": "COM对象类""method name": "播放状态",
+data type": "COM对象类""comment": "返回播放器的当前播放状态",
+data type": "COM对象类""type": "property getter",
+data type": "COM对象类""data type": "媒体播放状态"
+  },
+  {
+"method name": "控制器",
+"comment": "返回播放器的控制器管理对象",
+"type": "property getter",
+"data type": "播放器控制"
+  },
+  {
+}"data type": "文本型""method name": "设定",
+}"data type": "文本型""comment": "返回播放器的配置设定信息",
+}"data type": "文本型""type": "property getter",
+}"data type": "文本型""data type": "播放器设定"
+  },
+  {
+hod name": "控制器""method name": "当前媒体",
+hod name": "控制器""comment": "返回当前媒体对象",
+hod name": "控制器""type": "property getter",
+hod name": "控制器""data type": "播放器媒体"
+  },
+  {
+od name": "控制器""comment": "返回当前媒体对象""method name": "当前媒体",
+od name": "控制器""comment": "返回当前媒体对象""comment": "设置当前媒体对象",
+od name": "控制器""comment": "返回当前媒体对象""type": "property setter",
+od name": "控制器""comment": "返回当前媒体对象""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "播放器媒体"
+   }
+od name": "控制器""comment": "返回当前媒体对象"]
+  },
+  {
+od name": "控制器""data type": "播放器媒体""method name": "媒体集",
+od name": "控制器""data type": "播放器媒体""comment": "返回当前媒体集对象",
+od name": "控制器""data type": "播放器媒体""type": "property getter",
+od name": "控制器""data type": "播放器媒体""data type": "媒体集类"
+  },
+  {
+}"method name": "播放列表集",
+}"comment": "返回当前播放列表集对象",
+}"type": "property getter",
+}"data type": "播放列表集类"
+  },
+  {
+"type": "property getter""method name": "版本信息",
+"type": "property getter""comment": "返回本播放器的版本信息",
+"type": "property getter""type": "property getter",
+"type": "property getter""data type": "文本型"
+  },
+  {
+}"method name": "网络",
+}"comment": "返回网络管理对象",
+}"type": "property getter",
+}"data type": "播放器网络"
+  },
+  {
+"data type": "播放器网络""method name": "当前播放列表",
+"data type": "播放器网络""comment": "返回当前播放列表",
+"data type": "播放器网络""type": "property getter",
+"data type": "播放器网络""data type": "播放列表"
+  },
+  {
+type": "property getter""comment": "返回本播放器的版本信息""method name": "当前播放列表",
+type": "property getter""comment": "返回本播放器的版本信息""comment": "设置当前播放列表",
+type": "property getter""comment": "返回本播放器的版本信息""type": "property setter",
+type": "property getter""comment": "返回本播放器的版本信息""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "播放列表"
+   }
+type": "property getter""comment": "返回本播放器的版本信息"]
+  },
+  {
+"method name": "光驱集",
+"comment": "返回当前光驱集对象",
+"type": "property getter",
+"data type": "播放器光驱集"
+  },
+  {
+d name": "控制器""comment": "返回当前媒体对象""comment": "设置当前媒体对象""method name": "字幕",
+d name": "控制器""comment": "返回当前媒体对象""comment": "设置当前媒体对象""comment": "返回当前字幕对象",
+d name": "控制器""comment": "返回当前媒体对象""comment": "设置当前媒体对象""type": "property getter",
+d name": "控制器""comment": "返回当前媒体对象""comment": "设置当前媒体对象""data type": "媒体字幕类"
+  },
+  {
+"comment": "返回网络管理对象""method name": "在线",
+"comment": "返回网络管理对象""comment": "返回当前是否处于在线状态",
+"comment": "返回网络管理对象""type": "property getter",
+"comment": "返回网络管理对象""data type": "逻辑型"
+  },
+  {
+}"method name": "播放器错误",
+}"comment": "返回当前错误对象",
+}"type": "property getter",
+}"data type": "媒体错误类"
+  },
+  {
+ype": "property getter""comment": "返回本播放器的版本信息""type": "property setter""method name": "状态",
+ype": "property getter""comment": "返回本播放器的版本信息""type": "property setter""comment": "返回当前状态文本",
+ype": "property getter""comment": "返回本播放器的版本信息""type": "property setter""type": "property getter",
+ype": "property getter""comment": "返回本播放器的版本信息""type": "property setter""data type": "文本型"
+  },
+  {
+pe": "property getter""comment": "返回本播放器的版本信息""type": "property setter""type": "property getter""method name": "DVD媒体",
+pe": "property getter""comment": "返回本播放器的版本信息""type": "property setter""type": "property getter""comment": "返回DVD媒体对象",
+pe": "property getter""comment": "返回本播放器的版本信息""type": "property setter""type": "property getter""type": "property getter",
+pe": "property getter""comment": "返回本播放器的版本信息""type": "property setter""type": "property getter""data type": "DVD媒体类"
+  },
+  {
+comment": "返回网络管理对象""comment": "返回当前是否处于在线状态""method name": "可用",
+comment": "返回网络管理对象""comment": "返回当前是否处于在线状态""comment": "返回本组件是否处于被允许操作状态",
+comment": "返回网络管理对象""comment": "返回当前是否处于在线状态""type": "property getter",
+comment": "返回网络管理对象""comment": "返回当前是否处于在线状态""data type": "逻辑型"
+  },
+  {
+ype": "property getter""comment": "返回本播放器的版本信息""type": "property setter""method name": "可用",
+ype": "property getter""comment": "返回本播放器的版本信息""type": "property setter""comment": "设置本组件是否被允许操作",
+ype": "property getter""comment": "返回本播放器的版本信息""type": "property setter""type": "property setter",
+ype": "property getter""comment": "返回本播放器的版本信息""type": "property setter""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "逻辑型"
+   }
+ype": "property getter""comment": "返回本播放器的版本信息""type": "property setter"]
+  },
+  {
+pe": "property getter""comment": "返回本播放器的版本信息""type": "property setter""parameters": [
+"method name": "全屏模式",
+pe": "property getter""comment": "返回本播放器的版本信息""type": "property setter""parameters": [
+"comment": "返回本组件是否处于全屏状态",
+pe": "property getter""comment": "返回本播放器的版本信息""type": "property setter""parameters": [
+"type": "property getter",
+pe": "property getter""comment": "返回本播放器的版本信息""type": "property setter""parameters": [
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "全屏模式",
+
+"comment": "设置本组件是否处于全屏状态",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "菜单可用",
+
+"comment": "返回是否允许操作本组件的上下文菜单",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+: "property getter""comment": "返回本播放器的版本信息""type": "property setter""method name": "可用""method name": "菜单可用",
+: "property getter""comment": "返回本播放器的版本信息""type": "property setter""method name": "可用""comment": "设置是否允许操作本组件的上下文菜单",
+: "property getter""comment": "返回本播放器的版本信息""type": "property setter""method name": "可用""type": "property setter",
+: "property getter""comment": "返回本播放器的版本信息""type": "property setter""method name": "可用""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "逻辑型"
+   }
+: "property getter""comment": "返回本播放器的版本信息""type": "property setter""method name": "可用"]
+  },
+  {
+ameter name": "欲写入属性值""method name": "界面模式",
+ameter name": "欲写入属性值""comment": "返回所选择的界面模式.\n有效模式值有如下这些:\n  \"invisible\": 不可视;\n  \"none\": 无;\n  \"mini\": 迷你模式;\n  \"full\": 完整模式. ",
+ameter name": "欲写入属性值""type": "property getter",
+ameter name": "欲写入属性值""data type": "文本型"
+  },
+  {
+允许操作本组件的上下文菜单"method name": "界面模式",
+允许操作本组件的上下文菜单"comment": "设置所选择的界面模式.\n有效模式值有如下这些:\n  \"invisible\": 不可视;\n  \"none\": 无;\n  \"mini\": 迷你模式;\n  \"full\": 完整模式.",
+允许操作本组件的上下文菜单"type": "property setter",
+允许操作本组件的上下文菜单"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+允许操作本组件的上下文菜单]
+  },
+  {
+}"method name": "自适应尺寸",
+}"comment": "返回是否拉伸填充所播放的视频",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+"data type": "逻辑型""method name": "自适应尺寸",
+"data type": "逻辑型""comment": "设置是否拉伸填充所播放的视频",
+"data type": "逻辑型""type": "property setter",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "逻辑型"
+   }
+"data type": "逻辑型"]
+  },
+  {
+data type": "逻辑型""parameters": [
+"method name": "无窗口模式",
+data type": "逻辑型""parameters": [
+"comment": "返回视频是否为无窗口模式",
+data type": "逻辑型""parameters": [
+"type": "property getter",
+data type": "逻辑型""parameters": [
+"data type": "逻辑型"
+  },
+  {
+"data type": "媒体错误类""method name": "无窗口模式",
+"data type": "媒体错误类""comment": "设置视频是否为无窗口模式",
+"data type": "媒体错误类""type": "property setter",
+"data type": "媒体错误类""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "逻辑型"
+   }
+"data type": "媒体错误类"]
+  },
+  {
+"method name": "远程模式",
+"comment": "返回播放器是否处于远程模式",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+"method name": "播放器程序",
+"comment": "返回播放器程序对象",
+"type": "property getter",
+"data type": "媒体播放程序类"
+  },
+  {
+comment": "返回播放器程序对象""method name": "关闭",
+comment": "返回播放器程序对象""comment": "关闭正在播放的媒体"
+  },
+  {
+}"method name": "启动地址",
+}"parameters": [
+   {
+"parameter name": "所启动地址",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ }"method name": "创建播放列表",
+ }"comment": "创建并返回一个新的播放列表对象",
+ }"data type": "播放列表",
+ }"parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "地址",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "创建媒体对象",
+"comment": "创建并返回一个新的媒体对象",
+"data type": "播放器媒体",
+"parameters": [
+   {
+"parameter name": "媒体地址",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "打开播放器",
+"comment": "基于所指定的媒体地址打开播放器",
+"parameters": [
+   {
+"parameter name": "媒体地址",
+"data type": "文本型"
+   }
+]
+  }
+中的接口需要引用模块"MFC版媒体播放器组件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+]
+ },
+ {
+ }"class name": "播放列表改变类型",
+ }"@常量类": "整数",
+ }"constants": [
+  {
+ }"constant name": "未知",
+ }"initial value": "0"
+  },
+  {
+}"constant name": "清理",
+}"initial value": "1"
+  },
+  {
+ata type": "逻辑型""parameters": [
+"data type": "逻辑型""constant name": "信息改变",
+ata type": "逻辑型""parameters": [
+"data type": "逻辑型""initial value": "2"
+  },
+  {
+"constant name": "移动",
+"initial value": "3"
+  },
+  {
+}"constant name": "删除",
+}"initial value": "4"
+  },
+  {
+"initial value": "4""constant name": "插入",
+"initial value": "4""initial value": "5"
+  },
+  {
+"initial value": "4""constant name": "添加",
+"initial value": "4""initial value": "6"
+  },
+  {
+"constant name": "私有",
+"initial value": "7"
+  },
+  {
+}"constant name": "名称改变",
+}"initial value": "8"
+  },
+  {
+"constant name": "形态",
+"initial value": "9"
+  },
+  {
+}"constant name": "排序",
+}"initial value": "10"
+  }
+ }]
+ },
+ {
+nstant name": "清理""class name": "媒体设备类",
+nstant name": "清理""base class": "COM对象类",
+nstant name": "清理""methods": [
+  {
+}"method name": "友好名称",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "友好名称",
+"data type": "文本型""type": "property setter",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+"data type": "文本型"]
+  },
+  {
+}"method name": "设备名称",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+
+"method name": "设备ID",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+thod name": "设备ID""method name": "协作索引",
+thod name": "设备ID""type": "property getter",
+thod name": "设备ID""data type": "整数"
+  },
+  {
+hod name": "设备ID""data type": "整数""method name": "已连接",
+hod name": "设备ID""data type": "整数""type": "property getter",
+hod name": "设备ID""data type": "整数""data type": "逻辑型"
+  },
+  {
+}"method name": "状态",
+}"type": "property getter",
+}"data type": "媒体设备状态"
+  },
+  {
+tial value": "4""constant name": "插入""method name": "同步状态",
+tial value": "4""constant name": "插入""type": "property getter",
+tial value": "4""constant name": "插入""data type": "设备同步状态"
+  },
+  {
+}"method name": "进度",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+"type": "property getter""method name": "取项目信息",
+"type": "property getter""data type": "文本型",
+"type": "property getter""parameters": [
+   {
+"parameter name": "项目名称",
+"data type": "文本型"
+   }
+"type": "property getter"]
+  },
+  {
+
+"method name": "创建协作关系",
+
+"comment": "在媒体播放器和设备之间创建协作关系",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "是否显示界面",
+"comment": "指定是否显示设备设置对话框",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+data type": "逻辑型""method name": "删除协作关系",
+data type": "逻辑型""data type": "整数"
+  },
+  {
+thod name": "创建协作关系""method name": "开始",
+thod name": "创建协作关系""data type": "整数"
+  },
+  {
+ethod name": "创建播放列表""method name": "停止",
+ethod name": "创建播放列表""data type": "整数"
+  },
+  {
+"method name": "显示配置",
+"data type": "整数"
+  },
+  {
+ethod name": "创建播放列表""method name": "是否相同",
+ethod name": "创建播放列表""data type": "逻辑型",
+ethod name": "创建播放列表""parameters": [
+   {
+"parameter name": "所检查的设备",
+"data type": "媒体设备类"
+   }
+ethod name": "创建播放列表"]
+  }
+nstant name": "清理"]
+ },
+ {
+"class name": "媒体设备状态",
+"@常量类": "整数",
+"constants": [
+  {
+tant name": "清理"]"constant name": "未知",
+tant name": "清理"]"initial value": "0"
+  },
+  {
+@常量类": "整数""constant name": "已协作",
+@常量类": "整数""initial value": "1"
+  },
+  {
+ }"constant name": "协作被拒绝",
+ }"comment": "协作关系被用户拒绝",
+ }"initial value": "2"
+  },
+  {
+hod name": "创建播放列表"]"constant name": "多重协作",
+hod name": "创建播放列表"]"comment": "与其它计算机或用户进行协作",
+hod name": "创建播放列表"]"initial value": "3"
+  },
+  {
+"constant name": "手控设备",
+"comment": "设备仅支持手动传输",
+"initial value": "4"
+  },
+  {
+hod name": "打开播放器""constant name": "新设备",
+hod name": "打开播放器""initial value": "5"
+  }
+]
+ },
+ {
+
+"class name": "设备同步状态",
+
+"@常量类": "整数",
+
+"constants": [
+  {
+hod name": "创建协作关系""data type": "整数""constant name": "未知",
+hod name": "创建协作关系""data type": "整数""initial value": "0"
+  },
+  {
+
+"constant name": "正在同步",
+
+"initial value": "1"
+  },
+  {
+onstant name": "协作被拒绝""constant name": "停止",
+onstant name": "协作被拒绝""initial value": "2"
+  },
+  {
+onstant name": "协作被拒绝""constant name": "评估中",
+onstant name": "协作被拒绝""initial value": "3"
+  }
+
+]
+ },
+ {
+"class name": "光驱复制类",
+"base class": "COM对象类",
+"methods": [
+  {
+ss name": "光驱复制类""method name": "复制状态",
+ss name": "光驱复制类""type": "property getter",
+ss name": "光驱复制类""data type": "光驱复制状态"
+  },
+  {
+
+"method name": "复制进度",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "开始复制",
+
+"data type": "整数"
+  },
+  {
+thod name": "复制进度""method name": "停止复制",
+thod name": "复制进度""data type": "整数"
+  }
+]
+ },
+ {
+thod name": "复制进度""class name": "光驱复制状态",
+thod name": "复制进度""@常量类": "整数",
+thod name": "复制进度""constants": [
+  {
+hod name": "复制进度""constants": [
+"constant name": "未知",
+hod name": "复制进度""constants": [
+"initial value": "0"
+  },
+  {
+"constant name": "正在复制",
+"initial value": "1"
+  },
+  {
+"data type": "整数""constant name": "已经停止",
+"data type": "整数""initial value": "2"
+  }
+thod name": "复制进度"]
+ },
+ {
+ name": "复制进度""class name": "光驱复制状态""class name": "光驱刻录类",
+ name": "复制进度""class name": "光驱复制状态""base class": "COM对象类",
+ name": "复制进度""class name": "光驱复制状态""methods": [
+  {
+thod name": "复制进度""method name": "标签",
+thod name": "复制进度""type": "property getter",
+thod name": "复制进度""data type": "文本型"
+  },
+  {
+}"method name": "标签",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "刻录格式",
+}"type": "property getter",
+}"data type": "光碟刻录格式"
+  },
+  {
+"data type": "光碟刻录格式""method name": "刻录格式",
+"data type": "光碟刻录格式""type": "property setter",
+"data type": "光碟刻录格式""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "光碟刻录格式"
+   }
+"data type": "光碟刻录格式"]
+  },
+  {
+"method name": "刻录播放列表",
+"type": "property getter",
+"data type": "播放列表"
+  },
+  {
+
+"method name": "刻录播放列表",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "播放列表"
+   }
+
+]
+  },
+  {
+hod name": "创建协作关系""data type": "整数""method name": "刻录状态",
+hod name": "创建协作关系""data type": "整数""type": "property getter",
+hod name": "创建协作关系""data type": "整数""data type": "光驱刻录状态"
+  },
+  {
+}"method name": "刻录进度",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+"method name": "是否有效",
+"comment": "返回所指定功能项目是否有效",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "功能项目名称",
+"comment": "提供欲测试项目的名称,可以为以下几种:\n  \"Burn\": 本光驱为可刻录光驱;\n  \"Disc\": 在光驱里面存在碟片;\n  \"Erase\": 光驱里面的碟片已经被擦除;\n  \"Write\": 光驱里面的碟片可以被写入.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "取项目信息",
+
+"comment": "返回所指定项目的信息",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "项目",
+"comment": "提供欲检查项目的类型,可以为以下几种:\n  \"AvailableTime\":  碟片的有效时间(单位秒);\n  \"Blank\":  碟片是否为空白状态;\n  \"FreeSpace\":  碟片的可用空间尺寸(单位字节);\n  \"TotalSpace\": 碟片的全部空间尺寸(单位字节).",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "刷新状态",
+"data type": "整数"
+  },
+  {
+}"method name": "开始刻录",
+}"data type": "整数"
+  },
+  {
+
+"method name": "停止刻录",
+
+"data type": "整数"
+  },
+  {
+data type": "整数""method name": "擦除",
+data type": "整数""data type": "整数"
+  }
+ name": "复制进度""class name": "光驱复制状态"]
+ },
+ {
+ type": "整数""method name": "擦除""class name": "光驱刻录状态",
+ type": "整数""method name": "擦除""@常量类": "整数",
+ type": "整数""method name": "擦除""constants": [
+  {
+ame": "复制进度""class name": "光驱复制状态"]"constant name": "未知",
+ame": "复制进度""class name": "光驱复制状态"]"initial value": "0"
+  },
+  {
+thod name": "停止刻录""constant name": "忙碌",
+thod name": "停止刻录""initial value": "1"
+  },
+  {
+type": "整数""method name": "擦除""@常量类": "整数""constant name": "就绪",
+type": "整数""method name": "擦除""@常量类": "整数""initial value": "2"
+  },
+  {
+type": "整数""method name": "擦除""@常量类": "整数""constant name": "等待碟片",
+type": "整数""method name": "擦除""@常量类": "整数""initial value": "3"
+  },
+  {
+ype": "整数""method name": "擦除""@常量类": "整数""initial value": "3""constant name": "等待刷新状态",
+ype": "整数""method name": "擦除""@常量类": "整数""initial value": "3""initial value": "4"
+  },
+  {
+
+"constant name": "准备刻录",
+
+"initial value": "5"
+  },
+  {
+
+"constant name": "正在刻录",
+
+"initial value": "6"
+  },
+  {
+
+"constant name": "停止",
+
+"initial value": "7"
+  },
+  {
+
+"constant name": "正在擦除",
+
+"initial value": "8"
+  },
+  {
+
+"constant name": "正在下载",
+
+"initial value": "9"
+  }
+ type": "整数""method name": "擦除"]
+ },
+ {
+"class name": "媒体库类",
+"base class": "COM对象类",
+"methods": [
+  {
+"initial value": "9""method name": "名称",
+"initial value": "9""type": "property getter",
+"initial value": "9""data type": "文本型"
+  },
+  {
+ type": "整数""method name": "擦除""method name": "类型",
+ type": "整数""method name": "擦除""type": "property getter",
+ type": "整数""method name": "擦除""data type": "媒体库类型"
+  },
+  {
+ type": "整数""method name": "擦除""method name": "媒体集",
+ type": "整数""method name": "擦除""type": "property getter",
+ type": "整数""method name": "擦除""data type": "媒体集类"
+  },
+  {
+
+"method name": "是否相同",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所检查的媒体库",
+"data type": "媒体库类"
+   }
+
+]
+  }
+]
+ },
+ {
+ }"class name": "文件夹扫描状态",
+ }"@常量类": "整数",
+ }"constants": [
+  {
+tial value": "9""method name": "名称""constant name": "未知",
+tial value": "9""method name": "名称""initial value": "0"
+  },
+  {
+data type": "媒体库类""constant name": "正在扫描",
+data type": "媒体库类""initial value": "1"
+  },
+  {
+}"@常量类": "整数""constant name": "正在更新",
+}"@常量类": "整数""initial value": "2"
+  },
+  {
+}"@常量类": "整数""constant name": "停止",
+}"@常量类": "整数""initial value": "3"
+  }
+ }]
+ },
+ {
+ }"class name": "文本集改变类型",
+ }"@常量类": "整数",
+ }"constants": [
+  {
+量类": "整数""constant name": "停止""constant name": "未知",
+量类": "整数""constant name": "停止""initial value": "0"
+  },
+  {
+ameter name": "所检查的媒体库""constant name": "插入",
+ameter name": "所检查的媒体库""comment": "新项目已经被插入",
+ameter name": "所检查的媒体库""initial value": "1"
+  },
+  {
+meter name": "所检查的媒体库""comment": "新项目已经被插入""constant name": "改变",
+meter name": "所检查的媒体库""comment": "新项目已经被插入""comment": "文本集已经被改变",
+meter name": "所检查的媒体库""comment": "新项目已经被插入""initial value": "2"
+  },
+  {
+
+"constant name": "删除",
+
+"comment": "某项目已经被删除",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "清除",
+
+"comment": "文本集已经被清除",
+
+"initial value": "4"
+  },
+  {
+}"constant name": "开始更新",
+}"comment": "开始批量更新",
+}"initial value": "5"
+  },
+  {
+]"constant name": "结束更新",
+]"comment": "结束批量更新",
+]"initial value": "6"
+  }
+ }]
+ },
+ {
+"comment": "结束批量更新""class name": "媒体打开状态",
+"comment": "结束批量更新""@常量类": "整数",
+"comment": "结束批量更新""constants": [
+  {
+comment": "结束批量更新""constants": [
+"constant name": "未定义",
+comment": "结束批量更新""constants": [
+"initial value": "0"
+  },
+  {
+comment": "结束批量更新""constants": [
+"constant name": "正在改变",
+comment": "结束批量更新""constants": [
+"comment": "新的播放列表即将被载入",
+comment": "结束批量更新""constants": [
+"initial value": "1"
+  },
+  {
+comment": "结束批量更新""constants": [
+"constant name": "正在定位",
+comment": "结束批量更新""constants": [
+"comment": "定位播放列表",
+comment": "结束批量更新""constants": [
+"initial value": "2"
+  },
+  {
+omment": "结束批量更新""constants": [
+"comment": "定位播放列表""constant name": "正在连接",
+omment": "结束批量更新""constants": [
+"comment": "定位播放列表""comment": "正在连接到服务器获取播放列表",
+omment": "结束批量更新""constants": [
+"comment": "定位播放列表""initial value": "3"
+  },
+  {
+}"constant name": "正在载入",
+}"comment": "载入播放列表",
+}"initial value": "4"
+  },
+  {
+
+"constant name": "正在打开",
+
+"comment": "打开播放列表",
+
+"initial value": "5"
+  },
+  {
+"initial value": "5""constant name": "已经打开",
+"initial value": "5""comment": "播放列表已经打开",
+"initial value": "5""initial value": "6"
+  },
+  {
+
+"constant name": "已经改变",
+
+"comment": "播放列表已经改变",
+
+"initial value": "7"
+  },
+  {
+}"constant name": "媒体正在改变",
+}"comment": "新的媒体即将被载入",
+}"initial value": "8"
+  },
+  {
+initial value": "5""comment": "播放列表已经打开""constant name": "媒体正在定位",
+initial value": "5""comment": "播放列表已经打开""comment": "正在定位媒体",
+initial value": "5""comment": "播放列表已经打开""initial value": "9"
+  },
+  {
+}"constant name": "媒体正在连接",
+}"comment": "正在连接到服务器获取媒体",
+}"initial value": "10"
+  },
+  {
+
+"constant name": "媒体正在载入",
+
+"comment": "正在载入媒体",
+
+"initial value": "11"
+  },
+  {
+}"constant name": "媒体正在打开",
+}"comment": "正在打开媒体",
+}"initial value": "12"
+  },
+  {
+"comment": "开始批量更新""constant name": "媒体已经打开",
+"comment": "开始批量更新""comment": "已经将媒体打开",
+"comment": "开始批量更新""initial value": "13"
+  },
+  {
+
+"constant name": "开始识别编码",
+
+"comment": "开始识别媒体编码",
+
+"initial value": "14"
+  },
+  {
+
+"constant name": "结束识别编码",
+
+"comment": "结束识别媒体编码",
+
+"initial value": "15"
+  },
+  {
+
+"constant name": "开始获取授权",
+
+"comment": "开始获取媒体授权",
+
+"initial value": "16"
+  },
+  {
+
+"constant name": "结束获取授权",
+
+"comment": "结束获取媒体授权",
+
+"initial value": "17"
+  },
+  {
+"comment": "开始获取媒体授权""constant name": "开始个性化",
+"comment": "开始获取媒体授权""comment": "开始进行个性化处理",
+"comment": "开始获取媒体授权""initial value": "18"
+  },
+  {
+
+"constant name": "结束个性化",
+
+"comment": "结束进行个性化处理",
+
+"initial value": "19"
+  },
+  {
+"initial value": "4""constant name": "正在等待媒体",
+"initial value": "4""initial value": "20"
+  },
+  {
+
+"constant name": "打开未知类型的地址",
+
+"comment": "所打开的媒体地址其类型未知",
+
+"initial value": "21"
+  }
+"comment": "结束批量更新"]
+ },
+ {
+"initial value": "11""class name": "媒体播放状态",
+"initial value": "11""@常量类": "整数",
+"initial value": "11""constants": [
+  {
+initial value": "11""@常量类": "整数""constant name": "未定义",
+initial value": "11""@常量类": "整数""initial value": "0"
+  },
+  {
+initial value": "11""@常量类": "整数""constant name": "停止",
+initial value": "11""@常量类": "整数""comment": "回放已经停止",
+initial value": "11""@常量类": "整数""initial value": "1"
+  },
+  {
+nstant name": "结束个性化""constant name": "暂停",
+nstant name": "结束个性化""comment": "回放已经暂停",
+nstant name": "结束个性化""initial value": "2"
+  },
+  {
+stant name": "结束个性化""comment": "回放已经暂停""constant name": "播放",
+stant name": "结束个性化""comment": "回放已经暂停""comment": "正在播放媒体流",
+stant name": "结束个性化""comment": "回放已经暂停""initial value": "3"
+  },
+  {
+nstant name": "结束个性化""constant name": "正向扫描",
+nstant name": "结束个性化""comment": "正在向前扫描媒体流",
+nstant name": "结束个性化""initial value": "4"
+  },
+  {
+}"constant name": "逆向扫描",
+}"comment": "正在向后扫描媒体流",
+}"initial value": "5"
+  },
+  {
+nstant name": "逆向扫描""constant name": "正在缓冲",
+nstant name": "逆向扫描""comment": "正在对媒体流进行缓冲",
+nstant name": "逆向扫描""initial value": "6"
+  },
+  {
+"comment": "结束进行个性化处理""constant name": "正在等待",
+"comment": "结束进行个性化处理""comment": "正在等待媒体流的数据到达",
+"comment": "结束进行个性化处理""initial value": "7"
+  },
+  {
+comment": "结束进行个性化处理""initial value": "7""constant name": "媒体结束",
+comment": "结束进行个性化处理""initial value": "7""comment": "媒体流已经播放完毕",
+comment": "结束进行个性化处理""initial value": "7""initial value": "8"
+  },
+  {
+}"constant name": "正在传输",
+}"comment": "正在准备新的媒体",
+}"initial value": "9"
+  },
+  {
+tant name": "结束个性化""comment": "回放已经暂停""comment": "正在播放媒体流""constant name": "就绪",
+tant name": "结束个性化""comment": "回放已经暂停""comment": "正在播放媒体流""comment": "已经准备好了开始播放",
+tant name": "结束个性化""comment": "回放已经暂停""comment": "正在播放媒体流""initial value": "10"
+  },
+  {
+ name": "结束个性化""comment": "回放已经暂停""comment": "正在播放媒体流""constant name": "就绪""constant name": "正在重新连接",
+ name": "结束个性化""comment": "回放已经暂停""comment": "正在播放媒体流""constant name": "就绪""comment": "尝试重新连接到媒体流数据",
+ name": "结束个性化""comment": "回放已经暂停""comment": "正在播放媒体流""constant name": "就绪""initial value": "11"
+  }
+"initial value": "11"]
+ },
+ {
+"class name": "播放器控制",
+"base class": "COM对象类",
+"methods": [
+  {
+
+"method name": "当前位置",
+
+"comment": "返回媒体的当前播放位置(单位秒)",
+
+"type": "property getter",
+
+"data type": "小数"
+  },
+  {
+base class": "COM对象类""method name": "当前位置",
+base class": "COM对象类""comment": "设置媒体的当前播放位置(单位秒)",
+base class": "COM对象类""type": "property setter",
+base class": "COM对象类""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "小数"
+   }
+base class": "COM对象类"]
+  },
+  {
+
+"method name": "当前位置文本",
+
+"comment": "以文本方式返回媒体的当前播放位置,文本格式为 HH:MM:SS (小时:分钟:秒).",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+"comment": "返回媒体的当前播放位置(单位秒)""method name": "当前项目",
+"comment": "返回媒体的当前播放位置(单位秒)""comment": "返回当前正在播放的项目",
+"comment": "返回媒体的当前播放位置(单位秒)""type": "property getter",
+"comment": "返回媒体的当前播放位置(单位秒)""data type": "播放器媒体"
+  },
+  {
+}"method name": "当前项目",
+}"comment": "设置当前正在播放的项目",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "播放器媒体"
+   }
+}]
+  },
+  {
+
+"method name": "当前标记",
+
+"comment": "返回当前标记",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+ }"method name": "当前标记",
+ }"comment": "设置当前标记,值0表示将播放位置设置到媒体的首部.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "是否有效",
+}"comment": "返回所指定的媒体功能是否有效",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "项目名",
+"comment": "指定所欲检查的功能项目名,可以为以下几种之一:\n  \"currentItem\": 是否可以设置当前项目;\n  \"currentMarker\":  是否可以设置当前标记;\n  \"currentPosition\": 是否可以设置当前位置;\n  \"fastForward\": 是否可以快进;\n  \"fastReverse\": 是否可以快退;\n  \"next\": 是否可以到播放列表中的下一个项目;\n  \"pause\": 是否可以暂停;\n  \"play\": 是否可以播放;\n  \"previous\": 是否可以到播放列表中的上一个项目;\n  \"step\": 是否可以步进;\n  \"stop\": 是否可以停止.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "播放",
+}"comment": "开始播放媒体"
+  },
+  {
+
+"method name": "停止",
+
+"comment": "停止播放媒体"
+  },
+  {
+
+"method name": "暂停",
+
+"comment": "暂停播放媒体"
+  },
+  {
+
+"method name": "快进",
+
+"comment": "快进播放媒体"
+  },
+  {
+
+"method name": "快退",
+
+"comment": "快退播放媒体"
+  },
+  {
+"comment": "停止播放媒体""method name": "下一个",
+"comment": "停止播放媒体""comment": "跳转到播放列表中的下一个项目"
+  },
+  {
+
+"method name": "上一个",
+
+"comment": "跳转到播放列表中的上一个项目"
+  },
+  {
+
+"method name": "播放项目",
+
+"comment": "播放所指定的媒体项目",
+
+"parameters": [
+   {
+"parameter name": "所欲播放的媒体",
+"data type": "播放器媒体"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "播放器设定",
+"base class": "COM对象类",
+"methods": [
+  {
+"method name": "自动播放",
+"comment": "返回媒体是否自动开始播放",
+"type": "property getter",
+"data type": "逻辑型"
+  },
+  {
+thod name": "上一个""method name": "自动播放",
+thod name": "上一个""comment": "设置媒体是否自动开始播放",
+thod name": "上一个""type": "property setter",
+thod name": "上一个""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "逻辑型"
+   }
+thod name": "上一个"]
+  },
+  {
+ }"method name": "基准地址",
+ }"comment": "返回相对路径所使用的基准地址",
+ }"type": "property getter",
+ }"data type": "文本型"
+  },
+  {
+
+"method name": "基准地址",
+
+"comment": "设置相对路径所使用的基准地址",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"comment": "设置相对路径所使用的基准地址""method name": "默认帧",
+"comment": "设置相对路径所使用的基准地址""comment": "返回当接收到脚本命令时所显示的默认帧地址",
+"comment": "设置相对路径所使用的基准地址""type": "property getter",
+"comment": "设置相对路径所使用的基准地址""data type": "文本型"
+  },
+  {
+ }"method name": "默认帧",
+ }"comment": "设置当接收到脚本命令时所显示的默认帧地址",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"comment": "设置当接收到脚本命令时所显示的默认帧地址""method name": "请求地址",
+}"comment": "设置当接收到脚本命令时所显示的默认帧地址""comment": "返回媒体地址是否会启动WEB浏览器",
+}"comment": "设置当接收到脚本命令时所显示的默认帧地址""type": "property getter",
+}"comment": "设置当接收到脚本命令时所显示的默认帧地址""data type": "逻辑型"
+  },
+  {
+ment": "设置相对路径所使用的基准地址""method name": "默认帧""method name": "请求地址",
+ment": "设置相对路径所使用的基准地址""method name": "默认帧""comment": "设置媒体地址是否会启动WEB浏览器",
+ment": "设置相对路径所使用的基准地址""method name": "默认帧""type": "property setter",
+ment": "设置相对路径所使用的基准地址""method name": "默认帧""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "逻辑型"
+   }
+ment": "设置相对路径所使用的基准地址""method name": "默认帧"]
+  },
+  {
+"type": "property setter""method name": "静音",
+"type": "property setter""comment": "返回是否静音播放",
+"type": "property setter""type": "property getter",
+"type": "property setter""data type": "逻辑型"
+  },
+  {
+
+"method name": "静音",
+
+"comment": "设置是否静音播放",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+}"method name": "播放次数",
+}"comment": "返回媒体需要播放多少次",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+"data type": "整数""method name": "播放次数",
+"data type": "整数""comment": "设置媒体需要播放多少次",
+"data type": "整数""type": "property setter",
+"data type": "整数""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "整数"
+   }
+"data type": "整数"]
+  },
+  {
+"method name": "播放速率",
+"comment": "返回当前播放速率,1表示为正常速率.",
+"type": "property getter",
+"data type": "小数"
+  },
+  {
+}"method name": "播放速率",
+}"comment": "设置当前播放速率,1表示为正常速率.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "小数"
+   }
+}]
+  },
+  {
+播放速率,1表示为正常速率."method name": "立体声平衡",
+播放速率,1表示为正常速率."comment": "返回当前声道均衡值,有效值从-100到100,-100表示完全使用左声道,100表示完全使用右声道.",
+播放速率,1表示为正常速率."type": "property getter",
+播放速率,1表示为正常速率."data type": "整数"
+  },
+  {
+"method name": "立体声平衡",
+"comment": "设置当前声道均衡值",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"comment": "有效值从-100到100,-100表示完全使用左声道,100表示完全使用右声道.",
+"data type": "整数"
+   }
+]
+  },
+  {
+"parameters": [
+"method name": "音量",
+"parameters": [
+"comment": "返回当前播放音量,有效值从0到100, 0表示完全无声,100表示为最大音量.",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "整数"
+  },
+  {
+comment": "有效值从-100到100,-100表示完全使用左声道,100表示完全使用右声道.""method name": "音量",
+comment": "有效值从-100到100,-100表示完全使用左声道,100表示完全使用右声道.""comment": "设置当前播放音量,有效值从0到100, 0表示完全无声,100表示为最大音量.",
+comment": "有效值从-100到100,-100表示完全使用左声道,100表示完全使用右声道.""type": "property setter",
+comment": "有效值从-100到100,-100表示完全使用左声道,100表示完全使用右声道.""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "整数"
+   }
+comment": "有效值从-100到100,-100表示完全使用左声道,100表示完全使用右声道."]
+  },
+  {
+
+"method name": "显示错误",
+
+"comment": "返回是否允许显示错误对话框",
+
+"type": "property getter",
+
+"data type": "逻辑型"
+  },
+  {
+"type": "property getter""method name": "显示错误",
+"type": "property getter""comment": "设置是否允许显示错误对话框",
+"type": "property getter""type": "property setter",
+"type": "property getter""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "逻辑型"
+   }
+"type": "property getter"]
+  },
+  {
+"comment": "返回是否允许显示错误对话框""method name": "是否有效",
+"comment": "返回是否允许显示错误对话框""comment": "返回所指定的媒体功能是否有效",
+"comment": "返回是否允许显示错误对话框""data type": "逻辑型",
+"comment": "返回是否允许显示错误对话框""parameters": [
+   {
+"parameter name": "项目名",
+"comment": "项目名称为以下文本值之一:\n  \"AutoStart\": 自动开始播放;\n  \"Balance\": 设置立体声平衡;\n  \"BaseURL\": 设置基准地址;\n  \"DefaultFrame\": 设置默认帧;\n  \"EnableErrorDialogs\": 显示错误对话框;\n  \"GetMode\": 获取当前模式;\n  \"InvokeURLs\": 设置请求地址;\n  \"Mute\": 设置是否静音;\n  \"PlayCount\": 设置媒体播放次数;\n  \"Rate\": 设置媒体播放速率;\n  \"SetMode\": 设置模式;\n  \"Volume\": 设置音量.",
+"data type": "文本型"
+   }
+"comment": "返回是否允许显示错误对话框"]
+  },
+  {
+hod name": "立体声平衡""method name": "取模式",
+hod name": "立体声平衡""comment": "返回播放列表指定模式的值",
+hod name": "立体声平衡""data type": "逻辑型",
+hod name": "立体声平衡""parameters": [
+   {
+"parameter name": "模式名称",
+"comment": "指定所欲检查模式的名称,可以为以下文本值之一:\n  \"autoRewind\": 当播放到媒体尾部后自动回卷到首部重新播放;\n  \"loop\": 重复循环播放;\n  \"showFrame\": 当未播放时,自动显示最近的关键帧. 本模式仅对视频播放有效;\n  \"shuffle\": 随机播放.",
+"data type": "文本型"
+   }
+hod name": "立体声平衡"]
+  },
+  {
+"data type": "逻辑型""method name": "置模式",
+"data type": "逻辑型""comment": "设置播放列表指定模式的值",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "模式名称",
+"comment": "指定所欲设置模式的名称,可以为以下文本值之一:\n  \"autoRewind\": 当播放到媒体尾部后自动回卷到首部重新播放;\n  \"loop\": 重复循环播放;\n  \"showFrame\": 当未播放时,自动显示最近的关键帧. 本模式仅对视频播放有效;\n  \"shuffle\": 随机播放.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲设置的模式值",
+"comment": "为真启用,为假则禁用.",
+"data type": "逻辑型"
+   }
+"data type": "逻辑型"]
+  }
+]
+ },
+ {
+"class name": "播放器媒体",
+"base class": "COM对象类",
+"methods": [
+  {
+
+"method name": "源地址",
+
+"comment": "返回媒体的源地址",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+"data type": "逻辑型""method name": "媒体名称",
+"data type": "逻辑型""comment": "返回媒体名称",
+"data type": "逻辑型""type": "property getter",
+"data type": "逻辑型""data type": "文本型"
+  },
+  {
+
+"type": "property getter""method name": "媒体名称",
+
+"type": "property getter""comment": "设置媒体名称",
+
+"type": "property getter""type": "property setter",
+
+"type": "property getter""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+
+"type": "property getter"]
+  },
+  {
+
+"method name": "源图像宽度",
+
+"comment": "返回媒体图像的原始宽度",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+}"method name": "源图像高度",
+}"comment": "返回媒体图像的原始高度",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+
+"method name": "标记数目",
+
+"comment": "返回媒体文件中的标记数目",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "持续时间",
+
+"comment": "返回当前媒体的总共持续时间",
+
+"type": "property getter",
+
+"data type": "小数"
+  },
+  {
+}"method name": "持续时间文本",
+}"comment": "以文本方式返回当前媒体的总共持续时间,文本格式为 HH:MM:SS (小时:分钟:秒).",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+
+"method name": "属性数目",
+
+"comment": "返回当前媒体的关联属性的数目",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "是否相同",
+
+"comment": "返回所指定的媒体对象是否与本对象内容相同",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所欲检查的媒体对象",
+"data type": "播放器媒体"
+   }
+
+]
+  },
+  {
+ameter name": "所欲检查的媒体对象""method name": "取标记时间",
+ameter name": "所欲检查的媒体对象""comment": "返回所指定标记的时间位置",
+ameter name": "所欲检查的媒体对象""data type": "小数",
+ameter name": "所欲检查的媒体对象""parameters": [
+   {
+"parameter name": "标记号",
+"data type": "整数"
+   }
+ameter name": "所欲检查的媒体对象"]
+  },
+  {
+meter name": "所欲检查的媒体对象""comment": "返回所指定标记的时间位置""method name": "取标记名",
+meter name": "所欲检查的媒体对象""comment": "返回所指定标记的时间位置""comment": "返回所指定标记的名称",
+meter name": "所欲检查的媒体对象""comment": "返回所指定标记的时间位置""data type": "文本型",
+meter name": "所欲检查的媒体对象""comment": "返回所指定标记的时间位置""parameters": [
+   {
+"parameter name": "标记号",
+"data type": "整数"
+   }
+meter name": "所欲检查的媒体对象""comment": "返回所指定标记的时间位置"]
+  },
+  {
+"method name": "取属性名",
+"comment": "返回所指定位置属性项目的名称",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "属性索引位置",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取项目信息",
+"comment": "返回媒体中所指定属性项目的值",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "项目名称",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "置项目信息",
+"comment": "设置媒体中所指定属性项目的值",
+"parameters": [
+   {
+"parameter name": "项目名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "项目值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "属性索引位置""method name": "按序取项目信息",
+ameter name": "属性索引位置""comment": "返回所指定索引号(由\"媒体集类.取媒体索引号\"方法返回)处属性项目的值",
+ameter name": "属性索引位置""data type": "文本型",
+ameter name": "属性索引位置""parameters": [
+   {
+"parameter name": "索引号",
+"data type": "整数"
+   }
+ameter name": "属性索引位置"]
+  },
+  {
+
+"method name": "是否位于播放列表中",
+
+"comment": "返回本媒体是否位于所指定的播放列表中",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "播放列表对象",
+"data type": "播放列表"
+   }
+
+]
+  },
+  {
+"method name": "项目是否只读",
+"comment": "返回所指定属性项目是否只读",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "项目名称",
+"data type": "文本型"
+   }
+]
+  }
+]
+ },
+ {
+
+"class name": "媒体集类",
+
+"base class": "COM对象类",
+
+"methods": [
+  {
+ameter name": "属性索引位置""method name": "添加",
+ameter name": "属性索引位置""comment": "添加一个新的媒体对象",
+ameter name": "属性索引位置""data type": "播放器媒体",
+ameter name": "属性索引位置""parameters": [
+   {
+"parameter name": "媒体地址",
+"data type": "文本型"
+   }
+ameter name": "属性索引位置"]
+  },
+  {
+
+"methods": [
+"method name": "取所有媒体",
+
+"methods": [
+"comment": "返回当前所有媒体项目",
+
+"methods": [
+"data type": "播放列表"
+  },
+  {
+hod name": "取属性名""method name": "取指定名称媒体",
+hod name": "取属性名""comment": "返回所有具有指定名称的媒体",
+hod name": "取属性名""data type": "播放列表",
+hod name": "取属性名""parameters": [
+   {
+"parameter name": "名称",
+"data type": "文本型"
+   }
+hod name": "取属性名"]
+  },
+  {
+ameter name": "索引号""method name": "取指定类型媒体",
+ameter name": "索引号""comment": "返回所有具有指定类型的媒体",
+ameter name": "索引号""data type": "播放列表",
+ameter name": "索引号""parameters": [
+   {
+"parameter name": "媒体类型",
+"data type": "文本型"
+   }
+ameter name": "索引号"]
+  },
+  {
+ }"method name": "取指定作者媒体",
+ }"comment": "返回所有为指定作者的媒体",
+ }"data type": "播放列表",
+ }"parameters": [
+   {
+"parameter name": "媒体作者",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+]"method name": "取指定专辑媒体",
+]"comment": "返回所有在指定专辑中的媒体",
+]"data type": "播放列表",
+]"parameters": [
+   {
+"parameter name": "专辑名称",
+"data type": "文本型"
+   }
+]]
+  },
+  {
+eter name": "索引号"]"method name": "取指定属性媒体",
+eter name": "索引号"]"comment": "返回所有具有指定属性值的媒体",
+eter name": "索引号"]"data type": "播放列表",
+eter name": "索引号"]"parameters": [
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "属性值",
+"data type": "文本型"
+   }
+eter name": "索引号"]]
+  },
+  {
+data type": "文本型""method name": "删除",
+data type": "文本型""comment": "删除所指定媒体对象",
+data type": "文本型""parameters": [
+   {
+"parameter name": "媒体对象",
+"data type": "播放器媒体"
+   },
+   {
+"parameter name": "是否删除",
+"comment": "指定是否删除所指定媒体对象",
+"data type": "逻辑型"
+   }
+data type": "文本型"]
+  },
+  {
+ta type": "文本型"]"method name": "取属性文本集",
+ta type": "文本型"]"comment": "返回所指定属性的文本集",
+ta type": "文本型"]"data type": "媒体文本集类",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "媒体类型",
+"data type": "文本型"
+   }
+ta type": "文本型"]]
+  },
+  {
+ta type": "文本型"]"method name": "取媒体索引号",
+ta type": "文本型"]"comment": "返回所指定媒体项目的索引号",
+ta type": "文本型"]"data type": "整数",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "项目名称",
+"data type": "文本型"
+   }
+ta type": "文本型"]]
+  },
+  {
+ta type": "文本型"]"method name": "置删除标志",
+ta type": "文本型"]"comment": "设置/取消所指定媒体对象的删除标志",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "媒体对象",
+"data type": "播放器媒体"
+   },
+   {
+"parameter name": "是否删除",
+"comment": "为真则设置删除标志,为假则取消删除标志.",
+"data type": "逻辑型"
+   }
+ta type": "文本型"]]
+  },
+  {
+ype": "文本型"]"method name": "取属性文本集""method name": "是否被删除",
+ype": "文本型"]"method name": "取属性文本集""comment": "返回所指定媒体对象是否被设置了删除标志",
+ype": "文本型"]"method name": "取属性文本集""data type": "逻辑型",
+ype": "文本型"]"method name": "取属性文本集""parameters": [
+   {
+"parameter name": "媒体对象",
+"data type": "播放器媒体"
+   }
+ype": "文本型"]"method name": "取属性文本集"]
+  }
+
+]
+ },
+ {
+data type": "文本型""class name": "播放列表集类",
+data type": "文本型""base class": "COM对象类",
+data type": "文本型""methods": [
+  {
+data type": "播放器媒体""method name": "创建播放列表",
+data type": "播放器媒体""comment": "创建并返回一个新的播放列表对象",
+data type": "播放器媒体""data type": "播放列表",
+data type": "播放器媒体""parameters": [
+   {
+"parameter name": "播放列表名称",
+"data type": "文本型"
+   }
+data type": "播放器媒体"]
+  },
+  {
+
+"method name": "取所有播放列表",
+
+"comment": "返回当前所有播放列表",
+
+"data type": "播放列表数组类"
+  },
+  {
+ }"method name": "取指定名称播放列表",
+ }"comment": "返回所有具有指定名称的播放列表",
+ }"data type": "播放列表数组类",
+ }"parameters": [
+   {
+"parameter name": "播放列表名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+]"method name": "删除",
+]"comment": "删除所指定的播放列表",
+]"parameters": [
+   {
+"parameter name": "播放列表对象",
+"data type": "播放列表"
+   }
+]]
+  },
+  {
+]"method name": "置删除标志",
+]"comment": "设置或取消所指定播放列表的删除标志",
+]"parameters": [
+   {
+"parameter name": "播放列表对象",
+"data type": "播放列表"
+   },
+   {
+"parameter name": "是否删除",
+"comment": "为真则设置删除标志,为假则取消删除标志.",
+"data type": "逻辑型"
+   }
+]]
+  },
+  {
+comment": "为真则设置删除标志,为假则取消删除标志.""method name": "是否被删除",
+comment": "为真则设置删除标志,为假则取消删除标志.""comment": "返回所指定播放列表是否被设置了删除标志",
+comment": "为真则设置删除标志,为假则取消删除标志.""data type": "逻辑型",
+comment": "为真则设置删除标志,为假则取消删除标志.""parameters": [
+   {
+"parameter name": "播放列表对象",
+"data type": "播放列表"
+   }
+comment": "为真则设置删除标志,为假则取消删除标志."]
+  },
+  {
+
+"method name": "导入播放列表",
+
+"comment": "将所指定的播放列表导入到本对象内",
+
+"data type": "播放列表",
+
+"parameters": [
+   {
+"parameter name": "播放列表对象",
+"data type": "播放列表"
+   }
+
+]
+  }
+data type": "文本型"]
+ },
+ {
+
+"class name": "播放器网络",
+
+"base class": "COM对象类",
+
+"methods": [
+  {
+ass name": "播放器网络""method name": "带宽",
+ass name": "播放器网络""comment": "返回当前带宽",
+ass name": "播放器网络""type": "property getter",
+ass name": "播放器网络""data type": "整数"
+  },
+  {
+name": "播放器网络""method name": "带宽""method name": "被恢复包数目",
+name": "播放器网络""method name": "带宽""comment": "返回被恢复网络数据包的数目",
+name": "播放器网络""method name": "带宽""type": "property getter",
+name": "播放器网络""method name": "带宽""data type": "整数"
+  },
+  {
+
+"method name": "源协议",
+
+"comment": "返回用作获取数据的源协议名称",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+": "播放器网络""method name": "带宽""method name": "被恢复包数目""method name": "已接收数据包",
+": "播放器网络""method name": "带宽""method name": "被恢复包数目""comment": "返回所接收到网络数据包的数目",
+": "播放器网络""method name": "带宽""method name": "被恢复包数目""type": "property getter",
+": "播放器网络""method name": "带宽""method name": "被恢复包数目""data type": "整数"
+  },
+  {
+": "播放器网络""method name": "带宽""method name": "被恢复包数目""method name": "丢包数",
+": "播放器网络""method name": "带宽""method name": "被恢复包数目""comment": "返回已丢失网络数据包的数目",
+": "播放器网络""method name": "带宽""method name": "被恢复包数目""type": "property getter",
+": "播放器网络""method name": "带宽""method name": "被恢复包数目""data type": "整数"
+  },
+  {
+name": "播放器网络""method name": "带宽""method name": "接收质量",
+name": "播放器网络""method name": "带宽""comment": "返回最近15秒中已接收包占所有包的百分比",
+name": "播放器网络""method name": "带宽""type": "property getter",
+name": "播放器网络""method name": "带宽""data type": "整数"
+  },
+  {
+15秒中已接收包占所有包的百分比"method name": "缓冲数量",
+15秒中已接收包占所有包的百分比"comment": "返回在播放期间的缓冲次数",
+15秒中已接收包占所有包的百分比"type": "property getter",
+15秒中已接收包占所有包的百分比"data type": "整数"
+  },
+  {
+
+"method name": "缓冲进度",
+
+"comment": "返回当前缓存完成的百分比",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+"comment": "返回当前缓存完成的百分比""method name": "缓冲时间",
+"comment": "返回当前缓存完成的百分比""comment": "返回需要提前缓存多长时间的媒体数据(单位秒)",
+"comment": "返回当前缓存完成的百分比""type": "property getter",
+"comment": "返回当前缓存完成的百分比""data type": "整数"
+  },
+  {
+}"method name": "缓冲时间",
+}"comment": "设置需要提前缓存多长时间的媒体数据(单位秒)",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "帧速率",
+
+"comment": "返回当前视频的帧速率. 单位: 帧/秒",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+"data type": "整数""method name": "最大位速率",
+"data type": "整数""comment": "返回可能的最大媒体传输位速率",
+"data type": "整数""type": "property getter",
+"data type": "整数""data type": "整数"
+  },
+  {
+data type": "整数""data type": "整数""method name": "位速率",
+data type": "整数""data type": "整数""comment": "返回媒体的当前传输位速率",
+data type": "整数""data type": "整数""type": "property getter",
+data type": "整数""data type": "整数""data type": "整数"
+  },
+  {
+}"comment": "返回所有具有指定名称的播放列表""method name": "最大带宽",
+}"comment": "返回所有具有指定名称的播放列表""comment": "返回最大允许的传输带宽",
+}"comment": "返回所有具有指定名称的播放列表""type": "property getter",
+}"comment": "返回所有具有指定名称的播放列表""data type": "整数"
+  },
+  {
+}"method name": "最大带宽",
+}"comment": "设置最大允许的传输带宽",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "下载进度",
+}"comment": "返回下载完成百分比进度值",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+
+"method name": "帧编码速率",
+
+"comment": "返回视频的帧速率,单位为帧/秒.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+}"method name": "跳过帧数",
+}"comment": "返回当前被跳过帧的数目",
+}"type": "property getter",
+}"data type": "整数"
+  },
+  {
+data type": "播放器媒体""method name": "取代理选项",
+data type": "播放器媒体""comment": "返回所指定协议的代理选项值",
+data type": "播放器媒体""result comment": "返回值有以下几种:\n  0: 未使用代理服务器;\n  1: 使用当前浏览器的HTTP代理选项;\n  2: 使用手动指定的代理选项;\n  3. 自动探测使用代理选项.",
+data type": "播放器媒体""data type": "整数",
+data type": "播放器媒体""parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   }
+data type": "播放器媒体"]
+  },
+  {
+
+"method name": "置代理选项",
+
+"comment": "设置所指定协议的代理选项值",
+
+"parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代理选项值",
+"comment": "代理选项值有以下几种:\n  0: 未使用代理服务器;\n  1: 使用当前浏览器的HTTP代理选项;\n  2: 使用手动指定的代理选项;\n  3. 自动探测使用代理选项.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "取代理服务器",
+"comment": "返回所指定协议使用的代理服务器名称.\n注意: 本方法的返回值仅当所设置的代理选项值为2(使用手动指定的代理选项)时才有效.",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "置代理服务器",
+}"comment": "设置所指定协议使用的代理服务器名称.\n注意: 本方法仅当所设置的代理选项值为2(使用手动指定的代理选项)时才有效.",
+}"parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代理服务器名称",
+"comment": "指定所使用的代理服务器名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "取代理端口",
+"comment": "返回所指定协议的代理端口.\n注意: 本方法的返回值仅当所设置的代理选项值为2(使用手动指定的代理选项)时才有效.",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "置代理端口",
+
+"comment": "设置所指定协议的代理端口.\n注意: 本方法仅当所设置的代理选项值为2(使用手动指定的代理选项)时才有效.",
+
+"parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代理端口号",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "取代理例外列表",
+"comment": "返回所指定协议的代理例外主机列表,这些主机将不会通过所指定的代理服务器访问.",
+"result comment": "所返回的多个主机地址列表项之间使用分号分隔.",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "置代理例外列表",
+
+"comment": "设置所指定协议的代理例外主机列表,这些主机将不会通过所指定的代理服务器访问.",
+
+"parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "例外主机列表",
+"comment": "提供不通过代理服务器访问的主机地址列表,多个主机地址项之间使用分号分隔.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "是否避开本地主机",
+
+"comment": "返回代理是否避开位于本地网络中的本机",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "避开本地主机",
+data type": "文本型""comment": "设置代理是否避开位于本地网络中的本机",
+data type": "文本型""parameters": [
+   {
+"parameter name": "协议名称",
+"comment": "提供协议名称,目前所支持的协议名称有:\n  \"HTTP\", \"RTSP\", \"RTSPU\", \"RTSPT\", \"MMS\", \"MMSU\", \"MMST\", \"WMPCD\", \"WMPDVD\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否避开",
+"data type": "逻辑型"
+   }
+data type": "文本型"]
+  }
+
+]
+ },
+ {
+data type": "文本型""class name": "播放列表",
+data type": "文本型""base class": "COM对象类",
+data type": "文本型""methods": [
+  {
+ata type": "文本型""base class": "COM对象类""method name": "项目数目",
+ata type": "文本型""base class": "COM对象类""comment": "返回本播放列表中的项目数目",
+ata type": "文本型""base class": "COM对象类""type": "property getter",
+ata type": "文本型""base class": "COM对象类""data type": "整数"
+  },
+  {
+
+"method name": "名称",
+
+"comment": "返回本播放列表的名称",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "名称",
+
+"comment": "设置本播放列表的名称",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "属性数目",
+data type": "文本型""comment": "返回本播放列表关联的属性数目",
+data type": "文本型""type": "property getter",
+data type": "文本型""data type": "整数"
+  },
+  {
+"method name": "取属性名",
+"comment": "返回所指定索引位置处属性的名称",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "索引位置",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "取媒体",
+"comment": "返回所指定索引位置处的媒体对象",
+"data type": "播放器媒体",
+"parameters": [
+   {
+"parameter name": "索引位置",
+"data type": "整数"
+   }
+]
+  },
+  {
+ameter name": "索引位置""method name": "取项目信息",
+ameter name": "索引位置""comment": "返回播放列表中所指定属性项目的值",
+ameter name": "索引位置""data type": "文本型",
+ameter name": "索引位置""parameters": [
+   {
+"parameter name": "项目名称",
+"data type": "文本型"
+   }
+ameter name": "索引位置"]
+  },
+  {
+comment": "返回所指定索引位置处属性的名称""method name": "置项目信息",
+comment": "返回所指定索引位置处属性的名称""comment": "设置播放列表中所指定属性项目的值",
+comment": "返回所指定索引位置处属性的名称""parameters": [
+   {
+"parameter name": "项目名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "项目值",
+"data type": "文本型"
+   }
+comment": "返回所指定索引位置处属性的名称"]
+  },
+  {
+ }"method name": "是否相同",
+ }"comment": "返回所指定的播放列表内容是否与本对象内容相同",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "欲检查的播放列表",
+"data type": "播放列表"
+   }
+ }]
+  },
+  {
+"method name": "清空列表",
+"comment": "删除本播放列表中的所有项目"
+  },
+  {
+ameter name": "索引位置""method name": "插入项目",
+ameter name": "索引位置""comment": "在本播放列表中指定位置插入一个媒体项目",
+ameter name": "索引位置""parameters": [
+   {
+"parameter name": "插入索引位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "所插入媒体对象",
+"data type": "播放器媒体"
+   }
+ameter name": "索引位置"]
+  },
+  {
+}"method name": "添加",
+}"comment": "添加一个媒体项目到本播放列表中",
+}"parameters": [
+   {
+"parameter name": "媒体对象",
+"data type": "播放器媒体"
+   }
+}]
+  },
+  {
+ameter name": "索引位置""method name": "删除",
+ameter name": "索引位置""comment": "删除本播放列表中的指定媒体项目",
+ameter name": "索引位置""parameters": [
+   {
+"parameter name": "媒体对象",
+"data type": "播放器媒体"
+   }
+ameter name": "索引位置"]
+  },
+  {
+"parameters": [
+"method name": "移动",
+"parameters": [
+"comment": "移动本播放列表中指定媒体对象的位置",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "移动前索引位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "移动后索引位置",
+"data type": "整数"
+   }
+"parameters": [
+]
+  }
+data type": "文本型"]
+ },
+ {
+ }"class name": "播放器光驱集",
+ }"base class": "COM对象类",
+ }"methods": [
+  {
+ameters": [
+"method name": "移动""method name": "数量",
+ameters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目",
+ameters": [
+"method name": "移动""type": "property getter",
+ameters": [
+"method name": "移动""data type": "整数"
+  },
+  {
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目""method name": "取项目",
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目""comment": "返回所指定索引位置处的光驱对象",
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目""data type": "播放器光驱",
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目""parameters": [
+   {
+"parameter name": "索引位置",
+"data type": "整数"
+   }
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目"]
+  },
+  {
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目""method name": "取光驱",
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目""comment": "返回关联了所指定驱动器号(如:\"F:\")的光驱对象",
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目""data type": "播放器光驱",
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目""parameters": [
+   {
+"parameter name": "驱动器号",
+"comment": "为驱动器号字符+冒号字符,如\"D:\".",
+"data type": "文本型"
+   }
+meters": [
+"method name": "移动""comment": "返回本光驱集中的项目数目"]
+  }
+ }]
+ },
+ {
+]"class name": "媒体字幕类",
+]"base class": "COM对象类",
+]"methods": [
+  {
+
+"method name": "SAMI风格",
+
+"comment": "返回当前所设置的SAMI风格.\n字幕所使用的SAMI文件中可以定义多个风格,每个风格文本以'#'字符开始.\n例如,以下文本定义了一个名为\"#Emphasis1\"的风格:\n  #Emphasis1 {Name: Big Bold Italic; font-size: 14pt; text-align: center;\n            color: blue; font-family: sans-serif; font-weight: bold;\n            font-style: italic;}",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+ass name": "媒体字幕类""method name": "SAMI风格",
+ass name": "媒体字幕类""comment": "设置当前SAMI风格.",
+ass name": "媒体字幕类""type": "property setter",
+ass name": "媒体字幕类""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"comment": "指定所欲设置的风格.\n字幕所使用的SAMI文件中可以定义多个风格,每个风格文本以'#'字符开始.\n例如,以下文本定义了一个名为\"#Emphasis1\"的风格:\n  #Emphasis1 {Name: Big Bold Italic; font-size: 14pt; text-align: center;\n            color: blue; font-family: sans-serif; font-weight: bold;\n            font-style: italic;}",
+"data type": "文本型"
+   }
+ass name": "媒体字幕类"]
+  },
+  {
+
+"method name": "SAMI语言",
+
+"comment": "返回当前所设置的SAMI语言. 可使用的SAMI语言种类在所使用的SAMI文件中定义.",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "SAMI语言",
+
+"comment": "设置当前SAMI语言. 可使用的SAMI语言种类在所使用的SAMI文件中定义.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "SAMI文件名",
+
+"comment": "返回当前所设置的SAMI文件名",
+
+"type": "property getter",
+
+"data type": "文本型"
+  },
+  {
+thod name": "SAMI语言""method name": "SAMI文件名",
+thod name": "SAMI语言""comment": "设置当前SAMI文件名",
+thod name": "SAMI语言""type": "property setter",
+thod name": "SAMI语言""parameters": [
+   {
+"parameter name": "欲写入属性值",
+"data type": "文本型"
+   }
+thod name": "SAMI语言"]
+  },
+  {
+thod name": "SAMI文件名""method name": "字幕ID",
+thod name": "SAMI文件名""comment": "返回当前所设置的字幕ID",
+thod name": "SAMI文件名""type": "property getter",
+thod name": "SAMI文件名""data type": "文本型"
+  },
+  {
+
+"method name": "字幕ID",
+
+"comment": "设置当前字幕ID",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "欲写入属性值",
+"comment": "字幕ID指定用来显示字幕的HTML成员名称,可以为在HTML网页中任何支持\"innerHTML\"属性的HTML成员.",
+"data type": "文本型"
+   }
+
+]
+  }
+]]
+ },
+ {
+hod name": "SAMI文件名""type": "property getter""class name": "媒体错误类",
+hod name": "SAMI文件名""type": "property getter""base class": "COM对象类",
+hod name": "SAMI文件名""type": "property getter""methods": [
+  {
+od name": "SAMI语言"]"method name": "错误数目",
+od name": "SAMI语言"]"comment": "返回当前错误项的数目",
+od name": "SAMI语言"]"type": "property getter",
+od name": "SAMI语言"]"data type": "整数"
+  },
+  {
+od name": "SAMI文件名""type": "property getter""base class": "COM对象类""method name": "清理错误队列",
+od name": "SAMI文件名""type": "property getter""base class": "COM对象类""comment": "清理当前错误队列"
+  },
+  {
+"comment": "返回当前所设置的SAMI文件名""method name": "错误项",
+"comment": "返回当前所设置的SAMI文件名""comment": "返回所指定索引位置处的错误项",
+"comment": "返回当前所设置的SAMI文件名""data type": "媒体错误项类",
+"comment": "返回当前所设置的SAMI文件名""parameters": [
+   {
+"parameter name": "索引位置",
+"data type": "整数"
+   }
+"comment": "返回当前所设置的SAMI文件名"]
+  },
+  {
+hod name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助",
+hod name": "SAMI文件名""comment": "返回当前所设置的字幕ID""comment": "启动浏览器显示相关帮助信息"
+  }
+hod name": "SAMI文件名""type": "property getter"]
+ },
+ {
+hod name": "SAMI文件名""type": "property getter""class name": "DVD媒体类",
+hod name": "SAMI文件名""type": "property getter""base class": "COM对象类",
+hod name": "SAMI文件名""type": "property getter""methods": [
+  {
+}"method name": "域名",
+}"comment": "返回当前DVD域名",
+}"type": "property getter",
+}"data type": "文本型"
+  },
+  {
+"method name": "是否有效",
+"comment": "返回所指定的DVD功能是否有效",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "功能项",
+"comment": "功能项可以为以下值之一:\n  \"back\": 菜单回退;\n  \"dvd\": 判断DVD是否已经载入;\n  \"dvdDecoder\": 判断DVD解码器是否已经安装到当前计算机系统中;\n  \"resume\": 恢复播放;\n  \"titleMenu\": 标题菜单;\n  \"topMenu\": 顶部菜单.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "显示顶部菜单",
+ }"comment": "显示 DVD 的顶部菜单"
+  },
+  {
+
+"method name": "显示标题菜单",
+
+"comment": "显示 DVD 的当前标题菜单"
+  },
+  {
+
+"method name": "回退菜单",
+
+"comment": "回退一层菜单"
+  },
+  {
+thod name": "回退菜单""method name": "恢复播放",
+thod name": "回退菜单""comment": "从屏幕上清除所有菜单恢复到 DVD 的播放状态"
+  }
+hod name": "SAMI文件名""type": "property getter"]
+ },
+ {
+ameter name": "索引位置""class name": "媒体播放程序类",
+ameter name": "索引位置""base class": "COM对象类",
+ameter name": "索引位置""methods": [
+  {
+}"method name": "播放器已停泊",
+}"comment": "返回播放器是否已经处于停泊状态",
+}"type": "property getter",
+}"data type": "逻辑型"
+  },
+  {
+ name": "回退菜单""method name": "恢复播放""method name": "组件已显示",
+ name": "回退菜单""method name": "恢复播放""comment": "返回播放组件是否已经被显示",
+ name": "回退菜单""method name": "恢复播放""type": "property getter",
+ name": "回退菜单""method name": "恢复播放""data type": "逻辑型"
+  },
+  {
+
+"method name": "切换到播放器程序",
+
+"comment": "将显示切换到播放器程序"
+  },
+  {
+
+"method name": "切换到组件",
+
+"comment": "将显示切换到播放器组件"
+  }
+ameter name": "索引位置"]
+ },
+ {
+}"class name": "光碟刻录格式",
+}"@常量类": "整数",
+}"constants": [
+  {
+
+"constant name": "音频光碟",
+
+"initial value": "0"
+  },
+  {
+eter name": "索引位置"]"constant name": "数据光碟",
+eter name": "索引位置"]"initial value": "1"
+  }
+}]
+ },
+ {
+eter name": "索引位置"]"class name": "媒体库类型",
+eter name": "索引位置"]"@常量类": "整数",
+eter name": "索引位置"]"constants": [
+  {
+ter name": "索引位置"]"constants": [
+"constant name": "未知",
+ter name": "索引位置"]"constants": [
+"initial value": "0"
+  },
+  {
+"constant name": "全部",
+"initial value": "1"
+  },
+  {
+"@常量类": "整数""constant name": "本地",
+"@常量类": "整数""initial value": "2"
+  },
+  {
+
+"constant name": "远程",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "唱片",
+
+"initial value": "4"
+  },
+  {
+@常量类": "整数""initial value": "2""constant name": "便携设备",
+@常量类": "整数""initial value": "2""initial value": "5"
+  }
+eter name": "索引位置"]]
+ },
+ {
+name": "索引位置"]"constants": [
+"constant name": "未知""class name": "媒体文本集类",
+name": "索引位置"]"constants": [
+"constant name": "未知""base class": "COM对象类",
+name": "索引位置"]"constants": [
+"constant name": "未知""methods": [
+  {
+": "整数""initial value": "2""constant name": "便携设备""method name": "数目",
+": "整数""initial value": "2""constant name": "便携设备""comment": "返回文本项的数目",
+": "整数""initial value": "2""constant name": "便携设备""type": "property getter",
+": "整数""initial value": "2""constant name": "便携设备""data type": "整数"
+  },
+  {
+name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助""method name": "取项目",
+name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助""comment": "返回所指定索引位置处的文本项",
+name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助""data type": "文本型",
+name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助""parameters": [
+   {
+"parameter name": "索引位置",
+"data type": "整数"
+   }
+name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助"]
+  }
+name": "索引位置"]"constants": [
+"constant name": "未知"]
+ },
+ {
+"class name": "播放列表数组类",
+"base class": "COM对象类",
+"methods": [
+  {
+er name": "索引位置"]]"method name": "数目",
+er name": "索引位置"]]"comment": "返回播放列表项的数目",
+er name": "索引位置"]]"type": "property getter",
+er name": "索引位置"]]"data type": "整数"
+  },
+  {
+r name": "索引位置"]]"comment": "返回播放列表项的数目""method name": "取项目",
+r name": "索引位置"]]"comment": "返回播放列表项的数目""comment": "返回所指定索引位置处的播放列表",
+r name": "索引位置"]]"comment": "返回播放列表项的数目""data type": "播放列表",
+r name": "索引位置"]]"comment": "返回播放列表项的数目""parameters": [
+   {
+"parameter name": "索引位置",
+"data type": "整数"
+   }
+r name": "索引位置"]]"comment": "返回播放列表项的数目"]
+  }
+]
+ },
+ {
+"class name": "播放器光驱",
+"base class": "COM对象类",
+"methods": [
+  {
+data type": "整数""method name": "标识符",
+data type": "整数""comment": "返回本光驱对应的驱动器符文本,文本格式为驱动器字符+冒号,譬如: \"F:\".",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "文本型"
+  },
+  {
+ type": "整数""method name": "标识符""method name": "播放列表",
+ type": "整数""method name": "标识符""comment": "返回本驱动器中媒体当前对应的播放列表",
+ type": "整数""method name": "标识符""type": "property getter",
+ type": "整数""method name": "标识符""data type": "播放列表"
+  },
+  {
+ name": "索引位置"]]"comment": "返回播放列表项的数目""comment": "返回所指定索引位置处的播放列表""method name": "弹出",
+ name": "索引位置"]]"comment": "返回播放列表项的数目""comment": "返回所指定索引位置处的播放列表""comment": "弹出/关闭光驱,如果当前光驱为打开状态则关闭,反之则打开."
+  }
+]
+ },
+ {
+}"class name": "媒体错误项类",
+}"base class": "COM对象类",
+}"methods": [
+  {
+type": "整数""method name": "标识符""type": "property getter""method name": "错误码",
+type": "整数""method name": "标识符""type": "property getter""comment": "返回具体的错误代码值",
+type": "整数""method name": "标识符""type": "property getter""type": "property getter",
+type": "整数""method name": "标识符""type": "property getter""data type": "整数"
+  },
+  {
+name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助""method name": "描述",
+name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助""comment": "返回具体的错误描述文本",
+name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助""type": "property getter",
+name": "SAMI文件名""comment": "返回当前所设置的字幕ID""method name": "启动帮助""data type": "文本型"
+  },
+  {
+}"method name": "上下文",
+}"comment": "返回本错误对应的上下文信息",
+}"type": "property getter",
+}"data type": "COM变体型"
+  },
+  {
+
+"method name": "解决代码",
+
+"comment": "返回本错误的解决代码.\n本方法目前无效,仅用作保留在将来使用.",
+
+"type": "property getter",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "自定义地址",
+
+"comment": "返回本错误对应的自定义信息地址(如果存在)",
+
+"type": "property getter",
+
+"data type": "文本型"
+  }
+}]
+ }
+问本程序中的接口需要引用模块"MFC版媒体播放器组件".]
+}

@@ -1,0 +1,629 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.进程操作\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"Process\\\\ProcessTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"Process\\\\ProcessToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"Process\\\\ProcessToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"Process\\\\ProcessToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"Process\\\\ProcessToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"<Psapi.h>\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库": "\"Psapi.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______进程操作辅助函数_全局类",
+"@全局类": "真",
+"methods": [
+  {
+    "method name": "运行f",
+    "static": true,
+    "data type": "逻辑型",
+    "@嵌入式方法": "\"\"",
+    "parameters": [
+   {
+"parameter name": "欲运行的命令行",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否等待执行完毕",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "显示方式",
+"comment": "SW_SHOW=5 b表示显示\nSW_HIDE=0 表示隐藏",
+"data type": "整数",
+"@默认值": "5"
+   }
+    ]
+  },
+  {
+    "method name": "执行f",
+    "static": true,
+    "@嵌入式方法": "\"\"",
+    "parameters": [
+   {
+"parameter name": "要执行的文件名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "显示方式",
+"comment": "SW_SHOW=5 b表示显示\nSW_HIDE=0 表示隐藏",
+"data type": "整数",
+"@默认值": "5"
+   }
+    ]
+  },
+  {
+data type": "文本型""method name": "CMD",
+data type": "文本型""static": true,
+data type": "文本型""data type": "文本型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "要执行的命令",
+"comment": "tree /f c:\\\\a",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否UTF8解码",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否启用CMDC",
+"comment": "是否以 cmd /C 开头，如果为真，则完整的运行命令为  cmd /C tree /f c:\\a",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "文本型"]
+  },
+  {
+ "method name": "DLL_加载",
+ "result comment": "返回模块句柄",
+ "static": true,
+ "data type": "变整数",
+ "@嵌入式方法": "\"\"",
+ "parameters": [
+   {
+"parameter name": "DLL路径",
+"data type": "文本型"
+   }
+ ]
+  },
+  {
+"method name": "运行f""method name": "DLL_取函数地址",
+"method name": "运行f""static": true,
+"method name": "运行f""data type": "变整数",
+"method name": "运行f""@嵌入式方法": "\"\"",
+"method name": "运行f""parameters": [
+   {
+"parameter name": "模块句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "函数名称",
+"data type": "文本型"
+   }
+"method name": "运行f"]
+  },
+  {
+ }"method name": "DLL_卸载",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "模块句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+}"method name": "DLL_是否存在函数",
+}"static": true,
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "DLL名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "函数名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "进程_提权F",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "进程_创建F",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "命令行参数",
+"data type": "文本型"
+   },
+   {
+"parameter name": "存放进程句柄",
+"comment": "创建成功后，此参数会保存着进程句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "存放线程局部",
+"data type": "变整数"
+   },
+   {
+"parameter name": "存放进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "存放线程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否挂起",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "显示方式",
+"comment": "5 表示显示\n0 表示隐藏",
+"data type": "整数",
+"@默认值": "5"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "进程_结束F",
+data type": "文本型""static": true,
+data type": "文本型""parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "整数""method name": "进程_等待F",
+data type": "整数""static": true,
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "等待时间",
+"comment": "-1表示一直等待，",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "文本型""parameters": [
+"method name": "进程_关闭句柄F",
+ata type": "文本型""parameters": [
+"static": true,
+ata type": "文本型""parameters": [
+"data type": "逻辑型",
+ata type": "文本型""parameters": [
+"@嵌入式方法": "\"\"",
+ata type": "文本型""parameters": [
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   }
+ata type": "文本型""parameters": [
+]
+  },
+  {
+ta type": "整数"]"method name": "进程_取优先级F",
+ta type": "整数"]"static": true,
+ta type": "整数"]"data type": "文本型",
+ta type": "整数"]"@禁止流程检查": "真",
+ta type": "整数"]"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   }
+ta type": "整数"]]
+  },
+  {
+ }"method name": "进程_结束进程",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "ID",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "进程_取路径通过ID",
+ }"static": true,
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否全路径",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+}"data type": "文本型""method name": "进程_打开F",
+}"data type": "文本型""data type": "变整数",
+}"data type": "文本型""@嵌入式方法": "\"\"",
+}"data type": "文本型""parameters": [
+   {
+"parameter name": "访问标志",
+"comment": "进程打开_常量类 开头的 ，可以用位操作 例如 位或( PROCESS_QUERY_INFORMATION , PROCESS_VM_READ,)",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否继承权限",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   }
+}"data type": "文本型"]
+  },
+  {
+a type": "整数"]"data type": "文本型""method name": "进程_置工作集大小",
+a type": "整数"]"data type": "文本型""comment": "将程序使用内存移至交换页面  间接释放物理内存",
+a type": "整数"]"data type": "文本型""data type": "逻辑型",
+a type": "整数"]"data type": "文本型""@嵌入式方法": "\"\"",
+a type": "整数"]"data type": "文本型""parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "最小值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "最大值",
+"data type": "变整数"
+   }
+a type": "整数"]"data type": "文本型"]
+  },
+  {
+"method name": "进程_读内存F",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内存基址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区指针",
+"comment": "这个是提供一个缓冲区，用来保存读取到的数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区指针大小",
+"data type": "变整数"
+   },
+   {
+"parameter name": "实际读取字节数",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "进程_写内存F",
+
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "内存基址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区指针",
+"comment": "要写到内存的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "缓冲区指针大小",
+"data type": "变整数"
+   },
+   {
+"parameter name": "实际读取字节数",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "进程_枚举进程模块",
+"static": true,
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "进程进程ID",
+"comment": "如果等于0表示枚举自身进程",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "模块数组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否全路径",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "枚举标志",
+"comment": "默认枚举所有模块\n1 枚举 32位模块 \n2 枚举 64位模块\n3 枚举 所有模块\n4 默认枚举方式\nLIST_MODULES_32BIT  0x01  List the 32-bit modules.\nLIST_MODULES_64BIT  0x02  List the 64-bit modules.\nLIST_MODULES_ALL    0x03  List all modules.\nLIST_MODULES_DEFAULT 0x0  Use the default behavior.",
+"data type": "整数",
+"@默认值": "3"
+   }
+]
+  },
+  {
+ }"method name": "进程_枚举进程ID",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "输出_进程ID数组",
+"comment": "用来保存枚举到的进程id数组",
+"data type": "整数数组类"
+   }
+ }]
+  },
+  {
+}"@禁止流程检查": "真""method name": "进程_是否与系统位数一致",
+}"@禁止流程检查": "真""comment": "64-bit process on 64-bit Windows : FALSE\n32-bit process on 64-bit Windows : TRUE\n32-bit process on 32-bit Windows : FALSE",
+}"@禁止流程检查": "真""result comment": "调用函数 成功真，失败假",
+}"@禁止流程检查": "真""static": true,
+}"@禁止流程检查": "真""data type": "逻辑型",
+}"@禁止流程检查": "真""@禁止流程检查": "真",
+}"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   }
+}"@禁止流程检查": "真"]
+  },
+  {
+@默认值": "3""method name": "进程_是否为64位",
+@默认值": "3""static": true,
+@默认值": "3""data type": "逻辑型",
+@默认值": "3""parameters": [
+   {
+"parameter name": "PID",
+"data type": "整数"
+   }
+@默认值": "3"]
+  },
+  {
+}"method name": "进程_取命令行",
+}"comment": "如果失败了，可能就需要管理员权限",
+}"static": true,
+}"data type": "文本型",
+}"@视窗.附属文件": "\"Process\\\\GetProcessCommandLinex64.exe\\nProcess\\\\GetProcessCommandLinex86.exe\"",
+}"parameters": [
+   {
+"parameter name": "PID",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "进程_枚举进程名称F",
+"static": true,
+"parameters": [
+   {
+"parameter name": "用来保存_进程名称数组",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否全路径",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+ameter name": "缓冲区指针大小""method name": "进程_取指定进程名称ID数组",
+ameter name": "缓冲区指针大小""comment": "比如有两个 ie.exe 能得到两个ie.exe 的id数组",
+ameter name": "缓冲区指针大小""static": true,
+ameter name": "缓冲区指针大小""parameters": [
+   {
+"parameter name": "进程名称",
+"comment": "例如id.exe",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用来保存ID的数组",
+"data type": "整数数组类"
+   },
+   {
+"parameter name": "是否只查找一次",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "缓冲区指针大小"]
+  },
+  {
+ameter name": "PID""method name": "进程_进程ID是否存在",
+ameter name": "PID""static": true,
+ameter name": "PID""data type": "逻辑型",
+ameter name": "PID""parameters": [
+   {
+"parameter name": "参数_进程ID",
+"data type": "整数"
+   }
+ameter name": "PID"]
+  },
+  {
+data type": "逻辑型""method name": "进程_进程名称是否存在",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "要查找的进程名称",
+"data type": "文本型"
+   }
+data type": "逻辑型"]
+  },
+  {
+ameter name": "用来保存ID的数组""method name": "进程_取ID通过进程名称",
+ameter name": "用来保存ID的数组""comment": "比如有两个 ie.exe 只会返回第一个找到的，如果您要同时找到两个id ，可以用 进程_取指定进程名称ID数组\n如果找到，返回进程id 否则返回 -1",
+ameter name": "用来保存ID的数组""static": true,
+ameter name": "用来保存ID的数组""data type": "整数",
+ameter name": "用来保存ID的数组""parameters": [
+   {
+"parameter name": "进程名称",
+"comment": "例如id.exe",
+"data type": "文本型"
+   }
+ameter name": "用来保存ID的数组"]
+  }
+]
+ },
+ {
+"class name": "进程打开_常量类",
+"constants": [
+  {
+ameter name": "实际读取字节数""constant name": "全部权限",
+ameter name": "实际读取字节数""data type": "整数",
+ameter name": "实际读取字节数""initial value": "@PROCESS_ALL_ACCESS"
+  },
+  {
+data type": "逻辑型""constant name": "创建进程",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""initial value": "@PROCESS_CREATE_PROCESS"
+  },
+  {
+
+"constant name": "创建线程",
+
+"data type": "整数",
+
+"initial value": "@PROCESS_CREATE_THREAD"
+  },
+  {
+ameter name": "实际读取字节数""constant name": "取真实句柄",
+ameter name": "实际读取字节数""data type": "整数",
+ameter name": "实际读取字节数""initial value": "@PROCESS_DUP_HANDLE"
+  },
+  {
+}"constant name": "查询进程信息",
+}"data type": "整数",
+}"initial value": "@PROCESS_QUERY_INFORMATION"
+  },
+  {
+meter name": "实际读取字节数""initial value": "@PROCESS_ALL_ACCESS""constant name": "SET_QUOTA",
+meter name": "实际读取字节数""initial value": "@PROCESS_ALL_ACCESS""data type": "整数",
+meter name": "实际读取字节数""initial value": "@PROCESS_ALL_ACCESS""initial value": "@PROCESS_SET_QUOTA"
+  },
+  {
+ata type": "逻辑型""data type": "逻辑型""constant name": "设置进程信息",
+ata type": "逻辑型""data type": "逻辑型""data type": "整数",
+ata type": "逻辑型""data type": "逻辑型""initial value": "@PROCESS_SET_INFORMATION"
+  },
+  {
+ta type": "逻辑型"]"constant name": "结束进程",
+ta type": "逻辑型"]"data type": "整数",
+ta type": "逻辑型"]"initial value": "@PROCESS_TERMINATE"
+  },
+  {
+meter name": "用来保存ID的数组""static": true"constant name": "打打开虚拟内存",
+meter name": "用来保存ID的数组""static": true"data type": "整数",
+meter name": "用来保存ID的数组""static": true"initial value": "@PROCESS_VM_OPERATION"
+  },
+  {
+comment": "例如id.exe""constant name": "读虚拟内存",
+comment": "例如id.exe""data type": "整数",
+comment": "例如id.exe""initial value": "@PROCESS_VM_READ"
+  },
+  {
+
+"constant name": "写虚拟内存",
+
+"data type": "整数",
+
+"initial value": "@PROCESS_VM_WRITE"
+  },
+  {
+CESS_ALL_ACCESS"constant name": "SYNCHRONIZE",
+CESS_ALL_ACCESS"comment": "Enables using the process handle in any of the wait functions to wait for the process to terminate.",
+CESS_ALL_ACCESS"data type": "整数",
+CESS_ALL_ACCESS"initial value": "@SYNCHRONIZE"
+  }
+]
+ },
+ {
+"class name": "CMD回显类",
+"@视窗.后缀文本": "\"public CProcessToolCMDEchoBase\"",
+"methods": [
+  {
+"data type": "整数""method name": "执行命令",
+"data type": "整数""comment": "可以执行实时回显的命令，例如\nping www.baidu.com -t",
+"data type": "整数""data type": "逻辑型",
+"data type": "整数""@嵌入式方法": "\"\"",
+"data type": "整数""parameters": [
+   {
+"parameter name": "要执行的命令",
+"comment": "例如 tree /f c:\\a",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否使用CMD",
+"comment": "是否以 cmd /C 开头，如果为真，则完整的运行命令为  cmd /C tree /f c:\\a",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"data type": "整数"]
+  },
+  {
+"@禁止流程检查": "真""static": true"method name": "收到数据",
+"@禁止流程检查": "真""static": true"type": "event",
+"@禁止流程检查": "真""static": true"data type": "整数",
+"@禁止流程检查": "真""static": true"parameters": [
+   {
+"parameter name": "收到的字节集",
+"data type": "字节集类"
+   }
+"@禁止流程检查": "真""static": true]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

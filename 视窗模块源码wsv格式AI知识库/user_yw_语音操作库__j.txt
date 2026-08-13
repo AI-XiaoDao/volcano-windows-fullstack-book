@@ -1,0 +1,143 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."comment": "本库改自于“老黑”的模块",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"语音操作库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+"class name": "语音合成类_TTS",
+"comment": "SpVoice类是支持语音合成(TTS)的核心类。通过SpVoice对象调用TTS引擎，从而实现朗读功能。",
+"methods": [
+  {
+    "method name": "置语速",
+    "parameters": [
+   {
+"parameter name": "速度",
+"comment": "-10~10",
+"data type": "整数",
+"@默认值": "1"
+   }
+    ]
+  },
+  {
+
+"method name": "置声音大小",
+
+"parameters": [
+   {
+"parameter name": "大小",
+"data type": "整数",
+"@默认值": "100"
+   }
+
+]
+  },
+  {
+
+"method name": "机读文本",
+
+"parameters": [
+   {
+"parameter name": "内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "语音事件类",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "是否结束",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "朗读位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "朗读长度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "暂停发音"
+  },
+  {
+
+"method name": "恢复发音"
+  },
+  {
+data type": "整数""method name": "停止发音"
+  },
+  {
+
+"method name": "列举语音库",
+
+"data type": "文本数组类"
+  },
+  {
+
+"method name": "置语音库",
+
+"parameters": [
+   {
+"parameter name": "语音库名称",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "输出到WAV",
+
+"comment": "将文本内容转成语音文件",
+
+"parameters": [
+   {
+"parameter name": "待转内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "保存路径",
+"comment": "默认为桌面路径，名为“语音.wav”",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "语速",
+"comment": "-10~10",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "音量",
+"data type": "整数",
+"@默认值": "100"
+   },
+   {
+"parameter name": "频率",
+"comment": "SAFT8kHz8BitMono = 4\nSAFT8kHz8BitStereo = 5\nSAFT8kHz16BitMono = 6\nSAFT8kHz16BitStereo = 7\nSAFT11kHz8BitMono = 8\nSAFT11kHz8BitStereo = 9\nSAFT11kHz16BitMono = 10\nSAFT11kHz16BitStereo = 11\nSAFT12kHz8BitMono = 12\nSAFT12kHz8BitStereo = 13\nSAFT12kHz16BitMono = 14\nSAFT12kHz16BitStereo = 15\nSAFT16kHz8BitMono = 16\nSAFT16kHz8BitStereo = 17\nSAFT16kHz16BitMono = 18\nSAFT16kHz16BitStereo = 19\nSAFT22kHz8BitMono = 20\nSAFT22kHz8BitStereo = 21\nSAFT22kHz16BitMono = 22\nSAFT22kHz16BitStereo = 23\nSAFT24kHz8BitMono = 24\nSAFT24kHz8BitStereo = 25\nSAFT24kHz16BitMono = 26\nSAFT24kHz16BitStereo = 27\nSAFT32kHz8BitMono = 28\nSAFT32kHz8BitStereo = 29\nSAFT32kHz16BitMono = 30\nSAFT32kHz16BitStereo = 31\nSAFT44kHz8BitMono = 32\nSAFT44kHz8BitStereo = 33\nSAFT44kHz16BitMono = 34\nSAFT44kHz16BitStereo = 35\nSAFT48kHz8BitMono = 36\nSAFT48kHz8BitStereo = 37\nSAFT48kHz16BitMono = 38\nSAFT48kHz16BitStereo = 39\n",
+"data type": "整数",
+"@默认值": "20"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

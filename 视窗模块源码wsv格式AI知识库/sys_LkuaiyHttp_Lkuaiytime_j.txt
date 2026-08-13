@@ -1,0 +1,448 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".
+
+{
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."package name": "LkuaiyHttp.com",
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."classes": [
+ {
+"class name": "类_时钟操作",
+"@视窗.外部头文件": "\"MMSYSTEM.H\"",
+"@视窗.外部库": "\"winmm.lib\"",
+"methods": [
+  {
+"method name": "启动时钟",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "时间",
+"comment": "毫秒",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "结束时钟",
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "时钟事件",
+"type": "event",
+"data type": "整数"
+  }
+]
+ },
+ {
+"class name": "类_时间辅助函数",
+"@视窗.外部头文件": "\"<time.h>\\n<sys/timeb.h>\"",
+"methods": [
+  {
+methods": [
+"method name": "时间_取本周天时间戳",
+methods": [
+"data type": "长整数"
+  },
+  {
+"method name": "时间_取本周一时间戳",
+"data type": "长整数"
+  },
+  {
+
+"method name": "时间_取现行时间戳13位_文本",
+
+"comment": "13位 到毫秒",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "时间_取现行时间戳13位_长整数",
+}"comment": "13位 到毫秒",
+}"data type": "长整数",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "时间_取现行时间戳10位_长整数",
+}"comment": "10位",
+}"data type": "长整数",
+}"@禁止流程检查": "真"
+  },
+  {
+ameter name": "时间""method name": "时间_时间戳转年月日",
+ameter name": "时间""data type": "文本型",
+ameter name": "时间""parameters": [
+   {
+"parameter name": "时间戳",
+"data type": "长整数"
+   }
+ameter name": "时间"]
+  },
+  {
+eter name": "时间"]"method name": "时间_时间戳转时间",
+eter name": "时间"]"comment": "只支持10位时间戳",
+eter name": "时间"]"data type": "文本型",
+eter name": "时间"]"@禁止流程检查": "真",
+eter name": "时间"]"parameters": [
+   {
+"parameter name": "时间戳",
+"data type": "长整数"
+   },
+   {
+"parameter name": "时间格式",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S\""
+   }
+eter name": "时间"]]
+  },
+  {
+
+"method name": "时间_时间戳转格林",
+
+"comment": "只支持10位时间戳",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "时间戳",
+"data type": "长整数"
+   },
+   {
+"parameter name": "时间格式",
+"data type": "文本型",
+"@默认值": "\"%a, %d %b %Y %H:%M:%S GMT\""
+   }
+
+]
+  },
+  {
+"method name": "时间_取格林时间",
+"data type": "文本型",
+"@禁止流程检查": "真"
+  },
+  {
+ter name": "时间"]"parameters": [
+"method name": "时间_取格林时间时间戳",
+ter name": "时间"]"parameters": [
+"data type": "长整数",
+ter name": "时间"]"parameters": [
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "时间_格林时间转时间戳",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "格林时间文本",
+"comment": "必须时这种格式 Thu, 23 Jul 2020 06:04:11 GMT 其他格式解析不了",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否转换成北京时间",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+ter name": "时间"]"parameters": [
+"method name": "时间_格林时间转北京时间",
+ter name": "时间"]"parameters": [
+"data type": "文本型",
+ter name": "时间"]"parameters": [
+"parameters": [
+   {
+"parameter name": "格林时间文本",
+"comment": "必须时这种格式 Thu, 23 Jul 2020 06:04:11 GMT",
+"data type": "文本型"
+   },
+   {
+"parameter name": "北京时间格式",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S\""
+   }
+ter name": "时间"]"parameters": [
+]
+  },
+  {
+ }"method name": "时间_取年月日",
+ }"data type": "文本型",
+ }"@禁止流程检查": "真"
+  },
+  {
+ }"method name": "时间_取秒",
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "时间_取时分秒",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "时间_取小时",
+
+"comment": "取当前时间的小时",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "时间_取分钟",
+}"comment": "取当前时间的分钟",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "时间_取日期时间",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "格式文本",
+"data type": "文本型",
+"@默认值": "\"%u-%u-%u %u:%u:%u\""
+   }
+
+]
+  },
+  {
+
+"method name": "时间_取星期几",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "时间_生成时间戳",
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "年",
+"data type": "整数"
+   },
+   {
+"parameter name": "月",
+"data type": "整数"
+   },
+   {
+"parameter name": "日",
+"data type": "整数"
+   },
+   {
+"parameter name": "时",
+"data type": "整数"
+   },
+   {
+"parameter name": "分",
+"data type": "整数"
+   },
+   {
+"parameter name": "秒",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "时间_日期时间转时间戳",
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "年月日时分秒",
+"comment": "2020-07-19 13:14:00",
+"data type": "文本型"
+   },
+   {
+"parameter name": "格式",
+"comment": "%d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+
+]
+  },
+  {
+@默认值": "\"%d-%d-%d %d:%d:%d\"""method name": "时间_取时间间隔_秒",
+@默认值": "\"%d-%d-%d %d:%d:%d\"""comment": "会用 时间戳2  -  时间戳1  单位是秒 ",
+@默认值": "\"%d-%d-%d %d:%d:%d\"""data type": "长整数",
+@默认值": "\"%d-%d-%d %d:%d:%d\"""parameters": [
+   {
+"parameter name": "参数时间1",
+"comment": "\"2020-7-22 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数时间2",
+"comment": "\"2020-7-23 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间格式",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+@默认值": "\"%d-%d-%d %d:%d:%d\""]
+  },
+  {
+}"method name": "时间_取时间间隔_分",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "参数时间1",
+"comment": "\"2020-7-22 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数时间2",
+"comment": "\"2020-7-23 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间格式",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+}]
+  },
+  {
+}"method name": "时间_取时间间隔_时",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "参数时间1",
+"comment": "\"2020-7-22 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数时间2",
+"comment": "\"2020-7-23 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间格式",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+}]
+  },
+  {
+}"method name": "时间_取时间间隔_天",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "参数时间1",
+"comment": "\"2020-7-22 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数时间2",
+"comment": "\"2020-7-23 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间格式",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+}]
+  },
+  {
+}"method name": "时间_取时间间隔_格式文本",
+}"comment": "会用 时间戳2  -  时间戳1",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "参数时间1",
+"comment": "\"2020-7-22 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数时间2",
+"comment": "\"2020-7-23 16:54:25\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "时间格式",
+"comment": "参数1 和参数2的格式  %d-%d-%d %d:%d:%d",
+"data type": "文本型",
+"@默认值": "\"%d-%d-%d %d:%d:%d\""
+   }
+}]
+  },
+  {
+}"method name": "时间_取时间戳间隔_分",
+}"comment": "会用 时间戳2  -  时间戳1",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "十位时间戳1",
+"data type": "长整数"
+   },
+   {
+"parameter name": "十位时间戳2",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+}"method name": "时间_取时间戳间隔_时",
+}"comment": "会用 时间戳2  -  时间戳1",
+}"data type": "长整数",
+}"parameters": [
+   {
+"parameter name": "十位时间戳1",
+"data type": "长整数"
+   },
+   {
+"parameter name": "十位时间戳2",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+ }"method name": "时间_取时间戳间隔_天",
+ }"comment": "会用 时间戳2  -  时间戳1",
+ }"data type": "长整数",
+ }"parameters": [
+   {
+"parameter name": "十位时间戳1",
+"data type": "长整数"
+   },
+   {
+"parameter name": "十位时间戳2",
+"data type": "长整数"
+   }
+ }]
+  }
+]
+ }
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".]
+}

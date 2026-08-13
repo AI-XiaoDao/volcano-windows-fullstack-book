@@ -1,0 +1,2283 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+问本程序中的接口需要引用模块"PIV基础类"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"PIV基础类"."package name": "火山.PIV基础类",
+问本程序中的接口需要引用模块"PIV基础类"."comment": "时间和时钟操作\nhttps://github.com/SaierMe/piv",
+问本程序中的接口需要引用模块"PIV基础类"."classes": [
+ {
+turn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"class name": "PIV时间类",
+turn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"comment": "全局的时间处理函数",
+turn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@文档": "\"category = \\\"时间操作\\\"\"",
+turn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@别名": "\"//\"",
+turn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@别名类型": "本地类",
+turn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@类用途": "访问静态成员",
+turn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@全局类": "真",
+turn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"methods": [
+  {
+urn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@全局类": "真""method name": "取当前时间",
+urn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@全局类": "真""comment": "返回当前操作系统日期及时间;\n跟\"取现行时间\"一样,但速度更快.",
+urn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@全局类": "真""static": true,
+urn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@全局类": "真""data type": "小数",
+urn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));"@全局类": "真""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取当前秒时间戳",
+
+"comment": "获取当前的秒UNIX时间戳",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取当前毫秒时间戳",
+
+"comment": "获取当前的毫秒UNIX时间戳",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取当前微秒时间戳",
+
+"comment": "获取当前的微秒UNIX时间戳",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+thod name": "取当前微秒时间戳""method name": "取当前纳秒时间戳",
+thod name": "取当前微秒时间戳""comment": "获取当前的纳秒UNIX时间戳",
+thod name": "取当前微秒时间戳""result comment": "系统的最高精度是100纳秒(最后两位数固定为0),\n如需更高精度请用\"取现行纳秒时间戳\".",
+thod name": "取当前微秒时间戳""static": true,
+thod name": "取当前微秒时间戳""data type": "长整数",
+thod name": "取当前微秒时间戳""@禁止流程检查": "真"
+  },
+  {
+thod name": "取当前微秒时间戳""method name": "秒时间戳到文本",
+thod name": "取当前微秒时间戳""comment": "将秒时间戳转换到指定格式的时间文本",
+thod name": "取当前微秒时间戳""result comment": "默认格式\"2025-05-01 14:30\"",
+thod name": "取当前微秒时间戳""static": true,
+thod name": "取当前微秒时间戳""data type": "文本型",
+thod name": "取当前微秒时间戳""@禁止流程检查": "真",
+thod name": "取当前微秒时间戳""parameters": [
+   {
+"parameter name": "秒时间戳",
+"comment": "Unix时间戳,小于等于0时表示当前时间戳.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "格式文本",
+"comment": "时间文本的格式,下列为可用的格式替换符:\n  %Y : 4位年份  |  %y : 2位年份  |  %C : 世纪\n  %m : 2位月份  |  %b : 月份简写 |  %B : 月份全称\n  %d : 2位天数  |  %e : 2位天数(前补空格)\n  %A : 星期全称       |  %a : 星期简写\n  %u : 星期数(1-7)    |  %w : 星期数(0-6,0为星期天)\n  %j : 每年的第几天   |  %W : 每年的第几周\n  %H : 小时(24小时制) |  %I : 小时(12小时制)\n  %M : 分钟           |  %p : 12小时制的AM/PM\n  %S : 秒钟           |  %z : 时区",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S\""
+   },
+   {
+"parameter name": "使用GMT时区",
+"comment": "默认使用本地时区",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+thod name": "取当前微秒时间戳"]
+  },
+  {
+
+"method name": "毫秒时间戳到文本",
+
+"comment": "将毫秒时间戳转换到指定格式的时间文本",
+
+"result comment": "默认格式\"2025-05-01 14:30.841\"",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "毫秒时间戳",
+"comment": "毫秒级精度的Unix时间戳,小于等于0时表示当前时间戳.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "格式文本",
+"comment": "时间文本的格式,下列为可用的格式替换符:\n  %Qms : 毫秒   |  %Qus : 微秒   |  %Qns : 纳秒\n  %Y : 4位年份  |  %y : 2位年份  |  %C : 世纪\n  %m : 2位月份  |  %b : 月份简写 |  %B : 月份全称\n  %d : 2位天数  |  %e : 2位天数(前补空格)\n  %A : 星期全称       |  %a : 星期简写\n  %u : 星期数(1-7)    |  %w : 星期数(0-6,0为星期天)\n  %j : 每年的第几天   |  %W : 每年的第几周\n  %H : 小时(24小时制) |  %I : 小时(12小时制)\n  %M : 分钟           |  %p : 12小时制的AM/PM\n  %S : 秒钟           |  %z : 时区",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S.%Qms\""
+   },
+   {
+"parameter name": "使用GMT时区",
+"comment": "默认使用本地时区",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "微秒时间戳到文本",
+
+"comment": "将微秒时间戳转换到指定格式的时间文本",
+
+"result comment": "默认格式\"2025-05-01 14:30.841574\"",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "微秒时间戳",
+"comment": "微秒级精度的Unix时间戳,小于等于0时表示当前时间戳.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "格式文本",
+"comment": "时间文本的格式,下列为可用的格式替换符:\n  %Qms : 毫秒   |  %Qus : 微秒   |  %Qns : 纳秒\n  %Y : 4位年份  |  %y : 2位年份  |  %C : 世纪\n  %m : 2位月份  |  %b : 月份简写 |  %B : 月份全称\n  %d : 2位天数  |  %e : 2位天数(前补空格)\n  %A : 星期全称       |  %a : 星期简写\n  %u : 星期数(1-7)    |  %w : 星期数(0-6,0为星期天)\n  %j : 每年的第几天   |  %W : 每年的第几周\n  %H : 小时(24小时制) |  %I : 小时(12小时制)\n  %M : 分钟           |  %p : 12小时制的AM/PM\n  %S : 秒钟           |  %z : 时区",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S.%Qus\""
+   },
+   {
+"parameter name": "使用GMT时区",
+"comment": "默认使用本地时区",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+"method name": "纳秒时间戳到文本",
+"comment": "将纳秒时间戳转换到指定格式的时间文本",
+"result comment": "默认格式\"2025-05-01 14:30.841574229\"",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "纳秒时间戳",
+"comment": "纳秒级精度的Unix时间戳,小于等于0时表示当前时间戳.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "格式文本",
+"comment": "时间文本的格式,下列为可用的格式替换符:\n  %Qms : 毫秒   |  %Qus : 微秒   |  %Qns : 纳秒\n  %Y : 4位年份  |  %y : 2位年份  |  %C : 世纪\n  %m : 2位月份  |  %b : 月份简写 |  %B : 月份全称\n  %d : 2位天数  |  %e : 2位天数(前补空格)\n  %A : 星期全称       |  %a : 星期简写\n  %u : 星期数(1-7)    |  %w : 星期数(0-6,0为星期天)\n  %j : 每年的第几天   |  %W : 每年的第几周\n  %H : 小时(24小时制) |  %I : 小时(12小时制)\n  %M : 分钟           |  %p : 12小时制的AM/PM\n  %S : 秒钟           |  %z : 时区",
+"data type": "文本型",
+"@默认值": "\"%Y-%m-%d %H:%M:%S.%Qns\""
+   },
+   {
+"parameter name": "使用GMT时区",
+"comment": "默认使用本地时区",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+data type": "逻辑型""method name": "秒时间戳到时间",
+data type": "逻辑型""comment": "将秒时间戳转换到火山的小数时间",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "小数",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "秒时间戳",
+"comment": "秒级精度的Unix时间戳",
+"data type": "长整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+ta type": "逻辑型"]"method name": "毫秒时间戳到时间2",
+ta type": "逻辑型"]"comment": "将毫秒时间戳转换到火山的小数时间",
+ta type": "逻辑型"]"static": true,
+ta type": "逻辑型"]"data type": "小数",
+ta type": "逻辑型"]"@禁止流程检查": "真",
+ta type": "逻辑型"]"parameters": [
+   {
+"parameter name": "毫秒时间戳",
+"comment": "毫秒级精度的Unix时间戳",
+"data type": "长整数"
+   }
+ta type": "逻辑型"]]
+  },
+  {
+ type": "逻辑型"]]"method name": "微秒时间戳到时间",
+ type": "逻辑型"]]"comment": "将微秒时间戳转换到火山的小数时间",
+ type": "逻辑型"]]"static": true,
+ type": "逻辑型"]]"data type": "小数",
+ type": "逻辑型"]]"parameters": [
+   {
+"parameter name": "微秒时间戳",
+"comment": "微秒级精度的Unix时间戳",
+"data type": "长整数"
+   }
+ type": "逻辑型"]]]
+  },
+  {
+}"method name": "纳秒时间戳到时间",
+}"comment": "将纳秒时间戳转换到火山的小数时间",
+}"static": true,
+}"data type": "小数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "纳秒时间戳",
+"comment": "纳秒级精度的Unix时间戳",
+"data type": "长整数"
+   }
+}]
+  }
+turn ::KillTimer(m_hwnd, reinterpret_cast<UINT_PTR>(this));]
+ },
+ {
+"class name": "标准时间类",
+"comment": "封装了标准库的std::chrono::system_clock.\nsystem_clock是系统范畴的实时壁钟,可以转换成日期时间,最高精度为100纳秒.\n本类初始化时会自动获取当前的系统时间.",
+"base class": "PIV对象类",
+"@文档": "\"category = \\\"时间操作\\\"\"",
+"methods": [
+  {
+
+"method name": "置现行时间",
+
+"comment": "将当前的日期及时间设置为本对象的时间.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "置时间",
+
+"comment": "将火山的小数时间(毫秒级精度)设置为本对象的时间",
+
+"parameters": [
+   {
+"parameter name": "火山时间",
+"comment": "所欲置入的小数型时间,应为系统的本地时区.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "置时间文本",
+
+"comment": "将指定格式的时间文本设置为本对象的时间;\n如果给定文本不符合书写格式要求或者时间值错误导致不能进行转换,将返回假.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "日期时间文本",
+"comment": "提供具体所欲转换的日期时间文本内容,年份以后的所有部分均可以省略. 格式要求如下:\n中文格式(年月日排列顺序为年月日),例如:\n  1. 1973年11月15日12时30分25秒\n  2. 1973/11/15 12:30:25\n  3. 1973/11/15/12/30/25\n  4. 1973/11/15/12:30:25\n  5. 1973-11-15-12-30-25\n  6. 1973-11-15-12:30:25\n  7. 1973.11.15 12:30:25\n  8. 19731115123025\n非中文格式(年月日排列顺序为月日年),例如:\n  1. 11/15/1973 12:30:25\n  2. 11/15/1973/12/30/25\n  4. 11/15/1973/12:30:25\n  5. 11-15-1973-12-30-25\n  6. 11-15-1973-12:30:25\n  7. 11.15.1973 12:30:25",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否为中文格式",
+"comment": "指定所提供的日期时间文本内容是否为中文格式",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "置格林威治时间",
+
+"comment": "将HTTP协议头用的<RFC 1123>格式日期时间文本,置入为本对象的时间.",
+
+"parameters": [
+   {
+"parameter name": "GTM时间",
+"comment": "必须是\"Mon, 04 Jul 2022 02:20:58 GMT\"这种时间格式.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "置文件时间",
+
+"comment": "将FILETIME结构体的长整数时间,置入为本对象的时间",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文件时间",
+"comment": "提供FILETIME的LowPart和HighPart合并得到的长整数值.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置时间戳",
+
+"comment": "将秒精度的Unix时间戳设置为本对象的时间",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲置入时间戳",
+"comment": "必须是10位的秒时间戳",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置毫秒时间戳",
+
+"comment": "将毫秒精度的Unix时间戳设置为本对象的时间",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲置入时间戳",
+"comment": "必须是13位的时间戳",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置微秒时间戳",
+
+"comment": "将微秒精度的Unix时间戳设置为本对象的时间",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲置入时间戳",
+"comment": "必须是16位的时间戳",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "置纳秒时间戳",
+
+"comment": "将纳秒精度的Unix时间戳设置为本对象的时间",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲置入时间戳",
+"comment": "必须是19位的时间戳",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取时间部分",
+
+"comment": "返回一个包含已知时间指定部分的值",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲取的时间部分",
+"data type": "时间部分类型"
+   }
+
+]
+  },
+  {
+
+"method name": "取时间毫秒部分",
+
+"comment": "返回时间中毫秒部分的值(不含秒以上的值)",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "增减时间",
+
+"comment": "将时间增加或减去一段指定的间隔.",
+
+"parameters": [
+   {
+"parameter name": "被增减字段",
+"comment": "指定对时间的哪一部分进行增减操作;\n如果是月份、季度或年份,减去后的日期必定不会低于1970年1月1日0点.",
+"data type": "标准时间字段",
+"@默认值": "标准时间字段.秒"
+   },
+   {
+"parameter name": "增减值",
+"comment": "时间被增加或减少的数值",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取时间间隔",
+
+"comment": "返回本对象的时间减去另一个对象的时间的间隔数目.",
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "被减去的时间",
+"data type": "标准时间类"
+   },
+   {
+"parameter name": "所欲取间隔的字段",
+"comment": "指定时间间隔的精度,最高精度为100纳秒.",
+"data type": "标准时间字段",
+"@默认值": "标准时间字段.秒"
+   }
+
+]
+  },
+  {
+ }"method name": "取格式时间",
+ }"comment": "将时间格式化为指定格式的文本,本方法不依赖{fmt},更轻量一些.",
+ }"result comment": "格式文本不正确会崩溃,成功返回指定格式的日期时间;\n输出的日期时间必定不会低于1970年1月1日0点;",
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "格式文本",
+"comment": "默认格式为: \"2022-04-01 16:15:05\",转换后不能超过256个字符.\n下列为可用的格式替换符:\n   %%  %字符  |  %n 换行符  |  %t 水平制表符\n   %C  年份向下整除100          例: 20\n   %y  年份的后2位              例: 22\n   %Y  完整的4位年份            例: 2022\n   %h  缩写的月份名称           例: Apr\n   %b  缩写的月份名称           例: Apr\n   %B  完整的月份名称           例: April\n   %m  十进制的月份             例: 04\n   %d  2位数的某月第N天         例: 01\n   %e  2位的某月第N天,前补空格  例:  1\n   %a  缩写的星期名称           例: Fri\n   %A  完整的星期名称           例: Friday\n   %u  十进制的星期数(1-7)      例: 5\n   %w  星期数(0-6),0为星期天    例: 5\n   %j  3位数的某年第N天         例: 091\n   %U  2位数的某年第N星期       例: 13\n   %W  2位数的某年第N星期       例: 13\n   %D  等价于 %m/%d/%y          例: 04/01/22\n   %F  等价于 %Y-%m-%d          例: 2022-04-01\n   %H  2位数的小时数(24小时制)  例: 16\n   %I  2位数的小时数(12小时制)  例: 04\n   %M  2位数的分钟数            例: 15\n   %S  2位数的秒针数            例: 05\n   %p  12小时进制的AM/PM        例: PM\n   %R  等价于 %H:%M             例: 16:15\n   %T  等价于 %H:%M:%S          例: 16:15:05\n   %r  12小时制的时分秒时间     例: 04:15:05 PM\n   %X  本地环境的12小时制时钟   例: 16:15:05\n   %x  本地环境的日期           例: 04/01/22\n   %z  UTC格式的时区            例: +0800\n   %Z  时区的本地名称           例: 中国标准时间\n   %c  本地环境的日期与时间     例: Fri Apr  1 16:59:32 2022\n\n  格式替换符可以在中间加上#,部分无效果; 部分会将前面的补0或补\n空格去掉,比如\"%#F\"会解析为\"2022-4-1\"; 其中\"%#c\"和\"%#x\"会解析\n为更长的日期时间格式.",
+"data type": "文本型",
+"@默认值": "\"%F %T\""
+   },
+   {
+"parameter name": "使用GMT时区",
+"comment": "是否将输出的时间校准为格林威治标准时间(GMT)——即UTC零时区;\n默认为假,表示系统的本地时区.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+
+"method name": "取格林威治时间",
+
+"comment": "输出格林威治标准时间(GMT)的<RFC 1123>格式日期时间.\n这是HTTP协议头的标准日期时间格式.",
+
+"data type": "文本型"
+  },
+  {
+"data type": "文本型""method name": "格式化时间",
+"data type": "文本型""comment": "将时间格式化为指定格式的文本,本方法使用{fmt}库进行格式化,兼容C++20的std::format.",
+"data type": "文本型""result comment": "格式文本不正确会直接抛出异常,成功返回指定格式的日期时间.\n输出的日期时间必定不会低于1970年1月1日0点.",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@视窗.外部头文件": "\"src\\\\fmt\\\\chrono.h\"",
+"data type": "文本型""@强制依赖": "\"标准格式化类\"",
+"data type": "文本型""@禁止流程检查": "真",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "格式文本",
+"comment": "  默认格式为: \"2022-04-01 16:15:05\"\n  下列为<chrono>专用的格式替换符(省略了部分效果重复的),基本格式请\n参考\"标准格式化类\",格式替换符需要用\"{}\"包围,若要输入符号\"{\"和\"}\",\n需要用\"{{\"和\"}}\"转义.\n  因为只有一个参数(时间),所以在使用多个格式替换符时,必须指定参数\nID为0,例如\"{0:%F}T{0:%T%z}\"解析为\"2022-04-01T16:15:05+0800\".\n   %%  %字符  |  %n 换行符  |  %t 水平制表符\n   %C  年份向下整除100          例: 20\n   %y  年份的后2位              例: 22\n   %Y  完整的4位年份            例: 2022\n   %h  缩写的月份名称           例: Apr\n   %b  缩写的月份名称           例: Apr\n   %B  完整的月份名称           例: April\n   %m  十进制的月份             例: 04\n   %d  2位数的某月第N天         例: 01\n   %e  2位的某月第N天,前补空格  例:  1\n   %a  缩写的星期名称           例: Fri\n   %A  完整的星期名称           例: Friday\n   %u  十进制的星期数(1-7)      例: 5\n   %w  星期数(0-6),0为星期天    例: 5\n   %j  3位数的某年第N天         例: 091\n   %U  2位数的某年第N星期       例: 13\n   %W  2位数的某年第N星期       例: 13\n   %D  等价于 %m/%d/%y          例: 04/01/22\n   %F  等价于 %Y-%m-%d          例: 2022-04-01\n   %H  2位数的小时数(24小时制)  例: 16\n   %I  2位数的小时数(12小时制)  例: 04\n   %M  2位数的分钟数            例: 15\n   %S  2位数的秒针数            例: 05\n   %p  12小时进制的AM/PM        例: PM\n   %R  等价于 %H:%M             例: 16:15\n   %T  等价于 %H:%M:%S          例: 16:15:05\n   %r  12小时制的时分秒时间     例: 04:15:05 PM\n   %X  本地环境的12小时制时钟   例: 16:15:05\n   %z  UTC格式的时区            例: +0800\n   %Z  时区的本地名称           例: 中国标准时间\n   %c  本地环境的日期与时间     例: Fri Apr  1 16:59:32 2022",
+"data type": "文本型",
+"@默认值": "\"{:%F %T}\""
+   },
+   {
+"parameter name": "使用GMT时区",
+"comment": "是否将输出的时间校准为格林威治标准时间(GMT)——即UTC零时区;\n默认为假,表示系统的本地时区.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+"data type": "文本型"]
+  },
+  {
+}"method name": "到时间",
+}"comment": "返回火山的小数时间(毫秒级精度),为本地系统时区.",
+}"data type": "小数",
+}"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "到时间戳",
+
+"comment": "返回秒精度的Unix时间戳",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到毫秒时间戳",
+
+"comment": "返回毫秒精度的Unix时间戳",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到微秒时间戳",
+
+"comment": "返回微秒精度的Unix时间戳",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到纳秒时间戳",
+
+"comment": "返回纳秒精度的Unix时间戳",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "到文件时间",
+
+"comment": "返回FILETIME结构体的长整数时间,精度为100纳秒.",
+
+"result comment": "返回的长整数为LowPart和HighPart的合并值.",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否相等",
+
+"comment": "比较两个对象的时间是否相等",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲比较的时间",
+"data type": "标准时间类"
+   }
+
+]
+  },
+  {
+"method name": "是否不相等",
+"comment": "比较两个对象的时间是否不相等",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲比较的时间",
+"data type": "标准时间类"
+   }
+]
+  },
+  {
+
+"method name": "是否小于",
+
+"comment": "比较本对象的当前时间是否小于另一个对象的时间",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲比较的时间",
+"data type": "标准时间类"
+   }
+
+]
+  },
+  {
+
+"method name": "是否小于等于",
+
+"comment": "比较本对象的当前时间是否小于等于另一个对象的时间",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲比较的时间",
+"data type": "标准时间类"
+   }
+
+]
+  },
+  {
+
+"method name": "是否大于",
+
+"comment": "比较本对象的当前时间是否大于另一个对象的时间",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲比较的时间",
+"data type": "标准时间类"
+   }
+
+]
+  },
+  {
+
+"method name": "是否大于等于",
+
+"comment": "比较本对象的当前时间是否大于另一个对象的时间",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲比较的时间",
+"data type": "标准时间类"
+   }
+
+]
+  },
+  {
+}"method name": "取本地时区",
+}"comment": "返回本地系统的时区与UTC零时区的偏移分钟数,如北京时间为8×60=480.",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+"method name": "取展示内容",
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.",
+"@虚拟方法": "可覆盖",
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "标准计时器类",
+"comment": "封装了标准库的std::chrono::steady_clock.\nsteady_clock是单调时钟,时间只能向前走,不能转换到具体的日期时间.\n本类的主要用途是用来计算各种运行耗时,最高精度为100纳秒.",
+"base class": "PIV对象类",
+"@文档": "\"category = \\\"时间操作\\\"\"",
+"@视窗.外部头文件": "\"<vector>\"",
+"methods": [
+  {
+"method name": "计时",
+"comment": "新增记录当前的时间点,并返回计时索引.\n计时索引从0开始,但0保留为对象初始化时的时间点,所以返回的值必定大于等于1.",
+"result comment": "返回计时索引.",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+@禁止流程检查": "真""method name": "复位",
+@禁止流程检查": "真""comment": "将计时器清空,并重新获取当前时间点作为第一个计时(计时索引0)."
+  },
+  {
+}"method name": "取计时间隔",
+}"comment": "返回指定的两次计时之间的间隔数目",
+}"result comment": "如果提供的计时索引超出范围,将返回\"数值范围.最小长整数值\".",
+}"data type": "长整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "计时索引1",
+"comment": "提供被减去的时间点;\n计时索引从0开始,0为对象初始化时的时间点.",
+"data type": "整数"
+   },
+   {
+"parameter name": "计时索引2",
+"comment": "此为减去的时间点,提供的索引须小于\"计时索引1\".",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲取间隔的字段",
+"comment": "指定时间间隔的精度,最高精度为100纳秒;\n月份、季度、年份在本类中不可用.",
+"data type": "标准时间字段",
+"@默认值": "标准时间字段.微秒"
+   }
+}]
+  },
+  {
+
+"method name": "取经历时间",
+
+"comment": "返回从对象初始化到现在的经过时间,必定大于等于0.",
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲取间隔的字段",
+"comment": "指定时间间隔的精度,最高精度为100纳秒;\n月份、季度、年份在本类中不可用.",
+"data type": "标准时间字段",
+"@默认值": "标准时间字段.微秒"
+   }
+
+]
+  },
+  {
+
+"method name": "取最近两次间隔",
+
+"comment": "返回最近两次计时之间的间隔数目.\n如果计时次数小于2,则返回现行时间点与计时起点之间的间隔.",
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲取间隔的字段",
+"comment": "指定时间间隔的精度,最高精度为100纳秒;\n月份、季度、年份在本类中不可用.",
+"data type": "标准时间字段",
+"@默认值": "标准时间字段.微秒"
+   }
+
+]
+  },
+  {
+ }"method name": "取计时次数",
+ }"comment": "返回计时的计次;\n第1次(索引为0)为对象初始化时取的时间点,所以必定大于等于1.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取计时表",
+}"comment": "用文本列出每次计时之间的间隔时间",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "所欲取间隔的字段",
+"comment": "指定时间间隔的精度,最高精度为100纳秒.",
+"data type": "标准时间字段",
+"@默认值": "标准时间字段.微秒"
+   }
+}]
+  },
+  {
+"method name": "取展示内容",
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.",
+"@虚拟方法": "可覆盖",
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "标准时间辅助",
+"comment": "一些std::chrono常用全局静态方法(需以类名调用).",
+"@文档": "\"category = \\\"时间操作\\\"\"",
+"@强制依赖": "\"标准时间类\"",
+"methods": [
+  {
+
+"method name": "取本地时区",
+
+"comment": "返回本地系统的时区与UTC零时区的偏移分钟数,如北京时间为8×60=480.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取现行格式时间",
+}"comment": "将当前系统时间格式化为时间文本\n默认为\"2022-04-01 16:15:05\"的样式.",
+}"static": true,
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "格式文本",
+"comment": "  默认格式为: \"2022-04-01 16:15:05\",转换后不能超过256个字符.\n  下列为可用的格式替换符:\n   %%  %字符  |  %n 换行符  |  %t 水平制表符\n   %C  年份向下整除100          例: 20\n   %y  年份的后2位              例: 22\n   %Y  完整的4位年份            例: 2022\n   %h  缩写的月份名称           例: Apr\n   %b  缩写的月份名称           例: Apr\n   %B  完整的月份名称           例: April\n   %m  十进制的月份             例: 04\n   %d  2位数的某月第N天         例: 01\n   %e  2位的某月第N天,前补空格  例:  1\n   %a  缩写的星期名称           例: Fri\n   %A  完整的星期名称           例: Friday\n   %u  十进制的星期数(1-7)      例: 5\n   %w  星期数(0-6),0为星期天    例: 5\n   %j  3位数的某年第N天         例: 091\n   %U  2位数的某年第N星期       例: 13\n   %W  2位数的某年第N星期       例: 13\n   %D  等价于 %m/%d/%y          例: 04/01/22\n   %F  等价于 %Y-%m-%d          例: 2022-04-01\n   %H  2位数的小时数(24小时制)  例: 16\n   %I  2位数的小时数(12小时制)  例: 04\n   %M  2位数的分钟数            例: 15\n   %S  2位数的秒针数            例: 05\n   %p  12小时进制的AM/PM        例: PM\n   %R  等价于 %H:%M             例: 16:15\n   %T  等价于 %H:%M:%S          例: 16:15:05\n   %r  12小时制的时分秒时间     例: 04:15:05 PM\n   %X  本地环境的12小时制时钟   例: 16:15:05\n   %x  本地环境的日期           例: 04/01/22\n   %z  UTC格式的时区            例: +0800\n   %Z  时区的本地名称           例: 中国标准时间\n   %c  本地环境的日期与时间     例: Fri Apr  1 16:59:32 2022\n\n  格式替换符可以在中间加上#,部分无效果; 部分会将前面的补0或补\n空格去掉,比如\"%#F\"会解析为\"2022-4-1\"; 其中\"%#c\"和\"%#x\"会解析\n为更长的日期时间格式.",
+"data type": "文本型",
+"@默认值": "\"%F %T\""
+   }
+}]
+  },
+  {
+
+"method name": "取现行时间戳",
+
+"comment": "获取当前系统时间的10位无时区Unix时间戳,单位为秒.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "现行时间",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "取现行毫秒时间戳",
+
+"comment": "获取当前系统时间的Unix时间戳,单位为毫秒.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "现行时间",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "取现行微秒时间戳",
+
+"comment": "获取当前系统时间的Unix时间戳,单位为微秒.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "现行时间",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "取现行纳秒时间戳",
+
+"comment": "获取当前系统时间的Unix时间戳,单位为纳秒.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取现行格林威治时间",
+
+"comment": "获取当前格林威治标准时间(GMT)的<RFC 1123>格式的日期时间;\n这是HTTP协议头的标准日期时间格式.",
+
+"static": true,
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "秒格式化",
+
+"comment": "将指定秒数的时长格式为\"00:12:56\"这样的格式",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "秒长",
+"comment": "以秒为单位",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+ }"class name": "高性能计时器类",
+ }"comment": "极简计时器,可用于计算微秒精度的运行耗时,封装了系统API: QueryPerformanceCounter",
+ }"@文档": "\"category = \\\"时间操作\\\"\"",
+ }"methods": [
+  {
+
+"method name": "复位",
+
+"comment": "将计时器的开始时间重置为当前时间.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "将计时器的开始时间重置为当前时间.""method name": "取微秒耗时",
+"comment": "将计时器的开始时间重置为当前时间.""comment": "返回从上一次执行\"复位\"到现在的经过时间,单位为微秒.",
+"comment": "将计时器的开始时间重置为当前时间.""data type": "长整数",
+"comment": "将计时器的开始时间重置为当前时间.""@禁止流程检查": "真"
+  },
+  {
+comment": "将计时器的开始时间重置为当前时间.""comment": "返回从上一次执行\"复位\"到现在的经过时间,单位为微秒.""method name": "取经历时间",
+comment": "将计时器的开始时间重置为当前时间.""comment": "返回从上一次执行\"复位\"到现在的经过时间,单位为微秒.""comment": "返回从执行\"复位\"到现在的经过时间,必定大于等于0.",
+comment": "将计时器的开始时间重置为当前时间.""comment": "返回从上一次执行\"复位\"到现在的经过时间,单位为微秒.""data type": "长整数",
+comment": "将计时器的开始时间重置为当前时间.""comment": "返回从上一次执行\"复位\"到现在的经过时间,单位为微秒.""@禁止流程检查": "真",
+comment": "将计时器的开始时间重置为当前时间.""comment": "返回从上一次执行\"复位\"到现在的经过时间,单位为微秒.""parameters": [
+   {
+"parameter name": "所欲取间隔的字段",
+"comment": "指定时间间隔的精度,最高精度为100纳秒;\n只能用秒、毫秒、微秒、纳秒,选择其他字段一律返回秒间隔.",
+"data type": "标准时间字段",
+"@默认值": "标准时间字段.微秒"
+   }
+comment": "将计时器的开始时间重置为当前时间.""comment": "返回从上一次执行\"复位\"到现在的经过时间,单位为微秒."]
+  },
+  {
+
+"method name": "延时",
+
+"comment": "超高精度的延时程序,能精确到1微秒,但非常耗CPU性能(不建议使用).",
+
+"parameters": [
+   {
+"parameter name": "延迟时间",
+"comment": "单位为微秒",
+"data type": "长整数",
+"@输出名": "\"usec\""
+   }
+
+]
+  }
+ }]
+ },
+ {
+"class name": "标准时间字段",
+"comment": "\n",
+"@文档": "\"category = \\\"时间操作.辅助类\\\"\"",
+"@常量类": "整数",
+"constants": [
+  {
+
+"constant name": "纳秒",
+
+"comment": "1纳秒 = 十亿分之一秒",
+
+"initial value": "0"
+  },
+  {
+}"constant name": "微秒",
+}"comment": "1微秒 = 1000纳秒",
+}"initial value": "1"
+  },
+  {
+
+"constant name": "毫秒",
+
+"comment": "1毫秒 = 1000微秒",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "秒",
+
+"comment": "1秒钟 = 1000毫秒",
+
+"initial value": "3"
+  },
+  {
+
+"constant name": "分钟",
+
+"comment": "1分钟 = 60秒",
+
+"initial value": "4"
+  },
+  {
+
+"constant name": "小时",
+
+"comment": "1小时 = 60分钟",
+
+"initial value": "5"
+  },
+  {
+
+"constant name": "日",
+
+"comment": "1日   = 24小时",
+
+"initial value": "6"
+  },
+  {
+"initial value": "6""constant name": "周",
+"initial value": "6""comment": "1星期 = 7日",
+"initial value": "6""initial value": "7"
+  },
+  {
+
+"constant name": "月份",
+
+"comment": "1个月 = 27-31日",
+
+"initial value": "8"
+  },
+  {
+"comment": "1个月 = 27-31日""constant name": "季度",
+"comment": "1个月 = 27-31日""comment": "1季度 = 3个月",
+"comment": "1个月 = 27-31日""initial value": "9"
+  },
+  {
+}"constant name": "年份",
+}"comment": "1年 = 365-366日",
+}"initial value": "10"
+  }
+]
+ },
+ {
+}"class name": "系统时间结构",
+}"comment": "SYSTEMTIME 结构体",
+}"base class": "PIV结构模板",
+}"@文档": "\"category = \\\"时间操作.辅助类\\\"\"",
+}"@别名": "\"SYSTEMTIME\"",
+}"@模板实现类": "\"系统时间结构\"",
+}"variables": [
+  {
+"@别名": "\"SYSTEMTIME\"""variable name": "年",
+"@别名": "\"SYSTEMTIME\"""comment": "1601-30827",
+"@别名": "\"SYSTEMTIME\"""data type": "无符号短整数",
+"@别名": "\"SYSTEMTIME\"""@输出名": "\"wYear\""
+  },
+  {
+
+"variable name": "月",
+
+"comment": "1-12",
+
+"data type": "无符号短整数",
+
+"@输出名": "\"wMonth\""
+  },
+  {
+}"variable name": "周",
+}"comment": "0-6,0为星期天",
+}"data type": "无符号短整数",
+}"@输出名": "\"wDayOfWeek\""
+  },
+  {
+
+"variable name": "日",
+
+"comment": "1-31",
+
+"data type": "无符号短整数",
+
+"@输出名": "\"wDay\""
+  },
+  {
+}"variable name": "时",
+}"comment": "0-23",
+}"data type": "无符号短整数",
+}"@输出名": "\"wHour\""
+  },
+  {
+
+"variable name": "分",
+
+"comment": "0-59",
+
+"data type": "无符号短整数",
+
+"@输出名": "\"wMinute\""
+  },
+  {
+}"variable name": "秒",
+}"comment": "0-59",
+}"data type": "无符号短整数",
+}"@输出名": "\"wSecond\""
+  },
+  {
+
+"variable name": "毫秒",
+
+"comment": "0-999",
+
+"data type": "无符号短整数",
+
+"@输出名": "\"wMilliseconds\""
+  }
+}],
+}"methods": [
+  {
+
+"method name": "置时间",
+
+"comment": "将火山的小数型时间转换到SYSTEMTIME",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "系统时间结构"
+   },
+   {
+"parameter name": "火山时间",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "到时间",
+
+"comment": "将本对象的SYSTEMTIME转换为火山的小数型时间",
+
+"static": true,
+
+"data type": "小数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "系统时间结构"
+   }
+
+]
+  },
+  {
+
+"method name": "到时间文本",
+
+"comment": "将本对象的SYSTEMTIME输出为时间文本.\n格式: \"2024-03-20 23:57:58.456\"",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "系统时间结构"
+   }
+
+]
+  },
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "系统时间结构"
+   }
+
+]
+  }
+}]
+ },
+ {
+"class name": "文件时间结构",
+"comment": "FILETIME 包含一个64位值,表示自1601年1月1日(UTC)以来的100纳秒间隔时间数.",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"时间操作.辅助类\\\"\"",
+"@别名": "\"FILETIME\"",
+"@模板实现类": "\"文件时间结构\"",
+"variables": [
+  {
+variables": [
+"variable name": "低位日期时间",
+variables": [
+"comment": "文件时间的低位部分",
+variables": [
+"data type": "无符号整数",
+variables": [
+"@输出名": "\"dwLowDateTime\""
+  },
+  {
+
+"variable name": "高位日期时间",
+
+"comment": "文件时间的高位部分",
+
+"data type": "无符号整数",
+
+"@输出名": "\"dwHighDateTime\""
+  }
+],
+"methods": [
+  {
+methods": [
+"method name": "取现行时间",
+methods": [
+"comment": "获取当前的系统时间到本文件时间结构,精度为100纳秒.",
+methods": [
+"static": true,
+methods": [
+"data type": "文件时间结构",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"@视窗.返回参考": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "文件时间结构"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "到时间",
+
+"comment": "将本FILETIME转换为火山的小数型时间",
+
+"static": true,
+
+"data type": "小数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "文件时间结构"
+   }
+
+]
+  },
+  {
+"method name": "到长整数",
+"comment": "返回64位长度的文件时间戳(非Unix时间戳),以100纳秒为基本单位.",
+"static": true,
+"data type": "长整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "文件时间结构"
+   }
+]
+  },
+  {
+
+"method name": "到系统时间结构",
+
+"comment": "将本对象转换到\"系统时间结构(SYSTEMTIME)\"",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "系统时间结构",
+"data type": "系统时间结构"
+   }
+
+]
+  },
+  {
+
+"method name": "到时间戳",
+
+"comment": "将本对象转换到精度为秒的Unix时间戳",
+
+"static": true,
+
+"data type": "长整数",
+
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "文件时间结构"
+   }
+
+]
+  },
+  {
+ }"method name": "到毫秒时间戳",
+ }"comment": "将本对象转换到精度为毫秒的Unix时间戳",
+ }"static": true,
+ }"data type": "长整数",
+ }"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "文件时间结构"
+   }
+ }]
+  },
+  {
+
+"method name": "到纳秒时间戳",
+
+"comment": "将本对象转换到精度为毫秒的Unix时间戳",
+
+"static": true,
+
+"data type": "长整数",
+
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "文件时间结构"
+   }
+
+]
+  },
+  {
+
+"method name": "到时间文本",
+
+"comment": "将文件时间结构转换到指定格式的时间文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "本结构",
+"data type": "文件时间结构"
+   },
+   {
+"parameter name": "格式文本",
+"comment": "默认格式为: \"2022-03-21 09:19:05\",转换后不能超过256个字符.\n下列为可用的格式替换符:\n   %%  %字符  |  %n 换行符  |  %t 水平制表符\n   %C  年份向下整除100          例: 20\n   %y  年份的后2位              例: 22\n   %Y  完整的4位年份            例: 2022\n   %h  缩写的月份名称           例: Apr\n   %b  缩写的月份名称           例: Apr\n   %B  完整的月份名称           例: April\n   %m  十进制的月份             例: 04\n   %d  2位数的某月第N天         例: 01\n   %e  2位的某月第N天,前补空格  例:  1\n   %a  缩写的星期名称           例: Fri\n   %A  完整的星期名称           例: Friday\n   %u  十进制的星期数(1-7)      例: 5\n   %w  星期数(0-6),0为星期天    例: 5\n   %j  3位数的某年第N天         例: 091\n   %U  2位数的某年第N星期       例: 13\n   %W  2位数的某年第N星期       例: 13\n   %D  等价于 %m/%d/%y          例: 04/01/22\n   %F  等价于 %Y-%m-%d          例: 2022-04-01\n   %H  2位数的小时数(24小时制)  例: 16\n   %I  2位数的小时数(12小时制)  例: 04\n   %M  2位数的分钟数            例: 15\n   %S  2位数的秒针数            例: 05\n   %p  12小时进制的AM/PM        例: PM\n   %R  等价于 %H:%M             例: 16:15\n   %T  等价于 %H:%M:%S          例: 16:15:05\n   %r  12小时制的时分秒时间     例: 04:15:05 PM\n   %X  本地环境的12小时制时钟   例: 16:15:05\n   %x  本地环境的日期           例: 04/01/22\n   %z  UTC格式的时区            例: +0800\n   %Z  时区的本地名称           例: 中国标准时间\n   %c  本地环境的日期与时间     例: Fri Apr  1 16:59:32 2022\n\n  格式替换符可以在中间加上#,部分无效果; 部分会将前面的补0或补\n空格去掉,比如\"%#F\"会解析为\"2022-4-1\"; 其中\"%#c\"和\"%#x\"会解析\n为更长的日期时间格式.",
+"data type": "文本型",
+"@默认值": "\"%F %T\""
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "纳秒时钟类",
+"comment": "一个基于x86 CPU时钟周期的低开销纳秒级精度时钟.\n源码: https://github.com/MengRao/tscns\n注: 内部维护了一个全局的单例对象,只需要调用全局方法\"取现行纳秒时间戳\"\n即可获取高精度的计时.",
+"base class": "PIV对象类",
+"@文档": "\"category = \\\"时间操作\\\"\"",
+"@视窗.外部头文件": "\"src\\\\tscns.h\"",
+"@全局类": "真",
+"methods": [
+  {
+methods": [
+"method name": "取现行纳秒时间戳",
+methods": [
+"comment": "获取当前的纳秒时间戳",
+methods": [
+"static": true,
+methods": [
+"data type": "长整数",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "初始化",
+
+"comment": "使用本类之前必须执行本方法进行初始化校准.",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "初始校准耗时",
+"comment": "用于获取CPU时钟周期的频率,单位为纳秒,默认为20毫秒.",
+"data type": "长整数",
+"@默认值": "20000000"
+   },
+   {
+"parameter name": "校准间隔",
+"comment": "之后定期校准的最小时间间隔,单位为纳秒,默认为3秒.",
+"data type": "长整数",
+"@默认值": "3000000000"
+   }
+
+]
+  },
+  {
+"method name": "校准",
+"comment": "时间会逐渐跑偏,所以需要定期在后台(线程中)执行本方法校准时间.\n执行本方法的间隔不应大于\"初始化\"时设置的\"校准间隔\"值.",
+"@嵌入式方法": "\"\""
+  },
+  {
+"method name": "取纳秒时间",
+"comment": "一步获取当前的纳秒时间戳",
+"result comment": "返回纳秒时间戳",
+"data type": "长整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取时钟周期",
+
+"comment": "  获取CPU自启动以来的时钟周期数.\n  本方法执行效率极高,如果任务对时间间隔\n有严格要求,可以先用本方法记录时钟周期,\n再在之后用\"时钟周期到时间\"转换为时间戳.",
+
+"result comment": "返回时钟周期数",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "时钟周期到时间",
+
+"comment": "将时钟周期数转换为纳秒时间戳.",
+
+"result comment": "返回纳秒时间戳",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "时钟周期数",
+"comment": "所欲转换为时间的周期数.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+}"method name": "取展示内容",
+}"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+}"@虚拟方法": "可覆盖",
+}"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+}]
+  }
+]
+ },
+ {
+}"class name": "时钟队列类",
+}"comment": "  封装自系统API的timer-queue timer,跟<Mmsystem.h>里的多媒体时钟对比:\n  多媒体时钟的回调函数会造成阻塞,想不阻塞需要配合线程使用,但启动线程有\n额外的开销; 周期时间也是每次回调函数运行完再计算,所以每次事件之间的间隔\n时间不稳定; 系统限制了最多只能设置16个多媒体时钟.\n  时钟队列的回调函数在非I/O的线程池中执行,不会阻塞其他的时钟; \"周期事件\"\n之间的时间间隔固定不变; 可以在同一个\"时钟队列类\"中添加多个不同周期时间的\n时钟.而且可添加的时钟数量几乎没有上限,我测试添加了上万个也没有问题,开销\n也很低.\n  注意: 时钟的计时精度为1毫秒",
+}"@文档": "\"category = \\\"时间操作.周期时钟\\\"\"",
+}"@视窗.外部头文件": "\"<threadpoollegacyapiset.h>\\r\\n<map>\\r\\n<memory>\"",
+}"methods": [
+  {
+"methods": [
+"method name": "创建时钟队列",
+"methods": [
+"comment": "创建时钟队列.\n类初始化时会自动调用本方法,除非执行过\"销毁时钟队列\",否则无需使用.",
+"methods": [
+"result comment": "返回是否创建成功,重复创建将返回假.",
+"methods": [
+"data type": "逻辑型",
+"methods": [
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "销毁时钟队列",
+
+"comment": "销毁时钟队列,队列中所有的时钟都将被取消并删除.\n类清理时会自动调用本方法.",
+
+"result comment": "返回是否成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "完成事件",
+"comment": "0 将时钟标记为删除并立即返回,如果存在未完成的周期事件,会立即返回假;\n-1 等待所有\"时钟事件\"完成后返回;\n如果提供事件句柄(同步事件类),将立即返回并在删除时钟队列和\"周期事件\"完成后发出信号;",
+"data type": "变整数",
+"@默认值": "0",
+"@输出名": "\"hCompletionEvent\""
+   }
+
+]
+  },
+  {
+"method name": "添加时钟",
+"comment": "创建时钟并添加到时钟队列,添加成功后将立即启动时钟并开始响应\"周期事件\".",
+"result comment": "返回是否添加成功,如果时钟标记已存在则返回假.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "时钟标记",
+"comment": "用户自定义的时钟标记",
+"data type": "文本型",
+"@输出名": "\"szTimerID\""
+   },
+   {
+"parameter name": "周期时间",
+"comment": "时钟的周期时间(毫秒),如果参数为0,只发生一次性的\"周期事件\";\n如果参数大于0,则每经过该时间段后响应\"周期事件\",直到使用\"删除时钟\"或\"更新时钟\"功能.",
+"data type": "整数",
+"@输出名": "\"dwPeriod\""
+   },
+   {
+"parameter name": "启动延时",
+"comment": "时钟第一次发出信号之前必须经过的时间量(毫秒);\n0为不延时,创建时钟后立即响应\"周期事件\".",
+"data type": "整数",
+"@默认值": "0",
+"@输出名": "\"dwDueTime\""
+   },
+   {
+"parameter name": "用户数据",
+"comment": "用户自定义的参数,将传递到\"周期事件\"中,可用于传递数据.",
+"data type": "变整数",
+"@默认值": "0",
+"@输出名": "\"lpUserData\""
+   },
+   {
+"parameter name": "是否线程池运行",
+"comment": "是否在非I/O线程池中运行\"周期事件\",默认为真;\n为真时回调函数之间不会阻塞,固定以周期时间为间隔响应\"周期事件\";\n为假时在时钟线程中调用\"周期事件\",回调函数之间有阻塞,在上一个\"周期事件\"结束后;\n经过指定的周期时间才响应下一个\"周期事件\";",
+"data type": "逻辑型",
+"@默认值": "真",
+"@输出名": "\"bInThreadPool\""
+   }
+]
+  },
+  {
+
+"method name": "添加时钟2",
+
+"comment": "创建时钟并添加到时钟队列,与\"添加时钟\"的不同之处是需要提供自定义的静态方法作为时钟的回调函数.",
+
+"result comment": "返回是否添加成功,如果时钟标记已存在则返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "时钟标记",
+"comment": "用户自定义的时钟标记",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回调函数",
+"comment": "提供所欲执行的时钟回调函数,该方法必须为静态;\n无返回值,且参数类型与\"时钟回调函数模板\"一样.",
+"@匹配方法": "\"时钟回调函数模板\""
+   },
+   {
+"parameter name": "周期时间",
+"comment": "时钟的周期时间(毫秒),如果参数为0,只一次性地执行回调函数.\n如果参数大于0,则每经过该时间段后执行回调函数,直到使用\"删除时钟\"或\"更新时钟\"功能.",
+"data type": "整数"
+   },
+   {
+"parameter name": "启动延时",
+"comment": "时钟第一次发出信号之前必须经过的时间量(毫秒);\n0为不延时,创建时钟后立即执行回调函数.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "用户自定义的参数,将传递到回调函数中,可用于传递数据.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否线程池运行",
+"comment": "是否在非I/O线程池中运行回调函数,默认为真;\n为真时回调函数之间不会阻塞,固定以周期时间为间隔运行;\n为假时在时钟线程中调用回调函数,回调函数之间有阻塞,在上一个回调函数结束后;\n经过指定的周期时间才运行下一个回调函数;",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+data type": "逻辑型""method name": "移除时钟",
+data type": "逻辑型""comment": "从时钟队列中移除时钟,可选是否等待回调函数完成再删除时钟.",
+data type": "逻辑型""result comment": "返回是否成功",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@禁止流程检查": "真",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "时钟标记",
+"comment": "提供用户自定义的时钟标记",
+"data type": "文本型",
+"@输出名": "\"szTimerID\""
+   },
+   {
+"parameter name": "完成事件",
+"comment": "0 将时钟标记为删除并立即返回,如果存在未完成的周期事件,会立即返回假;\n-1 等待\"周期事件\"完成后返回;\n如果提供事件句柄(同步事件类),将立即返回并在并在删除时钟和\"周期事件\"完成后发出信号;",
+"data type": "变整数",
+"@默认值": "0",
+"@输出名": "\"hCompletionEvent\""
+   }
+data type": "逻辑型"]
+  },
+  {
+ta type": "逻辑型"]"method name": "更新时钟",
+ta type": "逻辑型"]"comment": "更改时钟的周期时间和启动延时.\n如果时钟之前的周期时间为0,则无法更新时钟.",
+ta type": "逻辑型"]"result comment": "返回是否成功",
+ta type": "逻辑型"]"data type": "逻辑型",
+ta type": "逻辑型"]"@禁止流程检查": "真",
+ta type": "逻辑型"]"parameters": [
+   {
+"parameter name": "时钟标记",
+"comment": "提供用户自定义的时钟标记",
+"data type": "文本型",
+"@输出名": "\"szTimerID\""
+   },
+   {
+"parameter name": "周期时间",
+"comment": "时钟的周期时间(毫秒),如果参数为0,只发生一次性的\"周期事件\";\n如果参数大于0,则每经过该时间段后响应\"周期事件\",直到使用\"删除时钟\"或\"更新时钟\"功能.",
+"data type": "整数",
+"@输出名": "\"dwPeriod\""
+   },
+   {
+"parameter name": "启动延时",
+"comment": "时钟第一次发出信号之前必须经过的时间量(毫秒);\n0为不延时,更新时钟后立即响应\"周期事件\".",
+"data type": "整数",
+"@默认值": "0",
+"@输出名": "\"dwDueTime\""
+   }
+ta type": "逻辑型"]]
+  },
+  {
+}"method name": "取时钟句柄",
+}"comment": "根据用户自定义的标记获取时钟的句柄",
+}"result comment": "成功返回句柄,失败返回0.",
+}"data type": "变整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "时钟标记",
+"comment": "提供用户自定义的时钟标记",
+"data type": "文本型",
+"@输出名": "\"szTimerID\""
+   }
+}]
+  },
+  {
+
+"method name": "取所有时钟标记",
+
+"comment": "获取所有正在运行的时钟标记",
+
+"result comment": "成功返回时钟序号的数量",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "时钟标记数组",
+"comment": "获取到的时钟标记在此参数中返回",
+"data type": "文本数组类",
+"@输出名": "\"sTimerIDArray\""
+   }
+
+]
+  },
+  {
+
+"method name": "取运行时钟数",
+
+"comment": "获取当前正在运行的时钟数量",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "时钟是否有效",
+
+"comment": "根据时钟标记检查对应的时钟是否正在运行",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "时钟标记",
+"comment": "提供用户自定义的时钟标记",
+"data type": "文本型",
+"@输出名": "\"szTimerID\""
+   }
+
+]
+  },
+  {
+
+"method name": "周期事件",
+
+"comment": "每当经过了指定的时钟周期,将发送本事件.",
+
+"result comment": "此返回值无意义",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "时钟标记",
+"comment": "用户在\"添加时钟\"时自定义的时钟标记",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "用户在\"添加时钟\"时传入的参数.可用于传递数据.",
+"data type": "变整数"
+   }
+
+]
+  }
+}]
+ },
+ {
+}"class name": "时钟队列类2",
+}"comment": "跟\"时钟队列类\"的不同之处是,使用自增的时钟序号代替自定义的时钟标记.\n注意: 时钟的计时精度为1毫秒",
+}"@文档": "\"category = \\\"时间操作.周期时钟\\\"\"",
+}"@视窗.外部头文件": "\"<threadpoollegacyapiset.h>\\r\\n<map>\\r\\n<memory>\"",
+}"methods": [
+  {
+"methods": [
+"method name": "创建时钟队列",
+"methods": [
+"comment": "创建时钟队列.\n类初始化时会自动调用本方法,除非执行过\"销毁时钟队列\",否则无需使用.",
+"methods": [
+"result comment": "返回是否创建成功,重复创建将返回假.",
+"methods": [
+"data type": "逻辑型",
+"methods": [
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "销毁时钟队列",
+
+"comment": "销毁时钟队列,队列中所有的时钟都将被取消并删除.\n类清理时会自动调用本方法.",
+
+"result comment": "返回是否成功",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "完成事件",
+"comment": "0 将时钟标记为删除并立即返回,如果存在未完成的周期事件,会立即返回假;\n-1 等待所有\"时钟事件\"完成后返回;\n如果提供事件句柄(同步事件类),将立即返回并在删除时钟队列和\"周期事件\"完成后发出信号;",
+"data type": "变整数",
+"@默认值": "0",
+"@输出名": "\"hCompletionEvent\""
+   }
+
+]
+  },
+  {
+
+"method name": "添加时钟",
+
+"comment": "创建时钟并添加到时钟队列,添加成功后将立即启动时钟并开始响应\"周期事件\".",
+
+"result comment": "成功返回时钟序号(从0开始分配),失败返回-1.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "周期时间",
+"comment": "时钟的周期时间(毫秒),如果参数为0,只发生一次性的\"周期事件\";\n如果参数大于0,则每经过该时间段后响应\"周期事件\",直到使用\"删除时钟\"或\"更新时钟\"功能.",
+"data type": "整数",
+"@输出名": "\"dwPeriod\""
+   },
+   {
+"parameter name": "启动延时",
+"comment": "时钟第一次发出信号之前必须经过的时间量(毫秒);\n0为不延时,创建时钟后立即响应\"周期事件\".",
+"data type": "整数",
+"@默认值": "0",
+"@输出名": "\"dwDueTime\""
+   },
+   {
+"parameter name": "用户数据",
+"comment": "用户自定义的参数,将传递到\"周期事件\"中,可用于传递数据,亦可作为时钟的标记符.",
+"data type": "变整数",
+"@默认值": "0",
+"@输出名": "\"lpUserData\""
+   },
+   {
+"parameter name": "是否线程池运行",
+"comment": "是否在非I/O线程池中运行\"周期事件\",默认为真;\n为真时回调函数之间不会阻塞,固定以周期时间为间隔响应\"周期事件\";\n为假时在时钟线程中调用\"周期事件\",回调函数之间有阻塞,在上一个\"周期事件\"结束后;\n经过指定的周期时间才响应下一个\"周期事件\";",
+"data type": "逻辑型",
+"@默认值": "真",
+"@输出名": "\"bInThreadPool\""
+   }
+
+]
+  },
+  {
+}"method name": "添加时钟2",
+}"comment": "创建时钟并添加到时钟队列,与\"添加时钟\"的不同之处是需要提供自定义的静态方法作为时钟的回调函数.",
+}"result comment": "成功返回时钟序号(从0开始分配),失败返回-1.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "回调函数",
+"comment": "提供所欲执行的时钟回调函数,该方法必须为静态,\n无返回值,且参数类型与\"时钟回调函数模板\"一样.",
+"@匹配方法": "\"时钟回调函数模板\""
+   },
+   {
+"parameter name": "周期时间",
+"comment": "时钟的周期时间(毫秒),如果参数为0,只一次性地执行回调函数.\n如果参数大于0,则每经过该时间段后执行回调函数,直到使用\"删除时钟\"或\"更新时钟\"功能.",
+"data type": "整数"
+   },
+   {
+"parameter name": "启动延时",
+"comment": "时钟第一次发出信号之前必须经过的时间量(毫秒).\n0为不延时,创建时钟后立即执行回调函数.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "用户自定义的参数,将传递到回调函数中,可用于传递数据,亦可作为时钟的标记符.",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否线程池运行",
+"comment": "是否在非I/O线程池中运行回调函数,默认为真;\n为真时回调函数之间不会阻塞,固定以周期时间为间隔运行;\n为假时在时钟线程中调用回调函数,回调函数之间有阻塞,在上一个回调函数结束后;\n经过指定的周期时间才运行下一个回调函数;",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+"method name": "移除时钟",
+"comment": "从时钟队列中移除时钟,可选是否等待回调函数完成再删除时钟.",
+"result comment": "返回是否成功",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "时钟序号",
+"comment": "提供由\"添加时钟\"返回的序号(从0开始).",
+"data type": "整数",
+"@输出名": "\"nIndex\""
+   },
+   {
+"parameter name": "完成事件",
+"comment": "0 将时钟标记为删除并立即返回,如果存在未完成的周期事件,会立即返回假;\n-1 等待\"周期事件\"完成后返回;\n如果提供事件句柄(同步事件类),将立即返回并在并在删除时钟和\"周期事件\"完成后发出信号;",
+"data type": "变整数",
+"@默认值": "0",
+"@输出名": "\"hCompletionEvent\""
+   }
+]
+  },
+  {
+"method name": "更新时钟",
+"comment": "更改时钟的周期时间和启动延时.\n如果时钟之前的周期时间为0,则无法更新时钟.",
+"result comment": "返回是否成功",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "时钟序号",
+"comment": "提供由\"添加时钟\"返回的序号(从0开始).",
+"data type": "整数",
+"@输出名": "\"nIndex\""
+   },
+   {
+"parameter name": "周期时间",
+"comment": "时钟的周期时间(毫秒),如果参数为0,只发生一次性的\"周期事件\";\n如果参数大于0,则每经过该时间段后响应\"周期事件\",直到使用\"删除时钟\"或\"更新时钟\"功能.",
+"data type": "整数",
+"@输出名": "\"dwPeriod\""
+   },
+   {
+"parameter name": "启动延时",
+"comment": "时钟第一次发出信号之前必须经过的时间量(毫秒);\n0为不延时,更新时钟后立即响应\"周期事件\".",
+"data type": "整数",
+"@默认值": "0",
+"@输出名": "\"dwDueTime\""
+   }
+]
+  },
+  {
+
+"method name": "取时钟句柄",
+
+"comment": "根据序号获取时钟的句柄",
+
+"result comment": "成功返回句柄,失败返回0.",
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "时钟序号",
+"comment": "提供由\"添加时钟\"返回的序号(从0开始).",
+"data type": "整数",
+"@输出名": "\"nIndex\""
+   }
+
+]
+  },
+  {
+}"method name": "取所有时钟序号",
+}"comment": "获取所有正在运行的时钟序号",
+}"result comment": "成功返回时钟序号的数量",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "时钟序号数组",
+"comment": "获取到的时钟序号在此参数中返回",
+"data type": "整数数组类",
+"@输出名": "\"nTimeIndexArray\""
+   }
+}]
+  },
+  {
+"method name": "取添加时钟数",
+"comment": "获取已添加的时钟数量,包括已经移除的时钟.",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取运行时钟数",
+
+"comment": "获取当前正在运行的时钟数量",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "时钟是否有效",
+
+"comment": "根据时钟序号检查对应的时钟是否正在运行",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "时钟序号",
+"comment": "提供由\"添加时钟\"返回的序号(从0开始).",
+"data type": "整数",
+"@输出名": "\"nIndex\""
+   }
+
+]
+  },
+  {
+
+"method name": "周期事件",
+
+"comment": "每当经过了指定的时钟周期,将发送本事件.",
+
+"result comment": "此返回值无意义",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "时钟序号",
+"comment": "提供周期事件的来源时钟序号(从0开始),该序号跟\"添加时钟\"返回的值一样.",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"comment": "用户在\"添加时钟\"时传入的参数.可用于传递数据,亦可作为时钟的标记符.",
+"data type": "变整数"
+   }
+
+]
+  }
+}]
+ },
+ {
+}"class name": "多媒体时钟类",
+}"comment": "多媒体时钟不容易丢失窗口消息.\n  1. 由于系统限制,最多只能创建16个多媒体时钟;\n  2. 时钟的计时精度为1毫秒;\n  3. 尽量不要在周期事件中操作界面组件,需要操作界面的请用\"时钟\"组件;\n  4. 所有时钟事件均在同一个子线程中运行,耗时的周期事件会阻塞周期时间;",
+}"@文档": "\"category = \\\"时间操作.周期时钟\\\"\"",
+}"@视窗.外部头文件": "\"Mmsystem.h\"",
+}"@视窗.外部库": "\"winmm.lib\"",
+}"methods": [
+  {
+"method name": "启动时钟",
+"comment": "启动一个时钟,重复启动会先销毁之前创建的时钟.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "周期时间",
+"comment": "时钟运行的周期时间,以毫秒为单位.",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "结束时钟",
+}"comment": "结束时钟周期"
+  },
+  {
+
+"method name": "是否正在任务",
+
+"comment": "返回时钟是否正在运行",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "时钟事件",
+
+"comment": "每当经过了指定的时钟周期,将发送本事件.\n请注意是本事件运行完毕后才开始下一次的计时.",
+
+"result comment": "此返回值无意义",
+
+"type": "event",
+
+"data type": "整数"
+  }
+}]
+ },
+ {
+}"class name": "线程时钟类",
+}"comment": "[过时功能,尽量不用!]\n多媒体时钟的二次封装.\n  1. 由于系统限制,最多只能创建16个多媒体时钟;\n  2. 时钟的计时精度为1毫秒;\n  3. 尽量不要在周期事件中操作界面组件,需要操作界面的请用\"时钟\"组件;\n  4. 每次触发的时钟事件以新建线程的方式运行,不会阻塞时钟的触发周期;",
+}"@文档": "\"category = \\\"时间操作.周期时钟\\\"\"",
+}"@视窗.外部头文件": "\"Mmsystem.h\"",
+}"@视窗.外部库": "\"winmm.lib\"",
+}"methods": [
+  {
+"@视窗.外部库": "\"winmm.lib\"""method name": "启动时钟",
+"@视窗.外部库": "\"winmm.lib\"""comment": "启动一个时钟,重复启动会先销毁之前创建的时钟.",
+"@视窗.外部库": "\"winmm.lib\"""data type": "逻辑型",
+"@视窗.外部库": "\"winmm.lib\"""@禁止流程检查": "真",
+"@视窗.外部库": "\"winmm.lib\"""parameters": [
+   {
+"parameter name": "周期时间",
+"comment": "时钟运行的周期时间,以毫秒为单位.",
+"data type": "整数"
+   }
+"@视窗.外部库": "\"winmm.lib\""]
+  },
+  {
+}"method name": "结束时钟",
+}"comment": "结束时钟周期"
+  },
+  {
+
+"method name": "是否正在任务",
+
+"comment": "返回时钟是否正在运行",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "时钟事件",
+
+"comment": "每当经过了指定的时钟周期,将发送本事件.\n事件以线程方式运行,耗时极低.",
+
+"result comment": "此返回值无意义",
+
+"type": "event",
+
+"data type": "整数"
+  }
+}]
+ },
+ {
+"class name": "界面时钟类",
+"comment": "界面时钟可以在主窗口的消息循环中处理周期事件.\n  1. 本时钟始终在主线程中运行,可以安全地操作窗口组件;\n  2. 时钟事件之间不会互相阻塞,但请勿在事件中执行耗时操作,否则会卡界面;\n  3. 时钟的计时精度为1毫秒;\n  4. 本时钟不能脱离窗口运行;",
+"@文档": "\"category = \\\"时间操作.周期时钟\\\"\"",
+"methods": [
+  {
+methods": [
+"method name": "启动时钟",
+methods": [
+"comment": "启动时钟,重复启动将替换之前的时钟,可以当作是修改周期时间.",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "请提供主窗口的句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "周期时间",
+"comment": "时钟运行的周期时间,以毫秒为单位.",
+"data type": "整数"
+   }
+methods": [
+]
+  },
+  {
+methods": [
+"method name": "结束时钟",
+methods": [
+"comment": "结束时钟",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真"
+  },
+  {
+methods": [
+"method name": "周期时间",
+methods": [
+"comment": "修改当前的周期时间",
+methods": [
+"type": "property setter",
+methods": [
+"parameters": [
+   {
+"parameter name": "周期时间",
+"comment": "时钟运行的周期时间,以毫秒为单位",
+"data type": "整数"
+   }
+methods": [
+]
+  },
+  {
+methods": [
+"method name": "时钟事件",
+methods": [
+"comment": "每当经过了指定的时钟周期,将发送本事件.\n注意: 本事件在主窗口的消息循环中执行,请勿执行耗时操作,否则会卡界面.",
+methods": [
+"result comment": "此返回值无意义",
+methods": [
+"type": "event",
+methods": [
+"data type": "整数",
+methods": [
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "与当前时钟关联的窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "启动时间",
+"comment": "系统启动后经过的毫秒数,与\"取启动时间\"一致.",
+"data type": "整数"
+   }
+methods": [
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"PIV基础类".]
+}

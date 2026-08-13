@@ -1,0 +1,291 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.程序",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.头文件搜寻目录": "\"Tars\\\\include\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"Tars\\\\include\\\\util\\\\tc_des.h\\r\\nTars\\\\include\\\\util\\\\tc_ex.h\\r\\nTars\\\\include\\\\util\\\\tc_md5.h\\r\\nTars\\\\include\\\\util\\\\tc_tea.h\\r\\nTars\\\\include\\\\util\\\\tc_pack.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部源文件": "\"Tars\\\\src\\\\tc_des.cpp\\r\\nTars\\\\src\\\\tc_ex.cpp\\r\\nTars\\\\src\\\\tc_md5.cpp\\r\\nTars\\\\src\\\\tc_tea.cpp\\r\\nTars\\\\src\\\\tc_pack.cpp\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______QQTea",
+"@全局类": "真",
+"methods": [
+  {
+ = 真"method name": "加密_Tea_FC",
+ = 真"static": true,
+ = 真"data type": "字节集类",
+ = 真"@禁止流程检查": "真",
+ = 真"parameters": [
+   {
+"parameter name": "加密内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥",
+"data type": "字节集类"
+   }
+ = 真]
+  },
+  {
+
+"method name": "解密_Tea_FC",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "解密内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密钥",
+"data type": "字节集类"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "TarsPackIn",
+"comment": "小数据的加密，文本不长度能超过255字节 字节集不能超过512",
+"methods": [
+  {
+
+"method name": "清空",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取长度",
+}"data type": "长整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+data type": "字节集类""method name": "到字节集",
+data type": "字节集类""data type": "字节集类",
+data type": "字节集类""@禁止流程检查": "真"
+  },
+  {
+ata type": "字节集类""@禁止流程检查": "真""method name": "加入字节",
+ata type": "字节集类""@禁止流程检查": "真""@嵌入式方法": "\"\"",
+ata type": "字节集类""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节"
+   }
+ata type": "字节集类""@禁止流程检查": "真"]
+  },
+  {
+加密，，，文本不能超过255字节"method name": "加入短整数",
+加密，，，文本不能超过255字节"@嵌入式方法": "\"\"",
+加密，，，文本不能超过255字节"parameters": [
+   {
+"parameter name": "数据",
+"data type": "短整数"
+   }
+加密，，，文本不能超过255字节]
+  },
+  {
+
+"method name": "加入整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "加入长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+"method name": "加入双精度小数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "小数"
+   }
+]
+  },
+  {
+data type": "字节集类""method name": "加入文本",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否UTF8编码",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "字节集类"]
+  },
+  {
+"method name": "加入字节集",
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "TarsPackOut",
+"comment": "小数据的加密，，，文本不能超过255字节",
+"methods": [
+  {
+ }"method name": "从字节集载入",
+ }"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+ }"method name": "是否到尾部",
+ }"data type": "逻辑型"
+  },
+  {
+}"method name": "读字节",
+}"data type": "字节"
+  },
+  {
+
+"method name": "读短整数",
+
+"data type": "短整数"
+  },
+  {
+@嵌入式方法": "\"\"""method name": "读整数",
+@嵌入式方法": "\"\"""data type": "整数"
+  },
+  {
+@默认值": "真""method name": "读长整数",
+@默认值": "真""data type": "长整数"
+  },
+  {
+ }"method name": "读双精度小数",
+ }"data type": "小数"
+  },
+  {
+ameter name": "数据""method name": "读文本",
+ameter name": "数据""comment": "可能只能读 长度小于255的文本",
+ameter name": "数据""data type": "文本型",
+ameter name": "数据""parameters": [
+   {
+"parameter name": "是否UTF8解码",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "数据"]
+  },
+  {
+meter name": "数据""comment": "可能只能读 长度小于255的文本""method name": "读字节集",
+meter name": "数据""comment": "可能只能读 长度小于255的文本""data type": "字节集类",
+meter name": "数据""comment": "可能只能读 长度小于255的文本""@禁止流程检查": "真"
+  }
+]
+ },
+ {
+"class name": "TarsDES",
+"@全局类": "真",
+"methods": [
+  {
+@全局类": "真""method name": "加密1",
+@全局类": "真""data type": "字节集类",
+@全局类": "真""@禁止流程检查": "真",
+@全局类": "真""parameters": [
+   {
+"parameter name": "密钥",
+"comment": "key, 8个字节",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要加密的数据",
+"data type": "字节集类"
+   }
+@全局类": "真"]
+  },
+  {
+全局类": "真""@禁止流程检查": "真""method name": "解密1",
+全局类": "真""@禁止流程检查": "真""data type": "字节集类",
+全局类": "真""@禁止流程检查": "真""@禁止流程检查": "真",
+全局类": "真""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "密钥",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要解密的数据",
+"data type": "字节集类"
+   }
+全局类": "真""@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "加密3",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "密钥",
+"comment": "key, 8个字节",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要加密的数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+"method name": "解密3",
+"data type": "字节集类",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "密钥",
+"comment": "key, 24个字节",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "要解密的数据",
+"data type": "字节集类"
+   }
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

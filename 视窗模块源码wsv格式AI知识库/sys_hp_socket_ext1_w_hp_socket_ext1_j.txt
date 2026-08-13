@@ -1,0 +1,252 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"HPSocket网络通讯扩展支持库1".
+
+{
+问本程序中的接口需要引用模块"HPSocket网络通讯扩展支持库1"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"HPSocket网络通讯扩展支持库1"."package name": "火山.视窗.网络",
+问本程序中的接口需要引用模块"HPSocket网络通讯扩展支持库1"."classes": [
+ {
+"class name": "TCP转发服务器",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\n实现TCP转发服务器,高并发线程安全.",
+"methods": [
+  {
+
+"method name": "停止"
+  },
+  {
+
+"method name": "启动",
+
+"comment": "初始化并启动转发服务器",
+
+"result comment": "返回初始化结果",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "提供所欲监听的地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "端口",
+"comment": "提供所欲监听的端口号. 有效端口号从0到65535.",
+"data type": "整数"
+   },
+   {
+"parameter name": "转发地址",
+"comment": "提供所欲转发到的服务器地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转发端口",
+"comment": "提供所欲转发到的服务器端口. 有效端口号从0到65535.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取服务器对象",
+
+"comment": "获取当前转发端中所使用的服务器对象,可用于设置其各项属性或参数.",
+
+"data type": "HP_TCP服务器",
+
+"@视窗.返回参考": "真"
+  },
+  {
+
+"method name": "取代理对象",
+
+"comment": "获取当前转发端中所使用的代理端对象,可用于设置其各项属性或参数.",
+
+"data type": "HP_TCP代理类",
+
+"@视窗.返回参考": "真"
+  },
+  {
+础类 = 通用哈希表模板类 @文档 = "category = \"数据处理\"" @模板实现类 = "变整数, 字节集类""method name": "启动完毕",
+础类 = 通用哈希表模板类 @文档 = "category = \"数据处理\"" @模板实现类 = "变整数, 字节集类""comment": "当转发服务器启动后准备就绪时本事件将被发送",
+础类 = 通用哈希表模板类 @文档 = "category = \"数据处理\"" @模板实现类 = "变整数, 字节集类""type": "event",
+础类 = 通用哈希表模板类 @文档 = "category = \"数据处理\"" @模板实现类 = "变整数, 字节集类""data type": "整数",
+础类 = 通用哈希表模板类 @文档 = "category = \"数据处理\"" @模板实现类 = "变整数, 字节集类""parameters": [
+   {
+"parameter name": "本地地址",
+"comment": "转发端本地所监听的地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "本地端口",
+"comment": "转发端本地所监听的端口",
+"data type": "整数"
+   },
+   {
+"parameter name": "转发地址",
+"comment": "转发端所欲将客户转发到的对端地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转发端口",
+"comment": "转发端所欲将客户转发到的对端端口",
+"data type": "整数"
+   }
+础类 = 通用哈希表模板类 @文档 = "category = \"数据处理\"" @模板实现类 = "变整数, 字节集类"]
+  },
+  {
+
+"method name": "客户离开",
+
+"comment": "当转发的客户端从转发目标端失去连接或从本地转发端失去连接时,本事件将被发送.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "关闭原因",
+"comment": "返回导致连接被关闭的操作",
+"data type": "HP操作类型"
+   },
+   {
+"parameter name": "错误码",
+"comment": "如果客户端为非正常退出,此参数为错误代码",
+"data type": "HP错误码"
+   }
+
+]
+  },
+  {
+
+"method name": "客户正在连接",
+
+"comment": "当客户端准备连接到转发服务器时本事件将被发送",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作.\n  2 = 本次操作错误, 服务器主动与当前连接ID断开连接并触发关闭事件.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "客户已连接",
+
+"comment": "当客户端已成功连接到转发目标端时本事件被发送",
+
+"result comment": "可选返回值:\n  0 = 本次操作成功, 继续执行.\n  1 = 忽略本次操作, 继续执行.\n  2 = 本次操作错误, 如果为同步连接将终止启动通信客户端,为异步则会关闭连接.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "转发被关闭",
+
+"comment": "当转发服务器被关闭时本事件将被发送",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "数据转发成功",
+
+"comment": "当转发服务器收到真实客户端发送的数据并成功转发至目标服务器时本事件将被发送,可用于流量统计.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "当前转发端本次成功转发的数据内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "当前转发端本次成功转发的数据长度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "数据接收成功",
+
+"comment": "当转发服务器收到转发目标服务器发送的数据并成功转发至真实客户端时本事件将被发送,可用于流量统计.",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前转发端本地的客户连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"comment": "当前转发端本次成功转发的数据内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "当前转发端本次成功转发的数据长度",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "变整数到变整数哈希表",
+"base class": "通用哈希表模板类",
+"@文档": "\"category = \\\"数据处理\\\"\"",
+"@模板实现类": "\"变整数, 变整数\""
+ },
+ {
+"class name": "变整数到字节集哈希表",
+"base class": "通用哈希表模板类",
+"@文档": "\"category = \\\"数据处理\\\"\"",
+"@模板实现类": "\"变整数, 字节集类\""
+ }
+问本程序中的接口需要引用模块"HPSocket网络通讯扩展支持库1".]
+}

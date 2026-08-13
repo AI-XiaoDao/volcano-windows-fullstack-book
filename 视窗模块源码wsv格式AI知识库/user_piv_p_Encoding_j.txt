@@ -1,0 +1,5203 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"package name": "火山.PIV基础类",
+"comment": "编码处理\nhttps://github.com/SaierMe/piv",
+"classes": [
+ {
+classes": [
+"class name": "编码P",
+classes": [
+"comment": "编码和进制相关的辅助方法(通过类名调用)",
+classes": [
+"base class": "编码辅助类",
+classes": [
+"@文档": "\"category = \\\"编码处理\\\"\"",
+classes": [
+"@别名": "\"//\"",
+classes": [
+"@别名类型": "本地类",
+classes": [
+"@类用途": "定义嵌入参数类型",
+classes": [
+"methods": [
+  {
+
+"method name": "展示字节数据",
+
+"comment": "返回类似调试输出字节集类的文本,但不展示ASCII内容.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数据地址",
+"comment": "所欲展示的数据地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "数据的长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"data type": "整数",
+"@默认值": "1024"
+   }
+
+]
+  },
+  {
+ }"method name": "展示字节集",
+ }"comment": "返回类似调试输出字节集类的文本,但不展示ASCII内容.",
+ }"static": true,
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "欲展示字节集",
+"comment": "所欲展示的字节集数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"data type": "整数",
+"@默认值": "1024"
+   }
+ }]
+  },
+  {
+
+"method name": "字节集到二进制文本",
+
+"comment": "将字节集转换到二进制文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否分隔",
+"comment": "是否每隔1个字节插入一个空格",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "整数到文本",
+
+"comment": "将整数值转换到十进制文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "整数值",
+"comment": "所欲转换的数值",
+"data type": "长整数"
+   },
+   {
+"parameter name": "保留位数",
+"comment": "所返回数值文本的最小长度(包括负号,最大值为20),\n不足位将在前面补零;",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "验证文本编码",
+
+"comment": "验证提供的Unicode文本是否符合指定代码页的文本编码,能判断转换到目标编码后是否会出现乱码.\n返回真表示能完整转换到目标编码.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲验证的文本",
+"comment": "提供所欲验证的UTF-16LE编码文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代码页",
+"comment": "0表示使用本地编码,常用代码页:\n  932 日文(Shift-JIS)\n  936 中文简体(GB2312)\n  949 韩文\n  950 中文繁体(Big5)",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "指定编码到文本",
+
+"comment": "将指定编码的文件数据转换为UTF-16LE文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "0为系统语言,请参考\"代码页\"中的常量.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "文本到指定编码",
+
+"comment": "将UTF-16LE文本转换为指定编码的文件数据",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "目标编码",
+"comment": "0为系统语言,请参考\"代码页\"中的常量.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+classes": [
+]
+ },
+ {
+"class name": "编码辅助类",
+"comment": "编码和进制相关的全局辅助方法",
+"@文档": "\"category = \\\"编码处理\\\"\"",
+"@别名": "\"//\"",
+"@别名类型": "本地类",
+"@类用途": "定义嵌入参数类型",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "取整数值位数",
+
+"comment": "计算整数值的十进制位数,比如0的位数是1,1000的位数是4,",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "整数值",
+"comment": "所欲取位数的数值,可以提供字节、字符、短整数、整数、长整数等类型.",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+
+"method name": "小数向上取整",
+
+"comment": "返回一个小数的整数部分,本方法返回大于所欲处理的小数值的最小整数.\n例如,将 7.3 转换 成 8, 将 -7.3 转换成 -7.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲处理的小数值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+data type": "小数""method name": "合并长整数",
+data type": "小数""comment": "  将第一个整数放置到结果长整数的低32位,将第二个整数放置到结果\n长整数的高32位,以此合并成一个长整数,并返回合并后的结果.",
+data type": "小数""static": true,
+data type": "小数""data type": "长整数",
+data type": "小数""@嵌入式方法": "\"\"",
+data type": "小数""parameters": [
+   {
+"parameter name": "用作合并的整数1",
+"data type": "整数"
+   },
+   {
+"parameter name": "用作合并的整数2",
+"data type": "整数"
+   }
+data type": "小数"]
+  },
+  {
+
+"method name": "取高32位",
+
+"comment": "获取64位长整数的高32位,对应\"合并长整数\".",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲取位的值",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取低32位",
+
+"comment": "获取64位长整数的低32位,对应\"合并长整数\".",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲取位的值",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取高16位",
+
+"comment": "获取32位整数的高16位,对应\"合并整数\".\n#define HIWORD(l)   ((WORD) (((DWORD) (l) >> 16) & 0xFFFF))",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲取位的值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取低16位",
+
+"comment": "获取32位整数的低16位,对应\"合并整数\".\n#define LOWORD(l)   ((WORD) (l))",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲取位的值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取高8位",
+
+"comment": "获取16位短整数的高8位,对应\"合并短整数\".\n#define HIBYTE(w)   ((BYTE) (((WORD) (w) >> 8) & 0xFF))",
+
+"static": true,
+
+"data type": "短整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲取位的值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取低8位",
+
+"comment": "获取16位短整数的低8位,对应\"合并短整数\".\n#define LOBYTE(w)   ((BYTE) (w))",
+
+"static": true,
+
+"data type": "短整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲取位的值",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取字符十六进制文本",
+
+"comment": "返回所指定字符所对应的十六进制文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲转换的字符",
+"data type": "字符"
+   },
+   {
+"parameter name": "所需要的最小宽度",
+"comment": "指定所需求的最小宽度(数字数目),如果有效数值宽度小于该值,则自动在首部加0.\n为0表示去除所有的前置'0'数字. 字节的十六进制文本不应大于4.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "取短整数十六进制文本",
+
+"comment": "返回所指定短整数所对应的十六进制文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲转换的短整数",
+"data type": "短整数"
+   },
+   {
+"parameter name": "所需要的最小宽度",
+"comment": "指定所需求的最小宽度(数字数目),如果有效数值宽度小于该值,则自动在首部加0.\n为0表示去除所有的前置'0'数字. 字节的十六进制文本不应大于4.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "取字节十六进制文本",
+
+"comment": "返回所指定字节所对应的十六进制文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲转换的字节数",
+"data type": "字节"
+   },
+   {
+"parameter name": "所需要的最小宽度",
+"comment": "指定所需求的最小宽度(数字数目),如果有效数值宽度小于该值,则自动在首部加0.\n为0表示去除所有的前置'0'数字. 字节的十六进制文本不应大于2.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "反转字符字节序",
+
+"comment": "  将所指定整数的组成字节的顺序反转,返回反转后的结果值.譬如十六进制整数0x12345678,\n反转后将返回0x78563412. 本命令在与类似Java这样的语言进行数据交互时很有用处.",
+
+"static": true,
+
+"data type": "字符",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲反转的字符",
+"data type": "字符"
+   }
+
+]
+  },
+  {
+
+"method name": "反转短整数字节序",
+
+"comment": "  将所指定整数的组成字节的顺序反转,返回反转后的结果值.譬如十六进制整数0x12345678,\n反转后将返回0x78563412. 本命令在与类似Java这样的语言进行数据交互时很有用处.",
+
+"static": true,
+
+"data type": "短整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲反转的短整数",
+"data type": "短整数"
+   }
+
+]
+  },
+  {
+"method name": "任意进制文本到整数",
+"comment": "任意进制文本到十进制整数",
+"result comment": "转换完全失败会返回0.",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "转换前的文本",
+"comment": "所欲转换的任意进制文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转换前的进制",
+"comment": "  文本的进制,范围为2-36进制.\n  如果为0,则按文本的开头自动识别,如\"0x\"为16进制;\"0\"为8进制;\"1-9\"为10进制.",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "任意进制文本到长整数",
+
+"comment": "任意进制文本到十进制长整数",
+
+"result comment": "转换完全失败会返回0.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "转换前的文本",
+"comment": "所欲转换的任意进制文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转换前的进制",
+"comment": "  文本的进制,范围为2-36进制.\n  如果为0,则按文本的开头自动识别,如\"0x\"为16进制;\"0\"为8进制;\"1-9\"为10进制.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "任意进制文本到变整数",
+
+"comment": "任意进制文本到十进制变整数",
+
+"result comment": "转换完全失败会返回0.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "转换前的文本",
+"comment": "所欲转换的任意进制文本.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转换前的进制",
+"comment": "  文本的进制,范围为2-36进制.\n  如果为0,则按文本的开头自动识别,如\"0x\"为16进制;\"0\"为8进制;\"1-9\"为10进制.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "整数到任意进制文本",
+
+"comment": "十进制整数到任意进制文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "转换前的整数",
+"data type": "整数"
+   },
+   {
+"parameter name": "转换后的进制",
+"comment": "2-36进制",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "长整数到任意进制文本",
+
+"comment": "十进制长整数到任意进制文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "转换前的长整数",
+"data type": "长整数"
+   },
+   {
+"parameter name": "转换后的进制",
+"comment": "2-36进制",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "无符号长整数到任意进制文本",
+
+"comment": "十进制无符号长整数到任意进制文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "转换前的长整数",
+"data type": "长整数"
+   },
+   {
+"parameter name": "转换后的进制",
+"comment": "2-36进制",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "任意进制文本到任意进制文本",
+
+"comment": "2-36进制间的文本转换",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "转换前的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "转换前的进制",
+"comment": "2-36进制",
+"data type": "整数"
+   },
+   {
+"parameter name": "转换后的进制",
+"comment": "2-36进制",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "十六进制文本到变整数",
+}"comment": "十六进制文本转换到十进制变整数",
+}"static": true,
+}"data type": "变整数",
+}"parameters": [
+   {
+"parameter name": "十六进制文本",
+"comment": "所欲转换的十六进制文本.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "是否为数值文本",
+
+"comment": "判断提供的文本是否为有效的数值",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数值文本",
+"comment": "所欲判断的任意进制文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数值进制",
+"comment": "文本的进制,范围为2-36进制.\n如果为0,则按文本的开头自动识别,如\"0x\"为16进制;\"0\"为8进制;\"1-9\"为10进制.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+
+"method name": "取千位分隔数值文本",
+
+"comment": "使用千位分隔符格式化数值文本.\n例: 1,234,567,890.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数值",
+"comment": "所欲格式化的数值,可以提供小于长整数的任意类型数值.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取格式字节文本",
+
+"comment": "返回适当单位的尺寸文本,根据字节数自动计算适合的单位(bytes、KB、MB、GB和TB).",
+
+"static": true,
+
+"data type": "文本型",
+
+"@视窗.外部头文件": "\"shlwapi.h\"",
+
+"@视窗.外部库": "\"Shlwapi.lib\"",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "字节数",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取格式千字节文本",
+
+"comment": "返回KB单位的尺寸文本,会将字节数向上舍入取整,如小于1024也会返回\"1 KB\".",
+
+"static": true,
+
+"data type": "文本型",
+
+"@视窗.外部头文件": "\"shlwapi.h\"",
+
+"@视窗.外部库": "\"Shlwapi.lib\"",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "字节数",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "十六进制字符到数值",
+"parameters": [
+"comment": "将一个十六进制字符转换到10进制数值,\n如果指定字符不是十六进制,则返回原值.\n例: '0'->0, 'f'->16",
+"parameters": [
+"static": true,
+"parameters": [
+"data type": "字符",
+"parameters": [
+"@禁止流程检查": "真",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "字符值",
+"data type": "字符"
+   }
+"parameters": [
+]
+  },
+  {
+
+"method name": "USC2到字符",
+
+"comment": "将一个USC2编码转换到Unicode字符,例: \"6d4b\"->'测'\n注意: 提供的文本应当不含\"\\u\"、\"%u\"等前缀,至少要有四个字符.",
+
+"static": true,
+
+"data type": "字符",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本指针",
+"comment": "提供的文本至少有四个字符",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "文本到Usc2编码",
+
+"comment": "将文本内容转换到Usc2编码,例: \"测试\"->\"\\u6d4b\\u8bd5\"",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲编码文本",
+"comment": "所欲编码的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "不编码ASCII字符",
+"comment": "不对英文字母、数字、半角标点符号进行编码",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "仅编码非常用字符",
+"comment": "仅转换GBK编码不支持显示的字符;\n注: 本参数为真后,将无视上一个参数值,始终不编码ASCII字符.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "前缀",
+"comment": "可以自定义Usc编码的前缀,一般为\"\\u\"和\"%u\".",
+"data type": "文本型",
+"@默认值": "\"\\\\u\""
+   }
+
+]
+  },
+  {
+
+"method name": "Usc2编码到文本",
+
+"comment": "将Usc2编码文本还原为文本内容,例: \"\\u6d4b\\u8bd5\"->\"测试\"",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "USC2文本",
+"comment": "请确保提供的Usc2编码文本有效,否则会返回不可预料的结果.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "前缀",
+"comment": "请提供Usc2编码的前缀,一般为\"\\u\"和\"%u\".",
+"data type": "文本型",
+"@默认值": "\"\\\\u\""
+   }
+
+]
+  },
+  {
+
+"method name": "整数到中文小写数字",
+
+"comment": "将整数值格式化为中文小写数字.\n例: 12345 转换为“一万二千三百四十五”.\n\"数值到大写\"的二次封装,区别是从小数改为整数值.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数字值",
+"comment": "进行转换的数字值,可以为字节、字符、短整数、整数、长整数等类型.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "整数到中文大写数字",
+
+"comment": "将整数值格式化为中文大写数字.\n例: 12345 转换为“壹万贰仟叁佰肆拾伍”.\n\"数值到大写\"的二次封装,区别是从小数改为整数值.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数字值",
+"comment": "进行转换的数字值,可以为字节、字符、短整数、整数、长整数等类型.",
+"data type": "长整数"
+   }
+
+]
+  },
+  {
+
+"method name": "小数到中文小写数字",
+
+"comment": "将小数值格式化为中文小写数字.\n例: 12345.55 转换为“一万二千三百四十五.五五”.\n\"数值到大写\"的二次封装,区别是\"点\"改用了\".\"符号.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数字值",
+"comment": "进行转换的数字值",
+"data type": "小数"
+   },
+   {
+"parameter name": "小数位数",
+"comment": "指定保留的小数位数,必须大于等于0",
+"data type": "整数",
+"@默认值": "2"
+   }
+
+]
+  },
+  {
+
+"method name": "小数到中文大写数字",
+
+"comment": "将小数值格式化为中文大写数字.\n例: 12345.55 转换为“壹万贰仟叁佰肆拾伍.伍伍”.\n\"数值到大写\"的二次封装,区别是\"点\"改用了\".\"符号.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数字值",
+"comment": "进行转换的数字值",
+"data type": "小数"
+   },
+   {
+"parameter name": "小数位数",
+"comment": "指定保留的小数位数,必须大于等于0",
+"data type": "整数",
+"@默认值": "2"
+   }
+
+]
+  },
+  {
+"method name": "小数到中文小写金额",
+"comment": "将小数值格式化为中文小写金额.\n例: 12345.50 转换为“人民币一万二千三百四十五元五角”.\n\"数值到金融\"的二次封装,区别是带了\"人民币\"前缀.",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "数字值",
+"comment": "进行转换的数字值",
+"data type": "小数"
+   },
+   {
+"parameter name": "前缀文本",
+"data type": "文本型",
+"@默认值": "\"人民币\""
+   }
+]
+  },
+  {
+
+"method name": "小数到中文大写金额",
+
+"comment": "将小数值格式化为中文大写金额.\n例: 12345.50 转换为“人民币壹万贰仟叁佰肆拾伍元伍角”.\n\"数值到金融\"的二次封装,区别是带了\"人民币\"前缀.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "数字值",
+"comment": "进行转换的数字值",
+"data type": "小数"
+   },
+   {
+"parameter name": "前缀文本",
+"data type": "文本型",
+"@默认值": "\"人民币\""
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "代码页",
+"constants": [
+  {
+
+"constant name": "ANSI",
+
+"comment": "CP_ACP 系统默认的Windows ANSI代码页",
+
+"data type": "整数",
+
+"initial value": "0"
+  },
+  {
+
+"constant name": "OEM",
+
+"comment": "CP_OEMCP",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "Macintosh",
+
+"comment": "CP_MACCP",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "线程代码页",
+
+"comment": "CP_THREAD_ACP 当前线程的ANSI代码页",
+
+"data type": "整数",
+
+"initial value": "3"
+  },
+  {
+}"constant name": "符号",
+}"comment": "CP_SYMBOL 符号代码页",
+}"data type": "整数",
+}"initial value": "43"
+  },
+  {
+
+"constant name": "UTF7",
+
+"comment": "CP_UTF7 Unicode(UTF-7)",
+
+"data type": "整数",
+
+"initial value": "65000"
+  },
+  {
+
+"constant name": "UTF8",
+
+"comment": "CP_UTF8 Unicode(UTF-8)",
+
+"data type": "整数",
+
+"initial value": "65001"
+  },
+  {
+
+"constant name": "日文",
+
+"comment": "日文 Shift-JIS",
+
+"data type": "整数",
+
+"initial value": "932"
+  },
+  {
+"comment": "CP_SYMBOL 符号代码页""constant name": "简体中文",
+"comment": "CP_SYMBOL 符号代码页""comment": "简体中文 GBK",
+"comment": "CP_SYMBOL 符号代码页""data type": "整数",
+"comment": "CP_SYMBOL 符号代码页""initial value": "936"
+  },
+  {
+
+"constant name": "韩文",
+
+"data type": "整数",
+
+"initial value": "949"
+  },
+  {
+}"constant name": "繁体中文",
+}"comment": "繁体中文 Big5",
+}"data type": "整数",
+}"initial value": "950"
+  },
+  {
+
+"constant name": "GB2312",
+
+"comment": "简体中文 GB2312（仅收录6763个汉字）",
+
+"data type": "整数",
+
+"initial value": "20936"
+  },
+  {
+
+"constant name": "GB18030",
+
+"comment": "简体中文 GB18030（单字最大4字节,共收录87887个汉字）",
+
+"data type": "整数",
+
+"initial value": "54936"
+  }
+]
+ },
+ {
+"class name": "位集合",
+"comment": "  位集合(std::bitset)表示一个N位的固定大小序列.可以用逻辑运算符\n操作位集合,并将它与文本和整数互相转换.\n  位集合的成员元素为二进制位,可以很方便地设置和获取二进制位的值.\n\n注意事项:\n 1. 必须执行\"创建/创建自XX\"方法后,才能使用本类的其他方法;\n 2. 赋值时,必须确保两个变量均已被创建,且二进制位数一致;",
+"@文档": "\"category = \\\"编码处理\\\"\"",
+"@视窗.外部头文件": "\"<bitset>\"",
+"@别名": "\"// std::bitset<N>\"",
+"@别名类型": "本地类",
+"methods": [
+  {
+
+"method name": "创建",
+
+"comment": "构造指定位数的位集合,其中所有位均设置为假(0).\n注意: 本类的所有创建方法都不能重复调用.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位数",
+"comment": "所欲构造的位数,1字节为8位.\n注意: 本参数不能使用整数变量,需要立即数、常量或方法返回值;",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自数值",
+
+"comment": "通过整数型值初始化构造位集合,位数与所提供的数值一样大(1字节为8位).\n注意: 本类的所有创建方法都不能重复调用.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "初始化数值",
+"comment": "所欲初始化到位集合的整数型值",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自文本",
+
+"comment": "通过文本初始化构造位集合,需要指定位数.\n注意: 本类的所有创建方法都不能重复调用.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位数",
+"comment": "所欲构造的位数,1字节为8位.\n注意: 本参数不能使用整数变量,需要立即数、常量或方法返回值;",
+"data type": "整数"
+   },
+   {
+"parameter name": "位文本",
+"comment": "提供用于初始化位集合的文本,比如\"100010\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲初始化长度",
+"comment": "提供使用位文本的多少个字符,必须小于或等于位文本的长度,-1表示使用整个文本.",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "零字符",
+"comment": "位设置为0(false)的代用字符",
+"data type": "字符",
+"@默认值": "'0'"
+   },
+   {
+"parameter name": "一字符",
+"comment": "位设置为1(true)的代用字符",
+"data type": "字符",
+"@默认值": "'1'"
+   }
+
+]
+  },
+  {
+comment": "位设置为1(true)的代用字符""method name": "取位",
+comment": "位设置为1(true)的代用字符""comment": "访问指定索引位置的二进制位,返回位的值(真/假).",
+comment": "位设置为1(true)的代用字符""static": true,
+comment": "位设置为1(true)的代用字符""data type": "逻辑型",
+comment": "位设置为1(true)的代用字符""@嵌入式方法": "\"\"",
+comment": "位设置为1(true)的代用字符""parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "索引位置",
+"comment": "提供所欲返回位的位置,索引位置从0开始,必须大于等于0小于位集合的位数.",
+"data type": "整数"
+   }
+comment": "位设置为1(true)的代用字符"]
+  },
+  {
+ }"method name": "为全部真",
+ }"comment": "位集合的所有二进制位均设置为真时返回真",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+ }]
+  },
+  {
+
+"method name": "为任一真",
+
+"comment": "位集合的任一二进制位设置为真时返回真",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "为全部假",
+
+"comment": "位集合的所有二进制位均重置为假时返回真",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "取设置位数",
+
+"comment": "返回位集合中被设置为真的二进制位数量",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "取位数",
+
+"comment": "返回位集合的位数",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "按位与",
+
+"comment": "进行两个位集合之间的二进制位与运算,返回计算结果.\n注意: 两个位集合以及返回结果的位数必须一致,\n若要将结果赋值到变量,被赋值的变量必须首先被\"创建\".",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "位运算左值",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位运算右值",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "按位或",
+
+"comment": "进行两个位集合之间的二进制位或运算,返回计算结果.\n注意: 两个位集合以及返回结果的位数必须一致,\n若要将结果赋值到变量,被赋值的变量必须首先被\"创建\".",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "位运算左值",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位运算右值",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "按位异或",
+
+"comment": "进行两个位集合之间的二进制位异或运算,返回计算结果.\n注意: 两个位集合以及返回结果的位数必须一致,\n若要将结果赋值到变量,被赋值的变量必须首先被\"创建\".",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "位运算左值",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位运算右值",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "按位左移",
+
+"comment": "进行位集合的二进制左移(向高索引位置),返回计算结果.\n注意: 返回结果的位数跟当前对象一致,若要将结果赋值到变量,\n被赋值的变量必须首先被\"创建\".",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位移数目",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "按位右移",
+
+"comment": "进行位集合的二进制右移(向低索引位置),返回计算结果.\n注意: 返回结果的位数跟当前对象一致,\n若要将结果赋值到变量,被赋值的变量必须首先被\"创建\".",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位移数目",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "按位取反",
+
+"comment": "将位集合的所有二进制位进行反转,返回反转之后的结果.\n注意: 返回结果的位数跟当前对象一致,若要将结果赋值到变量,\n被赋值的变量必须首先被\"创建\".",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "自身位与",
+
+"comment": "将当前位集合与指定位集合之间进行二进制位与运算,返回自身.\n注意: 两个位集合的位数必须一致",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位运算右值",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "自身位或",
+
+"comment": "将当前位集合与指定位集合之间进行二进制位或运算,返回自身.\n注意: 两个位集合的位数必须一致",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位运算右值",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "自身位异或",
+
+"comment": "将当前位集合与指定位集合之间进行二进制位异或运算,返回自身.\n注意: 两个位集合的位数必须一致",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位运算右值",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "自身位左移",
+
+"comment": "将当前位集合的二进制左移(向高索引位置)指定数目,返回自身.",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位移数目",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "自身位右移",
+
+"comment": "将当前位集合的二进制右移(向低索引位置)指定数目,返回自身.",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "位移数目",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "设置位",
+
+"comment": "将指定位置的二进制位设置为真,返回位集合自身.",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "索引位置",
+"comment": "提供所欲设置的位的位置,索引位置从0开始,必须大于等于0小于位集合的位数.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "重置位",
+
+"comment": "将指定位置的二进制位重置为假,返回位集合自身.",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "索引位置",
+"comment": "提供所欲设置的位的位置,索引位置从0开始,必须大于等于0小于位集合的位数.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "反转位",
+
+"comment": "反转指定位置的二进制位(真改为假,假改为真),返回位集合自身.",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "索引位置",
+"comment": "提供所欲翻转的位的位置,索引位置从0开始,必须大于等于0小于位集合的位数.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+"method name": "设置所有位",
+"comment": "将所有二进制位的值设置为真,返回位集合自身.",
+"static": true,
+"data type": "位集合",
+"@嵌入式方法": "\"\"",
+"@视窗.返回参考": "真",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+]
+  },
+  {
+
+"method name": "重置所有位",
+
+"comment": "将所有二进制位的值重置为假,返回位集合自身.",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "反转所有位",
+
+"comment": "翻转所有二进制位的值(真改为假,假改为真),返回位集合自身.",
+
+"static": true,
+
+"data type": "位集合",
+
+"@嵌入式方法": "\"\"",
+
+"@视窗.返回参考": "真",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "到文本",
+
+"comment": "将位集合的内容转换到文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   },
+   {
+"parameter name": "零字符",
+"comment": "位设置为假(0)的代用字符",
+"data type": "字符",
+"@默认值": "'0'"
+   },
+   {
+"parameter name": "一字符",
+"comment": "位设置为真(1)的代用字符",
+"data type": "字符",
+"@默认值": "'1'"
+   }
+
+]
+  },
+  {
+
+"method name": "到整数",
+
+"comment": "将位集合的内容转换到整数.\n位集合的首位对应数值的最低有效位,而尾位对应最高有效位.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+
+]
+  },
+  {
+
+"method name": "到长整数",
+
+"comment": "将位集合的内容转换到长整数.\n位集合的首位对应数值的最低有效位,而尾位对应最高有效位.",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"data type": "位集合"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "simdUTF",
+"comment": "  使用SIMD指令集(SSE2, AVX2, NEON, AVX-512)加速,\n每秒数十亿字符的Unicode编码验证和转换库.\n  源码: https://github.com/simdutf/simdutf",
+"@文档": "\"category = \\\"编码处理\\\"\"",
+"@别名": "\"//\"",
+"@别名类型": "本地类",
+"@类用途": "访问静态成员",
+"@视窗.外部头文件": "\"src\\\\simdutf.h\"",
+"@视窗.外部源文件": "\"src\\\\simdutf.cpp\"",
+"methods": [
+  {
+@类用途": "访问静态成员""method name": "UTF8到文本",
+@类用途": "访问静态成员""comment": "将所指定UTF-8格式的文本数据转换到UTF-16LE文本后返回.",
+@类用途": "访问静态成员""static": true,
+@类用途": "访问静态成员""data type": "文本型",
+@类用途": "访问静态成员""parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@类用途": "访问静态成员"]
+  },
+  {
+}"method name": "文本到UTF8",
+}"comment": "将UTF-16LE文本转换到UTF-8字节集后返回.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16LE文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "多字节到UTF8",
+}"comment": "将所指定ANSI多字节数据转换到UTF-8字节集后返回.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "多字节文本",
+"comment": "提供所欲转换的ANSI多字节编码文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+
+"method name": "UTF8到多字节",
+
+"comment": "将所指定UTF-8格式数据转换到ANSI多字节后返回.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "UTF8到文本_Ex",
+
+"comment": "将所指定UTF-8格式的文本数据转换到UTF-16LE文本.\n跟\"UTF8到文本\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-16LE文本的字符数(2字节),失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF16文本",
+"comment": "转换后的UTF-16LE文本将保存在此参数中",
+"data type": "文本型",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "文本到UTF8_Ex",
+
+"comment": "将UTF-16LE文本转换到UTF-8字节集.\n跟\"文本到UTF8\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-8文本的字节数,失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16LE文本",
+"data type": "文本型",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF8文本",
+"comment": "转换后的UTF-8文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "多字节到UTF8_Ex",
+
+"comment": "将所指定ANSI多字节数据转换到UTF-8字节集.\n跟\"多字节到UTF8\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-8文本的字节数,失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "多字节文本",
+"comment": "提供所欲转换的ANSI多字节编码文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF8文本",
+"comment": "转换后的UTF-8文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "UTF8到多字节_Ex",
+
+"comment": "将所指定UTF-8格式数据转换到ANSI多字节.\n跟\"UTF8到多字节\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回多字节文本的字节数,失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "多字节文本",
+"comment": "转换后的ANSI多字节文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "反转文本字节序",
+
+"comment": "  将提供的数据反转字节序,比如将输入的UTF-16LE转换为\nUTF-16BE,或者将UTF-16BE转换为UTF-16LE.",
+
+"result comment": "返回反转后的UTF-16编码数据",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF16数据",
+"comment": "所欲反转字节序的UTF-16编码数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+
+]
+  },
+  {
+}"method name": "自动检测编码",
+}"comment": "自动检测文本数据的Unicode编码类型,本方法只返回一个结果.\n本方法不支持检测ANSI的编码,统一返回0(未知).",
+}"result comment": "请参考\"SIMD编码类型\"的常量,本方法只返回其中一个值.",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文本数据",
+"comment": "所欲检测Unicode编码的文本数据.",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+}]
+  },
+  {
+}"method name": "检测编码",
+}"comment": "  检测文本数据的Unicode编码类型,如果检测的结果可能是UTF8或UTF-16LE,\n它将返回\"SIMD编码类型.UTF8 | SIMD编码类型.UTF-16LE\"的位或值.\n  本方法不支持检测ANSI的编码,统一返回0(未知).",
+}"result comment": "返回的结果可能是\"SIMD编码类型\"常量的位或值,请通过\"位与\"判断类型.",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+}]
+  },
+  {
+}"method name": "UTF8到UTF16LE",
+}"comment": "将所指定UTF-8格式的文本数据转换到UTF-16LE字节集后返回.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "UTF8到UTF16BE",
+}"comment": "将所指定UTF-8格式的文本数据转换到UTF-16BE字节集后返回.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "UTF8到UTF32",
+}"comment": "将所指定UTF-8格式的文本数据转换到UTF-32文本数据后返回.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "UTF8到UTF16LE_Ex",
+}"comment": "将所指定UTF-8格式的文本数据转换到UTF-16LE字节集.\n跟\"UTF8到UTF16LE\"的区别是在参数中返回转换后的数据.",
+}"result comment": "返回UTF-16LE文本的字符数(2字节),失败返回0.",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF16文本",
+"comment": "转换后的UTF-16LE文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+}]
+  },
+  {
+}"method name": "UTF8到UTF16BE_Ex",
+}"comment": "将所指定UTF-8格式的文本数据转换到UTF-16BE字节集.\n跟\"UTF8到UTF16BE\"的区别是在参数中返回转换后的数据.",
+}"result comment": "返回UTF-16BE文本的字符数(2字节),失败返回0.",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF16文本",
+"comment": "转换后的UTF-16BE文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+}]
+  },
+  {
+}"method name": "UTF8到UTF32_Ex",
+}"comment": "将所指定UTF-8格式的文本数据转换到UTF-32文本数据.\n跟\"UTF8到UTF32\"的区别是在参数中返回转换后的数据.",
+}"result comment": "返回UTF-32文本的字符数(4字节),失败返回0.",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "UTF8文本",
+"comment": "提供所欲转换的UTF-8字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF32文本",
+"comment": "转换后的UTF-32文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+}]
+  },
+  {
+
+"method name": "文本到UTF32",
+
+"comment": "将UTF-16LE文本转换到UTF-32字节集后返回.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16LE文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "UTF16LE到UTF8",
+
+"comment": "将UTF-16LE文本数据转换到UTF-8字节集后返回.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16LE文本",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ }"method name": "UTF16LE到UTF32",
+ }"comment": "将UTF-16LE文本转换到UTF-32字节集后返回.",
+ }"static": true,
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16LE文本",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+}"method name": "UTF16BE到UTF8",
+}"comment": "将UTF-16BE文本数据转换到UTF-8字节集后返回.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16BE文本",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "UTF16BE到UTF32",
+}"comment": "将UTF-16BE文本数据转换到UTF-32字节集后返回.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16BE文本",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+"method name": "文本到UTF32_Ex",
+"comment": "将UTF-16LE文本转换到UTF-32字节集后返回.\n跟\"文本到UTF32\"的区别是在参数中返回转换后的数据.",
+"result comment": "返回UTF-32文本的字符数(4字节),失败返回0.",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16LE文本",
+"data type": "文本型",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF32文本",
+"comment": "转换后的UTF-32文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+]
+  },
+  {
+
+"method name": "UTF16LE到UTF8_Ex",
+
+"comment": "将UTF-16LE文本数据转换到UTF-8字节集.\n跟\"UTF16LE到UTF8\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-8文本的字节数,失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16LE文本",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF8文本",
+"comment": "转换后的UTF-8文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "UTF16LE到UTF32_Ex",
+
+"comment": "将UTF-16LE文本转换到UTF-32字节集.\n跟\"UTF16LE到UTF32\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-32文本的字符数(4字节),失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16LE文本",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF32文本",
+"comment": "转换后的UTF-32文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "UTF16BE到UTF8_Ex",
+
+"comment": "将UTF-16BE文本数据转换到UTF-8字节集.\n跟\"UTF16BE到UTF8\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-8文本的字节数,失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16BE文本",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF8文本",
+"comment": "转换后的UTF-8文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+}"method name": "UTF16BE到UTF32_Ex",
+}"comment": "将UTF-16BE文本数据转换到UTF-32字节集.\n跟\"UTF16BE到UTF32\"的区别是在参数中返回转换后的数据.",
+}"result comment": "返回UTF-32文本的字符数(4字节),失败返回0.",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "UTF16文本",
+"comment": "提供所欲转换的UTF-16BE文本",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF32文本",
+"comment": "转换后的UTF-32文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+}]
+  },
+  {
+"method name": "UTF32到UTF8",
+"comment": "将UTF-32文本数据转换到UTF-8字节集后返回.",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "UTF32文本",
+"comment": "提供所欲转换的UTF-32字符集文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+
+"method name": "UTF32到文本",
+
+"comment": "将UTF-32文本数据转换到UTF-16LE文本后返回.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "UTF32文本",
+"comment": "提供所欲转换的UTF-32字符集文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+}"method name": "UTF32到UTF16LE",
+}"comment": "将UTF-32文本数据转换到UTF-16LE字节集后返回.",
+}"static": true,
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "UTF32文本",
+"comment": "提供所欲转换的UTF-32字符集文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+"method name": "UTF32到UTF16BE",
+"comment": "将UTF-32文本数据转换到UTF-16BE字节集后返回.",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "UTF32文本",
+"comment": "提供所欲转换的UTF-32字符集文本数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+
+"method name": "UTF32到UTF8_Ex",
+
+"comment": "将UTF-32文本数据转换到UTF-8字节集.\n跟\"UTF32到UTF8\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-8文本的字节数,失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF32文本",
+"comment": "提供所欲转换的UTF-32LE字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF8文本",
+"comment": "转换后的UTF-8文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "UTF32到文本_Ex",
+
+"comment": "将UTF-32文本数据转换到UTF-16LE文本.\n跟\"UTF32到文本\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-16LE文本的字符数(2字节),失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF32文本",
+"comment": "提供所欲转换的UTF-32字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF16文本",
+"comment": "转换后的UTF-16LE文本将保存在此参数中",
+"data type": "文本型",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "UTF32到UTF16LE_Ex",
+
+"comment": "将UTF-32文本数据转换到UTF-16LE字节集.\n跟\"UTF32到UTF16LE\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-16LE文本的字符数(2字节),失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF32文本",
+"comment": "提供所欲转换的UTF-32字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF16文本",
+"comment": "转换后的UTF-16LE文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "UTF32到UTF16BE_Ex",
+
+"comment": "将UTF-32文本数据转换到UTF-16BE字节集.\n跟\"UTF32到UTF16BE\"的区别是在参数中返回转换后的数据.",
+
+"result comment": "返回UTF-16BE文本的字符数(2字节),失败返回0.",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF32文本",
+"comment": "提供所欲转换的UTF-32字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "UTF16文本",
+"comment": "转换后的UTF-16BE文本将保存在此参数中",
+"data type": "字节集类",
+"@输出名": "\"output\""
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"null_terminated\""
+   },
+   {
+"parameter name": "是否校验文本",
+"comment": "  默认将输入的数据假定为有效的文本,不作校验地进行\n转换,返回的结果可能会有乱码;\n  为真时,在转换过程中会对数据进行验证,适合处理来源\n不可信的文本,若校验失败可能会返回空文本.",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"validate\""
+   }
+
+]
+  },
+  {
+
+"method name": "验证UTF8",
+
+"comment": "验证指定的字节集是否为有效的UTF-8文本数据.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本数据",
+"comment": "提供所欲验证的UTF8编码文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+
+]
+  },
+  {
+
+"method name": "验证ASCII",
+
+"comment": "验证指定的字节集是否为有效的ASCII文本数据.\n只能验证可打印的ASCII字符,数据中含中文等字符会返回假.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本数据",
+"comment": "提供所欲验证的ASCII编码文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+
+]
+  },
+  {
+
+"method name": "验证UTF16LE",
+
+"comment": "验证指定的字节集是否为有效的UTF-16LE文本数据.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本数据",
+"comment": "提供所欲验证的UTF-16LE编码文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+
+]
+  },
+  {
+ }"method name": "验证UTF16BE",
+ }"comment": "验证指定的字节集是否为有效的UTF-16BE文本数据.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "文本数据",
+"comment": "提供所欲验证的UTF-16BE编码文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+ }]
+  },
+  {
+
+"method name": "验证UTF32",
+
+"comment": "验证指定的字节集是否为有效的UTF-32文本数据.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本数据",
+"comment": "提供所欲验证的UTF-32编码文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+
+]
+  },
+  {
+
+"method name": "取UTF8长度",
+
+"comment": "获取UTF-8文本数据的有效字符长度(1个字符可能占1到4字节).",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF8文本数据",
+"comment": "提供所欲取字符数量的UTF-8字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+
+]
+  },
+  {
+
+"method name": "取UTF16LE长度",
+
+"comment": "获取UTF-16LE文本数据的有效字符长度(1个字符占2字节).",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "UTF16文本数据",
+"comment": "提供所欲取字符数量的UTF-16LE字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+
+]
+  },
+  {
+}"method name": "取UTF16BE长度",
+}"comment": "获取UTF-16BE文本数据的有效字符长度(1个字符占2字节).",
+}"static": true,
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "UTF16文本数据",
+"comment": "提供所欲取字符数量的UTF-16BE字符集文本数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   }
+}]
+  },
+  {
+}"method name": "字节集到BASE64文本",
+}"comment": "返回本字节集数据所对应的BASE64编码格式文本内容",
+}"static": true,
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "字节数据",
+"comment": "所欲编码的字节集数据",
+"data type": "字节集类",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "URL专用",
+"comment": "选择BASE64的编码格式:\n 真=URL专用\n 假=标准BASE64",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"options\""
+   }
+}]
+  },
+  {
+
+"method name": "BASE64文本到字节集",
+
+"comment": "将所指定的BASE64编码格式文本解码为对应的字节集后返回",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "BASE64编码文本",
+"comment": "提供所欲解码的BASE64编码文本",
+"data type": "文本型",
+"@输出名": "\"input\""
+   },
+   {
+"parameter name": "URL专用",
+"comment": "选择BASE64的编码格式:\n 真=URL专用\n 假=标准BASE64",
+"data type": "逻辑型",
+"@默认值": "假",
+"@输出名": "\"options\""
+   }
+
+]
+  },
+  {
+}"method name": "匹配系统",
+}"comment": "检查系统是否匹配指定的内存字节序",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "是否大端",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+
+"method name": "检测BOM签名",
+
+"comment": "检查提供的文本数据是否有BOM签名,如果无签名返回0(SIMD编码类型.未知).",
+
+"result comment": "请参考\"SIMD编码类型\"的常量",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文本数据",
+"data type": "字节集类",
+"@输出名": "\"data\""
+   }
+
+]
+  },
+  {
+
+"method name": "取BOM大小",
+
+"comment": "获取指定文本编码的BOM签名大小,以字节为单位.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "编码类型",
+"comment": "请参考\"SIMD编码类型\"的常量",
+"data type": "整数",
+"@输出名": "\"bom\""
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "SIMD编码类型",
+"comment": "\"simdUTF\"检测编码的返回值",
+"@文档": "\"category = \\\"编码处理.辅助类\\\"\"",
+"constants": [
+  {
+mdUTF\"检测编码的返回值"constant name": "未知",
+mdUTF\"检测编码的返回值"data type": "整数",
+mdUTF\"检测编码的返回值"initial value": "0"
+  },
+  {
+
+"constant name": "UTF8",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+
+"constant name": "UTF16_LE",
+
+"data type": "整数",
+
+"initial value": "2"
+  },
+  {
+
+"constant name": "UTF16_BE",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+"initial value": "4""constant name": "UTF32_LE",
+"initial value": "4""data type": "整数",
+"initial value": "4""initial value": "8"
+  },
+  {
+
+"constant name": "UTF32_BE",
+
+"data type": "整数",
+
+"initial value": "16"
+  },
+  {
+
+"constant name": "Latin1",
+
+"data type": "整数",
+
+"initial value": "32"
+  }
+],
+"methods": [
+  {
+
+"method name": "到文本",
+
+"static": true,
+
+"data type": "标准文本类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "编码类型",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+}"class name": "BASE编解码类",
+}"comment": "Base91、Base85编解码.\n源码: https://github.com/r-lyeh-archived/base\n针对火山对源码进行了大量修改",
+}"@文档": "\"category = \\\"编码处理\\\"\"",
+}"@视窗.外部头文件.全局-111": "\"src\\\\piv_encoding.hpp\"",
+}"@别名": "\"//\"",
+}"@别名类型": "本地类",
+}"@类用途": "访问静态成员",
+}"@全局类": "真",
+}"methods": [
+  {
+"@全局类": "真""method name": "字节集到BASE91文本",
+"@全局类": "真""comment": "将字节集数据转换为BASE91编码格式文本.\n保留ASCII字符为{<>\"}.",
+"@全局类": "真""static": true,
+"@全局类": "真""data type": "文本型",
+"@全局类": "真""@嵌入式方法": "\"\"",
+"@全局类": "真""parameters": [
+   {
+"parameter name": "所欲编码数据",
+"data type": "字节集类"
+   }
+"@全局类": "真"]
+  },
+  {
+
+"method name": "BASE91文本到字节集",
+
+"comment": "将BASE91编码格式文本解码为对应的字节集后返回.\n保留ASCII字符为{<>\"}.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "BASE91编码文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "字节集到BASE85文本",
+ }"comment": "将字节集数据转换为BASE85编码格式文本.",
+ }"result comment": "编码失败时返回空文本",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲编码数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "自动填充",
+"comment": "为真时将在内部自动填充编码数据,以满足字节对齐为4的倍数.\n如果为假,编码数据的长度必须为4的倍数,否则将失败返回空文本.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+
+"method name": "BASE85文本到字节集",
+
+"comment": "将BASE85编码格式文本解码为对应的字节集后返回.",
+
+"result comment": "解码失败时返回空字节集",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "BASE85编码文本",
+"comment": "BASE85文本的长度必须为5的倍数,否则将解码失败.",
+"data type": "文本型"
+   }
+
+]
+  }
+}]
+ },
+ {
+"class name": "MD5校验类",
+"comment": "  比\"CNG加解密\"和\"OpenSSL\"的MD5略快,取文件MD5时会自动\n分段校验,不需要打开整个文件,适合处理大文件.\n  源码: https://github.com/ulwanski/md5\n  针对火山对源码进行了大量修改",
+"@文档": "\"category = \\\"加解密\\\"\"",
+"@视窗.外部头文件": "\"src\\\\detail\\\\piv_md5.hpp\"",
+"@别名": "\"//\"",
+"@别名类型": "本地类",
+"@类用途": "访问静态成员",
+"constants": [
+  {
+
+"constant name": "空数据",
+
+"comment": "这是空数据的MD5,可以通过比较判断是否成功执行了MD5校验.",
+
+"data type": "文本型",
+
+"initial value": "\"D41D8CD98F00B204E9800998ECF8427E\""
+  }
+],
+"methods": [
+  {
+
+"method name": "取文件MD5",
+
+"comment": "获取指定文件的MD5数据摘要(32个字符)",
+
+"result comment": "打开文件失败会返回空文本",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"req_cpp_bool = true\"",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供所欲计算摘要的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否大写",
+"comment": "默认返回大写字符,为假时返回小写字符.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "  指定是否跳过文件开头的一部分数据,应提供大于等于0的值,0表示从文件\n首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   }
+
+]
+  },
+  {
+}"method name": "取数据MD5",
+}"comment": "获取指定数据的MD5数据摘要(32个字符)",
+}"result comment": "可以与\"MD5校验类.空数据\"判断是否校验了有效的数据",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"req_cpp_bool = true\"",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否大写",
+"comment": "默认返回大写字符,为假时返回小写字符.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+}"method name": "取资源MD5",
+}"comment": "获取指定视窗文件资源的MD5数据摘要(32个字符)",
+}"result comment": "可以与\"MD5校验类.空数据\"判断是否校验了有效的数据",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"req_cpp_bool = true\"",
+}"parameters": [
+   {
+"parameter name": "文件资源",
+"comment": "提供所欲计算摘要的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "是否大写",
+"comment": "默认返回大写字符,为假时返回小写字符.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+"method name": "取数据简短MD5",
+"comment": "获取指定数据的简短MD5数据摘要(6个字符)",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据",
+"data type": "字节集类"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "xxHash类",
+"comment": "  速度最快的摘要算法之一,工作速度接近内存的速度限制,\n其中XXH128比MD5快几倍以上.\n  源码: https://github.com/Cyan4973/xxHash\n  内部有4个不同版本和长度的子算法,速度比较:\n  XXH3(64位) > XXH128 > XXH64 > XXH32",
+"@文档": "\"category = \\\"加解密\\\"\"",
+"@视窗.外部头文件": "\"src\\\\detail\\\\piv_xxhash.hpp\"",
+"@别名": "\"//\"",
+"@别名类型": "本地类",
+"@类用途": "访问静态成员",
+"methods": [
+  {
+methods": [
+"method name": "取版本号",
+methods": [
+"comment": "返回xxHash的版本号",
+methods": [
+"static": true,
+methods": [
+"data type": "整数",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+ethods": [
+"@嵌入式方法": "\"\"""method name": "生成密码",
+ethods": [
+"@嵌入式方法": "\"\"""comment": "从自定义密码种子中生成一个指定长度的密码",
+ethods": [
+"@嵌入式方法": "\"\"""result comment": "返回所生成的高熵密码,失败返回空字节集.",
+ethods": [
+"@嵌入式方法": "\"\"""static": true,
+ethods": [
+"@嵌入式方法": "\"\"""data type": "字节集类",
+ethods": [
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+ethods": [
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "密码长度",
+"comment": "提供所欲生成的密码长度,必须大于136",
+"data type": "整数"
+   },
+   {
+"parameter name": "自定义种子",
+"comment": "提供一个自定义的密码种子,为空时将使用内部的默认密码作为种子.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+ethods": [
+"@嵌入式方法": "\"\""]
+  },
+  {
+ethods": [
+"@嵌入式方法": "\"\"""method name": "生成密码_192",
+ethods": [
+"@嵌入式方法": "\"\"""comment": "从64位整数种子值生成一个192字节长度的密码",
+ethods": [
+"@嵌入式方法": "\"\"""result comment": "返回所生成的高熵密码",
+ethods": [
+"@嵌入式方法": "\"\"""static": true,
+ethods": [
+"@嵌入式方法": "\"\"""data type": "字节集类",
+ethods": [
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+ethods": [
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "种子",
+"comment": "使用相同的种子值会生成一样的密码",
+"data type": "长整数"
+   }
+ethods": [
+"@嵌入式方法": "\"\""]
+  },
+  {
+ethods": [
+"@嵌入式方法": "\"\"""method name": "取数据XXH128",
+ethods": [
+"@嵌入式方法": "\"\"""comment": "计算指定数据的XXH3(128位)数据摘要,返回十六进制文本结果(32个字符).",
+ethods": [
+"@嵌入式方法": "\"\"""result comment": "数据为空仍会返回非0的哈希值",
+ethods": [
+"@嵌入式方法": "\"\"""static": true,
+ethods": [
+"@嵌入式方法": "\"\"""data type": "文本型",
+ethods": [
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+ethods": [
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据,支持以下数据类型:\n 字节集类、文本型、变整数(地址)、标准文本类(A/U)、文本视图类(A/U)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,可选计算整个数据或前面一部分.\n默认值-1表示计算整个数据,如果\"数据\"参数提供的是数据地址(变整数),\n则必须提供正确的长度(大于0且小于等于数据尺寸).",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   }
+ethods": [
+"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "取数据XXH128_字节集",
+
+"comment": "计算指定数据的XXH3(128位)数据摘要,返回字节集结果(16个字节).",
+
+"result comment": "数据为空仍会返回非0的哈希值",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据,支持以下数据类型:\n 字节集类、文本型、变整数(地址)、标准文本类(A/U)、文本视图类(A/U)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,可选计算整个数据或前面一部分.\n默认值-1表示计算整个数据,如果\"数据\"参数提供的是数据地址(变整数),\n则必须提供正确的长度(大于0且小于等于数据尺寸).",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "取数据HMAC_XXH128",
+}"comment": "使用密码计算指定数据的XXH3(128位)数据摘要,返回十六进制文本(32个字符).",
+}"result comment": "数据为空仍会返回非0的哈希值",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据,支持以下数据类型:\n 字节集类、文本型、变整数(地址)、标准文本类(A/U)、文本视图类(A/U)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,可选计算整个数据或前面一部分.\n默认值-1表示计算整个数据,如果\"数据\"参数提供的是数据地址(变整数),\n则必须提供正确的长度(大于0且小于等于数据尺寸).",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供计算摘要的密码,自定义密码可以增加外部哈希碰撞攻击的难度.\n密码的品质将影响哈希算法的分散性,应提供一段长度大于136字节的随机字节.\n建议使用\"生成密码\"函数生成一个高熵密码.\n注意: 如果密码为空或所计算的数据长度小于240字节,将使用内部的默认密码,\n此时的计算结果跟\"取数据XXH128\"一样.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+"method name": "取数据HMAC_XXH128_字节集",
+"comment": "使用密码计算指定数据的XXH3(128位)数据摘要,返回字节集(16个字节).",
+"result comment": "数据为空仍会返回非0的哈希值",
+"static": true,
+"data type": "字节集类",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据,支持以下数据类型:\n 字节集类、文本型、变整数(地址)、标准文本类(A/U)、文本视图类(A/U)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,可选计算整个数据或前面一部分.\n默认值-1表示计算整个数据,如果\"数据\"参数提供的是数据地址(变整数),\n则必须提供正确的长度(大于0且小于等于数据尺寸).",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供计算摘要的密码,自定义密码可以增加外部哈希碰撞攻击的难度.\n密码的品质将影响哈希算法的分散性,应提供一段长度大于136字节的随机字节.\n建议使用\"生成密码\"函数生成一个高熵密码.\n注意: 如果密码为空或所计算的数据长度小于240字节,将使用内部的默认密码,\n此时的计算结果跟\"取数据XXH128\"一样.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+]
+  },
+  {
+
+"method name": "取文件XXH128",
+
+"comment": "计算指定文件的XXH3(128位)数据摘要,返回十六进制文本(32个字符).",
+
+"result comment": "文件不存在或无法访问时返回0值,但文件数据为空仍会返回非0的哈希值.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供所欲计算摘要的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供计算摘要的密码,自定义密码可以增加外部哈希碰撞攻击的难度.\n密码的品质将影响哈希算法的分散性,应提供一段长度大于136字节的随机字节.\n建议使用\"生成密码\"函数生成一个高熵密码.\n注意: 本参数仅在提供的密码长度大于136字节时生效,否则使用内部的默认密码.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取文件XXH128_字节集",
+
+"comment": "计算指定文件的XXH3(128位)数据摘要,返回字节集结果(16个字节).",
+
+"result comment": "文件不存在或无法访问时返回0值,但文件数据为空仍会返回非0的哈希值.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供所欲计算摘要的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供计算摘要的密码,自定义密码可以增加外部哈希碰撞攻击的难度.\n密码的品质将影响哈希算法的分散性,应提供一段长度大于136字节的随机字节.\n建议使用\"生成密码\"函数生成一个高熵密码.\n注意: 本参数仅在提供的密码长度大于136字节时生效,否则使用内部的默认密码.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取资源XXH128",
+
+"comment": "计算指定文件资源的XXH3(128位)数据摘要,返回十六进制文本(32个字符).",
+
+"result comment": "文件资源无法载入时返回0值,但文件数据为空仍会返回非0的哈希值.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文件资源",
+"comment": "提供所欲计算摘要的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供计算摘要的密码,自定义密码可以增加外部哈希碰撞攻击的难度.\n密码的品质将影响哈希算法的分散性,应提供一段长度大于136字节的随机字节.\n建议使用\"生成密码\"函数生成一个高熵密码.\n注意: 本参数仅在提供的密码长度大于136字节时生效,否则使用内部的默认密码.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+}"method name": "取资源XXH128_字节集",
+}"comment": "计算指定文件资源的XXH3(128位)数据摘要,返回字节集结果(16个字节).",
+}"result comment": "文件资源无法载入时返回0值,但文件数据为空仍会返回非0的哈希值.",
+}"static": true,
+}"data type": "字节集类",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "文件资源",
+"comment": "提供所欲计算摘要的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供计算摘要的密码,自定义密码可以增加外部哈希碰撞攻击的难度.\n密码的品质将影响哈希算法的分散性,应提供一段长度大于136字节的随机字节.\n建议使用\"生成密码\"函数生成一个高熵密码.\n注意: 本参数仅在提供的密码长度大于136字节时生效,否则使用内部的默认密码.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+}"method name": "取数据XXH3",
+}"comment": "计算指定数据的XXH3(64位)数据摘要,返回64位长整数哈希值.",
+}"result comment": "数据为空仍会返回非0的哈希值,如需十六进制文本可以调用:\n取长整数十六进制文本 (哈希值, 16)",
+}"static": true,
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据,支持以下数据类型:\n 字节集类、文本型、变整数(地址)、标准文本类(A/U)、文本视图类(A/U)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,可选计算整个数据或前面一部分.\n默认值-1表示计算整个数据,如果\"数据\"参数提供的是数据地址(变整数),\n则必须提供正确的长度(大于0且小于等于数据尺寸).",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+}"method name": "取数据HMAC_XXH3",
+}"comment": "使用密码计算指定数据的XXH3(64位)数据摘要,返回64位长整数哈希值.",
+}"result comment": "数据为空仍会返回非0的哈希值,如需十六进制文本可以调用:\n取长整数十六进制文本 (哈希值, 16)",
+}"static": true,
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据,支持以下数据类型:\n 字节集类、文本型、变整数(地址)、标准文本类(A/U)、文本视图类(A/U)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,可选计算整个数据或前面一部分.\n默认值-1表示计算整个数据,如果\"数据\"参数提供的是数据地址(变整数),\n则必须提供正确的长度(大于0且小于等于数据尺寸).",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供计算摘要的密码,自定义密码可以增加外部哈希碰撞攻击的难度.\n密码的品质将影响哈希算法的分散性,应提供一段长度大于136字节的随机字节.\n建议使用\"生成密码\"函数生成一个高熵密码.\n注意: 如果密码为空或所计算的数据长度小于240字节,将使用内部的默认密码,\n此时的计算结果跟\"取数据XXH128\"一样.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+}]
+  },
+  {
+
+"method name": "取文件XXH3",
+
+"comment": "计算指定文件的XXH3(64位)数据摘要,返回64位长整数哈希值.",
+
+"result comment": "文件不存在或无法访问时返回0值,但文件数据为空仍会返回非0的哈希值.\n如需十六进制文本可以调用: 取长整数十六进制文本 (哈希值, 16)",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供所欲计算摘要的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供计算摘要的密码,自定义密码可以增加外部哈希碰撞攻击的难度.\n密码的品质将影响哈希算法的分散性,应提供一段长度大于136字节的随机字节.\n建议使用\"生成密码\"函数生成一个高熵密码.\n注意: 本参数仅在提供的密码长度大于136字节时生效,否则使用内部的默认密码.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取资源XXH3",
+
+"comment": "计算指定文件资源的XXH3(64位)数据摘要,返回64位长整数哈希值.",
+
+"result comment": "文件资源无法载入时返回0值,但文件数据为空仍会返回非0的哈希值.\n如需十六进制文本可以调用: 取长整数十六进制文本 (哈希值, 16)",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文件资源",
+"comment": "提供所欲计算摘要的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供计算摘要的密码,自定义密码可以增加外部哈希碰撞攻击的难度.\n密码的品质将影响哈希算法的分散性,应提供一段长度大于136字节的随机字节.\n建议使用\"生成密码\"函数生成一个高熵密码.\n注意: 本参数仅在提供的密码长度大于136字节时生效,否则使用内部的默认密码.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+}"method name": "取数据XXH64",
+}"comment": "计算指定数据的XXH64数据摘要,返回64位长整数哈希值.",
+}"result comment": "数据为空仍会返回非0的哈希值,如需十六进制文本可以调用:\n取长整数十六进制文本 (哈希值, 16)",
+}"static": true,
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据,支持以下数据类型:\n 字节集类、文本型、变整数(地址)、标准文本类(A/U)、文本视图类(A/U)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,可选计算整个数据或前面一部分.\n默认值-1表示计算整个数据,如果\"数据\"参数提供的是数据地址(变整数),\n则必须提供正确的长度(大于0且小于等于数据尺寸).",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+
+"method name": "取文件XXH64",
+
+"comment": "计算指定文件的XXH64数据摘要,返回64位长整数哈希值.",
+
+"result comment": "文件不存在或无法访问时返回0值,但文件数据为空仍会返回非0的哈希值.\n如需十六进制文本可以调用: 取长整数十六进制文本 (哈希值, 16)",
+
+"static": true,
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供所欲计算摘要的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+comment": "修改种子值允许可预测地改变输出的哈希值""method name": "取资源XXH64",
+comment": "修改种子值允许可预测地改变输出的哈希值""comment": "计算指定文件资源的XXH64数据摘要,返回64位长整数哈希值.",
+comment": "修改种子值允许可预测地改变输出的哈希值""result comment": "文件资源无法载入时返回0值,但文件数据为空仍会返回非0的哈希值.\n如需十六进制文本可以调用: 取长整数十六进制文本 (哈希值, 16)",
+comment": "修改种子值允许可预测地改变输出的哈希值""static": true,
+comment": "修改种子值允许可预测地改变输出的哈希值""data type": "长整数",
+comment": "修改种子值允许可预测地改变输出的哈希值""@嵌入式方法": "\"\"",
+comment": "修改种子值允许可预测地改变输出的哈希值""parameters": [
+   {
+"parameter name": "文件资源",
+"comment": "提供所欲计算摘要的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "长整数",
+"@默认值": "0"
+   }
+comment": "修改种子值允许可预测地改变输出的哈希值"]
+  },
+  {
+
+"method name": "取数据XXH32",
+
+"comment": "计算指定数据的XXH32数据摘要,返回32位整数哈希值.",
+
+"result comment": "数据为空仍会返回非0的哈希值,如需十六进制文本可以调用:\n取十六进制文本 (哈希值, 8)",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据,支持以下数据类型:\n 字节集类、文本型、变整数(地址)、标准文本类(A/U)、文本视图类(A/U)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,可选计算整个数据或前面一部分.\n默认值-1表示计算整个数据,如果\"数据\"参数提供的是数据地址(变整数),\n则必须提供正确的长度(大于0且小于等于数据尺寸).",
+"data type": "变整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+comment": "修改种子值允许可预测地改变输出的哈希值""method name": "取文件XXH32",
+comment": "修改种子值允许可预测地改变输出的哈希值""comment": "计算指定文件的XXH32数据摘要,返回32位整数哈希值.",
+comment": "修改种子值允许可预测地改变输出的哈希值""result comment": "文件不存在或无法访问时返回0值,但文件数据为空仍会返回非0的哈希值.\n如需十六进制文本可以调用: 取十六进制文本 (哈希值, 8)",
+comment": "修改种子值允许可预测地改变输出的哈希值""static": true,
+comment": "修改种子值允许可预测地改变输出的哈希值""data type": "整数",
+comment": "修改种子值允许可预测地改变输出的哈希值""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+comment": "修改种子值允许可预测地改变输出的哈希值""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "提供所欲计算摘要的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "整数",
+"@默认值": "0"
+   }
+comment": "修改种子值允许可预测地改变输出的哈希值"]
+  },
+  {
+}"method name": "取资源XXH32",
+}"comment": "计算指定文件资源的XXH32数据摘要,返回32位整数哈希值.",
+}"result comment": "文件资源无法载入时返回0值,但文件数据为空仍会返回非0的哈希值.\n如需十六进制文本可以调用: 取十六进制文本 (哈希值, 8)",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "文件资源",
+"comment": "提供所欲计算摘要的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "文件偏移",
+"comment": "指定是否跳过文件开头的一部分数据,应提供大于等于0的值.\n0表示从文件首部开始计算摘要,如果提供的偏移值大于文件长度,将不计算任何数据.",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "提供所欲计算摘要的数据长度,默认值-1表示计算偏移值后面的所有数据.",
+"data type": "长整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "种子",
+"comment": "修改种子值允许可预测地改变输出的哈希值",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "简易加解密",
+"comment": "纯C++源码实现的简易加解密库.\n其中RC4的加解密支持不定长度密码,结果跟易语言一致.\n源码: https://github.com/lsw29475/iAlgorithm",
+"@文档": "\"category = \\\"加解密\\\"\"",
+"@别名": "\"//\"",
+"@别名类型": "本地类",
+"@类用途": "访问静态成员",
+"methods": [
+  {
+
+"method name": "加密_AES_ECB",
+
+"comment": "将指定数据进行AES加密(ECB模式).",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_AES_ECB",
+
+"comment": "将指定数据进行AES加密(ECB模式).",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iAes.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iAes.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_AES_ECB",
+
+"comment": "将指定AES加密的数据进行解密(ECB模式).",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_AES_ECB",
+
+"comment": "将指定AES加密的数据进行解密(ECB模式).",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iAes.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iAes.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_AES_CBC",
+
+"comment": "将指定数据进行AES加密(CBC模式).",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_AES_CBC",
+
+"comment": "将指定数据进行AES加密(CBC模式).",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iAes.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iAes.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_AES_CBC",
+
+"comment": "将指定AES加密的数据进行解密(CBC模式).",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_AES_CBC",
+
+"comment": "将指定AES加密的数据进行解密(CBC模式).",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iAes.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iAes.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,请提供三种标准长度的密码,支持16,24,32.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供16字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_DES_ECB",
+
+"comment": "将指定数据进行DES加密(ECB模式).",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_DES_ECB",
+
+"comment": "将指定数据进行DES加密(ECB模式).",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iBit.h\\nsrc\\\\iAlgorithm\\\\iDes.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iBit.cpp\\nsrc\\\\iAlgorithm\\\\iDes.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_DES_ECB",
+
+"comment": "将指定DES加密的数据进行解密(ECB模式).",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+}"method name": "解密_字节集_DES_ECB",
+}"comment": "将指定DES加密的数据进行解密(ECB模式).",
+}"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+}"static": true,
+}"data type": "字节集类",
+}"@禁止流程检查": "真",
+}"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iBit.h\\nsrc\\\\iAlgorithm\\\\iDes.h\"",
+}"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iBit.cpp\\nsrc\\\\iAlgorithm\\\\iDes.cpp\"",
+}"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+
+"method name": "加密_DES_CBC",
+
+"comment": "将指定数据进行DES加密(CBC模式).",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_字节集_DES_CBC",
+
+"comment": "将指定数据进行DES加密(CBC模式).",
+
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iBit.h\\nsrc\\\\iAlgorithm\\\\iDes.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iBit.cpp\\nsrc\\\\iAlgorithm\\\\iDes.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_DES_CBC",
+
+"comment": "将指定DES加密的数据进行解密(CBC模式).",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = PKCS7填充\n 2 = 零填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_DES_CBC",
+
+"comment": "将指定DES加密的数据进行解密(CBC模式).",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iBit.h\\nsrc\\\\iAlgorithm\\\\iDes.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iBit.cpp\\nsrc\\\\iAlgorithm\\\\iDes.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,固定长度8字节.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "向量",
+"comment": "初始向量数据,最少要提供8字节.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "填充方式",
+"comment": " 0 = 不填充\n 1 = 零填充\n 2 = PKCS7填充",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+
+"method name": "加密_RC4",
+
+"comment": "将指定数据进行RC4加密.",
+
+"result comment": "返回数据加密后的结果,如果加密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,长度为1-256个字符.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "加密_字节集_RC4",
+"comment": "将指定数据进行RC4加密.",
+"result comment": "返回数据加密后的结果,加密失败将返回空字节集.",
+"static": true,
+"data type": "字节集类",
+"@禁止流程检查": "真",
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iRc4.h\"",
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iRc4.cpp\"",
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲加密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,长度为1-256字节.",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+
+"method name": "解密_RC4",
+
+"comment": "将指定RC4加密的数据进行解密.",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,长度为1-256个字符.",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "解密_字节集_RC4",
+
+"comment": "将指定RC4加密的数据进行解密.",
+
+"result comment": "返回解密后的结果,解密失败将返回空字节集.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iRc4.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iRc4.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲解密的数据.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供加密所使用的密码,长度为1-256字节.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据MD5",
+
+"comment": "用作获取指定数据的MD5数据摘要.",
+
+"result comment": "返回摘要计算后的结果.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据MD5_字节集",
+
+"comment": "用作获取指定数据的MD5数据摘要.",
+
+"result comment": "返回摘要计算后的结果.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iMd5.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iMd5.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA1",
+
+"comment": "用作获取指定数据的SHA1数据摘要.",
+
+"result comment": "返回摘要计算后的结果.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA1_字节集",
+
+"comment": "用作获取指定数据的SHA1数据摘要.",
+
+"result comment": "返回摘要计算后的结果.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iSha1.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iSha1.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA256",
+
+"comment": "用作获取指定数据的SHA256数据摘要.",
+
+"result comment": "返回摘要计算后的结果.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA256_字节集",
+
+"comment": "用作获取指定数据的SHA256数据摘要.",
+
+"result comment": "返回摘要计算后的结果.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iSha256.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iSha256.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA512",
+
+"comment": "用作获取指定数据的SHA512数据摘要.",
+
+"result comment": "返回摘要计算后的结果.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "取数据SHA512_字节集",
+
+"comment": "用作获取指定数据的SHA512数据摘要.",
+
+"result comment": "返回摘要计算后的结果.",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"@视窗.外部头文件": "\"src\\\\iAlgorithm\\\\iSha512.h\"",
+
+"@视窗.外部源文件": "\"src\\\\iAlgorithm\\\\iSha512.cpp\"",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"comment": "提供所欲计算摘要的数据.",
+"data type": "字节集类"
+   }
+
+]
+  }
+]
+ }
+]
+}

@@ -1,0 +1,222 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"FOFWebSocket扩展库".
+
+{
+问本程序中的接口需要引用模块"FOFWebSocket扩展库"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"FOFWebSocket扩展库"."package name": "FOFWEBSCOKET.com",
+问本程序中的接口需要引用模块"FOFWebSocket扩展库"."classes": [
+ {
+本程序中的接口需要引用模块"FOFWebSocket扩展库"."classes": [
+"class name": "FOFWebsocket客户端",
+本程序中的接口需要引用模块"FOFWebSocket扩展库"."classes": [
+"variables": [
+  {
+程序中的接口需要引用模块"FOFWebSocket扩展库"."classes": [
+"variables": [
+"variable name": "客户端",
+程序中的接口需要引用模块"FOFWebSocket扩展库"."classes": [
+"variables": [
+"data type": "HP_HTTP客户端"
+  }
+本程序中的接口需要引用模块"FOFWebSocket扩展库"."classes": [
+],
+本程序中的接口需要引用模块"FOFWebSocket扩展库"."classes": [
+"methods": [
+  {
+
+"method name": "连接Websocket",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址",
+"comment": "例如:ws://localhost:9010/ajaxchattest",
+"data type": "文本型"
+   },
+   {
+"parameter name": "附加头",
+"comment": "提供连接所欲使用的附加请求头,一个成员表示一组,例如:\"Origin:http://0.0.0.0\".",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "发送字节集",
+
+"result comment": "返回发送结果.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "字节集数据",
+"comment": "提供所欲发送的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "关闭Websocket",
+
+"comment": "断开可以使用连接命令重新链接",
+
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "Websocket收到数据",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "Websocket连接断开",
+
+"type": "event",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "Websocket连接完成",
+
+"type": "event",
+
+"data type": "整数"
+  }
+本程序中的接口需要引用模块"FOFWebSocket扩展库"."classes": [
+]
+ },
+ {
+"class name": "FOFWebsocket服务端",
+"comment": "使用案例：https://www.lkuaiy.com/rsdetails?page=1&id=16383501648786643",
+"variables": [
+  {
+
+"variable name": "整体功能",
+
+"data type": "HP_HTTP服务器"
+  }
+],
+"methods": [
+  {
+
+"method name": "启动Websocket",
+
+"comment": "启动服务器并开始监听指定端口.",
+
+"result comment": "返回启动结果.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "绑定地址",
+"comment": "提供所欲绑定的地址.",
+"data type": "文本型",
+"@默认值": "\"0.0.0.0\""
+   },
+   {
+"parameter name": "监听端口",
+"comment": "提供所欲监听的端口号.",
+"data type": "短整数",
+"@默认值": "9552"
+   }
+
+]
+  },
+  {
+ }"method name": "关闭Websocket",
+ }"comment": "断开当前服务器并释放资源.",
+ }"data type": "逻辑型"
+  },
+  {
+
+"method name": "发送字节集",
+
+"result comment": "返回发送结果.",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "客户ID",
+"comment": "提供所欲接收数据的客户ID.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "字节集数据",
+"comment": "提供所欲发送的数据.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "Websocket收到数据",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+
+"method name": "Websocket客户进入",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "Websocket客户离开",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "连接ID",
+"comment": "当前已连接的客户ID.",
+"data type": "变整数"
+   }
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"FOFWebSocket扩展库".]
+}

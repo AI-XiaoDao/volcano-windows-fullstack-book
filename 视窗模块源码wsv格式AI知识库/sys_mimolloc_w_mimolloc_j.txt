@@ -1,0 +1,139 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"高性能通用内存分配支持".
+
+{
+必须为本类所提供的"创建对象指针"方法所返回"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+必须为本类所提供的"创建对象指针"方法所返回"package name": "火山.视窗.内存扩展",
+必须为本类所提供的"创建对象指针"方法所返回"classes": [
+ {
+"class name": "高性能内存分配类",
+"comment": "★ 本类由\"飞翔的企鹅\"封装.\nmimolloc通用内存分配器,减少内存碎片,高性能.\n主页:https://github.com/microsoft/mimalloc",
+"@视窗.外部头文件": "\"libs\\\\include\\\\mimalloc.h\"",
+"@视窗.外部库.static": "\"libs\\\\$(p)\\\\static\\\\$(d)\\\\mimalloc.lib\"",
+"@视窗.外部库.non_static": "\"libs\\\\$(p)\\\\dynamic\\\\mimalloc-override.lib\"",
+"@视窗.附属文件.non_static": "\"libs\\\\$(p)\\\\dynamic\\\\mimalloc-override.dll\"",
+"@视窗.附属文件.non_static-win32": "\"libs\\\\$(p)\\\\dynamic\\\\mimalloc-redirect32.dll\"",
+"@视窗.附属文件.non_static-x64": "\"libs\\\\$(p)\\\\dynamic\\\\mimalloc-redirect.dll\"",
+"@视窗.需求VS版本.static": "\"16-\"",
+"methods": [
+  {
+methods": [
+"method name": "分配内存",
+methods": [
+"comment": "  分配一段所指定尺寸的内存,返回所分配内存的地址指针.\n  注意: 所返回的内存地址指针在不再使用后必须使用本类所提供的\"释放内存\"\n方法将其释放(除非调用了\"重分配内存\"方法将其重新分配).",
+methods": [
+"result comment": "成功返回所分配内存的地址指针,失败返回0.",
+methods": [
+"static": true,
+methods": [
+"data type": "变整数",
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "所欲分配内存的尺寸",
+"comment": "提供所欲分配内存的尺寸,必须大于0.",
+"data type": "变整数"
+   }
+methods": [
+]
+  },
+  {
+ 变整数"method name": "重分配内存",
+ 变整数"comment": "重新分配先前所已分配内存的尺寸,返回重分配后的内存地址指针.\n注意: 先前内存中的数据内容将被保留,即使本方法返回了不同的地址指针.",
+ 变整数"result comment": "成功返回所重分配内存的地址指针,失败返回0.",
+ 变整数"static": true,
+ 变整数"data type": "变整数",
+ 变整数"@嵌入式方法": "\"\"",
+ 变整数"parameters": [
+   {
+"parameter name": "先前所分配内存地址",
+"comment": "  提供先前调用本类所提供的\"分配内存\"或\"重分配内存\"方法所返回的内存\n地址指针,分配成功后该地址将会被释放,请勿再继续使用(注意本方法也可能返\n回相同的地址指针值).",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲重分配内存的尺寸",
+"comment": "提供所欲重新分配内存的尺寸,必须大于0.",
+"data type": "变整数"
+   }
+ 变整数]
+  },
+  {
+"method name": "连续分配",
+"comment": "  连续分配多段具有指定相同尺寸的内存,返回所分配起始地址的指针.\n  注意: 所返回的内存地址指针在不再使用后必须使用本类所提供的\"释放内存\"\n方法将其释放(除非调用了\"重分配内存\"方法将其重新分配).",
+"result comment": "返回所分配起始地址的指针,使用完毕后需调用本类所提供的\"释放内存\"方法将其释放.",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲分配个数",
+"comment": "提供所欲分配内存对象的个数",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲分配单个的尺寸",
+"comment": "提供所欲分配每个内存对象的尺寸,必须大于0.",
+"data type": "变整数"
+   }
+]
+  },
+  {
+    "method name": "释放内存",
+    "comment": "释放先前调用本类所提供的\"分配内存\",\"重分配内存\"或\"连续分配\"方法所分配的内存",
+    "static": true,
+    "@嵌入式方法": "\"\"",
+    "parameters": [
+   {
+"parameter name": "先前所分配内存地址",
+"comment": "  提供先前调用本类所提供的\"分配内存\",\"重分配内存\"或\"连续分配\"方法所返回的内存地址指针,\n注意所提供的内存地址指针在释放后将不再有效.",
+"data type": "变整数"
+   }
+    ]
+  },
+  {
+
+"method name": "创建对象指针",
+
+"comment": "创建并返回指向所指定类型对象的指针.\n注意: 该指针不再使用时,必须使用本类所提供的\"销毁对象指针\"方法将其释放.\n访问所返回的指针对象可以使用全局的\"读指针处对象\"方法",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲创建对象的类型",
+"comment": "  提供所欲创建对象的数据类型,注意在创建具有动态扩容性的对象指针时(如文本型以及字\n节集类等),需要避免其进行动态扩容,否则将无法确保其正常运行.",
+"data type": "对象类",
+"@需求类型": "数据类型"
+   }
+
+]
+  },
+  {
+
+"static": true"method name": "销毁对象指针",
+
+"static": true"comment": "释放并销毁由本类所提供的\"创建对象指针\"方法所创建的对象指针",
+
+"static": true"static": true,
+
+"static": true"@嵌入式方法": "\"\"",
+
+"static": true"parameters": [
+   {
+"parameter name": "对象指针",
+"comment": "该指针值必须为本类所提供的\"创建对象指针\"方法所返回",
+"data type": "变整数"
+   }
+
+"static": true]
+  }
+]
+ }
+必须为本类所提供的"创建对象指针"方法所返回]
+}

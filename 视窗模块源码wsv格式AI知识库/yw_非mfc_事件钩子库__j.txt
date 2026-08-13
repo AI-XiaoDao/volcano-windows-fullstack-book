@@ -1,0 +1,1090 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+ = "oldWndProc""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ = "oldWndProc""package name": "火山.仰望",
+ = "oldWndProc""@文档": "\"category = \\\"事件钩子库\\\"\"",
+ = "oldWndProc""classes": [
+ {
+ 挂接指针信息"class name": "热键监视类_",
+ 挂接指针信息"@文档": "\"category = \\\"事件钩子库.热键\\\"\"",
+ 挂接指针信息"methods": [
+  {
+型 = 变整数 @输出名 = "lpfunc""method name": "注册热键_",
+型 = 变整数 @输出名 = "lpfunc""result comment": "成功返回热键ID，失败返回-1",
+型 = 变整数 @输出名 = "lpfunc""data type": "整数",
+型 = 变整数 @输出名 = "lpfunc""@禁止流程检查": "真",
+型 = 变整数 @输出名 = "lpfunc""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "功能键",
+"comment": "1、ALT  2、Ctrl  4、Shift  8、Win    ；组合功能键，直接数字相加即可",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "键代码",
+"comment": "例如：键代码.V键",
+"data type": "整数"
+   }
+型 = 变整数 @输出名 = "lpfunc"]
+  },
+  {
+            "method name": "卸载热键_",
+            "data type": "逻辑型",
+            "@禁止流程检查": "真",
+            "parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "热键ID",
+"data type": "整数"
+   }
+            ]
+  },
+  {
+data type": "整数""method name": "热键触发事件",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "热键ID",
+"data type": "整数"
+   }
+data type": "整数"]
+  }
+ 挂接指针信息]
+ },
+ {
+"class name": "钩子类_",
+"@文档": "\"category = \\\"事件钩子库.钩子\\\"\"",
+"methods": [
+  {
+= 变整数 @输出名 = "lpfunc"]"method name": "注册键盘钩子_",
+= 变整数 @输出名 = "lpfunc"]"data type": "变整数",
+= 变整数 @输出名 = "lpfunc"]"@禁止流程检查": "真",
+= 变整数 @输出名 = "lpfunc"]"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否全局",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "开启屏蔽按键",
+"comment": "真：将拦截系统中的按键信息",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "屏蔽所有按键",
+"comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "触发单次",
+"comment": "真：按住某键时只触发一次",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+= 变整数 @输出名 = "lpfunc"]]
+  },
+  {
+ }"method name": "注册鼠标钩子_",
+ }"data type": "变整数",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否全局",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "开启屏蔽鼠标",
+"comment": "真：将拦截系统中的鼠标操作信息",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "屏蔽所有鼠标",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+
+"method name": "加入屏蔽组合键输出_",
+
+"comment": "针对按下Shift+某键时，会输出某键的问题",
+
+"parameters": [
+   {
+"parameter name": "键值",
+"comment": "例如：按键码.F键",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+@默认值": "假""method name": "删除屏蔽组合键输出_",
+@默认值": "假""parameters": [
+   {
+"parameter name": "键值",
+"data type": "整数"
+   }
+@默认值": "假"]
+  },
+  {
+
+"method name": "开启拦截按键_",
+
+"parameters": [
+   {
+"parameter name": "是否开启",
+"comment": "真：将拦截系统中的按键信息",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "屏蔽所有按键",
+"comment": "真：屏蔽整个键盘按键　；参数一“是否开启”设置为真时，本参数才会生效",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ }"method name": "加入屏蔽键_",
+ }"comment": "不清楚键值的可以通过“键代码信息输出事件”查看.\n例：\nAlt+Tab = 9 15\nAlt+Tab = 32 57\nAlt+F4 = 115 62\nWin = 91\nWin = 92",
+ }"parameters": [
+   {
+"parameter name": "键值一",
+"comment": "单填写参数一则屏蔽单键。例如：按键码.F键",
+"data type": "整数"
+   },
+   {
+"parameter name": "键值二",
+"comment": "两个参数均填写则可屏蔽组合键.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否组合键",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""method name": "删除屏蔽键_",
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""parameters": [
+   {
+"parameter name": "键值一",
+"comment": "单填写参数一则删除单键",
+"data type": "整数"
+   },
+   {
+"parameter name": "键值二",
+"comment": "两个参数均填写则可删除组合键",
+"data type": "整数",
+"@默认值": "-1"
+   }
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令"]
+  },
+  {
+data type": "整数""method name": "开启拦截鼠标_",
+data type": "整数""parameters": [
+   {
+"parameter name": "是否开启",
+"comment": "真：将拦截系统中的鼠标操作信息",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "屏蔽所有鼠标",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "整数"]
+  },
+  {
+@默认值": "真""method name": "加入屏蔽鼠标_",
+@默认值": "真""parameters": [
+   {
+"parameter name": "鼠标操作类型",
+"comment": "1、鼠标左键按下　2、鼠标左键放开　3、鼠标右键按下　4、鼠标右键放开.\n5、鼠标中键按下　6、鼠标中键放开　7、鼠标上滚　8、鼠标下滚",
+"data type": "整数"
+   }
+@默认值": "真"]
+  },
+  {
+data type": "逻辑型""method name": "删除屏蔽鼠标_",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "鼠标操作类型",
+"comment": "1、鼠标左键按下　2、鼠标左键放开　3、鼠标右键按下　4、鼠标右键放开.\n5、鼠标中键按下　6、鼠标中键放开　7、鼠标上滚　8、鼠标下滚",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+data type": "整数""method name": "卸载钩子_",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@禁止流程检查": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "钩子句柄",
+"comment": "注册钩子时返回的句柄，留空将卸载所有钩子",
+"data type": "变整数",
+"@默认值": "0"
+   }
+data type": "整数"]
+  },
+  {
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""method name": "键盘按下事件",
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""type": "event",
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""data type": "整数",
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""parameters": [
+   {
+"parameter name": "键代码",
+"comment": "例如：按键码.A键",
+"data type": "整数"
+   }
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令"]
+  },
+  {
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""method name": "键盘松开事件",
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""type": "event",
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""data type": "整数",
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令""parameters": [
+   {
+"parameter name": "键代码",
+"comment": "例如：按键码.A键",
+"data type": "整数"
+   }
+comment": "真：屏蔽整个键盘按键　；“开启屏蔽按键”设置为真时，本参数才会生效.\n无法拦截Ctrl+Alt+Del，可以配置“锁定任务管理器_”命令"]
+  },
+  {
+ }"method name": "组合键回调事件",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "键代码",
+"comment": "例如：按键码.A键",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否按下Ctrl",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否按下Alt",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否按下Shift",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否按下Win",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "按键状态",
+"comment": "真为按下，假为放开",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+
+"method name": "键代码信息输出事件",
+
+"comment": "输出键代码信息，方便调试屏蔽按键",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "键值一",
+"data type": "整数"
+   },
+   {
+"parameter name": "键值二",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "逻辑型""method name": "鼠标按下事件",
+data type": "逻辑型""type": "event",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "按下按键",
+"comment": "1左键，2右键，3中建",
+"data type": "整数"
+   }
+data type": "逻辑型"]
+  },
+  {
+
+"method name": "鼠标松开事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "放开按键",
+"comment": "1左键，2右键，3中建",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+]"method name": "鼠标滚轮事件",
+]"comment": "局部钩子此事件无效",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "滚动距离",
+"comment": "判断滚动方向，下滚：<0　上滚：>0",
+"data type": "整数"
+   }
+]]
+  },
+  {
+ }"method name": "鼠标移动事件",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "屏幕区横向位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "屏幕区纵向位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "组件区横向位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "组件区纵向位置",
+"data type": "整数"
+   }
+ }]
+  }
+]
+ },
+ {
+comment": "单填写参数一则屏蔽单键。例如：按键码.F键""class name": "鼠键钩子类_",
+comment": "单填写参数一则屏蔽单键。例如：按键码.F键""@文档": "\"category = \\\"事件钩子库.钩子\\\"\"",
+comment": "单填写参数一则屏蔽单键。例如：按键码.F键""methods": [
+  {
+"method name": "获取按键状态",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "按键码",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "鼠标按下事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "按下按键",
+"comment": "1左键，2右键，3中建",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "鼠标松开事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "放开按键",
+"comment": "1左键，2右键，3中建",
+"data type": "整数"
+   }
+]
+  },
+  {
+ }"method name": "键盘按下事件",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "按下按键",
+"comment": "例如：按键码.A键",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+]"method name": "键盘松开事件",
+]"type": "event",
+]"data type": "整数",
+]"parameters": [
+   {
+"parameter name": "放开按键",
+"comment": "例如：按键码.A键",
+"data type": "整数"
+   }
+]]
+  },
+  {
+"method name": "鼠标滚轮事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "滚动距离",
+"comment": "判断滚动方向，下滚：<0　上滚：>0",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "组合键回调事件",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "按键码",
+"comment": "例如：按键码.A键",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否按下Ctrl",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否按下Alt",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否按下Shift",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否按下Win",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "按键状态",
+"comment": "真为按下，假为放开",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+ }"method name": "内部回调方法",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "按键码",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "scanCode",
+"data type": "整数"
+   },
+   {
+"parameter name": "flags",
+"data type": "整数"
+   }
+ }]
+  }
+comment": "单填写参数一则屏蔽单键。例如：按键码.F键"]
+ },
+ {
+"class name": "模拟操作类_",
+"@文档": "\"category = \\\"事件钩子库.模拟鼠键操作\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+]"method name": "鼠标_限制鼠标移动范围",
+]"comment": "如果要让窗口一启动就执行限制，可以在窗口“首次激活”时调用本命令，\n不要在“创建完毕”时调用　",
+]"static": true,
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "限制左",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "限制顶",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "宽度范围",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "高度范围",
+"data type": "整数",
+"@默认值": "0"
+   }
+]]
+  },
+  {
+
+"method name": "鼠标_解除鼠标移动范围",
+
+"static": true
+  },
+  {
+
+"method name": "键盘_模拟按键",
+
+"comment": "可以单键也可以组合键",
+
+"static": true,
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "键代码",
+"comment": "例如：按键码.V键",
+"data type": "整数"
+   },
+   {
+"parameter name": "Ctrl",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Alt",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Shift",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Win",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+"method name": "键盘_模拟按键2",
+"comment": "向指定窗口句柄的窗口中发送按键消息",
+"static": true,
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "键代码",
+"comment": "例如：按键码.A键",
+"data type": "整数"
+   },
+   {
+"parameter name": "Ctrl",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Alt",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Shift",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "Win",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否激活窗口",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "样式",
+"comment": "默认为显示窗口但不改变当前激活的窗口",
+"data type": "窗口显示命令常量",
+"@默认值": "窗口显示命令常量.SW_SHOWNOACTIVATE"
+   }
+]
+  },
+  {
+data type": "逻辑型""method name": "键盘_模拟回车",
+data type": "逻辑型""static": true,
+data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "鼠标_模拟鼠标移动",
+"static": true,
+"parameters": [
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   }
+]
+  },
+  {
+"method name": "鼠标_模拟鼠标左键单击",
+"static": true,
+"parameters": [
+   {
+"parameter name": "点击类型",
+"comment": "0、按下松开 1、只按下 2、只松开",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+@默认值": "0""method name": "鼠标_模拟鼠标左键单击2",
+@默认值": "0""static": true,
+@默认值": "0""parameters": [
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "点击类型",
+"comment": "0、按下松开 1、只按下 2、只松开",
+"data type": "整数",
+"@默认值": "0"
+   }
+@默认值": "0"]
+  },
+  {
+
+"method name": "鼠标_模拟鼠标右键点击",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "点击类型",
+"comment": "0、按下松开 1、只按下 2、只松开",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+"method name": "鼠标_模拟鼠标右键点击2",
+"static": true,
+"parameters": [
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "点击类型",
+"comment": "0、按下松开 1、只按下 2、只松开",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+
+"method name": "鼠标_模拟鼠标中键点击",
+
+"static": true,
+
+"parameters": [
+   {
+"parameter name": "点击类型",
+"comment": "0、按下松开 1、只按下 2、只松开",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+parameters": [
+"method name": "鼠标_模拟鼠标中键点击2",
+parameters": [
+"static": true,
+parameters": [
+"parameters": [
+   {
+"parameter name": "横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "点击类型",
+"comment": "0、按下松开 1、只按下 2、只松开",
+"data type": "整数",
+"@默认值": "0"
+   }
+parameters": [
+]
+  },
+  {
+ }"method name": "鼠标_模拟鼠标滚轮滚动",
+ }"comment": "必须某个窗口先获得焦点",
+ }"static": true,
+ }"parameters": [
+   {
+"parameter name": "滚动方向",
+"comment": "真为向下滚，假为向上滚，1次为120",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  }
+]
+ },
+ {
+"class name": "挂接事件类_",
+"@文档": "\"category = \\\"事件钩子库.鼠键事件监视\\\"\"",
+"methods": [
+  {
+"method name": "挂接事件_",
+"comment": "绑定组件，获取组件事件",
+"parameters": [
+   {
+"parameter name": "组件句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+松开 1、只按下 2、只松开"method name": "置按键触发方式_",
+松开 1、只按下 2、只松开"comment": "设置在一个按键事件内触发单次或多次",
+松开 1、只按下 2、只松开"parameters": [
+   {
+"parameter name": "触发单次",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+松开 1、只按下 2、只松开]
+  },
+  {
+ameter name": "组件句柄""method name": "鼠标按下事件",
+ameter name": "组件句柄""type": "event",
+ameter name": "组件句柄""data type": "整数",
+ameter name": "组件句柄""parameters": [
+   {
+"parameter name": "组件句柄",
+"comment": "光标处组件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "横向位置",
+"comment": "当前组件内的光标位，x轴，不含屏幕距离和其它组件",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "当前组件内的光标位，y轴，不含屏幕距离和其它组件",
+"data type": "整数"
+   },
+   {
+"parameter name": "窗口左",
+"comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离",
+"data type": "整数"
+   },
+   {
+"parameter name": "窗口顶",
+"comment": "当前窗口内，光标距离窗口顶侧距离，不含屏幕距离",
+"data type": "整数"
+   },
+   {
+"parameter name": "按键类型",
+"comment": "1左键，2右键，3中建",
+"data type": "整数"
+   }
+ameter name": "组件句柄"]
+  },
+  {
+ }"method name": "鼠标松开事件",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "组件句柄",
+"comment": "光标处组件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "横向位置",
+"comment": "当前组件内的光标位，x轴，不含屏幕距离和其它组件",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "当前组件内的光标位，y轴，不含屏幕距离和其它组件",
+"data type": "整数"
+   },
+   {
+"parameter name": "窗口左",
+"comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离",
+"data type": "整数"
+   },
+   {
+"parameter name": "窗口顶",
+"comment": "当前窗口内，光标距离窗口顶侧距离，不含屏幕距离",
+"data type": "整数"
+   },
+   {
+"parameter name": "按键类型",
+"comment": "1左键，2右键，3中建",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+comment": "当前窗口内，光标距离窗口顶侧距离，不含屏幕距离""method name": "键盘按下事件",
+comment": "当前窗口内，光标距离窗口顶侧距离，不含屏幕距离""type": "event",
+comment": "当前窗口内，光标距离窗口顶侧距离，不含屏幕距离""data type": "整数",
+comment": "当前窗口内，光标距离窗口顶侧距离，不含屏幕距离""parameters": [
+   {
+"parameter name": "键代码",
+"comment": "例如：按键码.A键",
+"data type": "整数"
+   }
+comment": "当前窗口内，光标距离窗口顶侧距离，不含屏幕距离"]
+  },
+  {
+comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离""method name": "键盘松开事件",
+comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离""type": "event",
+comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离""data type": "整数",
+comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离""parameters": [
+   {
+"parameter name": "键代码",
+"comment": "例如：按键码.A键",
+"data type": "整数"
+   }
+comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离"]
+  },
+  {
+ameter name": "横向位置""method name": "鼠标滚轮事件",
+ameter name": "横向位置""type": "event",
+ameter name": "横向位置""data type": "整数",
+ameter name": "横向位置""parameters": [
+   {
+"parameter name": "滚动距离",
+"comment": "判断滚动方向，下滚：<0　上滚：>0",
+"data type": "整数"
+   }
+ameter name": "横向位置"]
+  },
+  {
+ }"method name": "鼠标移动事件",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "顶级句柄",
+"comment": "主体窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "组件句柄",
+"comment": "光标处组件句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "横向位置",
+"comment": "当前组件内的光标位，x轴，不含屏幕距离和其它组件",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向位置",
+"comment": "当前组件内的光标位，y轴，不含屏幕距离和其它组件",
+"data type": "整数"
+   },
+   {
+"parameter name": "组件左",
+"comment": "光标处组件在窗口中的左侧距离",
+"data type": "整数"
+   },
+   {
+"parameter name": "组件顶",
+"comment": "光标处组件在窗口中的顶侧距离",
+"data type": "整数"
+   },
+   {
+"parameter name": "组件宽",
+"comment": "光标处组件宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "组件高",
+"comment": "光标处组件高度",
+"data type": "整数"
+   },
+   {
+"parameter name": "窗口左",
+"comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离",
+"data type": "整数"
+   },
+   {
+"parameter name": "窗口顶",
+"comment": "当前窗口内，光标距离窗口顶侧距离，不含屏幕距离",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ }"method name": "回调事件集",
+ }"comment": "内部",
+ }"type": "event",
+ }"data type": "整数",
+ }"parameters": [
+   {
+"parameter name": "hwnd",
+"data type": "变整数"
+   },
+   {
+"parameter name": "uMsg",
+"data type": "整数"
+   },
+   {
+"parameter name": "wParam",
+"data type": "变整数"
+   },
+   {
+"parameter name": "lParam",
+"data type": "变整数"
+   }
+ }]
+  }
+]
+ },
+ {
+comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离""class name": "事件指针",
+comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离""@文档": "\"category = \\\"事件钩子库.鼠键事件监视.附加类\\\"\"",
+comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离""methods": [
+  {
+}"comment": "内部""method name": "置入新数据",
+}"comment": "内部""static": true,
+}"comment": "内部""parameters": [
+   {
+"parameter name": "对应句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否新数据",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "新数据对象",
+"data type": "挂接指针信息"
+   }
+}"comment": "内部"]
+  },
+  {
+"method name": "获取指针数据",
+"static": true,
+"data type": "挂接指针信息",
+"parameters": [
+   {
+"parameter name": "对应句柄",
+"data type": "变整数"
+   }
+]
+  }
+comment": "当前窗口内，光标距离窗口左侧距离，不含屏幕距离"]
+ },
+ {
+}"class name": "挂接指针信息",
+}"@文档": "\"category = \\\"事件钩子库.鼠键事件监视.附加类\\\"\"",
+}"@输出名": "\"ThisClass\"",
+}"variables": [
+  {
+data type": "挂接指针信息""variable name": "lpfunc",
+data type": "挂接指针信息""data type": "变整数",
+data type": "挂接指针信息""@输出名": "\"lpfunc\""
+  },
+  {
+ }"variable name": "oldWndProc",
+ }"data type": "变整数",
+ }"@输出名": "\"oldWndProc\""
+  },
+  {
+ }"variable name": "This",
+ }"data type": "变整数",
+ }"@输出名": "\"ThisClassOb\""
+  }
+}]
+ }
+ = "oldWndProc"]
+}

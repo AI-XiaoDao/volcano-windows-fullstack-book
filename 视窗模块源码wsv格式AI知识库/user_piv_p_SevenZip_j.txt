@@ -1,0 +1,4963 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+t<标准时间类>(@<本项目>.lastAccessTime())"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+t<标准时间类>(@<本项目>.lastAccessTime())"package name": "火山.PIV基础类",
+t<标准时间类>(@<本项目>.lastAccessTime())"comment": "  7-zip  https://www.7-zip.org\n  bit7z  https://github.com/rikyoz/bit7z\n  本类库需要依赖bit7z的lib静态库和\"7z.dll\"文件,其中dll文件是\n从7-zip官网下载,使用VS 2017编译器和32位时支持XP.\n  bit7z的很多方法都会抛出异常,封装时已经在内部俘获了大部分异\n常,其他少量异常请自行俘获或者严格做好判断吧.",
+t<标准时间类>(@<本项目>.lastAccessTime())"classes": [
+ {
+n<CVolString>(@<本项目>.extension().c_str())"class name": "存档读写类",
+n<CVolString>(@<本项目>.extension().c_str())"comment": "提供简单易用的压缩和解压命令,只需要调用一个方法即可完成压缩或解压.\n功能没有\"存档解压类\"和\"存档压缩类\"全面,也没有进度反馈,但胜在简单.",
+n<CVolString>(@<本项目>.extension().c_str())"base class": "PIV本地类",
+n<CVolString>(@<本项目>.extension().c_str())"@文档": "\"category = \\\"文件压缩\\\"\"",
+n<CVolString>(@<本项目>.extension().c_str())"@别名": "\"//Piv7zLib\"",
+n<CVolString>(@<本项目>.extension().c_str())"@别名类型": "本地类",
+n<CVolString>(@<本项目>.extension().c_str())"@类用途": "禁止创建对象",
+n<CVolString>(@<本项目>.extension().c_str())"@视窗.外部头文件": "\"bit7z\\\\include\\\\piv_bit7z.hpp\"",
+n<CVolString>(@<本项目>.extension().c_str())"@视窗.外部库": "\"bit7z\\\\lib\\\\$(p)\\\\$(d)\\\\bit7z_$(crt).lib\"",
+n<CVolString>(@<本项目>.extension().c_str())"@视窗.附属文件": "\"bit7z\\\\lib\\\\$(p)\\\\7z.dll\"",
+n<CVolString>(@<本项目>.extension().c_str())"@视窗.需求VS版本": "\"15-\"",
+n<CVolString>(@<本项目>.extension().c_str())"methods": [
+  {
+本变体>.isUInt8()"method name": "加载动态库",
+本变体>.isUInt8()"comment": "程序默认在执行本类库的任意方法时会自动加载与程序文件同位置的\"7z.dll\"文件.\n如果你想将\"7z.dll\"放在其他位置或更改dll的名称,请在执行其他方法前调用本方法手动加载.",
+本变体>.isUInt8()"static": true,
+本变体>.isUInt8()"data type": "逻辑型",
+本变体>.isUInt8()"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+本变体>.isUInt8()"parameters": [
+   {
+"parameter name": "动态库路径",
+"data type": "文本型"
+   }
+本变体>.isUInt8()]
+  },
+  {
+data type": "文本型""method name": "卸载动态库",
+data type": "文本型""comment": "手动卸载7z的动态库,一般不需要执行本方法.",
+data type": "文本型""static": true,
+data type": "文本型""@嵌入式方法": "\"\""
+  },
+  {
+问本程序中的接口需要引用模块"PIV基础类"."method name": "取最后错误",
+问本程序中的接口需要引用模块"PIV基础类"."comment": "返回最后一次操作的错误信息,返回\"OK\"表示操作成功无错误.\n本方法线程安全.",
+问本程序中的接口需要引用模块"PIV基础类"."static": true,
+问本程序中的接口需要引用模块"PIV基础类"."data type": "文本型",
+问本程序中的接口需要引用模块"PIV基础类"."@嵌入式方法": "\"\""
+  },
+  {
+<CVolString>(@<本项目>.extension().c_str())"@别名": "\"//Piv7zLib\"""method name": "添加到压缩包",
+<CVolString>(@<本项目>.extension().c_str())"@别名": "\"//Piv7zLib\"""comment": "将提供的文件和目录添加到压缩包中",
+<CVolString>(@<本项目>.extension().c_str())"@别名": "\"//Piv7zLib\"""result comment": "返回是否压缩成功,失败时可调用\"取最后错误\"获取错误信息.",
+<CVolString>(@<本项目>.extension().c_str())"@别名": "\"//Piv7zLib\"""static": true,
+<CVolString>(@<本项目>.extension().c_str())"@别名": "\"//Piv7zLib\"""data type": "逻辑型",
+<CVolString>(@<本项目>.extension().c_str())"@别名": "\"//Piv7zLib\"""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+<CVolString>(@<本项目>.extension().c_str())"@别名": "\"//Piv7zLib\"""parameters": [
+   {
+"parameter name": "路径数组",
+"comment": "所欲压缩的路径数组;\n提供的相对或绝对路径必须指向存在的文件或目录,否则会失败.",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "输出压缩文件的相对或绝对路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码,只有SevenZip和Zip格式支持设置密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "压缩等级",
+"comment": "设置压缩等级,会影响压缩速度和压缩包大小;\n其中Wim和Tar格式不支持设置压缩等级,会无视该参数;\n还有一些格式不支持\"仅存储\"或\"极速压缩\",使用了会返回失败.",
+"data type": "存档压缩等级",
+"@默认值": "存档压缩等级.标准压缩"
+   },
+   {
+"parameter name": "更新方式",
+"comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.",
+"data type": "存档更新方式",
+"@默认值": "存档更新方式.添加并替换文件"
+   }
+<CVolString>(@<本项目>.extension().c_str())"@别名": "\"//Piv7zLib\""]
+  },
+  {
+}"method name": "添加别名到压缩包",
+}"comment": "将提供的文件和目录路径以别名的方式添加到压缩包中",
+}"result comment": "返回是否压缩成功,失败时可调用\"取最后错误\"获取错误信息.",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "路径键值对",
+"comment": "所欲压缩的路径到别名键值对;\n其中键为文件或目录的相对或绝对路径,值为相对路径的别名;\n提供的键名必须指向存在的文件或目录,否则会失败.",
+"data type": "文本到文本哈希表"
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "输出压缩文件的相对或绝对路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码,只有SevenZip和Zip格式支持设置密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "压缩等级",
+"comment": "设置压缩等级,会影响压缩速度和压缩包大小;\n其中Wim和Tar格式不支持设置压缩等级,会无视该参数;\n还有一些格式不支持\"仅存储\"或\"极速压缩\",使用了会返回失败.",
+"data type": "存档压缩等级",
+"@默认值": "存档压缩等级.标准压缩"
+   },
+   {
+"parameter name": "更新方式",
+"comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.",
+"data type": "存档更新方式",
+"@默认值": "存档更新方式.添加并替换文件"
+   }
+}]
+  },
+  {
+ }"method name": "添加文件到压缩包",
+ }"comment": "将提供的文件数组添加到压缩包中,本方法会忽略数组中的目录路径.",
+ }"result comment": "返回是否压缩成功,失败时可调用\"取最后错误\"获取错误信息.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ }"parameters": [
+   {
+"parameter name": "路径数组",
+"comment": "所欲压缩的文件路径数组;\n提供的相对或绝对路径必须指向存在的文件,否则会失败;\n本方法只支持添加文件,数组中的目录将被忽略.",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "输出压缩文件的相对或绝对路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码,只有SevenZip和Zip格式支持设置密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "压缩等级",
+"comment": "设置压缩等级,会影响压缩速度和压缩包大小;\n其中Wim和Tar格式不支持设置压缩等级,会无视该参数;\n还有一些格式不支持\"仅存储\"或\"极速压缩\",使用了会返回失败.",
+"data type": "存档压缩等级",
+"@默认值": "存档压缩等级.标准压缩"
+   },
+   {
+"parameter name": "更新方式",
+"comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.",
+"data type": "存档更新方式",
+"@默认值": "存档更新方式.添加并替换文件"
+   }
+ }]
+  },
+  {
+@默认值": "存档压缩等级.标准压缩""method name": "添加匹配文件到压缩包",
+@默认值": "存档压缩等级.标准压缩""comment": "将指定目录中的文件添加到压缩包中,可以选择是否递归添加子目录,以及使用通配符筛选添加文件.\n注: 只支持压缩到SevenZip、Zip、Tar、Wim这4个格式.",
+@默认值": "存档压缩等级.标准压缩""result comment": "返回是否压缩成功,失败时可调用\"取最后错误\"获取错误信息.",
+@默认值": "存档压缩等级.标准压缩""static": true,
+@默认值": "存档压缩等级.标准压缩""data type": "逻辑型",
+@默认值": "存档压缩等级.标准压缩""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+@默认值": "存档压缩等级.标准压缩""parameters": [
+   {
+"parameter name": "输入目录",
+"comment": "请提供输入目录的相对或绝对路径;\n目录中的文件或子目录将被添加到压缩包中,但不包含输入目录本身.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "输出压缩文件的相对或绝对路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "筛选器",
+"comment": "用通配符筛选要压缩的部分文件",
+"data type": "文本型",
+"@默认值": "\"*\""
+   },
+   {
+"parameter name": "递归子目录",
+"comment": "是否递归搜寻\"输入目录\"下所有子目录中的文件",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码,只有SevenZip和Zip格式支持设置密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "压缩等级",
+"comment": "设置压缩等级,会影响压缩速度和压缩包大小;\n其中Wim和Tar格式不支持设置压缩等级,会无视该参数;\n还有一些格式不支持\"仅存储\"或\"极速压缩\",使用了会返回失败.",
+"data type": "存档压缩等级",
+"@默认值": "存档压缩等级.标准压缩"
+   },
+   {
+"parameter name": "更新方式",
+"comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.",
+"data type": "存档更新方式",
+"@默认值": "存档更新方式.添加并替换文件"
+   }
+@默认值": "存档压缩等级.标准压缩"]
+  },
+  {
+comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.""method name": "添加目录到压缩包",
+comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.""comment": "将指定的整个目录添加到压缩包中.\n注: 只支持压缩到SevenZip、Zip、Tar、Wim这4个格式.",
+comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.""result comment": "返回是否压缩成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.""static": true,
+comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.""data type": "逻辑型",
+comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.""parameters": [
+   {
+"parameter name": "输入目录",
+"comment": "请提供输入目录的相对或绝对路径;\n目录自身和其中的所有文件和子目录都会被添加到压缩包中.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "输出压缩文件的相对或绝对路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码,只有SevenZip和Zip格式支持设置密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "压缩等级",
+"comment": "设置压缩等级,会影响压缩速度和压缩包大小;\n其中Wim和Tar格式不支持设置压缩等级,会无视该参数;\n还有一些格式不支持\"仅存储\"或\"极速压缩\",使用了会返回失败.",
+"data type": "存档压缩等级",
+"@默认值": "存档压缩等级.标准压缩"
+   },
+   {
+"parameter name": "更新方式",
+"comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.",
+"data type": "存档更新方式",
+"@默认值": "存档更新方式.添加并替换文件"
+   }
+comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败."]
+  },
+  {
+@默认值": "\"*\"""method name": "添加匹配目录到压缩包",
+@默认值": "\"*\"""comment": "将指定目录中的文件和目录添加到压缩包中,可以选择是否递归添加子目录,以及使用通配符筛选添加的内容.\n注: 只支持压缩到SevenZip、Zip、Tar、Wim这4个格式.",
+@默认值": "\"*\"""result comment": "返回是否压缩成功,失败时可调用\"取最后错误\"获取错误信息.",
+@默认值": "\"*\"""static": true,
+@默认值": "\"*\"""data type": "逻辑型",
+@默认值": "\"*\"""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+@默认值": "\"*\"""parameters": [
+   {
+"parameter name": "输入目录",
+"comment": "请提供输入目录的相对或绝对路径;\n目录中的文件或子目录将被添加到压缩包中,但不包含输入目录本身.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "输出压缩文件的相对或绝对路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "筛选器",
+"comment": "用通配符筛选要压缩的部分文件",
+"data type": "文本型",
+"@默认值": "\"*\""
+   },
+   {
+"parameter name": "递归子目录",
+"comment": "是否递归搜寻\"输入目录\"下所有子目录中的文件",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码,只有SevenZip和Zip格式支持设置密码.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "压缩等级",
+"comment": "设置压缩等级,会影响压缩速度和压缩包大小;\n其中Wim和Tar格式不支持设置压缩等级,会无视该参数;\n还有一些格式不支持\"仅存储\"或\"极速压缩\",使用了会返回失败.",
+"data type": "存档压缩等级",
+"@默认值": "存档压缩等级.标准压缩"
+   },
+   {
+"parameter name": "更新方式",
+"comment": "如果目标压缩包已经存在,选择以何种方式更新目标压缩包的内容;\nBZip2、GZip、Xz不支持更新模式,若压缩包已存在就会返回失败.",
+"data type": "存档更新方式",
+"@默认值": "存档更新方式.添加并替换文件"
+   }
+@默认值": "\"*\""]
+  },
+  {
+ameter name": "压缩格式""method name": "解压到",
+ameter name": "压缩格式""comment": "将压缩文件完整解压到指定目录",
+ameter name": "压缩格式""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+ameter name": "压缩格式""static": true,
+ameter name": "压缩格式""data type": "逻辑型",
+ameter name": "压缩格式""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ameter name": "压缩格式""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "所欲解压的压缩文件,包含完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+ameter name": "压缩格式"]
+  },
+  {
+@默认值": "存档更新方式.添加并替换文件""method name": "解压到内存",
+@默认值": "存档更新方式.添加并替换文件""comment": "将压缩文件的全部内容解压到内存中.\n请勿使用本方法解压大文件,以免爆内存.",
+@默认值": "存档更新方式.添加并替换文件""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+@默认值": "存档更新方式.添加并替换文件""static": true,
+@默认值": "存档更新方式.添加并替换文件""data type": "逻辑型",
+@默认值": "存档更新方式.添加并替换文件""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+@默认值": "存档更新方式.添加并替换文件""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "所欲解压的压缩文件,包含完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解压结果",
+"comment": "解压成功后,内容会保存在此参数中.",
+"data type": "存档解压键值类"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+@默认值": "存档更新方式.添加并替换文件"]
+  },
+  {
+comment": "所欲解压的压缩文件,包含完整路径.""method name": "解压匹配文件",
+comment": "所欲解压的压缩文件,包含完整路径.""comment": "使用通配符筛选文件,然后将匹配的文件解压到指定目录.",
+comment": "所欲解压的压缩文件,包含完整路径.""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "所欲解压的压缩文件,包含完整路径.""static": true,
+comment": "所欲解压的压缩文件,包含完整路径.""data type": "逻辑型",
+comment": "所欲解压的压缩文件,包含完整路径.""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+comment": "所欲解压的压缩文件,包含完整路径.""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "所欲解压的压缩文件,包含完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "筛选器",
+"comment": "所欲筛选的文件路径,支持通配符,必须完全一致才能匹配成功；\n比如文件在子目录里的必须填写带文件夹的相对路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+comment": "所欲解压的压缩文件,包含完整路径."]
+  },
+  {
+comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.""method name": "解压匹配文件到字节集",
+comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.""comment": "使用通配符筛选文件,然后将匹配的第一个文件解压到字节集中.",
+comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.""static": true,
+comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.""data type": "逻辑型",
+comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.""@嵌入式方法": "\"req_cpp_bool = true\"",
+comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "所欲解压的压缩文件,包含完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "筛选器",
+"comment": "所欲筛选的文件路径,支持通配符,必须完全一致才能匹配成功；\n比如文件在子目录里的必须填写带文件夹的相对路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "解压成功后,内容会保存在此字节集中.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "返回最终解压的文件名",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"筛选器\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式."]
+  },
+  {
+comment": "所欲解压的压缩文件,包含完整路径.""method name": "解压正则匹配文件",
+comment": "所欲解压的压缩文件,包含完整路径.""comment": "使用正则表达式筛选文件,然后将匹配的文件解压到指定目录.",
+comment": "所欲解压的压缩文件,包含完整路径.""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "所欲解压的压缩文件,包含完整路径.""static": true,
+comment": "所欲解压的压缩文件,包含完整路径.""data type": "逻辑型",
+comment": "所欲解压的压缩文件,包含完整路径.""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+comment": "所欲解压的压缩文件,包含完整路径.""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "所欲解压的压缩文件,包含完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"comment": "用于筛选文件路径的正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+comment": "所欲解压的压缩文件,包含完整路径."]
+  },
+  {
+
+"method name": "解压正则匹配文件到字节集",
+
+"comment": "使用正则表达式筛选文件,然后将匹配的第一个文件解压到字节集中.",
+
+"result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_cpp_bool = true\"",
+
+"parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "所欲解压的压缩文件,包含完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "正则表达式",
+"comment": "用于筛选文件路径的正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "解压成功后,内容会保存在此字节集中.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "返回最终解压的文件名",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+
+]
+  },
+  {
+
+"method name": "解压资源到",
+
+"comment": "将视窗文件资源的压缩包完整解压到指定目录",
+
+"result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "压缩包资源",
+"comment": "所欲解压的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "解压资源到内存",
+data type": "文本型""comment": "将视窗文件资源的压缩包的全部内容解压到内存中.\n请勿使用本方法解压大文件,以免爆内存.",
+data type": "文本型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+data type": "文本型""static": true,
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "压缩包资源",
+"comment": "所欲解压的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "解压结果",
+"comment": "解压成功后,内容会保存在此参数中.",
+"data type": "存档解压键值类"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+data type": "文本型"]
+  },
+  {
+ameter name": "压缩包资源""method name": "解压资源匹配文件",
+ameter name": "压缩包资源""comment": "使用通配符筛选文件,然后将匹配的文件解压到指定目录.",
+ameter name": "压缩包资源""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+ameter name": "压缩包资源""static": true,
+ameter name": "压缩包资源""data type": "逻辑型",
+ameter name": "压缩包资源""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+ameter name": "压缩包资源""parameters": [
+   {
+"parameter name": "压缩包资源",
+"comment": "所欲解压的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "筛选器",
+"comment": "所欲筛选的文件路径,支持通配符,必须完全一致才能匹配成功；\n比如文件在子目录里的必须填写带文件夹的相对路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+ameter name": "压缩包资源"]
+  },
+  {
+ata type": "文本型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.""method name": "解压资源匹配到字节集",
+ata type": "文本型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.""comment": "使用通配符筛选文件,然后将匹配的第一个文件解压到字节集中.",
+ata type": "文本型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+ata type": "文本型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.""static": true,
+ata type": "文本型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.""data type": "逻辑型",
+ata type": "文本型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.""@嵌入式方法": "\"req_cpp_bool = true\"",
+ata type": "文本型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.""parameters": [
+   {
+"parameter name": "压缩包资源",
+"comment": "所欲解压的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "筛选器",
+"comment": "所欲筛选的文件路径,支持通配符,必须完全一致才能匹配成功；\n比如文件在子目录里的必须填写带文件夹的相对路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "解压成功后,内容会保存在此字节集中.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "返回最终解压的文件名",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"筛选器\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+ata type": "文本型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息."]
+  },
+  {
+
+"method name": "解压资源正则匹配文件",
+
+"comment": "使用正则表达式筛选文件,然后将匹配的文件解压到指定目录.",
+
+"result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+
+"parameters": [
+   {
+"parameter name": "压缩包资源",
+"comment": "所欲解压的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "正则表达式",
+"comment": "用于筛选文件路径的正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+
+]
+  },
+  {
+
+"method name": "解压资源正则匹配到字节集",
+
+"comment": "使用正则表达式筛选文件,然后将匹配的第一个文件解压到字节集中.",
+
+"result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_cpp_bool = true\"",
+
+"parameters": [
+   {
+"parameter name": "压缩包资源",
+"comment": "所欲解压的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "正则表达式",
+"comment": "用于筛选文件路径的正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "解压成功后,内容会保存在此字节集中.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "返回最终解压的文件名",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+
+]
+  },
+  {
+comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.""method name": "测试",
+comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.""comment": "测试提供的压缩文件是否完整有效,本方法会在内存中尝试完整解压数据.",
+comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.""result comment": "返回是否测试成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.""static": true,
+comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.""data type": "逻辑型",
+comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件.""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "所欲测试的压缩文件,包含完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+comment": "默认为假,表示只解压\"正则表达式\"成功匹配的第一个文件.\n若设置为真,则会解压未匹配的第一个文件."]
+  },
+  {
+data type": "存档输入格式""method name": "是否已加密文件名",
+data type": "存档输入格式""comment": "判断指定压缩包的文件名是否已加密,即未输入正确密码无法看到项目的文件名.",
+data type": "存档输入格式""result comment": "返回真表示至少有一个已加密的项目",
+data type": "存档输入格式""static": true,
+data type": "存档输入格式""data type": "逻辑型",
+data type": "存档输入格式""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+data type": "存档输入格式""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "所欲测试的压缩文件,包含完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+data type": "存档输入格式"]
+  },
+  {
+ata type": "存档输入格式""parameters": [
+"method name": "是否已加密",
+ata type": "存档输入格式""parameters": [
+"comment": "判断指定的压缩包是否已完整加密",
+ata type": "存档输入格式""parameters": [
+"result comment": "返回真表示压缩包的所有项目都是已加密的",
+ata type": "存档输入格式""parameters": [
+"static": true,
+ata type": "存档输入格式""parameters": [
+"data type": "逻辑型",
+ata type": "存档输入格式""parameters": [
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ata type": "存档输入格式""parameters": [
+"parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "所欲测试的压缩文件,包含完整路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+ata type": "存档输入格式""parameters": [
+]
+  }
+n<CVolString>(@<本项目>.extension().c_str())]
+ },
+ {
+ta type": "存档输入格式""parameters": [
+"comment": "判断指定的压缩包是否已完整加密""class name": "存档解压类",
+ta type": "存档输入格式""parameters": [
+"comment": "判断指定的压缩包是否已完整加密""comment": "  功能完整的压缩包解压类,支持解压进度反馈,\n还可以读取压缩包中的元数据.\n",
+ta type": "存档输入格式""parameters": [
+"comment": "判断指定的压缩包是否已完整加密""@文档": "\"category = \\\"文件压缩\\\"\"",
+ta type": "存档输入格式""parameters": [
+"comment": "判断指定的压缩包是否已完整加密""@强制依赖": "\"存档读写类\"",
+ta type": "存档输入格式""parameters": [
+"comment": "判断指定的压缩包是否已完整加密""@视窗.后缀文本": "\"public PivArchiveReader\"",
+ta type": "存档输入格式""parameters": [
+"comment": "判断指定的压缩包是否已完整加密""methods": [
+  {
+}"method name": "解压进度改变",
+}"comment": "当解压进度发生改变时,本事件将被多次触发直到解压结束.\n 1. 请勿在此执行耗时操作,否则将拖慢解压进度;\n 2. 通过返回值可以停止解压;\n 3. 如果是在主线程调用解压,可以直接在本事件中操作界面;\n 4. 若是在多线程中调用解压,则应该尽量使用\"高级主线程处理器\"\n等方式在子线程中操作界面组件;",
+}"result comment": "返回0表示继续解压,返回其他任意值停止解压.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "当前正在解压的文件路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "解压进度",
+"comment": "整体的解压百分比进度,范围为[0-100].",
+"data type": "整数"
+   },
+   {
+"parameter name": "总解压大小",
+"comment": "所有待解压的文件大小(解压后大小).",
+"data type": "长整数"
+   },
+   {
+"parameter name": "已解压大小",
+"comment": "目前已解压的大小.",
+"data type": "长整数"
+   },
+   {
+"parameter name": "整体压缩比",
+"comment": "当前已解压数据的压缩比(0-100),该值会随解压进度变化.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取最后错误",
+
+"comment": "返回最后一次操作的错误信息,返回\"OK\"表示操作成功无错误.",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "返回最后一次操作的错误信息,返回\"OK\"表示操作成功无错误.""method name": "是否为空",
+"comment": "返回最后一次操作的错误信息,返回\"OK\"表示操作成功无错误.""comment": "返回是否打开了压缩包,返回真表示未打开.",
+"comment": "返回最后一次操作的错误信息,返回\"OK\"表示操作成功无错误.""data type": "逻辑型",
+"comment": "返回最后一次操作的错误信息,返回\"OK\"表示操作成功无错误.""@嵌入式方法": "\"\""
+  },
+  {
+ata type": "存档输入格式""data type": "逻辑型""method name": "打开文件",
+ata type": "存档输入格式""data type": "逻辑型""comment": "通过文件路径打开压缩包,必须打开压缩包才能使用本类的其他方法.",
+ata type": "存档输入格式""data type": "逻辑型""result comment": "返回是否打开成功",
+ata type": "存档输入格式""data type": "逻辑型""data type": "逻辑型",
+ata type": "存档输入格式""data type": "逻辑型""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+ata type": "存档输入格式""data type": "逻辑型""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "请提供完整的压缩文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否启用进度反馈",
+"comment": "启用解压过程中的回调函数",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+ata type": "存档输入格式""data type": "逻辑型"]
+  },
+  {
+"method name": "打开字节集",
+"comment": "通过字节集打开压缩包,必须打开压缩包才能使用本类的其他方法.\n注意: 所提供的字节集数据会被缓存到本对象中,直到\"关闭\"压缩包才会释放;\n建议打开后释放原来的字节集,以减少内存占用.",
+"result comment": "返回是否打开成功",
+"data type": "逻辑型",
+"@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+"parameters": [
+   {
+"parameter name": "压缩包数据",
+"comment": "所欲被打开的压缩包字节集;\n数据会缓存到本对象内部,建议打开后释放字节集以减少内存占用.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否启用进度反馈",
+"comment": "启用解压过程中的回调函数",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+]
+  },
+  {
+data type": "存档输入格式""method name": "打开内存",
+data type": "存档输入格式""comment": "通过内存地址打开压缩包,必须打开压缩包才能使用本类的其他方法.\n注意: 所提供的内存数据会被缓存到本对象中,直到\"关闭\"压缩包才会释放;\n建议打开后释放原来的内存数据,以减少内存占用.",
+data type": "存档输入格式""result comment": "返回是否打开成功.",
+data type": "存档输入格式""data type": "逻辑型",
+data type": "存档输入格式""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+data type": "存档输入格式""parameters": [
+   {
+"parameter name": "压缩包地址",
+"comment": "所欲打开的压缩包内存地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "压缩包长度",
+"comment": "压缩包的字节长度",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否启用进度反馈",
+"comment": "启用解压过程中的回调函数",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+data type": "存档输入格式"]
+  },
+  {
+ta type": "存档输入格式"]"method name": "打开文件资源",
+ta type": "存档输入格式"]"comment": "打开视窗文件资源的压缩包,必须打开压缩包才能使用本类的其他方法.\n注意: 所提供的文件资源数据会被缓存到本对象中,直到\"关闭\"压缩包才会释放;",
+ta type": "存档输入格式"]"result comment": "返回是否打开成功.",
+ta type": "存档输入格式"]"data type": "逻辑型",
+ta type": "存档输入格式"]"@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+ta type": "存档输入格式"]"parameters": [
+   {
+"parameter name": "压缩包资源",
+"comment": "所欲打开的压缩包文件资源ID",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "是否启用进度反馈",
+"comment": "启用解压过程中的回调函数",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "密码",
+"comment": "设置解压密码,如果压缩包没有密码则不会有任何效果.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "解压格式",
+"comment": "默认自动根据压缩包的文件头和扩展名识别格式;\n若压缩包的扩展名和实际格式不符,有可能会识别失败,这时请手动选择格式.",
+"data type": "存档输入格式",
+"@默认值": "存档输入格式.自动"
+   }
+ta type": "存档输入格式"]]
+  },
+  {
+a type": "存档输入格式"]"comment": "打开视窗文件资源的压缩包,必须打开压缩包才能使用本类的其他方法.\n注意: 所提供的文件资源数据会被缓存到本对象中,直到\"关闭\"压缩包才会释放;""method name": "关闭",
+a type": "存档输入格式"]"comment": "打开视窗文件资源的压缩包,必须打开压缩包才能使用本类的其他方法.\n注意: 所提供的文件资源数据会被缓存到本对象中,直到\"关闭\"压缩包才会释放;""comment": "关闭压缩包,关闭后请勿再使用本类的其他方法.\n 1. 请勿在解压时执行关闭!\n 2. 类析构时会自动关闭,打开另一个压缩包也会自动关闭;",
+a type": "存档输入格式"]"comment": "打开视窗文件资源的压缩包,必须打开压缩包才能使用本类的其他方法.\n注意: 所提供的文件资源数据会被缓存到本对象中,直到\"关闭\"压缩包才会释放;""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "启用进度反馈",
+ }"comment": "设置是否启用解压过程中的回调函数,这可能会降低解压速度.",
+ }"type": "property setter",
+ }"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+"method name": "启用进度反馈",
+"comment": "返回是否启用了解压过程中的回调函数",
+"type": "property getter",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "逻辑型""method name": "解压到",
+data type": "逻辑型""comment": "将压缩包解压到指定目录",
+data type": "逻辑型""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   }
+data type": "逻辑型"]
+  },
+  {
+ }"method name": "解压到内存",
+ }"comment": "将压缩包的全部内容解压到内存中.\n请勿使用本方法解压大文件,以免爆内存.\n相比\"解压到内存2\",本方法需要做更多的内存复制,但进度反馈较为友好.",
+ }"result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "解压结果",
+"comment": "解压成功后,内容会以文本到字节集哈希表保存在此参数中;\n其中关键字为路径文本,值为数据字节集.",
+"data type": "存档解压键值类"
+   }
+ }]
+  },
+  {
+parameters": [
+"method name": "解压到内存2",
+parameters": [
+"comment": "将压缩包的全部内容解压到内存中.\n请勿使用本方法解压大文件,以免爆内存.\n相比\"解压到内存\",本方每解压一个文件都会从头反馈解压进度,但内存分配次数更低一些.",
+parameters": [
+"result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+parameters": [
+"data type": "逻辑型",
+parameters": [
+"@嵌入式方法": "\"\"",
+parameters": [
+"parameters": [
+   {
+"parameter name": "解压结果",
+"comment": "解压成功后,内容会以文本到字节集哈希表保存在此参数中;\n其中关键字为路径文本,值为数据字节集.",
+"data type": "存档解压键值类"
+   }
+parameters": [
+]
+  },
+  {
+@嵌入式方法": "\"\"""method name": "解压项目到字节集",
+@嵌入式方法": "\"\"""comment": "将压缩包中指定索引的一个文件解压到字节集中",
+@嵌入式方法": "\"\"""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+@嵌入式方法": "\"\"""data type": "逻辑型",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "索引",
+"comment": "压缩文件里的文件索引,如果索引是文件夹则无法解压返回假.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "解压成功后,内容会输出到此字节集中.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "返回索引所对应的文件名",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "解压多个项目到",
+
+"comment": "根据索引数组,将压缩包中对应的多个文件解压到指定目录.",
+
+"result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "索引数组",
+"comment": "压缩文件里的文件索引,如果索引是文件夹则无法解压返回假.",
+"data type": "整数数组类"
+   },
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "解压匹配文件",
+}"comment": "使用通配符筛选文件,然后将匹配的文件解压到指定目录.",
+}"result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+}"parameters": [
+   {
+"parameter name": "筛选器",
+"comment": "所欲筛选的文件路径,支持通配符,必须完全一致才能匹配成功；\n比如文件在子目录里的必须填写带文件夹的相对路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集",
+comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""comment": "使用通配符筛选文件,然后将匹配的第一个文件解压到字节集中.",
+comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""data type": "逻辑型",
+comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""@嵌入式方法": "\"req_cpp_bool = true\"",
+comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""parameters": [
+   {
+"parameter name": "筛选器",
+"comment": "所欲筛选的文件路径,支持通配符,必须完全一致才能匹配成功；\n比如文件在子目录里的必须填写带文件夹的相对路径.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "解压成功后,内容会保存在此字节集中.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "返回最终解压的文件名",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件."]
+  },
+  {
+
+"method name": "解压正则匹配文件",
+
+"comment": "使用正则表达式筛选文件,然后将匹配的文件解压到指定目录.",
+
+"result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+
+"parameters": [
+   {
+"parameter name": "正则表达式",
+"comment": "用于筛选文件路径的正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出路径",
+"comment": "所欲解压到的位置",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "解压正则匹配文件到字节集",
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""comment": "使用正则表达式筛选文件,然后将匹配的第一个文件解压到字节集中.",
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""result comment": "返回是否解压成功,失败时可调用\"取最后错误\"获取错误信息.",
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""data type": "逻辑型",
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""@嵌入式方法": "\"req_cpp_bool = true\"",
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""parameters": [
+   {
+"parameter name": "正则表达式",
+"comment": "用于筛选文件路径的正则表达式",
+"data type": "文本型"
+   },
+   {
+"parameter name": "输出数据",
+"comment": "解压成功后,内容会保存在此字节集中.",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "输出文件名",
+"comment": "返回最终解压的文件名",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只解压\"正则表达式\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集"]
+  },
+  {
+
+"method name": "测试",
+
+"comment": "测试打开的压缩包是否完整有效,本方法会在内存中尝试完整解压数据.",
+
+"result comment": "返回是否测试成功,失败时可调用\"取最后错误\"获取错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "文本型""method name": "测试项目",
+data type": "文本型""comment": "测试压缩包中指定的项目是否完整有效,本方法会在内存中尝试解压指定的项目.",
+data type": "文本型""result comment": "返回是否测试成功,失败时可调用\"取最后错误\"获取错误信息.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "索引",
+"comment": "压缩文件里的文件索引,如果索引是文件夹则无法解压返回假.",
+"data type": "整数"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "压缩密码",
+}"comment": "设置密码,密码会在之后的所有解压中生效,直到你执行\"清除密码\".\n如果压缩包没有密码,设置密码后不会有任何效果.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "密码",
+"comment": "提供空文本同于\"清除密码\"",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "压缩密码",
+"comment": "返回当前设置的压缩密码",
+"type": "property getter",
+"data type": "文本型",
+"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "密码""method name": "保留目录结构",
+ameter name": "密码""comment": "设置方法输出时是否保留输入的目录结构",
+ameter name": "密码""type": "property setter",
+ameter name": "密码""parameters": [
+   {
+"parameter name": "是否保留",
+"data type": "逻辑型"
+   }
+ameter name": "密码"]
+  },
+  {
+ata type": "文本型""@嵌入式方法": "\"\"""method name": "保留目录结构",
+ata type": "文本型""@嵌入式方法": "\"\"""comment": "返回真表示在解压和压缩文件时必定保留目录结构",
+ata type": "文本型""@嵌入式方法": "\"\"""type": "property getter",
+ata type": "文本型""@嵌入式方法": "\"\"""data type": "逻辑型",
+ata type": "文本型""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码",
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""comment": "清除当前已设置的密码",
+ent": "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""@嵌入式方法": "\"\""
+  },
+  {
+: "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""method name": "是否有密码",
+: "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""comment": "返回是否已经设置过密码",
+: "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""data type": "逻辑型",
+: "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取压缩格式",
+
+"comment": "检测压缩包的压缩格式",
+
+"result comment": "返回检测到的压缩格式值,返回自动(0)表示未检测到或未打开压缩文件.",
+
+"data type": "存档格式类型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取压缩包属性表",
+}"comment": "获取一部分可用的压缩包属性",
+}"data type": "存档属性表类",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "是否排除匹配项""method name": "取压缩包属性",
+ameter name": "是否排除匹配项""comment": "获取指定名称的压缩包属性",
+ameter name": "是否排除匹配项""data type": "存档属性变体型",
+ameter name": "是否排除匹配项""@嵌入式方法": "\"\"",
+ameter name": "是否排除匹配项""parameters": [
+   {
+"parameter name": "属性名",
+"data type": "存档属性名"
+   }
+ameter name": "是否排除匹配项"]
+  },
+  {
+ }"method name": "取项目信息表",
+ }"comment": "获取所有项目的信息表",
+ }"data type": "存档项目信息数组",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"data type": "存档项目信息数组""method name": "取项目属性",
+}"data type": "存档项目信息数组""comment": "获取指定索引和名称的项目属性",
+}"data type": "存档项目信息数组""result comment": "失败时返回的空变体型",
+}"data type": "存档项目信息数组""data type": "存档属性变体型",
+}"data type": "存档项目信息数组""@嵌入式方法": "\"\"",
+}"data type": "存档项目信息数组""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "所欲取属性的项目索引,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "属性名",
+"data type": "存档属性名"
+   }
+}"data type": "存档项目信息数组"]
+  },
+  {
+ta type": "文本型""@嵌入式方法": "\"\"""data type": "逻辑型""method name": "取项目数",
+ta type": "文本型""@嵌入式方法": "\"\"""data type": "逻辑型""comment": "获取压缩包的内容项目数量,1个项目表示1个文件或文件夹.",
+ta type": "文本型""@嵌入式方法": "\"\"""data type": "逻辑型""data type": "整数",
+ta type": "文本型""@嵌入式方法": "\"\"""data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""method name": "是否有密码""method name": "是否为目录项目",
+认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""method name": "是否有密码""comment": "判断指定索引的项目是否为文件夹.\n请确保项目索引有效,否则会抛出异常.",
+认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""method name": "是否有密码""data type": "逻辑型",
+认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""method name": "是否有密码""@嵌入式方法": "\"\"",
+认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""method name": "是否有密码""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "所欲判断是否为文件夹的项目索引,索引从0开始.",
+"data type": "整数"
+   }
+认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""method name": "是否有密码"]
+  },
+  {
+ "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""data type": "逻辑型""method name": "是否为加密项目",
+ "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""data type": "逻辑型""comment": "判断指定索引的项目是否为加密压缩文件.\n请确保项目索引有效,否则会抛出异常.",
+ "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""data type": "逻辑型""result comment": "未打开压缩包时始终返回假",
+ "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""data type": "逻辑型""data type": "逻辑型",
+ "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""data type": "逻辑型""@嵌入式方法": "\"\"",
+ "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""data type": "逻辑型""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "所欲判断是否为加密压缩的项目索引,索引从0开始.",
+"data type": "整数"
+   }
+ "默认为假,表示只解压\"筛选器\"成功匹配的文件;\n若设置为真,则会解压所有未匹配的文件.""method name": "解压匹配文件到字节集""method name": "清除密码""data type": "逻辑型"]
+  },
+  {
+}"method name": "取压缩文件路径",
+}"comment": "获取当前已打开的压缩文件路径",
+}"result comment": "未打开压缩文件时返回空文本",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "取文件夹数量",
+data type": "整数""comment": "获取压缩包内的文件夹项目数量",
+data type": "整数""result comment": "未打开压缩包时返回-1",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+"comment": "测试打开的压缩包是否完整有效,本方法会在内存中尝试完整解压数据.""method name": "取文件数量",
+"comment": "测试打开的压缩包是否完整有效,本方法会在内存中尝试完整解压数据.""comment": "获取压缩包内的文件项目数量",
+"comment": "测试打开的压缩包是否完整有效,本方法会在内存中尝试完整解压数据.""result comment": "未打开压缩包时返回-1",
+"comment": "测试打开的压缩包是否完整有效,本方法会在内存中尝试完整解压数据.""data type": "整数",
+"comment": "测试打开的压缩包是否完整有效,本方法会在内存中尝试完整解压数据.""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取总长度",
+
+"comment": "获取压缩包内容的未压缩总字节长度",
+
+"result comment": "未打开压缩包时返回-1",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取打包长度",
+
+"comment": "获取压缩包的字节长度(压缩后的长度,等于压缩文件的大小)",
+
+"result comment": "未打开压缩包时返回-1",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否有加密项目",
+
+"comment": "判断打开的压缩包是否至少有一个加密压缩项目",
+
+"result comment": "未打开压缩包时始终返回假",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否已加密",
+
+"comment": "判断打开的压缩包是否全部为加密压缩项目",
+
+"result comment": "未打开压缩包时始终返回假",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"data type": "逻辑型""method name": "取分卷数量",
+"data type": "逻辑型""comment": "获取压缩包的分卷数量,如果未分卷返回1.",
+"data type": "逻辑型""result comment": "成功返回1以上的分卷数量,未打开压缩包返回-1.",
+"data type": "逻辑型""data type": "整数",
+"data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否为分卷",
+
+"comment": "判断打开的压缩包是否为分卷压缩文件",
+
+"result comment": "未打开压缩包时始终返回假",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "是否为固实",
+ }"comment": "判断打开的压缩包是否为固实压缩文件",
+ }"result comment": "未打开压缩包时始终返回假",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"result comment": "未打开压缩包时始终返回假""method name": "取尾项目索引",
+}"result comment": "未打开压缩包时始终返回假""comment": "获取最后一个项目的索引",
+}"result comment": "未打开压缩包时始终返回假""result comment": "成功返回项目索引,如果压缩包为空或未打开压缩包返回-1.",
+}"result comment": "未打开压缩包时始终返回假""data type": "整数",
+}"result comment": "未打开压缩包时始终返回假""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "寻找项目索引",
+}"comment": "根据路径获取指定项目的索引位置",
+}"result comment": "成功返回项目索引,找不到或未打开压缩包返回-1.",
+}"data type": "整数",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "项目路径",
+"comment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+comment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""method name": "项目是否存在",
+comment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""comment": "查找压缩包内是否存在指定路径的项目",
+comment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""result comment": "返回真表示存在,否则为假.",
+comment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型",
+comment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+comment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""parameters": [
+   {
+"parameter name": "项目路径",
+"comment": "所欲判断的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.",
+"data type": "文本型"
+   }
+comment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可."]
+  },
+  {
+}"method name": "寻找项目",
+}"comment": "根据路径获取指定项目的迭代器.\n 1. 本方法会产生一个子语句体,你可以在子语句体内调用\"取枚举...\"等方法,\n获取所寻找到项目的属性;\n 2. 如果寻找的路径不存在,除了\"取枚举索引\"之外的其他方法都会抛出异常;\n 3. 本方法已经做了异常处理,一般不会造成崩溃,但建议用\"项目是否存在\",\n判断查找的项目是否存在;",
+}"@嵌入式方法": "\"name = bit7z_fiter\\r\\nhas_loop_body = true\\r\\nbody_header = \\\"@none\\\"\\r\\nbody_tail = \\\"} catch (...) { }\\\"\"",
+}"parameters": [
+   {
+"parameter name": "项目路径",
+"comment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "枚举循环",
+}"comment": " 1. 启动一个正向循环来枚举所打开压缩文件中的每一个项目,调用\"取枚举索引\"\n可以获取当前所枚举到项目的索引位置;\n 2. 在循环中可以调用\"取枚举...\"等方法来获取当前所枚举到项目的属性;\n 3. 必须打开压缩包后才能使用,否则会导致程序崩溃;",
+}"@嵌入式方法": "\"name = bit7z_iter\\r\\nhas_loop_body = true\""
+  },
+  {
+}"method name": "逆向枚举循环",
+}"comment": " 1. 启动一个逆向循环来枚举所打开压缩文件中的每一个项目,调用\"取枚举索引\"\n可以获取当前所枚举到项目的索引位置;\n 2. 在循环中可以调用\"取枚举...\"等方法来获取当前所枚举到项目的属性;\n 3. 必须打开压缩包后才能使用,否则会导致程序崩溃;",
+}"@嵌入式方法": "\"name = bit7z_riter\\r\\nhas_loop_body = true\""
+  },
+  {
+"@嵌入式方法": "\"name = bit7z_iter\\r\\nhas_loop_body = true\"""method name": "取枚举索引",
+"@嵌入式方法": "\"name = bit7z_iter\\r\\nhas_loop_body = true\"""comment": "获取当前所枚举到项目的索引.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+"@嵌入式方法": "\"name = bit7z_iter\\r\\nhas_loop_body = true\"""data type": "整数",
+"@嵌入式方法": "\"name = bit7z_iter\\r\\nhas_loop_body = true\"""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+omment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""method name": "取枚举属性",
+omment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""comment": "获取当前所枚举到项目的指定属性值.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+omment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""data type": "存档属性变体型",
+omment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"",
+omment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+   {
+"parameter name": "属性名",
+"data type": "存档属性名"
+   }
+omment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型"]
+  },
+  {
+"method name": "取枚举名称",
+"comment": "获取当前所枚举到项目的名称(文件名或文件夹名).\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+"data type": "文本型",
+"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+
+"method name": "取枚举是否目录",
+
+"comment": "判断当前枚举到的项目是否为文件夹.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+comment": "获取当前所枚举到项目的名称(文件名或文件夹名).\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.""method name": "取枚举是否符号链接",
+comment": "获取当前所枚举到项目的名称(文件名或文件夹名).\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.""comment": "判断当前枚举到的项目是否为符号链接.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+comment": "获取当前所枚举到项目的名称(文件名或文件夹名).\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.""data type": "逻辑型",
+comment": "获取当前所枚举到项目的名称(文件名或文件夹名).\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+
+"method name": "取枚举扩展名",
+
+"comment": "获取当前所枚举到项目的扩展名.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+
+"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""method name": "取枚举路径",
+
+"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""comment": "获取当前所枚举到项目的路径.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+
+"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""data type": "文本型",
+
+"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+comment": "获取当前所枚举到项目的名称(文件名或文件夹名).\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.""method name": "取枚举项目长度",
+comment": "获取当前所枚举到项目的名称(文件名或文件夹名).\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.""comment": "获取当前所枚举到项目的未压缩长度.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+comment": "获取当前所枚举到项目的名称(文件名或文件夹名).\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.""data type": "长整数",
+comment": "获取当前所枚举到项目的名称(文件名或文件夹名).\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+thod name": "取枚举扩展名""method name": "取枚举打包长度",
+thod name": "取枚举扩展名""comment": "获取当前所枚举到的项目压缩后的长度.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+thod name": "取枚举扩展名""data type": "长整数",
+thod name": "取枚举扩展名""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+
+"method name": "取枚举创建时间",
+
+"comment": "获取当前所枚举到项目的创建时间.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+
+"data type": "标准时间类",
+
+"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+}"method name": "取枚举访问时间",
+}"comment": "获取当前所枚举到项目的最后访问时间.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+}"data type": "标准时间类",
+}"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+
+"method name": "取枚举修改时间",
+
+"comment": "获取当前所枚举到项目的最后修改时间.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+
+"data type": "标准时间类",
+
+"@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+ethod name": "取枚举创建时间""method name": "取枚举文件属性",
+ethod name": "取枚举创建时间""comment": "获取当前所枚举到项目的文件属性.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+ethod name": "取枚举创建时间""result comment": "返回\"文件属性\"中一个或多个常量的位或值.",
+ethod name": "取枚举创建时间""data type": "整数",
+ethod name": "取枚举创建时间""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  },
+  {
+sult comment": "未打开压缩包时始终返回假""method name": "取尾项目索引""method name": "取枚举是否加密",
+sult comment": "未打开压缩包时始终返回假""method name": "取尾项目索引""comment": "判断当前所枚举到的项目是否为加密压缩.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+sult comment": "未打开压缩包时始终返回假""method name": "取尾项目索引""result comment": "返回真表示该项目为加密压缩.",
+sult comment": "未打开压缩包时始终返回假""method name": "取尾项目索引""data type": "逻辑型",
+sult comment": "未打开压缩包时始终返回假""method name": "取尾项目索引""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""
+  }
+ta type": "存档输入格式""parameters": [
+"comment": "判断指定的压缩包是否已完整加密"]
+ },
+ {
+}"class name": "存档输出模板",
+}"comment": "  封装了\"存档压缩类\"和\"存档编辑类\"共用的基本操作,\n不能直接使用本类.",
+}"@文档": "\"category = \\\"文件压缩\\\"\"",
+}"@强制依赖": "\"存档读写类\"",
+}"@模板基础类": "真",
+}"methods": [
+  {
+thod name": "取枚举创建时间""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""method name": "压缩进度改变",
+thod name": "取枚举创建时间""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""comment": "当压缩进度发生改变时,本事件将被多次触发直到压缩结束.\n 1. 请勿在此执行耗时操作,否则将拖慢压缩进度;\n 2. 通过返回值可以停止压缩;\n 3. 如果是在主线程调用压缩,可以直接在本事件中操作界面;\n 4. 若是在多线程中调用压缩,则应该尽量使用\"高级主线程处理器\"\n等方式在子线程中操作界面组件;",
+thod name": "取枚举创建时间""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""result comment": "返回0表示继续压缩,返回其他任意值停止压缩.",
+thod name": "取枚举创建时间""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""type": "event",
+thod name": "取枚举创建时间""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""data type": "整数",
+thod name": "取枚举创建时间""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\"""parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "当前正在压缩的文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "压缩进度",
+"comment": "整体的压缩百分比进度,范围为[0-100].",
+"data type": "整数"
+   },
+   {
+"parameter name": "总压缩大小",
+"comment": "所有待压缩的文件大小(解压后大小).",
+"data type": "长整数"
+   },
+   {
+"parameter name": "已压缩大小",
+"comment": "目前已压缩的大小",
+"data type": "长整数"
+   },
+   {
+"parameter name": "整体压缩比",
+"comment": "当前已压缩数据的压缩比(0-100),该值会随压缩进度变化.",
+"data type": "整数"
+   }
+thod name": "取枚举创建时间""@嵌入式方法": "\"parent = \\\"bit7z_iter, bit7z_riter, bit7z_fiter\\\"\""]
+  },
+  {
+ameter name": "整体压缩比""method name": "取最后错误",
+ameter name": "整体压缩比""comment": "返回最后一次操作的错误信息,返回\"OK\"表示操作成功无错误.",
+ameter name": "整体压缩比""data type": "文本型",
+ameter name": "整体压缩比""@嵌入式方法": "\"\""
+  },
+  {
+comment": "目前已压缩的大小""method name": "是否为空",
+comment": "目前已压缩的大小""comment": "返回是否创建了压缩包,返回真表示未创建.",
+comment": "目前已压缩的大小""data type": "逻辑型",
+comment": "目前已压缩的大小""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "关闭",
+ }"comment": "关闭压缩包,关闭后请勿再使用本类的其他方法.\n 1. 请勿在压缩时执行关闭!\n 2. 类析构时会自动关闭,打开或创建另一个压缩包也会自动关闭;",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+mment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"method name": "启用进度反馈",
+mment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"comment": "设置是否启用压缩过程中的回调函数,启用后会降低压缩速度.",
+mment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"type": "property setter",
+mment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   }
+mment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "启用进度反馈",
+}"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数",
+}"@嵌入式方法": "\"\"""type": "property getter",
+}"@嵌入式方法": "\"\"""data type": "逻辑型",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"type": "property setter""method name": "添加项目",
+ment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"type": "property setter""comment": "添加多个文件或文件夹到压缩队列中",
+ment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"type": "property setter""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+ment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"type": "property setter""data type": "逻辑型",
+ment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"type": "property setter""@嵌入式方法": "\"\"",
+ment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"type": "property setter""parameters": [
+   {
+"parameter name": "路径数组",
+"comment": "所欲压缩的路径数组;\n提供的相对或绝对路径必须指向存在的文件或目录,否则会失败.",
+"data type": "文本数组类"
+   }
+ment": "所欲查找的项目相对路径,如\"path\\file.txt\";\n若没有子目录则填文件名即可.""data type": "逻辑型""parameters": [
+"type": "property setter"]
+  },
+  {
+"data type": "文本型""method name": "添加别名项目",
+"data type": "文本型""comment": "使用哈希表添加多个文件或文件夹到压缩队列中,\n可以通过哈希表的值自定义项目的名称.",
+"data type": "文本型""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+"data type": "文本型""data type": "逻辑型",
+"data type": "文本型""@嵌入式方法": "\"\"",
+"data type": "文本型""parameters": [
+   {
+"parameter name": "路径键值对",
+"comment": "所欲压缩的路径到别名键值对;\n其中键为文件或目录的相对或绝对路径,值为相对路径的别名;\n提供的键必须指向存在的文件或目录,否则会失败.",
+"data type": "文本到文本哈希表"
+   }
+"data type": "文本型"]
+  },
+  {
+ }"method name": "添加文件",
+ }"comment": "添加单个文件到压缩队列中",
+ }"result comment": "返回是否成功,添加了目录和不存在的文件会返回假.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ }"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "所欲添加到压缩包的文件路径,默认会添加到压缩包的根目录.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "别名",
+"comment": "若不为空,添加的文件会按这个别名重命名;\n还可以用来指定文件在压缩包的相对路径.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ }]
+  },
+  {
+@默认值": "\"\"""method name": "添加字节集",
+@默认值": "\"\"""comment": "添加字节集数据到压缩队列中;\n所提供的字节集数据会被缓存到本对象中,直到\"关闭\"压缩包才会释放;\n建议添加后释放原来的字节集,以减少内存的占用.",
+@默认值": "\"\"""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+@默认值": "\"\"""data type": "逻辑型",
+@默认值": "\"\"""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+@默认值": "\"\"""parameters": [
+   {
+"parameter name": "缓存数据",
+"comment": "所欲添加到压缩包的字节集数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "数据名称",
+"comment": "数据在压缩包中的文件名称和相对路径",
+"data type": "文本型"
+   }
+@默认值": "\"\""]
+  },
+  {
+ }"method name": "添加内存",
+ }"comment": "将内存数据添加到压缩队列中;\n所提供的内存数据会被缓存到本对象中,直到\"关闭\"压缩包才会释放;\n建议添加后释放原来的内存数据,以减少内存的占用.",
+ }"result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ }"parameters": [
+   {
+"parameter name": "数据地址",
+"comment": "所欲添加到压缩包的内存数据地址",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"comment": "所欲添加到压缩包的内存数据长度",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据名称",
+"comment": "数据在压缩包中的文件名称和相对路径",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "添加资源",
+data type": "文本型""comment": "将内存数据添加到压缩队列中;\n所提供的内存数据会被缓存到本对象中,直到\"关闭\"压缩包才会释放;\n建议添加后释放原来的内存数据,以减少内存的占用.",
+data type": "文本型""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "文件资源",
+"comment": "所欲添加到压缩包的视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "数据名称",
+"comment": "数据在压缩包中的文件名称和相对路径",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""method name": "添加文件数组",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""comment": "添加多个文件到压缩队列中,数组中含有目录将被忽略.",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""data type": "逻辑型",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""parameters": [
+   {
+"parameter name": "文件数组",
+"comment": "所欲压缩的文件数组;\n提供的相对或绝对路径必须指向存在的文件,否则会失败.",
+"data type": "文本数组类"
+   }
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数"]
+  },
+  {
+data type": "文本型""method name": "添加匹配文件",
+data type": "文本型""comment": "使用通配符筛选指定目录下的文件,然后将匹配的文件添加到压缩队列中.\n注: 本方法只添加文件,不会添加目录.",
+data type": "文本型""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "输入目录",
+"comment": "请提供输入目录的相对或绝对路径;\n目录中的文件或子目录将被添加到压缩包中,但不含输入目录本身.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "筛选器",
+"comment": "用通配符筛选要压缩的部分文件,留空表示匹配所有文件.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "递归子目录",
+"comment": "是否递归搜寻\"输入目录\"下所有子目录中的文件.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只压缩\"筛选器\"成功匹配的文件;\n若设置为真,则会压缩所有未匹配的文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "文本型"]
+  },
+  {
+ameter name": "数据长度""method name": "添加目录",
+ameter name": "数据长度""comment": "将指定目录的所有文件和文件夹添加到压缩队列中,包括目录自身.",
+ameter name": "数据长度""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+ameter name": "数据长度""data type": "逻辑型",
+ameter name": "数据长度""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ameter name": "数据长度""parameters": [
+   {
+"parameter name": "目录路径",
+"comment": "所欲压缩的目录路径,包括目录自身会全部添加到压缩包中.",
+"data type": "文本型"
+   }
+ameter name": "数据长度"]
+  },
+  {
+}"method name": "添加匹配目录",
+}"comment": "使用通配符筛选指定目录下的内容,然后将匹配的文件和文件夹添加到压缩队列中.\n注: 本方法添加文件和目录.",
+}"result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+}"parameters": [
+   {
+"parameter name": "目录路径",
+"comment": "所欲压缩的目录路径,包括目录自身会添加到压缩包中.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "筛选器",
+"comment": "用通配符筛选要压缩的部分文件或目录,留空表示匹配所有文件.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "递归子目录",
+"comment": "是否递归搜寻\"目录路径\"下所有子目录中的内容.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否排除匹配项",
+"comment": "默认为假,表示只压缩\"筛选器\"成功匹配的内容;\n若设置为真,则会压缩所有未匹配的内容.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+"method name": "取压缩格式",
+"comment": "返回压缩包的格式",
+"data type": "存档格式类型",
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "取项目数量",
+
+"comment": "获取压缩包当前的项目数量,包括压缩包原有的项目和新添加的队列项目.",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""method name": "压缩密码",
+@嵌入式方法": "\"\"""comment": "设置密码,密码会在之后的所有压缩中生效,直到你执行\"清除密码\".",
+@嵌入式方法": "\"\"""type": "property setter",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "新密码",
+"comment": "提供空文本同于\"清除密码\"",
+"data type": "文本型"
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""method name": "压缩密码",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""comment": "返回当前的压缩密码",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""type": "property getter",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""data type": "文本型",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "压缩等级",
+
+"comment": "设置压缩等级,会影响压缩速度和压缩包大小;\n注意: Wim和Tar格式不支持设置压缩等级,会无视该参数.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "新等级",
+"data type": "存档压缩等级"
+   }
+
+]
+  },
+  {
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""method name": "压缩等级",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""comment": "返回当前的压缩等级",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""type": "property getter",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""data type": "存档压缩等级",
+"@嵌入式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""@禁止流程检查": "真"
+  },
+  {
+}"method name": "压缩方法",
+}"comment": "设置使用的压缩方法,请注意不同压缩格式支持的方法是不同的.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "新方法",
+"data type": "存档压缩方法"
+   }
+}]
+  },
+  {
+式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""method name": "压缩等级""method name": "压缩方法",
+式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""method name": "压缩等级""comment": "返回当前的压缩方法",
+式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""method name": "压缩等级""type": "property getter",
+式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""method name": "压缩等级""data type": "存档压缩方法",
+式方法": "\"\"""comment": "返回是否启用了压缩过程中的回调函数""method name": "压缩等级""@禁止流程检查": "真"
+  },
+  {
+"method name": "字典大小",
+"comment": "设置压缩使用的字典大小",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "新大小",
+"comment": "所需的字典大小",
+"data type": "整数"
+   }
+]
+  },
+  {
+type": "property setter""method name": "字典大小",
+type": "property setter""comment": "返回当前的字典大小",
+type": "property setter""type": "property getter",
+type": "property setter""data type": "整数",
+type": "property setter""@嵌入式方法": "\"\""
+  },
+  {
+入式方法": "\"\""]"method name": "单词大小",
+入式方法": "\"\""]"comment": "设置压缩使用的单词大小",
+入式方法": "\"\""]"type": "property setter",
+入式方法": "\"\""]"parameters": [
+   {
+"parameter name": "新大小",
+"comment": "所需的单词大小",
+"data type": "整数"
+   }
+入式方法": "\"\""]]
+  },
+  {
+式方法": "\"\""]"type": "property setter""method name": "单词大小",
+式方法": "\"\""]"type": "property setter""comment": "返回当前的单词大小",
+式方法": "\"\""]"type": "property setter""type": "property getter",
+式方法": "\"\""]"type": "property setter""data type": "整数",
+式方法": "\"\""]"type": "property setter""@嵌入式方法": "\"\""
+  },
+  {
+式方法": "\"\""]"type": "property setter""method name": "固实压缩",
+式方法": "\"\""]"type": "property setter""comment": "设置是否使用固实压缩,只有7z格式支持固实压缩.",
+式方法": "\"\""]"type": "property setter""type": "property setter",
+式方法": "\"\""]"type": "property setter""parameters": [
+   {
+"parameter name": "启用",
+"data type": "逻辑型"
+   }
+式方法": "\"\""]"type": "property setter"]
+  },
+  {
+data type": "逻辑型""method name": "固实压缩",
+data type": "逻辑型""comment": "返回是否使用固实压缩",
+data type": "逻辑型""type": "property getter",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@嵌入式方法": "\"\""
+  },
+  {
+方法": "\"\""]"type": "property setter""parameters": [
+"method name": "更新方式",
+方法": "\"\""]"type": "property setter""parameters": [
+"comment": "如果目标压缩包已经存在,设置如何更新目标压缩包的内容;\n注意: BZip2、GZip、Xz不支持更新模式,若压缩包存在就会失败.",
+方法": "\"\""]"type": "property setter""parameters": [
+"type": "property setter",
+方法": "\"\""]"type": "property setter""parameters": [
+"parameters": [
+   {
+"parameter name": "新更新方式",
+"data type": "存档更新方式"
+   }
+方法": "\"\""]"type": "property setter""parameters": [
+]
+  },
+  {
+"method name": "更新方式",
+"comment": "返回当前使用的更新方式",
+"type": "property getter",
+"data type": "存档更新方式",
+"@禁止流程检查": "真"
+  },
+  {
+@禁止流程检查": "真""method name": "分卷大小",
+@禁止流程检查": "真""comment": "设置创建分卷压缩文件时的分卷大小(字节),只有压缩为文件时才能分卷.",
+@禁止流程检查": "真""type": "property setter",
+@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "新分卷大小",
+"comment": "单位为字节,0表示不分卷.",
+"data type": "长整数"
+   }
+@禁止流程检查": "真"]
+  },
+  {
+
+"method name": "分卷大小",
+
+"comment": "获取创建分卷压缩文件的分卷大小(单位为字节),\n返回0表示不分卷.",
+
+"type": "property getter",
+
+"data type": "长整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "线程数",
+}"comment": "设置创建压缩时使用的CPU线程数",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "新线程数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+thod name": "线程数""method name": "线程数",
+thod name": "线程数""comment": "返回创建压缩时使用的CPU线程数",
+thod name": "线程数""type": "property getter",
+thod name": "线程数""data type": "整数",
+thod name": "线程数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "存储符号链接",
+}"comment": "设置是否将符号链接作为链接存储在压缩文件中",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否存储符号链接",
+"comment": "设置为真时,符号链接将存储为链接.",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+"method name": "存储符号链接",
+"comment": "返回是否将符号链接作为链接存储在压缩文件中",
+"type": "property getter",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\""
+  },
+  {
+hod name": "线程数""data type": "整数""method name": "保留目录结构",
+hod name": "线程数""data type": "整数""comment": "设置方法输出时是否保留输入的目录结构",
+hod name": "线程数""data type": "整数""type": "property setter",
+hod name": "线程数""data type": "整数""parameters": [
+   {
+"parameter name": "是否保留",
+"data type": "逻辑型"
+   }
+hod name": "线程数""data type": "整数"]
+  },
+  {
+ameter name": "是否保留""method name": "保留目录结构",
+ameter name": "是否保留""comment": "返回真表示在解压和压缩文件时必定保留目录结构",
+ameter name": "是否保留""type": "property getter",
+ameter name": "是否保留""data type": "逻辑型",
+ameter name": "是否保留""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "设置密码",
+
+"comment": "设置压缩密码和是否加密文件名",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+
+"parameters": [
+   {
+"parameter name": "新密码",
+"comment": "提供空文本同于\"清除密码\".",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "加密文件名",
+"comment": "是否加密压缩包项目的文件名,仅对SevenZip格式有效.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+meter name": "是否保留""type": "property getter""method name": "清除密码",
+meter name": "是否保留""type": "property getter""comment": "清除当前已设置的密码",
+meter name": "是否保留""type": "property getter""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否有密码",
+}"comment": "返回是否已经设置过密码",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "是否加密文件名",
+
+"comment": "返回是否加密文件名,只有SevenZip格式直接加密文件名.\n加密文件名后,必须输入密码才能查看压缩包里的项目,可以用\"设置密码\"方法开启.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  }
+}]
+ },
+ {
+}"class name": "存档压缩类",
+}"comment": "封装了完整功能的压缩类,可以设置所有的压缩选项,支持压缩进度反馈.\n简单流程: 创建自XX->添加XX->压缩到XX",
+}"base class": "存档输出模板",
+}"@文档": "\"category = \\\"文件压缩\\\"\"",
+}"@模板实现类": "\"\"",
+}"@视窗.后缀文本": "\"public PivArchiveWirter\"",
+}"methods": [
+  {
+"comment": "获取创建分卷压缩文件的分卷大小(单位为字节),\n返回0表示不分卷.""method name": "创建压缩包",
+"comment": "获取创建分卷压缩文件的分卷大小(单位为字节),\n返回0表示不分卷.""comment": "创建一个新的空压缩包,不会基于任何现有的压缩包数据进行更新压缩.\n必须成功创建压缩包才能执行本类的其他方法.",
+"comment": "获取创建分卷压缩文件的分卷大小(单位为字节),\n返回0表示不分卷.""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+"comment": "获取创建分卷压缩文件的分卷大小(单位为字节),\n返回0表示不分卷.""data type": "逻辑型",
+"comment": "获取创建分卷压缩文件的分卷大小(单位为字节),\n返回0表示不分卷.""@嵌入式方法": "\"req_cpp_bool = true\"",
+"comment": "获取创建分卷压缩文件的分卷大小(单位为字节),\n返回0表示不分卷.""parameters": [
+   {
+"parameter name": "是否启用进度反馈",
+"comment": "是否启用压缩过程中的回调函数,启用后可能会降低压缩速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   }
+"comment": "获取创建分卷压缩文件的分卷大小(单位为字节),\n返回0表示不分卷."]
+  },
+  {
+ameter name": "新密码""method name": "创建自文件",
+ameter name": "新密码""comment": "通过文件路径创建或更新压缩包,必须成功创建压缩包才能执行本类的其他方法.",
+ameter name": "新密码""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+ameter name": "新密码""data type": "逻辑型",
+ameter name": "新密码""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+ameter name": "新密码""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "提供空文本或不存在的路径,将创建一个新的压缩包;\n若提供了现有的压缩文件,将基于此压缩包进行更新压缩.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否启用进度反馈",
+"comment": "是否启用压缩过程中的回调函数,启用后可能会降低压缩速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ameter name": "新密码"]
+  },
+  {
+"method name": "创建自字节集",
+"comment": "通过字节集创建或更新压缩包,必须成功创建压缩包才能执行本类的其他方法.",
+"result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+"parameters": [
+   {
+"parameter name": "压缩包数据",
+"comment": "提供空字节集表示将创建一个新的压缩包;\n若提供了现有的压缩数据,将基于此压缩包进行更新压缩.",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否启用进度反馈",
+"comment": "是否启用压缩过程中的回调函数,启用后可能会降低压缩速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "创建自文件资源",
+"@嵌入式方法": "\"\"""comment": "通过文件资源创建或更新压缩包,必须成功创建压缩包才能执行本类的其他方法.",
+"@嵌入式方法": "\"\"""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "文件资源",
+"comment": "提供视窗文件资源",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "是否启用进度反馈",
+"comment": "是否启用压缩过程中的回调函数,启用后可能会降低压缩速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.""method name": "压缩到文件",
+comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.""comment": "将已添加到队列中的项目压缩,并输出到指定的文件中.",
+comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.""data type": "逻辑型",
+comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.""parameters": [
+   {
+"parameter name": "压缩包路径",
+"comment": "所欲输出的压缩包文件路径,若文件不存在将自动创建;\n若提供的路径跟\"创建自文件\"时相同,会添加并更新原来的压缩包.",
+"data type": "文本型"
+   }
+comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效."]
+  },
+  {
+
+"method name": "压缩到字节集",
+
+"comment": "  将已添加到队列中的项目压缩,并输出到指定的字节集中.\n  本方法只有在使用\"创建自字节集\"创建时才会变成更新模\n式,否则为创建模式.",
+
+"result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "输出字节集",
+"comment": "所欲输出的字节集变量,字节集的内容将被覆盖.",
+"data type": "字节集类"
+   }
+
+]
+  }
+}]
+ },
+ {
+
+"data type": "逻辑型""class name": "存档编辑类",
+
+"data type": "逻辑型""comment": "  封装了编辑压缩包的功能(更名/更新/删除项目),同时也支持\"存档压缩类\"的功能,\n可以看作是\"存档压缩类\"的进阶版,但本类只支持打开压缩文件.\n  简单流程: 打开文件->(操作项目)->应用更改",
+
+"data type": "逻辑型""base class": "存档输出模板",
+
+"data type": "逻辑型""@文档": "\"category = \\\"文件压缩\\\"\"",
+
+"data type": "逻辑型""@模板实现类": "\"\"",
+
+"data type": "逻辑型""@视窗.后缀文本": "\"public PivArchiveEditor\"",
+
+"data type": "逻辑型""methods": [
+  {
+ta type": "逻辑型""class name": "存档编辑类""method name": "打开文件",
+ta type": "逻辑型""class name": "存档编辑类""comment": "通过文件路径创建或更新压缩包,必须成功创建压缩包才能执行本类的其他方法.",
+ta type": "逻辑型""class name": "存档编辑类""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+ta type": "逻辑型""class name": "存档编辑类""data type": "逻辑型",
+ta type": "逻辑型""class name": "存档编辑类""@嵌入式方法": "\"req_str_param_text_pointer = true\\r\\nreq_cpp_bool = true\"",
+ta type": "逻辑型""class name": "存档编辑类""parameters": [
+   {
+"parameter name": "压缩文件",
+"comment": "提供空文本或不存在的路径,将创建一个新的压缩包;\n若提供了现有的压缩文件,将基于此压缩包进行更新压缩.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否启用进度反馈",
+"comment": "是否启用压缩过程中的回调函数,启用后可能会降低压缩速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "压缩格式",
+"comment": "设置压缩格式;\n注意BZip2、GZip、Xz格式只能压缩单个文件,提供了多个文件路径或目录就会失败.",
+"data type": "存档输出格式",
+"@默认值": "存档输出格式.SevenZip"
+   },
+   {
+"parameter name": "更新方式",
+"comment": "本类不支持模式\"无\",建议使用\"添加并替换文件\"或\"添加并更新文件\".",
+"data type": "存档更新方式",
+"@默认值": "存档更新方式.添加并替换文件"
+   },
+   {
+"parameter name": "压缩密码",
+"comment": "设置压缩密码;\n只有SevenZip和ZIP支持密码,其他格式设置无效.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ta type": "逻辑型""class name": "存档编辑类"]
+  },
+  {
+格式.SevenZip"method name": "应用更改",
+格式.SevenZip"comment": "将已请求更改(如\"更名/更新/删除\"操作)应用到打开的压缩文件中.",
+格式.SevenZip"result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+格式.SevenZip"data type": "逻辑型",
+格式.SevenZip"@嵌入式方法": "\"\""
+  },
+  {
+comment": "所欲输出的压缩包文件路径,若文件不存在将自动创建;\n若提供的路径跟\"创建自文件\"时相同,会添加并更新原来的压缩包.""method name": "索引项目更名",
+comment": "所欲输出的压缩包文件路径,若文件不存在将自动创建;\n若提供的路径跟\"创建自文件\"时相同,会添加并更新原来的压缩包.""comment": "请求更改指定索引的项目路径",
+comment": "所欲输出的压缩包文件路径,若文件不存在将自动创建;\n若提供的路径跟\"创建自文件\"时相同,会添加并更新原来的压缩包.""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "所欲输出的压缩包文件路径,若文件不存在将自动创建;\n若提供的路径跟\"创建自文件\"时相同,会添加并更新原来的压缩包.""data type": "逻辑型",
+comment": "所欲输出的压缩包文件路径,若文件不存在将自动创建;\n若提供的路径跟\"创建自文件\"时相同,会添加并更新原来的压缩包.""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+comment": "所欲输出的压缩包文件路径,若文件不存在将自动创建;\n若提供的路径跟\"创建自文件\"时相同,会添加并更新原来的压缩包.""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "所欲更名的项目索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "新路径名称",
+"comment": "项目在压缩包中的新路径名称",
+"data type": "文本型"
+   }
+comment": "所欲输出的压缩包文件路径,若文件不存在将自动创建;\n若提供的路径跟\"创建自文件\"时相同,会添加并更新原来的压缩包."]
+  },
+  {
+}"method name": "路径项目更名",
+}"comment": "请求更改指定路径的项目路径",
+}"result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "旧路径名称",
+"comment": "所欲更名的旧路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "新路径名称",
+"comment": "项目在压缩包中的新路径名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ameter name": "旧路径名称""method name": "更新索引项目自文件",
+ameter name": "旧路径名称""comment": "用文件数据更新指定索引的项目数据",
+ameter name": "旧路径名称""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+ameter name": "旧路径名称""data type": "逻辑型",
+ameter name": "旧路径名称""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+ameter name": "旧路径名称""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "所欲更新的项目索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "文件路径",
+"comment": "用来更新项目数据的文件路径",
+"data type": "文本型"
+   }
+ameter name": "旧路径名称"]
+  },
+  {
+comment": "所欲更新的项目索引""method name": "更新索引项目自字节集",
+comment": "所欲更新的项目索引""comment": "用字节集数据更新指定索引的项目数据",
+comment": "所欲更新的项目索引""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "所欲更新的项目索引""data type": "逻辑型",
+comment": "所欲更新的项目索引""@嵌入式方法": "\"\"",
+comment": "所欲更新的项目索引""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "所欲更新的项目索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据内容",
+"comment": "用来更新项目数据的字节集;\n所提供的数据会被缓存到本对象中,直到执行\"应用更改\"或\"关闭\"才会释放;\n建议执行本方法后释放提供的字节集,以减少内存占用.",
+"data type": "字节集类"
+   }
+comment": "所欲更新的项目索引"]
+  },
+  {
+"method name": "更新路径项目自文件",
+"comment": "用文件数据更新指定路径的项目数据",
+"result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+"parameters": [
+   {
+"parameter name": "项目路径",
+"comment": "所欲更新的项目路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文件路径",
+"comment": "用来更新项目数据的文件路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "更新路径项目自字节集",
+
+"comment": "用字节集数据更新指定路径的项目数据",
+
+"result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"parameters": [
+   {
+"parameter name": "项目路径",
+"comment": "所欲更新的项目路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "数据内容",
+"comment": "用来更新项目数据的字节集;\n所提供的数据会被缓存到本对象中,直到执行\"应用更改\"或\"关闭\"才会释放;\n建议执行本方法后释放提供的字节集,以减少内存占用.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+comment": "用来更新项目数据的文件路径""method name": "删除索引项目",
+comment": "用来更新项目数据的文件路径""comment": "请求删除指定索引的项目",
+comment": "用来更新项目数据的文件路径""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "用来更新项目数据的文件路径""data type": "逻辑型",
+comment": "用来更新项目数据的文件路径""@嵌入式方法": "\"\"",
+comment": "用来更新项目数据的文件路径""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "所欲删除的项目索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "递归删除目录",
+"comment": "如果指定的项目为文件夹,默认将只删除文件夹,而不删除其中的文件;\n将本参数设置为真将递归删除文件夹里的所有文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "用来更新项目数据的文件路径"]
+  },
+  {
+comment": "用来更新项目数据的文件路径""method name": "删除路径项目",
+comment": "用来更新项目数据的文件路径""comment": "请求删除指定路径的一或多个项目",
+comment": "用来更新项目数据的文件路径""result comment": "返回是否成功,失败时可调用\"取最后错误\"获取错误信息.",
+comment": "用来更新项目数据的文件路径""data type": "逻辑型",
+comment": "用来更新项目数据的文件路径""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+comment": "用来更新项目数据的文件路径""parameters": [
+   {
+"parameter name": "项目路径",
+"comment": "所欲删除的项目路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "递归删除目录",
+"comment": "如果指定的项目为文件夹,默认将只删除文件夹,而不删除其中的文件;\n将本参数设置为真将递归删除文件夹里的所有文件.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "用来更新项目数据的文件路径"]
+  }
+
+"data type": "逻辑型"]
+ },
+ {
+"class name": "存档解压键值类",
+"comment": "类型为\"文本到字节集排序表\"(std:map).\n\"键\"为解压所得的文件路径,\"值\"为对应文件的数据字节集.",
+"base class": "通用排序表模板",
+"@文档": "\"category = \\\"文件压缩.数据类型\\\"\"",
+"@模板实现类": "\"文本型, 字节集类\""
+ },
+ {
+
+"class name": "存档属性变体型",
+
+"comment": "BitPropVariant变体型可以存储压缩包或项目的各种类型属性值.\n执行\"取XXX\"方法时,如果获取的类型与变体类型不同,将会抛出异常.",
+
+"@文档": "\"category = \\\"文件压缩.数据类型\\\"\"",
+
+"@别名": "\"bit7z::BitPropVariant\"",
+
+"@别名类型": "本地类",
+
+"@强制依赖": "\"存档读写类\"",
+
+"methods": [
+  {
+ameter name": "项目路径""method name": "是否为空",
+ameter name": "项目路径""comment": "返回本变体型是否为空",
+ameter name": "项目路径""static": true,
+ameter name": "项目路径""data type": "逻辑型",
+ameter name": "项目路径""@嵌入式方法": "\"\"",
+ameter name": "项目路径""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+ameter name": "项目路径"]
+  },
+  {
+"method name": "到文本",
+"comment": "将变体型的任意类型属性值转换到文本",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+]
+  },
+  {
+er name": "项目路径""method name": "是否为空""method name": "取类型",
+er name": "项目路径""method name": "是否为空""comment": "获取变体型的属性值类型",
+er name": "项目路径""method name": "是否为空""static": true,
+er name": "项目路径""method name": "是否为空""data type": "存档变体类型",
+er name": "项目路径""method name": "是否为空""@嵌入式方法": "\"\"",
+er name": "项目路径""method name": "是否为空""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+er name": "项目路径""method name": "是否为空"]
+  },
+  {
+ame": "项目路径""method name": "是否为空""method name": "取类型""method name": "清空",
+ame": "项目路径""method name": "是否为空""method name": "取类型""comment": "清空本变体体中的属性值",
+ame": "项目路径""method name": "是否为空""method name": "取类型""static": true,
+ame": "项目路径""method name": "是否为空""method name": "取类型""@嵌入式方法": "\"\"",
+ame": "项目路径""method name": "是否为空""method name": "取类型""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+ame": "项目路径""method name": "是否为空""method name": "取类型"]
+  },
+  {
+ }"method name": "取逻辑型",
+ }"comment": "bool 获取类型为逻辑型的属性值",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+ }]
+  },
+  {
+ameter name": "本变体""method name": "取文本",
+ameter name": "本变体""comment": "tstring 获取类型为文本的属性值",
+ameter name": "本变体""static": true,
+ameter name": "本变体""data type": "文本型",
+ameter name": "本变体""@嵌入式方法": "\"\"",
+ameter name": "本变体""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+ameter name": "本变体"]
+  },
+  {
+ameter name": "本变体""method name": "取无符号字节",
+ameter name": "本变体""comment": "uint8_t 获取类型为无符号字节的属性值,返回值向上转换为短整数.",
+ameter name": "本变体""static": true,
+ameter name": "本变体""data type": "无符号字节",
+ameter name": "本变体""@嵌入式方法": "\"\"",
+ameter name": "本变体""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+ameter name": "本变体"]
+  },
+  {
+}"method name": "取无符号短整数",
+}"comment": "uint16_t 获取类型为无符号短整数的属性值,返回值向上转换为整数.",
+}"static": true,
+}"data type": "无符号短整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+}]
+  },
+  {
+"method name": "取无符号整数",
+"comment": "uint32_t 获取类型为无符号整数的属性值,返回值向上转换为长整数.",
+"static": true,
+"data type": "无符号整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+]
+  },
+  {
+eter name": "本变体"]"method name": "取无符号长整数",
+eter name": "本变体"]"comment": "uint64_t 获取类型为无符号长整数的属性值,返回值依然为长整数,所以较大的数值会变成负数.",
+eter name": "本变体"]"static": true,
+eter name": "本变体"]"data type": "无符号长整数",
+eter name": "本变体"]"@嵌入式方法": "\"\"",
+eter name": "本变体"]"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+eter name": "本变体"]]
+  },
+  {
+data type": "存档属性变体型""method name": "取字节",
+data type": "存档属性变体型""comment": "int8_t 获取类型为字节的属性值",
+data type": "存档属性变体型""static": true,
+data type": "存档属性变体型""data type": "字节",
+data type": "存档属性变体型""@嵌入式方法": "\"\"",
+data type": "存档属性变体型""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+data type": "存档属性变体型"]
+  },
+  {
+ta type": "存档属性变体型"]"method name": "取短整数",
+ta type": "存档属性变体型"]"comment": "int16_t 获取类型为短整数的属性值",
+ta type": "存档属性变体型"]"static": true,
+ta type": "存档属性变体型"]"data type": "短整数",
+ta type": "存档属性变体型"]"@嵌入式方法": "\"\"",
+ta type": "存档属性变体型"]"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+ta type": "存档属性变体型"]]
+  },
+  {
+ta type": "存档属性变体型"]"method name": "取整数",
+ta type": "存档属性变体型"]"comment": "int32_t 获取类型为整数的属性值",
+ta type": "存档属性变体型"]"static": true,
+ta type": "存档属性变体型"]"data type": "长整数",
+ta type": "存档属性变体型"]"@嵌入式方法": "\"\"",
+ta type": "存档属性变体型"]"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+ta type": "存档属性变体型"]]
+  },
+  {
+_t 获取类型为字节的属性值"method name": "取长整数",
+_t 获取类型为字节的属性值"comment": "int64_t 获取类型为长整数的属性值",
+_t 获取类型为字节的属性值"static": true,
+_t 获取类型为字节的属性值"data type": "长整数",
+_t 获取类型为字节的属性值"@嵌入式方法": "\"\"",
+_t 获取类型为字节的属性值"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+_t 获取类型为字节的属性值]
+  },
+  {
+
+"method name": "取文件时间",
+
+"comment": "FILETIME 获取类型为FILETIME结构体的属性值",
+
+"result comment": "返回自1601年1月1日以来的100纳秒间隔数(UTC).",
+
+"static": true,
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+
+]
+  },
+  {
+}"method name": "取标准时间",
+}"comment": "FILETIME 将FILETIME结构体的属性值转换为std::time_point(标准时间类),返回输出.",
+}"static": true,
+}"data type": "标准时间类",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+}]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "是否为逻辑型",
+"@嵌入式方法": "\"\"""comment": "bool 返回本变体型是否为逻辑型",
+"@嵌入式方法": "\"\"""static": true,
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+
+"static": true"method name": "是否为文本",
+
+"static": true"comment": "tstring 返回本变体型是否为文本型",
+
+"static": true"static": true,
+
+"static": true"data type": "逻辑型",
+
+"static": true"@嵌入式方法": "\"\"",
+
+"static": true"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+
+"static": true]
+  },
+  {
+"method name": "是否为无符号字节",
+"comment": "uint8_t 返回本变体型是否为无符号字节",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+]
+  },
+  {
+"method name": "是否为无符号短整数",
+"comment": "uint16_t 返回本变体型是否为无符号短整数",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+]
+  },
+  {
+comment": "uint16_t 返回本变体型是否为无符号短整数""method name": "是否为无符号整数",
+comment": "uint16_t 返回本变体型是否为无符号短整数""comment": "uint32_t 返回本变体型是否为无符号整数",
+comment": "uint16_t 返回本变体型是否为无符号短整数""static": true,
+comment": "uint16_t 返回本变体型是否为无符号短整数""data type": "逻辑型",
+comment": "uint16_t 返回本变体型是否为无符号短整数""@嵌入式方法": "\"\"",
+comment": "uint16_t 返回本变体型是否为无符号短整数""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+comment": "uint16_t 返回本变体型是否为无符号短整数"]
+  },
+  {
+mment": "uint16_t 返回本变体型是否为无符号短整数"]"method name": "是否为无符号长整数",
+mment": "uint16_t 返回本变体型是否为无符号短整数"]"comment": "uint64_t 返回本变体型是否为无符号长整数",
+mment": "uint16_t 返回本变体型是否为无符号短整数"]"static": true,
+mment": "uint16_t 返回本变体型是否为无符号短整数"]"data type": "逻辑型",
+mment": "uint16_t 返回本变体型是否为无符号短整数"]"@嵌入式方法": "\"\"",
+mment": "uint16_t 返回本变体型是否为无符号短整数"]"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+mment": "uint16_t 返回本变体型是否为无符号短整数"]]
+  },
+  {
+}"method name": "是否为字节",
+}"comment": "int8_t 返回本变体型是否为字节",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+}]
+  },
+  {
+
+"method name": "是否为短整数",
+
+"comment": "int16_t 返回本变体型是否为短整数",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+
+]
+  },
+  {
+}"method name": "是否为整数",
+}"comment": "int32_t 返回本变体型是否为整数",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+}]
+  },
+  {
+thod name": "是否为整数""method name": "是否为长整数",
+thod name": "是否为整数""comment": "int64_t 返回本变体型是否为长整数",
+thod name": "是否为整数""static": true,
+thod name": "是否为整数""data type": "逻辑型",
+thod name": "是否为整数""@嵌入式方法": "\"\"",
+thod name": "是否为整数""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+thod name": "是否为整数"]
+  },
+  {
+ameter name": "本变体""method name": "是否为时间",
+ameter name": "本变体""comment": "FILETIME 返回本变体型是否为FILETIME时间.",
+ameter name": "本变体""static": true,
+ameter name": "本变体""data type": "逻辑型",
+ameter name": "本变体""@嵌入式方法": "\"\"",
+ameter name": "本变体""parameters": [
+   {
+"parameter name": "本变体",
+"data type": "存档属性变体型"
+   }
+ameter name": "本变体"]
+  }
+
+]
+ },
+ {
+meter name": "本变体""comment": "FILETIME 返回本变体型是否为FILETIME时间.""class name": "存档属性表类",
+meter name": "本变体""comment": "FILETIME 返回本变体型是否为FILETIME时间.""comment": "\"存档解压类.取压缩包属性表\"所返回的排序表(std:map)类型.\n其中关键字为属性名,值为存档属性的变体型.",
+meter name": "本变体""comment": "FILETIME 返回本变体型是否为FILETIME时间.""base class": "通用排序表模板",
+meter name": "本变体""comment": "FILETIME 返回本变体型是否为FILETIME时间.""@文档": "\"category = \\\"文件压缩.数据类型\\\"\"",
+meter name": "本变体""comment": "FILETIME 返回本变体型是否为FILETIME时间.""@模板实现类": "\"存档属性名, 存档属性变体型\"",
+meter name": "本变体""comment": "FILETIME 返回本变体型是否为FILETIME时间.""@强制依赖": "\"存档读写类\""
+ },
+ {
+
+"class name": "存档项目信息类",
+
+"comment": "\"存档解压类.取项目信息表\"所返回的信息",
+
+"@文档": "\"category = \\\"文件压缩.数据类型\\\"\"",
+
+"@别名": "\"bit7z::BitArchiveItemInfo\"",
+
+"@别名类型": "本地类",
+
+"@强制依赖": "\"存档读写类\"",
+
+"methods": [
+  {
+"method name": "取属性表",
+"comment": "获取指定项目含有各种类型的属性表(不完整)",
+"static": true,
+"data type": "存档属性表类",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+]
+  },
+  {
+data type": "存档属性变体型""method name": "取属性",
+data type": "存档属性变体型""comment": "获取指定项目和类型的属性",
+data type": "存档属性变体型""result comment": "失败时返回的空变体型.",
+data type": "存档属性变体型""static": true,
+data type": "存档属性变体型""data type": "存档属性变体型",
+data type": "存档属性变体型""@嵌入式方法": "\"\"",
+data type": "存档属性变体型""parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   },
+   {
+"parameter name": "属性名",
+"data type": "存档属性名"
+   }
+data type": "存档属性变体型"]
+  },
+  {
+ameter name": "本项目""method name": "项目索引",
+ameter name": "本项目""comment": "获取指定项目的索引",
+ameter name": "本项目""static": true,
+ameter name": "本项目""data type": "整数",
+ameter name": "本项目""@嵌入式方法": "\"\"",
+ameter name": "本项目""parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+ameter name": "本项目"]
+  },
+  {
+ }"method name": "取名称",
+ }"comment": "获取指定项目的名称(文件名或文件夹名)",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+ }]
+  },
+  {
+data type": "存档属性变体型""method name": "是否为目录",
+data type": "存档属性变体型""comment": "判断指定项目是否为文件夹",
+data type": "存档属性变体型""static": true,
+data type": "存档属性变体型""data type": "逻辑型",
+data type": "存档属性变体型""@嵌入式方法": "\"\"",
+data type": "存档属性变体型""parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+data type": "存档属性变体型"]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "是否为符号链接",
+}"@嵌入式方法": "\"\"""comment": "判断指定项目是否为符号链接",
+}"@嵌入式方法": "\"\"""static": true,
+}"@嵌入式方法": "\"\"""data type": "逻辑型",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+eter name": "本变体"]"method name": "取扩展名",
+eter name": "本变体"]"comment": "获取指定项目的扩展名",
+eter name": "本变体"]"static": true,
+eter name": "本变体"]"data type": "文本型",
+eter name": "本变体"]"@嵌入式方法": "\"\"",
+eter name": "本变体"]"parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+eter name": "本变体"]]
+  },
+  {
+eter name": "本变体"]"method name": "取路径",
+eter name": "本变体"]"comment": "获取指定项目的路径",
+eter name": "本变体"]"static": true,
+eter name": "本变体"]"data type": "文本型",
+eter name": "本变体"]"@嵌入式方法": "\"\"",
+eter name": "本变体"]"parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+eter name": "本变体"]]
+  },
+  {
+eter name": "本项目"]"method name": "取项目长度",
+eter name": "本项目"]"comment": "获取指定项目的未压缩长度",
+eter name": "本项目"]"static": true,
+eter name": "本项目"]"data type": "长整数",
+eter name": "本项目"]"@嵌入式方法": "\"\"",
+eter name": "本项目"]"parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+eter name": "本项目"]]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "取打包长度",
+}"@嵌入式方法": "\"\"""comment": "获取指定项目压缩后的长度",
+}"@嵌入式方法": "\"\"""static": true,
+}"@嵌入式方法": "\"\"""data type": "长整数",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "取创建时间",
+}"@嵌入式方法": "\"\"""comment": "获取指定项目的创建时间",
+}"@嵌入式方法": "\"\"""static": true,
+}"@嵌入式方法": "\"\"""data type": "标准时间类",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+ }"method name": "取访问时间",
+ }"comment": "获取指定项目的最后访问时间",
+ }"static": true,
+ }"data type": "标准时间类",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+ }]
+  },
+  {
+ }"method name": "取修改时间",
+ }"comment": "获取指定项目的最后修改时间",
+ }"static": true,
+ }"data type": "标准时间类",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+ }]
+  },
+  {
+}"data type": "文本型""method name": "取文件属性",
+}"data type": "文本型""comment": "获取指定项目的文件属性",
+}"data type": "文本型""result comment": "返回\"文件属性\"中一个或多个常量的位或值.",
+}"data type": "文本型""static": true,
+}"data type": "文本型""data type": "整数",
+}"data type": "文本型""@嵌入式方法": "\"\"",
+}"data type": "文本型""parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+}"data type": "文本型"]
+  },
+  {
+ }"method name": "是否为加密项目",
+ }"comment": "判断当前所枚举到的项目是否为加密压缩.\n只能在本类的\"枚举循环\"/\"逆向枚举循环\"/\"寻找项目\"的子语句体中使用.",
+ }"result comment": "返回真表示该项目为加密压缩.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "本项目",
+"data type": "存档项目信息类"
+   }
+ }]
+  }
+
+]
+ },
+ {
+"class name": "存档项目信息数组",
+"comment": "\"存档解压类.取项目信息表\"所返回的信息数组类型.",
+"base class": "PIV数组模板",
+"@文档": "\"category = \\\"文件压缩.数据类型\\\"\"",
+"@模板实现类": "\"存档项目信息类\""
+ },
+ {
+"class name": "存档格式类型",
+"comment": "存档文件使用的压缩格式(BitFormat).",
+"@文档": "\"category = \\\"文件压缩.辅助类\\\"\"",
+"@常量类": "字节",
+"constants": [
+  {
+}"constant name": "自动",
+}"comment": "自动检测解压格式",
+}"initial value": "0x00"
+  },
+  {
+"initial value": "0x00""constant name": "ZIP",
+"initial value": "0x00""comment": "扩展名: .zip .zipx .jar .xpi .odt .ods .docx .xlsx .epub",
+"initial value": "0x00""initial value": "0x01"
+  },
+  {
+initial value": "0x00""initial value": "0x01""constant name": "BZIP2",
+initial value": "0x00""initial value": "0x01""comment": "扩展名: .bz2 .bzip2 .tbz2 .tbz",
+initial value": "0x00""initial value": "0x01""initial value": "0x02"
+  },
+  {
+@文档": "\"category = \\\"文件压缩.辅助类\\\"\"""constant name": "RAR",
+@文档": "\"category = \\\"文件压缩.辅助类\\\"\"""comment": "扩展名: .rar .r00",
+@文档": "\"category = \\\"文件压缩.辅助类\\\"\"""initial value": "0x03"
+  },
+  {
+}"constant name": "ARJ",
+}"comment": "扩展名: .arj",
+}"initial value": "0x04"
+  },
+  {
+nitial value": "0x00""initial value": "0x01""initial value": "0x02""constant name": "Z",
+nitial value": "0x00""initial value": "0x01""initial value": "0x02""comment": "扩展名: .z .taz",
+nitial value": "0x00""initial value": "0x01""initial value": "0x02""initial value": "0x05"
+  },
+  {
+itial value": "0x00""initial value": "0x01""initial value": "0x02""comment": "扩展名: .z .taz""constant name": "LZH",
+itial value": "0x00""initial value": "0x01""initial value": "0x02""comment": "扩展名: .z .taz""comment": "扩展名: .lzh .lha",
+itial value": "0x00""initial value": "0x01""initial value": "0x02""comment": "扩展名: .z .taz""initial value": "0x06"
+  },
+  {
+tial value": "0x00""initial value": "0x01""initial value": "0x02""comment": "扩展名: .z .taz""comment": "扩展名: .lzh .lha""constant name": "SevenZip",
+tial value": "0x00""initial value": "0x01""initial value": "0x02""comment": "扩展名: .z .taz""comment": "扩展名: .lzh .lha""comment": "扩展名: .7z",
+tial value": "0x00""initial value": "0x01""initial value": "0x02""comment": "扩展名: .z .taz""comment": "扩展名: .lzh .lha""initial value": "0x07"
+  },
+  {
+}"constant name": "CAB",
+}"comment": "扩展名: .cab",
+}"initial value": "0x08"
+  },
+  {
+initial value": "0x00""initial value": "0x01""constant name": "NSIS",
+initial value": "0x00""initial value": "0x01""comment": "扩展名: .nsis",
+initial value": "0x00""initial value": "0x01""initial value": "0x09"
+  },
+  {
+ial value": "0x00""initial value": "0x01""constant name": "NSIS""constant name": "LZMA",
+ial value": "0x00""initial value": "0x01""constant name": "NSIS""comment": "扩展名: .lzma",
+ial value": "0x00""initial value": "0x01""constant name": "NSIS""initial value": "0x0A"
+  },
+  {
+}"constant name": "LZMA86",
+}"comment": "扩展名:",
+}"initial value": "0x0B"
+  },
+  {
+: "\"category = \\\"文件压缩.辅助类\\\"\"""constant name": "RAR""constant name": "XZ",
+: "\"category = \\\"文件压缩.辅助类\\\"\"""constant name": "RAR""comment": "扩展名: .xz .txz",
+: "\"category = \\\"文件压缩.辅助类\\\"\"""constant name": "RAR""initial value": "0x0C"
+  },
+  {
+
+"constant name": "PPMD",
+
+"comment": "扩展名: .ppmd",
+
+"initial value": "0x0D"
+  },
+  {
+
+"constant name": "VHDX",
+
+"comment": "扩展名: .vhdx",
+
+"initial value": "0xC4"
+  },
+  {
+nstant name": "LZMA86""constant name": "COFF",
+nstant name": "LZMA86""comment": "扩展名:",
+nstant name": "LZMA86""initial value": "0xC6"
+  },
+  {
+@文档": "\"category = \\\"文件压缩.辅助类\\\"\"""constant name": "EXT",
+@文档": "\"category = \\\"文件压缩.辅助类\\\"\"""comment": "扩展名: .ext .ext2 .ext3 .ext4 .img",
+@文档": "\"category = \\\"文件压缩.辅助类\\\"\"""initial value": "0xC7"
+  },
+  {
+stant name": "LZMA86""initial value": "0xC6""constant name": "VMDK",
+stant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk",
+stant name": "LZMA86""initial value": "0xC6""initial value": "0xC8"
+  },
+  {
+
+"constant name": "VDI",
+
+"comment": "扩展名: .vdi",
+
+"initial value": "0xC9"
+  },
+  {
+tant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk""constant name": "QCOW",
+tant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk""comment": "扩展名: .qcow .qcow2 .qcow2c",
+tant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk""initial value": "0xCA"
+  },
+  {
+ant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk""initial value": "0xCA""constant name": "GPT",
+ant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk""initial value": "0xCA""comment": "扩展名:",
+ant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk""initial value": "0xCA""initial value": "0xCB"
+  },
+  {
+}"constant name": "RAR5",
+}"comment": "扩展名: .rar .r00",
+}"initial value": "0xCC"
+  },
+  {
+}"constant name": "IHEX",
+}"comment": "扩展名: .ihex",
+}"initial value": "0xCD"
+  },
+  {
+
+"constant name": "HXS",
+
+"comment": "扩展名: .hxs .hxi .hxr .hxq .hxw .lit",
+
+"initial value": "0xCE"
+  },
+  {
+}"constant name": "TE",
+}"comment": "扩展名:",
+}"initial value": "0xCF"
+  },
+  {
+
+"constant name": "UEFIc",
+
+"comment": "扩展名: .scap",
+
+"initial value": "0xD0"
+  },
+  {
+"comment": "扩展名:""constant name": "UEFIs",
+"comment": "扩展名:""comment": "扩展名: .uefif",
+"comment": "扩展名:""initial value": "0xD1"
+  },
+  {
+: "\"category = \\\"文件压缩.辅助类\\\"\"""constant name": "RAR""constant name": "SquashFS",
+: "\"category = \\\"文件压缩.辅助类\\\"\"""constant name": "RAR""comment": "扩展名: .squashfs",
+: "\"category = \\\"文件压缩.辅助类\\\"\"""constant name": "RAR""initial value": "0xD2"
+  },
+  {
+"comment": "扩展名: .vhdx""constant name": "CramFS",
+"comment": "扩展名: .vhdx""comment": "扩展名: .cramfs",
+"comment": "扩展名: .vhdx""initial value": "0xD3"
+  },
+  {
+"initial value": "0xCC""constant name": "APM",
+"initial value": "0xCC""comment": "扩展名: .apm",
+"initial value": "0xCC""initial value": "0xD4"
+  },
+  {
+"comment": "扩展名: .vhdx""constant name": "MSLZ",
+"comment": "扩展名: .vhdx""comment": "扩展名: .mslz",
+"comment": "扩展名: .vhdx""initial value": "0xD5"
+  },
+  {
+}"constant name": "FLV",
+}"comment": "扩展名:",
+}"initial value": "0xD6"
+  },
+  {
+ment": "扩展名: .vhdx""constant name": "MSLZ""constant name": "SWF",
+ment": "扩展名: .vhdx""constant name": "MSLZ""comment": "扩展名:",
+ment": "扩展名: .vhdx""constant name": "MSLZ""initial value": "0xD7"
+  },
+  {
+}"constant name": "SWFC",
+}"comment": "扩展名:",
+}"initial value": "0xD8"
+  },
+  {
+}"constant name": "NTFS",
+}"comment": "扩展名: .ntfs .img",
+}"initial value": "0xD9"
+  },
+  {
+ant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk""comment": "扩展名: .qcow .qcow2 .qcow2c""constant name": "FAT",
+ant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk""comment": "扩展名: .qcow .qcow2 .qcow2c""comment": "扩展名: .fat .img",
+ant name": "LZMA86""initial value": "0xC6""comment": "扩展名: .vmdk""comment": "扩展名: .qcow .qcow2 .qcow2c""initial value": "0xDA"
+  },
+  {
+}"constant name": "MBR",
+}"comment": "扩展名:",
+}"initial value": "0xDB"
+  },
+  {
+"initial value": "0xDB""constant name": "VHD",
+"initial value": "0xDB""comment": "扩展名: .vhd",
+"initial value": "0xDB""initial value": "0xDC"
+  },
+  {
+initial value": "0xDB""comment": "扩展名: .vhd""constant name": "PE",
+initial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:",
+initial value": "0xDB""comment": "扩展名: .vhd""initial value": "0xDD"
+  },
+  {
+
+"constant name": "ELF",
+
+"comment": "扩展名:",
+
+"initial value": "0xDE"
+  },
+  {
+initial value": "0xDB""comment": "扩展名: .vhd""constant name": "MACHO",
+initial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:",
+initial value": "0xDB""comment": "扩展名: .vhd""initial value": "0xDF"
+  },
+  {
+initial value": "0xDB""comment": "扩展名: .vhd""constant name": "UDF",
+initial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名: .udf .iso .img",
+initial value": "0xDB""comment": "扩展名: .vhd""initial value": "0xE0"
+  },
+  {
+
+"constant name": "XAR",
+
+"comment": "扩展名: .xar .pkg",
+
+"initial value": "0xE1"
+  },
+  {
+
+"constant name": "MUB",
+
+"comment": "扩展名: .mub",
+
+"initial value": "0xE2"
+  },
+  {
+nitial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""constant name": "HFS",
+nitial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""comment": "扩展名: .hfs .hfsx",
+nitial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3"
+  },
+  {
+itial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3""constant name": "DMG",
+itial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3""comment": "扩展名: .dmg",
+itial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3""initial value": "0xE4"
+  },
+  {
+tial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3""comment": "扩展名: .dmg""constant name": "COMPOUND",
+tial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3""comment": "扩展名: .dmg""comment": "扩展名: .msi .msp .doc .xls .ppt",
+tial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3""comment": "扩展名: .dmg""initial value": "0xE5"
+  },
+  {
+"comment": "扩展名: .xar .pkg""constant name": "WIM",
+"comment": "扩展名: .xar .pkg""comment": "扩展名: .wim .swm .esd",
+"comment": "扩展名: .xar .pkg""initial value": "0xE6"
+  },
+  {
+"initial value": "0xCF""constant name": "ISO",
+"initial value": "0xCF""comment": "扩展名: .iso .img",
+"initial value": "0xCF""initial value": "0xE7"
+  },
+  {
+initial value": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM",
+initial value": "0xCF""comment": "扩展名: .iso .img""comment": "扩展名: .chm .chw .chi .chq",
+initial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9"
+  },
+  {
+nitial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9""constant name": "SPLIT",
+nitial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9""comment": "扩展名: .001 .002 ...",
+nitial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9""initial value": "0xEA"
+  },
+  {
+
+"constant name": "RPM",
+
+"comment": "扩展名: .rpm",
+
+"initial value": "0xEB"
+  },
+  {
+tial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3""initial value": "0xE4""constant name": "DEB",
+tial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3""initial value": "0xE4""comment": "扩展名: .deb",
+tial value": "0xDB""comment": "扩展名: .vhd""comment": "扩展名:""initial value": "0xE3""initial value": "0xE4""initial value": "0xEC"
+  },
+  {
+nitial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9""constant name": "CPIO",
+nitial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9""comment": "扩展名: .cpio",
+nitial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9""initial value": "0xED"
+  },
+  {
+itial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9""comment": "扩展名: .cpio""constant name": "TAR",
+itial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9""comment": "扩展名: .cpio""comment": "扩展名: .tar",
+itial value": "0xCF""comment": "扩展名: .iso .img""initial value": "0xE9""comment": "扩展名: .cpio""initial value": "0xEE"
+  },
+  {
+
+"constant name": "GZIP",
+
+"comment": "扩展名: .gz .gzip .tgz",
+
+"initial value": "0xEF"
+  }
+]
+ },
+ {
+"comment": "扩展名: .mub""class name": "存档输入格式",
+"comment": "扩展名: .mub""comment": "解压文件时使用的压缩格式(BitInFormat).\n一般推荐使用\"自动\",会根据文件头和扩展名识别压缩格式;\n但如果遇到没有文件头的格式且扩展名与格式不符的,\"自动\"会无法正确识别格式.",
+"comment": "扩展名: .mub""@文档": "\"category = \\\"文件压缩.辅助类\\\"\"",
+"comment": "扩展名: .mub""@常量类": "字节",
+"comment": "扩展名: .mub""constants": [
+  {
+"constant name": "自动",
+"comment": "自动检测解压格式",
+"initial value": "0x00"
+  },
+  {
+ial value": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM""constant name": "ZIP",
+ial value": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM""comment": "扩展名: .zip .zipx .jar .xpi .odt .ods .docx .xlsx .epub",
+ial value": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM""initial value": "0x01"
+  },
+  {
+}"constant name": "BZIP2",
+}"comment": "扩展名: .bz2 .bzip2 .tbz2 .tbz",
+}"initial value": "0x02"
+  },
+  {
+
+"constant name": "RAR",
+
+"comment": "扩展名: .rar .r00\n注意: 如果是rar5的压缩包,请使用RAR5",
+
+"initial value": "0x03"
+  },
+  {
+"comment": "扩展名: .rar .r00\n注意: 如果是rar5的压缩包,请使用RAR5""constant name": "ARJ",
+"comment": "扩展名: .rar .r00\n注意: 如果是rar5的压缩包,请使用RAR5""comment": "扩展名: .arj",
+"comment": "扩展名: .rar .r00\n注意: 如果是rar5的压缩包,请使用RAR5""initial value": "0x04"
+  },
+  {
+
+"constant name": "Z",
+
+"comment": "扩展名: .z .taz",
+
+"initial value": "0x05"
+  },
+  {
+}"constant name": "LZH",
+}"comment": "扩展名: .lzh .lha",
+}"initial value": "0x06"
+  },
+  {
+value": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM""constant name": "ZIP""constant name": "SevenZip",
+value": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM""constant name": "ZIP""comment": "扩展名: .7z",
+value": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM""constant name": "ZIP""initial value": "0x07"
+  },
+  {
+}"constant name": "CAB",
+}"comment": "扩展名: .cab",
+}"initial value": "0x08"
+  },
+  {
+alue": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM""constant name": "ZIP""initial value": "0x07""constant name": "NSIS",
+alue": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM""constant name": "ZIP""initial value": "0x07""comment": "扩展名: .nsis",
+alue": "0xCF""comment": "扩展名: .iso .img""constant name": "CHM""constant name": "ZIP""initial value": "0x07""initial value": "0x09"
+  },
+  {
+}"constant name": "LZMA",
+}"comment": "扩展名: .lzma",
+}"initial value": "0x0A"
+  },
+  {
+nstant name": "CAB""constant name": "LZMA86",
+nstant name": "CAB""comment": "扩展名:",
+nstant name": "CAB""initial value": "0x0B"
+  },
+  {
+
+"constant name": "XZ",
+
+"comment": "扩展名: .xz .txz",
+
+"initial value": "0x0C"
+  },
+  {
+nstant name": "CAB""constant name": "PPMD",
+nstant name": "CAB""comment": "扩展名: .ppmd",
+nstant name": "CAB""initial value": "0x0D"
+  },
+  {
+"comment": "扩展名: .xz .txz""constant name": "Zstd",
+"comment": "扩展名: .xz .txz""comment": "扩展名: .Zstd",
+"comment": "扩展名: .xz .txz""initial value": "0x0E"
+  },
+  {
+
+"constant name": "COFF",
+
+"comment": "扩展名:",
+
+"initial value": "0xC6"
+  },
+  {
+nstant name": "CAB""constant name": "EXT",
+nstant name": "CAB""comment": "扩展名: .ext .ext2 .ext3 .ext4 .img",
+nstant name": "CAB""initial value": "0xC7"
+  },
+  {
+"initial value": "0xC6""constant name": "VMDK",
+"initial value": "0xC6""comment": "扩展名: .vmdk",
+"initial value": "0xC6""initial value": "0xC8"
+  },
+  {
+comment": "扩展名: .xz .txz""initial value": "0x0E""constant name": "VDI",
+comment": "扩展名: .xz .txz""initial value": "0x0E""comment": "扩展名: .vdi",
+comment": "扩展名: .xz .txz""initial value": "0x0E""initial value": "0xC9"
+  },
+  {
+"initial value": "0x08""constant name": "QCOW",
+"initial value": "0x08""comment": "扩展名: .qcow .qcow2 .qcow2c",
+"initial value": "0x08""initial value": "0xCA"
+  },
+  {
+
+"constant name": "GPT",
+
+"comment": "扩展名:",
+
+"initial value": "0xCB"
+  },
+  {
+
+"constant name": "RAR5",
+
+"comment": "扩展名: .rar .r00",
+
+"initial value": "0xCC"
+  },
+  {
+initial value": "0x08""initial value": "0xCA""constant name": "IHEX",
+initial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex",
+initial value": "0x08""initial value": "0xCA""initial value": "0xCD"
+  },
+  {
+
+"constant name": "HXS",
+
+"comment": "扩展名: .hxs .hxi .hxr .hxq .hxw .lit",
+
+"initial value": "0xCE"
+  },
+  {
+nitial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex""constant name": "TE",
+nitial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex""comment": "扩展名:",
+nitial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex""initial value": "0xCF"
+  },
+  {
+itial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex""initial value": "0xCF""constant name": "UEFIc",
+itial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex""initial value": "0xCF""comment": "扩展名: .scap",
+itial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex""initial value": "0xCF""initial value": "0xD0"
+  },
+  {
+tial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex""initial value": "0xCF""initial value": "0xD0""constant name": "UEFIs",
+tial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex""initial value": "0xCF""initial value": "0xD0""comment": "扩展名: .uefif",
+tial value": "0x08""initial value": "0xCA""comment": "扩展名: .ihex""initial value": "0xCF""initial value": "0xD0""initial value": "0xD1"
+  },
+  {
+nstant name": "HXS""constant name": "SquashFS",
+nstant name": "HXS""comment": "扩展名: .squashfs",
+nstant name": "HXS""initial value": "0xD2"
+  },
+  {
+}"constant name": "CramFS",
+}"comment": "扩展名: .cramfs",
+}"initial value": "0xD3"
+  },
+  {
+nstant name": "COFF""constant name": "APM",
+nstant name": "COFF""comment": "扩展名: .apm",
+nstant name": "COFF""initial value": "0xD4"
+  },
+  {
+stant name": "COFF""comment": "扩展名: .apm""constant name": "MSLZ",
+stant name": "COFF""comment": "扩展名: .apm""comment": "扩展名: .mslz",
+stant name": "COFF""comment": "扩展名: .apm""initial value": "0xD5"
+  },
+  {
+tant name": "COFF""comment": "扩展名: .apm""comment": "扩展名: .mslz""constant name": "FLV",
+tant name": "COFF""comment": "扩展名: .apm""comment": "扩展名: .mslz""comment": "扩展名:",
+tant name": "COFF""comment": "扩展名: .apm""comment": "扩展名: .mslz""initial value": "0xD6"
+  },
+  {
+
+"constant name": "SWF",
+
+"comment": "扩展名:",
+
+"initial value": "0xD7"
+  },
+  {
+}"constant name": "SWFC",
+}"comment": "扩展名:",
+}"initial value": "0xD8"
+  },
+  {
+}"constant name": "NTFS",
+}"comment": "扩展名: .ntfs .img",
+}"initial value": "0xD9"
+  },
+  {
+nstant name": "SWFC""constant name": "FAT",
+nstant name": "SWFC""comment": "扩展名: .fat .img",
+nstant name": "SWFC""initial value": "0xDA"
+  },
+  {
+"initial value": "0xD8""constant name": "MBR",
+"initial value": "0xD8""comment": "扩展名:",
+"initial value": "0xD8""initial value": "0xDB"
+  },
+  {
+"initial value": "0xD8""constant name": "VHD",
+"initial value": "0xD8""comment": "扩展名: .vhd",
+"initial value": "0xD8""initial value": "0xDC"
+  },
+  {
+nstant name": "NTFS""constant name": "PE",
+nstant name": "NTFS""comment": "扩展名:",
+nstant name": "NTFS""initial value": "0xDD"
+  },
+  {
+stant name": "COFF""comment": "扩展名: .apm""constant name": "ELF",
+stant name": "COFF""comment": "扩展名: .apm""comment": "扩展名:",
+stant name": "COFF""comment": "扩展名: .apm""initial value": "0xDE"
+  },
+  {
+t name": "COFF""comment": "扩展名: .apm""constant name": "ELF""constant name": "MACHO",
+t name": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:",
+t name": "COFF""comment": "扩展名: .apm""constant name": "ELF""initial value": "0xDF"
+  },
+  {
+stant name": "COFF""comment": "扩展名: .apm""constant name": "UDF",
+stant name": "COFF""comment": "扩展名: .apm""comment": "扩展名: .udf .iso .img",
+stant name": "COFF""comment": "扩展名: .apm""initial value": "0xE0"
+  },
+  {
+ name": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR",
+ name": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""comment": "扩展名: .xar .pkg",
+ name": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""initial value": "0xE1"
+  },
+  {
+}"constant name": "MUB",
+}"comment": "扩展名: .mub",
+}"initial value": "0xE2"
+  },
+  {
+}"constant name": "HFS",
+}"comment": "扩展名: .hfs .hfsx",
+}"initial value": "0xE3"
+  },
+  {
+"initial value": "0xE3""constant name": "DMG",
+"initial value": "0xE3""comment": "扩展名: .dmg",
+"initial value": "0xE3""initial value": "0xE4"
+  },
+  {
+tial value": "0xE3""constant name": "DMG""constant name": "COMPOUND",
+tial value": "0xE3""constant name": "DMG""comment": "扩展名: .msi .msp .doc .xls .ppt",
+tial value": "0xE3""constant name": "DMG""initial value": "0xE5"
+  },
+  {
+e": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""constant name": "WIM",
+e": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""comment": "扩展名: .wim .swm .esd",
+e": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""initial value": "0xE6"
+  },
+  {
+": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""initial value": "0xE6""constant name": "ISO",
+": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""initial value": "0xE6""comment": "扩展名: .iso .img",
+": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""initial value": "0xE6""initial value": "0xE7"
+  },
+  {
+ial value": "0xE3""constant name": "DMG""comment": "扩展名: .msi .msp .doc .xls .ppt""constant name": "CHM",
+ial value": "0xE3""constant name": "DMG""comment": "扩展名: .msi .msp .doc .xls .ppt""comment": "扩展名: .chm .chw .chi .chq",
+ial value": "0xE3""constant name": "DMG""comment": "扩展名: .msi .msp .doc .xls .ppt""initial value": "0xE9"
+  },
+  {
+nt name": "NTFS""constant name": "PE""constant name": "SPLIT",
+nt name": "NTFS""constant name": "PE""comment": "扩展名: .001 .002 ...",
+nt name": "NTFS""constant name": "PE""initial value": "0xEA"
+  },
+  {
+
+"constant name": "RPM",
+
+"comment": "扩展名: .rpm",
+
+"initial value": "0xEB"
+  },
+  {
+tial value": "0xE3""constant name": "DMG""constant name": "DEB",
+tial value": "0xE3""constant name": "DMG""comment": "扩展名: .deb",
+tial value": "0xE3""constant name": "DMG""initial value": "0xEC"
+  },
+  {
+initial value": "0xD8""initial value": "0xDC""constant name": "CPIO",
+initial value": "0xD8""initial value": "0xDC""comment": "扩展名: .cpio",
+initial value": "0xD8""initial value": "0xDC""initial value": "0xED"
+  },
+  {
+ial value": "0xE3""constant name": "DMG""comment": "扩展名: .deb""constant name": "TAR",
+ial value": "0xE3""constant name": "DMG""comment": "扩展名: .deb""comment": "扩展名: .tar",
+ial value": "0xE3""constant name": "DMG""comment": "扩展名: .deb""initial value": "0xEE"
+  },
+  {
+
+"constant name": "GZIP",
+
+"comment": "扩展名: .gz .gzip .tgz",
+
+"initial value": "0xEF"
+  }
+"comment": "扩展名: .mub"]
+ },
+ {
+
+"class name": "存档输出格式",
+
+"comment": "创建压缩包时使用的压缩格式(BitInOutFormat).",
+
+"@文档": "\"category = \\\"文件压缩.辅助类\\\"\"",
+
+"@常量类": "字节",
+
+"constants": [
+  {
+"comment": "创建压缩包时使用的压缩格式(BitInOutFormat).""constant name": "ZIP",
+"comment": "创建压缩包时使用的压缩格式(BitInOutFormat).""comment": "扩展名: .zip .zipx .jar .xpi .odt .ods .docx .xlsx .epub",
+"comment": "创建压缩包时使用的压缩格式(BitInOutFormat).""initial value": "0x01"
+  },
+  {
+initial value": "0xD8""initial value": "0xDC""constant name": "BZIP2",
+initial value": "0xD8""initial value": "0xDC""comment": "扩展名: .bz2 .bzip2 .tbz2 .tbz",
+initial value": "0xD8""initial value": "0xDC""initial value": "0x02"
+  },
+  {
+ial value": "0xD8""initial value": "0xDC""constant name": "BZIP2""constant name": "SevenZip",
+ial value": "0xD8""initial value": "0xDC""constant name": "BZIP2""comment": "扩展名: .7z",
+ial value": "0xD8""initial value": "0xDC""constant name": "BZIP2""initial value": "0x07"
+  },
+  {
+
+"constant name": "XZ",
+
+"comment": "扩展名: .xz .txz",
+
+"initial value": "0x0C"
+  },
+  {
+nstant name": "XZ""constant name": "WIM",
+nstant name": "XZ""comment": "扩展名: .wim .swm .esd",
+nstant name": "XZ""initial value": "0xE6"
+  },
+  {
+}"constant name": "TAR",
+}"comment": "扩展名: .tar",
+}"initial value": "0xEE"
+  },
+  {
+}"constant name": "GZIP",
+}"comment": "扩展名: .gz .gzip .tgz",
+}"initial value": "0xEF"
+  }
+
+]
+ },
+ {
+"constants": [
+"class name": "存档压缩等级",
+"constants": [
+"comment": "创建压缩文件时使用的压缩等级(BitCompressionLevel).\n注: Wim、Tar格式不支持设置压缩等级,但只是无效果,不会抛出错误.",
+"constants": [
+"@文档": "\"category = \\\"文件压缩.辅助类\\\"\"",
+"constants": [
+"@别名": "\"bit7z::BitCompressionLevel\"",
+"constants": [
+"@别名类型": "本地值类型",
+"constants": [
+"constants": [
+  {
+": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""initial value": "0xE6""constant name": "仅存储",
+": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""initial value": "0xE6""comment": "复制模式(不压缩)\nBZip2/GZip/Xz不支持该选项,会抛出异常.",
+": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""initial value": "0xE6""data type": "存档压缩等级",
+": "COFF""comment": "扩展名: .apm""constant name": "ELF""comment": "扩展名:""constant name": "XAR""initial value": "0xE6""initial value": "@bit7z::BitCompressionLevel::None"
+  },
+  {
+"initial value": "0xEB""constant name": "极速压缩",
+"initial value": "0xEB""comment": "GZip不支持该选项,会抛出异常.",
+"initial value": "0xEB""data type": "存档压缩等级",
+"initial value": "0xEB""initial value": "@bit7z::BitCompressionLevel::Fastest"
+  },
+  {
+tial value": "0xEB""constant name": "极速压缩""constant name": "快速压缩",
+tial value": "0xEB""constant name": "极速压缩""data type": "存档压缩等级",
+tial value": "0xEB""constant name": "极速压缩""initial value": "@bit7z::BitCompressionLevel::Fast"
+  },
+  {
+
+"constant name": "标准压缩",
+
+"data type": "存档压缩等级",
+
+"initial value": "@bit7z::BitCompressionLevel::Normal"
+  },
+  {
+ value": "0xEB""constant name": "极速压缩""constant name": "快速压缩""constant name": "最大压缩",
+ value": "0xEB""constant name": "极速压缩""constant name": "快速压缩""data type": "存档压缩等级",
+ value": "0xEB""constant name": "极速压缩""constant name": "快速压缩""initial value": "@bit7z::BitCompressionLevel::Max"
+  },
+  {
+
+"constant name": "极限压缩",
+
+"data type": "存档压缩等级",
+
+"initial value": "@bit7z::BitCompressionLevel::Ultra"
+  }
+"constants": [
+]
+ },
+ {
+
+"class name": "存档压缩方法",
+
+"comment": "创建压缩包时使用的压缩方法(BitCompressionMethod).",
+
+"@文档": "\"category = \\\"文件压缩.辅助类\\\"\"",
+
+"@别名": "\"bit7z::BitCompressionMethod\"",
+
+"@别名类型": "本地值类型",
+
+"constants": [
+  {
+stant name": "COFF""comment": "扩展名: .apm""constant name": "仅存储",
+stant name": "COFF""comment": "扩展名: .apm""comment": "不压缩,仅打包文件",
+stant name": "COFF""comment": "扩展名: .apm""data type": "存档压缩方法",
+stant name": "COFF""comment": "扩展名: .apm""initial value": "@bit7z::BitCompressionMethod::Copy"
+  },
+  {
+}"constant name": "Deflate",
+}"data type": "存档压缩方法",
+}"initial value": "@bit7z::BitCompressionMethod::Deflate"
+  },
+  {
+"comment": "扩展名: .mub""constant name": "Deflate64",
+"comment": "扩展名: .mub""data type": "存档压缩方法",
+"comment": "扩展名: .mub""initial value": "@bit7z::BitCompressionMethod::Deflate64"
+  },
+  {
+}"constant name": "BZip2",
+}"data type": "存档压缩方法",
+}"initial value": "@bit7z::BitCompressionMethod::BZip2"
+  },
+  {
+"initial value": "@bit7z::BitCompressionMethod::Deflate""constant name": "LZMA",
+"initial value": "@bit7z::BitCompressionMethod::Deflate""data type": "存档压缩方法",
+"initial value": "@bit7z::BitCompressionMethod::Deflate""initial value": "@bit7z::BitCompressionMethod::Lzma"
+  },
+  {
+initial value": "@bit7z::BitCompressionMethod::Deflate""data type": "存档压缩方法""constant name": "LZMA2",
+initial value": "@bit7z::BitCompressionMethod::Deflate""data type": "存档压缩方法""data type": "存档压缩方法",
+initial value": "@bit7z::BitCompressionMethod::Deflate""data type": "存档压缩方法""initial value": "@bit7z::BitCompressionMethod::Lzma2"
+  },
+  {
+}"constant name": "PPMd",
+}"data type": "存档压缩方法",
+}"initial value": "@bit7z::BitCompressionMethod::Ppmd"
+  }
+
+]
+ },
+ {
+"data type": "存档压缩方法""class name": "存档更新方式",
+"data type": "存档压缩方法""comment": "添加文件到压缩包时,如何处理已经存在的文件(UpdateMode).",
+"data type": "存档压缩方法""@文档": "\"category = \\\"文件压缩.辅助类\\\"\"",
+"data type": "存档压缩方法""@别名": "\"bit7z::UpdateMode\"",
+"data type": "存档压缩方法""@别名类型": "本地值类型",
+"data type": "存档压缩方法""constants": [
+  {
+nt name": "NTFS""constant name": "PE""constant name": "无",
+nt name": "NTFS""constant name": "PE""comment": "None 不能添加文件到现有的压缩包中,程序将抛出异常.",
+nt name": "NTFS""constant name": "PE""data type": "存档更新方式",
+nt name": "NTFS""constant name": "PE""initial value": "@bit7z::UpdateMode::None"
+  },
+  {
+
+"constant name": "添加并更新文件",
+
+"comment": "Append 将新文件添加到目标压缩包中,重复的文件不进行替换.",
+
+"data type": "存档更新方式",
+
+"initial value": "@bit7z::UpdateMode::Append"
+  },
+  {
+t name": "NTFS""constant name": "PE""data type": "存档更新方式""constant name": "添加并替换文件",
+t name": "NTFS""constant name": "PE""data type": "存档更新方式""comment": "Update 将新文件添加到目标压缩包中,并覆盖替换重复的文件.",
+t name": "NTFS""constant name": "PE""data type": "存档更新方式""data type": "存档更新方式",
+t name": "NTFS""constant name": "PE""data type": "存档更新方式""initial value": "@bit7z::UpdateMode::Update"
+  }
+"data type": "存档压缩方法"]
+ },
+ {
+"data type": "存档压缩方法""class name": "存档属性名",
+"data type": "存档压缩方法""comment": "压缩包或项目的属性名(BitProperty).\n部分属性在不同的压缩格式里有不一样的值类型.",
+"data type": "存档压缩方法""@文档": "\"category = \\\"文件压缩.辅助类\\\"\"",
+"data type": "存档压缩方法""@别名": "\"bit7z::BitProperty\"",
+"data type": "存档压缩方法""@别名类型": "本地值类型",
+"data type": "存档压缩方法""constants": [
+  {
+"constant name": "无属性",
+"comment": "NoProperty",
+"data type": "存档属性名",
+"initial value": "@bit7z::BitProperty::NoProperty"
+  },
+  {
+ name": "NTFS""constant name": "PE""data type": "存档更新方式""initial value": "@bit7z::UpdateMode::Update""constant name": "主子文件",
+ name": "NTFS""constant name": "PE""data type": "存档更新方式""initial value": "@bit7z::UpdateMode::Update""comment": "MainSubfile |  |",
+ name": "NTFS""constant name": "PE""data type": "存档更新方式""initial value": "@bit7z::UpdateMode::Update""data type": "存档属性名",
+ name": "NTFS""constant name": "PE""data type": "存档更新方式""initial value": "@bit7z::UpdateMode::Update""initial value": "@bit7z::BitProperty::MainSubfile"
+  },
+  {
+"constant name": "处理项目索引",
+"comment": "HandlerItemIndex |  |",
+"data type": "存档属性名",
+"initial value": "@bit7z::BitProperty::HandlerItemIndex"
+  },
+  {
+
+"constant name": "路径",
+
+"comment": "Path | 文本型 | 项目",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::Path"
+  },
+  {
+t7z::BitProperty\""constant name": "名称",
+t7z::BitProperty\""comment": "Name | 文本型 | 项目",
+t7z::BitProperty\""data type": "存档属性名",
+t7z::BitProperty\""initial value": "@bit7z::BitProperty::Name"
+  },
+  {
+"data type": "存档压缩方法""constant name": "扩展名",
+"data type": "存档压缩方法""comment": "Extension | 文本型 | 项目",
+"data type": "存档压缩方法""data type": "存档属性名",
+"data type": "存档压缩方法""initial value": "@bit7z::BitProperty::Extension"
+  },
+  {
+"data type": "存档压缩方法""constant name": "是否目录",
+"data type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目",
+"data type": "存档压缩方法""data type": "存档属性名",
+"data type": "存档压缩方法""initial value": "@bit7z::BitProperty::IsDir"
+  },
+  {
+"data type": "存档压缩方法""constant name": "项目大小",
+"data type": "存档压缩方法""comment": "Size | 无符号长整数 | 项目",
+"data type": "存档压缩方法""data type": "存档属性名",
+"data type": "存档压缩方法""initial value": "@bit7z::BitProperty::Size"
+  },
+  {
+data type": "存档压缩方法""data type": "存档属性名""constant name": "打包大小",
+data type": "存档压缩方法""data type": "存档属性名""comment": "PackSize | 无符号长整数 | 项目",
+data type": "存档压缩方法""data type": "存档属性名""data type": "存档属性名",
+data type": "存档压缩方法""data type": "存档属性名""initial value": "@bit7z::BitProperty::PackSize"
+  },
+  {
+
+"constant name": "文件属性",
+
+"comment": "Attrib | 无符号整数 | 项目",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::Attrib"
+  },
+  {
+"data type": "存档属性名""constant name": "创建时间",
+"data type": "存档属性名""comment": "CTime | 时间 | 项目",
+"data type": "存档属性名""data type": "存档属性名",
+"data type": "存档属性名""initial value": "@bit7z::BitProperty::CTime"
+  },
+  {
+data type": "存档属性名""data type": "存档属性名""constant name": "访问时间",
+data type": "存档属性名""data type": "存档属性名""comment": "ATime | 时间 | 项目",
+data type": "存档属性名""data type": "存档属性名""data type": "存档属性名",
+data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::ATime"
+  },
+  {
+ata type": "存档属性名""data type": "存档属性名""data type": "存档属性名""constant name": "修改时间",
+ata type": "存档属性名""data type": "存档属性名""data type": "存档属性名""comment": "MTime | 时间 | 项目",
+ata type": "存档属性名""data type": "存档属性名""data type": "存档属性名""data type": "存档属性名",
+ata type": "存档属性名""data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::MTime"
+  },
+  {
+ata type": "存档属性名""data type": "存档属性名""data type": "存档属性名""constant name": "固实",
+ata type": "存档属性名""data type": "存档属性名""data type": "存档属性名""comment": "Solid  | 逻辑型 | 压缩包",
+ata type": "存档属性名""data type": "存档属性名""data type": "存档属性名""data type": "存档属性名",
+ata type": "存档属性名""data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::Solid"
+  },
+  {
+}"constant name": "已注释",
+}"comment": "Commented |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::Commented"
+  },
+  {
+nstant name": "已注释""constant name": "已加密",
+nstant name": "已注释""comment": "Encrypted | 逻辑型 | 压缩包/项目",
+nstant name": "已注释""data type": "存档属性名",
+nstant name": "已注释""initial value": "@bit7z::BitProperty::Encrypted"
+  },
+  {
+stant name": "已注释""data type": "存档属性名""constant name": "分割前",
+stant name": "已注释""data type": "存档属性名""comment": "SplitBefore | 逻辑型 | 项目",
+stant name": "已注释""data type": "存档属性名""data type": "存档属性名",
+stant name": "已注释""data type": "存档属性名""initial value": "@bit7z::BitProperty::SplitBefore"
+  },
+  {
+type": "存档属性名""data type": "存档属性名""data type": "存档属性名""constant name": "修改时间""constant name": "分割后",
+type": "存档属性名""data type": "存档属性名""data type": "存档属性名""constant name": "修改时间""comment": "SplitAfter | 逻辑型 | 项目",
+type": "存档属性名""data type": "存档属性名""data type": "存档属性名""constant name": "修改时间""data type": "存档属性名",
+type": "存档属性名""data type": "存档属性名""data type": "存档属性名""constant name": "修改时间""initial value": "@bit7z::BitProperty::SplitAfter"
+  },
+  {
+
+"constant name": "字典大小",
+
+"comment": "DictionarySize |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::DictionarySize"
+  },
+  {
+}"constant name": "CRC",
+}"comment": "CRC | 无符号整数 | 项目",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::CRC"
+  },
+  {
+
+"constant name": "类型",
+
+"comment": "Type | 文本型 | 项目",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::Type"
+  },
+  {
+}"constant name": "是否Anti",
+}"comment": "IsAnti | 逻辑型 | 项目",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::IsAnti"
+  },
+  {
+ | 文本型 | 项目"constant name": "压缩方法",
+ | 文本型 | 项目"comment": "Method 文本型 |  |",
+ | 文本型 | 项目"data type": "存档属性名",
+ | 文本型 | 项目"initial value": "@bit7z::BitProperty::Method"
+  },
+  {
+
+"constant name": "主机系统",
+
+"comment": "HostOS | 文本型 | 项目",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::HostOS"
+  },
+  {
+| 文本型 | 项目"comment": "Method 文本型 |  |""constant name": "文件系统",
+| 文本型 | 项目"comment": "Method 文本型 |  |""comment": "FileSystem |  |",
+| 文本型 | 项目"comment": "Method 文本型 |  |""data type": "存档属性名",
+| 文本型 | 项目"comment": "Method 文本型 |  |""initial value": "@bit7z::BitProperty::FileSystem"
+  },
+  {
+"data type": "存档属性名""constant name": "用户",
+"data type": "存档属性名""comment": "User |  |",
+"data type": "存档属性名""data type": "存档属性名",
+"data type": "存档属性名""initial value": "@bit7z::BitProperty::User"
+  },
+  {
+
+"constant name": "组",
+
+"comment": "Group |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::Group"
+  },
+  {
+System |  |"constant name": "字块",
+System |  |"comment": "Block | 无符号整数 | 项目",
+System |  |"data type": "存档属性名",
+System |  |"initial value": "@bit7z::BitProperty::Block"
+  },
+  {
+
+"constant name": "注释",
+
+"comment": "Comment |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::Comment"
+  },
+  {
+comment": "HandlerItemIndex |  |""constant name": "位置",
+comment": "HandlerItemIndex |  |""comment": "Position |  |",
+comment": "HandlerItemIndex |  |""data type": "存档属性名",
+comment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position"
+  },
+  {
+omment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""constant name": "前缀",
+omment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""comment": "Prefix |  |",
+omment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""data type": "存档属性名",
+omment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""initial value": "@bit7z::BitProperty::Prefix"
+  },
+  {
+7z::BitProperty\""comment": "Name | 文本型 | 项目""constant name": "子目录数量",
+7z::BitProperty\""comment": "Name | 文本型 | 项目""comment": "NumSubDirs |  |",
+7z::BitProperty\""comment": "Name | 文本型 | 项目""data type": "存档属性名",
+7z::BitProperty\""comment": "Name | 文本型 | 项目""initial value": "@bit7z::BitProperty::NumSubDirs"
+  },
+  {
+
+"constant name": "子文件数量",
+
+"comment": "NumSubFiles |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::NumSubFiles"
+  },
+  {
+data type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""constant name": "解包版本",
+data type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""comment": "UnpackVer |  |",
+data type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""data type": "存档属性名",
+data type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""initial value": "@bit7z::BitProperty::UnpackVer"
+  },
+  {
+}"constant name": "分卷",
+}"comment": "Volume |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::Volume"
+  },
+  {
+mment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""data type": "存档属性名""constant name": "分卷压缩",
+mment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""data type": "存档属性名""comment": "IsVolume | 逻辑型 | 压缩包",
+mment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""data type": "存档属性名""data type": "存档属性名",
+mment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""data type": "存档属性名""initial value": "@bit7z::BitProperty::IsVolume"
+  },
+  {
+ment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""data type": "存档属性名""data type": "存档属性名""constant name": "偏移",
+ment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""data type": "存档属性名""data type": "存档属性名""comment": "Offset | 无符号长整数 | 压缩包",
+ment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""data type": "存档属性名""data type": "存档属性名""data type": "存档属性名",
+ment": "HandlerItemIndex |  |""initial value": "@bit7z::BitProperty::Position""data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::Offset"
+  },
+  {
+}"constant name": "链接",
+}"comment": "Links |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::Links"
+  },
+  {
+}"constant name": "字块数量",
+}"comment": "NumBlocks | 无符号整数 | 压缩包",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::NumBlocks"
+  },
+  {
+ata type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""data type": "存档属性名""constant name": "分卷数量",
+ata type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""data type": "存档属性名""comment": "NumVolumes | 无符号整数 | 压缩包",
+ata type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""data type": "存档属性名""data type": "存档属性名",
+ata type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""data type": "存档属性名""initial value": "@bit7z::BitProperty::NumVolumes"
+  },
+  {
+ta type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""data type": "存档属性名""comment": "NumVolumes | 无符号整数 | 压缩包""constant name": "时间类型",
+ta type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""data type": "存档属性名""comment": "NumVolumes | 无符号整数 | 压缩包""comment": "TimeType | 无符号整数 | 项目",
+ta type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""data type": "存档属性名""comment": "NumVolumes | 无符号整数 | 压缩包""data type": "存档属性名",
+ta type": "存档压缩方法""comment": "IsDir | 逻辑型 | 项目""data type": "存档属性名""comment": "NumVolumes | 无符号整数 | 压缩包""initial value": "@bit7z::BitProperty::TimeType"
+  },
+  {
+nstant name": "链接""constant name": "位数64",
+nstant name": "链接""comment": "Bit64 |  |",
+nstant name": "链接""data type": "存档属性名",
+nstant name": "链接""initial value": "@bit7z::BitProperty::Bit64"
+  },
+  {
+z::BitProperty\""comment": "Name | 文本型 | 项目""initial value": "@bit7z::BitProperty::NumSubDirs""constant name": "大端",
+z::BitProperty\""comment": "Name | 文本型 | 项目""initial value": "@bit7z::BitProperty::NumSubDirs""comment": "BigEndian |  |",
+z::BitProperty\""comment": "Name | 文本型 | 项目""initial value": "@bit7z::BitProperty::NumSubDirs""data type": "存档属性名",
+z::BitProperty\""comment": "Name | 文本型 | 项目""initial value": "@bit7z::BitProperty::NumSubDirs""initial value": "@bit7z::BitProperty::BigEndian"
+  },
+  {
+
+"constant name": "CPU",
+
+"comment": "Cpu |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::Cpu"
+  },
+  {
+::BitProperty\""comment": "Name | 文本型 | 项目""initial value": "@bit7z::BitProperty::NumSubDirs""data type": "存档属性名""constant name": "物理大小",
+::BitProperty\""comment": "Name | 文本型 | 项目""initial value": "@bit7z::BitProperty::NumSubDirs""data type": "存档属性名""comment": "PhySize | 无符号长整数 | 压缩包",
+::BitProperty\""comment": "Name | 文本型 | 项目""initial value": "@bit7z::BitProperty::NumSubDirs""data type": "存档属性名""data type": "存档属性名",
+::BitProperty\""comment": "Name | 文本型 | 项目""initial value": "@bit7z::BitProperty::NumSubDirs""data type": "存档属性名""initial value": "@bit7z::BitProperty::PhySize"
+  },
+  {
+"comment": "HostOS | 文本型 | 项目""constant name": "文件头大小",
+"comment": "HostOS | 文本型 | 项目""comment": "HeadersSize | 无符号长整数 | 压缩包",
+"comment": "HostOS | 文本型 | 项目""data type": "存档属性名",
+"comment": "HostOS | 文本型 | 项目""initial value": "@bit7z::BitProperty::HeadersSize"
+  },
+  {
+
+"constant name": "校验和",
+
+"comment": "Checksum |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::Checksum"
+  },
+  {
+data type": "存档属性名""data type": "存档属性名""constant name": "字符序列",
+data type": "存档属性名""data type": "存档属性名""comment": "Characts | 文本型 | 压缩包/项目",
+data type": "存档属性名""data type": "存档属性名""data type": "存档属性名",
+data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::Characts"
+  },
+  {
+"initial value": "@bit7z::BitProperty::Cpu""constant name": "VA",
+"initial value": "@bit7z::BitProperty::Cpu""comment": "Va |  |",
+"initial value": "@bit7z::BitProperty::Cpu""data type": "存档属性名",
+"initial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va"
+  },
+  {
+stant name": "链接""data type": "存档属性名""constant name": "ID",
+stant name": "链接""data type": "存档属性名""comment": "Id |  |",
+stant name": "链接""data type": "存档属性名""data type": "存档属性名",
+stant name": "链接""data type": "存档属性名""initial value": "@bit7z::BitProperty::Id"
+  },
+  {
+}"constant name": "短名称",
+}"comment": "ShortName |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::ShortName"
+  },
+  {
+}"constant name": "创建应用",
+}"comment": "CreatorApp |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::CreatorApp"
+  },
+  {
+}"constant name": "扇区大小",
+}"comment": "SectorSize |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::SectorSize"
+  },
+  {
+initial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""constant name": "POSIX文件属性",
+initial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""comment": "PosixAttrib |  |",
+initial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""data type": "存档属性名",
+initial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""initial value": "@bit7z::BitProperty::PosixAttrib"
+  },
+  {
+
+"constant name": "符号链接",
+
+"comment": "SymLink |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::SymLink"
+  },
+  {
+nstant name": "符号链接""constant name": "错误",
+nstant name": "符号链接""comment": "Error |  |",
+nstant name": "符号链接""data type": "存档属性名",
+nstant name": "符号链接""initial value": "@bit7z::BitProperty::Error"
+  },
+  {
+stant name": "链接""data type": "存档属性名""constant name": "总大小",
+stant name": "链接""data type": "存档属性名""comment": "TotalSize |  |",
+stant name": "链接""data type": "存档属性名""data type": "存档属性名",
+stant name": "链接""data type": "存档属性名""initial value": "@bit7z::BitProperty::TotalSize"
+  },
+  {
+stant name": "符号链接""data type": "存档属性名""constant name": "剩余空间",
+stant name": "符号链接""data type": "存档属性名""comment": "FreeSpace |  |",
+stant name": "符号链接""data type": "存档属性名""data type": "存档属性名",
+stant name": "符号链接""data type": "存档属性名""initial value": "@bit7z::BitProperty::FreeSpace"
+  },
+  {
+"data type": "存档属性名""constant name": "簇大小",
+"data type": "存档属性名""comment": "ClusterSize |  |",
+"data type": "存档属性名""data type": "存档属性名",
+"data type": "存档属性名""initial value": "@bit7z::BitProperty::ClusterSize"
+  },
+  {
+tant name": "符号链接""data type": "存档属性名""data type": "存档属性名""constant name": "卷标名称",
+tant name": "符号链接""data type": "存档属性名""data type": "存档属性名""comment": "VolumeName |  |",
+tant name": "符号链接""data type": "存档属性名""data type": "存档属性名""data type": "存档属性名",
+tant name": "符号链接""data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::VolumeName"
+  },
+  {
+tial value": "@bit7z::BitProperty::Cpu""constant name": "VA""constant name": "本地名称",
+tial value": "@bit7z::BitProperty::Cpu""constant name": "VA""comment": "LocalName |  |",
+tial value": "@bit7z::BitProperty::Cpu""constant name": "VA""data type": "存档属性名",
+tial value": "@bit7z::BitProperty::Cpu""constant name": "VA""initial value": "@bit7z::BitProperty::LocalName"
+  },
+  {
+"comment": "SymLink |  |""constant name": "提供程序",
+"comment": "SymLink |  |""comment": "Provider |  |",
+"comment": "SymLink |  |""data type": "存档属性名",
+"comment": "SymLink |  |""initial value": "@bit7z::BitProperty::Provider"
+  },
+  {
+"comment": "ShortName |  |""constant name": "NT安全描述符",
+"comment": "ShortName |  |""comment": "NtSecure |  |",
+"comment": "ShortName |  |""data type": "存档属性名",
+"comment": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure"
+  },
+  {
+"comment": "SymLink |  |""constant name": "是否ALT流",
+"comment": "SymLink |  |""comment": "IsAltStream | 逻辑型 | 压缩包",
+"comment": "SymLink |  |""data type": "存档属性名",
+"comment": "SymLink |  |""initial value": "@bit7z::BitProperty::IsAltStream"
+  },
+  {
+initial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""constant name": "是否AUX",
+initial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""comment": "IsAux |  |",
+initial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""data type": "存档属性名",
+initial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""initial value": "@bit7z::BitProperty::IsAux"
+  },
+  {
+nitial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""data type": "存档属性名""constant name": "是否已删除",
+nitial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""data type": "存档属性名""comment": "IsDeleted |  |",
+nitial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""data type": "存档属性名""data type": "存档属性名",
+nitial value": "@bit7z::BitProperty::Cpu""initial value": "@bit7z::BitProperty::Va""data type": "存档属性名""initial value": "@bit7z::BitProperty::IsDeleted"
+  },
+  {
+"comment": "SymLink |  |""constant name": "是否目录树",
+"comment": "SymLink |  |""comment": "IsTree |  |",
+"comment": "SymLink |  |""data type": "存档属性名",
+"comment": "SymLink |  |""initial value": "@bit7z::BitProperty::IsTree"
+  },
+  {
+"comment": "HostOS | 文本型 | 项目""constant name": "SAH1",
+"comment": "HostOS | 文本型 | 项目""comment": "Sha1 |  |",
+"comment": "HostOS | 文本型 | 项目""data type": "存档属性名",
+"comment": "HostOS | 文本型 | 项目""initial value": "@bit7z::BitProperty::Sha1"
+  },
+  {
+}"constant name": "SHA256",
+}"comment": "Sha256 |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::Sha256"
+  },
+  {
+"comment": "ShortName |  |""constant name": "错误类型",
+"comment": "ShortName |  |""comment": "ErrorType |  |",
+"comment": "ShortName |  |""data type": "存档属性名",
+"comment": "ShortName |  |""initial value": "@bit7z::BitProperty::ErrorType"
+  },
+  {
+"comment": "SymLink |  |""constant name": "错误数量",
+"comment": "SymLink |  |""comment": "NumErrors |  |",
+"comment": "SymLink |  |""data type": "存档属性名",
+"comment": "SymLink |  |""initial value": "@bit7z::BitProperty::NumErrors"
+  },
+  {
+"initial value": "@bit7z::BitProperty::Sha256""constant name": "错误标志",
+"initial value": "@bit7z::BitProperty::Sha256""comment": "ErrorFlags | 无符号整数 | 压缩包",
+"initial value": "@bit7z::BitProperty::Sha256""data type": "存档属性名",
+"initial value": "@bit7z::BitProperty::Sha256""initial value": "@bit7z::BitProperty::ErrorFlags"
+  },
+  {
+}"constant name": "警告标志",
+}"comment": "WarningFlags |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::WarningFlags"
+  },
+  {
+comment": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告",
+comment": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""comment": "Warning |  |",
+comment": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""data type": "存档属性名",
+comment": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""initial value": "@bit7z::BitProperty::Warning"
+  },
+  {
+
+"constant name": "流数量",
+
+"comment": "NumStreams |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::NumStreams"
+  },
+  {
+ant name": "符号链接""data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::VolumeName""constant name": "ALT流数量",
+ant name": "符号链接""data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::VolumeName""comment": "NumAltStreams |  |",
+ant name": "符号链接""data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::VolumeName""data type": "存档属性名",
+ant name": "符号链接""data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::VolumeName""initial value": "@bit7z::BitProperty::NumAltStreams"
+  },
+  {
+}"constant name": "ALT流大小",
+}"comment": "AltStreamsSize |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::AltStreamsSize"
+  },
+  {
+ent": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""constant name": "虚拟大小",
+ent": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""comment": "VirtualSize |  |",
+ent": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""data type": "存档属性名",
+ent": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""initial value": "@bit7z::BitProperty::VirtualSize"
+  },
+  {
+nt": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""data type": "存档属性名""constant name": "解包大小",
+nt": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""data type": "存档属性名""comment": "UnpackSize |  |",
+nt": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""data type": "存档属性名""data type": "存档属性名",
+nt": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""data type": "存档属性名""initial value": "@bit7z::BitProperty::UnpackSize"
+  },
+  {
+
+"constant name": "总物理大小",
+
+"comment": "TotalPhySize |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::TotalPhySize"
+  },
+  {
+nt": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""data type": "存档属性名""constant name": "分卷索引",
+nt": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""data type": "存档属性名""comment": "VolumeIndex | 无符号整数/无符号长整数 | 压缩包/项目",
+nt": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""data type": "存档属性名""data type": "存档属性名",
+nt": "ShortName |  |""initial value": "@bit7z::BitProperty::NtSecure""constant name": "警告""data type": "存档属性名""initial value": "@bit7z::BitProperty::VolumeIndex"
+  },
+  {
+nstant name": "总物理大小""constant name": "子类型",
+nstant name": "总物理大小""comment": "SubType |  |",
+nstant name": "总物理大小""data type": "存档属性名",
+nstant name": "总物理大小""initial value": "@bit7z::BitProperty::SubType"
+  },
+  {
+treamsSize |  |"constant name": "短注释",
+treamsSize |  |"comment": "ShortComment |  |",
+treamsSize |  |"data type": "存档属性名",
+treamsSize |  |"initial value": "@bit7z::BitProperty::ShortComment"
+  },
+  {
+}"constant name": "代码页",
+}"comment": "CodePage |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::CodePage"
+  },
+  {
+comment": "ShortName |  |""data type": "存档属性名""constant name": "是否非存档类型",
+comment": "ShortName |  |""data type": "存档属性名""comment": "IsNotArcType |  |",
+comment": "ShortName |  |""data type": "存档属性名""data type": "存档属性名",
+comment": "ShortName |  |""data type": "存档属性名""initial value": "@bit7z::BitProperty::IsNotArcType"
+  },
+  {
+omment": "ShortName |  |""data type": "存档属性名""data type": "存档属性名""constant name": "无法检测物理大小",
+omment": "ShortName |  |""data type": "存档属性名""data type": "存档属性名""comment": "PhySizeCantBeDetected |  |",
+omment": "ShortName |  |""data type": "存档属性名""data type": "存档属性名""data type": "存档属性名",
+omment": "ShortName |  |""data type": "存档属性名""data type": "存档属性名""initial value": "@bit7z::BitProperty::PhySizeCantBeDetected"
+  },
+  {
+}"constant name": "是否允许零文件尾",
+}"comment": "ZerosTailIsAllowed |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::ZerosTailIsAllowed"
+  },
+  {
+stant name": "总物理大小""data type": "存档属性名""constant name": "文件尾大小",
+stant name": "总物理大小""data type": "存档属性名""comment": "TailSize |  |",
+stant name": "总物理大小""data type": "存档属性名""data type": "存档属性名",
+stant name": "总物理大小""data type": "存档属性名""initial value": "@bit7z::BitProperty::TailSize"
+  },
+  {
+reamsSize |  |"data type": "存档属性名""constant name": "嵌入存根大小",
+reamsSize |  |"data type": "存档属性名""comment": "EmbeddedStubSize |  |",
+reamsSize |  |"data type": "存档属性名""data type": "存档属性名",
+reamsSize |  |"data type": "存档属性名""initial value": "@bit7z::BitProperty::EmbeddedStubSize"
+  },
+  {
+tant name": "总物理大小""data type": "存档属性名""comment": "TailSize |  |""constant name": "NT重分析",
+tant name": "总物理大小""data type": "存档属性名""comment": "TailSize |  |""comment": "NtReparse |  |",
+tant name": "总物理大小""data type": "存档属性名""comment": "TailSize |  |""data type": "存档属性名",
+tant name": "总物理大小""data type": "存档属性名""comment": "TailSize |  |""initial value": "@bit7z::BitProperty::NtReparse"
+  },
+  {
+ant name": "总物理大小""data type": "存档属性名""comment": "TailSize |  |""comment": "NtReparse |  |""constant name": "硬链接",
+ant name": "总物理大小""data type": "存档属性名""comment": "TailSize |  |""comment": "NtReparse |  |""comment": "HardLink |  |",
+ant name": "总物理大小""data type": "存档属性名""comment": "TailSize |  |""comment": "NtReparse |  |""data type": "存档属性名",
+ant name": "总物理大小""data type": "存档属性名""comment": "TailSize |  |""comment": "NtReparse |  |""initial value": "@bit7z::BitProperty::HardLink"
+  },
+  {
+"comment": "ZerosTailIsAllowed |  |""constant name": "索引节点",
+"comment": "ZerosTailIsAllowed |  |""comment": "INode |  |",
+"comment": "ZerosTailIsAllowed |  |""data type": "存档属性名",
+"comment": "ZerosTailIsAllowed |  |""initial value": "@bit7z::BitProperty::INode"
+  },
+  {
+}"constant name": "流ID",
+}"comment": "StreamId |  |",
+}"data type": "存档属性名",
+}"initial value": "@bit7z::BitProperty::StreamId"
+  },
+  {
+
+"constant name": "只读",
+
+"comment": "ReadOnly |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::ReadOnly"
+  },
+  {
+"data type": "存档属性名""constant name": "输出名称",
+"data type": "存档属性名""comment": "OutName |  |",
+"data type": "存档属性名""data type": "存档属性名",
+"data type": "存档属性名""initial value": "@bit7z::BitProperty::OutName"
+  },
+  {
+
+"constant name": "复制链接",
+
+"comment": "CopyLink |  |",
+
+"data type": "存档属性名",
+
+"initial value": "@bit7z::BitProperty::CopyLink"
+  }
+"data type": "存档压缩方法"]
+ },
+ {
+nstant name": "ALT流大小""class name": "存档变体类型",
+nstant name": "ALT流大小""comment": "\"存档属性变体型\"的属性值类型(BitPropVariantType).",
+nstant name": "ALT流大小""@文档": "\"category = \\\"文件压缩.辅助类\\\"\"",
+nstant name": "ALT流大小""@别名": "\"bit7z::BitPropVariantType\"",
+nstant name": "ALT流大小""@别名类型": "本地值类型",
+nstant name": "ALT流大小""constants": [
+  {
+}"constant name": "空",
+}"comment": "Empty",
+}"data type": "存档变体类型",
+}"initial value": "@bit7z::BitPropVariantType::Empty"
+  },
+  {
+}"constant name": "逻辑值",
+}"comment": "Bool",
+}"data type": "存档变体类型",
+}"initial value": "@bit7z::BitPropVariantType::Bool"
+  },
+  {
+"data type": "存档属性名""constant name": "文本值",
+"data type": "存档属性名""comment": "String",
+"data type": "存档属性名""data type": "存档变体类型",
+"data type": "存档属性名""initial value": "@bit7z::BitPropVariantType::String"
+  },
+  {
+data type": "存档属性名""data type": "存档变体类型""constant name": "无符号字节",
+data type": "存档属性名""data type": "存档变体类型""comment": "UInt8",
+data type": "存档属性名""data type": "存档变体类型""data type": "存档变体类型",
+data type": "存档属性名""data type": "存档变体类型""initial value": "@bit7z::BitPropVariantType::UInt8"
+  },
+  {
+stant name": "ALT流大小""constants": [
+"constant name": "无符号短整数",
+stant name": "ALT流大小""constants": [
+"comment": "UInt16",
+stant name": "ALT流大小""constants": [
+"data type": "存档变体类型",
+stant name": "ALT流大小""constants": [
+"initial value": "@bit7z::BitPropVariantType::UInt16"
+  },
+  {
+reamsSize |  |"data type": "存档属性名""constant name": "无符号整数",
+reamsSize |  |"data type": "存档属性名""comment": "UInt32",
+reamsSize |  |"data type": "存档属性名""data type": "存档变体类型",
+reamsSize |  |"data type": "存档属性名""initial value": "@bit7z::BitPropVariantType::UInt32"
+  },
+  {
+eamsSize |  |"data type": "存档属性名""data type": "存档变体类型""constant name": "无符号长整数",
+eamsSize |  |"data type": "存档属性名""data type": "存档变体类型""comment": "UInt64",
+eamsSize |  |"data type": "存档属性名""data type": "存档变体类型""data type": "存档变体类型",
+eamsSize |  |"data type": "存档属性名""data type": "存档变体类型""initial value": "@bit7z::BitPropVariantType::UInt64"
+  },
+  {
+amsSize |  |"data type": "存档属性名""data type": "存档变体类型""initial value": "@bit7z::BitPropVariantType::UInt64""constant name": "字节值",
+amsSize |  |"data type": "存档属性名""data type": "存档变体类型""initial value": "@bit7z::BitPropVariantType::UInt64""comment": "Int8",
+amsSize |  |"data type": "存档属性名""data type": "存档变体类型""initial value": "@bit7z::BitPropVariantType::UInt64""data type": "存档变体类型",
+amsSize |  |"data type": "存档属性名""data type": "存档变体类型""initial value": "@bit7z::BitPropVariantType::UInt64""initial value": "@bit7z::BitPropVariantType::Int8"
+  },
+  {
+}"constant name": "短整数值",
+}"comment": "Int16",
+}"data type": "存档变体类型",
+}"initial value": "@bit7z::BitPropVariantType::Int16"
+  },
+  {
+
+"constant name": "整数值",
+
+"comment": "Int32",
+
+"data type": "存档变体类型",
+
+"initial value": "@bit7z::BitPropVariantType::Int32"
+  },
+  {
+"initial value": "@bit7z::BitPropVariantType::Int32""constant name": "长整数值",
+"initial value": "@bit7z::BitPropVariantType::Int32""comment": "Int64",
+"initial value": "@bit7z::BitPropVariantType::Int32""data type": "存档变体类型",
+"initial value": "@bit7z::BitPropVariantType::Int32""initial value": "@bit7z::BitPropVariantType::Int64"
+  },
+  {
+"data type": "存档属性名""constant name": "时间值",
+"data type": "存档属性名""comment": "FileTime",
+"data type": "存档属性名""data type": "存档变体类型",
+"data type": "存档属性名""initial value": "@bit7z::BitPropVariantType::FileTime"
+  }
+nstant name": "ALT流大小"]
+ }
+t<标准时间类>(@<本项目>.lastAccessTime())]
+}

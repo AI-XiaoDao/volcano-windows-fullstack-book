@@ -1,0 +1,146 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.编译连接\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "编译命令_常用",
+"methods": [
+  {
+數ŝ"method name": "启用附加安全检查",
+數ŝ"comment": "/sdl 启用 /GS 提供的基线安全检查的超集并重写 /GS-。 \n默认情况下，/sdl 处于关闭状态。 /sdl- 禁用额外的安全检查。",
+數ŝ"@视窗.附加编译参数.release": "\"cpp: /sdl\""
+  },
+  {
+        "method name": "禁用附加安全检查",
+        "comment": "/sdl 启用 /GS 提供的基线安全检查的超集并重写 /GS-。 \n默认情况下，/sdl 处于关闭状态。 /sdl- 禁用额外的安全检查。",
+        "@视窗.附加编译参数.release": "\"cpp: /sdl-\""
+  },
+  {
+
+"method name": "编译线程数",
+
+"comment": "/cgthreads[1-8] \n可供 cl.exe 使用的最大线程数，范围在 1 到 8 之间。",
+
+"@视窗.附加编译参数.release": "\"cpp: /cgthreads8\""
+  },
+  {
+數ŝ"comment": "/sdl 启用 /GS 提供的基线安全检查的超集并重写 /GS-。 \n默认情况下，/sdl 处于关闭状态。 /sdl- 禁用额外的安全检查。""method name": "展开宏并写入文件",
+數ŝ"comment": "/sdl 启用 /GS 提供的基线安全检查的超集并重写 /GS-。 \n默认情况下，/sdl 处于关闭状态。 /sdl- 禁用额外的安全检查。""@视窗.附加编译参数": "\"cpp: /P\""
+  }
+]
+ },
+ {
+"class name": "编译命令_发布版",
+"methods": [
+  {
+ 整数"method name": "最小代码",
+ 整数"@视窗.附加编译参数.release": "\"cpp: /MD\""
+  },
+  {
+ŝ"comment": "/sdl 启用 /GS 提供的基线安全检查的超集并重写 /GS-。 \n默认情况下，/sdl 处于关闭状态。 /sdl- 禁用额外的安全检查。""@视窗.附加编译参数": "\"cpp: /P\"""method name": "最快速度",
+ŝ"comment": "/sdl 启用 /GS 提供的基线安全检查的超集并重写 /GS-。 \n默认情况下，/sdl 处于关闭状态。 /sdl- 禁用额外的安全检查。""@视窗.附加编译参数": "\"cpp: /P\"""@视窗.附加编译参数.release": "\"cpp: /O2\""
+  },
+  {
+數ŝ"comment": "/sdl 启用 /GS 提供的基线安全检查的超集并重写 /GS-。 \n默认情况下，/sdl 处于关闭状态。 /sdl- 禁用额外的安全检查。""method name": "内联函数展开",
+數ŝ"comment": "/sdl 启用 /GS 提供的基线安全检查的超集并重写 /GS-。 \n默认情况下，/sdl 处于关闭状态。 /sdl- 禁用额外的安全检查。""comment": "可选参数 /Ob{0|1|2} /Ob0 /Ob1 /Ob2\n0  禁用内联扩展。 默认情况下，扩展由编译器自行对所有\n函数进行（通常称为自动内联）。\n1  仅允许对标记为 inline、__inline 或 __forceinline\n 的函数或是在类声明中定义的 C++ 成员函数中进行扩展。\n2  默认值。 允许对标记为 inline、__inline 或\n __forceinline 的函数或是编译器选择的任何其他函数进行扩展。\n/Ob2 会在使用 /O1、/O2（最小化大小、最大化速度）\n 或 /Ox（完全优化） 时生效。\n此选项要求启用使用 /O1、/O2、/Ox 或 /Og 进行的优化。",
+數ŝ"comment": "/sdl 启用 /GS 提供的基线安全检查的超集并重写 /GS-。 \n默认情况下，/sdl 处于关闭状态。 /sdl- 禁用额外的安全检查。""@视窗.附加编译参数.release": "\"cpp: /Ob2\""
+  },
+  {
+ = 1"method name": "关闭优化",
+ = 1"comment": "此选项是默认设置。 由于 /Od 取消代码移动，\n所以简化了调试过程。\n 有关用于调试的编译器选项的更多信息\n，请参见 /Z7、/Zi、/ZI（调试信息格式）。",
+ = 1"@视窗.附加编译参数.release": "\"cpp: /Od\""
+  },
+  {
+= 1"@视窗.附加编译参数.release": "\"cpp: /Od\"""method name": "生成内部函数",
+= 1"@视窗.附加编译参数.release": "\"cpp: /Od\"""comment": "使用内部函数的程序比较快，因为它们没有函数调用系统开销。\n但是，由于创建了附加代码，它们可能比较大。\n有关有内部形式的函数的更多信息，请参见 内部。\n/Oi 仅作为对编译器的请求，用于将某些函数调用替换为内部函数；\n为产生更好的性能，编译器可能会调用函数\n（而不会将该函数调用替换为内部函数）。",
+= 1"@视窗.附加编译参数.release": "\"cpp: /Od\"""@视窗.附加编译参数.release": "\"cpp: /Oi\""
+  },
+  {
+ꌤŝ"method name": "代码大小优先",
+ꌤŝ"comment": "/Os（代码大小优先）\n通过指示编译器优选大小而非速度来最小化 EXE 和 DLL 的大小。 \n编译器可以将许多 C 和 C++ 构造缩小为功能类似的机器码序列。\n 这些差异有时在大小和速度之间提供了折中。\n /Os 和 /Ot 选项允许在二者之间指定一个首选项：",
+ꌤŝ"@视窗.附加编译参数.release": "\"cpp: /Os\""
+  },
+  {
+附加编译参数.release"method name": "代码速度优先",
+附加编译参数.release"comment": "/Ot（代码速度优先）\n通过指示编译器优选速度而非大小来最大化 EXE 和 DLL 的速度。\n（这是默认设置。）\n编译器可以将许多 C 和 C++ 构造缩小为功能类似的机器码序列。\n 这些差异有时在大小和速度之间提供了折衷。 \n“最大化速度”(/O2) 选项隐含 /Ot 选项。\n /O2 选项组合若干个选项以产生速度非常快的代码。",
+附加编译参数.release"@视窗.附加编译参数.release": "\"cpp: /Ot\""
+  },
+  {
+
+"method name": "完全优化",
+
+"comment": "使用 /Ox 编译器选项可以优先选择生成执行速度更快的代码而不是大小更小的代码。",
+
+"@视窗.附加编译参数.release": "\"cpp: /Ot\""
+  },
+  {
+ꌤŝ"@视窗.附加编译参数.release": "\"cpp: /Os\"""method name": "启用省略框架指针",
+ꌤŝ"@视窗.附加编译参数.release": "\"cpp: /Os\"""comment": "启用在调用堆栈上创建帧指针。\n省略帧指针。 (仅限 x86)",
+ꌤŝ"@视窗.附加编译参数.release": "\"cpp: /Os\"""@视窗.附加编译参数.win32,release": "\"cpp: /Oy-\""
+  },
+  {
+针。 (仅限 x86)"method name": "禁用框架指针",
+针。 (仅限 x86)"comment": "省略帧指针。 (仅限 x86)\n禁止在调用堆栈上创建帧指针。\n此选项可以加快函数调用的速度，因为无需设置和移除任何框架指针。 \n它还可以使一个或多个寄存器（Intel 386 或更高版本上的 EBP）空闲出来，\n以便存储频繁使用的变量和子表达式。",
+针。 (仅限 x86)"@视窗.附加编译参数.win32,release": "\"cpp: /Oy\""
+  }
+]
+ },
+ {
+"class name": "______条件编译",
+"comment": "这个一般用途有两个，第一，比如免费版和付费版软件，某些功能不编译进去，第二，系统定义的一些宏，可以用，",
+"@全局类": "真",
+"methods": [
+  {
+method name": "最小代码""method name": "条件编译_用户定义",
+method name": "最小代码""static": true,
+method name": "最小代码""@嵌入式方法": "\"name = \\\"voldefine\\\"\\r\\nno_end_sem = true\"",
+method name": "最小代码""parameters": [
+   {
+"parameter name": "条件",
+"@匹配类型": "所有类型"
+   }
+method name": "最小代码"]
+  },
+  {
+ = 2"method name": "条件编译_如果用户定义",
+ = 2"static": true,
+ = 2"@嵌入式方法": "\"name = \\\"volifdef\\\"\\r\\nbody_header = \\\"@none\\\"\\r\\nbody_tail = \\\"@none\\\"\\r\\nhas_body = true\\r\\nnext  = \\\"volelse,volendif\\\"\"",
+ = 2"parameters": [
+   {
+"parameter name": "条件",
+"@匹配类型": "所有类型"
+   }
+ = 2]
+  },
+  {
+ "函数进行（通常称为自动内联）。""method name": "条件编译_如果已定义宏",
+ "函数进行（通常称为自动内联）。""static": true,
+ "函数进行（通常称为自动内联）。""@嵌入式方法": "\"name = \\\"volifdef_noPre\\\"\\r\\nbody_header = \\\"@none\\\"\\r\\nbody_tail = \\\"@none\\\"\\r\\nhas_body = true\\r\\nnext  = \\\"volelse,volendif\\\"\"",
+ "函数进行（通常称为自动内联）。""parameters": [
+   {
+"parameter name": "条件",
+"@匹配类型": "所有类型"
+   }
+ "函数进行（通常称为自动内联）。"]
+  },
+  {
+}"method name": "条件编译_否则",
+}"static": true,
+}"@嵌入式方法": "\"name = \\\"volelse\\\"\\r\\nbody_header = \\\"@none\\\"\\r\\nbody_tail = \\\"@none\\\"\\r\\nhas_body = true\\r\\nnext  = \\\"volendif\\\"\\r\\nprev = \\\"volifdef,volifdef_noPre\\\"\""
+  },
+  {
+= 2"parameters": [
+"method name": "条件编译_结束",
+= 2"parameters": [
+"static": true,
+= 2"parameters": [
+"@嵌入式方法": "\"name = \\\"volendif\\\"\\r\\nprev = \\\"volelse,volifdef,volifdef_noPre\\\"\\r\\nno_end_sem = true\""
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

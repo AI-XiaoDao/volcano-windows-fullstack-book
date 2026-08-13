@@ -1,0 +1,1630 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".
+
+{
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"package name": "LkuaiyHttp.com",
+"classes": [
+ {
+ 文本型"class name": "微信支付_订单信息",
+ 文本型"variables": [
+  {
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".
+
+"variable name": "商品名",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件".
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "订单编号",
+
+"data type": "文本型"
+  },
+  {
+ᖰꚬŝ"variable name": "订单金额",
+ᖰꚬŝ"data type": "文本型"
+  },
+  {
+ 文本型"variable name": "商品编号",
+ 文本型"data type": "文本型"
+  },
+  {
+ 文本型"variable name": "客户ip",
+ 文本型"data type": "文本型"
+  },
+  {
+
+"variable name": "支付确认页面描述",
+
+"comment": "支付确认的页面描述文字\n例如：是否确认对商品：XXXX进行支付购买？\n如果这里不为空，则商户信息中的同名参数失效",
+
+"data type": "文本型"
+  },
+  {
+ 整数"variable name": "成功后跳转地址",
+ 整数"comment": "支付成功后支付页面会进行跳转\n如果这里不为空，则商户信息中的同名参数失效",
+ 整数"data type": "文本型"
+  }
+ 文本型]
+ },
+ {
+"class name": "微信支付_商户信息",
+"variables": [
+  {
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."variable name": "商户号",
+问本程序中的接口需要引用模块"火山PCFOF开源网站开发套件"."data type": "文本型"
+  },
+  {
+ꚫŝ"variable name": "APPID",
+ꚫŝ"data type": "文本型"
+  },
+  {
+
+"variable name": "APIv2密钥",
+
+"comment": "RSA的开发者密钥",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "支付确认页面描述",
+
+"comment": "支付确认的页面描述文字\n例如：是否确认对商品：XXXX进行支付购买？",
+
+"data type": "文本型"
+  },
+  {
+"variable name": "客户ip""variable name": "成功后回调地址",
+"variable name": "客户ip""comment": "支付成功后微信回调的地址信息",
+"variable name": "客户ip""data type": "文本型"
+  },
+  {
+ꚫŝ"variable name": "成功后跳转地址",
+ꚫŝ"comment": "支付成功后支付页面会进行跳转",
+ꚫŝ"data type": "文本型"
+  }
+]
+ },
+ {
+}"class name": "类_微信公众号",
+}"methods": [
+  {
+
+"method name": "初始化公众号",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "appID_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "appsecret_",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "获取微信登录链接",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "回调域名",
+"comment": "例如:https://www.xxx.com",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回调标识",
+"comment": "当登录成功时，回调的信息会收到此标识",
+"data type": "长整数"
+   }
+}]
+  },
+  {
+ }"method name": "微信Token验证_GET",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "来源对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+ }]
+  },
+  {
+"method name": "微信Token验证_GET_HTTPS",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "来源对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+]
+  },
+  {
+"method name": "微信登录_是否成功",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "回调标识",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回微信登录信息",
+"data type": "JSONCPP对象类"
+   }
+]
+  },
+  {
+
+"method name": "通用微信成功返回页面",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "页面名称",
+"data type": "文本型",
+"@默认值": "\"扫码登录成功\""
+   },
+   {
+"parameter name": "状态名称",
+"data type": "文本型",
+"@默认值": "\"登录成功\""
+   },
+   {
+"parameter name": "页面描述",
+"data type": "文本型",
+"@默认值": "\"恭喜您，本次扫码登录成功！\""
+   },
+   {
+"parameter name": "是否显示按钮",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "按钮标题",
+"data type": "文本型",
+"@默认值": "\"返回主页\""
+   },
+   {
+"parameter name": "按钮跳转地址",
+"data type": "文本型",
+"@默认值": "\"#\""
+   }
+
+]
+  },
+  {
+
+"method name": "微信登录_GET",
+
+"result comment": "返回真登陆成功，返回假登陆失败",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "解析参数",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回错误结果",
+"comment": "如果错误，则这里返回错误结果",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户头像",
+"comment": "非错误情况下有效\n用户头像，最后一个数值代表正方形头像大小（有0、46、64、96、132数值可选，0代表640*640正方形头像），用户没有头像时该项为空。若用户更换头像，原有头像 URL 将失效。",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户昵称",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户性别",
+"comment": "用户的性别，值为1时是男性，值为2时是女性，值为0时是未知",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户国家",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户省份",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户城市",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户唯一ID",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的回调标识",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+ }"method name": "微信公众号初始化JS代码",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "APPID_",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回调标识",
+"data type": "文本型"
+   },
+   {
+"parameter name": "当前页面URL",
+"comment": "例如：https://xxx.xxx.com",
+"data type": "文本型"
+   },
+   {
+"parameter name": "JS接口列表",
+"data type": "JSONCPP数组类"
+   },
+   {
+"parameter name": "是否开启调试模式",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+ameter name": "回调标识""method name": "模板消息发送",
+ameter name": "回调标识""parameters": [
+   {
+"parameter name": "用户OpenID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "模板消息ID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "单击后载入网址",
+"comment": "留空则ios单击进入空页面\n安卓无法单击",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "模板替换标题",
+"comment": "例如：\n{{first.DATA}}\n系统帐号：{{keyword1.DATA}}\n登录系统：{{keyword2.DATA}}\n登录时间：{{keyword3.DATA}}\n{{remark.DATA}}\n则这里是\n[\"first\",\"keyword1\",\"keyword2\",\"keyword3\",\"remark\"]",
+"data type": "JSONCPP数组类"
+   },
+   {
+"parameter name": "模板替换数据",
+"comment": "标题对应的值",
+"data type": "JSONCPP数组类"
+   }
+ameter name": "回调标识"]
+  },
+  {
+}"method name": "临时二维码生成",
+}"comment": "用户扫描带场景值二维码时，可能推送以下两种事件：\n如果用户还未关注公众号，则用户可以关注公众号，关注后微信会将带场景值关注事件推送给开发者。\n如果用户已经关注公众号，在用户扫描后会自动进入会话，微信也会将带场景值扫描事件推送给开发者。",
+}"data type": "字节集类",
+}"parameters": [
+   {
+"parameter name": "二维码失效时间",
+"comment": "单位：秒",
+"data type": "整数",
+"@默认值": "300"
+   },
+   {
+"parameter name": "二维码内容",
+"comment": "1-64位字符串",
+"data type": "文本型",
+"@默认值": "\"123456\""
+   }
+}]
+  },
+  {
+ameter name": "是否开启调试模式""method name": "收到公众号信息POST",
+ameter name": "是否开启调试模式""data type": "逻辑型",
+ameter name": "是否开启调试模式""parameters": [
+   {
+"parameter name": "来源对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+ameter name": "是否开启调试模式"]
+  },
+  {
+eter name": "是否开启调试模式"]"method name": "收到公众号信息POST_HTTPS",
+eter name": "是否开启调试模式"]"data type": "逻辑型",
+eter name": "是否开启调试模式"]"parameters": [
+   {
+"parameter name": "来源对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+eter name": "是否开启调试模式"]]
+  },
+  {
+ter name": "是否开启调试模式"]"data type": "逻辑型""method name": "取用户关注公众号时坐标",
+ter name": "是否开启调试模式"]"data type": "逻辑型""comment": "该方法只能在\n公众号收到消息回调事件中使用\n且用户的消息类型必须为：Event[关注公众号]\n开通了上报地理位置接口的公众号，用户在关注后进入公众号会话时，会弹框让用户确认是否允许公众号使用其地理位置。弹框只在关注后出现一次，用户以后可以在公众号详情页面进行操作。",
+ter name": "是否开启调试模式"]"data type": "逻辑型""parameters": [
+   {
+"parameter name": "返回地理位置纬度",
+"comment": "只在关注时有用",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回地理位置经度",
+"comment": "只在关注时有用",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回地理位置精度",
+"comment": "只在关注时有用",
+"data type": "文本型"
+   }
+ter name": "是否开启调试模式"]"data type": "逻辑型"]
+  },
+  {
+
+"method name": "回复用户消息",
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "用户OpenID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户消息类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户消息内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "公众号原始号码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "消息时间戳",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回复消息内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "不允回复消息",
+"data type": "文本型"
+  },
+  {
+data type": "文本型""method name": "公众号收到消息回调",
+data type": "文本型""type": "event",
+data type": "文本型""data type": "整数",
+data type": "文本型""parameters": [
+   {
+"parameter name": "FOF对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "用户OpenID",
+"comment": "用户的标识，对当前公众号唯一标识\n相当于用户对于该公众号的唯一ID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户消息类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户消息内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "公众号原始号码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "收到消息时间戳",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否扫码事件",
+"comment": "注意：如果非扫码触发，则为假",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "扫码回调内容",
+"comment": "注意：如果非扫码触发，则这里为空",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "整数""method name": "公众号收到消息回调_HTTPS",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "FOF对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "用户OpenID",
+"comment": "用户的标识，对当前公众号唯一标识\n相当于用户对于该公众号的唯一ID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户消息类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户消息内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "公众号原始号码",
+"data type": "文本型"
+   },
+   {
+"parameter name": "收到消息时间戳",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否扫码事件",
+"comment": "注意：如果非扫码触发，则为假",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "扫码回调内容",
+"comment": "注意：如果非扫码触发，则这里为空",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "设置用户备注",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "用户OpenID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "备注信息",
+"comment": "设置用户在公众号中的备注信息",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "用户移入黑名单",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "用户OpenID",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ameter name": "用户消息类型""method name": "用户移除黑名单",
+ameter name": "用户消息类型""data type": "逻辑型",
+ameter name": "用户消息类型""parameters": [
+   {
+"parameter name": "用户OpenID",
+"data type": "文本型"
+   }
+ameter name": "用户消息类型"]
+  },
+  {
+ata type": "文本型""parameters": [
+"method name": "获取公众号用户列表",
+ata type": "文本型""parameters": [
+"comment": "一次拉取调用最多拉取10000个关注者的OpenID，可以通过多次拉取的方式来满足需求。",
+ata type": "文本型""parameters": [
+"result comment": "格式[\"用户OpenID1\",\"用户OpenID2\".......]",
+ata type": "文本型""parameters": [
+"data type": "JSONCPP数组类",
+ata type": "文本型""parameters": [
+"parameters": [
+   {
+"parameter name": "当前页数",
+"data type": "整数",
+"@默认值": "1"
+   }
+ata type": "文本型""parameters": [
+]
+  },
+  {
+ata type": "文本型""parameters": [
+"method name": "获取用户基本信息",
+ata type": "文本型""parameters": [
+"data type": "JSONCPP对象类",
+ata type": "文本型""parameters": [
+"parameters": [
+   {
+"parameter name": "用户OpenID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回是否订阅公众号",
+"comment": "用户是否订阅该公众号标识，值为0时，代表此用户没有关注该公众号，拉取不到其余信息。",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户关注时间",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户备注",
+"comment": "公众号运营者对粉丝的备注，公众号运营者可在微信公众平台用户管理界面对粉丝添加备注\n注意：如果没有备注则为空",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回用户关注公众号渠道",
+"comment": "返回用户关注的渠道来源\nADD_SCENE_SEARCH 公众号搜索\nADD_SCENE_ACCOUNT_MIGRATION 公众号迁移\nADD_SCENE_PROFILE_CARD 名片分享\nADD_SCENE_QR_CODE 扫描二维码\nADD_SCENE_PROFILE_LINK 图文页内名称点击\nADD_SCENE_PROFILE_ITEM 图文页右上角菜单\nADD_SCENE_PAID 支付后关注\nADD_SCENE_WECHAT_ADVERTISEMENT 微信广告\nADD_SCENE_REPRINT 他人转载 \nADD_SCENE_LIVESTREAM 视频号直播\nADD_SCENE_CHANNELS 视频号 \nADD_SCENE_OTHERS 其他",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+ata type": "文本型""parameters": [
+]
+  },
+  {
+ata type": "文本型""parameters": [
+"method name": "微信支付_是否成功",
+ata type": "文本型""parameters": [
+"data type": "逻辑型",
+ata type": "文本型""parameters": [
+"parameters": [
+   {
+"parameter name": "回调标识",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回微信支付信息",
+"data type": "JSONCPP对象类"
+   }
+ata type": "文本型""parameters": [
+]
+  },
+  {
+ata type": "文本型""parameters": [
+"method name": "微信支付_支付成功POST",
+ata type": "文本型""parameters": [
+"data type": "逻辑型",
+ata type": "文本型""parameters": [
+"parameters": [
+   {
+"parameter name": "来源对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "成功回调URL",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回支付数据",
+"data type": "JSONCPP对象类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否告知微信已处理回调",
+"comment": "这里一般默认为真即可，代表告诉微信你给FOF的回调这边已经处理了；如果为假微信会重复进行回调",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ata type": "文本型""parameters": [
+]
+  },
+  {
+ }"method name": "微信支付_支付成功POST_HTTPS",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "来源对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "成功回调URL",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回支付数据",
+"data type": "JSONCPP对象类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否告知微信已处理回调",
+"comment": "这里一般默认为真即可，代表告诉微信你给FOF的回调这边已经处理了；如果为假微信会重复进行回调",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+data type": "逻辑型""method name": "微信支付_GET",
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "参商户信息",
+"data type": "微信支付_商户信息"
+   },
+   {
+"parameter name": "参订单信息",
+"comment": "如果【获取微信支付链接】方法的第三个参数不为空对象，则这里不用填写",
+"data type": "微信支付_订单信息",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "来源对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "返回的支付信息",
+"data type": "JSONCPP对象类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "支付询问页面",
+"comment": "默认不填写情况下使用FOF自带的询问页面数据",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+data type": "逻辑型"]
+  },
+  {
+ameter name": "数据大小""method name": "微信支付_GET_HTTPS",
+ameter name": "数据大小""data type": "逻辑型",
+ameter name": "数据大小""parameters": [
+   {
+"parameter name": "参商户信息",
+"data type": "微信支付_商户信息"
+   },
+   {
+"parameter name": "参订单信息",
+"comment": "如果【获取微信支付链接】方法的第三个参数不为空对象，则这里不用填写",
+"data type": "微信支付_订单信息",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "来源对象",
+"comment": "提供事件产生的具体来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "返回的支付信息",
+"data type": "JSONCPP对象类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "支付询问页面",
+"comment": "默认不填写情况下使用FOF自带的询问页面数据",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+ameter name": "数据大小"]
+  },
+  {
+"method name": "获取微信支付链接",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "回调域名",
+"comment": "例如:https://www.xxx.com",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回调标识",
+"comment": "当支付成功时，回调的信息会收到此标识",
+"data type": "长整数"
+   },
+   {
+"parameter name": "参订单信息",
+"comment": "如果此处不为空，则【微信支付_GET】【微信支付_GET_HTTPS】两个方法中的【参订单信息】参数失效",
+"data type": "微信支付_订单信息",
+"@默认值": "空对象"
+   }
+]
+  }
+}]
+ },
+ {
+parameters": [
+"class name": "类_短信类库",
+parameters": [
+"methods": [
+  {
+ameter name": "返回的支付信息""method name": "发送验证码",
+ameter name": "返回的支付信息""comment": "发送阿里云的验证码",
+ameter name": "返回的支付信息""data type": "文本型",
+ameter name": "返回的支付信息""@禁止流程检查": "真",
+ameter name": "返回的支付信息""parameters": [
+   {
+"parameter name": "AccessKeyId",
+"comment": "KEYID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "accessSecret",
+"comment": "Secret",
+"data type": "文本型"
+   },
+   {
+"parameter name": "TemplateCode",
+"comment": "你的短信模板例如：SMS_XXXXX",
+"data type": "文本型"
+   },
+   {
+"parameter name": "PhoneNumbers",
+"comment": "接收手机号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "TemplateParam",
+"comment": "短信变量数据，例如：{\"code\":\"123456\"}",
+"data type": "文本型",
+"@默认值": "\"{\\\"code\\\":\\\"123456\\\"}\""
+   },
+   {
+"parameter name": "SignName",
+"comment": "短信签名",
+"data type": "文本型"
+   }
+ameter name": "返回的支付信息"]
+  },
+  {
+ameter name": "返回的支付信息""method name": "发送腾讯云短信",
+ameter name": "返回的支付信息""comment": "短信、通知短信、验证码都可以发送",
+ameter name": "返回的支付信息""data type": "文本型",
+ameter name": "返回的支付信息""@禁止流程检查": "真",
+ameter name": "返回的支付信息""parameters": [
+   {
+"parameter name": "SmsSdkAppId",
+"comment": "在短信控制台添加应用后生成的实际SdkAppId,如1400006666\n可前往以下网页获取或创建\nhttps://console.cloud.tencent.com/smsv2/app-manage",
+"data type": "文本型"
+   },
+   {
+"parameter name": "SecretID",
+"comment": "标识API调用者身份ID，可前往以下网页获取\nhttps://console.cloud.tencent.com/cam/capi",
+"data type": "文本型"
+   },
+   {
+"parameter name": "SecretKey",
+"comment": "用于验证API调用者的身份，同SecretID一同获取",
+"data type": "文本型"
+   },
+   {
+"parameter name": "手机号",
+"comment": "接受短信的手机号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "短信签名",
+"comment": "短信签名内容,使用UTF-8编码,必须填写已审核通过的签名,如：利快云",
+"data type": "文本型"
+   },
+   {
+"parameter name": "模板ID",
+"comment": "模板ID,必须填写已审核通过的模板ID。可前往以下网页获取\nhttps://console.cloud.tencent.com/smsv2/csms-template",
+"data type": "文本型"
+   },
+   {
+"parameter name": "参数数据_",
+"comment": "JSON文本数组数据,模板TemplateId的参数,若无模板参数,则为空。 \n模板参数的个数需要与TemplateId对应模板的变量个数保持一致。",
+"data type": "JSONCPP数组类"
+   }
+ameter name": "返回的支付信息"]
+  },
+  {
+ameter name": "accessSecret""method name": "发送阿里云短信",
+ameter name": "accessSecret""comment": "短信、通知短信、验证码都可以发送",
+ameter name": "accessSecret""data type": "文本型",
+ameter name": "accessSecret""@禁止流程检查": "真",
+ameter name": "accessSecret""parameters": [
+   {
+"parameter name": "AccessKeyId",
+"comment": "KEYID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "accessSecret",
+"comment": "Secret",
+"data type": "文本型"
+   },
+   {
+"parameter name": "TemplateCode",
+"comment": "你的短信模板例如：SMS_XXXXX",
+"data type": "文本型"
+   },
+   {
+"parameter name": "PhoneNumbers",
+"comment": "接收手机号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "TemplateParam",
+"comment": "短信变量数据，例如：{\"code\":\"123456\"}\n注意：没有可直接留空",
+"data type": "文本型",
+"@默认值": "\"{\\\"code\\\":\\\"123456\\\"}\""
+   },
+   {
+"parameter name": "SignName",
+"comment": "短信签名",
+"data type": "文本型"
+   }
+ameter name": "accessSecret"]
+  }
+parameters": [
+]
+ },
+ {
+ameter name": "SignName""class name": "类_支付宝",
+ameter name": "SignName""methods": [
+  {
+ }"method name": "告知支付宝已经处理成功",
+ }"data type": "文本型"
+  },
+  {
+data type": "文本型""method name": "支付宝是否支付成功",
+data type": "文本型""comment": "支付成功返回真,失败返回假",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "GETURL",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "POST数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   }
+data type": "文本型"]
+  },
+  {
+ameter name": "GETURL""method name": "支付宝PC即时到帐_URL_新版",
+ameter name": "GETURL""comment": "RSA2加密版本",
+ameter name": "GETURL""data type": "文本型",
+ameter name": "GETURL""parameters": [
+   {
+"parameter name": "参站点IP",
+"comment": "需要带上http或者https\n结尾不能有/",
+"data type": "文本型"
+   },
+   {
+"parameter name": "订单编号",
+"comment": "支付宝的回调订单编号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "商品名称",
+"comment": "记住，为了兼容，尽量避免使用中文",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付金额",
+"comment": "尾数不能超过2位，如1234.22",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付PID",
+"comment": "支付宝的pid",
+"data type": "文本型"
+   },
+   {
+"parameter name": "RSA2私钥",
+"comment": "-----BEGIN PRIVATE KEY-----\n私钥内容\n-----END PRIVATE KEY-----",
+"data type": "文本型"
+   }
+ameter name": "GETURL"]
+  },
+  {
+ameter name": "GETURL""method name": "支付宝移动即时到帐_URL_新版",
+ameter name": "GETURL""comment": "RSA2加密版本",
+ameter name": "GETURL""data type": "文本型",
+ameter name": "GETURL""parameters": [
+   {
+"parameter name": "参站点IP",
+"comment": "需要带上http或者https\n结尾不能有/",
+"data type": "文本型"
+   },
+   {
+"parameter name": "订单编号",
+"comment": "支付宝的回调订单编号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "商品名称",
+"comment": "记住，为了兼容，尽量避免使用中文",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付金额",
+"comment": "尾数不能超过2位，如1234.22",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付PID",
+"comment": "支付宝的pid",
+"data type": "文本型"
+   },
+   {
+"parameter name": "RSA2私钥",
+"comment": "-----BEGIN PRIVATE KEY-----\n私钥内容\n-----END PRIVATE KEY-----",
+"data type": "文本型"
+   }
+ameter name": "GETURL"]
+  },
+  {
+ameter name": "GETURL""method name": "支付宝PC即时到帐_URL",
+ameter name": "GETURL""comment": "老版本只支持MD5密钥",
+ameter name": "GETURL""data type": "文本型",
+ameter name": "GETURL""parameters": [
+   {
+"parameter name": "参站点IP",
+"comment": "需要带上http或者https",
+"data type": "文本型"
+   },
+   {
+"parameter name": "订单编号",
+"comment": "支付宝的回调订单编号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "商品名称",
+"comment": "记住，为了兼容，尽量避免使用中文",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付金额",
+"comment": "尾数不能超过2位，如1234.22",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付账号",
+"comment": "支付宝的账号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付PID",
+"comment": "支付宝的pid",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付KEY",
+"comment": "支付宝的key",
+"data type": "文本型"
+   }
+ameter name": "GETURL"]
+  },
+  {
+ }"method name": "支付宝移动即时到帐_URL",
+ }"comment": "老版本只支持MD5密钥",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "参站点IP",
+"comment": "需要带上http或者https",
+"data type": "文本型"
+   },
+   {
+"parameter name": "订单编号",
+"comment": "支付宝的回调订单编号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "商品名称",
+"comment": "记住，为了兼容，尽量避免使用中文",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付金额",
+"comment": "尾数不能超过2位，如1234.22",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付账号",
+"comment": "支付宝的账号",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付PID",
+"comment": "支付宝的pid",
+"data type": "文本型"
+   },
+   {
+"parameter name": "支付KEY",
+"comment": "支付宝的key",
+"data type": "文本型"
+   }
+ }]
+  }
+ameter name": "SignName"]
+ },
+ {
+comment": "支付宝的pid""class name": "QQ互联数据",
+comment": "支付宝的pid""variables": [
+  {
+ }"variable name": "openid",
+ }"comment": "这里是用户的QQ唯一ID",
+ }"data type": "文本型"
+  },
+  {
+ariable name": "openid""variable name": "Access_Token",
+ariable name": "openid""data type": "文本型"
+  },
+  {
+}"variable name": "refresh_token",
+}"data type": "文本型"
+  },
+  {
+omment": "支付宝的pid""variables": [
+"variable name": "QQ昵称",
+omment": "支付宝的pid""variables": [
+"data type": "文本型"
+  },
+  {
+mment": "支付宝的pid""variables": [
+"data type": "文本型""variable name": "QQ头像",
+mment": "支付宝的pid""variables": [
+"data type": "文本型""comment": "这里保存头像地址",
+mment": "支付宝的pid""variables": [
+"data type": "文本型""data type": "文本型"
+  }
+comment": "支付宝的pid"]
+ },
+ {
+"class name": "类_QQ互联",
+"methods": [
+  {
+
+"method name": "初始化QQ互联",
+
+"parameters": [
+   {
+"parameter name": "APPID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "APPKEY",
+"data type": "文本型"
+   },
+   {
+"parameter name": "回调地址",
+"comment": "回调的网址",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "APPKEY""method name": "QQ互联_获取QQ登录链接",
+ameter name": "APPKEY""data type": "文本型"
+  },
+  {
+
+"method name": "QQ登录成功",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "APPID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "APPKEY",
+"data type": "文本型"
+   },
+   {
+"parameter name": "openid",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Access_Token",
+"data type": "文本型"
+   },
+   {
+"parameter name": "refresh_token",
+"data type": "文本型"
+   },
+   {
+"parameter name": "QQ昵称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "QQ头像地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "FOF对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+
+]
+  },
+  {
+"method name": "QQ登录成功_HTTPS",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "APPID",
+"data type": "文本型"
+   },
+   {
+"parameter name": "APPKEY",
+"data type": "文本型"
+   },
+   {
+"parameter name": "openid",
+"data type": "文本型"
+   },
+   {
+"parameter name": "Access_Token",
+"data type": "文本型"
+   },
+   {
+"parameter name": "refresh_token",
+"data type": "文本型"
+   },
+   {
+"parameter name": "QQ昵称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "QQ头像地址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "FOF对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+]
+  },
+  {
+
+"method name": "GetQQ互联处理",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+
+]
+  },
+  {
+
+"method name": "GetQQ互联处理_HTTPS",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   }
+
+]
+  },
+  {
+
+"method name": "GetQQ互联处理_软件",
+
+"comment": "本方法为软件专用，会自动进行相关处理，不需要在关注【QQ登录成功】的事件",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTP"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "登录成功URL协议",
+"comment": "登录成功进行301跳转的标识，例如输入：qq123\n则整体301连接为：/qq123?openid=xxxxx&Access_Token=xxxxx&refresh_token=xxxxx&name=QQ昵称&image=QQ头像\n注意：其中QQ昵称和QQ头像为十六进制文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "登录成功页面提示",
+"comment": "301跳转后页面上显示的提示信息\n可以是单纯的文本，也可以是html代码",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ameter name": "数据大小""method name": "GetQQ互联处理_软件_HTTPS",
+ameter name": "数据大小""comment": "本方法为软件专用，会自动进行相关处理，不需要在关注【QQ登录成功】的事件",
+ameter name": "数据大小""data type": "逻辑型",
+ameter name": "数据大小""parameters": [
+   {
+"parameter name": "来源对象",
+"data type": "FOFHTTPS"
+   },
+   {
+"parameter name": "服务句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "连接ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据大小",
+"data type": "整数"
+   },
+   {
+"parameter name": "用户数据",
+"data type": "FOFHTTP_用户数据"
+   },
+   {
+"parameter name": "登录成功URL协议",
+"comment": "登录成功进行301跳转的标识，例如输入：qq123\n则整体301连接为：/qq123?openid=xxxxx&Access_Token=xxxxx&refresh_token=xxxxx&name=QQ昵称&image=QQ头像\n注意：其中QQ昵称和QQ头像为十六进制文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "登录成功页面提示",
+"comment": "301跳转后页面上显示的提示信息\n可以是单纯的文本，也可以是html代码",
+"data type": "文本型"
+   }
+ameter name": "数据大小"]
+  }
+]
+ },
+ {
+ }"class name": "类_网页_访问_对象",
+ }"comment": "GET与POST请求",
+ }"@全局类": "真",
+ }"methods": [
+  {
+"method name": "网页_访问lky",
+"comment": "返回字节集数据  ；使用WinHttp的对象方式访问网页",
+"static": true,
+"data type": "字节集类",
+"parameters": [
+   {
+"parameter name": "请求网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "访问方式_参数",
+"comment": "假为:GET请求，真为:POST请求",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "提交数据",
+"comment": "提交字节集数据",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "提交Cookies",
+"comment": "设置提交时的cookie",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "附加协议头",
+"comment": "附加协议\n一行一个请用换行符隔开",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回Cookies",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回协议头",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回状态代码",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "禁止重定向",
+"comment": "默认不禁止网页重定向",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "超时时间",
+"comment": "默认为15秒,-1为无限等待",
+"data type": "整数",
+"@默认值": "15"
+   },
+   {
+"parameter name": "是否补全协议头",
+"comment": "当附件协议头为空时自动添加必要的UA协议头 默认为真，假将不再添加非传入协议头",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  }
+ }]
+ }
+]
+}

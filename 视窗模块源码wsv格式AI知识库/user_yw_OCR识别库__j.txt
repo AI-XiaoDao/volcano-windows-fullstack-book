@@ -1,0 +1,1298 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+慠ꋼŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+慠ꋼŝ"package name": "火山.仰望",
+慠ꋼŝ"comment": "支持32/64位，离线式，无限制",
+慠ꋼŝ"@文档": "\"category = \\\"OCR文字识别库\\\"\"",
+慠ꋼŝ"classes": [
+ {
+型 = 整数 注释 = "左上" 编辑时信息 = "0, 10F0E, 0, 0""class name": "RapidOCR识别类_GPU",
+型 = 整数 注释 = "左上" 编辑时信息 = "0, 10F0E, 0, 0""comment": "本库为GPU+CPU版，主打GPU性能强，基于RapidOCR所开发的OCR文字识别。编译库出自“李逍遥”作品",
+型 = 整数 注释 = "左上" 编辑时信息 = "0, 10F0E, 0, 0""@文档": "\"category = \\\"OCR文字识别库.RapidOCR识别库_GPU\\\"\"",
+型 = 整数 注释 = "左上" 编辑时信息 = "0, 10F0E, 0, 0""@视窗.附属文件": "\"OCR\\\\RapidOCR_GPU\\\\$(p)\\\\RapidOcrOnnxGpu.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\cublas64_11.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\cublasLt64_11.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\cudart64_110.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\cudnn_cnn_infer64_8.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\cudnn_ops_infer64_8.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\cudnn64_8.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\cufft64_10.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\onnxruntime.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\onnxruntime_providers_cuda.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\onnxruntime_providers_shared.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\onnxruntime_providers_tensorrt.dll\\r\\nOCR\\\\RapidOCR_GPU\\\\$(p)\\\\zlibwapi.dll\"",
+型 = 整数 注释 = "左上" 编辑时信息 = "0, 10F0E, 0, 0""@视窗.附属文件": "\"OCR\\\\OCR模型>OCR模型\"",
+型 = 整数 注释 = "左上" 编辑时信息 = "0, 10F0E, 0, 0""@视窗.需求目标平台": "64位平台",
+型 = 整数 注释 = "左上" 编辑时信息 = "0, 10F0E, 0, 0""methods": [
+  {
+"method name": "加载模型_",
+"comment": "不用时记得调用“释放模型_”释放内存，不然会造成内存泄漏",
+"result comment": "成功返回大于0的模型指针，错误返回负数",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "线程数量",
+"comment": "默认4 不超过CPU核心数，设置高不一定就快",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "检测模型路径",
+"comment": "默认为“中文_OCRv4.onnx”，也可调用类名参数如：OCR检测模型.中文_OCRv4（需要在前面加上“取运行目录 ()”）",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "语言模型路径",
+"comment": "默认为“中文简体_OCRv4”，也可调用类名参数如：OCR语言模型.中文简体_OCRv4（需要在前面加上“取运行目录 ()”）",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "语言字典路径",
+"comment": "可留空无需设置，默认是跟随参数三。也可调用类名参数如：OCR字典模型.中文简体_OCRv4（需要在前面加上“取运行目录 ()”）",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否开启GPU",
+"comment": "真为GPU模式，假为CPU模式。GPU模式有显卡要求，需要N卡列表，且越大越爽，CUDA驱动版本至少需要11.8",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+恐ꋼŝ"method name": "识别_多行",
+恐ꋼŝ"comment": "如需更高性能版，请联系仰望，付费购买",
+恐ꋼŝ"data type": "字节集类",
+恐ꋼŝ"parameters": [
+   {
+"parameter name": "模型指针",
+"comment": "加载模型_ 返回的模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "识别类型",
+"comment": "0单行文字识别   1多行文字识别   2多行文字识别并返回位置可信度(文本|#|位置|#|可信度|#|单字信息)  默认2",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "图像白边度",
+"comment": "图像预处理，在图片外周添加白边，用于提升识别率，文字框没有正确框住所有文字时，增加此值",
+"data type": "整数",
+"@默认值": "60"
+   },
+   {
+"parameter name": "图像缩放度",
+"comment": "按图片最长边的长度，此值为0代表不缩放，例：1024，如果图片长边大于1024则把图像整体缩小到1024再进行图像分割计算，如果图片长边小于1024则不缩放，如果图片长边小于32，则缩放到32",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "文本框置信度",
+"comment": "文字框文本框置信度，文字框没有正确框住所有文字时，减小此值",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "文本框置信度2",
+"comment": "文本框置信度",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "大小倍率",
+"comment": "单个文字框大小倍率，越大时单个文字框越大。此项与图片的大小相关，越大的图片此值应该越大",
+"data type": "单精度小数",
+"@默认值": "1.5"
+   },
+   {
+"parameter name": "旋转文字方向",
+"comment": "文字方向分类，只有图片倒置的情况下(旋转90~270度的图片)，才需要旋转文字方向分类",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "整张图片以最大可能文字方向来识别，当禁用旋转文字方向检测时，此项也不起作用",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+恐ꋼŝ]
+  },
+  {
+@默认值": "1.5""method name": "识别_多行2",
+@默认值": "1.5""comment": "如需更高性能版，请联系仰望，付费购买",
+@默认值": "1.5""data type": "文本型",
+@默认值": "1.5""parameters": [
+   {
+"parameter name": "模型指针",
+"comment": "加载模型_ 返回的模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "识别类型",
+"comment": "0单行文字识别   1多行文字识别   2多行文字识别并返回位置可信度(文本|#|位置|#|可信度|#|单字信息)  默认2",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "图像白边度",
+"comment": "图像预处理，在图片外周添加白边，用于提升识别率，文字框没有正确框住所有文字时，增加此值",
+"data type": "整数",
+"@默认值": "60"
+   },
+   {
+"parameter name": "图像缩放度",
+"comment": "按图片最长边的长度，此值为0代表不缩放，例：1024，如果图片长边大于1024则把图像整体缩小到1024再进行图像分割计算，如果图片长边小于1024则不缩放，如果图片长边小于32，则缩放到32",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "文本框置信度",
+"comment": "文字框文本框置信度，文字框没有正确框住所有文字时，减小此值",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "文本框置信度2",
+"comment": "文本框置信度",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "大小倍率",
+"comment": "单个文字框大小倍率，越大时单个文字框越大。此项与图片的大小相关，越大的图片此值应该越大",
+"data type": "单精度小数",
+"@默认值": "1.5"
+   },
+   {
+"parameter name": "旋转文字方向",
+"comment": "文字方向分类，只有图片倒置的情况下(旋转90~270度的图片)，才需要旋转文字方向分类",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "整张图片以最大可能文字方向来识别，当禁用旋转文字方向检测时，此项也不起作用",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "编码类型",
+"comment": "真：UTF-8 假：ANSI",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+@默认值": "1.5"]
+  },
+  {
+
+"method name": "识别_单行",
+
+"comment": "成功返回识别到的文字内容.\n如需更高性能版，请联系仰望，付费购买",
+
+"data type": "字节集类",
+
+"parameters": [
+   {
+"parameter name": "模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+@默认值": "1024""method name": "识别_单行2",
+@默认值": "1024""comment": "成功返回识别到的文字内容",
+@默认值": "1024""data type": "文本型",
+@默认值": "1024""parameters": [
+   {
+"parameter name": "模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "编码类型",
+"comment": "真：UTF-8 假：ANSI",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+@默认值": "1024"]
+  },
+  {
+@默认值": "0.3""method name": "识别_找字",
+@默认值": "0.3""data type": "字节集类",
+@默认值": "0.3""parameters": [
+   {
+"parameter name": "模型指针",
+"comment": "加载模型_ 返回的模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "找字数据",
+"comment": "找多个请用|隔开，比如： 李逍遥|赵灵儿  注意：为了仅支持多语言使用，字典和要找的文字必须都是utf8编码的；还有如果一行字存在间隔和大小相差较大的情况下，坐标也会有较大的偏移",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图像白边度",
+"comment": "图像预处理，在图片外周添加白边，用于提升识别率，文字框没有正确框住所有文字时，增加此值",
+"data type": "整数",
+"@默认值": "60"
+   },
+   {
+"parameter name": "图像缩放度",
+"comment": "按图片最长边的长度，此值为0代表不缩放，例：1024，如果图片长边大于1024则把图像整体缩小到1024再进行图像分割计算，如果图片长边小于1024则不缩放，如果图片长边小于32，则缩放到32",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "文本框置信度",
+"comment": "文字框文本框置信度，文字框没有正确框住所有文字时，减小此值",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "文本框置信度2",
+"comment": "文本框置信度",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "大小倍率",
+"comment": "单个文字框大小倍率，越大时单个文字框越大。此项与图片的大小相关，越大的图片此值应该越大",
+"data type": "单精度小数",
+"@默认值": "1.5"
+   },
+   {
+"parameter name": "旋转文字方向",
+"comment": "文字方向分类，只有图片倒置的情况下(旋转90~270度的图片)，才需要旋转文字方向分类",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "整张图片以最大可能文字方向来识别，当禁用旋转文字方向检测时，此项也不起作用",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@默认值": "0.3"]
+  },
+  {
+"method name": "识别_找字2",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "模型指针",
+"comment": "加载模型_ 返回的模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "找字数据",
+"comment": "找多个请用|隔开，比如： 李逍遥|赵灵儿  注意：为了仅支持多语言使用，字典和要找的文字必须都是utf8编码的；还有如果一行字存在间隔和大小相差较大的情况下，坐标也会有较大的偏移",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图像白边度",
+"comment": "图像预处理，在图片外周添加白边，用于提升识别率，文字框没有正确框住所有文字时，增加此值",
+"data type": "整数",
+"@默认值": "60"
+   },
+   {
+"parameter name": "图像缩放度",
+"comment": "按图片最长边的长度，此值为0代表不缩放，例：1024，如果图片长边大于1024则把图像整体缩小到1024再进行图像分割计算，如果图片长边小于1024则不缩放，如果图片长边小于32，则缩放到32",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "文本框置信度",
+"comment": "文字框文本框置信度，文字框没有正确框住所有文字时，减小此值",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "文本框置信度2",
+"comment": "文本框置信度",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "大小倍率",
+"comment": "单个文字框大小倍率，越大时单个文字框越大。此项与图片的大小相关，越大的图片此值应该越大",
+"data type": "单精度小数",
+"@默认值": "1.5"
+   },
+   {
+"parameter name": "旋转文字方向",
+"comment": "文字方向分类，只有图片倒置的情况下(旋转90~270度的图片)，才需要旋转文字方向分类",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "整张图片以最大可能文字方向来识别，当禁用旋转文字方向检测时，此项也不起作用",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "编码类型",
+"comment": "真：UTF-8 假：ANSI",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "释放模型_",
+"parameters": [
+   {
+"parameter name": "模型指针",
+"data type": "变整数"
+   }
+]
+  }
+型 = 整数 注释 = "左上" 编辑时信息 = "0, 10F0E, 0, 0"]
+ },
+ {
+"class name": "RapidOCR识别类_",
+"comment": "本库为CPU版，基于RapidOCR所开发的OCR文字识别。编译库出自“李逍遥”作品",
+"@文档": "\"category = \\\"OCR文字识别库.RapidOCR识别库\\\"\"",
+"@视窗.附属文件": "\"OCR\\\\RapidOCR\\\\$(p)\\\\RapidOCR.dll\"",
+"@视窗.附属文件": "\"OCR\\\\OCR模型>OCR模型\"",
+"methods": [
+  {
+"method name": "加载模型_",
+"comment": "不用时记得调用“释放模型_”释放内存，不然会造成内存泄漏",
+"result comment": "成功返回大于0的模型指针，错误返回负数",
+"data type": "变整数",
+"parameters": [
+   {
+"parameter name": "线程数量",
+"comment": "默认4 不超过CPU核心数，设置高不一定就快",
+"data type": "整数",
+"@默认值": "4"
+   },
+   {
+"parameter name": "检测模型路径",
+"comment": "默认为“中文_OCRv4.onnx”，也可调用类名参数如：OCR检测模型.中文_OCRv4（需要在前面加上“取运行目录 ()”）",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "语言模型路径",
+"comment": "默认为“中文简体_OCRv4”，也可调用类名参数如：OCR语言模型.中文简体_OCRv4（需要在前面加上“取运行目录 ()”）",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "语言字典路径",
+"comment": "可留空无需设置，默认是跟随参数三。也可调用类名参数如：OCR字典模型.中文简体_OCRv4（需要在前面加上“取运行目录 ()”）",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+hod name": "加载模型_""method name": "识别_多行",
+hod name": "加载模型_""comment": "如需更高性能版，请联系仰望，付费购买",
+hod name": "加载模型_""data type": "字节集类",
+hod name": "加载模型_""parameters": [
+   {
+"parameter name": "模型指针",
+"comment": "加载模型_ 返回的模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "识别类型",
+"comment": "0单行文字识别   1多行文字识别   2多行文字识别并返回位置可信度(文本|#|位置|#|可信度|#|单字信息)  默认2",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "图像白边度",
+"comment": "图像预处理，在图片外周添加白边，用于提升识别率，文字框没有正确框住所有文字时，增加此值",
+"data type": "整数",
+"@默认值": "60"
+   },
+   {
+"parameter name": "图像缩放度",
+"comment": "按图片最长边的长度，此值为0代表不缩放，例：1024，如果图片长边大于1024则把图像整体缩小到1024再进行图像分割计算，如果图片长边小于1024则不缩放，如果图片长边小于32，则缩放到32",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "文本框置信度",
+"comment": "文字框文本框置信度，文字框没有正确框住所有文字时，减小此值",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "文本框置信度2",
+"comment": "文本框置信度",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "大小倍率",
+"comment": "单个文字框大小倍率，越大时单个文字框越大。此项与图片的大小相关，越大的图片此值应该越大",
+"data type": "单精度小数",
+"@默认值": "1.5"
+   },
+   {
+"parameter name": "旋转文字方向",
+"comment": "文字方向分类，只有图片倒置的情况下(旋转90~270度的图片)，才需要旋转文字方向分类",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "整张图片以最大可能文字方向来识别，当禁用旋转文字方向检测时，此项也不起作用",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+hod name": "加载模型_"]
+  },
+  {
+"method name": "识别_多行2",
+"comment": "如需更高性能版，请联系仰望，付费购买",
+"data type": "文本型",
+"parameters": [
+   {
+"parameter name": "模型指针",
+"comment": "加载模型_ 返回的模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "识别类型",
+"comment": "0单行文字识别   1多行文字识别   2多行文字识别并返回位置可信度(文本|#|位置|#|可信度|#|单字信息)  默认2",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "图像白边度",
+"comment": "图像预处理，在图片外周添加白边，用于提升识别率，文字框没有正确框住所有文字时，增加此值",
+"data type": "整数",
+"@默认值": "60"
+   },
+   {
+"parameter name": "图像缩放度",
+"comment": "按图片最长边的长度，此值为0代表不缩放，例：1024，如果图片长边大于1024则把图像整体缩小到1024再进行图像分割计算，如果图片长边小于1024则不缩放，如果图片长边小于32，则缩放到32",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "文本框置信度",
+"comment": "文字框文本框置信度，文字框没有正确框住所有文字时，减小此值",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "文本框置信度2",
+"comment": "文本框置信度",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "大小倍率",
+"comment": "单个文字框大小倍率，越大时单个文字框越大。此项与图片的大小相关，越大的图片此值应该越大",
+"data type": "单精度小数",
+"@默认值": "1.5"
+   },
+   {
+"parameter name": "旋转文字方向",
+"comment": "文字方向分类，只有图片倒置的情况下(旋转90~270度的图片)，才需要旋转文字方向分类",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "整张图片以最大可能文字方向来识别，当禁用旋转文字方向检测时，此项也不起作用",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "编码类型",
+"comment": "真：UTF-8 假：ANSI",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+ }"method name": "识别_单行",
+ }"comment": "成功返回识别到的文字内容.\n如需更高性能版，请联系仰望，付费购买",
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+ }"method name": "识别_单行2",
+ }"comment": "成功返回识别到的文字内容",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "编码类型",
+"comment": "真：UTF-8 假：ANSI",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+ }"method name": "识别_找字",
+ }"data type": "字节集类",
+ }"parameters": [
+   {
+"parameter name": "模型指针",
+"comment": "加载模型_ 返回的模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "找字数据",
+"comment": "找多个请用|隔开，比如： 李逍遥|赵灵儿  注意：为了仅支持多语言使用，字典和要找的文字必须都是utf8编码的；还有如果一行字存在间隔和大小相差较大的情况下，坐标也会有较大的偏移",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图像白边度",
+"comment": "图像预处理，在图片外周添加白边，用于提升识别率，文字框没有正确框住所有文字时，增加此值",
+"data type": "整数",
+"@默认值": "60"
+   },
+   {
+"parameter name": "图像缩放度",
+"comment": "按图片最长边的长度，此值为0代表不缩放，例：1024，如果图片长边大于1024则把图像整体缩小到1024再进行图像分割计算，如果图片长边小于1024则不缩放，如果图片长边小于32，则缩放到32",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "文本框置信度",
+"comment": "文字框文本框置信度，文字框没有正确框住所有文字时，减小此值",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "文本框置信度2",
+"comment": "文本框置信度",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "大小倍率",
+"comment": "单个文字框大小倍率，越大时单个文字框越大。此项与图片的大小相关，越大的图片此值应该越大",
+"data type": "单精度小数",
+"@默认值": "1.5"
+   },
+   {
+"parameter name": "旋转文字方向",
+"comment": "文字方向分类，只有图片倒置的情况下(旋转90~270度的图片)，才需要旋转文字方向分类",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "整张图片以最大可能文字方向来识别，当禁用旋转文字方向检测时，此项也不起作用",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+comment": "文本框置信度""method name": "识别_找字2",
+comment": "文本框置信度""data type": "文本型",
+comment": "文本框置信度""parameters": [
+   {
+"parameter name": "模型指针",
+"comment": "加载模型_ 返回的模型指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "找字数据",
+"comment": "找多个请用|隔开，比如： 李逍遥|赵灵儿  注意：为了仅支持多语言使用，字典和要找的文字必须都是utf8编码的；还有如果一行字存在间隔和大小相差较大的情况下，坐标也会有较大的偏移",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图像白边度",
+"comment": "图像预处理，在图片外周添加白边，用于提升识别率，文字框没有正确框住所有文字时，增加此值",
+"data type": "整数",
+"@默认值": "60"
+   },
+   {
+"parameter name": "图像缩放度",
+"comment": "按图片最长边的长度，此值为0代表不缩放，例：1024，如果图片长边大于1024则把图像整体缩小到1024再进行图像分割计算，如果图片长边小于1024则不缩放，如果图片长边小于32，则缩放到32",
+"data type": "整数",
+"@默认值": "1024"
+   },
+   {
+"parameter name": "文本框置信度",
+"comment": "文字框文本框置信度，文字框没有正确框住所有文字时，减小此值",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "文本框置信度2",
+"comment": "文本框置信度",
+"data type": "单精度小数",
+"@默认值": "0.3"
+   },
+   {
+"parameter name": "大小倍率",
+"comment": "单个文字框大小倍率，越大时单个文字框越大。此项与图片的大小相关，越大的图片此值应该越大",
+"data type": "单精度小数",
+"@默认值": "1.5"
+   },
+   {
+"parameter name": "旋转文字方向",
+"comment": "文字方向分类，只有图片倒置的情况下(旋转90~270度的图片)，才需要旋转文字方向分类",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "旋转角度",
+"comment": "整张图片以最大可能文字方向来识别，当禁用旋转文字方向检测时，此项也不起作用",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "编码类型",
+"comment": "真：UTF-8 假：ANSI",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "文本框置信度"]
+  },
+  {
+"method name": "释放模型_",
+"parameters": [
+   {
+"parameter name": "模型指针",
+"data type": "变整数"
+   }
+]
+  }
+]
+ },
+ {
+
+"class name": "OCR检测模型",
+
+"@文档": "\"category = \\\"OCR文字识别库.RapidOCR识别库.模型类\\\"\"",
+
+"variables": [
+  {
+@默认值": "0.3""variable name": "中文_OCRv3",
+@默认值": "0.3""static": true,
+@默认值": "0.3""data type": "文本型",
+@默认值": "0.3""initial value": "\"OCR模型\\\\检测模型\\\\中文_OCRv3.onnx\""
+  },
+  {
+ }"variable name": "中文_OCRv4",
+ }"static": true,
+ }"data type": "文本型",
+ }"initial value": "\"OCR模型\\\\检测模型\\\\中文_OCRv4.onnx\""
+  },
+  {
+parameters": [
+"variable name": "中文_OCRv4_高精度",
+parameters": [
+"comment": "联系仰望付费",
+parameters": [
+"static": true,
+parameters": [
+"data type": "文本型",
+parameters": [
+"initial value": "\"OCR模型\\\\检测模型\\\\中文_OCRv4_高精度.onnx\""
+  },
+  {
+}"variable name": "英文",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"OCR模型\\\\检测模型\\\\英文.onnx\""
+  },
+  {
+}"data type": "文本型""variable name": "多语言",
+}"data type": "文本型""static": true,
+}"data type": "文本型""data type": "文本型",
+}"data type": "文本型""initial value": "\"OCR模型\\\\检测模型\\\\多语言.onnx\""
+  }
+
+]
+ },
+ {
+
+"class name": "OCR语言模型",
+
+"@文档": "\"category = \\\"OCR文字识别库.RapidOCR识别库.模型类\\\"\"",
+
+"variables": [
+  {
+data type": "单精度小数""variable name": "阿拉伯字母",
+data type": "单精度小数""static": true,
+data type": "单精度小数""data type": "文本型",
+data type": "单精度小数""initial value": "\"OCR模型\\\\识别模型\\\\阿拉伯字母\""
+  },
+  {
+R模型\\\\识别模型\\\\阿拉伯字母\""variable name": "梵文字母",
+R模型\\\\识别模型\\\\阿拉伯字母\""static": true,
+R模型\\\\识别模型\\\\阿拉伯字母\""data type": "文本型",
+R模型\\\\识别模型\\\\阿拉伯字母\""initial value": "\"OCR模型\\\\识别模型\\\\梵文字母\""
+  },
+  {
+ata type": "单精度小数""data type": "文本型""variable name": "韩文",
+ata type": "单精度小数""data type": "文本型""static": true,
+ata type": "单精度小数""data type": "文本型""data type": "文本型",
+ata type": "单精度小数""data type": "文本型""initial value": "\"OCR模型\\\\识别模型\\\\韩文\""
+  },
+  {
+"variable name": "卡纳达文",
+"static": true,
+"data type": "文本型",
+"initial value": "\"OCR模型\\\\识别模型\\\\卡纳达文\""
+  },
+  {
+@默认值": "0.3""variable name": "拉丁文",
+@默认值": "0.3""static": true,
+@默认值": "0.3""data type": "文本型",
+@默认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\拉丁文\""
+  },
+  {
+"variable name": "日文",
+"static": true,
+"data type": "文本型",
+"initial value": "\"OCR模型\\\\识别模型\\\\日文\""
+  },
+  {
+static": true"variable name": "斯拉夫字母",
+static": true"static": true,
+static": true"data type": "文本型",
+static": true"initial value": "\"OCR模型\\\\识别模型\\\\斯拉夫字母\""
+  },
+  {
+}"variable name": "泰卢固文",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"OCR模型\\\\识别模型\\\\泰卢固文\""
+  },
+  {
+data type": "文本型""variable name": "泰米尔文",
+data type": "文本型""static": true,
+data type": "文本型""data type": "文本型",
+data type": "文本型""initial value": "\"OCR模型\\\\识别模型\\\\泰米尔文\""
+  },
+  {
+}"variable name": "英文V4",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"OCR模型\\\\识别模型\\\\英文V4\""
+  },
+  {
+@默认值": "0.3""variable name": "中文繁体",
+@默认值": "0.3""static": true,
+@默认值": "0.3""data type": "文本型",
+@默认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\""
+  },
+  {
+默认值": "0.3""static": true"variable name": "中文简体_OCRv3",
+默认值": "0.3""static": true"static": true,
+默认值": "0.3""static": true"data type": "文本型",
+默认值": "0.3""static": true"initial value": "\"OCR模型\\\\识别模型\\\\中文简体_OCRv3\""
+  },
+  {
+默认值": "0.3""data type": "文本型""variable name": "中文简体_OCRv4",
+默认值": "0.3""data type": "文本型""static": true,
+默认值": "0.3""data type": "文本型""data type": "文本型",
+默认值": "0.3""data type": "文本型""initial value": "\"OCR模型\\\\识别模型\\\\中文简体_OCRv4\""
+  }
+
+]
+ },
+ {
+}"class name": "OCR字典模型",
+}"@文档": "\"category = \\\"OCR文字识别库.RapidOCR识别库.模型类\\\"\"",
+}"variables": [
+  {
+ata type": "单精度小数""static": true"variable name": "阿拉伯字母",
+ata type": "单精度小数""static": true"static": true,
+ata type": "单精度小数""static": true"data type": "文本型",
+ata type": "单精度小数""static": true"initial value": "\"OCR模型\\\\识别字典\\\\阿拉伯字母\""
+  },
+  {
+ta type": "单精度小数""static": true"data type": "文本型""variable name": "梵文字母",
+ta type": "单精度小数""static": true"data type": "文本型""static": true,
+ta type": "单精度小数""static": true"data type": "文本型""data type": "文本型",
+ta type": "单精度小数""static": true"data type": "文本型""initial value": "\"OCR模型\\\\识别字典\\\\梵文字母\""
+  },
+  {
+ta type": "单精度小数""static": true"data type": "文本型""variable name": "韩文",
+ta type": "单精度小数""static": true"data type": "文本型""static": true,
+ta type": "单精度小数""static": true"data type": "文本型""data type": "文本型",
+ta type": "单精度小数""static": true"data type": "文本型""initial value": "\"OCR模型\\\\识别字典\\\\韩文\""
+  },
+  {
+ta type": "单精度小数""static": true"data type": "文本型""variable name": "卡纳达文",
+ta type": "单精度小数""static": true"data type": "文本型""static": true,
+ta type": "单精度小数""static": true"data type": "文本型""data type": "文本型",
+ta type": "单精度小数""static": true"data type": "文本型""initial value": "\"OCR模型\\\\识别字典\\\\卡纳达文\""
+  },
+  {
+type": "单精度小数""data type": "文本型""variable name": "韩文""variable name": "拉丁文",
+type": "单精度小数""data type": "文本型""variable name": "韩文""static": true,
+type": "单精度小数""data type": "文本型""variable name": "韩文""data type": "文本型",
+type": "单精度小数""data type": "文本型""variable name": "韩文""initial value": "\"OCR模型\\\\识别字典\\\\拉丁文\""
+  },
+  {
+默认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""variable name": "日文",
+默认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""static": true,
+默认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""data type": "文本型",
+默认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\""
+  },
+  {
+"variable name": "斯拉夫字母",
+"static": true,
+"data type": "文本型",
+"initial value": "\"OCR模型\\\\识别字典\\\\斯拉夫字母\""
+  },
+  {
+iable name": "日文""variable name": "泰卢固文",
+iable name": "日文""static": true,
+iable name": "日文""data type": "文本型",
+iable name": "日文""initial value": "\"OCR模型\\\\识别字典\\\\泰卢固文\""
+  },
+  {
+a type": "单精度小数""static": true"data type": "文本型""initial value": "\"OCR模型\\\\识别字典\\\\卡纳达文\"""variable name": "泰米尔文",
+a type": "单精度小数""static": true"data type": "文本型""initial value": "\"OCR模型\\\\识别字典\\\\卡纳达文\"""static": true,
+a type": "单精度小数""static": true"data type": "文本型""initial value": "\"OCR模型\\\\识别字典\\\\卡纳达文\"""data type": "文本型",
+a type": "单精度小数""static": true"data type": "文本型""initial value": "\"OCR模型\\\\识别字典\\\\卡纳达文\"""initial value": "\"OCR模型\\\\识别字典\\\\泰米尔文\""
+  },
+  {
+}"variable name": "英文V4",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"OCR模型\\\\识别字典\\\\英文V4\""
+  },
+  {
+}"variable name": "中文繁体",
+}"static": true,
+}"data type": "文本型",
+}"initial value": "\"OCR模型\\\\识别字典\\\\中文繁体\""
+  },
+  {
+"variable name": "中文简体_OCRv3",
+"static": true,
+"data type": "文本型",
+"initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv3\""
+  },
+  {
+riable name": "英文V4""variable name": "中文简体_OCRv4",
+riable name": "英文V4""static": true,
+riable name": "英文V4""data type": "文本型",
+riable name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\""
+  }
+}]
+ },
+ {
+iable name": "英文V4""static": true"class name": "验证码识别类DdddOcr_X64",
+iable name": "英文V4""static": true"comment": "基于DdddOcr所开发的识别",
+iable name": "英文V4""static": true"@文档": "\"category = \\\"OCR文字识别库.Dddd识别库\\\"\"",
+iable name": "英文V4""static": true"@视窗.附属文件": "\"OCR\\\\DdddOcr\\\\X64\\\\ddddocr.dll\"",
+iable name": "英文V4""static": true"@视窗.需求目标平台": "64位平台",
+iable name": "英文V4""static": true"methods": [
+  {
+ype": "单精度小数""data type": "文本型""variable name": "韩文""static": true"method name": "初始化_",
+ype": "单精度小数""data type": "文本型""variable name": "韩文""static": true"data type": "逻辑型",
+ype": "单精度小数""data type": "文本型""variable name": "韩文""static": true"parameters": [
+   {
+"parameter name": "线程数量",
+"data type": "整数",
+"@默认值": "7"
+   }
+ype": "单精度小数""data type": "文本型""variable name": "韩文""static": true]
+  },
+  {
+
+"@文档": "\"category = \\\"OCR文字识别库.RapidOCR识别库.模型类\\\"\"""method name": "识别图片_",
+
+"@文档": "\"category = \\\"OCR文字识别库.RapidOCR识别库.模型类\\\"\"""data type": "文本型",
+
+"@文档": "\"category = \\\"OCR文字识别库.RapidOCR识别库.模型类\\\"\"""parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   }
+
+"@文档": "\"category = \\\"OCR文字识别库.RapidOCR识别库.模型类\\\"\""]
+  },
+  {
+}"method name": "dddd_init",
+}"static": true,
+}"data type": "逻辑型",
+}"@输出名": "\"dddd_init\"",
+}"@视窗.输入": "\"ddddocr.dll\"",
+}"parameters": [
+   {
+"parameter name": "线程数量",
+"data type": "整数"
+   },
+   {
+"parameter name": "old",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+"static": true"method name": "identify",
+"static": true"static": true,
+"static": true"data type": "变整数",
+"static": true"@输出名": "\"dddd_cls\"",
+"static": true"@视窗.输入": "\"ddddocr.dll\"",
+"static": true"parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片长度",
+"data type": "整数"
+   }
+"static": true]
+  }
+iable name": "英文V4""static": true]
+ },
+ {
+static": true"parameters": [
+"class name": "验证码识别类DdddOcr_X86",
+static": true"parameters": [
+"comment": "基于DdddOcr所开发的识别",
+static": true"parameters": [
+"@文档": "\"category = \\\"OCR文字识别库.Dddd识别库\\\"\"",
+static": true"parameters": [
+"@视窗.附属文件": "\"OCR\\\\DdddOcr\\\\X86\\\\ddddocr.dll\"",
+static": true"parameters": [
+"@视窗.需求目标平台": "32位平台",
+static": true"parameters": [
+"methods": [
+  {
+"static": true"method name": "初始化_",
+"static": true"data type": "逻辑型",
+"static": true"parameters": [
+   {
+"parameter name": "线程数量",
+"data type": "整数",
+"@默认值": "7"
+   }
+"static": true]
+  },
+  {
+tatic": true]"method name": "识别图片_",
+tatic": true]"data type": "文本型",
+tatic": true]"parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   }
+tatic": true]]
+  },
+  {
+iable name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\"""method name": "dddd_init",
+iable name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\"""static": true,
+iable name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\"""data type": "逻辑型",
+iable name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\"""@输出名": "\"InitModel\"",
+iable name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\"""@视窗.输入": "\"ddddocr.dll\"",
+iable name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\"""parameters": [
+   {
+"parameter name": "线程数量",
+"data type": "整数"
+   },
+   {
+"parameter name": "old",
+"data type": "逻辑型"
+   }
+iable name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\""]
+  },
+  {
+@默认值": "7""method name": "identify",
+@默认值": "7""static": true,
+@默认值": "7""data type": "变整数",
+@默认值": "7""@输出名": "\"Identify\"",
+@默认值": "7""@视窗.输入": "\"ddddocr.dll\"",
+@默认值": "7""parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图片长度",
+"data type": "整数"
+   }
+@默认值": "7"]
+  }
+static": true"parameters": [
+]
+ },
+ {
+"class name": "OCR识别类_",
+"comment": "基于NCNN所开发的OCR文字识别。外置模块文件\n",
+"@文档": "\"category = \\\"OCR文字识别库.NCNN识别库\\\"\"",
+"@视窗.附属文件": "\"OCR\\\\OcrLiteOnnx\\\\$(p)\\\\OcrLiteOnnx.dll\"",
+"@视窗.附属文件": "\"OCR\\\\models\\\\Resource.dat\"",
+"methods": [
+  {
+ata type": "单精度小数""static": true"method name": "初始化",
+ata type": "单精度小数""static": true"result comment": "返回创建指针",
+ata type": "单精度小数""static": true"data type": "变整数"
+  },
+  {
+able name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\"""@视窗.输入": "\"ddddocr.dll\"""method name": "关闭",
+able name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\"""@视窗.输入": "\"ddddocr.dll\"""parameters": [
+   {
+"parameter name": "指针",
+"comment": "初始化时所返回的指针",
+"data type": "变整数"
+   }
+able name": "英文V4""initial value": "\"OCR模型\\\\识别字典\\\\中文简体_OCRv4\"""@视窗.输入": "\"ddddocr.dll\""]
+  },
+  {
+a type": "单精度小数""static": true"data type": "文本型""data type": "文本型""method name": "单行识别",
+a type": "单精度小数""static": true"data type": "文本型""data type": "文本型""data type": "文本型",
+a type": "单精度小数""static": true"data type": "文本型""data type": "文本型""parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   }
+a type": "单精度小数""static": true"data type": "文本型""data type": "文本型"]
+  },
+  {
+"method name": "多行识别",
+"result comment": "OCR结果类",
+"data type": "对象数组类",
+"parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "参数",
+"comment": "50,1024,0.6,0.3,2,1,1",
+"data type": "文本型",
+"@默认值": "\"50,1024,0.6,0.3,2,1,1\""
+   },
+   {
+"parameter name": "识别结果",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+]
+  },
+  {
+ameter name": "参数""method name": "多行找字",
+ameter name": "参数""data type": "整数",
+ameter name": "参数""parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "参数",
+"data type": "文本型",
+"@默认值": "\"50,1024,0.6,0.3,2,1,1\""
+   },
+   {
+"parameter name": "欲寻找文字",
+"data type": "文本型"
+   },
+   {
+"parameter name": "x",
+"data type": "整数类"
+   },
+   {
+"parameter name": "y",
+"data type": "整数类"
+   }
+ameter name": "参数"]
+  }
+]
+ },
+ {
+ameter name": "参数""class name": "OCR识别类2_",
+ameter name": "参数""comment": "基于NCNN所开发的OCR文字识别。内置模块文件",
+ameter name": "参数""@文档": "\"category = \\\"OCR文字识别库.NCNN识别库\\\"\"",
+ameter name": "参数""@视窗.附属文件": "\"OCR\\\\OcrLiteOnnx\\\\$(p)\\\\OcrLiteOnnx.dll\"",
+ameter name": "参数""methods": [
+  {
+"method name": "初始化",
+"result comment": "返回创建指针",
+"data type": "变整数"
+  },
+  {
+hod name": "初始化""method name": "关闭",
+hod name": "初始化""parameters": [
+   {
+"parameter name": "指针",
+"comment": "初始化时所返回的指针",
+"data type": "变整数"
+   }
+hod name": "初始化"]
+  },
+  {
+riable name": "中文繁体""method name": "单行识别",
+riable name": "中文繁体""data type": "文本型",
+riable name": "中文繁体""parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   }
+riable name": "中文繁体"]
+  },
+  {
+meter name": "参数""data type": "整数""method name": "多行识别",
+meter name": "参数""data type": "整数""result comment": "OCR结果类",
+meter name": "参数""data type": "整数""data type": "对象数组类",
+meter name": "参数""data type": "整数""parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "参数",
+"comment": "50,1024,0.6,0.3,2,1,1",
+"data type": "文本型",
+"@默认值": "\"50,1024,0.6,0.3,2,1,1\""
+   },
+   {
+"parameter name": "识别结果",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+meter name": "参数""data type": "整数"]
+  },
+  {
+r name": "参数""data type": "整数""method name": "多行识别""method name": "多行找字",
+r name": "参数""data type": "整数""method name": "多行识别""data type": "整数",
+r name": "参数""data type": "整数""method name": "多行识别""parameters": [
+   {
+"parameter name": "图片数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "参数",
+"data type": "文本型",
+"@默认值": "\"50,1024,0.6,0.3,2,1,1\""
+   },
+   {
+"parameter name": "欲寻找文字",
+"data type": "文本型"
+   },
+   {
+"parameter name": "x",
+"data type": "整数类"
+   },
+   {
+"parameter name": "y",
+"data type": "整数类"
+   }
+r name": "参数""data type": "整数""method name": "多行识别"]
+  }
+ameter name": "参数"]
+ },
+ {
+认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\"""class name": "OCR结果类",
+认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\"""comment": "存坐标的数组",
+认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\"""@文档": "\"category = \\\"OCR文字识别库.NCNN识别库.附加库\\\"\"",
+认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\"""@视窗.结构类": "0",
+认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\"""variables": [
+  {
+data type": "字节集类""variable name": "文字",
+data type": "字节集类""comment": "识别的文字",
+data type": "字节集类""data type": "文本型"
+  },
+  {
+ameter name": "指针""variable name": "x1",
+ameter name": "指针""comment": "左上",
+ameter name": "指针""data type": "整数"
+  },
+  {
+ata type": "字节集类""data type": "文本型""variable name": "y1",
+ata type": "字节集类""data type": "文本型""comment": "左上",
+ata type": "字节集类""data type": "文本型""data type": "整数"
+  },
+  {
+值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\"""comment": "存坐标的数组""variable name": "x2",
+值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\"""comment": "存坐标的数组""comment": "右上",
+值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\"""comment": "存坐标的数组""data type": "整数"
+  },
+  {
+ameter name": "识别结果""variable name": "y2",
+ameter name": "识别结果""comment": "右上",
+ameter name": "识别结果""data type": "整数"
+  },
+  {
+r name": "参数""data type": "整数""method name": "多行识别""variable name": "x3",
+r name": "参数""data type": "整数""method name": "多行识别""comment": "右下",
+r name": "参数""data type": "整数""method name": "多行识别""data type": "整数"
+  },
+  {
+ameter name": "y""variable name": "y3",
+ameter name": "y""comment": "右下",
+ameter name": "y""data type": "整数"
+  },
+  {
+er name": "y""variable name": "y3""variable name": "x4",
+er name": "y""variable name": "y3""comment": "左下",
+er name": "y""variable name": "y3""data type": "整数"
+  },
+  {
+meter name": "指针""comment": "左上""variable name": "y4",
+meter name": "指针""comment": "左上""comment": "左下",
+meter name": "指针""comment": "左上""data type": "整数"
+  }
+认值": "0.3""initial value": "\"OCR模型\\\\识别模型\\\\中文繁体\"""initial value": "\"OCR模型\\\\识别字典\\\\日文\""]
+ }
+慠ꋼŝ]
+}

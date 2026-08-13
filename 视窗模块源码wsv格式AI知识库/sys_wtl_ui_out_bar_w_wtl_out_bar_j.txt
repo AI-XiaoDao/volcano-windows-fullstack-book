@@ -1,0 +1,1672 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"WTL卷帘式菜单组件".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"WTL卷帘式菜单组件".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"WTL卷帘式菜单组件".
+
+"package name": "火山.WTL界面.卷帘式菜单",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"WTL卷帘式菜单组件".
+
+"classes": [
+ {
+"class name": "卷帘菜单排列方式",
+"@常量类": "整数",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+你敺ŝ"constant name": "图标方式",
+你敺ŝ"initial value": "0"
+  },
+  {
+洠敺ŝ"constant name": "列表方式",
+洠敺ŝ"initial value": "1"
+  }
+]
+ },
+ {
+"class name": "卷帘菜单风格",
+"@常量类": "整数",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"constants": [
+  {
+型 = 逻辑型 注释 = "设置指定菜单的提示文本" 返回值注释 = "成功返回真,失败返回假." @嵌入式方法 = """constant name": "无",
+型 = 逻辑型 注释 = "设置指定菜单的提示文本" 返回值注释 = "成功返回真,失败返回假." @嵌入式方法 = """initial value": "0"
+  },
+  {
+的位置,索引从0开始."constant name": "蓝色XP风格",
+的位置,索引从0开始."initial value": "1"
+  },
+  {
+目的位置,索引从0开始.""constant name": "绿色XP风格",
+目的位置,索引从0开始.""initial value": "2"
+  },
+  {
+constant name": "列表方式""constant name": "银色XP风格",
+constant name": "列表方式""initial value": "3"
+  },
+  {
+目的位置,索引从0开始.""constant name": "自定义",
+目的位置,索引从0开始.""initial value": "4"
+  }
+]
+ },
+ {
+"class name": "卷帘式菜单",
+"base class": "窗口组件",
+"@视窗.外部头文件": "\"src\\\\wtl_out_bar.h\"",
+"@视窗.外部源文件": "\"src\\\\wtl_out_bar.cpp\\r\\nsrc\\\\lib\\\\wtlGfxGroupEdit.cpp\\r\\nsrc\\\\lib\\\\wtlGfxOutBarCtrl.cpp\\r\\nsrc\\\\lib\\\\wtlOutBarDC.cpp\\r\\nsrc\\\\lib\\\\wtlOutBarTipWnd.cpp\"",
+"@视窗.后缀文本": "\"public IOutBarEventListener\"",
+"@视窗.外部资源文件": "\"src\\\\lib\\\\res\\\\vol_out_bar.rc\"",
+"@视窗.窗口组件": "\"icon=\\\"res\\\\vol_out_bar.bmp\\\"\\ndefault_size = \\\"100, 240\\\"\"",
+"methods": [
+  {
+tegory = \\\"辅助类\\\"\""method name": "项目被选择",
+tegory = \\\"辅助类\\\"\""comment": "当用户单击项目时产生本事件",
+tegory = \\\"辅助类\\\"\""type": "event",
+tegory = \\\"辅助类\\\"\""data type": "整数",
+tegory = \\\"辅助类\\\"\""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供相关菜单的索引位置,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供相关项目的索引位置,从0开始.",
+"data type": "整数"
+   }
+tegory = \\\"辅助类\\\"\"]
+  },
+  {
+"method name": "菜单被改变",
+"comment": "当菜单被改变时产生本事件",
+"type": "event",
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供相关菜单的索引位置,从0开始.",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "项目名称被改变",
+}"comment": "当修改项目名称时产生本事件. 返回1表示不允许修改,返回0表示允许修改.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供名称被修改项目所处菜单的索引位置,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供名称被修改项目的索引位置,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "项目文本",
+"comment": "提供所欲修改到的项目名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "菜单名称被改变",
+}"comment": "当修改菜单名称时产生本事件. 返回1表示不允许修改,返回0表示允许修改.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供名称被修改菜单的索引位置,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "菜单文本",
+"comment": "提供所欲修改到的菜单名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+gory = \\\"辅助类\\\"\"]"method name": "菜单被单击",
+gory = \\\"辅助类\\\"\"]"comment": "当用户单击菜单时产生本事件",
+gory = \\\"辅助类\\\"\"]"type": "event",
+gory = \\\"辅助类\\\"\"]"data type": "整数",
+gory = \\\"辅助类\\\"\"]"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供相关菜单的索引位置,从0开始.",
+"data type": "整数"
+   }
+gory = \\\"辅助类\\\"\"]]
+  },
+  {
+敺ŝ"initial value": "0""method name": "菜单被右击",
+敺ŝ"initial value": "0""comment": "当用户用鼠标右键单击菜单时产生本事件",
+敺ŝ"initial value": "0""type": "event",
+敺ŝ"initial value": "0""data type": "整数",
+敺ŝ"initial value": "0""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供相关菜单的索引位置,从0开始.",
+"data type": "整数"
+   }
+敺ŝ"initial value": "0"]
+  },
+  {
+data type": "整数""method name": "项目被右击",
+data type": "整数""comment": "当用户用鼠标右键单击项目时产生本事件",
+data type": "整数""type": "event",
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供相关菜单的索引位置,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供相关项目的索引位置,从0开始.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "项目被双击",
+}"comment": "当用户用鼠标左键双击项目时产生本事件",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供相关菜单的索引位置,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供相关项目的索引位置,从0开始.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+comment": "提供相关菜单的索引位置,从0开始.""method name": "项目",
+comment": "提供相关菜单的索引位置,从0开始.""comment": "设置组合框下拉列表部分中的列表项目内容",
+comment": "提供相关菜单的索引位置,从0开始.""type": "property setter",
+comment": "提供相关菜单的索引位置,从0开始.""@视窗.设置时机": "组件创建前后",
+comment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义",
+comment": "提供相关菜单的索引位置,从0开始.""@附加文本": "\"..\\\\mfc_ui_base\\\\designer\\\\mfc_designer_x64.dll\\r\\n..\\\\mfc_ui_base\\\\designer\\\\mfc_designer_win32.dll\\r\\nOutBarDesigner\"",
+comment": "提供相关菜单的索引位置,从0开始.""parameters": [
+   {
+"parameter name": "所欲设置的内容",
+"comment": "项目内容为以'\\n'字符分隔的文本数组",
+"data type": "文本型"
+   }
+comment": "提供相关菜单的索引位置,从0开始."]
+  },
+  {
+鼠标右键单击菜单时产生本事件"method name": "项目图标图片组",
+鼠标右键单击菜单时产生本事件"comment": "提供当\"排列方式\"属性为\"图标方式\"时项目使用的图标",
+鼠标右键单击菜单时产生本事件"type": "property setter",
+鼠标右键单击菜单时产生本事件"@视窗.设置时机": "组件创建前后",
+鼠标右键单击菜单时产生本事件"parameters": [
+   {
+"parameter name": "所欲设置的图片组",
+"comment": "对图片组图片格式的要求请参见\"图片组资源\"类中的说明",
+"data type": "图片组资源"
+   }
+鼠标右键单击菜单时产生本事件]
+  },
+  {
+"initial value": "0"]"method name": "项目列表图片组",
+"initial value": "0"]"comment": "提供当\"排列方式\"属性为\"列表方式\"时项目使用的图标",
+"initial value": "0"]"type": "property setter",
+"initial value": "0"]"@视窗.设置时机": "组件创建前后",
+"initial value": "0"]"parameters": [
+   {
+"parameter name": "所欲设置的图片组",
+"comment": "对图片组图片格式的要求请参见\"图片组资源\"类中的说明",
+"data type": "图片组资源"
+   }
+"initial value": "0"]]
+  },
+  {
+ameter name": "菜单索引""method name": "置项目图标图片组",
+ameter name": "菜单索引""comment": "设置当\"排列方式\"属性为\"图标方式\"时项目使用的图标",
+ameter name": "菜单索引""parameters": [
+   {
+"parameter name": "所欲设置的图片组",
+"comment": "注意该参数对象内的图片组资源将移交本对象管理",
+"data type": "图片组对象类"
+   }
+ameter name": "菜单索引"]
+  },
+  {
+initial value": "0"]"comment": "提供当\"排列方式\"属性为\"列表方式\"时项目使用的图标""method name": "置项目列表图片组",
+initial value": "0"]"comment": "提供当\"排列方式\"属性为\"列表方式\"时项目使用的图标""comment": "设置当\"排列方式\"属性为\"列表方式\"时项目使用的图标",
+initial value": "0"]"comment": "提供当\"排列方式\"属性为\"列表方式\"时项目使用的图标""parameters": [
+   {
+"parameter name": "所欲设置的图片组",
+"comment": "注意该参数对象内的图片组资源将移交本对象管理",
+"data type": "图片组对象类"
+   }
+initial value": "0"]"comment": "提供当\"排列方式\"属性为\"列表方式\"时项目使用的图标"]
+  },
+  {
+ }"method name": "背景颜色",
+ }"type": "property setter",
+ }"@值细节类型": "颜色支持默认",
+ }"@视窗.设置时机": "组件创建前后",
+ }"parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "背景颜色",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+ethod name": "背景颜色""method name": "排列方式",
+ethod name": "背景颜色""type": "property setter",
+ethod name": "背景颜色""@视窗.设置时机": "组件创建前后",
+ethod name": "背景颜色""parameters": [
+   {
+"parameter name": "所欲设置的方式",
+"data type": "卷帘菜单排列方式"
+   }
+ethod name": "背景颜色"]
+  },
+  {
+"method name": "排列方式",
+"type": "property getter",
+"data type": "卷帘菜单排列方式",
+"@嵌入式方法": "\"\""
+  },
+  {
+omment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""method name": "现行选中菜单",
+omment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""comment": "设置当前被选中菜单",
+omment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""type": "property setter",
+omment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""@视窗.设置时机": "组件创建前后",
+omment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""parameters": [
+   {
+"parameter name": "菜单位置索引",
+"comment": "菜单位置索引从0开始,为-1表示无现行选中菜单.",
+"data type": "整数"
+   }
+omment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义"]
+  },
+  {
+mment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""comment": "设置当前被选中菜单""method name": "现行选中菜单",
+mment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""comment": "设置当前被选中菜单""comment": "返回现行选中菜单位置索引,为-1表示无.",
+mment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""comment": "设置当前被选中菜单""type": "property getter",
+mment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""comment": "设置当前被选中菜单""data type": "整数",
+mment": "提供相关菜单的索引位置,从0开始.""@值细节类型": "自定义""comment": "设置当前被选中菜单""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "现行选中项目",
+
+"comment": "设置现行被选中菜单中的当前被选中项目",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "项目位置索引",
+"comment": "项目位置索引从0开始,为-1表示没有现行选中项目.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "现行选中项目",
+ }"result comment": "返回现行选中项目位置索引,为-1表示无.",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+}"type": "property getter""method name": "菜单底色",
+}"type": "property getter""comment": "注意仅当\"XP风格\"为无/自定义时候有效",
+}"type": "property getter""type": "property setter",
+}"type": "property getter""@值细节类型": "颜色支持默认",
+}"type": "property getter""@视窗.设置时机": "组件创建前后",
+}"type": "property getter""parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+}"type": "property getter"]
+  },
+  {
+
+"@视窗.设置时机": "组件创建前后""method name": "菜单底色",
+
+"@视窗.设置时机": "组件创建前后""type": "property getter",
+
+"@视窗.设置时机": "组件创建前后""data type": "整数",
+
+"@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "菜单下按色",
+data type": "整数""comment": "注意仅当\"XP风格\"为无/自定义时候有效",
+data type": "整数""type": "property setter",
+data type": "整数""@值细节类型": "颜色支持默认",
+data type": "整数""@视窗.设置时机": "组件创建前后",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ethod name": "现行选中项目""method name": "菜单下按色",
+ethod name": "现行选中项目""type": "property getter",
+ethod name": "现行选中项目""data type": "整数",
+ethod name": "现行选中项目""@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "菜单悬停色",
+ }"comment": "注意仅当\"XP风格\"为无/自定义时候有效",
+ }"type": "property setter",
+ }"@值细节类型": "颜色支持默认",
+ }"@视窗.设置时机": "组件创建前后",
+ }"parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+hod name": "背景颜色"]"method name": "菜单悬停色",
+hod name": "背景颜色"]"type": "property getter",
+hod name": "背景颜色"]"data type": "整数",
+hod name": "背景颜色"]"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "菜单选中色",
+}"comment": "注意仅当\"XP风格\"为无/自定义时候有效",
+}"type": "property setter",
+}"@值细节类型": "颜色支持默认",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ethod name": "现行选中项目""method name": "菜单选中色",
+ethod name": "现行选中项目""type": "property getter",
+ethod name": "现行选中项目""data type": "整数",
+ethod name": "现行选中项目""@嵌入式方法": "\"\""
+  },
+  {
+\"颜色类\"所提供的颜色值"method name": "菜单文本色",
+\"颜色类\"所提供的颜色值"type": "property setter",
+\"颜色类\"所提供的颜色值"@值细节类型": "颜色支持默认",
+\"颜色类\"所提供的颜色值"@视窗.设置时机": "组件创建前后",
+\"颜色类\"所提供的颜色值"parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+\"颜色类\"所提供的颜色值]
+  },
+  {
+}"method name": "菜单文本色",
+}"type": "property getter",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  },
+  {
+\"XP风格\"为无/自定义时候有效"method name": "菜单下按文本色",
+\"XP风格\"为无/自定义时候有效"type": "property setter",
+\"XP风格\"为无/自定义时候有效"@值细节类型": "颜色支持默认",
+\"XP风格\"为无/自定义时候有效"@视窗.设置时机": "组件创建前后",
+\"XP风格\"为无/自定义时候有效"parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+\"XP风格\"为无/自定义时候有效]
+  },
+  {
+类\"所提供的颜色值"method name": "菜单文本色""method name": "菜单下按文本色",
+类\"所提供的颜色值"method name": "菜单文本色""type": "property getter",
+类\"所提供的颜色值"method name": "菜单文本色""data type": "整数",
+类\"所提供的颜色值"method name": "菜单文本色""@嵌入式方法": "\"\""
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "菜单悬停文本色",
+ata type": "整数""parameters": [
+"type": "property setter",
+ata type": "整数""parameters": [
+"@值细节类型": "颜色支持默认",
+ata type": "整数""parameters": [
+"@视窗.设置时机": "组件创建前后",
+ata type": "整数""parameters": [
+"parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+ata type": "整数""parameters": [
+]
+  },
+  {
+ }"method name": "菜单悬停文本色",
+ }"type": "property getter",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+"parameters": [
+"method name": "菜单选中文本色",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"@值细节类型": "颜色支持默认",
+"parameters": [
+"@视窗.设置时机": "组件创建前后",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+parameters": [
+"parameters": [
+"method name": "菜单选中文本色",
+parameters": [
+"parameters": [
+"type": "property getter",
+parameters": [
+"parameters": [
+"data type": "整数",
+parameters": [
+"parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+comment": "可以使用\"颜色类\"所提供的颜色值""method name": "项目文本色",
+comment": "可以使用\"颜色类\"所提供的颜色值""type": "property setter",
+comment": "可以使用\"颜色类\"所提供的颜色值""@值细节类型": "颜色支持默认",
+comment": "可以使用\"颜色类\"所提供的颜色值""@视窗.设置时机": "组件创建前后",
+comment": "可以使用\"颜色类\"所提供的颜色值""parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+comment": "可以使用\"颜色类\"所提供的颜色值"]
+  },
+  {
+ameter name": "所欲设置的颜色""method name": "项目文本色",
+ameter name": "所欲设置的颜色""type": "property getter",
+ameter name": "所欲设置的颜色""data type": "整数",
+ameter name": "所欲设置的颜色""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "项目悬停文本色",
+"type": "property setter",
+"@值细节类型": "颜色支持默认",
+"@视窗.设置时机": "组件创建前后",
+"parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+]
+  },
+  {
+"data type": "整数""method name": "项目悬停文本色",
+"data type": "整数""type": "property getter",
+"data type": "整数""data type": "整数",
+"data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+arameters": [
+"parameters": [
+"data type": "整数""method name": "项目选中文本色",
+arameters": [
+"parameters": [
+"data type": "整数""type": "property setter",
+arameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认",
+arameters": [
+"parameters": [
+"data type": "整数""@视窗.设置时机": "组件创建前后",
+arameters": [
+"parameters": [
+"data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+arameters": [
+"parameters": [
+"data type": "整数"]
+  },
+  {
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""method name": "项目选中文本色",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""type": "property getter",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "亮边框色",
+data type": "整数""type": "property setter",
+data type": "整数""@值细节类型": "颜色支持默认",
+data type": "整数""@视窗.设置时机": "组件创建前后",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""method name": "亮边框色",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""type": "property getter",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""@嵌入式方法": "\"\"""method name": "暗边框色",
+data type": "整数""@嵌入式方法": "\"\"""type": "property setter",
+data type": "整数""@嵌入式方法": "\"\"""@值细节类型": "颜色支持默认",
+data type": "整数""@嵌入式方法": "\"\"""@视窗.设置时机": "组件创建前后",
+data type": "整数""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲设置的颜色",
+"comment": "可以使用\"颜色类\"所提供的颜色值",
+"data type": "整数"
+   }
+data type": "整数""@嵌入式方法": "\"\""]
+  },
+  {
+arameters": [
+"parameters": [
+"data type": "整数""method name": "暗边框色",
+arameters": [
+"parameters": [
+"data type": "整数""type": "property getter",
+arameters": [
+"parameters": [
+"data type": "整数""data type": "整数",
+arameters": [
+"parameters": [
+"data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+rameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""method name": "菜单字体",
+rameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""comment": "设置菜单所使用的字体",
+rameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""type": "property setter",
+rameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后",
+rameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@值细节类型": "字体",
+rameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""parameters": [
+   {
+"parameter name": "字体描述文本",
+"comment": "  本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例子: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型"
+   }
+rameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认"]
+  },
+  {
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""method name": "项目字体",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""comment": "设置菜单内的项目所使用的字体",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""type": "property setter",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""@视窗.设置时机": "组件创建前后",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""@值细节类型": "字体",
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "字体描述文本",
+"comment": "  本参数的格式为: \"字体名, 字体尺寸, 是否为粗体, 是否为斜体, 是否有下划线, 是否有删除线, 旋转角度\",\n其中\"是否\"字段,用1代表真,0代表假,可以被省略.字体尺寸单位为磅, 旋转角度单位为1/10度.\n  例子: \"宋体, 10\", \"宋体, 10, 0, 1, 1, 0, 100\".",
+"data type": "文本型"
+   }
+meter name": "所欲设置的颜色""@嵌入式方法": "\"\""]
+  },
+  {
+arameters": [
+"parameters": [
+"data type": "整数""method name": "菜单高度",
+arameters": [
+"parameters": [
+"data type": "整数""type": "property setter",
+arameters": [
+"parameters": [
+"data type": "整数""@视窗.设置时机": "组件创建前后",
+arameters": [
+"parameters": [
+"data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置高度",
+"data type": "整数"
+   }
+arameters": [
+"parameters": [
+"data type": "整数"]
+  },
+  {
+ameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""method name": "菜单高度",
+ameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""type": "property getter",
+ameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数",
+ameters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""
+  },
+  {
+meters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数""method name": "菜单滚动速度",
+meters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数""type": "property setter",
+meters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数""@视窗.设置时机": "组件创建前后",
+meters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置速度",
+"comment": "值越大滚动越快,0表示没有滚动效果. 此值如果不为0,必须大于\"菜单高度\"属性值.",
+"data type": "整数"
+   }
+meters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数"]
+  },
+  {
+eters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数""@视窗.设置时机": "组件创建前后""method name": "菜单滚动速度",
+eters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数""@视窗.设置时机": "组件创建前后""type": "property getter",
+eters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数""@视窗.设置时机": "组件创建前后""data type": "整数",
+eters": [
+"parameters": [
+"data type": "整数""@值细节类型": "颜色支持默认""@视窗.设置时机": "组件创建前后""data type": "整数""@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""
+  },
+  {
+rameters": [
+"parameters": [
+"data type": "整数""parameters": [
+"method name": "平面",
+rameters": [
+"parameters": [
+"data type": "整数""parameters": [
+"type": "property setter",
+rameters": [
+"parameters": [
+"data type": "整数""parameters": [
+"@视窗.设置时机": "组件创建前后",
+rameters": [
+"parameters": [
+"data type": "整数""parameters": [
+"parameters": [
+   {
+"parameter name": "是否平面显示",
+"data type": "逻辑型"
+   }
+rameters": [
+"parameters": [
+"data type": "整数""parameters": [
+]
+  },
+  {
+eter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数""method name": "平面",
+eter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数""type": "property getter",
+eter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数""data type": "逻辑型",
+eter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "XP风格",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "所欲设置风格",
+"data type": "卷帘菜单风格"
+   }
+}]
+  },
+  {
+
+"method name": "XP风格",
+
+"type": "property getter",
+
+"data type": "卷帘菜单风格",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+eter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数""method name": "闪烁选中项目",
+eter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数""type": "property setter",
+eter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数""@视窗.设置时机": "组件创建前后",
+eter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数""parameters": [
+   {
+"parameter name": "是否闪烁选中项目",
+"data type": "逻辑型"
+   }
+eter name": "所欲设置的颜色""@嵌入式方法": "\"\"""data type": "整数"]
+  },
+  {
+
+"method name": "闪烁选中项目",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "菜单图标图片组",
+}"type": "property setter",
+}"@视窗.设置时机": "组件创建前后",
+}"parameters": [
+   {
+"parameter name": "所欲设置的图片组",
+"comment": "对图片组图片格式的要求请参见\"图片组资源\"类中的说明",
+"data type": "图片组资源"
+   }
+}]
+  },
+  {
+
+"type": "property getter""method name": "菜单背景图片组",
+
+"type": "property getter""type": "property setter",
+
+"type": "property getter""@视窗.设置时机": "组件创建前后",
+
+"type": "property getter""parameters": [
+   {
+"parameter name": "所欲设置的图片组",
+"comment": "对图片组图片格式的要求请参见\"图片组资源\"类中的说明",
+"data type": "图片组资源"
+   }
+
+"type": "property getter"]
+  },
+  {
+"data type": "卷帘菜单风格""method name": "置菜单图标图片组",
+"data type": "卷帘菜单风格""parameters": [
+   {
+"parameter name": "所欲设置的图片组",
+"comment": "注意该参数对象内的图片组资源将移交本对象管理",
+"data type": "图片组对象类"
+   }
+"data type": "卷帘菜单风格"]
+  },
+  {
+"data type": "卷帘菜单风格""method name": "置菜单背景图片组",
+"data type": "卷帘菜单风格""parameters": [
+   {
+"parameter name": "所欲设置的图片组",
+"comment": "注意该参数对象内的图片组资源将移交本对象管理",
+"data type": "图片组对象类"
+   }
+"data type": "卷帘菜单风格"]
+  },
+  {
+ }"method name": "显示菜单文本",
+ }"comment": "注意仅当设置有菜单底图时有效",
+ }"type": "property setter",
+ }"@视窗.设置时机": "组件创建前后",
+ }"parameters": [
+   {
+"parameter name": "是否显示菜单文本",
+"data type": "逻辑型"
+   }
+ }]
+  },
+  {
+ }"method name": "显示菜单文本",
+ }"type": "property getter",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "显示菜单图标",
+
+"comment": "注意仅当设置有菜单底图时有效",
+
+"type": "property setter",
+
+"@视窗.设置时机": "组件创建前后",
+
+"parameters": [
+   {
+"parameter name": "是否显示菜单图标",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+"@视窗.设置时机": "组件创建前后""method name": "显示菜单图标",
+"@视窗.设置时机": "组件创建前后""type": "property getter",
+"@视窗.设置时机": "组件创建前后""data type": "逻辑型",
+"@视窗.设置时机": "组件创建前后""@嵌入式方法": "\"\""
+  },
+  {
+"method name": "加入菜单",
+"comment": "加入一个新的菜单",
+"result comment": "成功返回真,失败返回假.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "菜单名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "加入位置",
+"comment": "指定将加入的菜单所在位置,如果为-1,则自动添加在尾部.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "菜单数值",
+"comment": "指定与该菜单相关联的附加数值,供用户自己使用.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+
+"method name": "加入项目",
+
+"comment": "在指定菜单中加入一个新的项目",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "项目名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "菜单索引",
+"comment": "指定在哪个菜单中插入项目. 索引从0开始,如果参数值为-1,表示在当前菜单中插入项目.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "指定项目插入的位置. 索引从0开始,如果参数值为-1,表示在所指定菜单(前一个参数决定)的尾部插入项目.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "图片索引",
+"comment": "指定该项目所使用的图片. 索引从0开始,如果参数值为-1,表示不使用图片.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "项目数值",
+"comment": "指定与该项目相关联的附加数值,供用户自己使用.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "删除菜单",
+ }"comment": "删除指定的菜单",
+ }"result comment": "成功返回真,失败返回假.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "索引值从0开始. 如果为-1,表示要删除所有菜单(相当于调用\"清除\").",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+"method name": "删除项目",
+"comment": "删除指定菜单中的指定项目",
+"result comment": "成功返回真,失败返回假.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "指定欲删除项目的位置. 索引从0开始,如果参数值为-1,表示删除指定菜单中的所有项目.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "菜单索引",
+"comment": "索引值从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+]
+  },
+  {
+
+"method name": "取菜单数",
+
+"comment": "返回菜单的数目",
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"comment": "删除指定的菜单""method name": "取项目数",
+}"comment": "删除指定的菜单""comment": "返回指定菜单中的项目数目",
+}"comment": "删除指定的菜单""data type": "整数",
+}"comment": "删除指定的菜单""@嵌入式方法": "\"\"",
+}"comment": "删除指定的菜单""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "索引值从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}"comment": "删除指定的菜单"]
+  },
+  {
+}"method name": "取菜单名称",
+}"comment": "返回指定菜单的名称文本",
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "索引值从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+ameter name": "项目数值""method name": "取项目名称",
+ameter name": "项目数值""comment": "返回指定菜单中指定项目的名称文本",
+ameter name": "项目数值""data type": "文本型",
+ameter name": "项目数值""@嵌入式方法": "\"\"",
+ameter name": "项目数值""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "菜单索引",
+"comment": "索引值从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "项目数值"]
+  },
+  {
+}"method name": "置菜单名称",
+}"comment": "设置指定菜单的名称文本. 调用本方法将触发\"菜单名称被改变\"事件.",
+}"result comment": "成功返回真,失败返回假.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供所欲修改菜单的索引位置,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "菜单名称",
+"comment": "提供所欲修改到的菜单名称",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ameter name": "项目索引""method name": "置项目名称",
+ameter name": "项目索引""comment": "设置指定菜单中指定项目的名称文本. 调用本方法将触发\"项目名称被改变\"事件.",
+ameter name": "项目索引""result comment": "成功返回真,失败返回假.",
+ameter name": "项目索引""data type": "逻辑型",
+ameter name": "项目索引""@禁止流程检查": "真",
+ameter name": "项目索引""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "项目名称",
+"comment": "提供项目所欲修改到的名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "菜单索引",
+"comment": "提供项目所处菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "项目索引"]
+  },
+  {
+data type": "整数""method name": "取菜单数值",
+data type": "整数""comment": "返回指定菜单的用户关联数值,如不存在则返回0(注意正常值也可能为0).",
+data type": "整数""data type": "变整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+data type": "整数"]
+  },
+  {
+}"method name": "取项目数值",
+}"comment": "获取指定菜单中指定项目的用户关联数值,如不存在则返回0(注意正常值也可能为0).",
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+"method name": "置菜单数值",
+"comment": "设置指定菜单的用户关联数值",
+"result comment": "成功返回真,所提供菜单位置无效返回假.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "菜单数值",
+"comment": "提供所欲设置的用户关联数值",
+"data type": "变整数"
+   }
+]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "置项目数值",
+}"@嵌入式方法": "\"\"""comment": "设置指定菜单中指定项目的用户关联数值",
+}"@嵌入式方法": "\"\"""result comment": "成功返回真,所提供项目位置无效返回假.",
+}"@嵌入式方法": "\"\"""data type": "逻辑型",
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "项目数值",
+"comment": "提供所欲设置的用户关联数值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+comment": "设置指定菜单的用户关联数值""method name": "取项目图片",
+comment": "设置指定菜单的用户关联数值""comment": "获取指定菜单中指定项目的图片索引,如所指定项目不存在或无图片则返回-1.",
+comment": "设置指定菜单的用户关联数值""data type": "整数",
+comment": "设置指定菜单的用户关联数值""@嵌入式方法": "\"\"",
+comment": "设置指定菜单的用户关联数值""parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+comment": "设置指定菜单的用户关联数值"]
+  },
+  {
+}"method name": "置项目图片",
+}"comment": "设置指定菜单中指定项目的图片索引",
+}"result comment": "成功返回真,所提供项目位置无效返回假.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图片索引",
+"comment": "提供所欲设置的图片索引值",
+"data type": "整数"
+   },
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+
+"method name": "清除",
+
+"comment": "删除所有菜单以及所有项目",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+omment": "设置指定菜单的用户关联数值""parameters": [
+"method name": "加入组件菜单",
+omment": "设置指定菜单的用户关联数值""parameters": [
+"comment": "在指定位置添加新的菜单,该菜单将容纳所指定的窗口组件(不能再容纳普通项目).\n本组件必须已经成功创建.",
+omment": "设置指定菜单的用户关联数值""parameters": [
+"result comment": "成功返回真,失败返回假.",
+omment": "设置指定菜单的用户关联数值""parameters": [
+"data type": "逻辑型",
+omment": "设置指定菜单的用户关联数值""parameters": [
+"parameters": [
+   {
+"parameter name": "菜单名称",
+"comment": "提供所加入菜单的名称文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口组件对象",
+"comment": "提供要加入的窗口组件. 该窗口组件将被自动调整大小,以便恰好放置于菜单中.\n建议使用容器类窗口组件,因为容器类窗口组件中再可放其它组件.即使被加入的组件不可视,必要时也会被自动显示出来.\n如果加入的是窗口,将自动取消其标题栏并禁止最大化/最小化和关闭.",
+"data type": "窗口组件"
+   },
+   {
+"parameter name": "加入位置",
+"comment": "指定将加入的菜单所在位置,如果为-1,则自动添加在尾部.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "菜单数值",
+"comment": "指定与该菜单相关联的附加数值,供用户自己使用.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+omment": "设置指定菜单的用户关联数值""parameters": [
+]
+  },
+  {
+ }"method name": "加入组件菜单2",
+ }"comment": "在指定位置添加新的菜单,该菜单将容纳所指定的窗口组件(不能再容纳普通项目).\n本组件必须已经成功创建.",
+ }"result comment": "成功返回真,失败返回假.",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "菜单名称",
+"comment": "提供所加入菜单的名称文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口组件句柄",
+"comment": "提供要加入的窗口组件句柄值. 该窗口组件将被自动调整大小,以便恰好放置于菜单中.\n建议使用容器类窗口组件,因为容器类窗口组件中再可放其它组件.即使被加入的组件不可视,必要时也会被自动显示出来.\n如果加入的是窗口,将自动取消其标题栏并禁止最大化/最小化和关闭.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "加入位置",
+"comment": "指定将加入的菜单所在位置,如果为-1,则自动添加在尾部.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "菜单数值",
+"comment": "指定与该菜单相关联的附加数值,供用户自己使用.",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+@默认值": "0""method name": "置菜单图标",
+@默认值": "0""comment": "设置指定菜单的图标",
+@默认值": "0""@嵌入式方法": "\"\"",
+@默认值": "0""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示设置现有全部菜单的图标.",
+"data type": "整数"
+   },
+   {
+"parameter name": "图标索引",
+"data type": "整数"
+   }
+@默认值": "0"]
+  },
+  {
+data type": "整数""method name": "取菜单图标",
+data type": "整数""comment": "返回指定菜单的图标索引位置,如果所提供菜单位置无效或尚未设置图标,将返回-1.",
+data type": "整数""data type": "整数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+ameter name": "菜单索引""method name": "置菜单底图",
+ameter name": "菜单索引""comment": "设置指定菜单的背景图片",
+ameter name": "菜单索引""@嵌入式方法": "\"\"",
+ameter name": "菜单索引""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示设置现有全部菜单的背景图片.",
+"data type": "整数"
+   },
+   {
+"parameter name": "正常图片索引",
+"comment": "索引值从0开始,如果为-1,表示无图片.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "选中图片索引",
+"comment": "索引值从0开始,如果为-1,表示无图片.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "正常加亮图片索引",
+"comment": "索引值从0开始,如果为-1,表示无图片.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "选中加亮图片索引",
+"comment": "索引值从0开始,如果为-1,表示无图片.",
+"data type": "整数",
+"@默认值": "-1"
+   }
+ameter name": "菜单索引"]
+  },
+  {
+data type": "文本型""method name": "取菜单底图",
+data type": "文本型""comment": "获取指定菜单的背景图片",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "正常图片索引",
+"comment": "用作保存所获取到的图片索引,为空对象表示忽略本参数.",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "选中图片索引",
+"comment": "用作保存所获取到的图片索引,为空对象表示忽略本参数.",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "正常加亮图片索引",
+"comment": "用作保存所获取到的图片索引,为空对象表示忽略本参数.",
+"data type": "整数类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "选中加亮图片索引",
+"comment": "用作保存所获取到的图片索引,为空对象表示忽略本参数.",
+"data type": "整数类",
+"@默认值": "空对象"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "文本型""method name": "菜单是否已禁止",
+data type": "文本型""comment": "返回所指定菜单是否已经被禁止,如果所指定菜单不存在,将返回假(注意正常也可能返回假).",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数"
+   }
+data type": "文本型"]
+  },
+  {
+mment": "设置指定菜单的用户关联数值"]"method name": "禁止菜单",
+mment": "设置指定菜单的用户关联数值"]"comment": "禁止或取消禁止指定菜单.\n被禁止的菜单不接受鼠标点击,外观上也与正常菜单有所区别.",
+mment": "设置指定菜单的用户关联数值"]"result comment": "成功返回真,失败返回假.",
+mment": "设置指定菜单的用户关联数值"]"data type": "逻辑型",
+mment": "设置指定菜单的用户关联数值"]"@嵌入式方法": "\"\"",
+mment": "设置指定菜单的用户关联数值"]"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型"
+   }
+mment": "设置指定菜单的用户关联数值"]]
+  },
+  {
+ }"method name": "项目是否已禁止",
+ }"comment": "返回指定项目是否已被禁止. 如果所指定项目不存在,将返回假(注意正常情况下也可能返回假).",
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+}"method name": "禁止项目",
+}"comment": "禁止或取消禁止指定项目.\n被禁止的项目不接受鼠标点击,外观上也与正常项目有所区别.",
+}"result comment": "成功返回真,失败返回假.",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否禁止",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+ameter name": "是否禁止""method name": "菜单是否已隐藏",
+ameter name": "是否禁止""comment": "返回所指定菜单是否已经被隐藏,如果所指定菜单不存在,将返回假(注意正常也可能返回假).",
+ameter name": "是否禁止""data type": "逻辑型",
+ameter name": "是否禁止""@嵌入式方法": "\"\"",
+ameter name": "是否禁止""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数"
+   }
+ameter name": "是否禁止"]
+  },
+  {
+
+"method name": "隐藏菜单",
+
+"comment": "隐藏或取消隐藏指定菜单.\n被隐藏的菜单不可见,且不可被设置为当前菜单.",
+
+"result comment": "成功返回真,失败返回假.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否隐藏",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+]"method name": "项目是否已隐藏",
+]"comment": "返回指定项目是否已被隐藏. 如果所指定项目不存在,将返回假(注意正常情况下也可能返回假).",
+]"data type": "逻辑型",
+]"@嵌入式方法": "\"\"",
+]"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   }
+]]
+  },
+  {
+comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""method name": "隐藏项目",
+comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""comment": "隐藏或取消隐藏指定项目",
+comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""result comment": "成功返回真,失败返回假.",
+comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""data type": "逻辑型",
+comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""@嵌入式方法": "\"\"",
+comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否隐藏",
+"data type": "逻辑型"
+   }
+comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单."]
+  },
+  {
+
+"method name": "取菜单提示文本",
+
+"comment": "返回所指定菜单的提示文本.\n如果所指定菜单不存在,将返回空文本(注意正常也可能返回空文本).",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "置菜单提示文本",
+data type": "整数""comment": "设置指定菜单的提示文本",
+data type": "整数""result comment": "成功返回真,失败返回假.",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数"
+   },
+   {
+"parameter name": "提示文本",
+"data type": "文本型"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "取项目提示文本",
+
+"comment": "返回所指定项目的提示文本.\n如果所指定项目不存在,将返回空文本(注意正常也可能返回空文本).",
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+omment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""parameters": [
+"method name": "置项目提示文本",
+omment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""parameters": [
+"comment": "设置指定项目的提示文本",
+omment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""parameters": [
+"result comment": "成功返回真,失败返回假.",
+omment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""parameters": [
+"data type": "逻辑型",
+omment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""parameters": [
+"@嵌入式方法": "\"\"",
+omment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""parameters": [
+"parameters": [
+   {
+"parameter name": "菜单索引",
+"comment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "项目索引",
+"comment": "提供项目的位置,索引从0开始.",
+"data type": "整数"
+   },
+   {
+"parameter name": "提示文本",
+"data type": "文本型"
+   }
+omment": "提供菜单的索引位置,从0开始. 如果为-1,表示为当前选中菜单.""parameters": [
+]
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"WTL卷帘式菜单组件".
+
+]
+}

@@ -1,0 +1,846 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"package name": "火山.基本",
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"comment": "本文件提供视窗项目的流数据操作支持功能",
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+"classes": [
+ {
+ "用作将流数据输出到内存中""class name": "流错误码",
+ "用作将流数据输出到内存中""comment": "流操作错误码列表",
+ "用作将流数据输出到内存中""@文档": "\"category = \\\"流操作.辅助类\\\"\"",
+ "用作将流数据输出到内存中""constants": [
+  {
+= "category = \"流操作\"""constant name": "无错误",
+= "category = \"流操作\"""data type": "整数",
+= "category = \"流操作\"""initial value": "@VESC_NONE"
+  },
+  {
+}"constant name": "空流",
+}"comment": "流对象为空",
+}"data type": "整数",
+}"initial value": "@VESC_NULL_STREAM"
+  },
+  {
+返回参考 = 真"constant name": "未知错误",
+返回参考 = 真"data type": "整数",
+返回参考 = 真"initial value": "@VESC_UNKNOWN_ERR"
+  },
+  {
+ "category = \"流操作\"""initial value": "@VESC_NONE""constant name": "读出错",
+ "category = \"流操作\"""initial value": "@VESC_NONE""data type": "整数",
+ "category = \"流操作\"""initial value": "@VESC_NONE""initial value": "@VESC_READ_ERR"
+  },
+  {
+回参考 = 真"initial value": "@VESC_UNKNOWN_ERR""constant name": "写出错",
+回参考 = 真"initial value": "@VESC_UNKNOWN_ERR""data type": "整数",
+回参考 = 真"initial value": "@VESC_UNKNOWN_ERR""initial value": "@VESC_WRITE_ERR"
+  },
+  {
+ "注意: 不要修改所返回字节集对象的内容""constant name": "定位出错",
+ "注意: 不要修改所返回字节集对象的内容""data type": "整数",
+ "注意: 不要修改所返回字节集对象的内容""initial value": "@VESC_SEEK_ERR"
+  },
+  {
+
+"constant name": "内存分配失败",
+
+"data type": "整数",
+
+"initial value": "@VESC_MEM_ALLOC_ERR"
+  },
+  {
+}"constant name": "无效数据",
+}"data type": "整数",
+}"initial value": "@VESC_INVALID_DATA"
+  }
+ "用作将流数据输出到内存中"]
+ },
+ {
+一份到流对象中,因此无需保留."class name": "基本流类",
+一份到流对象中,因此无需保留."comment": "所有流操作类的基础类",
+一份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\"",
+一份到流对象中,因此无需保留."@别名": "\"CVolBaseStream\"",
+一份到流对象中,因此无需保留."methods": [
+  {
+份到流对象中,因此无需保留."comment": "所有流操作类的基础类""method name": "关闭",
+份到流对象中,因此无需保留."comment": "所有流操作类的基础类""comment": "关闭流. 流操作结束后可以将其关闭,本操作不是必需的,流对象销毁时会自动关闭.\n本方法会自动清除流中的现有出错状态.",
+份到流对象中,因此无需保留."comment": "所有流操作类的基础类""result comment": "返回是否关闭成功",
+份到流对象中,因此无需保留."comment": "所有流操作类的基础类""static": true,
+份到流对象中,因此无需保留."comment": "所有流操作类的基础类""data type": "逻辑型",
+份到流对象中,因此无需保留."comment": "所有流操作类的基础类""@嵌入式方法": "\"\"",
+份到流对象中,因此无需保留."comment": "所有流操作类的基础类""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "基本流类"
+   }
+份到流对象中,因此无需保留."comment": "所有流操作类的基础类"]
+  },
+  {
+    "method name": "流是否为空",
+    "comment": "返回本流对象是否为空状态(即其中尚未置入任何实质的流数据来源)",
+    "static": true,
+    "data type": "逻辑型",
+    "@嵌入式方法": "\"\"",
+    "parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "基本流类"
+   }
+    ]
+  },
+  {
+份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\"""method name": "错误码",
+份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\"""comment": "  返回流中的当前错误码.\n  如果错误码不为\"流错误码.无错误\",则说明流当前处于出错状态,\n此时该流其后所有的流操作都将失败.",
+份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\"""result comment": "所返回值为\"流错误码\"类中的常量值或者用户自定义值",
+份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\"""static": true,
+份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\"""type": "property getter",
+份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\"""data type": "整数",
+份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\"""@嵌入式方法": "\"\"",
+份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\"""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "基本流类"
+   }
+份到流对象中,因此无需保留."@文档": "\"category = \\\"流操作\\\"\""]
+  },
+  {
+   "static": true"method name": "错误码",
+   "static": true"comment": "  设置流的当前错误码值.\n  所有流操作一旦失败,都将自动在流中设置对应的错误码.用户也可以在流操作\n过程中使用本属性设置自己定义的错误码(错误码值必须大于0,以免与系统内置\n的冲突).一旦流的错误码值不为\"流错误码.无错误\",则说明流当前处于出错状态,\n此时该流其后所有的流操作都将失败.",
+   "static": true"static": true,
+   "static": true"type": "property setter",
+   "static": true"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "基本流类"
+   },
+   {
+"parameter name": "所欲设置的错误码",
+"comment": "为\"流错误码\"类中的常量值或者用户自定义值,注意用户自定义值必须大于0.",
+"data type": "整数"
+   }
+   "static": true]
+  },
+  {
+ameter name": "所操作对象""method name": "清除错误",
+ameter name": "所操作对象""comment": "  清除流的出错状态. 本操作等效于\"错误码 = 流错误码.无错误\"语句.\n  所有流操作一旦失败,都将自动在流中设置对应的错误码.用户也可以在流操\n作过程中使用\"错误码\"属性设置自己定义的错误码(错误码值必须大于0,以免与\n系统内置的冲突).一旦流的错误码值不为\"流错误码.无错误\",则说明流当前处于\n出错状态,此时该流其后所有的流操作都将失败.",
+ameter name": "所操作对象""static": true,
+ameter name": "所操作对象""@嵌入式方法": "\"\"",
+ameter name": "所操作对象""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "基本流类"
+   }
+ameter name": "所操作对象"]
+  },
+  {
+
+"method name": "是否成功",
+
+"comment": "返回流当前是否不处于出错状态,即\"错误码\"属性值是否为\"流错误码.无错误\".\n流一旦处于出错状态,该流其后所有的流操作都将失败.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "基本流类"
+   }
+
+]
+  },
+  {
+ethod name": "是否成功""method name": "是否出错",
+ethod name": "是否成功""comment": "返回流当前是否处于出错状态,即\"错误码\"属性值是否不为\"流错误码.无错误\".\n流一旦处于出错状态,该流其后所有的流操作都将失败.",
+ethod name": "是否成功""static": true,
+ethod name": "是否成功""data type": "逻辑型",
+ethod name": "是否成功""@嵌入式方法": "\"\"",
+ethod name": "是否成功""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "基本流类"
+   }
+ethod name": "是否成功"]
+  }
+一份到流对象中,因此无需保留.]
+ },
+ {
+data type": "基本流类""class name": "输入流类",
+data type": "基本流类""comment": "所有输入流操作类的基础类",
+data type": "基本流类""base class": "基本流类",
+data type": "基本流类""@文档": "\"category = \\\"流操作\\\"\"",
+data type": "基本流类""@别名": "\"CVolBaseInputStream\"",
+data type": "基本流类""methods": [
+  {
+
+"method name": "重置",
+
+"comment": "  关闭本输入流,重置其所使用的数据读入缓冲区尺寸.\n  数据读入缓冲区用作提高数据读入的效率,默认使用的数据读入缓冲区尺寸为\n4096字节,可以通过调用本方法重置为更大或更小的尺寸.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   },
+   {
+"parameter name": "缓冲区尺寸",
+"comment": "提供所欲设置的数据读入缓冲区尺寸,小于等于0表示不使用缓冲区.",
+"data type": "整数",
+"@默认值": "4096"
+   }
+
+]
+  },
+  {
+"method name": "前移",
+"comment": "将当前读指针向前移动所指定的尺寸,返回是否成功.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   },
+   {
+"parameter name": "所前移的距离",
+"comment": "提供将当前读指针向前移动的字节数,必须大于等于0.",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "是否到尾部",
+
+"comment": "返回当前读指针是否已经到了输入流的尾部.\n注意: 如果流当前处于出错状态,本方法将始终返回真.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   }
+
+]
+  },
+  {
+data type": "输入流类""method name": "取读位置",
+data type": "输入流类""comment": "返回当前读指针相对流首部的偏移位置",
+data type": "输入流类""static": true,
+data type": "输入流类""data type": "整数",
+data type": "输入流类""@嵌入式方法": "\"\"",
+data type": "输入流类""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   }
+data type": "输入流类"]
+  },
+  {
+}"method name": "读数据",
+}"comment": "从本输入流中读入所指定尺寸的数据.\n本操作如果失败或未读取到所指定尺寸的数据,将自动在流中设置对应的出错状态.",
+}"result comment": "返回是否成功读入了所指定尺寸的数据",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   },
+   {
+"parameter name": "所欲读入数据尺寸",
+"comment": "提供所欲读入数据的尺寸",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲保存到的字节集",
+"comment": "所读入数据将存放进此字节集中,其中原有数据将被覆盖.",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+ameter name": "所操作对象""method name": "读数据2",
+ameter name": "所操作对象""comment": "从本输入流中读入所指定尺寸的数据.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+ameter name": "所操作对象""result comment": "返回所实际读入的字节数",
+ameter name": "所操作对象""static": true,
+ameter name": "所操作对象""data type": "整数",
+ameter name": "所操作对象""@嵌入式方法": "\"\"",
+ameter name": "所操作对象""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   },
+   {
+"parameter name": "所欲读入数据尺寸",
+"comment": "提供所欲读入数据的尺寸",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲保存到的字节集",
+"comment": "所读入数据将存放进此字节集中,其中原有数据将被覆盖.",
+"data type": "字节集类"
+   }
+ameter name": "所操作对象"]
+  },
+  {
+}"method name": "读内存",
+}"comment": "从本输入流中读入数据到所指定的内存地址.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+}"result comment": "返回所实际读入的字节数",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   },
+   {
+"parameter name": "所欲读入数据尺寸",
+"comment": "提供所欲读入数据的尺寸",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲保存到的内存地址",
+"comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间.",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+data type": "输入流类""method name": "读到尾部",
+data type": "输入流类""comment": "  从本输入流中当前读入指针位置处一直读入到流尾部,\n将所读取到的所有数据保存到所指定的字节集变量.\n  本操作如果失败,将自动在流中设置对应的出错状态.",
+data type": "输入流类""result comment": "返回所实际读入的字节数",
+data type": "输入流类""static": true,
+data type": "输入流类""data type": "整数",
+data type": "输入流类""@嵌入式方法": "\"\"",
+data type": "输入流类""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   },
+   {
+"parameter name": "所欲保存到的字节集",
+"comment": "所读入数据将存放进此字节集中,其中原有数据将被覆盖.",
+"data type": "字节集类"
+   }
+data type": "输入流类"]
+  },
+  {
+comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间.""method name": "读",
+comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间.""comment": "读入所指定的基本数据类型数据.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间.""result comment": "返回本流对象,用作支持连续读入.",
+comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间.""static": true,
+comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间.""data type": "输入流类",
+comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间.""@嵌入式方法": "\"\"",
+comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间.""@视窗.返回参考": "真",
+comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间.""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   },
+   {
+"parameter name": "所读取数据的存放变量",
+"comment": "本变量的数据类型决定了所欲读取数据的类型",
+"@匹配类型": "通用基本型",
+"@需求类型": "可写入变量"
+   }
+comment": "  所读入数据将存放到此地址处,请确保从此地址开始\n具有足够尺寸的有效内存空间."]
+  },
+  {
+ata type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象",
+ata type": "输入流类""@嵌入式方法": "\"\"""comment": "调用所指定对象中的数据.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+ata type": "输入流类""@嵌入式方法": "\"\"""result comment": "返回本流对象,用作支持连续读入.",
+ata type": "输入流类""@嵌入式方法": "\"\"""static": true,
+ata type": "输入流类""@嵌入式方法": "\"\"""data type": "输入流类",
+ata type": "输入流类""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+ata type": "输入流类""@嵌入式方法": "\"\"""@视窗.返回参考": "真",
+ata type": "输入流类""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   },
+   {
+"parameter name": "欲读取数据的对象",
+"comment": "  将调用该对象所处类的\"流读入\"方法(由用户自行定义或由\n系统编译器默认生成)来完成对此对象数据内容的读入.",
+"data type": "对象类"
+   }
+ata type": "输入流类""@嵌入式方法": "\"\""]
+  },
+  {
+ata type": "输入流类""@嵌入式方法": "\"\"""method name": "读数组",
+ata type": "输入流类""@嵌入式方法": "\"\"""comment": "读入所指定基本类型的数组内容.\n本操作如果失败或未读取到整个数组的全部数据,将自动在流中设置对应的出错状态.",
+ata type": "输入流类""@嵌入式方法": "\"\"""result comment": "返回是否成功读入了整个数组的全部数据",
+ata type": "输入流类""@嵌入式方法": "\"\"""static": true,
+ata type": "输入流类""@嵌入式方法": "\"\"""data type": "逻辑型",
+ata type": "输入流类""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+ata type": "输入流类""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输入流类"
+   },
+   {
+"parameter name": "所欲读取的数组",
+"comment": "提供所欲读取其内容的数组变量,所读取尺寸等于该数组的定义尺寸.",
+"@匹配类型": "通用非文本基本型数组",
+"@需求类型": "可写入变量"
+   }
+ata type": "输入流类""@嵌入式方法": "\"\""]
+  }
+data type": "基本流类"]
+ },
+ {
+a type": "输入流类""@嵌入式方法": "\"\""]"class name": "输出流类",
+a type": "输入流类""@嵌入式方法": "\"\""]"comment": "所有输出流操作类的基础类",
+a type": "输入流类""@嵌入式方法": "\"\""]"base class": "基本流类",
+a type": "输入流类""@嵌入式方法": "\"\""]"@文档": "\"category = \\\"流操作\\\"\"",
+a type": "输入流类""@嵌入式方法": "\"\""]"@别名": "\"CVolBaseOutputStream\"",
+a type": "输入流类""@嵌入式方法": "\"\""]"methods": [
+  {
+tegory = \\\"流操作\\\"\""method name": "重置",
+tegory = \\\"流操作\\\"\""comment": "  关闭本输出流,重置其所使用的数据输出缓冲区尺寸.\n  数据输出缓冲区用作提高数据输出的效率,默认使用的数据输出缓冲区尺寸为\n4096字节,可以通过调用本方法重置为更大或更小的尺寸.",
+tegory = \\\"流操作\\\"\""static": true,
+tegory = \\\"流操作\\\"\""@嵌入式方法": "\"\"",
+tegory = \\\"流操作\\\"\""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输出流类"
+   },
+   {
+"parameter name": "缓冲区尺寸",
+"comment": "提供所欲设置的数据输出缓冲区尺寸,小于等于0表示不使用缓冲区.",
+"data type": "整数",
+"@默认值": "4096"
+   }
+tegory = \\\"流操作\\\"\"]
+  },
+  {
+"method name": "刷新",
+"comment": "刷新写出流,将流中的所有缓存数据进行实际写出.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+"result comment": "返回是否刷新成功",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "基本流类"
+   }
+]
+  },
+  {
+ }"method name": "写数据",
+ }"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+ }"result comment": "返回是否成功写出了所指定尺寸的数据",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输出流类"
+   },
+   {
+"parameter name": "所欲写出的数据",
+"comment": "提供所欲写出的数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+}"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""method name": "写内存",
+}"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""comment": "写出所指定尺寸的内存数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+}"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""result comment": "返回是否成功写出了所指定尺寸的数据",
+}"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""static": true,
+}"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数",
+}"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""@嵌入式方法": "\"\"",
+}"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输出流类"
+   },
+   {
+"parameter name": "所欲写出数据的地址",
+"comment": "提供所欲写出数据的内存地址指针值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲写出数据尺寸",
+"comment": "提供所欲写出数据的尺寸",
+"data type": "整数"
+   }
+}"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态."]
+  },
+  {
+"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数""method name": "写",
+"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数""comment": "写出所指定的基本数据类型数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数""result comment": "返回本流对象,用作支持连续写出.",
+"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数""static": true,
+"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数""data type": "输出流类",
+"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数""@嵌入式方法": "\"\"",
+"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数""@视窗.返回参考": "真",
+"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输出流类"
+   },
+   {
+"parameter name": "所欲写出的数据",
+"comment": "本参数的数据类型决定了所欲写出数据的类型",
+"@匹配类型": "通用基本型"
+   }
+"comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态.""data type": "整数"]
+  },
+  {
+comment": "提供所欲写出数据的内存地址指针值""method name": "写对象",
+comment": "提供所欲写出数据的内存地址指针值""comment": "写出所指定对象中的数据.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+comment": "提供所欲写出数据的内存地址指针值""result comment": "返回本流对象,用作支持连续写出.",
+comment": "提供所欲写出数据的内存地址指针值""static": true,
+comment": "提供所欲写出数据的内存地址指针值""data type": "输出流类",
+comment": "提供所欲写出数据的内存地址指针值""@嵌入式方法": "\"\"",
+comment": "提供所欲写出数据的内存地址指针值""@视窗.返回参考": "真",
+comment": "提供所欲写出数据的内存地址指针值""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输出流类"
+   },
+   {
+"parameter name": "所欲写出的对象",
+"comment": "  将调用该对象所处类的\"流写出\"方法(由用户自行定义或由\n系统编译器默认生成)来完成对此对象数据内容的写出.",
+"data type": "对象类"
+   }
+comment": "提供所欲写出数据的内存地址指针值"]
+  },
+  {
+comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态."]"method name": "写数组",
+comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态."]"comment": "写出所指定基本类型的数组内容.\n本操作如果失败,将自动在流中设置对应的出错状态.",
+comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态."]"result comment": "返回是否成功写出了整个数组的全部数据",
+comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态."]"static": true,
+comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态."]"data type": "逻辑型",
+comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态."]"@嵌入式方法": "\"\"",
+comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态."]"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "输出流类"
+   },
+   {
+"parameter name": "所欲写出的数组",
+"comment": "提供所欲写出其内容的数组变量,所写出数据尺寸等于该数组的定义尺寸.",
+"@匹配类型": "通用非文本基本型数组"
+   }
+comment": "写出所指定尺寸的数据到本输出流.\n本操作如果失败,将自动在流中设置对应的出错状态."]]
+  }
+a type": "输入流类""@嵌入式方法": "\"\""]]
+ },
+ {
+comment": "提供所欲写出数据的内存地址指针值""class name": "文件输入流",
+comment": "提供所欲写出数据的内存地址指针值""comment": "用作输入来自文件中的流数据",
+comment": "提供所欲写出数据的内存地址指针值""base class": "输入流类",
+comment": "提供所欲写出数据的内存地址指针值""@文档": "\"category = \\\"流操作\\\"\"",
+comment": "提供所欲写出数据的内存地址指针值""@别名": "\"CVolFileInputStream\"",
+comment": "提供所欲写出数据的内存地址指针值""methods": [
+  {
+omment": "提供所欲写出数据的内存地址指针值""base class": "输入流类""method name": "打开",
+omment": "提供所欲写出数据的内存地址指针值""base class": "输入流类""comment": "打开所指定名称文件准备进行读入",
+omment": "提供所欲写出数据的内存地址指针值""base class": "输入流类""result comment": "返回是否打开成功",
+omment": "提供所欲写出数据的内存地址指针值""base class": "输入流类""static": true,
+omment": "提供所欲写出数据的内存地址指针值""base class": "输入流类""data type": "逻辑型",
+omment": "提供所欲写出数据的内存地址指针值""base class": "输入流类""@嵌入式方法": "\"\"",
+omment": "提供所欲写出数据的内存地址指针值""base class": "输入流类""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "文件输入流"
+   },
+   {
+"parameter name": "所欲打开文件名",
+"comment": "提供所欲打开读入的文件名",
+"data type": "文本型"
+   }
+omment": "提供所欲写出数据的内存地址指针值""base class": "输入流类"]
+  }
+comment": "提供所欲写出数据的内存地址指针值"]
+ },
+ {
+comment": "提供所欲写出数据的内存地址指针值""class name": "文件输出流",
+comment": "提供所欲写出数据的内存地址指针值""comment": "用作写出流数据到所指定文件中",
+comment": "提供所欲写出数据的内存地址指针值""base class": "输出流类",
+comment": "提供所欲写出数据的内存地址指针值""@文档": "\"category = \\\"流操作\\\"\"",
+comment": "提供所欲写出数据的内存地址指针值""@别名": "\"CVolFileOutputStream\"",
+comment": "提供所欲写出数据的内存地址指针值""methods": [
+  {
+
+"method name": "打开",
+
+"comment": "打开所指定名称文件准备进行写出",
+
+"result comment": "返回是否打开成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "文件输出流"
+   },
+   {
+"parameter name": "所欲打开文件名",
+"comment": "提供所欲打开写出的文件名,如果该文件不存在,将自动创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否附加",
+"comment": "  本参数值为假则销毁所指定文件中的原有内容,从文件首部\n开始写出,为真则从所指定文件的原有内容尾部开始写出.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  }
+comment": "提供所欲写出数据的内存地址指针值"]
+ },
+ {
+
+"class name": "加密文件输入流",
+
+"comment": "用作输入来自加密文件中的流数据",
+
+"base class": "输入流类",
+
+"@文档": "\"category = \\\"流操作\\\"\"",
+
+"@别名": "\"CVolCryptFileInputStream\"",
+
+"@视窗.外部头文件": "\"libs\\\\CryptFile\\\\vol_crypt_file.h\"",
+
+"@视窗.外部源文件": "\"libs\\\\CryptFile\\\\md5_check_sum.cpp\\nlibs\\\\CryptFile\\\\vol_crypt_file.cpp\"",
+
+"methods": [
+  {
+data type": "文件输出流""method name": "打开",
+data type": "文件输出流""comment": "打开所指定名称加密文件准备进行读入",
+data type": "文件输出流""result comment": "返回是否打开成功",
+data type": "文件输出流""static": true,
+data type": "文件输出流""data type": "逻辑型",
+data type": "文件输出流""@嵌入式方法": "\"\"",
+data type": "文件输出流""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "加密文件输入流"
+   },
+   {
+"parameter name": "所欲打开文件名",
+"comment": "提供所欲打开读入的文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码文本",
+"comment": "提供具体的密码文本,为空文本表示无.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "明文区长度",
+"comment": "  本参数指定从文件首部开始不希望被加密部分的长度,类库在读写此区域内的数据时,\n不会使用密码对其进行加解密操作. 此参数用作将加密文件分为明文区和密文区两部分,\n以方便某些应用程序同时保存一些明文数据.注意当打开已有加密数据的文件时,此参数\n值必须与新建此加密文件时所提供的参数值一致,否则会造成数据访问错误.",
+"data type": "整数",
+"@默认值": "0"
+   }
+data type": "文件输出流"]
+  }
+
+]
+ },
+ {
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""class name": "加密文件输出流",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""comment": "用作写出流数据到所指定加密文件中",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""base class": "输出流类",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@文档": "\"category = \\\"流操作\\\"\"",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@别名": "\"CVolCryptFileOutputStream\"",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@视窗.外部头文件": "\"libs\\\\CryptFile\\\\vol_crypt_file.h\"",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@视窗.外部源文件": "\"libs\\\\CryptFile\\\\md5_check_sum.cpp\\nlibs\\\\CryptFile\\\\vol_crypt_file.cpp\"",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""methods": [
+  {
+
+"method name": "打开",
+
+"comment": "打开所指定名称加密文件准备进行写出",
+
+"result comment": "返回是否打开成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "加密文件输出流"
+   },
+   {
+"parameter name": "所欲打开文件名",
+"comment": "提供所欲打开写出的文件名,如果该文件不存在,将自动创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码文本",
+"comment": "提供具体的密码文本,为空文本表示无.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "明文区长度",
+"comment": "  本参数指定从文件首部开始不希望被加密部分的长度,类库在读写此区域内的数据时,\n不会使用密码对其进行加解密操作. 此参数用作将加密文件分为明文区和密文区两部分,\n以方便某些应用程序同时保存一些明文数据.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象"]
+ },
+ {
+数据类型决定了所欲读取数据的类型"class name": "内存输入流",
+数据类型决定了所欲读取数据的类型"comment": "用作输入来自内存中的流数据",
+数据类型决定了所欲读取数据的类型"base class": "输入流类",
+数据类型决定了所欲读取数据的类型"@文档": "\"category = \\\"流操作\\\"\"",
+数据类型决定了所欲读取数据的类型"@别名": "\"CVolMemoryInputStream\"",
+数据类型决定了所欲读取数据的类型"methods": [
+  {
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""method name": "打开",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""comment": "打开所指定内存数据准备进行读入",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""static": true,
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@嵌入式方法": "\"\"",
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "内存输入流"
+   },
+   {
+"parameter name": "所欲读入数据",
+"comment": "  提供所欲打开读入的数据,该数据会被复制\n一份到流对象中,因此无需保留.",
+"data type": "字节集类"
+   }
+type": "输入流类""@嵌入式方法": "\"\"""method name": "读对象"]
+  },
+  {
+ype": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@嵌入式方法": "\"\"""method name": "打开2",
+ype": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@嵌入式方法": "\"\"""comment": "打开所指定内存数据准备进行读入",
+ype": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@嵌入式方法": "\"\"""static": true,
+ype": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+ype": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "内存输入流"
+   },
+   {
+"parameter name": "所欲读入数据的地址",
+"comment": "  提供所欲打开读入数据的内存地址首指针,该数据\n会被复制一份到流对象中,因此无需保留.",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲读入数据的尺寸",
+"comment": "提供所提供数据的尺寸",
+"data type": "整数"
+   }
+ype": "输入流类""@嵌入式方法": "\"\"""method name": "读对象""@嵌入式方法": "\"\""]
+  }
+数据类型决定了所欲读取数据的类型]
+ },
+ {
+
+"result comment": "返回是否打开成功""class name": "内存输出流",
+
+"result comment": "返回是否打开成功""comment": "用作将流数据输出到内存中",
+
+"result comment": "返回是否打开成功""base class": "输出流类",
+
+"result comment": "返回是否打开成功""@文档": "\"category = \\\"流操作\\\"\"",
+
+"result comment": "返回是否打开成功""@别名": "\"CVolMemoryOutputStream\"",
+
+"result comment": "返回是否打开成功""methods": [
+  {
+"result comment": "返回是否打开成功""methods": [
+"method name": "置预分配尺寸",
+"result comment": "返回是否打开成功""methods": [
+"comment": "  本流中存在一个用作存储所写入数据的内部字节集对象.为了快速进行数据写入操作,\n本方法可以设置该字节集所使用的空间分配尺寸,每次该字节集需要调整其空间大小时,\n都使用本属性值作为空间调整基准尺寸.值越大,写入数据时所实际需要重分配空间的次\n数就越少,操作速度越快,但是多余内存占用就越大.\n  一般情况下无需更改本属性值.",
+"result comment": "返回是否打开成功""methods": [
+"static": true,
+"result comment": "返回是否打开成功""methods": [
+"@嵌入式方法": "\"\"",
+"result comment": "返回是否打开成功""methods": [
+"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "内存输出流"
+   },
+   {
+"parameter name": "所欲设置的预分配尺寸",
+"comment": "提供所欲设置的预分配尺寸,必须大于等于0.",
+"data type": "整数"
+   }
+"result comment": "返回是否打开成功""methods": [
+]
+  },
+  {
+ }"method name": "清空",
+ }"comment": "清空先前所已经写入的所有流数据",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "内存输出流"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "取数据",
+data type": "整数""comment": "返回所有已经写入到本流中的数据.\n注意: 不要修改所返回字节集对象的内容",
+data type": "整数""static": true,
+data type": "整数""data type": "字节集类",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""@视窗.返回参考": "真",
+data type": "整数""parameters": [
+   {
+"parameter name": "所操作对象",
+"data type": "内存输出流"
+   }
+data type": "整数"]
+  }
+
+"result comment": "返回是否打开成功"]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容
+
+]
+}

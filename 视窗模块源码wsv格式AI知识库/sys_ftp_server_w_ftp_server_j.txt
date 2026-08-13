@@ -1,0 +1,255 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"FTP服务器".
+
+{
+需求VS版本 = "16-""file description": "本文件为一个火山程序的可用公开接口描述json文本",
+需求VS版本 = "16-""package name": "火山.视窗.网络",
+需求VS版本 = "16-""classes": [
+ {
+持UTF8."class name": "FTP权限",
+持UTF8."comment": "提供各种FTP访问权限,可以使用\"相加\"/\"位与\"操作符组合使用.",
+持UTF8."@文档": "\"category = \\\"辅助类\\\"\"",
+持UTF8."constants": [
+  {
+求VS版本 = "16-""classes": [
+"constant name": "读文件",
+求VS版本 = "16-""classes": [
+"comment": "下载文件",
+求VS版本 = "16-""classes": [
+"data type": "整数",
+求VS版本 = "16-""classes": [
+"initial value": "@(INT)fineftp::Permission::FileRead"
+  },
+  {
+
+"constant name": "写文件",
+
+"comment": "上传新的尚不存在的文件",
+
+"data type": "整数",
+
+"initial value": "@(INT)fineftp::Permission::FileWrite"
+  },
+  {
+
+"constant name": "添加文件数据",
+
+"comment": "上传数据并将其添加在已有文件尾部",
+
+"data type": "整数",
+
+"initial value": "@(INT)fineftp::Permission::FileAppend"
+  },
+  {
+UTF8."comment": "提供各种FTP访问权限,可以使用\"相加\"/\"位与\"操作符组合使用.""constant name": "删除文件",
+UTF8."comment": "提供各种FTP访问权限,可以使用\"相加\"/\"位与\"操作符组合使用.""comment": "删除或覆盖已有文件",
+UTF8."comment": "提供各种FTP访问权限,可以使用\"相加\"/\"位与\"操作符组合使用.""data type": "整数",
+UTF8."comment": "提供各种FTP访问权限,可以使用\"相加\"/\"位与\"操作符组合使用.""initial value": "@(INT)fineftp::Permission::FileDelete"
+  },
+  {
+VS版本 = "16-""classes": [
+"data type": "整数""constant name": "重命名文件",
+VS版本 = "16-""classes": [
+"data type": "整数""comment": "重命名已有文件",
+VS版本 = "16-""classes": [
+"data type": "整数""data type": "整数",
+VS版本 = "16-""classes": [
+"data type": "整数""initial value": "@(INT)fineftp::Permission::FileRename"
+  },
+  {
+VS版本 = "16-""classes": [
+"data type": "整数""constant name": "取目录内容",
+VS版本 = "16-""classes": [
+"data type": "整数""comment": "取回目录中的清单内容",
+VS版本 = "16-""classes": [
+"data type": "整数""data type": "整数",
+VS版本 = "16-""classes": [
+"data type": "整数""initial value": "@(INT)fineftp::Permission::DirList"
+  },
+  {
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""constant name": "创建目录",
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""comment": "创建新目录",
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""data type": "整数",
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""initial value": "@(INT)fineftp::Permission::DirCreate"
+  },
+  {
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""constant name": "删除目录",
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""comment": "删除已有目录",
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""data type": "整数",
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""initial value": "@(INT)fineftp::Permission::DirDelete"
+  },
+  {
+}"constant name": "重命名目录",
+}"comment": "重命名已有目录",
+}"data type": "整数",
+}"initial value": "@(INT)fineftp::Permission::DirRename"
+  },
+  {
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""constant name": "所有",
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""comment": "所有的权限",
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""data type": "整数",
+ = "16-""classes": [
+"data type": "整数""constant name": "取目录内容""initial value": "@(INT)fineftp::Permission::All"
+  },
+  {
+"comment": "上传数据并将其添加在已有文件尾部""constant name": "只读",
+"comment": "上传数据并将其添加在已有文件尾部""comment": "等效于\"读文件\"+\"取目录内容\",仅用作读取FTP服务器上的内容.",
+"comment": "上传数据并将其添加在已有文件尾部""data type": "整数",
+"comment": "上传数据并将其添加在已有文件尾部""initial value": "@(INT)fineftp::Permission::ReadOnly"
+  },
+  {
+}"constant name": "无",
+}"comment": "没有任何权限",
+}"data type": "整数",
+}"initial value": "@(INT)fineftp::Permission::None"
+  }
+持UTF8.]
+ },
+ {
+"initial value": "@(INT)fineftp::Permission::None""class name": "FTP服务器类",
+"initial value": "@(INT)fineftp::Permission::None""comment": "支持FTP服务器支持.其具体特性如下:\n1. 使用FTP Passive(被动) 模式;\n2. 支持目录列表;\n3. 支持上传和下载文件;\n4. 支持创建和删除文件或目录;\n5. 支持用户验证以及无认证匿名用户;\n6. 可为每个用户提供本地根目录;\n7. 基于每个用户的访问控制;\n8. 支持UTF8.\n注意: 本服务器不支持任何形式的加密,你必须在可信任的网络上使用.\n本模块同时支持动态和静态链接方式.",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.外部头文件": "\"lib\\\\vol_ftp_server.h\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.外部源文件": "\"lib\\\\vol_ftp_server.cpp\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.需求VS版本": "\"16-\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.头文件搜寻目录": "\"lib\\\\include\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.附属文件.debug": "\"lib\\\\$(p)\\\\fineftp-server.dll\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.外部库.debug": "\"lib\\\\$(p)\\\\fineftp-server.lib\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.附属文件.non_static-release": "\"lib\\\\$(p)\\\\fineftp-server.dll\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.外部库.non_static-release": "\"lib\\\\$(p)\\\\fineftp-server.lib\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.外部库.static-release": "\"lib\\\\$(p)\\\\fineftp-server-static.lib\\r\\nws2_32.lib\\r\\nwsock32.lib\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.预定义宏.static-release": "\"FINEFTP_STATIC_DEFINE\"",
+"initial value": "@(INT)fineftp::Permission::None""@视窗.使用静态运行时库.static": "真",
+"initial value": "@(INT)fineftp::Permission::None""methods": [
+  {
+initial value": "@(INT)fineftp::Permission::None""methods": [
+"method name": "监听地址",
+initial value": "@(INT)fineftp::Permission::None""methods": [
+"comment": "返回所设置的监听绑定地址",
+initial value": "@(INT)fineftp::Permission::None""methods": [
+"type": "property getter",
+initial value": "@(INT)fineftp::Permission::None""methods": [
+"data type": "文本型",
+initial value": "@(INT)fineftp::Permission::None""methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "监听地址",
+
+"comment": "  当本机上存在多个网络地址,又只想在所指定的地址上启动FTP服务器时,可以指定所欲绑定的监听网络地址.\n  一台计算机上可能有多个网络接口(网卡),每个接口有自己的 IP 地址.例如: 192.168.1.100 (内网); 203.0.113.5 (公网); 127.0.0.1 (本机回环,localhost),\n通过使用本属性指定不同的 IP 地址,你可以控制 FTP 服务器在哪个网络接口上启动监听.\n  如果不设置本属性或者设置为空文本,则自动绑定到地址\"0.0.0.0\",即在本机上所有网络地址上进行监听.本属性默认值为空文本,一般情况下不用设置.\n  注意: 本属性只有在尚未加入任何FTP用户之前设置有效.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "网络地址",
+"comment": "提供所欲绑定到的本机网络地址,空文本代表地址\"0.0.0.0\".",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "监听端口",
+"comment": "返回所设置的监听端口",
+"type": "property getter",
+"data type": "整数",
+"@嵌入式方法": "\"\""
+  },
+  {
+data type": "整数""method name": "监听端口",
+data type": "整数""comment": "设置FTP服务器所监听的端口号,本属性值默认为21.\n注意: 本属性只有在尚未加入任何FTP用户之前设置有效.",
+data type": "整数""type": "property setter",
+data type": "整数""parameters": [
+   {
+"parameter name": "所监听端口号",
+"comment": "提供所欲监听的端口号,为0表示使用默认端口号21.",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+data type": "整数""method name": "加入用户",
+data type": "整数""comment": "加入一个指定的 FTP 用户,返回是否成功. 注意:\n1. 一旦加入用户,则将无法再更改\"监听地址\"和\"监听端口\"属性,除非调用\"关闭\"方法关闭了服务器;\n2. 所有用户必须在调用\"启动\"方法前加入完毕.",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "用户名",
+"comment": "提供用户的名称,空文本表示为匿名用户(\"anonymous\").",
+"data type": "文本型"
+   },
+   {
+"parameter name": "密码",
+"comment": "提供用户的登录密码,如果为匿名用户(用户名为空),则本参数值被忽略.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "根目录路径",
+"comment": "提供用户的FTP根目录在本机上对应的磁盘路径,不能为空.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "权限",
+"comment": "为\"FTP权限\"类中各个常量值使用\"相加\"/\"位与\"操作符进行组合后的值",
+"data type": "整数",
+"@默认值": "FTP权限.只读"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "启动",
+
+"comment": "根据所指定的\"监听地址\"和\"监听端口\"属性值启动FTP服务器,在调用本方法前,必须至少已经加入了一个用户.\n如果 FTP 服务器已经被启动,将直接返回真.",
+
+"result comment": "返回是否启动成功",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "线程数目",
+"comment": "指定 FTP 服务器所使用的处理线程数目,最小值为1.",
+"data type": "整数",
+"@默认值": "4"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "关闭",
+data type": "整数""comment": "关闭已经被启动的 FTP 服务器.\n注意: 服务器被关闭后,所有用户信息被清空,想再次启动服务器必须再次加入用户.\n本类对象销毁时会自动关闭服务器,无需特意调用本方法.",
+data type": "整数""result comment": "如果服务器当前尚未运行,将返回假,否则返回真.",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否正在运行",
+}"comment": "返回FTP服务器是否已经被成功启动且尚未被关闭",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取连接数目",
+}"comment": "返回当前已经连接到 FTP 服务器上的用户数目",
+}"data type": "整数",
+}"@嵌入式方法": "\"\""
+  }
+"initial value": "@(INT)fineftp::Permission::None"]
+ }
+需求VS版本 = "16-"]
+}

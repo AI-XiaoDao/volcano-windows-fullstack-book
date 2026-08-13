@@ -1,0 +1,342 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"package name": "火山.原创软件",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"comment": "本模块来源于网络\n切勿用作非法用途",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"@文档": "\"category = \\\"windows.线程相关\\\"\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+"classes": [
+ {
+"class name": "线程池类f",
+"methods": [
+  {
+ 长整数"method name": "线程池回调函数",
+ 长整数"type": "event",
+ 长整数"data type": "整数",
+ 长整数"parameters": [
+   {
+"parameter name": "参数1",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数3",
+"data type": "变整数"
+   }
+ 长整数]
+  },
+  {
+data type": "变整数""method name": "创建",
+data type": "变整数""parameters": [
+   {
+"parameter name": "线程池数量",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+"挂接事件"命令时所提供的"标记值"参数值,非此方式挂接事件则本参数值固定为0."method name": "投递任务",
+"挂接事件"命令时所提供的"标记值"参数值,非此方式挂接事件则本参数值固定为0."parameters": [
+   {
+"parameter name": "参数1",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "参数3",
+"data type": "变整数",
+"@默认值": "0"
+   }
+"挂接事件"命令时所提供的"标记值"参数值,非此方式挂接事件则本参数值固定为0.]
+  },
+  {
+"method name": "取任务总数",
+"data type": "长整数"
+  },
+  {
+}"method name": "取已完成任务数",
+}"data type": "长整数"
+  },
+  {
+thod name": "取已完成任务数""method name": "取剩余任务数",
+thod name": "取已完成任务数""data type": "长整数"
+  }
+]
+ },
+ {
+"class name": "______线程池测试",
+"methods": [
+  {
+"data type": "长整数""method name": "开始测试"
+  },
+  {
+
+"method name": "开始测试2"
+  },
+  {
+"method name": "回调函数",
+"static": true,
+"data type": "整数",
+"parameters": [
+   {
+"parameter name": "参数",
+"data type": "变整数"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "线程池资源类",
+"comment": "注意 系统最低支持vista 服务器系统最低支持 2008",
+"methods": [
+  {
+}"method name": "创建",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "最大线程池数量",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "最小线程池数量",
+"data type": "整数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+"method name": "销毁",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "是否强制销毁",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+data type": "整数""method name": "调整线程数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "最大线程池数量",
+"data type": "整数",
+"@默认值": "1"
+   },
+   {
+"parameter name": "最小线程池数量",
+"data type": "整数",
+"@默认值": "1"
+   }
+data type": "整数"]
+  }
+]
+ },
+ {
+"class name": "线程池任务集类",
+"comment": "注意 系统最低支持vista 服务器系统最低支持 2008",
+"@视窗.后缀文本": "\"public CThreadPoolWorkBase\"",
+"@视窗.外部头文件": "\"ThreadPool\\\\BTThreadPool.h\"",
+"@视窗.外部库.win32": "\"ThreadPool\\\\BTThreadPoolx86.lib\"",
+"@视窗.附属文件.win32": "\"ThreadPool\\\\BTThreadPoolx86.dll\"",
+"@视窗.外部库.x64": "\"ThreadPool\\\\BTThreadPoolx64.lib\"",
+"@视窗.附属文件.x64": "\"ThreadPool\\\\BTThreadPoolx64.dll\"",
+"methods": [
+  {
+methods": [
+"method name": "创建",
+methods": [
+"data type": "逻辑型",
+methods": [
+"@禁止流程检查": "真",
+methods": [
+"parameters": [
+   {
+"parameter name": "线程池资源",
+"comment": "如果为空，表示使用的是系统的线程池",
+"data type": "线程池资源类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "任务参数1",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "任务参数2",
+"data type": "变整数",
+"@默认值": "0"
+   }
+methods": [
+]
+  },
+  {
+thods": [
+]"method name": "销毁",
+thods": [
+]"@嵌入式方法": "\"\""
+  },
+  {
+hods": [
+]"@嵌入式方法": "\"\"""method name": "提交任务",
+hods": [
+]"@嵌入式方法": "\"\"""data type": "逻辑型",
+hods": [
+]"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+ameter name": "任务参数2""method name": "取剩余任务数",
+ameter name": "任务参数2""data type": "长整数",
+ameter name": "任务参数2""@嵌入式方法": "\"\""
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "取当前执行任务数",
+ata type": "整数""parameters": [
+"data type": "长整数",
+ata type": "整数""parameters": [
+"@嵌入式方法": "\"\""
+  },
+  {
+": [
+]"@嵌入式方法": "\"\"""method name": "提交任务""method name": "取消所有任务",
+": [
+]"@嵌入式方法": "\"\"""method name": "提交任务""data type": "逻辑型",
+": [
+]"@嵌入式方法": "\"\"""method name": "提交任务""@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "等待任务完成",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ods": [
+]"@嵌入式方法": "\"\"""data type": "逻辑型""method name": "任务回调",
+ods": [
+]"@嵌入式方法": "\"\"""data type": "逻辑型""type": "event",
+ods": [
+]"@嵌入式方法": "\"\"""data type": "逻辑型""data type": "整数",
+ods": [
+]"@嵌入式方法": "\"\"""data type": "逻辑型""parameters": [
+   {
+"parameter name": "参数1",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数"
+   }
+ods": [
+]"@嵌入式方法": "\"\"""data type": "逻辑型"]
+  }
+]
+ },
+ {
+"class name": "简易线程池类",
+"comment": "如果您的软件中，只存在一个线程池，那么我建议您用这个就行了",
+"methods": [
+  {
+comment": "如果您的软件中，只存在一个线程池，那么我建议您用这个就行了""method name": "创建",
+comment": "如果您的软件中，只存在一个线程池，那么我建议您用这个就行了""parameters": [
+   {
+"parameter name": "线程最大数量",
+"data type": "整数",
+"@默认值": "8"
+   },
+   {
+"parameter name": "线程最小数量",
+"data type": "整数",
+"@默认值": "1"
+   }
+comment": "如果您的软件中，只存在一个线程池，那么我建议您用这个就行了"]
+  },
+  {
+comment": "如果您的软件中，只存在一个线程池，那么我建议您用这个就行了""method name": "销毁",
+comment": "如果您的软件中，只存在一个线程池，那么我建议您用这个就行了""parameters": [
+   {
+"parameter name": "是否强制销毁",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+comment": "如果您的软件中，只存在一个线程池，那么我建议您用这个就行了"]
+  },
+  {
+}"method name": "调整线程池",
+}"parameters": [
+   {
+"parameter name": "线程最大数",
+"comment": "-1表示不调整",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "线程最小数",
+"comment": "-1表示不调整",
+"data type": "整数",
+"@默认值": "-1"
+   }
+}]
+  },
+  {
+}"method name": "取消所有任务"
+  },
+  {
+}"method name": "等待任务完成"
+  },
+  {
+}"method name": "提交任务",
+}"comment": "内部提交N次任务",
+}"parameters": [
+   {
+"parameter name": "任务数",
+"data type": "整数",
+"@默认值": "1"
+   }
+}]
+  },
+  {
+"comment": "内部提交N次任务""method name": "取剩余任务数",
+"comment": "内部提交N次任务""data type": "长整数"
+  },
+  {
+comment": "-1表示不调整""method name": "取当前运行任务数",
+comment": "-1表示不调整""data type": "长整数"
+  },
+  {
+thod name": "提交任务""method name": "任务回调",
+thod name": "提交任务""type": "event",
+thod name": "提交任务""data type": "整数"
+  }
+]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+]
+}

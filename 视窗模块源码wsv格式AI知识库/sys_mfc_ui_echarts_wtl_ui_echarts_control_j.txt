@@ -1,0 +1,1057 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"WTL版ECharts图表组件".
+
+{
+使用 RGB 表示,比如"rgb(128, 128, 128)" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 "rgba(128, 128, 128, 0.5)"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+使用 RGB 表示,比如"rgb(128, 128, 128)" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 "rgba(128, 128, 128, 0.5)"."package name": "火山.ECharts",
+使用 RGB 表示,比如"rgb(128, 128, 128)" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 "rgba(128, 128, 128, 0.5)"."comment": "火山WTL·Echarts图表控件",
+使用 RGB 表示,比如"rgb(128, 128, 128)" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 "rgba(128, 128, 128, 0.5)"."classes": [
+ {
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""class name": "EC基础图表",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""comment": "火山WTL·Echarts图表基础组件,基于此组件可创建各类丰富的图表.\nApache ECharts 基于 JavaScript 的开源可视化图表库.\n本封装尽可能的还原了Echarts官方配置项(Option)的结构,概念及命名.\n用户可参考官方及示例迅速掌握各类图表的构建过程.\n新手教程:https://echarts.apache.org/zh/tutorial.html\n官方文档及示例:https://echarts.apache.org/examples/zh/index.html\n",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""base class": "窗口组件",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.后缀文本": "\"public IEChartsEventListener\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.窗口组件": "\"icon=\\\"icon\\\\ECharts.bmp\\\"\\r\\ndefault_size = \\\"240, 200\\\"\\r\\npreview_unsupported\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.外部头文件": "\"include\\\\wtl_ui_mb_echarts_wnd.h\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.外部源文件": "\"include\\\\wtl_ui_mb_echarts_wnd.cpp\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@文档": "\"category = \\\"图表控件\\\"\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.外部源文件.d:!_VOL_ECHARTS_CTL_BASE_EDGE": "\"..\\\\wtl_mini_blink\\\\lib\\\\wtl_ui_mb_wnd.cpp\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.附属文件.x64 - d:!_VOL_ECHARTS_CTL_BASE_EDGE": "\"..\\\\vMiniblink\\\\lib\\\\x64\\\\node.dll\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.附属文件.win32 - d:!_VOL_ECHARTS_CTL_BASE_EDGE": "\"..\\\\vMiniblink\\\\lib\\\\win32\\\\node.dll\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.外部库.win32 - d:_VOL_ECHARTS_CTL_BASE_EDGE": "\"..\\\\ui_webview2\\\\lib\\\\x86\\\\WebView2LoaderStatic.lib\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.外部库.x64 - d:_VOL_ECHARTS_CTL_BASE_EDGE": "\"..\\\\ui_webview2\\\\lib\\\\x64\\\\WebView2LoaderStatic.lib\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""@视窗.需求VS版本.d:_VOL_ECHARTS_CTL_BASE_EDGE": "\"16-\"",
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""variables": [
+  {
+    "variable name": "标题栏",
+    "comment": "标题组件,包含主标题和副标题. (对应option.title配置项)",
+    "data type": "图表标题栏类"
+  },
+  {
+   "data type": "图表标题栏类""variable name": "图例",
+   "data type": "图表标题栏类""comment": "图例组件(对应option.legend 配置项)展现了不同系列的标记,颜色和名字.可以通过点击图例控制哪些系列不显示.",
+   "data type": "图表标题栏类""data type": "图表图例类"
+  },
+  {
+用 RGB 表示,比如"rgb(128, 128, 128)" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 "rgba(128, 128, 128, 0.5)"."comment": "火山WTL·Echarts图表控件""variable name": "提示框",
+用 RGB 表示,比如"rgb(128, 128, 128)" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 "rgba(128, 128, 128, 0.5)"."comment": "火山WTL·Echarts图表控件""comment": "提示框组件,(对应option.tooltip配置项)",
+用 RGB 表示,比如"rgb(128, 128, 128)" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 "rgba(128, 128, 128, 0.5)"."comment": "火山WTL·Echarts图表控件""data type": "图表提示框类"
+  },
+  {
+ "也可以使用十六进制格式,比如 \'#ccc\'""variable name": "工具栏",
+ "也可以使用十六进制格式,比如 \'#ccc\'""comment": "工具栏组件,(对应option.toolbox配置项)内置有,数据视图,动态类型切换,数据区域缩放,数据重置等工具组件.",
+ "也可以使用十六进制格式,比如 \'#ccc\'""data type": "图表工具栏类"
+  },
+  {
+뢀敹ŝ"variable name": "数据区域缩放",
+뢀敹ŝ"comment": "区域数据缩放组件,(对应option.dataZoom配置项) 用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.",
+뢀敹ŝ"data type": "图表数据区域缩放类"
+  },
+  {
+窗口组件 = "icon=\"icon\\K线图.bmp\"\r\ndefault_size = \"240, 200\"\r\npreview_unsupported""variable name": "区域选择",
+窗口组件 = "icon=\"icon\\K线图.bmp\"\r\ndefault_size = \"240, 200\"\r\npreview_unsupported""comment": "区域选择组件,(对应option.brush配置项) 用户可以选择图中一部分数据,从而便于向用户展示被选中数据,或者他们的一些统计计算结果.",
+窗口组件 = "icon=\"icon\\K线图.bmp\"\r\ndefault_size = \"240, 200\"\r\npreview_unsupported""data type": "图表区域选择组件类"
+  },
+  {
+    "variable name": "视觉映射",
+    "comment": "视觉映射组件,(对应option.visualMap配置项)用于进行视觉编码,也就是将数据映射到视觉元素（视觉通道）",
+    "data type": "图表视觉映射类"
+  },
+  {
+}"variable name": "坐标系",
+}"comment": "图表坐标系组件,用于配置各类图表的底板网格.例如:直角坐标系上可以绘制折线图,柱状图.雷达图坐标系上可以绘制雷达图.地图坐标系上可以绘制地图.",
+}"data type": "图表坐标系组件类"
+  },
+  {
+}"variable name": "坐标轴",
+}"comment": "图表坐标轴组件,用来配置各个坐标系下的坐标轴.",
+}"data type": "图表坐标轴组件类"
+  },
+  {
+用十六进制格式,比如 '#ccc' "variable name": "坐标轴指示器",
+用十六进制格式,比如 '#ccc' "comment": "坐标轴指示器,(对应option.axisPointer配置项) 全局坐标轴指示器公用设置",
+用十六进制格式,比如 '#ccc' "data type": "坐标轴指示器类"
+  },
+  {
+riable name": "坐标系""variable name": "系列集",
+riable name": "坐标系""comment": "  系列集,(对应option.series配置项)此配置项实际是个数组,每个成员即一个系列,系列是指:一组数值以及他们映射成的图.\n其不仅表示数据,也表示数据映射成为的图.所以一个系列包含的要素至少有:一组数值,图表类型,以及其他的关于这些数据如何映射成图的参数.",
+riable name": "坐标系""data type": "图表系列集类"
+  },
+  {
+口组件 = "icon=\"icon\\K线图.bmp\"\r\ndefault_size = \"240, 200\"\r\npreview_unsupported""data type": "图表区域选择组件类""variable name": "动画设置",
+口组件 = "icon=\"icon\\K线图.bmp\"\r\ndefault_size = \"240, 200\"\r\npreview_unsupported""data type": "图表区域选择组件类""comment": "作用于全局的动画设置",
+口组件 = "icon=\"icon\\K线图.bmp\"\r\ndefault_size = \"240, 200\"\r\npreview_unsupported""data type": "图表区域选择组件类""data type": "图表动画设置类"
+  }
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\"."],
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".""methods": [
+  {
+"variable name": "视觉映射""method name": "使用Edge浏览框",
+"variable name": "视觉映射""comment": "调用本方法指示编译器基于Edge浏览框来编译ECharts图表组件,如果不调用本方法,将使用MiniBlink浏览框进行编译.\n注意: 本方法为编译时处理方法,系统在编译时只要检测到用户程序实际执行流程中任意位置调用了此方法,就启用对应的编译特性,和方法本身是否被执行到没有任何关系.",
+"variable name": "视觉映射""static": true,
+"variable name": "视觉映射""@视窗.预定义宏": "\"_VOL_ECHARTS_CTL_BASE_EDGE\\r\\n_WIN32_WINNT=0x0600\"",
+"variable name": "视觉映射""@视窗.编译信息": "\"基于Edge浏览框来编译ECharts图表组件\""
+  },
+  {
+敹ŝ"comment": "区域数据缩放组件,(对应option.dataZoom配置项) 用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.""method name": "取文本",
+敹ŝ"comment": "区域数据缩放组件,(对应option.dataZoom配置项) 用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.""comment": "将当前图表配置参数转换成JSON文本",
+敹ŝ"comment": "区域数据缩放组件,(对应option.dataZoom配置项) 用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.""result comment": "成功返回本配置项JSON文本",
+敹ŝ"comment": "区域数据缩放组件,(对应option.dataZoom配置项) 用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.""data type": "文本型"
+  },
+  {
+ŝ"comment": "区域数据缩放组件,(对应option.dataZoom配置项) 用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.""data type": "文本型""method name": "清空参数",
+ŝ"comment": "区域数据缩放组件,(对应option.dataZoom配置项) 用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.""data type": "文本型""comment": "清空本图表对象的所有配置参数,同时柱图,折线图,K线图等基础图表组件的初始设置也会被一并清空.",
+ŝ"comment": "区域数据缩放组件,(对应option.dataZoom配置项) 用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.""data type": "文本型""parameters": [
+   {
+"parameter name": "保留主题风格",
+"comment": "真为保留风格主题配置",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "保留调色盘",
+"comment": "真为保留调色盘配置",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "保留背景颜色",
+"comment": "真为保留背景颜色",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ŝ"comment": "区域数据缩放组件,(对应option.dataZoom配置项) 用于区域缩放,从而能自由关注细节的数据信息,或者概览数据整体,或者去除离群点的影响.""data type": "文本型"]
+  },
+  {
+ }"method name": "画图",
+ }"comment": "生成图表配置,创建图表实例并执行画图."
+  },
+  {
+ }"method name": "更新重画",
+ }"comment": "生成图表配置,不创建新的图表实例,将配置数据以覆盖的方式写入实例配置,并更新图表."
+  },
+  {
+ "method name": "执行JS脚本",
+ "comment": "执行一段js脚本",
+ "data type": "文本型",
+ "@嵌入式方法": "\"\"",
+ "parameters": [
+   {
+"parameter name": "JS文本",
+"comment": "提供一段js文本",
+"data type": "文本型"
+   }
+ ]
+  },
+  {
+ }"method name": "执行JS脚本2",
+ }"comment": "执行一段js脚本,返回执行结果文本.",
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "JS文本",
+"comment": "提供一段js文本,如果要返回结果请在欲返回的内容之前添加\"return\"",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "启用高分辨率支持",
+
+"comment": "本质是通过设置缩放级别并且关闭系统默认缩放来实现的.",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "缩放级别",
+
+"comment": "浏览器容器的缩放系数",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "缩放级别",
+"comment": "缩放系数,正常为1.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+comment": "缩放系数,正常为1.""method name": "缩放级别",
+comment": "缩放系数,正常为1.""comment": "浏览器容器缩放系数",
+comment": "缩放系数,正常为1.""result comment": "返回缩放系数",
+comment": "缩放系数,正常为1.""type": "property getter",
+comment": "缩放系数,正常为1.""data type": "小数",
+comment": "缩放系数,正常为1.""@禁止流程检查": "真"
+  },
+  {
+data type": "文本型""method name": "启用复制图片菜单",
+data type": "文本型""comment": "启用或屏蔽'复制图片'右键菜单.\n注意: 本方法在使用\"Edge浏览框\"来编译本组件时无效.",
+data type": "文本型""type": "property setter",
+data type": "文本型""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "假为屏蔽",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "文本型"]
+  },
+  {
+}"method name": "启用图片另存菜单",
+}"comment": "启用或屏蔽'启用图片另存'右键菜单.\n注意: 本方法在使用\"Edge浏览框\"来编译本组件时无效.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "假为屏蔽",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+data type": "文本型""method name": "截图",
+data type": "文本型""comment": "将图表页面打印到位图,如果使用\"MiniBlink浏览框\"编译,返回位图(bmp)字节集数据,如果使用\"Edge浏览框\"编译,返回的是PNG图片字节集数据.",
+data type": "文本型""result comment": "成功返回截图数据,失败返回空字节集.",
+data type": "文本型""data type": "字节集类",
+data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+}"method name": "自定义风格主题",
+}"comment": "用户可自行构建风格主题",
+}"parameters": [
+   {
+"parameter name": "主题名称",
+"comment": "提供自定义主题名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "主题配置文本",
+"comment": "主题配置,提供一个ECharts主题JSON文本,具体格式参考官方主题构建工具",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+截图数据,失败返回空字节集."method name": "风格主题",
+截图数据,失败返回空字节集."comment": "设置图表的颜色风格,本模块中内置了官方提供的12种主题风格.",
+截图数据,失败返回空字节集."type": "property setter",
+截图数据,失败返回空字节集."parameters": [
+   {
+"parameter name": "主题名称",
+"comment": "提供图表风格主题常量",
+"data type": "图表风格主题"
+   }
+截图数据,失败返回空字节集.]
+  },
+  {
+ameter name": "主题配置文本""method name": "暗黑模式",
+ameter name": "主题配置文本""comment": "是否是暗黑模式,默认会根据背景色的亮度自动设置, 如果是设置了容器的背景色而无法判断到,就可以使用该配置手动指定,echarts会根据是否是暗黑模式调整文本等的颜色。",
+ameter name": "主题配置文本""type": "property setter",
+ameter name": "主题配置文本""parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "真为启用",
+"data type": "逻辑型"
+   }
+ameter name": "主题配置文本"]
+  },
+  {
+"method name": "调色盘颜色列表",
+"comment": "调色盘颜色列表,如果系列没有设置颜色,则会依次循环从默认列表中取颜色作为系列颜色",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "颜色列表",
+"comment": "  提供一个数组文本如:\"['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4', '#ea7ccc']\".\n每个成员为一个颜色值依次代表一个系列的颜色.",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ameter name": "主题名称""method name": "背景颜色",
+ameter name": "主题名称""comment": "设置图表容器的背景颜色",
+ameter name": "主题名称""type": "property setter",
+ameter name": "主题名称""parameters": [
+   {
+"parameter name": "颜色值",
+"comment": "颜色可以使用RGB表示，比如 'rgb(128, 128, 128)' 或 'rgba(128, 128, 128, 0.5)',也可以使用十六进制格式,比如 '#ccc'",
+"data type": "文本型"
+   }
+ameter name": "主题名称"]
+  },
+  {
+ameter name": "颜色列表""method name": "启用图表项点击事件",
+ameter name": "颜色列表""comment": "启用图表项点击事件",
+ameter name": "颜色列表""type": "property setter",
+ameter name": "颜色列表""@视窗.设置时机": "组件创建前",
+ameter name": "颜色列表""parameters": [
+   {
+"parameter name": "是否启用",
+"data type": "逻辑型"
+   }
+ameter name": "颜色列表"]
+  },
+  {
+数据,失败返回空字节集.]"method name": "置背景填充",
+数据,失败返回空字节集.]"comment": "设置图表容器的背景纹理填充",
+数据,失败返回空字节集.]"parameters": [
+   {
+"parameter name": "纹理图形",
+"comment": "提供一个图片链接地址,支持本地路相对径如:\"img/img.png\".也可以是dataURL格式 如:\"data:image/png;...\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "平铺重复",
+"comment": "提供图表背景重复模式常量",
+"data type": "图表背景重复模式",
+"@默认值": "图表背景重复模式.重复"
+   }
+数据,失败返回空字节集.]]
+  },
+  {
+ameter name": "平铺重复""method name": "置背景颜色径向渐变",
+ameter name": "平铺重复""comment": "设置图表容器的背景径向渐变颜色",
+ameter name": "平铺重复""parameters": [
+   {
+"parameter name": "中心点横坐标",
+"comment": "取值范围0-1.",
+"data type": "小数"
+   },
+   {
+"parameter name": "中心点纵坐标",
+"comment": "取值范围0-1.",
+"data type": "小数"
+   },
+   {
+"parameter name": "渐变半径",
+"comment": "取值范围0-1.",
+"data type": "小数"
+   },
+   {
+"parameter name": "起始颜色",
+"comment": "可以使用rgb或十六进制格式颜色值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束颜色",
+"comment": "可以使用rgb或十六进制格式颜色值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否绝对值",
+"comment": "默认位置采用百分比值,如果设置为真则采用绝对像素值",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "平铺重复"]
+  },
+  {
+"method name": "置背景颜色线性渐变",
+"comment": "设置图表容器的背景线性渐变颜色",
+"parameters": [
+   {
+"parameter name": "起始点横坐标",
+"comment": "取值范围0-1.",
+"data type": "小数"
+   },
+   {
+"parameter name": "起始点纵坐标",
+"comment": "取值范围0-1.",
+"data type": "小数"
+   },
+   {
+"parameter name": "结束点横坐标",
+"comment": "取值范围0-1.",
+"data type": "小数"
+   },
+   {
+"parameter name": "结束点纵坐标",
+"comment": "取值范围0-1.",
+"data type": "小数"
+   },
+   {
+"parameter name": "起始颜色",
+"comment": "可以使用rgb或十六进制格式颜色值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结束颜色",
+"comment": "可以使用rgb或十六进制格式颜色值",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否绝对值",
+"comment": "默认位置采用百分比值,如果设置为真则采用绝对像素值",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+ameter name": "是否启用""method name": "置图片元素",
+ameter name": "是否启用""comment": "在图表环境中创建一个图片元素(Image),用于后续图表元素的纹理填充.",
+ameter name": "是否启用""parameters": [
+   {
+"parameter name": "图片地址",
+"comment": "提供一个图片链接地址,支持本地路相对径如:\"img/img.png\".也可以是dataURL格式 如:\"data:image/png;...\"",
+"data type": "文本型"
+   },
+   {
+"parameter name": "图片名称",
+"comment": "图片在图表环境中的唯一名称",
+"data type": "文本型"
+   }
+ameter name": "是否启用"]
+  },
+  {
+容器的背景线性渐变颜色"method name": "注册地图",
+容器的背景线性渐变颜色"comment": "用于为地理坐标或地图系列的地图类型系注册地图",
+容器的背景线性渐变颜色"parameters": [
+   {
+"parameter name": "地图名称",
+"comment": "提供一个地图名称,用于在地理坐标系或地图系列中指定所注册的地图.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "地图数据",
+"comment": "提供一个地图数据对象文本,可以是geoJSON,也可以是SGV文件数据: \"{ svg: svg }\"具体使用格式请参考官方文档.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "特定区域设置",
+"comment": "如果地图数据为geoJSON,这里可以提供一个对象文本用与配置特定区域的位置缩放及样式.具体使用格式请参考官方文档.",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+容器的背景线性渐变颜色]
+  },
+  {
+器的背景线性渐变颜色"parameters": [
+"method name": "显示标题栏",
+器的背景线性渐变颜色"parameters": [
+"comment": "是否显示图表标题栏",
+器的背景线性渐变颜色"parameters": [
+"type": "property setter",
+器的背景线性渐变颜色"parameters": [
+"parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+器的背景线性渐变颜色"parameters": [
+]
+  },
+  {
+"method name": "显示图例",
+"comment": "是否显示图例",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+comment": "真为显示""method name": "显示提示框",
+comment": "真为显示""comment": "是否显示提示框组件",
+comment": "真为显示""type": "property setter",
+comment": "真为显示""parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "真为显示"]
+  },
+  {
+
+"method name": "显示工具栏",
+
+"comment": "是否显示工具栏组件",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+data type": "逻辑型""method name": "主标题",
+data type": "逻辑型""comment": "设置图表的主标题内容,设置该项将自动显示标题栏.",
+data type": "逻辑型""type": "property setter",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "标题",
+"comment": "主标题文本",
+"data type": "文本型",
+"@默认值": "\"主标题\""
+   }
+data type": "逻辑型"]
+  },
+  {
+}"method name": "副标题",
+}"comment": "设置图表的副标题内容.设置该项将自动显示标题栏",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "标题",
+"comment": "副标题文本",
+"data type": "文本型",
+"@默认值": "\"副标题\""
+   }
+}]
+  },
+  {
+comment": "真为显示""method name": "准备就绪",
+comment": "真为显示""comment": "  当页面文档及ECharts图表环境准备就绪时触发此事件.",
+comment": "真为显示""type": "event",
+comment": "真为显示""data type": "整数",
+comment": "真为显示""parameters": [
+   {
+"parameter name": "系列集对象",
+"comment": "  系列集,(对应option.series配置项)此配置项实际是个数组,每个成员即一个系列,系列是指:一组数值以及他们映射成的图.\n其不仅表示数据,也表示数据映射成为的图.所以一个系列包含的要素至少有:一组数值,图表类型,以及其他的关于这些数据如何映射成图的参数.",
+"data type": "图表系列集类"
+   }
+comment": "真为显示"]
+  },
+  {
+}"method name": "图表项被单击",
+}"comment": "  当图表项被单击时触发此事件.",
+}"type": "event",
+}"data type": "整数",
+}"parameters": [
+   {
+"parameter name": "图表项信息",
+"comment": "图表项信息JSON文本  ",
+"data type": "文本型"
+   }
+}]
+  }
+以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\"."]
+ },
+ {
+@默认值": "\"副标题\"""class name": "直角坐标系图表基础类",
+@默认值": "\"副标题\"""comment": "折线图,柱状图,K线图等默认使用直角坐标系",
+@默认值": "\"副标题\"""base class": "EC基础图表",
+@默认值": "\"副标题\"""methods": [
+  {
+表项被单击时触发此事件."method name": "横坐标轴",
+表项被单击时触发此事件."comment": "取首个横轴",
+表项被单击时触发此事件."type": "property getter",
+表项被单击时触发此事件."data type": "图表坐标轴类",
+表项被单击时触发此事件."@视窗.返回参考": "真"
+  },
+  {
+默认值": "\"副标题\"""base class": "EC基础图表""method name": "横坐标轴",
+默认值": "\"副标题\"""base class": "EC基础图表""comment": "设置横轴",
+默认值": "\"副标题\"""base class": "EC基础图表""type": "property setter",
+默认值": "\"副标题\"""base class": "EC基础图表""parameters": [
+   {
+"parameter name": "坐标轴配置",
+"comment": "提供一个坐标轴对象",
+"data type": "图表坐标轴类"
+   }
+默认值": "\"副标题\"""base class": "EC基础图表"]
+  },
+  {
+"parameters": [
+"method name": "纵坐标轴",
+"parameters": [
+"comment": "取首个纵轴",
+"parameters": [
+"type": "property getter",
+"parameters": [
+"data type": "图表坐标轴类",
+"parameters": [
+"@视窗.返回参考": "真"
+  },
+  {
+parameters": [
+"type": "property getter""method name": "纵坐标轴",
+parameters": [
+"type": "property getter""comment": "设置纵轴",
+parameters": [
+"type": "property getter""type": "property setter",
+parameters": [
+"type": "property getter""parameters": [
+   {
+"parameter name": "坐标轴配置",
+"comment": "提供一个坐标轴对象",
+"data type": "图表坐标轴类"
+   }
+parameters": [
+"type": "property getter"]
+  },
+  {
+"parameters": [
+"method name": "提示框指示器",
+"parameters": [
+"comment": "设置提示框组件的坐标轴指示器类型",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "指示器类型",
+"comment": "提供坐标轴指示器类型常量",
+"data type": "坐标轴指示器类型",
+"@默认值": "坐标轴指示器类型.十字准星指示器"
+   }
+"parameters": [
+]
+  },
+  {
+"parameters": [
+"method name": "提示框触发类型",
+"parameters": [
+"comment": "鼠标动到数据图形上时,触发显示提示框的类型.",
+"parameters": [
+"type": "property setter",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "触发类型",
+"comment": "提供提示框触发类型常量",
+"data type": "提示框触发类型",
+"@默认值": "提示框触发类型.坐标轴触发"
+   }
+"parameters": [
+]
+  }
+@默认值": "\"副标题\""]
+ },
+ {
+ameter name": "触发类型""class name": "EC折线图",
+ameter name": "触发类型""comment": "Echarts折线图组件",
+ameter name": "触发类型""base class": "直角坐标系图表基础类",
+ameter name": "触发类型""@文档": "\"category = \\\"图表控件\\\"\"",
+ameter name": "触发类型""@视窗.窗口组件": "\"icon=\\\"icon\\\\折线图.bmp\\\"\\r\\ndefault_size = \\\"240, 200\\\"\\r\\npreview_unsupported\"",
+ameter name": "触发类型""methods": [
+  {
+框组件的坐标轴指示器类型"method name": "平滑曲线",
+框组件的坐标轴指示器类型"comment": "折线图是否平滑曲线显示.在系列创建前设置有效.",
+框组件的坐标轴指示器类型"type": "property setter",
+框组件的坐标轴指示器类型"parameters": [
+   {
+"parameter name": "是否启用",
+"comment": "默认关闭",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+框组件的坐标轴指示器类型]
+  },
+  {
+组件的坐标轴指示器类型"parameters": [
+"method name": "显示标签",
+组件的坐标轴指示器类型"parameters": [
+"comment": "是否显示数据的文字标签,在系列创建前有效.",
+组件的坐标轴指示器类型"parameters": [
+"type": "property setter",
+组件的坐标轴指示器类型"parameters": [
+"parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+组件的坐标轴指示器类型"parameters": [
+]
+  },
+  {
+的坐标轴指示器类型"parameters": [
+]"method name": "显示标记图形",
+的坐标轴指示器类型"parameters": [
+]"comment": "是否显示标记图形,",
+的坐标轴指示器类型"parameters": [
+]"type": "property setter",
+的坐标轴指示器类型"parameters": [
+]"parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "如果为假则只有在提示框点亮的时候显示",
+"data type": "逻辑型"
+   }
+的坐标轴指示器类型"parameters": [
+]]
+  },
+  {
+}"method name": "创建折线图系列",
+}"comment": "创建一个类型为折线图的系列数据加入系列集,并返回该系列,折线图的一个系列代表一条数据线.",
+}"data type": "图表系列类",
+}"@视窗.返回参考": "真",
+}"parameters": [
+   {
+"parameter name": "系列名称",
+"comment": "系列名称,在折线图中表示此数据线的名称或类目",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文本系列数据",
+"comment": "  提供一个数组文本如:\"[1,2,3,4,5,6,7]\"每个成员表示一个数据节点值.\n此参数与本方法第三个参数至少提供一个,如果同时提供了第三个参数,\n那么此参数将被舍弃.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "数组系列数据",
+"comment": "数组型系列数据,如果提供了此参数,那么本方法第二参数提供的内容将被舍弃.",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "平滑曲线",
+"comment": "是否平滑曲线显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "区域填充",
+"comment": "是否显示成面积图",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "数据堆叠",
+"comment": "是否数据堆叠",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  }
+ameter name": "触发类型"]
+ },
+ {
+eter name": "触发类型"]"class name": "EC柱状图",
+eter name": "触发类型"]"comment": "Echarts柱状图组件",
+eter name": "触发类型"]"base class": "直角坐标系图表基础类",
+eter name": "触发类型"]"@文档": "\"category = \\\"图表控件\\\"\"",
+eter name": "触发类型"]"@视窗.窗口组件": "\"icon=\\\"icon\\\\柱状图.bmp\\\"\\r\\ndefault_size = \\\"240, 200\\\"\\r\\npreview_unsupported\"",
+eter name": "触发类型"]"methods": [
+  {
+"data type": "图表系列类""method name": "显示背景",
+"data type": "图表系列类""comment": "是否显示柱状图柱条的背景色,在系列创建前有效.",
+"data type": "图表系列类""type": "property setter",
+"data type": "图表系列类""parameters": [
+   {
+"parameter name": "是否显示背景颜色",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+"data type": "图表系列类"]
+  },
+  {
+ameter name": "数据堆叠""method name": "显示标签",
+ameter name": "数据堆叠""comment": "是否在柱条显示数据的文字标签,在系列创建前有效.",
+ameter name": "数据堆叠""type": "property setter",
+ameter name": "数据堆叠""parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "数据堆叠"]
+  },
+  {
+"method name": "柱条宽度",
+"comment": "柱条的宽度,不设时自适应.在系列创建前有效.",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "宽度值文本",
+"comment": "可以是绝对值例如\"40\"或者百分数例如\"60%\"百分数基于自动计算出的每一类目的宽度",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "创建柱状图系列",
+"comment": "创建一个类型为柱状图的系列数据加入系列集,并返回该系列,柱状图的一个系列代表一个柱条.",
+"data type": "图表系列类",
+"@视窗.返回参考": "真",
+"parameters": [
+   {
+"parameter name": "系列名称",
+"comment": "系列名称,在折线图中表示此数据线的名称或类目",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "文本系列数据",
+"comment": "  提供一个数组文本如:\"[1,2,3,4,5,6,7]\"每个成员表示一个数据节点值.\n此参数与本方法第三个参数至少提供一个,如果同时提供了第三个参数,\n那么此参数将被舍弃.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "数组系列数据",
+"comment": "数组型系列数据,如果提供了此参数,那么本方法第二参数提供的内容将被舍弃.",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "数据堆叠",
+"comment": "是否数据堆叠",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  }
+eter name": "触发类型"]]
+ },
+ {
+"class name": "EC饼图",
+"comment": "Echarts饼图组件",
+"base class": "EC基础图表",
+"@文档": "\"category = \\\"图表控件\\\"\"",
+"@视窗.窗口组件": "\"icon=\\\"icon\\\\饼图.bmp\\\"\\r\\ndefault_size = \\\"240, 200\\\"\\r\\npreview_unsupported\"",
+"methods": [
+  {
+ameter name": "文本系列数据""method name": "提示框触发类型",
+ameter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型.",
+ameter name": "文本系列数据""type": "property setter",
+ameter name": "文本系列数据""parameters": [
+   {
+"parameter name": "触发类型",
+"comment": "提供提示框触发类型常量",
+"data type": "提示框触发类型",
+"@默认值": "提示框触发类型.数据项图形触发"
+   }
+ameter name": "文本系列数据"]
+  },
+  {
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型.""method name": "显示标签",
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型.""comment": "是否显示数据的文字标签,在系列创建前有效.",
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型.""type": "property setter",
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型.""parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型."]
+  },
+  {
+comment": "提供提示框触发类型常量""method name": "玫瑰图",
+comment": "提供提示框触发类型常量""comment": "饼图是否展示成南丁格尔玫瑰图,通过半径区分数据大小.在系列创建前设置有效",
+comment": "提供提示框触发类型常量""type": "property setter",
+comment": "提供提示框触发类型常量""parameters": [
+   {
+"parameter name": "是否为玫瑰图",
+"comment": "真为开启",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "提供提示框触发类型常量"]
+  }
+]
+ },
+ {
+ent": "提供提示框触发类型常量""method name": "玫瑰图""class name": "EC雷达图",
+ent": "提供提示框触发类型常量""method name": "玫瑰图""comment": "Echarts雷达图组件",
+ent": "提供提示框触发类型常量""method name": "玫瑰图""base class": "EC基础图表",
+ent": "提供提示框触发类型常量""method name": "玫瑰图""@文档": "\"category = \\\"图表控件\\\"\"",
+ent": "提供提示框触发类型常量""method name": "玫瑰图""@视窗.窗口组件": "\"icon=\\\"icon\\\\雷达图.bmp\\\"\\r\\ndefault_size = \\\"240, 200\\\"\\r\\npreview_unsupported\"",
+ent": "提供提示框触发类型常量""method name": "玫瑰图""methods": [
+  {
+}"method name": "显示标签",
+}"comment": "是否显示数据的文字标签,在系列创建前有效.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+"method name": "提示框触发类型",
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "触发类型",
+"data type": "提示框触发类型",
+"@默认值": "提示框触发类型.数据项图形触发"
+   }
+]
+  }
+ent": "提供提示框触发类型常量""method name": "玫瑰图"]
+ },
+ {
+@默认值": "提示框触发类型.数据项图形触发""class name": "EC漏斗图",
+@默认值": "提示框触发类型.数据项图形触发""comment": "Echarts漏斗图组件",
+@默认值": "提示框触发类型.数据项图形触发""base class": "EC基础图表",
+@默认值": "提示框触发类型.数据项图形触发""@文档": "\"category = \\\"图表控件\\\"\"",
+@默认值": "提示框触发类型.数据项图形触发""@视窗.窗口组件": "\"icon=\\\"icon\\\\漏斗图.bmp\\\"\\r\\ndefault_size = \\\"240, 200\\\"\\r\\npreview_unsupported\"",
+@默认值": "提示框触发类型.数据项图形触发""methods": [
+  {
+
+"method name": "显示标签",
+
+"comment": "是否显示数据的文字标签,在系列创建前有效.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型.""method name": "内部显示标签",
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型.""comment": "是否显示数据图形的内部文字标签,在系列创建前有效.",
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型.""type": "property setter",
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型.""parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为内部显示,假为外部(默认右侧)显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+meter name": "文本系列数据""comment": "鼠标动到数据图形上时,触发显示提示框的类型."]
+  },
+  {
+
+"method name": "提示框触发类型",
+
+"comment": "鼠标动到数据图形上时,触发显示提示框的类型.",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "触发类型",
+"comment": "提供提示框触发类型常量",
+"data type": "提示框触发类型",
+"@默认值": "提示框触发类型.数据项图形触发"
+   }
+
+]
+  }
+@默认值": "提示框触发类型.数据项图形触发"]
+ },
+ {
+ameter name": "是否显示""class name": "EC仪表盘",
+ameter name": "是否显示""comment": "Echarts仪表盘组件",
+ameter name": "是否显示""base class": "EC基础图表",
+ameter name": "是否显示""@文档": "\"category = \\\"图表控件\\\"\"",
+ameter name": "是否显示""@视窗.窗口组件": "\"icon=\\\"icon\\\\仪表盘.bmp\\\"\\r\\ndefault_size = \\\"240, 200\\\"\\r\\npreview_unsupported\"",
+ameter name": "是否显示""methods": [
+  {
+data type": "提示框触发类型""method name": "显示进度条",
+data type": "提示框触发类型""comment": "是否显示进度条,在系列创建设置前有效.",
+data type": "提示框触发类型""type": "property setter",
+data type": "提示框触发类型""parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "提示框触发类型"]
+  },
+  {
+data type": "逻辑型""method name": "显示指针",
+data type": "逻辑型""comment": "是否显示指针在系列创建设置前有效.",
+data type": "逻辑型""type": "property setter",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "是否显示",
+"comment": "真为显示",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "逻辑型"]
+  }
+ameter name": "是否显示"]
+ },
+ {
+ta type": "提示框触发类型"]"class name": "EC_K线图",
+ta type": "提示框触发类型"]"comment": "EchartsK线图组件",
+ta type": "提示框触发类型"]"base class": "直角坐标系图表基础类",
+ta type": "提示框触发类型"]"@文档": "\"category = \\\"图表控件\\\"\"",
+ta type": "提示框触发类型"]"@视窗.窗口组件": "\"icon=\\\"icon\\\\K线图.bmp\\\"\\r\\ndefault_size = \\\"240, 200\\\"\\r\\npreview_unsupported\"",
+ta type": "提示框触发类型"]"methods": [
+  {
+进度条,在系列创建设置前有效."method name": "阳线颜色",
+进度条,在系列创建设置前有效."comment": "K线图阳线图形颜色,即涨,在系列创建前设置有效.",
+进度条,在系列创建设置前有效."type": "property setter",
+进度条,在系列创建设置前有效."parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".\n也可以使用十六进制格式,比如 '#ccc' 设置为\"null\"表示空.",
+"data type": "文本型",
+"@默认值": "\"#c23531\""
+   }
+进度条,在系列创建设置前有效.]
+  },
+  {
+进度条,在系列创建设置前有效."method name": "阴线颜色",
+进度条,在系列创建设置前有效."comment": "K线图阴线图形颜色,即跌.在系列创建前设置有效.",
+进度条,在系列创建设置前有效."type": "property setter",
+进度条,在系列创建设置前有效."parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".\n也可以使用十六进制格式,比如 '#ccc' 设置为\"null\"表示空.",
+"data type": "文本型",
+"@默认值": "\"#314656\""
+   }
+进度条,在系列创建设置前有效.]
+  },
+  {
+显示,假为外部(默认右侧)显示"method name": "阳线边框颜色",
+显示,假为外部(默认右侧)显示"comment": "K线图阳线图形描边颜色,在系列创建前设置有效.",
+显示,假为外部(默认右侧)显示"type": "property setter",
+显示,假为外部(默认右侧)显示"parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".\n也可以使用十六进制格式,比如 '#ccc' ",
+"data type": "文本型",
+"@默认值": "\"#c23531\""
+   }
+显示,假为外部(默认右侧)显示]
+  },
+  {
+显示,假为外部(默认右侧)显示"method name": "阴线边框颜色",
+显示,假为外部(默认右侧)显示"comment": "K线图阴线图形描边颜色,在系列创建前设置有效.",
+显示,假为外部(默认右侧)显示"type": "property setter",
+显示,假为外部(默认右侧)显示"parameters": [
+   {
+"parameter name": "颜色值文本",
+"comment": "颜色可以使用 RGB 表示,比如\"rgb(128, 128, 128)\" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 \"rgba(128, 128, 128, 0.5)\".\n也可以使用十六进制格式,比如 '#ccc' ",
+"data type": "文本型",
+"@默认值": "\"#314656\""
+   }
+显示,假为外部(默认右侧)显示]
+  }
+ta type": "提示框触发类型"]]
+ }
+使用 RGB 表示,比如"rgb(128, 128, 128)" ,如果想要加上 alpha 通道,可以使用 RGBA,比如 "rgba(128, 128, 128, 0.5)".]
+}

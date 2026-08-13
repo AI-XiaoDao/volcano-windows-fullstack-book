@@ -1,0 +1,1632 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"仰望模块".
+
+{
+问本程序中的接口需要引用模块"仰望模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"仰望模块"."package name": "火山.仰望",
+问本程序中的接口需要引用模块"仰望模块"."@文档": "\"category = \\\"进程权限库\\\"\"",
+问本程序中的接口需要引用模块"仰望模块"."classes": [
+ {
+中的接口需要引用模块"仰望模块"."package name": "火山.仰望""class name": "互斥体类_",
+中的接口需要引用模块"仰望模块"."package name": "火山.仰望""@文档": "\"category = \\\"进程权限库.互斥体\\\"\"",
+中的接口需要引用模块"仰望模块"."package name": "火山.仰望""methods": [
+  {
+的接口需要引用模块"仰望模块"."package name": "火山.仰望""methods": [
+"method name": "关闭互斥体_路径",
+的接口需要引用模块"仰望模块"."package name": "火山.仰望""methods": [
+"comment": "同时会运行该程序",
+的接口需要引用模块"仰望模块"."package name": "火山.仰望""methods": [
+"data type": "逻辑型",
+的接口需要引用模块"仰望模块"."package name": "火山.仰望""methods": [
+"parameters": [
+   {
+"parameter name": "程序路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "互斥体名称",
+"data type": "文本数组类"
+   }
+的接口需要引用模块"仰望模块"."package name": "火山.仰望""methods": [
+]
+  },
+  {
+
+"method name": "关闭互斥体_ID",
+
+"comment": "需要手动运行程序后再执行本命令",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "互斥体名称",
+"data type": "文本数组类"
+   }
+
+]
+  }
+中的接口需要引用模块"仰望模块"."package name": "火山.仰望"]
+ },
+ {
+"class name": "互斥体类2_",
+"@文档": "\"category = \\\"进程权限库.互斥体2\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+"method name": "互斥_关闭互斥体运行程序",
+"static": true,
+"data type": "逻辑型",
+"@视窗.外部头文件": "\"iostream\"",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "程序路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "互斥体名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "运行数量",
+"data type": "整数",
+"@默认值": "2"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "进程注入类_",
+"@文档": "\"category = \\\"进程权限库.进程注入\\\"\"",
+"@视窗.外部头文件": "\"<TlHelp32.h>\"",
+"methods": [
+  {
+"method name": "注入1_",
+"comment": "支持32位、64位。调用本命令的程序位数必须与DLL一致",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "DLL文件名",
+"comment": "完整来源路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "注入2_",
+"comment": "支持32位、64位。调用本命令的程序位数必须与DLL一致",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "DLL文件名",
+"comment": "完整来源路径",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "注入3_",
+
+"comment": "支持32位、64位。调用本命令的程序位数必须与DLL一致",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "DLL文件名",
+"comment": "完整来源路径",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "卸载注入1_",
+}"comment": "FreeLibrary\n支持32位、64位。调用本命令的程序位数必须与DLL一致",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "DLL文件名",
+"comment": "完整来源路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "卸载注入2_",
+
+"comment": "FreeLibraryAndExitThread\n支持32位、64位。调用本命令的程序位数必须与DLL一致",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "DLL文件名",
+"comment": "完整来源路径",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "进程注入类2_",
+"comment": "不落地注入",
+"@文档": "\"category = \\\"进程权限库.进程注入\\\"\"",
+"methods": [
+  {
+
+"method name": "注入_",
+
+"comment": "64位专用，不落地注入",
+
+"result comment": "返回非0表示成功",
+
+"data type": "变整数",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "DLL数据",
+"comment": "读入文件() 或 视窗文件资源　来加载DLL文件数据",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+ }"method name": "GetExitCodeThread",
+ }"comment": "获取一个已中止线程的退出代码；非零表示成功，零表示失败",
+ }"static": true,
+ }"data type": "整数",
+ }"@输出名": "\"GetExitCodeThread\"",
+ }"@视窗.输入": "\"kernel32.dll\"",
+ }"parameters": [
+   {
+"parameter name": "参_线程句柄",
+"data type": "整数"
+   },
+   {
+"parameter name": "参_退出代码",
+"comment": "请使用：取变量地址(long) 传递进来；long为长整型变量；",
+"data type": "变整数"
+   }
+ }]
+  }
+]
+ },
+ {
+]"class name": "param",
+]"@文档": "\"category = \\\"进程权限库.进程注入.附加类\\\"\"",
+]"variables": [
+  {
+"@文档": "\"category = \\\"进程权限库.进程注入.附加类\\\"\"""variable name": "pFunc",
+"@文档": "\"category = \\\"进程权限库.进程注入.附加类\\\"\"""data type": "变整数"
+  },
+  {
+}"variable name": "Size",
+}"data type": "变整数"
+  },
+  {
+}"variable name": "LdrGetProcedureAddress",
+}"data type": "变整数"
+  },
+  {
+"data type": "变整数""variable name": "NtAllocateVirtualMemory",
+"data type": "变整数""data type": "变整数"
+  },
+  {
+"data type": "变整数""variable name": "LdrLoadDll",
+"data type": "变整数""data type": "变整数"
+  },
+  {
+
+"variable name": "RtlInitAnsiString",
+
+"data type": "变整数"
+  },
+  {
+
+"variable name": "RtlAnsiStringToUnicodeString",
+
+"data type": "变整数"
+  },
+  {
+a type": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString",
+a type": "变整数""variable name": "NtAllocateVirtualMemory""data type": "变整数"
+  },
+  {
+pe": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString""variable name": "LdrUnloadDll",
+pe": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString""data type": "变整数"
+  },
+  {
+e": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString""data type": "变整数""variable name": "NtFreeVirtualMemory",
+e": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString""data type": "变整数""data type": "变整数"
+  }
+]]
+ },
+ {
+e": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString""data type": "变整数""class name": "进程通讯类_",
+e": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString""data type": "变整数""comment": "支持跨程序、跨窗口、跨进程通讯",
+e": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString""data type": "变整数""@文档": "\"category = \\\"进程权限库.进程通讯\\\"\"",
+e": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString""data type": "变整数""methods": [
+  {
+
+"method name": "开启消息等待_",
+
+"comment": "只需开启一次，后台将循环等待新消息，通过“通讯事件”回调取出"
+  },
+  {
+}"method name": "关闭消息等待_"
+  },
+  {
+
+"method name": "释放句柄_"
+  },
+  {
+
+"method name": "置本端名称_",
+
+"comment": "给本端设置一个名称，可用于接收指定通讯内容",
+
+"parameters": [
+   {
+"parameter name": "名称",
+"comment": "例如：程序A",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "发送信息_",
+
+"comment": "发送端不会接收到信息，发送端如要取信息内容，请按以下命令操作;\n请用：取地址内容_()，取文本内容_()，取标记内容_()",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址内容",
+"comment": "提供该消息数据或对象的指针(此参数不支持跨程序间传指针);\n1、直接赋整数值;\n2、取文本指针、写指针处值、取变量地、取对象数据",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "文本内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "字节集内容",
+"comment": "可使用“取对象数据”命令填入本参数　；取出后使用“置对象数据”命令",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "通讯标记",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "接收对象",
+"comment": "通过“置本端名称_”设置，指定名称端才能接收到，例如：命名“程序A”",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "发送信息_同步",
+
+"comment": "发送端不会接收到信息，发送端如要取信息内容，请按以下命令操作;\n请用：取通讯地址内容_()，取通讯文本内容_()，取通讯标记内容_();\n同步发送后，另一端直接执行发送信息即可，此命令处可直接取得返回的信息，不需要经过事件取得",
+
+"result comment": "如果超时，会在“返回的标记内容”中返回“超时”",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "地址内容",
+"comment": "提供该消息数据或对象的指针(此参数不支持跨程序间传指针);\n1、直接赋整数值;\n2、取文本指针、写指针处值、取变量地、取对象数据",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "文本内容",
+"comment": "本项适合用来标记数据类型，或也可以当文本内容项发送",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "字节集内容",
+"comment": "可使用“取对象数据”命令填入本参数　；取出后使用“置对象数据”命令",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "通讯标记",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "接收对象",
+"comment": "通过“置本端名称_”设置，指定名称端才能接收到，例如：命名“程序A”",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的地址内容",
+"data type": "变整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回的文本内容",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "返回的字节集内容",
+"data type": "字节集类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的通讯标记",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "等待时间",
+"comment": "单位：毫秒 ；1000毫秒＝1秒",
+"data type": "整数",
+"@默认值": "2000"
+   }
+
+]
+  },
+  {
+型 = 整数 值 = 32"method name": "取通讯地址内容_",
+型 = 整数 值 = 32"comment": "返回的地址数据可使用：指针到文本、读指针处对象、读指针处值等命令还原数据",
+型 = 整数 值 = 32"data type": "变整数"
+  },
+  {
+
+"method name": "取通讯字节集内容_",
+
+"comment": "返回的地址数据可使用：置对象数据等命令还原数据",
+
+"data type": "字节集类"
+  },
+  {
+comment": "单位：毫秒 ；1000毫秒＝1秒""method name": "取通讯文本内容_",
+comment": "单位：毫秒 ；1000毫秒＝1秒""data type": "文本型"
+  },
+  {
+
+"method name": "取通讯标记内容_",
+
+"data type": "整数"
+  },
+  {
+
+"method name": "通讯事件",
+
+"comment": "需要开启“开启消息等待_”才有事件触发",
+
+"type": "event",
+
+"data type": "整数",
+
+"parameters": [
+   {
+"parameter name": "地址内容",
+"comment": "根据数据或对象的指针，取数据内容；指针到文本、读指针处对象、读指针处值、置对象数据等",
+"data type": "变整数"
+   },
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字节集内容",
+"comment": "可使用“置对象数据”命令",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "通讯标记",
+"data type": "整数"
+   }
+
+]
+  }
+e": "变整数""variable name": "NtAllocateVirtualMemory""variable name": "RtlFreeUnicodeString""data type": "变整数"]
+ },
+ {
+}"class name": "进程模块信息类_",
+}"@文档": "\"category = \\\"进程权限库.进程模块\\\"\"",
+}"@全局类": "真",
+}"methods": [
+  {
+ameter name": "通讯标记""method name": "进程_取所有进程模块",
+ameter name": "通讯标记""comment": "本命令有耗时操作，所以需要将本命令放在线程中执行，以免卡界面",
+ameter name": "通讯标记""static": true,
+ameter name": "通讯标记""data type": "整数",
+ameter name": "通讯标记""@禁止流程检查": "真",
+ameter name": "通讯标记""@视窗.外部头文件": "\"windows.h\\r\\ntlhelp32.h\\r\\npsapi.h\\r\\niostream\\r\\niomanip\\r\\nmap\"",
+ameter name": "通讯标记""@视窗.外部库": "\"psapi.lib\"",
+ameter name": "通讯标记""parameters": [
+   {
+"parameter name": "返回的信息组",
+"data type": "进程信息组"
+   }
+ameter name": "通讯标记"]
+  }
+}]
+ },
+ {
+"class name": "进程信息组",
+"base class": "对象数组模板类",
+"@输出到部件": "假",
+"@模板实现类": "\"进程信息类\""
+ },
+ {
+"class name": "进程信息类",
+"variables": [
+  {
+
+"variable name": "进程ID",
+
+"data type": "整数"
+  },
+  {
+}"variable name": "进程名",
+}"data type": "文本型"
+  },
+  {
+
+"variable name": "进程路径",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "DLL名称",
+
+"data type": "文本数组类"
+  },
+  {
+
+"variable name": "DLL路径",
+
+"data type": "文本数组类"
+  }
+]
+ },
+ {
+"class name": "进程提权类_",
+"@文档": "\"category = \\\"进程权限库.进程提权\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "进程_进程提权",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"comment": "留空表示当前进程",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "权限级别",
+"comment": "默认为提升程序调试权限",
+"data type": "权限常量类",
+"@默认值": "权限常量类.调试程序"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "权限常量类",
+"@文档": "\"category = \\\"进程权限库.进程提权.附加类\\\"\"",
+"@常量类": "文本型",
+"constants": [
+  {
+ss name": "权限常量类""constant name": "未经请求的输入",
+ss name": "权限常量类""comment": "允许从终端设备读取未经请求的输入",
+ss name": "权限常量类""initial value": "\"SeUnsolicitedInputPrivilege\""
+  },
+  {
+ss name": "权限常量类""constant name": "创建令牌对象",
+ss name": "权限常量类""comment": "允许创建主令牌，该令牌可以在进程创建访问令牌时，用于获取任何本地资源的访问权限",
+ss name": "权限常量类""initial value": "\"SeCreateTokenPrivilege\""
+  },
+  {
+
+"constant name": "替换进程级令牌",
+
+"comment": "允许在进程中分配主令牌",
+
+"initial value": "\"SeAssignPrimaryTokenPrivilege\""
+  },
+  {
+
+"constant name": "锁定内存页",
+
+"comment": "允许进程将数据保持在物理内存中，这样可防止系统将数据分页到磁盘上的虚拟内存中",
+
+"initial value": "\"SeLockMemoryPrivilege\""
+  },
+  {
+
+"constant name": "为进程调整内存配额",
+
+"comment": "允许更改进程可消耗的最大内存",
+
+"initial value": "\"SeIncreaseQuotaPrivilege\""
+  },
+  {
+"data type": "逻辑型""constant name": "将工作站添加到域",
+"data type": "逻辑型""comment": "允许将工作站添加到域",
+"data type": "逻辑型""initial value": "\"SeMachineAccountPrivilege\""
+  },
+  {
+ame": "权限常量类""constant name": "创建令牌对象""constant name": "以操作系统方式执行",
+ame": "权限常量类""constant name": "创建令牌对象""comment": "允许某个进程模拟任意用户而无须进行身份验证，因此该进程可以与该用户一样获得对本地资源的访问权限",
+ame": "权限常量类""constant name": "创建令牌对象""initial value": "\"SeTcbPrivilege\""
+  },
+  {
+
+"constant name": "管理审核和安全日志",
+
+"comment": "允许指定文件，Active Directory对象和注册表项之类的单个资源的对象访问审核选项，还可以查看和清除安全日志",
+
+"initial value": "\"SeSecurityPrivilege\""
+  },
+  {
+
+"constant name": "取得文件或其他对象的所有权",
+
+"comment": "允许取得系统中任何安全对象(包括Active Directory对象、文件和文件夹、打印机、注册表项、进程以及线程)的所有权",
+
+"initial value": "\"SeTakeOwnershipPrivilege\""
+  },
+  {
+型 = 整数 值 = 32"constant name": "获取同一会话中另一个用户的模拟令牌",
+型 = 整数 值 = 32"comment": "获取同一个会话中以交互方式登录的其他用户的模拟令牌",
+型 = 整数 值 = 32"initial value": "\"SeDelegateSessionUserImpersonatePrivilege\""
+  },
+  {
+ame": "权限常量类""constant name": "创建令牌对象""constant name": "加载和卸载设备驱动程序",
+ame": "权限常量类""constant name": "创建令牌对象""comment": "允许安装和卸载驱动程序",
+ame": "权限常量类""constant name": "创建令牌对象""initial value": "\"SeLoadDriverPrivilege\""
+  },
+  {
+me": "权限常量类""constant name": "创建令牌对象""initial value": "\"SeLoadDriverPrivilege\"""constant name": "配置文件系统性能",
+me": "权限常量类""constant name": "创建令牌对象""initial value": "\"SeLoadDriverPrivilege\"""comment": "允许使用性能监视工具来监视整个系统的性能信息",
+me": "权限常量类""constant name": "创建令牌对象""initial value": "\"SeLoadDriverPrivilege\"""initial value": "\"SeSystemProfilePrivilege\""
+  },
+  {
+
+"constant name": "更改系统时间",
+
+"comment": "允许更改计算机内部时钟上的日期和时间",
+
+"initial value": "\"SeSystemtimePrivilege\""
+  },
+  {
+
+"constant name": "配置文件单一进程",
+
+"comment": "允许使用性能监视工具来监视非系统进程的性能",
+
+"initial value": "\"SeProfileSingleProcessPrivilege\""
+  },
+  {
+
+"constant name": "提高计划优先级",
+
+"comment": "允许提高分配给其他进程的执行优先级",
+
+"initial value": "\"SeIncreaseBasePriorityPrivilege\""
+  },
+  {
+ame": "权限常量类""constant name": "创建令牌对象""constant name": "创建页面文件",
+ame": "权限常量类""constant name": "创建令牌对象""comment": "允许创建页面文件和更改页面文件的大小",
+ame": "权限常量类""constant name": "创建令牌对象""initial value": "\"SeCreatePagefilePrivilege\""
+  },
+  {
+
+"constant name": "创建永久共享对象",
+
+"comment": "允许利用对象管理器创建目录对象",
+
+"initial value": "\"SeCreatePermanentPrivilege\""
+  },
+  {
+
+"constant name": "备份文件和目录",
+
+"comment": "允许执行备份文件和目录",
+
+"initial value": "\"SeBackupPrivilege\""
+  },
+  {
+
+"constant name": "还原文件和目录",
+
+"comment": "允许执行还原文件和目录",
+
+"initial value": "\"SeRestorePrivilege\""
+  },
+  {
+RestorePrivilege\""constant name": "关闭系统",
+RestorePrivilege\""comment": "允许关闭本地的计算机",
+RestorePrivilege\""initial value": "\"SeShutdownPrivilege\""
+  },
+  {
+RestorePrivilege\""constant name": "调试程序",
+RestorePrivilege\""comment": "允许调试程序调试和调整任何进程的内存，忽略进程的DACL",
+RestorePrivilege\""initial value": "\"SeDebugPrivilege\""
+  },
+  {
+
+"constant name": "生成安全审核",
+
+"comment": "允许进程将项目添加到安全日志中",
+
+"initial value": "\"SeAuditPrivilege\""
+  },
+  {
+"initial value": "\"SeAuditPrivilege\"""constant name": "修改固件环境值",
+"initial value": "\"SeAuditPrivilege\"""comment": "允许修改固件环境值，固件环境变量是在非基于x86的计算机的稳定RAM中存储的设置，该设置的效果依赖于处理器",
+"initial value": "\"SeAuditPrivilege\"""initial value": "\"SeSystemEnvironmentPrivilege\""
+  },
+  {
+"initial value": "\"SeAuditPrivilege\"""constant name": "绕过遍历检查",
+"initial value": "\"SeAuditPrivilege\"""comment": "即使在不具有对已遍历目录的权限时也可以遍历目录树，此权限不允许用户列出目录的内容，仅允许遍历目录",
+"initial value": "\"SeAuditPrivilege\"""initial value": "\"SeChangeNotifyPrivilege\""
+  },
+  {
+initial value": "\"SeAuditPrivilege\"""initial value": "\"SeChangeNotifyPrivilege\"""constant name": "从远程系统强制关机",
+initial value": "\"SeAuditPrivilege\"""initial value": "\"SeChangeNotifyPrivilege\"""comment": "允许从网络上的远程位置关闭计算机",
+initial value": "\"SeAuditPrivilege\"""initial value": "\"SeChangeNotifyPrivilege\"""initial value": "\"SeRemoteShutdownPrivilege\""
+  },
+  {
+
+"constant name": "从扩展坞上移除计算机",
+
+"comment": "允许无需登录而从其扩展坞上移除便携式计算机",
+
+"initial value": "\"SeUndockPrivilege\""
+  },
+  {
+
+"constant name": "同步目录服务数据",
+
+"comment": "允许同步所有目录服务数据，这也称为Active Directory同步",
+
+"initial value": "\"SeSyncAgentPrivilege\""
+  },
+  {
+}"constant name": "信任计算机和用户帐户可以执行委派",
+}"comment": "允许将用户或计算机对象上设置\"已为委派信任\"设置",
+}"initial value": "\"SeEnableDelegationPrivilege\""
+  },
+  {
+}"constant name": "执行卷维护任务",
+}"comment": "允许在卷上运行维护任务，如远程碎片整理",
+}"initial value": "\"SeManageVolumePrivilege\""
+  },
+  {
+"initial value": "\"SeManageVolumePrivilege\"""constant name": "身份验证后模拟客户端",
+"initial value": "\"SeManageVolumePrivilege\"""comment": "允许在身份验证后模拟客户端",
+"initial value": "\"SeManageVolumePrivilege\"""initial value": "\"SeImpersonatePrivilege\""
+  },
+  {
+
+"constant name": "创建全局对象",
+
+"comment": "允许创建所有会话都可以使用的全局对象",
+
+"initial value": "\"SeCreateGlobalPrivilege\""
+  },
+  {
+nstant name": "创建全局对象""constant name": "作为受信任的呼叫方访问凭据管理器",
+nstant name": "创建全局对象""comment": "允许以受信任的呼叫方访问凭据管理器",
+nstant name": "创建全局对象""initial value": "\"SeTrustedCredManAccessPrivilege\""
+  },
+  {
+stant name": "创建全局对象""initial value": "\"SeTrustedCredManAccessPrivilege\"""constant name": "修改对象标签",
+stant name": "创建全局对象""initial value": "\"SeTrustedCredManAccessPrivilege\"""comment": "允许修改对象(例如文件、注册表项或其他用户所拥有的进程)的完整性标签",
+stant name": "创建全局对象""initial value": "\"SeTrustedCredManAccessPrivilege\"""initial value": "\"SeRelabelPrivilege\""
+  },
+  {
+nstant name": "创建全局对象""constant name": "增加进程工作集",
+nstant name": "创建全局对象""comment": "允许增加或减小进程的工作集大小",
+nstant name": "创建全局对象""initial value": "\"SeIncreaseWorkingSetPrivilege\""
+  },
+  {
+
+"constant name": "更改时区",
+
+"comment": "允许更改计算机用于显示本地时间(计算机的系统时间加上时区偏移)的时区",
+
+"initial value": "\"SeTimeZonePrivilege\""
+  },
+  {
+
+"constant name": "创建符号链接",
+
+"comment": "允许创建符号链接",
+
+"initial value": "\"SeCreateSymbolicLinkPrivilege\""
+  }
+]
+ },
+ {
+"class name": "进程优先级类_",
+"@文档": "\"category = \\\"进程权限库.进程优先级\\\"\"",
+"@全局类": "真",
+"methods": [
+  {
+nstant name": "更改时区""method name": "进程_取进程优先级",
+nstant name": "更改时区""result comment": "0、最高 1、高于标准 2、实时 3、标准 4、低于标准 5、低 -1、表示无权限访问进程",
+nstant name": "更改时区""static": true,
+nstant name": "更改时区""data type": "整数",
+nstant name": "更改时区""@禁止流程检查": "真",
+nstant name": "更改时区""parameters": [
+   {
+"parameter name": "进程ID",
+"comment": "默认0则取自身进程",
+"data type": "整数",
+"@默认值": "0"
+   }
+nstant name": "更改时区"]
+  },
+  {
+
+"method name": "进程_置进程优先级",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"comment": "默认0则取自身进程",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "进程级别",
+"comment": "0、最高 1、高于标准 2、实时 3、标准 4、低于标准 5、低",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "进程类_",
+"@文档": "\"category = \\\"进程权限库.进程操作\\\"\"",
+"@全局类": "真",
+"@视窗.外部头文件": "\"<iostream>\\r\\n<TlHelp32.h>\"",
+"@视窗.外部头文件": "\"cmd\\\\Processes.h\"",
+"@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"",
+"methods": [
+  {
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""method name": "进程_创建进程",
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""result comment": "返回进程ID",
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""static": true,
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""data type": "整数",
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""@禁止流程检查": "真",
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""parameters": [
+   {
+"parameter name": "程序路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "命令行",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否等待",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "显示方式",
+"comment": "2、隐藏　5、显示",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "运行目录",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\""]
+  },
+  {
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""method name": "进程_创建进程_管理员",
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""comment": "在Vista/Win7及更高系统上,以管理员模式创建进程;\n注意：请勿放在“窗口创建完毕”及“首次被激活”死循环中",
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""static": true,
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""data type": "逻辑型",
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""@禁止流程检查": "真",
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\"""parameters": [
+   {
+"parameter name": "进程路径",
+"comment": "留空默认启动自身进程",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "运行参数",
+"comment": "命令行参数",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+@视窗.外部源文件": "\"cmd\\\\Processes.cpp\""]
+  },
+  {
+
+"method name": "进程_枚举进程",
+
+"result comment": "返回进程数量",
+
+"static": true,
+
+"data type": "整数",
+
+"@视窗.外部头文件": "\"<AclAPI.h>\\r\\n<TlHelp32.h>\\r\\n<Psapi.h>\"",
+
+"@视窗.外部库": "\"AdvAPI32.Lib\\r\\nPsapi.lib\"",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "返回的进程名称",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的进程ID",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否获取程序路径",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "返回的程序路径",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "指定进程名",
+"comment": "指定枚举某进程，不区分大小写",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+
+"method name": "进程_枚举进程模块",
+
+"comment": "先执行“进程提权_”，否则一些系统进程无法获取\n获取某个进程所有模块的基本信息",
+
+"result comment": "成功返回进程的模块数量",
+
+"static": true,
+
+"data type": "整数",
+
+"@视窗.外部头文件": "\"tlhelp32.h\n\"",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"comment": "所欲取模块信息的进程ID,0为当前进程",
+"data type": "整数",
+"@输出名": "\"nPID\""
+   },
+   {
+"parameter name": "返回的模块基址",
+"data type": "变整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的模块大小",
+"data type": "整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的模块句柄",
+"data type": "变整数数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的模块名称",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "返回的模块路径",
+"data type": "文本数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_结束进程_名称",
+
+"comment": "结束单个进程",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_结束进程_ID",
+
+"comment": "结束单个进程",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "进程_结束进程_批量",
+}"comment": "结束多个同名进程",
+}"static": true,
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "进程_关闭进程",
+
+"comment": "关闭进程句柄",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_取进程路径_名称",
+
+"comment": "返回指定进程路径",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "进程_取进程路径_ID",
+}"comment": "返回指定进程路径",
+}"static": true,
+}"data type": "文本型",
+}"@视窗.外部头文件": "\"<Psapi.h>\"",
+}"@视窗.外部库": "\"Psapi.lib\"",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数",
+"@默认值": "0"
+   }
+}]
+  },
+  {
+"method name": "进程_取进程线程数",
+"result comment": "成功返回进程的线程数量.",
+"static": true,
+"data type": "整数",
+"@视窗.外部头文件": "\"tlhelp32.h\n\"",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "进程ID",
+"comment": "所欲取线程数量的进程ID",
+"data type": "整数",
+"@输出名": "\"nProcessID\""
+   }
+]
+  },
+  {
+@默认值": "0""method name": "进程_打开进程_ID",
+@默认值": "0""comment": "返回进程句柄",
+@默认值": "0""static": true,
+@默认值": "0""data type": "变整数",
+@默认值": "0""@禁止流程检查": "真",
+@默认值": "0""parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   }
+@默认值": "0"]
+  },
+  {
+"method name": "进程_打开进程_句柄",
+"comment": "返回进程句柄",
+"static": true,
+"data type": "变整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+"method name": "进程_取进程句柄数",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   }
+]
+  },
+  {
+"comment": "返回指定进程路径""method name": "进程_取自身进程句柄",
+"comment": "返回指定进程路径""static": true,
+"comment": "返回指定进程路径""data type": "变整数",
+"comment": "返回指定进程路径""@禁止流程检查": "真"
+  },
+  {
+}"method name": "进程_取指定进程句柄",
+}"static": true,
+}"data type": "变整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "进程_取自身进程ID",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+ameter name": "返回的程序路径""method name": "进程_取指定进程名称",
+ameter name": "返回的程序路径""comment": "进程ID取进程名",
+ameter name": "返回的程序路径""static": true,
+ameter name": "返回的程序路径""data type": "文本型",
+ameter name": "返回的程序路径""@禁止流程检查": "真",
+ameter name": "返回的程序路径""parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数",
+"@输出名": "\"nProcessID\""
+   }
+ameter name": "返回的程序路径"]
+  },
+  {
+meter name": "返回的程序路径""static": true"method name": "进程_取指定进程ID",
+meter name": "返回的程序路径""static": true"comment": "进程名取进行ID",
+meter name": "返回的程序路径""static": true"static": true,
+meter name": "返回的程序路径""static": true"data type": "整数",
+meter name": "返回的程序路径""static": true"@禁止流程检查": "真",
+meter name": "返回的程序路径""static": true"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+meter name": "返回的程序路径""static": true]
+  },
+  {
+
+"method name": "进程_取指定进程ID_批量",
+
+"comment": "取相同名称进程",
+
+"static": true,
+
+"data type": "整数",
+
+"@视窗.外部头文件": "\"<TlHelp32.h>\\r\\n<iphlpapi.h>\"",
+
+"@视窗.外部库": "\"Iphlpapi.lib\"",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回的ID组",
+"data type": "整数数组类"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_端口取进程ID",
+
+"comment": "通过端口取出进程PID",
+
+"static": true,
+
+"data type": "整数",
+
+"@视窗.外部头文件": "\"<iphlpapi.h>\"",
+
+"@视窗.外部库": "\"Iphlpapi.lib\"",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "端口",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_进程ID取端口",
+
+"comment": "通过进程PID取出端口",
+
+"static": true,
+
+"data type": "整数",
+
+"@视窗.外部头文件": "\"<iphlpapi.h>\"",
+
+"@视窗.外部库": "\"Iphlpapi.lib\"",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "PID",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "进程_窗口句柄取进程路径",
+}"comment": "通过窗口句柄取程序路径",
+}"static": true,
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"@视窗.外部头文件": "\"<Psapi.h>\"",
+}"@视窗.外部库": "\"Psapi.lib\"",
+}"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+
+"method name": "进程_取指定进程窗口句柄_进程名",
+
+"comment": "通过进程名取窗口句柄",
+
+"static": true,
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "窗口标题",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否模糊",
+"comment": "配合参数二使用",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否获取首句柄",
+"comment": "当参数二“窗口标题”为空时，本参数设置生效。不保证是主窗口句柄。真：获取首  假：获取尾",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "返回的窗口句柄组",
+"comment": "所有获取到的窗口句柄都保存在此数组中，并返回找到的第一个窗口句柄",
+"data type": "变整数数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_取指定进程窗口句柄_进程ID",
+
+"comment": "通过进程ID取窗口句柄",
+
+"result comment": "成功返回找到的第一个窗口句柄，不能保证是主窗口句柄，失败返回0",
+
+"static": true,
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"comment": "0为当前进程",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+}"method name": "进程_取指定进程窗口句柄2_进程名",
+}"comment": "通过进程名取窗口句柄",
+}"static": true,
+}"data type": "变整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+}"method name": "进程_取指定进程窗口句柄2_进程ID",
+}"comment": "通过进程ID窗口句柄",
+}"static": true,
+}"data type": "变整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "等待时限",
+"data type": "整数",
+"@默认值": "5000"
+   }
+}]
+  },
+  {
+
+"method name": "进程_取指定进程窗口句柄3_进程ID",
+
+"comment": "通过进程ID取窗口句柄",
+
+"result comment": "成功返回找到的第一个窗口句柄，不能保证是主窗口句柄，失败返回0",
+
+"static": true,
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"comment": "0为当前进程",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "返回的窗口句柄组",
+"comment": "所有获取到的窗口句柄都保存在此数组中，并返回找到的第一个窗口句柄",
+"data type": "变整数数组类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_窗口句柄取进程ID",
+
+"comment": "取出指定窗口句柄的进程ID",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_窗口句柄取线程ID",
+
+"comment": "取出指定窗口句柄的线程ID",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_进程是否存在",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "进程名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "进程_取远程函数地址",
+
+"result comment": "返回进程中指定DLL函数基址",
+
+"static": true,
+
+"data type": "变整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "DLL文件名",
+"comment": "完整来源路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "DLL函数输出名",
+"comment": "即DLL中，@输出名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "进程_取远程模块句柄",
+}"result comment": "返回进程中DLL模块句柄",
+}"static": true,
+}"data type": "变整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "DLL文件名",
+"comment": "完整来源路径",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "进程_取进程模块基址",
+"static": true,
+"data type": "变整数",
+"@视窗.外部头文件": "\"TlHelp32.h\"",
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数"
+   },
+   {
+"parameter name": "模块名",
+"data type": "文本型"
+   }
+]
+  }
+]
+ },
+ {
+"class name": "系统级权限类_",
+"@文档": "\"category = \\\"进程权限库.系统权限\\\"\"",
+"@视窗.外部头文件": "\"<TlHelp32.h>\"",
+"@全局类": "真",
+"methods": [
+  {
+@文档": "\"category = \\\"进程权限库.系统权限\\\"\"""method name": "进程_以系统级权限运行程序",
+@文档": "\"category = \\\"进程权限库.系统权限\\\"\"""comment": "将程序进程权限提升至SYSTEM级",
+@文档": "\"category = \\\"进程权限库.系统权限\\\"\"""static": true,
+@文档": "\"category = \\\"进程权限库.系统权限\\\"\"""data type": "逻辑型",
+@文档": "\"category = \\\"进程权限库.系统权限\\\"\"""parameters": [
+   {
+"parameter name": "程序路径",
+"comment": "默认提权自身  ",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "隐藏窗口运行",
+"comment": "默认不隐藏窗口",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+@文档": "\"category = \\\"进程权限库.系统权限\\\"\""]
+  },
+  {
+
+"method name": "进程_取程序运行权限级别",
+
+"comment": "获取进程当前UAC的执行权限级别。0、低级 1、中级 2、高级 3、系统级 -1、未知",
+
+"static": true,
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "进程ID",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  }
+]
+ }
+问本程序中的接口需要引用模块"仰望模块".]
+}

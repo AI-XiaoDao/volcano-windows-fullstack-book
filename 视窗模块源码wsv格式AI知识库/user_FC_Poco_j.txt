@@ -1,0 +1,359 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.程序",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"开源库.POCO\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部头文件": "\"poco\\\\pocoTool.h\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.win32": "\"poco\\\\pocoToolx86.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.win32": "\"poco\\\\pocoToolx86.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.外部库.x64": "\"poco\\\\pocoToolx64.lib\"",
+问本程序中的接口需要引用模块"原创软件模块"."@视窗.附属文件.x64": "\"poco\\\\pocoToolx64.dll\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "强大网页套接字数据类型_常量类",
+"comment": "#define PocoTool_Send_Type_Bin  2\n#define PocoTool_Send_Type_Text  1\n#define PocoTool_Send_Type_Ping  9\n#define PocoTool_Send_Type_Pong  10\n#define PocoTool_Send_Type_Close 8\n#define PocoTool_Send_Type_BITMASK 15",
+"constants": [
+  {
+䭠ꡮŝ"constant name": "字节集",
+䭠ꡮŝ"data type": "整数",
+䭠ꡮŝ"initial value": "@PocoTool_Send_Type_Bin"
+  },
+  {
+}"constant name": "文本",
+}"data type": "整数",
+}"initial value": "@PocoTool_Send_Type_Text"
+  },
+  {
+到的数据长度""constant name": "Ping",
+到的数据长度""data type": "整数",
+到的数据长度""initial value": "@PocoTool_Send_Type_Ping"
+  },
+  {
+断开指令给服务器"constant name": "Pong",
+断开指令给服务器"data type": "整数",
+断开指令给服务器"initial value": "@PocoTool_Send_Type_Pong"
+  },
+  {
+䔀ꡮŝ"constant name": "断开",
+䔀ꡮŝ"data type": "整数",
+䔀ꡮŝ"initial value": "@PocoTool_Send_Type_Close"
+  },
+  {
+ꡮŝ"data type": "整数""constant name": "掩码",
+ꡮŝ"data type": "整数""data type": "整数",
+ꡮŝ"data type": "整数""initial value": "@PocoTool_Send_Type_BITMASK"
+  }
+]
+ },
+ {
+"class name": "强大网页套接字查询类型_常量类",
+"constants": [
+  {
+        "constant name": "读",
+        "data type": "整数",
+        "initial value": "@PocoTool_Poll_Read"
+  },
+  {
+constants": [
+"constant name": "写",
+constants": [
+"data type": "整数",
+constants": [
+"initial value": "@PocoTool_Poll_Write"
+  },
+  {
+}"constant name": "错误",
+}"data type": "整数",
+}"initial value": "@PocoTool_Poll_Error"
+  },
+  {
+ "constant name": "读_写_错误",
+ "data type": "整数",
+ "initial value": "7"
+  }
+]
+ },
+ {
+"class name": "强大网页套接字数据类",
+"variables": [
+  {
+"variable name": "数据长度",
+"data type": "整数"
+  },
+  {
+"variable name": "数据类型",
+"data type": "整数"
+  },
+  {
+constants": [
+"variable name": "数据",
+constants": [
+"data type": "字节集类"
+  }
+]
+ },
+ {
+"class name": "强大网页套接字类",
+"methods": [
+  {
+"method name": "置协议头",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "键",
+"data type": "文本型"
+   },
+   {
+"parameter name": "值",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ŝ"data type": "整数""data type": "整数""method name": "置附加数据",
+ŝ"data type": "整数""data type": "整数""@嵌入式方法": "\"\"",
+ŝ"data type": "整数""data type": "整数""parameters": [
+   {
+"parameter name": "附加数据",
+"data type": "变整数"
+   }
+ŝ"data type": "整数""data type": "整数"]
+  },
+  {
+}"method name": "取附加数据",
+}"data type": "变整数",
+}"@禁止流程检查": "真"
+  },
+  {
+ameter name": "附加数据""method name": "置附加数据通过索引",
+ameter name": "附加数据""@嵌入式方法": "\"\"",
+ameter name": "附加数据""parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "附加数据",
+"data type": "变整数"
+   }
+ameter name": "附加数据"]
+  },
+  {
+"method name": "取附加数据通过索引",
+"data type": "变整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "索引",
+"data type": "整数"
+   }
+]
+  },
+  {
+ 整数"method name": "取错误代码",
+ 整数"data type": "整数",
+ 整数"@嵌入式方法": "\"\""
+  },
+  {
+的数据长度""data type": "整数""method name": "取错误信息",
+的数据长度""data type": "整数""data type": "文本型",
+的数据长度""data type": "整数""@嵌入式方法": "\"\""
+  },
+  {
+       "data type": "整数""method name": "置同步模式",
+       "data type": "整数""@嵌入式方法": "\"\"",
+       "data type": "整数""parameters": [
+   {
+"parameter name": "是否同步模式",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+       "data type": "整数"]
+  },
+  {
+eter name": "附加数据"]"method name": "置接收超时",
+eter name": "附加数据"]"@嵌入式方法": "\"\"",
+eter name": "附加数据"]"parameters": [
+   {
+"parameter name": "秒",
+"data type": "整数",
+"@默认值": "2"
+   },
+   {
+"parameter name": "毫秒",
+"data type": "整数",
+"@默认值": "0"
+   }
+eter name": "附加数据"]]
+  },
+  {
+整数"@嵌入式方法": "\"\"""method name": "查询",
+整数"@嵌入式方法": "\"\"""comment": "此函数的主要作用是用来查询是否可读，可写,或者说有错误",
+整数"@嵌入式方法": "\"\"""data type": "逻辑型",
+整数"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+整数"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "查询类型",
+"data type": "整数",
+"@默认值": "强大网页套接字查询类型_常量类.读_写_错误"
+   },
+   {
+"parameter name": "查询等待时间秒",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "查询等待时间毫秒",
+"data type": "整数",
+"@默认值": "30"
+   }
+整数"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "关闭",
+
+"comment": "关闭套接字",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "连接",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "网址",
+"data type": "文本型"
+   },
+   {
+"parameter name": "代理IP",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理端口",
+"data type": "整数",
+"@默认值": "8080"
+   },
+   {
+"parameter name": "代理账号",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "代理密码",
+"data type": "文本型",
+"@默认值": "\"\""
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "发送数据",
+data type": "文本型""result comment": "返回发送了多少个字节",
+data type": "文本型""data type": "整数",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "数据长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "数据类型",
+"comment": "网页套接字数据类型_常量类 中的常量",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否最后一帧",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "文本型"]
+  },
+  {
+ta type": "文本型"]"method name": "发送字节集",
+ta type": "文本型"]"data type": "逻辑型",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否是最后一帧",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ta type": "文本型"]]
+  },
+  {
+ }"method name": "发送文本",
+ }"data type": "逻辑型",
+ }"parameters": [
+   {
+"parameter name": "文本数据",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否是最后一帧",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+}"parameters": [
+"method name": "发送Ping",
+}"parameters": [
+"data type": "逻辑型",
+}"parameters": [
+"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+}"parameters": [
+]
+  },
+  {
+}"method name": "发送Pong",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "要发送的数据",
+"data type": "字节集类"
+   }
+}]
+  },
+  {
+data type": "字节集类""method name": "断开",
+data type": "字节集类""comment": "发送一个断开指令给服务器",
+data type": "字节集类""data type": "逻辑型"
+  },
+  {
+data type": "逻辑型""method name": "接收数据",
+data type": "逻辑型""result comment": "返回收到的数据长度",
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""@禁止流程检查": "真",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "用来保存收到的数据",
+"data type": "强大网页套接字数据类"
+   }
+data type": "逻辑型"]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

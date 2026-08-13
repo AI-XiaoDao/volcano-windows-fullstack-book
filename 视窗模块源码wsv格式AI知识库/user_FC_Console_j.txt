@@ -1,0 +1,273 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.控制台\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "控制台句柄常量",
+"@常量类": "整数",
+"constants": [
+  {
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""constant name": "输入句柄",
+本程序中的接口需要引用模块"原创软件模块"."comment": "本模块来源于网络\n切勿用作非法用途""initial value": "@STD_INPUT_HANDLE"
+  },
+  {
+ 整数"constant name": "输出句柄",
+ 整数"initial value": "@STD_OUTPUT_HANDLE"
+  },
+  {
+}"constant name": "错误句柄",
+}"initial value": "@STD_ERROR_HANDLE"
+  }
+]
+ },
+ {
+"class name": "控制台文本颜色常量",
+"constants": [
+  {
+_OUTPUT_HANDLE"constant name": "前景色_蓝色",
+_OUTPUT_HANDLE"data type": "短整数",
+_OUTPUT_HANDLE"initial value": "@FOREGROUND_BLUE"
+  },
+  {
+    "constant name": "前景色_绿色",
+    "data type": "短整数",
+    "initial value": "@FOREGROUND_GREEN"
+  },
+  {
+
+"constant name": "前景色_红色",
+
+"data type": "短整数",
+
+"initial value": "@FOREGROUND_RED"
+  },
+  {
+   "data type": "短整数""constant name": "背景色_蓝色",
+   "data type": "短整数""data type": "短整数",
+   "data type": "短整数""initial value": "@BACKGROUND_BLUE"
+  },
+  {
+    "constant name": "背景色_绿色",
+    "data type": "短整数",
+    "initial value": "@BACKGROUND_GREEN"
+  },
+  {
+"data type": "短整数""constant name": "背景色_红色",
+"data type": "短整数""data type": "短整数",
+"data type": "短整数""initial value": "@BACKGROUND_RED"
+  }
+]
+ },
+ {
+"class name": "控制台_全局类",
+"methods": [
+  {
+KGROUND_GREEN"method name": "标准输出",
+KGROUND_GREEN"comment": "在标准输出设备或标准错误设备上输出指定的内容.\n注意本方法只能在控制台程序中使用.",
+KGROUND_GREEN"static": true,
+KGROUND_GREEN"@嵌入式方法": "\"\"",
+KGROUND_GREEN"parameters": [
+   {
+"parameter name": "欲输出内容",
+"@匹配类型": "通用基本型"
+   },
+   {
+"parameter name": "输出方向",
+"comment": "提供内容所输出到的设备",
+"data type": "控制台程序输出方向",
+"@默认值": "控制台程序输出方向.标准输出设备"
+   }
+KGROUND_GREEN]
+  },
+  {
+
+"method name": "关闭",
+
+"static": true,
+
+"@嵌入式方法": "\"\""
+  },
+  {
+ss name": "控制台_全局类""method name": "打开",
+ss name": "控制台_全局类""static": true,
+ss name": "控制台_全局类""data type": "逻辑型",
+ss name": "控制台_全局类""@嵌入式方法": "\"\""
+  },
+  {
+GROUND_GREEN"@嵌入式方法": "\"\"""method name": "取输入输出句柄",
+GROUND_GREEN"@嵌入式方法": "\"\"""static": true,
+GROUND_GREEN"@嵌入式方法": "\"\"""data type": "长整数",
+GROUND_GREEN"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+GROUND_GREEN"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "句柄类型",
+"data type": "控制台句柄常量"
+   }
+GROUND_GREEN"@嵌入式方法": "\"\""]
+  },
+  {
+"data type": "短整数""method name": "置文本颜色",
+"data type": "短整数""static": true,
+"data type": "短整数""@嵌入式方法": "\"\"",
+"data type": "短整数""parameters": [
+   {
+"parameter name": "控制台句柄",
+"data type": "长整数"
+   },
+   {
+"parameter name": "颜色",
+"data type": "整数"
+   }
+"data type": "短整数"]
+  },
+  {
+EGROUND_RED"method name": "写出文本",
+EGROUND_RED"static": true,
+EGROUND_RED"parameters": [
+   {
+"parameter name": "控制台句柄",
+"data type": "长整数"
+   },
+   {
+"parameter name": "文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本长度",
+"data type": "整数"
+   }
+EGROUND_RED]
+  },
+  {
+ata type": "短整数"]"method name": "获取文本",
+ata type": "短整数"]"static": true,
+ata type": "短整数"]"data type": "文本型",
+ata type": "短整数"]"@禁止流程检查": "真",
+ata type": "短整数"]"parameters": [
+   {
+"parameter name": "控制台句柄",
+"data type": "长整数"
+   }
+ata type": "短整数"]]
+  },
+  {
+ta type": "短整数"]"static": true"method name": "置标题",
+ta type": "短整数"]"static": true"static": true,
+ta type": "短整数"]"static": true"data type": "逻辑型",
+ta type": "短整数"]"static": true"@嵌入式方法": "\"\"",
+ta type": "短整数"]"static": true"parameters": [
+   {
+"parameter name": "控制台标题",
+"comment": "UNICODE",
+"data type": "文本型"
+   }
+ta type": "短整数"]"static": true]
+  }
+]
+ },
+ {
+"class name": "控制台_类",
+"methods": [
+  {
+
+"method name": "标题",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "标题",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "关闭"
+  },
+  {
+ameter name": "标题""method name": "打开",
+ameter name": "标题""data type": "逻辑型"
+  },
+  {
+ameter name": "标题""method name": "输出文本颜色",
+ameter name": "标题""type": "property setter",
+ameter name": "标题""parameters": [
+   {
+"parameter name": "颜色",
+"data type": "整数"
+   }
+ameter name": "标题"]
+  },
+  {
+ta type": "短整数"]"parameters": [
+"method name": "错误文本颜色",
+ta type": "短整数"]"parameters": [
+"type": "property setter",
+ta type": "短整数"]"parameters": [
+"parameters": [
+   {
+"parameter name": "文本颜色",
+"data type": "整数"
+   }
+ta type": "短整数"]"parameters": [
+]
+  },
+  {
+}"method name": "输入文本颜色",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "文本颜色",
+"comment": "控制台文本颜色常量 开头的",
+"data type": "整数"
+   }
+}]
+  },
+  {
+meter name": "标题""data type": "逻辑型""method name": "输入",
+meter name": "标题""data type": "逻辑型""data type": "文本型"
+  },
+  {
+meter name": "标题""parameters": [
+"method name": "输出",
+meter name": "标题""parameters": [
+"parameters": [
+   {
+"parameter name": "文本",
+"comment": "要显示的文本",
+"data type": "文本型"
+   }
+meter name": "标题""parameters": [
+]
+  },
+  {
+
+"method name": "错误",
+
+"parameters": [
+   {
+"parameter name": "文本",
+"comment": "要显示的文本",
+"data type": "文本型"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "控制台测试类",
+"methods": [
+  {
+}"method name": "开始测试"
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}

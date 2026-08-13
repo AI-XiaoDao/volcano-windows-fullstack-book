@@ -1,0 +1,2196 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+"package name": "火山.PIV基础类",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+"comment": "https://github.com/SaierMe/piv",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+"@视窗.外部头文件": "\"src\\\\piv_url.hpp\"",
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+"classes": [
+ {
+SPC\plugins\vprj_win\classlib\user\piv\"class name": "URL编解码类",
+SPC\plugins\vprj_win\classlib\user\piv\"comment": "URL编解码",
+SPC\plugins\vprj_win\classlib\user\piv\"@文档": "\"category = \\\"网络辅助\\\"\"",
+SPC\plugins\vprj_win\classlib\user\piv\"@别名": "\"//\"",
+SPC\plugins\vprj_win\classlib\user\piv\"@类用途": "访问静态成员",
+SPC\plugins\vprj_win\classlib\user\piv\"@别名类型": "本地类",
+SPC\plugins\vprj_win\classlib\user\piv\"methods": [
+  {
+plugins\vprj_win\classlib\user\piv\"class name": "URL编解码类""method name": "编码",
+plugins\vprj_win\classlib\user\piv\"class name": "URL编解码类""comment": "将指定数据进行URL编码,返回编码后的数据.",
+plugins\vprj_win\classlib\user\piv\"class name": "URL编解码类""static": true,
+plugins\vprj_win\classlib\user\piv\"class name": "URL编解码类""data type": "字节集类",
+plugins\vprj_win\classlib\user\piv\"class name": "URL编解码类""@禁止流程检查": "真",
+plugins\vprj_win\classlib\user\piv\"class name": "URL编解码类""parameters": [
+   {
+"parameter name": "欲编码数据",
+"comment": "提供所欲进行编码的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "不编码保留字符",
+"comment": "是否不编码保留字符(;/?:@=&),保留字符在URL中有特殊含义",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+plugins\vprj_win\classlib\user\piv\"class name": "URL编解码类"]
+  },
+  {
+"method name": "编码2",
+"comment": "将指定数据进行URL编码,并在参数中返回编码后的数据.",
+"static": true,
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "欲编码数据",
+"comment": "提供所欲进行编码的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "编码数据",
+"comment": "返回编码后的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "不编码保留字符",
+"comment": "是否不编码保留字符(;/?:@=&),保留字符在URL中有特殊含义",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+}"method name": "编码文本",
+}"comment": "将指定文本进行URL编码,返回编码后的文本.",
+}"static": true,
+}"data type": "文本型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "欲编码文本",
+"comment": "提供所欲进行编码的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "将文本内容以UTF-8格式进行URL编码,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "不编码保留字符",
+"comment": "是否不编码保留字符(;/?:@=&),保留字符在URL中有特殊含义",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+
+"method name": "编码到文本",
+
+"comment": "将指定的编码的数据进行URL编码,返回编码后的文本.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲编码数据",
+"comment": "提供所欲进行编码的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "\"欲编码数据\"的文本编码是否为UTF-8,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "不编码保留字符",
+"comment": "是否不编码保留字符(;/?:@=&),保留字符在URL中有特殊含义",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ }"method name": "解码",
+ }"comment": "将指定数据进行URL解码,返回解码后的数据.",
+ }"static": true,
+ }"data type": "字节集类",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "欲解码数据",
+"comment": "提供所欲进行解码的数据",
+"data type": "字节集类"
+   }
+ }]
+  },
+  {
+]"method name": "解码2",
+]"comment": "将指定数据进行URL解码,并在参数中返回解码后的数据.",
+]"static": true,
+]"@禁止流程检查": "真",
+]"parameters": [
+   {
+"parameter name": "欲解码数据",
+"comment": "提供所欲进行解码的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "解码数据",
+"comment": "返回解码后的数据",
+"data type": "字节集类"
+   }
+]]
+  },
+  {
+data type": "字节集类""method name": "解码文本",
+data type": "字节集类""comment": "将指定文本进行URL解码,返回解码后的文本.",
+data type": "字节集类""static": true,
+data type": "字节集类""data type": "文本型",
+data type": "字节集类""@禁止流程检查": "真",
+data type": "字节集类""parameters": [
+   {
+"parameter name": "欲解码文本",
+"comment": "提供所欲进行解码的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "URL编码文本是否为UTF-8格式,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "字节集类"]
+  },
+  {
+"method name": "解码到文本",
+"comment": "将指定的编码的数据进行URL解码,返回解码后的文本.",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "欲解码数据",
+"comment": "提供所欲进行编码的数据",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "\"欲解码数据\"是否为UTF-8编码,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  }
+SPC\plugins\vprj_win\classlib\user\piv\]
+ },
+ {
+C\plugins\vprj_win\classlib\user\piv\]"class name": "URL地址构造类",
+C\plugins\vprj_win\classlib\user\piv\]"comment": "用于快捷生成正确URL编码的URL地址",
+C\plugins\vprj_win\classlib\user\piv\]"@文档": "\"category = \\\"网络辅助\\\"\"",
+C\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivUrlCreater\"",
+C\plugins\vprj_win\classlib\user\piv\]"methods": [
+  {
+vUrlCreater\""method name": "是否为空",
+vUrlCreater\""comment": "返回本对象是否为空",
+vUrlCreater\""static": true,
+vUrlCreater\""data type": "逻辑型",
+vUrlCreater\""@嵌入式方法": "\"\"",
+vUrlCreater\""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址构造类"
+   }
+vUrlCreater\"]
+  },
+  {
+vUrlCreater\""method name": "清空",
+vUrlCreater\""comment": "清空已生成的地址",
+vUrlCreater\""static": true,
+vUrlCreater\""@嵌入式方法": "\"\"",
+vUrlCreater\""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址构造类"
+   }
+vUrlCreater\"]
+  },
+  {
+vUrlCreater\""method name": "取地址",
+vUrlCreater\""comment": "返回URL地址的文本参考,传递给网页访问方法.\n注: 本方法不会产生文本复制.",
+vUrlCreater\""static": true,
+vUrlCreater\""data type": "文本型",
+vUrlCreater\""@嵌入式方法": "\"\"",
+vUrlCreater\""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址构造类"
+   }
+vUrlCreater\"]
+  },
+  {
+}"method name": "域名",
+}"comment": "设置URL域名(不含路径和参数),会覆盖之前置入的域名.\n前面必须有协议,后面按需填写端口号,暂不支持中文域名.\n例: \"https:://baidu.com\"、\"http:://192.168.1.1:8086\"",
+}"result comment": "返回自身(支持链式语法)",
+}"static": true,
+}"data type": "URL地址构造类",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址构造类"
+   },
+   {
+"parameter name": "所欲设置的域名",
+"comment": "所欲设置的URL域名,支持类型:\n 文本型、标准文本类(W/U/A)、文本视图类(W/U/A)、字节集类、文本指针",
+"@匹配类型": "通用型"
+   }
+}]
+  },
+  {
+"method name": "路径",
+"comment": "设置URL路径,会覆盖之前置入的路径.\n请以'/'字符开头,支持中文路径(会自动URL编码).\n例: \"/\"、\"/new\"",
+"result comment": "返回自身(支持链式语法)",
+"static": true,
+"data type": "URL地址构造类",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址构造类"
+   },
+   {
+"parameter name": "所欲设置的路径",
+"comment": "所欲设置的URL路径,支持类型:\n 文本型、标准文本类(W/U/A)、文本视图类(W/U/A)、字节集类、文本指针",
+"@匹配类型": "通用型"
+   }
+]
+  },
+  {
+"method name": "添加参数",
+"comment": "添加一组查询参数键值对,并对不安全字符进行URL编码.",
+"result comment": "返回自身(支持链式调用)",
+"static": true,
+"data type": "URL地址构造类",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址构造类"
+   },
+   {
+"parameter name": "键",
+"comment": "所欲添加的参数键名,支持类型:\n 文本型、标准文本类(W/U/A)、文本视图类(W/U/A)、字节集类、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "所欲添加的参数值,支持类型同上.",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "是否UTF8编码",
+"comment": "将文本内容以UTF-8格式进行URL编码,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  }
+C\plugins\vprj_win\classlib\user\piv\]]
+ },
+ {
+C\plugins\vprj_win\classlib\user\piv\]"class name": "URL地址解析类",
+C\plugins\vprj_win\classlib\user\piv\]"comment": "解析URL中各字段的文本和参数,本类内部使用的编码为UTF-16LE.\n<scheme>://<user>:<password>@<host>:<port>/<path>?<query>#<fragment>",
+C\plugins\vprj_win\classlib\user\piv\]"@文档": "\"category = \\\"网络辅助\\\"\"",
+C\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivUrlParser<wchar_t>\"",
+C\plugins\vprj_win\classlib\user\piv\]"variables": [
+  {
+\plugins\vprj_win\classlib\user\piv\]"variables": [
+"variable name": "URL",
+\plugins\vprj_win\classlib\user\piv\]"variables": [
+"comment": "包含完整的URL地址",
+\plugins\vprj_win\classlib\user\piv\]"variables": [
+"data type": "文本视图类W",
+\plugins\vprj_win\classlib\user\piv\]"variables": [
+"@输出名": "\"url\""
+  },
+  {
+}"variable name": "协议",
+}"comment": "包含URL的协议(scheme),如\"https\"",
+}"data type": "文本视图类W",
+}"@输出名": "\"scheme\""
+  },
+  {
+"@输出名": "\"scheme\"""variable name": "账户",
+"@输出名": "\"scheme\"""comment": "包含URL的用户名(user),账户应当使用URL编码.",
+"@输出名": "\"scheme\"""data type": "文本视图类W",
+"@输出名": "\"scheme\"""@输出名": "\"user\""
+  },
+  {
+@输出名": "\"scheme\"""data type": "文本视图类W""variable name": "密码",
+@输出名": "\"scheme\"""data type": "文本视图类W""comment": "包含URL的密码(password),密码必须使用URL编码.",
+@输出名": "\"scheme\"""data type": "文本视图类W""data type": "文本视图类W",
+@输出名": "\"scheme\"""data type": "文本视图类W""@输出名": "\"password\""
+  },
+  {
+@输出名": "\"scheme\"""data type": "文本视图类W""variable name": "域名",
+@输出名": "\"scheme\"""data type": "文本视图类W""comment": "包含URL的域名(host),如\"www.baidu.com\"",
+@输出名": "\"scheme\"""data type": "文本视图类W""data type": "文本视图类W",
+@输出名": "\"scheme\"""data type": "文本视图类W""@输出名": "\"host\""
+  },
+  {
+"@输出名": "\"scheme\"""variable name": "端口",
+"@输出名": "\"scheme\"""comment": "包含URL的端口(port),如\"80\".",
+"@输出名": "\"scheme\"""data type": "文本视图类W",
+"@输出名": "\"scheme\"""@输出名": "\"port\""
+  },
+  {
+@输出名": "\"scheme\"""@输出名": "\"port\"""variable name": "路径",
+@输出名": "\"scheme\"""@输出名": "\"port\"""comment": "包含URL的路径(path),如\"/index\"",
+@输出名": "\"scheme\"""@输出名": "\"port\"""data type": "文本视图类W",
+@输出名": "\"scheme\"""@输出名": "\"port\"""@输出名": "\"path\""
+  },
+  {
+@输出名": "\"scheme\"""@输出名": "\"port\"""variable name": "参数",
+@输出名": "\"scheme\"""@输出名": "\"port\"""comment": "包含URL的查询参数文本(query).",
+@输出名": "\"scheme\"""@输出名": "\"port\"""data type": "文本视图类W",
+@输出名": "\"scheme\"""@输出名": "\"port\"""@输出名": "\"query\""
+  },
+  {
+}"variable name": "片段",
+}"comment": "包含URL的片段(fragment),片段用于在网页中滚动到指定的位置.",
+}"data type": "文本视图类W",
+}"@输出名": "\"fragment\""
+  }
+C\plugins\vprj_win\classlib\user\piv\]],
+C\plugins\vprj_win\classlib\user\piv\]"methods": [
+  {
+
+"method name": "解析",
+
+"comment": "解析URL地址,本方法可以解析不完整的URL地址,\n比如你可以只解析路径和参数.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   },
+   {
+"parameter name": "URL地址",
+"comment": "所欲解析的URL地址,支持类型:\n 文本型、字节集类、标准文本类(W/U/A)、文本视图类(W/U/A)、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "缓存地址数据",
+"comment": "真: 将提供的URL地址数据复制到本对象的内部;\n假: 本对象会使用文本视图指向提供的URL地址,请确保提供的\"URL地址\"是变量,\n且该变量的的生命周期不能短于本对象;\n如果解析时产生了编码转换,则一定会缓存文本数据,可以使用\"是否有缓存\"判断.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "简易解析",
+"comment": "为真时只解析路径和参数,加快解析速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "是否有缓存",
+
+"comment": "判断本对象是否缓存了URL地址数据.\n返回假表示本对象不拥有表单的文本数据,当\"解析\"时\n提供的文本变量被销毁,则请勿再使用本对象.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   }
+
+]
+  },
+  {
+
+"method name": "取参数视图",
+
+"comment": "获取指定名称的参数值,本方法不会对参数值进行URL解码.",
+
+"static": true,
+
+"data type": "文本视图类W",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   },
+   {
+"parameter name": "名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、字节集类、标准文本类(W/U/A)、文本视图类(W/U/A)、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "URL编码文本是否为UTF-8格式,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+ }"method name": "取参数文本",
+ }"comment": "将指定名称的参数值进行URL解码,返回文本型.",
+ }"result comment": "成功返回参数值文本,否则返回空文本.",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   },
+   {
+"parameter name": "名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、字节集类、标准文本类(W/U/A)、文本视图类(W/U/A)、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "URL编码文本是否为UTF-8格式,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+
+"method name": "取指定参数",
+
+"comment": "将指定名称的参数值进行URL解码,返回标准文本类.",
+
+"result comment": "成功返回参数值文本,否则返回空文本.",
+
+"static": true,
+
+"data type": "标准文本类W",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   },
+   {
+"parameter name": "名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、字节集类、标准文本类(W/U/A)、文本视图类(W/U/A)、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "URL编码文本是否为UTF-8格式,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"method name": "清空",
+"comment": "清空本对象已解析的URL数据.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   }
+]
+  },
+  {
+
+"method name": "取协议",
+
+"comment": "返回一个文本型,其中包含URL的协议(scheme),如\"https\"",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   }
+
+]
+  },
+  {
+ }"method name": "取账户",
+ }"comment": "返回一个文本型,其中包含URL解码后的用户名(user).",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "URL编码文本是否为UTF-8格式,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+
+"method name": "取密码",
+
+"comment": "返回一个文本型,其中包含URL解码后的密码(password).",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "URL编码文本是否为UTF-8格式,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+
+"method name": "取域名",
+
+"comment": "返回一个文本型,其中包含URL的域名(host),如\"www.baidu.com\"",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   }
+
+]
+  },
+  {
+
+"method name": "取端口",
+
+"comment": "返回一个文本型,其中包含URL的端口(port),如\"80\".",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   }
+
+]
+  },
+  {
+"method name": "取路径",
+"comment": "返回一个文本型,其中包含URL的路径(path),如\"/index\"",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   }
+]
+  },
+  {
+ }"method name": "取参数",
+ }"comment": "返回一个文本型,其中包含URL的查询参数文本(query).",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   }
+ }]
+  },
+  {
+
+"method name": "取片段",
+
+"comment": "返回一个文本型,其中包含URL的片段(fragment),片段用于在网页中滚动到指定的位置.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   }
+
+]
+  },
+  {
+
+"method name": "取段落",
+
+"comment": "等同于\"取片段\",仅保留以兼容旧代码.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类"
+   }
+
+]
+  }
+C\plugins\vprj_win\classlib\user\piv\]]
+ },
+ {
+C\plugins\vprj_win\classlib\user\piv\]"class name": "URL地址解析类U",
+C\plugins\vprj_win\classlib\user\piv\]"comment": "解析URL中各字段的文本和参数,本类内部使用的编码为UTF-8.\n<scheme>://<user>:<password>@<host>:<port>/<path>?<query>#<fragment>",
+C\plugins\vprj_win\classlib\user\piv\]"@文档": "\"category = \\\"网络辅助\\\"\"",
+C\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivUrlParser<char>\"",
+C\plugins\vprj_win\classlib\user\piv\]"variables": [
+  {
+"variable name": "URL",
+"comment": "包含完整的URL地址",
+"data type": "文本视图类U",
+"@输出名": "\"url\""
+  },
+  {
+
+"variable name": "协议",
+
+"comment": "包含URL的协议(scheme),如\"https\"",
+
+"data type": "文本视图类U",
+
+"@输出名": "\"scheme\""
+  },
+  {
+
+"variable name": "账户",
+
+"comment": "包含URL的用户名(user),账户应当使用URL编码.",
+
+"data type": "文本视图类U",
+
+"@输出名": "\"user\""
+  },
+  {
+
+"variable name": "密码",
+
+"comment": "包含URL的密码(password),密码必须使用URL编码.",
+
+"data type": "文本视图类U",
+
+"@输出名": "\"password\""
+  },
+  {
+
+"variable name": "域名",
+
+"comment": "包含URL的域名(host),如\"www.baidu.com\"",
+
+"data type": "文本视图类U",
+
+"@输出名": "\"host\""
+  },
+  {
+"comment": "包含URL的域名(host),如\"www.baidu.com\"""variable name": "端口",
+"comment": "包含URL的域名(host),如\"www.baidu.com\"""comment": "包含URL的端口(port),如\"80\".",
+"comment": "包含URL的域名(host),如\"www.baidu.com\"""data type": "文本视图类U",
+"comment": "包含URL的域名(host),如\"www.baidu.com\"""@输出名": "\"port\""
+  },
+  {
+}"variable name": "路径",
+}"comment": "包含URL的路径(path),如\"/index\"",
+}"data type": "文本视图类U",
+}"@输出名": "\"path\""
+  },
+  {
+
+"variable name": "参数",
+
+"comment": "包含URL的查询参数文本(query).",
+
+"data type": "文本视图类U",
+
+"@输出名": "\"query\""
+  },
+  {
+"data type": "文本视图类U""variable name": "片段",
+"data type": "文本视图类U""comment": "包含URL的片段(fragment),片段用于在网页中滚动到指定的位置.",
+"data type": "文本视图类U""data type": "文本视图类U",
+"data type": "文本视图类U""@输出名": "\"fragment\""
+  }
+C\plugins\vprj_win\classlib\user\piv\]],
+C\plugins\vprj_win\classlib\user\piv\]"methods": [
+  {
+data type": "文本视图类U""@输出名": "\"fragment\"""method name": "解析",
+data type": "文本视图类U""@输出名": "\"fragment\"""comment": "解析URL地址,本方法可以解析不完整的URL地址,\n比如你可以只解析路径和参数.",
+data type": "文本视图类U""@输出名": "\"fragment\"""static": true,
+data type": "文本视图类U""@输出名": "\"fragment\"""@嵌入式方法": "\"\"",
+data type": "文本视图类U""@输出名": "\"fragment\"""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   },
+   {
+"parameter name": "URL地址",
+"comment": "所欲解析的URL地址,支持类型:\n 文本型、字节集类、标准文本类(W/U/A)、文本视图类(W/U/A)、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "缓存地址数据",
+"comment": "真: 将提供的URL地址数据复制到本对象的内部;\n假: 本对象会使用文本视图指向提供的URL地址,请确保提供的\"URL地址\"是变量,\n且该变量的的生命周期不能短于本对象;\n如果解析时产生了编码转换,则一定会缓存文本数据,可以使用\"是否有缓存\"判断.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "简易解析",
+"comment": "为真时只解析路径和参数,加快解析速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "文本视图类U""@输出名": "\"fragment\""]
+  },
+  {
+data type": "文本视图类U""@输出名": "\"fragment\"""method name": "是否有缓存",
+data type": "文本视图类U""@输出名": "\"fragment\"""comment": "判断本对象是否缓存了URL地址数据.\n返回假表示本对象不拥有表单的文本数据,如果\"解析\"时\n提供的文本变量被销毁,则请勿再使用本对象.",
+data type": "文本视图类U""@输出名": "\"fragment\"""static": true,
+data type": "文本视图类U""@输出名": "\"fragment\"""data type": "逻辑型",
+data type": "文本视图类U""@输出名": "\"fragment\"""@嵌入式方法": "\"\"",
+data type": "文本视图类U""@输出名": "\"fragment\"""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+data type": "文本视图类U""@输出名": "\"fragment\""]
+  },
+  {
+data type": "文本视图类U""@输出名": "\"fragment\"""method name": "取参数视图",
+data type": "文本视图类U""@输出名": "\"fragment\"""comment": "获取指定名称的参数值,本方法不会对参数值进行URL解码.",
+data type": "文本视图类U""@输出名": "\"fragment\"""static": true,
+data type": "文本视图类U""@输出名": "\"fragment\"""data type": "文本视图类U",
+data type": "文本视图类U""@输出名": "\"fragment\"""@嵌入式方法": "\"\"",
+data type": "文本视图类U""@输出名": "\"fragment\"""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   },
+   {
+"parameter name": "名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)",
+"@匹配类型": "通用型"
+   }
+data type": "文本视图类U""@输出名": "\"fragment\""]
+  },
+  {
+data type": "文本视图类U""@输出名": "\"fragment\"""method name": "取参数文本",
+data type": "文本视图类U""@输出名": "\"fragment\"""comment": "将指定名称的参数值进行URL解码,返回UTF-16LE文本型.",
+data type": "文本视图类U""@输出名": "\"fragment\"""result comment": "成功返回参数值文本,否则返回空文本.",
+data type": "文本视图类U""@输出名": "\"fragment\"""static": true,
+data type": "文本视图类U""@输出名": "\"fragment\"""data type": "文本型",
+data type": "文本视图类U""@输出名": "\"fragment\"""@嵌入式方法": "\"\"",
+data type": "文本视图类U""@输出名": "\"fragment\"""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   },
+   {
+"parameter name": "名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)",
+"@匹配类型": "通用型"
+   }
+data type": "文本视图类U""@输出名": "\"fragment\""]
+  },
+  {
+data type": "文本视图类U""@输出名": "\"fragment\"""method name": "取指定参数",
+data type": "文本视图类U""@输出名": "\"fragment\"""comment": "将指定名称的参数值进行URL解码,返回标准文本类U.",
+data type": "文本视图类U""@输出名": "\"fragment\"""result comment": "成功返回参数值文本,否则返回空文本.",
+data type": "文本视图类U""@输出名": "\"fragment\"""static": true,
+data type": "文本视图类U""@输出名": "\"fragment\"""data type": "标准文本类U",
+data type": "文本视图类U""@输出名": "\"fragment\"""@嵌入式方法": "\"\"",
+data type": "文本视图类U""@输出名": "\"fragment\"""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   },
+   {
+"parameter name": "名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)",
+"@匹配类型": "通用型"
+   }
+data type": "文本视图类U""@输出名": "\"fragment\""]
+  },
+  {
+ }"method name": "解码账户",
+ }"comment": "获取URL解码后的用户名(user)",
+ }"static": true,
+ }"data type": "标准文本类U",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+ }]
+  },
+  {
+
+"method name": "解码密码",
+
+"comment": "获取URL解码后的密码(password)",
+
+"static": true,
+
+"data type": "标准文本类U",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+
+]
+  },
+  {
+}"@嵌入式方法": "\"\"""method name": "清空",
+}"@嵌入式方法": "\"\"""comment": "清空本对象已解析的URL数据.",
+}"@嵌入式方法": "\"\"""static": true,
+}"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+}"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+}"@嵌入式方法": "\"\""]
+  },
+  {
+}"method name": "取协议",
+}"comment": "返回一个文本型,其中包含URL的协议(scheme),如\"https\"",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+}]
+  },
+  {
+}"method name": "取账户",
+}"comment": "返回一个文本型,其中包含URL解码后的用户名(user).",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+}]
+  },
+  {
+
+"method name": "取密码",
+
+"comment": "返回一个文本型,其中包含URL解码后的密码(password).",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   },
+   {
+"parameter name": "URL解码",
+"comment": "对参数值进行URL解码",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+"method name": "取域名",
+"comment": "返回一个文本型,其中包含URL的域名(host),如\"www.baidu.com\"",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+]
+  },
+  {
+
+"method name": "取端口",
+
+"comment": "返回一个文本型,其中包含URL的端口(port),如\"80\".",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+
+]
+  },
+  {
+data type": "URL地址解析类U""method name": "取路径",
+data type": "URL地址解析类U""comment": "返回一个文本型,其中包含URL的路径(path),如\"/index\"",
+data type": "URL地址解析类U""static": true,
+data type": "URL地址解析类U""data type": "文本型",
+data type": "URL地址解析类U""@嵌入式方法": "\"\"",
+data type": "URL地址解析类U""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+data type": "URL地址解析类U"]
+  },
+  {
+ }"method name": "取参数",
+ }"comment": "返回一个文本型,其中包含URL的查询参数文本(query).",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+ }]
+  },
+  {
+
+"method name": "取片段",
+
+"comment": "返回一个文本型,其中包含URL的片段(fragment),片段用于在网页中滚动到指定的位置.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+
+]
+  },
+  {
+"method name": "取段落",
+"comment": "等同于\"取片段\",仅保留以兼容旧代码.",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类U"
+   }
+]
+  }
+C\plugins\vprj_win\classlib\user\piv\]]
+ },
+ {
+C\plugins\vprj_win\classlib\user\piv\]"class name": "URL地址解析类A",
+C\plugins\vprj_win\classlib\user\piv\]"comment": "解析URL中各字段的文本和参数,本类内部使用的编码为ANSI本地多字节.\n<scheme>://<user>:<password>@<host>:<port>/<path>?<query>#<fragment>",
+C\plugins\vprj_win\classlib\user\piv\]"@文档": "\"category = \\\"网络辅助\\\"\"",
+C\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivUrlParser<char>\"",
+C\plugins\vprj_win\classlib\user\piv\]"variables": [
+  {
+
+"variable name": "URL",
+
+"comment": "包含完整的URL地址",
+
+"data type": "文本视图类A",
+
+"@输出名": "\"url\""
+  },
+  {
+"data type": "文本视图类A""variable name": "协议",
+"data type": "文本视图类A""comment": "包含URL的协议(scheme),如\"https\"",
+"data type": "文本视图类A""data type": "文本视图类A",
+"data type": "文本视图类A""@输出名": "\"scheme\""
+  },
+  {
+
+"variable name": "账户",
+
+"comment": "包含URL的用户名(user),账户应当使用URL编码.",
+
+"data type": "文本视图类A",
+
+"@输出名": "\"user\""
+  },
+  {
+
+"variable name": "密码",
+
+"comment": "包含URL的密码(password),密码必须使用URL编码.",
+
+"data type": "文本视图类A",
+
+"@输出名": "\"password\""
+  },
+  {
+"@输出名": "\"password\"""variable name": "域名",
+"@输出名": "\"password\"""comment": "包含URL的域名(host),如\"www.baidu.com\"",
+"@输出名": "\"password\"""data type": "文本视图类A",
+"@输出名": "\"password\"""@输出名": "\"host\""
+  },
+  {
+\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivUrlParser<char>\"""variable name": "端口",
+\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivUrlParser<char>\"""comment": "包含URL的端口(port),如\"80\".",
+\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivUrlParser<char>\"""data type": "文本视图类A",
+\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivUrlParser<char>\"""@输出名": "\"port\""
+  },
+  {
+名": "\"password\"""variable name": "域名""variable name": "路径",
+名": "\"password\"""variable name": "域名""comment": "包含URL的路径(path),如\"/index\"",
+名": "\"password\"""variable name": "域名""data type": "文本视图类A",
+名": "\"password\"""variable name": "域名""@输出名": "\"path\""
+  },
+  {
+"\"password\"""variable name": "域名""variable name": "路径""variable name": "参数",
+"\"password\"""variable name": "域名""variable name": "路径""comment": "包含URL的查询参数文本(query).",
+"\"password\"""variable name": "域名""variable name": "路径""data type": "文本视图类A",
+"\"password\"""variable name": "域名""variable name": "路径""@输出名": "\"query\""
+  },
+  {
+\"password\"""variable name": "域名""variable name": "路径""@输出名": "\"query\"""variable name": "片段",
+\"password\"""variable name": "域名""variable name": "路径""@输出名": "\"query\"""comment": "包含URL的片段(fragment),片段用于在网页中滚动到指定的位置.",
+\"password\"""variable name": "域名""variable name": "路径""@输出名": "\"query\"""data type": "文本视图类A",
+\"password\"""variable name": "域名""variable name": "路径""@输出名": "\"query\"""@输出名": "\"fragment\""
+  }
+C\plugins\vprj_win\classlib\user\piv\]],
+C\plugins\vprj_win\classlib\user\piv\]"methods": [
+  {
+\plugins\vprj_win\classlib\user\piv\]"methods": [
+"method name": "解析",
+\plugins\vprj_win\classlib\user\piv\]"methods": [
+"comment": "解析URL地址,本方法可以解析不完整的URL地址,\n比如你可以只解析路径和参数.",
+\plugins\vprj_win\classlib\user\piv\]"methods": [
+"static": true,
+\plugins\vprj_win\classlib\user\piv\]"methods": [
+"@嵌入式方法": "\"\"",
+\plugins\vprj_win\classlib\user\piv\]"methods": [
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   },
+   {
+"parameter name": "URL地址",
+"comment": "所欲解析的URL地址,支持类型:\n 文本型、字节集类、标准文本类(W/U/A)、文本视图类(W/U/A)、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "缓存地址数据",
+"comment": "真: 将提供的URL地址数据复制到本对象的内部;\n假: 本对象会使用文本视图指向提供的URL地址,请确保提供的\"URL地址\"是变量,\n且该变量的的生命周期不能短于本对象;\n如果解析时产生了编码转换,则一定会缓存文本数据,可以使用\"是否有缓存\"判断.",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "简易解析",
+"comment": "为真时只解析路径和参数,加快解析速度.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+\plugins\vprj_win\classlib\user\piv\]"methods": [
+]
+  },
+  {
+@匹配类型": "通用型""method name": "是否有缓存",
+@匹配类型": "通用型""comment": "判断本对象是否缓存了URL地址数据.\n返回假表示本对象不拥有表单的文本数据,如果\"解析\"时\n提供的文本变量被销毁,则请勿再使用本对象.",
+@匹配类型": "通用型""static": true,
+@匹配类型": "通用型""data type": "逻辑型",
+@匹配类型": "通用型""@嵌入式方法": "\"\"",
+@匹配类型": "通用型""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+@匹配类型": "通用型"]
+  },
+  {
+
+"method name": "取参数视图",
+
+"comment": "获取指定名称的参数值,本方法不会对参数值进行URL解码.",
+
+"static": true,
+
+"data type": "文本视图类A",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   },
+   {
+"parameter name": "名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类A、文本视图类A、字节集类(多字节)",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+
+"method name": "取参数文本",
+
+"comment": "将指定名称的参数值进行URL解码,返回UTF-16LE文本型.",
+
+"result comment": "成功返回参数值文本,否则返回空文本.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   },
+   {
+"parameter name": "名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类A、文本视图类A、字节集类(多字节)",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+
+"method name": "取指定参数",
+
+"comment": "将指定名称的参数值进行URL解码,返回标准文本类A.",
+
+"result comment": "成功返回参数值文本,否则返回空文本.",
+
+"static": true,
+
+"data type": "标准文本类A",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   },
+   {
+"parameter name": "名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类A、文本视图类A、字节集类(多字节)",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+@匹配类型": "通用型""method name": "解码账户",
+@匹配类型": "通用型""comment": "获取URL解码后的用户名(user)",
+@匹配类型": "通用型""static": true,
+@匹配类型": "通用型""data type": "标准文本类A",
+@匹配类型": "通用型""@嵌入式方法": "\"\"",
+@匹配类型": "通用型""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+@匹配类型": "通用型"]
+  },
+  {
+
+"method name": "解码密码",
+
+"comment": "获取URL解码后的密码(password)",
+
+"static": true,
+
+"data type": "标准文本类A",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+
+]
+  },
+  {
+"method name": "清空",
+"comment": "清空本对象已解析的URL数据.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+]
+  },
+  {
+
+"method name": "取协议",
+
+"comment": "返回一个文本型,其中包含URL的协议(scheme),如\"https\"",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+
+]
+  },
+  {
+
+"method name": "取账户",
+
+"comment": "返回一个文本型,其中包含URL解码后的用户名(user).",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+
+]
+  },
+  {
+"method name": "取密码",
+"comment": "返回一个文本型,其中包含URL解码后的密码(password).",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+]
+  },
+  {
+"method name": "取域名",
+"comment": "返回一个文本型,其中包含URL的域名(host),如\"www.baidu.com\"",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+]
+  },
+  {
+"method name": "取端口",
+"comment": "返回一个文本型,其中包含URL的端口(port),如\"80\".",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+]
+  },
+  {
+data type": "URL地址解析类A""method name": "取路径",
+data type": "URL地址解析类A""comment": "返回一个文本型,其中包含URL的路径(path),如\"/index\"",
+data type": "URL地址解析类A""static": true,
+data type": "URL地址解析类A""data type": "文本型",
+data type": "URL地址解析类A""@嵌入式方法": "\"\"",
+data type": "URL地址解析类A""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+data type": "URL地址解析类A"]
+  },
+  {
+}"method name": "取参数",
+}"comment": "返回一个文本型,其中包含URL的查询参数文本(query).",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+}]
+  },
+  {
+}"method name": "取片段",
+}"comment": "返回一个文本型,其中包含URL的片段(fragment),片段用于在网页中滚动到指定的位置.",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+}]
+  },
+  {
+}"method name": "取段落",
+}"comment": "等同于\"取片段\",仅保留以兼容旧代码.",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "URL地址解析类A"
+   }
+}]
+  }
+C\plugins\vprj_win\classlib\user\piv\]]
+ },
+ {
+C\plugins\vprj_win\classlib\user\piv\]"class name": "表单构造类",
+C\plugins\vprj_win\classlib\user\piv\]"comment": "用于快捷填写网络POST请求的表单参数.\n注意: 仅限x-www-form-urlencoded格式的表单.",
+C\plugins\vprj_win\classlib\user\piv\]"@文档": "\"category = \\\"网络辅助\\\"\"",
+C\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivFormCreater\"",
+C\plugins\vprj_win\classlib\user\piv\]"variables": [
+  {
+\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivFormCreater\"""variable name": "表单",
+\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivFormCreater\"""comment": "表单的字节集数据,用于提交参数",
+\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivFormCreater\"""data type": "字节集类",
+\plugins\vprj_win\classlib\user\piv\]"@别名": "\"PivFormCreater\"""@输出名": "\"form\""
+  }
+C\plugins\vprj_win\classlib\user\piv\]],
+C\plugins\vprj_win\classlib\user\piv\]"methods": [
+  {
+plugins\vprj_win\classlib\user\piv\]]"method name": "数据",
+plugins\vprj_win\classlib\user\piv\]]"comment": "返回表单的字节集数据,用于提交参数.\n注意: 跟本类的成员变量\"表单\"一样,仅保留以兼容旧代码.",
+plugins\vprj_win\classlib\user\piv\]]"static": true,
+plugins\vprj_win\classlib\user\piv\]]"data type": "字节集类",
+plugins\vprj_win\classlib\user\piv\]]"@嵌入式方法": "\"\"",
+plugins\vprj_win\classlib\user\piv\]]"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单构造类"
+   }
+plugins\vprj_win\classlib\user\piv\]]]
+  },
+  {
+}"method name": "清空",
+}"comment": "清空本表单的所有参数内容",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单构造类"
+   }
+}]
+  },
+  {
+"method name": "添加参数",
+"comment": "添加一组参数键值对,并对不安全字符进行URL编码.\n注: 本方法支持链式调用",
+"result comment": "返回自身(支持链式语法)",
+"static": true,
+"data type": "表单构造类",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单构造类"
+   },
+   {
+"parameter name": "键",
+"comment": "所欲添加的参数键名,支持类型:\n 文本型、标准文本类(W/U/A)、文本视图类(W/U/A)、字节集类、字符串指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "值",
+"comment": "所欲添加的参数值,支持类型同上.",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "将参数值以UTF-8格式进行URL编码,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+ameter name": "是否UTF8""method name": "到文本型",
+ameter name": "是否UTF8""comment": "返回一个文本型,其中包含了表单的当前内容.\n注意: 本方法会产生文本复制",
+ameter name": "是否UTF8""static": true,
+ameter name": "是否UTF8""data type": "文本型",
+ameter name": "是否UTF8""@嵌入式方法": "\"\"",
+ameter name": "是否UTF8""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单构造类"
+   }
+ameter name": "是否UTF8"]
+  },
+  {
+}"method name": "到文本视图",
+}"comment": "返回一个文本视图,其中包含了表单的当前内容.\n注意: 默认情况下本方法不会产生文本复制,\n请确保本对象的生命周期大于返回的文本视图.",
+}"static": true,
+}"data type": "文本视图类U",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单构造类"
+   }
+}]
+  },
+  {
+
+"method name": "置预分配尺寸",
+
+"comment": "设置\"表单\"的预分配尺寸,在\"添加参数\"前提供一个足够大的尺寸可以减少内存分配.\n本对象的默认值为2048,一般够用.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单构造类"
+   },
+   {
+"parameter name": "所欲设置的预分配尺寸",
+"comment": "提供所欲设置的预分配尺寸,必须大于等于0.",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "是否为空",
+
+"comment": "返回当前表单是否为空",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单构造类"
+   }
+
+]
+  }
+C\plugins\vprj_win\classlib\user\piv\]]
+ },
+ {
+"class name": "表单解析类",
+"comment": "用于在服务端解析POST的表单参数,本类内部使用的编码为UTF-16LE(不常用).\n注意: 仅限x-www-form-urlencoded格式的表单.",
+"@文档": "\"category = \\\"网络辅助\\\"\"",
+"@别名": "\"PivFormParser<wchar_t>\"",
+"methods": [
+  {
+
+"method name": "解析",
+
+"comment": "解析所指定表单的参数.\n注意: 本方法只支持解析\"key1=value1&key=value2\"这样的键值对,\n不能JSON等类型.",
+
+"result comment": "返回是否解析成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类"
+   },
+   {
+"parameter name": "表单数据",
+"comment": "所欲解析的表单参数,支持类型:\n 文本型、标准文本类(W/U/A)、文本视图类(W/U/A)、字节集类、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "缓存地址数据",
+"comment": "真: 将提供的表单数据复制到本对象的内部;\n假: 本对象会使用文本视图指向提供表单数据,请确保提供的\"表单数据\"是变量,\n且该变量的的生命周期不能短于本对象;\n如果解析时产生了编码转换,则一定会缓存文本数据,可以使用\"是否有缓存\"判断.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "是否有缓存",
+
+"comment": "判断本对象是否缓存了表单数据.\n返回假表示本对象不拥有表单的文本数据,如果\"解析\"时\n提供的文本变量被销毁,则请勿再使用本对象.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类"
+   }
+
+]
+  },
+  {
+
+"method name": "取参数",
+
+"comment": "获取指定名称的参数值并进行URL解码,以\"标准文本类\"返回解码后的参数值.",
+
+"result comment": "成功返回参数值文本,否则返回空文本.",
+
+"static": true,
+
+"data type": "标准文本类W",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类W、文本视图类、字节集类(UTF-16LE)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "URL编码文本是否为UTF-8格式,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"method name": "取参数视图",
+"comment": "返回一个文本视图,其中包含指定名称的参数值.\n本方法不会产生文本复制,也不会进行URL解码,\n本对象被销毁或清空后请勿再使用返回的文本视图.",
+"result comment": "成功返回参数值文本视图,否则返回空视图.",
+"static": true,
+"data type": "文本视图类W",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类W、文本视图类、字节集类(UTF-16LE)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "URL编码文本是否为UTF-8格式,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+
+"method name": "取参数文本",
+
+"comment": "获取指定名称的参数值并进行URL解码,以\"文本型\"返回解码后的参数值.",
+
+"result comment": "成功返回参数值文本,否则返回空文本.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类W、文本视图类、字节集类(UTF-16LE)",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "是否UTF8",
+"comment": "URL编码文本是否为UTF-8格式,否则为多字节.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+data type": "逻辑型""method name": "取所有键名",
+data type": "逻辑型""comment": "获取所有的参数名称(键名),返回键名的数量.",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "整数",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类"
+   },
+   {
+"parameter name": "键名数组",
+"comment": "存放参数名称的数组",
+"data type": "文本视图数组类W"
+   }
+data type": "逻辑型"]
+  },
+  {
+data type": "逻辑型""method name": "清空",
+data type": "逻辑型""comment": "清空本对象已解析的表单数据",
+data type": "逻辑型""static": true,
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类"
+   }
+data type": "逻辑型"]
+  }
+]
+ },
+ {
+"class name": "表单解析类U",
+"comment": "用于在服务端解析POST的表单参数,本类内部使用的编码为UTF-8(最常用).\n注意: 仅限x-www-form-urlencoded格式的表单.",
+"@文档": "\"category = \\\"网络辅助\\\"\"",
+"@别名": "\"PivFormParser<char>\"",
+"methods": [
+  {
+
+"method name": "解析",
+
+"comment": "解析所指定表单的参数.\n注意: 本方法只支持解析\"key1=value1&key=value2\"这样的键值对,\n不能JSON等类型.",
+
+"result comment": "返回是否解析成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类U"
+   },
+   {
+"parameter name": "表单数据",
+"comment": "所欲解析的表单参数,支持类型:\n 文本型、标准文本类(W/U/A)、文本视图类(W/U/A)、字节集类、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "缓存地址数据",
+"comment": "真: 将提供的表单数据复制到本对象的内部;\n假: 本对象会使用文本视图指向提供表单数据,请确保提供的\"表单数据\"是变量,\n且该变量的的生命周期不能短于本对象;\n如果解析时产生了编码转换,则一定会缓存文本数据,可以使用\"是否有缓存\"判断.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "是否有缓存",
+
+"comment": "判断本对象是否缓存了表单数据.\n返回假表示本对象不拥有表单的文本数据,如果\"解析\"时\n提供的文本变量被销毁,则请勿再使用本对象.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类U"
+   }
+
+]
+  },
+  {
+comment": "当前对象,本参数无需填写.""method name": "取参数",
+comment": "当前对象,本参数无需填写.""comment": "获取指定名称的参数值并进行URL解码,以\"标准文本型类U\"返回解码后的参数值.",
+comment": "当前对象,本参数无需填写.""result comment": "成功返回参数值文本,否则返回空文本.",
+comment": "当前对象,本参数无需填写.""static": true,
+comment": "当前对象,本参数无需填写.""data type": "标准文本类U",
+comment": "当前对象,本参数无需填写.""@嵌入式方法": "\"\"",
+comment": "当前对象,本参数无需填写.""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类U"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)",
+"@匹配类型": "通用型"
+   }
+comment": "当前对象,本参数无需填写."]
+  },
+  {
+comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)""method name": "取参数视图",
+comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)""comment": "返回一个文本视图,其中包含指定名称的参数值.\n本方法不会产生文本复制,也不会进行URL解码,\n本对象被销毁或清空后请勿再使用返回的文本视图.",
+comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)""result comment": "成功返回参数值文本视图,否则返回空视图.",
+comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)""static": true,
+comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)""data type": "文本视图类U",
+comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)""@嵌入式方法": "\"\"",
+comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类U"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)",
+"@匹配类型": "通用型"
+   }
+comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)"]
+  },
+  {
+ameter name": "参数名称""method name": "取参数文本",
+ameter name": "参数名称""comment": "获取指定名称的参数值并进行URL解码,以\"文本型\"返回解码后的参数值.",
+ameter name": "参数名称""result comment": "成功返回参数值文本,否则返回空文本.",
+ameter name": "参数名称""static": true,
+ameter name": "参数名称""data type": "文本型",
+ameter name": "参数名称""@嵌入式方法": "\"\"",
+ameter name": "参数名称""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类U"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类U、文本视图类U、字节集类(UTF-8)",
+"@匹配类型": "通用型"
+   }
+ameter name": "参数名称"]
+  },
+  {
+eter name": "参数名称"]"method name": "取所有键名",
+eter name": "参数名称"]"comment": "获取所有的参数名称(键名),返回键名的数量.",
+eter name": "参数名称"]"static": true,
+eter name": "参数名称"]"data type": "整数",
+eter name": "参数名称"]"@嵌入式方法": "\"\"",
+eter name": "参数名称"]"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类U"
+   },
+   {
+"parameter name": "键名数组",
+"comment": "存放参数名称的数组",
+"data type": "文本视图数组类U"
+   }
+eter name": "参数名称"]]
+  },
+  {
+
+"method name": "清空",
+
+"comment": "清空本对象已解析的表单数据",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类U"
+   }
+
+]
+  }
+]
+ },
+ {
+data type": "表单解析类U""class name": "表单解析类A",
+data type": "表单解析类U""comment": "用于在服务端解析POST的表单参数,本类内部使用的编码为ANSI本地多字节(常用).\n注意: 仅限x-www-form-urlencoded格式的表单.",
+data type": "表单解析类U""@文档": "\"category = \\\"网络辅助\\\"\"",
+data type": "表单解析类U""@别名": "\"PivFormParser<char>\"",
+data type": "表单解析类U""methods": [
+  {
+
+"method name": "解析",
+
+"comment": "解析所指定表单的参数.\n注意: 本方法只支持解析\"key1=value1&key=value2\"这样的键值对,\n不能JSON等类型.",
+
+"result comment": "返回是否解析成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类A"
+   },
+   {
+"parameter name": "表单数据",
+"comment": "所欲解析的表单参数,支持类型:\n 文本型、标准文本类(W/U/A)、文本视图类(W/U/A)、字节集类、文本指针",
+"@匹配类型": "通用型"
+   },
+   {
+"parameter name": "缓存地址数据",
+"comment": "真: 将提供的表单数据复制到本对象的内部;\n假: 本对象会使用文本视图指向提供表单数据,请确保提供的\"表单数据\"是变量,\n且该变量的的生命周期不能短于本对象;\n如果解析时产生了编码转换,则一定会缓存文本数据,可以使用\"是否有缓存\"判断.",
+"data type": "逻辑型"
+   }
+
+]
+  },
+  {
+
+"method name": "是否有缓存",
+
+"comment": "判断本对象是否缓存了表单数据.\n返回假表示本对象不拥有表单的文本数据,如果\"解析\"时\n提供的文本变量被销毁,则请勿再使用本对象.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类A"
+   }
+
+]
+  },
+  {
+
+"method name": "取参数",
+
+"comment": "获取指定名称的参数值并进行URL解码,以\"标准文本类A\"返回解码后的参数值.",
+
+"result comment": "成功返回参数值文本,否则返回空文本.",
+
+"static": true,
+
+"data type": "标准文本类A",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类A"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类A、文本视图类A、字节集类(多字节)",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+
+"method name": "取参数视图",
+
+"comment": "返回一个文本视图,其中包含指定名称的参数值.\n本方法不会产生文本复制,也不会进行URL解码,\n本对象被销毁或清空后请勿再使用返回的文本视图.",
+
+"result comment": "成功返回参数值文本视图,否则返回空视图.",
+
+"static": true,
+
+"data type": "文本视图类A",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类A"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类A、文本视图类A、字节集类(多字节)",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+
+"method name": "取参数文本",
+
+"comment": "获取指定名称的参数值并进行URL解码,以\"文本型\"返回解码后的参数值.",
+
+"result comment": "成功返回参数值文本,否则返回空文本.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类A"
+   },
+   {
+"parameter name": "参数名称",
+"comment": "所欲获取的参数名称,支持类型:\n 文本型、标准文本类A、文本视图类A、字节集类(多字节)",
+"@匹配类型": "通用型"
+   }
+
+]
+  },
+  {
+ameter name": "当前对象""method name": "取所有键名",
+ameter name": "当前对象""comment": "获取所有的参数名称(键名),返回键名的数量.",
+ameter name": "当前对象""static": true,
+ameter name": "当前对象""data type": "整数",
+ameter name": "当前对象""@嵌入式方法": "\"\"",
+ameter name": "当前对象""parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类A"
+   },
+   {
+"parameter name": "键名数组",
+"comment": "存放参数名称的数组",
+"data type": "文本视图数组类A"
+   }
+ameter name": "当前对象"]
+  },
+  {
+
+"method name": "清空",
+
+"comment": "清空本对象已解析的表单数据",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "当前对象",
+"comment": "当前对象,本参数无需填写.",
+"data type": "表单解析类A"
+   }
+
+]
+  }
+data type": "表单解析类U"]
+ }
+#### 以下为一个火山软件开发平台系统类库程序的内容 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+]
+}

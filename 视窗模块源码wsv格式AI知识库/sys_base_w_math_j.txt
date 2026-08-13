@@ -1,0 +1,2752 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+方法 = """file description": "本文件为一个火山程序的可用公开接口描述json文本",
+方法 = """package name": "火山.基本",
+方法 = """@文档": "\"category = \\\"算数运算\\\"\"",
+方法 = """classes": [
+ {
+= "category = \"数值转换\"""class name": "数值范围",
+= "category = \"数值转换\"""comment": "提供各种整数数值类型的最大和最小值",
+= "category = \"数值转换\"""constants": [
+  {
+"constant name": "最小字节值",
+"data type": "整数",
+"initial value": "@_VOL_SBYTE_MIN"
+  },
+  {
+
+"constant name": "最大字节值",
+
+"data type": "整数",
+
+"initial value": "@_VOL_SBYTE_MAX"
+  },
+  {
+
+"constant name": "最小短整数值",
+
+"data type": "整数",
+
+"initial value": "@_VOL_SHRT_MIN"
+  },
+  {
+定的十六进制文本(可以以\"0x\"开头)转换为对应的长整数值并返回""constant name": "最大短整数值",
+定的十六进制文本(可以以\"0x\"开头)转换为对应的长整数值并返回""data type": "整数",
+定的十六进制文本(可以以\"0x\"开头)转换为对应的长整数值并返回""initial value": "@_VOL_SHRT_MAX"
+  },
+  {
+nstant name": "最小短整数值""constant name": "最小字符值",
+nstant name": "最小短整数值""data type": "整数",
+nstant name": "最小短整数值""initial value": "0"
+  },
+  {
+
+"constant name": "最大字符值",
+
+"data type": "整数",
+
+"initial value": "@_VOL_WORD_MAX"
+  },
+  {
+ 文本型"constant name": "最小整数值",
+ 文本型"data type": "整数",
+ 文本型"initial value": "@_VOL_INT_MIN"
+  },
+  {
+data type": "整数""constant name": "最大整数值",
+data type": "整数""data type": "整数",
+data type": "整数""initial value": "@_VOL_INT_MAX"
+  },
+  {
+    "constant name": "最小长整数值",
+    "data type": "长整数",
+    "initial value": "@_VOL_INT64_MIN"
+  },
+  {
+nstant name": "最大字符值""constant name": "最大长整数值",
+nstant name": "最大字符值""data type": "长整数",
+nstant name": "最大字符值""initial value": "@_VOL_INT64_MAX"
+  },
+  {
+态 类型 = 长整数 注释 = "将所指定的十六进制文本(可以以\"0x\"开头)转换为对应的长整数值并返回" @嵌入式方法 = """constant name": "最小变整数值",
+态 类型 = 长整数 注释 = "将所指定的十六进制文本(可以以\"0x\"开头)转换为对应的长整数值并返回" @嵌入式方法 = """data type": "变整数",
+态 类型 = 长整数 注释 = "将所指定的十六进制文本(可以以\"0x\"开头)转换为对应的长整数值并返回" @嵌入式方法 = """initial value": "@_VOL_INT_P_MIN"
+  },
+  {
+
+"constant name": "最大变整数值",
+
+"data type": "变整数",
+
+"initial value": "@_VOL_INT_P_MAX"
+  },
+  {
+态 类型 = 整数 注释 = "将所指定的十六进制文本(可以以\"0x\"开头)转换为对应的整数值并返回" @嵌入式方法 = """constant name": "最小日期时间值",
+态 类型 = 整数 注释 = "将所指定的十六进制文本(可以以\"0x\"开头)转换为对应的整数值并返回" @嵌入式方法 = """comment": "提供所允许的最小日期时间值(用小数表达),为100年1月1日.",
+态 类型 = 整数 注释 = "将所指定的十六进制文本(可以以\"0x\"开头)转换为对应的整数值并返回" @嵌入式方法 = """data type": "小数",
+态 类型 = 整数 注释 = "将所指定的十六进制文本(可以以\"0x\"开头)转换为对应的整数值并返回" @嵌入式方法 = """initial value": "@_VOL_MIN_DATE"
+  },
+  {
+
+"constant name": "最大日期时间值",
+
+"comment": "提供所允许的最大日期时间值(用小数表达),为9999年1月1日.",
+
+"data type": "小数",
+
+"initial value": "@_VOL_MAX_DATE"
+  }
+= "category = \"数值转换\""]
+ },
+ {
+nstant name": "最大日期时间值""class name": "常数",
+nstant name": "最大日期时间值""comment": "提供各种常数值",
+nstant name": "最大日期时间值""constants": [
+  {
+文本型"initial value": "@_VOL_INT_MIN""constant name": "接近零小数值",
+文本型"initial value": "@_VOL_INT_MIN""comment": "提供一个无限接近零的小数值,可以用作在进行小数比较操作时使用.",
+文本型"initial value": "@_VOL_INT_MIN""data type": "小数",
+文本型"initial value": "@_VOL_INT_MIN""initial value": "@NEAR_ZERO_DOUBLE"
+  },
+  {
+R_ZERO_DOUBLE"constant name": "PI",
+R_ZERO_DOUBLE"comment": "圆周率,圆的周长与直径的比值.",
+R_ZERO_DOUBLE"data type": "小数",
+R_ZERO_DOUBLE"initial value": "3.14159265358979323846"
+  },
+  {
+_ZERO_DOUBLE"initial value": "3.14159265358979323846""constant name": "E",
+_ZERO_DOUBLE"initial value": "3.14159265358979323846""comment": "自然常数,自然对数函数的底数,有时被称为欧拉数.",
+_ZERO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数",
+_ZERO_DOUBLE"initial value": "3.14159265358979323846""initial value": "2.7182818284590452354"
+  }
+nstant name": "最大日期时间值"]
+ },
+ {
+_ZERO_DOUBLE"data type": "小数""class name": "矩形类",
+_ZERO_DOUBLE"data type": "小数""comment": "用作记录一个矩形数据",
+_ZERO_DOUBLE"data type": "小数""base class": "扩展对象类",
+_ZERO_DOUBLE"data type": "小数""@视窗.结构类": "0",
+_ZERO_DOUBLE"data type": "小数""variables": [
+  {
+}"variable name": "左边",
+}"data type": "整数",
+}"@属性变量": "真"
+  },
+  {
+stant name": "最大日期时间值""comment": "提供各种常数值""variable name": "顶边",
+stant name": "最大日期时间值""comment": "提供各种常数值""data type": "整数",
+stant name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真"
+  },
+  {
+tant name": "最大日期时间值""comment": "提供各种常数值""data type": "整数""variable name": "右边",
+tant name": "最大日期时间值""comment": "提供各种常数值""data type": "整数""data type": "整数",
+tant name": "最大日期时间值""comment": "提供各种常数值""data type": "整数""@属性变量": "真"
+  },
+  {
+}"variable name": "底边",
+}"data type": "整数",
+}"@属性变量": "真"
+  }
+_ZERO_DOUBLE"data type": "小数"],
+_ZERO_DOUBLE"data type": "小数""methods": [
+  {
+tant name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置",
+tant name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""comment": "返回本矩形的左上角位置",
+tant name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""type": "property getter",
+tant name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""data type": "位置类"
+  },
+  {
+ name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置""method name": "位置",
+ name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置""comment": "设置本矩形的左上角位置",
+ name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置""type": "property setter",
+ name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置""parameters": [
+   {
+"parameter name": "所欲设置位置",
+"data type": "位置类"
+   }
+ name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置"]
+  },
+  {
+圆的周长与直径的比值."method name": "尺寸",
+圆的周长与直径的比值."comment": "返回本矩形的尺寸",
+圆的周长与直径的比值."type": "property getter",
+圆的周长与直径的比值."data type": "尺寸类"
+  },
+  {
+ZERO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数""method name": "尺寸",
+ZERO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数""comment": "设置本矩形的尺寸",
+ZERO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数""type": "property setter",
+ZERO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数""parameters": [
+   {
+"parameter name": "所欲设置尺寸",
+"data type": "尺寸类"
+   }
+ZERO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数"]
+  },
+  {
+tant name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "宽度",
+tant name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""comment": "返回本矩形的宽度",
+tant name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""type": "property getter",
+tant name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""data type": "整数"
+  },
+  {
+name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置""comment": "设置本矩形的左上角位置""method name": "宽度",
+name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置""comment": "设置本矩形的左上角位置""comment": "设置本矩形的宽度",
+name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置""comment": "设置本矩形的左上角位置""type": "property setter",
+name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置""comment": "设置本矩形的左上角位置""parameters": [
+   {
+"parameter name": "所欲设置宽度",
+"data type": "整数"
+   }
+name": "最大日期时间值""comment": "提供各种常数值""@属性变量": "真""method name": "位置""comment": "设置本矩形的左上角位置"]
+  },
+  {
+的周长与直径的比值."comment": "返回本矩形的尺寸""method name": "高度",
+的周长与直径的比值."comment": "返回本矩形的尺寸""comment": "返回本矩形的高度",
+的周长与直径的比值."comment": "返回本矩形的尺寸""type": "property getter",
+的周长与直径的比值."comment": "返回本矩形的尺寸""data type": "整数"
+  },
+  {
+RO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数"]"method name": "高度",
+RO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数"]"comment": "设置本矩形的高度",
+RO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数"]"type": "property setter",
+RO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数"]"parameters": [
+   {
+"parameter name": "所欲设置高度",
+"data type": "整数"
+   }
+RO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数"]]
+  },
+  {
+}"method name": "到小数矩形",
+}"comment": "将本整数矩形转换为小数矩形",
+}"data type": "小数矩形类"
+  },
+  {
+
+"method name": "清零"
+  },
+  {
+周长与直径的比值."comment": "返回本矩形的尺寸""comment": "返回本矩形的高度""method name": "是否为空",
+周长与直径的比值."comment": "返回本矩形的尺寸""comment": "返回本矩形的高度""comment": "返回本矩形的面积是否为空",
+周长与直径的比值."comment": "返回本矩形的尺寸""comment": "返回本矩形的高度""data type": "逻辑型"
+  },
+  {
+ERO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数""parameters": [
+"method name": "设置",
+ERO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数""parameters": [
+"parameters": [
+   {
+"parameter name": "所欲设置左边位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置顶边位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置右边位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置底边位置",
+"data type": "整数"
+   }
+ERO_DOUBLE"initial value": "3.14159265358979323846""data type": "小数""parameters": [
+]
+  },
+  {
+
+"method name": "基于位置设置",
+
+"parameters": [
+   {
+"parameter name": "左上角位置",
+"data type": "位置类"
+   },
+   {
+"parameter name": "右下角位置",
+"data type": "位置类"
+   }
+
+]
+  },
+  {
+
+"method name": "基于位置和尺寸设置",
+
+"parameters": [
+   {
+"parameter name": "所设置位置",
+"data type": "位置类"
+   },
+   {
+"parameter name": "所设置尺寸",
+"data type": "尺寸类"
+   }
+
+]
+  },
+  {
+ 文本型"method name": "置左上角位置",
+ 文本型"parameters": [
+   {
+"parameter name": "所欲设置左边位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置顶边位置",
+"data type": "整数"
+   }
+ 文本型]
+  },
+  {
+data type": "整数""method name": "置右下角位置",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置右边位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置底边位置",
+"data type": "整数"
+   }
+data type": "整数"]
+  },
+  {
+
+"method name": "置尺寸",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的高度",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ameter name": "所欲设置顶边位置""method name": "横向移动",
+ameter name": "所欲设置顶边位置""parameters": [
+   {
+"parameter name": "横向移动距离",
+"data type": "整数"
+   }
+ameter name": "所欲设置顶边位置"]
+  },
+  {
+meter name": "所欲设置顶边位置""parameters": [
+"method name": "纵向移动",
+meter name": "所欲设置顶边位置""parameters": [
+"parameters": [
+   {
+"parameter name": "纵向移动距离",
+"data type": "整数"
+   }
+meter name": "所欲设置顶边位置""parameters": [
+]
+  },
+  {
+"method name": "移动",
+"parameters": [
+   {
+"parameter name": "横向移动距离",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向移动距离",
+"data type": "整数"
+   }
+]
+  },
+  {
+的周长与直径的比值."comment": "返回本矩形的尺寸""method name": "放大",
+的周长与直径的比值."comment": "返回本矩形的尺寸""parameters": [
+   {
+"parameter name": "横向放大尺寸",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向放大尺寸",
+"data type": "整数"
+   }
+的周长与直径的比值."comment": "返回本矩形的尺寸"]
+  },
+  {
+"method name": "缩小",
+"parameters": [
+   {
+"parameter name": "横向缩小尺寸",
+"data type": "整数"
+   },
+   {
+"parameter name": "纵向缩小尺寸",
+"data type": "整数"
+   }
+]
+  },
+  {
+ter name": "所欲设置顶边位置""parameters": [
+]"method name": "包含指定矩形",
+ter name": "所欲设置顶边位置""parameters": [
+]"comment": "扩充本矩形以包含所指定矩形",
+ter name": "所欲设置顶边位置""parameters": [
+]"parameters": [
+   {
+"parameter name": "所欲包含的矩形",
+"data type": "矩形类"
+   }
+ter name": "所欲设置顶边位置""parameters": [
+]]
+  },
+  {
+}"method name": "包含指定点",
+}"comment": "扩充本矩形以包含所指定点的位置",
+}"parameters": [
+   {
+"parameter name": "所欲包含点横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲包含点纵坐标",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "乘于",
+"comment": "将本矩形的所有成员乘于所指定的值",
+"parameters": [
+   {
+"parameter name": "所欲乘于的值",
+"data type": "小数"
+   }
+]
+  },
+  {
+的所有成员乘于所指定的值"method name": "除于",
+的所有成员乘于所指定的值"comment": "将本矩形的所有成员除于所指定的值",
+的所有成员乘于所指定的值"parameters": [
+   {
+"parameter name": "所欲除于的值",
+"data type": "小数"
+   }
+的所有成员乘于所指定的值]
+  },
+  {
+
+"method name": "取面积",
+
+"comment": "返回本矩形的面积",
+
+"data type": "整数"
+  },
+  {
+thod name": "包含指定点""method name": "取中心点",
+thod name": "包含指定点""comment": "返回本矩形的中心点位置",
+thod name": "包含指定点""data type": "位置类"
+  },
+  {
+ name": "包含指定点""method name": "取中心点""method name": "取中心横向位置",
+ name": "包含指定点""method name": "取中心点""comment": "返回本矩形中心点的横向位置",
+ name": "包含指定点""method name": "取中心点""data type": "整数"
+  },
+  {
+
+"method name": "取中心纵向位置",
+
+"comment": "返回本矩形中心点的纵向位置",
+
+"data type": "整数"
+  },
+  {
+}"method name": "取右下角位置",
+}"comment": "返回本矩形右下角的位置",
+}"data type": "位置类"
+  },
+  {
+ameter name": "所欲包含点纵坐标""method name": "规范化",
+ameter name": "所欲包含点纵坐标""comment": "整理本矩形的各个成员,去除左右边或上下边反转的情况,使其规范化."
+  },
+  {
+}"method name": "是否包含指定点",
+}"comment": "返回所指定点的位置是否在本矩形中",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "所检测点横坐标",
+"data type": "整数"
+   },
+   {
+"parameter name": "所检测点纵坐标",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "是否位于矩形内部",
+
+"comment": "返回本矩形是否完全位于所指定矩形内部",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所欲检查的矩形",
+"data type": "矩形类"
+   }
+
+]
+  },
+  {
+"method name": "是否相交",
+"comment": "返回本矩形是否与所指定矩形具有相交部分",
+"data type": "逻辑型",
+"parameters": [
+   {
+"parameter name": "所欲检查的矩形",
+"data type": "矩形类"
+   }
+]
+  },
+  {
+
+"method name": "取相交矩形",
+
+"comment": "  返回本矩形是否与所指定矩形具有相交部分并将\n相交部分矩形填入所指定参数中",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所欲检查的矩形",
+"data type": "矩形类"
+   },
+   {
+"parameter name": "相交结果矩形",
+"comment": "  本参数用作存储本矩形与所检查矩形的相交部分,\n如果没有相交,则将被清零.",
+"data type": "矩形类"
+   }
+
+]
+  },
+  {
+parameters": [
+"method name": "取展示内容",
+parameters": [
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+parameters": [
+"@虚拟方法": "可覆盖",
+parameters": [
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+parameters": [
+]
+  }
+_ZERO_DOUBLE"data type": "小数"]
+ },
+ {
+本对象中所有数据的展示文本"class name": "小数矩形类",
+本对象中所有数据的展示文本"comment": "用作记录一个小数矩形数据",
+本对象中所有数据的展示文本"base class": "扩展对象类",
+本对象中所有数据的展示文本"@视窗.结构类": "0",
+本对象中所有数据的展示文本"variables": [
+  {
+ERO_DOUBLE"data type": "小数"]"variable name": "左边",
+ERO_DOUBLE"data type": "小数"]"data type": "小数",
+ERO_DOUBLE"data type": "小数"]"@属性变量": "真"
+  },
+  {
+data type": "整数""variable name": "顶边",
+data type": "整数""data type": "小数",
+data type": "整数""@属性变量": "真"
+  },
+  {
+
+"variable name": "右边",
+
+"data type": "小数",
+
+"@属性变量": "真"
+  },
+  {
+}"variable name": "底边",
+}"data type": "小数",
+}"@属性变量": "真"
+  }
+本对象中所有数据的展示文本],
+本对象中所有数据的展示文本"methods": [
+  {
+ERO_DOUBLE"data type": "小数"]"method name": "位置",
+ERO_DOUBLE"data type": "小数"]"comment": "返回本矩形的左上角位置",
+ERO_DOUBLE"data type": "小数"]"type": "property getter",
+ERO_DOUBLE"data type": "小数"]"data type": "小数位置类"
+  },
+  {
+对象中所有数据的展示文本"base class": "扩展对象类""method name": "位置",
+对象中所有数据的展示文本"base class": "扩展对象类""comment": "设置本矩形的左上角位置",
+对象中所有数据的展示文本"base class": "扩展对象类""type": "property setter",
+对象中所有数据的展示文本"base class": "扩展对象类""parameters": [
+   {
+"parameter name": "所欲设置位置",
+"data type": "小数位置类"
+   }
+对象中所有数据的展示文本"base class": "扩展对象类"]
+  },
+  {
+data type": "整数""method name": "尺寸",
+data type": "整数""comment": "返回本矩形的尺寸",
+data type": "整数""type": "property getter",
+data type": "整数""data type": "小数尺寸类"
+  },
+  {
+data type": "整数""method name": "尺寸",
+data type": "整数""comment": "设置本矩形的尺寸",
+data type": "整数""type": "property setter",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲设置尺寸",
+"data type": "小数尺寸类"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "整数""data type": "小数尺寸类""method name": "宽度",
+ata type": "整数""data type": "小数尺寸类""comment": "返回本矩形的宽度",
+ata type": "整数""data type": "小数尺寸类""type": "property getter",
+ata type": "整数""data type": "小数尺寸类""data type": "小数"
+  },
+  {
+
+"method name": "宽度",
+
+"comment": "设置本矩形的宽度",
+
+"type": "property setter",
+
+"parameters": [
+   {
+"parameter name": "所欲设置宽度",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "高度",
+
+"comment": "返回本矩形的高度",
+
+"type": "property getter",
+
+"data type": "小数"
+  },
+  {
+
+"type": "property getter""method name": "高度",
+
+"type": "property getter""comment": "设置本矩形的高度",
+
+"type": "property getter""type": "property setter",
+
+"type": "property getter""parameters": [
+   {
+"parameter name": "所欲设置高度",
+"data type": "小数"
+   }
+
+"type": "property getter"]
+  },
+  {
+ethod name": "高度""method name": "到矩形",
+ethod name": "高度""comment": "将本小数矩形转换为整数矩形,注意将会存在精度转换误差.",
+ethod name": "高度""data type": "矩形类"
+  },
+  {
+ethod name": "高度""method name": "清零"
+  },
+  {
+
+"method name": "是否为空",
+
+"comment": "返回本矩形的面积是否为空",
+
+"data type": "逻辑型"
+  },
+  {
+}"method name": "设置",
+}"parameters": [
+   {
+"parameter name": "所欲设置左边位置",
+"data type": "小数"
+   },
+   {
+"parameter name": "所欲设置顶边位置",
+"data type": "小数"
+   },
+   {
+"parameter name": "所欲设置右边位置",
+"data type": "小数"
+   },
+   {
+"parameter name": "所欲设置底边位置",
+"data type": "小数"
+   }
+}]
+  },
+  {
+thod name": "设置""method name": "基于位置设置",
+thod name": "设置""parameters": [
+   {
+"parameter name": "左上角位置",
+"data type": "小数位置类"
+   },
+   {
+"parameter name": "右下角位置",
+"data type": "小数位置类"
+   }
+thod name": "设置"]
+  },
+  {
+
+"method name": "基于位置和尺寸设置",
+
+"parameters": [
+   {
+"parameter name": "所设置位置",
+"data type": "小数位置类"
+   },
+   {
+"parameter name": "所设置尺寸",
+"data type": "小数尺寸类"
+   }
+
+]
+  },
+  {
+ }"method name": "置左上角位置",
+ }"parameters": [
+   {
+"parameter name": "所欲设置左边位置",
+"data type": "小数"
+   },
+   {
+"parameter name": "所欲设置顶边位置",
+"data type": "小数"
+   }
+ }]
+  },
+  {
+ameter name": "左上角位置""method name": "置右下角位置",
+ameter name": "左上角位置""parameters": [
+   {
+"parameter name": "所欲设置右边位置",
+"data type": "小数"
+   },
+   {
+"parameter name": "所欲设置底边位置",
+"data type": "小数"
+   }
+ameter name": "左上角位置"]
+  },
+  {
+}"method name": "置尺寸",
+}"parameters": [
+   {
+"parameter name": "所欲设置的宽度",
+"data type": "小数"
+   },
+   {
+"parameter name": "所欲设置的高度",
+"data type": "小数"
+   }
+}]
+  },
+  {
+
+"method name": "横向移动",
+
+"parameters": [
+   {
+"parameter name": "横向移动距离",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+er name": "左上角位置""method name": "置右下角位置""method name": "纵向移动",
+er name": "左上角位置""method name": "置右下角位置""parameters": [
+   {
+"parameter name": "纵向移动距离",
+"data type": "小数"
+   }
+er name": "左上角位置""method name": "置右下角位置"]
+  },
+  {
+ameter name": "所设置尺寸""method name": "移动",
+ameter name": "所设置尺寸""parameters": [
+   {
+"parameter name": "横向移动距离",
+"data type": "小数"
+   },
+   {
+"parameter name": "纵向移动距离",
+"data type": "小数"
+   }
+ameter name": "所设置尺寸"]
+  },
+  {
+
+"method name": "放大",
+
+"parameters": [
+   {
+"parameter name": "横向放大尺寸",
+"data type": "小数"
+   },
+   {
+"parameter name": "纵向放大尺寸",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+data type": "小数""method name": "缩小",
+data type": "小数""parameters": [
+   {
+"parameter name": "横向缩小尺寸",
+"data type": "小数"
+   },
+   {
+"parameter name": "纵向缩小尺寸",
+"data type": "小数"
+   }
+data type": "小数"]
+  },
+  {
+data type": "小数""method name": "包含指定矩形",
+data type": "小数""comment": "扩充本矩形以包含所指定矩形",
+data type": "小数""parameters": [
+   {
+"parameter name": "所欲包含的矩形",
+"data type": "小数矩形类"
+   }
+data type": "小数"]
+  },
+  {
+
+"method name": "包含指定点",
+
+"comment": "扩充本矩形以包含所指定点的位置",
+
+"parameters": [
+   {
+"parameter name": "所欲包含点横坐标",
+"data type": "小数"
+   },
+   {
+"parameter name": "所欲包含点纵坐标",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "乘于",
+
+"comment": "将本矩形的所有成员乘于所指定的值",
+
+"parameters": [
+   {
+"parameter name": "所欲乘于的值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "除于",
+
+"comment": "将本矩形的所有成员除于所指定的值",
+
+"parameters": [
+   {
+"parameter name": "所欲除于的值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"parameters": [
+"method name": "取面积",
+
+"parameters": [
+"comment": "返回本矩形的面积",
+
+"parameters": [
+"data type": "小数"
+  },
+  {
+"method name": "取中心点",
+"comment": "返回本矩形的中心点位置",
+"data type": "小数位置类"
+  },
+  {
+]"method name": "取中心横向位置",
+]"comment": "返回本矩形中心点的横向位置",
+]"data type": "小数"
+  },
+  {
+]"method name": "取中心纵向位置",
+]"comment": "返回本矩形中心点的纵向位置",
+]"data type": "小数"
+  },
+  {
+thod name": "取中心横向位置""method name": "取右下角位置",
+thod name": "取中心横向位置""comment": "返回本矩形右下角的位置",
+thod name": "取中心横向位置""data type": "小数位置类"
+  },
+  {
+"comment": "返回本矩形中心点的横向位置""method name": "规范化",
+"comment": "返回本矩形中心点的横向位置""comment": "整理本矩形的各个成员,去除左右边或上下边反转的情况,使其规范化."
+  },
+  {
+rameters": [
+"method name": "取面积""method name": "是否包含指定点",
+rameters": [
+"method name": "取面积""comment": "返回所指定点的位置是否在本矩形中",
+rameters": [
+"method name": "取面积""data type": "逻辑型",
+rameters": [
+"method name": "取面积""parameters": [
+   {
+"parameter name": "所检测点横坐标",
+"data type": "小数"
+   },
+   {
+"parameter name": "所检测点纵坐标",
+"data type": "小数"
+   }
+rameters": [
+"method name": "取面积"]
+  },
+  {
+"parameters": [
+"method name": "是否位于矩形内部",
+"parameters": [
+"comment": "返回本矩形是否完全位于所指定矩形内部",
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "所欲检查的矩形",
+"data type": "小数矩形类"
+   }
+"parameters": [
+]
+  },
+  {
+
+"method name": "是否相交",
+
+"comment": "返回本矩形是否与所指定矩形具有相交部分",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "所欲检查的矩形",
+"data type": "小数矩形类"
+   }
+
+]
+  },
+  {
+}"method name": "取相交矩形",
+}"comment": "  返回本矩形是否与所指定矩形具有相交部分并将\n相交部分矩形填入所指定参数中",
+}"data type": "逻辑型",
+}"parameters": [
+   {
+"parameter name": "所欲检查的矩形",
+"data type": "小数矩形类"
+   },
+   {
+"parameter name": "相交结果矩形",
+"comment": "  本参数用作存储本矩形与所检查矩形的相交部分,\n如果没有相交,则将被清零.",
+"data type": "小数矩形类"
+   }
+}]
+  },
+  {
+thod name": "是否相交""method name": "取展示内容",
+thod name": "是否相交""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+thod name": "是否相交""@虚拟方法": "可覆盖",
+thod name": "是否相交""parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+thod name": "是否相交"]
+  }
+本对象中所有数据的展示文本]
+ },
+ {
+thod name": "除于""class name": "位置类",
+thod name": "除于""comment": "用作记录一个横纵向位置数据",
+thod name": "除于""base class": "扩展对象类",
+thod name": "除于""@视窗.结构类": "0",
+thod name": "除于""variables": [
+  {
+
+"variable name": "横向位置",
+
+"data type": "整数",
+
+"@属性变量": "真"
+  },
+  {
+data type": "文本型""variable name": "纵向位置",
+data type": "文本型""data type": "整数",
+data type": "文本型""@属性变量": "真"
+  }
+thod name": "除于"],
+thod name": "除于""methods": [
+  {
+"data type": "小数""method name": "到小数位置",
+"data type": "小数""comment": "将本整数位置转换为小数位置",
+"data type": "小数""data type": "小数位置类"
+  },
+  {
+定点的位置是否在本矩形中"method name": "清零"
+  },
+  {
+
+"method name": "设置",
+
+"parameters": [
+   {
+"parameter name": "所欲设置的横向位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的纵向位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "剪切到矩形内",
+
+"comment": "将本位置剪切到所指定矩形内",
+
+"parameters": [
+   {
+"parameter name": "用作剪切的矩形",
+"data type": "矩形类"
+   }
+
+]
+  },
+  {
+"method name": "取展示内容",
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+"@虚拟方法": "可覆盖",
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+]
+  }
+thod name": "除于"]
+ },
+ {
+comment": "用作填入本对象中所有数据的展示文本""class name": "位置数组类",
+comment": "用作填入本对象中所有数据的展示文本""base class": "对象数组模板类",
+comment": "用作填入本对象中所有数据的展示文本""@模板实现类": "\"位置类\""
+ },
+ {
+"class name": "小数位置类",
+"comment": "用作记录一个横纵向小数位置数据",
+"base class": "扩展对象类",
+"@视窗.结构类": "0",
+"variables": [
+  {
+data type": "文本型""variable name": "横向位置",
+data type": "文本型""data type": "小数",
+data type": "文本型""@属性变量": "真"
+  },
+  {
+
+"variable name": "纵向位置",
+
+"data type": "小数",
+
+"@属性变量": "真"
+  }
+],
+"methods": [
+  {
+data type": "文本型""method name": "到位置",
+data type": "文本型""comment": "将本小数位置转换为整数位置,注意将会存在精度转换误差.",
+data type": "文本型""data type": "位置类"
+  },
+  {
+ata type": "文本型""comment": "将本小数位置转换为整数位置,注意将会存在精度转换误差.""method name": "清零"
+  },
+  {
+data type": "文本型""method name": "设置",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲设置的横向位置",
+"data type": "小数"
+   },
+   {
+"parameter name": "所欲设置的纵向位置",
+"data type": "小数"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "剪切到矩形内",
+
+"comment": "将本位置剪切到所指定矩形内",
+
+"parameters": [
+   {
+"parameter name": "用作剪切的矩形",
+"data type": "小数矩形类"
+   }
+
+]
+  },
+  {
+methods": [
+"method name": "取展示内容",
+methods": [
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+methods": [
+"@虚拟方法": "可覆盖",
+methods": [
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+methods": [
+]
+  }
+]
+ },
+ {
+"class name": "尺寸类",
+"comment": "用作记录一个尺寸数据",
+"base class": "扩展对象类",
+"@视窗.结构类": "0",
+"variables": [
+  {
+data type": "文本型""variable name": "宽度",
+data type": "文本型""data type": "整数",
+data type": "文本型""@属性变量": "真"
+  },
+  {
+"variable name": "高度",
+"data type": "整数",
+"@属性变量": "真"
+  }
+],
+"methods": [
+  {
+
+"method name": "到小数尺寸",
+
+"comment": "将本整数尺寸转换为小数尺寸",
+
+"data type": "小数尺寸类"
+  },
+  {
+"method name": "清零"
+  },
+  {
+"method name": "设置",
+"parameters": [
+   {
+"parameter name": "所欲设置的宽度",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲设置的高度",
+"data type": "整数"
+   }
+]
+  },
+  {
+}"method name": "为零尺寸",
+}"data type": "逻辑型"
+  },
+  {
+@视窗.结构类": "0""method name": "取展示内容",
+@视窗.结构类": "0""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+@视窗.结构类": "0""@虚拟方法": "可覆盖",
+@视窗.结构类": "0""parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+@视窗.结构类": "0"]
+  }
+]
+ },
+ {
+"class name": "小数尺寸类",
+"comment": "用作记录一个小数尺寸数据",
+"base class": "扩展对象类",
+"@视窗.结构类": "0",
+"variables": [
+  {
+}"variable name": "宽度",
+}"data type": "小数",
+}"@属性变量": "真"
+  },
+  {
+ta type": "文本型"]"variable name": "高度",
+ta type": "文本型"]"data type": "小数",
+ta type": "文本型"]"@属性变量": "真"
+  }
+],
+"methods": [
+  {
+base class": "扩展对象类""method name": "到尺寸",
+base class": "扩展对象类""comment": "将本小数尺寸转换为整数尺寸,注意将会存在精度转换误差.",
+base class": "扩展对象类""data type": "尺寸类"
+  },
+  {
+ase class": "扩展对象类""data type": "尺寸类""method name": "清零"
+  },
+  {
+variables": [
+"method name": "设置",
+variables": [
+"parameters": [
+   {
+"parameter name": "所欲设置的宽度",
+"data type": "小数"
+   },
+   {
+"parameter name": "所欲设置的高度",
+"data type": "小数"
+   }
+variables": [
+]
+  },
+  {
+"method name": "为零尺寸",
+"data type": "逻辑型"
+  },
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  }
+]
+ },
+ {
+ }"class name": "算术运算类",
+ }"@全局类": "真",
+ }"methods": [
+  {
+ameter name": "最大展示数据尺寸""method name": "小数是否为零",
+ameter name": "最大展示数据尺寸""comment": "返回所指定的小数是否近似为0.\n由于小数值存在精度误差,因此检查小数值是否为0最好不要直接与0进行比较,使用本方法替代.",
+ameter name": "最大展示数据尺寸""static": true,
+ameter name": "最大展示数据尺寸""data type": "逻辑型",
+ameter name": "最大展示数据尺寸""@嵌入式方法": "\"\"",
+ameter name": "最大展示数据尺寸""parameters": [
+   {
+"parameter name": "所欲检查的小数值",
+"data type": "小数"
+   }
+ameter name": "最大展示数据尺寸"]
+  },
+  {
+meter name": "最大展示数据尺寸""@嵌入式方法": "\"\"""method name": "小数是否相等",
+meter name": "最大展示数据尺寸""@嵌入式方法": "\"\"""comment": "返回两个所指定的小数是否近似相等.\n由于小数值存在精度误差,因此检查小数值是否相等最好不要直接进行比较,使用本方法替代.",
+meter name": "最大展示数据尺寸""@嵌入式方法": "\"\"""static": true,
+meter name": "最大展示数据尺寸""@嵌入式方法": "\"\"""data type": "逻辑型",
+meter name": "最大展示数据尺寸""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+meter name": "最大展示数据尺寸""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "欲检查的小数值1",
+"data type": "小数"
+   },
+   {
+"parameter name": "欲检查的小数值2",
+"data type": "小数"
+   }
+meter name": "最大展示数据尺寸""@嵌入式方法": "\"\""]
+  },
+  {
+data type": "小数""method name": "取较小值",
+data type": "小数""comment": "返回两个同类型数值中较小的那个",
+data type": "小数""static": true,
+data type": "小数""@嵌入式方法": "\"\"",
+data type": "小数""parameters": [
+   {
+"parameter name": "待比较数值1",
+"@匹配类型": "通用数值型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "待比较数值2",
+"@匹配类型": "等于前参数值类型"
+   }
+data type": "小数"]
+  },
+  {
+ }"method name": "取较大值",
+ }"comment": "返回两个同类型数值中较大的那个",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "待比较数值1",
+"@匹配类型": "通用数值型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "待比较数值2",
+"@匹配类型": "等于前参数值类型"
+   }
+ }]
+  },
+  {
+同类型数值中较小的那个"method name": "取较小值3",
+同类型数值中较小的那个"comment": "返回三个同类型数值中最小的那个",
+同类型数值中较小的那个"static": true,
+同类型数值中较小的那个"@嵌入式方法": "\"\"",
+同类型数值中较小的那个"parameters": [
+   {
+"parameter name": "待比较数值1",
+"@匹配类型": "通用数值型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "待比较数值2",
+"@匹配类型": "等于前参数值类型"
+   },
+   {
+"parameter name": "待比较数值3",
+"@匹配类型": "等于前参数值类型"
+   }
+同类型数值中较小的那个]
+  },
+  {
+类型数值中较小的那个"comment": "返回三个同类型数值中最小的那个""method name": "取较大值3",
+类型数值中较小的那个"comment": "返回三个同类型数值中最小的那个""comment": "返回三个同类型数值中最大的那个",
+类型数值中较小的那个"comment": "返回三个同类型数值中最小的那个""static": true,
+类型数值中较小的那个"comment": "返回三个同类型数值中最小的那个""@嵌入式方法": "\"\"",
+类型数值中较小的那个"comment": "返回三个同类型数值中最小的那个""parameters": [
+   {
+"parameter name": "待比较数值1",
+"@匹配类型": "通用数值型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "待比较数值2",
+"@匹配类型": "等于前参数值类型"
+   },
+   {
+"parameter name": "待比较数值3",
+"@匹配类型": "等于前参数值类型"
+   }
+类型数值中较小的那个"comment": "返回三个同类型数值中最小的那个"]
+  },
+  {
+
+"method name": "剪切值",
+
+"comment": "  如果所指定数值小于所提供的最小值,则返回该最小值,\n如果所指定数值大于所提供的最大值,则返回该最大值,否\n则返回该数值本身.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "待检查数值",
+"@匹配类型": "通用数值型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "所允许的最小值",
+"comment": "如果所指定数值小于此值,则返回此值.",
+"@匹配类型": "等于前参数值类型"
+   },
+   {
+"parameter name": "所允许的最大值",
+"comment": "如果所指定数值大于此值,则返回此值.",
+"@匹配类型": "等于前参数值类型"
+   }
+
+]
+  },
+  {
+ameter name": "待比较数值1""method name": "小数整除",
+ameter name": "待比较数值1""comment": "将两个小数相除,返回其整数部分.",
+ameter name": "待比较数值1""static": true,
+ameter name": "待比较数值1""data type": "小数",
+ameter name": "待比较数值1""@禁止流程检查": "真",
+ameter name": "待比较数值1""parameters": [
+   {
+"parameter name": "被除数",
+"data type": "小数"
+   },
+   {
+"parameter name": "除数",
+"comment": "如果除数为0,本方法将返回0.",
+"data type": "小数"
+   }
+ameter name": "待比较数值1"]
+  },
+  {
+
+"method name": "求余数",
+
+"comment": "将两个小数相除,返回其余数部分.",
+
+"static": true,
+
+"data type": "小数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "被除数",
+"data type": "小数"
+   },
+   {
+"parameter name": "除数",
+"comment": "如果除数为0,本方法将返回0.",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+meter name": "待比较数值1""parameters": [
+"method name": "取符号",
+meter name": "待比较数值1""parameters": [
+"comment": "  返回一个整数,如果小于零,表明给定数值为负,如果等于零,\n表明给定数值为零,如果大于零,表明给定数值为正.",
+meter name": "待比较数值1""parameters": [
+"static": true,
+meter name": "待比较数值1""parameters": [
+"data type": "整数",
+meter name": "待比较数值1""parameters": [
+"@嵌入式方法": "\"\"",
+meter name": "待比较数值1""parameters": [
+"parameters": [
+   {
+"parameter name": "所欲判断的数值",
+"@匹配类型": "通用数值型"
+   }
+meter name": "待比较数值1""parameters": [
+]
+  },
+  {
+ }"method name": "取整数绝对值",
+ }"comment": "返回所指定整数的绝对值",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲处理的整数值",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ameter name": "所欲处理的整数值""method name": "取长整数绝对值",
+ameter name": "所欲处理的整数值""comment": "返回所指定长整数的绝对值",
+ameter name": "所欲处理的整数值""static": true,
+ameter name": "所欲处理的整数值""data type": "长整数",
+ameter name": "所欲处理的整数值""@嵌入式方法": "\"\"",
+ameter name": "所欲处理的整数值""parameters": [
+   {
+"parameter name": "所欲处理的长整数值",
+"data type": "长整数"
+   }
+ameter name": "所欲处理的整数值"]
+  },
+  {
+ }"method name": "取小数绝对值",
+ }"comment": "返回所指定小数的绝对值",
+ }"static": true,
+ }"data type": "小数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲处理的小数值",
+"data type": "小数"
+   }
+ }]
+  },
+  {
+eter name": "待比较数值1""parameters": [
+"parameters": [
+"method name": "取整",
+eter name": "待比较数值1""parameters": [
+"parameters": [
+"comment": "  返回一个小数的整数部分. 本命令与\"小数绝对取整\"命令不相同之处为:\n  如果给定小数为负数,则本方法返回小于或等于该小数的第一个负整数,而\"小数绝对取整\"\n方法则会返回大于或等于该小数的第一个负整数. 例如,本命令将 -7.8 转换成 -8, 而\n\"小数绝对取整\"命令将 -7.8 转换成 -7 .",
+eter name": "待比较数值1""parameters": [
+"parameters": [
+"static": true,
+eter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数",
+eter name": "待比较数值1""parameters": [
+"parameters": [
+"@嵌入式方法": "\"\"",
+eter name": "待比较数值1""parameters": [
+"parameters": [
+"parameters": [
+   {
+"parameter name": "所欲处理的小数值",
+"data type": "小数"
+   }
+eter name": "待比较数值1""parameters": [
+"parameters": [
+]
+  },
+  {
+
+"method name": "绝对取整",
+
+"comment": "  返回一个小数的整数部分. 本方法与\"小数取整\"命令不相同之处为:\n  如果给定小数为负数,则本方法返回大于或等于该小数的第一个负整数,而\"小数取整\"\n方法则会返回小于或等于该小数的第一个负整数. 例如,本命令将 -7.8 转换成 -7, 而\n\"小数取整\"命令将 -7.8 转换成 -8 .",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲处理的小数值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+@匹配类型": "通用数值型""method name": "四舍五入",
+@匹配类型": "通用数值型""comment": "返回按照指定的方式进行四舍五入运算的结果数值",
+@匹配类型": "通用数值型""static": true,
+@匹配类型": "通用数值型""data type": "小数",
+@匹配类型": "通用数值型""@嵌入式方法": "\"\"",
+@匹配类型": "通用数值型""parameters": [
+   {
+"parameter name": "欲被四舍五入的值",
+"data type": "小数"
+   },
+   {
+"parameter name": "被舍入的位置",
+"comment": "如果大于0,表示小数点右边应保留的位数; 如果等于0,表示舍入到整数; 如果小于0,表示小数点左边舍入到的位置.\n例如: 四舍五入 (1056.65, 1) 返回 1056.7; 四舍五入 (1056.65, 0) 返回 1057; 四舍五入 (1056.65, -1) 返回 1060.",
+"data type": "整数",
+"@默认值": "0"
+   }
+@匹配类型": "通用数值型"]
+  },
+  {
+"static": true"method name": "求次方",
+"static": true"comment": "返回指定数值的指定次方",
+"static": true"static": true,
+"static": true"data type": "小数",
+"static": true"@嵌入式方法": "\"\"",
+"static": true"parameters": [
+   {
+"parameter name": "欲求次方数值",
+"comment": "指定欲求其某次方的数值",
+"data type": "小数"
+   },
+   {
+"parameter name": "次方数",
+"comment": "指定对欲求次方数值的运算指数",
+"data type": "小数"
+   }
+"static": true]
+  },
+  {
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""method name": "求平方根",
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""comment": "返回指定数值的平方根",
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""static": true,
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""data type": "小数",
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""@嵌入式方法": "\"\"",
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""parameters": [
+   {
+"parameter name": "所欲处理的数值",
+"data type": "小数"
+   }
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数"]
+  },
+  {
+data type": "整数""method name": "弧度到角度",
+data type": "整数""comment": "将所指定以弧度为单位的角度值转换为以度为单位",
+data type": "整数""static": true,
+data type": "整数""data type": "小数",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "欲转换的角度值",
+"comment": "以弧度为单位",
+"data type": "小数"
+   }
+data type": "整数"]
+  },
+  {
+ata type": "整数""parameters": [
+"method name": "角度到弧度",
+ata type": "整数""parameters": [
+"comment": "将所指定以度为单位的角度值转换为以弧度为单位",
+ata type": "整数""parameters": [
+"static": true,
+ata type": "整数""parameters": [
+"data type": "小数",
+ata type": "整数""parameters": [
+"@嵌入式方法": "\"\"",
+ata type": "整数""parameters": [
+"parameters": [
+   {
+"parameter name": "欲转换的角度值",
+"comment": "以度为单位",
+"data type": "小数"
+   }
+ata type": "整数""parameters": [
+]
+  },
+  {
+
+"method name": "求正弦",
+
+"comment": "返回指定角的正弦值",
+
+"static": true,
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲进行计算的角",
+"comment": "所使用单位为弧度",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+"method name": "求余弦",
+"comment": "返回指定角的余弦值",
+"static": true,
+"data type": "小数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "欲进行计算的角",
+"comment": "所使用单位为弧度",
+"data type": "小数"
+   }
+]
+  },
+  {
+comment": "以弧度为单位""method name": "求正切",
+comment": "以弧度为单位""comment": "返回指定角的正切值",
+comment": "以弧度为单位""static": true,
+comment": "以弧度为单位""data type": "小数",
+comment": "以弧度为单位""@嵌入式方法": "\"\"",
+comment": "以弧度为单位""parameters": [
+   {
+"parameter name": "欲进行计算的角",
+"comment": "所使用单位为弧度",
+"data type": "小数"
+   }
+comment": "以弧度为单位"]
+  },
+  {
+comment": "以弧度为单位""method name": "求反正切",
+comment": "以弧度为单位""comment": "返回指定角的反正切值",
+comment": "以弧度为单位""static": true,
+comment": "以弧度为单位""data type": "小数",
+comment": "以弧度为单位""@嵌入式方法": "\"\"",
+comment": "以弧度为单位""parameters": [
+   {
+"parameter name": "欲进行计算的角",
+"comment": "所使用单位为弧度",
+"data type": "小数"
+   }
+comment": "以弧度为单位"]
+  },
+  {
+
+"parameters": [
+"method name": "求自然对数",
+
+"parameters": [
+"comment": "返回指定参数的自然对数值.\n自然对数是以 E 为底的对数.",
+
+"parameters": [
+"static": true,
+
+"parameters": [
+"data type": "小数",
+
+"parameters": [
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "欲求其自然对数的值",
+"data type": "小数"
+   }
+
+"parameters": [
+]
+  },
+  {
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""method name": "求反对数",
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""comment": "返回 E（自然对数的底）的某次方",
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""static": true,
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""data type": "小数",
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""@嵌入式方法": "\"\"",
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数""parameters": [
+   {
+"parameter name": "欲求其反对数的值",
+"comment": "注意如果参数值超过 709.782712893 ,将导致计算溢出.",
+"data type": "小数"
+   }
+ter name": "待比较数值1""parameters": [
+"parameters": [
+"data type": "整数"]
+  },
+  {
+ameter name": "欲求其自然对数的值""method name": "是否运算正确",
+ameter name": "欲求其自然对数的值""comment": "  对乘/除/求次方/求平方根/求正弦值/求余弦值/求正切值/求反正切值/求自然对数/求反对数\n等各种数学运算方法所计算出来的双精度结果数值进行校验,如果该数值正确有效,返回真.如果\n该数值是运算错误或运算溢出后的结果,返回假.",
+ameter name": "欲求其自然对数的值""static": true,
+ameter name": "欲求其自然对数的值""data type": "逻辑型",
+ameter name": "欲求其自然对数的值""@嵌入式方法": "\"\"",
+ameter name": "欲求其自然对数的值""parameters": [
+   {
+"parameter name": "所欲检查的小数值",
+"data type": "小数"
+   }
+ameter name": "欲求其自然对数的值"]
+  },
+  {
+ }"method name": "置随机数种子",
+ }"comment": "  为随机数生成器初始化一个种子值,不同的种子值将导致后续的\n取随机数系列方法返回不同的随机数系列值.\n  本方法的调用不是必需的,如果在未调用本方法时调用后续的取\n随机数系列方法,将自动首先使用一个随机值来初始化种子.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "欲置入的种子数值",
+"comment": "本参数值如果为0,将使用当前计算机系统的时钟毫秒值.",
+"data type": "整数",
+"@默认值": "0"
+   }
+ }]
+  },
+  {
+
+"method name": "取随机数",
+
+"comment": "  返回一个所指定范围内的随机整数值,注意范围\n两侧的最小和最大值本身被包括在内.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲取随机数的最小值",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "欲取随机数的最大值",
+"comment": "参数必须大于等于所指定的最小值",
+"data type": "整数",
+"@默认值": "数值范围.最大整数值"
+   }
+
+]
+  },
+  {
+comment": "参数必须大于等于所指定的最小值""method name": "取随机数2",
+comment": "参数必须大于等于所指定的最小值""comment": "返回一个在0到所指定值之间(包括两者本身)的随机整数值",
+comment": "参数必须大于等于所指定的最小值""static": true,
+comment": "参数必须大于等于所指定的最小值""data type": "整数",
+comment": "参数必须大于等于所指定的最小值""@嵌入式方法": "\"\"",
+comment": "参数必须大于等于所指定的最小值""parameters": [
+   {
+"parameter name": "欲取随机数的最大值",
+"comment": "参数值必须大于等于0",
+"data type": "整数"
+   }
+comment": "参数必须大于等于所指定的最小值"]
+  },
+  {
+大于等于所指定的最小值"method name": "取随机短整数",
+大于等于所指定的最小值"comment": "返回一个在0到32627之间(包括两者本身)的随机整数值",
+大于等于所指定的最小值"static": true,
+大于等于所指定的最小值"data type": "整数",
+大于等于所指定的最小值"@嵌入式方法": "\"\""
+  },
+  {
+ }"method name": "取随机整数",
+ }"comment": "返回一个从0到最大整数值之间(包括两者本身)的整数值",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\""
+  },
+  {
+大于等于所指定的最小值"method name": "取随机小数",
+大于等于所指定的最小值"comment": "  返回一个所指定范围内的随机小数值,注意范围\n两侧的最小和最大值本身被包括在内.",
+大于等于所指定的最小值"static": true,
+大于等于所指定的最小值"data type": "小数",
+大于等于所指定的最小值"@嵌入式方法": "\"\"",
+大于等于所指定的最小值"parameters": [
+   {
+"parameter name": "欲取随机数的最小值",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "欲取随机数的最大值",
+"comment": "参数必须大于等于所指定的最小值",
+"data type": "小数"
+   }
+大于等于所指定的最小值]
+  },
+  {
+@默认值": "数值范围.最大整数值""method name": "取随机小数2",
+@默认值": "数值范围.最大整数值""comment": "返回一个在0到1之间(包括0和1本身)的小数值",
+@默认值": "数值范围.最大整数值""static": true,
+@默认值": "数值范围.最大整数值""data type": "小数",
+@默认值": "数值范围.最大整数值""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "合并整数",
+}"comment": "  将第一个整数的低16位放置到结果整数的低16位,将第二个整数的低16位\n放置到结果整数的高16位,以此合并成一个整数,并返回合并后的结果.",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "用作合并的整数1",
+"data type": "整数"
+   },
+   {
+"parameter name": "用作合并的整数2",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "合并短整数",
+"comment": "  将第一个整数的低8位放置到结果短整数的低8位,将第二个整数的低8位\n放置到结果短整数的高8位,以此合并成一个短整数,并返回合并后的结果.",
+"static": true,
+"data type": "短整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "用作合并的整数1",
+"data type": "整数"
+   },
+   {
+"parameter name": "用作合并的整数2",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "求反正切2",
+
+"comment": "返回以弧度表示的 参数1/参数2 的反正切.反正切函数是正切函数的反函数.",
+
+"result comment": "返回单位是弧度",
+
+"static": true,
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "参数1",
+"data type": "小数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "求两直线夹角",
+
+"comment": "返回两直线夹角,采用正切公式计算两直线的夹角.",
+
+"result comment": "返回单位是弧度",
+
+"static": true,
+
+"data type": "小数",
+
+"parameters": [
+   {
+"parameter name": "参数1",
+"comment": "直线1的斜率",
+"data type": "小数"
+   },
+   {
+"parameter name": "参数2",
+"comment": "直线2的斜率",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+ameter name": "欲求其自然对数的值""method name": "是否是2的幂",
+ameter name": "欲求其自然对数的值""comment": "返回某数是否是2的幂",
+ameter name": "欲求其自然对数的值""static": true,
+ameter name": "欲求其自然对数的值""data type": "逻辑型",
+ameter name": "欲求其自然对数的值""parameters": [
+   {
+"parameter name": "欲求值的数值",
+"data type": "整数"
+   }
+ameter name": "欲求其自然对数的值"]
+  },
+  {
+"method name": "求双曲正切",
+"static": true,
+"data type": "小数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "欲求双曲正切的数值",
+"data type": "小数"
+   }
+]
+  },
+  {
+"method name": "求反双曲正切",
+"comment": "反双曲正切函数是双曲正切函数的反函数",
+"static": true,
+"data type": "小数",
+"parameters": [
+   {
+"parameter name": "欲求反双曲正切的小数",
+"comment": "输入参数必须大于-1且小于1\n当输入参数小于等于-1或大于等于1返回0",
+"data type": "小数"
+   }
+]
+  },
+  {
+static": true"method name": "求双曲余切",
+static": true"comment": "双曲余切是双曲函数的其中一种",
+static": true"static": true,
+static": true"data type": "小数",
+static": true"parameters": [
+   {
+"parameter name": "欲求双曲余切的小数",
+"data type": "小数"
+   }
+static": true]
+  },
+  {
+"static": true"method name": "求反双曲余切",
+"static": true"comment": "反双曲余切函数是双曲余切函数的反函数",
+"static": true"static": true,
+"static": true"data type": "小数",
+"static": true"parameters": [
+   {
+"parameter name": "欲求反双曲余切的小数",
+"comment": "输入参数必须小于-1或大于1\n当输入参数大于等于-1且小于等于1时返回0",
+"data type": "小数"
+   }
+"static": true]
+  },
+  {
+
+"method name": "求双曲正弦",
+
+"static": true,
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲求双曲正弦的数值",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+parameters": [
+"method name": "求双曲正割",
+parameters": [
+"comment": "双曲正割是双曲函数的其中一种",
+parameters": [
+"static": true,
+parameters": [
+"data type": "小数",
+parameters": [
+"parameters": [
+   {
+"parameter name": "欲求双曲正割的小数",
+"data type": "小数"
+   }
+parameters": [
+]
+  },
+  {
+comment": "直线2的斜率""method name": "求双曲余割",
+comment": "直线2的斜率""comment": "双曲余割是双曲函数的其中一种",
+comment": "直线2的斜率""static": true,
+comment": "直线2的斜率""data type": "小数",
+comment": "直线2的斜率""parameters": [
+   {
+"parameter name": "欲求双曲余割的小数",
+"data type": "小数"
+   }
+comment": "直线2的斜率"]
+  },
+  {
+hod name": "求反双曲正切""method name": "求双曲余弦",
+hod name": "求反双曲正切""static": true,
+hod name": "求反双曲正切""data type": "小数",
+hod name": "求反双曲正切""@嵌入式方法": "\"\"",
+hod name": "求反双曲正切""parameters": [
+   {
+"parameter name": "欲求双曲余弦的数值",
+"data type": "小数"
+   }
+hod name": "求反双曲正切"]
+  },
+  {
+"data type": "小数""method name": "求反双曲正弦",
+"data type": "小数""comment": "反双曲正弦函数是双曲正弦函数的反函数",
+"data type": "小数""static": true,
+"data type": "小数""data type": "小数",
+"data type": "小数""parameters": [
+   {
+"parameter name": "欲求反双曲正弦的小数",
+"data type": "小数"
+   }
+"data type": "小数"]
+  },
+  {
+data type": "小数""data type": "小数""method name": "求反双曲余弦",
+data type": "小数""data type": "小数""comment": "反双曲余弦函数是双曲余弦函数的反函数",
+data type": "小数""data type": "小数""static": true,
+data type": "小数""data type": "小数""data type": "小数",
+data type": "小数""data type": "小数""parameters": [
+   {
+"parameter name": "欲求反双曲余弦的小数",
+"comment": "输入参数必须大于等于1\n当输入参数小于1时返回0",
+"data type": "小数"
+   }
+data type": "小数""data type": "小数"]
+  },
+  {
+"method name": "求反双曲正割",
+"comment": "反双曲正割是双曲正割函数的反函数",
+"static": true,
+"data type": "小数",
+"parameters": [
+   {
+"parameter name": "欲求反双曲正割的小数",
+"comment": "输入参数必须大于等于0且小于等于1\n当输入参数大于1或小于等于0时返回0",
+"data type": "小数"
+   }
+]
+  },
+  {
+"method name": "求反双曲余割",
+"comment": "反双曲余割函数是双曲余割函数的反函数",
+"static": true,
+"data type": "小数",
+"parameters": [
+   {
+"parameter name": "欲求反双曲余割的小数",
+"comment": "输入参数必须不等于0\n当输入参数等于0时返回0",
+"data type": "小数"
+   }
+]
+  },
+  {
+"method name": "求对数",
+"comment": "如果a的x次方等于N（a>0，且a≠1）,那么数x叫做以a为底N的对数,其中,a叫做对数的底数,N叫做真数",
+"static": true,
+"data type": "小数",
+"parameters": [
+   {
+"parameter name": "欲求对数的底数",
+"data type": "小数"
+   },
+   {
+"parameter name": "欲求对数的真数",
+"data type": "小数"
+   }
+]
+  },
+  {
+hod name": "求反双曲正切""method name": "求曲率",
+hod name": "求反双曲正切""comment": "曲线的曲率就是针对曲线上某个点的切线方向角对弧长的转动率,通过微分来定义,表明曲线偏离直线的程度",
+hod name": "求反双曲正切""static": true,
+hod name": "求反双曲正切""data type": "小数",
+hod name": "求反双曲正切""parameters": [
+   {
+"parameter name": "一阶导数",
+"data type": "小数"
+   },
+   {
+"parameter name": "二阶导数",
+"data type": "小数"
+   }
+hod name": "求反双曲正切"]
+  },
+  {
+
+"method name": "求曲率半径",
+
+"comment": "曲率半径是曲率的倒数",
+
+"static": true,
+
+"data type": "小数",
+
+"parameters": [
+   {
+"parameter name": "一阶导数",
+"data type": "小数"
+   },
+   {
+"parameter name": "二阶导数",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"method name": "求反正割",
+
+"comment": "反正割函数是正割函数的反函数",
+
+"static": true,
+
+"data type": "小数",
+
+"parameters": [
+   {
+"parameter name": "欲求反正割的小数",
+"comment": "输入参数必须大于等于1或小于等于-1",
+"data type": "小数"
+   }
+
+]
+  },
+  {
+
+"parameters": [
+"method name": "求反余割",
+
+"parameters": [
+"comment": "反余割函数是余割函数的反函数",
+
+"parameters": [
+"static": true,
+
+"parameters": [
+"data type": "小数",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "欲求反余割的小数",
+"comment": "输入参数必须大于等于1或小于等于-1",
+"data type": "小数"
+   }
+
+"parameters": [
+]
+  },
+  {
+"method name": "求反余切",
+"comment": "反余切函数是余切函数的反函数",
+"static": true,
+"data type": "小数",
+"parameters": [
+   {
+"parameter name": "欲求反余切的小数",
+"data type": "小数"
+   }
+]
+  },
+  {
+od name": "求反双曲正切""data type": "小数""method name": "求正割",
+od name": "求反双曲正切""data type": "小数""comment": "在直角三角形中,斜边与某个锐角的邻边的比,叫做该锐角的正割.\n正割是余弦的倒数.",
+od name": "求反双曲正切""data type": "小数""static": true,
+od name": "求反双曲正切""data type": "小数""data type": "小数",
+od name": "求反双曲正切""data type": "小数""parameters": [
+   {
+"parameter name": "欲求正割的小数",
+"data type": "小数"
+   }
+od name": "求反双曲正切""data type": "小数"]
+  },
+  {
+"method name": "求余割",
+"comment": "在直角三角形中,斜边与某个锐角的对边的比值,叫做该锐角的余割.\n余割是正弦的倒数.",
+"static": true,
+"data type": "小数",
+"parameters": [
+   {
+"parameter name": "欲求余割的小数",
+"data type": "小数"
+   }
+]
+  },
+  {
+
+"comment": "曲率半径是曲率的倒数""method name": "求余切",
+
+"comment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.",
+
+"comment": "曲率半径是曲率的倒数""static": true,
+
+"comment": "曲率半径是曲率的倒数""data type": "小数",
+
+"comment": "曲率半径是曲率的倒数""parameters": [
+   {
+"parameter name": "欲求余切的小数",
+"data type": "小数"
+   }
+
+"comment": "曲率半径是曲率的倒数"]
+  },
+  {
+"comment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""method name": "求反余弦",
+"comment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""comment": "反余弦函数为余弦函数的反函数",
+"comment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""static": true,
+"comment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""data type": "小数",
+"comment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""@嵌入式方法": "\"\"",
+"comment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""parameters": [
+   {
+"parameter name": "欲求反余弦的小数",
+"comment": "输入参数必须大于等于-1或小于等于1",
+"data type": "小数"
+   }
+"comment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数."]
+  },
+  {
+comment": "曲率半径是曲率的倒数"]"method name": "求反正弦",
+comment": "曲率半径是曲率的倒数"]"comment": "反正弦函数为正弦函数的反函数",
+comment": "曲率半径是曲率的倒数"]"static": true,
+comment": "曲率半径是曲率的倒数"]"data type": "小数",
+comment": "曲率半径是曲率的倒数"]"@嵌入式方法": "\"\"",
+comment": "曲率半径是曲率的倒数"]"parameters": [
+   {
+"parameter name": "欲求反正弦的小数",
+"data type": "小数"
+   }
+comment": "曲率半径是曲率的倒数"]]
+  },
+  {
+ment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""method name": "求反余弦""method name": "求整数最大公因数",
+ment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""method name": "求反余弦""comment": "如果一个整数同时是几个整数的因数,称这个整数为它们的公因数.公因数中最大的称为最大公因数.",
+ment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""method name": "求反余弦""static": true,
+ment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""method name": "求反余弦""data type": "整数",
+ment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""method name": "求反余弦""parameters": [
+   {
+"parameter name": "欲求最大公因数的整数1",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲求最大公因数的整数2",
+"data type": "整数"
+   }
+ment": "曲率半径是曲率的倒数""comment": "在直角三角形中,某锐角的相邻直角边和相对直角边的比,叫做该锐角的余切.\n余切是正切的倒数.""method name": "求反余弦"]
+  },
+  {
+data type": "整数""method name": "求整数阶乘",
+data type": "整数""comment": "一个正整数的阶乘是所有小于及等于该数的正整数的积",
+data type": "整数""static": true,
+data type": "整数""data type": "整数",
+data type": "整数""parameters": [
+   {
+"parameter name": "欲求阶乘的整数",
+"data type": "整数"
+   }
+data type": "整数"]
+  }
+ }]
+ },
+ {
+ata type": "整数""comment": "一个正整数的阶乘是所有小于及等于该数的正整数的积""class name": "数值转换类",
+ata type": "整数""comment": "一个正整数的阶乘是所有小于及等于该数的正整数的积""@文档": "\"category = \\\"数值转换\\\"\"",
+ata type": "整数""comment": "一个正整数的阶乘是所有小于及等于该数的正整数的积""@全局类": "真",
+ata type": "整数""comment": "一个正整数的阶乘是所有小于及等于该数的正整数的积""methods": [
+  {
+ata type": "整数""data type": "整数""method name": "无符号字节到整数",
+ata type": "整数""data type": "整数""comment": "将所指定的字节以无符号的形式转换到整数.\n所谓无符号,即转换时忽略掉字节的最高符号位,认为其始终为正数.",
+ata type": "整数""data type": "整数""static": true,
+ata type": "整数""data type": "整数""data type": "整数",
+ata type": "整数""data type": "整数""@嵌入式方法": "\"\"",
+ata type": "整数""data type": "整数""parameters": [
+   {
+"parameter name": "所欲转换的字节",
+"data type": "字节"
+   }
+ata type": "整数""data type": "整数"]
+  },
+  {
+a type": "整数""data type": "整数"]"method name": "无符号短整数到整数",
+a type": "整数""data type": "整数"]"comment": "将所指定的短整数以无符号的形式转换到整数.\n所谓无符号,即转换时忽略掉短整数的最高符号位,认为其始终为正数.",
+a type": "整数""data type": "整数"]"static": true,
+a type": "整数""data type": "整数"]"data type": "整数",
+a type": "整数""data type": "整数"]"@嵌入式方法": "\"\"",
+a type": "整数""data type": "整数"]"parameters": [
+   {
+"parameter name": "所欲转换的短整数",
+"data type": "短整数"
+   }
+a type": "整数""data type": "整数"]]
+  },
+  {
+a type": "整数""data type": "整数"]"method name": "无符号字符到整数",
+a type": "整数""data type": "整数"]"comment": "将所指定的字符值以无符号的形式转换到整数.\n所谓无符号,即转换时忽略掉字符值的最高符号位,认为其始终为正数.",
+a type": "整数""data type": "整数"]"static": true,
+a type": "整数""data type": "整数"]"data type": "整数",
+a type": "整数""data type": "整数"]"@嵌入式方法": "\"\"",
+a type": "整数""data type": "整数"]"parameters": [
+   {
+"parameter name": "所欲转换的字符",
+"data type": "字符"
+   }
+a type": "整数""data type": "整数"]]
+  },
+  {
+omment": "曲率半径是曲率的倒数"]"comment": "反正弦函数为正弦函数的反函数""method name": "无符号整数到长整数",
+omment": "曲率半径是曲率的倒数"]"comment": "反正弦函数为正弦函数的反函数""comment": "将所指定的整数以无符号的形式转换到长整数.\n所谓无符号,即转换时忽略掉整数的最高符号位,认为其始终为正数.",
+omment": "曲率半径是曲率的倒数"]"comment": "反正弦函数为正弦函数的反函数""static": true,
+omment": "曲率半径是曲率的倒数"]"comment": "反正弦函数为正弦函数的反函数""data type": "长整数",
+omment": "曲率半径是曲率的倒数"]"comment": "反正弦函数为正弦函数的反函数""@嵌入式方法": "\"\"",
+omment": "曲率半径是曲率的倒数"]"comment": "反正弦函数为正弦函数的反函数""parameters": [
+   {
+"parameter name": "所欲转换的整数",
+"data type": "整数"
+   }
+omment": "曲率半径是曲率的倒数"]"comment": "反正弦函数为正弦函数的反函数"]
+  },
+  {
+"method name": "文本到短整数",
+"comment": "将所指定文本转换到短整数并返回",
+"static": true,
+"data type": "短整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲转换的文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+}"method name": "文本到整数",
+}"comment": "将所指定文本转换到整数并返回",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲转换的文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "文本到长整数",
+"comment": "将所指定文本转换到长整数并返回",
+"static": true,
+"data type": "长整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲转换的文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "文本到单精度小数",
+data type": "文本型""comment": "将所指定文本转换到单精度小数并返回",
+data type": "文本型""static": true,
+data type": "文本型""data type": "单精度小数",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲转换的文本",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "文本到小数",
+
+"comment": "将所指定文本转换到小数并返回",
+
+"static": true,
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲转换的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "文本到逻辑值",
+ }"comment": "将所指定文本转换到逻辑值并返回",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲转换的文本",
+"comment": "  提供所欲转换到逻辑值的文本内容(其首尾空白文本被忽略),\"真\"/\"true\"(不区分大小写)/\"1\"\n被转换为逻辑值真,其它文本内容被转换为逻辑值假.",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "取十六进制文本",
+"comment": "返回所指定整数所对应的十六进制文本",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "所欲转换的整数",
+"data type": "整数"
+   },
+   {
+"parameter name": "所需要的最小宽度",
+"comment": "指定所需求的最小宽度(数字数目),如果有效数值宽度小于该值,则自动在首部加0.\n为0表示去除所有的前置'0'数字.",
+"data type": "整数",
+"@默认值": "0"
+   }
+]
+  },
+  {
+}"comment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本",
+}"comment": "将所指定文本转换到逻辑值并返回""comment": "返回所指定长整数所对应的十六进制文本",
+}"comment": "将所指定文本转换到逻辑值并返回""static": true,
+}"comment": "将所指定文本转换到逻辑值并返回""data type": "文本型",
+}"comment": "将所指定文本转换到逻辑值并返回""@禁止流程检查": "真",
+}"comment": "将所指定文本转换到逻辑值并返回""parameters": [
+   {
+"parameter name": "所欲转换的长整数",
+"data type": "长整数"
+   },
+   {
+"parameter name": "所需要的最小宽度",
+"comment": "指定所需求的最小宽度(数字数目),如果有效数值宽度小于该值,则自动在首部加0.\n为0表示去除所有的前置'0'数字.",
+"data type": "整数",
+"@默认值": "0"
+   }
+}"comment": "将所指定文本转换到逻辑值并返回"]
+  },
+  {
+mment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""method name": "取变整数十六进制文本",
+mment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""comment": "返回所指定变整数所对应的十六进制文本",
+mment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""static": true,
+mment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""data type": "文本型",
+mment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""@禁止流程检查": "真",
+mment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""parameters": [
+   {
+"parameter name": "所欲转换的变整数",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所需要的最小宽度",
+"comment": "指定所需求的最小宽度(数字数目),如果有效数值宽度小于该值,则自动在首部加0.\n为0表示去除所有的前置'0'数字.",
+"data type": "整数",
+"@默认值": "0"
+   }
+mment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本"]
+  },
+  {
+ment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""@禁止流程检查": "真""method name": "数值到大写",
+ment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""@禁止流程检查": "真""comment": "将数值转换为简体或繁体的大写形式,返回转换后的文本.",
+ment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""@禁止流程检查": "真""static": true,
+ment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""@禁止流程检查": "真""data type": "文本型",
+ment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""@禁止流程检查": "真""@禁止流程检查": "真",
+ment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "所欲转换的数值",
+"comment": "提供所欲转换的数值,其小数位被舍入到两位.",
+"data type": "小数"
+   },
+   {
+"parameter name": "是否转化为简体",
+"comment": "为真转换为简体,为假则转换为繁体.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ment": "将所指定文本转换到逻辑值并返回""method name": "取长整数十六进制文本""@禁止流程检查": "真"]
+  },
+  {
+comment": "为真转换为简体,为假则转换为繁体.""method name": "数值到金融",
+comment": "为真转换为简体,为假则转换为繁体.""comment": "将数值转换为货币的简体或繁体大写形式,返回转换后的文本.",
+comment": "为真转换为简体,为假则转换为繁体.""static": true,
+comment": "为真转换为简体,为假则转换为繁体.""data type": "文本型",
+comment": "为真转换为简体,为假则转换为繁体.""@禁止流程检查": "真",
+comment": "为真转换为简体,为假则转换为繁体.""parameters": [
+   {
+"parameter name": "所欲转换的数值",
+"comment": "提供所欲转换的数值,其小数位被舍入到两位.",
+"data type": "小数"
+   },
+   {
+"parameter name": "是否转化为简体",
+"comment": "为真转换为简体,为假则转换为繁体.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "为真转换为简体,为假则转换为繁体."]
+  },
+  {
+
+"method name": "数值到格式文本",
+
+"comment": "将指定数值转换到所指定的格式化文本后返回",
+
+"static": true,
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲转换为文本的数值",
+"data type": "小数"
+   },
+   {
+"parameter name": "小数保留位数",
+"comment": "  如果大于0,表示小数点右边应四舍五入保留的位数; 如果等于0.表示舍入到整数;如果小于0,\n表示小数点左边舍入到的位置.如果为\"数值范围.最大整数值\",则保留所有实际存在的小数位.\n  例如: 数值到格式文本 (66.66, 1, 假) 将返回\"66.7\"; 数值到格式文本 (66.66, 0, 假)\n将返回\"67\";  数值到格式文本 (66.66, -1, 假) 将返回\"70\".",
+"data type": "整数",
+"@默认值": "数值范围.最大整数值"
+   },
+   {
+"parameter name": "是否进行千分位分隔",
+"comment": "如果为真,数值文本的每个千分位上都将被自动插入一个逗号进行分隔.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+ameter name": "是否进行千分位分隔""method name": "反转整数字节序",
+ameter name": "是否进行千分位分隔""comment": "  将所指定整数的组成字节的顺序反转,返回反转后的结果值.譬如十六进制整数0x12345678,\n反转后将返回0x78563412. 本命令在与类似Java这样的语言进行数据交互时很有用处.",
+ameter name": "是否进行千分位分隔""static": true,
+ameter name": "是否进行千分位分隔""data type": "整数",
+ameter name": "是否进行千分位分隔""@禁止流程检查": "真",
+ameter name": "是否进行千分位分隔""parameters": [
+   {
+"parameter name": "所欲反转的整数",
+"data type": "整数"
+   }
+ameter name": "是否进行千分位分隔"]
+  },
+  {
+parameters": [
+"method name": "反转长整数字节序",
+parameters": [
+"comment": "  将所指定长整数的组成字节的顺序反转,返回反转后的结果值.譬如十六进制整数0x12345678,\n反转后将返回0x78563412. 本命令在与类似Java这样的语言进行数据交互时很有用处.",
+parameters": [
+"static": true,
+parameters": [
+"data type": "长整数",
+parameters": [
+"@禁止流程检查": "真",
+parameters": [
+"parameters": [
+   {
+"parameter name": "所欲反转的长整数",
+"data type": "长整数"
+   }
+parameters": [
+]
+  },
+  {
+arameters": [
+"@禁止流程检查": "真""method name": "十六进制文本到整数",
+arameters": [
+"@禁止流程检查": "真""comment": "将所指定的十六进制文本(可以以\"0x\"开头)转换为对应的整数值并返回",
+arameters": [
+"@禁止流程检查": "真""static": true,
+arameters": [
+"@禁止流程检查": "真""data type": "整数",
+arameters": [
+"@禁止流程检查": "真""@嵌入式方法": "\"\"",
+arameters": [
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "十六进制文本",
+"data type": "文本型"
+   }
+arameters": [
+"@禁止流程检查": "真"]
+  },
+  {
+meter name": "是否进行千分位分隔""parameters": [
+"method name": "十六进制文本到长整数",
+meter name": "是否进行千分位分隔""parameters": [
+"comment": "将所指定的十六进制文本(可以以\"0x\"开头)转换为对应的长整数值并返回",
+meter name": "是否进行千分位分隔""parameters": [
+"static": true,
+meter name": "是否进行千分位分隔""parameters": [
+"data type": "长整数",
+meter name": "是否进行千分位分隔""parameters": [
+"@嵌入式方法": "\"\"",
+meter name": "是否进行千分位分隔""parameters": [
+"parameters": [
+   {
+"parameter name": "十六进制文本",
+"data type": "文本型"
+   }
+meter name": "是否进行千分位分隔""parameters": [
+]
+  }
+ata type": "整数""comment": "一个正整数的阶乘是所有小于及等于该数的正整数的积"]
+ }
+方法 = ""]
+}

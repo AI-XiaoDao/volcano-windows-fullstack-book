@@ -1,0 +1,344 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"HTML解析工具类".
+
+{
+问本程序中的接口需要引用模块"HTML解析工具类"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"HTML解析工具类"."package name": "火山.视窗.高级网页解析",
+问本程序中的接口需要引用模块"HTML解析工具类"."classes": [
+ {
+"class name": "网页元素类",
+"comment": "提供网页元素操作",
+"base class": "参考对象模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"网页元素数据类\"",
+"methods": [
+  {
+
+"method name": "_销毁",
+
+"comment": "内部方法,请勿调用."
+  },
+  {
+"method name": "取节点",
+"comment": "取指定索引节点",
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "索引从0开始,不能大于节点数-1",
+"data type": "整数"
+   },
+   {
+"parameter name": "保存节点对象",
+"comment": "取出来的节点保存在此参数中",
+"data type": "网页节点类"
+   }
+]
+  },
+  {
+开始位置,包含当前节点结束标签."method name": "取节点数",
+开始位置,包含当前节点结束标签."comment": "取出当前元素的节点数量.",
+开始位置,包含当前节点结束标签."data type": "整数",
+开始位置,包含当前节点结束标签."@禁止流程检查": "真"
+  },
+  {
+,包含当前节点结束标签."method name": "取节点数""method name": "查询元素",
+,包含当前节点结束标签."method name": "取节点数""parameters": [
+   {
+"parameter name": "选择器文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "查询结果",
+"data type": "网页元素类"
+   }
+,包含当前节点结束标签."method name": "取节点数"]
+  }
+]
+ },
+ {
+"class name": "高级网页解析器",
+"comment": "通过本类可快速解析HTML文档,支持路径查询网页文档.",
+"base class": "参考对象模板类",
+"@模板实现类": "\"高级网页解析器数据类\"",
+"methods": [
+  {
+data type": "网页元素类""method name": "创建",
+data type": "网页元素类""comment": "从HTML文本文档来创建解析器,创建成功后可调用\"查询元素\"方法查询HTML元素.",
+data type": "网页元素类""result comment": "创建成功返回真",
+data type": "网页元素类""data type": "逻辑型",
+data type": "网页元素类""@禁止流程检查": "真",
+data type": "网页元素类""parameters": [
+   {
+"parameter name": "网页内容",
+"data type": "文本型"
+   }
+data type": "网页元素类"]
+  },
+  {
+data type": "文本型""method name": "创建自文件",
+data type": "文本型""comment": "从本地文档创建解析器,创建成功后可调用\"查询元素\"方法查询HTML元素.",
+data type": "文本型""result comment": "创建成功返回真",
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""parameters": [
+   {
+"parameter name": "网页本地路径",
+"comment": "提供完整的本地文档路径",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "创建自资源",
+
+"comment": "从资源创建解析器,创建成功后可调用\"查询元素\"方法查询HTML元素.",
+
+"result comment": "创建成功返回真",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件资源",
+"data type": "视窗文件资源"
+   }
+
+]
+  },
+  {
+"data type": "逻辑型""method name": "创建自字节集",
+"data type": "逻辑型""comment": "从字节集创建解析器,创建成功后可调用\"查询元素\"方法查询HTML元素.",
+"data type": "逻辑型""result comment": "创建成功返回真",
+"data type": "逻辑型""data type": "逻辑型",
+"data type": "逻辑型""@禁止流程检查": "真",
+"data type": "逻辑型""parameters": [
+   {
+"parameter name": "网页内容",
+"comment": "必须保证提供的字节集是UTF8编码的.",
+"data type": "字节集类"
+   }
+"data type": "逻辑型"]
+  },
+  {
+ }"method name": "取位置源码",
+ }"comment": "  通过本方法可以取出指定位置的网页源码.\n  注意：在取单标签源码时(如：input),需要使用\"节点变量.取节点开始位置2()\"和\n\"节点变量.取节点结束位置2()\",并且开始位置和结束位置需要互换位置.\n  如下: 解析器变量.取位置源码 (节点变量.取节点结束位置2 (), 节点变量.取节点开始位置2 ()) ",
+ }"data type": "文本型",
+ }"parameters": [
+   {
+"parameter name": "开始位置",
+"data type": "整数"
+   },
+   {
+"parameter name": "结束位置",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+data type": "整数""method name": "查询元素",
+data type": "整数""comment": "创建解析器成功后,可通过本方法在HTML文档中查找元素.",
+data type": "整数""parameters": [
+   {
+"parameter name": "路径文本",
+"comment": "所查询内容,支持如下格式:\n  1.div.className -  通过元素名.类名来取得元素对象.\n  2.div.className > a 通过元素名.类名,得到指定元素对象后,继续获取该元素下的第一个a标签元素.\n  3.a 取得当前节点元素中所有的div其中的a标签元素.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "查询结果",
+"comment": "查询结果保存在此参数中.",
+"data type": "网页元素类"
+   }
+data type": "整数"]
+  }
+]
+ },
+ {
+"class name": "网页节点类",
+"comment": "提供网页节点操作",
+"base class": "参考对象模板类",
+"@文档": "\"category = \\\"辅助类\\\"\"",
+"@模板实现类": "\"网页节点数据类\"",
+"methods": [
+  {
+
+"method name": "_销毁",
+
+"comment": "内部方法,请勿调用."
+  },
+  {
+}"method name": "是否有效",
+}"comment": "判断当前节点是否有效",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取父节点",
+}"comment": "取当前节点的父节点对象",
+}"parameters": [
+   {
+"parameter name": "父节点结果",
+"comment": "结果通过此参数返回",
+"data type": "网页节点类"
+   }
+}]
+  },
+  {
+}"method name": "取下一个节点",
+}"comment": "取出当前节点的下一个节点对象",
+}"parameters": [
+   {
+"parameter name": "节点结果",
+"comment": "结果通过此参数返回",
+"data type": "网页节点类"
+   }
+}]
+  },
+  {
+ }"method name": "取上一个节点",
+ }"comment": "取出当前节点的上一个节点对象",
+ }"parameters": [
+   {
+"parameter name": "节点结果",
+"comment": "结果通过此参数返回",
+"data type": "网页节点类"
+   }
+ }]
+  },
+  {
+ }"method name": "取节点数",
+ }"comment": "取当前节点数量.",
+ }"data type": "整数",
+ }"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取节点",
+}"comment": "取指定索引节点",
+}"parameters": [
+   {
+"parameter name": "索引",
+"comment": "索引从0开始",
+"data type": "整数"
+   },
+   {
+"parameter name": "节点结果",
+"comment": "结果通过此参数返回",
+"data type": "网页节点类"
+   }
+}]
+  },
+  {
+data type": "整数""method name": "查询元素",
+data type": "整数""comment": "创建解析器成功后,可通过本方法在HTML文档中查找元素.",
+data type": "整数""parameters": [
+   {
+"parameter name": "选择器文本",
+"comment": "所查询内容,支持如下格式:\n  1.div.className -  通过元素名.类名来取得元素对象.\n  2.div.className > a 通过元素名.类名,得到指定元素对象后,继续获取该元素下的第一个a标签元素.\n  3.a 取得当前节点元素中所有的div其中的a标签元素.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "查询结果",
+"comment": "查询结果保存在此参数中.",
+"data type": "网页元素类"
+   }
+data type": "整数"]
+  },
+  {
+ }"method name": "取属性值",
+ }"comment": "取得指定节点元素内的属性值,例如,\"<img src=? />\",可使用\"取属性值(src)\n\",取得img中的src的值.",
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "属性名称",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+]"method name": "取属性数量",
+]"comment": "取出当前节点属性数量.",
+]"data type": "整数",
+]"@禁止流程检查": "真"
+  },
+  {
+"method name": "取指定属性名",
+"comment": "取指定索引属性名称",
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "索引",
+"comment": "索引从0开始",
+"data type": "整数"
+   }
+]
+  },
+  {
+"comment": "取指定索引节点""method name": "取指定属性值",
+"comment": "取指定索引节点""comment": "取指定索引属性值",
+"comment": "取指定索引节点""data type": "文本型",
+"comment": "取指定索引节点""@禁止流程检查": "真",
+"comment": "取指定索引节点""parameters": [
+   {
+"parameter name": "索引",
+"comment": "索引从0开始",
+"data type": "整数"
+   }
+"comment": "取指定索引节点"]
+  },
+  {
+comment": "取指定索引节点""parameters": [
+"method name": "取所有文本",
+comment": "取指定索引节点""parameters": [
+"comment": "本方法会取得当前元素中的所有文本内容, 例如 <a>文本1</a><a>文本2</a>,本方法将会\n取出文本1和文本2,两个文本会直接拼接起来.",
+comment": "取指定索引节点""parameters": [
+"data type": "文本型"
+  },
+  {
+
+"method name": "取节点文本",
+
+"comment": "取单独的节点文本,确保当前节点对象只有一个html标签时,本方法才有效.",
+
+"data type": "文本型"
+  },
+  {
+
+"method name": "取节点开始位置2",
+
+"comment": "取出节点开始位置,不包含当前节点开始标签.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真"
+  },
+  {
+}"method name": "取节点结束位置2",
+}"comment": "取出节点结束位置,不包含当前节点结束标签.",
+}"data type": "整数",
+}"@禁止流程检查": "真"
+  },
+  {
+"comment": "取出节点结束位置,不包含当前节点结束标签.""method name": "取节点开始位置",
+"comment": "取出节点结束位置,不包含当前节点结束标签.""comment": "取出节点开始位置,包含当前节点开始标签.",
+"comment": "取出节点结束位置,不包含当前节点结束标签.""data type": "整数",
+"comment": "取出节点结束位置,不包含当前节点结束标签.""@禁止流程检查": "真"
+  },
+  {
+"data type": "文本型""method name": "取节点结束位置",
+"data type": "文本型""comment": "取出节点开始位置,包含当前节点结束标签.",
+"data type": "文本型""data type": "整数",
+"data type": "文本型""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取节点标签名称",
+
+"comment": "取出当前节点的HTML标签名称",
+
+"data type": "文本型"
+  }
+]
+ }
+问本程序中的接口需要引用模块"HTML解析工具类".]
+}

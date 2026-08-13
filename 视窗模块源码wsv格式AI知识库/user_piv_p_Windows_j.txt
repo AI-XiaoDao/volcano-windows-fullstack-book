@@ -1,0 +1,2544 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"package name": "火山.PIV基础类",
+"comment": "https://github.com/SaierMe/piv",
+"classes": [
+ {
+classes": [
+"class name": "简易HOOK类",
+classes": [
+"comment": "MinHook原版: https://github.com/TsudaKageyu/minhook\nMultiHook分支: https://github.com/m417z/minhook\n  GitHub上非常热门的一个Inline Hook库,原作者2017年后\n就没有再提交更新,所以选择了MultiHook这个分支.\n  跟官方的\"硬件及键鼠和钩子操作类\"-\"系统API钩子类\"是\n同一个开源的不同分支.",
+classes": [
+"@文档": "\"category = \\\"HOOK\\\"\"",
+classes": [
+"@视窗.外部头文件": "\"minhook\\\\include\\\\MinHook.h\"",
+classes": [
+"@视窗.外部源文件": "\"minhook\\\\include\\\\MultiHook.c\"",
+classes": [
+"@视窗.外部头文件.全局-111": "\"src\\\\piv_encoding.hpp\"",
+classes": [
+"methods": [
+  {
+mi\r\n""method name": "置线程释放方法",
+mi\r\n""comment": "设置\"启用钩子\"和\"停用钩子\"时,挂起和恢复线程的方法.",
+mi\r\n""result comment": "返回0表示成功,其他值为失败.",
+mi\r\n""static": true,
+mi\r\n""data type": "MH状态码",
+mi\r\n""@嵌入式方法": "\"\"",
+mi\r\n""parameters": [
+   {
+"parameter name": "释放方法",
+"comment": "所欲设置的方法",
+"data type": "MH线程释放方法",
+"@默认值": "MH线程释放方法.快速释放"
+   }
+mi\r\n"]
+  },
+  {
+1开始"method name": "取状态码描述",
+1开始"comment": "将状态码翻译为文本,比如\"MH_OK\".",
+1开始"static": true,
+1开始"data type": "文本型",
+1开始"@嵌入式方法": "\"\"",
+1开始"parameters": [
+   {
+"parameter name": "状态码",
+"comment": "所欲翻译的状态码",
+"data type": "MH状态码"
+   }
+1开始]
+  },
+  {
+lasses": [
+"methods": [
+"method name": "安装钩子",
+lasses": [
+"methods": [
+"comment": "创建一个钩子来拦截目标函数;\n钩子默认处于停用状态,需要\"启用钩子\"才会开始拦截.",
+lasses": [
+"methods": [
+"result comment": "返回0表示成功,其他值为失败.",
+lasses": [
+"methods": [
+"static": true,
+lasses": [
+"methods": [
+"data type": "MH状态码",
+lasses": [
+"methods": [
+"@嵌入式方法": "\"\"",
+lasses": [
+"methods": [
+"parameters": [
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "钩子函数",
+"comment": "提供钩子函数的地址;\n钩子函数的参数和返回值类型必须跟目标函数相同.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "跳板函数",
+"comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数.",
+"data type": "变整数",
+"@需求类型": "可写入变量"
+   }
+lasses": [
+"methods": [
+]
+  },
+  {
+
+"method name": "安装钩子2",
+
+"comment": "创建一个钩子来拦截目标函数;\n钩子默认处于停用状态,需要\"启用钩子\"才会开始拦截.\n注: 跟\"安装钩子\"不同,最后一个参数需要用\"取变量地址\"传参,或者用默认值0表示不返回跳板函数.",
+
+"result comment": "返回0表示成功,其他值为失败.",
+
+"static": true,
+
+"data type": "MH状态码",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "钩子函数",
+"comment": "提供钩子函数的地址;\n钩子函数的参数和返回值类型必须跟目标函数相同.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "跳板函数指针",
+"comment": "请提供跳板函数的指针(用\"取变量地址()\"传参),或用0表示不返回跳板函数.\n*在钩子函数中调用跳板函数可以执行原始的目标函数.",
+"@匹配类型": "通用整数型",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+i\r\n""result comment": "返回0表示成功,其他值为失败.""method name": "安装API钩子",
+i\r\n""result comment": "返回0表示成功,其他值为失败.""comment": "创建一个钩子来拦截指定的API函数;\n钩子默认处于停用状态,需要\"启用钩子\"才会开始拦截.",
+i\r\n""result comment": "返回0表示成功,其他值为失败.""result comment": "返回0表示成功,其他值为失败.",
+i\r\n""result comment": "返回0表示成功,其他值为失败.""static": true,
+i\r\n""result comment": "返回0表示成功,其他值为失败.""data type": "MH状态码",
+i\r\n""result comment": "返回0表示成功,其他值为失败.""@嵌入式方法": "\"\"",
+i\r\n""result comment": "返回0表示成功,其他值为失败.""parameters": [
+   {
+"parameter name": "模块名称",
+"comment": "提供目标函数所在模块名称,比如\"User32.dll\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "函数名称",
+"comment": "提供所欲HOOK的目标函数名称,比如\"MessageBoxW\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "钩子函数",
+"comment": "提供钩子函数的地址;\n钩子函数的参数和返回值类型必须跟目标函数相同.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "跳板函数",
+"comment": "返回API被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行API的原始函数.",
+"data type": "变整数",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "目标函数",
+"comment": "返回API的原始函数地址,可用于\"启用钩子/停用钩子\"和\"卸载钩子\";\n启用钩子后执行该地址会进入钩子函数,因此请勿在钩子函数中执行该地址.",
+"data type": "变整数",
+"@需求类型": "可写入变量"
+   }
+i\r\n""result comment": "返回0表示成功,其他值为失败."]
+  },
+  {
+comment": "返回API的原始函数地址,可用于\"启用钩子/停用钩子\"和\"卸载钩子\";\n启用钩子后执行该地址会进入钩子函数,因此请勿在钩子函数中执行该地址.""method name": "安装API钩子2",
+comment": "返回API的原始函数地址,可用于\"启用钩子/停用钩子\"和\"卸载钩子\";\n启用钩子后执行该地址会进入钩子函数,因此请勿在钩子函数中执行该地址.""comment": "创建一个钩子来拦截指定的API函数;\n钩子默认处于停用状态,需要\"启用钩子\"才会开始拦截.",
+comment": "返回API的原始函数地址,可用于\"启用钩子/停用钩子\"和\"卸载钩子\";\n启用钩子后执行该地址会进入钩子函数,因此请勿在钩子函数中执行该地址.""result comment": "返回0表示成功,其他值为失败.",
+comment": "返回API的原始函数地址,可用于\"启用钩子/停用钩子\"和\"卸载钩子\";\n启用钩子后执行该地址会进入钩子函数,因此请勿在钩子函数中执行该地址.""static": true,
+comment": "返回API的原始函数地址,可用于\"启用钩子/停用钩子\"和\"卸载钩子\";\n启用钩子后执行该地址会进入钩子函数,因此请勿在钩子函数中执行该地址.""data type": "MH状态码",
+comment": "返回API的原始函数地址,可用于\"启用钩子/停用钩子\"和\"卸载钩子\";\n启用钩子后执行该地址会进入钩子函数,因此请勿在钩子函数中执行该地址.""parameters": [
+   {
+"parameter name": "模块名称",
+"comment": "提供目标函数所在模块名称,比如\"User32.dll\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "函数名称",
+"comment": "提供所欲HOOK的目标函数名称,比如\"MessageBoxW\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "钩子信息",
+"comment": "设置和返回钩子信息,必须先设置好\"钩子\"函数;\n执行成功后会自动填入跳板和目标函数.",
+"data type": "HOOK信息类"
+   }
+comment": "返回API的原始函数地址,可用于\"启用钩子/停用钩子\"和\"卸载钩子\";\n启用钩子后执行该地址会进入钩子函数,因此请勿在钩子函数中执行该地址."]
+  },
+  {
+"method name": "安装API钩子3",
+"comment": "创建一个钩子来拦截指定的API函数;\n钩子默认处于停用状态,需要\"启用钩子\"才会开始拦截.",
+"result comment": "返回0表示成功,其他值为失败.",
+"static": true,
+"data type": "MH状态码",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "模块名称",
+"comment": "提供目标函数所在模块名称,比如\"User32.dll\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "函数名称",
+"comment": "提供所欲HOOK的目标函数名称,比如\"MessageBoxW\".",
+"data type": "文本型"
+   },
+   {
+"parameter name": "钩子函数",
+"comment": "提供钩子函数的地址;\n钩子函数的参数和返回值类型必须跟目标函数相同.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "跳板函数指针",
+"comment": "请提供跳板函数的指针(用\"取变量地址()\"传参),或用0表示不返回跳板函数.\n*在钩子函数中调用跳板函数可以执行API的原始函数.",
+"@匹配类型": "通用整数型",
+"@默认值": "0"
+   },
+   {
+"parameter name": "目标函数指针",
+"comment": "请提供目标API的指针(用\"取变量地址()\"传参),或用0表示不返回目标函数.\n可用于\"启用钩子/停用钩子\"和\"卸载钩子\";\n启用钩子后执行该地址会进入钩子函数,因此请勿在钩子函数中执行该地址.",
+"@匹配类型": "通用整数型",
+"@默认值": "0"
+   }
+]
+  },
+  {
+@需求类型": "可写入变量""method name": "卸载钩子",
+@需求类型": "可写入变量""comment": "卸载一个或全部已经安装的钩子,卸载前会自动停用钩子.",
+@需求类型": "可写入变量""result comment": "返回0表示成功,其他值为失败.",
+@需求类型": "可写入变量""static": true,
+@需求类型": "可写入变量""data type": "MH状态码",
+@需求类型": "可写入变量""@嵌入式方法": "\"\"",
+@需求类型": "可写入变量""parameters": [
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲卸载钩子的目标函数地址;\n若提供的参数为0,将一次性卸载所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+@需求类型": "可写入变量"]
+  },
+  {
+求类型": "可写入变量"]"method name": "卸载空闲钩子",
+求类型": "可写入变量"]"comment": "卸载所有处于停用状态的钩子",
+求类型": "可写入变量"]"result comment": "返回0表示成功,其他值为失败.",
+求类型": "可写入变量"]"static": true,
+求类型": "可写入变量"]"data type": "MH状态码",
+求类型": "可写入变量"]"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "启用钩子",
+
+"comment": "启用一个或全部已安装的钩子;\n钩子函数在启用后才会开始拦截.",
+
+"result comment": "返回0表示成功,其他值为失败.",
+
+"static": true,
+
+"data type": "MH状态码",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲启用钩子的目标函数地址;\n若提供的参数为0,将一次性启用所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+
+"method name": "停用钩子",
+
+"comment": "停用一个或全部已安装的钩子;\n钩子函数在停用后会暂停拦截.",
+
+"result comment": "返回0表示成功,其他值为失败.",
+
+"static": true,
+
+"data type": "MH状态码",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+
+"method name": "请求启用钩子",
+
+"comment": "请求启用一个或全部已安装的钩子;\n后续需要调用\"应用请求\"才会实际执行.",
+
+"result comment": "返回0表示成功,其他值为失败.",
+
+"static": true,
+
+"data type": "MH状态码",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲启用钩子的目标函数地址;\n若提供的参数为0,将一次性启用所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+
+]
+  },
+  {
+示成功,其他值为失败."method name": "请求停用钩子",
+示成功,其他值为失败."comment": "请求停用一个或全部已安装的钩子;\n后续需要调用\"应用请求\"才会实际执行.",
+示成功,其他值为失败."result comment": "返回0表示成功,其他值为失败.",
+示成功,其他值为失败."static": true,
+示成功,其他值为失败."data type": "MH状态码",
+示成功,其他值为失败."@嵌入式方法": "\"\"",
+示成功,其他值为失败."parameters": [
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+示成功,其他值为失败.]
+  },
+  {
+@匹配类型": "通用整数型""method name": "应用请求",
+@匹配类型": "通用整数型""comment": "一次性应用所有请求的更改",
+@匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.",
+@匹配类型": "通用整数型""static": true,
+@匹配类型": "通用整数型""data type": "MH状态码",
+@匹配类型": "通用整数型""@嵌入式方法": "\"\""
+  }
+classes": [
+]
+ },
+ {
+ameter name": "目标函数""class name": "多重HOOK类",
+ameter name": "目标函数""comment": "MultiHook 分支增加了给同一个函数安装多个钩子的功能,\n这些多重钩子可以同时启用和生效.",
+ameter name": "目标函数""@文档": "\"category = \\\"HOOK\\\"\"",
+ameter name": "目标函数""@强制依赖": "\"简易HOOK类\"",
+ameter name": "目标函数""methods": [
+  {
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""method name": "置线程释放方法",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""comment": "设置\"启用钩子\"和\"停用钩子\"时,挂起和恢复线程的方法.",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""result comment": "返回0表示成功,其他值为失败.",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""static": true,
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""data type": "MH状态码",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""@嵌入式方法": "\"\"",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""parameters": [
+   {
+"parameter name": "释放方法",
+"comment": "所欲设置的方法",
+"data type": "MH线程释放方法",
+"@默认值": "MH线程释放方法.快速释放"
+   }
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败."]
+  },
+  {
+data type": "MH线程释放方法""method name": "取状态码描述",
+data type": "MH线程释放方法""comment": "将状态码翻译为文本,比如\"MH_OK\".",
+data type": "MH线程释放方法""static": true,
+data type": "MH线程释放方法""data type": "文本型",
+data type": "MH线程释放方法""@嵌入式方法": "\"\"",
+data type": "MH线程释放方法""parameters": [
+   {
+"parameter name": "状态码",
+"comment": "所欲翻译的状态码",
+"data type": "MH状态码"
+   }
+data type": "MH线程释放方法"]
+  },
+  {
+匹配类型": "通用整数型""static": true"method name": "安装钩子",
+匹配类型": "通用整数型""static": true"comment": "创建一个自定义ID的钩子来拦截目标函数;\n默认处于停用状态,需要\"启用钩子\"才会开始拦截.\n*安装到同一个函数的多个钩子可以同时生效,在钩子函数中只能调用同一个方法返回的跳板函数.",
+匹配类型": "通用整数型""static": true"result comment": "返回0表示成功,其他值为失败.",
+匹配类型": "通用整数型""static": true"static": true,
+匹配类型": "通用整数型""static": true"data type": "MH状态码",
+匹配类型": "通用整数型""static": true"@嵌入式方法": "\"\"",
+匹配类型": "通用整数型""static": true"parameters": [
+   {
+"parameter name": "钩子ID",
+"comment": "提供自定义的钩子标识符(从1开始);\n用于在同一个目标函数上安装多个不同的钩子函数.",
+"@默认值": "1",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "钩子函数",
+"comment": "提供钩子函数的地址;\n钩子函数的参数和返回值类型必须跟目标函数相同.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "跳板函数",
+"comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数.",
+"data type": "变整数",
+"@需求类型": "可写入变量"
+   }
+匹配类型": "通用整数型""static": true]
+  },
+  {
+comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数.""method name": "安装钩子2",
+comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数.""comment": "创建一个自定义ID的钩子来拦截目标函数;\n默认处于停用状态,需要\"启用钩子\"才会开始拦截.\n*安装到同一个函数的多个钩子可以同时生效,在钩子函数中只能调用同一个方法返回的跳板函数.",
+comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数.""result comment": "返回0表示成功,其他值为失败.",
+comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数.""static": true,
+comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数.""data type": "MH状态码",
+comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数.""@嵌入式方法": "\"\"",
+comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数.""parameters": [
+   {
+"parameter name": "钩子ID",
+"comment": "提供自定义的钩子标识符(从1开始);\n用于在同一个目标函数上安装多个不同的钩子函数.",
+"@默认值": "1",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "钩子函数",
+"comment": "提供钩子函数的地址;\n钩子函数的参数和返回值类型必须跟目标函数相同.",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "跳板函数指针",
+"comment": "请提供跳板函数的指针(用\"取变量地址()\"传参),或用0表示不返回跳板函数.\n*在钩子函数中调用跳板函数可以执行原始的目标函数.",
+"@匹配类型": "通用整数型",
+"@默认值": "0"
+   }
+comment": "返回目标函数被挂钩后的跳板函数地址;\n*在钩子函数中调用跳板函数可以执行原始的目标函数."]
+  },
+  {
+}"method name": "卸载钩子",
+}"comment": "卸载指定钩子ID的一个或全部已经安装的钩子",
+}"result comment": "返回0表示成功,其他值为失败.",
+}"static": true,
+}"data type": "MH状态码",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "钩子ID",
+"comment": "所欲卸载的自定义钩子标识符(从1开始).",
+"@默认值": "1",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲卸载钩子的目标函数地址;\n若提供的参数为0,将一次性卸载所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+}]
+  },
+  {
+comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.""method name": "卸载空闲钩子",
+comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.""comment": "卸载指定钩子ID的所有处于停用状态的钩子",
+comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.""result comment": "返回0表示成功,其他值为失败.",
+comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.""static": true,
+comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.""data type": "MH状态码",
+comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.""@嵌入式方法": "\"\"",
+comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制.""parameters": [
+   {
+"parameter name": "钩子ID",
+"comment": "所欲卸载的自定义钩子标识符(从1开始).",
+"@默认值": "1",
+"@匹配类型": "通用整数型"
+   }
+comment": "提供所欲HOOK的目标函数地址,它将被钩子函数控制."]
+  },
+  {
+ }"method name": "启用钩子",
+ }"comment": "启用指定钩子ID的一个或全部已安装的钩子;\n钩子函数在启用后才会开始拦截.",
+ }"result comment": "返回0表示成功,其他值为失败.",
+ }"static": true,
+ }"data type": "MH状态码",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "钩子ID",
+"comment": "提供所欲启用的自定义钩子标识符(从1开始).",
+"@默认值": "1",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲启用钩子的目标函数地址;\n若提供的参数为0,将一次性启用所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+ }]
+  },
+  {
+@匹配类型": "通用整数型""method name": "停用钩子",
+@匹配类型": "通用整数型""comment": "停用指定钩子ID的一个或全部已安装的钩子;\n钩子函数在停用后会暂停拦截.",
+@匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.",
+@匹配类型": "通用整数型""static": true,
+@匹配类型": "通用整数型""data type": "MH状态码",
+@匹配类型": "通用整数型""@嵌入式方法": "\"\"",
+@匹配类型": "通用整数型""parameters": [
+   {
+"parameter name": "钩子ID",
+"comment": "提供所欲停用的自定义钩子标识符(从1开始).",
+"@默认值": "1",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+@匹配类型": "通用整数型"]
+  },
+  {
+ameter name": "目标函数""method name": "请求启用钩子",
+ameter name": "目标函数""comment": "请求启用指定钩子ID的一个或全部已安装的钩子;\n后续需要调用\"应用请求\"才会实际执行.",
+ameter name": "目标函数""result comment": "返回0表示成功,其他值为失败.",
+ameter name": "目标函数""static": true,
+ameter name": "目标函数""data type": "MH状态码",
+ameter name": "目标函数""@嵌入式方法": "\"\"",
+ameter name": "目标函数""parameters": [
+   {
+"parameter name": "钩子ID",
+"comment": "提供所欲启用的自定义钩子标识符(从1开始).",
+"@默认值": "1",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲启用钩子的目标函数地址;\n若提供的参数为0,将一次性启用所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+ameter name": "目标函数"]
+  },
+  {
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""method name": "请求停用钩子",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""comment": "请求停用指定钩子ID的一个或全部已安装的钩子;\n后续需要调用\"应用多重请求\"才会实际执行.",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""result comment": "返回0表示成功,其他值为失败.",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""static": true,
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""data type": "MH状态码",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""@嵌入式方法": "\"\"",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""parameters": [
+   {
+"parameter name": "钩子ID",
+"comment": "提供所欲停用的自定义钩子标识符(从1开始).",
+"@默认值": "1",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "目标函数",
+"comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.",
+"@匹配类型": "通用整数型"
+   }
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败."]
+  },
+  {
+comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""method name": "应用请求",
+comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""comment": "一次性应用指定钩子ID所有请求的更改",
+comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""result comment": "返回0表示成功,其他值为失败.",
+comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""static": true,
+comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""data type": "MH状态码",
+comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""@嵌入式方法": "\"\"",
+comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+   {
+"parameter name": "钩子ID",
+"comment": "提供所欲应用请求的自定义钩子标识符(从1开始).",
+"@默认值": "1",
+"@匹配类型": "通用整数型"
+   }
+comment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子."]
+  }
+ameter name": "目标函数"]
+ },
+ {
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"class name": "MH状态码",
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"comment": "执行函数返回的状态码(MH_STATUS),0表示成功,其他表示失败.",
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"@文档": "\"category = \\\"HOOK.辅助类\\\"\"",
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"@常量类": "整数",
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"@强制依赖": "\"简易HOOK类\"",
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"constants": [
+  {
+mment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"constants": [
+"constant name": "未知错误",
+mment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"constants": [
+"comment": "-1 未知错误",
+mment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"constants": [
+"initial value": "@MH_UNKNOWN"
+  },
+  {
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"class name": "MH状态码""constant name": "成功",
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"class name": "MH状态码""comment": "0  成功无错误",
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"class name": "MH状态码""initial value": "@MH_OK"
+  },
+  {
+mment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"constants": [
+"constant name": "已初始化",
+mment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"constants": [
+"comment": "1  MinHook已经初始化",
+mment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"constants": [
+"initial value": "@MH_ERROR_ALREADY_INITIALIZED"
+  },
+  {
+mment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"@强制依赖": "\"简易HOOK类\"""constant name": "未初始化",
+mment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"@强制依赖": "\"简易HOOK类\"""comment": "2  MinHook尚未初始化,或已经被卸载.",
+mment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+"@强制依赖": "\"简易HOOK类\"""initial value": "@MH_ERROR_NOT_INITIALIZED"
+  },
+  {
+@匹配类型": "通用整数型""constant name": "已创建",
+@匹配类型": "通用整数型""comment": "3  目标函数已经安装了钩子",
+@匹配类型": "通用整数型""initial value": "@MH_ERROR_ALREADY_CREATED"
+  },
+  {
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""@嵌入式方法": "\"\"""constant name": "未创建",
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""@嵌入式方法": "\"\"""comment": "4  目标函数尚未安装钩子",
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""@嵌入式方法": "\"\"""initial value": "@MH_ERROR_NOT_CREATED"
+  },
+  {
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""constant name": "已启用",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""comment": "5  目标函数的钩子已被启用",
+匹配类型": "通用整数型""result comment": "返回0表示成功,其他值为失败.""initial value": "@MH_ERROR_ENABLED"
+  },
+  {
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""@嵌入式方法": "\"\"""constant name": "未创建""constant name": "已停用",
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""@嵌入式方法": "\"\"""constant name": "未创建""comment": "6  目标函数的钩子已被停用",
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""@嵌入式方法": "\"\"""constant name": "未创建""initial value": "@MH_ERROR_DISABLED"
+  },
+  {
+ }"constant name": "不可执行",
+ }"comment": "7  函数指针无效,指向的地址不是可执行区域.",
+ }"initial value": "@MH_ERROR_NOT_EXECUTABLE"
+  },
+  {
+ent": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""method name": "应用请求""constant name": "不支持的函数",
+ent": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""method name": "应用请求""comment": "8  目标函数不能安装钩子",
+ent": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""method name": "应用请求""initial value": "@MH_ERROR_UNSUPPORTED_FUNCTION"
+  },
+  {
+}"constant name": "内存分配失败",
+}"comment": "9  内存分配失败",
+}"initial value": "@MH_ERROR_MEMORY_ALLOC"
+  },
+  {
+
+"constant name": "内存受保护",
+
+"comment": "10 更改内存的保护属性失败",
+
+"initial value": "@MH_ERROR_MEMORY_PROTECT"
+  },
+  {
+ERROR_ENABLED"constant name": "找不到模块",
+ERROR_ENABLED"comment": "11 指定的模块可能未加载",
+ERROR_ENABLED"initial value": "@MH_ERROR_MODULE_NOT_FOUND"
+  },
+  {
+@匹配类型": "通用整数型""constant name": "找不到函数",
+@匹配类型": "通用整数型""comment": "12 模块中找不到指定的函数",
+@匹配类型": "通用整数型""initial value": "@MH_ERROR_FUNCTION_NOT_FOUND"
+  },
+  {
+
+"constant name": "互斥锁错误",
+
+"comment": "13 创建或等待主互斥锁时失败",
+
+"initial value": "@MH_ERROR_MUTEX_FAILURE"
+  }
+omment": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""parameters": [
+]
+ },
+ {
+@默认值": "1""class name": "MH线程释放方法",
+@默认值": "1""comment": "\"置线程释放方法\"的参数(MH_THREAD_FREEZE_METHOD)",
+@默认值": "1""@文档": "\"category = \\\"HOOK.辅助类\\\"\"",
+@默认值": "1""@常量类": "整数",
+@默认值": "1""@强制依赖": "\"简易HOOK类\"",
+@默认值": "1""constants": [
+  {
+
+"constant name": "原始方法",
+
+"comment": "  MinHook原来提供的方法,使用CreateToolhelp32Snapshot,\n有文档和支持所有的Windows版本,但速度很慢和可靠性较低.",
+
+"initial value": "@MH_FREEZE_METHOD_ORIGINAL"
+  },
+  {
+nstant name": "原始方法""constant name": "快速释放",
+nstant name": "原始方法""comment": "  使用NtGetNextThread,速度更快且可靠性更高,但没有文档.\n支持Windows Vista之后的系统,旧系统会自动回退到原始方法.",
+nstant name": "原始方法""initial value": "@MH_FREEZE_METHOD_FAST_UNDOCUMENTED"
+  },
+  {
+}"constant name": "不作释放",
+}"comment": "  不挂起线程也不调整指令指针寄存器.除非你了解它的含义并\n确定它是安全的,否则不要使用本方法.",
+}"initial value": "@MH_FREEZE_METHOD_NONE_UNSAFE"
+  }
+@默认值": "1"]
+ },
+ {
+@匹配类型": "通用整数型""class name": "HOOK信息类",
+@匹配类型": "通用整数型""comment": "为了方便用户使用而定义的一个类型.\n用来记录HOOK的相关信息,比如函数地址和多重钩子ID.",
+@匹配类型": "通用整数型""base class": "扩展对象类",
+@匹配类型": "通用整数型""@文档": "\"category = \\\"HOOK.辅助类\\\"\"",
+@匹配类型": "通用整数型""variables": [
+  {
+型": "通用整数型""class name": "HOOK信息类""variable name": "ID",
+型": "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID",
+型": "通用整数型""class name": "HOOK信息类""data type": "变整数"
+  },
+  {
+}"variable name": "钩子",
+}"comment": "钩子函数地址",
+}"data type": "变整数"
+  },
+  {
+建或等待主互斥锁时失败"variable name": "跳板",
+建或等待主互斥锁时失败"comment": "跳板函数地址",
+建或等待主互斥锁时失败"data type": "变整数"
+  },
+  {
+或等待主互斥锁时失败"data type": "变整数""variable name": "目标",
+或等待主互斥锁时失败"data type": "变整数""comment": "目标函数地址",
+或等待主互斥锁时失败"data type": "变整数""data type": "变整数"
+  }
+@匹配类型": "通用整数型"],
+@匹配类型": "通用整数型""methods": [
+  {
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""method name": "应用请求""comment": "8  目标函数不能安装钩子""method name": "取展示内容",
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""method name": "应用请求""comment": "8  目标函数不能安装钩子""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""method name": "应用请求""comment": "8  目标函数不能安装钩子""@虚拟方法": "可覆盖",
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""method name": "应用请求""comment": "8  目标函数不能安装钩子""parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+nt": "提供所欲停用钩子的目标函数地址;\n若提供的参数为0,将一次性停用所有已安装的钩子.""method name": "应用请求""comment": "8  目标函数不能安装钩子"]
+  }
+@匹配类型": "通用整数型"]
+ },
+ {
+"class name": "HOOK信息数组类",
+"comment": "\"HOOK信息类\"的数组",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"HOOK.辅助类\\\"\"",
+"@模板实现类": "\"HOOK信息类\""
+ },
+ {
+": "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""class name": "窗口操作类",
+": "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""comment": "通过窗口句柄操作Win32窗口",
+": "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@文档": "\"category = \\\"界面操作\\\"\"",
+": "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@别名": "\"//\"",
+": "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@别名类型": "本地类",
+": "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@类用途": "访问静态成员",
+": "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""methods": [
+  {
+: "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@类用途": "访问静态成员""method name": "取窗口类名",
+: "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@类用途": "访问静态成员""comment": "获取指定窗口句柄的窗口类名",
+: "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@类用途": "访问静态成员""static": true,
+: "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@类用途": "访问静态成员""data type": "文本型",
+: "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@类用途": "访问静态成员""@禁止流程检查": "真",
+: "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@类用途": "访问静态成员""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+: "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID""@类用途": "访问静态成员"]
+  },
+  {
+R_ENABLED"constant name": "找不到模块""method name": "寻找窗口句柄",
+R_ENABLED"constant name": "找不到模块""comment": "寻找与指定窗口类名和窗口标题匹配的顶级窗口的句柄",
+R_ENABLED"constant name": "找不到模块""static": true,
+R_ENABLED"constant name": "找不到模块""data type": "变整数",
+R_ENABLED"constant name": "找不到模块""@嵌入式方法": "\"\"",
+R_ENABLED"constant name": "找不到模块""parameters": [
+   {
+"parameter name": "窗口类名",
+"comment": "提供所欲寻找的窗口类名,不区分大小写,空对象表示匹配所有类名.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "窗口标题",
+"comment": "提供所欲寻找的窗口标题,不区分大小写,空对象表示匹配所有标题.",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+R_ENABLED"constant name": "找不到模块"]
+  },
+  {
+ABLED"constant name": "找不到模块""method name": "寻找窗口句柄""method name": "调用窗口过程",
+ABLED"constant name": "找不到模块""method name": "寻找窗口句柄""comment": "将消息信息传递到指定的窗口过程",
+ABLED"constant name": "找不到模块""method name": "寻找窗口句柄""result comment": "返回消息的处理结果",
+ABLED"constant name": "找不到模块""method name": "寻找窗口句柄""static": true,
+ABLED"constant name": "找不到模块""method name": "寻找窗口句柄""data type": "变整数",
+ABLED"constant name": "找不到模块""method name": "寻找窗口句柄""@嵌入式方法": "\"\"",
+ABLED"constant name": "找不到模块""method name": "寻找窗口句柄""parameters": [
+   {
+"parameter name": "上个窗口过程",
+"comment": "上一个窗口过程的指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "窗口句柄",
+"comment": "接收消息的窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "信息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数"
+   }
+ABLED"constant name": "找不到模块""method name": "寻找窗口句柄"]
+  },
+  {
+comment": "提供所欲寻找的窗口类名,不区分大小写,空对象表示匹配所有类名.""method name": "置窗口属性值",
+comment": "提供所欲寻找的窗口类名,不区分大小写,空对象表示匹配所有类名.""comment": "修改指定窗口的属性值,并返回之前的属性值.",
+comment": "提供所欲寻找的窗口类名,不区分大小写,空对象表示匹配所有类名.""static": true,
+comment": "提供所欲寻找的窗口类名,不区分大小写,空对象表示匹配所有类名.""data type": "变整数",
+comment": "提供所欲寻找的窗口类名,不区分大小写,空对象表示匹配所有类名.""@嵌入式方法": "\"\"",
+comment": "提供所欲寻找的窗口类名,不区分大小写,空对象表示匹配所有类名.""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "属性索引",
+"data type": "整数"
+   },
+   {
+"parameter name": "新属性值",
+"data type": "变整数"
+   }
+comment": "提供所欲寻找的窗口类名,不区分大小写,空对象表示匹配所有类名."]
+  },
+  {
+
+"method name": "取窗口属性值",
+
+"comment": "获取指定窗口的属性值",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "属性索引",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "取窗口标题",
+ }"comment": "获取指定窗口的标题",
+ }"static": true,
+ }"data type": "文本型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+ }]
+  },
+  {
+ }"method name": "置窗口标题",
+ }"comment": "设置指定窗口的标题",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "标题",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+"method name": "发送信息",
+"comment": "将指定信息发送到指定的窗口中,并等待且取回信息反馈值.",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "信息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"parameters": [
+"method name": "投递信息",
+
+"parameters": [
+"comment": "将指定信息发送到指定的窗口中,不等待直接返回.",
+
+"parameters": [
+"static": true,
+
+"parameters": [
+"data type": "逻辑型",
+
+"parameters": [
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "信息值",
+"data type": "整数"
+   },
+   {
+"parameter name": "参数1",
+"data type": "变整数"
+   },
+   {
+"parameter name": "参数2",
+"data type": "变整数"
+   }
+
+"parameters": [
+]
+  },
+  {
+ameter name": "参数1""method name": "加载图标文件",
+ameter name": "参数1""comment": "从文件加载图标并设置到窗口标题",
+ameter name": "参数1""static": true,
+ameter name": "参数1""data type": "逻辑型",
+ameter name": "参数1""@禁止流程检查": "真",
+ameter name": "参数1""parameters": [
+   {
+"parameter name": "主窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "图标文件",
+"data type": "文本型"
+   }
+ameter name": "参数1"]
+  },
+  {
+}"@禁止流程检查": "真""method name": "加载图标对象",
+}"@禁止流程检查": "真""comment": "从图标对象类加载图标到窗口中",
+}"@禁止流程检查": "真""static": true,
+}"@禁止流程检查": "真""data type": "逻辑型",
+}"@禁止流程检查": "真""@禁止流程检查": "真",
+}"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "主窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲设置的图标",
+"data type": "图标对象类"
+   }
+}"@禁止流程检查": "真"]
+  },
+  {
+"method name": "加载图标文件2",
+"comment": "从文件加载图标,返回图标句柄.",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "图标文件",
+"data type": "文本型"
+   }
+]
+  }
+": "通用整数型""class name": "HOOK信息类""comment": "多重钩子ID"]
+ },
+ {
+}"@禁止流程检查": "真""class name": "窗口子类化",
+}"@禁止流程检查": "真""comment": "窗口子类化API",
+}"@禁止流程检查": "真""@文档": "\"category = \\\"界面操作\\\"\"",
+}"@禁止流程检查": "真""@别名": "\"//\"",
+}"@禁止流程检查": "真""@别名类型": "本地类",
+}"@禁止流程检查": "真""@类用途": "访问静态成员",
+}"@禁止流程检查": "真""methods": [
+  {
+@嵌入式方法": "\"\"""method name": "安装窗口子类",
+@嵌入式方法": "\"\"""comment": "安装或更新窗口的子类回调函数.",
+@嵌入式方法": "\"\"""static": true,
+@嵌入式方法": "\"\"""data type": "逻辑型",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "所欲安装或更新窗口子类的窗口句柄",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "子类回调函数",
+"@匹配方法": "\"子类回调函数模板\""
+   },
+   {
+"parameter name": "子类ID",
+"comment": "子类回调函数加上子类ID作为子类的唯一标识符",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "引用数据",
+"comment": "传递到子类回调函数的自定义数据",
+"@匹配类型": "通用整数型",
+"@默认值": "0"
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+嵌入式方法": "\"\"""static": true"method name": "移除窗口子类",
+嵌入式方法": "\"\"""static": true"comment": "从窗口中移除指定的子类回调函数.",
+嵌入式方法": "\"\"""static": true"static": true,
+嵌入式方法": "\"\"""static": true"data type": "逻辑型",
+嵌入式方法": "\"\"""static": true"@嵌入式方法": "\"\"",
+嵌入式方法": "\"\"""static": true"parameters": [
+   {
+"parameter name": "窗口句柄",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "子类回调函数",
+"@匹配方法": "\"子类回调函数模板\""
+   },
+   {
+"parameter name": "子类ID",
+"@匹配类型": "通用整数型"
+   }
+嵌入式方法": "\"\"""static": true]
+  },
+  {
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""method name": "调用子类过程",
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""comment": "在窗口的子类链中调用下一个处理程序.\n如果是子类链的最后一个处理程序,则调用窗口的原始窗口过程.",
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""static": true,
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""data type": "变整数",
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供消息所对应的窗口句柄(HWND)",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "消息值",
+"comment": "提供消息的具体值",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "消息参数1",
+"comment": "提供消息所附带的参数1的值",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "消息参数2",
+"comment": "提供消息所附带的参数2的值",
+"@匹配类型": "通用整数型"
+   }
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\""]
+  },
+  {
+ }"method name": "取子类引用数据",
+ }"comment": "获取先前传递给指定窗口子类回调函数的引用数据.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "窗口句柄",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "子类回调函数",
+"@匹配方法": "\"\""
+   },
+   {
+"parameter name": "子类ID",
+"@匹配类型": "通用整数型"
+   },
+   {
+"parameter name": "返回引用数据",
+"data type": "变整数",
+"@需求类型": "可写入变量"
+   }
+ }]
+  },
+  {
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""method name": "子类回调函数模板",
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""static": true,
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""data type": "变整数",
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "窗口句柄",
+"comment": "提供消息所对应的窗口句柄(HWND)",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息值",
+"comment": "提供消息的具体值",
+"data type": "整数"
+   },
+   {
+"parameter name": "消息参数1",
+"comment": "提供消息所附带的参数1的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "消息参数2",
+"comment": "提供消息所附带的参数2的值",
+"data type": "变整数"
+   },
+   {
+"parameter name": "子类ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "引用数据",
+"data type": "变整数"
+   }
+入式方法": "\"\"""static": true"@嵌入式方法": "\"\""]
+  }
+}"@禁止流程检查": "真"]
+ },
+ {
+data type": "变整数""class name": "菜单操作类",
+data type": "变整数""comment": "通过菜单句柄操作Win32菜单",
+data type": "变整数""@文档": "\"category = \\\"界面操作\\\"\"",
+data type": "变整数""@别名": "\"//\"",
+data type": "变整数""@别名类型": "本地类",
+data type": "变整数""@类用途": "访问静态成员",
+data type": "变整数""methods": [
+  {
+ata type": "变整数""methods": [
+"method name": "创建菜单",
+ata type": "变整数""methods": [
+"comment": "创建一个顶级菜单栏",
+ata type": "变整数""methods": [
+"static": true,
+ata type": "变整数""methods": [
+"data type": "变整数",
+ata type": "变整数""methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+ta type": "变整数""methods": [
+"@嵌入式方法": "\"\"""method name": "创建弹出菜单",
+ta type": "变整数""methods": [
+"@嵌入式方法": "\"\"""comment": "创建一个弹出式菜单",
+ta type": "变整数""methods": [
+"@嵌入式方法": "\"\"""static": true,
+ta type": "变整数""methods": [
+"@嵌入式方法": "\"\"""data type": "变整数",
+ta type": "变整数""methods": [
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+句柄操作Win32菜单"method name": "置窗口菜单",
+句柄操作Win32菜单"comment": "分配一个新菜单到指定的窗口中,返回是否成功.",
+句柄操作Win32菜单"static": true,
+句柄操作Win32菜单"data type": "逻辑型",
+句柄操作Win32菜单"@嵌入式方法": "\"\"",
+句柄操作Win32菜单"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单句柄",
+"comment": "提供0表示删除当前的菜单",
+"data type": "变整数"
+   }
+句柄操作Win32菜单]
+  },
+  {
+
+"method name": "取窗口菜单",
+
+"comment": "返回指定窗口已分配的菜单栏句柄",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "取菜单项数量",
+"comment": "返回指定菜单的菜单项数量,失败返回-1.",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   }
+]
+  },
+  {
+
+"method name": "取菜单项ID",
+
+"comment": "返回指定菜单项的ID,失败返回-1.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "索引位置",
+"comment": "菜单项的从零开始的相对位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取子菜单句柄",
+
+"comment": "返回由指定菜单项激活的下拉菜单或子菜单的句柄.\n返回0表示指定的菜单项不会激活下拉菜单或子菜单.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "索引位置",
+"comment": "菜单项的从零开始的相对位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "销毁菜单",
+
+"comment": "销毁指定的菜单,返回是否成功.\n关闭程序之前必须销毁未分配给窗口的菜单(已分配的不用手动销毁).\n该命令会递归删除菜单及其所有子菜单.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "重画菜单",
+"parameters": [
+"comment": "重绘指定窗口的菜单栏,返回是否成功.\n如果在系统创建窗口后菜单栏发生更改,则必须调用此函数来绘制更改的菜单栏.",
+"parameters": [
+"static": true,
+"parameters": [
+"data type": "逻辑型",
+"parameters": [
+"@嵌入式方法": "\"\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   }
+"parameters": [
+]
+  },
+  {
+ }"method name": "插入菜单项",
+ }"comment": "插入一个新的菜单项目,返回是否成功.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "插入位置",
+"comment": "新菜单项会插入到该位置后面,根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "菜单项信息",
+"comment": "所欲插入菜单项的信息属性",
+"data type": "菜单项信息类"
+   }
+ }]
+  },
+  {
+comment": "新菜单项会插入到该位置后面,根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""method name": "加入菜单项",
+comment": "新菜单项会插入到该位置后面,根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""comment": "在菜单尾部加入一个菜单项,返回是否成功.",
+comment": "新菜单项会插入到该位置后面,根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""static": true,
+comment": "新菜单项会插入到该位置后面,根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""data type": "逻辑型",
+comment": "新菜单项会插入到该位置后面,根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""@嵌入式方法": "\"\"",
+comment": "新菜单项会插入到该位置后面,根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "标志",
+"comment": "请参考\"菜单项标志\"中的常量",
+"data type": "整数"
+   },
+   {
+"parameter name": "菜单项ID",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项标题",
+"data type": "文本型",
+"@默认值": "空对象"
+   }
+comment": "新菜单项会插入到该位置后面,根据\"是否为位置\"决定指定菜单项ID,还是相对位置."]
+  },
+  {
+
+"method name": "删除菜单项",
+
+"comment": "删除所指定的菜单项,返回是否成功.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""method name": "移除菜单项",
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""comment": "删除所指定的菜单项,返回是否成功.\n跟\"删除菜单项\"不同,如果菜单项可以打开下拉菜单或子菜单,则本命令不会销毁菜单,从而允许重复使用菜单.",
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""static": true,
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""data type": "逻辑型",
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""@嵌入式方法": "\"\"",
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID."]
+  },
+  {
+ }"method name": "选中菜单项",
+ }"comment": "设置或取消所指定ID菜单项目的选中状态,返回先前的选中状态.",
+ }"result comment": "返回值大于0表示之前为选中状态,0表示之前未选中,指定的菜单项不存在返回-1.",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否选中",
+"comment": "是否选中指定的菜单项",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+data type": "逻辑型""method name": "选中单选菜单项",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "首菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "尾菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "选中菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "逻辑型"]
+  },
+  {
+ameter name": "是否为位置""method name": "高亮菜单项",
+ameter name": "是否为位置""comment": "设置或取消所指定ID菜单项目的突出显示状态.",
+ameter name": "是否为位置""static": true,
+ameter name": "是否为位置""data type": "逻辑型",
+ameter name": "是否为位置""@嵌入式方法": "\"\"",
+ameter name": "是否为位置""parameters": [
+   {
+"parameter name": "窗口句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否高亮",
+"comment": "是否突出显示指定的菜单项",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "是否为位置"]
+  },
+  {
+"method name": "置默认菜单项",
+"comment": "设置指定菜单的默认菜单项",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""method name": "取默认菜单项",
+comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""comment": "获取指定菜单上的默认菜单项",
+comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""static": true,
+comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""data type": "整数",
+comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""@嵌入式方法": "\"\"",
+comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.""parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "递归子菜单",
+"comment": "如果默认菜单项是子菜单,是否递归搜索所有的子菜单.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置."]
+  },
+  {
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""method name": "允许菜单项",
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""comment": "设置或取消所指定ID菜单项的操作允许状态,返回是否成功.",
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""static": true,
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""data type": "整数",
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""@嵌入式方法": "\"\"",
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "允许状态",
+"comment": "0=启用; 1=禁用并灰显; 2=禁用",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID."]
+  },
+  {
+data type": "逻辑型""method name": "是否被选中",
+data type": "逻辑型""comment": "返回所指定的菜单项是否处于被选中状态,如果所指定菜单项不存在,将始终返回假.",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+data type": "逻辑型"]
+  },
+  {
+ }"method name": "是否被允许",
+ }"comment": "返回所指定ID菜单项是否处于被允许操作状态,如果所指定菜单项不存在,将始终返回假.",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@禁止流程检查": "真",
+ }"parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+ent": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""method name": "允许菜单项""method name": "取菜单项状态",
+ent": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""method name": "允许菜单项""comment": "返回值为\"菜单项标志\"的一或多个常量的位或值",
+ent": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""method name": "允许菜单项""static": true,
+ent": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""method name": "允许菜单项""data type": "整数",
+ent": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""method name": "允许菜单项""@嵌入式方法": "\"\"",
+ent": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""method name": "允许菜单项""parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ent": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.""method name": "允许菜单项"]
+  },
+  {
+comment": "所欲操作的菜单""method name": "取菜单项信息",
+comment": "所欲操作的菜单""comment": "获取菜单项的信息",
+comment": "所欲操作的菜单""static": true,
+comment": "所欲操作的菜单""data type": "逻辑型",
+comment": "所欲操作的菜单""@嵌入式方法": "\"\"",
+comment": "所欲操作的菜单""parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "菜单项信息",
+"comment": "返回菜单项信息",
+"data type": "菜单项信息类"
+   }
+comment": "所欲操作的菜单"]
+  },
+  {
+data type": "逻辑型""method name": "置菜单项信息",
+data type": "逻辑型""static": true,
+data type": "逻辑型""data type": "逻辑型",
+data type": "逻辑型""@嵌入式方法": "\"\"",
+data type": "逻辑型""parameters": [
+   {
+"parameter name": "菜单句柄",
+"comment": "所欲操作的菜单",
+"data type": "变整数"
+   },
+   {
+"parameter name": "菜单项",
+"comment": "根据\"是否为位置\"决定指定菜单项ID,还是相对位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "是否为位置",
+"comment": "为真时,参数\"菜单项\"为从0开始的菜单项相对位置,否则为菜单项ID.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "菜单项信息",
+"comment": "所欲设置的菜单项信息",
+"data type": "菜单项信息类"
+   }
+data type": "逻辑型"]
+  }
+data type": "变整数"]
+ },
+ {
+
+"class name": "菜单项标志",
+
+"@文档": "\"category = \\\"界面操作.辅助类\\\"\"",
+
+"constants": [
+  {
+"constant name": "选中",
+"comment": "选中复选框(仅适用于下拉菜单、子菜单和快捷菜单)",
+"data type": "整数",
+"initial value": "@MF_CHECKED"
+  },
+  {
+ta type": "逻辑型"]"constant name": "禁用",
+ta type": "逻辑型"]"comment": "菜单项已被禁用",
+ta type": "逻辑型"]"data type": "整数",
+ta type": "逻辑型"]"initial value": "@MF_DISABLED"
+  },
+  {
+a type": "逻辑型"]"initial value": "@MF_DISABLED""constant name": "灰色",
+a type": "逻辑型"]"initial value": "@MF_DISABLED""comment": "菜单项被禁用且显示成灰色",
+a type": "逻辑型"]"initial value": "@MF_DISABLED""data type": "整数",
+a type": "逻辑型"]"initial value": "@MF_DISABLED""initial value": "@MF_GRAYED"
+  },
+  {
+ }"constant name": "高亮",
+ }"comment": "菜单项被突出显示",
+ }"data type": "整数",
+ }"initial value": "@MF_HILITE"
+  },
+  {
+}"constant name": "所有者绘制",
+}"data type": "整数",
+}"initial value": "@MF_OWNERDRAW"
+  },
+  {
+ameter name": "菜单项信息""constant name": "子菜单",
+ameter name": "菜单项信息""comment": "菜单项是一个子菜单",
+ameter name": "菜单项信息""data type": "整数",
+ameter name": "菜单项信息""initial value": "@MF_POPUP"
+  },
+  {
+"data type": "整数""constant name": "分隔线",
+"data type": "整数""comment": "有一条水平分界线(仅适用于下拉菜单、子菜单和快捷菜单)",
+"data type": "整数""data type": "整数",
+"data type": "整数""initial value": "@MF_SEPARATOR"
+  },
+  {
+omment": "所欲操作的菜单""parameters": [
+"constant name": "启用",
+omment": "所欲操作的菜单""parameters": [
+"comment": "菜单项可用,由于值为0,需要使用表达式测试: !(Flag&(MF_DISABLED | MF_GRAYED))",
+omment": "所欲操作的菜单""parameters": [
+"data type": "整数",
+omment": "所欲操作的菜单""parameters": [
+"initial value": "@MF_ENABLED"
+  },
+  {
+meter name": "菜单项信息""data type": "整数""constant name": "文本菜单项",
+meter name": "菜单项信息""data type": "整数""comment": "菜单项标题文本. 由于值为0,需要使用表达式测试: !(Flag&(MF_BITMAP | MF_OWNERDRAW))",
+meter name": "菜单项信息""data type": "整数""data type": "整数",
+meter name": "菜单项信息""data type": "整数""initial value": "@MF_STRING"
+  },
+  {
+
+"constant name": "未选中",
+
+"comment": "未选中复选框. 由于值为0,需要使用表达式测试: !(Flag&MF_CHECKED)",
+
+"data type": "整数",
+
+"initial value": "@MF_UNCHECKED"
+  },
+  {
+nstant name": "未选中""constant name": "未高亮",
+nstant name": "未选中""comment": "菜单项未突出显示. 由于值为0,需要使用表达式测试: !(Flag&HILITE)",
+nstant name": "未选中""data type": "整数",
+nstant name": "未选中""initial value": "@MF_UNHILITE"
+  }
+
+]
+ },
+ {
+"class name": "菜单项状态",
+"@文档": "\"category = \\\"界面操作.辅助类\\\"\"",
+"constants": [
+  {
+meter name": "菜单项信息""comment": "菜单项是一个子菜单""constant name": "选中菜单项",
+meter name": "菜单项信息""comment": "菜单项是一个子菜单""comment": "选中复选框(仅适用于下拉菜单、子菜单和快捷菜单)",
+meter name": "菜单项信息""comment": "菜单项是一个子菜单""data type": "整数",
+meter name": "菜单项信息""comment": "菜单项是一个子菜单""initial value": "@MFS_CHECKED"
+  },
+  {
+eter name": "菜单项信息""comment": "菜单项是一个子菜单""initial value": "@MFS_CHECKED""constant name": "默认菜单项",
+eter name": "菜单项信息""comment": "菜单项是一个子菜单""initial value": "@MFS_CHECKED""comment": "该菜单项为默认值,一个菜单只能有一个默认菜单项,以粗体突出显示.",
+eter name": "菜单项信息""comment": "菜单项是一个子菜单""initial value": "@MFS_CHECKED""data type": "整数",
+eter name": "菜单项信息""comment": "菜单项是一个子菜单""initial value": "@MFS_CHECKED""initial value": "@MFS_DEFAULT"
+  },
+  {
+nstant name": "未选中""constant name": "禁用菜单项",
+nstant name": "未选中""comment": "菜单项已被禁用,并显示成灰色.",
+nstant name": "未选中""data type": "整数",
+nstant name": "未选中""initial value": "@MFS_DISABLED"
+  },
+  {
+nstant name": "未选中""constant name": "启用菜单项",
+nstant name": "未选中""comment": "启用菜单项,以便可以选择它,这是默认状态.",
+nstant name": "未选中""data type": "整数",
+nstant name": "未选中""initial value": "@MFS_ENABLED"
+  },
+  {
+"constant name": "灰色菜单项",
+"comment": "菜单项已被禁用,并显示成灰色.",
+"data type": "整数",
+"initial value": "@MFS_GRAYED"
+  },
+  {
+stant name": "灰色菜单项""constant name": "高亮菜单项",
+stant name": "灰色菜单项""comment": "突出显示菜单项",
+stant name": "灰色菜单项""data type": "整数",
+stant name": "灰色菜单项""initial value": "@MFS_HILITE"
+  },
+  {
+stant name": "未选中""comment": "菜单项已被禁用,并显示成灰色.""constant name": "取消选中菜单项",
+stant name": "未选中""comment": "菜单项已被禁用,并显示成灰色.""comment": "取消选中复选框",
+stant name": "未选中""comment": "菜单项已被禁用,并显示成灰色.""data type": "整数",
+stant name": "未选中""comment": "菜单项已被禁用,并显示成灰色.""initial value": "@MFS_UNCHECKED"
+  },
+  {
+initial value": "@MFS_GRAYED""constant name": "未高亮菜单项",
+initial value": "@MFS_GRAYED""comment": "菜单项未突出显示,这是默认状态.",
+initial value": "@MFS_GRAYED""data type": "整数",
+initial value": "@MFS_GRAYED""initial value": "@MFS_UNHILITE"
+  }
+]
+ },
+ {
+"class name": "菜单项信息类",
+"comment": "MENUITEMINFOW结构体",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"系统操作.辅助类\\\"\"",
+"@别名": "\"MENUITEMINFOW\"",
+"@模板实现类": "\"菜单项信息类\"",
+"variables": [
+  {
+comment": "MENUITEMINFOW结构体""variable name": "结构尺寸",
+comment": "MENUITEMINFOW结构体""comment": "cbSize 必须结构尺寸",
+comment": "MENUITEMINFOW结构体""data type": "整数",
+comment": "MENUITEMINFOW结构体""@输出名": "\"cbSize\""
+  },
+  {
+comment": "MENUITEMINFOW结构体""variable name": "掩码",
+comment": "MENUITEMINFOW结构体""comment": "fMask 指定获取或设置的成员,请参考常量\"\"",
+comment": "MENUITEMINFOW结构体""data type": "整数",
+comment": "MENUITEMINFOW结构体""@输出名": "\"fMask\""
+  },
+  {
+
+"variable name": "菜单项类型",
+
+"comment": "fType",
+
+"data type": "整数",
+
+"@输出名": "\"fType\""
+  },
+  {
+}"variable name": "菜单项状态",
+}"comment": "fState 请参考常量\"菜单项状态\"",
+}"data type": "整数",
+}"@输出名": "\"fState\""
+  },
+  {
+"variable name": "ID",
+"comment": "将fMask设置为MIIM_ID以使用",
+"data type": "整数",
+"@输出名": "\"wID\""
+  },
+  {
+ariable name": "菜单项类型""variable name": "菜单项数据",
+ariable name": "菜单项类型""comment": "将fMask设置为MIIM_DATA以使用",
+ariable name": "菜单项类型""data type": "变整数",
+ariable name": "菜单项类型""@输出名": "\"dwItemData\""
+  },
+  {
+@模板实现类": "\"菜单项信息类\"""variable name": "菜单项文本长度",
+@模板实现类": "\"菜单项信息类\"""comment": "cch",
+@模板实现类": "\"菜单项信息类\"""data type": "整数",
+@模板实现类": "\"菜单项信息类\"""@输出名": "\"cch\""
+  }
+],
+"methods": [
+  {
+模板实现类": "\"菜单项信息类\"""comment": "cch""method name": "子菜单句柄",
+模板实现类": "\"菜单项信息类\"""comment": "cch""comment": "hSubMenu",
+模板实现类": "\"菜单项信息类\"""comment": "cch""static": true,
+模板实现类": "\"菜单项信息类\"""comment": "cch""type": "property getter",
+模板实现类": "\"菜单项信息类\"""comment": "cch""data type": "变整数",
+模板实现类": "\"菜单项信息类\"""comment": "cch""@嵌入式方法": "\"\"",
+模板实现类": "\"菜单项信息类\"""comment": "cch""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   }
+模板实现类": "\"菜单项信息类\"""comment": "cch"]
+  },
+  {
+"method name": "子菜单句柄",
+"comment": "hSubMenu",
+"static": true,
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   },
+   {
+"parameter name": "值",
+"data type": "变整数"
+   }
+]
+  },
+  {
+sk设置为MIIM_ID以使用"method name": "选中复选框位图",
+sk设置为MIIM_ID以使用"comment": "hbmpChecked",
+sk设置为MIIM_ID以使用"static": true,
+sk设置为MIIM_ID以使用"type": "property getter",
+sk设置为MIIM_ID以使用"data type": "变整数",
+sk设置为MIIM_ID以使用"@嵌入式方法": "\"\"",
+sk设置为MIIM_ID以使用"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   }
+sk设置为MIIM_ID以使用]
+  },
+  {
+ameter name": "欲操作本对象""method name": "选中复选框位图",
+ameter name": "欲操作本对象""comment": "hbmpChecked",
+ameter name": "欲操作本对象""static": true,
+ameter name": "欲操作本对象""type": "property setter",
+ameter name": "欲操作本对象""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   },
+   {
+"parameter name": "值",
+"data type": "变整数"
+   }
+ameter name": "欲操作本对象"]
+  },
+  {
+ble name": "菜单项类型""variable name": "菜单项数据""method name": "取消复选框位图",
+ble name": "菜单项类型""variable name": "菜单项数据""comment": "hbmpUnchecked",
+ble name": "菜单项类型""variable name": "菜单项数据""static": true,
+ble name": "菜单项类型""variable name": "菜单项数据""type": "property getter",
+ble name": "菜单项类型""variable name": "菜单项数据""data type": "变整数",
+ble name": "菜单项类型""variable name": "菜单项数据""@嵌入式方法": "\"\"",
+ble name": "菜单项类型""variable name": "菜单项数据""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   }
+ble name": "菜单项类型""variable name": "菜单项数据"]
+  },
+  {
+meter name": "欲操作本对象""parameters": [
+"method name": "取消复选框位图",
+meter name": "欲操作本对象""parameters": [
+"comment": "hbmpUnchecked",
+meter name": "欲操作本对象""parameters": [
+"static": true,
+meter name": "欲操作本对象""parameters": [
+"type": "property setter",
+meter name": "欲操作本对象""parameters": [
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   },
+   {
+"parameter name": "值",
+"data type": "变整数"
+   }
+meter name": "欲操作本对象""parameters": [
+]
+  },
+  {
+
+"method name": "菜单项内容",
+
+"comment": "dwTypeData 内容取决于\"菜单项类型\"的值",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   }
+
+]
+  },
+  {
+
+"static": true"method name": "菜单项内容",
+
+"static": true"comment": "dwTypeData 内容取决于\"菜单项类型\"的值",
+
+"static": true"static": true,
+
+"static": true"type": "property setter",
+
+"static": true"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   },
+   {
+"parameter name": "值",
+"data type": "变整数"
+   }
+
+"static": true]
+  },
+  {
+
+"method name": "菜单项位图",
+
+"comment": "hbmpItem",
+
+"static": true,
+
+"type": "property getter",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   }
+
+]
+  },
+  {
+"method name": "菜单项位图",
+"comment": "hbmpItem",
+"static": true,
+"type": "property setter",
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   },
+   {
+"parameter name": "值",
+"data type": "变整数"
+   }
+]
+  },
+  {
+ameter name": "值""method name": "取展示内容",
+ameter name": "值""comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+ameter name": "值""static": true,
+ameter name": "值""data type": "文本型",
+ameter name": "值""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "菜单项信息类"
+   }
+ameter name": "值"]
+  }
+]
+ },
+ {
+type": "property setter""class name": "键鼠输入",
+type": "property setter""@文档": "\"category = \\\"系统操作.发送输入\\\"\"",
+type": "property setter""methods": [
+  {
+"method name": "发送输入",
+"result comment": "成功返回插入的输入事件数,0为表示输入被另一个线程阻止了.",
+"static": true,
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "输入数组",
+"data type": "输入结构数组类"
+   }
+]
+  }
+type": "property setter"]
+ },
+ {
+
+"class name": "鼠标输入结构",
+
+"base class": "PIV结构模板",
+
+"@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"",
+
+"@别名": "\"MOUSEINPUT\"",
+
+"@模板实现类": "\"鼠标输入结构\"",
+
+"variables": [
+  {
+"variable name": "dx",
+"comment": "鼠标x坐标",
+"data type": "整数",
+"@输出名": "\"dx\""
+  },
+  {
+iable name": "dx""variable name": "dy",
+iable name": "dx""comment": "鼠标y坐标",
+iable name": "dx""data type": "整数",
+iable name": "dx""@输出名": "\"dy\""
+  },
+  {
+"variable name": "mouseData",
+"comment": "按dwFlags的备注填写",
+"data type": "整数",
+"@输出名": "\"mouseData\""
+  },
+  {
+meter name": "值""comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.""variable name": "dwFlags",
+meter name": "值""comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.""comment": "可使用\"鼠标事件常量类\"的位或组合值.",
+meter name": "值""comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.""data type": "整数",
+meter name": "值""comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.""@输出名": "\"dwFlags\""
+  },
+  {
+"鼠标事件常量类\"的位或组合值."variable name": "time",
+"鼠标事件常量类\"的位或组合值."comment": "事件的时间戳,以毫秒为单位.如果此参数为0,系统将提供自己的时间戳.",
+"鼠标事件常量类\"的位或组合值."data type": "整数",
+"鼠标事件常量类\"的位或组合值."@输出名": "\"time\""
+  },
+  {
+鼠标事件常量类\"的位或组合值."@输出名": "\"time\"""variable name": "dwExtraInfo",
+鼠标事件常量类\"的位或组合值."@输出名": "\"time\"""comment": "与鼠标事件关联的附加值.应用程序调用GetMessageExtraInfo可获取此额外信息.",
+鼠标事件常量类\"的位或组合值."@输出名": "\"time\"""data type": "变整数",
+鼠标事件常量类\"的位或组合值."@输出名": "\"time\"""@输出名": "\"dwExtraInfo\""
+  }
+
+],
+
+"methods": [
+  {
+标事件常量类\"的位或组合值."@输出名": "\"time\"""data type": "变整数""method name": "取展示内容",
+标事件常量类\"的位或组合值."@输出名": "\"time\"""data type": "变整数""comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+标事件常量类\"的位或组合值."@输出名": "\"time\"""data type": "变整数""static": true,
+标事件常量类\"的位或组合值."@输出名": "\"time\"""data type": "变整数""data type": "文本型",
+标事件常量类\"的位或组合值."@输出名": "\"time\"""data type": "变整数""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "鼠标输入结构"
+   }
+标事件常量类\"的位或组合值."@输出名": "\"time\"""data type": "变整数"]
+  }
+
+]
+ },
+ {
+
+"class name": "键盘输入结构",
+
+"base class": "PIV结构模板",
+
+"@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"",
+
+"@别名": "\"KEYBDINPUT\"",
+
+"@模板实现类": "\"键盘输入结构\"",
+
+"variables": [
+  {
+标事件常量类\"的位或组合值."@输出名": "\"time\"""@输出名": "\"dwExtraInfo\"""variable name": "wVk",
+标事件常量类\"的位或组合值."@输出名": "\"time\"""@输出名": "\"dwExtraInfo\"""comment": "虚拟按键代码,范围为1-254.\n如果dwFlags为KEYEVENTF_UNICODE,本成员必须为0.",
+标事件常量类\"的位或组合值."@输出名": "\"time\"""@输出名": "\"dwExtraInfo\"""data type": "短整数",
+标事件常量类\"的位或组合值."@输出名": "\"time\"""@输出名": "\"dwExtraInfo\"""@输出名": "\"wVk\""
+  },
+  {
+data type": "整数""variable name": "wScan",
+data type": "整数""comment": "按键的硬件扫描代码.\n如果dwFlags为KEYEVENTF_UNICODE,则本在成员指定发送到前台应用的UNICODE字符.",
+data type": "整数""data type": "短整数",
+data type": "整数""@输出名": "\"wScan\""
+  },
+  {
+"data type": "变整数""variable name": "dwFlags",
+"data type": "变整数""comment": "为以下整数的位或组合值.\n1=KEYEVENTF_EXTENDEDKEY,扫描代码前面会有一个值为0xE0(224)的前缀字节.\n2=KEYEVENTF_KEYUP,指定本值为释放按键,未指定本值为按下按键.\n8=KEYEVENTF_SCANCODE,指定本值后将忽略wVk,使用wScan识别按键.\n4=KEYEVENTF_UNICODE,系统将合成VK_PACKET按键,wVk的值必须为0,本值只能与KEYEVENTF_KEYUP组合使用.",
+"data type": "变整数""data type": "整数",
+"data type": "变整数""@输出名": "\"dwFlags\""
+  },
+  {
+er name": "值""method name": "取展示内容""variable name": "time",
+er name": "值""method name": "取展示内容""comment": "事件的时间戳,以毫秒为单位.如果此参数为0,系统将提供自己的时间戳.",
+er name": "值""method name": "取展示内容""data type": "整数",
+er name": "值""method name": "取展示内容""@输出名": "\"time\""
+  },
+  {
+ata type": "整数""@输出名": "\"wScan\"""variable name": "dwExtraInfo",
+ata type": "整数""@输出名": "\"wScan\"""comment": "与鼠标事件关联的附加值.应用程序调用GetMessageExtraInfo可获取此额外信息.",
+ata type": "整数""@输出名": "\"wScan\"""data type": "变整数",
+ata type": "整数""@输出名": "\"wScan\"""@输出名": "\"dwExtraInfo\""
+  }
+
+],
+
+"methods": [
+  {
+meter name": "值""parameters": [
+"method name": "取展示内容",
+meter name": "值""parameters": [
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+meter name": "值""parameters": [
+"static": true,
+meter name": "值""parameters": [
+"data type": "文本型",
+meter name": "值""parameters": [
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "键盘输入结构"
+   }
+meter name": "值""parameters": [
+]
+  }
+
+]
+ },
+ {
+
+"class name": "硬件输入结构",
+
+"base class": "PIV结构模板",
+
+"@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"",
+
+"@别名": "\"HARDWAREINPUT\"",
+
+"@模板实现类": "\"硬件输入结构\"",
+
+"variables": [
+  {
+ter name": "值""parameters": [
+]"variable name": "uMsg",
+ter name": "值""parameters": [
+]"comment": "此消息由输入硬件生成.",
+ter name": "值""parameters": [
+]"data type": "整数",
+ter name": "值""parameters": [
+]"@输出名": "\"uMsg\""
+  },
+  {
+ass name": "硬件输入结构""variable name": "wParamL",
+ass name": "硬件输入结构""comment": "uMsg的LPRAM参数的低位值.",
+ass name": "硬件输入结构""data type": "短整数",
+ass name": "硬件输入结构""@输出名": "\"wParamL\""
+  },
+  {
+
+"variable name": "wParamH",
+
+"comment": "uMsg的LPRAM参数的高位值.",
+
+"data type": "短整数",
+
+"@输出名": "\"wParamH\""
+  }
+
+],
+
+"methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+
+"static": true,
+
+"data type": "文本型",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "硬件输入结构"
+   }
+
+]
+  }
+
+]
+ },
+ {
+"class name": "输入结构类",
+"base class": "PIV结构模板",
+"@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"",
+"@别名": "\"INPUT\"",
+"@模板实现类": "\"输入结构类\"",
+"variables": [
+  {
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.""variable name": "类型",
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.""comment": "0 INPUT_MOUSE    输入鼠标\n1 INPUT_KEYBOARD 输入键盘\n2 INPUT_HARDWARE 输入硬件",
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.""data type": "整数",
+"comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.""@输出名": "\"type\""
+  },
+  {
+ameter name": "欲操作本对象""variable name": "鼠标",
+ameter name": "欲操作本对象""comment": "鼠标输入",
+ameter name": "欲操作本对象""data type": "鼠标输入结构",
+ameter name": "欲操作本对象""@输出名": "\"mi\""
+  },
+  {
+@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"""variable name": "键盘",
+@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"""comment": "键盘输入",
+@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"""data type": "键盘输入结构",
+@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"""@输出名": "\"ki\""
+  },
+  {
+}"variable name": "硬件",
+}"comment": "硬件输入",
+}"data type": "硬件输入结构",
+}"@输出名": "\"hi\""
+  }
+],
+"methods": [
+  {
+meter name": "欲操作本对象""@输出名": "\"mi\"""method name": "取展示内容",
+meter name": "欲操作本对象""@输出名": "\"mi\"""comment": "将本对象中的所有数据用文本方式返回,用作调试或其它场合展示时使用.",
+meter name": "欲操作本对象""@输出名": "\"mi\"""static": true,
+meter name": "欲操作本对象""@输出名": "\"mi\"""data type": "文本型",
+meter name": "欲操作本对象""@输出名": "\"mi\"""parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "输入结构类"
+   }
+meter name": "欲操作本对象""@输出名": "\"mi\""]
+  }
+]
+ },
+ {
+"data type": "硬件输入结构""class name": "输入结构数组类",
+"data type": "硬件输入结构""base class": "PIV数组模板",
+"data type": "硬件输入结构""@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"",
+"data type": "硬件输入结构""@模板实现类": "\"输入结构类\""
+ },
+ {
+"data type": "硬件输入结构""class name": "鼠标事件常量类",
+"data type": "硬件输入结构""@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"",
+"data type": "硬件输入结构""constants": [
+  {
+}"constant name": "鼠标移动",
+}"data type": "整数",
+}"initial value": "@MOUSEEVENTF_MOVE"
+  },
+  {
+"constant name": "按下左键",
+"data type": "整数",
+"initial value": "@MOUSEEVENTF_LEFTDOWN"
+  },
+  {
+"constant name": "释放左键",
+"data type": "整数",
+"initial value": "@MOUSEEVENTF_LEFTUP"
+  },
+  {
+"constant name": "按下右键",
+"data type": "整数",
+"initial value": "@MOUSEEVENTF_RIGHTDOWN"
+  },
+  {
+
+"constant name": "释放右键",
+
+"data type": "整数",
+
+"initial value": "@MOUSEEVENTF_RIGHTUP"
+  },
+  {
+data type": "整数""constant name": "按下中键",
+data type": "整数""data type": "整数",
+data type": "整数""initial value": "@MOUSEEVENTF_MIDDLEDOWN"
+  },
+  {
+data type": "硬件输入结构""@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"""constant name": "释放中键",
+data type": "硬件输入结构""@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"""data type": "整数",
+data type": "硬件输入结构""@文档": "\"category = \\\"系统操作.发送输入.辅助类\\\"\"""initial value": "@MOUSEEVENTF_MIDDLEUP"
+  },
+  {
+data type": "硬件输入结构""constant name": "按下X键",
+data type": "硬件输入结构""comment": "mouseData的值1为按下第一个X键,2为按下第二个X键",
+data type": "硬件输入结构""data type": "整数",
+data type": "硬件输入结构""initial value": "@MOUSEEVENTF_XDOWN"
+  },
+  {
+SEEVENTF_XDOWN"constant name": "释放X键",
+SEEVENTF_XDOWN"comment": "mouseData的值1为释放第一个X键,2为释放第二个X键",
+SEEVENTF_XDOWN"data type": "整数",
+SEEVENTF_XDOWN"initial value": "@MOUSEEVENTF_XUP"
+  },
+  {
+SEEVENTF_XDOWN"constant name": "鼠标滚轮",
+SEEVENTF_XDOWN"comment": "mouseData的值为滚轮的垂直移动量",
+SEEVENTF_XDOWN"data type": "整数",
+SEEVENTF_XDOWN"initial value": "@MOUSEEVENTF_WHEEL"
+  },
+  {
+
+"constant name": "水平滚轮",
+
+"comment": "mouseData的值为滚轮的水平移动量",
+
+"data type": "整数",
+
+"initial value": "0x1000"
+  },
+  {
+EEVENTF_XDOWN"comment": "mouseData的值为滚轮的垂直移动量""constant name": "不合并消息",
+EEVENTF_XDOWN"comment": "mouseData的值为滚轮的垂直移动量""comment": "WM_MOUSEMOVE消息将不会合并,默认是合并WM_MOUSEMOVE消息.",
+EEVENTF_XDOWN"comment": "mouseData的值为滚轮的垂直移动量""data type": "整数",
+EEVENTF_XDOWN"comment": "mouseData的值为滚轮的垂直移动量""initial value": "0x2000"
+  },
+  {
+}"constant name": "虚拟桌面",
+}"comment": "将坐标映射到整个桌面,必须与\"绝对坐标\"配合使用。",
+}"data type": "整数",
+}"initial value": "@MOUSEEVENTF_VIRTUALDESK"
+  },
+  {
+initial value": "@MOUSEEVENTF_LEFTUP""constant name": "绝对坐标",
+initial value": "@MOUSEEVENTF_LEFTUP""comment": "dx和dy使用绝对坐标值,否则为相对坐标.",
+initial value": "@MOUSEEVENTF_LEFTUP""data type": "整数",
+initial value": "@MOUSEEVENTF_LEFTUP""initial value": "@MOUSEEVENTF_ABSOLUTE"
+  }
+"data type": "硬件输入结构"]
+ }
+]
+}

@@ -1,0 +1,2107 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"PIV基础类".
+
+{
+ (展示内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+ (展示内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"package name": "火山.PIV基础类",
+ (展示内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"comment": "https://github.com/SaierMe/piv",
+ (展示内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"classes": [
+ {
+"class name": "ULID类",
+"comment": "ULID(可排序的唯一标识符);\n它结合毫秒时间戳和随机数生成32个字节长度的标识符,并通过Base32转换到26个字符的ULID文本.\n  1. ULID前6个字节是毫秒时间戳,后10个字节通过std::mt19937算法生成的随机数;\n  2. ULID跟UUID/GUID相比,最大的区别是可以按字典序排序,先比较前面的时间戳,\n如果时间戳相等则继续比较后面的随机数;\n  3. ULID可以提取出时间戳;\n  4. ULID文本无特殊字符,可直接用于URL、JSON、SQL语句...\nhttps://github.com/suyash/ulid",
+"base class": "PIV本地类",
+"@文档": "\"category = \\\"伪随机数\\\"\"",
+"@视窗.外部头文件": "\"src\\\\detail\\\\ulid_struct.hh\"",
+"@别名": "\"ulid::ULID\"",
+"@别名类型": "本地类",
+"methods": [
+  {
+methods": [
+"method name": "构造",
+methods": [
+"comment": "从现行时间创建一个新的ULID对象",
+methods": [
+"static": true,
+methods": [
+"data type": "ULID类",
+methods": [
+"@禁止流程检查": "真"
+  },
+  {
+内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"method name": "创建",
+内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"comment": "从现行时间初始化当前的ULID,并返回自身.",
+内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"static": true,
+内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"data type": "ULID类",
+内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"@禁止流程检查": "真",
+内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"@视窗.返回参考": "真",
+内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "ULID类"
+   }
+内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+]
+  },
+  {
+容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+"method name": "从文本创建",
+容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+"comment": "从所指定的ULID文本创建对应的ULID并填入本对象中,返回是否成功.",
+容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+"static": true,
+容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+"data type": "逻辑型",
+容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+"@禁止流程检查": "真",
+容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "ULID类"
+   },
+   {
+"parameter name": "ULID文本",
+"comment": "提供所欲转换的文本格式的ULID,格式类似: \"01H5Z4KY89BKVEWY9CVW2Y3EHB\"",
+"data type": "文本型"
+   }
+容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]
+  },
+  {
+
+"method name": "从字节集创建",
+
+"comment": "从所指定的ULID字节集创建对应的ULID并填入本对象中,返回是否成功.",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "ULID类"
+   },
+   {
+"parameter name": "ULID字节集",
+"comment": "提供所欲转换的字节集格式的GUID,该字节集应由本类的\"取字节集\"方法返回.",
+"data type": "字节集类"
+   }
+
+]
+  },
+  {
+ "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]"method name": "取文本",
+ "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]"comment": "返回本对象中所保存ULID对应的文本,所返回文本格式类似:\n\"01H5Z4KY89BKVEWY9CVW2Y3EHB\"",
+ "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]"static": true,
+ "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]"data type": "文本型",
+ "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]"@禁止流程检查": "真",
+ "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "ULID类"
+   }
+ "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]
+  },
+  {
+17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]"method name": "取文本U",
+17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]"comment": "返回本对象中所保存ULID对应的文本,所返回文本格式类似:\n\"01H5Z4KY89BKVEWY9CVW2Y3EHB\"",
+17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]"static": true,
+17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]"data type": "标准文本类U",
+17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]"@禁止流程检查": "真",
+17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "ULID类"
+   }
+17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]
+  },
+  {
+. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]"method name": "取字节集",
+. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]"comment": "返回本对象中所保存ULID对应的字节集数据",
+. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]"static": true,
+. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]"data type": "字节集类",
+. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]"@嵌入式方法": "\"\"",
+. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "ULID类"
+   }
+. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]]
+  },
+  {
+GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]]"method name": "比较",
+GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]]"comment": "比较两个ULID的字典序大小,返回比较结果.",
+GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]]"result comment": "返回-1,表示本ULID小于所比较的ULID;\n返回0,表示本ULID等于所比较的ULID;\n返回1,表示本ULID大于所比较的ULID;",
+GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]]"static": true,
+GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]]"data type": "整数",
+GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]]"@嵌入式方法": "\"\"",
+GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]]"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "ULID类"
+   },
+   {
+"parameter name": "欲比较对象",
+"data type": "ULID类"
+   }
+GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+"parameters": [
+]]]]]
+  },
+  {
+}"method name": "取时间戳",
+}"comment": "返回ULID中的毫秒时间戳",
+}"static": true,
+}"data type": "长整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "欲操作本对象",
+"data type": "ULID类"
+   }
+}]
+  }
+]
+ },
+ {
+"class name": "ULID排序集",
+"comment": "可用于对ULID类(可排序的唯一标识符)进行排序存储\n",
+"base class": "通用排序集模板",
+"@文档": "\"category = \\\"数据处理.排序集\\\"\"",
+"@模板实现类": "\"ULID类\""
+ },
+ {
+"class name": "PIV随机数",
+"comment": "简易的无需实例化的std::mt19937伪随机数生成器,线程安全.",
+"@文档": "\"category = \\\"伪随机数\\\"\"",
+"@视窗.外部头文件": "\"<random>\"",
+"@别名": "\"//\"",
+"@别名类型": "本地类",
+"methods": [
+  {
+methods": [
+"method name": "重置种子",
+methods": [
+"comment": "为随机数引擎重新初始化一个种子值,不同的种子值将导致\n后续的取随机数系列方法返回不同的随机数系列值.\n注意: 本类的种子值全程序有效(包括线程).",
+methods": [
+"static": true,
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+methods": [
+"method name": "取随机整数",
+methods": [
+"comment": "产生在一个范围内均匀分布的型伪随机整数",
+methods": [
+"result comment": "返回产生的随机数,类型与参数\"最小值\"相同.",
+methods": [
+"static": true,
+methods": [
+"@嵌入式方法": "\"\"",
+methods": [
+"parameters": [
+   {
+"parameter name": "最小值",
+"comment": "指定取值范围的最小值,可使用\"数值范围\"中的常量.",
+"@匹配类型": "通用整数型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "最大值",
+"comment": "指定取值范围的最大值,必须大于等于最小值,可使用\"数值范围\"中的常量.",
+"@匹配类型": "匹配前参数值类型"
+   }
+methods": [
+]
+  },
+  {
+
+"method name": "取随机小数",
+
+"comment": "产生在一个范围内均匀分布的伪随机小数",
+
+"result comment": "返回产生的随机小数.",
+
+"static": true,
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "最小值",
+"comment": "指定取值范围的最小值",
+"data type": "小数"
+   },
+   {
+"parameter name": "最大值",
+"comment": "指定取值范围的最大值,必须大于等于最小值",
+"data type": "小数"
+   }
+
+]
+  }
+]
+ },
+ {
+"@嵌入式方法": "\"\"""class name": "标准随机数模板类",
+"@嵌入式方法": "\"\"""comment": "封装了<std::random>的基本操作\n请勿直接使用本类",
+"@嵌入式方法": "\"\"""@文档": "\"category = \\\"伪随机数\\\"\"",
+"@嵌入式方法": "\"\"""@视窗.外部头文件": "\"<random>\"",
+"@嵌入式方法": "\"\"""@模板基础类": "真",
+"@嵌入式方法": "\"\"""methods": [
+  {
+@嵌入式方法": "\"\"""methods": [
+"method name": "重置种子",
+@嵌入式方法": "\"\"""methods": [
+"comment": "  为随机数引擎重新初始化一个种子值,不同的种子值将导致\n后续的取随机数系列方法返回不同的随机数系列值.\n  本方法在类初始化时会自动调用,因此仅在你想要一个新的\n种子值时,才需要手动调用."
+  },
+  {
+@嵌入式方法": "\"\"""methods": [
+"method name": "取随机数",
+@嵌入式方法": "\"\"""methods": [
+"comment": "产生在一个范围内均匀分布的伪随机数.\n本方法可以自定义返回的整数类型.",
+@嵌入式方法": "\"\"""methods": [
+"result comment": "返回产生的随机数,类型与参数\"数值类型\"相同.",
+@嵌入式方法": "\"\"""methods": [
+"@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""methods": [
+"parameters": [
+   {
+"parameter name": "数值类型",
+"comment": "请填写\"短整数\"、\"整数\"、\"长整数\"等基本整数型.",
+"@匹配类型": "通用整数型",
+"@需求类型": "数据类型",
+"@返回值类型": "0"
+   },
+   {
+"parameter name": "最小值",
+"comment": "指定取值范围的最小值,可使用\"数值范围\"中的常量.",
+"@匹配类型": "匹配前参数值类型"
+   },
+   {
+"parameter name": "最大值",
+"comment": "指定取值范围的最大值,必须大于等于最小值,可使用\"数值范围\"中的常量.",
+"@匹配类型": "匹配前参数值类型"
+   }
+@嵌入式方法": "\"\"""methods": [
+]
+  },
+  {
+"method name": "取随机整数",
+"comment": "产生在一个范围内均匀分布的伪随机整数",
+"result comment": "返回产生的随机整数.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "最小值",
+"comment": "指定取值范围的最小值",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大值",
+"comment": "指定取值范围的最大值,必须大于等于最小值",
+"data type": "整数",
+"@默认值": "数值范围.最大整数值"
+   }
+]
+  },
+  {
+
+"method name": "取随机长整数",
+
+"comment": "产生在一个范围内均匀分布的伪随机长整数",
+
+"result comment": "返回产生的随机长整数.",
+
+"data type": "长整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "最小值",
+"comment": "指定取值范围的最小值",
+"data type": "长整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大值",
+"comment": "指定取值范围的最大值,必须大于等于最小值",
+"data type": "长整数",
+"@默认值": "数值范围.最大长整数值"
+   }
+
+]
+  },
+  {
+@默认值": "数值范围.最大长整数值""method name": "取随机小数",
+@默认值": "数值范围.最大长整数值""comment": "产生在一个范围内均匀分布的伪随机小数",
+@默认值": "数值范围.最大长整数值""result comment": "返回产生的随机小数.",
+@默认值": "数值范围.最大长整数值""data type": "小数",
+@默认值": "数值范围.最大长整数值""@禁止流程检查": "真",
+@默认值": "数值范围.最大长整数值""parameters": [
+   {
+"parameter name": "最小值",
+"comment": "指定取值范围的最小值",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大值",
+"comment": "指定取值范围的最大值,必须大于等于最小值",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+@默认值": "数值范围.最大长整数值"]
+  },
+  {
+@默认值": "1.0""method name": "取随机单精度小数",
+@默认值": "1.0""comment": "产生在一个范围内均匀分布的伪随机单精度小数",
+@默认值": "1.0""result comment": "返回产生的随机单精度小数.",
+@默认值": "1.0""data type": "单精度小数",
+@默认值": "1.0""@禁止流程检查": "真",
+@默认值": "1.0""parameters": [
+   {
+"parameter name": "最小值",
+"comment": "指定取值范围的最小值",
+"data type": "单精度小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "最大值",
+"comment": "指定取值范围的最大值,必须大于等于最小值",
+"data type": "单精度小数",
+"@默认值": "1.0"
+   }
+@默认值": "1.0"]
+  },
+  {
+}"method name": "取伯努利分布逻辑",
+}"comment": "根据伯努利分布离散概率函数产生随机逻辑值",
+}"result comment": "返回产生的随机逻辑值.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "成功概率",
+"comment": "  取值范围为 0 ≤ p ≤ 1\n  默认为50%的概率产生\"真\".",
+"data type": "小数",
+"@默认值": "0.50"
+   }
+}]
+  },
+  {
+
+"method name": "取二项分布整数",
+
+"comment": "根据二项分布离散概率函数产生随机正整数值.\n若每次试验的成功率为p,返回t次试验中的成功次数.",
+
+"result comment": "返回随机的成功次数.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "试验次数",
+"comment": "定义为t,必须大于等于0,为试验次数",
+"data type": "整数"
+   },
+   {
+"parameter name": "成功概率",
+"comment": "定义为p,取值范围为0 ≤ p ≤ 1,为每次试验产生\"真\"的概率.",
+"data type": "小数",
+"@默认值": "0.50"
+   }
+
+]
+  },
+  {
+
+"method name": "取负二项分布整数",
+
+"comment": "根据负二项分布离散概率函数产生随机正整数值.\n若每次试验的成功率为p,在多次试验后得到的成功次数为k,返回其中的失败次数.",
+
+"result comment": "返回随机的失败次数.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "成功次数",
+"comment": "定义为k,必须大于0,为多次试验的成功次数",
+"data type": "整数"
+   },
+   {
+"parameter name": "成功概率",
+"comment": "定义为p,取值范围为0 < p ≤ 1,为每次试验产生\"真\"的概率.",
+"data type": "小数",
+"@默认值": "0.50"
+   }
+
+]
+  },
+  {
+"method name": "取几何分布整数",
+"comment": "根据几何分布离散概率函数产生随机正整数值.\n若每次试验的成功率为p,返回需要试验多少次才能获得成功.",
+"result comment": "返回随机的试验次数.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "成功概率",
+"comment": "定义为p,取值范围为0 < p < 1,为每次试验产生\"真\"的概率.",
+"data type": "小数",
+"@默认值": "0.50"
+   }
+]
+  },
+  {
+}"method name": "取泊松分布整数",
+}"comment": "根据泊松分布离散概率函数产生随机正整数值.\n若同一时间或空间内平均发生μ次事件,返回其发生i次的概率.",
+}"result comment": "返回随机的概率.",
+}"data type": "整数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "平均数",
+"comment": "定义为μ,取值范围为0 < μ,为随机事件发生的平均数.",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+}]
+  },
+  {
+}"method name": "取指数分布小数",
+}"comment": "根据指数分布离散概率函数产生随机正小数值.\n若随机事件在每个时间或距离单位发生的频率为λ,返回的值为到一次随机事件的时间或距离.",
+}"result comment": "返回随机的时间或距离小数.",
+}"data type": "小数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "事件频率",
+"comment": "定义为λ,取值范围为0 < λ,为每单位事件发生的频率.",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+}]
+  },
+  {
+}"method name": "取伽玛分布小数",
+}"comment": "根据伽玛分布离散概率函数产生随机正小数值.\n返回α个独立指数分布的随机变量的和,每个的平均值为β.",
+}"data type": "小数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "形状",
+"comment": "定义为α,为形状参数.",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "尺度",
+"comment": "定义为β,为尺度参数.",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+}]
+  },
+  {
+}"method name": "取威布尔分布小数",
+}"comment": "根据威布尔分布离散概率函数产生随机正小数值",
+}"data type": "小数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "形状",
+"comment": "定义为α,为形状参数.",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "尺度",
+"comment": "定义为β,为尺度参数.",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+}]
+  },
+  {
+}"method name": "取极值分布小数",
+}"comment": "根据极值分布离散概率函数产生随机小数值",
+}"data type": "小数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "位置",
+"comment": "定义为α,为位置参数.",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "尺度",
+"comment": "定义为β,为尺度参数.",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+}]
+  },
+  {
+thod name": "取极值分布小数""method name": "取正态分布小数",
+thod name": "取极值分布小数""comment": "根据正态分布离散概率函数产生随机小数值",
+thod name": "取极值分布小数""data type": "小数",
+thod name": "取极值分布小数""@禁止流程检查": "真",
+thod name": "取极值分布小数""parameters": [
+   {
+"parameter name": "平均数",
+"comment": "定义为μ,为位置参数.",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "标准差",
+"comment": "定义为σ,为尺度参数.",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+thod name": "取极值分布小数"]
+  },
+  {
+}"method name": "取卡方分布小数",
+}"comment": "根据卡方分布离散概率函数产生随机小数值",
+}"data type": "小数",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "自由度",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+}]
+  },
+  {
+"method name": "取柯西分布小数",
+"comment": "根据柯西分布离散概率函数产生随机小数值",
+"data type": "小数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "位置",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "尺度",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+]
+  },
+  {
+
+"method name": "取费舍尔分布小数",
+
+"comment": "根据费舍尔F分布离散概率函数产生随机小数值",
+
+"data type": "小数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "自由度m",
+"data type": "小数",
+"@默认值": "1.0"
+   },
+   {
+"parameter name": "自由度n",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+
+]
+  },
+  {
+@默认值": "1.0""method name": "取学生T分布小数",
+@默认值": "1.0""comment": "根据学生T分布离散概率函数产生随机小数值",
+@默认值": "1.0""data type": "小数",
+@默认值": "1.0""@禁止流程检查": "真",
+@默认值": "1.0""parameters": [
+   {
+"parameter name": "自由度",
+"data type": "小数",
+"@默认值": "1.0"
+   }
+@默认值": "1.0"]
+  },
+  {
+
+"method name": "取随机字符",
+
+"comment": "获取由指定数量和类型的随机ASCII字符,适合用来生成密码.",
+
+"result comment": "成功返回指定字符数的随机文本,失败返回空文本.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "欲取字符数",
+"comment": "要取的字符个数",
+"data type": "整数"
+   },
+   {
+"parameter name": "字符类型",
+"comment": "为以下数值相加值或位或值,默认为1+2+4;\n  1、数字\n  2、小写字母\n  4、大写字母\n  8、特殊符号",
+"data type": "整数",
+"@默认值": "7"
+   }
+
+]
+  },
+  {
+
+"method name": "取随机汉字",
+
+"comment": "获取指定数量的随机汉字.\n注: 从20902个汉字中获取,有大量非常用汉字,看起来非常像乱码.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "汉字数量",
+"comment": "提供随机汉字的数量",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取随机百家姓",
+
+"comment": "获取随机的百家姓",
+
+"result comment": "成功返回指定字符数的随机文本,失败返回空文本.",
+
+"data type": "文本型",
+
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "取随机字节集",
+
+"comment": "获取指定长度的随机内容字节集",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "字节集长度",
+"comment": "提供随机字节集的长度",
+"data type": "整数"
+   },
+   {
+"parameter name": "去除零值",
+"comment": "返回的字节集中是否包含0值",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  }
+"@嵌入式方法": "\"\""]
+ },
+ {
+comment": "返回的字节集中是否包含0值""class name": "标准随机数类",
+comment": "返回的字节集中是否包含0值""comment": "采用\"std::mt19937\"的32位梅森旋转算法,耗时最慢且状态存储要求较高,但产生的随机数质量最高.",
+comment": "返回的字节集中是否包含0值""base class": "标准随机数模板类",
+comment": "返回的字节集中是否包含0值""@文档": "\"category = \\\"伪随机数\\\"\"",
+comment": "返回的字节集中是否包含0值""@模板实现类": "\"\""
+ },
+ {
+"class name": "随机数类_mt19937_64",
+"comment": "采用\"std::mt19937_64\"的64位梅森旋转算法,耗时最慢且状态存储要求较高,但产生的随机数质量最高.",
+"base class": "标准随机数模板类",
+"@文档": "\"category = \\\"伪随机数\\\"\"",
+"@模板实现类": "\"\""
+ },
+ {
+"class name": "随机数类_minstd_rand0",
+"comment": "采用\"std::minstd_rand0\"的线性同余算法,速度较快且状态存储要求最低,但产生的随机数质量一般.",
+"base class": "标准随机数模板类",
+"@文档": "\"category = \\\"伪随机数\\\"\"",
+"@模板实现类": "\"\""
+ },
+ {
+_mt19937_64"class name": "随机数类_minstd_rand",
+_mt19937_64"comment": "采用\"std::minstd_rand\"的线性同余算法,速度较快且状态存储要求最低,但产生的随机数质量一般.",
+_mt19937_64"base class": "标准随机数模板类",
+_mt19937_64"@文档": "\"category = \\\"伪随机数\\\"\"",
+_mt19937_64"@模板实现类": "\"\""
+ },
+ {
+mt19937_64"@文档": "\"category = \\\"伪随机数\\\"\"""class name": "随机数类_ranlux24_base",
+mt19937_64"@文档": "\"category = \\\"伪随机数\\\"\"""comment": "采用\"std::ranlux24_base\"的带进位减(延迟斐波那契)算法,速度非常快,但状态存储要求最大,也有不太适合的谱特性.",
+mt19937_64"@文档": "\"category = \\\"伪随机数\\\"\"""base class": "标准随机数模板类",
+mt19937_64"@文档": "\"category = \\\"伪随机数\\\"\"""@文档": "\"category = \\\"伪随机数\\\"\"",
+mt19937_64"@文档": "\"category = \\\"伪随机数\\\"\"""@模板实现类": "\"\""
+ },
+ {
+"class name": "随机数类_ranlux48_base",
+"comment": "采用\"std::ranlux48_base\"的带进位减(延迟斐波那契)算法,速度非常快,但状态存储要求最大,也有不太适合的谱特性.",
+"base class": "标准随机数模板类",
+"@文档": "\"category = \\\"伪随机数\\\"\"",
+"@模板实现类": "\"\""
+ },
+ {
+@模板实现类": "\"\"""class name": "随机数类_ranlux24",
+@模板实现类": "\"\"""comment": "基于\"随机数类_ranlux24_base\"加上随机数引擎适配器,舍弃了部分不太适合的谱特性.",
+@模板实现类": "\"\"""base class": "标准随机数模板类",
+@模板实现类": "\"\"""@文档": "\"category = \\\"伪随机数\\\"\"",
+@模板实现类": "\"\"""@模板实现类": "\"\""
+ },
+ {
+模板实现类": "\"\"""@模板实现类": "\"\"""class name": "随机数类_ranlux48",
+模板实现类": "\"\"""@模板实现类": "\"\"""comment": "基于\"随机数类_ranlux48_base\"加上随机数引擎适配器,舍弃了部分不太适合的谱特性.",
+模板实现类": "\"\"""@模板实现类": "\"\"""base class": "标准随机数模板类",
+模板实现类": "\"\"""@模板实现类": "\"\"""@文档": "\"category = \\\"伪随机数\\\"\"",
+模板实现类": "\"\"""@模板实现类": "\"\"""@模板实现类": "\"\""
+ },
+ {
+"class name": "随机数类_knuth_b",
+"comment": "基于\"随机数类_minstd_rand0\"加上随机数引擎适配器,打乱了随机数引擎的输出.",
+"base class": "标准随机数模板类",
+"@文档": "\"category = \\\"伪随机数\\\"\"",
+"@模板实现类": "\"\""
+ },
+ {
+"class name": "配置文件操作类",
+"comment": "  提供简易的ini配置文件读写操作,支持多字节、UTF-8和UTF-16LE编码.\n  所有属性写的方法,都必须在\"打开文件\"、\"创建自文件\"、\"创建自字节集\"\n之前设置,后续设置无效.\n  源码: https://github.com/brofield/simpleini",
+"@文档": "\"category = \\\"配置文件.INI\\\"\"",
+"@视窗.外部头文件": "\"src\\\\SimpleIni.h\"",
+"@视窗.外部头文件.全局-111": "\"src\\\\piv_encoding.hpp\"",
+"methods": [
+  {
+methods": [
+"method name": "清空",
+methods": [
+"comment": "释放本配置对象的所有内存数据",
+methods": [
+"@嵌入式方法": "\"\""
+  },
+  {
+模板实现类": "\"\"""base class": "标准随机数模板类""method name": "是否为空",
+模板实现类": "\"\"""base class": "标准随机数模板类""comment": "检查本配置对象是否为空(未加载任何数据)",
+模板实现类": "\"\"""base class": "标准随机数模板类""data type": "逻辑型",
+模板实现类": "\"\"""base class": "标准随机数模板类""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否允许重复键名",
+}"comment": "  设置是否允许存在重复的键名,即一个键名允许存在多个键值.\n  如果开启本属性,使用\"取XX键值\"时只获取到第一个键值,只有\n\"取所有键值\"能获取全部键值.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否允许",
+"comment": "默认为假",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+ameter name": "是否允许""method name": "是否允许重复键名",
+ameter name": "是否允许""comment": "返回是否允许重复键名",
+ameter name": "是否允许""type": "property getter",
+ameter name": "是否允许""data type": "逻辑型",
+ameter name": "是否允许""@嵌入式方法": "\"\""
+  },
+  {
+meter name": "是否允许""@嵌入式方法": "\"\"""method name": "是否允许跨行键值",
+meter name": "是否允许""@嵌入式方法": "\"\"""comment": "  设置是否允许键值可以跨越多行,格式如下:\n    key = <<<TAG\n    .... multiline value ....\n    TAG\n  其中\"TAG\"标签可以自定义,但一定要成对出现,开始标签前一定要有\"<<<\",\n结束标签要单独写一行，而且一定要写在行首.\n  中间是跨行的键值,可以有很多行,其中换行符会被替换为'\\\\n'字符.",
+meter name": "是否允许""@嵌入式方法": "\"\"""type": "property setter",
+meter name": "是否允许""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "是否允许",
+"comment": "默认为假",
+"data type": "逻辑型"
+   }
+meter name": "是否允许""@嵌入式方法": "\"\""]
+  },
+  {
+}"method name": "是否允许跨行键值",
+}"comment": "返回是否允许跨行键值",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "是否添加空格",
+"@嵌入式方法": "\"\"""comment": "设置是否在键值对的等号两边添加空格.\n 真: \"key = value\";\n 假: \"key=value\".",
+"@嵌入式方法": "\"\"""type": "property setter",
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "是否添加",
+"comment": "默认为假",
+"data type": "逻辑型"
+   }
+"@嵌入式方法": "\"\""]
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "是否添加空格",
+"@嵌入式方法": "\"\"""comment": "返回是否在等号两边添加空格",
+"@嵌入式方法": "\"\"""type": "property getter",
+"@嵌入式方法": "\"\"""data type": "逻辑型",
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+@嵌入式方法": "\"\"""data type": "逻辑型""method name": "是否解析引号",
+@嵌入式方法": "\"\"""data type": "逻辑型""comment": "设置是否解析包围单行键值的双引号.\n为真时会将双引号当作语法解析,不会输出到键值中;\n为假时会将双引号输出为字符.",
+@嵌入式方法": "\"\"""data type": "逻辑型""type": "property setter",
+@嵌入式方法": "\"\"""data type": "逻辑型""parameters": [
+   {
+"parameter name": "是否解析",
+"comment": "默认为假",
+"data type": "逻辑型"
+   }
+@嵌入式方法": "\"\"""data type": "逻辑型"]
+  },
+  {
+
+"method name": "是否解析引号",
+
+"comment": "返回是否解析包围单行键值的引号",
+
+"type": "property getter",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "是否允许单键名",
+}"comment": "设置是否允许存在没有等号和键值的单个键名.\n为假时必须有等号才会解析出键名和键值;\n为真时将没有等号的单行文本识别为单个键名.",
+}"type": "property setter",
+}"parameters": [
+   {
+"parameter name": "是否允许",
+"comment": "默认为假",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "是否允许单键名",
+}"comment": "返回是否允许存在没有等号和键值的单个键名",
+}"type": "property getter",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+
+"method name": "创建自文本",
+
+"comment": "从文本型数据中读入ini配置数据,本方法会覆盖本类之前的数据.",
+
+"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "配置内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "创建自字节集",
+
+"comment": "从字节集数据中读入ini配置数据,本方法会覆盖本类之前的数据.",
+
+"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "配置内容",
+"data type": "字节集类"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定字节集文本编码,文本编码必须对应,否则可能会乱码;\n其中\"未知\"等同多字节.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF8"
+   }
+
+]
+  },
+  {
+"@禁止流程检查": "真""method name": "创建自文件",
+"@禁止流程检查": "真""comment": "  从指定的文件中读入ini配置数据,本方法会覆盖本类之前的数据.\n  注意: 读入配置后就会关闭文件,所以之后修改的配置并不会反映到\nini文件中,必须调用\"保存/保存文件\"才会将结果保存到文件.",
+"@禁止流程检查": "真""result comment": "返回值大于等于0表示成功,小于0表示失败.",
+"@禁止流程检查": "真""data type": "整数",
+"@禁止流程检查": "真""@禁止流程检查": "真",
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "文件名",
+"comment": "所欲打开的ini配置文件,文件不存在时会自动创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定所打开ini文件的文本编码;\n首先会根据文件的BOM签名自动识别编码;\n若不存在签名,则以此参数指定的编码打开,\"未知\"等同多字节;\n文本编码必须选择正确,否则可能会乱码.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.未知"
+   },
+   {
+"parameter name": "自动保存",
+"comment": "是否在对象被释放之前自动保存更改到文件中;\n为假时必须手动调用\"保存\",否则可能丢失未保存的编辑内容;\n为真时,即使已经通过\"保存文件\"将配置数据保存到新文件中,\n仍会将更改保存到原文件.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+"@禁止流程检查": "真"]
+  },
+  {
+"method name": "打开文件",
+"comment": "  本方法跟\"创建自文件\"一样,只是为了兼容以前的代码才保留.\n  从指定的文件中获取ini配置数据,本方法会覆盖本类之前的数据.\n  注意: 读入配置后就会关闭文件,所以之后修改的配置并不会反映到\nini文件中,必须调用\"保存/保存文件\"才会将结果保存到文件.",
+"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+"data type": "整数",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "所欲打开的ini配置文件,文件不存在时会自动创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定所打开ini文件的文本编码;\n首先会根据文件的BOM签名自动识别编码;\n若不存在签名,则以此参数指定的编码打开,\"未知\"等同多字节;\n文本编码必须选择正确,否则可能会乱码.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.未知"
+   },
+   {
+"parameter name": "自动保存",
+"comment": "是否在对象被释放之前自动保存更改到文件中;\n为假时必须手动调用\"保存\",否则可能丢失未保存的编辑内容;\n为真时,即使已经通过\"保存文件\"将配置数据保存到新文件中,\n仍会将更改保存到原文件中.",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "保存",
+"comment": "覆盖保存所打开的ini文件.\n如果未执行过\"创建自文件/打开文件\",应当使用\"保存文件\".",
+"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+"data type": "整数",
+"@禁止流程检查": "真"
+  },
+  {
+
+"method name": "保存文件",
+
+"comment": "将当前编辑的内容保存到指定的ini文件中",
+
+"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+
+"data type": "整数",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "文件名",
+"comment": "所欲保存内容的ini配置文件,如果文件不存在将自动创建.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本编码",
+"comment": "指定保存文件的文本编码,UTF8和UTF16会添加自动BOM签名,其中\"未知\"等同多字节.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF8"
+   }
+
+]
+  },
+  {
+
+"method name": "取文件编码",
+
+"comment": "返回已打开ini配置文件的文本编码.\n若未成功执行过\"打开文件\",则返回\"文本编码类型.未知\".",
+
+"data type": "文本编码类型",
+
+"@嵌入式方法": "\"\""
+  },
+  {
+"@嵌入式方法": "\"\"""method name": "到文本",
+"@嵌入式方法": "\"\"""comment": "将内存中的配置数据输出到文本",
+"@嵌入式方法": "\"\"""data type": "文本型",
+"@嵌入式方法": "\"\"""@禁止流程检查": "真"
+  },
+  {
+
+"method name": "到字节集",
+
+"comment": "将内存中的配置数据输出到字节集类.\n本方法不做编码转换,直接返回类的内部数据,内部只使用多字节和UTF8两种编码.",
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "添加签名",
+"comment": "是否对UTF-8数据添加BOM签名(多字节无签名)",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否UTF8编码",
+"comment": "返回字节集的数据是否为UTF8编码,返回假则说明是多字节编码.",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+data type": "逻辑型类""method name": "取所有节名",
+data type": "逻辑型类""comment": "获取配置数据中所有节的名称",
+data type": "逻辑型类""parameters": [
+   {
+"parameter name": "返回节名数组",
+"comment": "成功返回节名的数组",
+"data type": "文本数组类"
+   }
+data type": "逻辑型类"]
+  },
+  {
+"method name": "取所有键名",
+"comment": "获取指定节中的所有唯一键名",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取所有键名的节",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回键名数组",
+"comment": "成功返回键名的数组",
+"data type": "文本数组类"
+   }
+]
+  },
+  {
+"method name": "取所有键值",
+"comment": "获取指定节指定键的所有键值.\n\"是否允许重复键名\"为真时会返回所有同键名的值,为假时只会返回第一个值.",
+"data type": "逻辑型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取键值的节名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取键值的键名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回值数组",
+"comment": "成功返回键值数组",
+"data type": "文本数组类"
+   }
+]
+  },
+  {
+
+"method name": "取所有节名2",
+
+"comment": "获取配置数据中所有节的信息.\n本方法除了节名,还能返回注释和序号.",
+
+"parameters": [
+   {
+"parameter name": "返回配置项数组",
+"comment": "成功返回节名的数组",
+"data type": "配置项信息数组类"
+   }
+
+]
+  },
+  {
+}"method name": "取所有键名2",
+}"comment": "获取指定节中所有唯一键名的信息.\n本方法除了键名,还能返回注释和序号.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取所有键名的节",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回配置项数组",
+"comment": "成功返回键名的数组",
+"data type": "配置项信息数组类"
+   }
+}]
+  },
+  {
+}"method name": "取所有键值2",
+}"comment": "获取指定节指定键的所有键值信息.\n本方法除了键值,还能返回注释和序号.\n\"是否允许重复键名\"为真时会返回所有同键名的值,为假时只会返回第一个值.",
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取键值的节名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲取键值的键名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "返回配置项数组",
+"comment": "成功返回键值数组",
+"data type": "配置项信息数组类"
+   }
+}]
+  },
+  {
+"@禁止流程检查": "真""method name": "取节成员数",
+"@禁止流程检查": "真""comment": "获取指定节的键数量",
+"@禁止流程检查": "真""data type": "整数",
+"@禁止流程检查": "真""@嵌入式方法": "\"\"",
+"@禁止流程检查": "真""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取键数量的节名",
+"data type": "文本型"
+   }
+"@禁止流程检查": "真"]
+  },
+  {
+}"method name": "取节键值对",
+}"comment": "获取指定节名的所有键值对",
+}"result comment": "返回键值对哈希表",
+}"data type": "文本到文本哈希表",
+}"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲取键值对的节名",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "节名是否存在",
+
+"comment": "检查指定的节是否存在",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲检查的节名",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+comment": "所欲检查的节名""method name": "键名是否存在",
+comment": "所欲检查的节名""comment": "检查指定的键名是否存在",
+comment": "所欲检查的节名""data type": "逻辑型",
+comment": "所欲检查的节名""@嵌入式方法": "\"\"",
+comment": "所欲检查的节名""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲检查键名的节名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲检查的键名",
+"data type": "文本型"
+   }
+comment": "所欲检查的节名"]
+  },
+  {
+comment": "所欲检查的键名""method name": "取文本键值",
+comment": "所欲检查的键名""comment": "获取指定键的文本型键值.\n即使\"是否允许重复键名\"为真,也只会返回找到的第一个值.",
+comment": "所欲检查的键名""data type": "文本型",
+comment": "所欲检查的键名""@嵌入式方法": "\"\"",
+comment": "所欲检查的键名""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲获取键值的节名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲获取键值的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "如果所指定键名不存在,将返回此默认值.",
+"data type": "文本型",
+"@默认值": "\"\""
+   },
+   {
+"parameter name": "是否有多个值",
+"comment": "返回当前键是否有多个值,为真时可以用\"取所有键值\"获取.",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+comment": "所欲检查的键名"]
+  },
+  {
+mment": "所欲检查的键名"]"method name": "取整数键值",
+mment": "所欲检查的键名"]"comment": "获取指定键的整数型键值.\n即使\"是否允许重复键名\"为真,也只会返回找到的第一个值.",
+mment": "所欲检查的键名"]"data type": "整数",
+mment": "所欲检查的键名"]"@嵌入式方法": "\"\"",
+mment": "所欲检查的键名"]"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲获取键值的节名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲获取键值的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "如果所指定键名不存在,将返回此默认值.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否有多个值",
+"comment": "返回当前键是否有多个值,为真时可以用\"取所有键值\"获取.",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+mment": "所欲检查的键名"]]
+  },
+  {
+
+"method name": "取小数键值",
+
+"comment": "获取指定键的小数型键值.\n即使\"是否允许重复键名\"为真,也只会返回找到的第一个值.",
+
+"data type": "小数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲获取键值的节名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲获取键值的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "如果所指定键名不存在,将返回此默认值.",
+"data type": "小数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否有多个值",
+"comment": "返回当前键是否有多个值,为真时可以用\"取所有键值\"获取.",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+
+"method name": "取逻辑键值",
+
+"comment": "获取指定键的逻辑型键值.\n即使\"是否允许重复键名\"为真,也只会返回找到的第一个值.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲获取键值的节名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲获取键值的键名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "默认值",
+"comment": "如果所指定键名不存在,将返回此默认值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "是否有多个值",
+"comment": "返回当前键是否有多个值,为真时可以用\"取所有键值\"获取.",
+"data type": "逻辑型类",
+"@默认值": "空对象"
+   }
+
+]
+  },
+  {
+ameter name": "是否有多个值""method name": "置文本键值",
+ameter name": "是否有多个值""comment": "添加或更新一个节或文本型键值.\n当\"是否允许重复键名\"为真时,始终为添加键值.",
+ameter name": "是否有多个值""result comment": "返回值大于等于0表示成功,小于0表示失败.",
+ameter name": "是否有多个值""data type": "整数",
+ameter name": "是否有多个值""@嵌入式方法": "\"\"",
+ameter name": "是否有多个值""parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲添加或更新的节",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲添加或更新的键,留空表示创建一个空节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "键值",
+"comment": "所欲设置的键值,留空表示创建一个空节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "注释",
+"comment": "设置节或键的注释,如果键名为空则是设置节的注释;\n可空,注释文本必须以字符';'或'#'开头;\n仅在第一次创建新的节或键名时才会写入注释.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "强制替换",
+"comment": "\"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ameter name": "是否有多个值"]
+  },
+  {
+}"method name": "置整数键值",
+}"comment": "添加或更新一个整数型键值.\n当\"是否允许重复键名\"为真时,始终为添加键值.",
+}"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲添加或更新的节",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲添加或更新的键",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"comment": "所欲设置的键值",
+"data type": "整数"
+   },
+   {
+"parameter name": "注释",
+"comment": "设置节或键的注释,如果键名为空则是设置节的注释;\n可空,注释文本必须以字符';'或'#'开头;\n仅在第一次创建新的节或键名时才会写入注释.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "使用十六进制",
+"comment": "是否以十六进制文本的格式来写入整数型键值",
+"data type": "逻辑型",
+"@默认值": "假"
+   },
+   {
+"parameter name": "强制替换",
+"comment": "\"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+}"method name": "置小数键值",
+}"comment": "添加或更新一个小数型键值.\n当\"是否允许重复键名\"为真时,始终为添加键值.",
+}"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲添加或更新的节",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲添加或更新的键",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"comment": "所欲设置的键值",
+"data type": "小数"
+   },
+   {
+"parameter name": "注释",
+"comment": "设置节或键的注释,如果键名为空则是设置节的注释;\n可空,注释文本必须以字符';'或'#'开头;\n仅在第一次创建新的节或键名时才会写入注释.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "强制替换",
+"comment": "\"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+}]
+  },
+  {
+ }"method name": "置逻辑键值",
+ }"comment": "添加或更新一个逻辑型键值.\n当\"是否允许重复键名\"为真时,始终为添加键值.",
+ }"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲添加或更新的节",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲添加或更新的键",
+"data type": "文本型"
+   },
+   {
+"parameter name": "键值",
+"comment": "所欲设置的键值",
+"data type": "逻辑型"
+   },
+   {
+"parameter name": "注释",
+"comment": "设置节或键的注释,如果键名为空则是设置节的注释;\n可空,注释文本必须以字符';'或'#'开头;\n仅在第一次创建新的节或键名时才会写入注释.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "强制替换",
+"comment": "\"是否允许重复键名\"为真时,是否强制将同一个键名的\n所有键值都替换成新值.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+ }]
+  },
+  {
+"method name": "删除配置",
+"comment": "  删除整个节,或节中的某个键.\n  当\"是否允许重复键名\"为真时,将删除所有同名的键,\n如果要单独删除某个键值对,请用\"删除键值\".",
+"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲删除的键,如果键名为空,则表示删除整个节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "删除空节",
+"comment": "如果删除指定键后,节已经没有其他内容,是否把这个空节也删除掉?",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+]
+  },
+  {
+
+"method name": "删除键值",
+
+"comment": "删除整个节,或节中的某个键.如果提供了键值,则只删除对应的键.",
+
+"result comment": "返回值大于等于0表示成功,小于0表示失败.",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "节名",
+"comment": "所欲删除配置的节,如果如果键名为空,则表示删除整个节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "键名",
+"comment": "所欲删除的键,如果键名为空,则表示删除整个节.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "键值",
+"comment": "所欲删除的指定键值,如果留空则表示删除所有同名的键.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "删除空节",
+"comment": "如果删除指定键后,节已经没有其他内存,是否把这个空节也删除掉.",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  }
+]
+ },
+ {
+@默认值": "假""class name": "配置项信息类",
+@默认值": "假""base class": "扩展对象类",
+@默认值": "假""@文档": "\"category = \\\"配置文件.INI.辅助类\\\"\"",
+@默认值": "假""variables": [
+  {
+}"variable name": "项目",
+}"comment": "节名、键名、键值",
+}"data type": "文本型",
+}"@输出名": "\"pItem\""
+  },
+  {
+"data type": "文本型""variable name": "注释",
+"data type": "文本型""comment": "配置项的注释",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""@输出名": "\"pComment\""
+  },
+  {
+}"variable name": "序号",
+}"comment": "配置项的序号,从0开始,为ini配置数据除去空行和注释之后的排序.",
+}"data type": "整数",
+}"@输出名": "\"nOrder\""
+  }
+@默认值": "假"],
+@默认值": "假""methods": [
+  {
+
+"method name": "取展示内容",
+
+"comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.",
+
+"@虚拟方法": "可覆盖",
+
+"parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+
+]
+  }
+@默认值": "假"]
+ },
+ {
+"class name": "配置项信息数组类",
+"base class": "对象数组模板类",
+"@文档": "\"category = \\\"配置文件.INI.辅助类\\\"\"",
+"@模板实现类": "\"配置项信息类\""
+ },
+ {
+base class": "对象数组模板类""class name": "快捷方式操作",
+base class": "对象数组模板类""comment": "自己写的快捷方式解析,别问我为什么不用IShellLink对象,我写完才发现有这玩意…\n基本把我电脑上的快捷方式都测试了一遍,如果还遇到不能解析的,可以提交给我.\n另外,部分快捷方式文件没有目标文件属性、时间等信息是正常的.",
+base class": "对象数组模板类""@文档": "\"category = \\\"快捷方式\\\"\"",
+base class": "对象数组模板类""@别名": "\"//\"",
+base class": "对象数组模板类""@别名类型": "本地类",
+base class": "对象数组模板类""@类用途": "访问静态成员",
+base class": "对象数组模板类""methods": [
+  {
+
+"method name": "解析",
+
+"comment": "解析快捷方式文件中的信息",
+
+"result comment": "返回是否成功",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "文件路径",
+"comment": "快捷方式文件的文件路径",
+"data type": "文本型"
+   },
+   {
+"parameter name": "快捷方式信息",
+"comment": "成功返回快捷方式的各项信息",
+"data type": "快捷方式信息类"
+   }
+
+]
+  }
+base class": "对象数组模板类"]
+ },
+ {
+"class name": "快捷方式信息类",
+"comment": "备注的\"可空\"是可能为空的意思...",
+"base class": "扩展对象类",
+"@文档": "\"category = \\\"快捷方式.辅助类\\\"\"",
+"variables": [
+  {
+variables": [
+"variable name": "本地目标",
+variables": [
+"comment": "快捷方式所指向的本地卷目标",
+variables": [
+"data type": "文本型"
+  },
+  {
+ariables": [
+"comment": "快捷方式所指向的本地卷目标""variable name": "网络目标",
+ariables": [
+"comment": "快捷方式所指向的本地卷目标""comment": "快捷方式所指向的网络卷目标",
+ariables": [
+"comment": "快捷方式所指向的本地卷目标""data type": "文本型"
+  },
+  {
+riables": [
+"comment": "快捷方式所指向的本地卷目标""data type": "文本型""variable name": "起始位置",
+riables": [
+"comment": "快捷方式所指向的本地卷目标""data type": "文本型""comment": "快捷方式所指向目标的工作路径",
+riables": [
+"comment": "快捷方式所指向的本地卷目标""data type": "文本型""data type": "文本型"
+  },
+  {
+
+"variable name": "备注",
+
+"comment": "(可空)快捷方式文件的备注",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "相对路径",
+
+"comment": "(可空)快捷方式文件的相对路径",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "命令行参数",
+
+"comment": "(可空)快捷方式文件的命令行参数",
+
+"data type": "文本型"
+  },
+  {
+
+"variable name": "自定义图标文件",
+
+"comment": "(可空)自定义图标文件的路径",
+
+"data type": "文本型"
+  },
+  {
+riable name": "命令行参数""variable name": "可选属性",
+riable name": "命令行参数""comment": "快捷方式文件的可选属性,为\"快捷方式可选属性\"类中常量的组合值.",
+riable name": "命令行参数""data type": "整数"
+  },
+  {
+}"variable name": "目标文件属性",
+}"comment": "(可空)目标文件属性,为\"快捷方式目标文件属性\"类中常量的组合值.",
+}"data type": "整数"
+  },
+  {
+"data type": "整数""variable name": "创建时间",
+"data type": "整数""comment": "(可空)快捷方式文件的创建时间",
+"data type": "整数""data type": "长整数"
+  },
+  {
+
+"variable name": "修改时间",
+
+"comment": "(可空)快捷方式文件的创建时间",
+
+"data type": "长整数"
+  },
+  {
+
+"variable name": "访问时间",
+
+"comment": "(可空)快捷方式文件的上一次访问时间",
+
+"data type": "长整数"
+  },
+  {
+"data type": "长整数""variable name": "目标文件长度",
+"data type": "长整数""comment": "(可空)目标文件的字节长度",
+"data type": "长整数""data type": "整数"
+  },
+  {
+快捷方式文件的创建时间"variable name": "图标个数",
+快捷方式文件的创建时间"comment": "(可空)快捷方式的自定义图标个数",
+快捷方式文件的创建时间"data type": "整数"
+  },
+  {
+}"variable name": "运行方式",
+}"comment": "(可空)目标文件执行时窗口显示方式：\n  1. 常规窗口\n  2. 最小化\n  3. 最大化",
+}"data type": "整数"
+  },
+  {
+riable name": "运行方式""variable name": "快捷键",
+riable name": "运行方式""comment": "(可空)快捷方式的快捷键",
+riable name": "运行方式""data type": "整数"
+  },
+  {
+iable name": "运行方式""data type": "整数""variable name": "GUID",
+iable name": "运行方式""data type": "整数""comment": "快捷方式文件的GUID",
+iable name": "运行方式""data type": "整数""data type": "GUID类"
+  }
+],
+"methods": [
+  {
+}"method name": "取目标文件属性描述",
+}"data type": "文本型"
+  },
+  {
+
+"method name": "是否为指定属性",
+
+"data type": "逻辑型",
+
+"parameters": [
+   {
+"parameter name": "标志值",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲匹配的属性",
+"comment": "请参考\"快捷方式目标文件属性\"",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "取展示内容",
+data type": "整数""comment": "将本对象中的所有数据用文本方式填入到所提供的文本参数中,用作调试或其它场合展示时使用.\n",
+data type": "整数""@虚拟方法": "可覆盖",
+data type": "整数""parameters": [
+   {
+"parameter name": "展示内容",
+"comment": "用作填入本对象中所有数据的展示文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "最大展示数据尺寸",
+"comment": "提供用户所指定的最大允许展示数据尺寸,小于0表示全部展示,等于0表示展示默认尺寸数据.",
+"data type": "整数"
+   }
+data type": "整数"]
+  }
+]
+ },
+ {
+data type": "整数""class name": "快捷方式目标文件属性",
+data type": "整数""@文档": "\"category = \\\"快捷方式.辅助类\\\"\"",
+data type": "整数""constants": [
+  {
+data type": "文本型""constant name": "只读文件",
+data type": "文本型""comment": "快捷方式所指目标文件有只读属性",
+data type": "文本型""data type": "整数",
+data type": "文本型""initial value": "1"
+  },
+  {
+}"constant name": "隐藏文件",
+}"comment": "快捷方式所指目标文件有隐藏属性",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+}"constant name": "系统文件",
+}"comment": "快捷方式所指目标文件是系统文件",
+}"data type": "整数",
+}"initial value": "4"
+  },
+  {
+
+"constant name": "卷标",
+
+"comment": "快捷方式所指目标是卷标",
+
+"data type": "整数",
+
+"initial value": "8"
+  },
+  {
+ }"constant name": "文件夹",
+ }"comment": "快捷方式所指目标是文件夹",
+ }"data type": "整数",
+ }"initial value": "16"
+  },
+  {
+
+"constant name": "可以存档文件",
+
+"comment": "快捷方式所指目标文件在上次存档后被修改过.\n(跟系统备份有关,系统备份文件后会取消这个属性,之后修改文件就会加回来)",
+
+"data type": "整数",
+
+"initial value": "32"
+  },
+  {
+onstant name": "文件夹""constant name": "加密文件",
+onstant name": "文件夹""comment": "快捷方式所指目标文件被加密(加密内容以便保护数据)",
+onstant name": "文件夹""data type": "整数",
+onstant name": "文件夹""initial value": "64"
+  },
+  {
+
+"constant name": "常规文件",
+
+"comment": "快捷方式所指目标文件属性为一般",
+
+"data type": "整数",
+
+"initial value": "128"
+  },
+  {
+
+"constant name": "临时文件",
+
+"comment": "快捷方式所指目标文件为临时",
+
+"data type": "整数",
+
+"initial value": "256"
+  },
+  {
+
+"constant name": "稀疏文件",
+
+"comment": "快捷方式所指目标文件为稀疏文件",
+
+"data type": "整数",
+
+"initial value": "512"
+  },
+  {
+"initial value": "512""constant name": "重分析点数据",
+"initial value": "512""comment": "快捷方式所指目标文件有重分析点数据",
+"initial value": "512""data type": "整数",
+"initial value": "512""initial value": "1024"
+  },
+  {
+"initial value": "512""constant name": "压缩内容",
+"initial value": "512""comment": "快捷方式所指目标文件被压缩(压缩内容以便节省磁盘空间)",
+"initial value": "512""data type": "整数",
+"initial value": "512""initial value": "2048"
+  },
+  {
+initial value": "512""data type": "整数""constant name": "脱机文件",
+initial value": "512""data type": "整数""comment": "快捷方式所指目标文件脱机",
+initial value": "512""data type": "整数""data type": "整数",
+initial value": "512""data type": "整数""initial value": "4096"
+  }
+data type": "整数"]
+ },
+ {
+
+"class name": "快捷方式可选属性",
+
+"@文档": "\"category = \\\"快捷方式.辅助类\\\"\"",
+
+"constants": [
+  {
+
+"constant name": "存在list段",
+
+"comment": "是否存在Shell item ID list段",
+
+"data type": "整数",
+
+"initial value": "1"
+  },
+  {
+}"constant name": "指向文件或文件夹",
+}"comment": "存在是快捷方式指向文件或文件夹,否则为指向其他.",
+}"data type": "整数",
+}"initial value": "2"
+  },
+  {
+
+"constant name": "存在备注",
+
+"comment": "存在备注字符串",
+
+"data type": "整数",
+
+"initial value": "4"
+  },
+  {
+nstant name": "指向文件或文件夹""constant name": "存在相对路径",
+nstant name": "指向文件或文件夹""comment": "存在相对路径",
+nstant name": "指向文件或文件夹""data type": "整数",
+nstant name": "指向文件或文件夹""initial value": "8"
+  },
+  {
+}"constant name": "存在起始位置",
+}"comment": "存在起始位置",
+}"data type": "整数",
+}"initial value": "16"
+  },
+  {
+}"constant name": "存在命令行参数",
+}"comment": "存在命令行参数",
+}"data type": "整数",
+}"initial value": "32"
+  },
+  {
+
+"constant name": "存在自定义图标",
+
+"comment": "存在自定义图标",
+
+"data type": "整数",
+
+"initial value": "64"
+  }
+
+]
+ }
+ (展示内容, "17. GUID: " + 取调试文本2 (最大展示数据尺寸, GUID.取文本 ()))]
+}

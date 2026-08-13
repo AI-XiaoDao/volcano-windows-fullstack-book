@@ -1,0 +1,2346 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\sys_base_w_string_p.txt"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\sys_base_w_string_p.txt"package name": "火山.基本",
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\sys_base_w_string_p.txt"comment": "本文件提供视窗项目的相关文本操作支持功能",
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\sys_base_w_string_p.txt"classes": [
+ {
+换 = 真"class name": "文本编码类型",
+换 = 真"comment": "提供各种文本编码类型",
+换 = 真"@文档": "\"category = \\\"文本操作.辅助类\\\"\"",
+换 = 真"@常量类": "整数",
+换 = 真"constants": [
+  {
+ 小数"constant name": "未知",
+ 小数"comment": "未知编码",
+ 小数"initial value": "@VSET_UNKNOWN"
+  },
+  {
+ = 真"@常量类": "整数""constant name": "UTF16",
+ = 真"@常量类": "整数""comment": "UTF-16编码",
+ = 真"@常量类": "整数""initial value": "@VSET_UTF_16"
+  },
+  {
+}"constant name": "UTF8",
+}"comment": "UTF-8编码",
+}"initial value": "@VSET_UTF_8"
+  },
+  {
+}"constant name": "多字节",
+}"comment": "MBCS多字节本地字符编码",
+}"initial value": "@VSET_MBCS"
+  }
+换 = 真]
+ },
+ {
+= 真]"class name": "文本类",
+= 真]"comment": "提供对Unicode-16字符集格式文本的相关操作支持.\n火山视窗系统所使用的文本字符集即为Unicode-16格式.",
+= 真]"@文档": "\"category = \\\"文本操作\\\"\"",
+= 真]"@别名": "\"@an<CVolString>\"",
+= 真]"@全局类": "真",
+= 真]"methods": [
+  {
+ 真]"methods": [
+"method name": "取随机字母数字",
+ 真]"methods": [
+"comment": "A-Z、a-z、0-9 中取出随机指定数量的字符.",
+ 真]"methods": [
+"static": true,
+ 真]"methods": [
+"data type": "文本型",
+ 真]"methods": [
+"parameters": [
+   {
+"parameter name": "取出的字符数",
+"data type": "整数"
+   }
+ 真]"methods": [
+]
+  },
+  {
+
+"method name": "取文本标记值",
+
+"comment": "返回本文本对象中所设置的用户标记数值.\n由于文本数据实际上也是对象数据,因此其中也保存有用户标记数值.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "置文本标记值",
+
+"comment": "设置本文本对象中的用户标记数值,如果未设置过,其初始值为0.\n由于文本数据实际上也是对象数据,因此其中也保存有用户标记数值.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型",
+"@需求类型": "可写入变量"
+   },
+   {
+"parameter name": "所欲设置的标记值",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取文本预分配字符数",
+
+"comment": "  返回本文本对象为了快速进行内容的添加/删除处理使用的空间分配尺寸,\n每次文本需要调整其空间大小时,都使用本属性值乘于单个字符尺寸作为空\n间调整基准尺寸.值越大,批量加入/删除文本内容时所实际需要重分配空间\n的次数就越少,操作速度越快,但是多余内存占用就越大.\n  一般情况下无需更改本属性值.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "置文本预分配字符数",
+"comment": "  设置本文本对象为了快速进行内容的添加/删除处理使用的空间分配尺寸,\n每次文本需要调整其空间大小时,都使用本属性值乘于单个字符尺寸作为空\n间调整基准尺寸.值越大,批量加入/删除文本内容时所实际需要重分配空间\n的次数就越少,操作速度越快,但是多余内存占用就越大.\n  一般情况下无需更改本属性值.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "预分配字符数",
+"data type": "整数"
+   }
+]
+  },
+  {
+ = 真"comment": "提供各种文本编码类型""method name": "取当前代码页",
+ = 真"comment": "提供各种文本编码类型""comment": "返回当前操作系统所使用的ANSI代码页",
+ = 真"comment": "提供各种文本编码类型""result comment": "具体整数值所对应的代码页请自行查阅相关资料,下面列出一些常用代码页:\n  中文简体: 936\n  中文繁体: 950",
+ = 真"comment": "提供各种文本编码类型""static": true,
+ = 真"comment": "提供各种文本编码类型""data type": "整数",
+ = 真"comment": "提供各种文本编码类型""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "简繁转换",
+}"comment": "将所提供中文文本在简体和繁体之间进行转换.",
+}"result comment": "成功返回转换后的结果,失败则返回原文本.",
+}"static": true,
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "待转换的文本",
+"comment": "提供需要进行转换的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否转换到繁体",
+"comment": "为真转换到繁体,为假则转换到简体.",
+"data type": "逻辑型"
+   }
+}]
+  },
+  {
+}"method name": "填充文本",
+}"comment": "使用所指定长度的指定字符重新填写本文本对象,返回填充后的文本数据首地址指针.\n注意: 本文本对象内的原有内容将被覆盖.",
+}"result comment": "返回填充后文本数据的首地址",
+}"static": true,
+}"data type": "变整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "填充长度",
+"comment": "提供所欲填写文本的长度(即重复填充所指定字符的次数),必须大于等于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "填充字符",
+"comment": "提供所欲使用的填充用字符,注意不能为零字符('\\0').",
+"data type": "字符",
+"@默认值": "' '"
+   }
+}]
+  },
+  {
+}"method name": "文本到对象",
+}"comment": "将所指定文本转换到对象并返回",
+}"static": true,
+}"data type": "对象类",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲转换的文本",
+"comment": "提供所欲转换到对象的文本内容",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+ameter name": "所欲转换的文本""method name": "对象到文本",
+ameter name": "所欲转换的文本""comment": "如果所指定对象为文本数据,则将其转换到文本返回,否则返回空文本.",
+ameter name": "所欲转换的文本""static": true,
+ameter name": "所欲转换的文本""data type": "文本型",
+ameter name": "所欲转换的文本""@禁止流程检查": "真",
+ameter name": "所欲转换的文本""parameters": [
+   {
+"parameter name": "文本对象数据",
+"comment": "可以为\"文本到对象\"方法的返回值",
+"data type": "对象类"
+   }
+ameter name": "所欲转换的文本"]
+  },
+  {
+
+"method name": "文本到UTF8",
+
+"comment": "将当前文本转换到UTF8字符集格式后返回.\n等同于火山安卓、服务器中的\"文本到字节数组\".",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+"method name": "UTF8到文本",
+"comment": "将所指定UTF8格式的文本数据转换到文本后返回.\n等同于火山安卓、服务器中的\"字节数组到文本\".",
+"static": true,
+"data type": "文本型",
+"@禁止流程检查": "真",
+"parameters": [
+   {
+"parameter name": "所欲转换的UTF8文本数据",
+"comment": "提供所欲转换的UTF8字符集文本数据",
+"data type": "字节集类"
+   }
+]
+  },
+  {
+}"method name": "文件资源到文本",
+}"comment": "载入所指定的文本数据资源,返回是否载入成功.",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲载入的数据资源",
+"comment": "用作提供所欲载入的RCDATA类型资源,如果为\"空资源.空文件\",将返回空文本.",
+"data type": "视窗文件资源"
+   },
+   {
+"parameter name": "所欲写出到的文本",
+"comment": "用作接收所载入的资源数据文本,其中的原有内容将被覆盖.",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "文本到多字节",
+
+"comment": "将当前文本转换到本地多字节字符集格式(即MBS)后返回.\n等同于火山安卓、服务器中的\"文本到GBK\".",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否包括结束零字符",
+"comment": "指定在所转换到的结果文本字节集中是否包括结束零字符",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+data type": "文本型""method name": "多字节到文本",
+data type": "文本型""comment": "将所指定本地多字节字符集格式(即MBS)的文本数据转换到文本后返回.\n等同于火山安卓、服务器中的\"GBK到文本\".",
+data type": "文本型""static": true,
+data type": "文本型""data type": "文本型",
+data type": "文本型""@禁止流程检查": "真",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲转换的文本数据",
+"comment": "提供所欲转换的本地多字节字符集文本数据",
+"data type": "字节集类"
+   }
+data type": "文本型"]
+  },
+  {
+ }"method name": "文本到字节集",
+ }"comment": "将当前文本转换到字节集数据后返回.\n注意: 所返回数据不包括结束零字符,其文本字符集格式为UTF-16编码.\n等同于火山安卓、服务器中的\"文本到UTF16\"方法.",
+ }"static": true,
+ }"data type": "字节集类",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲转换的文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ameter name": "所欲转换的文本数据""method name": "字节集到文本",
+ameter name": "所欲转换的文本数据""comment": "将所指定的字节集数据转换到文本后返回.\n注意: 必须确保所提供的字节集数据为Unicode-16编码文本内容.\n等同于火山安卓、服务器中的\"UTF16到文本\"方法.",
+ameter name": "所欲转换的文本数据""static": true,
+ameter name": "所欲转换的文本数据""data type": "文本型",
+ameter name": "所欲转换的文本数据""@禁止流程检查": "真",
+ameter name": "所欲转换的文本数据""parameters": [
+   {
+"parameter name": "所欲转换的文本数据",
+"comment": "提供所欲转换的Unicode-16编码文本内容数据",
+"data type": "字节集类"
+   }
+ameter name": "所欲转换的文本数据"]
+  },
+  {
+}"method name": "读入文本文件",
+}"comment": "  从所指定路径文件中读入指定尺寸的文本内容并将其返回,如果读取失败将返回空\n文本(注意正常情况下也可能返回空文本).",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲读取文件名",
+"comment": "提供所欲读取文件的路径名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲读取数据尺寸",
+"comment": "提供所欲读取数据的尺寸(单位字节),为-1表示全部读取.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "文件文本编码",
+"comment": "  提供文件中文本内容的编码格式,如果为\"文本编码类型.未知\",则首先检查是否为\n\"文本编码类型.UTF16\"格式,如果不是,则认为其为\"文本编码类型.多字节\"格式.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+}]
+  },
+  {
+}"method name": "读入文本文件2",
+}"comment": "从所指定路径文件中读入指定尺寸的文本内容到本文本内,返回是否读取成功.",
+}"static": true,
+}"data type": "逻辑型",
+}"@禁止流程检查": "真",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲读取文件名",
+"comment": "提供所欲读取文件的路径名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲读取数据尺寸",
+"comment": "提供所欲读取数据的尺寸(单位字节),为-1表示全部读取.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "文件文本编码",
+"comment": "  提供文件中文本内容的编码格式,如果为\"文本编码类型.未知\",则首先检查是否为\n\"文本编码类型.UTF16\"格式,如果不是,则认为其为\"文本编码类型.多字节\"格式.",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+}]
+  },
+  {
+}"method name": "写出文本文件",
+}"comment": "将本文本的内容写入到所指定路径的文件中,返回是否写出成功.",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲写到文件名",
+"comment": "提供所欲写到文件的路径名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲写出文本长度",
+"comment": "提供所欲写出文本的字符数目,为-1表示全部写出.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "所欲写出文本编码",
+"comment": "提供欲将所写出文本转换到的编码类型,不能为\"文本编码类型.未知\".",
+"data type": "文本编码类型",
+"@默认值": "文本编码类型.UTF16"
+   }
+}]
+  },
+  {
+ }"method name": "复制到字符数组",
+ }"comment": "将本文本的内容复制到所指定的字符数组中,会自动添加结尾零字符.",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲复制到的字符数组",
+"comment": "提供所欲复制到的字符数组",
+"data type": "字符 []"
+   },
+   {
+"parameter name": "字符数组的成员数",
+"comment": "提供指定字符数组定义时所分配的成员字符数目",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+
+"method name": "添加字符数组",
+
+"comment": "将所指定字符数组中的文本内容添加到本文本的尾部",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的字符数组",
+"comment": "提供所欲添加其文本内容的字符数组",
+"data type": "字符 []"
+   },
+   {
+"parameter name": "所欲添加的字符数目",
+"comment": "  提供该字符数组中所欲加入到本文本中的字符数目,必须大于等于0\n且小于等于指定字符数组定义时所分配的成员字符数目.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "取文本指针",
+
+"comment": "返回当前文本内容的文本指针值.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+
+"static": true,
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"method name": "置文本指针",
+"comment": "将指针所指向的文本内容置入当前文本对象中",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲置入文本内容指针",
+"comment": "为指向一段以'\\0'字符结束的文本内容,该内容将被置入到当前文本对象中.",
+"data type": "变整数"
+   }
+]
+  },
+  {
+"method name": "添加文本指针内容",
+"comment": "将所指定指针处的文本数据添加到本文本的尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本数据指针",
+"comment": "提供指向所欲加入文本数据内容的指针.\n注意: 该指针必须指向以零字符结束的文本内容.",
+"data type": "变整数"
+   }
+]
+  },
+  {
+data type": "变整数""method name": "添加部分文本指针内容",
+data type": "变整数""comment": "将所指定指针处的部分文本数据添加到本文本的尾部.\n除非必要且对指针概念有透彻的了解,不要使用本方法.",
+data type": "变整数""static": true,
+data type": "变整数""@嵌入式方法": "\"\"",
+data type": "变整数""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "文本数据指针",
+"comment": "提供指向所欲加入文本数据内容的指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "所欲添加文本的长度",
+"comment": "  提供所欲添加文本的长度,必须确保指针所指向地址处尺寸为\n\"本参数值*单个字符数据尺寸\"的地址空间可读.",
+"data type": "整数"
+   }
+data type": "变整数"]
+  },
+  {
+}"method name": "指针到文本",
+}"comment": "根据指定指针所指向的文本数据建立并返回一个文本对象",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "文本数据指针",
+"comment": "提供指向所欲取出文本数据内容的指针",
+"data type": "变整数"
+   }
+}]
+  },
+  {
+
+"method name": "多字节指针到文本",
+
+"comment": "根据指定指针所指向的多字节编码文本数据建立并返回一个文本对象",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "文本数据指针",
+"comment": "提供指向所欲取出多字节编码文本数据内容的指针",
+"data type": "变整数"
+   }
+
+]
+  },
+  {
+"method name": "到文本",
+"comment": "返回指定数据的文本形式",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲转换的数据",
+"@匹配类型": "通用基本型"
+   }
+]
+  },
+  {
+ameter name": "文本数据指针""method name": "置文本",
+ameter name": "文本数据指针""comment": "将所指定类型的数据置入所欲操作的文本中",
+ameter name": "文本数据指针""static": true,
+ameter name": "文本数据指针""@嵌入式方法": "\"\"",
+ameter name": "文本数据指针""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲置入的数据",
+"@匹配类型": "通用基本型"
+   }
+ameter name": "文本数据指针"]
+  },
+  {
+
+"method name": "字符数组到文本",
+
+"comment": "根据所指定字符数组中的文本内容构建并返回一个文本值.\n注意: 该数组中必须存在以零字符结束的文本内容.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲使用的字符数组",
+"data type": "字符 []"
+   },
+   {
+"parameter name": "字符数目",
+"comment": "  提供该字符数组中所欲加入到返回文本中的字符数目,必须大于等于0\n且小于等于指定字符数组定义时所分配的成员字符数目.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "取文本长度",
+ }"comment": "返回所指定文本型数据的长度",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "置文本长度",
+}"comment": "设置所指定文本型数据的长度\n",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲设置的长度",
+"comment": "  如果小于原有文本长度,则将原有文本剪切到所指定长度,\n如果大于原有文本长度,则在尾部补充对应数目的空格字符.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取文本左边",
+
+"comment": "返回一个文本,其中包含指定文本中从左边算起指定数量的字符.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲取出字符的数目",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "取文本右边",
+}"comment": "返回一个文本,其中包含指定文本中从右边算起指定数量的字符.",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲取出字符的数目",
+"data type": "整数"
+   }
+}]
+  },
+  {
+}"method name": "取文本中间",
+}"comment": "返回一个文本,其中包含指定文本中从指定位置算起指定数量的字符.",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始取出索引位置",
+"comment": "注意索引值从0开始,即0代表首字符位置.",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲取出字符的数目",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "取文本哈希值",
+
+"comment": "  计算并返回所指定文本的哈希值,区分英文字母的大小写.\n  文本哈希值可以在需要快速比较两个文本是否相同时使用(即如果\n两个文本的哈希值不同,则两个文本必定不相同).",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "取文本大小写无关哈希值",
+}"comment": "  计算并返回所指定文本的哈希值,不区分英文字母的大小写.\n  文本哈希值可以在需要快速比较两个文本是否相同时使用(即如果\n两个文本的哈希值不同,则两个文本必定不相同).",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"method name": "文本是否为空",
+"comment": "返回所指定文本是否为空",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+ }"method name": "文本是否为空对象",
+ }"comment": "返回所指定文本是否设置了\"空白对象\"标志",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ }"method name": "清空文本",
+ }"comment": "清空所指定文本的内容",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+}"method name": "删除部分文本",
+}"comment": "删除所指定文本中的指定区域内的字符",
+}"result comment": "返回所实际删除的字符数",
+}"static": true,
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始字符索引",
+"comment": "  提供所欲删除内容部分的首字符索引位置,必须大于等于0且小\n于等于当前文本长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲删除字符数",
+"comment": "  提供所欲删除的字符数,必须大于等于0且加上\"起始字符索引\"\n参数值后小于等于当前文本长度.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "欲删除字符数""method name": "文本比较",
+ameter name": "欲删除字符数""comment": "比较两个文本,返回比较结果.",
+ameter name": "欲删除字符数""result comment": "如果返回值小于0,表示本文本小于所比较文本;\n如果等于0,表示本文本等于所比较文本;\n如果大于0,表示本文本大于所比较文本.",
+ameter name": "欲删除字符数""static": true,
+ameter name": "欲删除字符数""data type": "整数",
+ameter name": "欲删除字符数""@嵌入式方法": "\"\"",
+ameter name": "欲删除字符数""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲比较的文本",
+"comment": "提供所欲比较的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "指定比较时是否区分英文字母的大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "欲删除字符数"]
+  },
+  {
+
+"data type": "文本型""method name": "检查加入路径字符",
+
+"data type": "文本型""comment": "如果所指定路径文本不以路径字符'\\'结束,则添加该字符到尾部.",
+
+"data type": "文本型""static": true,
+
+"data type": "文本型""@嵌入式方法": "\"\"",
+
+"data type": "文本型""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"comment": "提供所欲处理的路径文本",
+"data type": "文本型"
+   }
+
+"data type": "文本型"]
+  },
+  {
+}"method name": "检查删除路径字符",
+}"comment": "如果所指定路径文本以一个可以被删除的路径字符'\\'结束(即不为类似\"c:\\\"这样的文本),则将其删除.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"comment": "提供所欲处理的路径文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+"static": true"method name": "插入字符",
+"static": true"comment": "将所指定字符插入到文本的所指定索引位置",
+"static": true"static": true,
+"static": true"@嵌入式方法": "\"\"",
+"static": true"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "插入索引位置",
+"comment": "提供所欲插入的索引位置,必须大于等于0且小于等于文本当前长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的字符",
+"comment": "提供所欲插入到文本中的字符",
+"data type": "字符"
+   }
+"static": true]
+  },
+  {
+ }"method name": "删除字符",
+ }"comment": "删除指定文本内容中的所指定区域的字符",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "首字符索引位置",
+"comment": "提供所欲删除首字符的索引位置,必须大于等于0且小于等于文本当前长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "欲删除字符数目",
+"comment": "提供所欲删除字符的数目,必须大于等于0且加上\"首字符索引位置\"后小于等于文本当前长度.",
+"data type": "整数",
+"@默认值": "1"
+   }
+ }]
+  },
+  {
+}"method name": "加入字符",
+}"comment": "将所指定的字符添加到文本的尾部",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的字符",
+"comment": "提供所欲添加到文本中的字符",
+"data type": "字符"
+   }
+}]
+  },
+  {
+}"method name": "取空白文本",
+}"comment": "返回具有指定数目半角空格的文本",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "空格数目",
+"comment": "提供所欲置入的空格字符数目",
+"data type": "整数"
+   }
+}]
+  },
+  {
+"method name": "取重复文本",
+"comment": "将所指定文本重复指定次数,返回结果文本.",
+"static": true,
+"data type": "文本型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲重复的文本",
+"comment": "提供所欲重复置入的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲重复的次数",
+"comment": "提供所欲重复置入的次数",
+"data type": "整数"
+   }
+]
+  },
+  {
+
+"method name": "加入重复字符",
+
+"comment": "将所指定的字符添加多个到文本的尾部",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的字符",
+"comment": "提供所欲添加到文本中的字符",
+"data type": "字符",
+"@默认值": "' '"
+   },
+   {
+"parameter name": "所欲重复添加的次数",
+"comment": "提供将所指定字符重复添加的次数",
+"data type": "整数",
+"@默认值": "1"
+   }
+
+]
+  },
+  {
+指定字符重复添加的次数"method name": "加入文本",
+指定字符重复添加的次数"comment": "将所指定文本添加到当前文本尾部",
+指定字符重复添加的次数"static": true,
+指定字符重复添加的次数"@嵌入式方法": "\"\"",
+指定字符重复添加的次数"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的文本",
+"data type": "文本型"
+   }
+指定字符重复添加的次数]
+  },
+  {
+data type": "文本型""method name": "加入部分文本",
+data type": "文本型""comment": "将所指定文本的一部分添加到当前文本尾部",
+data type": "文本型""static": true,
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的长度",
+"comment": "提供欲将所指定文本的多少字符添加到当前文本尾部",
+"data type": "整数"
+   }
+data type": "文本型"]
+  },
+  {
+data type": "文本型""method name": "插入文本",
+data type": "文本型""comment": "将所指定文本插入到当前文本所指定位置",
+data type": "文本型""static": true,
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲插入的索引位置",
+"comment": "指定所欲插入的字符索引位置,必须大于等于0且小于等于当前文本的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的文本",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+
+"method name": "插入部分文本",
+
+"comment": "将所指定文本的一部分插入到当前文本所指定位置",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲插入的索引位置",
+"comment": "指定所欲插入的字符索引位置,必须大于等于0且小于等于当前文本的长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "所欲插入的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲插入的长度",
+"comment": "提供欲将指定文本的多少字符插入到当前文本的所指定位置",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+ }"method name": "取字符",
+ }"comment": "返回文本中所指定索引位置处的字符",
+ }"static": true,
+ }"data type": "字符",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "字符索引位置",
+"comment": "提供所欲获取字符的索引位置,必须大于等于0小于文本的当前长度.",
+"data type": "整数"
+   }
+ }]
+  },
+  {
+ameter name": "字符索引位置""method name": "加入小写文本",
+ameter name": "字符索引位置""comment": "将所指定文本中的英文字母转换到小写后添加到当前文本尾部",
+ameter name": "字符索引位置""static": true,
+ameter name": "字符索引位置""@嵌入式方法": "\"\"",
+ameter name": "字符索引位置""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的文本",
+"data type": "文本型"
+   }
+ameter name": "字符索引位置"]
+  },
+  {
+"method name": "加入大写文本",
+"comment": "将所指定文本中的英文字母转换到大写后添加到当前文本尾部",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+
+"method name": "加入重复文本",
+
+"comment": "将所指定的文本重复多次加入当前文本的尾部",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的次数",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+}"method name": "加入多行文本",
+}"comment": "  将所指定的多行文本(基于换行符分隔)加入到当前文本尾部,支持在\n多行文本中的每行行首添加或删除指定数目的空格字符.",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲添加的文本",
+"comment": "所添加文本中可以包括以换行符分隔的多行文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所添加行首空格数",
+"comment": "  指定在所提供的多行文本中每行行首添加的空格字符数目,\n如果小于0,则删除行首对应数目的空格字符.",
+"data type": "整数"
+   }
+}]
+  },
+  {
+ameter name": "所添加行首空格数""method name": "加入换行文本",
+ameter name": "所添加行首空格数""comment": "将回车及换行字符(\"\\r\\n\")添加到当前文本尾部",
+ameter name": "所添加行首空格数""static": true,
+ameter name": "所添加行首空格数""@嵌入式方法": "\"\"",
+ameter name": "所添加行首空格数""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+ameter name": "所添加行首空格数"]
+  },
+  {
+
+"method name": "检查加入换行文本",
+
+"comment": "如果当前文本不以换行字符('\\n')结束,则将回车及换行字符(\"\\r\\n\")添加到当前文本尾部",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "插入文本行首空格",
+
+"comment": "将所指定文本的每行(基于换行符分隔)行首插入指定数目的空格字符",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲插入的空格数",
+"comment": "指定在文本每行行首插入的空格字符数目,不能小于0.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "删除文本空白行",
+
+"comment": "删除所指定文本中的所有空行(基于换行符分隔,包括行中全为空白字符的文本行)",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "取格式文本",
+}"comment": "建立所指定的格式文本",
+}"static": true,
+}"data type": "文本型",
+}"@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+}"parameters": [
+   {
+"parameter name": "格式文本",
+"comment": "提供其中可以包含格式替换符的文本,其中的格式替换符将被后续对应参数所替换.\n以下为常用的格式替换符,详细信息请参阅C++文档中关于sprintf函数的说明.\n    %c: 字符\n    %d: 整数(以有符号十进制格式替换)\n    %o: 整数(以无符号八进制格式替换)\n    %u: 整数(以无符号十进制格式替换)\n    %x: 整数(以无符号小写十六进制格式替换)\n    %X: 整数(以无符号大写十六进制格式替换)\n    %I64d: 长整数(以有符号十进制格式替换)\n    %I64o: 长整数(以无符号八进制格式替换)\n    %I64u: 长整数(以无符号十进制格式替换)\n    %I64x: 长整数(以无符号小写十六进制格式替换)\n    %I64X: 长整数(以无符号大写十六进制格式替换)\n    %e, %E: 小数(以指数形式替换)\n    %f: 小数(以非指数形式替换)\n    %.8f: 小数(用来表达小数的带宽度限制的常用格式替换符)\n    %g, %G: 小数(根据值大小自动选择是否以指数形式替换)\n    %s: 文本型\n    %%: 百分号字符本身\n注意: 如果欲格式化\"变整数\"值,请务必将其先强制转换为整数或者长整数,再使用对应的格式替换符.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换数据",
+"comment": "用作给格式文本中的格式替换符提供替换数据,格式替换符的数目和数据类型必须与替换数据保持一致.",
+"@匹配类型": "通用基本型",
+"@可扩展": "\"\""
+   }
+}]
+  },
+  {
+@嵌入式方法": "\"\"""method name": "加入格式文本",
+@嵌入式方法": "\"\"""comment": "将所指定的格式文本添加到当前文本尾部",
+@嵌入式方法": "\"\"""static": true,
+@嵌入式方法": "\"\"""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "格式文本",
+"comment": "提供其中可以包含格式替换符的文本,其中的格式替换符将被后续对应参数所替换.\n以下为常用的格式替换符,详细信息请参阅C++文档中关于sprintf函数的说明.\n    %c: 字符\n    %d: 整数(以有符号十进制格式替换)\n    %o: 整数(以无符号八进制格式替换)\n    %u: 整数(以无符号十进制格式替换)\n    %x: 整数(以无符号小写十六进制格式替换)\n    %X: 整数(以无符号大写十六进制格式替换)\n    %I64d: 长整数(以有符号十进制格式替换)\n    %I64o: 长整数(以无符号八进制格式替换)\n    %I64u: 长整数(以无符号十进制格式替换)\n    %I64x: 长整数(以无符号小写十六进制格式替换)\n    %I64X: 长整数(以无符号大写十六进制格式替换)\n    %e, %E: 小数(以指数形式替换)\n    %f: 小数(以非指数形式替换)\n    %.8f: 小数(用来表达小数的带宽度限制的常用格式替换符)\n    %g, %G: 小数(根据值大小自动选择是否以指数形式替换)\n    %s: 文本型\n    %%: 百分号字符本身\n注意: 如果欲格式化\"变整数\"值,请务必将其先强制转换为整数或者长整数,再使用对应的格式替换符.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换数据",
+"comment": "用作给格式文本中的格式替换符提供替换数据,格式替换符的数目和数据类型必须与替换数据保持一致.",
+"@匹配类型": "通用基本型",
+"@可扩展": "\"\""
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+
+"@嵌入式方法": "\"\"""method name": "加入多行格式文本",
+
+"@嵌入式方法": "\"\"""comment": "将所指定的多行格式文本(基于换行符分隔)添加到当前文本尾部",
+
+"@嵌入式方法": "\"\"""static": true,
+
+"@嵌入式方法": "\"\"""@嵌入式方法": "\"req_str_param_text_pointer = true\"",
+
+"@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所添加行首空格数",
+"comment": "指定在所提供的多行文本中每行行首添加的空格字符数目,不能小于0.",
+"data type": "整数"
+   },
+   {
+"parameter name": "格式文本",
+"comment": "提供其中可以包含格式替换符的文本,其中的格式替换符将被后续对应参数所替换.\n以下为常用的格式替换符,详细信息请参阅C++文档中关于sprintf函数的说明.\n    %c: 字符\n    %d: 整数(以有符号十进制格式替换)\n    %o: 整数(以无符号八进制格式替换)\n    %u: 整数(以无符号十进制格式替换)\n    %x: 整数(以无符号小写十六进制格式替换)\n    %X: 整数(以无符号大写十六进制格式替换)\n    %I64d: 长整数(以有符号十进制格式替换)\n    %I64o: 长整数(以无符号八进制格式替换)\n    %I64u: 长整数(以无符号十进制格式替换)\n    %I64x: 长整数(以无符号小写十六进制格式替换)\n    %I64X: 长整数(以无符号大写十六进制格式替换)\n    %e, %E: 小数(以指数形式替换)\n    %f: 小数(以非指数形式替换)\n    %.8f: 小数(用来表达小数的带宽度限制的常用格式替换符)\n    %g, %G: 小数(根据值大小自动选择是否以指数形式替换)\n    %s: 文本型\n    %%: 百分号字符本身\n注意: 如果欲格式化\"变整数\"值,请务必将其先强制转换为整数或者长整数,再使用对应的格式替换符.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "替换数据",
+"comment": "用作给格式文本中的格式替换符提供替换数据,格式替换符的数目和数据类型必须与替换数据保持一致.",
+"@匹配类型": "通用基本型",
+"@可扩展": "\"\""
+   }
+
+"@嵌入式方法": "\"\""]
+  },
+  {
+
+"method name": "置部分文本",
+
+"comment": "将所指定文本的部分内容复制到当前文本中,当前文本的原有内容将被覆盖.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲复制的文本",
+"comment": "提供所欲复制进当前文本中的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲复制的长度",
+"comment": "提供欲将所指定文本的多少字符复制进当前文本中.\n必须大于等于0且小于等于所欲复制文本的长度.",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+
+"method name": "逆序置文本",
+
+"comment": "将所指定文本的内容逆序翻转后复制到当前文本中,当前文本的原有内容将被覆盖.",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲复制的文本",
+"comment": "提供所欲逆序复制进当前文本中的文本内容",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "取逆序文本",
+
+"comment": "将所指定文本的内容逆序翻转后置入一个新文本中,然后将其返回.",
+
+"static": true,
+
+"data type": "文本型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲翻转的文本",
+"comment": "提供所欲逆序翻转的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+"parameters": [
+"method name": "逆序置部分文本",
+"parameters": [
+"comment": "将所指定文本的部分内容逆序翻转后复制到当前文本中,当前文本的原有内容将被覆盖.",
+"parameters": [
+"static": true,
+"parameters": [
+"@嵌入式方法": "\"\"",
+"parameters": [
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲复制的文本",
+"comment": "提供所欲逆序复制进当前文本中的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲复制的长度",
+"comment": "提供欲将所指定文本的多少字符逆序复制进当前文本中.\n必须大于等于0且小于等于所欲复制文本的长度.",
+"data type": "整数"
+   }
+"parameters": [
+]
+  },
+  {
+arameters": [
+]"method name": "替换文本控制符",
+arameters": [
+]"comment": "将所指定文本中的所有控制类字符替换为空格",
+arameters": [
+]"static": true,
+arameters": [
+]"@嵌入式方法": "\"\"",
+arameters": [
+]"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+arameters": [
+]]
+  },
+  {
+ameter name": "所欲操作的文本""method name": "文本替换",
+ameter name": "所欲操作的文本""comment": "将指定文本的某一部分用其它的文本替换",
+ameter name": "所欲操作的文本""static": true,
+ameter name": "所欲操作的文本""@嵌入式方法": "\"\"",
+ameter name": "所欲操作的文本""parameters": [
+   {
+"parameter name": "被替换文本",
+"comment": "提供欲被替换的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始替换索引位置",
+"comment": "指定替换的起始索引位置,必须大于等于0且小于等于被替换文本长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "替换长度",
+"comment": "  指定所欲替换的文本部分的长度,必须大于等于0且加上\"起始替换索引位置\"\n后小于等于被替换文本长度.",
+"data type": "整数"
+   },
+   {
+"parameter name": "用作替换的文本",
+"data type": "文本型"
+   }
+ameter name": "所欲操作的文本"]
+  },
+  {
+ }"method name": "子文本替换",
+ }"comment": "将所指定文本中的指定内容子文本替换为另一个文本",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲被替换的子文本",
+"comment": "提供欲被替换的子文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用作替换的文本",
+"comment": "提供用作替换所指定子文本的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始替换索引位置",
+"comment": "  指定在欲被替换文本中的起始搜寻索引位置,必须\n大于等于0且小于欲被替换文本的长度.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "替换次数",
+"comment": "指定所欲进行替换的次数,如果小于0则全部替换.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "指定比较时是否区分英文字母的大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+}"method name": "替换所有子文本",
+}"comment": "将所指定文本中的所有指定内容子文本均替换为另一个文本",
+}"result comment": "返回是否产生了实际替换",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲被替换的子文本",
+"comment": "提供欲被替换的子文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用作替换的文本",
+"comment": "提供用作替换所指定子文本的文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "替换字符",
+
+"comment": "将文本中所有指定字符均替换为另一个",
+
+"result comment": "返回是否产生了实际替换",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲被替换的字符",
+"comment": "提供文本中所欲被替换的字符",
+"data type": "字符"
+   },
+   {
+"parameter name": "所欲替换到的字符",
+"comment": "提供用作替换的字符",
+"data type": "字符"
+   },
+   {
+"parameter name": "起始替换索引位置",
+"comment": "提供起始替换索引位置,必须大于等于0且小于等于文本长度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "加入小数文本",
+data type": "整数""comment": "将所指定小数转换为文本后加入到当前文本尾部",
+data type": "整数""static": true,
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲加入的小数",
+"data type": "小数"
+   }
+data type": "整数"]
+  },
+  {
+"static": true"method name": "加入整数文本",
+"static": true"comment": "将所指定整数转换为文本后加入到当前文本尾部",
+"static": true"static": true,
+"static": true"@嵌入式方法": "\"\"",
+"static": true"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲加入的整数",
+"data type": "整数"
+   }
+"static": true]
+  },
+  {
+data type": "文本型""method name": "加入无符号整数文本",
+data type": "文本型""comment": "将所指定整数转换为无符号文本后加入到当前文本尾部",
+data type": "文本型""static": true,
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲加入的整数",
+"data type": "整数"
+   }
+data type": "文本型"]
+  },
+  {
+ta type": "文本型"]"method name": "加入长整数文本",
+ta type": "文本型"]"comment": "将所指定长整数转换为文本后加入到当前文本尾部",
+ta type": "文本型"]"static": true,
+ta type": "文本型"]"@嵌入式方法": "\"\"",
+ta type": "文本型"]"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲加入的长整数",
+"data type": "长整数"
+   }
+ta type": "文本型"]]
+  },
+  {
+"method name": "加入无符号长整数文本",
+"comment": "将所指定长整数转换为无符号文本后加入到当前文本尾部",
+"static": true,
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲加入的长整数",
+"data type": "长整数"
+   }
+]
+  },
+  {
+data type": "长整数""method name": "到大写",
+data type": "长整数""comment": "将当前文本中的所有英文字母转换为大写,返回转换后的结果文本.",
+data type": "长整数""static": true,
+data type": "长整数""data type": "文本型",
+data type": "长整数""@嵌入式方法": "\"\"",
+data type": "长整数""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+data type": "长整数"]
+  },
+  {
+@嵌入式方法": "\"\"""method name": "到小写",
+@嵌入式方法": "\"\"""comment": "将当前文本中的所有英文字母转换为小写,返回转换后的结果文本.",
+@嵌入式方法": "\"\"""static": true,
+@嵌入式方法": "\"\"""data type": "文本型",
+@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+@嵌入式方法": "\"\""]
+  },
+  {
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""method name": "到全角",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""comment": "将文本中所有的半角英文字符转换为对应的全角中文字符,返回转换后的结果文本.",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""static": true,
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""data type": "文本型",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""@嵌入式方法": "\"\"",
+嵌入式方法": "\"\"""@嵌入式方法": "\"\"""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+嵌入式方法": "\"\"""@嵌入式方法": "\"\""]
+  },
+  {
+入式方法": "\"\"""@嵌入式方法": "\"\"""static": true"method name": "到半角",
+入式方法": "\"\"""@嵌入式方法": "\"\"""static": true"comment": "将文本中所有的全角中文字符转换为对应的半角英文字符,返回转换后的结果文本.",
+入式方法": "\"\"""@嵌入式方法": "\"\"""static": true"static": true,
+入式方法": "\"\"""@嵌入式方法": "\"\"""static": true"data type": "文本型",
+入式方法": "\"\"""@嵌入式方法": "\"\"""static": true"@嵌入式方法": "\"\"",
+入式方法": "\"\"""@嵌入式方法": "\"\"""static": true"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+入式方法": "\"\"""@嵌入式方法": "\"\"""static": true]
+  },
+  {
+ }"method name": "删首空",
+ }"comment": "删除当前文本首部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+data type": "文本型""method name": "删尾空",
+data type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.",
+data type": "文本型""static": true,
+data type": "文本型""data type": "文本型",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+data type": "文本型"]
+  },
+  {
+ata type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""method name": "删首尾空",
+ata type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""comment": "删除当前文本首部和尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.",
+ata type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""static": true,
+ata type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""data type": "文本型",
+ata type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""@嵌入式方法": "\"\"",
+ata type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+ata type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本."]
+  },
+  {
+ }"method name": "删全部空",
+ }"comment": "删除当前文本中的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.",
+ }"static": true,
+ }"data type": "文本型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+ta type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""parameters": [
+"method name": "自身到大写",
+ta type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""parameters": [
+"comment": "将当前文本自身中的所有英文字母转换为大写",
+ta type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""parameters": [
+"static": true,
+ta type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""parameters": [
+"@嵌入式方法": "\"\"",
+ta type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""parameters": [
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+ta type": "文本型""comment": "删除当前文本尾部的所有空白字符(全半角空格/回车/换行/制表符等),返回删除后的结果文本.""parameters": [
+]
+  },
+  {
+}"method name": "自身到小写",
+}"comment": "将当前文本自身中的所有英文字母转换为小写",
+}"static": true,
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+}]
+  },
+  {
+
+"method name": "自身到全角",
+
+"comment": "将文本自身中所有的半角英文字符转换为对应的全角中文字符",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "自身到半角",
+
+"comment": "将文本自身中所有的全角中文字符转换为对应的半角英文字符",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "删自身首空",
+
+"comment": "删除当前文本自身首部的所有空白字符",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+
+"method name": "删自身尾空",
+
+"comment": "删除当前文本自身尾部的所有空白字符",
+
+"static": true,
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+ }"method name": "删自身首尾空",
+ }"comment": "删除当前文本自身首部和尾部的所有空白字符",
+ }"static": true,
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+ }]
+  },
+  {
+
+"method name": "寻找字符",
+
+"comment": "查找当前文本中所指定字符的所处索引位置,未找到则返回-1.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲查找的字符",
+"comment": "提供所欲查找的字符",
+"data type": "字符"
+   },
+   {
+"parameter name": "起始查找索引位置",
+"comment": "提供起始查找的索引位置,必须大于等于0且小于等于文本长度.",
+"data type": "整数",
+"@默认值": "0"
+   }
+
+]
+  },
+  {
+ }"method name": "倒找字符",
+ }"comment": "逆向查找当前文本中所指定字符的所处索引位置,未找到则返回-1.",
+ }"static": true,
+ }"data type": "整数",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲查找的字符",
+"comment": "提供所欲查找的字符",
+"data type": "字符"
+   }
+ }]
+  },
+  {
+
+"method name": "寻找文本",
+
+"comment": "查找当前文本中所指定文本的所处索引位置,未找到则返回-1.",
+
+"static": true,
+
+"data type": "整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "被搜寻的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲寻找的文本",
+"comment": "提供所欲查找的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜寻位置",
+"comment": "提供起始查找的索引位置,必须大于等于0且小于等于文本长度.",
+"data type": "整数",
+"@默认值": "0"
+   },
+   {
+"parameter name": "是否不区分大小写",
+"comment": "指定比较时是否不区分英文字母的大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+时是否不区分英文字母的大小写"method name": "倒找文本",
+时是否不区分英文字母的大小写"comment": "逆向查找当前文本中所指定文本的所处索引位置,未找到则返回-1.",
+时是否不区分英文字母的大小写"static": true,
+时是否不区分英文字母的大小写"data type": "整数",
+时是否不区分英文字母的大小写"@嵌入式方法": "\"\"",
+时是否不区分英文字母的大小写"parameters": [
+   {
+"parameter name": "被搜寻的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "欲寻找的文本",
+"comment": "提供所欲查找的文本内容",
+"data type": "文本型"
+   },
+   {
+"parameter name": "起始搜寻位置",
+"comment": "提供起始查找的索引位置,小于等于文本长度,如果小于0表示从文本尾部开始查找.",
+"data type": "整数",
+"@默认值": "-1"
+   },
+   {
+"parameter name": "是否不区分大小写",
+"comment": "指定比较时是否不区分英文字母的大小写",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+时是否不区分英文字母的大小写]
+  },
+  {
+}"method name": "是否以字符开头",
+}"comment": "返回当前文本是否以所指定字符开头",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲检查的字符",
+"comment": "提供用来检查是否以其开头的字符",
+"data type": "字符"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "指定比较时是否区分英文字母的大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+
+"method name": "是否以文本开头",
+
+"comment": "返回当前文本是否以所指定文本开头",
+
+"static": true,
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲检查的文本",
+"comment": "提供用来检查是否以其开头的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "指定比较时是否区分英文字母的大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+
+]
+  },
+  {
+ }"method name": "是否以字符结束",
+ }"comment": "返回当前文本是否以所指定字符结束",
+ }"static": true,
+ }"data type": "逻辑型",
+ }"@嵌入式方法": "\"\"",
+ }"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲检查的字符",
+"comment": "提供用来检查是否以其结束的字符",
+"data type": "字符"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "指定比较时是否区分英文字母的大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ }]
+  },
+  {
+}"method name": "是否以文本结束",
+}"comment": "返回当前文本是否以所指定文本结束",
+}"static": true,
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "所欲检查的文本",
+"comment": "提供用来检查是否以其结束的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否区分大小写",
+"comment": "指定比较时是否区分英文字母的大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+}]
+  },
+  {
+"method name": "取尾字符",
+"comment": "返回当前文本的尾部字符,如果当前文本为空,则返回零字符.",
+"static": true,
+"data type": "字符",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   }
+]
+  },
+  {
+"method name": "分割左右文本",
+"comment": "把文本在所指定字符首次出现的位置处分割成左右两个部分",
+"result comment": "分割成功返回真,未找到所指定的分割字符返回假.",
+"static": true,
+"data type": "逻辑型",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "分割字符",
+"comment": "提供分割所使用的字符,文本将在该字符首次出现的位置处分割成左右两个部分.",
+"data type": "字符"
+   },
+   {
+"parameter name": "左结果文本",
+"comment": "如果不为空对象且方法返回真,则将所分割出来的左边文本内容存放入此参数结果变量中.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "右结果文本",
+"comment": "如果不为空对象且方法返回真,则将所分割出来的右边文本内容存放入此参数结果变量中.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否删除首尾空",
+"comment": "是否自动删除左右分割结果文本的首尾空白",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+data type": "文本型""method name": "分割左右子文本",
+data type": "文本型""comment": "把文本在所指定子文本首次出现的位置处分割成左右两个部分",
+data type": "文本型""result comment": "分割成功返回真,未找到所指定的分割子文本返回假.",
+data type": "文本型""static": true,
+data type": "文本型""data type": "逻辑型",
+data type": "文本型""@嵌入式方法": "\"\"",
+data type": "文本型""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "分割用子文本",
+"comment": "提供分割所使用的子文本,文本将在该子文本首次出现的位置处分割成左右两个部分.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "左结果文本",
+"comment": "如果不为空对象且方法返回真,则将所分割出来的左边文本内容存放入此参数结果变量中.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "右结果文本",
+"comment": "如果不为空对象且方法返回真,则将所分割出来的右边文本内容存放入此参数结果变量中.",
+"data type": "文本型",
+"@默认值": "空对象"
+   },
+   {
+"parameter name": "是否删除首尾空",
+"comment": "是否自动删除左右分割结果文本的首尾空白",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+data type": "文本型"]
+  },
+  {
+"method name": "分割文本",
+"comment": "  将文本基于所指定的字符集合进行分割,然后将分割结果存放到所指定的数组中,\n返回存放到所指定数组中的成员数目(即所分割出来的结果文本数目).",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "分割字符集合",
+"comment": "  提供进行分割时所基于的所有字符,其中的每个字符均在分割时被使用(即遇到其\n中任何一个字符时均认为发现了一个分割点).\n  譬如: \",;\\n\", 即指定了基于逗号/分号/换行符三个字符进行分割,遇到了这三\n个字符中的任何一个,均进行一次分割.",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果存放数组",
+"comment": "用作提供存放所有分割结果文本用的数组,其中的原有内容将被覆盖.",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否删除首尾空",
+"comment": "是否自动删除所有分割结果文本的首尾空白",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否忽略空白结果",
+"comment": "是否自动去除所有为空或全部为空白字符的分割结果文本",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "分割子文本",
+"comment": "  将文本基于所指定的子文本进行分割,然后将分割结果存放到所指定的数组中,\n返回存放到所指定数组中的成员数目(即所分割出来的结果文本数目).",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "分割用子文本",
+"comment": "提供进行分割时所基于的子文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "结果存放数组",
+"comment": "用作提供存放所有分割结果文本用的数组,其中的原有内容将被覆盖.",
+"data type": "文本数组类"
+   },
+   {
+"parameter name": "是否删除首尾空",
+"comment": "是否自动删除所有分割结果文本的首尾空白",
+"data type": "逻辑型",
+"@默认值": "真"
+   },
+   {
+"parameter name": "是否忽略空白结果",
+"comment": "是否自动去除所有为空或全部为空白字符的分割结果文本",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+]
+  },
+  {
+"method name": "分割整数文本",
+"comment": "  将文本基于所指定的字符进行分割,然后将分割结果转换到整数后存放到所指定的数组中,\n返回存放到所指定数组中的成员数目(即所分割出来的结果整数数目).",
+"static": true,
+"data type": "整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "分割字符",
+"comment": "提供进行分割时所基于的字符,在被分割文本中的每一个该字符均被认为是一个分割点.",
+"data type": "字符"
+   },
+   {
+"parameter name": "结果存放数组",
+"comment": "用作提供存放所有分割结果整数用的数组,其中的原有内容将被覆盖.",
+"data type": "整数数组类"
+   }
+]
+  },
+  {
+ameter name": "分割字符""method name": "分割小数文本",
+ameter name": "分割字符""comment": "  将文本基于所指定的字符进行分割,然后将分割结果转换到小数后存放到所指定的数组中,\n返回存放到所指定数组中的成员数目(即所分割出来的结果小数数目).",
+ameter name": "分割字符""static": true,
+ameter name": "分割字符""data type": "整数",
+ameter name": "分割字符""@嵌入式方法": "\"\"",
+ameter name": "分割字符""parameters": [
+   {
+"parameter name": "所欲操作的文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "分割字符",
+"comment": "提供进行分割时所基于的字符,在被分割文本中的每一个该字符均被认为是一个分割点.",
+"data type": "字符"
+   },
+   {
+"parameter name": "结果存放数组",
+"comment": "用作提供存放所有分割结果小数用的数组,其中的原有内容将被覆盖.",
+"data type": "小数数组类"
+   }
+ameter name": "分割字符"]
+  },
+  {
+ameter name": "分割字符""method name": "近似等于",
+ameter name": "分割字符""comment": "当比较文本在被比较文本的首部被包容时返回真,否则返回假.",
+ameter name": "分割字符""static": true,
+ameter name": "分割字符""data type": "逻辑型",
+ameter name": "分割字符""@禁止流程检查": "真",
+ameter name": "分割字符""parameters": [
+   {
+"parameter name": "被比较文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "比较文本",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否区分大小写",
+"data type": "逻辑型",
+"@默认值": "真"
+   }
+ameter name": "分割字符"]
+  }
+= 真]]
+ }
+sers\cxzxc\Desktop\官方火山编程安卓+PC视窗+go的wsv源码\视窗模块源码wsv格式AI知识库\sys_base_w_string_p.txt]
+}

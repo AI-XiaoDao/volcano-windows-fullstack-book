@@ -1,0 +1,112 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+㄀ꡱŝ"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+㄀ꡱŝ"package name": "火山.原创软件",
+㄀ꡱŝ"@文档": "\"category = \\\"开源库.音频处理.音频信息\\\"\"",
+㄀ꡱŝ"@视窗.外部头文件": "\"taglib\\\\taglibTool.h\"",
+㄀ꡱŝ"@视窗.外部库.win32": "\"taglib\\\\taglibToolx86.lib\"",
+㄀ꡱŝ"@视窗.附属文件.win32": "\"taglib\\\\taglibToolx86.dll\"",
+㄀ꡱŝ"@视窗.外部库.x64": "\"taglib\\\\taglibToolx64.lib\"",
+㄀ꡱŝ"@视窗.附属文件.x64": "\"taglib\\\\taglibToolx64.dll\"",
+㄀ꡱŝ"classes": [
+ {
+"class name": "音频信息类",
+"methods": [
+  {
+ss name": "音频信息类""method name": "打开",
+ss name": "音频信息类""data type": "逻辑型",
+ss name": "音频信息类""@禁止流程检查": "真",
+ss name": "音频信息类""parameters": [
+   {
+"parameter name": "音频文件",
+"data type": "文本型"
+   }
+ss name": "音频信息类"]
+  },
+  {
+}"method name": "保存",
+}"comment": "如果修改过 音频文件的信息，就要调用保存",
+}"data type": "逻辑型",
+}"@嵌入式方法": "\"\""
+  },
+  {
+"comment": "如果修改过 音频文件的信息，就要调用保存""method name": "是否有效",
+"comment": "如果修改过 音频文件的信息，就要调用保存""comment": "音频文件信息是否有效\n * Returns true if the file is open and readable and valid information for\n * the Tag and / or AudioProperties was found.",
+"comment": "如果修改过 音频文件的信息，就要调用保存""data type": "逻辑型",
+"comment": "如果修改过 音频文件的信息，就要调用保存""@嵌入式方法": "\"\""
+  },
+  {
+comment": "如果修改过 音频文件的信息，就要调用保存""@嵌入式方法": "\"\"""method name": "关闭",
+comment": "如果修改过 音频文件的信息，就要调用保存""@嵌入式方法": "\"\"""@嵌入式方法": "\"\""
+  },
+  {
+}"method name": "取标签",
+}"data type": "文本型",
+}"parameters": [
+   {
+"parameter name": "标签类型",
+"comment": "// 范围 0 - 6 | 0 title | 1 artist | 2 album | 3 year | 4 comment | 5 track | 6 genre",
+"data type": "整数"
+   }
+}]
+  },
+  {
+
+"method name": "置标签",
+
+"data type": "逻辑型",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "标签类型",
+"comment": "// 范围 0 - 6 | 0 title | 1 artist | 2 album | 3 year | 4 comment | 5 track | 6 genre",
+"data type": "整数"
+   },
+   {
+"parameter name": "标签属性",
+"data type": "文本型"
+   }
+
+]
+  },
+  {
+}"method name": "取属性",
+}"data type": "整数",
+}"@嵌入式方法": "\"\"",
+}"parameters": [
+   {
+"parameter name": "类型",
+"comment": "//0 时长(秒)  | 1 比特率 | 2 采样率 | 3 通道数",
+"data type": "整数"
+   }
+}]
+  },
+  {
+comment": "//0 时长(秒)  | 1 比特率 | 2 采样率 | 3 通道数""method name": "置默认编码",
+comment": "//0 时长(秒)  | 1 比特率 | 2 采样率 | 3 通道数""@嵌入式方法": "\"\"",
+comment": "//0 时长(秒)  | 1 比特率 | 2 采样率 | 3 通道数""parameters": [
+   {
+"parameter name": "是否unicode",
+"data type": "逻辑型"
+   }
+comment": "//0 时长(秒)  | 1 比特率 | 2 采样率 | 3 通道数"]
+  },
+  {
+mment": "//0 时长(秒)  | 1 比特率 | 2 采样率 | 3 通道数"]"method name": "置ID3v2默认编码",
+mment": "//0 时长(秒)  | 1 比特率 | 2 采样率 | 3 通道数"]"@嵌入式方法": "\"\"",
+mment": "//0 时长(秒)  | 1 比特率 | 2 采样率 | 3 通道数"]"parameters": [
+   {
+"parameter name": "编码类型",
+"comment": "可选值 0 1 2 3\n//typedef enum {\n// TagLib_ID3v2_Latin1,  == 0\n// TagLib_ID3v2_UTF16,   == 1\n// TagLib_ID3v2_UTF16BE, == 2\n// TagLib_ID3v2_UTF8     == 3 \n//} TagLib_ID3v2_Encoding;",
+"data type": "整数"
+   }
+mment": "//0 时长(秒)  | 1 比特率 | 2 采样率 | 3 通道数"]]
+  }
+]
+ }
+㄀ꡱŝ]
+}

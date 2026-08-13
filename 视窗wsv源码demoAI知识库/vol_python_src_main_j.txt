@@ -1,0 +1,61 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本
+
+{
+= 程序类"file description": "本文件为一个火山程序的可用公开接口描述json文本",
+= 程序类"package name": "火山.程序",
+= 程序类"classes": [
+ {
+ headers"class name": "启动类",
+ headers"comment": "  \"@视窗.附属文件\"属性用作将例程中需要使用的Python脚本文件同时复制到编译结果目录,用作在\n例程运行时导入使用.\n  如果将属性值写为\"test.py\",编译器会将这个文件和编译出来的应用程序放到同一个目录中,这样\n这个python脚本文件就可以直接导入使用. 此处有意将\"test.py\"放到\"mymod\"子目录里面,这样就不\n能直接导入,用作在后面演示\"自定义模块搜寻目录\"功能时使用.",
+ headers"base class": "程序类",
+ headers"@视窗.附属文件": "\"test.py > mymod\"",
+ headers"methods": [
+  {
+ Py对象类"method name": "启动方法",
+ Py对象类"data type": "整数"
+  },
+  {
+附属文件 = "my_net > _py_ext_libs""method name": "代码执行"
+  },
+  {
+ 文本型"method name": "脚本函数1",
+ 文本型"static": true,
+ 文本型"data type": "Py对象类",
+ 文本型"parameters": [
+   {
+"parameter name": "方法脚本全名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "用户数据1",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用户数据2",
+"data type": "变整数"
+   },
+   {
+"parameter name": "位置参数数据",
+"data type": "Py对象类"
+   },
+   {
+"parameter name": "关键字参数数据",
+"data type": "Py对象类"
+   }
+ 文本型]
+  },
+  {
+    "method name": "线程主函数",
+    "static": true,
+    "parameters": [
+   {
+"parameter name": "线程状态对象",
+"data type": "线程状态类"
+   }
+    ]
+  }
+ headers]
+ }
+= 程序类]
+}

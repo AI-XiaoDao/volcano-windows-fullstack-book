@@ -1,0 +1,380 @@
+
+###### 以下为一个火山软件开发平台系统类库程序对外公开接口的json格式描述文本 - 访问本程序中的接口需要引用模块"原创软件模块".
+
+{
+问本程序中的接口需要引用模块"原创软件模块"."file description": "本文件为一个火山程序的可用公开接口描述json文本",
+问本程序中的接口需要引用模块"原创软件模块"."package name": "火山.原创软件",
+问本程序中的接口需要引用模块"原创软件模块"."@文档": "\"category = \\\"windows.资源操作\\\"\"",
+问本程序中的接口需要引用模块"原创软件模块"."classes": [
+ {
+"class name": "______资源操作",
+"@全局类": "真",
+"methods": [
+  {
+
+"method name": "资源_取文件",
+
+"static": true,
+
+"data type": "字节集类",
+
+"@禁止流程检查": "真",
+
+"parameters": [
+   {
+"parameter name": "资源文件",
+"data type": "视窗文件资源"
+   }
+
+]
+  }
+]
+ },
+ {
+"class name": "资源操作_全局类",
+"constants": [
+  {
+constants": [
+"constant name": "ACCELERATOR",
+constants": [
+"data type": "文本型",
+constants": [
+"initial value": "@RT_ACCELERATOR"
+  },
+  {
+ }"constant name": "动画光标",
+ }"data type": "文本型",
+ }"initial value": "@RT_ANICURSOR"
+  },
+  {
+"data type": "字节集类""constant name": "动画图标",
+"data type": "字节集类""data type": "文本型",
+"data type": "字节集类""initial value": "@RT_ANIICON"
+  },
+  {
+
+"constant name": "位图",
+
+"data type": "文本型",
+
+"initial value": "@RT_BITMAP"
+  },
+  {
+constants": [
+"constant name": "光标",
+constants": [
+"comment": "Hardware-dependent cursor resource ",
+constants": [
+"data type": "文本型",
+constants": [
+"initial value": "@RT_CURSOR"
+  },
+  {
+
+"constant name": "对话框",
+
+"comment": "Dialog box ",
+
+"data type": "文本型",
+
+"initial value": "@RT_DIALOG"
+  },
+  {
+data type": "字节集类""initial value": "@RT_ANIICON""constant name": "DLGINCLUDE",
+data type": "字节集类""initial value": "@RT_ANIICON""data type": "文本型",
+data type": "字节集类""initial value": "@RT_ANIICON""initial value": "@RT_DLGINCLUDE"
+  },
+  {
+}"constant name": "字体",
+}"comment": " Font resource ",
+}"data type": "文本型",
+}"initial value": "@RT_FONT"
+  },
+  {
+"constant name": "FONTDIR",
+"comment": "RT_FONTDIR Font directory resource ",
+"data type": "文本型",
+"initial value": "@RT_FONTDIR"
+  },
+  {
+"data type": "文本型""constant name": "光标组",
+"data type": "文本型""comment": "RT_GROUP_CURSOR Hardware-independent cursor resource ",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""initial value": "@RT_GROUP_CURSOR"
+  },
+  {
+
+"constant name": "图标组",
+
+"comment": "RT_GROUP_ICON Hardware-independent icon resource ",
+
+"data type": "文本型",
+
+"initial value": "@RT_GROUP_ICON"
+  },
+  {
+
+"constant name": "HTML",
+
+"data type": "文本型",
+
+"initial value": "@RT_HTML"
+  },
+  {
+}"constant name": "图标",
+}"comment": "RT_ICON Hardware-dependent icon resource ",
+}"data type": "文本型",
+}"initial value": "@RT_ICON"
+  },
+  {
+
+"constant name": "清单",
+
+"comment": "RT_MANIFEST Windows XP: Fusion XML Manifest ",
+
+"data type": "文本型",
+
+"initial value": "@RT_MANIFEST"
+  },
+  {
+"data type": "文本型""constant name": "菜单",
+"data type": "文本型""comment": "RT_MENU Menu resource ",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""initial value": "@RT_MENU"
+  },
+  {
+"initial value": "@RT_MANIFEST""constant name": "MESSAGETABLE",
+"initial value": "@RT_MANIFEST""comment": "RT_MESSAGETABLE Message-table entry ",
+"initial value": "@RT_MANIFEST""data type": "文本型",
+"initial value": "@RT_MANIFEST""initial value": "@RT_MESSAGETABLE"
+  },
+  {
+
+"constant name": "PLUGPLAY",
+
+"comment": "RT_PLUGPLAY Plug and Play resource ",
+
+"data type": "文本型",
+
+"initial value": "@RT_PLUGPLAY"
+  },
+  {
+
+"constant name": "附加数据",
+
+"comment": "RT_RCDATA Application-defined resource (raw data) ",
+
+"data type": "文本型",
+
+"initial value": "@RT_RCDATA"
+  },
+  {
+}"constant name": "文本",
+}"comment": "RT_STRING String-table entry ",
+}"data type": "文本型",
+}"initial value": "@RT_STRING"
+  },
+  {
+
+"constant name": "版本",
+
+"comment": "RT_VERSION Version resource ",
+
+"data type": "文本型",
+
+"initial value": "@RT_VERSION"
+  },
+  {
+"data type": "文本型""constant name": "VXD",
+"data type": "文本型""comment": "RT_VXD ",
+"data type": "文本型""data type": "文本型",
+"data type": "文本型""initial value": "@RT_VXD"
+  }
+],
+"methods": [
+  {
+"comment": "RT_VERSION Version resource ""method name": "加载模块",
+"comment": "RT_VERSION Version resource ""result comment": "返回模块句柄",
+"comment": "RT_VERSION Version resource ""data type": "变整数",
+"comment": "RT_VERSION Version resource ""@嵌入式方法": "\"\"",
+"comment": "RT_VERSION Version resource ""parameters": [
+   {
+"parameter name": "模块全路径",
+"comment": "可以是 dll 也可以是 exe",
+"data type": "文本型"
+   }
+"comment": "RT_VERSION Version resource "]
+  },
+  {
+data type": "文本型""initial value": "@RT_VXD""method name": "释放模块",
+data type": "文本型""initial value": "@RT_VXD""parameters": [
+   {
+"parameter name": "模块句柄",
+"data type": "变整数"
+   }
+data type": "文本型""initial value": "@RT_VXD"]
+  },
+  {
+omment": "RT_VERSION Version resource "]"method name": "查找资源",
+omment": "RT_VERSION Version resource "]"comment": "首先，您要调用 查找 找到资源",
+omment": "RT_VERSION Version resource "]"result comment": "返回资源句柄 HRSRC",
+omment": "RT_VERSION Version resource "]"static": true,
+omment": "RT_VERSION Version resource "]"data type": "变整数",
+omment": "RT_VERSION Version resource "]"@嵌入式方法": "\"\"",
+omment": "RT_VERSION Version resource "]"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "HMODULE",
+"data type": "变整数"
+   },
+   {
+"parameter name": "资源名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "资源类型",
+"data type": "文本型"
+   }
+omment": "RT_VERSION Version resource "]]
+  },
+  {
+"method name": "加载资源",
+"comment": "打开资源",
+"result comment": "资源数据句柄",
+"static": true,
+"data type": "变整数",
+"@嵌入式方法": "\"\"",
+"parameters": [
+   {
+"parameter name": "模块句柄",
+"comment": "HMODULE",
+"data type": "变整数"
+   },
+   {
+"parameter name": "资源句柄",
+"comment": "HRSRC",
+"data type": "变整数"
+   }
+]
+  },
+  {
+data type": "文本型""comment": "RT_VXD ""method name": "取数据指针",
+data type": "文本型""comment": "RT_VXD ""comment": "得到资源数据的内存指针",
+data type": "文本型""comment": "RT_VXD ""result comment": "返回数据指针",
+data type": "文本型""comment": "RT_VXD ""static": true,
+data type": "文本型""comment": "RT_VXD ""data type": "变整数",
+data type": "文本型""comment": "RT_VXD ""@嵌入式方法": "\"\"",
+data type": "文本型""comment": "RT_VXD ""parameters": [
+   {
+"parameter name": "资源数据句柄",
+"data type": "变整数"
+   }
+data type": "文本型""comment": "RT_VXD "]
+  },
+  {
+ta type": "文本型""comment": "RT_VXD "]"method name": "取数据大小",
+ta type": "文本型""comment": "RT_VXD "]"comment": "得到资源数据的大小",
+ta type": "文本型""comment": "RT_VXD "]"static": true,
+ta type": "文本型""comment": "RT_VXD "]"data type": "整数",
+ta type": "文本型""comment": "RT_VXD "]"@嵌入式方法": "\"\"",
+ta type": "文本型""comment": "RT_VXD "]"parameters": [
+   {
+"parameter name": "资源句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "模块句柄",
+"data type": "变整数",
+"@默认值": "0"
+   }
+ta type": "文本型""comment": "RT_VXD "]]
+  },
+  {
+comment": "HMODULE""method name": "关闭资源",
+comment": "HMODULE""static": true,
+comment": "HMODULE""@嵌入式方法": "\"\"",
+comment": "HMODULE""parameters": [
+   {
+"parameter name": "资源数据句柄",
+"data type": "变整数"
+   }
+comment": "HMODULE"]
+  },
+  {
+
+"method name": "准备更新资源",
+
+"result comment": "返回 更新句柄",
+
+"data type": "变整数",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "可执行文件名",
+"data type": "文本型"
+   },
+   {
+"parameter name": "是否删除资源",
+"data type": "逻辑型",
+"@默认值": "假"
+   }
+
+]
+  },
+  {
+
+"method name": "更新资源",
+
+"data type": "逻辑型",
+
+"@嵌入式方法": "\"\"",
+
+"parameters": [
+   {
+"parameter name": "更新句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "资源类型",
+"data type": "文本型"
+   },
+   {
+"parameter name": "资源名称",
+"data type": "文本型"
+   },
+   {
+"parameter name": "语言",
+"data type": "短整数"
+   },
+   {
+"parameter name": "用作更新的数据指针",
+"data type": "变整数"
+   },
+   {
+"parameter name": "用作更新的数据大小",
+"data type": "整数"
+   }
+
+]
+  },
+  {
+data type": "整数""method name": "结束更新资源",
+data type": "整数""data type": "逻辑型",
+data type": "整数""@嵌入式方法": "\"\"",
+data type": "整数""parameters": [
+   {
+"parameter name": "更新句柄",
+"data type": "变整数"
+   },
+   {
+"parameter name": "是否取消",
+"data type": "逻辑型"
+   }
+data type": "整数"]
+  }
+]
+ }
+问本程序中的接口需要引用模块"原创软件模块".]
+}
